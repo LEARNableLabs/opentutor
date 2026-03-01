@@ -1,0 +1,17 @@
+{
+  "name": "opentutor",
+  "version": "0.1.0",
+  "description": "OpenClaw plugin: interactive AI tutor for any topic",
+  "type": "module",
+  "main": "./index.ts",
+  "peerDependencies": {
+    "openclaw": ">=2026.1.26"
+  },
+  "devDependencies": {
+    "openclaw": "latest",
+    "typescript": "^5.0.0"
+  },
+  "openclaw": {
+    "extensions": ["./index.ts"]
+  }
+}

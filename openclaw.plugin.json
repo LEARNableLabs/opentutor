@@ -1,0 +1,11 @@
+{
+  "id": "opentutor",
+  "name": "OpenTutor",
+  "description": "Interactive AI tutor for programming, math, science, languages, and any other topic.",
+  "skills": ["./skills"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
