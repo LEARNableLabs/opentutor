@@ -298,22 +298,16 @@ When generating a lesson:
 
 **If this table is empty:** All claims in this research were verified or cited — no user confirmation needed.
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **How does the agent determine "pedagogical section" boundaries in practice?**
-   - What we know: D-01 specifies split by section (concept, example, exercise). Existing `lesson-delivery.md` defines 5 format variations.
-   - What's unclear: For formats like "teach-back" or "real-world challenge," section boundaries are less obvious than mini-lessons.
-   - Recommendation: Planner should define example sequences for all 5 formats during planning phase. Use mini-lesson as template, adapt for others.
+   - **Resolved:** D-06 defines per-format sequence templates for all 5 format variations. Plan 01 Task 2 implements these templates with explicit message boundaries for each format.
 
 2. **What happens if student replies mid-sequence (after message 2 of 4)?**
-   - What we know: Cron delivers lessons as conversation starters. Chat flow is live and adaptive.
-   - What's unclear: Should agent finish the 4-message sequence before responding, or pause and address student's question?
-   - Recommendation: Out of scope for this phase (message formatting only, not conversation flow). Flag for future phase or document in `workspace/AGENTS.md` as implementation detail.
+   - **Resolved:** Out of scope for Phase 1 (message formatting only, not conversation flow). Noted for future phase.
 
 3. **How to handle code blocks that naturally exceed 150 words?**
-   - What we know: D-02 allows exceeding soft cap for clarity. Code blocks use `<pre><code>` formatting.
-   - What's unclear: Should code examples be split across messages, or kept whole even if 200+ words?
-   - Recommendation: Keep code blocks whole (splitting breaks syntax). Code blocks are visually distinct — not "wall of text." Document as exception in chunking rules.
+   - **Resolved:** Plan 01 Task 1 documents code blocks as an exception — kept whole (splitting breaks syntax), treated as visually distinct content not subject to the word cap.
 
 ## Environment Availability
 
