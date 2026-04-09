@@ -81,13 +81,64 @@ Four emoji are used as structural anchors at the start of each message. They sig
 
 ## Format Variations
 
-Don't deliver the same style every time. Rotate through:
+Don't deliver the same style every time. Rotate through these formats. Each has its own message sequence template.
 
-- **Mini-lesson** — concept + example + exercise
-- **Just a question** — "Think about this today: why can't you comb a hairy ball flat?"
-- **Resource drop** — "Watch this 10-min video, we'll discuss after" + link
-- **Teach it back** — "Explain X in your own words, like you're telling a friend"
-- **Real-world challenge** — "Open a Python REPL and try to..."
+### Mini-Lesson (4 messages)
+
+The most common format. Concept + example + exercise.
+
+**Sequence:** 📖 Hook → 🧠 Concept → 💡 Example → ✏️ Exercise
+
+- **Message 1 (📖 Hook):** Title, day progress, callback to yesterday's lesson, teaser for today's topic. Format: "📖 Day N/total · Topic — Yesterday we [callback]. Today: [teaser]?"
+- **Message 2 (🧠 Concept):** Core definition or principle. 1-3 short paragraphs. Bold key terms. Keep under 150 words.
+- **Message 3 (💡 Example):** Concrete analogy or real-world illustration. Make abstract ideas tangible.
+- **Message 4 (✏️ Exercise):** Problem, question, or prompt. Must invite a reply. Format: "✏️ [problem] — [instruction]. Reply with your answer."
+
+### Just a Question (2 messages)
+
+A thought-provoking question to chew on. Low-pressure, high-curiosity.
+
+**Sequence:** 📖 Hook → 🧠 Question
+
+- **Message 1 (📖 Hook):** "📖 Day N/total — Quick one today..."
+- **Message 2 (🧠 Question):** "🧠 Think about this: [thought-provoking question]?" The question should be open-ended and connect to upcoming material.
+
+### Resource Drop (3 messages)
+
+Share a video, article, book, or tool. Give context for why it matters.
+
+**Sequence:** 📖 Hook → 💡 Resource → ✏️ Follow-up
+
+- **Message 1 (📖 Hook):** "📖 Day N/total — Time for a different perspective..."
+- **Message 2 (💡 Resource):** "💡 [resource description]: [link]. [Why it's valuable — 1-2 sentences]."
+- **Message 3 (✏️ Follow-up):** "✏️ After [engaging with resource], tell me: [reflection question]?"
+
+### Teach-Back (3 messages)
+
+Student explains a concept in their own words. Tests deep understanding.
+
+**Sequence:** 📖 Hook → ✏️ Prompt → 🧠 Scaffolding
+
+- **Message 1 (📖 Hook):** "📖 Day N/total — Let's see if you can explain this..."
+- **Message 2 (✏️ Prompt):** "✏️ Explain [concept] in your own words. Pretend you're teaching it to someone who's never heard of it."
+- **Message 3 (🧠 Scaffolding):** "🧠 Hint: Start with [anchor point]. Then connect it to [related concept from previous lesson]."
+
+### Real-World Challenge (3 messages)
+
+Hands-on problem. Coding exercise, calculation, or practical application.
+
+**Sequence:** 📖 Hook → ✏️ Challenge → 💡 Hint
+
+- **Message 1 (📖 Hook):** "📖 Day N/total — Ready for a tricky one?"
+- **Message 2 (✏️ Challenge):** "✏️ [hard problem statement]. Take your time."
+- **Message 3 (💡 Hint):** "💡 Stuck? Think about [hint]. Or reply 'skip' and I'll show you the solution."
+
+### Rules for All Formats
+
+- **Final message must have an engagement prompt** — exercise, question, or teaser for tomorrow. No dead-end messages.
+- **Minimum 2 messages** — even the shortest format (question) uses 2 messages.
+- **Each message gets one emoji anchor** — placed at the start, signaling content type.
+- **Adapt, don't rigidly follow** — these are templates, not scripts. If the content naturally calls for an extra message or a different anchor order, that's fine. The spirit is structured variety, not mechanical repetition.
 
 ## Review Days
 
