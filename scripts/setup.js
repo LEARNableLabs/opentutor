@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.join(__dirname, '..');
 const SKILL_DIR = path.join(REPO_ROOT, 'skills', 'tutor');
-const WORKSPACE_TEMPLATE = path.join(SKILL_DIR, 'workspace');
+const WORKSPACE_TEMPLATE = path.join(REPO_ROOT, 'workspace');
 
 const rl = createInterface({ input, output });
 const ask = (q) => rl.question(q);
@@ -70,13 +70,14 @@ Never narrate your boot-up. Use these files silently and jump straight into the 
 
 // ─── workspace installer ─────────────────────────────────────────────────────
 
-function installWorkspace(dir, { includeAgentsMd = false } = {}) {
+function installWorkspace(dir, { includeAgentsMd = false, overrides = {} } = {}) {
   const files = ['IDENTITY.md', 'SOUL.md', 'USER.md'];
   if (includeAgentsMd) files.push('AGENTS.md');
 
   for (const file of files) {
+    const src = overrides[file] ?? path.join(WORKSPACE_TEMPLATE, file);
     const copied = copyFileIfMissing(
-      path.join(WORKSPACE_TEMPLATE, file),
+      src,
       path.join(dir, file),
     );
     if (copied) tick(`${file} → ${path.join(dir, file)}`);
@@ -130,7 +131,11 @@ function setupOpenClawLike(platformId) {
   tick(`skill → ${skillDst}`);
 
   const wsDst = path.join(root, 'workspaces', 'tutor');
-  installWorkspace(wsDst, { includeAgentsMd: true });
+  const ocSoul = path.join(REPO_ROOT, 'openclaw', 'SOUL.md');
+  installWorkspace(wsDst, {
+    includeAgentsMd: true,
+    overrides: fs.existsSync(ocSoul) ? { 'SOUL.md': ocSoul } : {},
+  });
 
   const configFile = path.join(root, `${platformId}.json`);
   let config = {};

@@ -8,23 +8,25 @@ OpenTutor is a universal agent skill that turns any compatible AI agent into a p
 opentutor/
 ├── skills/tutor/
 │   ├── SKILL.md                      # Core teaching instructions (universal)
-│   ├── cron/jobs.template.json       # Scheduled lesson job template
-│   └── workspace/
-│       ├── AGENTS.md                 # Agent behavior guide (session flow, memory, guardrails)
-│       ├── IDENTITY.md               # Tutor persona
-│       ├── SOUL.md                   # Teaching style
-│       ├── USER.md                   # Student profile template
-│       ├── memory/.gitkeep
-│       └── tutor/
-│           ├── curricula/.gitkeep
-│           └── progress.json
+│   └── cron/jobs.template.json       # Scheduled lesson job template
+├── workspace/                        # Workspace templates (platform-agnostic)
+│   ├── AGENTS.md                     # Agent behavior guide (session flow, memory, guardrails)
+│   ├── IDENTITY.md                   # Tutor persona
+│   ├── SOUL.md                       # Teaching style (base)
+│   ├── USER.md                       # Student profile template
+│   ├── memory/.gitkeep
+│   └── tutor/
+│       ├── curricula/.gitkeep
+│       └── progress.json
 ├── openclaw/                         # OpenClaw-specific integration
 │   ├── README.md                     # OpenClaw setup guide
+│   ├── SOUL.md                       # OpenClaw SOUL override (buttons, polls, charts)
 │   └── opentutor.json                # Agent + channel config template
 ├── nanoclaw/                         # NanoClaw-specific integration
 │   └── README.md                     # NanoClaw setup guide
 ├── nemoclaw/                         # NemoClaw-specific integration
 │   └── README.md                     # NemoClaw setup guide
+├── scripts/setup.js                  # Unified setup CLI
 ├── package.json
 └── README.md                         # Universal install guide
 ```
@@ -32,7 +34,8 @@ opentutor/
 ## Key files
 
 - **`skills/tutor/SKILL.md`** — the core skill. Edit this to change teaching methodology, persona, or behavior. All platforms read this.
-- **`skills/tutor/workspace/AGENTS.md`** — agent behavior reference: session boot, memory, guardrails, formatting. Travels with the skill to every platform.
+- **`workspace/AGENTS.md`** — agent behavior reference: session boot, memory, guardrails, formatting. Copied to every platform's workspace on setup.
+- **`workspace/SOUL.md`** — base teaching personality. Platform folders can override (e.g. `openclaw/SOUL.md` adds buttons and polls).
 - **`openclaw/README.md`** — OpenClaw-specific setup (gateway config, Telegram pairing, cron jobs).
 - **`nanoclaw/README.md`** — NanoClaw-specific setup (container/skills copy, workspace templates, task scheduler).
 
@@ -44,4 +47,4 @@ opentutor/
 ## Conventions
 
 - Do not auto-commit or auto-push.
-- Keep `SKILL.md` and `workspace/AGENTS.md` platform-agnostic. Platform-specific setup goes in its own subfolder.
+- Keep `SKILL.md` and `workspace/` files platform-agnostic. Platform-specific overrides go in the platform subfolder.
