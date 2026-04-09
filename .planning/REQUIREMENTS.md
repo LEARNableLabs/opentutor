@@ -61,19 +61,19 @@ Deferred to future milestone. Tracked but not in current roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FMT-01 | — | Pending |
-| FMT-02 | — | Pending |
-| FMT-03 | — | Pending |
-| EXR-01 | — | Pending |
-| EXR-02 | — | Pending |
-| NAV-01 | — | Pending |
-| PRG-01 | — | Pending |
+| FMT-01 | Phase 1 | Pending |
+| FMT-02 | Phase 1 | Pending |
+| FMT-03 | Phase 1 | Pending |
+| EXR-01 | Phase 2 | Pending |
+| EXR-02 | Phase 2 | Pending |
+| NAV-01 | Phase 3 | Pending |
+| PRG-01 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 7 total
-- Mapped to phases: 0
-- Unmapped: 7 ⚠️
+- Mapped to phases: 7
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-04-09*
-*Last updated: 2026-04-09 after initial definition*
+*Last updated: 2026-04-09 after roadmap creation*
