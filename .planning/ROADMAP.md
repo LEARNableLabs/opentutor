@@ -29,8 +29,8 @@ The student should feel like they're using a polished learning app, not reading 
   4. Student reads bold key terms, code-formatted math, bullet-formatted lists
 **Plans:** 2 plans
 Plans:
-- [ ] 01-01-PLAN.md — Universal chunking rules and emoji anchor system in lesson-delivery.md
-- [ ] 01-02-PLAN.md — Platform alignment: openclaw/SOUL.md HTML formatting, SKILL.md and AGENTS.md cross-references
+- [x] 01-01-PLAN.md — Universal chunking rules and emoji anchor system in lesson-delivery.md
+- [x] 01-02-PLAN.md — Platform alignment: openclaw/SOUL.md HTML formatting, SKILL.md and AGENTS.md cross-references
 **UI hint**: yes
 
 ### Phase 2: Interactive Exercises
