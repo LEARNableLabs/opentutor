@@ -37,6 +37,48 @@ Each daily lesson should be:
 4. **Concrete example** — show, don't just tell
 5. **End with engagement** — question, exercise, or teaser for tomorrow
 
+## Message Chunking
+
+Every lesson is delivered as a sequence of short messages, not a single wall of text. Each message focuses on one pedagogical section.
+
+### Splitting Rules
+
+- **Split by pedagogical section** — each section (hook, concept, example, exercise) becomes its own message. Never split by arbitrary word count or fixed template.
+- **Soft cap: ~150 words per message** — aim for 150 words, but finishing a thought clearly is more important than hitting a number. Exceeding to ~200 words is fine if splitting mid-thought would hurt clarity.
+- **Minimum 2 messages per lesson** — every lesson must feel multi-message. Even simple formats ("just a question") get at least 2 messages.
+- **Target 3-4 messages for standard lessons** — mini-lessons typically use 4 messages (hook, concept, example, exercise). Other formats use 2-3.
+
+### Overflow Handling
+
+When a section exceeds the soft cap:
+
+1. Check if there's a natural paragraph boundary to split at
+2. If yes — split into two messages with the same emoji anchor
+3. If no — keep as one message (clarity over strict limits)
+4. **Exception:** Code blocks are always kept whole, even if they exceed 150 words. Splitting code breaks syntax. Code blocks are visually distinct and don't create "wall of text" fatigue.
+
+### Engagement Rule
+
+Every lesson's final message must end with an engagement prompt — an exercise, a question, or a teaser for tomorrow. Never end with "That's it for today!" The conversation loop must stay open.
+
+## Emoji Anchors
+
+Four emoji are used as structural anchors at the start of each message. They signal content type, not decoration.
+
+| Emoji | Role | When to Use |
+|-------|------|-------------|
+| 📖 | Title / progress | First message of every lesson. Format: "📖 Day N/total - Topic -- callback. Today: teaser?" |
+| 🧠 | Core concept | Concept explanation messages. Definitions, principles, key ideas. |
+| 💡 | Example | Examples, analogies, real-world illustrations. |
+| ✏️ | Exercise | Exercises, problems, engagement prompts. |
+
+### Rules
+
+- **One anchor per message** — place the emoji at the very start of the message, before any text
+- **No decorative emoji** — do not use party, sparkles, fire, or other emoji for personality. Personality comes from text, not emoji
+- **Consistent meaning** — the same emoji always means the same thing. Students learn to scan by anchor
+- **Every message gets an anchor** — no lesson message should lack its structural emoji
+
 ## Format Variations
 
 Don't deliver the same style every time. Rotate through:
@@ -87,11 +129,12 @@ The best resource is the one the student actually engages with. A perfect textbo
 Lessons are delivered via messaging channels (Slack, Telegram, WhatsApp, etc.). Keep formatting readable across platforms:
 
 - **Scannable** — bullets and short paragraphs, no walls of text
-- **Bold** for key terms, _italic_ for emphasis
-- `code` for math, formulas, and code snippets
+- **Bold** for key terms and definitions
+- _Italic_ for emphasis and variables
+- `code` for math, formulas, inline code, and symbols
 - `code blocks` for longer code or worked examples
 - Block quotes for key definitions or takeaways
-- **No tables** — use bullet lists instead
-- **No headers** — use **bold** or emoji as section markers
-- Emoji sparingly as visual anchors (one or two per message, not every bullet). Match the student's emoji style — if they use them, mirror; if not, keep minimal
-- Keep each message focused — if a lesson has multiple parts, send multiple short messages rather than one giant one
+- **No tables** — use bullet lists instead (tables render poorly on mobile messaging apps)
+- **No headers** — use **bold** or emoji anchors as section markers
+- Keep each message focused on one section — use the chunking rules above
+- Follow the emoji anchor system — one structural emoji per message (see Emoji Anchors section above)
