@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "GENERATE_A_UUID",
+      "name": "tutor-lessons",
+      "description": "Daily tutor lesson delivery",
+      "enabled": true,
+      "createdAtMs": 0,
+      "updatedAtMs": 0,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9,13,19 * * *",
+        "tz": "America/New_York"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Read tutor/progress.json. If active_topics is empty, send a short friendly message (2-3 sentences) asking what topic the student wants to learn — suggest 2-3 interesting options. Do NOT read curriculum files or do extended research when there are no active topics. If active_topics has entries, read the matching curriculum file in tutor/curricula/ and deliver a concise daily lesson with a small exercise. Keep total response under 200 words.",
+        "thinking": "low",
+        "model": "anthropic/claude-opus-4-6"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "CHANNEL_NAME"
+      },
+      "state": {}
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "active_topics": [],
+  "schedule": {
+    "times": ["09:00", "13:00", "19:00"],
+    "timezone": "America/New_York",
+    "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+  },
+  "history": []
+}

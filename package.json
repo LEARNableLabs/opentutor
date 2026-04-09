@@ -1,17 +1,12 @@
 {
   "name": "opentutor",
-  "version": "0.1.0",
-  "description": "OpenClaw plugin: interactive AI tutor for any topic",
+  "version": "1.0.0",
+  "description": "Portable AI tutor skill for any topic — works with Claude Code, Cursor, Gemini CLI, OpenCode, and any Agent Skills-compatible agent.",
   "type": "module",
-  "main": "./index.ts",
-  "peerDependencies": {
-    "openclaw": ">=2026.1.26"
+  "bin": {
+    "opentutor": "./scripts/setup.js"
   },
   "devDependencies": {
-    "openclaw": "latest",
     "typescript": "^5.0.0"
-  },
-  "openclaw": {
-    "extensions": ["./index.ts"]
   }
 }
