@@ -93,7 +93,7 @@ Restart NanoClaw — it will start polling Telegram automatically.
 
 ## Step 5 — Schedule daily lessons
 
-NanoClaw has its own task scheduler — use `schedule_task` from within the agent rather than the `cron/jobs.template.json` (which is for OpenClaw's cron system).
+NanoClaw has its own task scheduler — use `schedule_task` from within the agent rather than the `openclaw/cron/jobs.template.json` (which is for OpenClaw's cron system).
 
 From the main channel, ask the agent to schedule lessons:
 

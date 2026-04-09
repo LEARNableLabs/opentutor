@@ -172,14 +172,14 @@ To skip pairing and lock the bot to your ID only, find your Telegram numeric use
 
 ## Step 6 — Scheduled lesson delivery (cron)
 
-A cron template is provided at `skills/tutor/cron/jobs.template.json`. To set up scheduled lessons:
+A cron template is provided at `openclaw/cron/jobs.template.json`. To set up scheduled lessons:
 
 1. Generate a UUID: `uuidgen | tr '[:upper:]' '[:lower:]'`
 2. Copy the template into your cron config:
 
 ```bash
 # If you don't have existing cron jobs:
-cp skills/tutor/cron/jobs.template.json ~/.openclaw/cron/jobs.json
+cp openclaw/cron/jobs.template.json ~/.openclaw/cron/jobs.json
 
 # If you already have jobs.json, merge the job entry manually
 ```

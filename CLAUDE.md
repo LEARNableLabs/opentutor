@@ -7,8 +7,7 @@ OpenTutor is a universal agent skill that turns any compatible AI agent into a p
 ```
 opentutor/
 ├── skills/tutor/
-│   ├── SKILL.md                      # Core teaching instructions (universal)
-│   └── cron/jobs.template.json       # Scheduled lesson job template
+│   └── SKILL.md                      # Core teaching instructions (universal)
 ├── workspace/                        # Workspace templates (platform-agnostic)
 │   ├── AGENTS.md                     # Agent behavior guide (session flow, memory, guardrails)
 │   ├── IDENTITY.md                   # Tutor persona
@@ -20,8 +19,8 @@ opentutor/
 │       └── progress.json
 ├── openclaw/                         # OpenClaw-specific integration
 │   ├── README.md                     # OpenClaw setup guide
-│   ├── SOUL.md                       # OpenClaw SOUL override (buttons, polls, charts)
-│   └── opentutor.json                # Agent + channel config template
+│   ├── SOUL.md                       # SOUL override (buttons, polls, charts)
+│   └── cron/jobs.template.json       # Scheduled lesson job template
 ├── nanoclaw/                         # NanoClaw-specific integration
 │   └── README.md                     # NanoClaw setup guide
 ├── nemoclaw/                         # NemoClaw-specific integration

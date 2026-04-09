@@ -154,16 +154,14 @@ OpenTutor is designed for 3 scheduled pushes per day — a short spark to start 
 | 1:00 PM | Midday review |
 | 7:00 PM | Evening practice |
 
-A cron template is at `skills/tutor/cron/jobs.template.json`. Import it into your agent's scheduler, set the `CHANNEL_NAME`, and adjust the timezone to yours.
+A cron template is at `openclaw/cron/jobs.template.json`. Import it into your agent's scheduler, set the `CHANNEL_NAME`, and adjust the timezone to yours.
 
 ## Repo structure
 
 ```
 opentutor/
 ├── skills/tutor/
-│   ├── SKILL.md                      # Tutor instructions (loaded on activation)
-│   └── cron/
-│       └── jobs.template.json        # Scheduled lesson job template
+│   └── SKILL.md                      # Tutor instructions (loaded on activation)
 ├── workspace/                        # Workspace templates (platform-agnostic)
 │   ├── AGENTS.md                     # Session boot instructions
 │   ├── IDENTITY.md                   # Tutor persona
@@ -174,7 +172,8 @@ opentutor/
 │       ├── curricula/.gitkeep
 │       └── progress.json             # Initial progress state
 └── openclaw/
-    └── SOUL.md                       # OpenClaw override (buttons, polls, charts)
+    ├── SOUL.md                       # OpenClaw override (buttons, polls, charts)
+    └── cron/jobs.template.json       # Scheduled lesson delivery template
 ```
 
 ## Validating the skill
