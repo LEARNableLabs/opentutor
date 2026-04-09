@@ -69,7 +69,7 @@ Updated three skill files to align with the universal chunking and anchor system
 
 ### Task 1: Update openclaw/SOUL.md
 
-**Commit:** 618ef6a
+**Commit:** d55f744
 
 **Change 1: Replace emoji anchor list in Lesson Delivery section**
 
@@ -119,7 +119,7 @@ No other sections modified — preserved all existing content (How You Teach, To
 
 ### Task 2: Update SKILL.md and AGENTS.md
 
-**Commit:** b5ab3d3
+**Commit:** 77ee402
 
 **SKILL.md changes (2 locations):**
 
@@ -220,8 +220,8 @@ None. This plan updated skill file prose instructions only — no code with stub
 - ✅ FOUND: workspace/AGENTS.md
 
 **Commits:**
-- ✅ FOUND: 618ef6a (Task 1 — openclaw/SOUL.md alignment and Telegram HTML formatting)
-- ✅ FOUND: b5ab3d3 (Task 2 — SKILL.md and AGENTS.md cross-reference updates)
+- ✅ FOUND: d55f744 (Task 1 — openclaw/SOUL.md alignment and Telegram HTML formatting)
+- ✅ FOUND: 77ee402 (Task 2 — SKILL.md and AGENTS.md cross-reference updates)
 
 ## Impact Assessment
 
@@ -252,5 +252,5 @@ None. This plan updated skill file prose instructions only — no code with stub
 
 **Duration:** 150 seconds (2 minutes 30 seconds)
 **Tasks:** 2/2 completed
-**Commits:** 2 (618ef6a, b5ab3d3)
+**Commits:** 2 (d55f744, 77ee402)
 **Files Modified:** 3 (openclaw/SOUL.md, skills/tutor/SKILL.md, workspace/AGENTS.md)
