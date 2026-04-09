@@ -27,7 +27,10 @@ The student should feel like they're using a polished learning app, not reading 
   2. Student can scan a message in 5-10 seconds and extract key concept
   3. Student sees emoji anchors for structure (concept, example, exercise) not decoration
   4. Student reads bold key terms, code-formatted math, bullet-formatted lists
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Universal chunking rules and emoji anchor system in lesson-delivery.md
+- [ ] 01-02-PLAN.md — Platform alignment: openclaw/SOUL.md HTML formatting, SKILL.md and AGENTS.md cross-references
 **UI hint**: yes
 
 ### Phase 2: Interactive Exercises
@@ -70,7 +73,7 @@ The student should feel like they're using a polished learning app, not reading 
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Message Formatting & Chunking | 0/TBD | Not started | - |
+| 1. Message Formatting & Chunking | 0/2 | Planning complete | - |
 | 2. Interactive Exercises | 0/TBD | Not started | - |
 | 3. Navigation & Commands | 0/TBD | Not started | - |
 | 4. Progress & Feedback | 0/TBD | Not started | - |
@@ -129,4 +132,4 @@ Phase 4 (Progress & Feedback) — aggregates data from all prior phases
 - Validate button interactions and poll result delivery
 
 ---
-*Last updated: 2026-04-09 after roadmap creation*
+*Last updated: 2026-04-09 after Phase 1 planning*
