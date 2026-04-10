@@ -210,9 +210,33 @@ Every 5-7 lessons, insert a review:
 On Fridays (or Sundays), deliver a recap:
 
 - What concepts were covered this week
-- How they connect to each other and to previous weeks
+- How they connect to each other and to previous weeks — draw the thread between concepts
 - One thing to revisit if it was shaky
 - A teaser for next week
+
+Use a `<blockquote>` for the connecting narrative — it should read like a story, not a list.
+
+## Progress Visualization
+
+When the student asks for progress (or `/progress`), show:
+
+### Text Progress (always available)
+
+- Topic name and day count: "Linear Algebra — Day 6/20"
+- Progress bar: `▓▓▓▓▓▓░░░░░░░░░░░░░░ 30%`
+- Lesson list with status markers: ✅ done, 🔄 current, ⬜ upcoming
+- Stats: streak, quiz accuracy, lessons completed
+- Weak spots: concepts flagged for revisit with scheduled day
+
+### Visual Progress Card (when platform supports images)
+
+When the platform can send images, generate a visual progress card showing:
+- Progress bar with percentage
+- Dot timeline of lessons (green = done, blue = current, grey = upcoming)
+- Stat boxes: streak, quiz accuracy, lessons done
+- Weak spot callout
+
+Keep it personal and non-competitive — no leaderboards, no comparisons. The only benchmark is the student's own trajectory.
 
 ## Resources & Research
 
