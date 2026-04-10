@@ -1,0 +1,262 @@
+{
+  "topic": "Optimal Transport",
+  "slug": "optimal-transport",
+  "created": "2026-04-10",
+  "student_level": "advanced",
+  "intensity": "deep",
+  "scope": "Full picture — theory, computation, ML applications",
+  "exit_criteria": [
+    "Explain the Monge vs Kantorovich formulation and why the relaxation matters",
+    "Derive and interpret Kantorovich duality for a simple cost",
+    "Implement Sinkhorn algorithm from scratch and explain its convergence",
+    "Explain Brenier's theorem and its geometric meaning",
+    "Describe gradient flows in Wasserstein space and the JKO scheme",
+    "Use POT library to solve OT problems on real data",
+    "Explain how Wasserstein distance is used in GANs and flow matching",
+    "Read a modern OT paper and understand its contribution"
+  ],
+  "prerequisites": ["measure theory basics", "linear algebra", "probability", "convex optimization basics", "Python/numpy"],
+  "primary_textbook": "Peyré & Cuturi — Computational Optimal Transport (free PDF)",
+  "lessons": [
+    {
+      "day": 1,
+      "module": "Foundations",
+      "title": "Why does moving dirt cost money?",
+      "concepts": ["Monge's original problem", "cost function", "transport map", "physical intuition"],
+      "resources": ["Williams blog post", "Peyré & Cuturi Ch 1", "Kantorovich Initiative intro"],
+      "status": "pending"
+    },
+    {
+      "day": 2,
+      "module": "Foundations",
+      "title": "What if you could split the dirt?",
+      "concepts": ["Kantorovich relaxation", "transport plans/couplings", "linear programming", "existence of optimal plans"],
+      "resources": ["Peyré & Cuturi Ch 2", "Figalli & Glaudo Ch 1"],
+      "status": "pending"
+    },
+    {
+      "day": 3,
+      "module": "Foundations",
+      "title": "The dual side — prices instead of plans",
+      "concepts": ["Kantorovich duality", "c-transforms", "strong duality", "dual interpretation"],
+      "resources": ["Villani (2003) Ch 2", "Santambrogio Ch 1"],
+      "status": "pending"
+    },
+    {
+      "day": 4,
+      "module": "Foundations",
+      "title": "When everything lives on a line",
+      "concepts": ["1-D optimal transport", "quantile functions", "monotone rearrangement", "closed-form solution"],
+      "resources": ["Santambrogio Ch 2", "POT 1-D examples"],
+      "status": "pending"
+    },
+    {
+      "day": 5,
+      "module": "Foundations",
+      "title": "How far apart are two distributions, really?",
+      "concepts": ["Wasserstein distances W_p", "metric properties", "comparison with KL/TV/MMD", "topology"],
+      "resources": ["Peyré & Cuturi Ch 5", "Figalli & Glaudo", "Wasserman lecture notes"],
+      "status": "pending"
+    },
+    {
+      "day": 6,
+      "module": "Foundations",
+      "title": "Review: build your OT intuition from scratch",
+      "concepts": ["hands-on exercises", "1-D transport by hand", "POT first steps"],
+      "resources": ["POT quickstart", "Michiel Stock blog"],
+      "status": "pending"
+    },
+    {
+      "day": 7,
+      "module": "Structure",
+      "title": "Optimal maps are secretly convex",
+      "concepts": ["Brenier's theorem", "gradients of convex functions", "cyclical monotonicity", "existence and uniqueness"],
+      "resources": ["Villani (2003) Ch 4", "Brenier 1991 paper"],
+      "status": "pending"
+    },
+    {
+      "day": 8,
+      "module": "Structure",
+      "title": "The PDE hiding inside optimal transport",
+      "concepts": ["Monge-Ampère equation", "regularity", "Caffarelli's regularity theory"],
+      "resources": ["Villani (2003) Ch 5", "Ambrosio et al. Lecture 7"],
+      "status": "pending"
+    },
+    {
+      "day": 9,
+      "module": "Structure",
+      "title": "Walking between distributions",
+      "concepts": ["displacement interpolation", "McCann interpolation", "geodesics in Wasserstein space"],
+      "resources": ["Villani (2003) Ch 6"],
+      "status": "pending"
+    },
+    {
+      "day": 10,
+      "module": "Structure",
+      "title": "When is a functional well-behaved on probability space?",
+      "concepts": ["displacement convexity", "functionals on measures", "Wasserstein space metric structure"],
+      "resources": ["Villani (2009) Ch 16-17", "Ambrosio et al. Lectures 8-10"],
+      "status": "pending"
+    },
+    {
+      "day": 11,
+      "module": "Computation",
+      "title": "Solving OT the hard way",
+      "concepts": ["network simplex", "Hungarian algorithm", "auction algorithm", "complexity bounds"],
+      "resources": ["Peyré & Cuturi numerical methods", "POT exact solvers"],
+      "status": "pending"
+    },
+    {
+      "day": 12,
+      "module": "Computation",
+      "title": "The paper that changed everything — Sinkhorn",
+      "concepts": ["entropic regularization", "Sinkhorn-Knopp algorithm", "convergence", "O(n²/ε²) complexity"],
+      "resources": ["Cuturi NeurIPS 2013", "Peyré & Cuturi Ch 3"],
+      "status": "pending"
+    },
+    {
+      "day": 13,
+      "module": "Computation",
+      "title": "Sinkhorn lies (a little) — debiasing",
+      "concepts": ["bias of entropic OT", "Sinkhorn divergence", "interpolation Wasserstein↔MMD"],
+      "resources": ["Genevay, Peyré & Cuturi 2018"],
+      "status": "pending"
+    },
+    {
+      "day": 14,
+      "module": "Computation",
+      "title": "What if one side is continuous?",
+      "concepts": ["semidiscrete OT", "power diagrams", "Laguerre tessellation"],
+      "resources": ["Peyré & Cuturi Ch 4"],
+      "status": "pending"
+    },
+    {
+      "day": 15,
+      "module": "Computation",
+      "title": "The shortcut — slice and project",
+      "concepts": ["sliced Wasserstein distance", "Radon transform", "generalized slicing", "computational advantages"],
+      "resources": ["Kolouri et al. NeurIPS 2019"],
+      "status": "pending"
+    },
+    {
+      "day": 16,
+      "module": "Computation",
+      "title": "Workshop: OT in code",
+      "concepts": ["POT hands-on", "OTT-JAX", "exact vs Sinkhorn vs sliced", "barycenters"],
+      "resources": ["POT tutorials", "OTT-JAX docs", "Numerical Tours"],
+      "status": "pending"
+    },
+    {
+      "day": 17,
+      "module": "Dynamics",
+      "title": "OT as fluid mechanics",
+      "concepts": ["Benamou-Brenier formula", "continuity equation", "dynamic formulation", "action minimization"],
+      "resources": ["Benamou & Brenier 2000", "Ambrosio et al. Lecture 17"],
+      "status": "pending"
+    },
+    {
+      "day": 18,
+      "module": "Dynamics",
+      "title": "Wasserstein space has a Riemannian structure?!",
+      "concepts": ["Otto calculus", "tangent space", "Riemannian gradient", "formal calculations"],
+      "resources": ["Otto 2001", "Villani (2009) Ch 15", "Ambrosio et al. Lecture 18"],
+      "status": "pending"
+    },
+    {
+      "day": 19,
+      "module": "Dynamics",
+      "title": "PDEs are just rolling downhill",
+      "concepts": ["gradient flows in Wasserstein space", "JKO scheme", "minimizing movements", "heat equation as gradient flow"],
+      "resources": ["Jordan, Kinderlehrer & Otto 1998", "Figalli & Glaudo", "AGS book Part II"],
+      "status": "pending"
+    },
+    {
+      "day": 20,
+      "module": "Dynamics",
+      "title": "Fokker-Planck and friends",
+      "concepts": ["Fokker-Planck as gradient flow", "porous medium equation", "aggregation equations"],
+      "resources": ["Ambrosio et al. Lectures 13-14"],
+      "status": "pending"
+    },
+    {
+      "day": 21,
+      "module": "Extensions",
+      "title": "What if the masses don't match?",
+      "concepts": ["unbalanced OT", "partial OT", "KL penalty", "robust OT", "handling outliers"],
+      "resources": ["Peyré & Cuturi extensions section"],
+      "status": "pending"
+    },
+    {
+      "day": 22,
+      "module": "Extensions",
+      "title": "Comparing spaces that don't share a ground metric",
+      "concepts": ["Gromov-Wasserstein distance", "relational OT", "shape matching", "cross-domain comparison"],
+      "resources": ["Peyré & Cuturi", "OTT-JAX Gromov-Wasserstein"],
+      "status": "pending"
+    },
+    {
+      "day": 23,
+      "module": "Extensions",
+      "title": "OT meets statistics — the curse of dimensionality",
+      "concepts": ["sample complexity", "minimax rates", "curse of dimensionality", "regularization as smoothing"],
+      "resources": ["Peyré & Cuturi Ch 6", "Wasserman lecture notes"],
+      "status": "pending"
+    },
+    {
+      "day": 24,
+      "module": "ML Applications",
+      "title": "Why GANs needed a better distance",
+      "concepts": ["WGAN objective", "weight clipping", "gradient penalty", "training stability", "mode collapse"],
+      "resources": ["Arjovsky et al. 2017", "Gulrajani et al. 2017"],
+      "status": "pending"
+    },
+    {
+      "day": 25,
+      "module": "ML Applications",
+      "title": "Transporting one dataset to look like another",
+      "concepts": ["OT for domain adaptation", "distribution matching", "DeepJDOT", "label-preserving transport"],
+      "resources": ["Courty et al. 2017"],
+      "status": "pending"
+    },
+    {
+      "day": 26,
+      "module": "ML Applications",
+      "title": "Flow matching — OT meets generative models",
+      "concepts": ["OT-CFM", "conditional flow matching", "neural OT maps", "ICNNs", "diffusion model connections"],
+      "resources": ["Tong et al. 2024", "Lipman et al. 2023", "Makkuva et al. 2020", "TorchCFM"],
+      "status": "pending"
+    },
+    {
+      "day": 27,
+      "module": "ML Applications",
+      "title": "OT everywhere — NLP, vision, biology, fairness",
+      "concepts": ["Word Mover's Distance", "color transfer", "Waddington-OT", "Wasserstein barycenters for fairness"],
+      "resources": ["Kusner et al. 2015", "Broad Institute primer", "Survey papers"],
+      "status": "pending"
+    },
+    {
+      "day": 28,
+      "module": "ML Applications",
+      "title": "Workshop: build something with OT",
+      "concepts": ["hands-on project", "pick an application", "implement end-to-end"],
+      "resources": ["POT", "TorchCFM", "Awesome-OT-in-Deep-Learning"],
+      "status": "pending"
+    },
+    {
+      "day": 29,
+      "module": "Frontiers",
+      "title": "OT and the shape of space itself",
+      "concepts": ["Ricci curvature via OT", "Lott-Sturm-Villani theory", "synthetic curvature"],
+      "resources": ["Villani (2009) Part III"],
+      "status": "pending"
+    },
+    {
+      "day": 30,
+      "module": "Frontiers",
+      "title": "Where is OT going?",
+      "concepts": ["scalability challenges", "neural OT benchmarks", "OT in transformers", "inverse OT", "open problems"],
+      "resources": ["Peyré 2025 course notes", "Korotin et al.", "Recent survey papers"],
+      "status": "pending"
+    }
+  ]
+}
