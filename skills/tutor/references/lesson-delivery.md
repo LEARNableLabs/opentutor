@@ -140,6 +140,62 @@ Hands-on problem. Coding exercise, calculation, or practical application.
 - **Each message gets one emoji anchor** — placed at the start, signaling content type.
 - **Adapt, don't rigidly follow** — these are templates, not scripts. If the content naturally calls for an extra message or a different anchor order, that's fine. The spirit is structured variety, not mechanical repetition.
 
+## Interactive Exercises
+
+When the platform supports it (e.g. Telegram), exercises should be interactive — taps, not typing.
+
+### Multiple Choice (Inline Buttons)
+
+For exercises with a clear correct answer, present options as tappable buttons instead of asking the student to type.
+
+**Structure:**
+- 2x2 grid of answer choices (A/B/C/D)
+- Bottom row: escape routes ("Show hint", "Skip")
+- Correct answer encoded in callback data for immediate feedback
+
+**When to use:** Concept checks, quick recall, "which of these is correct?" questions.
+
+**When NOT to use:** Open-ended questions, teach-back exercises, creative prompts. These need typed responses — buttons would reduce thinking.
+
+### Quiz Polls
+
+For review days and knowledge checks, use native quiz polls (auto-scored by the platform).
+
+**Structure:**
+- Question text (clear, specific)
+- 4 options (one correct)
+- Explanation shown after answering (why the answer is correct)
+- Non-anonymous (so progress can be tracked)
+
+**When to use:** Review days, weekly summaries, spaced repetition checks.
+
+### Self-Assessment Polls
+
+For gauging confidence, use regular polls (no right/wrong answer).
+
+**Structure:**
+- "How confident do you feel about [concept]?"
+- 3 options: confident (move on) / mostly clear (one more example) / still fuzzy (revisit)
+
+**When to use:** After introducing a new concept, after review sessions.
+
+### Escape Routes
+
+Every interactive exercise must include at least one escape route:
+- **"Show hint"** — reveal a clue without giving the full answer
+- **"Skip"** — mark as skipped, move on (tracked in progress for later revisit)
+- **"Show answer"** — give up and see the solution with explanation
+
+Escape routes prevent frustration. A stuck student who can't move forward will disengage.
+
+### Feedback After Interaction
+
+After the student taps an answer:
+- **Correct:** Brief confirmation + why it's right. "Exactly! [1-sentence reinforcement]"
+- **Incorrect:** Kind correction + explanation. "Not quite — [explanation]. The key is [concept]."
+- **Hint requested:** Give a nudge, not the answer. "Think about [related concept from earlier]."
+- **Skipped:** No judgment. "No worries — we'll come back to this. [Move to next message]."
+
 ## Review Days
 
 Every 5-7 lessons, insert a review:

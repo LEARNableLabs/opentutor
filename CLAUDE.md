@@ -252,6 +252,8 @@ Use these entry points:
 - `/gsd-execute-phase` for planned phase work
 
 Do not make direct repo edits outside a GSD workflow unless the user explicitly asks to bypass it.
+
+**Fast-track rule:** For simple, obvious tasks (quick edits, config changes, small fixes), just do them directly — skip planning, discussion, and subagent overhead. Use `/gsd-quick` or just edit. Reserve the full GSD ceremony for multi-step work that actually needs coordination.
 <!-- GSD:workflow-end -->
 
 <!-- GSD:profile-start -->

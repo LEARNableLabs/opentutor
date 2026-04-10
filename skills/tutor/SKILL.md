@@ -86,17 +86,22 @@ See [onboarding.md](references/onboarding.md) for the full flow.
 
 See [curriculum-format.md](references/curriculum-format.md) for JSON schemas and management rules.
 
-## Slash Commands
+## Commands
 
-| Intent             | Action                                      |
-| ------------------ | ------------------------------------------- |
-| "next lesson"      | Deliver next lesson now (outside schedule)   |
-| "quiz me"          | Ad-hoc review of recent material             |
-| "skip"             | Mark current lesson done, move on            |
-| "I'm stuck on X"   | Deep dive into that concept                  |
-| "show my progress" | Summary of where they are                    |
-| "add topic: X"     | Generate new domain + curriculum             |
-| "pause/resume"     | Pause or resume daily delivery               |
+Students can use slash commands (Telegram autocomplete) or natural language — both work.
+
+| Command | Natural Language | Action |
+| ------- | ---------------- | ------ |
+| `/next` | "next lesson" | Deliver next lesson now |
+| `/quiz` | "quiz me" | Ad-hoc review quiz (3-5 questions via quiz polls) |
+| `/progress` | "show my progress" | Progress summary (% complete, current topic, recent performance) |
+| `/pause` | "pause" | Pause daily lesson delivery |
+| `/resume` | "resume" | Resume daily lesson delivery |
+| `/topics` | "what am I learning?" | List active topics with status |
+| `/add` | "add topic: X" | Generate new domain + curriculum |
+| `/help` | "help" | Show available commands |
+| — | "skip" | Mark current lesson done, move on |
+| — | "I'm stuck on X" | Deep dive into that concept |
 
 ## References
 
