@@ -70,8 +70,8 @@ Never narrate your boot-up. Use these files silently and jump straight into the 
 
 // ─── workspace installer ─────────────────────────────────────────────────────
 
-function installWorkspace(dir, { includeAgentsMd = false, overrides = {} } = {}) {
-  const files = ['IDENTITY.md', 'SOUL.md', 'USER.md'];
+function installWorkspace(dir, { includeAgentsMd = false, overrides = {}, student = {} } = {}) {
+  const files = ['IDENTITY.md', 'SOUL.md'];
   if (includeAgentsMd) files.push('AGENTS.md');
 
   for (const file of files) {
@@ -82,6 +82,29 @@ function installWorkspace(dir, { includeAgentsMd = false, overrides = {} } = {})
     );
     if (copied) tick(`${file} → ${path.join(dir, file)}`);
     else warn(`${file} already exists, skipped`);
+  }
+
+  // USER.md — pre-fill with student info if provided
+  const userDst = path.join(dir, 'USER.md');
+  if (!fs.existsSync(userDst)) {
+    const name = student.name || '';
+    const timezone = student.timezone || '';
+    const content = `# USER.md - About Your Student
+
+- **Name:** ${name}
+- **What to call them:** ${name}
+- **Timezone:** ${timezone}
+- **Educational level:** _(middle school / high school / undergrad / grad / PhD / professional / self-taught)_
+- **Notes:**
+
+## Context
+
+_(Fill this in as you learn about the student — interests, background, learning style, what motivates them.)_
+`;
+    fs.writeFileSync(userDst, content);
+    tick(`USER.md → ${userDst}${name ? ` (${name}, ${timezone})` : ''}`);
+  } else {
+    warn('USER.md already exists, skipped');
   }
 
   fs.mkdirSync(path.join(dir, 'tutor', 'curricula'), { recursive: true });
@@ -96,7 +119,7 @@ function installWorkspace(dir, { includeAgentsMd = false, overrides = {} } = {})
 
 // ─── platform setups ─────────────────────────────────────────────────────────
 
-function setupAgentSkills(platformId, isGlobal) {
+async function setupAgentSkills(platformId, isGlobal, student) {
   const dirs = {
     'claude-code': ['.claude',  path.join(os.homedir(), '.claude')],
     'codex':       ['.codex',   path.join(os.homedir(), '.codex')],
@@ -111,7 +134,7 @@ function setupAgentSkills(platformId, isGlobal) {
   const wsDir = isGlobal
     ? path.join(baseDir, 'tutor')
     : path.join(process.cwd(), '.tutor');
-  installWorkspace(wsDir);
+  installWorkspace(wsDir, { student });
 
   const claudeMd = isGlobal
     ? path.join(baseDir, 'CLAUDE.md')
@@ -119,11 +142,9 @@ function setupAgentSkills(platformId, isGlobal) {
   const added = appendIfMissing(claudeMd, '## Tutor', TUTOR_BOOT_MD);
   if (added) tick(`boot instructions → ${claudeMd}`);
   else warn(`tutor section already in ${claudeMd}, skipped`);
-
-  console.log(`\n  Next: edit ${path.join(wsDir, 'USER.md')} with your name and timezone.`);
 }
 
-function setupOpenClawLike(platformId) {
+function setupOpenClawLike(platformId, student) {
   const root = path.join(os.homedir(), `.${platformId}`);
 
   const skillDst = path.join(root, 'skills', 'tutor');
@@ -135,6 +156,7 @@ function setupOpenClawLike(platformId) {
   installWorkspace(wsDst, {
     includeAgentsMd: true,
     overrides: fs.existsSync(ocSoul) ? { 'SOUL.md': ocSoul } : {},
+    student,
   });
 
   const configFile = path.join(root, `${platformId}.json`);
@@ -167,10 +189,9 @@ function setupOpenClawLike(platformId) {
     warn(`tutor agent already in ${configFile}, skipped`);
   }
 
-  console.log(`\n  Next: edit ${path.join(wsDst, 'USER.md')} with your name and timezone.`);
 }
 
-async function setupNanoClaw() {
+async function setupNanoClaw(student) {
   let ncRoot = process.cwd();
   if (!fs.existsSync(path.join(ncRoot, 'container', 'skills'))) {
     const raw = await ask('  Path to your NanoClaw project root: ');
@@ -195,20 +216,19 @@ async function setupNanoClaw() {
     return;
   }
 
-  installWorkspace(groupDir);
+  installWorkspace(groupDir, { student });
 
-  console.log(`\n  Next: edit ${path.join(groupDir, 'USER.md')} with the student's name and timezone.`);
-  console.log('  The skill will be synced into the container on next spawn — no restart needed.');
+  console.log('\n  The skill will be synced into the container on next spawn — no restart needed.');
 }
 
 // ─── main ─────────────────────────────────────────────────────────────────────
 
 const PLATFORMS = [
-  { id: 'claude-code', name: 'Claude Code', hasScope: true,  run: (isGlobal) => setupAgentSkills('claude-code', isGlobal) },
-  { id: 'codex',       name: 'Codex',       hasScope: true,  run: (isGlobal) => setupAgentSkills('codex', isGlobal) },
-  { id: 'openclaw',   name: 'OpenClaw',    hasScope: false, run: () => setupOpenClawLike('openclaw') },
-  { id: 'nemoclaw',   name: 'NemoClaw',    hasScope: false, run: () => setupOpenClawLike('nemoclaw') },
-  { id: 'nanoclaw',   name: 'NanoClaw',    hasScope: false, run: () => setupNanoClaw() },
+  { id: 'claude-code', name: 'Claude Code', hasScope: true,  run: (isGlobal, student) => setupAgentSkills('claude-code', isGlobal, student) },
+  { id: 'codex',       name: 'Codex',       hasScope: true,  run: (isGlobal, student) => setupAgentSkills('codex', isGlobal, student) },
+  { id: 'openclaw',   name: 'OpenClaw',    hasScope: false, run: (_ig, student) => setupOpenClawLike('openclaw', student) },
+  { id: 'nemoclaw',   name: 'NemoClaw',    hasScope: false, run: (_ig, student) => setupOpenClawLike('nemoclaw', student) },
+  { id: 'nanoclaw',   name: 'NanoClaw',    hasScope: false, run: (_ig, student) => setupNanoClaw(student) },
 ];
 
 async function main() {
@@ -243,9 +263,18 @@ async function main() {
     isGlobal = !scopeRaw.trim().toLowerCase().startsWith('p');
   }
 
+  // Ask for student info upfront
+  console.log('\n── Student Info ─────────────────────────');
+  const nameRaw = await ask('  Your name: ');
+  const tzRaw = await ask('  Your timezone (e.g. America/New_York): ');
+  const student = {
+    name: nameRaw.trim(),
+    timezone: tzRaw.trim(),
+  };
+
   for (const platform of selected) {
     console.log(`\n── ${platform.name} ${'─'.repeat(40 - platform.name.length)}`);
-    await platform.run(isGlobal);
+    await platform.run(isGlobal, student);
   }
 
   console.log('\n══════════════════════════════');
