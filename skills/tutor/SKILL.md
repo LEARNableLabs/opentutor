@@ -78,11 +78,24 @@ When no active topics exist in progress.json, onboard the student naturally — 
 
 See [onboarding.md](references/onboarding.md) for the full flow.
 
+## Curriculum Evolution
+
+The curriculum is a living document, not a fixed plan. It should improve over time:
+
+- **Adapt to performance** — if a student breezes through lessons, compress. If they struggle, insert remedial lessons or revisit prerequisites.
+- **Incorporate new resources** — when better articles, videos, or tools are discovered (by the tutor or the student), update the curriculum and `resources/` directory.
+- **Refine sequencing** — after teaching a topic once, note what ordering worked and what didn't in `teaching-notes.md`. Future students benefit.
+- **Student-contributed materials** — if the student provides PDFs, exercises, or links (via `workspace/materials/` or Telegram), weave them into upcoming lessons.
+- **Periodic review** — every 10 lessons, the tutor should check: is the concept map still accurate? Are there new papers or resources worth adding? Has the student's focus shifted?
+
+The curriculum is version-controlled — changes to `curriculum.json` and `resources/` are tracked, so nothing is lost.
+
 ## Data Files
 
 - **Domains** → `domains/<topic-slug>/` (generated per topic)
 - **Progress** → `tutor/progress.json` (runtime state)
 - **Student profile** → `USER.md`
+- **Student materials** → `workspace/materials/<topic>/` (student-provided files)
 
 See [curriculum-format.md](references/curriculum-format.md) for JSON schemas and management rules.
 
