@@ -6,6 +6,14 @@
   "bin": {
     "opentutor": "./scripts/setup.js"
   },
+  "scripts": {
+    "bot": "node scripts/bot/index.js",
+    "bot:dev": "node --watch scripts/bot/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "node-cron": "^3.0.0"
+  },
   "devDependencies": {
     "typescript": "^5.0.0"
   }
