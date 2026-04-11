@@ -11,10 +11,10 @@ The student should feel like they're using a polished learning app, not reading 
 
 ## Phases
 
-- [ ] **Phase 1: Message Formatting & Chunking** - Readable messages optimized for mobile Telegram
-- [ ] **Phase 2: Interactive Exercises** - Buttons and polls replace typing for exercises
-- [ ] **Phase 3: Navigation & Commands** - Slash commands for discovery and control
-- [ ] **Phase 4: Progress & Feedback** - Personal progress visualization and summaries
+- [x] **Phase 1: Message Formatting & Chunking** - Readable messages optimized for mobile Telegram
+- [x] **Phase 2: Interactive Exercises** - Buttons and polls replace typing for exercises
+- [x] **Phase 3: Navigation & Commands** - Slash commands for discovery and control
+- [x] **Phase 4: Progress & Feedback** - Personal progress visualization and summaries
 
 ## Phase Details
 
@@ -73,10 +73,10 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Message Formatting & Chunking | 0/2 | Planning complete | - |
-| 2. Interactive Exercises | 0/TBD | Not started | - |
-| 3. Navigation & Commands | 0/TBD | Not started | - |
-| 4. Progress & Feedback | 0/TBD | Not started | - |
+| 1. Message Formatting & Chunking | 2/2 | Complete | 2026-04-10 |
+| 2. Interactive Exercises | 1/1 | Complete | 2026-04-10 |
+| 3. Navigation & Commands | 1/1 | Complete | 2026-04-10 |
+| 4. Progress & Feedback | 1/1 | Complete | 2026-04-10 |
 
 ## Dependency Graph
 
@@ -132,4 +132,4 @@ Phase 4 (Progress & Feedback) — aggregates data from all prior phases
 - Validate button interactions and poll result delivery
 
 ---
-*Last updated: 2026-04-09 after Phase 1 planning*
+*Last updated: 2026-04-10 — all phases complete*
