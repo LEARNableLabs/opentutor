@@ -89,12 +89,14 @@ function installWorkspace(dir, { includeAgentsMd = false, overrides = {}, studen
   if (!fs.existsSync(userDst)) {
     const name = student.name || '';
     const timezone = student.timezone || '';
+    const level = student.level || '';
+    const levelDisplay = level || '_(middle school / high school / undergrad / grad / PhD / professional / self-taught)_';
     const content = `# USER.md - About Your Student
 
 - **Name:** ${name}
 - **What to call them:** ${name}
 - **Timezone:** ${timezone}
-- **Educational level:** _(middle school / high school / undergrad / grad / PhD / professional / self-taught)_
+- **Educational level:** ${levelDisplay}
 - **Notes:**
 
 ## Context
@@ -267,9 +269,11 @@ async function main() {
   console.log('\n── Student Info ─────────────────────────');
   const nameRaw = await ask('  Your name: ');
   const tzRaw = await ask('  Your timezone (e.g. America/New_York): ');
+  const levelRaw = await ask('  Educational level (e.g. undergrad, PhD, self-taught) [optional]: ');
   const student = {
     name: nameRaw.trim(),
     timezone: tzRaw.trim(),
+    level: levelRaw.trim() || '',
   };
 
   for (const platform of selected) {
