@@ -65,7 +65,7 @@ export function buildLessonPrompt(skills, lesson, topicSlug) {
     teachingNotes ? `## Teaching Notes for ${topicSlug}\n\n${teachingNotes}` : '',
     conceptMap ? `## Concept Map\n\n${conceptMap}` : '',
     buildUserContext(),
-    `## Current Lesson\n\nDeliver lesson Day ${lesson.day}: "${lesson.title}"\nModule: ${lesson.module}\nConcepts: ${lesson.concepts.join(', ')}\nResources to reference: ${lesson.resources.join(', ')}\n\nFollow the message chunking rules: split by emoji anchors (📖🧠💡✏️), one anchor per message, ~150 words per message. The LAST message must be an exercise with inline button options (provide 4 choices labeled A-D). End with engagement, never "that's it for today."`,
+    `## Current Lesson\n\nDeliver lesson Day ${lesson.day}: "${lesson.title}"\nModule: ${lesson.module}\nConcepts: ${lesson.concepts.join(', ')}\nResources to reference: ${lesson.resources.join(', ')}\n\nFollow the message chunking rules: split by emoji anchors (📖🧠💡✏️), one anchor per message, ~150 words per message. The LAST message must be an exercise with inline button options (provide 4 choices labeled A-D). After the options, add a line: "correct: X" where X is the correct letter (A, B, C, or D). End with engagement, never "that's it for today."`,
   ].filter(Boolean).join('\n\n---\n\n');
 
   return { system, model: 'strong' };

@@ -6,6 +6,7 @@ import { readProgress, updateProgress, getTopicProgress, listTopics } from './st
 import { deliverNextLesson } from './lesson.js';
 import { generateQuiz } from './quiz.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
+import { generateAndRegisterTopic } from './curriculum.js';
 
 export function isCommand(text) {
   return text.startsWith('/');
@@ -106,11 +107,26 @@ async function cmdTopics(chatId, channel) {
 }
 
 async function cmdAdd(chatId, channel, skills, topic) {
-  if (topic) {
-    await channel.sendMessage(chatId, `Let me build a curriculum for <b>${topic}</b>. Give me a minute...`);
-    // TODO: trigger curriculum generation flow
-  } else {
+  if (!topic) {
     await channel.sendMessage(chatId, 'What do you want to learn? Tell me a topic or say "not sure" and I\'ll suggest some ideas.');
+    return;
+  }
+
+  await channel.sendMessage(chatId, `Let me build a curriculum for <b>${topic}</b>. Give me a minute...`);
+  await channel.sendTyping(chatId);
+
+  try {
+    const slug = await generateAndRegisterTopic(topic, skills);
+    const p = getTopicProgress(slug);
+    await channel.sendMessage(chatId, [
+      `📚 <b>${topic}</b> — curriculum ready!`,
+      `${p.total} lessons across multiple modules.`,
+      '',
+      `Type /next to start your first lesson.`,
+    ].join('\n'));
+  } catch (err) {
+    console.error('  curriculum generation error:', err.message);
+    await channel.sendMessage(chatId, "Something went wrong building your curriculum. Try again or pick a different topic.");
   }
 }
 

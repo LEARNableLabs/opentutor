@@ -18,7 +18,10 @@ export async function route(update, channel, skills) {
 
   // Poll answer
   if (update.poll_answer) {
-    // TODO: record quiz result in progress
+    const { appendMemory } = await import('./state.js');
+    const answer = update.poll_answer;
+    const optionIds = answer.option_ids || [];
+    appendMemory(`Quiz poll answered: options [${optionIds.join(', ')}] by user ${answer.user?.id || 'unknown'}`);
     return;
   }
 

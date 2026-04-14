@@ -35,7 +35,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
     // Add exercise buttons to the last message (or any ✏️ message)
     if (chunk.anchor === '✏️' || (isLast && !chunks.some((c) => c.anchor === '✏️'))) {
-      options.buttons = buildExerciseButtons(lesson.day);
+      options.buttons = buildExerciseButtons(lesson.day, chunk.text);
     }
 
     await channel.sendMessage(chatId, chunk.text, options);
@@ -82,14 +82,17 @@ function parseLessonChunks(text) {
 
 // ── Build exercise buttons ──────────────────────────────────
 
-function buildExerciseButtons(day) {
+function buildExerciseButtons(day, exerciseText) {
+  // Try to detect correct answer from Claude's response (e.g., "correct: B" or "(answer: C)")
+  const correctMatch = exerciseText?.match(/(?:correct|answer)[:\s]*([A-D])/i);
+  const correctLetter = correctMatch ? correctMatch[1].toUpperCase() : null;
+
+  const options = ['A', 'B', 'C', 'D'];
   return [
-    [
-      { text: 'A', callback_data: `L${day}_A` },
-      { text: 'B', callback_data: `L${day}_B` },
-      { text: 'C', callback_data: `L${day}_C` },
-      { text: 'D', callback_data: `L${day}_D_correct` },
-    ],
+    options.map((letter) => ({
+      text: letter,
+      callback_data: `L${day}_${letter}${letter === correctLetter ? '_correct' : ''}`,
+    })),
     [
       { text: '💡 Hint', callback_data: `L${day}_hint` },
       { text: '⏭ Skip', callback_data: `L${day}_skip` },

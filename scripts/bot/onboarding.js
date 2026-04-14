@@ -7,6 +7,7 @@ import { generate } from './claude.js';
 import { buildOnboardingPrompt } from './context.js';
 import { readProgress, updateProgress } from './state.js';
 import { appendMessage, getRecentHistory } from './session.js';
+import { generateAndRegisterTopic } from './curriculum.js';
 
 export function isOnboarding() {
   const progress = readProgress();
@@ -40,12 +41,32 @@ export async function handleOnboarding(text, chatId, channel, skills) {
   // Log assistant response
   appendMessage(chatId, 'assistant', response.text);
 
-  // Check if onboarding is complete (Claude mentions curriculum is ready or active_topics set)
-  const text_lower = response.text.toLowerCase();
-  if (text_lower.includes('curriculum is ready') || text_lower.includes('lesson 1') || text_lower.includes('first lesson')) {
-    updateProgress((p) => {
-      p.onboarding = { active: false, completedAt: Date.now() };
-    });
+  // Check if Claude's response indicates a topic was chosen
+  const topicMatch = response.text.match(/(?:building|generating|creating|preparing).*?curriculum.*?(?:for|on|about)\s+["""]?([^""".\n]+)/i)
+    || response.text.match(/(?:let'?s?\s+(?:start|learn|dive|explore))\s+([^.!\n]+)/i);
+
+  // Also detect if Claude explicitly names the topic in a structured way
+  const explicitTopic = response.text.match(/\*\*Topic:\*\*\s*(.+)/i)
+    || response.text.match(/📚\s*(.+?)(?:\s*—|\n)/);
+
+  const detectedTopic = explicitTopic?.[1]?.trim() || topicMatch?.[1]?.trim();
+
+  if (detectedTopic && detectedTopic.length > 2 && detectedTopic.length < 100) {
+    await channel.sendMessage(chatId, response.text);
+    await channel.sendMessage(chatId, `Building your curriculum for <b>${detectedTopic}</b>...`);
+    await channel.sendTyping(chatId);
+
+    try {
+      const slug = await generateAndRegisterTopic(detectedTopic, skills);
+      updateProgress((p) => {
+        p.onboarding = { active: false, completedAt: Date.now() };
+      });
+      await channel.sendMessage(chatId, `📚 Curriculum ready! Type /next for your first lesson.`);
+    } catch (err) {
+      console.error('  onboarding curriculum error:', err.message);
+      await channel.sendMessage(chatId, "Had trouble building the curriculum. Tell me the topic again and I'll retry.");
+    }
+    return;
   }
 
   await channel.sendMessage(chatId, response.text);
