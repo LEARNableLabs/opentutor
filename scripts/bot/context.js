@@ -106,15 +106,69 @@ export function buildChatPrompt(skills) {
   return { system, model: 'cheap' };
 }
 
-export function buildCurriculumPrompt(skills, topic, studentLevel) {
+export function buildScaffoldPrompt(skills, topic, studentLevel) {
+  const system = [
+    skills.get('skill'),
+    skills.get('curriculum-format'),
+    skills.get('teaching-method'),
+    buildUserContext(),
+    `## Curriculum Scaffold (Phase A — Instant Draft)
+
+Generate a lightweight starter curriculum for: "${topic}"
+Student level: ${studentLevel}
+
+This is a quick draft so the student can start immediately. A deep research phase will enrich it later.
+
+Output a JSON object with these keys:
+- curriculum: { topic, slug, created (today's date), student_level, lessons (array of 3-5 starter lessons) }
+- teachingNotes: a short markdown string with initial teaching approach (2-3 sentences)
+- conceptMap: a short markdown string listing 5-8 core concepts in learning order
+
+Each lesson needs: day, module, title (as a question/provocation), concepts (array), resources (empty array for now — will be filled by research), status: "pending".
+
+Keep it focused — just enough to deliver lesson 1 well. Do NOT hallucinate resource URLs.`,
+  ].filter(Boolean).join('\n\n---\n\n');
+
+  return { system, model: 'strong' };
+}
+
+export function buildResearchSynthesisPrompt(skills, topic, studentLevel, researchContext) {
   const system = [
     skills.get('skill'),
     skills.get('domain-template'),
     skills.get('curriculum-format'),
     skills.get('teaching-method'),
     buildUserContext(),
-    `## Curriculum Generation\n\nGenerate a complete curriculum for: "${topic}"\nStudent level: ${studentLevel}\n\nFollow the domain template. Output a complete curriculum.json with 20-30 lessons.\n\nEach lesson needs: day, module, title (as a question/provocation), concepts, resources (specific URLs), status: "pending".\n\nAlso output a teaching-notes.md and concept-map.md.\n\nOutput as JSON with keys: curriculum, teachingNotes, conceptMap`,
+    `## Research Results
+
+The following was gathered from academic APIs (arxiv, Semantic Scholar, OpenAlex, Wikipedia):
+
+${researchContext}`,
+    `## Curriculum Generation (Phase B — Research-Driven)
+
+Using the research above, generate a complete curriculum for: "${topic}"
+Student level: ${studentLevel}
+
+Requirements:
+- 20-30 lessons organized into modules
+- Each lesson: day, module, title (as a question/provocation), concepts (array), resources (array of REAL URLs from the research above or well-known sources you can verify), status: "pending"
+- Include review days every 5-7 lessons
+- Lesson titles should be questions or provocations, not topic labels
+- Map prerequisites and flag if student might be missing background
+- Sequence based on real pedagogical ordering from the syllabi and textbooks found in research
+
+Also generate:
+- teachingNotes: detailed markdown with approach, common misconceptions, level adjustments, rabbit holes
+- conceptMap: full dependency graph of concepts in learning order with prerequisite links
+
+Output as JSON with keys: curriculum, teachingNotes, conceptMap
+Only include resource URLs that appear in the research results above or that you are confident are real (e.g., Wikipedia pages, MIT OCW courses, 3Blue1Brown videos).`,
   ].filter(Boolean).join('\n\n---\n\n');
 
   return { system, model: 'strong' };
+}
+
+// Keep backward compat alias
+export function buildCurriculumPrompt(skills, topic, studentLevel) {
+  return buildScaffoldPrompt(skills, topic, studentLevel);
 }

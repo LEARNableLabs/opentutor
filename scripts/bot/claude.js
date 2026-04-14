@@ -78,12 +78,19 @@ async function generateSDK(system, messages, options = {}) {
   const model = tier === 'strong' ? CLAUDE.strongModel : CLAUDE.cheapModel;
   const maxTokens = options.maxTokens || (tier === 'strong' ? 4096 : 1024);
 
-  const response = await client.messages.create({
+  const params = {
     model,
     max_tokens: maxTokens,
     system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
     messages,
-  });
+  };
+
+  // Enable web search for research-heavy tasks
+  if (options.webSearch) {
+    params.tools = [{ type: 'web_search_20250305', name: 'web_search', max_uses: options.webSearchMaxUses || 5 }];
+  }
+
+  const response = await client.messages.create(params);
 
   const text = response.content
     .filter((b) => b.type === 'text')
