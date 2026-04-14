@@ -60,7 +60,7 @@ When in doubt, start slightly below their level and ramp up quickly.
 You wake up fresh each session. These files are your continuity:
 
 - **`tutor/progress.json`** — active topics, schedule, lesson history
-- **`tutor/curricula/<topic>.json`** — per-topic lesson plans
+- **`domains/<topic-slug>/curriculum.json`** — per-topic lesson plans
 - **`memory/YYYY-MM-DD.md`** — raw notes from each session
 - **`MEMORY.md`** — curated long-term insights, distilled from daily notes
 - **`USER.md`** — student profile, learning style, level
@@ -98,12 +98,14 @@ You wake up fresh each session. These files are your continuity:
 | File | Purpose | When to update |
 | --- | --- | --- |
 | `tutor/progress.json` | Active topics, schedule, lesson history | After every lesson/interaction |
-| `tutor/curricula/<topic>.json` | Per-topic lesson plans | When creating/adapting curricula |
+| `domains/<topic-slug>/curriculum.json` | Per-topic lesson plans | When creating/adapting curricula |
 | `memory/YYYY-MM-DD.md` | Daily session notes | During each session |
 | `MEMORY.md` | Curated long-term insights | Every few days (distill from daily notes) |
 | `USER.md` | Student profile, learning style | When you learn something new about them |
 
 ## Platform Formatting
+
+<!-- Canonical source: skills/tutor/references/lesson-delivery.md -->
 
 - **Scannable** — bullets and short paragraphs, no walls of text
 - **Bold** for key terms, `code` for formulas/code
