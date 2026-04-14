@@ -6,7 +6,7 @@ import { generate } from './claude.js';
 import { buildQuizPrompt } from './context.js';
 import { readCurriculum } from './state.js';
 
-export async function generateQuiz(topicSlug, chatId, channel, skills) {
+export async function generateQuiz(topicSlug, chatId, channel, skills, specificConcepts) {
   const curriculum = readCurriculum(topicSlug);
   if (!curriculum) {
     await channel.sendMessage(chatId, "Can't find that curriculum. Try /topics to see what's available.");
@@ -15,19 +15,22 @@ export async function generateQuiz(topicSlug, chatId, channel, skills) {
 
   // Get recently completed lessons for quiz material
   const completed = curriculum.lessons.filter((l) => l.status === 'completed');
-  if (completed.length < 2) {
+  if (completed.length < 2 && !specificConcepts) {
     await channel.sendMessage(chatId, "You need at least a couple lessons under your belt before a quiz. Keep going!");
     return;
   }
 
   const recent = completed.slice(-5); // last 5 completed lessons
+  const quizTarget = specificConcepts || recent.map((l) => l.title).join(', ');
 
   await channel.sendTyping(chatId);
-  await channel.sendMessage(chatId, "🧠 <b>Pop quiz!</b> Don't panic — let's see what stuck.\n");
+  if (!specificConcepts) {
+    await channel.sendMessage(chatId, "🧠 <b>Pop quiz!</b> Don't panic — let's see what stuck.\n");
+  }
 
   const { system } = buildQuizPrompt(skills, topicSlug, recent);
   const response = await generate(system, [
-    { role: 'user', content: `Generate a review quiz for: ${recent.map((l) => l.title).join(', ')}` },
+    { role: 'user', content: `Generate a review quiz for: ${quizTarget}` },
   ], { model: 'strong' });
 
   // Parse JSON from response

@@ -6,6 +6,7 @@ import { generateStream } from './claude.js';
 import { buildLessonPrompt } from './context.js';
 import { getNextLesson, markLessonComplete, readCurriculum, appendMemory } from './state.js';
 import { appendMessage } from './session.js';
+import { registerLessonConcepts } from './spaced-repetition.js';
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const lesson = getNextLesson(topicSlug);
@@ -49,6 +50,11 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   appendMessage(chatId, 'assistant', response.text);
   appendMemory(`Lesson delivered: Day ${lesson.day} — ${lesson.title} (${topicSlug})`);
   markLessonComplete(topicSlug, lesson.day, { delivered: true });
+
+  // Register concepts for spaced repetition
+  if (lesson.concepts?.length) {
+    registerLessonConcepts(topicSlug, lesson.concepts);
+  }
 }
 
 // ── Parse lesson text into chunks by emoji anchors ──────────

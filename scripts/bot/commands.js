@@ -7,6 +7,7 @@ import { deliverNextLesson } from './lesson.js';
 import { generateQuiz } from './quiz.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
 import { generateAndRegisterTopic } from './curriculum.js';
+import { getDueReviews, getRepetitionSummary } from './spaced-repetition.js';
 
 export function isCommand(text) {
   return text.startsWith('/');
@@ -15,6 +16,7 @@ export function isCommand(text) {
 const handlers = {
   '/next': cmdNext,
   '/quiz': cmdQuiz,
+  '/review': cmdReview,
   '/progress': cmdProgress,
   '/pause': cmdPause,
   '/resume': cmdResume,
@@ -53,6 +55,21 @@ async function cmdQuiz(chatId, channel, skills) {
   await generateQuiz(progress.active_topics[0], chatId, channel, skills);
 }
 
+async function cmdReview(chatId, channel, skills) {
+  const due = getDueReviews(null, 3);
+  if (!due.length) {
+    await channel.sendMessage(chatId, "Nothing due for review right now. Keep learning!");
+    return;
+  }
+
+  await channel.sendTyping(chatId);
+  await channel.sendMessage(chatId, `🔄 <b>Spaced review</b> — ${due.length} concept${due.length > 1 ? 's' : ''} due\n`);
+
+  // Generate a quick quiz on the due concepts
+  const concepts = due.map((r) => r.concept).join(', ');
+  await generateQuiz(due[0].topic, chatId, channel, skills, concepts);
+}
+
 async function cmdProgress(chatId, channel) {
   const topics = listTopics();
   if (!topics.length) {
@@ -67,6 +84,12 @@ async function cmdProgress(chatId, channel) {
     const bar = progressBar(p.percent);
     text += `\n<b>${p.topic}</b> — Day ${p.completed + 1}/${p.total}\n${bar} ${p.percent}%\n`;
     if (p.current) text += `Next: <i>${p.current.title}</i>\n`;
+
+    // Spaced repetition stats
+    const sr = getRepetitionSummary(slug);
+    if (sr.total > 0) {
+      text += `🔄 ${sr.due} due · ${sr.mastered} mastered · ${sr.struggling} need work\n`;
+    }
   }
 
   await channel.sendMessage(chatId, text);
@@ -133,6 +156,7 @@ async function cmdHelp(chatId, channel) {
     '📖 <b>Commands</b>\n',
     '/next — Get the next lesson now',
     '/quiz — Quick review quiz',
+    '/review — Spaced repetition review',
     '/progress — See your progress',
     '/topics — List your active topics',
     '/add — Start a new topic',

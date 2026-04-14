@@ -31,6 +31,7 @@ const telegram = new TelegramChannel({
 await telegram.registerCommands([
   { command: 'next', description: 'Get the next lesson now' },
   { command: 'quiz', description: 'Quick review quiz on recent material' },
+  { command: 'review', description: 'Spaced repetition review of past concepts' },
   { command: 'progress', description: 'See your learning progress' },
   { command: 'pause', description: 'Pause daily lessons' },
   { command: 'resume', description: 'Resume daily lessons' },
