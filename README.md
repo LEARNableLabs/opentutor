@@ -58,13 +58,47 @@ OpenTutor follows the [Agent Skills](https://agentskills.io) open standard and w
 OpenTutor activates when you want to learn something. It:
 
 - **Onboards you** — asks what you want to learn, your background, and your level
-- **Builds a curriculum** — 20–40 bite-sized daily lessons, tailored to your level
-- **Delivers daily lessons** — short, focused, one concept at a time (~3–5 min read)
+- **Researches the topic** — searches arxiv, Semantic Scholar, OpenAlex, and Wikipedia for real papers, syllabi, and textbooks
+- **Builds a curriculum** — 20–30 lessons grounded in actual academic sources, not generic outlines
+- **Delivers daily lessons** — short, focused, one concept at a time (~3–5 min read) via Telegram
+- **Interactive exercises** — inline buttons (A/B/C/D), quiz polls, hints, and skip options
 - **Adapts** — harder if you're breezing through, slower if you're stuck
 - **Tracks progress** — remembers where you left off across sessions
 - **Uses deliberate practice** — targets your weak spots, not what you already know
 
 The teaching philosophy is the "1% rule": slow, steady growth compounds fast. A student who learns 1% per day for 100 days owns the topic.
+
+## Telegram Bot
+
+OpenTutor includes a self-contained Telegram bot. No external gateway needed — just a bot token and an API key.
+
+```bash
+# Set up .env
+TELEGRAM_BOT_TOKEN=your_token_from_botfather
+TELEGRAM_CHAT_ID=your_chat_id          # optional, restricts to one chat
+ANTHROPIC_API_KEY=your_key             # for SDK backend
+CLAUDE_BACKEND=sdk                      # or 'cli' for Claude Code CLI
+
+# Run
+npm run bot
+```
+
+The bot supports two backends:
+- **CLI** (default): uses `claude -p` — no API key needed, requires Claude Code installed
+- **SDK**: uses the Anthropic API directly — faster, supports web search during curriculum generation
+
+### Slash commands
+
+| Command | What it does |
+|---|---|
+| `/start` | Begin onboarding |
+| `/next` | Get the next lesson |
+| `/quiz` | Quick review quiz (native Telegram polls) |
+| `/progress` | See your learning progress |
+| `/topics` | List active topics |
+| `/add <topic>` | Start learning a new topic |
+| `/pause` / `/resume` | Pause or resume daily lessons |
+| `/help` | Show available commands |
 
 ### Natural language commands
 
@@ -97,35 +131,50 @@ workspace/
 ├── MEMORY.md                 # Curated long-term memories
 ├── memory/
 │   └── YYYY-MM-DD.md         # Daily session logs
+├── sessions/
+│   └── <chatId>.jsonl        # Conversation history per chat
 └── tutor/
-    ├── progress.json         # Active topics, schedule, history
-    └── curricula/
-        └── <topic>.json      # Per-topic lesson plans
+    └── progress.json         # Active topics, schedule, history
 ```
 
-Seed the workspace files from `skills/tutor/workspace/` on first run, or let the agent create them automatically.
+Seed the workspace files from `workspace/` on first run, or let the agent create them automatically.
+
+### Curriculum generation
+
+When you pick a topic, the tutor uses a **two-phase** approach:
+
+1. **Phase A (instant)** — sends a mini-wiki intro grounded in Wikipedia + a suggested video/article to engage with immediately
+2. **Phase B (background, 30-90s)** — researches the topic across arxiv, Semantic Scholar, OpenAlex, and Wikipedia in parallel, then synthesizes a full 20-30 lesson curriculum with verified resources
+
+See [docs/curriculum-generation.md](docs/curriculum-generation.md) for the full workflow.
+
+Each topic is stored in `skills/tutor/domains/<topic-slug>/`:
+
+```
+domains/optimal-transport/
+├── curriculum.json      # 20-30 lessons with verified resources
+├── concept-map.md       # Concept dependency graph
+├── teaching-notes.md    # Domain-specific pedagogy
+└── research.md          # Raw research results (arxiv, papers, etc.)
+```
 
 ### Curriculum format
 
-Each topic is a JSON file in `tutor/curricula/`:
-
 ```json
 {
-  "topic": "Differential Geometry",
-  "created": "2026-03-01",
-  "prerequisites": ["multivariable calculus", "linear algebra"],
+  "topic": "Optimal Transport",
+  "slug": "optimal-transport",
+  "created": "2026-04-14",
+  "student_level": "advanced",
+  "prerequisites": ["measure theory basics", "linear algebra", "probability"],
+  "exit_criteria": ["Explain Monge vs Kantorovich", "Implement Sinkhorn"],
   "lessons": [
     {
       "day": 1,
-      "title": "What is a curve?",
-      "concepts": ["parametric curves", "smoothness"],
-      "status": "completed",
-      "delivered": "2026-03-02"
-    },
-    {
-      "day": 2,
-      "title": "Tangent vectors",
-      "concepts": ["velocity vector", "unit tangent"],
+      "module": "Foundations",
+      "title": "Why does moving dirt cost money?",
+      "concepts": ["Monge problem", "cost function", "transport map"],
+      "resources": ["https://optimaltransport.github.io/", "Peyré & Cuturi Ch 1"],
       "status": "pending"
     }
   ]
@@ -164,20 +213,50 @@ A cron template is at `openclaw/cron/jobs.template.json`. Import it into your ag
 
 ```
 opentutor/
+├── assets/
+│   └── opentutor_logo.png            # Project logo
+├── scripts/
+│   ├── setup.js                      # Interactive setup CLI
+│   └── bot/                          # Self-contained Telegram bot
+│       ├── index.js                  # Entry point (npm run bot)
+│       ├── claude.js                 # Claude wrapper (CLI + SDK backends)
+│       ├── router.js                 # Message routing
+│       ├── commands.js               # Slash command handlers
+│       ├── lesson.js                 # Lesson delivery with emoji-anchor chunking
+│       ├── quiz.js                   # Quiz generation via Telegram polls
+│       ├── curriculum.js             # Two-phase curriculum generation
+│       ├── research.js               # Academic research pipeline (arxiv, etc.)
+│       ├── context.js                # System prompt builders
+│       ├── onboarding.js             # New student onboarding flow
+│       ├── callbacks.js              # Inline button handler
+│       ├── scheduler.js              # Cron-based lesson scheduler
+│       ├── session.js                # Conversation history (JSONL)
+│       ├── state.js                  # File-based state management
+│       ├── config.js                 # Configuration loader
+│       └── channels/
+│           ├── base.js               # Channel interface
+│           └── telegram.js           # Telegram Bot API implementation
 ├── skills/tutor/
-│   └── SKILL.md                      # Tutor instructions (loaded on activation)
+│   ├── SKILL.md                      # Meta-skill: pedagogy + domain generation
+│   ├── references/                   # Teaching methodology docs
+│   ├── templates/                    # Domain generation template
+│   └── domains/                      # Generated per-topic data
+│       └── <topic-slug>/
+│           ├── curriculum.json
+│           ├── concept-map.md
+│           ├── teaching-notes.md
+│           └── research.md
 ├── workspace/                        # Workspace templates (platform-agnostic)
 │   ├── AGENTS.md                     # Session boot instructions
 │   ├── IDENTITY.md                   # Tutor persona
 │   ├── SOUL.md                       # Teaching style (base)
-│   ├── USER.md                       # Student profile template
-│   ├── memory/.gitkeep
-│   └── tutor/
-│       ├── curricula/.gitkeep
-│       └── progress.json             # Initial progress state
-└── openclaw/
-    ├── SOUL.md                       # OpenClaw override (buttons, polls, charts)
-    └── cron/jobs.template.json       # Scheduled lesson delivery template
+│   └── USER.md                       # Student profile template
+├── openclaw/                         # OpenClaw-specific integration
+│   ├── SOUL.md                       # Telegram override (buttons, polls, HTML)
+│   └── cron/jobs.template.json       # Scheduled lesson template
+├── docs/
+│   └── curriculum-generation.md      # Full curriculum workflow docs
+└── package.json
 ```
 
 ## Validating the skill
