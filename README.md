@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/opentutor_logo.png" alt="OpenTutor" width="200">
+</p>
+
 # OpenTutor
 
 A portable [Agent Skill](https://agentskills.io) that turns any compatible AI agent into a personalized, daily tutor for any topic — programming, math, science, languages, history, and more.
