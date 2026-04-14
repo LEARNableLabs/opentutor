@@ -106,6 +106,43 @@ export function buildChatPrompt(skills) {
   return { system, model: 'cheap' };
 }
 
+export function buildFlashcardPrompt(skills, review) {
+  // Difficulty progression based on streak
+  let difficulty;
+  if (review.streak <= 1) difficulty = 'recognition — "Which of these is correct?" style, 4 multiple choice options';
+  else if (review.streak <= 2) difficulty = 'recall — "What does X guarantee?" style, open recall with 4 options';
+  else if (review.streak <= 3) difficulty = 'application — "Given this setup, what would X predict?" style';
+  else if (review.streak <= 4) difficulty = 'connection — "How does X relate to Y?" style, linking concepts';
+  else difficulty = 'synthesis — "Explain X in your own words" or "Why does X matter?"';
+
+  const system = [
+    skills.get('tg-soul'),
+    buildUserContext(),
+    `## Flashcard Generation
+
+Generate ONE quick flashcard for the concept: "${review.concept}" (topic: ${review.topic})
+Difficulty level: ${difficulty}
+This is repetition #${review.reps + 1}, streak: ${review.streak}.
+
+Output as JSON:
+{
+  "question": "the question text (short, one sentence)",
+  "options": ["option A", "option B", "option C", "option D"],
+  "correct": 0,
+  "explanation": "brief explanation of the correct answer (1 sentence)"
+}
+
+Rules:
+- Keep the question under 100 characters (Telegram poll limit is 300)
+- Keep each option under 50 characters
+- Make wrong options plausible but clearly wrong
+- Tone: light, encouraging ("Pop quiz!", "Quick one:")
+- No filler, no preamble — just the JSON`,
+  ].filter(Boolean).join('\n\n---\n\n');
+
+  return { system, model: 'cheap' };
+}
+
 export function buildIntroPrompt(skills, topic, studentLevel, wikiSummary) {
   const wikiContext = wikiSummary
     ? `## Wikipedia Summary\n\n**${wikiSummary.title}**: ${wikiSummary.extract}\n${wikiSummary.url ? `Source: ${wikiSummary.url}` : ''}`

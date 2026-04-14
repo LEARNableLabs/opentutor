@@ -5,7 +5,7 @@
 import cron from 'node-cron';
 import { readProgress } from './state.js';
 import { deliverNextLesson } from './lesson.js';
-import { generateQuiz } from './quiz.js';
+import { deliverFlashcards } from './flashcard.js';
 import { getDueReviews } from './spaced-repetition.js';
 import { SCHEDULE } from './config.js';
 
@@ -40,10 +40,8 @@ export function startScheduler(schedule, channel, skills) {
         if (isLastSlot) {
           const due = getDueReviews(null, 3);
           if (due.length > 0) {
-            console.log(`  scheduler: review at ${time} (${due.length} concepts due)`);
-            const concepts = due.map((r) => r.concept).join(', ');
-            await channel.sendMessage(chatId, `🔄 <b>Evening review</b> — ${due.length} concept${due.length > 1 ? 's' : ''} to revisit\n`);
-            await generateQuiz(due[0].topic, chatId, channel, skills, concepts);
+            console.log(`  scheduler: flashcard review at ${time} (${due.length} concepts due)`);
+            await deliverFlashcards(chatId, channel, skills, Math.min(due.length, 3));
             return;
           }
         }

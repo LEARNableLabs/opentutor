@@ -23,6 +23,12 @@ export async function handleCallback(callbackQuery, channel, skills) {
 
   // Parse callback data
   // Format: "L{day}_{option}_{correct?}" or "hint_{id}" or "skip_{id}" or topic/intensity selectors
+  // Flashcard callbacks
+  if (data.startsWith('fc_')) {
+    const { handleFlashcardCallback } = await import('./flashcard.js');
+    return handleFlashcardCallback(data, chatId, channel, messageId);
+  }
+
   if (data.startsWith('topic_') || data.startsWith('intensity_') || data.startsWith('ot_')) {
     // Onboarding selections — handled by onboarding.js via router
     // Store selection and trigger onboarding handler
