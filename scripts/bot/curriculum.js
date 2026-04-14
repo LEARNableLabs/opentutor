@@ -1,74 +1,70 @@
 /**
  * Curriculum generation — two-phase approach:
- *   Phase A: instant scaffold (3-5 lessons) so student can start immediately
+ *   Phase A: mini-wiki intro + suggested resource (instant)
  *   Phase B: research pipeline → Claude synthesizes full 20-30 lesson curriculum
  *
- * Writes curriculum.json, teaching-notes.md, concept-map.md to domains/<slug>/.
- * Registers the topic in progress.json.
+ * See docs/curriculum-generation.md for the full workflow.
  */
 
 import fs from 'fs';
 import path from 'path';
 import { generate } from './claude.js';
-import { buildScaffoldPrompt, buildResearchSynthesisPrompt } from './context.js';
+import { buildIntroPrompt, buildResearchSynthesisPrompt } from './context.js';
 import { PATHS } from './config.js';
 import { updateProgress, writeCurriculum, appendMemory } from './state.js';
 import { researchTopic, formatResearchContext } from './research.js';
+import { searchWikipediaSummary } from './research.js';
 
 /**
- * Phase A — generate a lightweight scaffold and register the topic.
- * Returns immediately so the student can start lesson 1.
+ * Phase A — send mini-wiki intro + kick off background research.
+ * Returns the slug and intro text. Does NOT create curriculum.json yet.
  * @param {string} topic - Human-readable topic name
  * @param {Map} skills - Loaded skill files
+ * @param {number} chatId - Telegram chat ID for Phase B notification
+ * @param {object} channel - Telegram channel for sending notification
  * @param {string} [level] - Student level override
- * @returns {string} topic slug
+ * @returns {{ slug: string, intro: string }}
  */
-export async function generateAndRegisterTopic(topic, skills, level) {
+export async function generateAndRegisterTopic(topic, skills, chatId, channel, level) {
   const slug = slugify(topic);
   const domainDir = path.join(PATHS.domains, slug);
 
   // Already exists — just register
   if (fs.existsSync(path.join(domainDir, 'curriculum.json'))) {
     registerTopic(slug);
-    return slug;
+    return { slug, intro: null };
   }
 
   const studentLevel = level || detectLevel() || 'intermediate';
 
-  // Phase A: instant scaffold
-  const { system } = buildScaffoldPrompt(skills, topic, studentLevel);
+  // Quick Wikipedia lookup for grounding
+  const wikiSummary = await searchWikipediaSummary(topic).catch(() => null);
+
+  // Phase A: Claude generates mini-wiki intro + resource suggestion
+  const { system } = buildIntroPrompt(skills, topic, studentLevel, wikiSummary);
   const response = await generate(system, [
-    { role: 'user', content: `Generate a starter curriculum scaffold for: "${topic}"` },
+    { role: 'user', content: `Introduce me to "${topic}" and suggest something to watch/read right now.` },
   ], { model: 'strong' });
 
-  const parsed = parseGeneratedDomain(response.text, topic, slug);
-
-  // Write scaffold files
+  // Create domain dir but no curriculum.json yet — Phase B will create it
   fs.mkdirSync(domainDir, { recursive: true });
-  writeCurriculum(slug, parsed.curriculum);
-  if (parsed.teachingNotes) {
-    fs.writeFileSync(path.join(domainDir, 'teaching-notes.md'), parsed.teachingNotes);
-  }
-  if (parsed.conceptMap) {
-    fs.writeFileSync(path.join(domainDir, 'concept-map.md'), parsed.conceptMap);
-  }
-
   registerTopic(slug);
-  appendMemory(`Topic registered: ${topic} (${slug}) — scaffold with ${parsed.curriculum.lessons?.length || 0} starter lessons`);
+  appendMemory(`Topic registered: ${topic} (${slug}) — intro sent, curriculum building in background`);
 
   // Kick off Phase B in the background (non-blocking)
-  enrichCurriculum(topic, slug, studentLevel, skills).catch((err) => {
+  enrichCurriculum(topic, slug, studentLevel, skills, chatId, channel).catch((err) => {
     console.error(`  enrich: background research failed for ${slug}:`, err.message);
   });
 
-  return slug;
+  return { slug, intro: response.text };
 }
 
 /**
  * Phase B — research + synthesize full curriculum.
  * Runs in the background after Phase A returns.
+ * Notifies the student when the curriculum is ready.
  */
-async function enrichCurriculum(topic, slug, studentLevel, skills) {
+async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, channel) {
   console.log(`  enrich: starting research for "${topic}"`);
   const domainDir = path.join(PATHS.domains, slug);
 
@@ -77,27 +73,28 @@ async function enrichCurriculum(topic, slug, studentLevel, skills) {
   const researchContext = formatResearchContext(research);
 
   if (!researchContext.trim()) {
-    console.log('  enrich: no research results, keeping scaffold');
-    return;
+    console.log('  enrich: no research results, generating from knowledge only');
   }
 
   // Save raw research for reference
-  fs.writeFileSync(path.join(domainDir, 'research.md'), [
-    `# Research: ${topic}`,
-    `Generated: ${new Date().toISOString().split('T')[0]}`,
-    '',
-    researchContext,
-  ].join('\n'));
+  if (researchContext.trim()) {
+    fs.writeFileSync(path.join(domainDir, 'research.md'), [
+      `# Research: ${topic}`,
+      `Generated: ${new Date().toISOString().split('T')[0]}`,
+      '',
+      researchContext,
+    ].join('\n'));
+  }
 
   // Step 2: Claude synthesizes research into full curriculum
-  const { system } = buildResearchSynthesisPrompt(skills, topic, studentLevel, researchContext);
+  const { system } = buildResearchSynthesisPrompt(skills, topic, studentLevel, researchContext || 'No external research available — generate from your knowledge.');
   const response = await generate(system, [
     { role: 'user', content: `Using the research results, generate a complete 20-30 lesson curriculum for: "${topic}"` },
   ], { model: 'strong', webSearch: true, webSearchMaxUses: 5 });
 
   const parsed = parseGeneratedDomain(response.text, topic, slug);
 
-  // Preserve completion status from scaffold
+  // Preserve completion status if curriculum already existed
   const existing = readExistingCurriculum(slug);
   if (existing?.lessons) {
     for (const lesson of parsed.curriculum.lessons) {
@@ -110,7 +107,7 @@ async function enrichCurriculum(topic, slug, studentLevel, skills) {
     }
   }
 
-  // Overwrite with enriched curriculum
+  // Write full curriculum
   writeCurriculum(slug, parsed.curriculum);
   if (parsed.teachingNotes) {
     fs.writeFileSync(path.join(domainDir, 'teaching-notes.md'), parsed.teachingNotes);
@@ -120,8 +117,25 @@ async function enrichCurriculum(topic, slug, studentLevel, skills) {
   }
 
   const lessonCount = parsed.curriculum.lessons?.length || 0;
-  console.log(`  enrich: curriculum enriched — ${lessonCount} lessons for "${topic}"`);
-  appendMemory(`Curriculum enriched: ${topic} — ${lessonCount} lessons from research (arxiv: ${research.arxiv.length}, openalex: ${research.openAlex.length})`);
+  const moduleCount = new Set(parsed.curriculum.lessons?.map((l) => l.module)).size;
+  console.log(`  enrich: curriculum ready — ${lessonCount} lessons for "${topic}"`);
+  appendMemory(`Curriculum ready: ${topic} — ${lessonCount} lessons, ${moduleCount} modules (arxiv: ${research.arxiv.length}, openalex: ${research.openAlex.length})`);
+
+  // Notify student
+  if (chatId && channel) {
+    try {
+      await channel.sendMessage(chatId, [
+        `📚 <b>Your curriculum is ready!</b>`,
+        '',
+        `<b>${topic}</b> — ${lessonCount} lessons across ${moduleCount} modules.`,
+        research.arxiv.length > 0 ? `Based on ${research.arxiv.length} papers and academic sources.` : '',
+        '',
+        `Type /next for your first lesson.`,
+      ].filter(Boolean).join('\n'));
+    } catch (err) {
+      console.error('  enrich: notification failed:', err.message);
+    }
+  }
 }
 
 /**

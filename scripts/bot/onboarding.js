@@ -53,18 +53,22 @@ export async function handleOnboarding(text, chatId, channel, skills) {
 
   if (detectedTopic && detectedTopic.length > 2 && detectedTopic.length < 100) {
     await channel.sendMessage(chatId, response.text);
-    await channel.sendMessage(chatId, `Building your curriculum for <b>${detectedTopic}</b>...`);
     await channel.sendTyping(chatId);
 
     try {
-      const slug = await generateAndRegisterTopic(detectedTopic, skills);
+      const { intro } = await generateAndRegisterTopic(detectedTopic, skills, chatId, channel);
       updateProgress((p) => {
         p.onboarding = { active: false, completedAt: Date.now() };
       });
-      await channel.sendMessage(chatId, `📚 Curriculum ready! Type /next for your first lesson.`);
+
+      // Send mini-wiki intro
+      if (intro) {
+        await channel.sendMessage(chatId, intro);
+        await channel.sendMessage(chatId, '🔬 Researching and building your full curriculum — I\'ll let you know when it\'s ready.');
+      }
     } catch (err) {
       console.error('  onboarding curriculum error:', err.message);
-      await channel.sendMessage(chatId, "Had trouble building the curriculum. Tell me the topic again and I'll retry.");
+      await channel.sendMessage(chatId, "Had trouble setting up the topic. Tell me the topic again and I'll retry.");
     }
     return;
   }

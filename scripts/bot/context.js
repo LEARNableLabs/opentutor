@@ -106,30 +106,43 @@ export function buildChatPrompt(skills) {
   return { system, model: 'cheap' };
 }
 
-export function buildScaffoldPrompt(skills, topic, studentLevel) {
+export function buildIntroPrompt(skills, topic, studentLevel, wikiSummary) {
+  const wikiContext = wikiSummary
+    ? `## Wikipedia Summary\n\n**${wikiSummary.title}**: ${wikiSummary.extract}\n${wikiSummary.url ? `Source: ${wikiSummary.url}` : ''}`
+    : '';
+
   const system = [
     skills.get('skill'),
-    skills.get('curriculum-format'),
-    skills.get('teaching-method'),
+    skills.get('tg-soul'),
     buildUserContext(),
-    `## Curriculum Scaffold (Phase A — Instant Draft)
+    wikiContext,
+    `## Topic Introduction (Phase A)
 
-Generate a lightweight starter curriculum for: "${topic}"
+The student just picked: "${topic}"
 Student level: ${studentLevel}
 
-This is a quick draft so the student can start immediately. A deep research phase will enrich it later.
+Write a mini-wiki intro for Telegram (HTML formatting). Include:
 
-Output a JSON object with these keys:
-- curriculum: { topic, slug, created (today's date), student_level, lessons (array of 3-5 starter lessons) }
-- teachingNotes: a short markdown string with initial teaching approach (2-3 sentences)
-- conceptMap: a short markdown string listing 5-8 core concepts in learning order
+1. **What it is** — 2-3 sentences explaining the field/topic. Ground this in the Wikipedia summary above if available.
+2. **Why it matters** — one sentence on why this is worth learning.
+3. **Key people** — mention 2-4 important figures (with brief context).
+4. **Start here** — suggest ONE specific, real resource the student can engage with right now while the curriculum is being built. This should be:
+   - A well-known video (3Blue1Brown, Veritasium, Khan Academy, MIT OCW lecture)
+   - OR a canonical introductory article/blog post
+   - OR a free textbook intro chapter
+   Pick something appropriate for their level. Only suggest resources you are confident exist — real URLs only.
 
-Each lesson needs: day, module, title (as a question/provocation), concepts (array), resources (empty array for now — will be filled by research), status: "pending".
+Keep the whole message under 200 words. Use Telegram HTML tags (<b>, <i>, <a href>). Be warm and enthusiastic — study buddy tone.
 
-Keep it focused — just enough to deliver lesson 1 well. Do NOT hallucinate resource URLs.`,
+Do NOT generate any curriculum, lesson list, or JSON. Just the intro message.`,
   ].filter(Boolean).join('\n\n---\n\n');
 
   return { system, model: 'strong' };
+}
+
+// Kept for backward compat — no longer used in main flow
+export function buildScaffoldPrompt(skills, topic, studentLevel) {
+  return buildIntroPrompt(skills, topic, studentLevel, null);
 }
 
 export function buildResearchSynthesisPrompt(skills, topic, studentLevel, researchContext) {

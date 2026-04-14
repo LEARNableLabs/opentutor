@@ -228,6 +228,9 @@ async function searchOpenAlex(topic) {
 
 // ── Wikipedia ──────────────────────────────────────────────
 
+/** Public alias for Phase A quick lookup */
+export { searchWikipedia as searchWikipediaSummary };
+
 async function searchWikipedia(topic) {
   const query = encodeURIComponent(topic);
   const url = `${WIKIPEDIA_API}/page/summary/${query}`;

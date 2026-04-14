@@ -112,21 +112,19 @@ async function cmdAdd(chatId, channel, skills, topic) {
     return;
   }
 
-  await channel.sendMessage(chatId, `Let me build a curriculum for <b>${topic}</b>. Give me a minute...`);
   await channel.sendTyping(chatId);
 
   try {
-    const slug = await generateAndRegisterTopic(topic, skills);
-    const p = getTopicProgress(slug);
-    await channel.sendMessage(chatId, [
-      `📚 <b>${topic}</b> — curriculum ready!`,
-      `${p.total} lessons across multiple modules.`,
-      '',
-      `Type /next to start your first lesson.`,
-    ].join('\n'));
+    const { intro } = await generateAndRegisterTopic(topic, skills, chatId, channel);
+
+    // Send the mini-wiki intro
+    if (intro) {
+      await channel.sendMessage(chatId, intro);
+      await channel.sendMessage(chatId, '🔬 Researching and building your full curriculum now — I\'ll let you know when it\'s ready.');
+    }
   } catch (err) {
     console.error('  curriculum generation error:', err.message);
-    await channel.sendMessage(chatId, "Something went wrong building your curriculum. Try again or pick a different topic.");
+    await channel.sendMessage(chatId, "Something went wrong. Try again or pick a different topic.");
   }
 }
 
