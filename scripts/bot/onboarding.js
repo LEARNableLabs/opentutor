@@ -15,7 +15,7 @@ export function isOnboarding() {
   return progress.onboarding?.active === true;
 }
 
-export async function startOnboarding(chatId, channel, skills) {
+export async function startOnboarding(chatId, channel, _skills) {
   log.info({ user_id: chatId }, 'onboarding started');
   updateProgress((p) => {
     p.onboarding = { active: true, step: 'intro', startedAt: Date.now() };

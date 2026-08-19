@@ -3,8 +3,6 @@
  * Parses callback_data, sends feedback, updates progress.
  */
 
-import { generate } from './claude.js';
-import { buildChatPrompt } from './context.js';
 import { appendMemory } from './state.js';
 import { log } from './logger.js';
 

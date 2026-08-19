@@ -15,7 +15,7 @@ export class BaseChannel {
   async stop() { throw new Error('not implemented'); }
 
   /** Send a text message (HTML formatted) */
-  async sendMessage(chatId, text, options = {}) { throw new Error('not implemented'); }
+  async sendMessage(_chatId, _text, _options = {}) { throw new Error('not implemented'); }
 
   /** Send multiple messages sequentially with delays */
   async sendChunked(chatId, messages, delayMs = 2000) {
@@ -26,19 +26,19 @@ export class BaseChannel {
   }
 
   /** Send a quiz or regular poll */
-  async sendPoll(chatId, question, options, quizOptions = {}) { throw new Error('not implemented'); }
+  async sendPoll(_chatId, _question, _options, _quizOptions = {}) { throw new Error('not implemented'); }
 
   /** Send a photo (for LaTeX, progress cards, etc.) */
-  async sendPhoto(chatId, photoPath, caption = '') { throw new Error('not implemented'); }
+  async sendPhoto(_chatId, _photoPath, _caption = '') { throw new Error('not implemented'); }
 
   /** Acknowledge a callback (button tap) */
-  async answerCallback(callbackId, text = '') { throw new Error('not implemented'); }
+  async answerCallback(_callbackId, _text = '') { throw new Error('not implemented'); }
 
   /** Show "typing..." indicator */
-  async sendTyping(chatId) { throw new Error('not implemented'); }
+  async sendTyping(_chatId) { throw new Error('not implemented'); }
 
   /** Register slash commands for autocomplete */
-  async registerCommands(commands) { throw new Error('not implemented'); }
+  async registerCommands(_commands) { throw new Error('not implemented'); }
 }
 
 function sleep(ms) {

@@ -4,7 +4,7 @@
  * Usage: npm run bot
  */
 
-import { TELEGRAM, PATHS } from './config.js';
+import { TELEGRAM } from './config.js';
 import { TelegramChannel } from './channels/telegram.js';
 import { route } from './router.js';
 import { readProgress } from './state.js';
