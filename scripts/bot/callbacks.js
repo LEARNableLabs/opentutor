@@ -38,28 +38,32 @@ export async function handleCallback(callbackQuery, channel, skills) {
     return handleOnboardingCallback(data, chatId, channel, skills);
   }
 
-  if (data.includes('hint')) {
+  if (data.endsWith(':hint')) {
     await channel.sendMessage(chatId, '💡 <b>Hint:</b> Think about what we covered earlier in this lesson. What concept connects to the question?', {});
     return;
   }
 
-  if (data.includes('skip')) {
+  if (data.endsWith(':skip')) {
     await channel.sendMessage(chatId, "⏭ No worries — skipped. We'll come back to this one later.");
     appendMemory(`Exercise skipped: ${data}`);
     return;
   }
 
-  // Lesson exercise answer: L{day}_{letter}
-  if (data.startsWith('L') || data.startsWith('ans_')) {
-    const match = data.match(/^L(\d+)_([A-D])$/);
+  // Lesson exercise answer: ex:{topicSlug}:{day}:{letter}
+  if (data.startsWith('ex:')) {
+    const match = data.match(/^ex:([^:]+):(\d+):([A-D])$/);
     if (match) {
-      const [, day, letter] = match;
-      const correct = getCorrectAnswer(Number(day));
+      const [, topicSlug, day, letter] = match;
+      const correct = getCorrectAnswer(topicSlug, Number(day));
       try {
         await channel.editMessageButtons(chatId, messageId, []);
       } catch { /* may fail if message is old */ }
 
-      if (correct && letter === correct) {
+      if (!correct) {
+        log.warn({ day, letter }, 'no correct answer stored — accepting any answer');
+        await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
+        appendMemory(`Exercise accepted (no answer key): ${data}`);
+      } else if (letter === correct) {
         await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
         appendMemory(`Exercise correct: ${data}`);
       } else {

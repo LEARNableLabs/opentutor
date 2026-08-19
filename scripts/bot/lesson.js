@@ -12,8 +12,8 @@ import { log } from './logger.js';
 
 const exerciseAnswers = new Map();
 
-export function getCorrectAnswer(day) {
-  return exerciseAnswers.get(day);
+export function getCorrectAnswer(topicSlug, day) {
+  return exerciseAnswers.get(topicSlug + ':' + day);
 }
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
@@ -48,7 +48,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
     // Add exercise buttons to the last message (or any ✏️ message)
     if (chunk.anchor === '✏️' || (isLast && !chunks.some((c) => c.anchor === '✏️'))) {
-      options.buttons = buildExerciseButtons(lesson.day, chunk.text);
+      options.buttons = buildExerciseButtons(lesson.day, chunk.text, topicSlug);
     }
 
     await channel.sendMessage(chatId, chunk.text, options);
@@ -101,20 +101,23 @@ function parseLessonChunks(text) {
 
 // ── Build exercise buttons ──────────────────────────────────
 
-function buildExerciseButtons(day, exerciseText) {
+function buildExerciseButtons(day, exerciseText, topicSlug) {
   const correctMatch = exerciseText?.match(/(?:correct|answer)[:\s]*([A-D])/i);
-  const correctLetter = correctMatch ? correctMatch[1].toUpperCase() : null;
-  if (correctLetter) exerciseAnswers.set(day, correctLetter);
+  if (correctMatch) {
+    exerciseAnswers.set(topicSlug + ':' + day, correctMatch[1].toUpperCase());
+  } else {
+    log.warn({ day }, 'could not parse correct answer from exercise text');
+  }
 
   const options = ['A', 'B', 'C', 'D'];
   return [
     options.map((letter) => ({
       text: letter,
-      callback_data: `L${day}_${letter}`,
+      callback_data: `ex:${topicSlug}:${day}:${letter}`,
     })),
     [
-      { text: '💡 Hint', callback_data: `L${day}_hint` },
-      { text: '⏭ Skip', callback_data: `L${day}_skip` },
+      { text: '💡 Hint', callback_data: `ex:${topicSlug}:${day}:hint` },
+      { text: '⏭ Skip', callback_data: `ex:${topicSlug}:${day}:skip` },
     ],
   ];
 }
