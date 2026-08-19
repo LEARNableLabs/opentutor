@@ -10,6 +10,7 @@ import { route } from './router.js';
 import { readProgress } from './state.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
 import { loadSkillFiles } from './context.js';
+import { pruneOldSessions } from './session.js';
 import { logger } from './logger.js';
 
 logger.info('OpenTutor Gateway starting');
@@ -18,6 +19,10 @@ logger.info('OpenTutor Gateway starting');
 
 const skills = loadSkillFiles();
 logger.info({ count: skills.size }, 'skills loaded');
+
+// ── Prune old session files ────────────────────────────────
+
+pruneOldSessions();
 
 // ── Set up Telegram channel ─────────────────────────────────
 
@@ -38,6 +43,7 @@ await telegram.registerCommands([
   { command: 'resume', description: 'Resume daily lessons' },
   { command: 'topics', description: 'List your active topics' },
   { command: 'add', description: 'Add a new topic to learn' },
+  { command: 'switch', description: 'Switch your default topic' },
   { command: 'help', description: 'Show available commands' },
 ]);
 logger.info('commands registered');

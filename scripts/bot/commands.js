@@ -23,6 +23,7 @@ const handlers = {
   '/resume': cmdResume,
   '/topics': cmdTopics,
   '/add': cmdAdd,
+  '/switch': cmdSwitch,
   '/help': cmdHelp,
   '/start': cmdStart,
 };
@@ -39,27 +40,42 @@ export async function handleCommand(text, chatId, channel, skills) {
   await channel.sendMessage(chatId, "I don't know that command. Type /help to see what I can do.");
 }
 
-async function cmdNext(chatId, channel, skills) {
+async function cmdNext(chatId, channel, skills, args) {
   const progress = readProgress();
   if (!progress.active_topics?.length) {
     await channel.sendMessage(chatId, "You don't have any active topics yet. Type /add to start learning something!");
     return;
   }
-  // Deliver next lesson for first active topic
-  await deliverNextLesson(progress.active_topics[0], chatId, channel, skills);
+  const topic = resolveTopic(args, progress.active_topics);
+  if (!topic) {
+    await channel.sendMessage(chatId, 'Topic not found — try /topics to see your list');
+    return;
+  }
+  await deliverNextLesson(topic, chatId, channel, skills);
 }
 
-async function cmdQuiz(chatId, channel, skills) {
+async function cmdQuiz(chatId, channel, skills, args) {
   const progress = readProgress();
   if (!progress.active_topics?.length) {
     await channel.sendMessage(chatId, "Nothing to quiz on yet — start a topic first with /add");
     return;
   }
-  await generateQuiz(progress.active_topics[0], chatId, channel, skills);
+  const topic = resolveTopic(args, progress.active_topics);
+  if (!topic) {
+    await channel.sendMessage(chatId, 'Topic not found — try /topics to see your list');
+    return;
+  }
+  await generateQuiz(topic, chatId, channel, skills);
 }
 
-async function cmdReview(chatId, channel, skills) {
-  const due = getDueReviews(null, 3);
+async function cmdReview(chatId, channel, skills, args) {
+  const progress = readProgress();
+  const topic = args ? resolveTopic(args, progress.active_topics || []) : null;
+  if (args && !topic) {
+    await channel.sendMessage(chatId, 'Topic not found — try /topics to see your list');
+    return;
+  }
+  const due = getDueReviews(topic, 3);
   if (!due.length) {
     await channel.sendMessage(chatId, "Nothing due for review right now. Keep learning!");
     return;
@@ -154,6 +170,27 @@ async function cmdAdd(chatId, channel, skills, topic) {
   }
 }
 
+async function cmdSwitch(chatId, channel, _skills, args) {
+  const progress = readProgress();
+  if (!progress.active_topics?.length) {
+    await channel.sendMessage(chatId, "No topics to switch between. Type /add to start learning!");
+    return;
+  }
+  const topic = resolveTopic(args, progress.active_topics);
+  if (!topic) {
+    await channel.sendMessage(chatId, 'Topic not found — try /topics to see your list');
+    return;
+  }
+  updateProgress((p) => {
+    const idx = p.active_topics.indexOf(topic);
+    if (idx > 0) {
+      p.active_topics.splice(idx, 1);
+      p.active_topics.unshift(topic);
+    }
+  });
+  await channel.sendMessage(chatId, `Switched to ${topic} as your default topic.`);
+}
+
 async function cmdHelp(chatId, channel) {
   await channel.sendMessage(chatId, [
     '📖 <b>Commands</b>\n',
@@ -163,6 +200,7 @@ async function cmdHelp(chatId, channel) {
     '/progress — See your progress',
     '/topics — List your active topics',
     '/add — Start a new topic',
+    '/switch — Switch your default topic',
     '/pause — Pause daily lessons',
     '/resume — Resume daily lessons',
     '/help — This message',
@@ -182,6 +220,16 @@ async function cmdStart(chatId, channel, skills) {
 }
 
 // ── Helpers ─────────────────────────────────────────────────
+
+function resolveTopic(args, activeTopics) {
+  if (!args) return activeTopics[0];
+  const lower = args.toLowerCase();
+  const exact = activeTopics.find(t => t === lower);
+  if (exact) return exact;
+  const partial = activeTopics.find(t => t.startsWith(lower));
+  if (partial) return partial;
+  return null;
+}
 
 function progressBar(percent, width = 20) {
   const filled = Math.round((percent / 100) * width);

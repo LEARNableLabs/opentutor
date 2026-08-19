@@ -4,7 +4,8 @@
  */
 
 import { appendMemory } from './state.js';
-import { getCorrectAnswer } from './lesson.js';
+import { getCorrectAnswer, getLessonContext } from './lesson.js';
+import { generate } from './claude.js';
 import { log } from './logger.js';
 
 export async function handleCallback(callbackQuery, channel, skills) {
@@ -39,6 +40,25 @@ export async function handleCallback(callbackQuery, channel, skills) {
   }
 
   if (data.endsWith(':hint')) {
+    try {
+      const match = data.match(/^ex:([^:]+):(\d+):hint$/);
+      if (match) {
+        const [, topicSlug, day] = match;
+        const ctx = getLessonContext(topicSlug, Number(day));
+        if (ctx) {
+          await channel.sendTyping(chatId);
+          const result = await generate(
+            `Give a brief, helpful hint for this exercise. Topic: ${ctx.title}, Concepts: ${(ctx.concepts || []).join(', ')}. Do not give away the answer.`,
+            [{ role: 'user', content: 'I need a hint for this exercise.' }],
+            { model: 'cheap' }
+          );
+          await channel.sendMessage(chatId, `💡 <b>Hint:</b> ${result.text}`);
+          return;
+        }
+      }
+    } catch (err) {
+      log.warn({ err, callback: data }, 'context-aware hint generation failed, using fallback');
+    }
     await channel.sendMessage(chatId, '💡 <b>Hint:</b> Think about what we covered earlier in this lesson. What concept connects to the question?', {});
     return;
   }

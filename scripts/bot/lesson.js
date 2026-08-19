@@ -11,9 +11,14 @@ import { sleep } from './helpers.js';
 import { log } from './logger.js';
 
 const exerciseAnswers = new Map();
+const lessonContext = new Map();
 
 export function getCorrectAnswer(topicSlug, day) {
   return exerciseAnswers.get(topicSlug + ':' + day);
+}
+
+export function getLessonContext(topicSlug, day) {
+  return lessonContext.get(topicSlug + ':' + day);
 }
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
@@ -57,6 +62,13 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
       await sleep(2000);
     }
   }
+
+  // Store lesson context for hint generation
+  lessonContext.set(topicSlug + ':' + lesson.day, {
+    title: lesson.title,
+    concepts: lesson.concepts,
+    topicSlug,
+  });
 
   // Log and update progress
   log.info({ topic: topicSlug, lesson_id: lesson.day, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson delivered');
