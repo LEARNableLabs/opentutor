@@ -81,6 +81,7 @@ OpenTutor includes a self-contained Telegram bot. No external gateway needed —
 | `/progress` | See your learning progress |
 | `/topics` | List active topics |
 | `/add <topic>` | Start learning a new topic |
+| `/switch <topic>` | Switch your default topic |
 | `/pause` | Pause daily lessons |
 | `/resume` | Resume daily lessons |
 | `/help` | Show available commands |
