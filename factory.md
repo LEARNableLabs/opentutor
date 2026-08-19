@@ -26,23 +26,24 @@ main
 
 ### Mutable Paths
 
-- `scripts/bot/**` — bot process, commands, routing, scheduling
-- `scripts/setup.js` — setup CLI
-- `skills/tutor/**` — meta-skill, references, templates, domains
-- `workspace/**` — agent behavior, identity, progress tracking
-- `openclaw/**` — OpenClaw platform integration
-- `nanoclaw/**` — NanoClaw platform integration
-- `nemoclaw/**` — NemoClaw platform integration
-- `eval/**` — eval harness and scoring
+- scripts/bot/
+- scripts/setup.js
+- skills/tutor/
+- workspace/
+- openclaw/
+- nanoclaw/
+- nemoclaw/
+- eval/
+- tests/
 
 ### Immutable Paths
 
-- `.obsidian/` — Obsidian app configuration
-- `CLAUDE.md` — project instructions
-- `factory.md` — this file
-- `.factory/config.json` — factory runtime config
-- `package.json` — only factory agents may update dependencies
-- `LICENSE` — license file
+- .obsidian/
+- CLAUDE.md
+- factory.md
+- .factory/config.json
+- package.json
+- LICENSE
 
 ## Guards
 

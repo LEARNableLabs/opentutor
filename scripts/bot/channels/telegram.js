@@ -111,7 +111,6 @@ export class TelegramChannel extends BaseChannel {
     if (typeof photoSource === 'string' && photoSource.startsWith('http')) {
       form.append('photo', photoSource);
     } else {
-      const { createReadStream } = await import('fs');
       const blob = await import('fs/promises').then((f) => f.readFile(photoSource));
       form.append('photo', new Blob([blob]), 'photo.png');
     }
