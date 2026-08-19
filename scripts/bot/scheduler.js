@@ -8,6 +8,7 @@ import { deliverNextLesson } from './lesson.js';
 import { deliverFlashcards } from './flashcard.js';
 import { getDueReviews } from './spaced-repetition.js';
 import { SCHEDULE } from './config.js';
+import { logger } from './logger.js';
 
 let jobs = [];
 
@@ -40,25 +41,25 @@ export function startScheduler(schedule, channel, skills) {
         if (isLastSlot) {
           const due = getDueReviews(null, 3);
           if (due.length > 0) {
-            console.log(`  scheduler: flashcard review at ${time} (${due.length} concepts due)`);
+            logger.info({ time, due_count: due.length }, 'scheduler: flashcard review');
             await deliverFlashcards(chatId, channel, skills, Math.min(due.length, 3));
             return;
           }
         }
 
         // Regular slot → deliver next lesson
-        console.log(`  scheduler: delivering lesson at ${time}`);
         const topic = progress.active_topics[0];
+        logger.info({ time, topic }, 'scheduler: delivering lesson');
         await deliverNextLesson(topic, chatId, channel, skills);
       } catch (err) {
-        console.error('  scheduler: delivery error:', err.message);
+        logger.error({ err, time }, 'scheduler: delivery error');
       }
     }, { timezone: tz });
 
     jobs.push(job);
   }
 
-  console.log(`  scheduler: ${jobs.length} jobs (${times.join(', ')} ${tz})`);
+  logger.info({ job_count: jobs.length, times, timezone: tz }, 'scheduler started');
 }
 
 export function stopScheduler() {

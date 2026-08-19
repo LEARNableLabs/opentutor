@@ -8,6 +8,7 @@ import { buildOnboardingPrompt } from './context.js';
 import { readProgress, updateProgress } from './state.js';
 import { appendMessage, getRecentHistory } from './session.js';
 import { generateAndRegisterTopic } from './curriculum.js';
+import { log } from './logger.js';
 
 export function isOnboarding() {
   const progress = readProgress();
@@ -15,6 +16,7 @@ export function isOnboarding() {
 }
 
 export async function startOnboarding(chatId, channel, skills) {
+  log.info({ user_id: chatId }, 'onboarding started');
   updateProgress((p) => {
     p.onboarding = { active: true, step: 'intro', startedAt: Date.now() };
   });
@@ -67,7 +69,7 @@ export async function handleOnboarding(text, chatId, channel, skills) {
         await channel.sendMessage(chatId, '🔬 Researching and building your full curriculum — I\'ll let you know when it\'s ready.');
       }
     } catch (err) {
-      console.error('  onboarding curriculum error:', err.message);
+      log.error({ err, topic: detectedTopic }, 'onboarding curriculum error');
       await channel.sendMessage(chatId, "Had trouble setting up the topic. Tell me the topic again and I'll retry.");
     }
     return;

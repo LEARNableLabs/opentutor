@@ -6,6 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PATHS } from './config.js';
+import { log } from './logger.js';
 
 const MAX_HISTORY = 20; // messages to include in Claude context
 
@@ -34,6 +35,7 @@ export function getRecentHistory(channelId, limit = MAX_HISTORY) {
 }
 
 export function clearSession(channelId) {
+  log.info({ channel_id: channelId }, 'session cleared');
   const file = getSessionPath(channelId);
   try {
     fs.unlinkSync(file);

@@ -8,6 +8,7 @@ import { generateQuiz } from './quiz.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
 import { generateAndRegisterTopic } from './curriculum.js';
 import { getDueReviews, getRepetitionSummary } from './spaced-repetition.js';
+import { log } from './logger.js';
 
 export function isCommand(text) {
   return text.startsWith('/');
@@ -28,7 +29,9 @@ const handlers = {
 
 export async function handleCommand(text, chatId, channel, skills) {
   const [cmd, ...args] = text.split(' ');
-  const handler = handlers[cmd.toLowerCase()];
+  const command = cmd.toLowerCase();
+  log.info({ command, user_id: chatId }, 'command received');
+  const handler = handlers[command];
   if (handler) {
     return handler(chatId, channel, skills, args.join(' '));
   }
@@ -146,7 +149,7 @@ async function cmdAdd(chatId, channel, skills, topic) {
       await channel.sendMessage(chatId, '🔬 Researching and building your full curriculum now — I\'ll let you know when it\'s ready.');
     }
   } catch (err) {
-    console.error('  curriculum generation error:', err.message);
+    log.error({ err, topic, command: '/add' }, 'curriculum generation error');
     await channel.sendMessage(chatId, "Something went wrong. Try again or pick a different topic.");
   }
 }

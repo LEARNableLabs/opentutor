@@ -7,41 +7,46 @@ import { handleCommand, isCommand } from './commands.js';
 import { handleCallback } from './callbacks.js';
 import { handleOnboarding, isOnboarding } from './onboarding.js';
 import { handleChat } from './chat.js';
+import { runWithReqId, log } from './logger.js';
 
 export async function route(update, channel, skills) {
-  console.log('  route:', JSON.stringify(update.message?.text || update.callback_query?.data || 'unknown').slice(0, 60));
+  return runWithReqId(async () => {
+    const input = update.message?.text || update.callback_query?.data || 'unknown';
+    const user_id = update.message?.from?.id || update.callback_query?.from?.id;
+    log.info({ user_id, input: String(input).slice(0, 60) }, 'route');
 
-  // Callback query (button tap)
-  if (update.callback_query) {
-    return handleCallback(update.callback_query, channel, skills);
-  }
+    // Callback query (button tap)
+    if (update.callback_query) {
+      return handleCallback(update.callback_query, channel, skills);
+    }
 
-  // Poll answer
-  if (update.poll_answer) {
-    const { appendMemory } = await import('./state.js');
-    const answer = update.poll_answer;
-    const optionIds = answer.option_ids || [];
-    appendMemory(`Quiz poll answered: options [${optionIds.join(', ')}] by user ${answer.user?.id || 'unknown'}`);
-    return;
-  }
+    // Poll answer
+    if (update.poll_answer) {
+      const { appendMemory } = await import('./state.js');
+      const answer = update.poll_answer;
+      const optionIds = answer.option_ids || [];
+      appendMemory(`Quiz poll answered: options [${optionIds.join(', ')}] by user ${answer.user?.id || 'unknown'}`);
+      return;
+    }
 
-  // Text message
-  const message = update.message;
-  if (!message?.text) return;
+    // Text message
+    const message = update.message;
+    if (!message?.text) return;
 
-  const chatId = message.chat.id;
-  const text = message.text.trim();
+    const chatId = message.chat.id;
+    const text = message.text.trim();
 
-  // Commands take priority
-  if (isCommand(text)) {
-    return handleCommand(text, chatId, channel, skills);
-  }
+    // Commands take priority
+    if (isCommand(text)) {
+      return handleCommand(text, chatId, channel, skills);
+    }
 
-  // Onboarding flow (if active)
-  if (isOnboarding()) {
-    return handleOnboarding(text, chatId, channel, skills);
-  }
+    // Onboarding flow (if active)
+    if (isOnboarding()) {
+      return handleOnboarding(text, chatId, channel, skills);
+    }
 
-  // General chat
-  return handleChat(text, chatId, channel, skills);
+    // General chat
+    return handleChat(text, chatId, channel, skills);
+  });
 }

@@ -5,8 +5,10 @@
 import { generate } from './claude.js';
 import { buildChatPrompt } from './context.js';
 import { appendMessage, getRecentHistory } from './session.js';
+import { log } from './logger.js';
 
 export async function handleChat(text, chatId, channel, skills) {
+  log.info({ user_id: chatId }, 'chat message');
   // Show typing while generating
   await channel.sendTyping(chatId);
 

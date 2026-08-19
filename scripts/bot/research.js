@@ -3,6 +3,8 @@
  * for curriculum generation. All APIs are free, no keys needed.
  */
 
+import { log } from './logger.js';
+
 const ARXIV_API = 'https://export.arxiv.org/api/query';
 const SEMANTIC_SCHOLAR_API = 'https://api.semanticscholar.org/graph/v1';
 const OPENALEX_API = 'https://api.openalex.org';
@@ -34,7 +36,13 @@ export async function researchTopic(topic, options = {}) {
     openAlex: openAlex.status === 'fulfilled' ? openAlex.value : [],
   };
 
-  console.log(`  research: arxiv=${results.arxiv.length} semantic=${results.semanticScholar.length} wikipedia=${results.wikipedia ? 'yes' : 'no'} openalex=${results.openAlex.length}`);
+  log.info({
+    topic,
+    arxiv: results.arxiv.length,
+    semantic_scholar: results.semanticScholar.length,
+    wikipedia: !!results.wikipedia,
+    openalex: results.openAlex.length,
+  }, 'research complete');
 
   return results;
 }
@@ -162,7 +170,7 @@ async function searchSemanticScholar(topic) {
   });
 
   if (res.status === 429) {
-    console.log('  research: Semantic Scholar rate limited, skipping');
+    log.warn({ topic }, 'Semantic Scholar rate limited, skipping');
     return [];
   }
 

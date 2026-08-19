@@ -5,6 +5,7 @@
 import { generate } from './claude.js';
 import { buildQuizPrompt } from './context.js';
 import { readCurriculum } from './state.js';
+import { log } from './logger.js';
 
 export async function generateQuiz(topicSlug, chatId, channel, skills, specificConcepts) {
   const curriculum = readCurriculum(topicSlug);
@@ -20,6 +21,7 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, specificC
     return;
   }
 
+  log.info({ topic: topicSlug, completed_count: completed.length }, 'generating quiz');
   const recent = completed.slice(-5); // last 5 completed lessons
   const quizTarget = specificConcepts || recent.map((l) => l.title).join(', ');
 
@@ -39,6 +41,7 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, specificC
     if (!jsonMatch) throw new Error('No JSON array found');
     const questions = JSON.parse(jsonMatch[0]);
 
+    log.info({ topic: topicSlug, question_count: questions.length }, 'quiz generated');
     for (const q of questions) {
       await channel.sendPoll(chatId, q.question, q.options, {
         correctOptionId: q.correct,
@@ -47,7 +50,7 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, specificC
       await sleep(1500);
     }
   } catch (err) {
-    // Fallback: send as text if JSON parsing fails
+    log.warn({ err, topic: topicSlug }, 'quiz JSON parse failed, sending as text');
     await channel.sendMessage(chatId, response.text);
   }
 }

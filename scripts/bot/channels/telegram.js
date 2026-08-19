@@ -4,6 +4,7 @@
  */
 
 import { BaseChannel } from './base.js';
+import { log } from '../logger.js';
 
 export class TelegramChannel extends BaseChannel {
   constructor({ token, chatId, mode = 'polling', onUpdate }) {
@@ -21,7 +22,7 @@ export class TelegramChannel extends BaseChannel {
 
   async start() {
     this.running = true;
-    console.log(`  telegram: ${this.mode} mode`);
+    log.info({ mode: this.mode }, 'telegram channel started');
     if (this.mode === 'polling') this._poll();
   }
 
@@ -51,11 +52,11 @@ export class TelegramChannel extends BaseChannel {
           try {
             await this.onUpdate(update);
           } catch (err) {
-            console.error('  telegram: handler error:', err.message);
+            log.error({ err, update_id: update.update_id }, 'telegram: handler error');
           }
         }
       } catch (err) {
-        console.error('  telegram: poll error:', err.message);
+        log.error({ err }, 'telegram: poll error');
         await sleep(5000);
       }
     }
@@ -110,7 +111,6 @@ export class TelegramChannel extends BaseChannel {
     if (typeof photoSource === 'string' && photoSource.startsWith('http')) {
       form.append('photo', photoSource);
     } else {
-      const { createReadStream } = await import('fs');
       const blob = await import('fs/promises').then((f) => f.readFile(photoSource));
       form.append('photo', new Blob([blob]), 'photo.png');
     }

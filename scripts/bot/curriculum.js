@@ -14,6 +14,7 @@ import { PATHS } from './config.js';
 import { updateProgress, writeCurriculum, appendMemory } from './state.js';
 import { researchTopic, formatResearchContext } from './research.js';
 import { searchWikipediaSummary } from './research.js';
+import { log } from './logger.js';
 
 /**
  * Phase A — send mini-wiki intro + kick off background research.
@@ -53,7 +54,7 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
 
   // Kick off Phase B in the background (non-blocking)
   enrichCurriculum(topic, slug, studentLevel, skills, chatId, channel).catch((err) => {
-    console.error(`  enrich: background research failed for ${slug}:`, err.message);
+    log.error({ err, topic, slug }, 'enrich: background research failed');
   });
 
   return { slug, intro: response.text };
@@ -65,7 +66,7 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
  * Notifies the student when the curriculum is ready.
  */
 async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, channel) {
-  console.log(`  enrich: starting research for "${topic}"`);
+  log.info({ topic, slug }, 'enrich: starting research');
   const domainDir = path.join(PATHS.domains, slug);
 
   // Step 1: Run research pipeline (parallel API queries)
@@ -73,7 +74,7 @@ async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, chann
   const researchContext = formatResearchContext(research);
 
   if (!researchContext.trim()) {
-    console.log('  enrich: no research results, generating from knowledge only');
+    log.info({ topic }, 'enrich: no research results, generating from knowledge only');
   }
 
   // Save raw research for reference
@@ -118,7 +119,7 @@ async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, chann
 
   const lessonCount = parsed.curriculum.lessons?.length || 0;
   const moduleCount = new Set(parsed.curriculum.lessons?.map((l) => l.module)).size;
-  console.log(`  enrich: curriculum ready — ${lessonCount} lessons for "${topic}"`);
+  log.info({ topic, lesson_count: lessonCount, module_count: moduleCount }, 'enrich: curriculum ready');
   appendMemory(`Curriculum ready: ${topic} — ${lessonCount} lessons, ${moduleCount} modules (arxiv: ${research.arxiv.length}, openalex: ${research.openAlex.length})`);
 
   // Notify student
@@ -133,7 +134,7 @@ async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, chann
         `Type /next for your first lesson.`,
       ].filter(Boolean).join('\n'));
     } catch (err) {
-      console.error('  enrich: notification failed:', err.message);
+      log.error({ err, topic }, 'enrich: notification failed');
     }
   }
 }

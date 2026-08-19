@@ -8,6 +8,7 @@ import { generate } from './claude.js';
 import { buildFlashcardPrompt } from './context.js';
 import { getDueReviews, recordReview } from './spaced-repetition.js';
 import { appendMemory } from './state.js';
+import { log } from './logger.js';
 
 /**
  * Deliver flashcard reviews for due concepts.
@@ -18,6 +19,7 @@ import { appendMemory } from './state.js';
  */
 export async function deliverFlashcards(chatId, channel, skills, limit = 1) {
   const due = getDueReviews(null, limit);
+  log.info({ due_count: due.length, limit }, 'flashcard delivery');
   if (!due.length) {
     await channel.sendMessage(chatId, "Nothing due for review right now. Keep learning! 🎯");
     return;
@@ -62,6 +64,7 @@ export async function handleFlashcardCallback(data, chatId, channel, messageId) 
   const topic = parts[1];
   const concept = parts[2]?.replace(/-/g, ' ');
   const isCorrect = data.includes('_correct');
+  log.info({ topic, concept, is_correct: isCorrect }, 'flashcard callback');
 
   // Remove buttons
   try {
