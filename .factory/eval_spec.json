@@ -1,0 +1,4 @@
+[
+  "Start the bot process and verify it initializes without errors",
+  "Verify the bot responds to a basic health-check or /start command"
+]
