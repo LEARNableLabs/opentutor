@@ -31,8 +31,8 @@ const required = ['TELEGRAM_BOT_TOKEN'];
 if (backend === 'sdk') required.push('ANTHROPIC_API_KEY');
 const missing = required.filter((k) => !process.env[k]);
 if (missing.length) {
-  console.error(`Missing required env vars: ${missing.join(', ')}`);
-  console.error(`Add them to ${path.join(ROOT, '.env')}`);
+  const { logger } = await import('./logger.js');
+  logger.fatal({ missing }, 'Missing required env vars');
   process.exit(1);
 }
 

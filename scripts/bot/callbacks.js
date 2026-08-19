@@ -6,6 +6,7 @@
 import { generate } from './claude.js';
 import { buildChatPrompt } from './context.js';
 import { appendMemory } from './state.js';
+import { log } from './logger.js';
 
 export async function handleCallback(callbackQuery, channel, skills) {
   const cbId = callbackQuery.id;
@@ -17,6 +18,8 @@ export async function handleCallback(callbackQuery, channel, skills) {
     await channel.answerCallback(cbId);
     return;
   }
+
+  log.info({ callback: data, user_id: chatId }, 'callback received');
 
   // Acknowledge immediately (removes loading spinner)
   await channel.answerCallback(cbId);

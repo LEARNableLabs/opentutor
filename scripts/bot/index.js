@@ -10,13 +10,14 @@ import { route } from './router.js';
 import { readProgress } from './state.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
 import { loadSkillFiles } from './context.js';
+import { logger } from './logger.js';
 
-console.log('\n  OpenTutor Gateway\n');
+logger.info('OpenTutor Gateway starting');
 
 // ── Load skill files ────────────────────────────────────────
 
 const skills = loadSkillFiles();
-console.log(`  skills: ${skills.size} files loaded`);
+logger.info({ count: skills.size }, 'skills loaded');
 
 // ── Set up Telegram channel ─────────────────────────────────
 
@@ -39,7 +40,7 @@ await telegram.registerCommands([
   { command: 'add', description: 'Add a new topic to learn' },
   { command: 'help', description: 'Show available commands' },
 ]);
-console.log('  commands: registered');
+logger.info('commands registered');
 
 // ── Start scheduler ─────────────────────────────────────────
 
@@ -51,12 +52,12 @@ if (progress.schedule && !progress.schedule.paused) {
 // ── Start polling ───────────────────────────────────────────
 
 await telegram.start();
-console.log('  status: running\n');
+logger.info('status: running');
 
 // ── Graceful shutdown ───────────────────────────────────────
 
 function shutdown(signal) {
-  console.log(`\n  ${signal} received, shutting down...`);
+  logger.info({ signal }, 'shutting down');
   telegram.stop();
   stopScheduler();
   process.exit(0);

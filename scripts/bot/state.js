@@ -6,6 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PATHS } from './config.js';
+import { log } from './logger.js';
 
 // ── Progress ────────────────────────────────────────────────
 
@@ -29,6 +30,7 @@ export function writeProgress(data) {
   const tmp = PATHS.progress + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(data, null, 2) + '\n');
   fs.renameSync(tmp, PATHS.progress);
+  log.debug({ active_topics: data.active_topics }, 'progress written');
 }
 
 export function updateProgress(fn) {
@@ -70,6 +72,7 @@ export function writeCurriculum(topicSlug, data) {
   const tmp = p + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(data, null, 2) + '\n');
   fs.renameSync(tmp, p);
+  log.info({ topic: topicSlug, lesson_count: data.lessons?.length }, 'curriculum written');
 }
 
 export function getNextLesson(topicSlug) {
@@ -79,6 +82,7 @@ export function getNextLesson(topicSlug) {
 }
 
 export function markLessonComplete(topicSlug, day, engagement = {}) {
+  log.info({ topic: topicSlug, lesson_id: day }, 'lesson marked complete');
   const curriculum = readCurriculum(topicSlug);
   if (!curriculum) return;
   const lesson = curriculum.lessons.find((l) => l.day === day);

@@ -7,10 +7,13 @@ import { buildLessonPrompt } from './context.js';
 import { getNextLesson, markLessonComplete, readCurriculum, appendMemory } from './state.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts } from './spaced-repetition.js';
+import { log } from './logger.js';
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
+  const start = Date.now();
   const lesson = getNextLesson(topicSlug);
   if (!lesson) {
+    log.info({ topic: topicSlug }, 'all lessons completed');
     const curriculum = readCurriculum(topicSlug);
     await channel.sendMessage(chatId, `🎉 <b>You've completed all ${curriculum?.lessons?.length || 0} lessons in ${curriculum?.topic || topicSlug}!</b>\n\nType /quiz for a final review, or /add to start something new.`);
     return;
@@ -18,6 +21,8 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
   // Show typing while generating
   await channel.sendTyping(chatId);
+
+  log.info({ topic: topicSlug, lesson_id: lesson.day, title: lesson.title }, 'delivering lesson');
 
   // Build prompt and generate
   const { system, model } = buildLessonPrompt(skills, lesson, topicSlug);
@@ -47,6 +52,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   }
 
   // Log and update progress
+  log.info({ topic: topicSlug, lesson_id: lesson.day, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson delivered');
   appendMessage(chatId, 'assistant', response.text);
   appendMemory(`Lesson delivered: Day ${lesson.day} — ${lesson.title} (${topicSlug})`);
   markLessonComplete(topicSlug, lesson.day, { delivered: true });

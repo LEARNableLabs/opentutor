@@ -4,6 +4,8 @@
  */
 
 import { spawn } from 'child_process';
+import { log } from './logger.js';
+
 const BACKEND = process.env.CLAUDE_BACKEND || 'cli';
 
 /**
@@ -14,8 +16,19 @@ const BACKEND = process.env.CLAUDE_BACKEND || 'cli';
  * @param {'cheap'|'strong'} options.model - Model tier hint (used by SDK backend)
  */
 export async function generate(system, messages, options = {}) {
-  if (BACKEND === 'sdk') return generateSDK(system, messages, options);
-  return generateCLI(system, messages, options);
+  const start = Date.now();
+  const backend = BACKEND === 'sdk' ? 'sdk' : 'cli';
+  log.info({ backend, model: options.model || 'default' }, 'claude generate start');
+  try {
+    const result = BACKEND === 'sdk'
+      ? await generateSDK(system, messages, options)
+      : await generateCLI(system, messages, options);
+    log.info({ backend, latency_ms: Date.now() - start, model: result.model }, 'claude generate done');
+    return result;
+  } catch (err) {
+    log.error({ err, backend, latency_ms: Date.now() - start }, 'claude generate failed');
+    throw err;
+  }
 }
 
 /** Alias for consistency — CLI doesn't support streaming but same interface */
@@ -44,7 +57,7 @@ async function generateCLI(system, messages, options = {}) {
 
     child.on('close', (code) => {
       if (code !== 0) {
-        console.error('  claude-cli error:', stderr.slice(0, 200));
+        log.error({ exit_code: code, stderr: stderr.slice(0, 200) }, 'claude-cli error');
         reject(new Error(`Claude CLI exited with code ${code}`));
         return;
       }
