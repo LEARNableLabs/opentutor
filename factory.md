@@ -59,7 +59,7 @@ main
 ### Command
 
 ```bash
-node eval/score.js
+python3 eval/score.py
 ```
 
 ### Threshold
@@ -73,6 +73,22 @@ node eval/score.js
 | syntax_check | 0.30 | Validate JS files parse with `node --check` on all `.js` files under `scripts/` |
 | observability | 0.30 | Scan `.js` files for logging patterns (console.log/warn/error, pino, winston) and tracing |
 | architecture | 0.40 | Check structural integrity: required skill/workspace files exist, JSON files parse, setup script present |
+
+## Project Eval
+
+| Dimension | Weight | Description |
+|-----------|--------|-------------|
+| syntax_check | 0.30 | Validate JS files parse with node --check |
+| observability | 0.30 | Scan .js files for logging patterns and tracing |
+| architecture | 0.40 | Check required skill/workspace files exist and JSON parses |
+
+## Eval Weights
+
+| Component | Weight |
+|-----------|--------|
+| hygiene | 0.30 |
+| growth | 0.20 |
+| project | 0.50 |
 
 ## Eval Spec
 
