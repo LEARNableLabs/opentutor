@@ -7,7 +7,19 @@ import { buildLessonPrompt } from './context.js';
 import { getNextLesson, markLessonComplete, readCurriculum, appendMemory } from './state.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts } from './spaced-repetition.js';
+import { sleep } from './helpers.js';
 import { log } from './logger.js';
+
+const exerciseAnswers = new Map();
+const lessonContext = new Map();
+
+export function getCorrectAnswer(topicSlug, day) {
+  return exerciseAnswers.get(topicSlug + ':' + day);
+}
+
+export function getLessonContext(topicSlug, day) {
+  return lessonContext.get(topicSlug + ':' + day);
+}
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const start = Date.now();
@@ -41,7 +53,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
     // Add exercise buttons to the last message (or any ✏️ message)
     if (chunk.anchor === '✏️' || (isLast && !chunks.some((c) => c.anchor === '✏️'))) {
-      options.buttons = buildExerciseButtons(lesson.day, chunk.text);
+      options.buttons = buildExerciseButtons(lesson.day, chunk.text, topicSlug);
     }
 
     await channel.sendMessage(chatId, chunk.text, options);
@@ -50,6 +62,13 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
       await sleep(2000);
     }
   }
+
+  // Store lesson context for hint generation
+  lessonContext.set(topicSlug + ':' + lesson.day, {
+    title: lesson.title,
+    concepts: lesson.concepts,
+    topicSlug,
+  });
 
   // Log and update progress
   log.info({ topic: topicSlug, lesson_id: lesson.day, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson delivered');
@@ -94,24 +113,23 @@ function parseLessonChunks(text) {
 
 // ── Build exercise buttons ──────────────────────────────────
 
-function buildExerciseButtons(day, exerciseText) {
-  // Try to detect correct answer from Claude's response (e.g., "correct: B" or "(answer: C)")
+function buildExerciseButtons(day, exerciseText, topicSlug) {
   const correctMatch = exerciseText?.match(/(?:correct|answer)[:\s]*([A-D])/i);
-  const correctLetter = correctMatch ? correctMatch[1].toUpperCase() : null;
+  if (correctMatch) {
+    exerciseAnswers.set(topicSlug + ':' + day, correctMatch[1].toUpperCase());
+  } else {
+    log.warn({ day }, 'could not parse correct answer from exercise text');
+  }
 
   const options = ['A', 'B', 'C', 'D'];
   return [
     options.map((letter) => ({
       text: letter,
-      callback_data: `L${day}_${letter}${letter === correctLetter ? '_correct' : ''}`,
+      callback_data: `ex:${topicSlug}:${day}:${letter}`,
     })),
     [
-      { text: '💡 Hint', callback_data: `L${day}_hint` },
-      { text: '⏭ Skip', callback_data: `L${day}_skip` },
+      { text: '💡 Hint', callback_data: `ex:${topicSlug}:${day}:hint` },
+      { text: '⏭ Skip', callback_data: `ex:${topicSlug}:${day}:skip` },
     ],
   ];
-}
-
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
 }

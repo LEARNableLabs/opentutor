@@ -36,7 +36,7 @@ export const generateStream = generate;
 
 // ── Claude Code CLI backend ─────────────────────────────────
 
-async function generateCLI(system, messages, options = {}) {
+async function generateCLI(system, messages, _options = {}) {
   const userMessages = messages
     .filter((m) => m.role === 'user')
     .map((m) => m.content)

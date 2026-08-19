@@ -5,6 +5,7 @@
 
 import { BaseChannel } from './base.js';
 import { log } from '../logger.js';
+import { sleep } from '../helpers.js';
 
 export class TelegramChannel extends BaseChannel {
   constructor({ token, chatId, mode = 'polling', onUpdate }) {
@@ -156,8 +157,4 @@ export class TelegramChannel extends BaseChannel {
     if (!data.ok) throw new Error(`Telegram ${method}: ${data.description}`);
     return data.result;
   }
-}
-
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
 }

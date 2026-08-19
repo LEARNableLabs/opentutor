@@ -20,10 +20,15 @@ export async function handleChat(text, chatId, channel, skills) {
   const history = getRecentHistory(chatId);
   history.push({ role: 'user', content: text });
 
-  const response = await generate(system, history, { model });
+  try {
+    const response = await generate(system, history, { model });
 
-  // Log assistant response
-  appendMessage(chatId, 'assistant', response.text);
+    // Log assistant response
+    appendMessage(chatId, 'assistant', response.text);
 
-  await channel.sendMessage(chatId, response.text);
+    await channel.sendMessage(chatId, response.text);
+  } catch (err) {
+    log.error({ err, user_id: chatId }, 'chat generation failed');
+    await channel.sendMessage(chatId, 'Something went wrong — try again in a moment.');
+  }
 }

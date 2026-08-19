@@ -18,6 +18,12 @@ JavaScript + Markdown
 npm run bot
 ```
 
+## Test Command
+
+```bash
+npm test
+```
+
 ## Target Branch
 
 main
