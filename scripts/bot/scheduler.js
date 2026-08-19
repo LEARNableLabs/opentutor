@@ -48,8 +48,8 @@ export function startScheduler(schedule, channel, skills) {
         }
 
         // Regular slot → deliver next lesson
-        logger.info({ time, topic }, 'scheduler: delivering lesson');
         const topic = progress.active_topics[0];
+        logger.info({ time, topic }, 'scheduler: delivering lesson');
         await deliverNextLesson(topic, chatId, channel, skills);
       } catch (err) {
         logger.error({ err, time }, 'scheduler: delivery error');
