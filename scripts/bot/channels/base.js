@@ -3,6 +3,8 @@
  * Telegram is first; Slack, WhatsApp, etc. follow the same shape.
  */
 
+import { sleep } from '../helpers.js';
+
 export class BaseChannel {
   constructor(name) {
     this.name = name;
@@ -39,8 +41,4 @@ export class BaseChannel {
 
   /** Register slash commands for autocomplete */
   async registerCommands(_commands) { throw new Error('not implemented'); }
-}
-
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
 }

@@ -7,7 +7,14 @@ import { buildLessonPrompt } from './context.js';
 import { getNextLesson, markLessonComplete, readCurriculum, appendMemory } from './state.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts } from './spaced-repetition.js';
+import { sleep } from './helpers.js';
 import { log } from './logger.js';
+
+const exerciseAnswers = new Map();
+
+export function getCorrectAnswer(day) {
+  return exerciseAnswers.get(day);
+}
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const start = Date.now();
@@ -95,23 +102,19 @@ function parseLessonChunks(text) {
 // ── Build exercise buttons ──────────────────────────────────
 
 function buildExerciseButtons(day, exerciseText) {
-  // Try to detect correct answer from Claude's response (e.g., "correct: B" or "(answer: C)")
   const correctMatch = exerciseText?.match(/(?:correct|answer)[:\s]*([A-D])/i);
   const correctLetter = correctMatch ? correctMatch[1].toUpperCase() : null;
+  if (correctLetter) exerciseAnswers.set(day, correctLetter);
 
   const options = ['A', 'B', 'C', 'D'];
   return [
     options.map((letter) => ({
       text: letter,
-      callback_data: `L${day}_${letter}${letter === correctLetter ? '_correct' : ''}`,
+      callback_data: `L${day}_${letter}`,
     })),
     [
       { text: '💡 Hint', callback_data: `L${day}_hint` },
       { text: '⏭ Skip', callback_data: `L${day}_skip` },
     ],
   ];
-}
-
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
 }

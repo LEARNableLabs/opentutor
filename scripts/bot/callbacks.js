@@ -4,6 +4,7 @@
  */
 
 import { appendMemory } from './state.js';
+import { getCorrectAnswer } from './lesson.js';
 import { log } from './logger.js';
 
 export async function handleCallback(callbackQuery, channel, skills) {
@@ -25,7 +26,7 @@ export async function handleCallback(callbackQuery, channel, skills) {
   // Parse callback data
   // Format: "L{day}_{option}_{correct?}" or "hint_{id}" or "skip_{id}" or topic/intensity selectors
   // Flashcard callbacks
-  if (data.startsWith('fc_')) {
+  if (data.startsWith('fc::')) {
     const { handleFlashcardCallback } = await import('./flashcard.js');
     return handleFlashcardCallback(data, chatId, channel, messageId);
   }
@@ -48,25 +49,24 @@ export async function handleCallback(callbackQuery, channel, skills) {
     return;
   }
 
-  if (data.includes('correct')) {
-    // Remove buttons from original message
-    try {
-      await channel.editMessageButtons(chatId, messageId, []);
-    } catch { /* may fail if message is old */ }
-
-    await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
-    appendMemory(`Exercise correct: ${data}`);
-    return;
-  }
-
-  // Wrong answer
+  // Lesson exercise answer: L{day}_{letter}
   if (data.startsWith('L') || data.startsWith('ans_')) {
-    try {
-      await channel.editMessageButtons(chatId, messageId, []);
-    } catch { /* may fail */ }
+    const match = data.match(/^L(\d+)_([A-D])$/);
+    if (match) {
+      const [, day, letter] = match;
+      const correct = getCorrectAnswer(Number(day));
+      try {
+        await channel.editMessageButtons(chatId, messageId, []);
+      } catch { /* may fail if message is old */ }
 
-    await channel.sendMessage(chatId, "❌ Not quite — think about it from a different angle. What did we say about this concept earlier?");
-    appendMemory(`Exercise incorrect: ${data}`);
-    return;
+      if (correct && letter === correct) {
+        await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
+        appendMemory(`Exercise correct: ${data}`);
+      } else {
+        await channel.sendMessage(chatId, "❌ Not quite — think about it from a different angle. What did we say about this concept earlier?");
+        appendMemory(`Exercise incorrect: ${data}`);
+      }
+      return;
+    }
   }
 }
