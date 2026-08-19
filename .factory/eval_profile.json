@@ -1,0 +1,35 @@
+{
+  "project_type": "bot",
+  "dimensions": [
+    {
+      "name": "syntax_check",
+      "command": "node --check <file>",
+      "weight": 0.3,
+      "parser": "exit_code",
+      "regex_pattern": null,
+      "description": "Validate JS files parse with node --check on all .js files under scripts/",
+      "source": "explicit"
+    },
+    {
+      "name": "observability",
+      "command": "(inline)",
+      "weight": 0.3,
+      "parser": "json",
+      "regex_pattern": null,
+      "description": "Scan .js files for logging patterns (console.log/warn/error, pino, winston) and tracing",
+      "source": "explicit"
+    },
+    {
+      "name": "architecture",
+      "command": "(inline)",
+      "weight": 0.4,
+      "parser": "json",
+      "regex_pattern": null,
+      "description": "Check structural integrity: required skill/workspace files exist, JSON files parse, setup script present",
+      "source": "explicit"
+    }
+  ],
+  "tier": "explicit",
+  "confidence": 0.9,
+  "human_reviewed": false
+}
