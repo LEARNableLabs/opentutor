@@ -43,3 +43,20 @@ export function clearSession(channelId) {
     // already gone
   }
 }
+
+export function pruneOldSessions(maxAgeDays = 7) {
+  const dir = PATHS.sessions;
+  try {
+    const files = fs.readdirSync(dir);
+    const cutoff = Date.now() - maxAgeDays * 24 * 60 * 60 * 1000;
+    for (const file of files) {
+      if (!file.endsWith('.jsonl')) continue;
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      if (stat.mtimeMs < cutoff) {
+        fs.unlinkSync(filePath);
+        log.info({ file }, 'pruned old session');
+      }
+    }
+  } catch { /* sessions dir may not exist yet */ }
+}

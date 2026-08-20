@@ -59,11 +59,10 @@ export async function deliverFlashcards(chatId, channel, skills, limit = 1) {
  * @param {number} messageId
  */
 export async function handleFlashcardCallback(data, chatId, channel, messageId) {
-  // Parse: fc_{topic}_{concept}_{answer}_{correct?}
-  const parts = data.split('_');
+  const parts = data.split('::');
   const topic = parts[1];
   const concept = parts[2]?.replace(/-/g, ' ');
-  const isCorrect = data.includes('_correct');
+  const isCorrect = parts[3] === 'correct';
   log.info({ topic, concept, is_correct: isCorrect }, 'flashcard callback');
 
   // Remove buttons
@@ -115,8 +114,8 @@ function parseFlashcard(text, review) {
     question,
     buttons: [
       [
-        { text: '✅ Got it', callback_data: `fc_${topicSlug}_${conceptSlug}_correct` },
-        { text: '❌ Forgot', callback_data: `fc_${topicSlug}_${conceptSlug}_wrong` },
+        { text: '✅ Got it', callback_data: `fc::${topicSlug}::${conceptSlug}::correct` },
+        { text: '❌ Forgot', callback_data: `fc::${topicSlug}::${conceptSlug}::wrong` },
       ],
     ],
   };

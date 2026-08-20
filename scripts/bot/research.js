@@ -18,9 +18,7 @@ const WIKIPEDIA_API = 'https://en.wikipedia.org/api/rest_v1';
  * @param {string} [options.level] - Student level (beginner, intermediate, advanced)
  * @returns {Promise<{arxiv: object[], semanticScholar: object[], wikipedia: object|null, openAlex: object[]}>}
  */
-export async function researchTopic(topic, options = {}) {
-  const level = options.level || 'intermediate';
-
+export async function researchTopic(topic, _options = {}) {
   // Run all searches in parallel
   const [arxiv, semanticScholar, wikipedia, openAlex] = await Promise.allSettled([
     searchArxiv(topic),

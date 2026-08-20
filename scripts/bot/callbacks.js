@@ -3,9 +3,9 @@
  * Parses callback_data, sends feedback, updates progress.
  */
 
-import { generate } from './claude.js';
-import { buildChatPrompt } from './context.js';
 import { appendMemory } from './state.js';
+import { getCorrectAnswer, getLessonContext } from './lesson.js';
+import { generate } from './claude.js';
 import { log } from './logger.js';
 
 export async function handleCallback(callbackQuery, channel, skills) {
@@ -27,7 +27,7 @@ export async function handleCallback(callbackQuery, channel, skills) {
   // Parse callback data
   // Format: "L{day}_{option}_{correct?}" or "hint_{id}" or "skip_{id}" or topic/intensity selectors
   // Flashcard callbacks
-  if (data.startsWith('fc_')) {
+  if (data.startsWith('fc::')) {
     const { handleFlashcardCallback } = await import('./flashcard.js');
     return handleFlashcardCallback(data, chatId, channel, messageId);
   }
@@ -39,36 +39,58 @@ export async function handleCallback(callbackQuery, channel, skills) {
     return handleOnboardingCallback(data, chatId, channel, skills);
   }
 
-  if (data.includes('hint')) {
+  if (data.endsWith(':hint')) {
+    try {
+      const match = data.match(/^ex:([^:]+):(\d+):hint$/);
+      if (match) {
+        const [, topicSlug, day] = match;
+        const ctx = getLessonContext(topicSlug, Number(day));
+        if (ctx) {
+          await channel.sendTyping(chatId);
+          const result = await generate(
+            `Give a brief, helpful hint for this exercise. Topic: ${ctx.title}, Concepts: ${(ctx.concepts || []).join(', ')}. Do not give away the answer.`,
+            [{ role: 'user', content: 'I need a hint for this exercise.' }],
+            { model: 'cheap' }
+          );
+          await channel.sendMessage(chatId, `💡 <b>Hint:</b> ${result.text}`);
+          return;
+        }
+      }
+    } catch (err) {
+      log.warn({ err, callback: data }, 'context-aware hint generation failed, using fallback');
+    }
     await channel.sendMessage(chatId, '💡 <b>Hint:</b> Think about what we covered earlier in this lesson. What concept connects to the question?', {});
     return;
   }
 
-  if (data.includes('skip')) {
+  if (data.endsWith(':skip')) {
     await channel.sendMessage(chatId, "⏭ No worries — skipped. We'll come back to this one later.");
     appendMemory(`Exercise skipped: ${data}`);
     return;
   }
 
-  if (data.includes('correct')) {
-    // Remove buttons from original message
-    try {
-      await channel.editMessageButtons(chatId, messageId, []);
-    } catch { /* may fail if message is old */ }
+  // Lesson exercise answer: ex:{topicSlug}:{day}:{letter}
+  if (data.startsWith('ex:')) {
+    const match = data.match(/^ex:([^:]+):(\d+):([A-D])$/);
+    if (match) {
+      const [, topicSlug, day, letter] = match;
+      const correct = getCorrectAnswer(topicSlug, Number(day));
+      try {
+        await channel.editMessageButtons(chatId, messageId, []);
+      } catch { /* may fail if message is old */ }
 
-    await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
-    appendMemory(`Exercise correct: ${data}`);
-    return;
-  }
-
-  // Wrong answer
-  if (data.startsWith('L') || data.startsWith('ans_')) {
-    try {
-      await channel.editMessageButtons(chatId, messageId, []);
-    } catch { /* may fail */ }
-
-    await channel.sendMessage(chatId, "❌ Not quite — think about it from a different angle. What did we say about this concept earlier?");
-    appendMemory(`Exercise incorrect: ${data}`);
-    return;
+      if (!correct) {
+        log.warn({ day, letter }, 'no correct answer stored');
+        await channel.sendMessage(chatId, `You picked <b>${letter}</b> — I couldn't score this one automatically. Let's keep going!`);
+        appendMemory(`Exercise unscored (no answer key): ${data}`);
+      } else if (letter === correct) {
+        await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
+        appendMemory(`Exercise correct: ${data}`);
+      } else {
+        await channel.sendMessage(chatId, "❌ Not quite — think about it from a different angle. What did we say about this concept earlier?");
+        appendMemory(`Exercise incorrect: ${data}`);
+      }
+      return;
+    }
   }
 }

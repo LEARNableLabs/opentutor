@@ -177,11 +177,6 @@ Do NOT generate any curriculum, lesson list, or JSON. Just the intro message.`,
   return { system, model: 'strong' };
 }
 
-// Kept for backward compat — no longer used in main flow
-export function buildScaffoldPrompt(skills, topic, studentLevel) {
-  return buildIntroPrompt(skills, topic, studentLevel, null);
-}
-
 export function buildResearchSynthesisPrompt(skills, topic, studentLevel, researchContext) {
   const system = [
     skills.get('skill'),
@@ -218,7 +213,3 @@ Only include resource URLs that appear in the research results above or that you
   return { system, model: 'strong' };
 }
 
-// Keep backward compat alias
-export function buildCurriculumPrompt(skills, topic, studentLevel) {
-  return buildScaffoldPrompt(skills, topic, studentLevel);
-}

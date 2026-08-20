@@ -5,6 +5,7 @@
 
 import { BaseChannel } from './base.js';
 import { log } from '../logger.js';
+import { sleep, retry } from '../helpers.js';
 
 export class TelegramChannel extends BaseChannel {
   constructor({ token, chatId, mode = 'polling', onUpdate }) {
@@ -147,17 +148,20 @@ export class TelegramChannel extends BaseChannel {
   // ── Internal ──────────────────────────────────────────────
 
   async _call(method, body = {}) {
-    const res = await fetch(`${this.api}/${method}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    });
-    const data = await res.json();
-    if (!data.ok) throw new Error(`Telegram ${method}: ${data.description}`);
-    return data.result;
+    return retry(async () => {
+      const res = await fetch(`${this.api}/${method}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (data.ok) return data.result;
+      if (data.error_code === 429) {
+        const retryAfter = data.parameters?.retry_after || 5;
+        await sleep(retryAfter * 1000);
+        throw new Error(`Telegram rate limited (retry_after: ${retryAfter}s)`);
+      }
+      throw new Error(`Telegram ${method}: ${data.description}`);
+    }, { maxAttempts: 3, baseDelay: 1000, label: `telegram:${method}` });
   }
-}
-
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
 }

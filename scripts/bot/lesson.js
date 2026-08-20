@@ -2,12 +2,44 @@
  * Lesson delivery — generate via Claude, parse by emoji anchors, send chunked.
  */
 
+import fs from 'fs';
+import path from 'path';
 import { generateStream } from './claude.js';
 import { buildLessonPrompt } from './context.js';
 import { getNextLesson, markLessonComplete, readCurriculum, appendMemory } from './state.js';
+import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts } from './spaced-repetition.js';
+import { sleep } from './helpers.js';
 import { log } from './logger.js';
+
+const EXERCISE_STATE_PATH = path.join(PATHS.workspace, 'tutor', 'exercise-state.json');
+
+function loadExerciseState() {
+  try {
+    return JSON.parse(fs.readFileSync(EXERCISE_STATE_PATH, 'utf-8'));
+  } catch {
+    return { answers: {}, contexts: {} };
+  }
+}
+
+function saveExerciseState(state) {
+  const dir = path.dirname(EXERCISE_STATE_PATH);
+  fs.mkdirSync(dir, { recursive: true });
+  const tmp = EXERCISE_STATE_PATH + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(state, null, 2));
+  fs.renameSync(tmp, EXERCISE_STATE_PATH);
+}
+
+const exerciseState = loadExerciseState();
+
+export function getCorrectAnswer(topicSlug, day) {
+  return exerciseState.answers[topicSlug + ':' + day];
+}
+
+export function getLessonContext(topicSlug, day) {
+  return exerciseState.contexts[topicSlug + ':' + day];
+}
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const start = Date.now();
@@ -41,7 +73,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
     // Add exercise buttons to the last message (or any ✏️ message)
     if (chunk.anchor === '✏️' || (isLast && !chunks.some((c) => c.anchor === '✏️'))) {
-      options.buttons = buildExerciseButtons(lesson.day, chunk.text);
+      options.buttons = buildExerciseButtons(lesson.day, chunk.text, topicSlug);
     }
 
     await channel.sendMessage(chatId, chunk.text, options);
@@ -50,6 +82,14 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
       await sleep(2000);
     }
   }
+
+  // Store lesson context for hint generation (persisted to disk)
+  exerciseState.contexts[topicSlug + ':' + lesson.day] = {
+    title: lesson.title,
+    concepts: lesson.concepts,
+    topicSlug,
+  };
+  saveExerciseState(exerciseState);
 
   // Log and update progress
   log.info({ topic: topicSlug, lesson_id: lesson.day, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson delivered');
@@ -94,24 +134,36 @@ function parseLessonChunks(text) {
 
 // ── Build exercise buttons ──────────────────────────────────
 
-function buildExerciseButtons(day, exerciseText) {
-  // Try to detect correct answer from Claude's response (e.g., "correct: B" or "(answer: C)")
-  const correctMatch = exerciseText?.match(/(?:correct|answer)[:\s]*([A-D])/i);
-  const correctLetter = correctMatch ? correctMatch[1].toUpperCase() : null;
+function buildExerciseButtons(day, exerciseText, topicSlug) {
+  const patterns = [
+    /(?:correct|answer)\s*(?:is)?[:\s]*\(?([A-D])\)?/i,
+    /\b([A-D])\b\s*(?:is\s+)?(?:the\s+)?(?:correct|right)\b/i,
+    /✅\s*\(?([A-D])\)?/i,
+    /^[^a-z]*correct[^a-z]*([A-D])\b/im,
+  ];
+  let matched = false;
+  for (const pattern of patterns) {
+    const m = exerciseText?.match(pattern);
+    if (m) {
+      exerciseState.answers[topicSlug + ':' + day] = m[1].toUpperCase();
+      saveExerciseState(exerciseState);
+      matched = true;
+      break;
+    }
+  }
+  if (!matched) {
+    log.warn({ day }, 'could not parse correct answer from exercise text');
+  }
 
   const options = ['A', 'B', 'C', 'D'];
   return [
     options.map((letter) => ({
       text: letter,
-      callback_data: `L${day}_${letter}${letter === correctLetter ? '_correct' : ''}`,
+      callback_data: `ex:${topicSlug}:${day}:${letter}`,
     })),
     [
-      { text: '💡 Hint', callback_data: `L${day}_hint` },
-      { text: '⏭ Skip', callback_data: `L${day}_skip` },
+      { text: '💡 Hint', callback_data: `ex:${topicSlug}:${day}:hint` },
+      { text: '⏭ Skip', callback_data: `ex:${topicSlug}:${day}:skip` },
     ],
   ];
-}
-
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
 }

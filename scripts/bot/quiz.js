@@ -5,6 +5,7 @@
 import { generate } from './claude.js';
 import { buildQuizPrompt } from './context.js';
 import { readCurriculum } from './state.js';
+import { sleep } from './helpers.js';
 import { log } from './logger.js';
 
 export async function generateQuiz(topicSlug, chatId, channel, skills, specificConcepts) {
@@ -55,6 +56,3 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, specificC
   }
 }
 
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
-}

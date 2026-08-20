@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Graduation cap base (mortarboard) -->
+  <polygon points="64,38 12,58 64,78 116,58" fill="#2563EB"/>
+  <!-- Cap top surface -->
+  <polygon points="64,38 116,58 116,62 64,82 12,62 12,58" fill="#1D4ED8"/>
+  <!-- Cap button on top -->
+  <circle cx="64" cy="38" r="4" fill="#1E40AF"/>
+  <!-- Tassel string -->
+  <line x1="64" y1="38" x2="100" y2="42" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <!-- Tassel end -->
+  <rect x="97" y="42" width="6" height="12" rx="2" fill="#F59E0B"/>
+  <!-- Lightbulb rising from cap center -->
+  <ellipse cx="64" cy="24" rx="14" ry="16" fill="#F59E0B"/>
+  <!-- Lightbulb base/screw -->
+  <rect x="57" y="33" width="14" height="6" rx="2" fill="#D97706"/>
+  <!-- Lightbulb highlight -->
+  <ellipse cx="59" cy="20" rx="4" ry="6" fill="#FDE68A" opacity="0.6"/>
+  <!-- Spark lines around bulb -->
+  <line x1="64" y1="2" x2="64" y2="6" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="44" y1="10" x2="47" y2="13" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="84" y1="10" x2="81" y2="13" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="38" y1="22" x2="42" y2="23" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="90" y1="22" x2="86" y2="23" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cap band / lower portion -->
+  <path d="M32,68 L32,85 Q64,100 96,85 L96,68 L64,82 Z" fill="#2563EB"/>
+  <!-- Band highlight -->
+  <path d="M32,68 L32,72 Q64,86 96,72 L96,68 L64,82 Z" fill="#1D4ED8"/>
+</svg>

@@ -15,7 +15,7 @@ export function isOnboarding() {
   return progress.onboarding?.active === true;
 }
 
-export async function startOnboarding(chatId, channel, skills) {
+export async function startOnboarding(chatId, channel, _skills) {
   log.info({ user_id: chatId }, 'onboarding started');
   updateProgress((p) => {
     p.onboarding = { active: true, step: 'intro', startedAt: Date.now() };
@@ -38,7 +38,14 @@ export async function handleOnboarding(text, chatId, channel, skills) {
   const history = getRecentHistory(chatId);
   history.push({ role: 'user', content: text });
 
-  const response = await generate(system, history, { model: 'strong' });
+  let response;
+  try {
+    response = await generate(system, history, { model: 'strong' });
+  } catch (err) {
+    log.error({ err, user_id: chatId }, 'onboarding generation failed');
+    await channel.sendMessage(chatId, 'Hit a snag — tell me again what you would like to learn.');
+    return;
+  }
 
   // Log assistant response
   appendMessage(chatId, 'assistant', response.text);
