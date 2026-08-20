@@ -83,7 +83,6 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     }
   }
 
-  // Store lesson context for hint generation (persisted to disk)
   exerciseState.contexts[topicSlug + ':' + lesson.day] = {
     title: lesson.title,
     concepts: lesson.concepts,

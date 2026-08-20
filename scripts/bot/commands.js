@@ -123,7 +123,7 @@ async function cmdPause(chatId, channel, _skills) {
   await channel.sendMessage(chatId, '⏸ Lessons paused. Type /resume when you\'re ready.');
 }
 
-async function cmdResume(chatId, channel, skills) {
+async function cmdResume(chatId, channel, _skills) {
   const progress = updateProgress((p) => {
     p.schedule = p.schedule || {};
     p.schedule.paused = false;
