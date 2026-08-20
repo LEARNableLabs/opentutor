@@ -34,7 +34,12 @@ const CAPS = {
 // ── Tutor state ───────────────────────────────────────────────
 
 const tutorMemory = []
+const executionLog = []
 let researchRounds = 0
+
+function logStep(entry) {
+  executionLog.push({ ...entry, timestamp: executionLog.length + 1 })
+}
 
 if (humanGuidance) {
   tutorMemory.push(`[human-guidance] The human provided this guidance to resume: ${humanGuidance}`)
@@ -160,6 +165,18 @@ ${researchRounds > 0 ? `\nTargeted research rounds used: ${researchRounds}/${CAP
     tutorMemory.push(`[${step}] ${decision.context_update}`)
   }
 
+  logStep({
+    type: 'tutor-decision',
+    step,
+    iteration: iteration || 1,
+    decision: decision?.decision,
+    confidence: decision?.confidence,
+    reasoning: decision?.reasoning,
+    research_query: decision?.research_query,
+    redo_feedback: decision?.redo_feedback,
+    quality_snapshot: decision?.quality_snapshot,
+  })
+
   log(`Tutor (${step}): ${decision?.decision || 'unknown'} (confidence: ${decision?.confidence || '?'}/10) — ${decision?.quality_snapshot || ''}`)
 
   return decision || { decision: 'ADVANCE', confidence: 5, reasoning: 'No response from tutor', context_update: 'Tutor did not respond, defaulting to ADVANCE', quality_snapshot: 'unknown' }
@@ -203,13 +220,15 @@ phase('Survey')
 log(`Starting tutor-controlled pipeline for "${topic}" (${level})`)
 
 const surveyResult = await workflow('research', { topic, mode: 'survey' })
+logStep({ type: 'workflow', name: 'research', mode: 'survey', result: { coverage: surveyResult?.coverage, gaps: surveyResult?.gaps } })
 log(`Survey done: coverage ${surveyResult?.coverage || '?'}/10`)
 
 let decision = await tutorJudge('survey', surveyResult)
 
 while (decision.decision === 'RESEARCH' && researchRounds < CAPS.targetedResearch) {
   log(`Tutor requests targeted research: "${decision.research_query}"`)
-  await workflow('research', { topic, mode: 'targeted', query: decision.research_query })
+  const targetedResult = await workflow('research', { topic, mode: 'targeted', query: decision.research_query })
+  logStep({ type: 'workflow', name: 'research', mode: 'targeted', query: decision.research_query, result: targetedResult })
   researchRounds++
   decision = await tutorJudge('survey-enriched', { enrichedWith: decision.research_query, roundsUsed: researchRounds, roundsMax: CAPS.targetedResearch })
 }
@@ -267,6 +286,7 @@ Report as JSON.`,
   { label: 'audience', phase: 'Audience', schema: AUDIENCE_SCHEMA }
 )
 
+logStep({ type: 'agent', name: 'audience', result: audience })
 tutorMemory.push(`[audience] ${audience?.summary || 'Audience assessment completed.'}`)
 log(`Audience: ${audience?.audience_type || 'unknown'} — ${audience?.goal || 'unknown goal'}`)
 
@@ -334,6 +354,7 @@ for (let attempt = 1; attempt <= CAPS.buildRedos + 1; attempt++) {
     feedback: buildFeedback,
     audience: audience?.summary,
   })
+  logStep({ type: 'workflow', name: 'curriculum-build', mode: buildMode, attempt, result: { gate: buildResult?.gate, issues: buildResult?.issues } })
 
   log(`Build attempt ${attempt}: gate=${buildResult?.gate || '?'}, mode=${buildMode}`)
 
@@ -345,7 +366,8 @@ for (let attempt = 1; attempt <= CAPS.buildRedos + 1; attempt++) {
 
   if (decision.decision === 'RESEARCH' && researchRounds < CAPS.targetedResearch) {
     log(`Tutor requests targeted research before rebuild: "${decision.research_query}"`)
-    await workflow('research', { topic, mode: 'targeted', query: decision.research_query })
+    const targetedResult = await workflow('research', { topic, mode: 'targeted', query: decision.research_query })
+    logStep({ type: 'workflow', name: 'research', mode: 'targeted', query: decision.research_query, result: targetedResult })
     researchRounds++
   }
 
@@ -358,6 +380,7 @@ phase('QA')
 
 for (let cycle = 1; cycle <= CAPS.qaCycles + 1; cycle++) {
   const qaResult = await workflow('curriculum-qa', { topic })
+  logStep({ type: 'workflow', name: 'curriculum-qa', cycle, result: { verdict: qaResult?.verdict, score: qaResult?.score, criticalIssues: qaResult?.criticalIssues, warnings: qaResult?.warnings } })
 
   log(`QA cycle ${cycle}: verdict=${qaResult?.verdict || '?'}, score=${qaResult?.score || '?'}/10`)
 
@@ -369,19 +392,21 @@ for (let cycle = 1; cycle <= CAPS.qaCycles + 1; cycle++) {
 
   if (decision.decision === 'RESEARCH' && researchRounds < CAPS.targetedResearch) {
     log(`Tutor requests targeted research to fix QA issues: "${decision.research_query}"`)
-    await workflow('research', { topic, mode: 'targeted', query: decision.research_query })
+    const targetedResult = await workflow('research', { topic, mode: 'targeted', query: decision.research_query })
+    logStep({ type: 'workflow', name: 'research', mode: 'targeted', query: decision.research_query, result: targetedResult })
     researchRounds++
   }
 
   if (decision.decision === 'REDO' || decision.decision === 'RESEARCH') {
     log(`Rebuilding (patch) with QA feedback before re-running QA`)
-    await workflow('curriculum-build', {
+    const patchResult = await workflow('curriculum-build', {
       topic,
       level,
       mode: 'patch',
       feedback: decision.redo_feedback || 'Address QA findings.',
       audience: audience?.summary,
     })
+    logStep({ type: 'workflow', name: 'curriculum-build', mode: 'patch', cycle, result: { gate: patchResult?.gate, issues: patchResult?.issues } })
   }
 }
 
@@ -392,6 +417,7 @@ phase('Schedule')
 let schedFeedback = null
 for (let attempt = 1; attempt <= CAPS.scheduleRedos + 1; attempt++) {
   const schedResult = await workflow('schedule', { topic, timezone, feedback: schedFeedback })
+  logStep({ type: 'workflow', name: 'schedule', attempt, result: { pacing: schedResult?.schedule?.pacing, gate: schedResult?.gate } })
 
   log(`Schedule attempt ${attempt}: pacing=${schedResult?.schedule?.pacing || '?'}`)
 
@@ -456,11 +482,26 @@ ${tutorMemory.map((m, i) => (i + 1) + '. ' + m).join('\n')}
 - Estimated completion:
 
 ## Files Generated
-List all files in ${domainDir}/ with their sizes.`,
+List all files in ${domainDir}/ with their sizes.
+
+## Execution Log
+${executionLog.map(e => {
+    if (e.type === 'tutor-decision') return '### Step ' + e.timestamp + ': Tutor → ' + e.step + ' (attempt ' + e.iteration + ')\n- **Decision**: ' + e.decision + ' (confidence: ' + e.confidence + '/10)\n- **Reasoning**: ' + e.reasoning + (e.research_query ? '\n- **Research query**: ' + e.research_query : '') + (e.redo_feedback ? '\n- **Redo feedback**: ' + e.redo_feedback : '') + '\n- **Quality**: ' + e.quality_snapshot
+    if (e.type === 'workflow') return '### Step ' + e.timestamp + ': Workflow → ' + e.name + ' (' + (e.mode || 'default') + ')' + (e.query ? '\n- **Query**: ' + e.query : '') + (e.attempt ? '\n- **Attempt**: ' + e.attempt : '') + (e.cycle ? '\n- **Cycle**: ' + e.cycle : '') + '\n- **Result**: ' + JSON.stringify(e.result)
+    if (e.type === 'agent') return '### Step ' + e.timestamp + ': Agent → ' + e.name + '\n- **Result**: ' + JSON.stringify(e.result)
+    return '### Step ' + e.timestamp + ': ' + e.type + '\n' + JSON.stringify(e)
+  }).join('\n\n')}`,
   { label: 'report', phase: 'Register' }
 )
 
-log(`Pipeline complete for "${topic}" — ${tutorMemory.length} tutor judgments, ${researchRounds} targeted research rounds`)
+// ── Write execution log as JSON ──────────────────────────────
+
+await agent(
+  'Write the following JSON to ' + domainDir + '/execution-log.json:\n\n' + JSON.stringify({ topic, slug, level, audience: audience?.summary, tutorMemory, executionLog, researchRounds, caps: CAPS }, null, 2),
+  { label: 'write-log', phase: 'Register' }
+)
+
+log('Pipeline complete for "' + topic + '" — ' + tutorMemory.length + ' tutor judgments, ' + researchRounds + ' targeted research rounds')
 
 return {
   topic,
