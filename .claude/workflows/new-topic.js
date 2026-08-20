@@ -501,6 +501,67 @@ await agent(
   { label: 'write-log', phase: 'Register' }
 )
 
+// ── Write HTML pipeline report ───────────────────────────────
+
+const reportData = JSON.stringify({
+  topic,
+  slug,
+  level,
+  audience,
+  tutorMemory,
+  executionLog,
+  researchRounds,
+  caps: CAPS,
+}, null, 2)
+
+await agent(
+  'Generate a self-contained HTML pipeline report and write it to ' + domainDir + '/pipeline-report.html.\n\n' +
+  '## Data\n```json\n' + reportData + '\n```\n\n' +
+  '## Requirements\n\n' +
+  'Build a single HTML file with ALL CSS inline (no external dependencies). The page should visualize the full pipeline execution.\n\n' +
+  '### 1. Header\n' +
+  '- Title: "Pipeline Report: ' + topic + '"\n' +
+  '- Subtitle: generated date, level, audience summary\n' +
+  '- 4 stat cards in a row: Tutor Judgments (count), Research Rounds (used/max), Total Steps (count), Final Verdict (from last QA tutor decision)\n\n' +
+  '### 2. Pipeline Flow Diagram\n' +
+  'A horizontal or vertical flow showing the pipeline steps as connected nodes:\n' +
+  '- Each step is a rounded box with the step name (Survey, Audience, Build, QA, Schedule, Register)\n' +
+  '- Color-code by what happened: green = ADVANCE on first try, yellow = ADVANCE after iteration, blue = included RESEARCH, gray = not reached\n' +
+  '- Show arrows between steps. If a step looped (REDO/RESEARCH), show a curved arrow back to itself with the iteration count\n' +
+  '- Use CSS flexbox/grid, not SVG — keep it simple\n\n' +
+  '### 3. Tutor Decision Timeline\n' +
+  'A vertical timeline of every tutor decision, in order. For each:\n' +
+  '- Step name and attempt number as header\n' +
+  '- Decision badge: ADVANCE (green), RESEARCH (blue), REDO (yellow), ESCALATE (red)\n' +
+  '- Confidence as a small horizontal bar (1-10 scale)\n' +
+  '- Reasoning text (collapsible via <details> tag)\n' +
+  '- If RESEARCH: show the query in a highlighted box\n' +
+  '- If REDO: show the feedback in a highlighted box\n' +
+  '- Quality snapshot as a subtle italic line\n\n' +
+  '### 4. Workflow Calls Table\n' +
+  'A table of all workflow/agent calls (non-tutor entries in executionLog):\n' +
+  '- Columns: Step #, Workflow Name, Mode, Attempt/Cycle, Key Results\n' +
+  '- Highlight targeted research rows in light blue\n' +
+  '- Highlight patch rebuilds in light yellow\n\n' +
+  '### 5. Audience Profile Card\n' +
+  'If audience data exists, show a card with: audience_type, goal, background, tone, depth, time_commitment, summary.\n' +
+  'Use a 2-column layout with labels on the left and values on the right.\n\n' +
+  '### 6. Tutor Memory (accumulated context)\n' +
+  'Show the full tutorMemory array as a numbered list. Each entry is one judgment summary.\n' +
+  'Use a monospace font for this section — it is the tutor\'s internal narrative.\n\n' +
+  '### Style Rules\n' +
+  '- Font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif\n' +
+  '- Background: #f8fafc, text: #1e293b\n' +
+  '- Primary: #2563eb, Success: #16a34a, Warning: #eab308, Error: #dc2626, Info: #0ea5e9\n' +
+  '- Cards: white background, box-shadow: 0 1px 3px rgba(0,0,0,0.12), border-radius: 8px, padding: 24px\n' +
+  '- Decision badges: small rounded pills with white text on colored background\n' +
+  '- Max content width: 960px, centered\n' +
+  '- Responsive: cards wrap on narrow screens\n' +
+  '- Page title: "Pipeline Report: ' + topic + '"\n\n' +
+  'Write the complete HTML file. It must render correctly when opened in a browser.',
+  { label: 'html-report', phase: 'Register' }
+)
+
 log('Pipeline complete for "' + topic + '" — ' + tutorMemory.length + ' tutor judgments, ' + researchRounds + ' targeted research rounds')
 
 return {
