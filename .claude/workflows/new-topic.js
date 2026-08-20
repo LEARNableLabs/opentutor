@@ -219,7 +219,7 @@ args: {topic: "${topic}", level: "${level}", humanGuidance: "your answer here"}`
 phase('Survey')
 log(`Starting tutor-controlled pipeline for "${topic}" (${level})`)
 
-const surveyResult = await workflow('research', { topic, mode: 'survey' })
+const surveyResult = await workflow({scriptPath: '.claude/workflows/research.js'}, { topic, mode: 'survey' })
 logStep({ type: 'workflow', name: 'research', mode: 'survey', result: { coverage: surveyResult?.coverage, gaps: surveyResult?.gaps } })
 log(`Survey done: coverage ${surveyResult?.coverage || '?'}/10`)
 
@@ -227,7 +227,7 @@ let decision = await tutorJudge('survey', surveyResult)
 
 while (decision.decision === 'RESEARCH' && researchRounds < CAPS.targetedResearch) {
   log(`Tutor requests targeted research: "${decision.research_query}"`)
-  const targetedResult = await workflow('research', { topic, mode: 'targeted', query: decision.research_query })
+  const targetedResult = await workflow({scriptPath: '.claude/workflows/research.js'}, { topic, mode: 'targeted', query: decision.research_query })
   logStep({ type: 'workflow', name: 'research', mode: 'targeted', query: decision.research_query, result: targetedResult })
   researchRounds++
   decision = await tutorJudge('survey-enriched', { enrichedWith: decision.research_query, roundsUsed: researchRounds, roundsMax: CAPS.targetedResearch })
@@ -347,7 +347,7 @@ phase('Build')
 let buildFeedback = null
 for (let attempt = 1; attempt <= CAPS.buildRedos + 1; attempt++) {
   const buildMode = buildFeedback ? 'patch' : 'full'
-  const buildResult = await workflow('curriculum-build', {
+  const buildResult = await workflow({scriptPath: '.claude/workflows/curriculum-build.js'}, {
     topic,
     level,
     mode: buildMode,
@@ -366,7 +366,7 @@ for (let attempt = 1; attempt <= CAPS.buildRedos + 1; attempt++) {
 
   if (decision.decision === 'RESEARCH' && researchRounds < CAPS.targetedResearch) {
     log(`Tutor requests targeted research before rebuild: "${decision.research_query}"`)
-    const targetedResult = await workflow('research', { topic, mode: 'targeted', query: decision.research_query })
+    const targetedResult = await workflow({scriptPath: '.claude/workflows/research.js'}, { topic, mode: 'targeted', query: decision.research_query })
     logStep({ type: 'workflow', name: 'research', mode: 'targeted', query: decision.research_query, result: targetedResult })
     researchRounds++
   }
@@ -379,7 +379,7 @@ for (let attempt = 1; attempt <= CAPS.buildRedos + 1; attempt++) {
 phase('QA')
 
 for (let cycle = 1; cycle <= CAPS.qaCycles + 1; cycle++) {
-  const qaResult = await workflow('curriculum-qa', { topic })
+  const qaResult = await workflow({scriptPath: '.claude/workflows/curriculum-qa.js'}, { topic })
   logStep({ type: 'workflow', name: 'curriculum-qa', cycle, result: { verdict: qaResult?.verdict, score: qaResult?.score, criticalIssues: qaResult?.criticalIssues, warnings: qaResult?.warnings } })
 
   log(`QA cycle ${cycle}: verdict=${qaResult?.verdict || '?'}, score=${qaResult?.score || '?'}/10`)
@@ -392,14 +392,14 @@ for (let cycle = 1; cycle <= CAPS.qaCycles + 1; cycle++) {
 
   if (decision.decision === 'RESEARCH' && researchRounds < CAPS.targetedResearch) {
     log(`Tutor requests targeted research to fix QA issues: "${decision.research_query}"`)
-    const targetedResult = await workflow('research', { topic, mode: 'targeted', query: decision.research_query })
+    const targetedResult = await workflow({scriptPath: '.claude/workflows/research.js'}, { topic, mode: 'targeted', query: decision.research_query })
     logStep({ type: 'workflow', name: 'research', mode: 'targeted', query: decision.research_query, result: targetedResult })
     researchRounds++
   }
 
   if (decision.decision === 'REDO' || decision.decision === 'RESEARCH') {
     log(`Rebuilding (patch) with QA feedback before re-running QA`)
-    const patchResult = await workflow('curriculum-build', {
+    const patchResult = await workflow({scriptPath: '.claude/workflows/curriculum-build.js'}, {
       topic,
       level,
       mode: 'patch',
@@ -416,7 +416,7 @@ phase('Schedule')
 
 let schedFeedback = null
 for (let attempt = 1; attempt <= CAPS.scheduleRedos + 1; attempt++) {
-  const schedResult = await workflow('schedule', { topic, timezone, feedback: schedFeedback })
+  const schedResult = await workflow({scriptPath: '.claude/workflows/schedule.js'}, { topic, timezone, feedback: schedFeedback })
   logStep({ type: 'workflow', name: 'schedule', attempt, result: { pacing: schedResult?.schedule?.pacing, gate: schedResult?.gate } })
 
   log(`Schedule attempt ${attempt}: pacing=${schedResult?.schedule?.pacing || '?'}`)
