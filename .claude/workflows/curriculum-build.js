@@ -1,7 +1,7 @@
 export const meta = {
   name: 'curriculum-build',
-  description: 'Build a full curriculum from research — modules, lessons, concept map, teaching notes',
-  whenToUse: 'After running the research workflow. Usage: run with args {topic: "optimal transport", level: "intermediate"}',
+  description: 'Build a full curriculum from research — modules, lessons, concept map, teaching notes. Supports patch mode for targeted fixes.',
+  whenToUse: 'After running the research workflow. Usage: run with args {topic: "optimal transport", level: "intermediate"} for full build, or {topic: "...", level: "...", mode: "patch", feedback: "fix lessons 12-15..."} for targeted fixes',
   phases: [
     { title: 'Read', detail: 'Load research document and existing domain data' },
     { title: 'Design', detail: 'Parallel agents design curriculum structure, concept map, and teaching notes' },
@@ -13,10 +13,120 @@ export const meta = {
 const topic = args?.topic
 if (!topic) throw new Error('Missing args.topic — pass {topic: "optimal transport", level: "intermediate"}')
 const level = args?.level || 'intermediate'
+const mode = args?.mode || 'full'
+const feedback = args?.feedback || null
+const audience = args?.audience || null
 
 const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const domainDir = `skills/tutor/domains/${slug}`
 const researchPath = `${domainDir}/research.md`
+
+const audienceContext = audience
+  ? `\n## Target Audience\n${typeof audience === 'string' ? audience : JSON.stringify(audience, null, 2)}`
+  : ''
+
+// ══════════════════════════════════════════════════════════════
+// PATCH MODE — targeted fixes based on feedback
+// ══════════════════════════════════════════════════════════════
+
+if (mode === 'patch' && feedback) {
+  phase('Read')
+  log(`Patch mode: applying targeted fixes to "${topic}" curriculum`)
+
+  phase('Design')
+
+  const patchResults = await parallel([
+    () => agent(
+      `Read these files:
+- ${domainDir}/curriculum.json
+- ${domainDir}/concept-map.md
+- ${researchPath} (check for any "Targeted Research" sections at the end — these contain new material)
+
+Apply these specific fixes to the curriculum and concept map:
+${feedback}
+${audienceContext}
+
+Rules:
+- Only modify the parts cited in the feedback
+- Preserve all lessons/concepts not mentioned in the feedback
+- If adding new lessons, maintain day number sequence
+- If the feedback mentions thin resources, pull from research.md
+- If new targeted research sections exist, incorporate relevant findings
+- Write the complete corrected curriculum.json back to ${domainDir}/curriculum.json
+- If the concept map needs updates, write the corrected version to ${domainDir}/concept-map.md
+
+Report what you changed at the end of your response.`,
+      { label: 'patch:curriculum', phase: 'Design' }
+    ),
+    () => agent(
+      `Read these files:
+- ${domainDir}/resources.md
+- ${domainDir}/teaching-notes.md
+- ${researchPath} (check for any "Targeted Research" sections at the end — these contain new material)
+
+Apply these specific fixes:
+${feedback}
+${audienceContext}
+
+Rules:
+- Only modify sections cited in the feedback
+- If new targeted research sections exist in research.md, incorporate relevant resources
+- Preserve all content not mentioned in the feedback
+- Write corrected files back to their original paths
+- If a file needs no changes, do not rewrite it
+
+Report what you changed at the end of your response.`,
+      { label: 'patch:resources', phase: 'Design' }
+    ),
+  ])
+
+  // ── Gate — same quality check as full mode ───────────────────
+
+  phase('Gate')
+
+  const GATE_SCHEMA = {
+    type: 'object',
+    properties: {
+      verdict: { type: 'string', enum: ['PROCEED', 'ISSUES'] },
+      sequencing_ok: { type: 'boolean' },
+      coverage_ok: { type: 'boolean' },
+      difficulty_curve_ok: { type: 'boolean' },
+      issues: { type: 'array', items: { type: 'string' } },
+      suggestions: { type: 'array', items: { type: 'string' } },
+    },
+    required: ['verdict', 'issues'],
+  }
+
+  const gate = await agent(
+    `You are a pedagogical quality gate. Review the patched curriculum for "${topic}" (${level} level).
+
+Read these files (they have just been updated by a patch operation):
+- ${domainDir}/curriculum.json
+- ${domainDir}/concept-map.md
+- ${domainDir}/teaching-notes.md
+- ${domainDir}/resources.md
+
+The patch was applied to fix these issues:
+${feedback}
+
+Check:
+1. **Sequencing** — Do prerequisites still come before dependents after the patch?
+2. **Coverage** — Did the patch address the cited issues without breaking other coverage?
+3. **Difficulty curve** — Is the progression still gradual?
+4. **Regression** — Did the patch introduce any new problems?
+5. **Completeness** — Were all items in the feedback actually addressed?
+
+Report as JSON. PROCEED if the patch looks good. ISSUES if there are remaining or new problems.`,
+    { label: 'patch-gate', phase: 'Gate', schema: GATE_SCHEMA }
+  )
+
+  log(`Patch gate: ${gate?.verdict || 'unknown'}, issues: ${gate?.issues?.length || 0}`)
+  return { topic, slug, level, domainDir, mode: 'patch', gate: gate?.verdict, issues: gate?.issues }
+}
+
+// ══════════════════════════════════════════════════════════════
+// FULL MODE — complete curriculum design (default)
+// ══════════════════════════════════════════════════════════════
 
 // ── Phase 1: Read — load research and templates ───────────────
 
@@ -57,6 +167,8 @@ if (!reader?.research) {
 
 const ctx = `Topic: "${topic}"
 Student level: ${level}
+${audienceContext}
+${feedback ? `\n## Previous Feedback to Address\n${feedback}` : ''}
 ${reader?.research ? `\n## Research\n${reader.research}` : '(no research available — generate from knowledge)'}
 ${reader?.userProfile ? `\n## Student Profile\n${reader.userProfile}` : ''}
 ${reader?.curriculumFormat ? `\n## Curriculum Format Reference\n${reader.curriculumFormat}` : ''}
@@ -279,4 +391,4 @@ const writeFiles = await parallel([
 ])
 
 log(`Curriculum written to ${domainDir}/ (4 files)`)
-return { topic, slug, level, domainDir, gate: gate?.verdict, issues: gate?.issues }
+return { topic, slug, level, domainDir, mode: 'full', gate: gate?.verdict, issues: gate?.issues }
