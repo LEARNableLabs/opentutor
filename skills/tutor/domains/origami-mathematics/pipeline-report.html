@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline Report: origami mathematics</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    padding: 32px 16px;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 32px; }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+  .header .subtitle { font-size: 14px; color: #64748b; margin-bottom: 24px; }
+
+  /* Stat cards */
+  .stat-row {
+    display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 40px;
+  }
+  .stat-card {
+    flex: 1 1 200px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    text-align: center;
+  }
+  .stat-card .stat-value { font-size: 32px; font-weight: 700; }
+  .stat-card .stat-label { font-size: 13px; color: #64748b; margin-top: 4px; }
+  .stat-value.green { color: #16a34a; }
+  .stat-value.blue { color: #2563eb; }
+
+  /* Section headings */
+  .section-title {
+    font-size: 20px; font-weight: 700; margin: 40px 0 16px;
+    padding-bottom: 8px; border-bottom: 2px solid #e2e8f0;
+  }
+
+  /* Cards */
+  .card {
+    background: #fff; border-radius: 8px; padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12); margin-bottom: 20px;
+  }
+
+  /* Pipeline flow */
+  .pipeline-flow {
+    display: flex; flex-wrap: wrap; align-items: flex-start;
+    gap: 0; margin-bottom: 40px; justify-content: center;
+  }
+  .pipeline-step-wrapper {
+    display: flex; align-items: center;
+  }
+  .pipeline-step {
+    display: flex; flex-direction: column; align-items: center;
+    position: relative;
+  }
+  .pipeline-node {
+    border-radius: 12px; padding: 14px 24px; font-weight: 600;
+    font-size: 14px; color: #fff; text-align: center;
+    min-width: 120px; position: relative;
+  }
+  .pipeline-node.green { background: #16a34a; }
+  .pipeline-node.yellow { background: #ca8a04; }
+  .pipeline-node.gray { background: #94a3b8; }
+  .pipeline-node.blue { background: #2563eb; }
+  .pipeline-loop {
+    font-size: 11px; color: #64748b; margin-top: 6px;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .pipeline-loop .loop-arrow {
+    display: inline-block; width: 20px; height: 20px;
+    border: 2px solid #ca8a04; border-radius: 50%;
+    border-top-color: transparent; position: relative;
+  }
+  .pipeline-loop .loop-arrow::after {
+    content: ""; position: absolute; top: -3px; right: -1px;
+    border: 4px solid transparent; border-bottom-color: #ca8a04;
+  }
+  .pipeline-arrow {
+    width: 36px; height: 2px; background: #cbd5e1; position: relative;
+    margin: 0 2px; flex-shrink: 0; align-self: center;
+    margin-top: -14px;
+  }
+  .pipeline-arrow::after {
+    content: ""; position: absolute; right: -1px; top: -4px;
+    border: 5px solid transparent; border-left-color: #cbd5e1;
+  }
+  .pipeline-status-label {
+    font-size: 11px; color: #64748b; margin-top: 2px;
+  }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before {
+    content: ""; position: absolute; left: 11px; top: 0; bottom: 0;
+    width: 2px; background: #e2e8f0;
+  }
+  .timeline-item { position: relative; margin-bottom: 24px; }
+  .timeline-dot {
+    width: 22px; height: 22px; border-radius: 50%;
+    position: absolute; left: -32px; top: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; color: #fff; font-weight: 700;
+  }
+  .timeline-dot.green { background: #16a34a; }
+  .timeline-dot.yellow { background: #ca8a04; }
+  .timeline-dot.blue { background: #2563eb; }
+  .timeline-dot.red { background: #dc2626; }
+
+  .timeline-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .timeline-step { font-weight: 700; font-size: 15px; }
+
+  .badge {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 11px; font-weight: 700; color: #fff; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge.advance { background: #16a34a; }
+  .badge.redo { background: #ca8a04; }
+  .badge.research { background: #2563eb; }
+  .badge.escalate { background: #dc2626; }
+
+  .confidence-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-size: 13px; color: #64748b; }
+  .confidence-bar-bg {
+    width: 100px; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;
+  }
+  .confidence-bar-fill { height: 100%; border-radius: 3px; background: #2563eb; }
+
+  .quality-snapshot { font-style: italic; font-size: 13px; color: #64748b; margin-top: 8px; }
+
+  details { margin-top: 6px; }
+  details summary {
+    cursor: pointer; font-size: 13px; color: #2563eb; font-weight: 600;
+    outline: none;
+  }
+  details summary:hover { text-decoration: underline; }
+  details .detail-body {
+    margin-top: 8px; padding: 12px 16px; background: #f1f5f9;
+    border-radius: 6px; font-size: 13px; line-height: 1.7;
+    white-space: pre-wrap; word-wrap: break-word;
+  }
+  .redo-box {
+    margin-top: 8px; padding: 12px 16px; background: #fefce8;
+    border-left: 3px solid #ca8a04; border-radius: 0 6px 6px 0;
+    font-size: 13px; line-height: 1.7; white-space: pre-wrap; word-wrap: break-word;
+  }
+
+  /* Workflow table */
+  .workflow-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .workflow-table th {
+    text-align: left; padding: 10px 12px; background: #f1f5f9;
+    font-weight: 700; border-bottom: 2px solid #e2e8f0;
+  }
+  .workflow-table td {
+    padding: 10px 12px; border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+  }
+  .workflow-table tr.highlight-blue { background: #eff6ff; }
+  .workflow-table tr.highlight-yellow { background: #fefce8; }
+
+  /* Audience card */
+  .audience-grid {
+    display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px;
+    font-size: 14px;
+  }
+  .audience-label { font-weight: 700; color: #475569; }
+  .audience-value { color: #1e293b; }
+
+  /* Tutor memory */
+  .memory-list {
+    list-style: decimal; padding-left: 24px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+    font-size: 13px; line-height: 1.8;
+  }
+  .memory-list li { margin-bottom: 10px; }
+
+  @media (max-width: 640px) {
+    .stat-row { flex-direction: column; }
+    .pipeline-flow { flex-direction: column; align-items: center; }
+    .pipeline-arrow { width: 2px; height: 28px; margin: 4px 0; }
+    .pipeline-arrow::after {
+      right: auto; top: auto; bottom: -1px; left: -4px;
+      border: 5px solid transparent; border-top-color: #cbd5e1;
+      border-left-color: transparent;
+    }
+    .pipeline-step-wrapper { flex-direction: column; }
+    .audience-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===== 1. HEADER ===== -->
+  <div class="header">
+    <h1>Pipeline Report: origami mathematics</h1>
+    <div class="subtitle">
+      Generated 2026-08-20 &middot; Level: intermediate &middot;
+      STEM undergraduates, mathematically curious professionals, and serious self-taught learners
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-value blue">7</div>
+      <div class="stat-label">Tutor Judgments</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">0 / 3</div>
+      <div class="stat-label">Research Rounds (used / cap)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">16</div>
+      <div class="stat-label">Total Steps</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value green">ADVANCE</div>
+      <div class="stat-label">Final Verdict (QA pass)</div>
+    </div>
+  </div>
+
+  <!-- ===== 2. PIPELINE FLOW DIAGRAM ===== -->
+  <h2 class="section-title">Pipeline Flow</h2>
+  <div class="card">
+    <div class="pipeline-flow">
+      <!-- Survey -->
+      <div class="pipeline-step-wrapper">
+        <div class="pipeline-step">
+          <div class="pipeline-node green">Survey</div>
+          <div class="pipeline-status-label">1 attempt</div>
+        </div>
+      </div>
+      <div class="pipeline-arrow"></div>
+      <!-- Audience -->
+      <div class="pipeline-step-wrapper">
+        <div class="pipeline-step">
+          <div class="pipeline-node green">Audience</div>
+          <div class="pipeline-status-label">1 attempt</div>
+        </div>
+      </div>
+      <div class="pipeline-arrow"></div>
+      <!-- Build -->
+      <div class="pipeline-step-wrapper">
+        <div class="pipeline-step">
+          <div class="pipeline-node yellow">Build</div>
+          <div class="pipeline-loop">
+            <span class="loop-arrow"></span>
+            <span>3 attempts (2 REDOs)</span>
+          </div>
+        </div>
+      </div>
+      <div class="pipeline-arrow"></div>
+      <!-- QA -->
+      <div class="pipeline-step-wrapper">
+        <div class="pipeline-step">
+          <div class="pipeline-node yellow">QA</div>
+          <div class="pipeline-loop">
+            <span class="loop-arrow"></span>
+            <span>2 cycles (1 REDO)</span>
+          </div>
+        </div>
+      </div>
+      <div class="pipeline-arrow"></div>
+      <!-- Schedule -->
+      <div class="pipeline-step-wrapper">
+        <div class="pipeline-step">
+          <div class="pipeline-node green">Schedule</div>
+          <div class="pipeline-status-label">1 attempt</div>
+        </div>
+      </div>
+      <div class="pipeline-arrow"></div>
+      <!-- Register -->
+      <div class="pipeline-step-wrapper">
+        <div class="pipeline-step">
+          <div class="pipeline-node gray">Register</div>
+          <div class="pipeline-status-label">not in log</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 3. TUTOR DECISION TIMELINE ===== -->
+  <h2 class="section-title">Tutor Decision Timeline</h2>
+
+  <!-- Decision 1: Survey ADVANCE -->
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot green">1</div>
+      <div class="card">
+        <div class="timeline-header">
+          <span class="timeline-step">Survey &mdash; Attempt 1</span>
+          <span class="badge advance">ADVANCE</span>
+        </div>
+        <div class="confidence-row">
+          Confidence: 0.88
+          <div class="confidence-bar-bg"><div class="confidence-bar-fill" style="width:88%"></div></div>
+        </div>
+        <details>
+          <summary>Show reasoning</summary>
+          <div class="detail-body">The research survey is thorough and well-structured for building an intermediate origami mathematics curriculum. It provides 20+ papers (15 in Key Papers, 6+ in Active Research Fronts), 10 textbooks spanning all difficulty levels, diverse educational resources (MIT OCW course, 8+ video series, 6 interactive tools including WebGL simulators and open-source software), and a clear field landscape organized into identifiable pillars. The survey self-identifies six gaps, which is a sign of quality rather than a weakness. Evaluating each gap against the intermediate level target: (1) curved-crease origami is advanced differential geometry -- fine as a "further topics" mention; (2) map folding is niche and partially covered by Uehara's book; (3) modular origami is the most relevant gap but Hull's Project Origami provides 30 activities including modular topics; (4) topology connections are graduate-level; (5) pedagogy research is meta-level, not content; (6) exercise banks are partially covered by Project Origami and MIT 6.849 assignments. None of these gaps would leave core intermediate lessons unsupported. The Resource Quality Notes section, which organizes materials by beginner/intermediate/advanced difficulty, directly supports curriculum structuring. The field landscape is clear enough to design a coherent course progression from axiomatics through flat-foldability to computational methods and applications.</div>
+        </details>
+        <div class="quality-snapshot">Research survey: 322 lines, well-organized into 7 sections. Papers: 20+ total. Educational resources: 1 full graduate course (MIT OCW, free), 10 textbooks, 8+ video resources, 6 interactive tools.</div>
+      </div>
+    </div>
+
+    <!-- Decision 2: Build REDO #1 -->
+    <div class="timeline-item">
+      <div class="timeline-dot yellow">2</div>
+      <div class="card">
+        <div class="timeline-header">
+          <span class="timeline-step">Build &mdash; Attempt 1</span>
+          <span class="badge redo">REDO</span>
+        </div>
+        <div class="confidence-row">
+          Confidence: 0.88
+          <div class="confidence-bar-bg"><div class="confidence-bar-fill" style="width:88%"></div></div>
+        </div>
+        <details>
+          <summary>Show reasoning</summary>
+          <div class="detail-body">I verified all four flagged issues against the actual files. Two are confirmed; two are factually wrong.
+
+ISSUE 1 (Sequencing violation -- Origamizer before TreeMaker): WRONG. The curriculum teaches TreeMaker on Day 16 and Origamizer on Day 18. This is the correct dependency order. The step output swapped the two.
+
+ISSUE 2 (Teaching notes 35-day plan vs 30-day curriculum): CONFIRMED. The teaching notes Section 5 describes a 35-day difficulty progression while the curriculum has exactly 30 lessons.
+
+ISSUE 3 (Concept map phases and mind-blowing days mismatch): CONFIRMED. The concept map describes different phase orderings than the curriculum implements.
+
+ISSUE 4 (Fold-and-cut theorem missing): WRONG. It appears explicitly in Day 19's concept list.
+
+OVERALL QUALITY: The curriculum.json is excellent -- 30 well-structured lessons with engaging question-format titles. The problem is purely internal consistency: teaching-notes.md and concept-map.md reference day numbers that do not match the 30-day curriculum.</div>
+        </details>
+        <details>
+          <summary>Show REDO feedback</summary>
+          <div class="redo-box">Two of the four flagged issues are real and must be fixed. Two are false alarms.
+
+FALSE ALARM 1 -- Do NOT change the TreeMaker/Origamizer order. Dependency is satisfied.
+FALSE ALARM 2 -- Do NOT add a separate fold-and-cut lesson. Already covered on Day 19.
+
+FIX 1 -- teaching-notes.md Section 5: Rewrite the difficulty map to match the 30-day curriculum (currently describes 35 days).
+FIX 2 -- teaching-notes.md Section 6: Update module day ranges to match curriculum.
+FIX 3 -- concept-map.md Section 4: Update "Suggested Day" column to match actual curriculum days.
+FIX 4 -- concept-map.md Section 7: Update all "When to Activate" day references.
+FIX 5 -- concept-map.md Section 8: Update phase descriptions and day ranges.
+
+Do NOT change curriculum.json.</div>
+        </details>
+        <div class="quality-snapshot">curriculum.json: STRONG | concept-map.md: content STRONG but day references MISALIGNED | teaching-notes.md: pedagogy STRONG but 35-day map vs 30-day curriculum | resources.md: STRONG</div>
+      </div>
+    </div>
+
+    <!-- Decision 3: Build REDO #2 -->
+    <div class="timeline-item">
+      <div class="timeline-dot yellow">3</div>
+      <div class="card">
+        <div class="timeline-header">
+          <span class="timeline-step">Build &mdash; Attempt 2</span>
+          <span class="badge redo">REDO</span>
+        </div>
+        <div class="confidence-row">
+          Confidence: 0.92
+          <div class="confidence-bar-bg"><div class="confidence-bar-fill" style="width:92%"></div></div>
+        </div>
+        <details>
+          <summary>Show reasoning</summary>
+          <div class="detail-body">The patch from the first REDO was incomplete. teaching-notes.md Section 5 was correctly fixed to 30 days with accurate spike references. concept-map.md Sections 4/7/8 were correctly aligned. But teaching-notes.md Sections 2, 4, and 7 still carry day references from the previous version. This creates 18 misalignments with the curriculum and internal contradictions within teaching-notes.md itself (the Section 7 summary table was updated but the prose above it was not). These are not cosmetic -- a tutor following the notes would surface misconceptions, rabbit holes, and cross-topic connections at wrong points in the curriculum, missing optimal teaching moments by 5-15 days.</div>
+        </details>
+        <details>
+          <summary>Show REDO feedback</summary>
+          <div class="redo-box">The patch fixed Section 5 and the summary tables but missed the prose in Sections 2, 4, and 7 of teaching-notes.md. Fix ONLY the 18 day references listed:
+
+SECTION 2 -- 4 misconception timing fixes
+SECTION 4 -- 6 rabbit hole header fixes
+SECTION 7 -- 8 cross-topic connection timing fixes
+
+Do not change any other text, do not touch curriculum.json, concept-map.md, or resources.md.</div>
+        </details>
+        <div class="quality-snapshot">curriculum.json: excellent. concept-map.md: good (aligned). teaching-notes.md: strong content but 18 stale day references in Sections 2/4/7. resources.md: excellent.</div>
+      </div>
+    </div>
+
+    <!-- Decision 4: Build ADVANCE -->
+    <div class="timeline-item">
+      <div class="timeline-dot green">4</div>
+      <div class="card">
+        <div class="timeline-header">
+          <span class="timeline-step">Build &mdash; Attempt 3</span>
+          <span class="badge advance">ADVANCE</span>
+        </div>
+        <div class="confidence-row">
+          Confidence: 0.95
+          <div class="confidence-bar-bg"><div class="confidence-bar-fill" style="width:95%"></div></div>
+        </div>
+        <details>
+          <summary>Show reasoning</summary>
+          <div class="detail-body">All 18 day-number misalignments identified in REDO attempt 2 have been corrected. Section 2 misconception surfacing references, Section 4 rabbit hole timing headers, and Section 7 cross-topic connection timing now match the curriculum days and are internally consistent. Section 5 difficulty progression was already fixed in attempt 2 and remains correct. The curriculum is pedagogically sound: 30 lessons with engaging question titles, review days every 5-7 lessons, no thin lessons, valid concept dependency ordering, real and diverse resources, and specific teaching guidance. One very minor discrepancy exists (concept-map Section 7 maps juggling combinatorial enumeration to Day 11 while teaching-notes maps it to Day 9-10), but this reflects a legitimate pedagogical range choice across the Maekawa-counting-multivertex cluster (Days 9-11), not an error.</div>
+        </details>
+        <div class="quality-snapshot">curriculum.json: strong (30 engaging lessons, valid dependencies, good review pacing). concept-map.md: strong (31 concepts, clean dependency graph, aligned day references). teaching-notes.md: strong (all day references corrected). resources.md: strong (real sources, diverse formats). Overall: ready to ship.</div>
+      </div>
+    </div>
+
+    <!-- Decision 5: QA REDO -->
+    <div class="timeline-item">
+      <div class="timeline-dot yellow">5</div>
+      <div class="card">
+        <div class="timeline-header">
+          <span class="timeline-step">QA &mdash; Cycle 1</span>
+          <span class="badge redo">REDO</span>
+        </div>
+        <div class="confidence-row">
+          Confidence: 0.95
+          <div class="confidence-bar-bg"><div class="confidence-bar-fill" style="width:95%"></div></div>
+        </div>
+        <details>
+          <summary>Show reasoning</summary>
+          <div class="detail-body">One verified critical issue makes REDO mandatory: howtofoldit.org (used in curriculum.json Days 3/4 and resources.md) has been domain-hijacked and redirects students to a gambling website. This was confirmed by live HTTP request. Beyond that, the concept-map declares a false dependency (Concept 28 on Concept 27) creating a 7-day prereq inversion, two concepts that break dependency chains are absent from lessons (Universal Molecules, Two-Colorability), and two additional URLs are verified broken (momath.org/folding-fridays returns 403, origametry.net has SSL failure). The curriculum structure, module arc, and pedagogical design remain strong -- these are targeted fixes, not a redesign.</div>
+        </details>
+        <details>
+          <summary>Show REDO feedback</summary>
+          <div class="redo-box">Fix the following 8 specific items. Do NOT restructure the curriculum or touch lesson ordering.
+
+1. CRITICAL -- Replace howtofoldit.org (gambling redirect) in curriculum.json Days 3/4 and resources.md
+2. concept-map.md: Remove false dependency (Concept 28 on Concept 27)
+3. curriculum.json Day 17: Replace momath.org/folding-fridays (403)
+4. resources.md: Replace momath.org/folding-fridays
+5. resources.md: Replace origametry.net (SSL failure) with Cambridge UP page
+6. curriculum.json Day 15: Add "universal molecules" to concepts
+7. curriculum.json Day 10: Add "two-colorability of crease patterns" to concepts</div>
+        </details>
+        <div class="quality-snapshot">Score 6.4/10. Strong structural foundation. One critical blocker (gambling-redirect URL), one false dependency, two missing concepts, two broken URLs. Fixes are bounded and mechanical.</div>
+      </div>
+    </div>
+
+    <!-- Decision 6: QA ADVANCE -->
+    <div class="timeline-item">
+      <div class="timeline-dot green">6</div>
+      <div class="card">
+        <div class="timeline-header">
+          <span class="timeline-step">QA &mdash; Cycle 2</span>
+          <span class="badge advance">ADVANCE</span>
+        </div>
+        <div class="confidence-row">
+          Confidence: 0.88
+          <div class="confidence-bar-bg"><div class="confidence-bar-fill" style="width:88%"></div></div>
+        </div>
+        <details>
+          <summary>Show reasoning</summary>
+          <div class="detail-body">Score is 7.2/10, meeting the 7+ threshold. Both originally-critical issues were downgraded to warnings by the adversarial check: (1) the Cambridge URL for "How to Fold It" is a URL-format issue for a demonstrably real book, and (2) the Day 3/4 prerequisite ordering is contained within a single module and mitigated by teaching notes treating Days 3-4 as a unit. The truly critical defects from REDO 1 (howtofoldit.org gambling redirect, momath.org 403) are confirmed fixed. The 15 remaining warnings are legitimate improvement opportunities but none would materially harm the student's learning experience. The curriculum is structurally sound, internally consistent, and deliverable.</div>
+        </details>
+        <div class="quality-snapshot">Score: 7.2/10 | Verdict: PASS_WITH_WARNINGS | Critical: 0 (2 downgraded) | Warnings: 15 | Data integrity: 10/10 | All files internally consistent and aligned with 30-day curriculum.</div>
+      </div>
+    </div>
+
+    <!-- Decision 7: Schedule ADVANCE -->
+    <div class="timeline-item">
+      <div class="timeline-dot green">7</div>
+      <div class="card">
+        <div class="timeline-header">
+          <span class="timeline-step">Schedule &mdash; Attempt 1</span>
+          <span class="badge advance">ADVANCE</span>
+        </div>
+        <div class="confidence-row">
+          Confidence: 0.88
+          <div class="confidence-bar-bg"><div class="confidence-bar-fill" style="width:88%"></div></div>
+        </div>
+        <details>
+          <summary>Show reasoning</summary>
+          <div class="detail-body">All four evaluation criteria are met. (1) Delivery times 09:00/13:00/19:00 ET are within normal waking hours. (2) Standard pacing at 1 lesson/day with weekend rest is appropriate for intermediate-level mathematical content. Two doubled-up pairs maintain momentum without overload. (3) Review days are well-placed after every identified difficulty spike: extraReviewDays after the three spike clusters plus built-in review lessons at module boundaries. (4) The 32 working days over 45 calendar days is arithmetically consistent. One minor data-modeling nuance: reviewDays[28] is semantically inconsistent but intent is clear and redundantly captured in extraReviewDays -- no pedagogical impact.</div>
+        </details>
+        <div class="quality-snapshot">Schedule is well-designed and ready for use. Delivery times follow cognitive science principles. Pacing balances depth with momentum. Review placement provides multiple consolidation layers. Completion estimate is realistic.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 4. WORKFLOW CALLS TABLE ===== -->
+  <h2 class="section-title">Workflow Calls</h2>
+  <div class="card" style="overflow-x:auto;">
+    <table class="workflow-table">
+      <thead>
+        <tr>
+          <th>Step</th>
+          <th>Workflow</th>
+          <th>Mode</th>
+          <th>Attempt</th>
+          <th>Key Results</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>research</td>
+          <td>survey</td>
+          <td>&mdash;</td>
+          <td>Coverage: 8/10. 6 gaps identified (curved-crease, map folding, modular, topology, pedagogy research, exercise banks). None blocking for intermediate level.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>audience</td>
+          <td>agent</td>
+          <td>&mdash;</td>
+          <td>Audience profile generated: STEM undergrads, curious professionals, self-taught learners. Goal: working fluency in origami mathematics. Time: 25-40 min/lesson.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>curriculum-build</td>
+          <td>full</td>
+          <td>1</td>
+          <td>Gate: ISSUES. 4 issues flagged (2 confirmed real: day-number misalignment in teaching-notes and concept-map).</td>
+        </tr>
+        <tr class="highlight-yellow">
+          <td>6</td>
+          <td>curriculum-build</td>
+          <td>patch</td>
+          <td>2</td>
+          <td>Gate: PROCEED. Section 5 and concept-map Sections 4/7/8 aligned. Incomplete: 18 stale day refs remained.</td>
+        </tr>
+        <tr class="highlight-yellow">
+          <td>8</td>
+          <td>curriculum-build</td>
+          <td>patch</td>
+          <td>3</td>
+          <td>Gate: PROCEED. All 18 day-number misalignments corrected. All files internally consistent.</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>curriculum-qa</td>
+          <td>&mdash;</td>
+          <td>Cycle 1</td>
+          <td>Verdict: FAIL (6.4/10). 1 critical issue (gambling redirect), 16 warnings.</td>
+        </tr>
+        <tr class="highlight-yellow">
+          <td>12</td>
+          <td>curriculum-build</td>
+          <td>patch</td>
+          <td>Cycle 1</td>
+          <td>Gate: PROCEED. 8 targeted fixes applied (URL replacements, dependency fix, concept additions).</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>curriculum-qa</td>
+          <td>&mdash;</td>
+          <td>Cycle 2</td>
+          <td>Verdict: PASS_WITH_WARNINGS (7.2/10). 0 critical (2 downgraded), 15 warnings. Meets 7+ threshold.</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>schedule</td>
+          <td>&mdash;</td>
+          <td>1</td>
+          <td>Pacing: standard. Gate: ISSUES (all 4 criteria met, minor semantic inconsistency only).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== 5. AUDIENCE PROFILE CARD ===== -->
+  <h2 class="section-title">Audience Profile</h2>
+  <div class="card">
+    <div class="audience-grid">
+      <div class="audience-label">Audience Type</div>
+      <div class="audience-value">STEM undergraduates, mathematically curious professionals (engineers, designers, educators), and serious self-taught learners with solid quantitative foundations. The common thread is comfort with mathematical reasoning and genuine curiosity about the geometry of folding -- not exam pressure or research deadlines.</div>
+
+      <div class="audience-label">Goal</div>
+      <div class="audience-value">Build working fluency in origami mathematics: understand, state, and apply the core theorems (Kawasaki-Justin, Maekawa) and axioms (Huzita-Justin), reason about flat-foldability and geometric constructibility, and connect paper-folding to broader mathematical structures. The student should finish able to read primary literature, use computational tools, and recognize origami-mathematical structure in engineering applications.</div>
+
+      <div class="audience-label">Background</div>
+      <div class="audience-value">Comfortable with algebra, coordinate geometry, and trigonometry. Some exposure to proof-based mathematics -- at minimum one college-level course in discrete math, linear algebra, or an intro-to-proofs course. Familiarity with basic calculus helpful but not a hard prerequisite. No prior origami technique required. No programming background assumed.</div>
+
+      <div class="audience-label">Tone</div>
+      <div class="audience-value">Hands-on and example-driven, with formal foundations introduced through physical intuition. Every theorem should first be discovered through folding before being stated precisely. Rigorous where it matters, conversational enough to sustain daily self-study. Rabbit holes encouraged.</div>
+
+      <div class="audience-label">Depth</div>
+      <div class="audience-value">Intuition plus key proofs, with applied grounding. Build geometric intuition through physical folding, then formalize with precise theorem statements and selected complete proofs. Provide proof sketches for harder results. Include computational exercises and hands-on folding tasks. Stops short of the full graduate treatment.</div>
+
+      <div class="audience-label">Time Commitment</div>
+      <div class="audience-value">10-15 minutes study + 10-15 minutes exercises. Some lessons add 5-10 minutes for hands-on folding. Total per lesson: 25-40 minutes, consistent with the 1% daily growth rule.</div>
+
+      <div class="audience-label">Summary</div>
+      <div class="audience-value">The target student has solid high-school mathematics and at least introductory exposure to proof-based reasoning. They are drawn to origami mathematics by intellectual curiosity or cross-disciplinary interest, not by exam deadlines. The course builds geometric intuition through physical folding, formalizes it with precise theorems, and connects the mathematics to real-world applications and computational tools.</div>
+    </div>
+  </div>
+
+  <!-- ===== 6. TUTOR MEMORY ===== -->
+  <h2 class="section-title">Tutor Memory (Accumulated Context)</h2>
+  <div class="card">
+    <ol class="memory-list">
+      <li>[survey] RESEARCH SURVEY EVALUATED for origami-mathematics at intermediate level. Quality: strong. 20+ papers, 10 textbooks, diverse interactive tools. Six pillars identified: (1) flat-foldability theory, (2) geometric constructibility/axiomatics, (3) computational origami/algorithms, (4) rigid origami/deployable structures, (5) origami metamaterials, (6) tessellations/geometric patterns. Six gaps acknowledged by the survey itself: curved-crease origami, map folding combinatorics, modular/unit origami, topology connections, pedagogy research, exercise banks. None are blocking for intermediate-level curriculum.</li>
+      <li>[audience] The target student has solid high-school mathematics and at least introductory exposure to proof-based reasoning -- a STEM undergraduate, a quantitatively literate professional, or a disciplined self-learner. They are drawn to origami mathematics by intellectual curiosity or cross-disciplinary interest, not by exam deadlines or publication pressure.</li>
+      <li>[build] REDO issued for origami-mathematics curriculum build (attempt 1 of 3). Curriculum.json is strong: 30 lessons, engaging question titles, good review pacing. Two real issues: (a) teaching-notes.md Section 5 describes a 35-day plan with wrong spike day references, (b) concept-map.md Sections 4/7/8 have mismatched phase descriptions and day references.</li>
+      <li>[build] REDO issued for origami-mathematics curriculum build (attempt 2 of 3). curriculum.json remains strong and untouched. concept-map.md Sections 4/7/8 are now correctly aligned. teaching-notes.md Section 5 is now correctly aligned at 30 days. However, Sections 2, 4, and 7 still carry 18 stale day references.</li>
+      <li>[build] ADVANCE issued for origami-mathematics curriculum build (attempt 3 of 3). All 18 day-number misalignments corrected. All four domain files are now internally consistent and aligned with the 30-day curriculum.</li>
+      <li>[qa] REDO issued for origami-mathematics QA review (attempt 1 of 3). QA score 6.4/10, verdict FAIL. One verified critical issue: howtofoldit.org redirects to a gambling website. Additional: false dependency in concept map, orphan concepts, broken URLs. Eight specific fixes issued.</li>
+      <li>[qa] ADVANCE issued for origami-mathematics QA review (attempt 2 of 3). QA score 7.2/10, verdict PASS_WITH_WARNINGS. Both originally-critical issues downgraded by adversarial verification. Previous critical fixes confirmed. 15 warnings remain as improvement opportunities. Curriculum is deliverable.</li>
+      <li>[schedule] ADVANCE issued for origami-mathematics schedule. All four criteria pass: delivery times reasonable, standard pacing appropriate, review days align with difficulty spikes, estimated 45 calendar days / 32 working days is arithmetically consistent.</li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>

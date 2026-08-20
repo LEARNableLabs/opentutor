@@ -1,0 +1,386 @@
+{
+  "topic": "category theory",
+  "slug": "category-theory",
+  "created": "2026-08-20",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Categories: objects, morphisms, composition, identity, isomorphism",
+    "Functors: covariant and contravariant, preservation of composition and identity",
+    "Natural transformations: components, naturality square, vertical and horizontal composition",
+    "Basic abstract algebra: groups, rings, modules, homomorphisms",
+    "Elementary set theory: functions, injections, surjections, bijections",
+    "Familiarity with topological spaces (helpful but not strictly required)"
+  ],
+  "exit_criteria": [
+    "Recognize universal properties in concrete mathematical constructions and verify them formally via uniqueness of mediating morphisms",
+    "State and apply the Yoneda lemma to prove isomorphisms, characterize representable functors, and derive the co-Yoneda lemma",
+    "Identify adjunctions across algebra, topology, order theory, and programming, and verify them via hom-set bijection or unit-counit triangle identities",
+    "Recognize when RAPL/LAPC constrains adjoint existence, and use limit-preservation arguments to determine whether a functor can have an adjoint",
+    "Construct Eilenberg-Moore and Kleisli categories for a monad, and explain how monads encode algebraic theories and model computational effects via Moggi's framework",
+    "Read string-diagrammatic proofs in monoidal categories and translate between enriched-categorical language and concrete structures such as metric spaces and ordered sets",
+    "Connect Lawvere's enriched framework to Wasserstein distance from optimal transport, and trace how the Giry monad bridges probability, measure theory, and categorical algebra",
+    "Read category-theoretic arguments in research papers and textbooks without constant reference lookups, and articulate which advanced direction -- topos theory, higher category theory, or applied category theory -- to pursue next"
+  ],
+  "lessons": [
+    {
+      "day": 1,
+      "module": "The Language of Structure",
+      "title": "What are categories really, beyond the textbook definition?",
+      "concepts": ["category", "object", "morphism", "composition", "identity", "isomorphism"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://abuseofnotation.github.io/category-theory-illustrated/",
+        "https://www.math3ma.com/categories/category-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 2,
+      "module": "The Language of Structure",
+      "title": "Why are monoids, preorders, and matrices secretly categories?",
+      "concepts": ["concrete category", "key examples (Set, Grp, Top, Vect, Pos)", "monoid as one-object category", "preorder as thin category", "groupoid"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://arxiv.org/abs/1612.09375",
+        "https://abuseofnotation.github.io/category-theory-illustrated/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 3,
+      "module": "The Language of Structure",
+      "title": "Why are commutative diagrams the equations of category theory?",
+      "concepts": ["commutative diagram", "diagram chasing", "composing paths in a diagram"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://abuseofnotation.github.io/category-theory-illustrated/",
+        "https://q.uiver.app/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 4,
+      "module": "The Language of Structure",
+      "title": "When does injection fail to capture the categorical notion of 'one-to-one'?",
+      "concepts": ["isomorphism", "monomorphism", "epimorphism", "mono+epi does not imply iso"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://arxiv.org/abs/1612.09375",
+        "https://ncatlab.org/nlab/show/monomorphism"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 5,
+      "module": "The Language of Structure",
+      "title": "Can reversing every arrow in a proof give you a second theorem for free?",
+      "concepts": ["opposite category", "duality principle", "dual constructions"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://arxiv.org/abs/1612.09375",
+        "https://ncatlab.org/nlab/show/opposite+category"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 6,
+      "module": "The Language of Structure",
+      "title": "Review: Can you move fluently between the language of categories and their examples?",
+      "concepts": ["categorical fluency synthesis", "diagram chasing", "examples across algebra and topology"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://www.math3ma.com/categories/category-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 7,
+      "module": "Maps Between Worlds",
+      "title": "What do functors preserve and what can they forget?",
+      "concepts": ["covariant functor", "forgetful functor", "faithful functor", "full functor", "functor laws"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/functor",
+        "https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 8,
+      "module": "Maps Between Worlds",
+      "title": "How does a contravariant functor secretly live in the opposite category?",
+      "concepts": ["contravariant functor", "functor from C^op", "dual space functor", "power set functor", "presheaf preview"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/functor",
+        "https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 9,
+      "module": "Maps Between Worlds",
+      "title": "When are two functors doing the same thing differently?",
+      "concepts": ["natural transformation", "naturality square", "vertical composition", "horizontal composition", "natural isomorphism"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/natural+transformation",
+        "https://abuseofnotation.github.io/category-theory-illustrated/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 10,
+      "module": "Maps Between Worlds",
+      "title": "What is the category of all functors between two categories?",
+      "concepts": ["functor category", "presheaf", "Eilenberg-Mac Lane motivation"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/functor+category",
+        "https://arxiv.org/abs/1612.09375"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 11,
+      "module": "Maps Between Worlds",
+      "title": "When are two categories 'the same' without being identical?",
+      "concepts": ["equivalence of categories", "full faithful essentially surjective", "equivalence vs isomorphism of categories"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/equivalence+of+categories",
+        "https://arxiv.org/abs/1612.09375"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 12,
+      "module": "Maps Between Worlds",
+      "title": "Review: Can you verify naturality, construct functors, and test equivalence?",
+      "concepts": ["naturality verification", "functor construction", "equivalence testing"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://www.math3ma.com/categories/category-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 13,
+      "module": "The Art of Universal Construction",
+      "title": "Why do products mirror conjunction and coproducts mirror disjunction?",
+      "concepts": ["universal property", "initial object", "terminal object", "categorical product", "coproduct"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_",
+        "https://ncatlab.org/nlab/show/universal+property"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 14,
+      "module": "The Art of Universal Construction",
+      "title": "How do you force two morphisms to agree, categorically?",
+      "concepts": ["equalizer", "coequalizer", "fork diagram", "kernel as equalizer"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://arxiv.org/abs/1612.09375",
+        "https://ncatlab.org/nlab/show/equalizer"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 15,
+      "module": "The Art of Universal Construction",
+      "title": "What happens when you glue objects along shared substructure?",
+      "concepts": ["pullback", "pushout", "fiber product", "pullback square"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://abuseofnotation.github.io/category-theory-illustrated/",
+        "https://ncatlab.org/nlab/show/pullback"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 16,
+      "module": "The Art of Universal Construction",
+      "title": "Can every diagram have a best approximation?",
+      "concepts": ["cone", "limit", "colimit", "universal cone"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://arxiv.org/abs/1612.09375",
+        "https://www.youtube.com/playlist?list=PLlGXNwjYhXYxKVa67r0pKuYufECy713bv"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 17,
+      "module": "The Art of Universal Construction",
+      "title": "What does a functor see when it looks at an object?",
+      "concepts": ["hom-functor", "representable functor", "covariant vs contravariant hom"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/representable+functor",
+        "https://arxiv.org/abs/1612.09375"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 18,
+      "module": "The Art of Universal Construction",
+      "title": "When does a category have all possible limits?",
+      "concepts": ["completeness", "cocompleteness", "limits from products and equalizers", "complete categories"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://arxiv.org/abs/1612.09375",
+        "https://ncatlab.org/nlab/show/complete+category"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 19,
+      "module": "The Art of Universal Construction",
+      "title": "Review: Can you spot the universal property hiding in every construction?",
+      "concepts": ["universal property synthesis", "limit-colimit duality", "completeness criteria"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://www.math3ma.com/categories/category-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 20,
+      "module": "The Deep Symmetry of Adjunctions",
+      "title": "Why do free constructions always come with a universal price tag?",
+      "concepts": ["free-forgetful adjunction", "unit of adjunction", "universal arrow"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/adjoint+functor",
+        "https://www.youtube.com/playlist?list=PLlGXNwjYhXYxKVa67r0pKuYufECy713bv"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 21,
+      "module": "The Deep Symmetry of Adjunctions",
+      "title": "How many equivalent ways can you say the same adjunction?",
+      "concepts": ["hom-set adjunction", "unit-counit definition", "triangle identities"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://arxiv.org/abs/1612.09375",
+        "https://ncatlab.org/nlab/show/adjunction"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 22,
+      "module": "The Deep Symmetry of Adjunctions",
+      "title": "How does Kantorovich duality look through categorical lenses?",
+      "concepts": ["Galois connection", "adjunction from OT duality", "order-theoretic adjunction", "product-diagonal adjunction"],
+      "resources": [
+        "https://ncatlab.org/nlab/show/Galois+connection",
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://arxiv.org/abs/1803.05316"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 23,
+      "module": "The Deep Symmetry of Adjunctions",
+      "title": "Do adjunctions play nicely with limits?",
+      "concepts": ["RAPL", "LAPC", "preservation vs creation of limits", "Freyd's adjoint functor theorem preview"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/adjoint+functor+theorem",
+        "https://arxiv.org/abs/1612.09375"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 24,
+      "module": "The Deep Symmetry of Adjunctions",
+      "title": "Review: Are adjunctions the single most important concept in category theory?",
+      "concepts": ["adjunction synthesis", "adjunctions vs universal properties vs representability"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://www.math3ma.com/categories/category-theory",
+        "https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 25,
+      "module": "Yoneda, Monads, and the Frontier",
+      "title": "Why is the Yoneda lemma the most important result you haven't internalized?",
+      "concepts": ["Yoneda lemma", "natural bijection", "proof by naturality"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/Yoneda+lemma",
+        "https://www.math3ma.com/categories/category-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 26,
+      "module": "Yoneda, Monads, and the Frontier",
+      "title": "What does it mean that objects ARE their relationships?",
+      "concepts": ["Yoneda embedding", "fully faithful functor", "presheaf category", "Cayley's theorem analog", "co-Yoneda lemma"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/Yoneda+embedding",
+        "https://ncatlab.org/nlab/show/co-Yoneda+lemma"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 27,
+      "module": "Yoneda, Monads, and the Frontier",
+      "title": "What falls out when you compose an adjunction with itself?",
+      "concepts": ["monad from adjunction", "unit and multiplication", "monad axioms", "Giry monad"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/monad",
+        "https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 28,
+      "module": "Yoneda, Monads, and the Frontier",
+      "title": "How do Kleisli arrows model computation and Eilenberg-Moore algebras capture algebra?",
+      "concepts": ["Eilenberg-Moore category", "algebra for a monad", "Kleisli category", "computational monad", "Moggi's framework"],
+      "resources": [
+        "https://emilyriehl.github.io/files/context.pdf",
+        "https://ncatlab.org/nlab/show/Kleisli+category",
+        "https://www.semanticscholar.org/paper/7f2210ff39ef9669f2a84db611c80c4b28f9fffc"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 29,
+      "module": "Yoneda, Monads, and the Frontier",
+      "title": "What if your category has its own multiplication and morphisms go all the way up?",
+      "concepts": ["monoidal category", "string diagram", "enriched category", "Lawvere metric space", "topos preview", "subobject classifier", "2-category", "infinity-category", "Kan extension preview"],
+      "resources": [
+        "https://ncatlab.org/nlab/show/monoidal+category",
+        "https://ncatlab.org/nlab/show/enriched+category",
+        "https://ncatlab.org/nlab/show/Lawvere+metric+space",
+        "https://ncatlab.org/nlab/show/topos",
+        "https://ncatlab.org/nlab/show/Kan+extension",
+        "https://arxiv.org/abs/1007.2925"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 30,
+      "module": "Yoneda, Monads, and the Frontier",
+      "title": "Where is category theory reshaping science and engineering right now?",
+      "concepts": ["applied category theory", "categorical machine learning", "categorical quantum mechanics", "synthesis across all modules", "choosing your next direction"],
+      "resources": [
+        "https://arxiv.org/abs/2408.14014",
+        "https://arxiv.org/abs/1803.05316",
+        "https://ocw.mit.edu/courses/18-s097-applied-category-theory-january-iap-2019/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

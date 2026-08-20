@@ -1,0 +1,387 @@
+{
+  "topic": "origami mathematics",
+  "slug": "origami-mathematics",
+  "created": "2026-08-20",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Euclidean geometry (angle relationships, polygon properties, geometric constructions)",
+    "basic abstract algebra (groups, fields, homomorphisms)",
+    "linear algebra fundamentals (transformations, matrix representation)",
+    "introductory combinatorics and graph theory",
+    "proof-writing experience (direct proof, contradiction, induction)",
+    "comfort with mathematical notation and definitions"
+  ],
+  "exit_criteria": [
+    "State and apply all seven Huzita-Justin axioms and explain why origami constructions are strictly more powerful than compass-and-straightedge",
+    "Determine whether a single-vertex crease pattern is flat-foldable using Kawasaki's and Maekawa's theorems, and enumerate its valid mountain-valley assignments",
+    "Explain tree theory and use circle-river packing to design a uniaxial origami base for a given stick figure",
+    "Analyze rigid foldability of degree-4 vertex patterns and derive the kinematic properties of Miura-ori including its Poisson's ratio",
+    "State and sketch the proof that flat-fold MV assignment is NP-hard, and explain the significance of flat origami's Turing completeness",
+    "Use computational tools (Origami Simulator, TreeMaker, Tachi's software) to design, simulate, and verify crease patterns",
+    "Read and critically engage with primary literature in origami mathematics (Hull, Demaine, Lang, Tachi)",
+    "Identify connections between origami mathematics and prior studies in category theory, optimal transport, and combinatorics"
+  ],
+  "lessons": [
+    {
+      "day": 1,
+      "module": "The Power of a Single Fold",
+      "title": "What really happens when you fold a sheet of paper?",
+      "concepts": ["fold as geometric reflection", "crease lines and crease patterns", "mountain-valley assignment"],
+      "resources": [
+        "https://mathigon.org/course/euclidean-geometry/origami",
+        "https://www.youtube.com/watch?v=8p02DtmyQhU",
+        "https://www.youtube.com/watch?v=etCW9M9VdGk"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 2,
+      "module": "The Power of a Single Fold",
+      "title": "Can you trisect an angle with nothing but a sheet of paper?",
+      "concepts": ["Huzita-Justin axioms (single-fold)", "Beloch fold (Axiom 6)", "angle trisection by folding"],
+      "resources": [
+        "https://mathigon.org/course/euclidean-geometry/origami",
+        "https://arxiv.org/abs/math/9912039",
+        "https://people.math.ethz.ch/~acannas/Student_Papers/BSc_Theses/2024_bsc_kunz_mathematics_of_origami.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 3,
+      "module": "The Power of a Single Fold",
+      "title": "What numbers can paper folding reach that a compass cannot?",
+      "concepts": ["origami-constructible numbers", "Pythagorean-Euclidean-origami number hierarchy", "solving cubic equations by folding"],
+      "resources": [
+        "https://arxiv.org/abs/math/9912039",
+        "https://www.cambridge.org/core/books/origametry/F1221B0998585B16C87B7AD8DDC05358",
+        "https://www.cambridge.org/core/books/how-to-fold-it/9780521145473"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 4,
+      "module": "The Power of a Single Fold",
+      "title": "Why did it take two millennia to discover paper beats a compass?",
+      "concepts": ["compass-and-straightedge limitations", "doubling the cube by folding", "Galois theory connection to constructibility"],
+      "resources": [
+        "https://people.math.ethz.ch/~acannas/Student_Papers/BSc_Theses/2024_bsc_kunz_mathematics_of_origami.pdf",
+        "https://arxiv.org/abs/math/9912039",
+        "https://www.cambridge.org/core/books/how-to-fold-it/9780521145473"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 5,
+      "module": "The Power of a Single Fold",
+      "title": "What if you could make two folds at once?",
+      "concepts": ["multi-fold axioms (Alperin-Lang)", "two-fold alignments", "completeness of axiom systems"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/3177bcabb27ddfd82ea6783cf6aea2e9b192d451",
+        "https://github.com/mwalczyk/pga-axioms",
+        "https://www.cambridge.org/core/books/origametry/F1221B0998585B16C87B7AD8DDC05358"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 6,
+      "module": "The Power of a Single Fold",
+      "title": "Review: Can you reconstruct the full axiom hierarchy from a blank sheet?",
+      "concepts": ["synthesis of fold axioms", "constructibility hierarchy", "hands-on folding constructions"],
+      "resources": [
+        "https://mathigon.org/course/euclidean-geometry/origami",
+        "https://www.geogebra.org/m/RfTRUbcY",
+        "https://www.routledge.com/Project-Origami-Activities-for-Exploring-Mathematics-Second-Edition/Hull/p/book/9781466567917"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 7,
+      "module": "When Can Paper Lie Flat?",
+      "title": "Why do some crease patterns refuse to fold flat?",
+      "concepts": ["flat foldability", "single-vertex crease patterns", "necessary vs sufficient conditions"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/6e2aeb0a6efb8351452ed5d209e5e980b59159af",
+        "https://origamisimulator.org/",
+        "https://arxiv.org/abs/1307.1065"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 8,
+      "module": "When Can Paper Lie Flat?",
+      "title": "What secret do the angles around a crease vertex hide?",
+      "concepts": ["Kawasaki's theorem", "alternating angle-sum condition", "Kawasaki-Justin generalization"],
+      "resources": [
+        "https://www.cambridge.org/core/books/origametry/F1221B0998585B16C87B7AD8DDC05358",
+        "https://people.math.ethz.ch/~acannas/Student_Papers/BSc_Theses/2024_bsc_kunz_mathematics_of_origami.pdf",
+        "https://www.youtube.com/watch?v=c3SJ7W6OWfM"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 9,
+      "module": "When Can Paper Lie Flat?",
+      "title": "Why must mountain folds always outnumber valley folds (or vice versa)?",
+      "concepts": ["Maekawa's theorem", "M - V = +/-2 parity constraint", "topological origin of the parity rule"],
+      "resources": [
+        "https://arxiv.org/abs/1307.1065",
+        "https://origamisimulator.org/",
+        "https://www.routledge.com/Project-Origami-Activities-for-Exploring-Mathematics-Second-Edition/Hull/p/book/9781466567917"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 10,
+      "module": "When Can Paper Lie Flat?",
+      "title": "How many valid ways can you fold a given crease pattern?",
+      "concepts": ["counting valid MV assignments", "big-little-big angle condition", "two-colorability of crease patterns", "combinatorial enumeration under local constraints"],
+      "resources": [
+        "https://arxiv.org/abs/1307.1065",
+        "https://www.semanticscholar.org/paper/6e2aeb0a6efb8351452ed5d209e5e980b59159af",
+        "https://www.cambridge.org/core/books/origametry/F1221B0998585B16C87B7AD8DDC05358"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 11,
+      "module": "When Can Paper Lie Flat?",
+      "title": "What breaks when multiple vertices have to agree?",
+      "concepts": ["multi-vertex flat foldability", "global consistency of local conditions", "layer ordering constraints"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/e7dfa56beb0c2643112718562832692df83727a7",
+        "https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/",
+        "https://origamisimulator.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 12,
+      "module": "When Can Paper Lie Flat?",
+      "title": "How does swapping every mountain for a valley mirror categorical duality?",
+      "concepts": ["MV duality as an involution", "crease patterns as planar graphs", "isomorphism of folded states"],
+      "resources": [
+        "https://arxiv.org/abs/1307.1065",
+        "https://origamisimulator.org/",
+        "https://www.cambridge.org/core/books/origametry/F1221B0998585B16C87B7AD8DDC05358"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 13,
+      "module": "When Can Paper Lie Flat?",
+      "title": "Review: Given a crease pattern, can you determine its fate?",
+      "concepts": ["integrated application of Kawasaki-Maekawa", "flat-foldability decision procedure", "connections to combinatorial enumeration in juggling"],
+      "resources": [
+        "https://people.math.ethz.ch/~acannas/Student_Papers/BSc_Theses/2024_bsc_kunz_mathematics_of_origami.pdf",
+        "https://origamisimulator.org/",
+        "https://www.routledge.com/Project-Origami-Activities-for-Exploring-Mathematics-Second-Edition/Hull/p/book/9781466567917"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 14,
+      "module": "Designing Origami by Algorithm",
+      "title": "How do you design an origami figure backwards -- from shape to crease pattern?",
+      "concepts": ["tree theory of origami", "uniaxial bases", "flap-to-circle correspondence"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/1006c0ab0295b41e5f3ec96ba0b5025a731c73c4",
+        "https://www.youtube.com/watch?v=NYKcOFQCeno",
+        "https://www.quantamagazine.org/the-atomic-theory-of-origami-20171031/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 15,
+      "module": "Designing Origami by Algorithm",
+      "title": "Why is packing circles the secret to designing any origami base?",
+      "concepts": ["circle-river packing", "constrained optimization in crease design", "universal molecules", "connections to linear programming"],
+      "resources": [
+        "https://langorigami.com/article/treemaker/",
+        "https://www.semanticscholar.org/paper/1006c0ab0295b41e5f3ec96ba0b5025a731c73c4",
+        "https://www.quantamagazine.org/the-atomic-theory-of-origami-20171031/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 16,
+      "module": "Designing Origami by Algorithm",
+      "title": "How did software transform origami from art to engineering?",
+      "concepts": ["TreeMaker workflow", "Rigid Origami Simulator", "digital-physical design loop"],
+      "resources": [
+        "https://langorigami.com/article/treemaker/",
+        "https://origami.c.u-tokyo.ac.jp/~tachi/software/",
+        "https://origamisimulator.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 17,
+      "module": "Designing Origami by Algorithm",
+      "title": "What makes a repeating fold pattern tile the plane?",
+      "concepts": ["origami tessellations", "twist folds", "wallpaper group symmetries in crease patterns"],
+      "resources": [
+        "https://origamisimulator.org/",
+        "https://www.youtube.com/watch?v=oUnNkHGXefA",
+        "https://mathigon.org/origami"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 18,
+      "module": "Designing Origami by Algorithm",
+      "title": "Can every polyhedron be folded from a single flat sheet?",
+      "concepts": ["universal folding theorem", "Origamizer algorithm", "polyhedral surface to crease-pattern conversion"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/dcc00dc59c7458119d12a600c28da4ea25eeb497",
+        "https://origami.c.u-tokyo.ac.jp/~tachi/software/",
+        "https://origamisimulator.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 19,
+      "module": "Designing Origami by Algorithm",
+      "title": "Review: From stick figure to folded form -- can you trace the full design pipeline?",
+      "concepts": ["end-to-end origami design synthesis", "fold-and-cut theorem", "convex optimization parallels with optimal transport", "tool-assisted design verification"],
+      "resources": [
+        "https://langorigami.com/article/treemaker/",
+        "https://erikdemaine.org/folding/",
+        "https://origamisimulator.org/",
+        "https://www.quantamagazine.org/the-atomic-theory-of-origami-20171031/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 20,
+      "module": "Rigid Folds and Real Materials",
+      "title": "What happens to origami when paper becomes steel?",
+      "concepts": ["rigid origami definition", "kinematic constraints at degree-4 vertices", "rigid foldability conditions"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/ab401d7e479b2b0875c53bd53fd57a0ac2eb75d2",
+        "https://origami.c.u-tokyo.ac.jp/~tachi/software/",
+        "https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 21,
+      "module": "Rigid Folds and Real Materials",
+      "title": "Why did a satellite engineer need a 1970s fold pattern?",
+      "concepts": ["Miura-ori geometry", "single-DOF deployment mechanism", "negative Poisson's ratio"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/22e3963e0aaba110efc3128d7157e4d2c094666b",
+        "https://origamisimulator.org/",
+        "https://www.youtube.com/watch?v=NYKcOFQCeno"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 22,
+      "module": "Rigid Folds and Real Materials",
+      "title": "Can you tune a material's stiffness just by refolding it?",
+      "concepts": ["mechanical metamaterials from Miura-ori", "bistable unit cells", "programmable compressive modulus"],
+      "resources": [
+        "https://doi.org/10.1126/science.1252876",
+        "https://www.semanticscholar.org/paper/22e3963e0aaba110efc3128d7157e4d2c094666b",
+        "https://origamisimulator.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 23,
+      "module": "Rigid Folds and Real Materials",
+      "title": "How do zipper-coupled tubes create structures that are stiff yet deployable?",
+      "concepts": ["coupled Miura-ori tubes", "structural stiffness from reconfigurability", "deployable architecture"],
+      "resources": [
+        "https://doi.org/10.1073/pnas.1509465112",
+        "https://origami.c.u-tokyo.ac.jp/~tachi/software/",
+        "https://erikdemaine.org/folding/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 24,
+      "module": "Rigid Folds and Real Materials",
+      "title": "What changes when paper has real thickness?",
+      "concepts": ["thick-panel origami", "offset hinge techniques", "engineering accommodation of material thickness"],
+      "resources": [
+        "https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/",
+        "https://erikdemaine.org/folding/",
+        "https://www.semanticscholar.org/paper/ab401d7e479b2b0875c53bd53fd57a0ac2eb75d2"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 25,
+      "module": "Rigid Folds and Real Materials",
+      "title": "Review: From Miura's satellite to programmable matter -- can you trace the arc?",
+      "concepts": ["rigid origami theory synthesis", "isometric deformation parallels with optimal transport", "engineering applications survey"],
+      "resources": [
+        "https://origamisimulator.org/",
+        "https://origami.c.u-tokyo.ac.jp/~tachi/software/",
+        "https://www.youtube.com/watch?v=NYKcOFQCeno"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 26,
+      "module": "Complexity, Computation, and Open Frontiers",
+      "title": "Why is deciding flat-foldability as hard as the hardest problems in computer science?",
+      "concepts": ["NP-hardness of MV assignment", "Bern-Hayes reduction", "parameterized complexity of folding"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/e7dfa56beb0c2643112718562832692df83727a7",
+        "https://arxiv.org/abs/2410.07666",
+        "https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 27,
+      "module": "Complexity, Computation, and Open Frontiers",
+      "title": "Can a folded sheet of paper simulate a Turing machine?",
+      "concepts": ["Turing completeness of flat origami", "computational universality via folding", "layer ordering as computation"],
+      "resources": [
+        "https://arxiv.org/abs/2309.07932",
+        "https://arxiv.org/abs/2410.07666",
+        "https://www.youtube.com/watch?v=c3SJ7W6OWfM"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 28,
+      "module": "Complexity, Computation, and Open Frontiers",
+      "title": "What does a randomly folded sheet of paper look like mathematically?",
+      "concepts": ["random flat-foldable origami", "Markov chains on MV assignments", "connections to statistical mechanics"],
+      "resources": [
+        "https://arxiv.org/abs/1307.1065",
+        "https://www.cambridge.org/core/books/origametry/F1221B0998585B16C87B7AD8DDC05358",
+        "https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 29,
+      "module": "Complexity, Computation, and Open Frontiers",
+      "title": "Where are the unsolved problems hiding in origami mathematics?",
+      "concepts": ["curved-crease origami", "map folding problem", "higher-dimensional folding", "modular origami mathematics"],
+      "resources": [
+        "https://erikdemaine.org/folding/",
+        "https://www.youtube.com/watch?v=c3SJ7W6OWfM",
+        "https://www.quantamagazine.org/the-atomic-theory-of-origami-20171031/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 30,
+      "module": "Complexity, Computation, and Open Frontiers",
+      "title": "Capstone: How does origami mathematics connect to your wider mathematical universe?",
+      "concepts": ["cross-topic synthesis with category theory and optimal transport", "reading primary origami literature", "charting independent study directions"],
+      "resources": [
+        "https://www.cambridge.org/core/books/origametry/F1221B0998585B16C87B7AD8DDC05358",
+        "https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/",
+        "https://erikdemaine.org/folding/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

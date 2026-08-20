@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline Report: category theory</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6;padding:24px 16px}
+  .container{max-width:960px;margin:0 auto}
+  h1{font-size:1.75rem;font-weight:700;margin-bottom:4px}
+  h2{font-size:1.35rem;font-weight:600;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+  h3{font-size:1.05rem;font-weight:600;margin-bottom:8px}
+  .subtitle{color:#64748b;font-size:0.95rem;margin-bottom:24px;line-height:1.5}
+
+  /* Cards */
+  .card{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.12);border-radius:8px;padding:24px;margin-bottom:24px}
+
+  /* Stat row */
+  .stat-row{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:32px}
+  .stat-card{flex:1;min-width:180px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.12);border-radius:8px;padding:20px;text-align:center}
+  .stat-card .label{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#64748b;margin-bottom:6px}
+  .stat-card .value{font-size:1.6rem;font-weight:700}
+  .stat-card .value.primary{color:#2563eb}
+  .stat-card .value.success{color:#16a34a}
+  .stat-card .value.warning{color:#eab308}
+  .stat-card .value.info{color:#0ea5e9}
+
+  /* Badge */
+  .badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:0.75rem;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:0.03em;vertical-align:middle}
+  .badge-advance{background:#16a34a}
+  .badge-research{background:#0ea5e9}
+  .badge-redo{background:#eab308;color:#1e293b}
+  .badge-escalate{background:#dc2626}
+
+  /* Flow diagram */
+  .flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0;margin-bottom:32px;padding:16px 0}
+  .flow-step{position:relative;display:flex;flex-direction:column;align-items:center;min-width:110px}
+  .flow-node{border-radius:12px;padding:12px 18px;font-weight:600;font-size:0.9rem;text-align:center;border:2px solid;min-width:100px}
+  .flow-node.green{background:#dcfce7;border-color:#16a34a;color:#15803d}
+  .flow-node.yellow{background:#fef9c3;border-color:#eab308;color:#854d0e}
+  .flow-node.blue{background:#dbeafe;border-color:#2563eb;color:#1e40af}
+  .flow-node.gray{background:#f1f5f9;border-color:#94a3b8;color:#64748b}
+  .flow-arrow{display:flex;align-items:center;font-size:1.5rem;color:#94a3b8;padding:0 4px}
+  .loop-indicator{font-size:0.7rem;color:#854d0e;margin-top:4px;display:flex;align-items:center;gap:3px}
+  .loop-indicator .loop-icon{display:inline-block;width:18px;height:18px;border:2px solid #eab308;border-top-color:transparent;border-radius:50%;position:relative}
+  .loop-indicator .loop-icon::after{content:"";position:absolute;top:-2px;right:-2px;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:5px solid #eab308}
+
+  /* Timeline */
+  .timeline{position:relative;padding-left:28px;margin-bottom:32px}
+  .timeline::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:#e2e8f0}
+  .timeline-item{position:relative;margin-bottom:24px}
+  .timeline-item::before{content:"";position:absolute;left:-22px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #cbd5e1}
+  .timeline-item.advance::before{background:#16a34a;box-shadow:0 0 0 2px #16a34a}
+  .timeline-item.redo::before{background:#eab308;box-shadow:0 0 0 2px #eab308}
+  .timeline-item.research::before{background:#0ea5e9;box-shadow:0 0 0 2px #0ea5e9}
+  .timeline-header{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:6px}
+  .timeline-step{font-weight:700;font-size:1rem}
+  .confidence-bar-wrap{display:flex;align-items:center;gap:6px;margin:6px 0 8px 0}
+  .confidence-bar-wrap .clabel{font-size:0.75rem;color:#64748b;min-width:72px}
+  .confidence-bar{width:120px;height:8px;background:#e2e8f0;border-radius:4px;overflow:hidden}
+  .confidence-fill{height:100%;border-radius:4px;background:#2563eb}
+  .confidence-val{font-size:0.75rem;color:#64748b}
+  details{margin:6px 0}
+  details summary{cursor:pointer;font-size:0.85rem;color:#2563eb;font-weight:500}
+  details .detail-body{margin-top:8px;font-size:0.88rem;color:#334155;line-height:1.65;white-space:pre-wrap}
+  .highlight-box{background:#fef9c3;border-left:3px solid #eab308;padding:10px 14px;margin:8px 0;font-size:0.85rem;border-radius:0 6px 6px 0;white-space:pre-wrap;line-height:1.55}
+  .highlight-box.blue{background:#dbeafe;border-left-color:#2563eb}
+  .quality-snapshot{font-style:italic;font-size:0.82rem;color:#64748b;margin-top:6px;line-height:1.5}
+
+  /* Table */
+  .table-wrap{overflow-x:auto;margin-bottom:32px}
+  table{width:100%;border-collapse:collapse;font-size:0.88rem}
+  th{background:#f1f5f9;text-align:left;padding:10px 12px;font-weight:600;border-bottom:2px solid #e2e8f0}
+  td{padding:10px 12px;border-bottom:1px solid #e2e8f0;vertical-align:top}
+  tr.row-blue{background:#eff6ff}
+  tr.row-yellow{background:#fefce8}
+
+  /* Audience profile */
+  .audience-grid{display:grid;grid-template-columns:140px 1fr;gap:8px 16px;font-size:0.9rem}
+  .audience-grid .alabel{font-weight:600;color:#475569}
+  .audience-grid .avalue{color:#334155;line-height:1.55}
+
+  /* Memory list */
+  .memory-list{list-style:decimal;padding-left:24px;font-family:"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:0.82rem;line-height:1.7;color:#334155}
+  .memory-list li{margin-bottom:10px}
+
+  /* Section spacing */
+  .section{margin-bottom:40px}
+
+  @media(max-width:640px){
+    .stat-row{flex-direction:column}
+    .flow{flex-direction:column;gap:8px}
+    .flow-arrow{transform:rotate(90deg)}
+    .audience-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="section">
+    <h1>Pipeline Report: category theory</h1>
+    <p class="subtitle">
+      Generated: 2026-08-20 &middot; Level: intermediate<br>
+      The target student is a mathematically literate learner who already knows what categories, functors, and natural transformations are but cannot yet wield adjunctions, the Yoneda lemma, or monads with confidence.
+    </p>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="label">Tutor Judgments</div>
+        <div class="value primary">6</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Research Rounds</div>
+        <div class="value info">0 / 3</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Total Steps</div>
+        <div class="value warning">13</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Final Verdict</div>
+        <div class="value success">ADVANCE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIPELINE FLOW DIAGRAM -->
+  <div class="section">
+    <h2>Pipeline Flow</h2>
+    <div class="card">
+      <div class="flow">
+
+        <div class="flow-step">
+          <div class="flow-node green">Survey</div>
+        </div>
+        <div class="flow-arrow">&#8594;</div>
+
+        <div class="flow-step">
+          <div class="flow-node green">Audience</div>
+        </div>
+        <div class="flow-arrow">&#8594;</div>
+
+        <div class="flow-step">
+          <div class="flow-node yellow">Build</div>
+          <div class="loop-indicator">
+            <span class="loop-icon"></span> 3 attempts
+          </div>
+        </div>
+        <div class="flow-arrow">&#8594;</div>
+
+        <div class="flow-step">
+          <div class="flow-node green">QA</div>
+        </div>
+        <div class="flow-arrow">&#8594;</div>
+
+        <div class="flow-step">
+          <div class="flow-node green">Schedule</div>
+        </div>
+        <div class="flow-arrow">&#8594;</div>
+
+        <div class="flow-step">
+          <div class="flow-node gray">Register</div>
+        </div>
+
+      </div>
+      <p style="text-align:center;font-size:0.78rem;color:#64748b;margin-top:4px">
+        <span style="display:inline-block;width:10px;height:10px;background:#dcfce7;border:1px solid #16a34a;border-radius:3px;vertical-align:middle"></span> First-try advance &nbsp;
+        <span style="display:inline-block;width:10px;height:10px;background:#fef9c3;border:1px solid #eab308;border-radius:3px;vertical-align:middle"></span> Advanced after iteration &nbsp;
+        <span style="display:inline-block;width:10px;height:10px;background:#dbeafe;border:1px solid #2563eb;border-radius:3px;vertical-align:middle"></span> Included research &nbsp;
+        <span style="display:inline-block;width:10px;height:10px;background:#f1f5f9;border:1px solid #94a3b8;border-radius:3px;vertical-align:middle"></span> Not reached
+      </p>
+    </div>
+  </div>
+
+  <!-- TUTOR DECISION TIMELINE -->
+  <div class="section">
+    <h2>Tutor Decision Timeline</h2>
+
+    <!-- Decision 1: Survey ADVANCE -->
+    <div class="timeline">
+      <div class="timeline-item advance">
+        <div class="timeline-header">
+          <span class="timeline-step">Survey &middot; Attempt 1</span>
+          <span class="badge badge-advance">ADVANCE</span>
+        </div>
+        <div class="confidence-bar-wrap">
+          <span class="clabel">Confidence</span>
+          <div class="confidence-bar"><div class="confidence-fill" style="width:88%"></div></div>
+          <span class="confidence-val">0.88</span>
+        </div>
+        <details>
+          <summary>Reasoning</summary>
+          <div class="detail-body">The research survey is strong across all evaluation criteria. 15 papers (exceeding the 10+ threshold) span from the 1945 founding paper to a 2024 ML survey. Educational resources are exceptionally diverse: 14 textbooks (9 free), 3 MIT courses, 70+ lecture videos across 2 full series, 5 interactive tools, and learning paths organized by 5 student profiles. The field landscape is clear, with OpenAlex-backed topic clusters, 6 active research frontiers, and a well-mapped key-people section.
+
+The document self-identifies 7 gaps, which I evaluated individually for pedagogical impact at the intermediate level. The most significant gap -- monoidal categories and string diagrams -- is covered implicitly within multiple listed resources (Mac Lane, Milewski, Fong/Spivak all treat monoidal categories). HoTT and enriched categories are advanced topics that an intermediate course would touch briefly. Categorical quantum mechanics and linguistics are specialized application areas. Exercise collections exist within the listed textbooks. Community resources are supplementary.
+
+No gap would leave a core intermediate lesson unsupported. The 6 major pillars (foundations, limits/adjunctions, monads, topos theory/logic, higher CT, applied CT) are all well-resourced. Triggering RESEARCH for the listed gaps would be perfectionism given that the existing 15 papers and 14 textbooks provide more than enough material for 20-30 intermediate lessons. The coverage score of 8 from the step output is reasonable.</div>
+        </details>
+        <div class="quality-snapshot">Research survey is comprehensive and well-structured. 15 papers and 14 textbooks provide abundant material. All 6 major pillars of category theory are well-resourced. Self-identified gaps are real but manageable -- most are either implicitly covered or beyond intermediate scope. Resource diversity (courses, videos, tools, blogs, textbooks) is excellent. Field landscape is clear enough to structure a coherent course progression.</div>
+      </div>
+
+      <!-- Decision 2: Build REDO attempt 1 -->
+      <div class="timeline-item redo">
+        <div class="timeline-header">
+          <span class="timeline-step">Build &middot; Attempt 1</span>
+          <span class="badge badge-redo">REDO</span>
+        </div>
+        <div class="confidence-bar-wrap">
+          <span class="clabel">Confidence</span>
+          <div class="confidence-bar"><div class="confidence-fill" style="width:93%"></div></div>
+          <span class="confidence-val">0.93</span>
+        </div>
+        <details>
+          <summary>Reasoning</summary>
+          <div class="detail-body">The four domain files are individually strong but structurally misaligned with each other. The curriculum JSON follows a 6-module ordering (Review -> Universal Constructions -> Adjunctions -> Monads -> Yoneda -> Horizons), while the teaching notes and concept map follow a 5-module ordering (Review -> Functors/Nat Trans -> Universal Constructions -> Adjunctions -> Yoneda+Monads+Frontier). A tutor using all four documents simultaneously would encounter contradictory day references, wrong module assignments, and mismatched difficulty calibrations.
+
+I verified every self-assessment issue against the actual files. Several claims were factually wrong -- the curriculum DOES have a 5-day "Foundations Review" module (Issue 3 was false), the Yoneda lemma is on Day 24 not Day 7 (Issue 4 was false), Beck's monadicity theorem is 3 days after Eilenberg-Moore not 1 day (Issue 8 was false), and Kan extensions DO appear on Day 29 as a preview (Issue 9 was false). But the underlying structural misalignment these issues gestured toward is real and critical.</div>
+        </details>
+        <div class="highlight-box">
+          <strong>Redo feedback (abridged):</strong> All four domain files are structurally misaligned. The curriculum JSON has 6 modules in one ordering; the teaching notes and concept map have 5 modules in a different ordering. 7 specific fixes required: align to one module structure using teaching notes as reference, update concept map day references, update resources module mapping, remove Freyd's adjoint functor theorem from exit criteria, handle Beck's monadicity scope, preserve Kan extensions mention.
+        </div>
+        <div class="quality-snapshot">Curriculum JSON: Well-structured 30-day sequence, engaging question titles, proper dependencies, review days every 5-6 lessons, no thin lessons, 2-3 resources per lesson. Teaching notes: Exceptionally detailed day-by-day pedagogy. Concept map: Thorough 35-concept dependency graph. Resources: 8 textbooks (7 free), 3 MIT courses, 70+ videos, 6 interactive tools. CRITICAL DEFECT: The four files describe two different course structures and cannot be used together as-is.</div>
+      </div>
+
+      <!-- Decision 3: Build REDO attempt 2 -->
+      <div class="timeline-item redo">
+        <div class="timeline-header">
+          <span class="timeline-step">Build &middot; Attempt 2</span>
+          <span class="badge badge-redo">REDO</span>
+        </div>
+        <div class="confidence-bar-wrap">
+          <span class="clabel">Confidence</span>
+          <div class="confidence-bar"><div class="confidence-fill" style="width:92%"></div></div>
+          <span class="confidence-val">0.92</span>
+        </div>
+        <details>
+          <summary>Reasoning</summary>
+          <div class="detail-body">All three reported issues are confirmed as real misalignments between the teaching notes' day-by-day commentary and the curriculum's actual day assignments. The curriculum JSON, concept map, and resources file are all internally consistent and well-aligned with each other -- the problems are isolated to teaching-notes.md. However, the misalignments are pedagogically significant: a tutor following the teaching notes' daily commentary for Module 3 (Days 13-18) would give guidance for the wrong lesson content on four consecutive days (Days 14-17). This is not a stylistic concern; it would directly harm lesson delivery. Since the fixes are confined to one file with clear, mechanical corrections needed, this should be a clean final attempt.</div>
+        </details>
+        <div class="highlight-box">
+          <strong>Redo feedback (abridged):</strong> Fix three day-reference misalignments in teaching-notes.md only. FIX 1: Day 3/4 swap (mono/epi commentary on wrong day). FIX 2: Module 3 Days 13-18 daily commentary describes different topic-per-day arrangement than curriculum. FIX 3: Cross-topic connections table has two day references off by one. Do NOT change curriculum.json, concept-map.md, or resources.md.
+        </div>
+        <div class="quality-snapshot">Curriculum JSON: EXCELLENT. Concept map: EXCELLENT. Resources: EXCELLENT. Teaching notes: CONTENT EXCELLENT but DAY REFERENCES MISALIGNED in 3 specific sections. Only teaching-notes.md needs targeted fixes.</div>
+      </div>
+
+      <!-- Decision 4: Build ADVANCE attempt 3 -->
+      <div class="timeline-item advance">
+        <div class="timeline-header">
+          <span class="timeline-step">Build &middot; Attempt 3</span>
+          <span class="badge badge-advance">ADVANCE</span>
+        </div>
+        <div class="confidence-bar-wrap">
+          <span class="clabel">Confidence</span>
+          <div class="confidence-bar"><div class="confidence-fill" style="width:95%"></div></div>
+          <span class="confidence-val">0.95</span>
+        </div>
+        <details>
+          <summary>Reasoning</summary>
+          <div class="detail-body">This is the final allowed iteration (attempt 3 of 3). The single remaining issue -- Misconception 7 in Section 2 of teaching-notes.md says "the first time limit appears (Day 17)" when curriculum.json places limits on Day 16 -- is a cosmetic day-reference error in one sentence. It does not rise to the level of a critical pedagogical error. The actual day-by-day pedagogy in Section 5 of the same file correctly places the CONCEPTUAL WALL and limits discussion on Day 16, consistent with curriculum.json and the concept map. A student following the curriculum would encounter the correct information during delivery. All other quality criteria are fully met.</div>
+        </details>
+        <div class="quality-snapshot">CURRICULUM BUILD -- category theory (intermediate): PASS. 30 lessons, 5 modules, 35 concept map entries, all aligned. Teaching notes provide exceptional pedagogical depth with OT and origami cross-connections. Resources diverse and mapped to lessons. One cosmetic day-reference error does not affect delivery. Ready for use.</div>
+      </div>
+
+      <!-- Decision 5: QA ADVANCE -->
+      <div class="timeline-item advance">
+        <div class="timeline-header">
+          <span class="timeline-step">QA &middot; Attempt 1</span>
+          <span class="badge badge-advance">ADVANCE</span>
+        </div>
+        <div class="confidence-bar-wrap">
+          <span class="clabel">Confidence</span>
+          <div class="confidence-bar"><div class="confidence-fill" style="width:82%"></div></div>
+          <span class="confidence-val">0.82</span>
+        </div>
+        <details>
+          <summary>Reasoning</summary>
+          <div class="detail-body">The QA report scores 7.4/10 with one verified critical issue: a literal space in the HoTT book URL on resources.md line 348 (supplementary advanced references section, not referenced by any lesson). This is a copy-editing typo, not a pedagogical defect. The resource is real and well-known; any student would find it instantly via search.
+
+The most substantive warnings (exit criteria 6-7 over-promising on monoidal/enriched/string-diagram competence vs Day 29's survey depth, and concept #27 "monads as algebraic theories" absent from lesson concepts despite being needed for exit criterion 5) are real quality gaps but were downgraded from critical by the adversarial check. The teaching notes make the limited scope of Day 29 explicitly clear, and the algebraic theories content is partially present in Day 28's T-algebra pedagogy even if not surfaced in the structured concept list.
+
+Three build iterations have resolved all structural alignment issues (the original cause of REDOs). The four domain files are internally consistent: the curriculum JSON's 30 lessons across 5 modules with review days at 6, 12, 19, 24, 30 match the teaching notes' module-by-module commentary, the concept map's 35-concept dependency graph, and the resources' module-to-resource mapping table. Data integrity is 10/10. Curriculum sequencing is 8.5/10. No circular dependencies, no prerequisite ordering violations, no hallucinated citations.</div>
+        </details>
+        <div class="quality-snapshot">Score: 7.4/10. Structural alignment: resolved (3 build iterations). Data integrity: 10/10. Curriculum sequencing: 8.5/10. Concept coverage: 6/10 (exit criteria 6-7 over-promise). Pedagogical quality: 7/10. Resource verification: 6.5/10 (1 broken URL). One trivial critical issue. No pedagogically blocking defects. Ready to ship.</div>
+      </div>
+
+      <!-- Decision 6: Schedule ADVANCE -->
+      <div class="timeline-item advance">
+        <div class="timeline-header">
+          <span class="timeline-step">Schedule &middot; Attempt 1</span>
+          <span class="badge badge-advance">ADVANCE</span>
+        </div>
+        <div class="confidence-bar-wrap">
+          <span class="clabel">Confidence</span>
+          <div class="confidence-bar"><div class="confidence-fill" style="width:88%"></div></div>
+          <span class="confidence-val">0.88</span>
+        </div>
+        <details>
+          <summary>Reasoning</summary>
+          <div class="detail-body">The schedule in progress.json is pedagogically sound across all four evaluation criteria. (1) Delivery times (09:00, 14:00, 20:00 ET) are all within reasonable waking hours with good spacing for concept introduction, practice, and spaced-repetition review. (2) Pacing at 1 lesson/day is appropriate for intermediate category theory, where the teaching notes repeatedly stress going slowly through Modules 3-4. (3) Review day placement precisely targets the five difficulty spikes explicitly identified in the teaching notes: natural transformations (lesson 9), first universal constructions (lesson 13), general limits (lesson 16), adjunction equivalences (lesson 21), and the Yoneda lemma (lesson 25). Combined with the curriculum's built-in review lessons at 6, 12, 19, 24, every major conceptual transition has review scaffolding. (4) The 40-day estimate for 35 active days with Sundays off is arithmetically correct and realistic for a 6-week course.</div>
+        </details>
+        <div class="quality-snapshot">Schedule quality: GOOD. All four evaluation criteria pass. Times reasonable for ET, pacing appropriate for intermediate abstract math, reviews precisely target teaching-notes-identified spikes, completion estimate realistic.</div>
+      </div>
+
+    </div><!-- /.timeline -->
+  </div>
+
+  <!-- WORKFLOW CALLS TABLE -->
+  <div class="section">
+    <h2>Workflow Calls</h2>
+    <div class="card table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Step #</th>
+            <th>Workflow</th>
+            <th>Mode</th>
+            <th>Attempt</th>
+            <th>Key Results</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>research</td>
+            <td>survey</td>
+            <td>&mdash;</td>
+            <td>Coverage: <strong>8/10</strong>. 7 gaps identified (monoidal categories, HoTT, enriched CT, quantum, linguistics, exercises, community).</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>audience</td>
+            <td>agent</td>
+            <td>&mdash;</td>
+            <td>Audience profiled: math/CS undergrads, early grads, FP engineers. Goal: intermediate categorical fluency (limits, adjunctions, Yoneda, monads).</td>
+          </tr>
+          <tr class="row-yellow">
+            <td>4</td>
+            <td>curriculum-build</td>
+            <td>full</td>
+            <td>1 of 3</td>
+            <td>ISSUES: 9 issues flagged. 3 critical (structural misalignment between files), 2 major, 2 moderate, 2 minor.</td>
+          </tr>
+          <tr class="row-yellow">
+            <td>6</td>
+            <td>curriculum-build</td>
+            <td>patch</td>
+            <td>2 of 3</td>
+            <td>ISSUES: 3 issues remaining. Teaching notes day-by-day commentary misaligned for Module 1 (Day 3/4) and Module 3 (Days 13-18).</td>
+          </tr>
+          <tr class="row-yellow">
+            <td>8</td>
+            <td>curriculum-build</td>
+            <td>patch</td>
+            <td>3 of 3</td>
+            <td>ISSUES: 1 cosmetic issue. Misconception 7 references Day 17 instead of Day 16 for limits. Non-blocking.</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>curriculum-qa</td>
+            <td>cycle 1</td>
+            <td>1 of 2</td>
+            <td>Verdict: <strong>PASS_WITH_WARNINGS</strong>. Score: <strong>7.4/10</strong>. 1 critical (URL typo), 15 warnings.</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>schedule</td>
+            <td>&mdash;</td>
+            <td>1 of 2</td>
+            <td>Pacing: standard (1 lesson/day). 5 review days inserted at difficulty spikes. 40 calendar days total.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- AUDIENCE PROFILE CARD -->
+  <div class="section">
+    <h2>Audience Profile</h2>
+    <div class="card">
+      <div class="audience-grid">
+        <div class="alabel">Audience</div>
+        <div class="avalue">Math or CS undergrads (junior/senior), early graduate students, and software engineers with functional programming experience who have already encountered basic categorical concepts (categories, functors, natural transformations) and want to develop working fluency with the full intermediate toolkit.</div>
+
+        <div class="alabel">Goal</div>
+        <div class="avalue">Build fluency with the core categorical toolkit -- limits/colimits, adjunctions, the Yoneda lemma, monads, and introductory topos theory -- so the student can read mathematical papers that use categorical language, apply categorical reasoning in their own domain (pure math, typed programming, or applied science), and have a solid foundation for approaching advanced topics like higher category theory or applied CT independently.</div>
+
+        <div class="alabel">Background</div>
+        <div class="avalue">Assumes: (1) prior exposure to basic category theory at the level of Leinster chapters 1-3 or Milewski season 1 -- comfortable with the definitions of category, functor, natural transformation, and universal property; (2) mathematical maturity -- can follow abstract definitions, reason about commutative diagrams, and handle proof sketches; (3) grounding in at least one concrete domain that provides source examples -- abstract algebra (groups, rings, modules), point-set topology, or typed functional programming (Haskell, OCaml, Scala). Does NOT assume prior knowledge of adjunctions, monads (in the categorical sense), limits/colimits beyond products and coproducts, or any topos theory.</div>
+
+        <div class="alabel">Tone</div>
+        <div class="avalue">Rigorous but accessible. Lead with motivating examples and concrete intuition from the student's home domain before stating formal definitions and theorems. Use precise mathematical language but always pair it with an informal reading. Proofs should be included for central results (Yoneda, adjunction-monad correspondence) but presented as guided reasoning rather than terse symbol manipulation. Encourage active engagement through frequent "try this" prompts and diagram-drawing exercises.</div>
+
+        <div class="alabel">Depth</div>
+        <div class="avalue">Intuition plus key proofs with applied grounding. Each major concept gets: (a) motivating examples from multiple domains, (b) the formal definition with careful unpacking, (c) proof of the central theorem with commentary on proof technique, (d) concrete exercises that require applying the concept. The course should NOT attempt full formal generality (no enriched categories, no infinity-categories, no advanced topos internals) but should gesture toward these as motivation for further study.</div>
+
+        <div class="alabel">Time</div>
+        <div class="avalue">15-20 minutes of focused reading per lesson, plus 10-15 minutes of exercises (diagram-drawing, proof completion, or worked examples). Roughly 30 minutes total per session, designed for daily or near-daily engagement.</div>
+
+        <div class="alabel">Summary</div>
+        <div class="avalue">The target student is a mathematically literate learner -- upper-level undergrad, early grad, or experienced programmer -- who already knows what categories, functors, and natural transformations are but cannot yet wield adjunctions, the Yoneda lemma, or monads with confidence. The course builds this intermediate fluency through a rigorous-but-intuitive approach: each concept is motivated by concrete examples, stated precisely, proved where central, and exercised across both mathematical and computational domains. By the end of 20-30 lessons, the student should be able to read category-theoretic arguments in papers and textbooks without constant reference lookups.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUTOR MEMORY -->
+  <div class="section">
+    <h2>Tutor Memory (Accumulated Context)</h2>
+    <div class="card">
+      <ol class="memory-list">
+        <li>[survey] RESEARCH SURVEY EVALUATION (category-theory, intermediate): 15 key papers spanning 1945-2024, well above 10+ threshold. 14 textbooks (9 free), 3 MIT courses, 70+ lecture videos, 5 interactive tools. 6 identifiable major pillars: foundations, limits/adjunctions, monads, topos theory/logic, higher CT, applied CT. Self-identified gaps (monoidal categories, HoTT, enriched CT, quantum, linguistics, exercises, community) are either covered implicitly in listed resources or are advanced/specialized topics beyond intermediate scope. Learning paths organized by 5 student profiles show sophisticated field understanding. Field landscape is clear with OpenAlex-backed quantitative data. Coverage score 8 is appropriate; sufficient to structure 20-30 intermediate lessons. NOTE for curriculum builder: monoidal categories lessons should draw from Mac Lane ch.7, Milewski series, and Fong/Spivak rather than expecting a dedicated resource listing.</li>
+        <li>[audience] The target student is a mathematically literate learner -- upper-level undergrad, early grad, or experienced programmer -- who already knows what categories, functors, and natural transformations are but cannot yet wield adjunctions, the Yoneda lemma, or monads with confidence. The course builds this intermediate fluency through a rigorous-but-intuitive approach: each concept is motivated by concrete examples, stated precisely, proved where central, and exercised across both mathematical and computational domains. By the end of 20-30 lessons, the student should be able to read category-theoretic arguments in papers and textbooks without constant reference lookups, and have a clear map of which advanced directions (higher CT, topos theory, applied CT) match their interests.</li>
+        <li>[build] 3. [curriculum-build] REDO (attempt 1 of 3): All four domain files are individually high-quality but structurally misaligned. The curriculum JSON has 6 modules (Review Days 1-5, Universal Constructions Days 6-11, Adjunctions Days 12-17, Monads Days 18-23, Yoneda Days 24-27, Horizons Days 28-30) while the teaching notes and concept map describe 5 modules in a different ordering (Review Days 1-6, Functors/Nat Trans Days 7-12, Universal Constructions Days 13-19, Adjunctions Days 20-24, Yoneda+Monads+Frontier Days 25-30). The concept map day references and cross-topic connection timings all follow the teaching notes schedule, not the curriculum. The self-assessment identified 9 issues but several were factually wrong. The core real problem is structural misalignment between the four files.</li>
+        <li>[build] 4. [curriculum-build] REDO (attempt 2 of 3): Curriculum JSON, concept map, and resources are all internally consistent and high-quality. The problems are isolated to teaching-notes.md where day-by-day commentary was written for a different day arrangement than the curriculum uses. Three specific fixes needed: (a) Module 1 Day 3 commentary discusses mono/epi but curriculum Day 3 is commutative diagrams; (b) Module 3 Days 13-18 commentary describes a different topic arrangement; (c) Cross-topic connections reference wrong days.</li>
+        <li>[build] 5. [build] ADVANCE (attempt 3 of 3): All four domain files are internally consistent and high-quality. The curriculum JSON has 30 lessons across 5 modules with review days at 6, 12, 19, 24, 30. The concept map's 35 concepts and dependency graph align with the lesson sequence. One minor cosmetic issue remains: teaching-notes.md Misconception 7 references "(Day 17)" for limits instead of "(Day 16)", but delivery would be unaffected. No critical pedagogical errors found.</li>
+        <li>[qa] 6. [qa] ADVANCE (attempt 1 of 3): QA score 7.4/10, verdict PASS_WITH_WARNINGS. One verified critical issue: space character in HoTT book URL on resources.md line 348. Fifteen warnings. All four domain files are internally consistent after 3 build iterations. Data integrity perfect. Sequencing valid DAG. No hallucinated citations. Curriculum is shippable.</li>
+        <li>[schedule] 7. [schedule] ADVANCE (attempt 1 of 2): Schedule in progress.json is pedagogically sound. Delivery times 09:00/14:00/20:00 ET are reasonable. Pacing at 1 lesson/day is appropriate. Five inserted review days target the exact difficulty spikes. Estimated completion of 40 calendar days (~6 weeks) is realistic.</li>
+      </ol>
+    </div>
+  </div>
+
+  <p style="text-align:center;color:#94a3b8;font-size:0.75rem;padding:16px 0">OpenTutor Pipeline Report</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,358 @@
+{
+  "topic": "mathematics of juggling",
+  "slug": "mathematics-of-juggling",
+  "created": "2026-08-20",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Combinatorics: permutations, binomial coefficients, generating functions, bijective proof techniques",
+    "Modular arithmetic and basic number theory",
+    "Linear algebra: matrices, eigenvalues, matrix powers, stochastic matrices",
+    "Probability: sample spaces, conditional probability, expectation, introductory Markov chains",
+    "Proof fluency: mathematical induction, construction, contradiction, and reading published proofs",
+    "Elementary group theory: groups, subgroups, homomorphisms, group actions"
+  ],
+  "exit_criteria": [
+    "Determine the validity of any siteswap sequence using both the average theorem and the permutation test",
+    "Construct and analyze the complete state transition graph for b balls with a given maximum throw height",
+    "State and prove the (b+1)^p counting theorem for juggling sequences via bijection",
+    "Identify primitive juggling sequences and decompose composite siteswaps into their primitive components",
+    "Model random juggling as a Markov chain on states and derive the stationary distribution using Stirling numbers",
+    "Read and follow the core arguments in Buhler et al. (1994) and Warrington (2003) independently",
+    "Construct the braid word corresponding to a periodic siteswap and identify the resulting link type",
+    "Explain the correspondence between bounded affine permutations and positroid varieties in the Grassmannian"
+  ],
+  "lessons": [
+    {
+      "day": 1,
+      "module": "The Language of Throws",
+      "title": "Why did Shannon build a juggling robot?",
+      "concepts": ["Shannon's juggling theorem", "flight time and dwell time", "the equation (F+D)H = (V+D)N"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/4129d6b4388a82f9b566fb4d1b00ca5aa58f1ca1",
+        "https://www.youtube.com/watch?v=7dwgusHjA0Y",
+        "https://www.maths.ox.ac.uk/outreach/oxford-mathematics-alphabet/j-juggling"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 2,
+      "module": "The Language of Throws",
+      "title": "Can three numbers describe a juggling trick?",
+      "concepts": ["siteswap notation", "beat diagrams", "ladder diagrams"],
+      "resources": [
+        "https://www.youtube.com/watch?v=hZMR2h93X0k",
+        "https://mathweb.ucsd.edu/~jeggers/Resources/juggling.pdf",
+        "https://www.youtube.com/watch?v=LmfS3EttuQg"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 3,
+      "module": "The Language of Throws",
+      "title": "Why does the average never lie?",
+      "concepts": ["average theorem", "necessary vs sufficient conditions for validity"],
+      "resources": [
+        "https://www.youtube.com/watch?v=DXKbeBd_k4U",
+        "https://sharmaeklavya2.github.io/blog/juggling-theory.html",
+        "https://www.qedcat.com/articles/juggling_survey.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 4,
+      "module": "The Language of Throws",
+      "title": "When is a number sequence actually juggleable?",
+      "concepts": ["landing schedule", "permutation test", "collision-freeness"],
+      "resources": [
+        "https://www.youtube.com/watch?v=CVRolIVGJys",
+        "https://www.quantamagazine.org/the-mathematics-of-juggling-20170524/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 5,
+      "module": "The Language of Throws",
+      "title": "What can a simulator reveal that notation cannot?",
+      "concepts": ["synchronous siteswap notation", "multiplex notation basics", "pattern visualization and exploration"],
+      "resources": [
+        "https://jugglinglab.org/",
+        "https://siteswapsim.com/",
+        "https://jugglingedge.com/software/jlab/anim.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 6,
+      "module": "The Language of Throws",
+      "title": "Review: What have we learned about juggling notation?",
+      "concepts": ["review of siteswap notation and validity tests", "connecting beat diagrams to landing schedules", "siteswap concatenation as a sequence operation"],
+      "resources": [
+        "https://mathweb.ucsd.edu/~ronspubs/13_05_juggling.pdf",
+        "https://www.qedcat.com/articles/juggling_survey.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 7,
+      "module": "States, Graphs, and Counting",
+      "title": "What does a juggler's future look like from any given beat?",
+      "concepts": ["state vectors", "ground state vs excited state", "the landing schedule as state encoding"],
+      "resources": [
+        "https://www.youtube.com/watch?v=GNKFSpJIBO0",
+        "https://jugglinglab.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 8,
+      "module": "States, Graphs, and Counting",
+      "title": "Can you draw the universe of three-ball patterns?",
+      "concepts": ["state transition diagrams", "reachability and connected components"],
+      "resources": [
+        "https://www.youtube.com/watch?v=K3lhCqXMJq0",
+        "https://sharmaeklavya2.github.io/blog/juggling-theory.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 9,
+      "module": "States, Graphs, and Counting",
+      "title": "Why are there exactly 125 ways to juggle four balls in three beats?",
+      "concepts": ["the (b+1)^p counting theorem", "bijective proof via throw-height decomposition", "comparison to naive counting"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/173f764ab3328fba3165e4e58ea967c5ea04f80d",
+        "https://doi.org/10.1007/b98883"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 10,
+      "module": "States, Graphs, and Counting",
+      "title": "Which patterns are the atoms?",
+      "concepts": ["primitive juggling sequences", "decomposition of composite siteswaps", "Chung-Graham counting results"],
+      "resources": [
+        "https://doi.org/10.1080/00029890.2008.11920516",
+        "https://mathweb.ucsd.edu/~ronspubs/13_05_juggling.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 11,
+      "module": "States, Graphs, and Counting",
+      "title": "What happens when you catch two balls at once?",
+      "concepts": ["multiplex siteswaps", "matrix formulation of multiplex enumeration", "Butler-Graham recursion"],
+      "resources": [
+        "https://arxiv.org/abs/0801.2597",
+        "https://doi.org/10.1007/b98883"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 12,
+      "module": "States, Graphs, and Counting",
+      "title": "Review: When does a local rule fail to guarantee global consistency?",
+      "concepts": ["review of states, graphs, and counting", "local vs global validity in combinatorial structures", "parallel with origami flat-foldability"],
+      "resources": [
+        "https://mathweb.ucsd.edu/~ronspubs/13_05_juggling.pdf",
+        "https://www.qedcat.com/articles/juggling_survey.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 13,
+      "module": "Permutations and Descents",
+      "title": "Is every juggling pattern a rearrangement in disguise?",
+      "concepts": ["siteswaps as permutations", "cycle structure of juggling permutations", "bounded drop size"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/173f764ab3328fba3165e4e58ea967c5ea04f80d",
+        "https://doi.org/10.1007/b98883"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 14,
+      "module": "Permutations and Descents",
+      "title": "What do drops and descents reveal about a pattern?",
+      "concepts": ["descent set of a permutation", "drops in juggling sequences", "descent polynomials for bounded-drop permutations"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/173f764ab3328fba3165e4e58ea967c5ea04f80d",
+        "https://doi.org/10.1016/j.ejc.2010.01.011"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 15,
+      "module": "Permutations and Descents",
+      "title": "Can you follow the argument in a real research paper?",
+      "concepts": ["guided reading of Buhler et al. 1994", "proof structure: bijection and descent analysis"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/173f764ab3328fba3165e4e58ea967c5ea04f80d"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 16,
+      "module": "Permutations and Descents",
+      "title": "Why do Stirling numbers keep showing up in juggling?",
+      "concepts": ["Stirling numbers of the second kind", "set partitions and juggling states"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/c595923b1d606982364f24060ca476e5d7936573",
+        "https://arxiv.org/abs/math/0302257"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 17,
+      "module": "Permutations and Descents",
+      "title": "What algebraic structure hides inside siteswap?",
+      "concepts": ["siteswap concatenation as monoid operation", "irreducible elements and primitive siteswaps", "connection to category theory: one-object categories"],
+      "resources": [
+        "https://mathweb.ucsd.edu/~ronspubs/13_05_juggling.pdf",
+        "https://www.qedcat.com/articles/juggling_survey.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 18,
+      "module": "Permutations and Descents",
+      "title": "Review: What connects permutations, counting, and algebra?",
+      "concepts": ["review of permutations, descents, Stirling numbers, and algebraic structure", "ball redistribution as discrete transport", "throw-catch duality"],
+      "resources": [
+        "https://www.quantamagazine.org/the-mathematics-of-juggling-20170524/",
+        "https://mathweb.ucsd.edu/~ronspubs/13_05_juggling.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 19,
+      "module": "Random Juggling",
+      "title": "What if you threw each ball at random?",
+      "concepts": ["random juggling models", "throw distributions on non-negative integers", "sample space of random siteswaps"],
+      "resources": [
+        "https://arxiv.org/abs/math/0302257",
+        "https://www.youtube.com/watch?v=ZP_gY4Ih85U"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 20,
+      "module": "Random Juggling",
+      "title": "Does a random juggler forget where the balls were?",
+      "concepts": ["Markov property of juggling states", "transition matrix construction", "ergodicity and irreducibility"],
+      "resources": [
+        "https://arxiv.org/abs/math/0302257",
+        "https://jugglinglab.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 21,
+      "module": "Random Juggling",
+      "title": "Where does a random juggler eventually settle?",
+      "concepts": ["stationary distribution", "detailed balance equations", "Warrington's Stirling number formula for steady state"],
+      "resources": [
+        "https://arxiv.org/abs/math/0302257"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 22,
+      "module": "Random Juggling",
+      "title": "Can you follow Warrington's probability argument?",
+      "concepts": ["guided reading of Warrington 2003", "proof of the stationary distribution formula"],
+      "resources": [
+        "https://arxiv.org/abs/math/0302257",
+        "https://www.youtube.com/watch?v=ZP_gY4Ih85U"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 23,
+      "module": "Random Juggling",
+      "title": "What happens when the throw distribution has a tuning knob?",
+      "concepts": ["parameterized throw distributions", "multivariate juggling probabilities", "rook polynomials on Ferrers boards"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/de2a0349aae46997d9b191af4429cfa9031ab2f9",
+        "https://arxiv.org/abs/1402.3752"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 24,
+      "module": "Random Juggling",
+      "title": "Review: What unifies counting and probability in juggling?",
+      "concepts": ["review of random juggling and Markov models", "synthesis of enumerative and probabilistic viewpoints", "connecting stationary distributions to Stirling number formulas"],
+      "resources": [
+        "https://mathweb.ucsd.edu/~ronspubs/13_05_juggling.pdf",
+        "https://www.qedcat.com/articles/juggling_survey.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 25,
+      "module": "Braids, Geometry, and the Frontier",
+      "title": "Do juggling balls weave braids through spacetime?",
+      "concepts": ["braid groups and generators", "braid diagrams from periodic siteswaps", "the Devadoss-Mugno construction"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/2f090da906dbe4930141f6295be74337b041ccdf",
+        "https://www.jonglage.net/theorie/notation/siteswap-avancee/refs/Matthew%20Macauley%20-%20Braids%20And%20Juggling%20Patterns%20(2003).pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 26,
+      "module": "Braids, Geometry, and the Frontier",
+      "title": "Can every knot be juggled into existence?",
+      "concepts": ["surjectivity of the siteswap-to-braid map", "Alexander's theorem and closures of braids", "links from juggling patterns"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/2f090da906dbe4930141f6295be74337b041ccdf",
+        "https://doi.org/10.1007/b98883"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 27,
+      "module": "Braids, Geometry, and the Frontier",
+      "title": "What do affine permutations tell us about juggling?",
+      "concepts": ["bounded affine permutations", "translating siteswaps to affine permutations", "verifying boundedness conditions"],
+      "resources": [
+        "https://doi.org/10.1112/s0010437x13007240",
+        "https://doi.org/10.1007/b98883"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 28,
+      "module": "Braids, Geometry, and the Frontier",
+      "title": "What do jugglers and Grassmannians have in common?",
+      "concepts": ["positroid cells in the Grassmannian", "the Knutson-Lam-Speyer correspondence"],
+      "resources": [
+        "https://doi.org/10.1112/s0010437x13007240",
+        "https://doi.org/10.1007/b98883"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 29,
+      "module": "Braids, Geometry, and the Frontier",
+      "title": "Review: How do braids and geometry encode juggling?",
+      "concepts": ["review of braid groups, links, and affine permutations", "consolidation of geometric and algebraic perspectives"],
+      "resources": [
+        "https://mathweb.ucsd.edu/~ronspubs/13_05_juggling.pdf",
+        "https://www.qedcat.com/articles/juggling_survey.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "day": 30,
+      "module": "Braids, Geometry, and the Frontier",
+      "title": "What is still unknown about juggling mathematics?",
+      "concepts": ["universal juggling cycles", "open problems and active research frontiers"],
+      "resources": [
+        "https://www.semanticscholar.org/paper/44fc233f894e7fa649daa694f736aff7581bd3f1",
+        "https://erikdemaine.org/papers/JuggleShuffle_Graham80/paper.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

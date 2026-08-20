@@ -1,9 +1,27 @@
 {
-  "active_topics": [],
+  "active_topics": ["category-theory", "mathematics-of-juggling", "origami-mathematics"],
   "schedule": {
-    "times": ["09:00", "13:00", "19:00"],
+    "times": [
+      "09:00",
+      "13:00",
+      "19:00"
+    ],
     "timezone": "America/New_York",
-    "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+    "paused": false,
+    "pacing": "standard",
+    "lessonsPerDay": 1,
+    "reviewDays": [
+      6,
+      12,
+      18,
+      24,
+      29
+    ],
+    "restDays": [
+      "sun"
+    ],
+    "estimatedCompletionDays": 36,
+    "rationale": "Standard pacing at one lesson per day, with two easy-day doublings (L1+L2 on active day 1, L5+L6 on active day 4) to build early momentum through Module 1. Three daily slots exploit the spacing effect: 09:00 introduces new concepts at peak morning alertness, 13:00 applies them through practice after a 4-hour encoding window, and 19:00 consolidates via spaced-repetition review timed to leverage overnight memory consolidation. Three consolidation days are inserted after the hardest spikes (after L9 counting theorem spike, after L15 paper-reading spike, and after the L20-22 triple high-load streak in random juggling) to prevent cognitive overload. Built-in curriculum reviews at lessons 6, 12, 18, 24, and 29 align with module boundaries. Review day 24 correctly targets the Module 4 review lesson rather than day 22, which is a substantive guided reading of Warrington's probability argument. The doublingDays sequence (day 1: L1+2, day 2: L3, day 3: L4, day 4: L5+6) ensures lesson 4 (permutation test, exit criterion 1 and bottleneck concept 7) gets its own full day. Sunday rest prevents burnout across the five-week arc of increasingly abstract material. Total: 31 active days across 36 calendar days."
   },
   "history": []
 }
