@@ -54,11 +54,18 @@ opentutor/
 
 ## How domain generation works
 
-1. Student picks a topic during onboarding or via "add topic: X"
-2. Tutor researches the topic (web search, syllabi, textbooks)
-3. Tutor generates `domains/<topic-slug>/` with four files following `templates/domain-template.md`
-4. Tutor registers the topic in `workspace/tutor/progress.json`
-5. When delivering lessons, tutor loads the domain's data + its own pedagogy references
+Domain generation uses a **tutor-controlled pipeline** (`.claude/workflows/new-topic.js`). A tutor agent judges every step and decides: ADVANCE, RESEARCH (targeted deep-dive), REDO (with feedback), or ESCALATE (ask human).
+
+1. **Survey research** — broad multi-source search (arxiv, Semantic Scholar, OpenAlex, Wikipedia, educational). Tutor may request up to 3 targeted research rounds on specific subtopics.
+2. **Audience assessment** — tutor profiles the target learner (audience type, goal, background, tone, depth)
+3. **Build curriculum** — 4 parallel design agents generate domain files. Tutor judges; may trigger targeted research or a rebuild.
+4. **QA** — 5 adversarial dimension checkers + verification. Tutor judges; may trigger patch rebuild + re-QA.
+5. **Schedule** — difficulty analysis + pacing design. Tutor judges.
+6. **Register** — adds topic to `workspace/tutor/progress.json`
+
+Research is **demand-driven**: the tutor can request targeted research at any step, not just during the research phase. Patch mode rebuilds only the parts that need fixing (~5 agents vs 10 for full rebuild).
+
+See `docs/curriculum-generation.md` for the full workflow documentation.
 
 ## Adding or editing skills
 

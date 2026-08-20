@@ -15,6 +15,7 @@ if (!topic) throw new Error('Missing args.topic — pass {topic: "optimal transp
 
 const timezone = args?.timezone || 'America/New_York'
 const timesPerDay = args?.timesPerDay || 3
+const feedback = args?.feedback || null
 const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const domainDir = `skills/tutor/domains/${slug}`
 
@@ -76,6 +77,7 @@ phase('Design')
 
 const schedule = await agent(
   `You are a learning schedule optimizer. Design an optimal lesson delivery schedule for "${topic}".
+${feedback ? `\n## Previous Attempt Feedback\nThe previous schedule had these issues — address them in your design:\n${feedback}\n` : ''}
 
 ## Curriculum Analysis
 ${JSON.stringify(analysis, null, 2)}

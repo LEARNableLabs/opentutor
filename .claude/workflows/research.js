@@ -1,21 +1,116 @@
 export const meta = {
   name: 'research',
-  description: 'Parallel academic research for a topic — arxiv, Semantic Scholar, OpenAlex, Wikipedia, web syllabi',
-  whenToUse: 'When adding a new topic or refreshing research for an existing domain. Usage: run with args {topic: "optimal transport"}',
+  description: 'Academic research for a topic — broad survey or targeted deep-dive on a specific subtopic',
+  whenToUse: 'When adding a new topic or filling research gaps. Usage: run with args {topic: "optimal transport"} for survey, or {topic: "optimal transport", mode: "targeted", query: "Sinkhorn regularization"} for targeted',
   phases: [
-    { title: 'Gather', detail: 'Fan out 5 research agents across academic APIs and web sources' },
-    { title: 'Gate', detail: 'CEO-style quality gate reviews research coverage and gaps' },
-    { title: 'Synthesize', detail: 'Merge, deduplicate, and write structured research document' },
+    { title: 'Gather', detail: 'Fan out research agents across academic APIs and web sources' },
+    { title: 'Gate', detail: 'Quality gate reviews research coverage and gaps (survey only)' },
+    { title: 'Synthesize', detail: 'Merge and write structured research document' },
   ],
 }
 
 const topic = args?.topic
 if (!topic) throw new Error('Missing args.topic — pass {topic: "your topic"}')
 
+const mode = args?.mode || 'survey'
 const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const domainDir = `skills/tutor/domains/${slug}`
 
-// ── Phase 1: Gather — parallel research fork ──────────────────
+// ══════════════════════════════════════════════════════════════
+// TARGETED MODE — focused research on a specific subtopic
+// ══════════════════════════════════════════════════════════════
+
+if (mode === 'targeted') {
+  const query = args?.query
+  if (!query) throw new Error('Targeted mode requires args.query — pass {topic: "...", mode: "targeted", query: "specific subtopic"}')
+
+  phase('Gather')
+  log(`Targeted research: "${query}" within "${topic}"`)
+
+  const results = await parallel([
+    () => agent(
+      `You are a research agent. Search the web for academic papers specifically about "${query}" in the context of "${topic}".
+
+Find the 5-8 most relevant papers. For each paper report:
+- title
+- authors
+- year
+- one-sentence summary of contribution
+- URL (arxiv, DOI, or Semantic Scholar)
+
+Focus narrowly on "${query}" — not the broader field. Only include papers you can verify exist.
+Write as structured markdown.`,
+      { label: 'targeted:academic', phase: 'Gather' }
+    ),
+    () => agent(
+      `You are a research agent. Search the web for practical educational resources specifically about "${query}" in the context of "${topic}".
+
+Find resources in these categories:
+1. **Course modules/lectures** — specific lectures or chapters covering "${query}" (with URLs)
+2. **Tutorials/blog posts** — particularly good explanations of "${query}" (with URLs)
+3. **Code/tools** — repos, notebooks, or interactive demos for "${query}" (with URLs)
+4. **Videos** — specific talks or video explanations (with URLs)
+
+Focus narrowly on "${query}". Only include resources you can confirm exist with real URLs.
+Write as structured markdown.`,
+      { label: 'targeted:practical', phase: 'Gather' }
+    ),
+  ])
+
+  phase('Synthesize')
+
+  const synthesis = await agent(
+    `You are a research synthesizer. Merge the following targeted research on "${query}" (within "${topic}") into a structured markdown section.
+
+## Academic Papers
+${results[0] || '(no results)'}
+
+## Practical Resources
+${results[1] || '(no results)'}
+
+---
+
+Write a focused research section with this exact structure:
+
+## Targeted Research: ${query}
+_Added: (today's date)_
+
+### Key Papers
+Deduplicated list of papers. For each:
+- **Title** (Year) — Authors. One-line summary. URL
+
+### Educational Resources
+Organized by type (courses, tutorials, code, videos).
+
+### Implications for Curriculum
+2-3 sentences: what concepts from "${query}" should a course on "${topic}" cover? What's the right depth for a student?
+
+Rules:
+- Only include resources with real, verifiable URLs
+- Be concise — this supplements existing research, not replaces it`,
+    { label: 'synthesize', phase: 'Synthesize' }
+  )
+
+  await agent(
+    `Read the file ${domainDir}/research.md (if it exists).
+
+APPEND the following section at the end of the file. Do NOT modify any existing content.
+If the file does not exist, create it with just this content.
+
+${synthesis}`,
+    { label: 'append', phase: 'Synthesize' }
+  )
+
+  const paperCount = (results[0] || '').split('\n').filter(l => l.match(/^\s*-\s*\*\*/)).length
+  const resourceCount = (results[1] || '').split('\n').filter(l => l.match(/^\s*-\s*\*\*/)).length
+
+  log(`Targeted research on "${query}" appended to ${domainDir}/research.md`)
+  return { topic, slug, mode: 'targeted', query, paperCount, resourceCount }
+}
+
+// ══════════════════════════════════════════════════════════════
+// SURVEY MODE — broad multi-source research (default)
+// ══════════════════════════════════════════════════════════════
 
 phase('Gather')
 log(`Researching "${topic}" across 5 sources`)
@@ -222,7 +317,6 @@ Rules:
 
 const synthesis = await agent(synthesisPrompt, { label: 'synthesize', phase: 'Synthesize' })
 
-// Write to file
 const writePrompt = `Create the directory ${domainDir} if it doesn't exist, then write the following research document to ${domainDir}/research.md
 
 ${synthesis}`

@@ -20,13 +20,13 @@
 
 **:books: Research-Grounded Curricula** — Generates 20-30 lesson curricula sourced from arxiv, Semantic Scholar, OpenAlex, and Wikipedia
 
+**:robot: Tutor-Controlled Pipeline** — A tutor agent judges every step (research, build, QA, schedule) and decides where more work is needed — with demand-driven targeted research
+
 **:repeat: Spaced Repetition** — Built-in flashcard system with SM-2 scheduling to reinforce concepts at optimal intervals
 
 **:chart_with_upwards_trend: Adaptive Difficulty** — Adjusts lesson difficulty based on quiz performance and engagement patterns
 
 **:electric_plug: Multi-Platform** — Works with Claude Code, Cursor, Gemini CLI, OpenCode, OpenClaw, NanoClaw, and any Agent Skills-compatible client
-
-**:zap: Two-Phase Generation** — Instant mini-wiki intro (Phase A) while full curriculum researches in background (Phase B, 30-90s)
 
 **:pencil2: Interactive Exercises** — Inline buttons (A/B/C/D), quiz polls, hints, skip options, and open-ended practice
 
@@ -102,15 +102,41 @@ OpenTutor includes a self-contained Telegram bot. No external gateway needed —
 
 ## How It Works
 
-### Curriculum Generation (Two-Phase)
+### Curriculum Generation (Tutor-Controlled Pipeline)
 
-1. **Phase A (instant)** — sends a mini-wiki intro grounded in Wikipedia + a suggested video/article to engage with immediately
-2. **Phase B (background, 30-90s)** — researches the topic across arxiv, Semantic Scholar, OpenAlex, and Wikipedia in parallel, then synthesizes a full 20-30 lesson curriculum with verified resources
+A **tutor agent** controls the entire pipeline, judging each step and deciding where more work is needed:
+
+```
+Survey Research (broad)
+  → Tutor judges → may request targeted deep-dives
+Audience Assessment
+  → Tutor profiles the target learner (audience, goal, depth, tone)
+Build Curriculum
+  → Tutor judges → may request more research or targeted fixes
+QA (adversarial, 5 dimensions)
+  → Tutor judges → may trigger patch rebuild + re-QA
+Schedule
+  → Tutor judges → may adjust pacing
+Register
+```
+
+The tutor can make four decisions at each step:
+- **ADVANCE** — quality sufficient, move forward
+- **RESEARCH** — "I need more depth on X" (triggers targeted search)
+- **REDO** — redo this step with specific feedback
+- **ESCALATE** — ask the human for guidance
+
+Research is **demand-driven**: a broad survey maps the field upfront, then targeted deep-dives happen whenever the tutor identifies gaps — during build, after QA, wherever needed.
+
+**Phase A (instant)** — sends a mini-wiki intro grounded in Wikipedia + a suggested video/article while the pipeline runs in background.
 
 ### Architecture
 
 ```
 User -> Telegram -> Router -> [Commands, Lessons, Quiz, Chat, Onboarding] -> Claude -> Research APIs
+                                                                                ↕
+                                                                          Tutor Pipeline
+                                                                    (survey → build → QA → schedule)
 ```
 
 ### Workspace Layout
