@@ -80,9 +80,9 @@ export async function handleCallback(callbackQuery, channel, skills) {
       } catch { /* may fail if message is old */ }
 
       if (!correct) {
-        log.warn({ day, letter }, 'no correct answer stored — accepting any answer');
-        await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
-        appendMemory(`Exercise accepted (no answer key): ${data}`);
+        log.warn({ day, letter }, 'no correct answer stored');
+        await channel.sendMessage(chatId, `You picked <b>${letter}</b> — I couldn't score this one automatically. Let's keep going!`);
+        appendMemory(`Exercise unscored (no answer key): ${data}`);
       } else if (letter === correct) {
         await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
         appendMemory(`Exercise correct: ${data}`);

@@ -5,6 +5,7 @@
 
 import { spawn } from 'child_process';
 import { log } from './logger.js';
+import { retry } from './helpers.js';
 
 const BACKEND = process.env.CLAUDE_BACKEND || 'cli';
 
@@ -20,9 +21,12 @@ export async function generate(system, messages, options = {}) {
   const backend = BACKEND === 'sdk' ? 'sdk' : 'cli';
   log.info({ backend, model: options.model || 'default' }, 'claude generate start');
   try {
-    const result = BACKEND === 'sdk'
-      ? await generateSDK(system, messages, options)
-      : await generateCLI(system, messages, options);
+    const result = await retry(
+      () => BACKEND === 'sdk'
+        ? generateSDK(system, messages, options)
+        : generateCLI(system, messages, options),
+      { maxAttempts: 3, baseDelay: 2000, label: `claude:${backend}` }
+    );
     log.info({ backend, latency_ms: Date.now() - start, model: result.model }, 'claude generate done');
     return result;
   } catch (err) {

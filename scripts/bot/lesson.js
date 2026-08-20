@@ -2,23 +2,43 @@
  * Lesson delivery — generate via Claude, parse by emoji anchors, send chunked.
  */
 
+import fs from 'fs';
+import path from 'path';
 import { generateStream } from './claude.js';
 import { buildLessonPrompt } from './context.js';
 import { getNextLesson, markLessonComplete, readCurriculum, appendMemory } from './state.js';
+import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts } from './spaced-repetition.js';
 import { sleep } from './helpers.js';
 import { log } from './logger.js';
 
-const exerciseAnswers = new Map();
-const lessonContext = new Map();
+const EXERCISE_STATE_PATH = path.join(PATHS.workspace, 'tutor', 'exercise-state.json');
+
+function loadExerciseState() {
+  try {
+    return JSON.parse(fs.readFileSync(EXERCISE_STATE_PATH, 'utf-8'));
+  } catch {
+    return { answers: {}, contexts: {} };
+  }
+}
+
+function saveExerciseState(state) {
+  const dir = path.dirname(EXERCISE_STATE_PATH);
+  fs.mkdirSync(dir, { recursive: true });
+  const tmp = EXERCISE_STATE_PATH + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(state, null, 2));
+  fs.renameSync(tmp, EXERCISE_STATE_PATH);
+}
+
+const exerciseState = loadExerciseState();
 
 export function getCorrectAnswer(topicSlug, day) {
-  return exerciseAnswers.get(topicSlug + ':' + day);
+  return exerciseState.answers[topicSlug + ':' + day];
 }
 
 export function getLessonContext(topicSlug, day) {
-  return lessonContext.get(topicSlug + ':' + day);
+  return exerciseState.contexts[topicSlug + ':' + day];
 }
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
@@ -63,12 +83,12 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     }
   }
 
-  // Store lesson context for hint generation
-  lessonContext.set(topicSlug + ':' + lesson.day, {
+  exerciseState.contexts[topicSlug + ':' + lesson.day] = {
     title: lesson.title,
     concepts: lesson.concepts,
     topicSlug,
-  });
+  };
+  saveExerciseState(exerciseState);
 
   // Log and update progress
   log.info({ topic: topicSlug, lesson_id: lesson.day, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson delivered');
@@ -114,10 +134,23 @@ function parseLessonChunks(text) {
 // ── Build exercise buttons ──────────────────────────────────
 
 function buildExerciseButtons(day, exerciseText, topicSlug) {
-  const correctMatch = exerciseText?.match(/(?:correct|answer)[:\s]*([A-D])/i);
-  if (correctMatch) {
-    exerciseAnswers.set(topicSlug + ':' + day, correctMatch[1].toUpperCase());
-  } else {
+  const patterns = [
+    /(?:correct|answer)\s*(?:is)?[:\s]*\(?([A-D])\)?/i,
+    /\b([A-D])\b\s*(?:is\s+)?(?:the\s+)?(?:correct|right)\b/i,
+    /✅\s*\(?([A-D])\)?/i,
+    /^[^a-z]*correct[^a-z]*([A-D])\b/im,
+  ];
+  let matched = false;
+  for (const pattern of patterns) {
+    const m = exerciseText?.match(pattern);
+    if (m) {
+      exerciseState.answers[topicSlug + ':' + day] = m[1].toUpperCase();
+      saveExerciseState(exerciseState);
+      matched = true;
+      break;
+    }
+  }
+  if (!matched) {
     log.warn({ day }, 'could not parse correct answer from exercise text');
   }
 
