@@ -1,7 +1,7 @@
 /**
- * Curriculum generation — two-phase approach:
- *   Phase A: mini-wiki intro + suggested resource (instant)
- *   Phase B: research pipeline → Claude synthesizes full 20-30 lesson curriculum
+ * Curriculum generation — quick-start + background enrichment:
+ *   Phase A (~10-30s): Wikipedia + parallel research → taster lesson + roadmap + 5-lesson quick curriculum
+ *   Phase B (background): full research → Claude synthesizes 20-30 lesson curriculum, preserving completed lessons
  *
  * See docs/curriculum-generation.md for the full workflow.
  */
@@ -9,7 +9,7 @@
 import fs from 'fs';
 import path from 'path';
 import { generate } from './claude.js';
-import { buildIntroPrompt, buildResearchSynthesisPrompt } from './context.js';
+import { buildQuickStartPrompt, buildResearchSynthesisPrompt } from './context.js';
 import { PATHS } from './config.js';
 import { updateProgress, writeCurriculum, appendMemory } from './state.js';
 import { researchTopic, formatResearchContext } from './research.js';
@@ -17,14 +17,9 @@ import { searchWikipediaSummary } from './research.js';
 import { log } from './logger.js';
 
 /**
- * Phase A — send mini-wiki intro + kick off background research.
- * Returns the slug and intro text. Does NOT create curriculum.json yet.
- * @param {string} topic - Human-readable topic name
- * @param {Map} skills - Loaded skill files
- * @param {number} chatId - Telegram chat ID for Phase B notification
- * @param {object} channel - Telegram channel for sending notification
- * @param {string} [level] - Student level override
- * @returns {{ slug: string, intro: string }}
+ * Phase A — quick start: research + taster + preliminary curriculum (~10-30s).
+ * Returns taster message and roadmap immediately. Writes a 5-lesson quick
+ * curriculum so /next works right away. Kicks off full enrichment in background.
  */
 export async function generateAndRegisterTopic(topic, skills, chatId, channel, level) {
   const slug = slugify(topic);
@@ -37,47 +32,19 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
   }
 
   const studentLevel = level || detectLevel() || 'intermediate';
-
-  // Quick Wikipedia lookup for grounding
-  const wikiSummary = await searchWikipediaSummary(topic).catch(() => null);
-
-  // Phase A: Claude generates mini-wiki intro + resource suggestion
-  const { system } = buildIntroPrompt(skills, topic, studentLevel, wikiSummary);
-  const response = await generate(system, [
-    { role: 'user', content: `Introduce me to "${topic}" and suggest something to watch/read right now.` },
-  ], { model: 'strong' });
-
-  // Create domain dir but no curriculum.json yet — Phase B will create it
   fs.mkdirSync(domainDir, { recursive: true });
-  registerTopic(slug);
-  appendMemory(`Topic registered: ${topic} (${slug}) — intro sent, curriculum building in background`);
 
-  // Kick off Phase B in the background (non-blocking)
-  enrichCurriculum(topic, slug, studentLevel, skills, chatId, channel).catch((err) => {
-    log.error({ err, topic, slug }, 'enrich: background research failed');
-  });
+  // Run Wikipedia + research APIs in parallel (~5s)
+  const [wikiSummary, research] = await Promise.all([
+    searchWikipediaSummary(topic).catch(() => null),
+    researchTopic(topic, { level: studentLevel }).catch(() => ({
+      arxiv: [], semanticScholar: [], wikipedia: null, openAlex: [],
+    })),
+  ]);
 
-  return { slug, intro: response.text };
-}
-
-/**
- * Phase B — research + synthesize full curriculum.
- * Runs in the background after Phase A returns.
- * Notifies the student when the curriculum is ready.
- */
-async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, channel) {
-  log.info({ topic, slug }, 'enrich: starting research');
-  const domainDir = path.join(PATHS.domains, slug);
-
-  // Step 1: Run research pipeline (parallel API queries)
-  const research = await researchTopic(topic, { level: studentLevel });
   const researchContext = formatResearchContext(research);
 
-  if (!researchContext.trim()) {
-    log.info({ topic }, 'enrich: no research results, generating from knowledge only');
-  }
-
-  // Save raw research for reference
+  // Save research for Phase B
   if (researchContext.trim()) {
     fs.writeFileSync(path.join(domainDir, 'research.md'), [
       `# Research: ${topic}`,
@@ -87,7 +54,92 @@ async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, chann
     ].join('\n'));
   }
 
-  // Step 2: Claude synthesizes research into full curriculum
+  // Claude generates taster + roadmap + quick 5-lesson curriculum (~10-20s)
+  const { system } = buildQuickStartPrompt(skills, topic, studentLevel, wikiSummary, researchContext || null);
+  const response = await generate(system, [
+    { role: 'user', content: `Give me a quick start for "${topic}".` },
+  ], { model: 'strong' });
+
+  let taster = '';
+  let roadmap = '';
+  let quickLessons = [];
+
+  try {
+    const jsonMatch = response.text.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      const data = JSON.parse(jsonMatch[0]);
+      taster = data.taster || '';
+      roadmap = data.roadmap || '';
+      quickLessons = data.quickCurriculum || [];
+    }
+  } catch {
+    taster = response.text;
+  }
+
+  // Write quick curriculum so /next works immediately
+  if (quickLessons.length > 0) {
+    const quickCurriculum = {
+      topic,
+      slug,
+      created: new Date().toISOString().split('T')[0],
+      student_level: studentLevel,
+      preliminary: true,
+      lessons: quickLessons.map((l, i) => ({
+        day: l.day || i + 1,
+        module: l.module || 'Getting Started',
+        title: l.title || `Lesson ${i + 1}`,
+        concepts: l.concepts || [],
+        resources: l.resources || [],
+        status: l.status || 'pending',
+      })),
+    };
+    writeCurriculum(slug, quickCurriculum);
+    log.info({ topic, lessons: quickLessons.length }, 'quick curriculum written');
+  }
+
+  registerTopic(slug);
+  appendMemory(`Topic registered: ${topic} (${slug}) — taster sent, quick curriculum (${quickLessons.length} lessons) available, full curriculum building in background`);
+
+  // Build intro message: taster + roadmap
+  const intro = [taster, roadmap].filter(Boolean).join('\n\n');
+
+  // Kick off Phase B in the background (non-blocking)
+  enrichCurriculum(topic, slug, studentLevel, skills, chatId, channel).catch((err) => {
+    log.error({ err, topic, slug }, 'enrich: background enrichment failed');
+  });
+
+  return { slug, intro };
+}
+
+/**
+ * Phase B — full research + synthesize 20-30 lesson curriculum.
+ * Runs in the background after Phase A returns.
+ * Preserves completion status from the quick curriculum.
+ * Notifies the student when the full curriculum replaces the preliminary one.
+ */
+async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, channel) {
+  log.info({ topic, slug }, 'enrich: starting full curriculum generation');
+  const domainDir = path.join(PATHS.domains, slug);
+
+  // Research is already saved from Phase A, but re-read it
+  let researchContext = '';
+  try {
+    researchContext = fs.readFileSync(path.join(domainDir, 'research.md'), 'utf-8');
+  } catch {
+    // Re-run research if file missing
+    const research = await researchTopic(topic, { level: studentLevel });
+    researchContext = formatResearchContext(research);
+    if (researchContext.trim()) {
+      fs.writeFileSync(path.join(domainDir, 'research.md'), [
+        `# Research: ${topic}`,
+        `Generated: ${new Date().toISOString().split('T')[0]}`,
+        '',
+        researchContext,
+      ].join('\n'));
+    }
+  }
+
+  // Claude synthesizes research into full curriculum
   const { system } = buildResearchSynthesisPrompt(skills, topic, studentLevel, researchContext || 'No external research available — generate from your knowledge.');
   const response = await generate(system, [
     { role: 'user', content: `Using the research results, generate a complete 20-30 lesson curriculum for: "${topic}"` },
@@ -95,7 +147,7 @@ async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, chann
 
   const parsed = parseGeneratedDomain(response.text, topic, slug);
 
-  // Preserve completion status if curriculum already existed
+  // Preserve completion status from preliminary curriculum
   const existing = readExistingCurriculum(slug);
   if (existing?.lessons) {
     for (const lesson of parsed.curriculum.lessons) {
@@ -108,7 +160,10 @@ async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, chann
     }
   }
 
-  // Write full curriculum
+  // Remove the preliminary flag
+  parsed.curriculum.preliminary = false;
+
+  // Write full curriculum (overwrites quick curriculum)
   writeCurriculum(slug, parsed.curriculum);
   if (parsed.teachingNotes) {
     fs.writeFileSync(path.join(domainDir, 'teaching-notes.md'), parsed.teachingNotes);
@@ -119,19 +174,19 @@ async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, chann
 
   const lessonCount = parsed.curriculum.lessons?.length || 0;
   const moduleCount = new Set(parsed.curriculum.lessons?.map((l) => l.module)).size;
-  log.info({ topic, lesson_count: lessonCount, module_count: moduleCount }, 'enrich: curriculum ready');
-  appendMemory(`Curriculum ready: ${topic} — ${lessonCount} lessons, ${moduleCount} modules (arxiv: ${research.arxiv.length}, openalex: ${research.openAlex.length})`);
+  log.info({ topic, lesson_count: lessonCount, module_count: moduleCount }, 'enrich: full curriculum ready');
+  appendMemory(`Full curriculum ready: ${topic} — ${lessonCount} lessons, ${moduleCount} modules (replaced preliminary)`);
 
-  // Notify student
+  // Notify student that full curriculum is ready
   if (chatId && channel) {
     try {
       await channel.sendMessage(chatId, [
-        `📚 <b>Your curriculum is ready!</b>`,
+        `📚 <b>Your full curriculum is ready!</b>`,
         '',
         `<b>${topic}</b> — ${lessonCount} lessons across ${moduleCount} modules.`,
-        research.arxiv.length > 0 ? `Based on ${research.arxiv.length} papers and academic sources.` : '',
+        existing?.preliminary ? 'Upgraded from your starter lessons — your progress is preserved.' : '',
         '',
-        `Type /next for your first lesson.`,
+        `Type /next to continue learning.`,
       ].filter(Boolean).join('\n'));
     } catch (err) {
       log.error({ err, topic }, 'enrich: notification failed');
@@ -180,7 +235,6 @@ function readExistingCurriculum(slug) {
 }
 
 function parseGeneratedDomain(text, topic, slug) {
-  // Try to parse as JSON object with curriculum, teachingNotes, conceptMap keys
   try {
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
@@ -207,7 +261,6 @@ function parseGeneratedDomain(text, topic, slug) {
     // JSON parse failed
   }
 
-  // Fallback: bare JSON array of lessons
   try {
     const arrayMatch = text.match(/\[[\s\S]*\]/);
     if (arrayMatch) {

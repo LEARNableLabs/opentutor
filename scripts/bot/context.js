@@ -143,7 +143,7 @@ Rules:
   return { system, model: 'cheap' };
 }
 
-export function buildIntroPrompt(skills, topic, studentLevel, wikiSummary) {
+export function buildQuickStartPrompt(skills, topic, studentLevel, wikiSummary, researchContext) {
   const wikiContext = wikiSummary
     ? `## Wikipedia Summary\n\n**${wikiSummary.title}**: ${wikiSummary.extract}\n${wikiSummary.url ? `Source: ${wikiSummary.url}` : ''}`
     : '';
@@ -151,31 +151,39 @@ export function buildIntroPrompt(skills, topic, studentLevel, wikiSummary) {
   const system = [
     skills.get('skill'),
     skills.get('tg-soul'),
+    skills.get('lesson-delivery'),
     buildUserContext(),
     wikiContext,
-    `## Topic Introduction (Phase A)
+    researchContext ? `## Quick Research Results\n\n${researchContext}` : '',
+    `## Quick Start — Taster Lesson (Phase A)
 
 The student just picked: "${topic}"
 Student level: ${studentLevel}
 
-Write a mini-wiki intro for Telegram (HTML formatting). Include:
+Generate a JSON response with these keys:
 
-1. **What it is** — 2-3 sentences explaining the field/topic. Ground this in the Wikipedia summary above if available.
-2. **Why it matters** — one sentence on why this is worth learning.
-3. **Key people** — mention 2-4 important figures (with brief context).
-4. **Start here** — suggest ONE specific, real resource the student can engage with right now while the curriculum is being built. This should be:
-   - A well-known video (3Blue1Brown, Veritasium, Khan Academy, MIT OCW lecture)
-   - OR a canonical introductory article/blog post
-   - OR a free textbook intro chapter
-   Pick something appropriate for their level. Only suggest resources you are confident exist — real URLs only.
+1. **taster** — An HTML string for Telegram. This is a taster to see if the student is interested. Include:
+   - What this field is about (2-3 vivid sentences, grounded in Wikipedia/research if available)
+   - ONE fascinating "hook" — the most surprising or beautiful idea in this field, explained in 2 sentences
+   - A "try this" micro-exercise: one simple question or thought experiment they can try right now (with answer hidden behind a spoiler or revealed after a line break)
+   - ONE real resource to explore further (video, article, or interactive tool — real URL only)
+   - End with: "I'm building your full curriculum now — type /next when you're ready for lesson 1."
+   Keep under 250 words. Warm, curious tone. Telegram HTML tags (<b>, <i>, <a href>, <tg-spoiler>).
 
-Keep the whole message under 200 words. Use Telegram HTML tags (<b>, <i>, <a href>). Be warm and enthusiastic — study buddy tone.
+2. **roadmap** — An HTML string showing a high-level preview of the journey. 4-6 bullet points, each a module name + one-sentence description. Give the student a sense of where this goes.
 
-Do NOT generate any curriculum, lesson list, or JSON. Just the intro message.`,
+3. **quickCurriculum** — A preliminary 5-lesson JSON array to start with while the full curriculum builds:
+   [{"day": 1, "module": "...", "title": "Why does X...?", "concepts": ["a", "b"], "resources": [], "status": "pending"}]
+   These should be the natural first 5 lessons any course on this topic would include — foundational enough to survive unchanged when the full curriculum arrives.
+
+Output as JSON: {"taster": "html string", "roadmap": "html string", "quickCurriculum": [...]}
+Do NOT output anything outside the JSON.`,
   ].filter(Boolean).join('\n\n---\n\n');
 
   return { system, model: 'strong' };
 }
+
+export const buildIntroPrompt = buildQuickStartPrompt;
 
 export function buildResearchSynthesisPrompt(skills, topic, studentLevel, researchContext) {
   const system = [
