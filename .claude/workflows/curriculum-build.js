@@ -165,7 +165,7 @@ if (!reader?.research) {
   log(`WARNING: No research found at ${researchPath}. Run the research workflow first.`)
 }
 
-const ctx = `Topic: "${topic}"
+let ctx = `Topic: "${topic}"
 Student level: ${level}
 ${audienceContext}
 ${feedback ? `\n## Previous Feedback to Address\n${feedback}` : ''}
@@ -173,6 +173,60 @@ ${reader?.research ? `\n## Research\n${reader.research}` : '(no research availab
 ${reader?.userProfile ? `\n## Student Profile\n${reader.userProfile}` : ''}
 ${reader?.curriculumFormat ? `\n## Curriculum Format Reference\n${reader.curriculumFormat}` : ''}
 ${reader?.teachingMethod ? `\n## Teaching Method Reference\n${reader.teachingMethod}` : ''}`
+
+// ── Cross-topic overlap scan ──────────────────────────────────
+
+const OVERLAP_SCHEMA = {
+  type: 'object',
+  properties: {
+    existingTopics: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          slug: { type: 'string' },
+          topic: { type: 'string' },
+          sharedConcepts: { type: 'array', items: { type: 'string' } },
+          connectionPoints: { type: 'array', items: { type: 'string' } },
+        },
+        required: ['slug', 'topic'],
+      },
+    },
+  },
+  required: ['existingTopics'],
+}
+
+const overlap = await agent(
+  `List all directories under skills/tutor/domains/ (excluding "${slug}").
+For each existing domain directory found, read its concept-map.md and curriculum.json.
+
+Then identify concepts that overlap or connect with the new topic "${topic}".
+
+A "shared concept" is a concept that appears in both the existing domain and would naturally appear in a course on "${topic}" (e.g., "linear programming" might be shared between "optimal transport" and "operations research").
+
+A "connection point" is a specific way the two topics relate — how a concept learned in the existing topic enables or enriches understanding of the new topic (e.g., "Kantorovich duality from optimal-transport provides foundation for understanding LP duality in this course").
+
+If no other domains exist, return {"existingTopics": []}.
+
+Return as JSON.`,
+  { label: 'overlap-scan', phase: 'Read', schema: OVERLAP_SCHEMA }
+)
+
+const crossTopicConnections = (overlap?.existingTopics || []).filter(t => (t.sharedConcepts?.length || 0) > 0 || (t.connectionPoints?.length || 0) > 0)
+
+const overlapContext = crossTopicConnections.length > 0
+  ? '\n## Cross-Topic Connections\nThe student has already studied these related topics:\n' +
+    crossTopicConnections.map(t =>
+      '- **' + t.topic + '** (' + t.slug + '): ' +
+      (t.sharedConcepts?.length ? 'shares concepts [' + t.sharedConcepts.join(', ') + ']' : '') +
+      (t.connectionPoints?.length ? ' — ' + t.connectionPoints.join('; ') : '')
+    ).join('\n')
+  : ''
+
+if (crossTopicConnections.length > 0) {
+  log(`Found ${crossTopicConnections.length} related topic(s) with concept overlap`)
+  ctx = ctx + overlapContext
+}
 
 // ── Phase 2: Design — parallel curriculum design agents ───────
 
@@ -244,6 +298,7 @@ Write teaching notes covering:
 4. **Rabbit holes** — 4-6 fascinating tangential connections to drop in during lessons (with suggested timing)
 5. **Difficulty progression** — Where the difficulty spikes are and how to manage them
 6. **Assessment strategies** — What kinds of exercises work best for each module (multiple choice, open-ended, computation, proof, application)
+7. **Cross-topic connections** — If the context includes cross-topic connections from other domains the student has studied, write a section listing: which previously learned concepts connect to this course, at which lesson to surface each connection, and how to frame it ("You already know X from your study of Y — here it shows up as Z"). If no cross-topic connections exist, omit this section.
 
 Output as markdown. Be specific and practical — a tutor bot will use these notes to adapt its delivery.`,
   },

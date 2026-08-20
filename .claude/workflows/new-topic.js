@@ -1,7 +1,7 @@
 export const meta = {
   name: 'new-topic',
   description: 'Tutor-controlled pipeline: survey → audience → build → QA → schedule. The tutor judges each step and decides where more work is needed.',
-  whenToUse: 'When adding a completely new topic. Chains research, curriculum-build, schedule, and curriculum-qa workflows with a tutor quality loop. Usage: run with args {topic: "category theory", level: "intermediate"}',
+  whenToUse: 'When adding a completely new topic. Usage: run with args {topic: "category theory", level: "intermediate"}. For preview only: {topic: "...", dryRun: true}. To resume after escalation: {topic: "...", humanGuidance: "your answer"}',
   phases: [
     { title: 'Survey', detail: 'Broad multi-source research to map the field' },
     { title: 'Audience', detail: 'Tutor assesses target audience and tailors approach' },
@@ -18,6 +18,7 @@ if (!topic) throw new Error('Missing args.topic — pass {topic: "category theor
 const level = args?.level || 'intermediate'
 const timezone = args?.timezone || 'America/New_York'
 const humanGuidance = args?.humanGuidance || null
+const dryRun = args?.dryRun || false
 const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const domainDir = `skills/tutor/domains/${slug}`
 
@@ -269,6 +270,56 @@ Report as JSON.`,
 tutorMemory.push(`[audience] ${audience?.summary || 'Audience assessment completed.'}`)
 log(`Audience: ${audience?.audience_type || 'unknown'} — ${audience?.goal || 'unknown goal'}`)
 
+// ── Dry-run exit point ────────────────────────────────────────
+
+if (dryRun) {
+  await agent(
+    `Write a preview report to ${domainDir}/preview.md.
+
+Read ${domainDir}/research.md to summarize what was found.
+
+Write the report with this structure:
+
+# Preview: ${topic}
+Generated: (today's date)
+Mode: DRY RUN — no curriculum built yet
+
+## Field Map
+Summarize the major branches/pillars of "${topic}" based on the research.
+List the top 5-8 subtopics that a curriculum would cover.
+
+## Audience Profile
+- **Type**: ${audience?.audience_type || 'unknown'}
+- **Goal**: ${audience?.goal || 'unknown'}
+- **Background**: ${audience?.background || 'unknown'}
+- **Tone**: ${audience?.tone || 'unknown'}
+- **Depth**: ${audience?.depth || 'unknown'}
+- **Time per lesson**: ${audience?.time_commitment || 'unknown'}
+
+## Research Coverage
+Summarize: how many papers found, how many educational resources, any major gaps.
+
+## Tutor Notes
+${tutorMemory.map((m, i) => (i + 1) + '. ' + m).join('\n')}
+
+## Next Step
+To proceed with the full pipeline, run:
+args: {topic: "${topic}", level: "${level}"}`,
+    { label: 'preview', phase: 'Audience' }
+  )
+
+  log(`Dry run complete. Preview written to ${domainDir}/preview.md`)
+  return {
+    topic,
+    slug,
+    level,
+    dryRun: true,
+    audience,
+    researchRounds,
+    tutorMemory,
+  }
+}
+
 // ── Phase 3: Build Curriculum ─────────────────────────────────
 
 phase('Build')
@@ -368,6 +419,45 @@ Then read ${domainDir}/curriculum.json and report:
 - Module count
 - First lesson title`,
   { label: 'register', phase: 'Register' }
+)
+
+// ── Pipeline Report ───────────────────────────────────────────
+
+await agent(
+  `Write a pipeline run report to ${domainDir}/pipeline-report.md.
+
+Read these files to gather final stats:
+- ${domainDir}/curriculum.json — lesson count, module count
+- ${domainDir}/qa-report.md — QA verdict and score (if exists)
+- workspace/tutor/progress.json — schedule details
+
+Write the report with this structure:
+
+# Pipeline Report: ${topic}
+Generated: (today's date)
+
+## Summary
+- **Topic**: ${topic}
+- **Level**: ${level}
+- **Audience**: ${audience?.summary || 'Not assessed'}
+- **Tutor Judgments**: ${tutorMemory.length}
+- **Targeted Research Rounds**: ${researchRounds}/${CAPS.targetedResearch}
+
+## Tutor Decision Log
+${tutorMemory.map((m, i) => (i + 1) + '. ' + m).join('\n')}
+
+## Pipeline Stats
+(Fill in from the files you read)
+- Total lessons:
+- Total modules:
+- QA verdict:
+- QA score:
+- Schedule pacing:
+- Estimated completion:
+
+## Files Generated
+List all files in ${domainDir}/ with their sizes.`,
+  { label: 'report', phase: 'Register' }
 )
 
 log(`Pipeline complete for "${topic}" — ${tutorMemory.length} tutor judgments, ${researchRounds} targeted research rounds`)
