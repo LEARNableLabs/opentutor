@@ -127,13 +127,15 @@ For each issue found, report severity, description, location, and fix.`,
 ${FILE_CONTEXT}
 
 Check curriculum.json for:
-1. **Required fields** — Every lesson must have: day, module, title, concepts (array), resources (array), status
-2. **Day sequence** — Days must be sequential (1, 2, 3...) with no gaps or duplicates
+1. **Required fields** — Every lesson must have: lesson (int), module, title, concepts (array), difficulty (int 1-5), type (one of: mini-lesson, question, resource-drop, teach-back, real-world, review), resources (array), status
+2. **Lesson sequence** — lesson numbers must be sequential (1, 2, 3...) with no gaps or duplicates
 3. **Status values** — Every status must be "pending" or "completed" (not null, undefined, or other)
 4. **Non-empty arrays** — concepts and resources arrays must not be empty
-5. **Top-level fields** — Must have: topic, slug, created, lessons
-6. **String quality** — No empty strings, no placeholder text, no "TBD"
-7. **JSON validity** — Check it actually parses as valid JSON
+5. **Top-level fields** — Must have: topic, slug, created, student_level, prerequisites, exit_criteria, lessons
+6. **Difficulty values** — Must be integers 1-5. Check the curve is plausible (early lessons should be low, reviews should be 1-2)
+7. **Type values** — Must be one of the valid delivery types. Review lessons must have type "review". Check for variety (not all mini-lesson).
+8. **String quality** — No empty strings, no placeholder text, no "TBD"
+9. **JSON validity** — Check it actually parses as valid JSON
 
 For each issue found, report severity (critical for schema violations), description, location, and fix.`,
   },

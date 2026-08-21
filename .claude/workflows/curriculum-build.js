@@ -240,14 +240,18 @@ const DESIGNERS = [
 ${ctx}
 
 Design requirements:
-- 20-30 lessons organized into 4-6 modules
-- Each module covers a coherent subtopic
-- Each lesson: day number, module name, title (as a question or provocation, NOT a topic label), concepts (2-4 per lesson), resources (real URLs from the research)
-- Include review days every 5-7 lessons
+- Let the material dictate the curriculum size. A narrow topic might need 18 lessons; a broad one might need 35. Do NOT default to 30. Think about how much ground this specific topic needs to cover at the ${level} level.
+- Organize into modules by coherent subtopic (typically 3-7 modules, but the material decides)
+- Each lesson: sequential lesson number, module name, title (as a question or provocation, NOT a topic label), concepts (2-4 per lesson), difficulty (1-5 cognitive load scale), type (delivery format), resources (real URLs from the research)
+- Difficulty scale: 1=review/light, 2=accessible new material, 3=standard, 4=challenging, 5=peak difficulty. Early lessons should be 1-2, building to 3-4 peaks, with review dips. The curve should match the actual conceptual demands, not follow a formula.
+- Delivery types: "mini-lesson" (concept+example+exercise), "question" (thought-provoking question), "resource-drop" (share and discuss a resource), "teach-back" (student explains), "real-world" (hands-on challenge), "review" (spaced repetition). Vary them — don't use mini-lesson for everything.
+- Include review lessons every 5-7 lessons (type: "review", difficulty: 1-2)
 - Sequence must respect concept dependencies (prerequisites before dependents)
 - Lesson titles should be engaging questions like "Why does moving dirt cost money?" not labels like "Introduction to optimal transport"
-- First lessons should be accessible and motivating
+- First lessons should be accessible and motivating (difficulty 1-2)
 - Last lessons should connect to cutting-edge applications
+- Prerequisites: list what's genuinely needed — could be 3, could be 10
+- Exit criteria: list what the student can concretely do after completing. Match ambition to material, not to a fixed count.
 
 Output as JSON:
 {
@@ -256,17 +260,19 @@ Output as JSON:
       "name": "Module Name",
       "lessons": [
         {
-          "day": 1,
+          "lesson": 1,
           "title": "Why does X happen?",
           "concepts": ["concept1", "concept2"],
+          "difficulty": 2,
+          "type": "mini-lesson",
           "resources": ["url1", "url2"],
           "status": "pending"
         }
       ]
     }
   ],
-  "prerequisites": ["list of external prerequisites"],
-  "exit_criteria": ["list of 6-8 things the student should be able to do after completing"]
+  "prerequisites": ["list of external prerequisites the student needs before starting"],
+  "exit_criteria": ["concrete things the student can do after completing"]
 }`,
   },
   {
@@ -410,10 +416,12 @@ The curriculum.json must follow this exact schema:
   "exit_criteria": [...],
   "lessons": [
     {
-      "day": 1,
+      "lesson": 1,
       "module": "Module Name",
       "title": "Why does X happen?",
       "concepts": ["concept1", "concept2"],
+      "difficulty": 2,
+      "type": "mini-lesson",
       "resources": ["url1"],
       "status": "pending"
     }
@@ -422,9 +430,10 @@ The curriculum.json must follow this exact schema:
 
 Requirements:
 - Flatten the module structure into a flat lessons array, but keep the "module" field on each lesson
+- Every lesson must have: lesson (sequential number), module, title, concepts, difficulty (1-5), type (mini-lesson|question|resource-drop|teach-back|real-world|review), resources, status
 - Every lesson must have status: "pending"
-- 20-30 lessons total
-- Include review days (title like "Review: What have we learned about X?")
+- Keep the lesson count from the structure agent — do NOT pad or truncate to hit a round number
+- Include review lessons (type: "review") — these should already be in the structure
 ${gate?.issues?.length ? '\nFix these issues identified by the quality gate:\n' + gate.issues.map(i => '- ' + i).join('\n') : ''}
 
 Write ONLY the curriculum.json file.`

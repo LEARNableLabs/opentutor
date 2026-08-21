@@ -33,10 +33,12 @@ const analysis = await agent(
 4. workspace/USER.md — student profile
 5. workspace/tutor/progress.json — current progress and schedule
 
-For each lesson, estimate:
-- Cognitive load (1-5): how much new material
-- Prerequisite depth: how many prior concepts are needed
-- Difficulty spikes: where the hardest transitions are
+Each lesson in curriculum.json has a "difficulty" field (1-5 scale) and a "type" field (delivery format). Use these directly — do not re-estimate difficulty from scratch.
+
+For each lesson, extract:
+- The difficulty value from the curriculum
+- Whether it's a spike (difficulty >= 4, or a jump of 2+ from the previous lesson)
+- The delivery type (review lessons need less time than real-world challenges)
 
 Report as JSON:
 {
@@ -44,8 +46,8 @@ Report as JSON:
   "moduleCount": number,
   "currentProgress": {"completed": number, "total": number},
   "currentSchedule": {"times": [...], "timezone": "...", "paused": boolean} or null,
-  "difficultyProfile": [{"day": 1, "title": "...", "load": 3, "spike": false}],
-  "spikeDays": [day numbers where difficulty spikes],
+  "difficultyProfile": [{"lesson": 1, "title": "...", "difficulty": 3, "type": "mini-lesson", "spike": false}],
+  "spikeDays": [lesson numbers where difficulty spikes],
   "studentLevel": "beginner|intermediate|advanced",
   "estimatedWeeks": number
 }`,

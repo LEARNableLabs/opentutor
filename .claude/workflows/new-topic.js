@@ -70,7 +70,7 @@ const STEP_CRITERIA = {
 Read the research document at ${domainDir}/research.md to form your judgment.
 
 - Does the research cover the major branches and subtopics of "${topic}"?
-- Are there enough papers (10+) to support 20-30 lessons?
+- Are there enough papers (10+) to support a full curriculum?
 - Are educational resources diverse (courses, videos, interactive tools, code)?
 - Are there any critical subtopics with zero coverage that would leave lessons unsupported?
 - Is the field landscape clear enough to structure a course?
@@ -80,7 +80,7 @@ Read the research document at ${domainDir}/research.md to form your judgment.
 Read the research document at ${domainDir}/research.md — check especially the "Targeted Research" sections at the end.
 
 - Did the targeted research fill the gaps you identified?
-- Is coverage now sufficient to build a 20-30 lesson curriculum?
+- Is coverage now sufficient to build a full curriculum?
 - Are there still critical blind spots that would leave lessons unsupported?`,
 
   build: `## Evaluation Criteria: Curriculum Build
@@ -94,7 +94,9 @@ Check:
 - Does the lesson sequence respect concept dependencies from the concept map?
 - Are lesson titles engaging questions or provocations (not dry topic labels)?
 - Is the difficulty progression gradual and appropriate for ${level}?
-- Are there 20-30 lessons with review days every 5-7 lessons?
+- Does the lesson count fit the material (not padded or truncated to a round number)?
+- Are there review lessons (type: "review") every 5-7 lessons?
+- Does every lesson have difficulty (1-5) and type fields?
 - Are there "thin" lessons with only 1 concept and no resources?
 - Does the concept map match the lesson sequence (no orphan concepts)?
 - Are teaching notes specific enough to guide delivery?

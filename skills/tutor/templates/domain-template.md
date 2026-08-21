@@ -26,10 +26,12 @@ When a student picks a new topic:
 ### curriculum.json
 
 See `references/curriculum-format.md` for the full schema. Key points:
-- Aim for 20-40 lessons per topic
+- Let the material dictate lesson count — typically 15-35, but the topic decides
 - Each lesson = one core concept, ~3-5 minute read
+- Every lesson needs: lesson number, module, title, concepts, difficulty (1-5), type (delivery format), resources, status
+- Delivery types: mini-lesson, question, resource-drop, teach-back, real-world, review — vary them
 - Map prerequisites — warn if background might be missing
-- Include review days every 5-7 lessons
+- Include review lessons (type: "review") every 5-7 lessons
 
 ### concept-map.md
 
