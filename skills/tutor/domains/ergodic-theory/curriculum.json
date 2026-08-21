@@ -1,0 +1,366 @@
+{
+  "topic": "Ergodic Theory",
+  "slug": "ergodic-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "measure theory",
+    "Lebesgue integration",
+    "point-set topology",
+    "metric spaces"
+  ],
+  "exit_criteria": [
+    "student can identify and verify measure-preserving transformations",
+    "student can apply Poincaré Recurrence Theorem to concrete systems",
+    "student can state and use Birkhoff's Ergodic Theorem",
+    "student can determine whether a system is ergodic or mixing",
+    "student can compute measure-theoretic entropy for simple systems",
+    "student understands connections to probability and number theory"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Examples",
+      "title": "What makes a dynamical system 'measure-preserving'?",
+      "concepts": ["measure-preserving transformations", "invariant measures", "probability spaces"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.osu.edu/sites/default/files/courses/MATH_7221.02_Syllabus.pdf",
+        "https://people.math.harvard.edu/~ctm/papers/home/text/class/notes/ergodic/course.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Examples",
+      "title": "Why does a circle rotation preserve Lebesgue measure?",
+      "concepts": ["circle rotations", "irrational rotations", "Lebesgue measure"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.math.uci.edu/~asgor/Ergodic_Theory_2018/",
+        "https://ergodicityeconomics.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Examples",
+      "title": "How does the Arnold cat map stretch and fold the torus?",
+      "concepts": ["Arnold cat map", "hyperbolic systems", "symbolic dynamics"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.studysmarter.co.uk/explanations/math/geometry/ergodic-theory/",
+        "https://people.math.harvard.edu/~ctm/papers/home/text/class/notes/ergodic/course.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Examples",
+      "title": "What can we learn from the Bernoulli shift?",
+      "concepts": ["shift spaces", "Bernoulli measures", "independence"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.berkeley.edu/~fengt/ergodic_theory.pdf",
+        "https://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations & Examples",
+      "title": "How do you construct an invariant measure?",
+      "concepts": ["invariant measure construction", "uniqueness", "examples"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.math.uci.edu/~asgor/Ergodic_Theory_2018/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations & Examples",
+      "title": "What have we learned about measure-preserving systems so far?",
+      "concepts": ["measure-preserving transformations", "invariant measures", "examples review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://math.osu.edu/sites/default/files/courses/MATH_7221.02_Syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Recurrence & Ergodicity",
+      "title": "Why does Poincaré say 'everything comes back'?",
+      "concepts": ["Poincaré Recurrence Theorem", "recurrence", "almost everywhere"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.osu.edu/sites/default/files/courses/MATH_7221.02_Syllabus.pdf",
+        "https://people.math.harvard.edu/~ctm/papers/home/text/class/notes/ergodic/course.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Recurrence & Ergodicity",
+      "title": "How long until a trajectory returns?",
+      "concepts": ["return times", "Kac's formula", "expected return time"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf",
+        "https://math.berkeley.edu/~fengt/ergodic_theory.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Recurrence & Ergodicity",
+      "title": "What does it mean for a system to be 'indecomposable'?",
+      "concepts": ["ergodicity", "ergodic decomposition", "indecomposability"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.harvard.edu/~ctm/papers/home/text/class/notes/ergodic/course.pdf",
+        "https://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Recurrence & Ergodicity",
+      "title": "Is every irrational circle rotation ergodic?",
+      "concepts": ["ergodicity of rotations", "equidistribution", "Weyl's criterion"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://math.berkeley.edu/~fengt/ergodic_theory.pdf",
+        "https://www.classcentral.com/subject/ergodic-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Recurrence & Ergodicity",
+      "title": "How can you prove a system is ergodic?",
+      "concepts": ["ergodicity proofs", "invariant sets", "measure zero"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.math.uci.edu/~asgor/Ergodic_Theory_2018/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Recurrence & Ergodicity",
+      "title": "How do recurrence and ergodicity relate to each other?",
+      "concepts": ["recurrence", "ergodicity", "synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Birkhoff's Theorem",
+      "title": "Why do time averages equal space averages?",
+      "concepts": ["Birkhoff Ergodic Theorem", "time averages", "space averages"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.mit.edu/~sheffield/2016175/Lecture22.pdf",
+        "https://people.math.harvard.edu/~ctm/papers/home/text/class/notes/ergodic/course.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Birkhoff's Theorem",
+      "title": "How does Birkhoff's theorem generalize the Law of Large Numbers?",
+      "concepts": ["pointwise convergence", "laws of large numbers", "i.i.d. vs ergodic"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/",
+        "https://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Birkhoff's Theorem",
+      "title": "Can we compute the frequency of digits in continued fractions?",
+      "concepts": ["continued fractions", "Gauss map", "applications to number theory"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://people.clas.ufl.edu/boyland/ergodic-theory-s21/",
+        "https://math.berkeley.edu/~fengt/ergodic_theory.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Birkhoff's Theorem",
+      "title": "How would you apply Birkhoff's theorem to a chosen system?",
+      "concepts": ["applications", "computation", "ergodic limits"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.classcentral.com/subject/ergodic-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Consolidation",
+      "title": "How do invariance, recurrence, and time averages connect?",
+      "concepts": ["recurrence", "ergodicity", "Birkhoff's theorem", "synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.studysmarter.co.uk/explanations/math/geometry/ergodic-theory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Mixing & Spectral Theory",
+      "title": "What's the difference between ergodic and mixing?",
+      "concepts": ["weak mixing", "strong mixing", "correlation decay"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.osu.edu/sites/default/files/courses/MATH_7222.02_Syllabus.pdf",
+        "https://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Mixing & Spectral Theory",
+      "title": "Why is the Bernoulli shift mixing but circle rotations are not?",
+      "concepts": ["mixing examples", "spectral analysis", "eigenvalues"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://people.math.harvard.edu/~ctm/papers/home/text/class/notes/ergodic/course.pdf",
+        "https://math.berkeley.edu/~fengt/ergodic_theory.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Mixing & Spectral Theory",
+      "title": "How do unitary operators encode dynamics?",
+      "concepts": ["Koopman operator", "unitary representation", "spectral theory"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf",
+        "https://www.math.uci.edu/~asgor/Ergodic_Theory_2018/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Mixing & Spectral Theory",
+      "title": "Can spectral methods decide if a system is mixing?",
+      "concepts": ["spectral characterization", "continuous spectrum", "point spectrum"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://people.math.harvard.edu/~ctm/papers/home/text/class/notes/ergodic/course.pdf",
+        "https://www.classcentral.com/subject/ergodic-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Mixing & Spectral Theory",
+      "title": "Does the Arnold cat map mix?",
+      "concepts": ["hyperbolic mixing", "Anosov systems", "verification"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://math.berkeley.edu/~fengt/ergodic_theory.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Mixing & Spectral Theory",
+      "title": "What patterns do we see in ergodic, mixing, and spectral properties?",
+      "concepts": ["mixing", "spectral theory", "synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Entropy & Applications",
+      "title": "How do we measure the 'randomness' of a transformation?",
+      "concepts": ["measure-theoretic entropy", "Kolmogorov-Sinai entropy", "information theory"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.osu.edu/sites/default/files/courses/MATH_7222.02_Syllabus.pdf",
+        "https://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Entropy & Applications",
+      "title": "Why does the variational principle connect topological and measure entropy?",
+      "concepts": ["variational principle", "topological entropy", "equilibrium states"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://people.math.harvard.edu/~ctm/papers/home/text/class/notes/ergodic/course.pdf",
+        "https://people.clas.ufl.edu/boyland/ergodic-theory-s21/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Entropy & Applications",
+      "title": "What does ergodicity mean for statistical mechanics?",
+      "concepts": ["Boltzmann ergodic hypothesis", "equilibrium", "physical applications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ergodicityeconomics.com/",
+        "https://www.studysmarter.co.uk/explanations/math/geometry/ergodic-theory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Entropy & Applications",
+      "title": "Which advanced topics in ergodic theory should you explore next?",
+      "concepts": ["advanced topics", "research directions", "applications"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.classcentral.com/subject/ergodic-theory",
+        "https://people.clas.ufl.edu/boyland/ergodic-theory-s21/",
+        "https://www.math.uci.edu/~asgor/Ergodic_Theory_2018/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,638 @@
+{
+  "topic": "Medicinal chemistry and drug design",
+  "slug": "medicinal-chemistry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "organic chemistry",
+    "biochemistry fundamentals",
+    "basic pharmacology"
+  ],
+  "exit_criteria": [
+    "analyze structure-activity relationships and predict how structural changes affect drug properties",
+    "apply Lipinski's Rule of Five and ADME principles to evaluate drug-likeness",
+    "use computational tools (molecular docking, ADME prediction) for hit identification and optimization",
+    "explain major drug-target interaction mechanisms and design strategies for selectivity",
+    "critique real drug discovery case studies and identify key design decisions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes a molecule a drug?",
+      "concepts": [
+        "drug definition",
+        "drug-target interactions",
+        "therapeutic window"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrd.2016.244",
+        "https://www.drugbank.com/guides/drug-discovery"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How does a drug go from lab to pharmacy?",
+      "concepts": [
+        "drug discovery pipeline",
+        "preclinical development",
+        "clinical trials"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/15-136j-drugs-politics-and-culture-spring-2003/",
+        "https://www.fda.gov/patients/drug-development-process"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What is a pharmacophore and why does it matter?",
+      "concepts": [
+        "pharmacophore",
+        "molecular recognition",
+        "complementarity"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/cr100117x",
+        "https://www.rcsb.org/docs/general-help/pharmacophore-models"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How did aspirin teach us about structure-activity relationships?",
+      "concepts": [
+        "SAR",
+        "acetylation mechanism",
+        "COX inhibition"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3195271/",
+        "https://www.youtube.com/watch?v=KM3KXz6gEA8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "What are the key non-covalent forces in drug binding?",
+      "concepts": [
+        "hydrogen bonds",
+        "van der Waals forces",
+        "electrostatic interactions",
+        "hydrophobic effect"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.5b01684",
+        "https://www.rcsb.org/docs/general-help/molecular-interactions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "Review: Foundations checkpoint",
+      "concepts": [
+        "drug discovery basics",
+        "pharmacophores",
+        "SAR principles",
+        "molecular interactions"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://teachopencadd.github.io/talktorials.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Drug-Target Interactions",
+      "title": "Why do drugs bind to proteins?",
+      "concepts": [
+        "binding affinity",
+        "non-covalent interactions",
+        "binding free energy"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rcsb.org/",
+        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.5b01684"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Drug-Target Interactions",
+      "title": "How do enzyme inhibitors work?",
+      "concepts": [
+        "competitive inhibition",
+        "allosteric inhibition",
+        "Ki vs IC50"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK22339/",
+        "https://www.ebi.ac.uk/chembl/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Drug-Target Interactions",
+      "title": "What are GPCRs and why are they prime drug targets?",
+      "concepts": [
+        "GPCRs",
+        "receptor pharmacology",
+        "agonists vs antagonists"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrd.2017.178",
+        "https://gpcrdb.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Drug-Target Interactions",
+      "title": "How do you design a drug that hits only its target?",
+      "concepts": [
+        "selectivity",
+        "off-target effects",
+        "polypharmacology"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.9b00917",
+        "https://www.nature.com/articles/nrd2683"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Drug-Target Interactions",
+      "title": "Can you sketch the binding mode of imatinib in BCR-ABL?",
+      "concepts": [
+        "protein-ligand complexes",
+        "3D structure",
+        "key interactions"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.rcsb.org/structure/1IEP",
+        "https://www.pymol.org/tutorials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Drug-Target Interactions",
+      "title": "Review: Binding and selectivity",
+      "concepts": [
+        "drug-target binding",
+        "selectivity strategies",
+        "inhibition mechanisms"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ebi.ac.uk/chembl/",
+        "https://www.guidetopharmacology.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Physicochemical Properties",
+      "title": "What is Lipinski's Rule of Five and does it still matter?",
+      "concepts": [
+        "Lipinski's Rule",
+        "oral bioavailability",
+        "drug-likeness"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/ci990307l",
+        "http://www.swissadme.ch/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Physicochemical Properties",
+      "title": "How does a drug get from your gut to your bloodstream?",
+      "concepts": [
+        "absorption",
+        "intestinal permeability",
+        "first-pass metabolism"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK547662/",
+        "https://admet.scbdd.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Physicochemical Properties",
+      "title": "Why do hydrophobic drugs cross membranes better?",
+      "concepts": [
+        "lipophilicity",
+        "LogP",
+        "membrane permeability"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.9b00853",
+        "https://www.molinspiration.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Physicochemical Properties",
+      "title": "What happens to drugs in the liver?",
+      "concepts": [
+        "metabolism",
+        "phase I and phase II",
+        "metabolic stability"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK547852/",
+        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.9b00375"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Physicochemical Properties",
+      "title": "How do you predict ADME properties computationally?",
+      "concepts": [
+        "in silico ADME",
+        "predictive models",
+        "SwissADME"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "http://www.swissadme.ch/",
+        "https://www.nature.com/articles/s41598-017-02893-w",
+        "https://pkcsm.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Physicochemical Properties",
+      "title": "Review: ADME principles",
+      "concepts": [
+        "drug-likeness",
+        "ADME properties",
+        "in silico prediction"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://www.swissadme.ch/",
+        "https://pubchem.ncbi.nlm.nih.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Lead Optimization",
+      "title": "How do you turn a hit into a lead?",
+      "concepts": [
+        "hit-to-lead",
+        "potency optimization",
+        "screening cascades"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/jm501000q",
+        "https://www.nature.com/articles/nrd.2016.230"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Lead Optimization",
+      "title": "What are bioisosteres and when should you use them?",
+      "concepts": [
+        "bioisosteric replacement",
+        "scaffold hopping",
+        "patent evasion"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/jm801283q",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3737809/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Lead Optimization",
+      "title": "Why would you design a prodrug?",
+      "concepts": [
+        "prodrugs",
+        "bioactivation",
+        "improving bioavailability"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/jm900856g",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2975903/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Lead Optimization",
+      "title": "How do cytochrome P450 enzymes dictate drug design?",
+      "concepts": [
+        "CYP450",
+        "metabolic liabilities",
+        "drug-drug interactions"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3033451/",
+        "https://pubs.acs.org/doi/10.1021/acs.chemrestox.8b00409"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Lead Optimization",
+      "title": "Can you propose three structural modifications to improve this lead?",
+      "concepts": [
+        "SAR analysis",
+        "structure modification",
+        "property optimization"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ebi.ac.uk/chembl/",
+        "https://pubs.acs.org/journal/jmcmar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Lead Optimization",
+      "title": "Review: Lead optimization strategies",
+      "concepts": [
+        "bioisosteres",
+        "prodrugs",
+        "metabolism",
+        "SAR"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://teachopencadd.github.io/talktorials.html",
+        "https://www.ebi.ac.uk/chembl/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Computational Methods",
+      "title": "How does molecular docking work?",
+      "concepts": [
+        "molecular docking",
+        "scoring functions",
+        "pose prediction"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://vina.scripps.edu/",
+        "https://pubs.acs.org/doi/10.1021/acs.jcim.6b00049"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Computational Methods",
+      "title": "Can you dock a ligand into a protein target using AutoDock Vina?",
+      "concepts": [
+        "docking workflow",
+        "binding site identification",
+        "result interpretation"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://vina.scripps.edu/tutorial/",
+        "https://www.cgl.ucsf.edu/chimerax/",
+        "https://autodock-vina.readthedocs.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Computational Methods",
+      "title": "What is QSAR and how do you build a predictive model?",
+      "concepts": [
+        "QSAR",
+        "molecular descriptors",
+        "machine learning in drug design"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jcim.8b00263",
+        "https://www.rdkit.org/docs/GettingStartedInPython.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Computational Methods",
+      "title": "How do you screen millions of compounds virtually?",
+      "concepts": [
+        "virtual screening",
+        "library design",
+        "hit prioritization"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nrd.2016.175",
+        "https://zinc.docking.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Computational Methods",
+      "title": "Why is structure-based design more powerful with AI?",
+      "concepts": [
+        "AI in drug design",
+        "deep learning",
+        "AlphaFold"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/d41586-023-03172-6",
+        "https://alphafold.ebi.ac.uk/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Computational Methods",
+      "title": "Review: Computational drug design",
+      "concepts": [
+        "docking",
+        "virtual screening",
+        "QSAR",
+        "AI methods"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://teachopencadd.github.io/talktorials.html",
+        "https://www.rdkit.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Modern Approaches",
+      "title": "Why is fragment-based drug discovery powerful?",
+      "concepts": [
+        "FBDD",
+        "fragment libraries",
+        "growing and linking"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrd.2016.109",
+        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.9b02096"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Modern Approaches",
+      "title": "When should you design a covalent inhibitor?",
+      "concepts": [
+        "covalent drugs",
+        "targeted covalent inhibition",
+        "warheads"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nrd.2017.178",
+        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.9b01720"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Modern Approaches",
+      "title": "How was nirmatrelvir (Paxlovid) designed during the pandemic?",
+      "concepts": [
+        "rapid drug design",
+        "structure-based design",
+        "clinical translation"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.abl4784",
+        "https://www.nature.com/articles/d41586-021-03074-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Modern Approaches",
+      "title": "What are PROTACs and how do they work?",
+      "concepts": [
+        "PROTACs",
+        "targeted protein degradation",
+        "E3 ligases"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41573-021-00371-6",
+        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.1c00482"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 35,
+      "module": "Modern Approaches",
+      "title": "Can you design a synthesis route for a simple drug candidate?",
+      "concepts": [
+        "retrosynthetic analysis",
+        "medicinal chemistry synthesis",
+        "scalability"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.organic-chemistry.org/namedreactions/",
+        "https://pubs.acs.org/doi/10.1021/acs.oprd.9b00524"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 36,
+      "module": "Modern Approaches",
+      "title": "Final review: Putting it all together",
+      "concepts": [
+        "integrated drug design",
+        "case studies",
+        "future directions"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/nrd/",
+        "https://pubs.acs.org/journal/jmcmar",
+        "https://blogs.sciencemag.org/pipeline/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

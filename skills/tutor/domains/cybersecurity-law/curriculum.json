@@ -1,0 +1,394 @@
+{
+  "topic": "Cybersecurity Law and Policy",
+  "slug": "cybersecurity-law",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic legal concepts (statutes, case law, jurisdiction)",
+    "fundamental cybersecurity concepts (breaches, encryption, authentication)",
+    "awareness of major privacy regulations (GDPR, CCPA)"
+  ],
+  "exit_criteria": [
+    "analyze legal risks in cybersecurity incidents across multiple jurisdictions",
+    "apply privacy frameworks to real-world data handling scenarios",
+    "evaluate computer crime statutes and their reach",
+    "design legally compliant incident response procedures",
+    "navigate tensions between security, privacy, and surveillance",
+    "assess international data transfer mechanisms"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations and Privacy Law",
+      "title": "Why do we regulate data instead of trusting companies to protect it?",
+      "concepts": ["privacy as a right", "market failure in data protection", "regulatory rationale"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cyberlaw.stanford.edu/",
+        "https://www.eff.org/issues/privacy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations and Privacy Law",
+      "title": "How does GDPR turn data subjects into rights-holders?",
+      "concepts": ["data subject rights", "lawful basis for processing", "controller vs processor", "territorial scope"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://gdpr.eu/",
+        "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations and Privacy Law",
+      "title": "What happens when a company ignores a data subject access request?",
+      "concepts": ["GDPR enforcement", "supervisory authorities", "GDPR fines"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.enforcementtracker.com/",
+        "https://edpb.europa.eu/edpb_en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations and Privacy Law",
+      "title": "Why did California build its own GDPR instead of waiting for federal law?",
+      "concepts": ["CCPA/CPRA", "state privacy fragmentation", "opt-out vs opt-in", "private right of action"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://oag.ca.gov/privacy/ccpa",
+        "https://iapp.org/resources/article/us-state-privacy-legislation-tracker/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations and Privacy Law",
+      "title": "How do sector-specific laws create compliance complexity?",
+      "concepts": ["HIPAA", "COPPA", "GLBA", "sectoral approach vs omnibus"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.hhs.gov/hipaa/index.html",
+        "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations and Privacy Law",
+      "title": "Review: Privacy Frameworks",
+      "concepts": ["GDPR", "CCPA", "sectoral laws", "enforcement mechanisms"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://iapp.org/resources/topics/privacy-law/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Data Breach Law and Litigation",
+      "title": "When does a company have to tell you your data was stolen?",
+      "concepts": ["breach notification laws", "state notification requirements", "timing obligations", "content requirements"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncsl.org/technology-and-communication/security-breach-notification-laws",
+        "https://www.bakerlaw.com/databreach"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Data Breach Law and Litigation",
+      "title": "Why do most data breach lawsuits fail at the standing stage?",
+      "concepts": ["Article III standing", "injury-in-fact", "Spokeo v. Robins", "TransUnion v. Ramirez"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://epic.org/issues/consumer-privacy/data-breaches/",
+        "https://www.supremecourt.gov/opinions/20pdf/20-297_4g25.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Data Breach Law and Litigation",
+      "title": "What makes a company negligent in cybersecurity?",
+      "concepts": ["duty of care", "reasonable security", "FTC Section 5 authority", "state tort claims"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ftc.gov/business-guidance/privacy-security",
+        "https://www.ftc.gov/legal-library/browse/cases-proceedings"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Data Breach Law and Litigation",
+      "title": "How do class action economics shape breach litigation strategy?",
+      "concepts": ["class certification", "settlement incentives", "damages calculation", "cy pres"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.huntonprivacyblog.com/",
+        "https://privacylawblog.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Computer Crime and Fraud",
+      "title": "When does logging into a website become a federal crime?",
+      "concepts": ["Computer Fraud and Abuse Act (CFAA)", "unauthorized access", "exceeding authorization", "Van Buren v. United States"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nacdl.org/Landing/ComputerFraudandAbuseAct",
+        "https://www.eff.org/issues/cfaa"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Computer Crime and Fraud",
+      "title": "Review: Privacy and Breach Law",
+      "concepts": ["notification requirements", "standing", "CFAA basics", "regulatory enforcement"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.justice.gov/criminal-ccips/prosecuting-computer-crimes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Computer Crime and Fraud",
+      "title": "Why do security researchers fear criminal prosecution?",
+      "concepts": ["good faith research", "vulnerability disclosure", "CFAA prosecutorial discretion", "legal safe harbors"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.justice.gov/criminal-fraud/page/file/1535301/download",
+        "https://www.hackerone.com/vulnerability-disclosure"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Computer Crime and Fraud",
+      "title": "How do wire fraud and identity theft charges extend cybercrimes?",
+      "concepts": ["Wire Fraud Act", "identity theft statutes", "Economic Espionage Act", "charging stacking"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.justice.gov/criminal/criminal-fraud",
+        "https://www.justice.gov/criminal-ccips"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Surveillance and National Security",
+      "title": "Does the Fourth Amendment protect your emails stored in the cloud?",
+      "concepts": ["Stored Communications Act", "third-party doctrine", "Carpenter v. United States", "reasonable expectation of privacy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.brennancenter.org/issues/national-security/privacy-civil-liberties",
+        "https://epic.org/issues/privacy-surveillance/government-surveillance/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Surveillance and National Security",
+      "title": "How does FISA allow warrantless surveillance of Americans?",
+      "concepts": ["Foreign Intelligence Surveillance Act", "Section 702", "incidental collection", "FISA Court"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.eff.org/issues/fisa",
+        "https://www.brennancenter.org/our-work/research-reports/reform-fisa-court"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Surveillance and National Security",
+      "title": "Why can't the government force Apple to unlock a terrorist's iPhone?",
+      "concepts": ["encryption backdoors", "All Writs Act", "Apple v. FBI", "technical vs legal compulsion"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.eff.org/deeplinks/2016/02/eff-support-apple-encryption-battle",
+        "https://www.lawfaremedia.com/topics/encryption"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Surveillance and National Security",
+      "title": "Review: Crime and Surveillance",
+      "concepts": ["CFAA scope", "Fourth Amendment digital privacy", "FISA authorities", "encryption debate"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.cdt.org/insights/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Intellectual Property and Security",
+      "title": "When does reverse engineering violate the DMCA?",
+      "concepts": ["Digital Millennium Copyright Act", "anti-circumvention", "Section 1201", "research exceptions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.eff.org/issues/dmca",
+        "https://www.copyright.gov/legislation/dmca.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Intellectual Property and Security",
+      "title": "How do trade secrets protect security techniques better than patents?",
+      "concepts": ["trade secret law", "Defend Trade Secrets Act", "economic espionage", "non-disclosure vs publication"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.justice.gov/archives/usao/file/804681/download",
+        "https://www.finnegan.com/en/insights/trade-secrets.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Intellectual Property and Security",
+      "title": "Why do security conferences require responsible disclosure before talks?",
+      "concepts": ["coordinated disclosure", "full disclosure debate", "legal risk mitigation", "vendor relationships"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://vuls.cert.org/confluence/display/CVD",
+        "https://www.first.org/global/sigs/vulnerability-coordination"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "International Law and Jurisdiction",
+      "title": "How can the EU fine an American company for violating European law?",
+      "concepts": ["extraterritorial jurisdiction", "effects doctrine", "GDPR territorial scope", "enforcement mechanisms"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.whitecase.com/insight-alert/extraterritoriality-gdpr",
+        "https://edpb.europa.eu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "International Law and Jurisdiction",
+      "title": "Why did Schrems II kill the Privacy Shield?",
+      "concepts": ["international data transfers", "adequacy decisions", "Standard Contractual Clauses", "Schrems cases"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/",
+        "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "International Law and Jurisdiction",
+      "title": "Review: IP and International Law",
+      "concepts": ["DMCA scope", "trade secrets", "extraterritorial jurisdiction", "data transfers"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.councilofeuropeconventions.coe.int/Treaty/en/Treaties/Html/185.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Compliance and Incident Response",
+      "title": "How do you preserve evidence without destroying attorney-client privilege?",
+      "concepts": ["legal hold", "privilege in IR", "work product doctrine", "third-party consultants"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.acc.com/resource-library/cybersecurity-incident-response-plan",
+        "https://www.nixonpeabody.com/en/ideas/articles/2021/08/10/privilege-considerations-in-cyber-incident-response"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Compliance and Incident Response",
+      "title": "What regulatory frameworks apply to a healthcare breach vs a bank breach?",
+      "concepts": ["sector-specific compliance", "HIPAA vs GLBA", "PCI-DSS", "regulatory fragmentation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing",
+        "https://www.pcisecuritystandards.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Compliance and Incident Response",
+      "title": "Why are cyber insurance policies starting to exclude ransomware payments?",
+      "concepts": ["cyber insurance market", "moral hazard", "ransomware policy", "regulatory pressure"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.naic.org/cipr_topics/topic_cyber_risk.htm",
+        "https://www.cisa.gov/stopransomware"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Compliance and Incident Response",
+      "title": "Can you build a legally defensible incident response plan in a day?",
+      "concepts": ["IR planning", "tabletop exercises", "regulatory reporting", "legal team coordination", "lessons learned"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf",
+        "https://www.sans.org/white-papers/33901/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Compliance and Incident Response",
+      "title": "Review: Compliance and Incident Response",
+      "concepts": ["legal hold and privilege", "sector-specific compliance", "cyber insurance", "IR planning", "synthesis of legal frameworks"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing",
+        "https://www.acc.com/resource-library/cybersecurity-incident-response-plan"
+      ],
+      "status": "pending"
+    }
+  ]
+}

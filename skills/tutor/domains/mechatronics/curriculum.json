@@ -1,0 +1,397 @@
+{
+  "topic": "Mechatronics",
+  "slug": "mechatronics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic electronics (Ohm's law, circuits)",
+    "programming fundamentals (variables, loops, functions)",
+    "basic physics (forces, motion, energy)"
+  ],
+  "exit_criteria": [
+    "design and build sensor-actuator systems with feedback control",
+    "implement PID controllers for motor control",
+    "integrate mechanical, electrical, and software subsystems",
+    "debug mechatronic systems using systematic troubleshooting",
+    "select appropriate sensors and actuators for design requirements"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes a system 'mechatronic'?",
+      "concepts": ["system integration", "interdisciplinary design", "feedback loops"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=tK3zs0QOFgA",
+        "https://www.allaboutcircuits.com/textbook/alternating-current/chpt-13/what-is-mechatronics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How does a sensor turn physical reality into electrical signals?",
+      "concepts": ["transducers", "signal conditioning", "analog-to-digital conversion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/analog-to-digital-conversion",
+        "https://www.allaboutcircuits.com/textbook/direct-current/chpt-9/voltage-signal-sources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Why do encoders beat potentiometers for measuring rotation?",
+      "concepts": ["rotary encoders", "quadrature encoding", "resolution vs accuracy"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.digikey.com/en/articles/the-basics-of-rotary-encoders-overview-and-new-technologies-today",
+        "https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How can you measure what you can't directly touch?",
+      "concepts": ["proximity sensors", "ultrasonic sensing", "infrared sensing", "capacitive sensing"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.electronics-tutorials.ws/io/io_5.html",
+        "https://www.arduino.cc/en/Tutorial/BuiltInExamples/Ping"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "How do you wire a sensor so it doesn't fry your microcontroller?",
+      "concepts": ["pull-up resistors", "debouncing", "voltage dividers", "interfacing"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/pull-up-resistors",
+        "https://www.arduino.cc/en/Tutorial/BuiltInExamples/Debounce"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review I",
+      "title": "Can you identify sensors and wire them correctly?",
+      "concepts": ["sensors review", "signal conditioning review", "interfacing review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-experiment-guide---v40",
+        "https://www.allaboutcircuits.com/textbook/direct-current/chpt-9/voltage-signal-sources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Actuators & Motion",
+      "title": "Why do different motors exist for different jobs?",
+      "concepts": ["DC motors", "stepper motors", "servo motors", "torque-speed curves"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jameco.com/Jameco/workshop/howitworks/how-servo-motors-work.html",
+        "https://www.allaboutcircuits.com/textbook/alternating-current/chpt-13/brushless-dc-motors/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Actuators & Motion",
+      "title": "What happens if you connect a motor directly to a microcontroller pin?",
+      "concepts": ["motor drivers", "H-bridge", "current limits", "back-EMF protection"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/motors-and-selecting-the-right-one",
+        "https://www.ti.com/lit/an/slva527a/slva527a.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Actuators & Motion",
+      "title": "How does PWM trick a motor into thinking it's getting analog power?",
+      "concepts": ["pulse-width modulation", "duty cycle", "motor speed control"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/pulse-width-modulation",
+        "https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Actuators & Motion",
+      "title": "How do you accelerate a stepper motor without losing steps?",
+      "concepts": ["acceleration profiles", "trajectory planning", "step timing"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ti.com/lit/an/slyt482/slyt482.pdf",
+        "https://www.youtube.com/watch?v=fHAO7SW-SZI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Actuators & Motion",
+      "title": "Why do 3D printers use timing belts instead of lead screws everywhere?",
+      "concepts": ["power transmission", "mechanical advantage", "backlash", "precision vs speed"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.linearmotiontips.com/ball-screw-vs-belt-drive/",
+        "https://reprap.org/wiki/Mechanical_Considerations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Actuators & Motion",
+      "title": "Watch a robot arm fail: what went wrong?",
+      "concepts": ["failure modes", "mechanical debugging", "system constraints"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=YEZQDdE3LZk",
+        "https://hackaday.com/2020/11/24/fail-of-the-week-cnc-machine-skips-steps-and-burns-up-driver/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Review II",
+      "title": "How well do you understand sensors and actuators?",
+      "concepts": ["sensors review", "actuators review", "interfacing review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-experiment-guide---v40",
+        "https://www.arduino.cc/en/Tutorial/BuiltInExamples"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Control Systems",
+      "title": "Why does a thermostat need to know the current temperature?",
+      "concepts": ["feedback control", "open-loop vs closed-loop", "error signals"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=UR0hOmjaHp0",
+        "https://www.allaboutcircuits.com/technical-articles/introduction-to-control-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Control Systems",
+      "title": "What is PID and why is it everywhere?",
+      "concepts": ["proportional control", "integral control", "derivative control", "PID structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=wkfEZmsQqiA",
+        "https://www.ni.com/en-us/innovations/white-papers/06/pid-theory-explained.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Control Systems",
+      "title": "How does each PID term fix a different problem?",
+      "concepts": ["steady-state error", "overshoot", "oscillation", "response time"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=XfAt6hNV8XM",
+        "https://www.wescottdesign.com/articles/pid/pidWithoutAPhd.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Control Systems",
+      "title": "How do you tune a PID controller that won't settle?",
+      "concepts": ["manual tuning", "Ziegler-Nichols method", "empirical tuning"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=fusr9eTceEo",
+        "https://controlguru.com/ziegler-nichols-tuning-rules/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Control Systems",
+      "title": "Why do some systems fight back when you try to control them?",
+      "concepts": ["stability", "oscillation", "gain margins", "damping"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=IrIXzwLqW9Q",
+        "https://www.allaboutcircuits.com/textbook/alternating-current/chpt-16/system-stability/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Control Systems",
+      "title": "What can you do when PID isn't enough?",
+      "concepts": ["feedforward control", "state-space methods", "advanced control"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=E_RDCFOlJx4",
+        "https://file.tavsys.net/control/controls-engineering-in-frc.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Review III",
+      "title": "Can you debug a failing control system?",
+      "concepts": ["control review", "systematic debugging", "tuning review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ni.com/en-us/innovations/white-papers/06/pid-theory-explained.html",
+        "https://www.youtube.com/watch?v=UR0hOmjaHp0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Integration & Communication",
+      "title": "How do microcontrollers talk to sensors without a rat's nest of wires?",
+      "concepts": ["serial communication", "I2C", "SPI", "UART"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/serial-communication",
+        "https://www.allaboutcircuits.com/technical-articles/introduction-to-the-i2c-bus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Integration & Communication",
+      "title": "Why does CAN bus dominate automotive systems?",
+      "concepts": ["CAN protocol", "message prioritization", "multi-master systems", "robustness"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=FqLDpHsxvf8",
+        "https://www.ti.com/lit/an/sloa101b/sloa101b.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration & Communication",
+      "title": "What happens when your control loop takes too long to execute?",
+      "concepts": ["real-time constraints", "interrupt priorities", "RTOS basics", "timing analysis"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.freertos.org/implementation/a00002.html",
+        "https://www.embeddedrelated.com/showarticle/743.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration & Communication",
+      "title": "How would you architect a line-following robot?",
+      "concepts": ["modularity", "signal flow", "interface design", "subsystem decomposition"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=4Y7zG48uHRo",
+        "https://www.instructables.com/Line-Follower-Robot-PID-Control-Android-Setup/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration & Communication",
+      "title": "How do engineers test mechatronic systems before building hardware?",
+      "concepts": ["hardware-in-the-loop", "simulation", "digital twins", "validation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.mathworks.com/help/simulink/hardware-in-the-loop-simulation.html",
+        "https://www.youtube.com/watch?v=9HQaBTqY8Lc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Real-World Design",
+      "title": "What makes industrial automation different from hobby robotics?",
+      "concepts": ["reliability", "safety systems", "fault tolerance", "industrial standards"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.automation.com/en-us/articles/2016-1/fundamentals-of-industrial-automation",
+        "https://www.youtube.com/watch?v=J5bAYdHj8E8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Review IV",
+      "title": "Can you integrate all the mechatronics subsystems?",
+      "concepts": ["integration review", "system architecture review", "communication review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-experiment-guide---v40",
+        "https://www.instructables.com/Line-Follower-Robot-PID-Control-Android-Setup/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Real-World Design",
+      "title": "How would you design a self-balancing platform?",
+      "concepts": ["multi-variable control", "IMU fusion", "stability", "system integration"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=woCdjbsjbPg",
+        "https://github.com/TKJElectronics/BalancingRobot"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Real-World Design",
+      "title": "Where is mechatronics headed in the next decade?",
+      "concepts": ["soft robotics", "bio-inspired systems", "swarm robotics", "AI integration"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=KY4yLzdUL6I",
+        "https://robotics.sciencemag.org/content/5/45/eabb0839"
+      ],
+      "status": "pending"
+    }
+  ]
+}

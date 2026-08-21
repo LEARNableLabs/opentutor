@@ -1,0 +1,300 @@
+{
+  "topic": "Network science — from epidemics to social media",
+  "slug": "network-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic probability and statistics",
+    "linear algebra fundamentals (matrices, vectors)",
+    "programming in Python"
+  ],
+  "exit_criteria": [
+    "analyze real-world networks using NetworkX and compute key metrics",
+    "implement and simulate epidemic models (SIS, SIR) on networks",
+    "identify network structures (small-world, scale-free) in real datasets",
+    "explain how information spreads through social networks",
+    "design interventions for epidemic control or information diffusion"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do networks matter for understanding the world?",
+      "concepts": ["networks as models", "nodes and edges", "real-world examples"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["http://networksciencebook.com/chapter/1"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do we represent networks in computers?",
+      "concepts": ["adjacency matrix", "edge list", "adjacency list"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://networkx.org/documentation/stable/tutorial.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What makes directed networks different from undirected ones?",
+      "concepts": ["directed graphs", "in-degree and out-degree", "network types"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["http://networksciencebook.com/chapter/2"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can you build your first network from real data?",
+      "concepts": ["data collection", "network construction", "basic visualization"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://snap.stanford.edu/data/", "https://gephi.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Why does the degree of a node matter?",
+      "concepts": ["degree distribution", "hubs", "histograms"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["http://networksciencebook.com/chapter/3"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Network Structure",
+      "title": "What have we learned about networks so far?",
+      "concepts": ["graph representations", "degree", "network types"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://networkx.org/documentation/stable/reference/introduction.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Network Structure",
+      "title": "Why are some nodes more important than others?",
+      "concepts": ["centrality", "degree centrality", "network position"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["http://networksciencebook.com/chapter/7"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Network Structure",
+      "title": "How do we measure who connects different parts of a network?",
+      "concepts": ["betweenness centrality", "shortest paths", "network bridges"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://networkx.org/documentation/stable/reference/algorithms/centrality.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Network Structure",
+      "title": "What makes the small-world phenomenon so surprising?",
+      "concepts": ["six degrees of separation", "average path length", "social networks"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["http://networksciencebook.com/chapter/4"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Network Structure",
+      "title": "Why do friends of your friends tend to be friends?",
+      "concepts": ["clustering coefficient", "transitivity", "local structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://networkx.org/documentation/stable/reference/algorithms/clustering.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Network Structure",
+      "title": "Can you identify structural patterns in a real social network?",
+      "concepts": ["centrality analysis", "clustering", "path analysis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://snap.stanford.edu/data/ego-Facebook.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Network Models",
+      "title": "What do centrality, clustering, and path length reveal about networks?",
+      "concepts": ["centrality measures", "small-world", "clustering"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["http://networksciencebook.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Network Models",
+      "title": "What happens when you wire a network completely randomly?",
+      "concepts": ["random graphs", "Erdős-Rényi model", "probability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["http://networksciencebook.com/chapter/3"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Network Models",
+      "title": "How did Watts and Strogatz explain the small-world property?",
+      "concepts": ["small-world model", "rewiring", "local and global structure"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["http://networksciencebook.com/chapter/4"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Network Models",
+      "title": "Why do most real networks have hubs and long tails?",
+      "concepts": ["power-law distributions", "scale-free networks", "heavy tails"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["http://networksciencebook.com/chapter/5"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Network Models",
+      "title": "How does preferential attachment create inequality?",
+      "concepts": ["Barabási-Albert model", "rich get richer", "growth mechanisms"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["http://networksciencebook.com/chapter/5"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Network Models",
+      "title": "Can you simulate and compare different network models?",
+      "concepts": ["model implementation", "network generation", "comparative analysis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://networkx.org/documentation/stable/reference/generators.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Epidemic Dynamics",
+      "title": "What patterns emerge from random and scale-free networks?",
+      "concepts": ["network models", "structural properties", "degree distributions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://networkx.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Epidemic Dynamics",
+      "title": "How do diseases spread through contact networks?",
+      "concepts": ["epidemic models", "SIS model", "infection dynamics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["http://networksciencebook.com/chapter/10"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Epidemic Dynamics",
+      "title": "What determines whether an epidemic takes off or dies out?",
+      "concepts": ["basic reproduction number R0", "epidemic threshold", "outbreak conditions"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.complexityexplorer.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Epidemic Dynamics",
+      "title": "Why does network structure matter for epidemic control?",
+      "concepts": ["targeted interventions", "hubs and superspreaders", "vaccination strategies"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["http://networksciencebook.com/chapter/10"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Epidemic Dynamics",
+      "title": "Can you simulate COVID-19 spread on different network types?",
+      "concepts": ["SIR model", "network effects", "intervention design"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://github.com/coronafighter/coronaSEIR"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Social Networks",
+      "title": "How do we find communities in social networks?",
+      "concepts": ["community detection", "modularity", "clustering algorithms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["http://networksciencebook.com/chapter/9"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Social Networks",
+      "title": "Can you explain epidemic models and network communities?",
+      "concepts": ["epidemic thresholds", "R0", "community structure"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://networkx.org/documentation/stable/reference/algorithms/community.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Social Networks",
+      "title": "Why does information go viral on social media?",
+      "concepts": ["information cascades", "viral content", "diffusion models"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["http://web.stanford.edu/class/cs224w/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Social Networks",
+      "title": "How do influencers shape opinion dynamics?",
+      "concepts": ["influence maximization", "opinion leaders", "persuasion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://snap.stanford.edu/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Social Networks",
+      "title": "What can network science tell us about echo chambers?",
+      "concepts": ["homophily", "polarization", "filter bubbles"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.youtube.com/watch?v=UX7YQ6m2r_o", "http://networksciencebook.com/chapter/7"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Social Networks",
+      "title": "Can you analyze a Twitter network to predict information spread?",
+      "concepts": ["social network analysis", "diffusion prediction", "real-world application"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://snap.stanford.edu/data/ego-Twitter.html"],
+      "status": "pending"
+    }
+  ]
+}

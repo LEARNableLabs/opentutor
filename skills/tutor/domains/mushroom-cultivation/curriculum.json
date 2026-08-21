@@ -1,0 +1,332 @@
+{
+  "topic": "Mushroom cultivation — substrate science and fruiting",
+  "slug": "mushroom-cultivation",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (cell structure, respiration)",
+    "sterile technique fundamentals",
+    "familiarity with fungal life cycles"
+  ],
+  "exit_criteria": [
+    "formulate and prepare substrates for oyster, shiitake, and lion's mane",
+    "design and maintain fruiting chambers with species-specific parameters",
+    "diagnose and prevent common contamination issues",
+    "calculate biological efficiency and optimize yields",
+    "troubleshoot pinning failures using environmental data"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fungal Biology Foundations",
+      "title": "How does a mushroom actually grow from a spore?",
+      "concepts": ["fungal life cycle", "mycelial growth", "dikaryotic phase"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.shroomery.org/8407/The-Mushroom-Life-Cycle",
+        "https://www.youtube.com/watch?v=bEtFWfDKFvk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fungal Biology Foundations",
+      "title": "Why can't you just plant mushrooms like vegetables?",
+      "concepts": ["saprophytic nutrition", "enzymatic breakdown", "lignocellulose"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7022788/",
+        "https://www.youtube.com/watch?v=HwATBE8sD4I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fungal Biology Foundations",
+      "title": "What makes oyster mushrooms grow so differently than shiitake?",
+      "concepts": ["species ecology", "wood-decay types", "cultivation niches"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://extension.psu.edu/mushroom-cultivation",
+        "https://www.fieldforest.net/category/mushroom-cultivation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Substrate Science",
+      "title": "Why does the carbon-to-nitrogen ratio determine success or failure?",
+      "concepts": ["C:N ratio", "nutritional balance", "mycelial metabolism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6274837/",
+        "https://grocycle.com/substrate-nutrition/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Substrate Science",
+      "title": "How do you turn straw into mushroom food?",
+      "concepts": ["substrate preparation", "pasteurization", "moisture content"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=45b2t7fqKDo",
+        "https://freshcapmushrooms.com/learn/growing-oyster-mushrooms-on-straw/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Substrate Science",
+      "title": "When should you sterilize versus pasteurize?",
+      "concepts": ["sterilization", "pasteurization", "competitive exclusion"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.shroomery.org/forums/showflat.php/Number/24076162",
+        "https://www.youtube.com/watch?v=hH86e9KpVPE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Substrate Science",
+      "title": "How do substrate choices connect to success and failure?",
+      "concepts": ["C:N ratio review", "preparation methods", "troubleshooting"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://grocycle.com/mushroom-substrate-guide/",
+        "https://www.shroomery.org/13878/Fruiting-Chamber-FAQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Substrate Science",
+      "title": "What happens if you add too much supplement to sawdust?",
+      "concepts": ["supplementation", "contamination risk", "nitrogen excess"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=BZGZmHU0gTs",
+        "https://fieldforest.net/Substrate-Supplementation/departments/111/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Spawn Production",
+      "title": "Why is grain spawn the gold standard for colonization?",
+      "concepts": ["grain spawn", "inoculation density", "spawn run"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=BBXcfs0xL2A",
+        "https://freshcapmushrooms.com/learn/mushroom-grain-spawn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Spawn Production",
+      "title": "How do you scale from agar to 50 pounds of spawn?",
+      "concepts": ["scaling techniques", "liquid culture", "transfer generations"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.shroomery.org/forums/showflat.php/Number/24461957",
+        "https://www.youtube.com/watch?v=m5y_d_QSodY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Spawn Production",
+      "title": "What makes spawn go bad and how do you catch it early?",
+      "concepts": ["contamination ID", "Trichoderma", "bacterial indicators"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.shroomery.org/12484/Mushroom-Cultivation-Troubleshooting",
+        "https://grocycle.com/mushroom-contamination/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Environmental Control",
+      "title": "Why won't your mushrooms pin without a temperature drop?",
+      "concepts": ["pinning triggers", "temperature shock", "evaporative cooling"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.shroomery.org/13878/Fruiting-Chamber-FAQ",
+        "https://www.youtube.com/watch?v=nkk6HPLr01I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Environmental Control",
+      "title": "What are the key decision points from spawn to pinning?",
+      "concepts": ["spawn production", "contamination prevention", "pinning triggers"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://grocycle.com/growing-mushrooms-for-beginners/",
+        "https://freshcapmushrooms.com/learn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Environmental Control",
+      "title": "How do CO₂ levels secretly control your yields?",
+      "concepts": ["CO₂ concentration", "fresh air exchange", "FAE design"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=6J0KG1w4Iak",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4320875/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Environmental Control",
+      "title": "What's the real relationship between humidity and mushroom quality?",
+      "concepts": ["relative humidity", "evaporation", "mushroom morphology"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://grocycle.com/humidity-for-mushrooms/",
+        "https://www.youtube.com/watch?v=7DVFY4I1e_E"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Environmental Control",
+      "title": "How would you design a fruiting chamber for your apartment?",
+      "concepts": ["chamber design", "automation", "environmental monitoring"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=wDwKx3SAk0c",
+        "https://www.shroomery.org/forums/showflat.php/Number/17332777"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Species-Specific Cultivation",
+      "title": "Why do oyster mushrooms fruit in a grocery bag but shiitake need logs?",
+      "concepts": ["species requirements", "ecological strategy", "cultivation system matching"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://extension.psu.edu/oyster-mushroom-cultivation",
+        "https://extension.psu.edu/shiitake-mushroom-cultivation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Species-Specific Cultivation",
+      "title": "What makes lion's mane so fussy about CO₂?",
+      "concepts": ["lion's mane parameters", "morphological sensitivity", "antler formation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=vZDZfKLWjqw",
+        "https://freshcapmushrooms.com/learn/growing-lions-mane-mushrooms/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Species-Specific Cultivation",
+      "title": "How would you adapt a protocol from oyster to reishi?",
+      "concepts": ["parameter translation", "substrate modification", "fruiting adaptation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://grocycle.com/growing-reishi-mushrooms/",
+        "https://www.youtube.com/watch?v=KFxmwMdKP5s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Yield Optimization",
+      "title": "How do temperature, CO₂, and humidity work together?",
+      "concepts": ["pinning", "FAE", "species parameters"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.shroomery.org/13887/Simplified-Cultivation-Methods-Easy-As-Fuck",
+        "https://grocycle.com/mushroom-growing-problems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Yield Optimization",
+      "title": "How do you calculate biological efficiency and why should you care?",
+      "concepts": ["biological efficiency", "yield metrics", "performance benchmarks"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://grocycle.com/biological-efficiency-mushrooms/",
+        "https://www.youtube.com/watch?v=8fHvyT-hLiY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Yield Optimization",
+      "title": "What causes the second flush to be smaller than the first?",
+      "concepts": ["flush dynamics", "substrate depletion", "rehydration"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.shroomery.org/forums/showflat.php/Number/17231150",
+        "https://freshcapmushrooms.com/learn/flush-mushrooms/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Yield Optimization",
+      "title": "How do you diagnose and fix a contamination outbreak?",
+      "concepts": ["diagnostic protocol", "contamination sources", "corrective actions"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://grocycle.com/mushroom-contamination/",
+        "https://www.youtube.com/watch?v=iRNlFB6yGjI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Yield Optimization",
+      "title": "How would you design your first commercial trial?",
+      "concepts": ["system integration", "scaling strategy", "performance monitoring"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=7MnEmnIqy3w",
+        "https://extension.psu.edu/small-scale-mushroom-cultivation"
+      ],
+      "status": "pending"
+    }
+  ]
+}

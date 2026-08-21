@@ -1,0 +1,365 @@
+{
+  "topic": "Astrobiology — life beyond Earth",
+  "slug": "astrobiology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (organic compounds, pH, redox)",
+    "introductory biology (cell structure, DNA, evolution)",
+    "basic physics (light, energy, gravity)",
+    "general astronomy (planets, stars, spectroscopy)"
+  ],
+  "exit_criteria": [
+    "evaluate whether a planetary environment could support life",
+    "explain multiple pathways for the origin of life",
+    "interpret biosignature data from exoplanet atmospheres",
+    "analyze the habitability of solar system targets (Mars, Europa, Enceladus, Titan)",
+    "discuss the Drake equation and Fermi paradox with nuance",
+    "design a mission concept to search for life on another world"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Life",
+      "title": "What actually is 'life'?",
+      "concepts": ["definitions of life", "NASA working definition", "edge cases"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://astrobiology.nasa.gov/research/life-detection/about/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Life",
+      "title": "How did life start from non-living chemistry?",
+      "concepts": ["prebiotic chemistry", "Miller-Urey experiment", "RNA world hypothesis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=QImCld9YubE",
+        "https://www.ncbi.nlm.nih.gov/books/NBK26876/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Life",
+      "title": "Why do hydrothermal vents matter for early life?",
+      "concepts": ["hydrothermal vents", "chemosynthesis", "metabolism-first theories"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://astrobiology.nasa.gov/news/hydrothermal-vents-and-the-origin-of-life/",
+        "https://www.youtube.com/@NASAAstrobiology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Life",
+      "title": "Could life use a different biochemistry than Earth's?",
+      "concepts": ["alternative biochemistries", "silicon-based life", "ammonia solvents"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.seti.org/alternative-biochemistries"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Life in Extreme Environments",
+      "title": "What are the limits of life on Earth?",
+      "concepts": ["extremophiles", "temperature limits", "pH limits", "pressure limits"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://astrobiology.nasa.gov/research/life-detection/extremophiles/",
+        "https://microbewiki.kenyon.edu/index.php/Extremophile"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Life in Extreme Environments",
+      "title": "How do tardigrades survive the vacuum of space?",
+      "concepts": ["tardigrades", "cryptobiosis", "anhydrobiosis", "radiation resistance"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nasa.gov/feature/ames/tardigrades",
+        "https://www.youtube.com/watch?v=7W194GQ6fHI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Life in Extreme Environments",
+      "title": "Is there life kilometers below Earth's surface?",
+      "concepts": ["deep biosphere", "subsurface microbial communities", "endoliths"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://astrobiology.nasa.gov/news/deep-biosphere/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Life in Extreme Environments",
+      "title": "What are the fundamental boundaries of life?",
+      "concepts": ["extremophile review", "habitability synthesis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://phl.upr.edu/projects/habitable-exoplanets-catalog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Habitable Worlds",
+      "title": "What makes a planet habitable?",
+      "concepts": ["habitable zone", "Goldilocks zone", "liquid water requirement"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://exoplanets.nasa.gov/what-is-an-exoplanet/about-exoplanets/",
+        "https://phl.upr.edu/projects/habitable-exoplanets-catalog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Habitable Worlds",
+      "title": "Can moons around gas giants host life?",
+      "concepts": ["tidal heating", "subsurface oceans", "orbital resonance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://solarsystem.nasa.gov/moons/jupiter-moons/europa/overview/",
+        "https://www.youtube.com/watch?v=0eZCoVjBB34"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Habitable Worlds",
+      "title": "Why does atmospheric composition tell us about habitability?",
+      "concepts": ["greenhouse gases", "atmospheric retention", "runaway greenhouse effect"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://climate.nasa.gov/news/2475/nasa-climate-modeling-suggests-venus-may-have-been-habitable/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Habitable Worlds",
+      "title": "Could life exist without water?",
+      "concepts": ["water activity", "alternative solvents", "Titan's methane lakes"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://solarsystem.nasa.gov/moons/saturn-moons/titan/overview/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Habitable Worlds",
+      "title": "How do we evaluate if a world can support life?",
+      "concepts": ["habitability checklist", "case studies"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://phl.upr.edu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Exoplanet Detection",
+      "title": "How do we find planets around other stars?",
+      "concepts": ["transit method", "radial velocity", "direct imaging"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://exoplanets.nasa.gov/alien-worlds/ways-to-find-a-planet/",
+        "https://eyes.nasa.gov/apps/exo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Exoplanet Detection",
+      "title": "What can transit data tell us about an exoplanet's atmosphere?",
+      "concepts": ["transmission spectroscopy", "atmospheric composition", "JWST observations"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.jwst.nasa.gov/content/science/origins.html",
+        "https://exoplanets.nasa.gov/news/1756/five-ways-the-james-webb-space-telescope-will-study-exoplanets/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Exoplanet Detection",
+      "title": "Why are super-Earths interesting for astrobiology?",
+      "concepts": ["super-Earths", "mini-Neptunes", "mass-radius relationship"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://exoplanets.nasa.gov/what-is-an-exoplanet/planet-types/super-earth/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Exoplanet Detection",
+      "title": "Where can you explore real exoplanet data?",
+      "concepts": ["exoplanet databases", "data interpretation", "habitability indices"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://exoplanetarchive.ipac.caltech.edu/",
+        "https://eyes.nasa.gov/apps/exo",
+        "https://phl.upr.edu/projects/habitable-exoplanets-catalog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Solar System Exploration",
+      "title": "Is there life on Mars — or was there ever?",
+      "concepts": ["ancient Mars water", "methane detection", "Perseverance rover findings"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://mars.nasa.gov/mars2020/",
+        "https://astrobiology.nasa.gov/news/searching-for-life-on-mars/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Solar System Exploration",
+      "title": "Why is Europa's ocean a top target for life?",
+      "concepts": ["Europa", "subsurface ocean", "ice shell dynamics", "plumes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://solarsystem.nasa.gov/moons/jupiter-moons/europa/overview/",
+        "https://europa.nasa.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Solar System Exploration",
+      "title": "What makes Enceladus's plumes exciting for astrobiology?",
+      "concepts": ["Enceladus", "cryovolcanism", "organics in plumes", "hydrothermal activity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://solarsystem.nasa.gov/moons/saturn-moons/enceladus/overview/",
+        "https://www.youtube.com/watch?v=bWx0mH93U1s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Solar System Exploration",
+      "title": "Which solar system worlds are the best targets for finding life?",
+      "concepts": ["Mars vs. ocean worlds", "mission priorities"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://astrobiology.nasa.gov/missions/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Searching for Life",
+      "title": "What are biosignatures and how do we detect them?",
+      "concepts": ["biosignatures", "atmospheric disequilibrium", "oxygen paradox", "false positives"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://astrobiology.nasa.gov/research/life-detection/biosignatures/",
+        "https://arxiv.org/abs/1705.07560"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Searching for Life",
+      "title": "How does SETI search for intelligent life?",
+      "concepts": ["SETI", "technosignatures", "radio signals", "Breakthrough Listen"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.seti.org/",
+        "https://breakthroughinitiatives.org/initiative/1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Searching for Life",
+      "title": "Why haven't we found aliens yet?",
+      "concepts": ["Drake equation", "Fermi paradox", "Great Filter hypothesis"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.seti.org/drake-equation",
+        "https://www.youtube.com/watch?v=sNhhvQGsMEc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Searching for Life",
+      "title": "How would you design your own astrobiology mission?",
+      "concepts": ["mission design", "target selection", "instrumentation", "constraints"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://astrobiology.nasa.gov/missions/",
+        "https://europa.nasa.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Searching for Life",
+      "title": "How do we search for life and what have we learned?",
+      "concepts": ["biosignatures review", "SETI review", "detection strategies synthesis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://astrobiology.nasa.gov/research/life-detection/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Searching for Life",
+      "title": "What's next for astrobiology?",
+      "concepts": ["future missions", "technological advances", "interdisciplinary frontiers"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://astrobiology.nasa.gov/news/",
+        "https://www.esa.int/Science_Exploration/Space_Science/Exoplanets",
+        "https://www.youtube.com/@NASAAstrobiology"
+      ],
+      "status": "pending"
+    }
+  ]
+}

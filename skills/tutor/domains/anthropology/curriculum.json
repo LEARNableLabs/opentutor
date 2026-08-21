@@ -1,0 +1,334 @@
+{
+  "topic": "Anthropology — kinship, ritual, and cultural evolution",
+  "slug": "anthropology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic understanding of culture and society",
+    "familiarity with evolutionary concepts (natural selection, adaptation)",
+    "exposure to cross-cultural comparison"
+  ],
+  "exit_criteria": [
+    "analyze kinship systems using standard terminology and theory",
+    "explain how rituals create meaning and social cohesion",
+    "evaluate competing theories of cultural evolution",
+    "apply anthropological frameworks to contemporary social phenomena",
+    "critically assess ethnographic evidence and theoretical claims",
+    "understand the relationship between biological and cultural inheritance"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do anthropologists care about kinship, ritual, and evolution?",
+      "concepts": ["anthropological questions", "cultural variation", "human universals"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21a-01-how-culture-works-fall-2012/",
+        "https://www.youtube.com/watch?v=a7xJ_qJ7iL8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do we know what we know about other cultures?",
+      "concepts": ["ethnographic method", "participant observation", "cultural relativism", "comparison"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.americananthro.org/AdvanceYourCareer/Content.aspx?ItemNumber=2150",
+        "https://courses.washington.edu/anth457/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Kinship Systems",
+      "title": "What is kinship, and why isn't it just about biology?",
+      "concepts": ["social kinship", "descent", "affinity", "fictive kin"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21a-112-culture-and-society-in-southeast-asia-spring-2006/",
+        "https://www.britannica.com/topic/kinship"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Kinship Systems",
+      "title": "Why do the Nuer trace descent through fathers, not mothers?",
+      "concepts": ["patrilineal descent", "lineages", "segmentary systems"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/2844259",
+        "https://archive.org/details/kinshipandmarria00evan"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Kinship Systems",
+      "title": "How can your mother's brother be more important than your father?",
+      "concepts": ["matrilineal descent", "avunculate", "Trobriand kinship"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.sapiens.org/culture/matrilineal-societies/",
+        "https://www.youtube.com/watch?v=TqV5E7KdXeY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Kinship Systems",
+      "title": "Why do some cultures have six words for 'cousin' while others have none?",
+      "concepts": ["kinship terminology", "classificatory systems", "cross vs parallel cousins"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Kinship_terminology",
+        "https://anthro.vancouver.wsu.edu/media/Course_files/anth-302-edward-h-hagen/kinship-terminology.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Kinship Systems",
+      "title": "Can you map and compare different kinship systems?",
+      "concepts": ["descent patterns", "terminology systems", "cross-cultural variation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://scholarblogs.emory.edu/violentimages/kinship-diagrams/",
+        "https://www.britannica.com/topic/kinship/Kinship-systems"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Kinship Systems",
+      "title": "Why do people marry their enemies instead of their friends?",
+      "concepts": ["alliance theory", "marriage exchange", "Lévi-Strauss"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/2741866",
+        "https://www.youtube.com/watch?v=Ll7y5NnMV5M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Kinship Systems",
+      "title": "What happens when kinship meets the state?",
+      "concepts": ["kinship and politics", "modern transformations", "commodification"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.annualreviews.org/doi/10.1146/annurev-anthro-092412-155505",
+        "https://www.sapiens.org/culture/kinship-studies/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Ritual and Meaning",
+      "title": "Why do societies everywhere have rituals?",
+      "concepts": ["ritual definition", "social functions", "meaning-making"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/ritual",
+        "https://www.youtube.com/watch?v=oP7mZs3D5p8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Ritual and Meaning",
+      "title": "How does a boy become a man?",
+      "concepts": ["rites of passage", "Van Gennep's model", "separation-transition-incorporation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/3773889",
+        "https://courses.lumenlearning.com/culturalanthropology/chapter/rites-of-passage/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Ritual and Meaning",
+      "title": "What happens in the space between identities?",
+      "concepts": ["liminality", "communitas", "Victor Turner", "anti-structure"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/1159789",
+        "https://www.youtube.com/watch?v=Hm5rQYLE9_E"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Ritual and Meaning",
+      "title": "Why walk on hot coals or pierce your skin?",
+      "concepts": ["costly signaling", "commitment", "group solidarity", "pain and memory"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/ritual-and-religion-in-human-evolution/E4B0F8F3C0E3C0B4C0E3C0B4C0E3C0B4",
+        "https://santafe.edu/research/results/working-papers/ritual-and-religion-in-human-evolution"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Ritual and Meaning",
+      "title": "How do rituals create meaning and hold societies together?",
+      "concepts": ["rites of passage", "liminality", "social cohesion", "costly signaling"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.americananthro.org/",
+        "https://www.sapiens.org/culture/ritual-anthropology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Ritual and Meaning",
+      "title": "How do symbols mean? The case of the Balinese cockfight",
+      "concepts": ["symbolic anthropology", "thick description", "Geertz", "interpretation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/2151264",
+        "https://genius.com/Clifford-geertz-deep-play-notes-on-the-balinese-cockfight-annotated"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Cultural Evolution",
+      "title": "If evolution is about genes, how does culture evolve?",
+      "concepts": ["dual inheritance theory", "cultural transmission", "Boyd and Richerson"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cambridge.org/core/books/not-by-genes-alone/0F394FE1D0C4E5C0E3C0B4C0E3C0B4C0E3",
+        "https://www.youtube.com/watch?v=iVhLlT7Kz4Y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Cultural Evolution",
+      "title": "Why copy the successful person, not the successful behavior?",
+      "concepts": ["prestige bias", "model-based bias", "social learning strategies"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://evolution-institute.org/focus-article/prestige-dominance-and-cultural-evolution/",
+        "https://www.eva.mpg.de/comparative-cultural-psychology/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Cultural Evolution",
+      "title": "How did humans get so smart together?",
+      "concepts": ["cumulative cultural evolution", "ratchet effect", "collective brain"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.1158062",
+        "https://www.youtube.com/watch?v=DZv8VyIQ7YU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Cultural Evolution",
+      "title": "Why are WEIRD people so weird?",
+      "concepts": ["WEIRD psychology", "kinship intensity", "institutions", "Joseph Henrich"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.apa.org/monitor/2010/05/weird",
+        "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/weirdest-people-in-the-world/BF84F7517D56AFF7B7EB58411A554C17"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Cultural Evolution",
+      "title": "Can genes and culture coevolve?",
+      "concepts": ["gene-culture coevolution", "lactase persistence", "niche construction"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/gene-culture-coevolution-127732/",
+        "https://www.annualreviews.org/doi/10.1146/annurev-anthro-092412-155554"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Cultural Evolution",
+      "title": "What mechanisms drive cultural evolution across generations?",
+      "concepts": ["transmission biases", "cumulative evolution", "coevolution", "WEIRD societies"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://culturalevolutionsociety.org/",
+        "https://www.youtube.com/watch?v=1i_TReM_zJo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Synthesis",
+      "title": "How does kinship shape ritual and cultural evolution?",
+      "concepts": ["integration", "kinship-ritual links", "transmission networks"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.journals.uchicago.edu/doi/10.1086/668207",
+        "https://www.sapiens.org/culture/anthropology-integration/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Synthesis",
+      "title": "What can anthropology tell us about contemporary social change?",
+      "concepts": ["applied anthropology", "globalization", "cultural persistence and change"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.americananthro.org/ParticipateAndAdvocate/Content.aspx?ItemNumber=1652",
+        "https://www.sapiens.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Synthesis",
+      "title": "Where do we go from here?",
+      "concepts": ["frontier questions", "methodological debates", "future directions"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.annualreviews.org/journal/anthro",
+        "https://www.cambridge.org/core/journals/evolutionary-human-sciences",
+        "https://www.currentanthropology.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

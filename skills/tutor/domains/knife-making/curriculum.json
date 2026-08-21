@@ -1,0 +1,359 @@
+{
+  "topic": "Knife making — metallurgy, heat treatment, and design",
+  "slug": "knife-making",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic metalworking",
+    "shop safety",
+    "materials science fundamentals",
+    "basic hand tool use"
+  ],
+  "exit_criteria": [
+    "select appropriate steel for a given knife application",
+    "design and execute heat treatment protocols for carbon and stainless steels",
+    "analyze blade geometry trade-offs (edge retention, strength, cutting performance)",
+    "troubleshoot common heat treatment failures (warping, soft spots, cracking)",
+    "design a complete knife from concept to specification",
+    "evaluate and correct edge geometry and grind quality"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Steel Fundamentals",
+      "title": "What makes steel hard enough to cut?",
+      "concepts": ["carbon content", "crystal structure", "hardness vs. toughness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://knifesteelnerds.com/2018/07/14/what-is-steel/",
+        "https://youtube.com/@WalterSorrellsKnives"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Steel Fundamentals",
+      "title": "Why do different steels behave so differently?",
+      "concepts": ["alloying elements", "chromium", "vanadium", "molybdenum"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://knifesteelnerds.com/2020/05/01/knife-steels-rated-by-a-metallurgist-toughness-edge-retention-and-corrosion-resistance/",
+        "https://crucible.com/resources/technical-data-sheets/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Steel Fundamentals",
+      "title": "How do I choose between carbon and stainless steel?",
+      "concepts": ["carbon steel properties", "stainless steel properties", "corrosion resistance", "ease of heat treatment"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://knifesteelnerds.com/2021/10/04/stainless-steel-or-carbon-steel-for-knives/",
+        "https://americanbladesmith.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Steel Fundamentals",
+      "title": "What steel should I use for a chef's knife vs. a bushcraft knife?",
+      "concepts": ["application requirements", "steel selection criteria", "performance trade-offs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://knifesteelnerds.com/2018/12/17/what-steel-should-i-use-for-my-knife/",
+        "https://bladeforums.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Steel Fundamentals",
+      "title": "Can you explain your steel choice to someone buying your knife?",
+      "concepts": ["steel selection reasoning", "performance expectations", "maintenance requirements"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://knifesteelnerds.com",
+        "https://reddit.com/r/Bladesmith"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Heat Treatment Theory",
+      "title": "What happens to steel when you heat it red-hot?",
+      "concepts": ["phase transformations", "austenite", "critical temperatures"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://knifesteelnerds.com/2019/04/08/why-does-steel-get-hard-when-you-heat-it-and-quench-it/",
+        "https://youtube.com/@AlecSteele"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Heat Treatment Theory",
+      "title": "What have we learned about steel fundamentals and phase changes?",
+      "concepts": ["steel composition", "alloying effects", "austenite formation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://knifesteelnerds.com/2018/07/14/what-is-steel/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Heat Treatment Theory",
+      "title": "Why does quenching make steel hard?",
+      "concepts": ["martensite formation", "quench rate", "quench media"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://knifesteelnerds.com/2018/09/10/why-does-steel-get-harder-when-you-quench-it-faster/",
+        "https://crucible.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Heat Treatment Theory",
+      "title": "What causes a blade to warp or crack during quench?",
+      "concepts": ["thermal stress", "transformation stress", "quench cracking", "warping prevention"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://knifesteelnerds.com/2020/07/27/why-do-knives-warp-when-heat-treating/",
+        "https://youtube.com/@WalterSorrellsKnives"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Heat Treatment Theory",
+      "title": "How does tempering balance hardness and toughness?",
+      "concepts": ["tempering mechanism", "carbide precipitation", "hardness-toughness trade-off"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://knifesteelnerds.com/2018/08/27/tempering-of-steel/",
+        "https://cartech.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Heat Treatment Theory",
+      "title": "Should I temper at 350°F or 450°F for my hunting knife?",
+      "concepts": ["tempering temperature selection", "target hardness", "application requirements"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://knifesteelnerds.com/2019/07/29/how-to-choose-a-tempering-temperature/",
+        "https://crucible.com/resources/technical-data-sheets/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Heat Treatment Practice",
+      "title": "What equipment do I actually need to heat treat knives?",
+      "concepts": ["heat sources", "temperature control", "quench tanks", "safety equipment"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://youtube.com/@WalterSorrellsKnives",
+        "https://www.newenglandschoolofmetalwork.com",
+        "https://americanbladesmith.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Heat Treatment Practice",
+      "title": "What are the essential principles we've covered in heat treatment theory?",
+      "concepts": ["austenite", "martensite", "quenching", "tempering"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://knifesteelnerds.com/2019/04/08/why-does-steel-get-hard-when-you-heat-it-and-quench-it/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Heat Treatment Practice",
+      "title": "How do I heat treat 1084 carbon steel step-by-step?",
+      "concepts": ["heat treatment protocol", "temperature verification", "soak time", "quench technique"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://knifesteelnerds.com/2019/02/18/metallurgy-and-heat-treatment-of-1084-steel/",
+        "https://youtube.com/@AaronGoughCom"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Heat Treatment Practice",
+      "title": "What makes stainless steel heat treatment harder than carbon steel?",
+      "concepts": ["stainless austenitizing temps", "plate quench", "sub-zero treatment", "decarburization"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://knifesteelnerds.com/2020/03/02/stainless-steel-heat-treating/",
+        "https://youtube.com/@AlecSteele"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Heat Treatment Practice",
+      "title": "Can you diagnose what went wrong with this failed heat treat?",
+      "concepts": ["troubleshooting", "failure analysis", "hardness testing", "grain size"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://knifesteelnerds.com/2020/07/27/why-do-knives-warp-when-heat-treating/",
+        "https://bladeforums.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Heat Treatment Practice",
+      "title": "How would you teach your heat treatment process to an apprentice?",
+      "concepts": ["protocol design", "quality control", "documentation", "repeatability"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://knifesteelnerds.com",
+        "https://americanbladesmith.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Blade Geometry and Design",
+      "title": "Why does edge geometry matter more than steel hardness?",
+      "concepts": ["edge angle", "apex geometry", "cutting performance", "edge stability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://knifesteelnerds.com/2018/06/18/what-is-the-best-knife-steel/",
+        "https://youtube.com/@WalterSorrellsKnives"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Blade Geometry and Design",
+      "title": "How do steel selection, heat treatment, and edge geometry connect?",
+      "concepts": ["steel selection", "heat treatment", "edge geometry"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://knifesteelnerds.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Blade Geometry and Design",
+      "title": "What's the difference between a hollow grind and a flat grind?",
+      "concepts": ["grind types", "hollow grind", "flat grind", "convex grind", "scandi grind"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://knifesteelnerds.com/2019/09/16/what-is-the-best-grind-for-knives/",
+        "https://youtube.com/@AaronGoughCom"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Blade Geometry and Design",
+      "title": "How do blade profile and grind work together?",
+      "concepts": ["blade profiles", "grind selection", "cutting tasks", "design integration"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://youtube.com/@WalterSorrellsKnives",
+        "https://britishblades.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Blade Geometry and Design",
+      "title": "Why does this knife cut better even though it's the same steel?",
+      "concepts": ["geometry optimization", "edge-to-spine taper", "distal taper", "blade thickness"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://knifesteelnerds.com/2019/02/25/edge-geometry-and-cutting-performance/",
+        "https://youtube.com/@AaronGoughCom"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration and Mastery",
+      "title": "How would you design a knife for a specific task from scratch?",
+      "concepts": ["design requirements", "steel selection", "geometry specification", "heat treatment planning"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://knifesteelnerds.com",
+        "https://americanbladesmith.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration and Mastery",
+      "title": "What are the top 3 mistakes you see beginner knifemakers make?",
+      "concepts": ["common errors", "quality control", "learning from mistakes"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://reddit.com/r/Bladesmith",
+        "https://bladeforums.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration and Mastery",
+      "title": "What does a complete knife design workflow look like from start to finish?",
+      "concepts": ["steel selection", "heat treatment", "geometry", "troubleshooting"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://knifesteelnerds.com",
+        "https://youtube.com/@WalterSorrellsKnives"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration and Mastery",
+      "title": "How would you improve this knife design?",
+      "concepts": ["design critique", "performance optimization", "manufacturability", "aesthetics vs. function"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://knifesteelnerds.com",
+        "https://americanbladesmith.com",
+        "https://bladeforums.com"
+      ],
+      "status": "pending"
+    }
+  ]
+}

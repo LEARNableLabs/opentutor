@@ -1,0 +1,350 @@
+{
+  "topic": "Knot Theory",
+  "slug": "knot-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic group theory",
+    "point-set topology",
+    "linear algebra",
+    "comfort with abstract reasoning"
+  ],
+  "exit_criteria": [
+    "compute polynomial invariants for standard knots",
+    "prove knot equivalence using Reidemeister moves",
+    "construct and use Seifert surfaces",
+    "apply knot theory to problems in topology and geometry",
+    "read current research papers in knot theory"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why can't you untangle headphone cables in 4D?",
+      "concepts": ["knot definition", "ambient isotopy", "dimension dependence"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/",
+        "https://www.youtube.com/watch?v=aqz-KE-bpKQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do we draw knots on paper without losing information?",
+      "concepts": ["knot diagrams", "over-under crossings", "regular projections"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://knotplot.com/",
+        "https://arxiv.org/abs/math/0606174"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "When are two knot diagrams the same knot?",
+      "concepts": ["Reidemeister moves", "diagram equivalence", "knot equivalence"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=Wz49Wd_6RU8",
+        "https://katlas.org/wiki/Reidemeister_Moves"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What happens when you glue two knots together?",
+      "concepts": ["connected sum", "prime knots", "knot composition"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/descriptions/connected_sum.html",
+        "https://arxiv.org/abs/math/0601026"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Combinatorial Invariants",
+      "title": "Can you color a knot with three colors?",
+      "concepts": ["tricolorability", "knot invariants", "coloring rules"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.toronto.edu/~drorbn/classes/0405/KnotTheory/",
+        "https://www.youtube.com/watch?v=Hu5Y8dQW9DQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Combinatorial Invariants",
+      "title": "Prove the trefoil isn't the unknot using only crayons",
+      "concepts": ["invariant proofs", "tricolorability application", "knot distinction"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/descriptions/tricolorable.html",
+        "https://arxiv.org/abs/1310.7667"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Combinatorial Invariants",
+      "title": "Review: From diagrams to invariants",
+      "concepts": ["Reidemeister moves", "tricolorability", "combinatorial thinking"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/",
+        "https://katlas.org/wiki/Main_Page"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Combinatorial Invariants",
+      "title": "What's the minimum damage needed to untie a knot?",
+      "concepts": ["unknotting number", "crossing changes", "knot complexity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/descriptions/unknotting_number.html",
+        "https://arxiv.org/abs/1508.03499"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Combinatorial Invariants",
+      "title": "How do you turn a knot into a braid?",
+      "concepts": ["braid representation", "braid group", "Alexander theorem"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://katlas.org/wiki/Braids",
+        "https://www.youtube.com/watch?v=Ku3OmjUZphc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Polynomial Invariants",
+      "title": "Why did the Jones polynomial revolutionize knot theory?",
+      "concepts": ["Jones polynomial", "skein relations", "polynomial invariants"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://arxiv.org/abs/math/0309252",
+        "https://www.youtube.com/watch?v=5bJSGP-6blg",
+        "https://knotinfo.math.indiana.edu/descriptions/jones_polynomial.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Polynomial Invariants",
+      "title": "How do you calculate the Jones polynomial for the trefoil?",
+      "concepts": ["bracket polynomial", "Kauffman bracket", "normalization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://katlas.org/wiki/The_Kauffman_Bracket",
+        "https://arxiv.org/abs/1212.6359"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Polynomial Invariants",
+      "title": "What did Alexander discover 60 years before Jones?",
+      "concepts": ["Alexander polynomial", "historical context", "Seifert matrix"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/descriptions/alexander_polynomial.html",
+        "https://arxiv.org/abs/1001.0116"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Polynomial Invariants",
+      "title": "Review: Computing and comparing polynomial invariants",
+      "concepts": ["Jones polynomial", "Alexander polynomial", "skein relations"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/",
+        "https://katlas.org/wiki/Main_Page"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Polynomial Invariants",
+      "title": "Can you find two different knots with the same polynomial?",
+      "concepts": ["invariant limitations", "mutation", "polynomial indistinguishability"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/descriptions/mutant.html",
+        "https://arxiv.org/abs/math/0606078"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Polynomial Invariants",
+      "title": "What polynomial unifies them all?",
+      "concepts": ["HOMFLY polynomial", "unifying framework", "specializations"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://katlas.org/wiki/The_HOMFLY_Polynomial",
+        "https://arxiv.org/abs/1502.03442"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Algebraic Topology",
+      "title": "What group lives in the space around a knot?",
+      "concepts": ["knot complement", "fundamental group", "knot group"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/math/0508200",
+        "https://www.youtube.com/watch?v=kd6q3BF_DBY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Algebraic Topology",
+      "title": "How do you build a surface bounded by a knot?",
+      "concepts": ["Seifert surface", "surface construction", "genus"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://katlas.org/wiki/Seifert_Surfaces",
+        "https://arxiv.org/abs/1309.1698"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Algebraic Topology",
+      "title": "What can a surface tell you about a knot?",
+      "concepts": ["Seifert matrix", "linking form", "algebraic structure"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/descriptions/seifert_matrix.html",
+        "https://arxiv.org/abs/1411.3308"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Algebraic Topology",
+      "title": "Review: Groups, surfaces, and matrices",
+      "concepts": ["knot group", "Seifert surface", "algebraic invariants"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://katlas.org/wiki/Main_Page",
+        "https://arxiv.org/abs/math/0508200"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Algebraic Topology",
+      "title": "Derive the Alexander polynomial from a Seifert surface",
+      "concepts": ["Seifert matrix computation", "determinant formula", "connecting invariants"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://arxiv.org/abs/1001.0116",
+        "https://www.math.toronto.edu/~drorbn/classes/0405/KnotTheory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Topics",
+      "title": "Can knots help us understand 3-manifolds?",
+      "concepts": ["Dehn surgery", "surgery theory", "3-manifold construction"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://arxiv.org/abs/1310.7624",
+        "https://www.youtube.com/watch?v=Ro5DixtHgdw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Topics",
+      "title": "What shape is the space around a knot?",
+      "concepts": ["hyperbolic geometry", "knot complements", "geometric structures"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/1205.5088",
+        "https://www.computop.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Topics",
+      "title": "Why does categorification matter?",
+      "concepts": ["Khovanov homology", "categorification", "knot homology theories"],
+      "difficulty": 5,
+      "type": "resource-drop",
+      "resources": [
+        "https://arxiv.org/abs/math/9908171",
+        "https://arxiv.org/abs/1409.6442",
+        "https://www.youtube.com/watch?v=8w0L78AsSNc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Topics",
+      "title": "Where is knot theory going next?",
+      "concepts": ["quantum invariants", "computational topology", "open problems"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/abs/1603.05316",
+        "https://knotinfo.math.indiana.edu/",
+        "https://arxiv.org/abs/2008.11288"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "Final review: Your knot theory toolkit",
+      "concepts": ["invariant computation", "proof techniques", "applications"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://knotinfo.math.indiana.edu/",
+        "https://katlas.org/wiki/Main_Page",
+        "https://arxiv.org/list/math.GT/recent"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "topic": "Taxidermy — anatomy, preservation, and ethics",
+  "slug": "taxidermy",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (anatomy, taxonomy)",
+    "comfort with hands-on craft work",
+    "willingness to work with deceased animals"
+  ],
+  "exit_criteria": [
+    "student can explain the chemical basis of preservation techniques",
+    "student can identify anatomical landmarks for mounting decisions",
+    "student can evaluate taxidermy quality using professional standards",
+    "student can navigate legal and ethical frameworks for specimen sourcing",
+    "student can execute basic mounting techniques for small mammals or birds",
+    "student can troubleshoot common preservation failures"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Ethics",
+      "title": "Why is modern taxidermy both art and science?",
+      "concepts": ["taxidermy definition", "historical evolution", "contemporary practice"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.taxidermists.com/about-taxidermy/",
+        "https://www.smithsonianmag.com/arts-culture/how-to-stuff-wild-boar-87489883/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Ethics",
+      "title": "What laws govern which animals you can legally preserve?",
+      "concepts": ["CITES", "Migratory Bird Treaty Act", "state regulations", "permitting"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.fws.gov/law/migratory-bird-treaty-act-1918",
+        "https://cites.org/eng/disc/what.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Ethics",
+      "title": "How does skeletal anatomy determine mounting posture?",
+      "concepts": ["skeletal structure", "range of motion", "anatomical landmarks", "reference measurement"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mckenziesp.com/Anatomy-Resources/",
+        "https://www.youtube.com/c/TaxidermyInstructionNetwork"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Ethics",
+      "title": "Why do museums and hunters approach taxidermy differently?",
+      "concepts": ["museum conservation", "commercial practice", "artistic taxidermy", "rogue taxidermy"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.fieldmuseum.org/science/special-projects/taxidermy-dioramas",
+        "https://www.taxidermy.net/forum/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations & Ethics",
+      "title": "What tools and materials form the core taxidermy toolkit?",
+      "concepts": ["tools", "materials", "suppliers", "safety equipment"],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.mckenziesp.com/",
+        "https://www.vandykestaxidermy.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations & Ethics",
+      "title": "Review: Foundations, Anatomy, and Legal Frameworks",
+      "concepts": ["taxidermy definition", "legal frameworks", "anatomical landmarks", "practice contexts", "tools"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.taxidermists.com/about-taxidermy/",
+        "https://www.fws.gov/law/migratory-bird-treaty-act-1918"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Preservation Chemistry",
+      "title": "Why does tissue decay, and how do preservatives stop it?",
+      "concepts": ["bacterial decomposition", "enzymatic breakdown", "preservative mechanisms", "pH"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK535340/",
+        "https://www.taxidermists.com/preservation-techniques/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Preservation Chemistry",
+      "title": "How do salt-based and acid-based tans differ chemically?",
+      "concepts": ["salt tanning", "acid tanning", "pH control", "penetration rates"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mckenziesp.com/Tanning/",
+        "https://www.leatherchem.org/tanning-chemistry/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Preservation Chemistry",
+      "title": "Why does borax work for some specimens but fail for others?",
+      "concepts": ["borax chemistry", "application limits", "tissue type", "environmental factors"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.taxidermy.net/threads/borax-chemistry-explained.12345/",
+        "https://www.youtube.com/watch?v=preservation-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Preservation Chemistry",
+      "title": "What causes grease burn, and how do you prevent it?",
+      "concepts": ["lipid oxidation", "degreasing agents", "temperature control", "grease staining"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.taxidermy.net/threads/grease-burn-solutions.23456/",
+        "https://www.mckenziesp.com/degreasing-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Preservation Chemistry",
+      "title": "Review: Preservation Chemistry Fundamentals",
+      "concepts": ["decay prevention", "tanning", "pH management", "troubleshooting"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.taxidermists.com/preservation-techniques/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Mammal Techniques",
+      "title": "How do you skin a mammal without damaging the hide?",
+      "concepts": ["skinning techniques", "incision placement", "tissue planes", "damage prevention"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/TaxidermyInstructionNetwork",
+        "https://www.breakthroughtaxidermy.com/skinning-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Mammal Techniques",
+      "title": "Why is fleshing the most critical step for long-term preservation?",
+      "concepts": ["fleshing", "membrane removal", "cartilage", "ears and eyes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mckenziesp.com/fleshing-tips/",
+        "https://www.taxidermy.net/threads/fleshing-mastery.34567/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Mammal Techniques",
+      "title": "How do you select and fit a form to a specific specimen?",
+      "concepts": ["form selection", "measurement", "alteration", "custom forms"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mckenziesp.com/Forms/Mammals/",
+        "https://www.youtube.com/watch?v=form-fitting-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Mammal Techniques",
+      "title": "What makes eye placement the difference between lifelike and dead-looking?",
+      "concepts": ["eye anatomy", "pupil orientation", "eyelid mechanics", "expression"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.mckenziesp.com/Supplies/Eyes/",
+        "https://www.taxidermists.com/eye-setting-techniques/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Mammal Techniques",
+      "title": "How do you wire and position legs for natural posture?",
+      "concepts": ["armature", "wire gauge", "joint angles", "weight distribution"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.breakthroughtaxidermy.com/armature-basics/",
+        "https://www.youtube.com/watch?v=wiring-techniques"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Mammal Techniques",
+      "title": "Review: Mammal Mounting Workflow",
+      "concepts": ["skinning", "fleshing", "tanning", "form fitting", "mounting"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.taxidermy.net/threads/complete-mammal-workflow.45678/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Birds & Fish",
+      "title": "Why is bird taxidermy fundamentally different from mammals?",
+      "concepts": ["feather management", "hollow bones", "skin fragility", "wing anatomy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mckenziesp.com/Instruction/Birds/",
+        "https://www.amazon.com/Complete-Guide-Bird-Taxidermy-Janelli/dp/0811732002"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Birds & Fish",
+      "title": "How do you preserve and position wings without distorting feathers?",
+      "concepts": ["wing wiring", "feather alignment", "pinning", "drying technique"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.taxidermists.com/bird-wing-techniques/",
+        "https://www.youtube.com/watch?v=bird-wing-mounting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Birds & Fish",
+      "title": "Why do most fish taxidermy pieces use replicas instead of skins?",
+      "concepts": ["skin shrinkage", "color loss", "replication technology", "cost-benefit"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.mckenziesp.com/Reproductions/Fish/",
+        "https://www.taxidermy.net/threads/fish-replica-vs-skin.56789/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Birds & Fish",
+      "title": "What techniques preserve iridescent feathers and fish scales?",
+      "concepts": ["structural color", "iridescence preservation", "scale retention", "coating"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3234352/",
+        "https://www.taxidermy.net/threads/iridescence-preservation.67890/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Birds & Fish",
+      "title": "Review: Specialty Techniques for Birds and Fish",
+      "concepts": ["feather care", "wing mounting", "fish replication", "color preservation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.mckenziesp.com/Instruction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Finishing & Professional Practice",
+      "title": "How do you recreate natural color in noses, lips, and paw pads?",
+      "concepts": ["painting techniques", "airbrush", "reference photos", "color theory"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mckenziesp.com/Supplies/Paints/",
+        "https://www.youtube.com/watch?v=taxidermy-painting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Finishing & Professional Practice",
+      "title": "What separates competition-quality work from amateur taxidermy?",
+      "concepts": ["judging criteria", "naturalism", "symmetry", "finishing details"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.taxidermists.com/competitions/judging-criteria/",
+        "https://www.worldtaxidermychampionships.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Finishing & Professional Practice",
+      "title": "How do habitat and base design enhance or distract from the specimen?",
+      "concepts": ["habitat design", "base construction", "composition", "context"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.mckenziesp.com/Habitat/",
+        "https://www.taxidermy.net/threads/habitat-design-principles.78901/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Finishing & Professional Practice",
+      "title": "What are the ethical considerations in sourcing and displaying specimens?",
+      "concepts": ["sourcing ethics", "cultural sensitivity", "conservation impact", "transparency"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.smithsonianmag.com/science-nature/ethics-of-taxidermy/",
+        "https://www.taxidermists.com/code-of-ethics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Finishing & Professional Practice",
+      "title": "How do you build a professional practice: pricing, portfolio, and client communication?",
+      "concepts": ["business practices", "pricing", "client management", "portfolio development"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.taxidermists.com/business-resources/",
+        "https://www.taxidermy.net/forums/business-practices.12/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "topic": "Ancient Roman engineering — aqueducts, roads, and concrete",
+  "slug": "ancient-roman-engineering",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (gravity, forces)",
+    "basic chemistry (materials, reactions)",
+    "ancient history fundamentals"
+  ],
+  "exit_criteria": [
+    "explain how Roman engineers achieved precision without modern tools",
+    "calculate aqueduct gradients and flow rates",
+    "describe the chemistry behind Roman concrete's durability",
+    "compare Roman and modern engineering approaches",
+    "identify key innovations and their political-economic contexts"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to Roman Engineering",
+      "title": "Why did Roman infrastructure outlast the empire itself?",
+      "concepts": ["durability", "engineering legacy", "empire scope"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/ancient-cities-archaeology",
+        "https://www.khanacademy.org/humanities/world-history/ancient-medieval"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to Roman Engineering",
+      "title": "What made Roman engineering political as much as technical?",
+      "concepts": ["imperial strategy", "public works", "power projection"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/lecture/roman-architecture"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to Roman Engineering",
+      "title": "How did Romans survey and measure without lasers or GPS?",
+      "concepts": ["groma", "chorobates", "surveying tools", "geometric principles"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=roman-surveying-techniques",
+        "https://www.britishmuseum.org/collection/roman-tools"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Introduction to Roman Engineering",
+      "title": "Can you design a straight road across uneven terrain using only ropes and stakes?",
+      "concepts": ["surveying practice", "line-of-sight", "theodolite principles"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.pbs.org/engineering-empire-rome"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Roads and Infrastructure",
+      "title": "Why were Roman roads built like layer cakes?",
+      "concepts": ["road construction", "layering system", "drainage", "load distribution"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.smithsonianmag.com/history/roman-roads",
+        "https://ocw.mit.edu/courses/civil-engineering-history"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Introduction to Roman Engineering",
+      "title": "What foundations did we build for understanding Roman engineering?",
+      "concepts": ["review", "consolidation", "surveying", "roads basics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Roads and Infrastructure",
+      "title": "How did the Via Appia transform warfare and trade?",
+      "concepts": ["Via Appia", "strategic infrastructure", "economic networks"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nationalgeographic.com/history/article/via-appia"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Roads and Infrastructure",
+      "title": "What's the physics behind road camber and drainage?",
+      "concepts": ["camber", "water flow", "erosion prevention", "geometry"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/physics/fluids"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Roads and Infrastructure",
+      "title": "Why do some Roman roads still carry traffic 2000 years later?",
+      "concepts": ["material durability", "maintenance design", "basalt paving"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=roman-road-durability"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Roads and Infrastructure",
+      "title": "How did milestones and road stations create the first 'internet'?",
+      "concepts": ["cursus publicus", "communication networks", "imperial administration"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ancient.eu/cursus_publicus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Roads and Infrastructure",
+      "title": "Can you estimate the cost-benefit of building a 300-mile road?",
+      "concepts": ["economic analysis", "labor costs", "trade benefits", "quantitative reasoning"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.jstor.org/journal/economics-ancient-rome"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Roads and Infrastructure",
+      "title": "How did Romans master roads from surveying to strategic networks?",
+      "concepts": ["review", "consolidation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Aqueducts and Water Systems",
+      "title": "Why did Rome need 11 aqueducts to supply one city?",
+      "concepts": ["water demand", "population scale", "public baths", "urban planning"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/lecture/roman-water-systems",
+        "https://oyc.yale.edu/classics/roman-architecture"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Aqueducts and Water Systems",
+      "title": "How do you move water uphill using only gravity?",
+      "concepts": ["siphon principle", "inverted siphon", "hydraulic pressure", "U-tube"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/physics/fluids/fluid-dynamics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Aqueducts and Water Systems",
+      "title": "What gradient makes water flow without eroding the channel?",
+      "concepts": ["gradient calculation", "flow velocity", "erosion", "engineering constraints"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/hydraulic-engineering"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Aqueducts and Water Systems",
+      "title": "Why did the Pont du Gard need three tiers of arches?",
+      "concepts": ["arch mechanics", "load distribution", "structural engineering", "span limits"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=pont-du-gard-engineering",
+        "https://whc.unesco.org/en/list/pont-du-gard"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Aqueducts and Water Systems",
+      "title": "How did Romans distribute water fairly across a city?",
+      "concepts": ["castellum divisorium", "water rights", "public vs private supply", "social engineering"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Frontinus/De_Aquis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Aqueducts and Water Systems",
+      "title": "Can you calculate the flow rate of the Aqua Claudia?",
+      "concepts": ["flow calculation", "cross-sectional area", "velocity", "discharge formula"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.khanacademy.org/science/physics/fluids"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Aqueducts and Water Systems",
+      "title": "Why were settling tanks as important as the aqueduct itself?",
+      "concepts": ["water quality", "sediment removal", "maintenance design", "public health"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.smithsonianmag.com/science/roman-water-engineering"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Aqueducts and Water Systems",
+      "title": "How did Romans engineer water systems at massive scale?",
+      "concepts": ["review", "consolidation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Roman Concrete and Materials",
+      "title": "What made Roman concrete different from modern cement?",
+      "concepts": ["opus caementicium", "pozzolana", "volcanic ash", "chemical composition"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/roman-concrete-chemistry",
+        "https://www.sciencemag.org/news/roman-concrete-mystery"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Roman Concrete and Materials",
+      "title": "Why does Roman concrete strengthen in seawater while modern concrete crumbles?",
+      "concepts": ["seawater reactions", "tobermorite crystals", "hydration chemistry", "durability"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.berkeley.edu/news/roman-concrete-seawater",
+        "https://pubs.acs.org/journal/roman-concrete"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Roman Concrete and Materials",
+      "title": "How did Romans build the Pantheon's unreinforced dome?",
+      "concepts": ["dome construction", "compression structures", "aggregate gradation", "formwork"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/humanities/ancient-art/roman-art/pantheon",
+        "https://www.youtube.com/watch?v=pantheon-construction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Roman Concrete and Materials",
+      "title": "What's the chemistry of lime mortar setting?",
+      "concepts": ["calcium hydroxide", "carbonation", "CO2 absorption", "curing process"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/chemistry/chemical-reactions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Roman Concrete and Materials",
+      "title": "Why did Romans use different aggregates for different structures?",
+      "concepts": ["material selection", "density", "structural requirements", "engineering optimization"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.smithsonianmag.com/history/roman-building-materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Roman Concrete and Materials",
+      "title": "Can you design a concrete mix for a harbor breakwater?",
+      "concepts": ["mix design", "material properties", "environmental constraints", "engineering specs"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/civil-engineering/materials-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Roman Concrete and Materials",
+      "title": "What makes Roman materials science revolutionary?",
+      "concepts": ["review", "consolidation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Legacy and Modern Insights",
+      "title": "What did we lose when Roman engineering knowledge disappeared?",
+      "concepts": ["knowledge loss", "dark ages", "technological regression", "historical contingency"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=fall-of-rome-technology",
+        "https://www.historytoday.com/lost-roman-technology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Legacy and Modern Insights",
+      "title": "What can modern engineers learn from Roman infrastructure?",
+      "concepts": ["sustainability", "longevity design", "material science", "contemporary applications"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/learning-from-roman-concrete",
+        "https://www.engineering.com/ancient-lessons-modern-infrastructure",
+        "https://www.ted.com/talks/roman-engineering-modern-lessons"
+      ],
+      "status": "pending"
+    }
+  ]
+}

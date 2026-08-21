@@ -1,0 +1,338 @@
+{
+  "topic": "Optics — classical and quantum",
+  "slug": "optics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "linear algebra",
+    "basic electromagnetism",
+    "introductory quantum mechanics"
+  ],
+  "exit_criteria": [
+    "explain wave interference and diffraction using Maxwell's equations",
+    "design and analyze interferometers and diffraction experiments",
+    "describe light using quantum states (Fock, coherent, squeezed)",
+    "model light-matter interaction for two-level systems",
+    "understand photon statistics and correlation functions",
+    "explain applications in quantum cryptography and quantum information"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Wave Optics Foundations",
+      "title": "What is light, really?",
+      "concepts": ["electromagnetic waves", "Maxwell equations", "wave equation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/",
+        "https://www.feynmanlectures.caltech.edu/II_18.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Wave Optics Foundations",
+      "title": "Why do waves add and subtract?",
+      "concepts": ["superposition principle", "phase", "constructive interference"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/wave-interference"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Wave Optics Foundations",
+      "title": "How do we describe the wiggle direction of light?",
+      "concepts": ["polarization", "Jones vectors", "linear and circular polarization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.animations.physics.unsw.edu.au/jw/light/polarisation.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Interference",
+      "title": "Why do soap bubbles show rainbows?",
+      "concepts": ["thin film interference", "optical path length", "phase shift"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/resources/interference-of-electromagnetic-waves/",
+        "https://www.youtube.com/watch?v=6vFMo-kP7-c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Interference",
+      "title": "What made Young's double slit experiment revolutionary?",
+      "concepts": ["double-slit interference", "fringe pattern", "wave-particle duality"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=Iuv6hY6zsd0",
+        "https://phet.colorado.edu/en/simulations/quantum-wave-interference"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Interference",
+      "title": "How does a Michelson interferometer measure tiny distances?",
+      "concepts": ["Michelson interferometer", "beam splitters", "path difference"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Interference",
+      "title": "How would you design an interferometer?",
+      "concepts": ["interferometer applications", "LIGO", "measurement precision"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ligo.caltech.edu/page/what-is-interferometer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Interference",
+      "title": "Review: Wave Optics and Interference",
+      "concepts": ["waves", "polarization", "interference"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Diffraction and Coherence",
+      "title": "Why does light bend around corners?",
+      "concepts": ["Huygens-Fresnel principle", "wavefronts", "secondary sources"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/resources/diffraction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Diffraction and Coherence",
+      "title": "Single slit vs double slit — what changes?",
+      "concepts": ["single-slit diffraction", "diffraction envelope", "interference vs diffraction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=Iuv6hY6zsd0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Diffraction and Coherence",
+      "title": "How do CDs and DVDs store data using light?",
+      "concepts": ["diffraction gratings", "spectroscopy", "grating equation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://hyperphysics.phy-astr.gsu.edu/hbase/phyopt/grating.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Diffraction and Coherence",
+      "title": "What makes light 'coherent'?",
+      "concepts": ["temporal coherence", "spatial coherence", "coherence length"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Diffraction and Coherence",
+      "title": "Review: Diffraction and Coherence",
+      "concepts": ["diffraction", "gratings", "coherence"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Quantum Foundations",
+      "title": "Why do we need to quantize light?",
+      "concepts": ["photoelectric effect", "photons", "energy quantization"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.feynmanlectures.caltech.edu/III_04.html",
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Quantum Foundations",
+      "title": "What is a Fock state?",
+      "concepts": ["number states", "Fock states", "creation and annihilation operators"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/",
+        "https://arxiv.org/abs/quant-ph/0505193"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Quantum Foundations",
+      "title": "How are coherent states different from Fock states?",
+      "concepts": ["coherent states", "minimum uncertainty", "quadrature operators"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Quantum Foundations",
+      "title": "How do we measure photon shot noise?",
+      "concepts": ["shot noise", "photon counting", "quantum fluctuations"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=qFBP8lYGSIg",
+        "https://qutip.org/docs/latest/guide/guide-states.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Quantum Foundations",
+      "title": "Review: Quantum States of Light",
+      "concepts": ["photons", "Fock states", "coherent states"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Light-Matter Interaction",
+      "title": "How does an atom absorb a photon?",
+      "concepts": ["two-level system", "dipole interaction", "transition rates"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/",
+        "https://www.youtube.com/watch?v=ZqkL_ZLQ7W0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Light-Matter Interaction",
+      "title": "What are Rabi oscillations?",
+      "concepts": ["Rabi frequency", "oscillations", "resonance"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Light-Matter Interaction",
+      "title": "What distinguishes the Jaynes-Cummings model from classical light-matter interaction?",
+      "concepts": ["Jaynes-Cummings model", "vacuum Rabi splitting", "cavity QED"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-422-atomic-and-optical-physics-ii-spring-2013/",
+        "https://arxiv.org/abs/quant-ph/0604169"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Light-Matter Interaction",
+      "title": "How would you explain spontaneous emission to a friend?",
+      "concepts": ["spontaneous emission", "vacuum fluctuations", "Einstein A coefficient"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Quantum Effects and Applications",
+      "title": "Why do photons bunch or antibunch?",
+      "concepts": ["photon statistics", "g^(2) correlation", "bunching and antibunching"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=zcqZHYo7ONs",
+        "https://arxiv.org/abs/1504.00408"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Quantum Effects and Applications",
+      "title": "How does quantum cryptography keep secrets?",
+      "concepts": ["BB84 protocol", "quantum key distribution", "no-cloning theorem"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=LaOHRoGwVEw",
+        "https://qiskit.org/textbook/ch-algorithms/quantum-key-distribution.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Quantum Effects and Applications",
+      "title": "What's happening now in quantum optics?",
+      "concepts": ["entanglement", "quantum computing", "squeezed light"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nobelprize.org/prizes/physics/2022/summary/",
+        "https://arxiv.org/abs/1809.01478",
+        "https://www.youtube.com/watch?v=g_IaVepNDT4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Quantum Effects and Applications",
+      "title": "Review: From Classical Waves to Quantum Light",
+      "concepts": ["interference", "quantization", "light-matter interaction", "applications"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "topic": "Historical European Martial Arts (HEMA)",
+  "slug": "hema",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Basic understanding of medieval/Renaissance European history",
+    "Familiarity with sword terminology (blade, hilt, guard, etc.)",
+    "Physical ability to practice basic movements safely",
+    "Interest in historical combat systems or martial arts"
+  ],
+  "exit_criteria": [
+    "Can interpret a simple historical fencing treatise passage",
+    "Understands major German and Italian martial traditions",
+    "Can explain core timing and measure concepts (Vor/Nach, tempo)",
+    "Can identify key historical masters and their contributions",
+    "Understands the difference between historical reconstruction and modern sport fencing"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundation",
+      "title": "Why do medieval fight books look so weird?",
+      "concepts": ["manuscript interpretation", "visual language", "period illustration conventions"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["Wiktenauer MS I.33 images", "YouTube: Scholagladiatoria - Reading Fight Books"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundation",
+      "title": "What makes a historical source trustworthy?",
+      "concepts": ["source criticism", "provenance", "dating methods", "authorship attribution"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["Wiktenauer source dating guide", "HEMA Alliance source evaluation checklist"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundation",
+      "title": "Who was teaching sword fighting in 1400, and why should we care?",
+      "concepts": ["historical masters", "Liechtenauer tradition", "Fiore dei Liberi", "transmission lineages"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["Fiore's Fior di Battaglia overview", "Liechtenauer Society introduction", "Map of major fight book authors"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "German Longsword",
+      "title": "What does 'Indes' actually mean, and why do HEMA people argue about it?",
+      "concepts": ["Indes", "timing theory", "simultaneity", "German fencing vocabulary"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["Christian Tobler - Art of Longsword Fighting (Indes chapter)", "YouTube: Blood and Iron - Indes Breakdown"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "German Longsword",
+      "title": "How do you read a cryptic German verse about sword fighting?",
+      "concepts": ["Merkverse", "mnemonic poetry", "gloss interpretation", "Liechtenauer's Zettel"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["Liechtenauer Zettel with modern gloss", "Ringeck manuscript translation"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "German Longsword",
+      "title": "Vor and Nach: who moves first, and why does it matter?",
+      "concepts": ["Vor", "Nach", "initiative", "tactical decision-making", "tempo"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Meyer's Art of Combat - Vor/Nach sections", "YouTube: Akademia Szermierzy - Timing Drills"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Review",
+      "title": "Can you spot the timing principles in this sparring video?",
+      "concepts": ["Indes", "Vor/Nach", "tempo", "video analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["Longpoint tournament footage", "HEMA Scorecard match videos"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Italian Tradition",
+      "title": "Why does Italian rapier fencing look so different from German longsword?",
+      "concepts": ["weapon evolution", "civilian vs military", "dueling culture", "Italian vs German pedagogy"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["Capo Ferro's Gran Simulacro", "The Secret History of the Sword (Amberger)"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Italian Tradition",
+      "title": "What's the difference between measure and tempo in Italian fencing theory?",
+      "concepts": ["misura", "tempo", "Italian fencing vocabulary", "distance management"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Fabris - Lo Schermo (measure sections)", "YouTube: Scholagladiatoria - Italian Measure"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Italian Tradition",
+      "title": "How do you interpret a Fiore dei Liberi diagram?",
+      "concepts": ["Fiore's system", "sequential diagrams", "segno", "guards and actions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["Fiore manuscript digitized", "Guy Windsor - Swordsman's Companion"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Blade Mechanics",
+      "title": "What happens when two swords touch?",
+      "concepts": ["binding", "winding", "blade engagement", "leverage principles"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["Meyer - winding sections", "YouTube: Blood and Iron - Winding Tutorial"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Blade Mechanics",
+      "title": "Why do some guards feel strong and others feel weak?",
+      "concepts": ["strong and weak of blade", "Starke/Schwäche", "mechanical advantage", "guard structure"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Tobler - Longsword (blade mechanics chapter)", "Diagram of blade sections"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Review",
+      "title": "Compare: how do German and Italian sources describe blade engagement?",
+      "concepts": ["binding", "winding", "cross-tradition comparison", "terminology differences"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["Liechtenauer glosses vs Fiore text side-by-side", "Comparative HEMA analysis articles"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Cross-Weapon Principles",
+      "title": "Can longsword principles work with a dagger?",
+      "concepts": ["weapon scaling", "universal principles", "adaptation", "German wrestling treatises"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["Ott wrestling manual", "Meyer dagger sections", "YouTube: Multi-weapon principle demonstrations"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Cross-Weapon Principles",
+      "title": "What did medieval masters teach first: wrestling, dagger, or sword?",
+      "concepts": ["pedagogical progression", "Bloßfechten", "armored vs unarmored", "master systems"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Fiore's pedagogical order", "Liechtenauer tradition structure", "Teaching progression debate articles"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Historical Context",
+      "title": "Who actually used these techniques: nobles, soldiers, or everyone?",
+      "concepts": ["social context", "martial culture", "guild systems", "Fechtschulen", "class distinctions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["HEMA Alliance - Historical Context articles", "Academic papers on martial guilds"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Historical Context",
+      "title": "How did armor change fencing techniques?",
+      "concepts": ["armored combat", "unarmored combat", "half-swording", "weapon evolution", "tactical adaptation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Talhoffer armored combat sections", "YouTube: Scholagladiatoria - Armored Fighting"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Modern Interpretation",
+      "title": "Why do two HEMA schools teach the same source differently?",
+      "concepts": ["interpretation methodology", "living tradition vs reconstruction", "experimental archaeology", "instructor lineages"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["WMA forums - interpretation debates", "YouTube: Comparison videos of different interpretations"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Review",
+      "title": "What's your interpretation: analyze this ambiguous treatise passage",
+      "concepts": ["source interpretation", "evidence weighing", "experimentation", "argumentation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["Selected treatise passage with multiple interpretations", "Academic HEMA interpretation methods"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Modern Practice",
+      "title": "Is HEMA a sport, historical research, or martial art?",
+      "concepts": ["identity debates", "sport vs historical accuracy", "tournament culture", "research communities"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["HEMA Alliance mission statement", "Reddit r/wma community discussions", "Tournament rulebooks"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Modern Practice",
+      "title": "How do you train safely for something designed to kill?",
+      "concepts": ["safety protocols", "equipment standards", "intensity scaling", "injury prevention"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["HEMA safety guidelines", "Equipment supplier guides (SPES, Purpleheart)", "YouTube: Safety gear reviews"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Modern Practice",
+      "title": "What makes a good HEMA tournament format?",
+      "concepts": ["tournament design", "scoring systems", "cutting vs sparring", "forms competitions", "ruleset debates"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["Longpoint tournament rules", "Swordfish format comparison", "HEMA Scorecard tournament analysis"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Synthesis",
+      "title": "Can you design a training drill from a treatise passage?",
+      "concepts": ["pedagogical design", "drill creation", "source-to-practice", "training methodology"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["Meyer drill progressions", "Guy Windsor training curriculum", "Instructor development guides"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Synthesis",
+      "title": "What's worth arguing about in HEMA, and what isn't?",
+      "concepts": ["productive debates", "evidence standards", "community norms", "historical vs practical", "intellectual humility"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["WMA forums - meta-discussions", "HEMA community blog posts", "Keith Farrell - scholarship articles"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Review",
+      "title": "Final synthesis: present your interpretation of a complete technique sequence",
+      "concepts": ["comprehensive interpretation", "evidence synthesis", "practical demonstration", "peer critique"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["Student-selected treatise section", "Community feedback guidelines", "Historical Fencing podcast discussions"],
+      "status": "pending"
+    }
+  ]
+}

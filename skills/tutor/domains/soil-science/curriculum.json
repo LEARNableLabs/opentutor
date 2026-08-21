@@ -1,0 +1,385 @@
+{
+  "topic": "Soil science and pedology",
+  "slug": "soil-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry",
+    "basic geology",
+    "environmental science fundamentals"
+  ],
+  "exit_criteria": [
+    "describe soil formation processes and the five soil-forming factors",
+    "identify and describe soil horizons in the field",
+    "classify soils using USDA Soil Taxonomy to the order level",
+    "measure and interpret key physical and chemical properties",
+    "explain nutrient cycling and biological processes in soils",
+    "use soil survey tools and interpret soil maps",
+    "apply soil science principles to real-world land management problems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to Pedology",
+      "title": "Why is soil more than just 'dirt'?",
+      "concepts": ["soil definition", "pedology", "soil functions"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils",
+        "https://www.fao.org/soils-portal/about/en/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to Pedology",
+      "title": "What makes soil a living system?",
+      "concepts": ["soil as ecosystem", "soil-plant-atmosphere continuum", "ecosystem services"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.soils.org/about-soils/basics",
+        "https://www.youtube.com/watch?v=0olLjzWZLFQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to Pedology",
+      "title": "How do we study what's beneath our feet?",
+      "concepts": ["field methods", "soil pits", "sampling"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-survey-manual",
+        "https://casoilresource.lawr.ucdavis.edu/soilweb-apps/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Soil Formation",
+      "title": "What are the five factors that create soil?",
+      "concepts": ["CLORPT model", "pedogenic factors", "Jenny's equation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-formation",
+        "https://en.wikipedia.org/wiki/Pedogenesis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Soil Formation",
+      "title": "How does rock become soil?",
+      "concepts": ["weathering", "physical weathering", "chemical weathering", "biological weathering"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soils.org/about-soils/basics/weathering",
+        "https://www.youtube.com/watch?v=pzG2H5eC1Lw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Soil Formation",
+      "title": "Why do soils have layers?",
+      "concepts": ["soil horizons", "horizonation", "eluviation", "illuviation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-survey-manual/chapter-3-examination-and-description-of-soils",
+        "https://casoilresource.lawr.ucdavis.edu/soil-properties/horizon-notation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Soil Formation",
+      "title": "Does soil form faster in rainforests or deserts?",
+      "concepts": ["climate effects", "temperature", "precipitation", "pedogenic regimes"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.soils.org/about-soils/climate",
+        "https://www.fao.org/soils-portal/soil-survey/soil-classification/en/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Soil Formation",
+      "title": "How do the five factors work together to create different soils?",
+      "concepts": ["five factors review", "weathering processes", "horizonation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.soils.org/about-soils/basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Soil Formation",
+      "title": "How long does it take to make an inch of soil?",
+      "concepts": ["soil age", "time factor", "soil maturity", "chronosequences"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nrcs.usda.gov/about/history/articles/soils-and-the-dust-bowl",
+        "https://www.youtube.com/watch?v=BFYv6TRFlz0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Physical Properties",
+      "title": "What's the difference between sand, silt, and clay?",
+      "concepts": ["particle size", "soil texture", "texture triangle"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-texture-calculator",
+        "https://soilseries.sc.egov.usda.gov/osdname.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Physical Properties",
+      "title": "Why do some soils crumble and others clump?",
+      "concepts": ["soil structure", "aggregation", "peds"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.soils.org/about-soils/basics/structure",
+        "https://www.youtube.com/watch?v=Q0IgT2xN0-c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Physical Properties",
+      "title": "How does water move through soil?",
+      "concepts": ["soil water", "porosity", "permeability", "infiltration"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nrcs.usda.gov/resources/education-and-teaching-materials/soil-water-movement",
+        "https://www.soils.org/about-soils/basics/water"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Physical Properties",
+      "title": "What happens when soil gets too compacted?",
+      "concepts": ["bulk density", "compaction", "soil health"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/conservation-by-state/soil-health",
+        "https://www.youtube.com/watch?v=ntJouJhLM48"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Physical Properties",
+      "title": "Can you predict a soil's behavior from texture alone?",
+      "concepts": ["texture-structure relationships", "water-holding capacity", "workability"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://casoilresource.lawr.ucdavis.edu/",
+        "https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Chemical Properties",
+      "title": "Why does soil pH matter so much?",
+      "concepts": ["pH", "acidity", "alkalinity", "buffering"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soils.org/about-soils/basics/ph",
+        "https://www.youtube.com/watch?v=TX6RXgJk3bM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Chemical Properties",
+      "title": "How do physical and chemical properties interact to shape soil behavior?",
+      "concepts": ["texture-structure-chemistry integration", "property interactions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.soils.org/about-soils/basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Chemical Properties",
+      "title": "How do clay particles hold onto nutrients?",
+      "concepts": ["cation exchange", "CEC", "anion exchange", "surface charge"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nrcs.usda.gov/resources/education-and-teaching-materials/cation-exchange-capacity",
+        "https://www.soils.org/about-soils/basics/cec"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Chemical Properties",
+      "title": "Where does soil organic matter come from and where does it go?",
+      "concepts": ["organic matter", "humus", "decomposition", "carbon cycling"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-organic-matter",
+        "https://www.youtube.com/watch?v=AGHBZ1z5Nf4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Soil Biology",
+      "title": "What's alive in a handful of soil?",
+      "concepts": ["soil biodiversity", "microbial communities", "soil food web"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-biology",
+        "https://www.soils.org/about-soils/basics/biology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Soil Biology",
+      "title": "Why are earthworms called ecosystem engineers?",
+      "concepts": ["soil fauna", "bioturbation", "macroorganisms"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/animals/earthworms",
+        "https://www.youtube.com/watch?v=g5hzJhXB5Yw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Soil Biology",
+      "title": "How do plant roots shape their chemical neighborhood?",
+      "concepts": ["rhizosphere", "root exudates", "mycorrhizae", "plant-microbe interactions"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.soils.org/about-soils/basics/rhizosphere",
+        "https://www.youtube.com/watch?v=btMQ5w0vaQ0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Classification & Mapping",
+      "title": "Why do we need a soil classification system?",
+      "concepts": ["soil taxonomy", "classification principles", "diagnostic horizons"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nrcs.usda.gov/resources/guides-and-instructions/keys-to-soil-taxonomy",
+        "https://www.fao.org/soils-portal/data-hub/soil-classification/world-reference-base/en/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Classification & Mapping",
+      "title": "What's the difference between a Mollisol and an Alfisol?",
+      "concepts": ["soil orders", "USDA taxonomy", "soil properties and genesis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nrcs.usda.gov/resources/education-and-teaching-materials/soil-orders",
+        "https://casoilresource.lawr.ucdavis.edu/see/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Classification & Mapping",
+      "title": "How would you classify and map the soils in your region?",
+      "concepts": ["integrated soil understanding", "classification application", "mapping interpretation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://casoilresource.lawr.ucdavis.edu/soilweb-apps/",
+        "https://websoilsurvey.nrcs.usda.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Classification & Mapping",
+      "title": "How do we create a soil map?",
+      "concepts": ["soil survey", "mapping units", "field reconnaissance"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://websoilsurvey.nrcs.usda.gov/",
+        "https://www.nrcs.usda.gov/resources/guides-and-instructions/national-cooperative-soil-survey-ncss"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications",
+      "title": "How can soil science help feed a growing world?",
+      "concepts": ["soil fertility", "nutrient management", "sustainable agriculture"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health",
+        "https://www.fao.org/global-soil-partnership/areas-of-work/soil-fertility/en/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications",
+      "title": "What happens when soil erodes?",
+      "concepts": ["soil erosion", "conservation practices", "land degradation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/soil-erosion",
+        "https://www.youtube.com/watch?v=VdT8zLxGYqE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applications",
+      "title": "Can soil save us from climate change?",
+      "concepts": ["carbon sequestration", "soil health", "climate mitigation", "regenerative practices"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/climate/soil-carbon-storage",
+        "https://www.fao.org/global-soil-partnership/areas-of-work/soil-carbon/en/",
+        "https://www.youtube.com/watch?v=0olLjzWZLFQ"
+      ],
+      "status": "pending"
+    }
+  ]
+}

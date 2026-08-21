@@ -1,0 +1,359 @@
+{
+  "topic": "The science of coffee — from seed to cup",
+  "slug": "science-of-coffee",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (acids, bases, pH)",
+    "organic molecules (alcohols, aldehydes, esters)",
+    "phase changes (solid, liquid, gas)"
+  ],
+  "exit_criteria": [
+    "explain how processing method affects flavor",
+    "predict extraction outcomes based on grind size, temperature, and time",
+    "identify roast level from chemical and physical cues",
+    "troubleshoot common brewing problems (sourness, bitterness, flatness)",
+    "describe the chemistry behind Maillard reactions in coffee roasting",
+    "conduct a basic sensory evaluation using SCA flavor wheel"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Coffee Biology & Cultivation",
+      "title": "Why are there only two main coffee species?",
+      "concepts": ["Coffea arabica", "Coffea canephora", "genetic diversity", "caffeine content"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://worldcoffeeresearch.org/",
+        "https://coffee.ucdavis.edu/research"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Coffee Biology & Cultivation",
+      "title": "How does altitude change coffee flavor?",
+      "concepts": ["terroir", "sugar accumulation", "bean density", "flavor precursors"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://sca.coffee/",
+        "https://perfectdailygrind.com/guides/altitude-coffee-important/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Coffee Biology & Cultivation",
+      "title": "What's actually inside a coffee cherry?",
+      "concepts": ["cherry anatomy", "parchment", "mucilage", "seed development"],
+      "difficulty": 1,
+      "type": "question",
+      "resources": [
+        "https://worldcoffeeresearch.org/",
+        "https://www.youtube.com/@jameshoffmann"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Coffee Biology & Cultivation",
+      "title": "Why does coffee grown in volcanic soil taste different?",
+      "concepts": ["soil chemistry", "mineral uptake", "nutrient availability", "flavor development"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://coffee.ucdavis.edu/",
+        "https://www.baristahustle.com/blog/soil-and-coffee-flavor/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Coffee Biology & Cultivation",
+      "title": "How does climate change threaten coffee production?",
+      "concepts": ["temperature stress", "disease resistance", "habitat loss", "adaptation strategies"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://worldcoffeeresearch.org/topics/climate-change/",
+        "https://www.nature.com/articles/nclimate1788"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Processing Methods",
+      "title": "What happens when coffee ferments in its own mucilage?",
+      "concepts": ["fermentation", "microbial activity", "lactic acid", "fruity flavors"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://worldcoffeeresearch.org/work/fermentation/",
+        "https://www.baristahustle.com/blog/fermentation-and-coffee-processing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Processing Methods",
+      "title": "How does the coffee cherry become a green bean?",
+      "concepts": ["cherry anatomy review", "processing overview", "flavor precursor formation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://sca.coffee/",
+        "https://www.youtube.com/@jameshoffmann"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Processing Methods",
+      "title": "Why does washed coffee taste cleaner than natural?",
+      "concepts": ["washed processing", "natural processing", "mucilage removal", "flavor clarity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://sca.coffee/",
+        "https://perfectdailygrind.com/washed-vs-natural-coffee-processing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Processing Methods",
+      "title": "What makes honey processing the messy middle ground?",
+      "concepts": ["honey processing", "pulped natural", "mucilage retention", "sweetness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.baristahustle.com/blog/honey-processing/",
+        "https://sca.coffee/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Processing Methods",
+      "title": "How dry is dry enough after processing?",
+      "concepts": ["moisture content", "water activity", "drying kinetics", "storage stability"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://worldcoffeeresearch.org/",
+        "https://www.baristahustle.com/blog/drying-coffee/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Roasting Chemistry",
+      "title": "What is the Maillard reaction and why does it make coffee delicious?",
+      "concepts": ["Maillard reaction", "reducing sugars", "amino acids", "brown color", "aroma compounds"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.compoundchem.com/2014/10/08/coffee-roasting/",
+        "https://www.baristahustle.com/blog/roasting-chemistry-the-maillard-reaction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Roasting Chemistry",
+      "title": "Why does coffee crack during roasting?",
+      "concepts": ["first crack", "second crack", "steam pressure", "physical structure"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/@jameshoffmann",
+        "https://www.sweetmarias.com/what-is-first-crack.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Roasting Chemistry",
+      "title": "How do light roasts preserve origin character?",
+      "concepts": ["roast degree", "acidity preservation", "origin flavors", "chlorogenic acids"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://sca.coffee/",
+        "https://www.baristahustle.com/blog/roast-color-and-acidity/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Roasting Chemistry",
+      "title": "How do processing and roasting work together to create flavor?",
+      "concepts": ["fermentation review", "Maillard review", "flavor development timeline"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.compoundchem.com/2014/10/08/coffee-roasting/",
+        "https://sca.coffee/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Roasting Chemistry",
+      "title": "What volatile compounds give dark roast its smoky character?",
+      "concepts": ["pyrolysis", "phenols", "guaiacol", "carbonization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.baristahustle.com/blog/coffee-volatiles/",
+        "https://pubs.acs.org/doi/10.1021/jf00047a001"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Roasting Chemistry",
+      "title": "Experiment: Can you taste the difference between roast levels?",
+      "concepts": ["sensory comparison", "roast profiling", "acidity vs. body trade-off"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://sca.coffee/research/protocols-best-practices",
+        "https://www.youtube.com/@jameshoffmann"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Extraction Science",
+      "title": "What dissolves first when you brew coffee?",
+      "concepts": ["extraction kinetics", "solubility", "acids", "sugars", "bitter compounds"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.baristahustle.com/blog/coffee-extraction-and-how-to-taste-it/",
+        "https://sca.coffee/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Extraction Science",
+      "title": "Why does grind size matter so much?",
+      "concepts": ["surface area", "extraction rate", "particle size distribution", "contact time"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.baristahustle.com/blog/the-most-important-thing-about-grinding/",
+        "https://www.youtube.com/@jameshoffmann"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Extraction Science",
+      "title": "How hot should your water really be?",
+      "concepts": ["temperature", "solubility curves", "extraction efficiency", "flavor balance"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://sca.coffee/",
+        "https://www.baristahustle.com/blog/water-temperature-for-coffee-brewing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Extraction Science",
+      "title": "What's the difference between extraction yield and strength?",
+      "concepts": ["extraction yield", "total dissolved solids (TDS)", "brew ratio", "concentration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.baristahustle.com/blog/extraction-and-tds/",
+        "https://sca.coffee/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Extraction Science",
+      "title": "What controls the journey from roasted bean to brewed cup?",
+      "concepts": ["roast chemistry review", "extraction kinetics review", "troubleshooting workflow"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.baristahustle.com/blog/coffee-brewing-control-chart/",
+        "https://sca.coffee/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Extraction Science",
+      "title": "Why does water chemistry change everything?",
+      "concepts": ["water hardness", "alkalinity", "buffering", "mineral extraction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.baristahustle.com/blog/water-for-coffee-an-introduction/",
+        "https://sca.coffee/research/water-quality-handbook"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Sensory Science",
+      "title": "How does the SCA flavor wheel organize taste?",
+      "concepts": ["flavor wheel", "sensory vocabulary", "taste vs. aroma", "retronasal olfaction"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://sca.coffee/research/coffee-tasters-flavor-wheel",
+        "https://www.baristahustle.com/blog/coffee-flavor-wheel/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Sensory Science",
+      "title": "What makes acidity bright versus sour?",
+      "concepts": ["acidity", "pH", "perceived sourness", "quality acidity", "malic vs. citric acids"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://sca.coffee/",
+        "https://www.baristahustle.com/blog/acidity-in-coffee/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Sensory Science",
+      "title": "Why does coffee taste different as it cools?",
+      "concepts": ["temperature perception", "volatile release", "sensory adaptation", "cooling curve"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.baristahustle.com/blog/temperature-and-taste/",
+        "https://www.youtube.com/@jameshoffmann"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Sensory Science",
+      "title": "Can you design and execute a professional coffee cupping?",
+      "concepts": ["cupping protocol", "fragrance vs. aroma", "scoring", "defect detection"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://sca.coffee/research/protocols-best-practices",
+        "https://www.youtube.com/@jameshoffmann"
+      ],
+      "status": "pending"
+    }
+  ]
+}

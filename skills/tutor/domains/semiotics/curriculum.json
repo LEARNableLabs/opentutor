@@ -1,0 +1,337 @@
+{
+  "topic": "Semiotics — signs, symbols, and meaning",
+  "slug": "semiotics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic linguistics or philosophy exposure",
+    "comfort with abstract concepts",
+    "ability to analyze texts and images"
+  ],
+  "exit_criteria": [
+    "student can distinguish icon, index, and symbol in real-world examples",
+    "student can apply Saussurean and Peircean frameworks to analyze signs",
+    "student can decode connotation and myth in cultural artifacts",
+    "student can perform semiotic analysis of visual and textual media",
+    "student understands how codes and conventions shape meaning"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes a thumbs-up mean approval?",
+      "concepts": ["sign", "signifier", "signified", "arbitrariness"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/saussure/",
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem01.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why did Saussure split the sign in two?",
+      "concepts": ["dyadic model", "langue vs. parole", "synchronic vs. diachronic"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem02.html",
+        "https://courses.lumenlearning.com/suny-introductiontocommunication/chapter/1-3-semiotic-theory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How does a weathervane point to wind direction?",
+      "concepts": ["index", "icon", "symbol", "triadic model"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/peirce-semiotics/",
+        "https://www.iep.utm.edu/peir-log/#SH3a"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Why does Peirce's sign need three parts?",
+      "concepts": ["object", "representamen", "interpretant", "unlimited semiosis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/peirce-semiotics/",
+        "https://www.commens.org/encyclopedia/article/bergman-mats-peirces-ten-classes-signs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Saussure vs. Peirce: Which framework would you use to analyze a traffic light?",
+      "concepts": ["comparative frameworks", "application strategies"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem02.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "Review: Can you spot the icon, index, and symbol?",
+      "concepts": ["sign types review", "foundational models review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Sign Relations",
+      "title": "What's the difference between 'tree' and '/tri/?",
+      "concepts": ["syntagmatic relations", "paradigmatic relations", "value"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem03.html",
+        "https://plato.stanford.edu/entries/saussure/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Sign Relations",
+      "title": "Why can't you wear a tuxedo to a funeral?",
+      "concepts": ["codes", "conventions", "appropriateness"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem04.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Sign Relations",
+      "title": "How do emojis change meaning in context?",
+      "concepts": ["context dependency", "digital semiotics", "polysemy"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://journals.sagepub.com/doi/10.1177/1470357218759226",
+        "https://www.unicode.org/emoji/charts/full-emoji-list.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Sign Relations",
+      "title": "What happens when a sign points to another sign?",
+      "concepts": ["intertextuality", "meta-signs", "semiotic chains"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem09.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Sign Relations",
+      "title": "How would you analyze a meme using Peircean sign types?",
+      "concepts": ["applied analysis", "contemporary examples"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://knowyourmeme.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sign Relations",
+      "title": "Review: Can you identify codes, contexts, and sign relations?",
+      "concepts": ["sign relations review", "codes review", "context review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Codes and Culture",
+      "title": "What's the difference between what a rose shows and what it suggests?",
+      "concepts": ["denotation", "connotation", "levels of signification"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem05.html",
+        "https://www.goodreads.com/book/show/51565.Mythologies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Codes and Culture",
+      "title": "How did Barthes turn wine into myth?",
+      "concepts": ["myth", "second-order signification", "ideology"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.goodreads.com/book/show/51565.Mythologies",
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem05.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Codes and Culture",
+      "title": "Why do ads sell lifestyles instead of products?",
+      "concepts": ["advertising semiotics", "cultural codes", "symbolic capital"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem08.html",
+        "https://www.adsoftheworld.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Codes and Culture",
+      "title": "What makes a genre recognizable?",
+      "concepts": ["genre codes", "narrative conventions", "reader expectations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem07.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Visual Semiotics",
+      "title": "How does a photograph lie by telling the truth?",
+      "concepts": ["photographic indexicality", "visual rhetoric", "framing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/short/barthes2.html",
+        "https://www.moma.org/collection/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Visual Semiotics",
+      "title": "What do colors mean across cultures?",
+      "concepts": ["color codes", "cultural variation", "symbolic systems"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.informationisbeautiful.net/visualizations/colours-in-cultures/",
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Visual Semiotics",
+      "title": "Review: Which visual signs and cultural codes can you identify?",
+      "concepts": ["visual analysis review", "applied semiotics review", "denotation-connotation-myth review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Visual Semiotics",
+      "title": "How can you decode the semiotics of a film poster?",
+      "concepts": ["visual composition", "typography", "cultural references"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.imdb.com/",
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem08.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Visual Semiotics",
+      "title": "Why do interfaces use trash cans and folders?",
+      "concepts": ["skeuomorphism", "metaphor", "interface semiotics"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.nngroup.com/articles/skeuomorphism/",
+        "https://www.interaction-design.org/literature/topics/semiotics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Topics",
+      "title": "What's the structure of a story underneath its content?",
+      "concepts": ["semiotic square", "Greimas", "deep structure"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem10.html",
+        "https://www.signosemio.com/greimas/semiotic-square.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Topics",
+      "title": "How do different communities read the same text differently?",
+      "concepts": ["interpretive communities", "reader-response", "situated meaning"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.jstor.org/stable/468923",
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Topics",
+      "title": "Can animals use signs?",
+      "concepts": ["biosemiotics", "zoosemiotics", "non-human meaning"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.degruyter.com/journal/key/semi/html",
+        "https://www.biosemiotics.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "How would you design your own semiotic analysis framework?",
+      "concepts": ["synthesis", "applied methodology", "original analysis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/",
+        "https://semioticreview.com/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

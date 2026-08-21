@@ -1,0 +1,336 @@
+{
+  "topic": "Tracking and trailing — reading animal signs",
+  "slug": "tracking-and-trailing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic ecology and wildlife biology",
+    "outdoor observation experience",
+    "familiarity with common North American mammals"
+  ],
+  "exit_criteria": [
+    "identify tracks from major mammal families by morphology and gait",
+    "interpret behavior from track patterns and associated signs",
+    "age tracks and sign using environmental context",
+    "trail an animal through varied substrates using systematic methodology",
+    "reconstruct movement sequences and behavioral narratives from sign complexes"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Track Basics",
+      "title": "What story does a single footprint tell?",
+      "concepts": ["track morphology", "anatomical features", "measurement basics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.inaturalist.org/guides/1352",
+        "https://www.cybertracker.org/tracking-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Track Basics",
+      "title": "Why do mammals leave different track shapes?",
+      "concepts": ["locomotion anatomy", "toe patterns", "pad structure", "claws vs. retractable"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.wildernessawareness.org/articles/track-anatomy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Track Basics",
+      "title": "How can you tell a dog from a coyote from a fox?",
+      "concepts": ["canid family tracks", "size scaling", "negative space", "toenail angles"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://trackercertification.com/resources/canid-comparison",
+        "https://www.inaturalist.org/observations?taxon_id=41067"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Track Basics",
+      "title": "What makes cat tracks different from everyone else?",
+      "concepts": ["felid family", "asymmetric arrangement", "retractable claws", "lead toe dominance"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.inaturalist.org/observations?taxon_id=41070"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Track Basics",
+      "title": "Can you identify these tracks without looking at the answer?",
+      "concepts": ["track identification", "elimination method", "field diagnosis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cybertracker.org/track-quiz"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Track Basics",
+      "title": "Can you identify major track families and their key features?",
+      "concepts": ["track anatomy review", "family characteristics", "identification practice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.inaturalist.org/guides/1352"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Gait Patterns",
+      "title": "Why do animals walk in patterns, not random steps?",
+      "concepts": ["gait definition", "four fundamental gaits", "energy efficiency"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.wildernessawareness.org/articles/understanding-gaits"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Gait Patterns",
+      "title": "What does a trotting deer look like on paper?",
+      "concepts": ["direct register", "overstep", "stride measurement", "trot pattern"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.inaturalist.org/observations?q=deer+tracks",
+        "https://trackercertification.com/gait-patterns/trot"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Gait Patterns",
+      "title": "How can you tell if an animal was running or walking?",
+      "concepts": ["stride vs. straddle", "speed indicators", "gait transitions"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cybertracker.org/gait-identification"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Gait Patterns",
+      "title": "What was this weasel doing here?",
+      "concepts": ["bound pattern", "mustelid gait", "behavior from gait", "hunting signs"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.inaturalist.org/observations?taxon_id=41640"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Gait Patterns",
+      "title": "Why do gaits change in the middle of a trail?",
+      "concepts": ["behavioral transitions", "alarm response", "terrain adaptation", "investigation behavior"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.wildernessawareness.org/articles/gait-transitions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Gait Patterns",
+      "title": "Can you interpret movement and behavior from these track patterns?",
+      "concepts": ["gait recognition", "speed estimation", "behavior interpretation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://trackercertification.com/practice-gaits"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sign Reading",
+      "title": "What can poop tell you about an animal's life?",
+      "concepts": ["scat morphology", "diet analysis", "species identification from scat"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.inaturalist.org/observations?iconic_taxa=Animalia&q=scat"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sign Reading",
+      "title": "How do carnivores and herbivores leave different feeding signs?",
+      "concepts": ["browse patterns", "kill sites", "bone evidence", "foraging trails"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.wildernessawareness.org/articles/feeding-signs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Sign Reading",
+      "title": "Why do bears rub trees and deer scrape the ground?",
+      "concepts": ["scent marking", "territorial behavior", "rubs and scrapes", "visual markers"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.inaturalist.org/observations?q=bear+rub",
+        "https://www.inaturalist.org/observations?q=deer+scrape"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sign Reading",
+      "title": "Where do animals sleep and why there?",
+      "concepts": ["day beds", "denning behavior", "thermal refugia", "security sites"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.wildernessawareness.org/articles/bedding-sites"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Sign Reading",
+      "title": "What else besides tracks can you find in the field?",
+      "concepts": ["hair identification", "feather analysis", "bone gnawing", "trails and runs"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.inaturalist.org/guides/incidental-sign"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Sign Reading",
+      "title": "Can you reconstruct the story from this sign complex?",
+      "concepts": ["sign integration", "behavioral narrative", "multiple evidence types"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://trackercertification.com/scenario-practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Aging & Context",
+      "title": "What can you tell about an animal from its full suite of signs?",
+      "concepts": ["scat vs. tracks vs. feeding", "sign complex reading", "species stories"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cybertracker.org/sign-identification"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Aging & Context",
+      "title": "How old is this track?",
+      "concepts": ["track aging", "weathering stages", "environmental factors", "relative dating"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.wildernessawareness.org/articles/aging-tracks"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Aging & Context",
+      "title": "What happens to tracks when it rains, freezes, or dries out?",
+      "concepts": ["precipitation effects", "freeze-thaw cycles", "desiccation", "track preservation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://trackercertification.com/weathering-effects"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Aging & Context",
+      "title": "How do snow, mud, sand, and dust change what you see?",
+      "concepts": ["substrate effects", "track fidelity", "registration quality", "medium-specific interpretation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.wildernessawareness.org/articles/substrate-tracking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Aging & Context",
+      "title": "What was the weather doing when this animal passed?",
+      "concepts": ["context reconstruction", "environmental timeline", "weather indicators in tracks"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cybertracker.org/track-aging-quiz"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Trailing",
+      "title": "How do you follow an animal that doesn't want to be found?",
+      "concepts": ["trailing methodology", "step-by-step tracking", "track traps", "sign cutting"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.wildernessawareness.org/articles/trailing-techniques"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Trailing",
+      "title": "How would you track an animal from first sign to behavioral story?",
+      "concepts": ["integrated tracking", "morphology to behavior", "full skill integration"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://trackercertification.com/field-scenarios"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Trailing",
+      "title": "What complete story can you tell from this wildlife scene?",
+      "concepts": ["behavioral reconstruction", "narrative from evidence", "tracker interpretation", "field mastery"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://www.cybertracker.org/advanced-scenarios"
+      ],
+      "status": "pending"
+    }
+  ]
+}

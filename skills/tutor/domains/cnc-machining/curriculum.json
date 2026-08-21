@@ -1,0 +1,398 @@
+{
+  "topic": "CNC machining — toolpath generation and material science",
+  "slug": "cnc-machining",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic algebra and trigonometry",
+    "understanding of 3D coordinate systems",
+    "comfort reading technical drawings or CAD models",
+    "basic physics (forces, friction, heat)"
+  ],
+  "exit_criteria": [
+    "generate 2D and 3D toolpaths using CAM software",
+    "select cutting tools and parameters for different materials",
+    "explain chip formation mechanics and cutting forces",
+    "optimize toolpaths for cycle time and tool life",
+    "troubleshoot common machining problems using material science principles",
+    "simulate and verify toolpaths before production"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "CNC Fundamentals",
+      "title": "How does a CNC machine know where to go?",
+      "concepts": ["coordinate systems", "machine axes", "work offsets"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.haascnc.com/service/troubleshooting-and-how-to/how-to/work-offsets---what-are-they.html",
+        "https://www.youtube.com/watch?v=FLqYz9se6Sg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "CNC Fundamentals",
+      "title": "What is G-code and why does every machine speak it?",
+      "concepts": ["G-code", "modal commands", "program structure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/blog/cnc-programming-introduction-g-code/",
+        "https://linuxcnc.org/docs/html/gcode.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "CNC Fundamentals",
+      "title": "Why do machinists obsess over feed rate and spindle speed?",
+      "concepts": ["spindle speed (RPM)", "feed rate", "cutting speed"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.gwizardfree.com/speeds-feeds-cnc-calculator/",
+        "https://www.youtube.com/watch?v=VWLo0kUAz_g"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "CNC Fundamentals",
+      "title": "How do you choose the right cutting tool for the job?",
+      "concepts": ["end mills", "tool geometry", "flute count", "tool materials"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.harveyperformance.com/resources/end-mill-selection-guide/",
+        "https://www.youtube.com/watch?v=qXNJO0RTe9g"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "CNC Fundamentals",
+      "title": "What happens when your tool crashes into the part?",
+      "concepts": ["safety", "collision detection", "rapid positioning"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=lKuOk-41I7w",
+        "https://www.cnczone.com/forums/general-cnc-metalworking-machines/344642-cnc.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "CNC Fundamentals",
+      "title": "Can you set up and program a basic CNC operation?",
+      "concepts": ["review of coordinate systems", "G-code fundamentals", "feeds and speeds", "tool selection", "safety"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.haascnc.com/service/troubleshooting-and-how-to.html",
+        "https://linuxcnc.org/docs/html/gcode.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "CAM and Toolpath Basics",
+      "title": "How does CAM software turn a 3D model into machine instructions?",
+      "concepts": ["CAM workflow", "setup", "toolpaths", "post-processing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/blog/cam-programming-101/",
+        "https://help.autodesk.com/view/fusion360/ENU/courses/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "CAM and Toolpath Basics",
+      "title": "Why does facing a part flat matter so much?",
+      "concepts": ["facing operations", "surface finish", "stepover"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/blog/toolpath-tuesday-face-mill/",
+        "https://www.youtube.com/watch?v=kP8JzB38pNg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "CAM and Toolpath Basics",
+      "title": "What is the difference between contouring and pocketing?",
+      "concepts": ["2D contour", "pocket clearing", "radial vs axial engagement"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/blog/toolpath-types-2d-machining/",
+        "https://www.youtube.com/watch?v=l8D0ZXe7sQ0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "CAM and Toolpath Basics",
+      "title": "How do adaptive toolpaths make machining faster and safer?",
+      "concepts": ["adaptive clearing", "constant engagement", "trochoidal milling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/blog/adaptive-clearing-toolpath/",
+        "https://www.youtube.com/watch?v=uEu3PzpLXoc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "CAM and Toolpath Basics",
+      "title": "Can you generate a working toolpath for this simple part?",
+      "concepts": ["CAM practice", "setup", "tool selection", "simulation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/free-trial",
+        "https://camotics.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "CAM and Toolpath Basics",
+      "title": "How does CAM software transform your design into machine code?",
+      "concepts": ["review of CAM workflow", "toolpath types", "optimization strategies"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/blog/cam-programming-101/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Material Science and Cutting Forces",
+      "title": "Why do chips curl instead of staying straight?",
+      "concepts": ["chip formation", "shear plane", "built-up edge"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nist.gov/publications/chip-formation-machining",
+        "https://www.youtube.com/watch?v=mRuSYQ5Npek"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Material Science and Cutting Forces",
+      "title": "How do cutting forces change with different materials?",
+      "concepts": ["cutting forces", "material hardness", "ductility", "machinability"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nist.gov/programs-projects/machining",
+        "https://www.amazon.com/Metal-Cutting-Theory-Practice-Third/dp/1574446592"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Material Science and Cutting Forces",
+      "title": "What kills cutting tools first: heat, wear, or fracture?",
+      "concepts": ["tool wear mechanisms", "abrasive wear", "diffusion wear", "thermal cracking"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.harveyperformance.com/resources/tool-wear-failure/",
+        "https://www.youtube.com/watch?v=n0uCNT2N3X0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Material Science and Cutting Forces",
+      "title": "Why does machining aluminum feel completely different from steel?",
+      "concepts": ["material-specific strategies", "aluminum vs steel", "chip evacuation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.harveyperformance.com/resources/machining-aluminum/",
+        "https://www.youtube.com/watch?v=Sl8AO4qGPR0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Material Science and Cutting Forces",
+      "title": "How do tool coatings actually protect the cutting edge?",
+      "concepts": ["tool coatings", "TiN", "TiAlN", "AlTiN", "coating selection"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.harveyperformance.com/resources/understanding-end-mill-coatings/",
+        "https://www.mitsubishicarbide.com/en/technical_information/tec_turning_tools/tec_turning_insert/coating_selection"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Material Science and Cutting Forces",
+      "title": "Explain why this titanium part keeps breaking tools.",
+      "concepts": ["troubleshooting", "material properties", "parameter adjustment"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.harveyperformance.com/resources/machining-titanium/",
+        "https://www.youtube.com/watch?v=XKm4Pj0FZBk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Toolpath Strategies",
+      "title": "When should you climb mill versus conventional mill?",
+      "concepts": ["climb milling", "conventional milling", "chip thickness", "tool deflection"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.harveyperformance.com/resources/climb-vs-conventional-milling/",
+        "https://www.youtube.com/watch?v=JdW0yOAuoRQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Advanced Toolpath Strategies",
+      "title": "How does material science drive every machining decision?",
+      "concepts": ["review of chip formation", "cutting forces", "tool wear", "material-specific strategies"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nist.gov/programs-projects/machining"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Toolpath Strategies",
+      "title": "How does 3D surfacing create smooth flowing shapes?",
+      "concepts": ["3D toolpaths", "ball mills", "parallel finishing", "scallop height"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/blog/3d-toolpaths-fusion-360/",
+        "https://www.youtube.com/watch?v=qYB9LsjsJ6w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Toolpath Strategies",
+      "title": "What changes when you add a 4th or 5th axis?",
+      "concepts": ["multi-axis machining", "rotary axes", "simultaneous vs indexed"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/blog/multi-axis-machining-basics/",
+        "https://www.youtube.com/watch?v=EkPVtZmijVc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Toolpath Strategies",
+      "title": "Why do high-speed machining strategies break conventional wisdom?",
+      "concepts": ["high-speed machining", "light cuts", "high speeds", "thermal effects"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.harveyperformance.com/resources/high-speed-machining/",
+        "https://www.youtube.com/watch?v=Vuw2xGnUf3s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Toolpath Strategies",
+      "title": "Design a multi-operation toolpath strategy for this complex part.",
+      "concepts": ["operation planning", "tool changes", "workholding", "sequencing"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.autodesk.com/products/fusion-360/free-trial",
+        "https://camotics.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Optimization and Troubleshooting",
+      "title": "How do you measure machining success beyond just finished parts?",
+      "concepts": ["cycle time", "tool life", "surface finish", "dimensional accuracy"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.nist.gov/ambition/project-manufacturing-metrology",
+        "https://www.youtube.com/watch?v=8sQ9F8P9LfY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Optimization and Troubleshooting",
+      "title": "What causes chatter and how do you eliminate it?",
+      "concepts": ["chatter", "vibration", "tool stickout", "depth of cut"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.harveyperformance.com/resources/understanding-chatter/",
+        "https://www.youtube.com/watch?v=mSBhYv6WVRA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Optimization and Troubleshooting",
+      "title": "When should you apply advanced toolpath strategies?",
+      "concepts": ["review of climb vs conventional milling", "3D surfacing", "multi-axis", "high-speed machining", "optimization"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.harveyperformance.com/resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Optimization and Troubleshooting",
+      "title": "How would you speed up this toolpath without breaking tools?",
+      "concepts": ["toolpath optimization", "parameter tuning", "material removal rate"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.gwizardfree.com/feeds-speeds-optimizer/",
+        "https://www.youtube.com/watch?v=J0N5YbZ7Yt4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Optimization and Troubleshooting",
+      "title": "What have we learned about toolpaths and materials?",
+      "concepts": ["final synthesis", "real-world application", "continuous learning"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/c/NYCCNC",
+        "https://www.youtube.com/c/ThisOldTony",
+        "https://www.practicalmachinist.com/",
+        "https://www.cnczone.com/forums/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

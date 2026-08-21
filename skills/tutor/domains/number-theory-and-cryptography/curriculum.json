@@ -1,0 +1,366 @@
+{
+  "topic": "Number theory and cryptography",
+  "slug": "number-theory-and-cryptography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "proof-based mathematics",
+    "modular arithmetic basics",
+    "basic programming (Python or similar)"
+  ],
+  "exit_criteria": [
+    "student can implement RSA encryption and decryption from scratch",
+    "student can prove why Fermat's Little Theorem enables RSA",
+    "student can analyze security of cryptographic protocols using number theory",
+    "student can test primality of large numbers efficiently",
+    "student understands discrete logarithm problem and Diffie-Hellman"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Number Theory",
+      "title": "Why is divisibility the foundation of all number theory?",
+      "concepts": ["divisibility", "division algorithm", "greatest common divisor"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.gordon.edu/ntic/",
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Number Theory",
+      "title": "How does the Euclidean algorithm find the GCD so efficiently?",
+      "concepts": ["Euclidean algorithm", "extended Euclidean algorithm", "Bezout's identity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://explained-from-first-principles.com/number-theory/",
+        "https://www.youtube.com/watch?v=AbjhsGnKEtE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Number Theory",
+      "title": "What makes prime numbers the atoms of arithmetic?",
+      "concepts": ["prime numbers", "fundamental theorem of arithmetic", "prime factorization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf",
+        "https://www.coursera.org/learn/number-theory-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Number Theory",
+      "title": "Can you find the GCD of 1071 and 462 without a calculator?",
+      "concepts": ["Euclidean algorithm application", "manual computation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://play.google.com/store/apps/details?id=com.vinodsigadana030.numbertheory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Modular Arithmetic",
+      "title": "Why does clock arithmetic govern modern cryptography?",
+      "concepts": ["congruences", "modular arithmetic", "residue classes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf",
+        "https://geeksforgeeks.org/number-theory-used-in-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Modular Arithmetic",
+      "title": "How do you solve linear equations modulo n?",
+      "concepts": ["modular inverses", "linear congruences", "Chinese Remainder Theorem"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://explained-from-first-principles.com/number-theory/",
+        "https://math.gordon.edu/ntic/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Modular Arithmetic",
+      "title": "Review: Divisibility to Modular Arithmetic",
+      "concepts": ["GCD", "Euclidean algorithm", "modular arithmetic review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/number-theory-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Modular Arithmetic",
+      "title": "What is Euler's totient function counting?",
+      "concepts": ["Euler's phi function", "totient", "multiplicativity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf",
+        "https://www.youtube.com/watch?v=AbjhsGnKEtE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Modular Arithmetic",
+      "title": "Why does a^(p-1) ≡ 1 (mod p) for any a?",
+      "concepts": ["Fermat's Little Theorem", "proof", "applications"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://almuhammadi.com/sultan/crypto_books/Koblitz.2ndEd.pdf",
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Modular Arithmetic",
+      "title": "How does Euler generalize Fermat's theorem to composite moduli?",
+      "concepts": ["Euler's Theorem", "generalization", "RSA foundation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf",
+        "https://geeksforgeeks.org/number-theory-used-in-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Classical Cryptography",
+      "title": "How did Caesar encrypt his military messages?",
+      "concepts": ["substitution ciphers", "Caesar cipher", "frequency analysis"],
+      "difficulty": 1,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/learn/crypto",
+        "https://freevideolectures.com/course/3027/cryptography-and-network-security/3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Classical Cryptography",
+      "title": "Why is a shared secret key vulnerable in the internet age?",
+      "concepts": ["symmetric encryption", "key distribution problem", "public key insight"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/crypto",
+        "http://almuhammadi.com/sultan/crypto_books/Koblitz.2ndEd.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Classical Cryptography",
+      "title": "Review: From Fermat to Cryptographic Motivation",
+      "concepts": ["Fermat's Little Theorem", "Euler's Theorem", "key distribution problem"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/number-theory-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "RSA Cryptosystem",
+      "title": "How can you encrypt a message without sharing a secret?",
+      "concepts": ["public key cryptography", "RSA overview", "trapdoor functions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://almuhammadi.com/sultan/crypto_books/Koblitz.2ndEd.pdf",
+        "https://www.coursera.org/learn/number-theory-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "RSA Cryptosystem",
+      "title": "Why does RSA key generation require choosing two primes?",
+      "concepts": ["RSA key generation", "modulus n = pq", "public and private exponents"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf",
+        "https://geeksforgeeks.org/number-theory-used-in-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "RSA Cryptosystem",
+      "title": "Can you implement RSA encryption from scratch?",
+      "concepts": ["RSA implementation", "modular exponentiation", "encoding/decoding"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.coursera.org/learn/crypto",
+        "https://play.google.com/store/apps/details?id=com.vinodsigadana030.numbertheory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "RSA Cryptosystem",
+      "title": "What happens if you choose weak RSA parameters?",
+      "concepts": ["RSA security", "small primes attack", "common modulus attack"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/learn/number-theory-cryptography",
+        "http://almuhammadi.com/sultan/crypto_books/Koblitz.2ndEd.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "RSA Cryptosystem",
+      "title": "How do digital signatures prove message authenticity?",
+      "concepts": ["digital signatures", "RSA signatures", "authentication vs encryption"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/crypto",
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Primality and Factoring",
+      "title": "Review: RSA from Theory to Implementation",
+      "concepts": ["RSA key generation", "encryption/decryption", "security considerations"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/number-theory-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Primality and Factoring",
+      "title": "How can you efficiently test if a huge number is prime?",
+      "concepts": ["primality testing", "Fermat primality test", "Miller-Rabin test"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://explained-from-first-principles.com/number-theory/",
+        "http://almuhammadi.com/sultan/crypto_books/Koblitz.2ndEd.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Primality and Factoring",
+      "title": "Why is factoring large numbers so hard?",
+      "concepts": ["integer factorization", "trial division", "Pollard's rho", "computational complexity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf",
+        "https://www.coursera.org/learn/crypto"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Primality and Factoring",
+      "title": "Can you break RSA by factoring a 100-digit number?",
+      "concepts": ["factorization challenge", "RSA cracking", "security parameter sizing"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.coursera.org/learn/number-theory-cryptography",
+        "https://play.google.com/store/apps/details?id=com.vinodsigadana030.numbertheory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Topics",
+      "title": "What is the discrete logarithm problem?",
+      "concepts": ["discrete logarithm", "cyclic groups", "hardness assumption"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://almuhammadi.com/sultan/crypto_books/Koblitz.2ndEd.pdf",
+        "https://www.math.wustl.edu/~matkerr/NTCbook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Topics",
+      "title": "How do two strangers agree on a secret key over a public channel?",
+      "concepts": ["Diffie-Hellman key exchange", "discrete log security", "man-in-the-middle"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/learn/crypto",
+        "https://geeksforgeeks.org/number-theory-used-in-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "Review: Primality, Factoring, and Discrete Logarithms",
+      "concepts": ["Miller-Rabin", "factorization hardness", "Diffie-Hellman"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/number-theory-cryptography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "What are elliptic curves and why do cryptographers love them?",
+      "concepts": ["elliptic curves", "elliptic curve cryptography", "efficiency vs RSA"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "http://almuhammadi.com/sultan/crypto_books/Koblitz.2ndEd.pdf",
+        "https://www.coursera.org/learn/crypto"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "Will quantum computers break all current cryptography?",
+      "concepts": ["quantum computing threat", "Shor's algorithm", "post-quantum cryptography"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/learn/crypto",
+        "https://github.com/foolOnTheHill/cryptography-resources"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,384 @@
+{
+  "topic": "Phycology — the biology of algae",
+  "slug": "phycology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "general biology",
+    "cell biology",
+    "basic chemistry",
+    "photosynthesis fundamentals"
+  ],
+  "exit_criteria": [
+    "identify major algal groups by morphology and cellular characteristics",
+    "explain endosymbiotic origins of chloroplasts across lineages",
+    "describe diverse algal life cycles and reproductive strategies",
+    "analyze ecological roles of algae in marine and freshwater ecosystems",
+    "evaluate applications of algae in biotechnology and environmental remediation",
+    "interpret phylogenetic relationships among algal groups"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to Algae",
+      "title": "What makes something an 'alga' if algae aren't a single evolutionary group?",
+      "concepts": ["polyphyly", "algal definition", "photosynthetic diversity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.algaebase.org",
+        "https://ucmp.berkeley.edu/greenalgae/greenalgae.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to Algae",
+      "title": "Why do different algae have different colors?",
+      "concepts": ["photosynthetic pigments", "chlorophylls", "accessory pigments", "light absorption"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://oceanservice.noaa.gov/facts/phytoplankton.html",
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to Algae",
+      "title": "How did chloroplasts end up in so many different organisms?",
+      "concepts": ["endosymbiosis", "primary endosymbiosis", "secondary endosymbiosis", "plastid evolution"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/plastids-the-double-edged-sword-of-endosymbiosis-13648330/",
+        "https://doi.org/10.1098/rstb.2009.0103"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Introduction to Algae",
+      "title": "Can you identify an alga just by looking at its cell structure?",
+      "concepts": ["cell wall composition", "flagellar apparatus", "storage products", "diagnostic features"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://protistimagedata.org",
+        "https://www.microscopy-uk.org.uk/mag/indexmag.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Cyanobacteria",
+      "title": "Why are cyanobacteria called 'blue-green algae' if they're bacteria?",
+      "concepts": ["prokaryotic photosynthesis", "cyanobacteria evolution", "oxygenic photosynthesis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cyanosite.bio.purdue.edu",
+        "https://ucmp.berkeley.edu/bacteria/cyanobacteria.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Cyanobacteria",
+      "title": "How did cyanobacteria change Earth's atmosphere forever?",
+      "concepts": ["Great Oxidation Event", "stromatolites", "oxygen production", "Earth history"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://astrobiology.nasa.gov/news/the-great-oxidation-event/",
+        "https://www.pnas.org/content/117/35/21219"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Cyanobacteria",
+      "title": "What are heterocysts and why do some cyanobacteria need them?",
+      "concepts": ["nitrogen fixation", "heterocysts", "cell differentiation", "anaerobic metabolism"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41579-019-0222-6",
+        "https://microbewiki.kenyon.edu/index.php/Heterocyst"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Cyanobacteria",
+      "title": "Review: Algal Fundamentals and Cyanobacteria",
+      "concepts": ["photosynthetic diversity", "endosymbiosis", "cyanobacteria", "prokaryotic algae"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/bacteria-archaea/prokaryote-metabolism-ecology/a/nitrogen-fixation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Green Algae and Plant Origins",
+      "title": "What makes green algae the closest relatives of land plants?",
+      "concepts": ["Chlorophyta", "Charophyta", "plant evolution", "shared characters"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ucmp.berkeley.edu/greenalgae/greenalgae.html",
+        "https://tolweb.org/Green_plants/2382"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Green Algae and Plant Origins",
+      "title": "Why is Volvox a living model of multicellularity evolution?",
+      "concepts": ["colonial organization", "multicellularity", "division of labor", "Volvox"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nrg.2016.27",
+        "https://www.youtube.com/watch?v=VCWRUGRrTi4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Green Algae and Plant Origins",
+      "title": "How do ulvophytes achieve such diverse body forms?",
+      "concepts": ["Ulva", "morphological diversity", "siphonous organization", "nuclear organization"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=144122",
+        "https://doi.org/10.1111/nph.14974"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Green Algae and Plant Origins",
+      "title": "Can you trace the evolutionary path from Chara to land plants?",
+      "concepts": ["charophytes", "plant colonization", "adaptations to land", "phylogeny"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.pnas.org/content/116/14/6989",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6377237/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Green Algae and Plant Origins",
+      "title": "Review: Green Algae Diversity and Evolution",
+      "concepts": ["Chlorophyta", "Charophyta", "multicellularity", "plant origins"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://tolweb.org/Green_plants/2382"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Red and Brown Algae",
+      "title": "How do red algae thrive in deep water where other algae can't?",
+      "concepts": ["phycobilins", "red algae", "deep-water adaptation", "light harvesting"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ucmp.berkeley.edu/rhodophyta/rhodophyta.html",
+        "https://oceanservice.noaa.gov/facts/redalgae.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Red and Brown Algae",
+      "title": "What makes red algal life cycles so complex?",
+      "concepts": ["triphasic life cycle", "carposporophyte", "alternation of generations", "Polysiphonia"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.botany.org/Algae/RedAlgae.php",
+        "https://doi.org/10.1111/jpy.12947"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Red and Brown Algae",
+      "title": "Why are brown algae ecologically dominant in cold temperate seas?",
+      "concepts": ["Phaeophyceae", "kelp", "holdfast-stipe-blade", "ecosystem engineering"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/kelp-forest.html",
+        "https://www.youtube.com/watch?v=DgIyAXUkJdY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Red and Brown Algae",
+      "title": "How did brown algae evolve complex multicellularity independently?",
+      "concepts": ["convergent evolution", "tissue differentiation", "transport systems", "developmental biology"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1016/j.cub.2015.11.038",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3152098/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Red and Brown Algae",
+      "title": "Review: Red and Brown Algae Diversity",
+      "concepts": ["Rhodophyta", "Phaeophyceae", "life cycles", "ecological roles"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ucmp.berkeley.edu/chromista/phaeophyta.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Diatoms and Dinoflagellates",
+      "title": "What makes diatom frustules so geometrically perfect?",
+      "concepts": ["diatoms", "silica frustule", "morphology", "Bacillariophyta"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://diatoms.org",
+        "https://www.youtube.com/watch?v=8KqQfgZDdgo",
+        "https://www.microscopyu.com/techniques/polarized-light/diatoms"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Diatoms and Dinoflagellates",
+      "title": "Why are diatoms called 'the grass of the sea'?",
+      "concepts": ["primary productivity", "phytoplankton ecology", "food webs", "carbon cycle"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://oceanservice.noaa.gov/facts/diatom.html",
+        "https://www.nature.com/articles/nature07410"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Diatoms and Dinoflagellates",
+      "title": "How do dinoflagellates produce bioluminescence?",
+      "concepts": ["dinoflagellates", "bioluminescence", "luciferase", "ecological function"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.mbari.org/bioluminescence-research/",
+        "https://doi.org/10.1038/s41598-018-36495-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Diatoms and Dinoflagellates",
+      "title": "What causes harmful algal blooms and red tides?",
+      "concepts": ["HABs", "red tides", "toxins", "eutrophication", "environmental triggers"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://oceanservice.noaa.gov/hazards/hab/",
+        "https://www.whoi.edu/oceanus/feature/the-dangers-of-harmful-algal-blooms/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Diatoms and Dinoflagellates",
+      "title": "Review: Diatoms and Dinoflagellates",
+      "concepts": ["diatoms", "dinoflagellates", "frustules", "bioluminescence", "HABs", "primary productivity"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://diatoms.org",
+        "https://oceanservice.noaa.gov/hazards/hab/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Ecology and Applications",
+      "title": "How do coral-algal symbioses sustain entire reef ecosystems?",
+      "concepts": ["Symbiodinium", "zooxanthellae", "coral bleaching", "mutualism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanservice.noaa.gov/education/tutorial_corals/coral03_zooxanthellae.html",
+        "https://doi.org/10.1038/nature16989"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Ecology and Applications",
+      "title": "Can algae solve our biofuel and carbon problems?",
+      "concepts": ["algal biotechnology", "biofuels", "carbon sequestration", "commercial applications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.energy.gov/eere/bioenergy/algae",
+        "https://doi.org/10.1038/s41587-019-0053-y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Ecology and Applications",
+      "title": "What are the commercial products we extract from algae?",
+      "concepts": ["agar", "carrageenan", "alginates", "phycocolloids", "industrial applications"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.fao.org/3/y4765e/y4765e08.htm",
+        "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/agar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Ecology and Applications",
+      "title": "How do algae help clean polluted water and treat wastewater?",
+      "concepts": ["bioremediation", "wastewater treatment", "nutrient removal", "heavy metal uptake", "phycoremediation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/topics/engineering/phycoremediation",
+        "https://www.epa.gov/nutrient-policy-data/algae-wastewater-treatment"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Ecology and Applications",
+      "title": "Review: Synthesizing Algal Biology from Cells to Ecosystems",
+      "concepts": ["diversity", "ecology", "evolution", "applications", "synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.algaebase.org",
+        "https://ucmp.berkeley.edu/alllife/threedomains.html"
+      ],
+      "status": "pending"
+    }
+  ]
+}

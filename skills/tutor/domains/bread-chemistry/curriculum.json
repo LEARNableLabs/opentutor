@@ -1,0 +1,320 @@
+{
+  "topic": "Bread chemistry — gluten networks and baking science",
+  "slug": "bread-chemistry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (molecules, chemical reactions)",
+    "understanding of acids and bases",
+    "familiarity with percentages and ratios",
+    "basic biology (enzymes, fermentation)"
+  ],
+  "exit_criteria": [
+    "explain how gluten networks form and what makes them strong or weak",
+    "predict how changing hydration affects bread texture",
+    "understand fermentation chemistry and control flavor development",
+    "troubleshoot bread failures using chemical principles",
+    "design bread formulas for specific outcomes (crispy crust, open crumb, etc.)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Flour & Gluten Basics",
+      "title": "What makes bread dough stretchy instead of crumbly like cookie dough?",
+      "concepts": ["gluten proteins", "gliadin vs glutenin", "protein hydration"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2016/04/29/gluten-free-baking-science",
+        "https://www.seriouseats.com/bread-dough-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Flour & Gluten Basics",
+      "title": "Why does kneading make dough smooth and elastic?",
+      "concepts": ["mechanical alignment", "gluten network formation", "kneading mechanics"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/ChainBaker",
+        "https://www.kingarthurbaking.com/blog/2017/03/01/kneading-dough"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Flour & Gluten Basics",
+      "title": "What's the difference between bread flour and all-purpose flour at the molecular level?",
+      "concepts": ["protein content", "flour types", "gluten strength"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2018/09/14/understanding-flour-types",
+        "https://thebreadlab.wsu.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Flour & Gluten Basics",
+      "title": "Can you over-develop gluten, and what happens if you do?",
+      "concepts": ["gluten development stages", "over-kneading", "dough breakdown"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.seriouseats.com/how-to-knead-dough"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Flour & Gluten Basics",
+      "title": "Why do some recipes call for 'resting' dough before kneading?",
+      "concepts": ["autolyse", "enzymatic activity", "dough hydration time"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2017/09/29/autolyse-how-what-when",
+        "https://www.youtube.com/c/Foodgeek"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Water & Hydration Chemistry",
+      "title": "How do gluten proteins work together to make dough elastic and strong?",
+      "concepts": ["protein structure review", "hydration review", "mechanical development"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Water & Hydration Chemistry",
+      "title": "What does '70% hydration' actually mean, and why do bakers use this weird math?",
+      "concepts": ["baker's percentage", "hydration ratio", "formula design"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2023/05/05/bakers-percentage",
+        "https://www.thefreshloaf.com/lessons/yourfirstloaf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Water & Hydration Chemistry",
+      "title": "Why does high-hydration dough produce bigger holes in the bread?",
+      "concepts": ["water distribution", "gluten extensibility", "gas retention"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.seriouseats.com/how-to-make-ciabatta-bread",
+        "https://www.youtube.com/c/ChainBaker"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Water & Hydration Chemistry",
+      "title": "Does the mineral content of water actually matter for bread?",
+      "concepts": ["water chemistry", "pH effects", "mineral ions and gluten"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.bakerpedia.com/ingredients/water/",
+        "https://www.kingarthurbaking.com/blog/2016/07/11/does-water-matter-in-bread-baking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Water & Hydration Chemistry",
+      "title": "How does temperature affect how fast water gets absorbed?",
+      "concepts": ["temperature and hydration rate", "protein swelling", "enzyme activation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2020/05/01/desired-dough-temperature"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Fermentation & Gas Production",
+      "title": "What exactly is yeast doing inside your dough?",
+      "concepts": ["yeast metabolism", "anaerobic respiration", "CO2 and ethanol production"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2015/04/17/yeast-101",
+        "https://www.seriouseats.com/how-yeast-works-bread-baking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Fermentation & Gas Production",
+      "title": "How does water content shape bread texture and structure?",
+      "concepts": ["baker's percentage review", "hydration effects", "water quality"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Fermentation & Gas Production",
+      "title": "Why does sourdough taste tangy while yeasted bread doesn't?",
+      "concepts": ["lactic acid bacteria", "organic acids", "flavor compounds"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/Foodgeek",
+        "https://www.kingarthurbaking.com/blog/2020/04/07/sourdough-starter-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Fermentation & Gas Production",
+      "title": "How do enzymes quietly reshape your dough during fermentation?",
+      "concepts": ["amylase", "protease", "enzymatic breakdown", "flour conditioning"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bakerpedia.com/ingredients/enzymes/",
+        "https://www.kingarthurbaking.com/blog/2017/05/19/enzyme-magic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Fermentation & Gas Production",
+      "title": "What determines whether you get big irregular holes or fine even crumb?",
+      "concepts": ["gas bubble formation", "coalescence", "gluten film strength", "shaping tension"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.seriouseats.com/bread-crumb-structure"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Fermentation & Gas Production",
+      "title": "Why does cold fermentation develop more flavor?",
+      "concepts": ["temperature and metabolism", "flavor compound development", "retarded fermentation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2015/02/27/cold-fermentation",
+        "https://www.youtube.com/c/AdamRagusea"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Heat & Structure Formation",
+      "title": "What happens in the first 10 minutes when bread hits the oven?",
+      "concepts": ["oven spring", "yeast death", "alcohol vaporization", "gas expansion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2017/07/14/oven-spring",
+        "https://www.seriouseats.com/what-happens-when-bread-bakes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Heat & Structure Formation",
+      "title": "What chemical changes happen during fermentation?",
+      "concepts": ["yeast and bacteria review", "acid production", "enzyme activity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Heat & Structure Formation",
+      "title": "At what temperature does gluten permanently set, and why does that matter?",
+      "concepts": ["protein denaturation", "thermal setting", "structure stabilization"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.bakerpedia.com/processes/baking/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Heat & Structure Formation",
+      "title": "Why does starch turn from powder to gel, and then back to firm bread?",
+      "concepts": ["starch gelatinization", "retrogradation", "amylose and amylopectin"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2016/06/17/starch-in-baking",
+        "https://www.seriouseats.com/starch-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Heat & Structure Formation",
+      "title": "What makes bread crust brown, crispy, and delicious?",
+      "concepts": ["Maillard reaction", "caramelization", "crust chemistry"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.seriouseats.com/maillard-reaction-science-cooking",
+        "https://www.kingarthurbaking.com/blog/2015/06/19/bread-crust-color"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Ingredients & Techniques",
+      "title": "Why does salt strengthen gluten but slow down fermentation?",
+      "concepts": ["salt and protein interaction", "osmotic pressure", "yeast inhibition"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2017/02/03/salt-in-bread-dough",
+        "https://www.bakerpedia.com/ingredients/salt/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Ingredients & Techniques",
+      "title": "How do fats, eggs, and sugar change the chemistry of enriched doughs?",
+      "concepts": ["fat and gluten interference", "sugar and yeast", "emulsification", "enrichment chemistry"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2016/11/18/enriched-bread-dough",
+        "https://www.seriouseats.com/brioche-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Ingredients & Techniques",
+      "title": "What went wrong with this bread, and how can chemistry explain the failure?",
+      "concepts": ["troubleshooting", "applying chemical principles", "systematic diagnosis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.kingarthurbaking.com/blog/2018/03/23/troubleshooting-bread",
+        "https://www.thefreshloaf.com/handbook/troubleshooting-bread"
+      ],
+      "status": "pending"
+    }
+  ]
+}

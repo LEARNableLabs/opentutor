@@ -1,0 +1,422 @@
+{
+  "topic": "Acoustics and the Physics of Music",
+  "slug": "acoustics-and-the-physics-of-music",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "algebra and basic trigonometry",
+    "introductory physics (forces, energy, waves)",
+    "basic music literacy (notes, intervals, scales)"
+  ],
+  "exit_criteria": [
+    "explain wave phenomena and interference patterns in sound",
+    "predict the harmonic series for strings and air columns",
+    "analyze how instrument design affects tone quality",
+    "describe psychoacoustic phenomena like consonance and masking",
+    "apply Fourier analysis to decompose complex sounds",
+    "evaluate room acoustics for musical performance"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Wave Fundamentals",
+      "title": "What makes sound different from silence?",
+      "concepts": ["longitudinal waves", "compression and rarefaction", "frequency and amplitude"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/sound-waves",
+        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/resources/lecture-11-video-1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Wave Fundamentals",
+      "title": "Why do waves add and subtract?",
+      "concepts": ["superposition principle", "constructive interference", "destructive interference"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://exploresound.org/acoustics-activities/acoustic-simulators/sound-wave-sim/",
+        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/resources/copy3_of_lecture-5-video/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Wave Fundamentals",
+      "title": "How does a guitar string know which note to play?",
+      "concepts": ["standing waves", "nodes and antinodes", "fundamental frequency"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.mysimulator.uk/categories/sound/",
+        "https://courses.physics.illinois.edu/phys406/sp2017/Course_Info/Phys406POM_Course_Syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Wave Fundamentals",
+      "title": "What happens when waves meet?",
+      "concepts": ["wave reflection", "transmission", "boundary conditions"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/sound-waves"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Wave Fundamentals",
+      "title": "Why do some frequencies cancel each other out?",
+      "concepts": ["phase relationships", "beats", "acoustic interference"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/resources/copy3_of_lecture-5-video/",
+        "https://exploresound.org/acoustics-activities/acoustic-simulators/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Wave Fundamentals",
+      "title": "How well do you understand wave behavior?",
+      "concepts": ["superposition", "standing waves", "interference review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/sound-waves"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Sound Production & Resonance",
+      "title": "Why does an empty room sound different than a full one?",
+      "concepts": ["resonance", "natural frequencies", "acoustic damping"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://persona500.com/room-acoustics-simulator",
+        "https://www.umdphysics.umd.edu/academics/courses/989-physics-102-physics-of-music.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Sound Production & Resonance",
+      "title": "How does resonance amplify sound?",
+      "concepts": ["driven oscillations", "resonance curves", "Q factor"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mysimulator.uk/categories/sound/",
+        "https://pubs.aip.org/asa/jasa/article/149/2/1175/600803/Acoustics-Apps-Interactive-simulations-for-digital"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Sound Production & Resonance",
+      "title": "What makes a note sound 'in tune'?",
+      "concepts": ["simple ratios", "just intonation", "equal temperament"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://courses.physics.illinois.edu/phys406/sp2017/Course_Info/Phys406POM_Course_Syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Sound Production & Resonance",
+      "title": "Why do musical instruments have overtones?",
+      "concepts": ["harmonic series", "partials", "mode shapes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mysimulator.uk/categories/sound/",
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/resources/mit21m_380s16_lec05/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Sound Production & Resonance",
+      "title": "How can we visualize the harmonic series?",
+      "concepts": ["frequency spectrum", "spectral analysis", "harmonic ratios"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://pubs.aip.org/asa/jasa/article/149/2/1175/600803/Acoustics-Apps-Interactive-simulations-for-digital",
+        "https://exploresound.org/acoustics-activities/acoustic-simulators/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sound Production & Resonance",
+      "title": "What determines the quality of a musical tone?",
+      "concepts": ["timbre", "spectral envelope", "temporal evolution"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/resources/mit21m_380s16_lec05/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sound Production & Resonance",
+      "title": "Can you predict how objects will resonate?",
+      "concepts": ["resonance", "harmonics", "timbre review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/sound-waves"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Musical Instruments",
+      "title": "How does string length affect pitch?",
+      "concepts": ["wave speed on strings", "tension and mass density", "wavelength-frequency relationship"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mysimulator.uk/categories/sound/",
+        "https://courses.physics.illinois.edu/phys406/sp2017/Course_Info/Phys406POM_Course_Syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Musical Instruments",
+      "title": "Why does a violin sound different from a guitar?",
+      "concepts": ["body resonance", "formants", "transient response"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pubs.aip.org/asa/jasa/article/149/2/1175/600803/Acoustics-Apps-Interactive-simulations-for-digital"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Musical Instruments",
+      "title": "What happens inside a flute when you blow?",
+      "concepts": ["air column resonance", "open vs closed pipes", "edge tone generation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mysimulator.uk/categories/sound/",
+        "https://www.niu.edu/clas/physics/_pdf/spring-2019/Phys-180-syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Musical Instruments",
+      "title": "How do percussion instruments produce definite pitches?",
+      "concepts": ["membrane vibrations", "inharmonic partials", "kettle drum modes"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubs.aip.org/asa/jasa/article/149/2/1175/600803/Acoustics-Apps-Interactive-simulations-for-digital"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Musical Instruments",
+      "title": "Why does a brass instrument's shape matter?",
+      "concepts": ["bore profile", "impedance matching", "valve systems"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://courses.physics.illinois.edu/phys406/sp2017/Course_Info/Phys406POM_Course_Syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Musical Instruments",
+      "title": "Can you explain how your favorite instrument works?",
+      "concepts": ["instrument physics synthesis", "sound production mechanisms", "resonance application"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mysimulator.uk/categories/sound/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Musical Instruments",
+      "title": "What patterns connect all instrument families?",
+      "concepts": ["instrument classification", "sound production review", "resonance systems"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pubs.aip.org/asa/jasa/article/149/2/1175/600803/Acoustics-Apps-Interactive-simulations-for-digital"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Psychoacoustics & Perception",
+      "title": "Why do some intervals sound pleasant and others harsh?",
+      "concepts": ["consonance and dissonance", "critical bandwidth", "roughness perception"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/pages/syllabus/",
+        "https://www.umdphysics.umd.edu/academics/courses/989-physics-102-physics-of-music.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Psychoacoustics & Perception",
+      "title": "How does your brain construct pitch from overtones?",
+      "concepts": ["pitch perception", "place theory", "temporal theory"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/pages/syllabus/",
+        "https://www.niu.edu/clas/physics/_pdf/spring-2019/Phys-180-syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Psychoacoustics & Perception",
+      "title": "What makes a sound 'bright' or 'dark'?",
+      "concepts": ["spectral centroid", "high-frequency content", "timbre perception"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/resources/mit21m_380s16_lec05/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Psychoacoustics & Perception",
+      "title": "Why can't we hear all frequencies equally well?",
+      "concepts": ["equal-loudness contours", "Fletcher-Munson curves", "auditory sensitivity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Psychoacoustics & Perception",
+      "title": "How does masking hide sounds in plain hearing?",
+      "concepts": ["auditory masking", "simultaneous masking", "temporal masking"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/pages/syllabus/",
+        "https://www.niu.edu/clas/physics/_pdf/spring-2019/Phys-180-syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Psychoacoustics & Perception",
+      "title": "What creates the illusion of missing fundamentals?",
+      "concepts": ["virtual pitch", "residue pitch", "harmonic template matching"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Acoustics in Practice",
+      "title": "How do physical sounds become perceptual experiences?",
+      "concepts": ["physics to perception pathway", "psychoacoustics review", "integrated understanding"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.umdphysics.umd.edu/academics/courses/989-physics-102-physics-of-music.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Acoustics in Practice",
+      "title": "How do concert halls shape sound?",
+      "concepts": ["reverberation time", "early reflections", "diffusion and absorption"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://persona500.com/room-acoustics-simulator",
+        "https://www.umdphysics.umd.edu/academics/courses/989-physics-102-physics-of-music.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Acoustics in Practice",
+      "title": "What does digital sampling reveal about sound?",
+      "concepts": ["sampling theorem", "Nyquist frequency", "quantization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/resources/mit21m_380s16_lec05/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Acoustics in Practice",
+      "title": "How can Fourier analysis decode any sound?",
+      "concepts": ["Fourier transform", "frequency domain", "spectral decomposition"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/resources/mit21m_380s16_lec05/",
+        "https://pubs.aip.org/asa/jasa/article/149/2/1175/600803/Acoustics-Apps-Interactive-simulations-for-digital"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Acoustics in Practice",
+      "title": "How do digital effects manipulate sound in the frequency domain?",
+      "concepts": ["audio filters", "EQ and compression", "time-domain effects", "spectral processing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/resources/mit21m_380s16_lec05/",
+        "https://www.umdphysics.umd.edu/academics/courses/989-physics-102-physics-of-music.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Acoustics in Practice",
+      "title": "Can you design a sound from scratch using physics principles?",
+      "concepts": ["synthesis integration", "harmonic design", "timbre engineering", "complete workflow"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mysimulator.uk/categories/sound/",
+        "https://pubs.aip.org/asa/jasa/article/149/2/1175/600803/Acoustics-Apps-Interactive-simulations-for-digital"
+      ],
+      "status": "pending"
+    }
+  ]
+}

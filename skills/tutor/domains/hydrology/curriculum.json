@@ -1,0 +1,425 @@
+{
+  "topic": "Hydrology and water cycles",
+  "slug": "hydrology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (energy, forces)",
+    "algebra and basic calculus",
+    "environmental science fundamentals",
+    "map reading and spatial thinking"
+  ],
+  "exit_criteria": [
+    "explain water movement through all components of the hydrologic cycle",
+    "analyze hydrographs and predict watershed response to precipitation",
+    "calculate basic groundwater flow using Darcy's Law",
+    "evaluate water balance for a watershed or region",
+    "apply rainfall-runoff models to predict streamflow",
+    "assess human impacts on local and regional water systems",
+    "interpret real hydrological data from USGS and other sources"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Water Cycle Fundamentals",
+      "title": "Where does Earth's water hide?",
+      "concepts": ["water reservoirs", "global water budget", "distribution"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/where-earths-water",
+        "https://earthobservatory.nasa.gov/features/Water"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Water Cycle Fundamentals",
+      "title": "Why does water never leave Earth?",
+      "concepts": ["closed system", "water cycle fluxes", "conservation of mass"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/water-cycle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Water Cycle Fundamentals",
+      "title": "How much energy does it take to move water?",
+      "concepts": ["latent heat", "phase changes", "energy balance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-72-groundwater-hydrology/",
+        "https://www.cuahsi.org/education/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Water Cycle Fundamentals",
+      "title": "Can you track a water molecule's journey?",
+      "concepts": ["residence time", "pathways", "hydrologic connectivity"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/water-cycle-precipitation",
+        "https://water.usgs.gov/edu/earthwherewater.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Water Cycle Fundamentals",
+      "title": "Review: Water cycle systems and energy",
+      "concepts": ["water cycle review", "systems thinking"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Precipitation and Atmospheric Water",
+      "title": "How does air hold water?",
+      "concepts": ["humidity", "saturation vapor pressure", "dew point"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.weather.gov/jetstream/saturate",
+        "https://www.noaa.gov/education/resource-collections/weather-atmosphere"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Precipitation and Atmospheric Water",
+      "title": "Why do clouds form where they do?",
+      "concepts": ["adiabatic cooling", "condensation nuclei", "orographic effects"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.weather.gov/jetstream/clouds",
+        "https://earthobservatory.nasa.gov/features/Clouds"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Precipitation and Atmospheric Water",
+      "title": "What makes rain different from snow?",
+      "concepts": ["precipitation types", "temperature profiles", "measurement"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.weather.gov/jetstream/precip_types",
+        "https://www.ncei.noaa.gov/products/land-based-station/global-precipitation-climatology-project"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Precipitation and Atmospheric Water",
+      "title": "How do we measure invisible water leaving Earth?",
+      "concepts": ["evapotranspiration", "potential ET", "Penman-Monteith equation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/evapotranspiration-and-water-cycle",
+        "https://www.fao.org/3/x0490e/x0490e00.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Surface Water Hydrology",
+      "title": "Review: From atmosphere to land surface",
+      "concepts": ["atmospheric water review", "precipitation to runoff"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Surface Water Hydrology",
+      "title": "What defines a watershed?",
+      "concepts": ["watershed boundaries", "drainage divides", "topographic control"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/watersheds-and-drainage-basins",
+        "https://www.epa.gov/hwp/what-watershed"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Surface Water Hydrology",
+      "title": "Why doesn't all rain become runoff?",
+      "concepts": ["infiltration", "runoff generation", "Horton overland flow"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/runoff-surface-and-overland-water-runoff",
+        "https://www.cuahsi.org/education/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Surface Water Hydrology",
+      "title": "How do scientists predict streamflow?",
+      "concepts": ["unit hydrograph", "SCS curve number", "rainfall-runoff modeling"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.hec.usace.army.mil/software/hec-hms/",
+        "https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/national/water/manage/hydrology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Surface Water Hydrology",
+      "title": "Can you read a river's story from its graph?",
+      "concepts": ["hydrograph analysis", "peak flow", "baseflow separation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://waterdata.usgs.gov/nwis",
+        "https://www.usgs.gov/special-topics/water-science-school/science/how-streamflow-measured"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Surface Water Hydrology",
+      "title": "When will the next 100-year flood happen?",
+      "concepts": ["flood frequency", "return period", "probability"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/floods-and-recurrence-intervals",
+        "https://water.usgs.gov/edu/100yearflood.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Surface Water Hydrology",
+      "title": "Review: Tracking water across the landscape",
+      "concepts": ["surface hydrology review", "integration"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://waterdata.usgs.gov/nwis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Groundwater Systems",
+      "title": "Where is Earth's hidden freshwater?",
+      "concepts": ["aquifers", "porosity", "groundwater storage"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/groundwater-what-groundwater",
+        "https://www.usgs.gov/mission-areas/water-resources/science/groundwater"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Groundwater Systems",
+      "title": "How fast does water move through rock?",
+      "concepts": ["hydraulic conductivity", "Darcy's Law", "permeability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-72-groundwater-hydrology/",
+        "https://www.usgs.gov/special-topics/water-science-school/science/aquifers-and-groundwater"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Groundwater Systems",
+      "title": "What happens when you pump a well?",
+      "concepts": ["cone of depression", "drawdown", "well hydraulics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/groundwater-decline-and-depletion",
+        "https://groundwaterresourcehub.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Groundwater Systems",
+      "title": "Why do rivers still flow during droughts?",
+      "concepts": ["baseflow", "groundwater discharge", "surface water interaction"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/groundwater-discharge-and-streamflow",
+        "https://waterdata.usgs.gov/nwis/rt"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Groundwater Systems",
+      "title": "Can you map an invisible aquifer?",
+      "concepts": ["potentiometric surface", "flow nets", "aquifer mapping"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.usgs.gov/mission-areas/water-resources/science/national-water-information-system-nwis",
+        "https://www.usgs.gov/special-topics/water-science-school/science/aquifer-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Groundwater Systems",
+      "title": "Review: Subsurface water systems",
+      "concepts": ["groundwater review", "surface-groundwater connection"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.usgs.gov/mission-areas/water-resources/science/groundwater"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Hydrological Modeling and Applications",
+      "title": "How do we model something we can't see everywhere?",
+      "concepts": ["water balance", "conceptual models", "distributed vs lumped"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.hec.usace.army.mil/",
+        "https://swat.tamu.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Hydrological Modeling and Applications",
+      "title": "Which modeling tools fit your watershed problem?",
+      "concepts": ["HEC-HMS", "SWAT", "GIS applications"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.hec.usace.army.mil/software/hec-hms/",
+        "https://www.hec.usace.army.mil/software/hec-ras/",
+        "https://swat.tamu.edu/software/",
+        "https://water.usgs.gov/ogw/modflow/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Hydrological Modeling and Applications",
+      "title": "Why do different models give different answers?",
+      "concepts": ["model uncertainty", "calibration", "validation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.cuahsi.org/education/",
+        "https://www.hydroshare.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Hydrological Modeling and Applications",
+      "title": "Can you predict your watershed's response to a storm?",
+      "concepts": ["model application", "scenario analysis", "prediction"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://waterdata.usgs.gov/nwis",
+        "https://www.nrcs.usda.gov/wps/portal/nrcs/main/national/water/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Human Impacts and Management",
+      "title": "How is climate changing the water cycle?",
+      "concepts": ["climate impacts", "precipitation patterns", "extreme events"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/mission-areas/water-resources/science/water-availability-and-use-science-program",
+        "https://www.ipcc.ch/report/ar6/wg1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Human Impacts and Management",
+      "title": "What happens when cities replace forests?",
+      "concepts": ["urbanization", "impervious surfaces", "stormwater management"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.epa.gov/green-infrastructure",
+        "https://www.usgs.gov/mission-areas/water-resources/science/effects-urbanization-streamflow"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Human Impacts and Management",
+      "title": "Review: Modeling and human impacts",
+      "concepts": ["modeling review", "application synthesis", "integration"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.usgs.gov/mission-areas/water-resources",
+        "https://www.cuahsi.org/education/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Human Impacts and Management",
+      "title": "Can we manage water for both people and ecosystems?",
+      "concepts": ["water resources management", "environmental flows", "sustainability"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/mission-areas/water-resources",
+        "https://www.epa.gov/waterdata/water-quality-data",
+        "https://www.nature.org/en-us/what-we-do/our-priorities/provide-food-and-water-sustainably/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Integration and Synthesis",
+      "title": "How would you solve your local watershed's biggest challenge?",
+      "concepts": ["integration", "synthesis", "applied problem-solving", "local context"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://waterdata.usgs.gov/nwis",
+        "https://www.epa.gov/hwp",
+        "https://www.usgs.gov/mission-areas/water-resources"
+      ],
+      "status": "pending"
+    }
+  ]
+}

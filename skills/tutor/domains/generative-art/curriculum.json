@@ -1,0 +1,409 @@
+{
+  "topic": "Generative and computational art",
+  "slug": "generative-art",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic programming (variables, loops, functions, arrays)",
+    "high school algebra and trigonometry",
+    "coordinate systems",
+    "some exposure to Processing or p5.js"
+  ],
+  "exit_criteria": [
+    "design and implement autonomous generative systems",
+    "control randomness and noise for aesthetic purposes",
+    "create recursive patterns and fractal structures",
+    "simulate natural phenomena with particle systems and physics",
+    "manipulate color computationally across different color spaces",
+    "implement agent-based behaviors and emergent systems",
+    "export work for both digital display and physical plotting",
+    "articulate design decisions in algorithmic art"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Controlled Chaos",
+      "title": "Why does true randomness often look wrong in art?",
+      "concepts": ["pseudorandomness", "seeded randomness", "controlled chance"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://p5js.org/reference/#/p5/random",
+        "https://www.tylerlhobbs.com/writings/randomness-in-generative-art"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Controlled Chaos",
+      "title": "How can you make randomness feel natural instead of chaotic?",
+      "concepts": ["Perlin noise", "coherent noise", "noise vs random"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://p5js.org/reference/#/p5/noise",
+        "https://genekogan.com/code/p5js-perlin-noise/",
+        "https://www.youtube.com/watch?v=Qf4dIN99e2w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Controlled Chaos",
+      "title": "What happens when noise drives motion over time?",
+      "concepts": ["noise fields", "temporal noise", "animated noise"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html",
+        "https://editor.p5js.org/codingtrain/sketches/L-HQz13WI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Controlled Chaos",
+      "title": "Can you explain why your generative sketch produces these patterns?",
+      "concepts": ["parameters", "constraints", "design space"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://inconvergent.net/2016/shepherding-random-numbers/",
+        "https://tylerxhobbs.com/essays/2018/randomness"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Controlled Chaos",
+      "title": "How do weighted distributions give you artistic control?",
+      "concepts": ["probability distributions", "weighted randomness", "bias"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://p5js.org/examples/math-noise-wave.html",
+        "https://github.com/mattdesl/workshop-data-artwork"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Controlled Chaos",
+      "title": "What randomness and noise techniques have you mastered?",
+      "concepts": ["random", "noise", "distributions", "parameters"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://generative-artistry.com/tutorials/",
+        "https://openprocessing.org/browse/#"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Form & Structure",
+      "title": "Why are grids the foundation of so much generative art?",
+      "concepts": ["grid systems", "tessellation", "modular composition"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://generative-artistry.com/tutorials/tiled-lines/",
+        "https://p5js.org/examples/structure-create-graphics.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Form & Structure",
+      "title": "What makes a pattern look organized but not boring?",
+      "concepts": ["variation within constraint", "breaking the grid", "visual rhythm"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://generative-artistry.com/tutorials/un-deuxtrois/",
+        "https://www.youtube.com/watch?v=0jjeOYMjmDU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Form & Structure",
+      "title": "How does recursion create infinite complexity from simple rules?",
+      "concepts": ["recursion", "fractals", "self-similarity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://thecodingtrain.com/CodingChallenges/014-fractaltree.html",
+        "https://p5js.org/examples/simulate-recursive-tree.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Form & Structure",
+      "title": "Can you generate a Mondrian painting algorithmically?",
+      "concepts": ["recursive subdivision", "binary space partitioning", "aesthetic rules"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://generative-artistry.com/tutorials/piet-mondrian/",
+        "https://github.com/erdavids/Generative-Art-Tutorials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Form & Structure",
+      "title": "What symmetries exist in generative space?",
+      "concepts": ["reflection", "rotation", "translation", "symmetry groups"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://p5js.org/examples/transform-rotate.html",
+        "https://openprocessing.org/sketch/378706"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Form & Structure",
+      "title": "What creative possibilities emerge from space-filling curves?",
+      "concepts": ["Hilbert curve", "space-filling", "algorithmic drawing"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://thecodingtrain.com/CodingChallenges/146-rendering-ray-casting.html",
+        "https://inconvergent.net/generative/",
+        "https://en.wikipedia.org/wiki/Hilbert_curve"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Form & Structure",
+      "title": "How do grids, recursion, and symmetry shape your work?",
+      "concepts": ["grids", "recursion", "symmetry", "subdivision"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://generative-artistry.com/",
+        "https://openprocessing.org/browse/?time=anytime&type=tags&q=patterns"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Motion & Life",
+      "title": "How do you make coded movement feel organic?",
+      "concepts": ["easing", "interpolation", "velocity", "acceleration"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://p5js.org/examples/motion-bounce.html",
+        "https://easings.net/",
+        "https://www.youtube.com/watch?v=17WoOqgXsRM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Motion & Life",
+      "title": "What happens when thousands of particles follow simple rules?",
+      "concepts": ["particle systems", "arrays of objects", "emergence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://thecodingtrain.com/CodingChallenges/078-simple-particle-system.html",
+        "https://natureofcode.com/book/chapter-4-particle-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Motion & Life",
+      "title": "Why does adding physics make simulations feel real?",
+      "concepts": ["forces", "vectors", "Newton's laws", "springs"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://natureofcode.com/book/chapter-2-forces/",
+        "https://p5js.org/examples/simulate-forces.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Motion & Life",
+      "title": "How do flow fields create beautiful emergent paths?",
+      "concepts": ["flow fields", "vector fields", "force fields"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://tylerxhobbs.com/essays/2020/flow-fields",
+        "https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Motion & Life",
+      "title": "What feedback patterns arise from decay and accumulation?",
+      "concepts": ["feedback loops", "trails", "fade", "accumulation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://p5js.org/examples/color-linear-gradient.html",
+        "https://openprocessing.org/sketch/413567"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Motion & Life",
+      "title": "What motion and life techniques can you now control?",
+      "concepts": ["motion", "particles", "forces", "flow fields"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://natureofcode.com/book/",
+        "https://thecodingtrain.com/tracks/the-nature-of-code-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Color & Image",
+      "title": "Why do RGB and HSL lead to different aesthetic results?",
+      "concepts": ["color spaces", "RGB", "HSL", "perceptual color"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://programmingdesignsystems.com/color/color-models-and-color-spaces/",
+        "https://p5js.org/reference/#/p5/colorMode"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Color & Image",
+      "title": "How do algorithms generate harmonious color palettes?",
+      "concepts": ["palette generation", "color harmony", "interpolation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://tylerxhobbs.com/essays/2021/using-color-in-generative-art",
+        "https://coolors.co/",
+        "https://www.youtube.com/watch?v=riiJTF5-N7c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Color & Image",
+      "title": "What can you do when you treat images as data?",
+      "concepts": ["pixel manipulation", "image processing", "data as material"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://p5js.org/reference/#/p5/pixels",
+        "https://thecodingtrain.com/CodingChallenges/011-pixelsorting.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Color & Image",
+      "title": "How can dithering and halftones create computational texture?",
+      "concepts": ["dithering", "halftone", "texture synthesis"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://tannerhelland.com/2012/12/28/dithering-eleven-algorithms-source-code.html",
+        "https://github.com/mewo2/oisin",
+        "https://www.youtube.com/watch?v=0L2n8Tg2FwI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Emergent Systems",
+      "title": "How do autonomous agents create complex behavior?",
+      "concepts": ["steering behaviors", "agents", "flocking", "emergence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://natureofcode.com/book/chapter-6-autonomous-agents/",
+        "https://thecodingtrain.com/CodingChallenges/124-flocking-boids.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Emergent Systems",
+      "title": "Can simple rewrite rules grow realistic plants?",
+      "concepts": ["L-systems", "grammars", "plant generation", "turtle graphics"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://algorithmicbotany.org/papers/abop/abop.pdf",
+        "https://thecodingtrain.com/CodingChallenges/016-lsystem.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Emergent Systems",
+      "title": "What lifelike patterns emerge from cellular automata?",
+      "concepts": ["cellular automata", "Conway's Game of Life", "rule spaces"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://natureofcode.com/book/chapter-7-cellular-automata/",
+        "https://thecodingtrain.com/CodingChallenges/085-the-game-of-life.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Emergent Systems",
+      "title": "How do emergent systems create complexity from simplicity?",
+      "concepts": ["agents", "L-systems", "cellular automata", "emergence"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://natureofcode.com/book/",
+        "https://complexityexplorer.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Mastery & Context",
+      "title": "Can you build a generative system that produces infinite variations?",
+      "concepts": ["generative systems", "parameter spaces", "variation", "curation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://tylerxhobbs.com/essays/2021/the-rise-of-long-form-generative-art",
+        "https://www.fxhash.xyz/",
+        "https://www.artblocks.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Mastery & Context",
+      "title": "How does your work connect to generative art's lineage?",
+      "concepts": ["generative art history", "pioneers", "contemporary practice"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.artnome.com/news/2018/8/8/why-love-generative-art",
+        "https://www.rightclicksave.com/article/the-history-of-generative-art",
+        "https://spalterdigital.com/artworks/vera-molnar/",
+        "https://www.youtube.com/watch?v=_8DMEHxOLQE"
+      ],
+      "status": "pending"
+    }
+  ]
+}

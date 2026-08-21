@@ -1,0 +1,333 @@
+{
+  "topic": "The Physics of Musical Instruments",
+  "slug": "physics-of-musical-instruments",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "calculus (derivatives, integrals)",
+    "basic wave mechanics",
+    "trigonometry",
+    "exposure to differential equations helpful but not required"
+  ],
+  "exit_criteria": [
+    "explain how instrument geometry determines pitch and timbre",
+    "predict harmonic series for strings, pipes, and membranes",
+    "analyze spectrograms to identify instrument characteristics",
+    "design simple instruments using wave mechanics principles",
+    "connect mathematical models to real instrument behavior"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Acoustics Fundamentals",
+      "title": "Why does a guitar string make sound when nothing touches the air?",
+      "concepts": ["vibrating strings", "energy transfer", "sound radiation", "coupling mechanisms"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.acs.psu.edu/drussell/Demos/string-waves/string-waves.html",
+        "https://phet.colorado.edu/en/simulations/wave-on-a-string"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Acoustics Fundamentals",
+      "title": "What makes a note sound like a note instead of noise?",
+      "concepts": ["periodic vibration", "fundamental frequency", "harmonic series", "pitch perception"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/harmonics.html",
+        "https://www.youtube.com/watch?v=i_0DXxNeaQ0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Acoustics Fundamentals",
+      "title": "How does a single note contain many frequencies at once?",
+      "concepts": ["Fourier analysis", "overtones", "timbre", "spectral content"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/fourier-making-waves",
+        "https://jackschaedler.github.io/circles-sines-signals/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Acoustics Fundamentals",
+      "title": "Why do instruments sound different even when playing the same note?",
+      "concepts": ["timbre", "attack transients", "formants", "inharmonicity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/sound.spectrum.html",
+        "https://musiclab.chromeexperiments.com/Spectrogram/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Acoustics Fundamentals",
+      "title": "What happens when two waves meet in the same space?",
+      "concepts": ["superposition", "interference", "standing waves", "nodes and antinodes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/wave-interference",
+        "https://www.acs.psu.edu/drussell/Demos/superposition/superposition.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Acoustics Fundamentals",
+      "title": "Review: Sound waves and the harmonic toolkit",
+      "concepts": ["review: harmonics", "review: timbre", "review: standing waves"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/music/",
+        "https://www.youtube.com/watch?v=YsZKvLnf7wU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "String Instruments",
+      "title": "Why does tightening a guitar string raise its pitch?",
+      "concepts": ["wave speed on strings", "tension", "mass per unit length", "frequency-length relationship"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/strings.html",
+        "https://www.acs.psu.edu/drussell/Demos/string-waves/string-waves.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "String Instruments",
+      "title": "How does a string choose which frequencies to vibrate at?",
+      "concepts": ["boundary conditions", "normal modes", "harmonic series", "quantization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/normal-modes",
+        "https://newt.phys.unsw.edu.au/jw/strings.html#overtones"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "String Instruments",
+      "title": "What makes a piano note decay faster than a violin note?",
+      "concepts": ["damping", "energy dissipation", "Q factor", "sustain mechanisms"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/guitar.html",
+        "https://ccrma.stanford.edu/~jos/pasp/Decay_Parameters.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "String Instruments",
+      "title": "How does a guitar body amplify sound without electricity?",
+      "concepts": ["resonance", "soundboard radiation", "body modes", "acoustic impedance matching"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/guitar.html",
+        "https://www.acoustics.asn.au/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "String Instruments",
+      "title": "Why do violins and guitars need different playing techniques?",
+      "concepts": ["bowing vs plucking", "stick-slip friction", "Helmholtz motion", "attack characteristics"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/Bows.html",
+        "https://www.acs.psu.edu/drussell/bowed-string/bowed-string.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "String Instruments",
+      "title": "Can you design a string instrument using physics alone?",
+      "concepts": ["design constraints", "scaling laws", "material properties", "optimization"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/strings.html",
+        "https://ccrma.stanford.edu/~jos/pasp/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "String Instruments",
+      "title": "Review: String vibrations and instrument design",
+      "concepts": ["review: string modes", "review: resonance", "review: timbre generation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/strings.html",
+        "https://www.youtube.com/watch?v=TKF6nFzpHBU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Wind Instruments",
+      "title": "How does blowing across a bottle create a tone?",
+      "concepts": ["air column resonance", "edge tone", "feedback mechanisms", "pipe modes"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/flutes.v.clarinets.html",
+        "https://www.acs.psu.edu/drussell/Demos/Pipes/Pipes.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Wind Instruments",
+      "title": "Why does a clarinet sound an octave lower than a flute of the same length?",
+      "concepts": ["open vs closed pipes", "boundary conditions", "pressure vs displacement antinodes", "wavelength constraints"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/flutes.v.clarinets.html",
+        "https://www.acs.psu.edu/drussell/Demos/Pipes-Closed/Closed-Pipes.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Wind Instruments",
+      "title": "What makes a reed start vibrating when you blow on it?",
+      "concepts": ["reed mechanics", "Bernoulli effect", "self-sustained oscillation", "flow control"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/clarinet.html",
+        "https://www.phys.unsw.edu.au/jw/saxacoustics.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Wind Instruments",
+      "title": "How do brass players change pitch with just their lips?",
+      "concepts": ["lip-valve oscillator", "impedance matching", "mode locking", "resonance selection"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/brassacoustics.html",
+        "https://www.phys.unsw.edu.au/jw/trumpet.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Wind Instruments",
+      "title": "Why do tone holes change a flute's pitch more than you'd expect?",
+      "concepts": ["effective length", "end corrections", "acoustic impedance", "cross-fingering"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/fluteacoustics.html",
+        "https://www.phys.unsw.edu.au/jw/flute.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Wind Instruments",
+      "title": "Review: Air columns, reeds, and resonance",
+      "concepts": ["review: pipe modes", "review: reed oscillation", "review: brass acoustics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/wind.html",
+        "https://www.youtube.com/watch?v=E3GfKhQygKE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Percussion & Modern Instruments",
+      "title": "Why don't drums produce clear pitches like strings and pipes?",
+      "concepts": ["2D vibrations", "circular membranes", "Bessel functions", "inharmonic overtones"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/drums.html",
+        "https://www.acs.psu.edu/drussell/Demos/MembraneCircle/Circle.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Percussion & Modern Instruments",
+      "title": "What makes a xylophone bar ring at a definite pitch?",
+      "concepts": ["vibrating bars", "flexural waves", "tuning and undercutting", "harmonic bar design"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/xylophone.html",
+        "https://www.acs.psu.edu/drussell/Demos/BarWaves/BarWaves.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Percussion & Modern Instruments",
+      "title": "How do electric guitars work if strings don't directly move air?",
+      "concepts": ["electromagnetic induction", "magnetic pickups", "string-pickup coupling", "signal processing"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/electricguitar.html",
+        "https://en.wikipedia.org/wiki/Pickup_(music_technology)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Percussion & Modern Instruments",
+      "title": "Can we simulate real instruments with computers alone?",
+      "concepts": ["physical modeling synthesis", "digital waveguides", "modal synthesis", "Karplus-Strong algorithm"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ccrma.stanford.edu/~jos/pasp/",
+        "https://www.music.mcgill.ca/~gary/courses/papers/Karplus-Strong-CMJ-1983.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Percussion & Modern Instruments",
+      "title": "What does the future of musical instrument physics look like?",
+      "concepts": ["metamaterials", "active control", "haptic feedback", "augmented instruments"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://ccrma.stanford.edu/groups/soundwire/",
+        "https://www.nime.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

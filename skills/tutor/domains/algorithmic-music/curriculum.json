@@ -1,0 +1,270 @@
+{
+  "topic": "Algorithmic and Generative Music",
+  "slug": "algorithmic-music",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic music theory (rhythm, pitch, scales)",
+    "programming fundamentals (variables, loops, functions)",
+    "comfort with command-line tools"
+  ],
+  "exit_criteria": [
+    "student can explain core algorithmic composition techniques and their musical applications",
+    "student can implement Markov chains, L-systems, and cellular automata for music generation",
+    "student can write and perform live code using TidalCycles or Sonic Pi",
+    "student can design constraint-based systems for composition",
+    "student can critically analyze generative music systems and identify their limitations"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes music 'algorithmic' versus 'composed'?",
+      "concepts": ["algorithmic composition", "determinism vs randomness", "generative systems"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://en.wikipedia.org/wiki/Algorithmic_composition", "https://toplap.org/about/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How did Iannis Xenakis use probability to compose music?",
+      "concepts": ["stochastic music", "historical context", "musical formalism"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=SZazYFchLRI", "https://en.wikipedia.org/wiki/Iannis_Xenakis"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Why does randomness alone not create interesting music?",
+      "concepts": ["structure vs chaos", "musical constraints", "aesthetic decisions"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=M9xMuPWAZW8"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can you identify algorithmic patterns in a piece of music?",
+      "concepts": ["pattern recognition", "repetition", "variation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://teropa.info/loop/", "https://learningmusic.ableton.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Algorithmic Techniques",
+      "title": "How do Markov chains predict the next note?",
+      "concepts": ["Markov chains", "state transitions", "probability matrices"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://setosa.io/blog/2014/07/26/markov-chains/", "https://github.com/korymath/markov-music"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Algorithmic Techniques",
+      "title": "How can you build a simple Markov melody generator?",
+      "concepts": ["implementation", "debugging", "musical output"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://github.com/korymath/markov-music", "https://tonejs.github.io/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Algorithmic Techniques",
+      "title": "What happens when plants grow music?",
+      "concepts": ["L-systems", "recursive structures", "fractal patterns"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://en.wikipedia.org/wiki/L-system", "http://paulbourke.net/fractals/lsys/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Algorithmic Techniques",
+      "title": "How does Conway's Game of Life make rhythm?",
+      "concepts": ["cellular automata", "emergence", "rhythmic patterns"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=S-W0NX97DB0", "https://playgameoflife.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Algorithmic Techniques",
+      "title": "Why do genetic algorithms 'evolve' better melodies?",
+      "concepts": ["genetic algorithms", "fitness functions", "evolution"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://en.wikipedia.org/wiki/Genetic_algorithm", "https://github.com/osteele/genetic-algorithm-music"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Stochastic Methods",
+      "title": "What's the difference between white noise and pink noise?",
+      "concepts": ["noise types", "spectral density", "perceptual differences"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=H2lJLXS3AYM", "https://en.wikipedia.org/wiki/Colors_of_noise"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Stochastic Methods",
+      "title": "How can probability distributions shape musical parameters?",
+      "concepts": ["Gaussian distributions", "uniform distributions", "parameter mapping"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists", "https://tonejs.github.io/docs/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Stochastic Methods",
+      "title": "Why does Perlin noise create smoother musical changes?",
+      "concepts": ["Perlin noise", "smoothness", "temporal coherence"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html", "https://en.wikipedia.org/wiki/Perlin_noise"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Stochastic Methods",
+      "title": "What happens when you experiment with stochastic parameters in a synthesizer?",
+      "concepts": ["synthesis", "randomization", "musical control"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://sonic-pi.net/", "https://tonejs.github.io/examples/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Live Coding Systems",
+      "title": "What is live coding and why code music on stage?",
+      "concepts": ["live coding", "performance practice", "improvisation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://toplap.org/", "https://www.youtube.com/watch?v=yY1FSsUV-8c"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Live Coding Systems",
+      "title": "How does TidalCycles turn patterns into rhythm?",
+      "concepts": ["pattern languages", "mini-notation", "temporal composition"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://tidalcycles.org/docs/", "https://tidalcycles.org/docs/patternlib/tutorials/mini_notation/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Live Coding Systems",
+      "title": "Can you build a drum pattern using Sonic Pi?",
+      "concepts": ["sample playback", "timing", "loop structures"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://sonic-pi.net/tutorial.html", "https://github.com/sonic-pi-net/sonic-pi"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Live Coding Systems",
+      "title": "Why does SuperCollider separate Server and Language?",
+      "concepts": ["client-server architecture", "OSC protocol", "synthesis engine"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://doc.sccode.org/Tutorials/Getting-Started/00-Getting-Started-With-SC.html", "https://supercollider.github.io/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Live Coding Systems",
+      "title": "What tools and resources exist in the SuperCollider ecosystem?",
+      "concepts": ["UGens", "SynthDefs", "patterns"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://doc.sccode.org/Browse.html", "http://sccode.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Grammars and Constraints",
+      "title": "How do pattern systems differ across live coding languages?",
+      "concepts": ["abstraction levels", "expressiveness", "workflow"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://toplap.org/wiki/Videos", "https://github.com/toplap/awesome-livecoding"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Grammars and Constraints",
+      "title": "How do formal grammars generate musical structure?",
+      "concepts": ["context-free grammars", "derivation trees", "recursive composition"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://en.wikipedia.org/wiki/Chomsky_hierarchy", "https://github.com/mdp/gibberish"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Grammars and Constraints",
+      "title": "Why do constraints paradoxically increase creativity?",
+      "concepts": ["constraint-based composition", "rule systems", "creative boundaries"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=eJVYND_YRx8", "https://en.wikipedia.org/wiki/Oulipo"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Grammars and Constraints",
+      "title": "Can you design a constraint system for melody generation?",
+      "concepts": ["rule design", "musical theory application", "algorithmic composition"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.youtube.com/watch?v=M9xMuPWAZW8", "https://github.com/ctford/kolmogorov-music"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Real-time Performance",
+      "title": "How does network music enable collaborative performance?",
+      "concepts": ["networked systems", "synchronization", "distributed performance"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://estuary.mcmaster.ca/", "https://github.com/d0kt0r0/estuary"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Real-time Performance",
+      "title": "What are the aesthetic trade-offs in generative systems?",
+      "concepts": ["agency", "authorship", "control vs emergence"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=S2EZqikCIfY", "https://en.wikipedia.org/wiki/Brian_Eno"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Real-time Performance",
+      "title": "How would you design and perform a live-coded piece?",
+      "concepts": ["performance", "integration", "aesthetic decisions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://tidalcycles.org/", "https://sonic-pi.net/", "https://github.com/toplap/awesome-livecoding"],
+      "status": "pending"
+    }
+  ]
+}

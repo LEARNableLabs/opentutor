@@ -1,0 +1,389 @@
+{
+  "topic": "Journalism and investigative reporting",
+  "slug": "journalism",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic news writing",
+    "fundamental journalism ethics",
+    "standard interviewing skills",
+    "research and fact-checking basics"
+  ],
+  "exit_criteria": [
+    "conduct multi-source investigations using FOIA and public records",
+    "develop and protect confidential sources ethically",
+    "apply data journalism techniques to structured datasets",
+    "execute hostile and trauma-informed interviews",
+    "verify information using digital and traditional methods",
+    "navigate legal and ethical boundaries in investigative work",
+    "structure long-form investigative narratives"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Investigative Mindset and Methodology",
+      "title": "What makes an investigation worth pursuing?",
+      "concepts": ["story selection", "public interest test", "investigative hypothesis"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://gijn.org/stories/investigative-journalism-manual/",
+        "https://www.ire.org/resource-center/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Investigative Mindset and Methodology",
+      "title": "How do journalists build an investigative roadmap?",
+      "concepts": ["story planning", "hypothesis testing", "information gaps"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://gijn.org/resource/story-based-inquiry-guide/",
+        "https://www.propublica.org/about/steal-our-stories"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Investigative Mindset and Methodology",
+      "title": "Why does 'follow the money' still work?",
+      "concepts": ["financial trails", "corporate records", "ownership structures"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.occrp.org/en/resources",
+        "https://gijn.org/series/follow-the-money/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Investigative Mindset and Methodology",
+      "title": "What patterns reveal systemic problems versus isolated incidents?",
+      "concepts": ["pattern recognition", "systemic analysis", "case aggregation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ire.org/training/",
+        "https://gijn.org/resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Source Development",
+      "title": "How do you earn a source's trust when investigating power?",
+      "concepts": ["source cultivation", "trust building", "power dynamics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.poynter.org/educators-students/",
+        "https://gijn.org/tipsheet-protecting-sources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Source Development",
+      "title": "When should information be on, off, or on background?",
+      "concepts": ["attribution standards", "off-the-record protocols", "background sourcing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.spj.org/ethicscode.asp",
+        "https://www.poynter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Source Development",
+      "title": "How do you protect sources while building credible stories?",
+      "concepts": ["source protection", "shield laws", "operational security"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://freedom.press/training/",
+        "https://gijn.org/digital-security-resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Source Development",
+      "title": "How well can you apply source cultivation and protection strategies?",
+      "concepts": ["source cultivation review", "attribution review", "protection review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ire.org/resource-center/",
+        "https://www.poynter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Public Records and FOIA",
+      "title": "What can government records reveal that sources won't say?",
+      "concepts": ["public records landscape", "record types", "accessibility"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rcfp.org/open-government-guide/",
+        "https://www.ire.org/resource-center/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Public Records and FOIA",
+      "title": "How do you craft a FOIA request that actually gets fulfilled?",
+      "concepts": ["FOIA mechanics", "request drafting", "exemptions"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.rcfp.org/foia/",
+        "https://www.muckrock.com/news/archives/2019/jan/22/foia-tips/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Public Records and FOIA",
+      "title": "Why do agencies deny requests, and how do you fight back?",
+      "concepts": ["FOIA denials", "appeals process", "exemption challenges"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.rcfp.org/",
+        "https://www.muckrock.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Public Records and FOIA",
+      "title": "What do court records, property records, and corporate filings tell you?",
+      "concepts": ["court documents", "property records", "corporate filings"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.publicrecords.com/",
+        "https://www.ire.org/nicar/",
+        "https://investigativedashboard.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Public Records and FOIA",
+      "title": "How do you analyze thousands of documents efficiently?",
+      "concepts": ["document organization", "DocumentCloud", "pattern extraction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.documentcloud.org/",
+        "https://www.ire.org/resource-center/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Public Records and FOIA",
+      "title": "Can you navigate FOIA requests and document analysis effectively?",
+      "concepts": ["FOIA review", "document analysis review", "records strategy review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.rcfp.org/",
+        "https://www.muckrock.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Interview Mastery",
+      "title": "How do you get reluctant sources to open up?",
+      "concepts": ["rapport building", "strategic questioning", "reluctant sources"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.poynter.org/",
+        "https://gijn.org/resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Interview Mastery",
+      "title": "What makes a hostile interview succeed or fail?",
+      "concepts": ["confrontational interviewing", "accountability questioning", "follow-up techniques"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ire.org/resource-center/",
+        "https://www.poynter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Interview Mastery",
+      "title": "How do you interview trauma survivors ethically?",
+      "concepts": ["trauma-informed interviewing", "consent protocols", "psychological safety"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://dartcenter.org/resources/dart-center-style-guide",
+        "https://www.poynter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Interview Mastery",
+      "title": "When do you know you have enough on the record?",
+      "concepts": ["interview sufficiency", "corroboration standards", "follow-up strategy"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ire.org/",
+        "https://www.poynter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Data and Document Analysis",
+      "title": "What can a spreadsheet tell you that narrative can't?",
+      "concepts": ["data journalism fundamentals", "pattern detection", "outlier analysis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ire.org/nicar/",
+        "https://datajournalism.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Data and Document Analysis",
+      "title": "How do you turn public datasets into stories?",
+      "concepts": ["data acquisition", "cleaning data", "finding story angles"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ire.org/nicar/",
+        "https://source.opennews.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Data and Document Analysis",
+      "title": "How confidently can you integrate data analysis with interviewing?",
+      "concepts": ["data analysis review", "interviewing review", "integration review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ire.org/",
+        "https://gijn.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Data and Document Analysis",
+      "title": "Why do statistics lie, and how do you catch them?",
+      "concepts": ["statistical literacy", "misleading metrics", "data verification"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ire.org/nicar/",
+        "https://www.poynter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Data and Document Analysis",
+      "title": "How do you verify documents in the age of deepfakes?",
+      "concepts": ["document authentication", "digital forensics", "metadata analysis"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://firstdraftnews.org/",
+        "https://www.bellingcat.com/resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Ethics and Legal Frameworks",
+      "title": "Where is the line between aggressive reporting and harassment?",
+      "concepts": ["reporting boundaries", "subject dignity", "pursuit limits"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.spj.org/ethicscode.asp",
+        "https://www.poynter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Ethics and Legal Frameworks",
+      "title": "How do you avoid getting sued while publishing the truth?",
+      "concepts": ["defamation law", "legal review", "risk assessment"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rcfp.org/resources/",
+        "https://www.spj.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Ethics and Legal Frameworks",
+      "title": "When should you publish despite legal threats?",
+      "concepts": ["public interest calculus", "prior restraint", "editorial courage"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.rcfp.org/",
+        "https://gijn.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Verification and Publishing",
+      "title": "What's your final checklist before publication?",
+      "concepts": ["fact-checking protocol", "legal review", "source verification"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.poynter.org/ifcn/",
+        "https://www.ire.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Verification and Publishing",
+      "title": "Are you ready to conduct a complete investigation from pitch to publication?",
+      "concepts": ["comprehensive review", "investigation workflow", "ethics and legal review", "publication readiness"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ire.org/resource-center/",
+        "https://gijn.org/",
+        "https://www.propublica.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

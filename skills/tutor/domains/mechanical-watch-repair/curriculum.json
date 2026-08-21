@@ -1,0 +1,372 @@
+{
+  "topic": "Mechanical Watch Repair",
+  "slug": "mechanical-watch-repair",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic mechanical understanding",
+    "fine motor skills and hand-eye coordination",
+    "comfort working with small precision tools",
+    "basic understanding of gears and springs",
+    "patience and attention to detail"
+  ],
+  "exit_criteria": [
+    "perform complete service (disassembly, cleaning, lubrication, reassembly) on a simple mechanical movement",
+    "diagnose common timing and operational problems",
+    "use timing machine to measure and adjust rate and beat",
+    "replace mainsprings safely",
+    "perform basic pivot and jewel repairs",
+    "understand escapement function and identify common escapement problems",
+    "work safely with balance assemblies without damaging hairsprings",
+    "document repairs systematically for future reference"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "How does storing energy in a coiled spring make a watch tick?",
+      "concepts": ["mainspring barrel", "gear train", "escapement", "energy flow"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ciechanow.ski/mechanical-watch/",
+        "https://watchrepairtutorials.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What's the difference between a hand-wound and automatic movement?",
+      "concepts": ["manual wind movements", "automatic winding", "rotor mechanism", "movement calibers"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "https://watchrepairtutorials.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Why do watchmakers need so many different screwdrivers?",
+      "concepts": ["screwdrivers", "tweezers", "loupes", "hand removers", "case openers"],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=ioszReAsd8Y",
+        "https://watchrepairlessons.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How do you set up a workspace that won't lose tiny screws?",
+      "concepts": ["workspace organization", "lighting", "dust control", "parts trays", "movement holders"],
+      "difficulty": 1,
+      "type": "real-world",
+      "resources": [
+        "https://www.amazon.com/Maintaining-Repairing-Mechanical-Watches-Practical/dp/1785001558",
+        "https://watchrepairtutorials.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Essential Techniques",
+      "title": "Review: Can you identify the main components and your essential tools?",
+      "concepts": ["movement anatomy review", "tool identification", "workspace setup"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ciechanow.ski/mechanical-watch/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Essential Techniques",
+      "title": "What's the correct sequence for taking a watch apart without breaking anything?",
+      "concepts": ["disassembly sequence", "balance removal", "barrel bridge", "train bridge"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://watchrepairtutorials.com/",
+        "https://www.amazon.com/Maintaining-Repairing-Mechanical-Watches-Practical/dp/1785001558"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Essential Techniques",
+      "title": "How do you remember where everything goes when there are 100+ parts?",
+      "concepts": ["photographic documentation", "parts organization", "systematic layout", "note-taking"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://watchrepairtutorials.com/",
+        "https://www.watchuseek.com/threads/service-your-own-vintage-mechanical-watch.5444749/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Essential Techniques",
+      "title": "Why must you never touch pivots with your fingers?",
+      "concepts": ["pivot handling", "tweezers technique", "jewel removal", "component protection"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://watchrepairlessons.com/",
+        "https://watchrepairtutorials.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Cleaning & Lubrication",
+      "title": "What happens when you put a watch movement in an ultrasonic bath?",
+      "concepts": ["ultrasonic cleaning", "cleaning solutions", "basket technique", "drying methods"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.amazon.com/Maintaining-Repairing-Mechanical-Watches-Practical/dp/1785001558",
+        "https://watchrepairtutorials.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Cleaning & Lubrication",
+      "title": "Why do different parts of a movement need different oils?",
+      "concepts": ["watch oils", "grease vs oil", "viscosity", "oil breakdown"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "https://watchrepairlessons.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Cleaning & Lubrication",
+      "title": "How do you apply a microscopic drop of oil exactly where it needs to go?",
+      "concepts": ["oiling technique", "oilers", "oil sinks", "capillary action", "over-lubrication problems"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://watchrepairlessons.com/",
+        "https://www.amazon.com/Maintaining-Repairing-Mechanical-Watches-Practical/dp/1785001558"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Cleaning & Lubrication",
+      "title": "Review: Where would you oil each part of the movement and why?",
+      "concepts": ["lubrication points", "oil selection", "application technique review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://watchrepairtutorials.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Reassembly & Timing",
+      "title": "What's the secret to getting everything back together in the right order?",
+      "concepts": ["reassembly sequence", "train verification", "function testing", "case fitting"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://watchrepairtutorials.com/",
+        "https://www.amazon.com/Maintaining-Repairing-Mechanical-Watches-Practical/dp/1785001558"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Reassembly & Timing",
+      "title": "How does a timing machine hear what you can't?",
+      "concepts": ["timing machine operation", "rate measurement", "beat error", "amplitude", "positional variance"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "https://watchrepairtutorials.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Reassembly & Timing",
+      "title": "Why does the watch tick-TOCK instead of tick-tick?",
+      "concepts": ["beat error", "balance position", "hairspring stud", "beat correction"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "https://watchrepairlessons.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Reassembly & Timing",
+      "title": "How do you make a watch run exactly 86,400 beats per day?",
+      "concepts": ["rate adjustment", "regulator", "beat rate", "timing screws", "measurement"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "https://ciechanow.ski/mechanical-watch/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Reassembly & Timing",
+      "title": "What checks should you perform before declaring a service complete?",
+      "concepts": ["functional testing", "positional timing", "power reserve", "hand setting", "quality control"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.amazon.com/Maintaining-Repairing-Mechanical-Watches-Practical/dp/1785001558",
+        "https://watchrepairtutorials.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Common Repairs",
+      "title": "Review: Can you service a complete movement and verify timing?",
+      "concepts": ["complete service review", "timing verification", "troubleshooting"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://watchrepairtutorials.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Common Repairs",
+      "title": "How do you replace a broken mainspring without it exploding?",
+      "concepts": ["mainspring removal", "mainspring winder", "barrel assembly", "mainspring installation", "safety"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://watchrepairlessons.com/",
+        "https://www.amazon.com/Maintaining-Repairing-Mechanical-Watches-Practical/dp/1785001558"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Common Repairs",
+      "title": "What do you do when a pivot breaks off?",
+      "concepts": ["pivot damage assessment", "lathe work basics", "staff replacement", "pivot polishing"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "http://www.ticktockpro.com/The%20Complete%20Watch%20Repair%20Course%20with%20diagrams.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Common Repairs",
+      "title": "How do you remove a jewel without shattering it?",
+      "concepts": ["jewel types", "jewel removal tools", "staking set", "jewel installation", "endshake"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "http://www.ticktockpro.com/The%20Complete%20Watch%20Repair%20Course%20with%20diagrams.pdf",
+        "https://watchrepairlessons.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Common Repairs",
+      "title": "Why is replacing a balance staff the most nerve-wracking repair?",
+      "concepts": ["balance staff removal", "roller table", "impulse jewel", "staff fitting", "hairspring safety"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "http://www.ticktockpro.com/The%20Complete%20Watch%20Repair%20Course%20with%20diagrams.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Work",
+      "title": "How does the escapement convert rotary motion into tick-tock?",
+      "concepts": ["Swiss lever escapement", "escape wheel", "pallet fork", "impulse", "lock and drop"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "https://ciechanow.ski/mechanical-watch/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Work",
+      "title": "What happens when pallet stones wear or chip?",
+      "concepts": ["pallet stones", "escapement geometry", "stone replacement", "adjustment after replacement"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "http://www.ticktockpro.com/The%20Complete%20Watch%20Repair%20Course%20with%20diagrams.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Work",
+      "title": "Review: Can you diagnose and repair common mechanical failures?",
+      "concepts": ["repair review", "diagnostic approach", "common failures"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.amazon.com/Maintaining-Repairing-Mechanical-Watches-Practical/dp/1785001558"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Work",
+      "title": "How do you true and poise a balance wheel to atomic precision?",
+      "concepts": ["balance truing", "poising", "poising tool", "balance screws", "dynamic balance"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.awci.com/educationcareers/awci-course-catalog/",
+        "http://www.ticktockpro.com/The%20Complete%20Watch%20Repair%20Course%20with%20diagrams.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Work",
+      "title": "Why is the hairspring both the soul of the watch and its most fragile part?",
+      "concepts": ["hairspring function", "magnetization", "deformation", "hairspring manipulation", "collet and stud"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ciechanow.ski/mechanical-watch/",
+        "http://www.ticktockpro.com/The%20Complete%20Watch%20Repair%20Course%20with%20diagrams.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

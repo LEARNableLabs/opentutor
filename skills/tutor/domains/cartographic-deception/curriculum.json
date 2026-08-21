@@ -1,0 +1,290 @@
+{
+  "topic": "History of cartographic deception — propaganda maps",
+  "slug": "cartographic-deception",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic geography",
+    "awareness of historical propaganda techniques",
+    "critical reading skills"
+  ],
+  "exit_criteria": [
+    "identify projection biases and their political implications",
+    "decode visual rhetoric in propaganda maps",
+    "analyze how color, scale, and symbols manipulate interpretation",
+    "recognize colonial erasure and counter-mapping strategies",
+    "evaluate digital map platforms for algorithmic bias"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Map Power",
+      "title": "Why can't we flatten the Earth without lying?",
+      "concepts": ["projection problem", "geometric distortion", "impossible task"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://xkcd.com/977/", "https://thetruesize.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Map Power",
+      "title": "How does your world map make you see the world wrong?",
+      "concepts": ["Mercator projection", "area distortion", "perceptual bias"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://thetruesize.com/", "https://www.axismaps.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Map Power",
+      "title": "What happens when you change the center of the map?",
+      "concepts": ["eurocentrism", "perspective shift", "spatial politics"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://bigthink.com/strange-maps/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Map Power",
+      "title": "Why do all projections play favorites?",
+      "concepts": ["trade-offs", "preserved properties", "political choices"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://xkcd.com/977/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Map Power",
+      "title": "Can you spot the political choice in Mercator?",
+      "concepts": ["colonial power", "visual dominance", "size perception"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.davidrumsey.com/", "https://thetruesize.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Map Power",
+      "title": "How do projections turn geometry into politics?",
+      "concepts": ["projection review", "distortion patterns", "political implications"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://thetruesize.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Projection Politics",
+      "title": "Why did Mercator make Greenland look huge?",
+      "concepts": ["latitude distortion", "navigation needs", "unintended consequences"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://en.wikipedia.org/wiki/Mercator_projection"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Projection Politics",
+      "title": "How did the Peters projection start a war?",
+      "concepts": ["equal-area projection", "decolonial mapping", "projection controversy"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://bigthink.com/strange-maps/", "https://en.wikipedia.org/wiki/Gall%E2%80%93Peters_projection"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Projection Politics",
+      "title": "Explain why your GPS lies about distance",
+      "concepts": ["Web Mercator", "digital distortion", "user assumptions"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.axismaps.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Projection Politics",
+      "title": "Which countries benefit from which projections?",
+      "concepts": ["geopolitical advantage", "visual emphasis", "projection choice"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://thetruesize.com/", "https://www.loc.gov/collections/persuasive-cartography/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Projection Politics",
+      "title": "Why is the Greenwich meridian a colonial relic?",
+      "concepts": ["prime meridian", "temporal imperialism", "arbitrary standards"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.bl.uk/collection-guides/maps"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Color, Symbol & Lie",
+      "title": "How does red on a map change what you think?",
+      "concepts": ["color psychology", "emotional manipulation", "cartographic rhetoric"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.axismaps.com/", "https://www.loc.gov/collections/persuasive-cartography/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Color, Symbol & Lie",
+      "title": "Can you trace the path from projection to persuasion?",
+      "concepts": ["synthesis review", "visual manipulation", "cumulative patterns"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.loc.gov/collections/persuasive-cartography/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Color, Symbol & Lie",
+      "title": "Can you make the same data tell opposite stories?",
+      "concepts": ["data manipulation", "visual framing", "choropleth bias"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://pudding.cool/", "https://www.axismaps.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Color, Symbol & Lie",
+      "title": "Why do election maps mislead voters?",
+      "concepts": ["area bias", "population vs territory", "visual misinformation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://pudding.cool/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Color, Symbol & Lie",
+      "title": "How do cartographers hide things in plain sight?",
+      "concepts": ["omission", "selective labeling", "erasure techniques"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.loc.gov/collections/persuasive-cartography/", "https://news.cornell.edu/stories/2012/06/exhibit-focuses-maps-weapons-imperialism"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Color, Symbol & Lie",
+      "title": "What makes a symbol neutral or loaded?",
+      "concepts": ["semiotic power", "cultural encoding", "icon design"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.axismaps.com/", "https://www.davidrumsey.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "20th Century Propaganda",
+      "title": "How did Nazi maps justify invasion?",
+      "concepts": ["lebensraum", "territorial claims", "cartographic aggression"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.loc.gov/collections/persuasive-cartography/", "https://www.davidrumsey.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "20th Century Propaganda",
+      "title": "What did Cold War maps want you to fear?",
+      "concepts": ["encirclement narrative", "domino theory", "threat visualization"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.loc.gov/collections/persuasive-cartography/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "20th Century Propaganda",
+      "title": "What connects distortion, symbols, and propaganda?",
+      "concepts": ["historical synthesis", "propaganda patterns", "visual continuity"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.loc.gov/collections/persuasive-cartography/", "https://news.cornell.edu/stories/2012/06/exhibit-focuses-maps-weapons-imperialism"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "20th Century Propaganda",
+      "title": "How did domino theory maps shape Vietnam policy?",
+      "concepts": ["visual argument", "policy influence", "cartographic determinism"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.loc.gov/collections/persuasive-cartography/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "20th Century Propaganda",
+      "title": "Decode a propaganda map's visual rhetoric",
+      "concepts": ["close reading", "rhetorical analysis", "synthesis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.loc.gov/collections/persuasive-cartography/", "https://www.davidrumsey.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Digital Deception & Counter-Mapping",
+      "title": "How do Google Maps decide what exists?",
+      "concepts": ["algorithmic curation", "digital gatekeeping", "platform power"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://bigthink.com/strange-maps/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Digital Deception & Counter-Mapping",
+      "title": "Can satellite imagery be faked?",
+      "concepts": ["deepfake geography", "image manipulation", "verification challenges"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://pudding.cool/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Digital Deception & Counter-Mapping",
+      "title": "How do indigenous communities counter-map?",
+      "concepts": ["counter-mapping", "decolonial practice", "alternative cartography"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://en.wikipedia.org/wiki/Critical_cartography"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Digital Deception & Counter-Mapping",
+      "title": "What happens when algorithms choose what you see?",
+      "concepts": ["algorithmic bias", "filter bubbles", "digital propaganda"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://pudding.cool/", "https://bigthink.com/strange-maps/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Digital Deception & Counter-Mapping",
+      "title": "How do you decode deception in maps you see daily?",
+      "concepts": ["comprehensive review", "applied analysis", "critical cartographic literacy"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://thetruesize.com/", "https://www.loc.gov/collections/persuasive-cartography/", "https://pudding.cool/"],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "topic": "Measure theory and integration",
+  "slug": "measure-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "real analysis (sequences, series, continuity, epsilon-delta)",
+    "point-set topology (metric spaces, open/closed sets)",
+    "undergraduate calculus (Riemann integration)",
+    "proof techniques (induction, contradiction, direct proof)"
+  ],
+  "exit_criteria": [
+    "construct and work with sigma-algebras and measurable spaces",
+    "prove properties of measures and apply extension theorems",
+    "compute Lebesgue integrals and apply convergence theorems",
+    "use Fubini's theorem for iterated integrals",
+    "work with Lp spaces and understand their completeness",
+    "apply Radon-Nikodym theorem to find densities",
+    "connect Lebesgue integration to differentiation via fundamental theorem"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Measure Theory",
+      "title": "Why does the Riemann integral fail for highly discontinuous functions?",
+      "concepts": ["Riemann integral limitations", "Dirichlet function", "motivation for Lebesgue"],
+      "difficulty": 1,
+      "type": "question",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://open.umn.edu/opentextbooks/textbooks/measure-integration-real-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Measure Theory",
+      "title": "What algebraic structure do we need to 'measure' sets?",
+      "concepts": ["sigma-algebras", "Borel sets", "measurable spaces"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/pages/lecture-notes/",
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Measure Theory",
+      "title": "How do we assign consistent 'sizes' to infinitely many sets?",
+      "concepts": ["measures", "countable additivity", "null sets"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/",
+        "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Measure Theory",
+      "title": "Can we extend length from intervals to all 'reasonable' sets?",
+      "concepts": ["outer measure", "Carathéodory's theorem", "measurability criterion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://www.cmat.edu.uy/~mordecki/courses/medida2013/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Measure Theory",
+      "title": "What is Lebesgue measure and why does it generalize length?",
+      "concepts": ["Lebesgue measure on R", "translation invariance", "Borel sigma-algebra"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/measure-integration-real-analysis",
+        "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Measure Theory",
+      "title": "How do sigma-algebras and measures work in practice?",
+      "concepts": ["sigma-algebra constructions", "measure properties", "Borel sets"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/",
+        "https://mpaldridge.github.io/teaching/ma40042/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Integration Theory",
+      "title": "Which functions can we integrate with respect to a measure?",
+      "concepts": ["measurable functions", "inverse images", "Borel measurability"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Integration Theory",
+      "title": "How do we build the Lebesgue integral from simple functions?",
+      "concepts": ["simple functions", "integration of simple functions", "approximation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cmat.edu.uy/~mordecki/courses/medida2013/book.pdf",
+        "https://open.umn.edu/opentextbooks/textbooks/measure-integration-real-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Integration Theory",
+      "title": "Why does integrating by 'horizontal slices' change everything?",
+      "concepts": ["Lebesgue vs Riemann", "horizontal slicing", "measure of level sets"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.celsiuselements.com/math/measure-theory-video-lectures/",
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Integration Theory",
+      "title": "Can we pass limits through integrals?",
+      "concepts": ["Monotone Convergence Theorem", "Fatou's Lemma", "limit interchange"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/",
+        "https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Integration Theory",
+      "title": "What's the most useful convergence theorem in all of analysis?",
+      "concepts": ["Dominated Convergence Theorem", "integrable dominating function", "applications"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://www.cmat.edu.uy/~mordecki/courses/medida2013/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Integration Theory",
+      "title": "How do different notions of convergence relate to each other?",
+      "concepts": ["pointwise convergence", "almost everywhere convergence", "convergence in measure", "Egoroff's theorem"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/measure-integration-real-analysis",
+        "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Integration Theory",
+      "title": "How do we apply convergence theorems to solve problems?",
+      "concepts": ["MCT applications", "DCT applications", "Fatou applications"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/",
+        "https://mpaldridge.github.io/teaching/ma40042/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Product Measures and Fubini",
+      "title": "How do we measure rectangles in product spaces?",
+      "concepts": ["product sigma-algebra", "product measure", "measurable rectangles"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://www.cmat.edu.uy/~mordecki/courses/medida2013/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Product Measures and Fubini",
+      "title": "When can we swap the order of integration?",
+      "concepts": ["Fubini's theorem", "Tonelli's theorem", "iterated integrals"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/",
+        "https://open.umn.edu/opentextbooks/textbooks/measure-integration-real-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Product Measures and Fubini",
+      "title": "Why does Fubini fail without integrability assumptions?",
+      "concepts": ["counterexamples to Fubini", "necessity of conditions", "measurability vs integrability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://e.math.cornell.edu/people/belk/measuretheory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Product Measures and Fubini",
+      "title": "How do we compute volumes using iterated integrals?",
+      "concepts": ["Fubini applications", "change of variables", "geometric applications"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/",
+        "https://www.celsiuselements.com/math/measure-theory-video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Signed Measures and Radon-Nikodym",
+      "title": "What happens when we relax the positivity of measures?",
+      "concepts": ["signed measures", "positive/negative variations", "total variation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://www.cmat.edu.uy/~mordecki/courses/medida2013/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Signed Measures and Radon-Nikodym",
+      "title": "How do we decompose a space into positive and negative parts?",
+      "concepts": ["Hahn decomposition", "Jordan decomposition", "signed measure review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/",
+        "https://mpaldridge.github.io/teaching/ma40042/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Signed Measures and Radon-Nikodym",
+      "title": "When can we represent one measure as a density of another?",
+      "concepts": ["absolute continuity", "Radon-Nikodym theorem", "Radon-Nikodym derivative"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Signed Measures and Radon-Nikodym",
+      "title": "How do absolute continuity and the Radon-Nikodym theorem connect?",
+      "concepts": ["absolute continuity applications", "Radon-Nikodym derivative properties", "density representations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://open.umn.edu/opentextbooks/textbooks/measure-integration-real-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Function Spaces and Applications",
+      "title": "What are Lp spaces and why do they matter?",
+      "concepts": ["Lp spaces", "p-norms", "integral norms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cmat.edu.uy/~mordecki/courses/medida2013/book.pdf",
+        "https://open.umn.edu/opentextbooks/textbooks/measure-integration-real-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Function Spaces and Applications",
+      "title": "Are Lp spaces complete metric spaces?",
+      "concepts": ["Riesz-Fischer theorem", "completeness of Lp", "Cauchy sequences"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Function Spaces and Applications",
+      "title": "How do we differentiate integrals and integrate derivatives?",
+      "concepts": ["Lebesgue differentiation theorem", "fundamental theorem of calculus", "absolutely continuous functions"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.ethz.ch/~salamon/PREPRINTS/measure.pdf",
+        "https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Function Spaces and Applications",
+      "title": "How does measure theory underpin modern probability?",
+      "concepts": ["probability spaces", "random variables as measurable functions", "expectation as integral"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.classcentral.com/course/swayam-measure-theory-imsc-43635",
+        "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Function Spaces and Applications",
+      "title": "How do all the major theorems of measure theory connect together?",
+      "concepts": ["integration theory overview", "convergence theorems", "Lp spaces", "Radon-Nikodym"],
+      "difficulty": 1,
+      "type": "teach-back",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/measure-integration-real-analysis",
+        "https://www.celsiuselements.com/math/measure-theory-video-lectures/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

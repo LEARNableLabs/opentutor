@@ -1,0 +1,261 @@
+{
+  "topic": "Mushroom identification — morphology, toxicology, and ecology",
+  "slug": "mushroom-identification",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic fungal biology",
+    "comfort with scientific terminology",
+    "willingness to work outdoors"
+  ],
+  "exit_criteria": [
+    "identify major taxonomic groups by morphological features",
+    "recognize deadly poisonous species and their look-alikes",
+    "use dichotomous keys and field guides effectively",
+    "assess ecological context to narrow identification",
+    "conduct safe field documentation and specimen collection",
+    "know when microscopy or expert confirmation is needed"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Morphological Foundations",
+      "title": "Why do mushroom hunters obsess over tiny details?",
+      "concepts": ["morphological observation", "identification workflow", "documentation importance"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://www.mushroomexpert.com/glossary.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Morphological Foundations",
+      "title": "What stories do caps tell about a mushroom's identity?",
+      "concepts": ["cap shape", "cap surface", "cap margin", "color variation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.mushroomexpert.com/caps.html", "https://www.inaturalist.org/guides/13629"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Morphological Foundations",
+      "title": "How can gills and pores reveal a mushroom's family secrets?",
+      "concepts": ["gill attachment", "gill spacing", "pore structure", "spore-bearing surfaces"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.mushroomexpert.com/gills.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Morphological Foundations",
+      "title": "What clues hide where stem meets ground?",
+      "concepts": ["stem structure", "volva", "ring/annulus", "base characteristics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.mushroomexpert.com/stems.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Morphological Foundations",
+      "title": "Why is a spore print worth waiting for?",
+      "concepts": ["spore print technique", "spore color", "diagnostic value"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.mushroomexpert.com/spore_print.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Major Taxonomic Groups",
+      "title": "Review: Can you identify morphological features in the field?",
+      "concepts": ["morphology review", "observation practice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.inaturalist.org/observations?place_id=any&taxon_id=47170"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Major Taxonomic Groups",
+      "title": "What makes an Amanita both beautiful and deadly?",
+      "concepts": ["Amanita genus", "universal veil", "deadly species", "look-alikes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.mushroomexpert.com/amanita.html", "https://www.namyco.org/toxicology.php"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Major Taxonomic Groups",
+      "title": "How do boletes break the gilled mushroom rule?",
+      "concepts": ["Boletales", "pore surface", "staining reactions", "edibility patterns"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.mushroomexpert.com/boletes.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Major Taxonomic Groups",
+      "title": "Why do little brown mushrooms terrify even experts?",
+      "concepts": ["LBMs", "Cortinarius", "Galerina", "microscopy requirements"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.mushroomexpert.com/lbms.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Major Taxonomic Groups",
+      "title": "What field guide would help you identify this mystery mushroom?",
+      "concepts": ["dichotomous keys", "field guide use", "regional resources"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.mushroomobserver.org/observer/how_to_use_keys"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Major Taxonomic Groups",
+      "title": "How do polypores and crusts defy the mushroom stereotype?",
+      "concepts": ["Polyporales", "crust fungi", "woody substrates", "perennial structures"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.mushroomexpert.com/polypores.html", "https://www.inaturalist.org/taxa/119998-Polyporales"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Toxicology and Safety",
+      "title": "Review: Can you navigate a mushroom identification key?",
+      "concepts": ["key navigation", "taxonomic groups review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.mushroomobserver.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Toxicology and Safety",
+      "title": "Why does one bite of a Death Cap destroy your liver?",
+      "concepts": ["amatoxins", "toxin mechanisms", "delayed symptoms", "treatment"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.namyco.org/toxicology.php", "https://www.mushroomexpert.com/amanita_phalloides.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Toxicology and Safety",
+      "title": "What makes a mushroom poisoning hard to diagnose?",
+      "concepts": ["toxin syndromes", "symptom timing", "medical identification"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.namyco.org/toxicology.php"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Toxicology and Safety",
+      "title": "How do edible mushrooms get deadly look-alikes?",
+      "concepts": ["convergent evolution", "confusion pairs", "safety protocols"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.mushroomexpert.com/look_alikes.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Toxicology and Safety",
+      "title": "Can you create a safe foraging decision tree?",
+      "concepts": ["foraging safety", "identification confidence", "expert confirmation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.namyco.org/mushroom_poisoning_syndromes.php"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Ecological Context",
+      "title": "Review: Would you eat this mushroom? Why or why not?",
+      "concepts": ["toxicology review", "identification confidence assessment"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.inaturalist.org/observations?taxon_id=47170&quality_grade=research"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Ecological Context",
+      "title": "Why does this mushroom only grow under oaks?",
+      "concepts": ["mycorrhizal associations", "tree partnerships", "host specificity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.mushroomexpert.com/ecology.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Ecological Context",
+      "title": "How does knowing the substrate narrow your ID to five species?",
+      "concepts": ["substrate preference", "wood decay types", "ecological niches"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.mushroomexpert.com/substrates.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Ecological Context",
+      "title": "What does seasonal timing reveal about mushroom identity?",
+      "concepts": ["phenology", "seasonal patterns", "climate factors"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.mushroomobserver.org/observer/lookup_location", "https://www.inaturalist.org/calendar"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Field Methods and Integration",
+      "title": "How do you document a find so experts can help remotely?",
+      "concepts": ["field photography", "specimen notes", "location data", "online identification"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.mushroomobserver.org/observer/how_to_observe", "https://www.inaturalist.org/pages/getting+started"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Field Methods and Integration",
+      "title": "What ethical rules guide responsible mushroom collecting?",
+      "concepts": ["collection ethics", "conservation", "private land access", "sustainability"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.namyco.org/collecting_ethics.php"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Field Methods and Integration",
+      "title": "Review: Walk me through identifying this unknown specimen",
+      "concepts": ["integrated workflow", "multi-source confirmation", "limitation recognition"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.mushroomobserver.org/observations", "https://www.inaturalist.org/observations/identify"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Field Methods and Integration",
+      "title": "When should you admit that you need a microscope?",
+      "concepts": ["identification limits", "microscopy indications", "expert consultation", "citizen science platforms"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.mushroomobserver.org/observer/advanced_search", "https://www.mushroomexpert.com/microscopy.html"],
+      "status": "pending"
+    }
+  ]
+}

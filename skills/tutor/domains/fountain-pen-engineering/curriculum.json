@@ -1,0 +1,280 @@
+{
+  "topic": "Fountain pen engineering — nib geometry and ink chemistry",
+  "slug": "fountain-pen-engineering",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (pH, solutions, molecular interactions)",
+    "materials science fundamentals (metals, alloys, stress/strain)",
+    "fluid mechanics basics (surface tension, viscosity, capillary action)"
+  ],
+  "exit_criteria": [
+    "analyze nib geometry and predict writing characteristics",
+    "diagnose ink flow problems from nib and feed design",
+    "evaluate ink formulations for compatibility and performance",
+    "design modifications to nib tines for line variation",
+    "assess trade-offs between materials, geometry, and ink properties"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to Fountain Pen Systems",
+      "title": "How does ink flow from reservoir to paper without a pump?",
+      "concepts": ["capillary action", "gravity feed", "air pressure equilibrium"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://www.richardspens.com/ref/anatomy/anatomy.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to Fountain Pen Systems",
+      "title": "Why do some nibs write smoothly while others feel scratchy?",
+      "concepts": ["tipping geometry", "contact angle", "surface finish"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.gouletpens.com/pages/nib-nook"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to Fountain Pen Systems",
+      "title": "What makes fountain pen ink different from other inks?",
+      "concepts": ["pH neutrality", "low viscosity", "dye vs pigment"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.fountainpennetwork.com/forum/topic/62808-fountain-pen-ink-chemistry/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Nib Geometry Fundamentals",
+      "title": "Why does the slit down the middle of the nib matter so much?",
+      "concepts": ["slit width", "ink channel", "tine flexibility", "capillary spacing"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.richardspens.com/ref/nibs/basics.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Nib Geometry Fundamentals",
+      "title": "How does nib tipping material affect writing performance?",
+      "concepts": ["iridium alloys", "hardness", "wear resistance", "welding technique"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.peytonstreetpens.com/tipping-material-what-it-is-and-why-it-matters.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Nib Geometry Fundamentals",
+      "title": "What determines whether a nib writes fine or broad?",
+      "concepts": ["tipping shape", "contact patch", "line width", "grind profiles"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.gouletpens.com/pages/anatomy-of-a-fountain-pen-nib"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Nib Geometry Fundamentals",
+      "title": "Can you explain how nib anatomy controls ink flow?",
+      "concepts": ["nib anatomy review", "flow fundamentals"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.jetpens.com/blog/The-Beginner-s-Guide-to-Fountain-Pens/pt/782"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Nib Geometry Fundamentals",
+      "title": "Why do gold nibs flex more than steel nibs?",
+      "concepts": ["elastic modulus", "alloy composition", "springback", "work hardening"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.fountainpennetwork.com/forum/topic/216479-why-gold-nibs/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Nib Geometry Fundamentals",
+      "title": "How does feed design regulate ink flow to prevent flooding?",
+      "concepts": ["feed channels", "air exchange", "ink capacity", "saturation control"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.richardspens.com/ref/anatomy/feeds.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Nib Geometry Fundamentals",
+      "title": "Can you design a nib that writes both fine and broad?",
+      "concepts": ["stub grind", "italic grind", "line variation", "pressure response"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.nibgrinder.com/guide-to-custom-grinds"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Ink Chemistry Basics",
+      "title": "What makes ink flow smoothly through tiny channels?",
+      "concepts": ["surface tension", "wetting", "contact angle", "surfactants"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.jetpens.com/blog/fountain-pen-ink-comparison/pt/829"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Ink Chemistry Basics",
+      "title": "Why do some inks clog pens while others don't?",
+      "concepts": ["particle size", "pigment suspension", "dye solubility", "pH stability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.fountainpennetwork.com/forum/topic/190235-why-some-inks-clog/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Ink Chemistry Basics",
+      "title": "How do capillary forces and ink chemistry work together?",
+      "concepts": ["capillary action review", "ink composition review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.gouletpens.com/pages/ink-properties"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Ink Chemistry Basics",
+      "title": "How do manufacturers balance water resistance with easy cleaning?",
+      "concepts": ["polymer binders", "resin additives", "permanence", "solubility trade-offs"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.fountainpennetwork.com/forum/topic/267890-waterproof-ink-chemistry/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Ink Chemistry Basics",
+      "title": "What causes ink shading and sheen on paper?",
+      "concepts": ["dye concentration gradients", "surface pooling", "chromatography", "surfactant migration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.mountainofink.com/blog/sheen-and-shading"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Ink Chemistry Basics",
+      "title": "Why can't you mix all fountain pen inks together safely?",
+      "concepts": ["pH compatibility", "chemical reactions", "precipitation", "corrosion potential"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.jetpens.com/blog/can-you-mix-fountain-pen-inks/pt/891"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Advanced Nib Engineering",
+      "title": "How do nibmeisters grind custom line variations?",
+      "concepts": ["grinding angles", "tipping reshaping", "smoothing techniques", "microscopy inspection"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://www.nibs.com/blog/posts/custom-nib-grinding-guide", "https://www.youtube.com/watch?v=E2EvB5BR8Do"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Advanced Nib Engineering",
+      "title": "What limits how flexible a nib can be before it fails?",
+      "concepts": ["yield strength", "fatigue limit", "stress concentration", "tine geometry limits"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.fountainpennetwork.com/forum/topic/298456-flex-nib-engineering/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Nib Engineering",
+      "title": "How do material properties and geometry combine to control flow?",
+      "concepts": ["nib materials review", "geometry-flow relationships"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.richardspens.com/ref/nibs/primer.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Advanced Nib Engineering",
+      "title": "How do you diagnose and fix baby's bottom or railroad lines?",
+      "concepts": ["nib defects", "tipping geometry errors", "slit misalignment", "repair techniques"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.peytonstreetpens.com/nib-problems-and-solutions.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Ink Formulation",
+      "title": "How would you formulate an archival-quality iron gall ink?",
+      "concepts": ["iron-tannin complex", "acidic formulation", "corrosion control", "longevity testing"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.fountainpennetwork.com/forum/topic/225890-iron-gall-ink-formulation/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Ink Formulation",
+      "title": "What viscosity and surface tension targets optimize fast-drying without feathering?",
+      "concepts": ["rheology optimization", "paper interaction", "evaporation rate", "absorption kinetics"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.jetpens.com/blog/fountain-pen-ink-properties-explained/pt/829"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Ink Formulation",
+      "title": "Why do some inks require biocides and others don't?",
+      "concepts": ["microbial growth", "organic components", "preservatives", "shelf stability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.fountainpennetwork.com/forum/topic/301456-ink-biocides/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration and Real-World Design",
+      "title": "How would you match ink properties to nib characteristics for optimal performance?",
+      "concepts": ["nib-ink compatibility", "flow matching", "design integration", "performance optimization"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.gouletpens.com/pages/matching-nibs-and-inks"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration and Real-World Design",
+      "title": "What are the engineering trade-offs in designing a reliable daily-use fountain pen?",
+      "concepts": ["reliability engineering", "cost-performance balance", "manufacturing tolerances", "user experience"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.richardspens.com/ref/design/design_considerations.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration and Real-World Design",
+      "title": "How do nib design, ink chemistry, and system integration create optimal performance?",
+      "concepts": ["comprehensive review", "nib-ink integration", "system optimization", "engineering synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.richardspens.com/ref/reference.htm", "https://www.fountainpennetwork.com/forum/"],
+      "status": "pending"
+    }
+  ]
+}

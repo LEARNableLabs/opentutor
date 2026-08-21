@@ -1,0 +1,414 @@
+{
+  "topic": "Linguistics — Syntax, Semantics, and Pragmatics",
+  "slug": "linguistics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic understanding of grammar (parts of speech, sentence structure)",
+    "familiarity with logic or formal reasoning",
+    "comfort with abstract symbolic representation"
+  ],
+  "exit_criteria": [
+    "construct and analyze syntactic tree diagrams using X-bar theory",
+    "identify and explain semantic relations (entailment, presupposition, implicature)",
+    "apply compositional semantics to determine truth conditions",
+    "distinguish between semantic and pragmatic contributions to meaning",
+    "analyze conversational implicature using Gricean maxims",
+    "identify speech act types and their felicity conditions",
+    "explain how syntax, semantics, and pragmatics interact in natural language understanding"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do we need three separate fields to study meaning?",
+      "concepts": ["syntax vs semantics vs pragmatics", "linguistic competence", "meaning in language"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-903-language-and-its-structure-iii-semantics-and-pragmatics-spring-2005/",
+        "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How does 'The chicken is ready to eat' mean two completely different things?",
+      "concepts": ["structural ambiguity", "constituency", "hierarchical structure"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://elearning.cpp.edu/learning-objects/syntactic-tree-structures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What makes a sentence grammatical versus meaningful versus appropriate?",
+      "concepts": ["grammaticality", "semantic well-formedness", "pragmatic felicity"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.reed.edu/linguistics/khan/assets/syllabus-211.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Syntactic Structure",
+      "title": "How do we prove that words group into phrases?",
+      "concepts": ["constituency tests", "substitution", "movement"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pressbooks.pub/essentialsoflinguistics/chapter/8-2-tree-diagrams/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Syntactic Structure",
+      "title": "Why do linguists draw sentences as trees instead of just reading left to right?",
+      "concepts": ["tree diagrams", "phrase structure rules", "hierarchical structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://conceptviz.app/tools/syntactic-tree-generator",
+        "http://mshang.ca/syntree/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Syntactic Structure",
+      "title": "What do all noun phrases have in common, from 'it' to 'the very old book on the shelf'?",
+      "concepts": ["X-bar theory", "heads", "complements", "specifiers"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://software.sil.org/lingtree/",
+        "https://babel.ling.upenn.edu/~kroch/Trees.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Syntactic Structure",
+      "title": "How can we tell that 'What did you see?' is related to 'You did see what?'",
+      "concepts": ["movement operations", "wh-movement", "traces"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-900-introduction-to-linguistics-spring-2022/resources/ocw_24900_lecture20_2022apr19/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Syntactic Structure",
+      "title": "Why can't 'himself' appear just anywhere in a sentence?",
+      "concepts": ["binding theory", "anaphora", "c-command"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-900-introduction-to-linguistics-spring-2022/resources/ocw_24900_lecture20_2022apr19/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Syntactic Structure",
+      "title": "Can you analyze the syntax of a complex sentence from a news article?",
+      "concepts": ["complex sentences", "embedded clauses", "practical parsing"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://lin-tree-solver.adambcomer.com/",
+        "https://conceptviz.app/tools/syntactic-tree-generator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Syntactic Structure",
+      "title": "Review: What have we learned about how sentences are built?",
+      "concepts": ["constituency", "tree structure", "movement", "binding"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/a1-5-draw-a-tree-step-by-step/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Lexical Semantics",
+      "title": "What's the difference between knowing a word and knowing what it refers to?",
+      "concepts": ["sense vs reference", "Frege's puzzle", "meaning and denotation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/analyzing-meaning-an-introduction-to-semantics-and-pragmatics",
+        "http://www.acsu.buffalo.edu/~jb77/LIN438_538.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Lexical Semantics",
+      "title": "How are 'bachelor' and 'unmarried man' related? What about 'hot' and 'cold'?",
+      "concepts": ["synonymy", "antonymy", "hyponymy", "semantic fields"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://langsci-press.org/catalog/book/359"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Lexical Semantics",
+      "title": "Why is 'kill' simpler than 'cause to die' even though they mean the same thing?",
+      "concepts": ["lexical decomposition", "semantic primitives", "conceptual structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/analyzing-meaning-an-introduction-to-semantics-and-pragmatics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Compositional Semantics",
+      "title": "How do we build the meaning of a sentence from the meanings of its words?",
+      "concepts": ["principle of compositionality", "Frege's principle", "semantic combination"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-903-language-and-its-structure-iii-semantics-and-pragmatics-spring-2005/pages/readings/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Compositional Semantics",
+      "title": "When is a sentence true? How do linguists formalize this?",
+      "concepts": ["truth conditions", "truth values", "possible worlds"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-973-advanced-semantics-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Compositional Semantics",
+      "title": "Why does 'Every student read a book' have two different meanings?",
+      "concepts": ["quantifiers", "scope ambiguity", "surface vs inverse scope"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-973-advanced-semantics-spring-2009/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Compositional Semantics",
+      "title": "How do modals like 'must' and 'might' change sentence meaning?",
+      "concepts": ["modality", "necessity", "possibility", "modal logic"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://langsci-press.org/catalog/book/359"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Compositional Semantics",
+      "title": "Review: How do we calculate what sentences mean?",
+      "concepts": ["compositionality", "truth conditions", "quantification", "scope"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/analyzing-meaning-an-introduction-to-semantics-and-pragmatics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Pragmatics Foundations",
+      "title": "Why does 'Can you pass the salt?' work as a request, not just a yes/no question?",
+      "concepts": ["literal vs intended meaning", "indirect speech acts", "context"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-954-pragmatics-in-linguistic-theory-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Pragmatics Foundations",
+      "title": "What are Grice's rules of conversation, and how do we break them?",
+      "concepts": ["Gricean maxims", "quality", "quantity", "relation", "manner"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://s3.amazonaws.com/mirror.facultyinfo.unt.edu/jrr0041/schteach/Official!%20semantics%20%20pragmatics%20syllabus-2.pdf",
+        "https://open.umn.edu/opentextbooks/textbooks/analyzing-meaning-an-introduction-to-semantics-and-pragmatics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Pragmatics Foundations",
+      "title": "How does 'She's a fine friend' mean the opposite when said sarcastically?",
+      "concepts": ["conversational implicature", "flouting maxims", "scalar implicature"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-954-pragmatics-in-linguistic-theory-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Pragmatics Foundations",
+      "title": "What are we doing when we say things? Promising? Declaring? Asking?",
+      "concepts": ["speech acts", "Austin", "Searle", "illocutionary force"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://s3.amazonaws.com/mirror.facultyinfo.unt.edu/jrr0041/schteach/Official!%20semantics%20%20pragmatics%20syllabus-2.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Pragmatics",
+      "title": "Why does 'Have you stopped cheating?' imply you were cheating before?",
+      "concepts": ["presupposition", "presupposition triggers", "projection problem"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-954-pragmatics-in-linguistic-theory-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Pragmatics",
+      "title": "How do words like 'here', 'now', 'I', and 'you' shift meaning with every utterance?",
+      "concepts": ["deixis", "person deixis", "spatial deixis", "temporal deixis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://linguistics.uchicago.edu/intro-semantics-and-pragmatics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Pragmatics",
+      "title": "Review: How does context shape what we mean and understand?",
+      "concepts": ["implicature", "speech acts", "presupposition", "deixis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/analyzing-meaning-an-introduction-to-semantics-and-pragmatics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration",
+      "title": "Where does syntax end and semantics begin?",
+      "concepts": ["syntax-semantics interface", "argument structure", "theta roles"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-903-language-and-its-structure-iii-semantics-and-pragmatics-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration",
+      "title": "Can semantic knowledge override syntactic structure? What about pragmatic context?",
+      "concepts": ["interface phenomena", "garden path sentences", "parsing preferences"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-900-introduction-to-linguistics-spring-2022/resources/ocw_24900_lecture20_2022apr19/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Integration",
+      "title": "How do we understand 'The ham sandwich wants his check' in a restaurant?",
+      "concepts": ["metonymy", "reference transfer", "pragmatic enrichment"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://linguistics.uchicago.edu/intro-semantics-and-pragmatics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Integration",
+      "title": "What happens when you analyze a real conversation using all three frameworks?",
+      "concepts": ["integrated analysis", "discourse structure", "multi-level understanding"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-954-pragmatics-in-linguistic-theory-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Integration",
+      "title": "How do different languages divide labor between syntax, semantics, and pragmatics?",
+      "concepts": ["cross-linguistic variation", "typology", "universals"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cambridge.org/highereducation/books/exploring-language-and-linguistics/3DBD29516B335491267E9C04403CB616/pragmatics/C84E482E5B3BDCA25BE6ADE8F166CD65"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Integration",
+      "title": "What are the big open questions in syntax, semantics, and pragmatics today?",
+      "concepts": ["research frontiers", "theoretical debates", "future directions"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://global.oup.com/ukhe/disciplines/linguistics/semantics-and-pragmatics/",
+        "https://www.cambridge.org/core/series/cambridge-textbooks-in-linguistics/79990002F07F78DC02C536C2BD183E71"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Integration",
+      "title": "Final review: How does language work as a system connecting form, meaning, and use?",
+      "concepts": ["holistic understanding", "three-way integration", "linguistic competence"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-903-language-and-its-structure-iii-semantics-and-pragmatics-spring-2005/",
+        "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

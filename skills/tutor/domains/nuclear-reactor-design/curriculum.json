@@ -1,0 +1,283 @@
+{
+  "topic": "Nuclear Reactor Design",
+  "slug": "nuclear-reactor-design",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "undergraduate physics",
+    "thermodynamics",
+    "fluid mechanics",
+    "differential equations",
+    "basic nuclear physics"
+  ],
+  "exit_criteria": [
+    "analyze neutron balance and criticality in reactor cores",
+    "design fuel assembly lattices and calculate power distributions",
+    "evaluate thermal-hydraulic performance and safety margins",
+    "assess reactor safety systems and accident scenarios",
+    "compare different reactor types and select appropriate designs for applications",
+    "understand regulatory requirements and safety analysis methods"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Reactor Physics Fundamentals",
+      "title": "How do we sustain a controlled chain reaction?",
+      "concepts": ["neutron multiplication", "criticality", "k-effective"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Reactor Physics Fundamentals",
+      "title": "Why do some neutrons cause fission while others just bounce around?",
+      "concepts": ["neutron cross-sections", "scattering vs absorption", "energy spectrum"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.nrc.gov/reading-rm/basic-ref/teachers/03.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Reactor Physics Fundamentals",
+      "title": "What makes thermal reactors different from fast reactors?",
+      "concepts": ["moderation", "thermal spectrum", "fast spectrum"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-power-reactors/nuclear-power-reactors.aspx"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Reactor Physics Fundamentals",
+      "title": "How do we mathematically describe neutron behavior in a reactor?",
+      "concepts": ["diffusion theory", "transport equation", "flux"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/22-05-neutron-science-and-reactor-physics-fall-2009/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Reactor Physics Fundamentals",
+      "title": "Why does uranium fuel eventually stop working even when most of it is still there?",
+      "concepts": ["burnup", "fission products", "fuel depletion"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=rcOFV4y5fAc"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Reactor Physics Fundamentals",
+      "title": "Review: Neutron physics fundamentals",
+      "concepts": ["criticality", "neutron spectrum", "fuel cycles"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.nrc.gov/reading-rm/basic-ref/teachers/unit-3.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Core Design Principles",
+      "title": "How do we arrange fuel rods to maximize power output?",
+      "concepts": ["lattice design", "fuel assembly geometry", "pitch-to-diameter ratio"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/22-06-engineering-of-nuclear-systems-fall-2010/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Core Design Principles",
+      "title": "Why doesn't all fuel burn at the same rate?",
+      "concepts": ["power distribution", "peaking factors", "form factors"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.iaea.org/publications/7305/power-reactor-core-parameter-analysis"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Core Design Principles",
+      "title": "What happens when the reactor heats up or cools down?",
+      "concepts": ["reactivity coefficients", "temperature feedback", "stability"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/sr0800/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Core Design Principles",
+      "title": "How do we plan where to put fresh and spent fuel?",
+      "concepts": ["core loading patterns", "fuel shuffling", "cycle length"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.iaea.org/publications/8763/loading-pattern-optimization"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Thermal-Hydraulics",
+      "title": "How much heat can we safely remove from a fuel rod?",
+      "concepts": ["heat flux", "thermal limits", "hot channel factors"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/22-312-engineering-of-nuclear-reactors-fall-2015/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Thermal-Hydraulics",
+      "title": "Why does boiling water make reactor design more complicated?",
+      "concepts": ["two-phase flow", "void fraction", "flow regimes"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=fZyxvJn5HWw"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Thermal-Hydraulics",
+      "title": "What happens if the coolant stops flowing?",
+      "concepts": ["natural circulation", "decay heat", "passive cooling"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/3mile-isle.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Thermal-Hydraulics",
+      "title": "Review: Core design and heat removal",
+      "concepts": ["power peaking", "thermal limits", "two-phase flow"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.nuclear-power.com/nuclear-engineering/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Safety Systems and Analysis",
+      "title": "How do multiple safety layers protect against accidents?",
+      "concepts": ["defense-in-depth", "safety barriers", "redundancy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.iaea.org/publications/8700/defence-in-depth-in-nuclear-safety"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Safety Systems and Analysis",
+      "title": "What if the biggest pipe breaks?",
+      "concepts": ["loss-of-coolant accident", "ECCS", "blowdown"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://ocw.mit.edu/courses/22-091-nuclear-reactor-safety-spring-2008/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Safety Systems and Analysis",
+      "title": "How do we calculate the probability of catastrophic failure?",
+      "concepts": ["probabilistic risk assessment", "fault trees", "event trees"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.nrc.gov/about-nrc/regulatory/risk-informed/pra.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Safety Systems and Analysis",
+      "title": "Why is containment the last line of defense?",
+      "concepts": ["containment design", "pressure suppression", "filtered venting"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.world-nuclear.org/information-library/safety-and-security/safety-of-plants/safety-of-nuclear-power-reactors.aspx"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Materials and Fuel",
+      "title": "What makes a good fuel material?",
+      "concepts": ["fuel types", "UO2", "MOX", "enrichment"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/fuel-fabrication.aspx"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Materials and Fuel",
+      "title": "Why does radiation damage materials over time?",
+      "concepts": ["radiation damage", "embrittlement", "swelling", "creep"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=s_b-zpSnoHs"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Materials and Fuel",
+      "title": "Can we build fuel that can't melt?",
+      "concepts": ["TRISO fuel", "accident-tolerant fuel", "cladding materials"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.iaea.org/topics/accident-tolerant-fuels"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Materials and Fuel",
+      "title": "Review: Safety and materials",
+      "concepts": ["safety systems", "PRA", "fuel performance"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.nrc.gov/reactors/new-reactors/design-cert.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Control and Instrumentation",
+      "title": "How do control rods shut down a reactor in seconds?",
+      "concepts": ["control rod design", "shutdown systems", "negative reactivity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.nuclear-power.com/nuclear-power/reactor-physics/reactor-control/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Control and Instrumentation",
+      "title": "How do we measure what's happening inside a sealed reactor vessel?",
+      "concepts": ["in-core instrumentation", "neutron detectors", "reactor protection"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.iaea.org/publications/13873/instrumentation-and-control-systems-important-to-safety-in-nuclear-power-plants"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Reactor Concepts",
+      "title": "What makes Generation IV reactors better than current designs?",
+      "concepts": ["Gen IV reactors", "passive safety", "sustainability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.gen-4.org/gif/jcms/c_59461/generation-iv-systems"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Reactor Concepts",
+      "title": "Could small modular reactors democratize nuclear power?",
+      "concepts": ["SMR designs", "factory fabrication", "distributed generation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.iaea.org/topics/small-modular-reactors"],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "topic": "Dendrochronology — reading tree rings",
+  "slug": "dendrochronology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic statistics (mean, variance, correlation)",
+    "fundamental ecology or environmental science",
+    "comfort with data analysis",
+    "scientific method and hypothesis testing"
+  ],
+  "exit_criteria": [
+    "student can identify ring boundaries and measure ring widths accurately",
+    "student can cross-date samples using skeleton plotting and statistical validation",
+    "student can build a standardized chronology from multiple cores",
+    "student can interpret climate signals from tree-ring patterns",
+    "student can apply dendrochronological methods to real-world problems in archaeology or climate science",
+    "student can critically evaluate quality and limitations of tree-ring data"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Tree Biology and Ring Formation",
+      "title": "Why do trees make rings in the first place?",
+      "concepts": ["seasonal cambium activity", "earlywood and latewood", "annual growth cycles"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://ltrr.arizona.edu/about/treerings", "https://www.ncei.noaa.gov/products/paleoclimatology/tree-ring"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Tree Biology and Ring Formation",
+      "title": "What makes a ring wide or narrow?",
+      "concepts": ["limiting factors", "temperature vs precipitation sensitivity", "competition and disturbance"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.swisseduc.ch/glaciers/glossary/dendrochronology-en.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Tree Biology and Ring Formation",
+      "title": "How can you tell a false ring from a true annual boundary?",
+      "concepts": ["false rings", "missing rings", "cellular anatomy", "microsections"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://dendrochronologia.org/resources"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Tree Biology and Ring Formation",
+      "title": "Why do different species tell different climate stories?",
+      "concepts": ["species selection", "ecological amplitude", "site selection principles"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.sciencedirect.com/journal/dendrochronologia"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Measurement and Cross-Dating",
+      "title": "How do you extract a core without killing the tree?",
+      "concepts": ["increment borer technique", "core mounting", "sample preparation", "field protocols"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ltrr.arizona.edu/webhome/dmeko/dend_course.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Measurement and Cross-Dating",
+      "title": "What's the difference between measuring and reading a tree ring?",
+      "concepts": ["skeleton plotting", "marker years", "visual crossdating", "pattern matching"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.treeringsociety.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Measurement and Cross-Dating",
+      "title": "Review: From living tree to measured data",
+      "concepts": ["sampling strategy", "core preparation workflow", "measurement setup"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://ltrr.arizona.edu/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Measurement and Cross-Dating",
+      "title": "How does COFECHA catch your dating mistakes?",
+      "concepts": ["statistical cross-dating", "correlation analysis", "t-values", "flagging algorithm"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.ltrr.arizona.edu/software.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Measurement and Cross-Dating",
+      "title": "Can you cross-date these mystery cores?",
+      "concepts": ["hands-on crossdating", "master chronology comparison", "quality control"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.ncei.noaa.gov/products/paleoclimatology/international-tree-ring-data-bank"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Measurement and Cross-Dating",
+      "title": "What happens when two experts disagree on a ring boundary?",
+      "concepts": ["inter-observer variability", "consensus dating", "problem cores", "documentation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://dendrochronologia.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Building Chronologies",
+      "title": "Why do we need to remove the tree's age trend?",
+      "concepts": ["biological growth trend", "standardization", "detrending methods", "signal preservation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://cran.r-project.org/web/packages/dplR/index.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Building Chronologies",
+      "title": "How do negative exponential and spline fits change your climate signal?",
+      "concepts": ["curve fitting", "high vs low frequency preservation", "detrending tradeoffs"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://andybunn.shinyapps.io/dplR_tutorial/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Building Chronologies",
+      "title": "What's the difference between a standard and residual chronology?",
+      "concepts": ["biweight robust mean", "autoregression removal", "chronology types", "RCS method"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.sciencedirect.com/topics/earth-and-planetary-sciences/dendrochronology"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Building Chronologies",
+      "title": "Review: From raw measurements to climate-ready chronology",
+      "concepts": ["ARSTAN workflow", "chronology statistics", "EPS and Rbar"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.ltrr.arizona.edu/software.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Climate Signals",
+      "title": "How do you know if your trees are recording temperature or precipitation?",
+      "concepts": ["response functions", "correlation with climate", "seasonal windows", "limiting factors"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.ncei.noaa.gov/products/paleoclimatology/tree-ring"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Climate Signals",
+      "title": "What makes 1816 show up as a pointer year in trees worldwide?",
+      "concepts": ["pointer years", "volcanic forcing", "global signals", "superposed epoch analysis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.nature.com/subjects/dendrochronology"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Climate Signals",
+      "title": "Why do drought signals preserve better than wet years?",
+      "concepts": ["signal asymmetry", "stress physiology", "moisture sensitivity", "complacency"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://dendrochronologia.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Climate Signals",
+      "title": "How far back can you reconstruct climate with confidence?",
+      "concepts": ["sample depth", "replication", "chronology strength", "uncertainty quantification"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.ncei.noaa.gov/products/paleoclimatology/international-tree-ring-data-bank"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Climate Signals",
+      "title": "Can you reconstruct the Palmer Drought Severity Index for your region?",
+      "concepts": ["reconstruction methods", "calibration period", "verification", "transfer functions"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": ["https://www.ldeo.columbia.edu/tree-ring-laboratory"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Climate Signals",
+      "title": "Review: Reading climate stories in ring patterns",
+      "concepts": ["signal extraction", "climate relationships", "reconstruction workflow"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://ltrr.arizona.edu/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Applications Beyond Climate",
+      "title": "How did dendro prove the Vikings reached America?",
+      "concepts": ["archaeological dating", "wiggle matching", "calendar dating", "L'Anse aux Meadows"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.nature.com/articles/s41586-021-03972-8"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Applications Beyond Climate",
+      "title": "What can fire scars tell you about historical fire regimes?",
+      "concepts": ["fire history reconstruction", "fire scar anatomy", "seasonality of fires", "fire return intervals"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.fs.usda.gov/research/rmrs/projects/fire-history"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applications Beyond Climate",
+      "title": "How do you date a Stradivarius violin?",
+      "concepts": ["art and artifact dating", "wood identification", "floating chronologies", "cultural heritage"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://dendrochronologia.org/resources"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications Beyond Climate",
+      "title": "Why do insect outbreaks leave signatures in tree rings?",
+      "concepts": ["disturbance ecology", "outbreak chronologies", "growth suppression", "mortality patterns"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.fs.usda.gov/rmrs/science-program-areas/forest-insect-and-disease-research"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Methods",
+      "title": "What can carbon isotopes add to ring width measurements?",
+      "concepts": ["stable isotope dendrochronology", "δ13C and δ18O", "stomatal conductance", "water use efficiency"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://www.wsl.ch/en/about-wsl/instrumented-field-sites-and-laboratories/dendrosciences.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Methods",
+      "title": "Review: How does dendro solve problems beyond climate reconstruction?",
+      "concepts": ["archaeological dating", "fire history", "disturbance ecology", "expanding the proxy toolbox"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.treeringsociety.org/", "https://dendrochronologia.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Methods",
+      "title": "How does blue intensity compete with maximum latewood density?",
+      "concepts": ["blue intensity", "wood density", "reflectance measurements", "cost-effective proxies"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.cambridge.org/core/journals/holocene"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Methods",
+      "title": "What does quantitative wood anatomy reveal that ring widths miss?",
+      "concepts": ["cell dimensions", "anatomical chronologies", "hydraulic properties", "micro-dendro"],
+      "difficulty": 5,
+      "type": "resource-drop",
+      "resources": ["https://www.frontiersin.org/journals/plant-science"],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Advanced Methods",
+      "title": "Can you design a dendro study to solve a real problem?",
+      "concepts": ["study design", "site selection", "method selection", "integration of techniques"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://ltrr.arizona.edu/", "https://www.treeringsociety.org/"],
+      "status": "pending"
+    }
+  ]
+}

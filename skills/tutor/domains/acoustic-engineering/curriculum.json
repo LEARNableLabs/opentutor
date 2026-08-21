@@ -1,0 +1,280 @@
+{
+  "topic": "Acoustic engineering and room design",
+  "slug": "acoustic-engineering",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (waves, oscillations)",
+    "comfort with logarithms and decibels",
+    "trigonometry fundamentals"
+  ],
+  "exit_criteria": [
+    "predict and identify room modes in rectangular spaces",
+    "measure frequency and impulse response with REW",
+    "design absorption and diffusion treatment plans",
+    "diagnose common acoustic problems from measurements",
+    "apply active correction within its limits"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Wave Mechanics",
+      "title": "Why do low frequencies travel through walls but highs don't?",
+      "concepts": ["wavelength-frequency relationship", "diffraction", "barrier transmission"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/2-067-acoustics-and-sensing-spring-2015/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Wave Mechanics",
+      "title": "What happens when two sound waves collide?",
+      "concepts": ["superposition", "constructive interference", "destructive interference", "phase"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.acoustics.salford.ac.uk/acoustics_world/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Wave Mechanics",
+      "title": "How does sound bounce off walls differently than light?",
+      "concepts": ["specular reflection", "angle of incidence", "impedance discontinuity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.masterhandbook.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Wave Mechanics",
+      "title": "How do you calculate the wavelength of the lowest note your room can support?",
+      "concepts": ["wavelength calculation", "frequency-to-length conversion"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.sengpielaudio.com/calculator-wavelength.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Room Modes and Standing Waves",
+      "title": "Why does your voice sound different in the bathroom?",
+      "concepts": ["room modes", "resonance", "standing waves"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.hunecke.de/en/calculators/room-eigenmodes.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Room Modes and Standing Waves",
+      "title": "Review: Waves, interference, and room resonances",
+      "concepts": ["wavelength", "interference", "room modes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.aes.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Room Modes and Standing Waves",
+      "title": "What are axial, tangential, and oblique modes?",
+      "concepts": ["mode types", "axial modes", "tangential modes", "oblique modes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.acousticfields.com/room-modes/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Room Modes and Standing Waves",
+      "title": "Why do small rooms have bigger bass problems?",
+      "concepts": ["modal density", "schroeder frequency", "transition frequency"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.roomeqwizard.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Room Modes and Standing Waves",
+      "title": "How do you find the best listening position in a room?",
+      "concepts": ["modal pressure zones", "nulls and peaks", "boundary interactions"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.harman.com/documents/multsubs_0.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Reverberation and Time Behavior",
+      "title": "What makes a cathedral sound like a cathedral?",
+      "concepts": ["reverberation time", "RT60", "decay curves"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.openairlib.net/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Reverberation and Time Behavior",
+      "title": "Why do early reflections sound different than late ones?",
+      "concepts": ["early reflections", "late reverberation", "precedence effect"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.acoustics.asn.au/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Reverberation and Time Behavior",
+      "title": "Review: Room modes and reverberation basics",
+      "concepts": ["standing waves", "modal density", "RT60"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.aes.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Reverberation and Time Behavior",
+      "title": "How can you predict reverberation time from room dimensions and materials?",
+      "concepts": ["Sabine equation", "absorption area", "room volume"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.sengpielaudio.com/calculator-RT60.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Absorption and Diffusion",
+      "title": "How does foam on the wall kill sound?",
+      "concepts": ["porous absorption", "flow resistance", "thickness-frequency relationship"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.acousticfields.com/porous-absorption/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Absorption and Diffusion",
+      "title": "Why can't thin panels absorb bass?",
+      "concepts": ["absorption depth", "quarter-wavelength rule", "membrane absorbers"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://ethanwiner.com/acoustics.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Absorption and Diffusion",
+      "title": "What's a Helmholtz resonator and why is it in your room?",
+      "concepts": ["resonant absorption", "Helmholtz resonance", "tuned absorption"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.acoustics.salford.ac.uk/feschools/waves/resonanc.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Absorption and Diffusion",
+      "title": "How does a diffuser scatter sound without killing it?",
+      "concepts": ["diffusion", "scattering", "QRD diffusers", "phase grating"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.acousticfields.com/diffusion/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Absorption and Diffusion",
+      "title": "How do you design a bass trap for your room's worst mode?",
+      "concepts": ["bass trapping", "corner placement", "absorption coefficient"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.gikacoustics.com/bass-traps/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Measurement and Analysis",
+      "title": "Review: Absorption, diffusion, and treatment design",
+      "concepts": ["porous absorption", "resonant absorption", "diffusion", "bass trapping"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.aes.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Measurement and Analysis",
+      "title": "What does an impulse response tell you about a room?",
+      "concepts": ["impulse response", "time-domain analysis", "reflections"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.roomeqwizard.com/help/help_en-GB/html/graph_impulse.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Measurement and Analysis",
+      "title": "How do you measure frequency response with REW?",
+      "concepts": ["frequency response", "swept sine", "averaging", "smoothing"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.roomeqwizard.com/", "https://www.youtube.com/watch?v=OLRsRyXkzJ8"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Measurement and Analysis",
+      "title": "What's hiding in a waterfall plot?",
+      "concepts": ["waterfall plots", "time-frequency analysis", "modal decay"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.roomeqwizard.com/help/help_en-GB/html/graph_waterfall.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Design and Correction",
+      "title": "Why do some room dimensions sound better than others?",
+      "concepts": ["room ratios", "golden ratio", "modal distribution"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.bobgolds.com/Mode/RoomModes.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Design and Correction",
+      "title": "Where should speakers go to minimize boundary loading?",
+      "concepts": ["boundary loading", "bass reinforcement", "symmetry", "SBIR"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.genelec.com/monitor-placement"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Design and Correction",
+      "title": "Review: Measurement and design fundamentals",
+      "concepts": ["impulse response", "frequency response", "room ratios", "speaker placement"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.aes.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Design and Correction",
+      "title": "When should you EQ a room and when shouldn't you?",
+      "concepts": ["parametric EQ", "minimum phase", "DSP correction", "limits of EQ"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://ethanwiner.com/acoustics.html", "https://www.harman.com/innovation/research"],
+      "status": "pending"
+    }
+  ]
+}

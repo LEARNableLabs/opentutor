@@ -1,0 +1,342 @@
+{
+  "topic": "Error-Correcting Codes — from Hamming to LDPC",
+  "slug": "error-correcting-codes",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "linear algebra (vector spaces, matrices)",
+    "basic probability",
+    "modular arithmetic"
+  ],
+  "exit_criteria": [
+    "design and analyze linear block codes using generator and parity-check matrices",
+    "implement Hamming codes and syndrome decoding",
+    "understand Reed-Solomon codes and their applications in storage/communication",
+    "explain LDPC codes and belief propagation decoding",
+    "compute error correction capabilities using distance bounds",
+    "apply error-correcting codes to real-world systems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Error Correction",
+      "title": "Why can't we just repeat every message three times?",
+      "concepts": ["redundancy", "error models", "binary symmetric channel"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/",
+        "https://en.wikipedia.org/wiki/Error_detection_and_correction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Error Correction",
+      "title": "What did Shannon prove was possible?",
+      "concepts": ["channel capacity", "Shannon's theorem", "noisy channel coding"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/computing/computer-science/informationtheory",
+        "https://en.wikipedia.org/wiki/Shannon%27s_source_coding_theorem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Error Correction",
+      "title": "How far apart should codewords be to catch errors?",
+      "concepts": ["Hamming distance", "minimum distance", "error detection vs correction"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nand2tetris.org/",
+        "https://en.wikipedia.org/wiki/Hamming_distance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Error Correction",
+      "title": "What's the maximum error protection for a given code length?",
+      "concepts": ["Hamming bound", "Singleton bound", "perfect codes"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/abs/cs/0611112",
+        "https://en.wikipedia.org/wiki/Hamming_bound"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Error Correction",
+      "title": "How do parity bits actually detect errors?",
+      "concepts": ["parity check", "even/odd parity", "single-bit error detection"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=X8jsijhllIA",
+        "https://www.cs.cmu.edu/~guyb/realworld/error_correction.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Error Correction",
+      "title": "Can you connect distance, bounds, and parity?",
+      "concepts": ["distance", "bounds", "parity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Hamming Codes",
+      "title": "Why did Hamming invent his code while debugging a relay computer?",
+      "concepts": ["Hamming(7,4) code", "historical motivation", "Bell Labs"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Hamming_code",
+        "https://www.youtube.com/watch?v=373FUw-2U2k"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Hamming Codes",
+      "title": "How do you encode 4 bits of data into 7 bits with error correction?",
+      "concepts": ["Hamming encoding", "parity bit positions", "powers of 2"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cs.cmu.edu/~guyb/realworld/error_correction.html",
+        "https://www.3blue1brown.com/lessons/hamming-codes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Hamming Codes",
+      "title": "What is syndrome decoding and why is it elegant?",
+      "concepts": ["syndrome", "coset decoding", "error localization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/",
+        "https://en.wikipedia.org/wiki/Decoding_methods#Syndrome_decoding"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Linear Block Codes",
+      "title": "Why represent codes as vector spaces over finite fields?",
+      "concepts": ["generator matrix", "parity-check matrix", "linear codes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nptel.ac.in/courses/117/106/117106137/",
+        "https://en.wikipedia.org/wiki/Linear_code"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Linear Block Codes",
+      "title": "What makes a code 'perfect' and why are they rare?",
+      "concepts": ["perfect codes", "sphere packing", "Golay codes"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Perfect_code",
+        "https://www.ams.org/notices/200304/fea-pless.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Linear Block Codes",
+      "title": "How do matrices, syndromes, and Hamming codes work together?",
+      "concepts": ["matrices", "syndrome", "Hamming codes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Cyclic Codes",
+      "title": "Why treat codewords as polynomials?",
+      "concepts": ["polynomial representation", "cyclic shift", "generator polynomial"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Cyclic_code",
+        "https://nptel.ac.in/courses/117/106/117106137/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Cyclic Codes",
+      "title": "How do CRC checksums protect your downloads?",
+      "concepts": ["CRC", "cyclic redundancy check", "polynomial division"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Cyclic_redundancy_check",
+        "https://www.youtube.com/watch?v=izG7qT0EpBw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Cyclic Codes",
+      "title": "What are BCH codes and how do they generalize Hamming?",
+      "concepts": ["BCH codes", "minimal polynomials", "multiple error correction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/BCH_code",
+        "https://arxiv.org/abs/1601.06214"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Cyclic Codes",
+      "title": "Why do CDs and QR codes use Reed-Solomon codes?",
+      "concepts": ["Reed-Solomon codes", "finite field arithmetic", "burst errors"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction",
+        "https://www.youtube.com/watch?v=fBRMaEAFLE0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Cyclic Codes",
+      "title": "Can you implement a simple Reed-Solomon encoder?",
+      "concepts": ["implementation", "GF(256)", "practical encoding"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://github.com/tomerfiliba/reedsolomon",
+        "https://research.swtch.com/field"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Cyclic Codes",
+      "title": "How do polynomials, CRC, and Reed-Solomon relate?",
+      "concepts": ["polynomials", "CRC", "Reed-Solomon"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Cyclic_code"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Modern Codes",
+      "title": "How do convolutional codes differ from block codes?",
+      "concepts": ["convolutional codes", "shift registers", "trellis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Convolutional_code",
+        "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Modern Codes",
+      "title": "Why is the Viterbi algorithm a dynamic programming triumph?",
+      "concepts": ["Viterbi algorithm", "maximum likelihood decoding", "trellis search"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Viterbi_algorithm",
+        "https://www.youtube.com/watch?v=6JVqutwtzmo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Modern Codes",
+      "title": "What made turbo codes revolutionary in the 1990s?",
+      "concepts": ["turbo codes", "iterative decoding", "parallel concatenation"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Turbo_code",
+        "https://arxiv.org/abs/1403.2974"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Modern Codes",
+      "title": "How do LDPC codes achieve near-Shannon capacity?",
+      "concepts": ["LDPC codes", "sparse parity-check matrix", "belief propagation"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Low-density_parity-check_code",
+        "https://www.youtube.com/watch?v=Ff5LpHJKluw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Modern Codes",
+      "title": "Why were LDPC codes forgotten for 30 years?",
+      "concepts": ["Gallager's thesis", "computational complexity", "rediscovery"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://web.stanford.edu/class/ee388/papers/ldpc.pdf",
+        "https://en.wikipedia.org/wiki/Robert_G._Gallager"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications & Synthesis",
+      "title": "What connects convolutional, turbo, and LDPC codes?",
+      "concepts": ["convolutional", "turbo", "LDPC"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications & Synthesis",
+      "title": "How did error-correcting codes enable deep space exploration?",
+      "concepts": ["concatenated codes", "Voyager mission", "5G NR", "SSD controllers"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://descanso.jpl.nasa.gov/",
+        "https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction#Data_storage"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,601 @@
+{
+  "topic": "Microbiology and Virology",
+  "slug": "microbiology-and-virology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "introductory biology",
+    "cell biology basics",
+    "basic chemistry",
+    "molecular biology fundamentals"
+  ],
+  "exit_criteria": [
+    "explain the structural and metabolic diversity of microorganisms",
+    "describe viral replication strategies and host interactions",
+    "interpret microbial growth curves and metabolic pathways",
+    "compare prokaryotic and eukaryotic gene regulation mechanisms",
+    "analyze host-pathogen interactions at molecular and cellular levels",
+    "evaluate the role of microbes in health, disease, and biotechnology"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Microbial Life and Structure",
+      "title": "What makes a microbe a microbe?",
+      "concepts": [
+        "microbial diversity",
+        "size scale",
+        "prokaryotes vs eukaryotes"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/bacteria-archaea",
+        "https://www.ncbi.nlm.nih.gov/books/NBK8423/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Microbial Life and Structure",
+      "title": "Why do bacteria need cell walls but we don't?",
+      "concepts": [
+        "peptidoglycan",
+        "osmotic pressure",
+        "Gram staining"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK8477/",
+        "https://www.biointeractive.org/classroom-resources/visualizing-bacterial-cell-wall"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Microbial Life and Structure",
+      "title": "How do bacteria move and sense their environment?",
+      "concepts": [
+        "flagella",
+        "chemotaxis",
+        "pili and fimbriae"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ibiology.org/microbiology/bacterial-motility/",
+        "https://www.khanacademy.org/science/biology/bacteria-archaea/prokaryote-structure"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Microbial Life and Structure",
+      "title": "What makes archaea extreme survivors?",
+      "concepts": [
+        "archaeal membrane lipids",
+        "extremophiles",
+        "domain Archaea"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/archaea-14173304/",
+        "https://ocw.mit.edu/courses/7-014-introductory-biology-spring-2005/resources/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Metabolism and Growth",
+      "title": "How do microbes get their energy?",
+      "concepts": [
+        "chemotrophy",
+        "phototrophy",
+        "electron donors and acceptors"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK8458/",
+        "https://microbiologyinfo.com/types-of-microbial-metabolism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Metabolism and Growth",
+      "title": "Why can some bacteria live without oxygen while others die?",
+      "concepts": [
+        "aerobic vs anaerobic respiration",
+        "fermentation",
+        "oxygen toxicity"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/cellular-energetics/cellular-respiration-ap",
+        "https://www.ncbi.nlm.nih.gov/books/NBK8458/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Review",
+      "title": "What have we learned about microbial structure and diversity?",
+      "concepts": [
+        "microbial diversity",
+        "bacterial structure",
+        "archaeal adaptations",
+        "synthesis"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/bacteria-archaea",
+        "https://quizlet.com/subject/microbiology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Metabolism and Growth",
+      "title": "What does a bacterial growth curve reveal?",
+      "concepts": [
+        "lag phase",
+        "exponential growth",
+        "stationary phase",
+        "death phase"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK8539/",
+        "https://courses.lumenlearning.com/microbiology/chapter/how-microbes-grow/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Metabolism and Growth",
+      "title": "How do biofilms turn bacteria into communities?",
+      "concepts": [
+        "quorum sensing",
+        "extracellular matrix",
+        "biofilm development"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/bacterial-biofilms-14184699/",
+        "https://www.biointeractive.org/classroom-resources/biofilms-antibiotic-resistance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Microbial Genetics",
+      "title": "How do bacteria replicate their circular chromosomes?",
+      "concepts": [
+        "bidirectional replication",
+        "origin of replication",
+        "DNA polymerase"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK9850/",
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Microbial Genetics",
+      "title": "Why do bacteria use operons to control genes?",
+      "concepts": [
+        "lac operon",
+        "trp operon",
+        "negative and positive regulation"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/regulation-of-gene-expression-and-cell-specialization",
+        "https://www.ncbi.nlm.nih.gov/books/NBK22065/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Microbial Genetics",
+      "title": "How do bacteria share genes without sex?",
+      "concepts": [
+        "horizontal gene transfer",
+        "transformation",
+        "conjugation",
+        "transduction"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/horizontal-gene-transfer-in-bacteria-543/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK8477/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Microbial Genetics",
+      "title": "What are plasmids and why do they matter for antibiotic resistance?",
+      "concepts": [
+        "plasmids",
+        "R factors",
+        "antibiotic resistance genes"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cdc.gov/drugresistance/about/how-resistance-happens.html",
+        "https://www.biointeractive.org/classroom-resources/antibiotic-resistance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Review",
+      "title": "How do bacteria grow, metabolize, and share genes?",
+      "concepts": [
+        "bacterial structure",
+        "metabolism",
+        "genetics",
+        "synthesis"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/bacteria-archaea",
+        "https://quizlet.com/subject/microbiology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Viral Fundamentals",
+      "title": "Are viruses alive?",
+      "concepts": [
+        "viral properties",
+        "obligate intracellular parasites",
+        "living vs non-living"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/biology-of-viruses",
+        "https://www.ncbi.nlm.nih.gov/books/NBK8149/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Viral Fundamentals",
+      "title": "What are viruses made of?",
+      "concepts": [
+        "capsid",
+        "envelope",
+        "genome types",
+        "structural proteins"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://viralzone.expasy.org/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK8149/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Viral Fundamentals",
+      "title": "How does the Baltimore classification organize viral diversity?",
+      "concepts": [
+        "Baltimore classification",
+        "DNA vs RNA viruses",
+        "replication strategies"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://viralzone.expasy.org/254",
+        "https://www.nature.com/scitable/topicpage/biology-of-human-tumor-viruses-14118934/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Viral Fundamentals",
+      "title": "Why do some viruses have envelopes and others don't?",
+      "concepts": [
+        "envelope acquisition",
+        "budding",
+        "naked vs enveloped viruses"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.biointeractive.org/classroom-resources/how-viruses-work",
+        "https://www.ncbi.nlm.nih.gov/books/NBK8149/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Viral Replication and Diversity",
+      "title": "How does a virus hijack a cell?",
+      "concepts": [
+        "attachment",
+        "entry",
+        "uncoating",
+        "receptor-mediated endocytosis"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ibiology.org/microbiology/viral-entry/",
+        "https://www.khanacademy.org/science/biology/biology-of-viruses/virus-biology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Viral Replication and Diversity",
+      "title": "What happens during the lytic vs lysogenic cycle?",
+      "concepts": [
+        "lytic cycle",
+        "lysogenic cycle",
+        "prophage",
+        "lambda phage"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/biology-of-viruses/virus-biology",
+        "https://www.ncbi.nlm.nih.gov/books/NBK8149/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Viral Replication and Diversity",
+      "title": "How do retroviruses reverse the central dogma?",
+      "concepts": [
+        "reverse transcriptase",
+        "HIV replication",
+        "integration"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.biointeractive.org/classroom-resources/hiv-life-cycle",
+        "https://www.ncbi.nlm.nih.gov/books/NBK8439/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Review",
+      "title": "What defines viruses and how do they replicate?",
+      "concepts": [
+        "viral structure",
+        "Baltimore classification",
+        "replication cycles",
+        "synthesis"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/biology-of-viruses",
+        "https://viralzone.expasy.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Viral Replication and Diversity",
+      "title": "Why do RNA viruses mutate so fast?",
+      "concepts": [
+        "error-prone replication",
+        "quasi-species",
+        "antigenic drift"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/rna-virus-replication-and-evolution-22960164/",
+        "https://www.cdc.gov/flu/about/viruses/change.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Viral Replication and Diversity",
+      "title": "What makes bacteriophages special?",
+      "concepts": [
+        "phage diversity",
+        "phage therapy",
+        "transduction"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/bacteriophages-14related062/",
+        "https://phagesdb.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Host-Microbe Interactions",
+      "title": "How do pathogens cause disease?",
+      "concepts": [
+        "virulence factors",
+        "toxins",
+        "invasion",
+        "Koch's postulates"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK8526/",
+        "https://www.cdc.gov/infectioncontrol/basics/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Host-Microbe Interactions",
+      "title": "Why doesn't your immune system kill your gut bacteria?",
+      "concepts": [
+        "microbiome",
+        "immune tolerance",
+        "symbiosis",
+        "dysbiosis"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/host-microbe-interactions-14209079/",
+        "https://www.nih.gov/news-events/nih-research-matters/gut-microbes-immune-system"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Host-Microbe Interactions",
+      "title": "How do viruses evade the immune system?",
+      "concepts": [
+        "antigenic variation",
+        "latency",
+        "immune evasion strategies"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK8149/",
+        "https://www.biointeractive.org/classroom-resources/immune-evasion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Host-Microbe Interactions",
+      "title": "What makes a virus jump species?",
+      "concepts": [
+        "zoonotic transmission",
+        "spillover events",
+        "receptor compatibility",
+        "emerging diseases"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cdc.gov/onehealth/basics/zoonotic-diseases.html",
+        "https://www.nature.com/articles/nrmicro.2017.45"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Review",
+      "title": "How do host-pathogen interactions drive health and disease?",
+      "concepts": [
+        "pathogenesis",
+        "immune evasion",
+        "vaccines",
+        "zoonoses",
+        "synthesis"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK8526/",
+        "https://www.cdc.gov/vaccines/vpd/vaccines-diseases.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Host-Microbe Interactions",
+      "title": "How do vaccines work at the molecular level?",
+      "concepts": [
+        "adaptive immunity",
+        "memory cells",
+        "vaccine types",
+        "herd immunity"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.biointeractive.org/classroom-resources/immune-system",
+        "https://www.cdc.gov/vaccines/vpd/vaccines-diseases.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Applications and Integration",
+      "title": "How are microbes used in biotechnology?",
+      "concepts": [
+        "recombinant DNA",
+        "industrial fermentation",
+        "bioremediation",
+        "synthetic biology"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK8535/",
+        "https://www.nature.com/scitable/topicpage/microbial-biotechnology-40232668/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Applications and Integration",
+      "title": "What can metagenomics tell us about invisible ecosystems?",
+      "concepts": [
+        "metagenomics",
+        "16S rRNA sequencing",
+        "virome",
+        "unculturable microbes"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/metagenomics-an-introduction-14255596/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3531572/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Applications and Integration",
+      "title": "How do microbes and viruses shape life on Earth?",
+      "concepts": [
+        "integration",
+        "microbial diversity",
+        "viral strategies",
+        "host interactions",
+        "applications"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/bacteria-archaea",
+        "https://www.khanacademy.org/science/biology/biology-of-viruses"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "topic": "Water treatment and environmental engineering",
+  "slug": "water-treatment",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "general chemistry",
+    "basic biology",
+    "fluid mechanics fundamentals",
+    "mass and energy balances"
+  ],
+  "exit_criteria": [
+    "design and size basic water and wastewater treatment unit operations",
+    "perform mass balance calculations for treatment systems",
+    "select appropriate treatment processes based on water quality goals",
+    "evaluate treatment process performance using kinetic models",
+    "assess sustainability and resource recovery opportunities in water systems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Water Quality Fundamentals",
+      "title": "What makes water 'dirty' and how do we measure it?",
+      "concepts": ["contaminant types", "water quality parameters", "regulatory standards"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-77-water-quality-control-spring-2006/",
+        "https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Water Quality Fundamentals",
+      "title": "Why do pathogens and chemical contaminants require different removal strategies?",
+      "concepts": ["pathogen characteristics", "chemical contaminants", "treatment objectives"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.who.int/publications/i/item/9789241549950",
+        "https://www.epa.gov/dwreginfo/chemical-contaminant-rules"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Water Quality Fundamentals",
+      "title": "How do mass balances help us design treatment systems?",
+      "concepts": ["mass balance", "reactor configurations", "retention time"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-77-water-quality-control-spring-2006/pages/lecture-notes/",
+        "https://www.youtube.com/watch?v=xOH8VvDgJ2A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Water Quality Fundamentals",
+      "title": "Can you predict which treatment train will work for this contaminated water source?",
+      "concepts": ["treatment train design", "process selection", "water characterization"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.awwa.org/Resources-Tools/Resource-Topics/Water-Treatment",
+        "https://www.epa.gov/sites/default/files/2015-09/documents/archive_of_document_describing_small_drinking_water_systems.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Physical-Chemical Treatment",
+      "title": "What makes tiny particles clump together in coagulation?",
+      "concepts": ["coagulation", "flocculation", "particle destabilization", "jar tests"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=lUW3gRJXzKo",
+        "https://www.lenntech.com/processes/coagulation-flocculation/coagulation/coagulation.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Physical-Chemical Treatment",
+      "title": "Review: From contaminants to coagulation",
+      "concepts": ["water quality review", "mass balance review", "coagulation review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-77-water-quality-control-spring-2006/pages/assignments/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Physical-Chemical Treatment",
+      "title": "How fast must water flow for particles to settle?",
+      "concepts": ["sedimentation", "settling velocity", "overflow rate", "Stokes' law"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=S7TUe5w6RHo",
+        "https://ocw.mit.edu/courses/1-77-water-quality-control-spring-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Physical-Chemical Treatment",
+      "title": "What's the difference between a sand filter and your coffee filter?",
+      "concepts": ["filtration mechanisms", "deep bed filtration", "membrane filtration", "backwashing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.who.int/tools/compendium-on-health-and-environment/water-sanitation",
+        "https://www.youtube.com/c/PracticalEngineeringChannel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Physical-Chemical Treatment",
+      "title": "Why does chlorine kill bacteria but not all viruses equally?",
+      "concepts": ["disinfection kinetics", "CT value", "chlorine chemistry", "disinfection byproducts"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/dwreginfo/drinking-water-regulations",
+        "https://www.cdc.gov/healthywater/drinking/public/water_disinfection.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Physical-Chemical Treatment",
+      "title": "Design a rapid sand filter for a town of 50,000 people",
+      "concepts": ["design calculations", "loading rates", "filter sizing", "hydraulics"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.who.int/publications/i/item/9789241548427",
+        "https://www.epa.gov/sites/default/files/2019-09/documents/final_post_filtration_fact_sheet_9-16-19.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Physical-Chemical Treatment",
+      "title": "When should you choose UV or ozone instead of chlorine?",
+      "concepts": ["alternative disinfection", "UV mechanisms", "ozonation", "comparative assessment"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.awwa.org/Publications/Journal-AWWA",
+        "https://iwaponline.com/wst"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Biological Treatment",
+      "title": "How do microorganisms clean wastewater by eating pollution?",
+      "concepts": ["microbial metabolism", "BOD and COD", "aerobic vs anaerobic", "growth kinetics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-018j-ecology-i-the-earth-system-fall-2009/",
+        "https://www.youtube.com/watch?v=xRIwWm1Lk8A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Biological Treatment",
+      "title": "Review: Physical-chemical treatment design",
+      "concepts": ["coagulation-flocculation review", "filtration review", "disinfection review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-77-water-quality-control-spring-2006/pages/exams/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Biological Treatment",
+      "title": "What determines how fast bacteria can multiply and consume waste?",
+      "concepts": ["Monod kinetics", "substrate utilization", "biomass yield", "specific growth rate"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=YIzJBP6Ff8c",
+        "https://www.iwapublishing.com/news/biological-wastewater-treatment-principles-modelling-and-design"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Biological Treatment",
+      "title": "Why does activated sludge need to be recycled back to the aeration tank?",
+      "concepts": ["activated sludge process", "mixed liquor", "sludge recycle", "SRT and HRT"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=K8YhvCDRw1c",
+        "https://www.wef.org/resources/for-the-public/what-are-biosolids/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Biological Treatment",
+      "title": "How do you remove nitrogen and phosphorus without adding chemicals?",
+      "concepts": ["nitrification", "denitrification", "biological phosphorus removal", "nutrient cycling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/nutrient-policy-data/nitrogen",
+        "https://www.wef.org/globalassets/assets-wef/direct-download-library/public/03---resources/wsec-2017-fs-009-nutrient-removal.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Biological Treatment",
+      "title": "Watch a wastewater treatment plant video and explain each treatment stage",
+      "concepts": ["integrated treatment", "plant operations", "process sequencing"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=6LsJwN0M6dU",
+        "https://www.youtube.com/watch?v=RlVEAaLEE_4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Biological Treatment",
+      "title": "Design an activated sludge system with nutrient removal for a food processing plant",
+      "concepts": ["industrial wastewater", "design parameters", "nutrient removal design", "troubleshooting"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://www.epa.gov/eg/industrial-wastewater",
+        "https://www.wef.org/resources/topics/industrial-water-and-wastewater/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Treatment and Integration",
+      "title": "What contaminants can membranes remove that conventional treatment cannot?",
+      "concepts": ["membrane types", "microfiltration", "ultrafiltration", "reverse osmosis", "nanofiltration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/dwreginfo/membrane-filtration-guidance-manual",
+        "https://www.youtube.com/watch?v=c8dDGAYc2VM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Advanced Treatment and Integration",
+      "title": "Review: Biological treatment and kinetics",
+      "concepts": ["microbial kinetics review", "activated sludge review", "nutrient removal review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.edx.org/learn/environmental-science/delft-university-of-technology-wastewater-treatment"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Treatment and Integration",
+      "title": "How does activated carbon trap dissolved organic contaminants?",
+      "concepts": ["adsorption", "activated carbon", "isotherm models", "breakthrough curves"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/dwreginfo/drinking-water-treatment-technology-unit-cost-models",
+        "https://www.carbontrust.com/resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Treatment and Integration",
+      "title": "Why is advanced oxidation needed for pharmaceuticals and personal care products?",
+      "concepts": ["emerging contaminants", "advanced oxidation processes", "hydroxyl radicals", "treatment effectiveness"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.epa.gov/chemicals-under-tsca/contaminants-emerging-concern",
+        "https://iwaponline.com/wst/article/76/2/292/19386"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Treatment and Integration",
+      "title": "Can treated wastewater become drinking water?",
+      "concepts": ["water reuse", "potable reuse", "public perception", "multiple barrier approach"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.epa.gov/waterreuse/basic-information-about-water-reuse",
+        "https://www.youtube.com/watch?v=h0F4E5G3XfI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Treatment and Integration",
+      "title": "How much energy does it take to clean water and can we reduce it?",
+      "concepts": ["energy consumption", "energy recovery", "sustainability metrics", "carbon footprint"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.iea.org/reports/water-energy-nexus",
+        "https://www.wef.org/resources/topics/energy-management/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Treatment and Integration",
+      "title": "Compare membrane vs. activated carbon for removing trace organic contaminants",
+      "concepts": ["technology comparison", "contaminant removal efficiency", "operational considerations"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.epa.gov/dwreginfo/drinking-water-treatment-technology-unit-cost-models",
+        "https://iwaponline.com/wst/article-abstract/67/1/1/19599"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Treatment and Integration",
+      "title": "Design a complete treatment system: from contaminated source to safe drinking water",
+      "concepts": ["integrated design", "process optimization", "regulatory compliance", "cost-benefit analysis"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://www.who.int/publications/i/item/9789241548427",
+        "https://www.epa.gov/dwreginfo/information-about-public-water-systems"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Treatment and Integration",
+      "title": "Review: Advanced treatment technologies",
+      "concepts": ["membranes review", "adsorption review", "advanced oxidation review", "reuse review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-77-water-quality-control-spring-2006/pages/study-materials/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

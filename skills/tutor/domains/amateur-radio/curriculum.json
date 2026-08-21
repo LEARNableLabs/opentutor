@@ -1,0 +1,376 @@
+{
+  "topic": "Amateur radio — propagation, antenna theory, and protocols",
+  "slug": "amateur-radio",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic electronics (Ohm's law, AC/DC circuits)",
+    "electromagnetic wave concepts (frequency, wavelength)",
+    "Technician or General class license (or equivalent)",
+    "basic radio operation experience"
+  ],
+  "exit_criteria": [
+    "predict HF propagation conditions using solar indices and propagation tools",
+    "design and build wire antennas for specific bands and applications",
+    "calculate antenna impedance, SWR, and feedline losses",
+    "operate CW, SSB, and digital modes following proper procedures",
+    "handle DX pileups and contest exchanges effectively",
+    "explain ionospheric layer behavior and its impact on different bands",
+    "model antennas using NEC-based software",
+    "participate effectively in emergency communications nets"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Radio Wave Propagation",
+      "title": "How do radio waves actually travel through space?",
+      "concepts": ["electromagnetic radiation", "frequency spectrum", "wavelength relationship"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/propagation-of-rf-signals",
+        "https://www.youtube.com/c/DaveCasler"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Radio Wave Propagation",
+      "title": "Why can't you talk to Europe on 2 meters but you can on 20 meters?",
+      "concepts": ["propagation modes", "ground wave", "line-of-sight", "skywave"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.arrl.org/propagation-modes",
+        "https://www.voacap.com/hf/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Radio Wave Propagation",
+      "title": "What makes HF signals bounce back to Earth?",
+      "concepts": ["ionosphere structure", "refractive index", "critical angle"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/the-ionosphere",
+        "https://pskreporter.info"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Radio Wave Propagation",
+      "title": "Why does 40m work better at night than during the day?",
+      "concepts": ["D layer absorption", "E layer", "F layer characteristics", "diurnal variation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.arrl.org/ionospheric-layers",
+        "https://www.reversebeacon.net"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Radio Wave Propagation",
+      "title": "How does the sun control your radio contacts?",
+      "concepts": ["solar cycle", "sunspot number", "solar flux index", "geomagnetic activity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/solar-activity",
+        "https://www.dxatlas.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ionospheric Effects",
+      "title": "What's the highest frequency that will actually work right now?",
+      "concepts": ["maximum usable frequency", "critical frequency", "skip zone", "dead zone"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.voacap.com/hf/",
+        "https://www.arrl.org/muf-and-luf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Ionospheric Effects",
+      "title": "Review: From waves to ionospheric windows",
+      "concepts": ["propagation modes", "ionospheric layers", "MUF prediction"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.arrl.org/propagation-tutorials",
+        "https://hamstudy.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Ionospheric Effects",
+      "title": "Why do VHF/UHF signals sometimes travel hundreds of miles?",
+      "concepts": ["tropospheric ducting", "temperature inversion", "E-skip", "meteor scatter"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.arrl.org/vhf-uhf-propagation",
+        "https://www.youtube.com/c/HamRadioCrashCourse"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Ionospheric Effects",
+      "title": "How do you predict propagation before you turn on the radio?",
+      "concepts": ["propagation software", "gray line enhancement", "seasonal patterns", "real-time monitoring"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.voacap.com/hf/",
+        "https://www.dxatlas.com",
+        "https://pskreporter.info"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Ionospheric Effects",
+      "title": "Can you explain propagation to a curious newcomer?",
+      "concepts": ["teaching propagation", "mental models", "practical examples"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.arrl.org/propagation-tutorials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Ionospheric Effects",
+      "title": "Why did your QSO work when the prediction said it wouldn't?",
+      "concepts": ["scatter modes", "long-path propagation", "sporadic E", "aurora propagation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.arrl.org/advanced-propagation",
+        "https://www.eham.net"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Antenna Fundamentals",
+      "title": "What makes one antenna better than another?",
+      "concepts": ["radiation resistance", "antenna efficiency", "gain", "directivity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/antenna-fundamentals",
+        "https://www.arrl.org/shop/ARRL-Antenna-Book-25th-Edition/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Antenna Fundamentals",
+      "title": "Why does your SWR meter matter so much?",
+      "concepts": ["impedance matching", "SWR", "reflected power", "resonance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/swr-and-impedance-matching",
+        "https://www.youtube.com/user/K7age"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Antenna Fundamentals",
+      "title": "Review: Propagation and antenna basics",
+      "concepts": ["ionosphere", "MUF", "antenna gain", "impedance"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://hamstudy.org",
+        "https://www.arrl.org/review-materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Antenna Fundamentals",
+      "title": "How does your feedline change what the radio sees?",
+      "concepts": ["coaxial cable", "ladder line", "loss", "impedance transformation", "velocity factor"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/feed-lines",
+        "https://www.arrl.org/shop/ARRL-Antenna-Book-25th-Edition/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Antenna Fundamentals",
+      "title": "What's the ideal antenna pattern for your operating style?",
+      "concepts": ["radiation patterns", "elevation angle", "azimuthal pattern", "takeoff angle"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.arrl.org/antenna-patterns",
+        "https://www.eznec.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Antenna Fundamentals",
+      "title": "Why does antenna height affect your contacts more than power?",
+      "concepts": ["ground effects", "ground plane", "near field vs far field", "antenna height rules"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.arrl.org/antenna-height-and-ground-effects",
+        "https://www.qsl.net/4nec2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Practical Antenna Design",
+      "title": "How do you build a dipole that actually works?",
+      "concepts": ["dipole design", "resonance calculation", "center insulator", "feedpoint impedance"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/dipole-antennas",
+        "https://www.arrl.org/shop/ARRL-Antenna-Book-25th-Edition/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Practical Antenna Design",
+      "title": "When should you choose a vertical over a dipole?",
+      "concepts": ["vertical antennas", "ground radials", "low angle radiation", "space constraints"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.arrl.org/vertical-antennas",
+        "https://www.eznec.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Practical Antenna Design",
+      "title": "How do loops defy conventional antenna wisdom?",
+      "concepts": ["loop antennas", "magnetic vs electric field", "small loops", "full-wave loops"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/loop-antennas",
+        "https://www.qsl.net/4nec2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Practical Antenna Design",
+      "title": "Review: Building and modeling antennas",
+      "concepts": ["antenna types", "feedlines", "modeling software", "impedance matching"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.arrl.org/antenna-review",
+        "https://hamstudy.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Practical Antenna Design",
+      "title": "What makes a Yagi beam work and how do you tune one?",
+      "concepts": ["Yagi design", "director elements", "reflector", "driven element", "boom length"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/yagi-antennas",
+        "https://www.eznec.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Practical Antenna Design",
+      "title": "Can you design an antenna system for your station?",
+      "concepts": ["system design", "antenna selection", "constraints", "compromise antennas"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.arrl.org/shop/ARRL-Antenna-Book-25th-Edition/",
+        "https://www.qsl.net/4nec2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Operating Modes & Protocols",
+      "title": "Why do different modes sound so different on the bands?",
+      "concepts": ["AM", "SSB", "FM", "CW", "bandwidth", "mode selection"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.arrl.org/operating-modes",
+        "https://www.youtube.com/c/DaveCasler"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Operating Modes & Protocols",
+      "title": "What's the art of working a massive DX pileup?",
+      "concepts": ["DXing", "pileup management", "split operation", "timing", "calling technique"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.arrl.org/dx-operating-techniques",
+        "https://www.eham.net"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Operating Modes & Protocols",
+      "title": "How have digital modes changed ham radio forever?",
+      "concepts": ["PSK31", "FT8", "RTTY", "SSTV", "weak signal work", "digital protocol"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.arrl.org/digital-modes",
+        "https://pskreporter.info",
+        "https://www.youtube.com/c/HamRadioCrashCourse"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Operating Modes & Protocols",
+      "title": "Can you guide a net or handle emergency traffic?",
+      "concepts": ["net control", "ARES/RACES", "traffic handling", "emergency procedures", "formal message format"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.arrl.org/emergency-communications",
+        "https://www.arrl.org/public-service"
+      ],
+      "status": "pending"
+    }
+  ]
+}

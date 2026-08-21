@@ -1,0 +1,367 @@
+{
+  "topic": "Optical Fiber Communications",
+  "slug": "optical-fiber-communications",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "electromagnetics fundamentals",
+    "basic optics (refraction, reflection)",
+    "digital communications basics",
+    "signal processing fundamentals"
+  ],
+  "exit_criteria": [
+    "design and analyze optical fiber communication links",
+    "select appropriate components for system requirements",
+    "calculate link budgets and predict BER performance",
+    "understand trade-offs between modulation formats and multiplexing schemes",
+    "troubleshoot common fiber optic system issues"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Light in Fibers",
+      "title": "Why does light stay trapped inside a glass fiber?",
+      "concepts": ["total internal reflection", "refractive index", "critical angle"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/total_internal_reflection.html",
+        "https://www.youtube.com/watch?v=0MwMkBET_5I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Light in Fibers",
+      "title": "What's the difference between a light ray and a light mode?",
+      "concepts": ["ray optics", "wave optics", "modal theory", "mode propagation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.rp-photonics.com/modes.html",
+        "https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=358"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Light in Fibers",
+      "title": "Why do some fibers carry only one mode while others carry hundreds?",
+      "concepts": ["single-mode fiber", "multi-mode fiber", "V-parameter", "cutoff wavelength"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/single_mode_fibers.html",
+        "https://www.corning.com/worldwide/en/products/communication-networks/resources/fiber-optic-learning-center.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Light in Fibers",
+      "title": "How does dispersion scramble your signal over long distances?",
+      "concepts": ["chromatic dispersion", "modal dispersion", "polarization mode dispersion", "pulse broadening"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.rp-photonics.com/chromatic_dispersion.html",
+        "https://www.ieee.li/pdf/viewgraphs/dispersion_in_optical_fibers.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Light in Fibers",
+      "title": "Why does your signal get weaker: where does the light go?",
+      "concepts": ["attenuation", "absorption", "scattering", "bending loss"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/fiber_attenuation.html",
+        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048006-optical-fiber-loss-and-attenuation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Light in Fibers",
+      "title": "Review: How does light actually travel through optical fiber?",
+      "concepts": ["total internal reflection", "modal theory", "fiber types", "dispersion", "attenuation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.rp-photonics.com/fibers.html",
+        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048006-optical-fiber-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Optical Components and Devices",
+      "title": "What makes a good optical transmitter: LED or laser?",
+      "concepts": ["LED sources", "laser diodes", "spectral width", "modulation bandwidth"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.rp-photonics.com/laser_diodes.html",
+        "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/understanding-laser-diodes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Optical Components and Devices",
+      "title": "How does a photodetector turn photons into electrical current?",
+      "concepts": ["photodetection", "PIN photodiode", "avalanche photodiode", "responsivity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/photodetectors.html",
+        "https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=285"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Optical Components and Devices",
+      "title": "Can you amplify light without converting it to electricity first?",
+      "concepts": ["optical amplifiers", "EDFA", "Raman amplification", "semiconductor optical amplifiers"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.rp-photonics.com/erbium_doped_fiber_amplifiers.html",
+        "https://www.youtube.com/watch?v=Qb3WpEQJwpM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Optical Components and Devices",
+      "title": "What passive components do you need to build a fiber network?",
+      "concepts": ["optical couplers", "splitters", "circulators", "filters", "isolators"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=1419",
+        "https://www.rp-photonics.com/passive_fiber_optics.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Optical Components and Devices",
+      "title": "How would you explain optical amplifiers to a radio engineer?",
+      "concepts": ["gain", "noise figure", "amplifier cascades", "signal-to-noise ratio"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.rp-photonics.com/noise_figure.html",
+        "https://www.ieee.li/pdf/viewgraphs/optical_amplifiers.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Optical Components and Devices",
+      "title": "Review: From light sources to detectors, what did we learn?",
+      "concepts": ["component review", "system integration", "performance trade-offs"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048070-optical-transceiver-module-overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Modulation and Multiplexing",
+      "title": "How do you encode data onto a light beam?",
+      "concepts": ["intensity modulation", "direct modulation", "external modulation", "Mach-Zehnder modulator"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/intensity_modulators.html",
+        "https://www.youtube.com/watch?v=fCu7qeT4Y-o"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Modulation and Multiplexing",
+      "title": "Why use different colors when you could just go faster?",
+      "concepts": ["wavelength division multiplexing", "DWDM", "channel spacing", "ITU grid"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.rp-photonics.com/wavelength_division_multiplexing.html",
+        "https://www.cisco.com/c/en/us/products/collateral/optical-networking/dense-wavelength-division-multiplexing-dwdm/white-paper-c11-743214.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Modulation and Multiplexing",
+      "title": "What if we also use polarization and time as dimensions?",
+      "concepts": ["polarization division multiplexing", "time division multiplexing", "OTDM", "multi-dimensional multiplexing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/polarization_division_multiplexing.html",
+        "https://ieeexplore.ieee.org/document/6027961"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Modulation and Multiplexing",
+      "title": "How does QPSK let you pack more bits per symbol?",
+      "concepts": ["digital modulation formats", "QPSK", "QAM", "constellation diagrams"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/phase_shift_keying.html",
+        "https://www.youtube.com/watch?v=r1h-y4JpRic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Modulation and Multiplexing",
+      "title": "Design a WDM system for a cross-country fiber link",
+      "concepts": ["WDM system design", "channel allocation", "amplifier placement", "dispersion management"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cisco.com/c/en/us/td/docs/optical/15000r7_0/dwdm/configuration/guide/454_DWDM_Config_Guide/links.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Modulation and Multiplexing",
+      "title": "Review: How many ways can we squeeze more data onto a fiber?",
+      "concepts": ["modulation formats", "multiplexing techniques", "capacity limits"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-34-1-157"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "System Design and Analysis",
+      "title": "Will your receiver actually detect the signal you send?",
+      "concepts": ["link power budget", "transmitter power", "receiver sensitivity", "margin"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048006-link-power-budget-calculation",
+        "https://www.thefoa.org/tech/ref/testing/test/dB.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "System Design and Analysis",
+      "title": "How fast can your system respond: the rise time budget",
+      "concepts": ["rise time budget", "bandwidth-distance product", "system bandwidth", "timing constraints"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048070-rise-time-budget-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "System Design and Analysis",
+      "title": "Where does noise come from, and how bad is it?",
+      "concepts": ["receiver noise", "shot noise", "thermal noise", "signal-to-noise ratio"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/receiver_noise.html",
+        "https://www.youtube.com/watch?v=7CiHkNg27FY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "System Design and Analysis",
+      "title": "How do you predict how many bit errors you'll get?",
+      "concepts": ["bit error rate", "Q-factor", "error probability", "BER testing"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/bit_error_rate.html",
+        "https://www.ieee.li/pdf/viewgraphs/ber_measurements.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "System Design and Analysis",
+      "title": "Build a complete link budget for a real fiber deployment",
+      "concepts": ["end-to-end system design", "budget allocation", "performance verification", "measurement"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cisco.com/c/en/us/support/docs/optical-networking/ons-15454-sonet-multiservice-provisioning-platform-mspp/27042-tcc2p-loss-budget.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "System Design and Analysis",
+      "title": "Review: Can you design a fiber link from scratch?",
+      "concepts": ["integrated system design", "trade-off analysis", "verification"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048006-fiber-optic-system-design-overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "What happens when light gets so intense it misbehaves?",
+      "concepts": ["nonlinear effects", "self-phase modulation", "four-wave mixing", "Kerr effect"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/nonlinearities.html",
+        "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-23-1-346"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "How does coherent detection revolutionize fiber communications?",
+      "concepts": ["coherent detection", "digital signal processing", "polarization multiplexing", "phase recovery"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rp-photonics.com/coherent_detection.html",
+        "https://ieeexplore.ieee.org/document/5406316"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "What's next: space-division multiplexing and beyond?",
+      "concepts": ["space-division multiplexing", "multi-core fibers", "orbital angular momentum", "future directions"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.rp-photonics.com/multi_core_fibers.html",
+        "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-31-4-565",
+        "https://www.youtube.com/watch?v=TQVKVnxZG-A"
+      ],
+      "status": "pending"
+    }
+  ]
+}

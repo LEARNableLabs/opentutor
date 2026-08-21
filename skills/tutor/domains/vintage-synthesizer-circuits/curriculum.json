@@ -1,0 +1,361 @@
+{
+  "topic": "Vintage synthesizer circuits — analog oscillators and filters",
+  "slug": "vintage-synthesizer-circuits",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic circuit analysis (Ohm's law, Kirchhoff's laws)",
+    "op-amp fundamentals (inverting/non-inverting configurations)",
+    "AC circuit concepts (frequency, capacitance, reactance)",
+    "schematic reading ability",
+    "basic understanding of musical pitch and octaves"
+  ],
+  "exit_criteria": [
+    "analyze classic VCO and VCF circuits from schematics",
+    "explain exponential converter operation and temperature compensation",
+    "compare transistor ladder vs op-amp filter topologies",
+    "understand historical context of Moog, ARP, and Buchla designs",
+    "design simple voltage-controlled circuits with proper scaling"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes a synthesizer 'voltage-controlled'?",
+      "concepts": ["control voltage", "modular synthesis", "1V/octave standard"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musicfromouterspace.com/index.php?MAINTAB=SYNTHDIY&VPW=1900&VPH=1050",
+        "https://www.soundonsound.com/techniques/synth-secrets-part-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why does pitch control need an exponential converter?",
+      "concepts": ["exponential converter", "V/octave", "logarithmic frequency"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.schmitzbits.de/expo_tutorial.html",
+        "https://www.doepfer.de/DIY/a100_diy.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do you make 1V/octave accurate across 8 octaves?",
+      "concepts": ["temperature compensation", "matched transistor pairs", "trimming and calibration"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ti.com/lit/an/sloa033/sloa033.pdf",
+        "https://www.electro-music.com/forum/topic-67890.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What happens when transistors aren't matched?",
+      "concepts": ["differential pairs", "current mirrors", "component matching"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://sound-au.com/articles/audio-mixing.htm",
+        "https://www.musicfromouterspace.com/analogsynth_new/MATCHEDTRANSISTORS/matchedtransistors.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Review: How well do you understand control voltage fundamentals?",
+      "concepts": ["CV review", "exponential conversion", "component matching"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.doepfer.de/a100_man/a100t_e.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Voltage-Controlled Oscillators",
+      "title": "How does a sawtooth oscillator core actually work?",
+      "concepts": ["current source", "capacitor charging", "sawtooth reset", "integrator circuits"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.schmitzbits.de/vco.html",
+        "https://www.falstad.com/circuit/circuitjs.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Voltage-Controlled Oscillators",
+      "title": "Why do we care about waveform symmetry?",
+      "concepts": ["harmonic content", "triangle wave", "even/odd harmonics"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.soundonsound.com/techniques/synthesizing-strings-part-1",
+        "https://www.electro-music.com/forum/topic-25084.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Voltage-Controlled Oscillators",
+      "title": "What are the classic VCO circuits you should know?",
+      "concepts": ["Moog 901 VCO", "ARP 3620 VCO", "CEM3340", "AS3340"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.bigbruin.com/content/synth_tech/vco_tech/vco_tech.pdf",
+        "https://www.alfarzpp.lv/eng/sc/CEM3340.pdf",
+        "https://www.youtube.com/watch?v=QBatvo8bCa4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Voltage-Controlled Oscillators",
+      "title": "How do you convert a triangle wave to a sine wave?",
+      "concepts": ["waveshaping", "differential pair shaper", "nonlinear transfer function"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.schmitzbits.de/tri2sin.html",
+        "https://www.musicfromouterspace.com/analogsynth_new/WAVESHAPEVCO/WAVESHAPEVCO.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Voltage-Controlled Oscillators",
+      "title": "Build a simple VCO on paper — can you identify all the stages?",
+      "concepts": ["VCO block diagram", "expo converter stage", "oscillator core", "output buffering"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.doepfer.de/a100_man/a100m_e.htm",
+        "https://www.ti.com/lit/an/slaa118/slaa118.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Voltage-Controlled Oscillators",
+      "title": "Why does temperature drift matter for tuning stability?",
+      "concepts": ["thermal drift", "VBE temperature coefficient", "compensation techniques"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.electro-music.com/forum/topic-28634.html",
+        "https://sound-au.com/appnotes/an001.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Voltage-Controlled Oscillators",
+      "title": "Review: Can you trace signal flow through a VCO?",
+      "concepts": ["VCO review", "signal path", "control path"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.musicfromouterspace.com/analogsynth_new/SOUNDLAB_ULTIMATE/SLUM_VCO/SLUM_VCO.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Voltage-Controlled Oscillators",
+      "title": "What made the CEM3340 chip legendary?",
+      "concepts": ["integrated VCO", "Curtis chips", "design evolution"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.alfarzpp.lv/eng/sc/CEM3340.pdf",
+        "https://www.electricdruid.net/cem3340-vco-voltage-controlled-oscillator-designs/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Voltage-Controlled Filters",
+      "title": "What makes the Moog ladder filter special?",
+      "concepts": ["transistor ladder", "four-pole lowpass", "resonance feedback"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.timstinchcombe.co.uk/synth/MS20_study.pdf",
+        "https://www.acoustics.ed.ac.uk/wp-content/uploads/DAFx04_Proceedings/P_211.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Voltage-Controlled Filters",
+      "title": "How does resonance create self-oscillation?",
+      "concepts": ["positive feedback", "Q factor", "filter ringing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.schmitzbits.de/vcf.html",
+        "https://www.electro-music.com/forum/topic-29845.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Voltage-Controlled Filters",
+      "title": "Why use a transistor ladder instead of op-amps?",
+      "concepts": ["overdrive characteristics", "headroom", "tonal color", "noise floor"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sound-au.com/articles/ladder-filter.htm",
+        "https://www.musicfromouterspace.com/analogsynth_new/MOOGLADDERFILTER/ladder_filter.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Voltage-Controlled Filters",
+      "title": "How do classic filter topologies compare — ladder vs state-variable vs Sallen-Key?",
+      "concepts": ["filter topologies", "Sallen-Key", "state-variable filter", "comparative analysis"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ti.com/lit/an/sloa093/sloa093.pdf",
+        "https://www.doepfer.de/DIY/a100_diy.htm",
+        "https://www.youtube.com/watch?v=9y7gvLSdG-U"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Voltage-Controlled Filters",
+      "title": "How do state-variable filters give you multiple outputs simultaneously?",
+      "concepts": ["state-variable topology", "multi-mode filter", "lowpass/bandpass/highpass outputs"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.schmitzbits.de/ms20.html",
+        "https://www.electro-music.com/forum/topic-32156.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Voltage-Controlled Filters",
+      "title": "Review: Filter topologies, resonance, and voltage control",
+      "concepts": ["VCF review", "topology comparison", "control methods"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.doepfer.de/a100_man/a100m_e.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Voltage-Controlled Filters",
+      "title": "Design a simple voltage-controlled lowpass filter — what are the key stages?",
+      "concepts": ["VCF block diagram", "cutoff control", "resonance control", "audio path"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.musicfromouterspace.com/analogsynth_new/VCF/vcf.php",
+        "https://sound-au.com/project99.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Voltage-Controlled Filters",
+      "title": "Why did some vintage filters sound 'better' than others?",
+      "concepts": ["subjective sound quality", "distortion characteristics", "frequency response irregularities"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.soundonsound.com/techniques/synthesizer-filters",
+        "https://www.timstinchcombe.co.uk/synth/filters.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Integration & Legacy",
+      "title": "How do East Coast and West Coast synthesizer designs differ?",
+      "concepts": ["Moog vs Buchla", "subtractive vs additive/West Coast", "design philosophy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soundonsound.com/techniques/buchla-200e",
+        "https://www.perfectcircuit.com/signal/east-coast-vs-west-coast-synthesis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration & Legacy",
+      "title": "What can modern IC designs teach us about vintage circuits?",
+      "concepts": ["modern vs vintage tradeoffs", "AS3340", "V2164", "evolution of design"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.electricdruid.net/technical-documents/",
+        "https://www.schmitzbits.de/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration & Legacy",
+      "title": "Can you build a mental model of a complete synthesizer voice?",
+      "concepts": ["VCO+VCF+VCA chain", "modulation routing", "signal flow", "complete voice architecture"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.musicfromouterspace.com/analogsynth_new/WALLWARTSYNTH/WALLWARTSYNTH.php",
+        "https://www.youtube.com/watch?v=VYWtyNRJCfU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration & Legacy",
+      "title": "How would you modify a classic VCO or VCF to improve performance?",
+      "concepts": ["circuit modification", "performance optimization", "design tradeoffs", "practical improvements"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.electro-music.com/forum/",
+        "https://www.schmitzbits.de/index.html",
+        "https://www.electricdruid.net/technical-documents/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration & Legacy",
+      "title": "Review: Can you explain vintage synthesizer circuit design from first principles?",
+      "concepts": ["comprehensive review", "CV fundamentals", "VCO architecture", "VCF topologies", "complete synthesis chain"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.musicfromouterspace.com/",
+        "https://www.schmitzbits.de/",
+        "https://www.soundonsound.com/techniques/synth-secrets-part-1"
+      ],
+      "status": "pending"
+    }
+  ]
+}

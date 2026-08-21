@@ -1,0 +1,414 @@
+{
+  "topic": "Electronic Music Synthesis",
+  "slug": "electronic-music-synthesis",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic audio concepts (frequency, amplitude, timbre)",
+    "simple subtractive synthesis (OSC → filter → envelope)",
+    "DAW or audio software familiarity",
+    "basic music theory (notes, scales, intervals)"
+  ],
+  "exit_criteria": [
+    "design complex patches using multiple synthesis methods",
+    "explain and apply FM, wavetable, granular, and physical modeling synthesis",
+    "analyze a sound and choose appropriate synthesis technique to recreate it",
+    "build modular patches with advanced modulation routing",
+    "understand signal flow at audio rate vs. control rate",
+    "integrate synthesis techniques in music production context"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundation Review and Signal Flow",
+      "title": "What's actually happening inside a synthesizer?",
+      "concepts": ["signal flow", "audio rate vs. control rate", "oscillator-filter-amplifier chain"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/",
+        "https://thewayfarerproject.com/learning/learn-synthesis-with-vcv-rack/learn-synthesis-with-vcv-rack-series-01/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundation Review and Signal Flow",
+      "title": "Why do we need voltage control?",
+      "concepts": ["CV/gate paradigm", "modulation sources", "control voltage"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://steinhardt.nyu.edu/courses/electronic-music-synthesis-fundamental-techniques",
+        "https://www.perfectcircuit.com/signal/the-programmable-eurorack"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundation Review and Signal Flow",
+      "title": "How does a modular synthesizer think?",
+      "concepts": ["patch cables", "modulation routing", "normalization"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-contemporary-history-and-aesthetics-fall-2009/resources/lecture-13-modular-synthesizers/",
+        "https://vcvrack.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundation Review and Signal Flow",
+      "title": "What makes a filter resonate?",
+      "concepts": ["resonance", "filter self-oscillation", "Q factor"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.berklee.edu/courses/composing-and-producing-electronic-music-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Advanced Subtractive Techniques",
+      "title": "How do you create movement without changing notes?",
+      "concepts": ["LFO routing", "filter sweeps", "amplitude modulation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://assets.online.berklee.edu/handbooks/berklee-online-electronic-music-production-and-sound-design-handbook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Advanced Subtractive Techniques",
+      "title": "Why does detuning oscillators make sounds wider?",
+      "concepts": ["detuning", "beating frequencies", "phase relationships"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Advanced Subtractive Techniques",
+      "title": "Can you make a bass patch that cuts through a mix?",
+      "concepts": ["harmonic content", "filter cutoff placement", "sub-bass vs. mid-bass"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://online.berklee.edu/courses/composing-and-producing-electronic-music-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Advanced Subtractive Techniques",
+      "title": "Review: Build three patches from memory",
+      "concepts": ["subtractive synthesis", "modulation", "patch design"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://thewayfarerproject.com/learning/learn-synthesis-with-vcv-rack/learn-synthesis-with-vcv-rack-series-01/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Additive and Harmonic Synthesis",
+      "title": "What if you built a sound from pure sine waves?",
+      "concepts": ["additive synthesis", "harmonic series", "partial control"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/5bd0465bc03db23c2b8029775eac5069_MIT21M_380S16_Lec14.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Additive and Harmonic Synthesis",
+      "title": "How do organs and drawbar synths work?",
+      "concepts": ["harmonic drawbars", "tonewheel synthesis", "additive timbre control"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Additive and Harmonic Synthesis",
+      "title": "Why is it so hard to synthesize realistic strings?",
+      "concepts": ["inharmonicity", "spectral evolution", "attack transients"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://music.duke.edu/courses/introduction-electronic-music-composition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Additive and Harmonic Synthesis",
+      "title": "Can you resynthesize a real instrument?",
+      "concepts": ["spectral analysis", "resynthesis", "additive recreation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Frequency Modulation Synthesis",
+      "title": "What happens when one oscillator controls another's pitch?",
+      "concepts": ["FM synthesis", "carrier and modulator", "modulation index"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Frequency Modulation Synthesis",
+      "title": "Why does FM create those metallic bell sounds?",
+      "concepts": ["sidebands", "inharmonic spectra", "Bessel functions"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Frequency Modulation Synthesis",
+      "title": "Review: Map out carrier-to-modulator ratios",
+      "concepts": ["FM ratios", "harmonic vs. inharmonic", "frequency relationships"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://online.berklee.edu/courses/composing-and-producing-electronic-music-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Frequency Modulation Synthesis",
+      "title": "How do DX7 algorithms work?",
+      "concepts": ["FM algorithms", "operator stacks", "feedback loops"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://music.duke.edu/courses/introduction-electronic-music-composition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Frequency Modulation Synthesis",
+      "title": "Can you design a complex FM pad from scratch?",
+      "concepts": ["complex FM", "envelope-controlled index", "multiple operators"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://online.berklee.edu/courses/composing-and-producing-electronic-music-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Wavetable and Spectral Methods",
+      "title": "What if oscillators could morph between shapes?",
+      "concepts": ["wavetable synthesis", "wavetable position", "interpolation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/5b13e880744921dfa22d4034ec9d40e8_MIT21M_380S16_Lec16.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Wavetable and Spectral Methods",
+      "title": "How does Serum create those evolving textures?",
+      "concepts": ["wavetable scanning", "FM in wavetables", "warp modes"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://online.berklee.edu/courses/composing-and-producing-electronic-music-1",
+        "https://www.xferrecords.com/products/serum"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Wavetable and Spectral Methods",
+      "title": "Why does waveshaping create distortion?",
+      "concepts": ["waveshaping", "transfer functions", "harmonic generation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/5b13e880744921dfa22d4034ec9d40e8_MIT21M_380S16_Lec16.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Wavetable and Spectral Methods",
+      "title": "Can you hear the difference between time and frequency domain?",
+      "concepts": ["FFT", "spectral processing", "phase vocoder"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Wavetable and Spectral Methods",
+      "title": "Review: Compare synthesis methods for the same sound",
+      "concepts": ["synthesis method comparison", "timbral analysis", "technique selection"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://assets.online.berklee.edu/handbooks/berklee-online-electronic-music-production-and-sound-design-handbook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Granular and Sample-Based Methods",
+      "title": "What if you could play with microseconds of sound?",
+      "concepts": ["granular synthesis", "grain parameters", "grain clouds"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://music.duke.edu/courses/introduction-electronic-music-composition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Granular and Sample-Based Methods",
+      "title": "How do you freeze time in audio?",
+      "concepts": ["grain density", "time-stretching", "buffer position control"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Granular and Sample-Based Methods",
+      "title": "Why does granular synthesis create such rich textures?",
+      "concepts": ["stochastic processes", "randomization", "emergent complexity"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Granular and Sample-Based Methods",
+      "title": "Can you turn speech into a musical instrument?",
+      "concepts": ["sample manipulation", "formant preservation", "pitch vs. timbre"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://music.duke.edu/courses/introduction-electronic-music-composition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Physical Modeling and Integration",
+      "title": "How do you simulate a vibrating string in code?",
+      "concepts": ["physical modeling", "Karplus-Strong", "delay-based synthesis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Physical Modeling and Integration",
+      "title": "How do you simulate breathing into an instrument?",
+      "concepts": ["wind modeling", "breath control", "tube resonance", "excitation sources"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://music.duke.edu/courses/introduction-electronic-music-composition",
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Physical Modeling and Integration",
+      "title": "What synthesis method would you choose for this sound?",
+      "concepts": ["synthesis technique selection", "hybrid synthesis", "sound analysis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://assets.online.berklee.edu/handbooks/berklee-online-electronic-music-production-and-sound-design-handbook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Physical Modeling and Integration",
+      "title": "How do you combine synthesis techniques in one patch?",
+      "concepts": ["hybrid synthesis", "layering", "parallel processing"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://online.berklee.edu/courses/composing-and-producing-electronic-music-1",
+        "https://thewayfarerproject.com/learning/learn-synthesis-with-vcv-rack/learn-synthesis-with-vcv-rack-series-01/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Physical Modeling and Integration",
+      "title": "How do you make a synth respond to touch like an instrument?",
+      "concepts": ["velocity sensitivity", "aftertouch", "MPE", "expression control"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://online.berklee.edu/courses/composing-and-producing-electronic-music-1",
+        "https://assets.online.berklee.edu/handbooks/berklee-online-electronic-music-production-and-sound-design-handbook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Physical Modeling and Integration",
+      "title": "Review: Design a signature sound from first principles",
+      "concepts": ["synthesis mastery", "sound design workflow", "creative synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-380-music-and-technology-sound-design-spring-2016/",
+        "https://assets.online.berklee.edu/handbooks/berklee-online-electronic-music-production-and-sound-design-handbook.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "topic": "Robotics — Kinematics and Motion Planning",
+  "slug": "robotics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "linear algebra (vectors, matrices, transformations)",
+    "multivariable calculus",
+    "basic physics (mechanics)",
+    "Python programming",
+    "basic understanding of coordinate systems"
+  ],
+  "exit_criteria": [
+    "compute forward and inverse kinematics for serial manipulators",
+    "construct configuration space representations for robot systems",
+    "implement sampling-based planners (RRT, PRM)",
+    "evaluate motion planning algorithms for completeness and optimality",
+    "generate smooth trajectories with kinematic and dynamic constraints",
+    "integrate motion planning with feedback control for trajectory tracking",
+    "debug and visualize robot motion using Python simulation tools"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Robot Kinematics",
+      "title": "Why do we need so many coordinate frames?",
+      "concepts": ["rigid body transformations", "rotation matrices", "homogeneous coordinates"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course1",
+        "https://hades.mech.northwestern.edu/index.php/Modern_Robotics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Robot Kinematics",
+      "title": "How does a robot arm know where its hand is?",
+      "concepts": ["forward kinematics", "Denavit-Hartenberg parameters", "product of exponentials"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/pages/lecture-notes/",
+        "https://see.stanford.edu/Course/CS223A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Robot Kinematics",
+      "title": "Can we solve inverse kinematics exactly?",
+      "concepts": ["inverse kinematics", "analytical solutions", "geometric approaches", "multiple solutions"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://petercorke.github.io/robotics-toolbox-python/intro.html",
+        "https://see.stanford.edu/Course/CS223A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Robot Kinematics",
+      "title": "What happens when analytical IK fails?",
+      "concepts": ["numerical inverse kinematics", "Jacobian pseudoinverse", "iterative methods"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://hades.mech.northwestern.edu/index.php/Modern_Robotics",
+        "https://petercorke.github.io/robotics-toolbox-python/intro.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Robot Kinematics",
+      "title": "Why can't my robot move in certain directions?",
+      "concepts": ["Jacobian matrix", "velocity kinematics", "singularities", "manipulability"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course1",
+        "https://sites.google.com/site/robotkinematicscmu/syllabus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Robot Kinematics",
+      "title": "Build and test a 3-DOF arm in Python",
+      "concepts": ["URDF models", "robotics toolbox", "kinematics verification"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://petercorke.github.io/robotics-toolbox-python/intro.html",
+        "https://github.com/jslee02/awesome-robotics-libraries"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Configuration Space and Classical Planning",
+      "title": "Why is configuration space more useful than physical space?",
+      "concepts": ["configuration space", "C-space obstacles", "degrees of freedom"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://faculty.cc.gatech.edu/~seth/Teaching/cs8803RMP/index-2019.php?u=resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Configuration Space and Classical Planning",
+      "title": "How do we check if a path collides with obstacles?",
+      "concepts": ["collision detection", "bounding volumes", "swept volume"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.coppeliarobotics.com/",
+        "https://cyberbotics.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Configuration Space and Classical Planning",
+      "title": "Can we navigate by following artificial forces?",
+      "concepts": ["potential field methods", "attractive and repulsive forces", "local minima"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-412j-cognitive-robotics-spring-2016/videos-for-advanced-lectures/advanced-lecture-1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Configuration Space and Classical Planning",
+      "title": "How do graph search algorithms find robot paths?",
+      "concepts": ["roadmaps", "visibility graphs", "A* search", "graph representation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.classcentral.com/course/robotics-computation-5029",
+        "https://faculty.cc.gatech.edu/~seth/Teaching/cs8803RMP/index-2019.php?u=resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Configuration Space and Classical Planning",
+      "title": "Why does the curse of dimensionality break grid-based planning?",
+      "concepts": ["computational complexity", "grid resolution", "high-dimensional spaces"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://www.classcentral.com/course/robotics-computation-5029"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Configuration Space and Classical Planning",
+      "title": "What have we learned so far about getting robots to move?",
+      "concepts": ["kinematics review", "C-space review", "classical planning methods"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://hades.mech.northwestern.edu/index.php/Modern_Robotics",
+        "https://petercorke.github.io/robotics-toolbox-python/intro.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Configuration Space and Classical Planning",
+      "title": "Implement A* planning for a mobile robot",
+      "concepts": ["heuristics", "path cost", "implementation patterns"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://github.com/knmcguire/best-of-robot-simulators",
+        "http://jeongseok.dev/awesome-robotics-libraries/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sampling-Based Motion Planning",
+      "title": "What if we explore the space randomly?",
+      "concepts": ["sampling-based planning", "probabilistic completeness", "random sampling"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://faculty.cc.gatech.edu/~seth/Teaching/cs8803RMP/index-2019.php?u=resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Sampling-Based Motion Planning",
+      "title": "How does RRT grow a tree toward unexplored regions?",
+      "concepts": ["rapidly-exploring random trees", "nearest neighbor", "tree expansion", "bias toward goal"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-832-underactuated-robotics-spring-2009/video-lectures/lecture-14-feasible-motion-planning/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sampling-Based Motion Planning",
+      "title": "Can we build a reusable roadmap for many queries?",
+      "concepts": ["probabilistic roadmaps", "PRM construction", "lazy evaluation", "multi-query planning"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://www.classcentral.com/course/robotics-computation-5029"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Sampling-Based Motion Planning",
+      "title": "Why are RRT paths so jagged and inefficient?",
+      "concepts": ["path quality", "optimality", "asymptotic optimality", "RRT* algorithm"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://faculty.cc.gatech.edu/~seth/Teaching/cs8803RMP/index-2019.php?u=resources",
+        "https://underactuated.csail.mit.edu/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Sampling-Based Motion Planning",
+      "title": "How can we guide sampling toward better solutions?",
+      "concepts": ["informed sampling", "heuristic guidance", "Informed RRT*", "sampling ellipsoids"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://faculty.cc.gatech.edu/~seth/Teaching/cs8803RMP/index-2019.php?u=resources",
+        "https://underactuated.csail.mit.edu/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Sampling-Based Motion Planning",
+      "title": "Which planner should you actually use for this problem?",
+      "concepts": ["RRT vs PRM", "probabilistic completeness", "optimality trade-offs"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://github.com/knmcguire/best-of-robot-simulators"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Sampling-Based Motion Planning",
+      "title": "Build RRT and RRT* for a 2D robot arm",
+      "concepts": ["implementation details", "parameter tuning", "performance comparison"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://petercorke.github.io/robotics-toolbox-python/intro.html",
+        "https://github.com/knmcguire/best-of-robot-simulators"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Trajectory Optimization and Control",
+      "title": "How do we turn a path into a smooth trajectory?",
+      "concepts": ["path smoothing", "splines", "velocity profiles", "continuity constraints"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://hades.mech.northwestern.edu/index.php/Modern_Robotics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Trajectory Optimization and Control",
+      "title": "What if we plan directly in trajectory space?",
+      "concepts": ["trajectory optimization", "CHOMP", "TrajOpt", "gradient-based optimization"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://underactuated.csail.mit.edu/index.html",
+        "https://manipulation.csail.mit.edu/Fall2025/lec/fall25-lec9.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Trajectory Optimization and Control",
+      "title": "How do we respect robot dynamics and actuator limits?",
+      "concepts": ["dynamic constraints", "torque limits", "acceleration bounds", "dynamic feasibility"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://underactuated.csail.mit.edu/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Trajectory Optimization and Control",
+      "title": "Can the robot actually follow the planned trajectory?",
+      "concepts": ["feedback control", "trajectory tracking", "PID control", "computed torque control"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/modernrobotics-course4",
+        "https://see.stanford.edu/Course/CS223A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics and Integration",
+      "title": "How do we plan when the robot must contact the environment?",
+      "concepts": ["contact planning", "manipulation", "hybrid dynamics", "force control"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://hades.mech.northwestern.edu/index.php/ME_449_Robotic_Manipulation_(Archive_Fall_2019)",
+        "https://manipulation.csail.mit.edu/Fall2025/lec/fall25-lec9.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics and Integration",
+      "title": "Should we plan once or replan continuously?",
+      "concepts": ["reactive planning", "replanning strategies", "model predictive control", "real-time constraints"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-412j-cognitive-robotics-spring-2016/videos-for-advanced-lectures/advanced-lecture-1/",
+        "https://underactuated.csail.mit.edu/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics and Integration",
+      "title": "Design a complete motion system for a real robot task",
+      "concepts": ["system integration", "sensor feedback", "task specification", "debugging strategies"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://cyberbotics.com/",
+        "https://www.coppeliarobotics.com/",
+        "https://petercorke.github.io/robotics-toolbox-python/intro.html"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "topic": "Surreal numbers \u2014 games and infinitesimals",
+  "slug": "surreal-numbers",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "set theory basics",
+    "proof by induction",
+    "real number properties",
+    "basic abstract algebra"
+  ],
+  "exit_criteria": [
+    "construct and compare surreal numbers using left/right sets",
+    "perform arithmetic operations on surreal numbers",
+    "analyze simple combinatorial games using surreal number values",
+    "work with infinitesimal and infinite surreal numbers",
+    "explain how surreals extend the real number system"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "The Construction",
+      "title": "How can we build all numbers from nothing?",
+      "concepts": [
+        "recursive definition",
+        "left and right sets",
+        "base cases"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Surreal_number",
+        "https://arxiv.org/abs/math/0410026"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "The Construction",
+      "title": "What makes a surreal number valid?",
+      "concepts": [
+        "well-formedness",
+        "no-confusion condition",
+        "generation"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=ZYj4NkeGPdM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "The Construction",
+      "title": "How do we recognize familiar numbers in disguise?",
+      "concepts": [
+        "integers",
+        "dyadic rationals",
+        "canonical forms"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/mathematical-games/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "The Construction",
+      "title": "Why does birthday matter in the surreal universe?",
+      "concepts": [
+        "generation",
+        "birthday",
+        "simplicity"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=ZYj4NkeGPdM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "The Construction",
+      "title": "Can you build your first surreal numbers?",
+      "concepts": [
+        "construction practice",
+        "verification"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Surreal_number#Construction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "The Construction",
+      "title": "Review: The Construction",
+      "concepts": [
+        "synthesis",
+        "construction fundamentals"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Surreal_number"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Ordering and Arithmetic",
+      "title": "How do we compare surreal numbers?",
+      "concepts": [
+        "ordering relation",
+        "comparison rules",
+        "trichotomy"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/math/0410026"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Ordering and Arithmetic",
+      "title": "What happens when we add surreal numbers?",
+      "concepts": [
+        "addition",
+        "recursive arithmetic",
+        "commutativity"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Surreal_number#Arithmetic_operations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Ordering and Arithmetic",
+      "title": "How does negation work in the surreal world?",
+      "concepts": [
+        "negation",
+        "subtraction",
+        "additive inverses"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=ZYj4NkeGPdM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Ordering and Arithmetic",
+      "title": "Why is multiplication so much trickier?",
+      "concepts": [
+        "multiplication",
+        "recursive products",
+        "associativity"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/math/0410026"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Ordering and Arithmetic",
+      "title": "Review: Construction and basic arithmetic",
+      "concepts": [
+        "synthesis",
+        "problem-solving"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Surreal_number"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Ordering and Arithmetic",
+      "title": "Can surreal numbers be divided?",
+      "concepts": [
+        "multiplicative inverses",
+        "reciprocals",
+        "field properties"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/math/0410026"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Games as Numbers",
+      "title": "What does a two-player game have to do with numbers?",
+      "concepts": [
+        "combinatorial games",
+        "positions",
+        "game values"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Combinatorial_game_theory",
+        "https://cgsuite.sourceforge.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Games as Numbers",
+      "title": "How do we turn Hackenbush into mathematics?",
+      "concepts": [
+        "Hackenbush",
+        "game analysis",
+        "numerical values"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=ZYj4NkeGPdM",
+        "https://cgsuite.sourceforge.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Games as Numbers",
+      "title": "What happens when games aren't numbers?",
+      "concepts": [
+        "infinitesimal games",
+        "star",
+        "fuzzy games"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/abs/math/0410026"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Games as Numbers",
+      "title": "What can Winning Ways teach us about game strategy?",
+      "concepts": [
+        "game strategy",
+        "historical context"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Winning_Ways_for_your_Mathematical_Plays",
+        "https://cgsuite.sourceforge.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Games as Numbers",
+      "title": "Review: Games and their surreal values",
+      "concepts": [
+        "game analysis",
+        "value computation"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://cgsuite.sourceforge.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Games as Numbers",
+      "title": "Can you analyze a game position and find its value?",
+      "concepts": [
+        "game solving",
+        "strategy analysis"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://cgsuite.sourceforge.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Beyond the Reals",
+      "title": "How do we build infinitely large numbers?",
+      "concepts": [
+        "omega",
+        "transfinite numbers",
+        "ordinal-like construction"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Surreal_number#Transfinite_numbers",
+        "https://arxiv.org/abs/math/0410026"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Beyond the Reals",
+      "title": "What are infinitesimal numbers and why do they matter?",
+      "concepts": [
+        "infinitesimals",
+        "epsilon",
+        "non-standard analysis"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/nonstandard-analysis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Beyond the Reals",
+      "title": "How can we do arithmetic with infinity?",
+      "concepts": [
+        "transfinite arithmetic",
+        "omega algebra",
+        "limits"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/abs/math/0410026"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Beyond the Reals",
+      "title": "Why are the surreals the largest ordered field?",
+      "concepts": [
+        "universality",
+        "embeddings",
+        "field properties"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/mathematical-games/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Beyond the Reals",
+      "title": "Review: Infinities and infinitesimals",
+      "concepts": [
+        "synthesis",
+        "extensions of the reals"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Surreal_number"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications and Extensions",
+      "title": "Where do surreal numbers appear in modern mathematics?",
+      "concepts": [
+        "applications",
+        "model theory",
+        "set theory"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://arxiv.org/abs/math/0410026",
+        "https://plato.stanford.edu/entries/mathematical-games/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications and Extensions",
+      "title": "Can you explain surreal numbers to someone new?",
+      "concepts": [
+        "synthesis",
+        "communication",
+        "deep understanding"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=ZYj4NkeGPdM"
+      ],
+      "status": "pending"
+    }
+  ]
+}

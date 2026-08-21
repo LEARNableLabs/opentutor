@@ -1,0 +1,405 @@
+{
+  "topic": "Seismology — earthquake science",
+  "slug": "seismology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "calculus (derivatives, integrals)",
+    "basic physics (waves, mechanics)",
+    "linear algebra (vectors, matrices)",
+    "differential equations (optional but helpful)"
+  ],
+  "exit_criteria": [
+    "interpret seismograms and identify P-waves, S-waves, and surface waves",
+    "explain how seismic waves reveal Earth's internal structure",
+    "calculate earthquake magnitude and locate epicenters using arrival times",
+    "read and interpret focal mechanism diagrams",
+    "understand seismic hazard assessment and mitigation strategies",
+    "use real seismic data from networks like IRIS and USGS"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamentals of Seismic Waves",
+      "title": "What makes the ground shake during an earthquake?",
+      "concepts": ["elastic waves", "seismic energy", "wave propagation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet/how_are_earthquakes_recorded",
+        "https://earthquake.usgs.gov/learn/topics/seismology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamentals of Seismic Waves",
+      "title": "Why do P-waves arrive before S-waves?",
+      "concepts": ["P-waves", "S-waves", "wave velocity", "particle motion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animations/6",
+        "https://www.usgs.gov/programs/earthquake-hazards/science/seismic-waves"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamentals of Seismic Waves",
+      "title": "How would you explain the difference between body and surface waves to a friend?",
+      "concepts": ["body waves", "surface waves", "Love waves", "Rayleigh waves"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animations",
+        "https://www.mtu.edu/geo/community/seismology/learn/earthquake-measure/wave-types/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamentals of Seismic Waves",
+      "title": "What determines how fast seismic waves travel through rock?",
+      "concepts": ["elastic moduli", "density", "wave speed equations", "Poisson's ratio"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-510-introduction-to-seismology-spring-2010/",
+        "https://www.iris.edu/hq/inclass/fact-sheet/seismic_wave_propagation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fundamentals of Seismic Waves",
+      "title": "Can you identify P and S waves on this real seismogram?",
+      "concepts": ["seismogram reading", "phase identification", "arrival times"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.iris.edu/hq/programs/education_and_outreach/amaseis",
+        "https://ds.iris.edu/ieb/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Fundamentals of Seismic Waves",
+      "title": "What happens when seismic waves hit boundaries between rock layers?",
+      "concepts": ["reflection", "refraction", "Snell's law", "critical refraction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animations/seismic_waves_refracting_reflecting",
+        "https://www.eas.slu.edu/eqc/eqc_mt/TUTORIAL/Seismogram/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Review: Wave Fundamentals",
+      "title": "Review: Seismic wave types and propagation",
+      "concepts": ["wave types review", "velocity review", "wave propagation review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animations",
+        "https://www.usgs.gov/programs/earthquake-hazards/science/seismic-waves"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Earth's Internal Structure",
+      "title": "How do seismologists know what's inside the Earth without drilling down?",
+      "concepts": ["travel times", "ray paths", "Earth layers", "discontinuities"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet/earths_interior",
+        "https://www.usgs.gov/media/images/structure-earth"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Earth's Internal Structure",
+      "title": "Why can't S-waves travel through the outer core?",
+      "concepts": ["S-wave shadow zone", "liquid outer core", "seismic discontinuities"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animations/13",
+        "https://earthquake.usgs.gov/learn/topics/earth_structure.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Earth's Internal Structure",
+      "title": "What are travel-time curves and how do they reveal Earth's structure?",
+      "concepts": ["travel-time curves", "velocity models", "ray tracing", "PREM model"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet/travel_time_curves",
+        "https://ds.iris.edu/spud/earthmodel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Earth's Internal Structure",
+      "title": "How can we image variations in Earth's mantle like a medical CT scan?",
+      "concepts": ["seismic tomography", "velocity anomalies", "mantle plumes", "subduction zones"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animations/14",
+        "https://earthquake.usgs.gov/research/structure/crust/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Earth's Internal Structure",
+      "title": "Which Earth model tool helps you understand how waves travel through different layers?",
+      "concepts": ["interactive modeling", "ray tracing tools", "velocity profiles"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://ds.iris.edu/ieb/",
+        "https://www.seis.sc.edu/software/TauP/",
+        "https://ds.iris.edu/ds/products/emc-earthmodels/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Earth's Internal Structure",
+      "title": "What tools can help you trace seismic ray paths through Earth models?",
+      "concepts": ["TauP toolkit", "ray path visualization", "Earth model comparison"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.seis.sc.edu/software/TauP/",
+        "https://ds.iris.edu/ds/products/taup/",
+        "https://ds.iris.edu/ds/products/emc-earthmodels/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Review: Waves and Structure",
+      "title": "Review: From wave basics to imaging Earth's interior",
+      "concepts": ["wave types review", "Earth structure review", "travel times review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animations",
+        "https://earthquake.usgs.gov/learn/topics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Earthquake Source Physics",
+      "title": "What actually happens at a fault when an earthquake occurs?",
+      "concepts": ["elastic rebound theory", "fault mechanics", "stick-slip", "stress accumulation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet/plate_tectonics_earthquakes",
+        "https://earthquake.usgs.gov/learn/topics/how_eq_happen.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Earthquake Source Physics",
+      "title": "How do we measure how 'big' an earthquake is?",
+      "concepts": ["magnitude scales", "Richter scale", "moment magnitude", "energy release"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity",
+        "https://www.iris.edu/hq/inclass/fact-sheet/measuring_earthquakes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Earthquake Source Physics",
+      "title": "Why are there so many small earthquakes but few large ones?",
+      "concepts": ["Gutenberg-Richter law", "earthquake statistics", "power-law distribution", "b-value"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://earthquake.usgs.gov/research/induced/myths.php",
+        "https://www.iris.edu/hq/inclass/fact-sheet/earthquake_frequency"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Earthquake Source Physics",
+      "title": "What do beach ball diagrams tell us about how faults move?",
+      "concepts": ["focal mechanisms", "moment tensor", "fault plane solutions", "first motion polarity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet/focalmechanism",
+        "https://earthquake.usgs.gov/research/cmt/",
+        "https://www.usgs.gov/media/images/focal-mechanism-beach-ball"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Earthquake Source Physics",
+      "title": "Can you interpret focal mechanisms for recent earthquakes?",
+      "concepts": ["mechanism interpretation", "stress field", "tectonic setting"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://earthquake.usgs.gov/earthquakes/map/",
+        "https://www.globalcmt.org/",
+        "https://ds.iris.edu/spud/momenttensor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Review: Earthquake Sources",
+      "title": "Review: Fault mechanics and earthquake magnitude",
+      "concepts": ["elastic rebound review", "magnitude scales review", "focal mechanisms review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet",
+        "https://earthquake.usgs.gov/learn/topics/how_eq_happen.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Seismic Data and Instrumentation",
+      "title": "How does a seismometer actually detect ground motion?",
+      "concepts": ["seismometer design", "inertial sensors", "feedback systems", "frequency response"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet/seismometer",
+        "https://www.usgs.gov/programs/earthquake-hazards/monitoring-ground-shaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Seismic Data and Instrumentation",
+      "title": "Why do we need global seismic networks?",
+      "concepts": ["seismic networks", "station distribution", "azimuthal coverage", "detection threshold"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.iris.edu/hq/programs/gsn",
+        "https://earthquake.usgs.gov/monitoring/gsn/",
+        "https://ds.iris.edu/gmap/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Seismic Data and Instrumentation",
+      "title": "How do seismologists locate earthquake epicenters?",
+      "concepts": ["epicenter location", "triangulation", "arrival time differences", "depth determination"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet/locating_earthquakes",
+        "https://earthquake.usgs.gov/learn/topics/determining_depth.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Seismic Data and Instrumentation",
+      "title": "What signal processing tricks help us see earthquakes more clearly?",
+      "concepts": ["filtering", "noise reduction", "spectral analysis", "phase picking"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ds.iris.edu/ds/nodes/dmc/tutorials/",
+        "https://www.iris.edu/hq/programs/education_and_outreach/amaseis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Seismic Data and Instrumentation",
+      "title": "How can you access and analyze real seismic data from recent earthquakes?",
+      "concepts": ["data access", "IRIS tools", "waveform analysis", "event catalogs"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ds.iris.edu/wilber3/find_event",
+        "https://service.iris.edu/irisws/",
+        "https://earthquake.usgs.gov/data/comcat/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Review: Instrumentation and Data",
+      "title": "Review: Seismic networks and data analysis",
+      "concepts": ["seismometer review", "network design review", "location methods review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet",
+        "https://earthquake.usgs.gov/learn/faq/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Earthquake Hazards and Applications",
+      "title": "How do scientists predict ground shaking for future earthquakes?",
+      "concepts": ["seismic hazard assessment", "probabilistic hazard", "ground motion prediction", "return periods"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://earthquake.usgs.gov/hazards/",
+        "https://www.usgs.gov/programs/earthquake-hazards/science/seismic-hazard-maps-and-site-specific-data"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Earthquake Hazards and Applications",
+      "title": "Why does the same earthquake cause different damage in different places?",
+      "concepts": ["site effects", "soil amplification", "liquefaction", "basin resonance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://earthquake.usgs.gov/research/structure/3dgeologic/",
+        "https://www.usgs.gov/programs/earthquake-hazards/liquefaction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Earthquake Hazards and Applications",
+      "title": "Can we warn people before the shaking starts?",
+      "concepts": ["earthquake early warning", "ShakeAlert", "P-wave detection", "warning time"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.shakealert.org/",
+        "https://earthquake.usgs.gov/research/earlywarning/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

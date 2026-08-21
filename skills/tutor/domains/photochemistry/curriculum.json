@@ -1,0 +1,373 @@
+{
+  "topic": "Photochemistry",
+  "slug": "photochemistry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "general chemistry",
+    "organic chemistry I",
+    "basic quantum mechanics",
+    "molecular orbital theory",
+    "spectroscopy fundamentals"
+  ],
+  "exit_criteria": [
+    "student can interpret Jablonski diagrams and predict photophysical pathways",
+    "student can distinguish singlet and triplet excited states and explain spin selection rules",
+    "student can calculate quantum yields from experimental data",
+    "student can predict products of common photochemical reactions (Norrish, photocycloaddition, isomerization)",
+    "student can explain energy transfer mechanisms (FRET vs Dexter)",
+    "student can design simple photoredox catalytic cycles",
+    "student can connect photochemistry to real applications (photosynthesis, solar cells, phototherapy)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Light & Matter Fundamentals",
+      "title": "Why does light have both wave and particle properties?",
+      "concepts": ["wave-particle duality", "photon energy", "electromagnetic spectrum"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/blackbody-spectrum",
+        "https://ocw.mit.edu/courses/5-61-physical-chemistry-fall-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Light & Matter Fundamentals",
+      "title": "How do molecules absorb light?",
+      "concepts": ["Beer-Lambert law", "absorption spectroscopy", "chromophores", "extinction coefficient"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Electronic_Spectroscopy_Basics/The_Beer-Lambert_Law",
+        "https://www.youtube.com/watch?v=kJy7KTvO0cU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Light & Matter Fundamentals",
+      "title": "What makes a molecule colorful?",
+      "concepts": ["conjugation", "HOMO-LUMO gap", "color and structure"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.chemtube3d.com/",
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.6b00559"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Light & Matter Fundamentals",
+      "title": "Which electronic transitions are allowed and which are forbidden?",
+      "concepts": ["selection rules", "transition dipole moment", "spin and orbital angular momentum"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Selection_Rules_for_Electronic_Spectra_of_Transition_Metal_Complexes",
+        "https://ocw.mit.edu/courses/5-62-physical-chemistry-ii-spring-2008/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Excited States",
+      "title": "What happens to a molecule immediately after absorbing a photon?",
+      "concepts": ["Franck-Condon principle", "vertical excitation", "vibrational relaxation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=uKdQmYEgF0g",
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Vibrational_Spectroscopy/Vibronic_Coupling/Franck-Condon_Principle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Excited States",
+      "title": "Why do singlet and triplet states have different energies?",
+      "concepts": ["spin multiplicity", "singlet states", "triplet states", "exchange energy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.chemguide.co.uk/physical/basicrates/singletandtriplet.html",
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Quantum_Mechanics/10%3A_Multi-electron_Atoms/Singlet_and_Triplet_Excited_States"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Light & Matter Fundamentals / Excited States",
+      "title": "Can you explain how molecules absorb light and form excited states?",
+      "concepts": ["review all concepts from modules 1-2"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/chemistry"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Excited States",
+      "title": "How do we map all possible fates of an excited molecule?",
+      "concepts": ["Jablonski diagram", "radiative processes", "non-radiative processes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=2L8lF0bcJQg",
+        "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Instrumentation_and_Analysis/Luminescence/Jablonski_Diagram"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Excited States",
+      "title": "Can you draw and interpret a Jablonski diagram for benzene?",
+      "concepts": ["applying Jablonski diagrams", "aromatic excited states"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/ed084p1840"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Photophysical Processes",
+      "title": "Why do some molecules glow when you shine light on them?",
+      "concepts": ["fluorescence", "Stokes shift", "fluorescence lifetime"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=8wW739TloHo",
+        "https://www.microscopyu.com/techniques/fluorescence/introduction-to-fluorescence-microscopy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Photophysical Processes",
+      "title": "How is phosphorescence different from fluorescence?",
+      "concepts": ["phosphorescence", "intersystem crossing", "spin-forbidden transitions", "long-lived emission"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Fluorescence_and_Phosphorescence",
+        "https://www.youtube.com/watch?v=hRdMzY2KaZk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Photophysical Processes",
+      "title": "What determines how efficiently a molecule fluoresces?",
+      "concepts": ["quantum yield", "fluorescence quantum yield", "competing pathways"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=3482",
+        "https://pubs.acs.org/doi/10.1021/acs.jpclett.0c00783"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Photophysical Processes",
+      "title": "How do we measure excited state lifetimes?",
+      "concepts": ["time-resolved spectroscopy", "fluorescence lifetime", "decay kinetics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.edinst.com/blog/what-is-fluorescence-lifetime/",
+        "https://www.youtube.com/watch?v=pPyPy5L7WLU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Photophysical Processes",
+      "title": "Why do heavy atoms enhance phosphorescence?",
+      "concepts": ["heavy atom effect", "spin-orbit coupling", "intersystem crossing enhancement"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Supplemental_Modules_and_Websites_(Inorganic_Chemistry)/Descriptive_Chemistry/Elements_Organized_by_Block/2_p-Block_Elements/Group_17%3A_The_Halogens/1Group_17%3A_General_Properties_of_Halogens/Heavy_Atom_Effect",
+        "https://pubs.rsc.org/en/content/articlelanding/2019/cp/c8cp07591e"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Photophysical Processes",
+      "title": "Can you distinguish fluorescence from phosphorescence and calculate quantum yields?",
+      "concepts": ["review all photophysical processes"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.olympus-lifescience.com/en/microscope-resource/primer/techniques/fluorescence/fluorescenceintro/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Energy Transfer",
+      "title": "How can one excited molecule transfer its energy to another?",
+      "concepts": ["energy transfer", "donor-acceptor pairs", "spectral overlap"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=0FtU8x7HVd4",
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Electronic_Energy_Transfer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Energy Transfer",
+      "title": "What is FRET and how does it work over long distances?",
+      "concepts": ["Förster resonance energy transfer", "dipole-dipole coupling", "distance dependence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.thermofisher.com/us/en/home/references/molecular-probes-the-handbook/technical-notes-and-product-highlights/fluorescence-resonance-energy-transfer-fret.html",
+        "https://www.youtube.com/watch?v=RRlnAyC0kJg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Energy Transfer",
+      "title": "When does Dexter electron exchange dominate over FRET?",
+      "concepts": ["Dexter energy transfer", "electron exchange", "orbital overlap", "triplet-triplet transfer"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Kinetics/06%3A_Modeling_Reaction_Kinetics/6.02%3A_Temperature_Dependence_of_Reaction_Rates/6.2.03%3A_The_Arrhenius_Law/6.2.3.05%3A_Quantitative_Treatment_of_Energy_Transfer",
+        "https://pubs.acs.org/doi/10.1021/acs.jpca.9b00813"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Energy Transfer",
+      "title": "How does nature use energy transfer in photosynthesis?",
+      "concepts": ["light-harvesting complexes", "antenna systems", "energy funneling"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=uixA8ZXx0KU",
+        "https://www.nature.com/scitable/topicpage/photosynthetic-light-harvesting-pigments-and-organization-of-14376666/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Photochemical Reactions",
+      "title": "What happens when an excited molecule breaks a bond?",
+      "concepts": ["photofragmentation", "Norrish Type I", "radical formation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Reactions/Photochemical_Reactions/Norrish_Type_I_Reaction",
+        "https://www.youtube.com/watch?v=V9yW5ZMmLhg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Energy Transfer / Photochemical Reactions",
+      "title": "Can you predict the mechanism and products of key photochemical reactions?",
+      "concepts": ["review Norrish, isomerization, cycloaddition"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.chemguide.co.uk/organicprops/carbonylcompounds/photochemistry.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Photochemical Reactions",
+      "title": "How can light trigger rearrangement instead of fragmentation?",
+      "concepts": ["Norrish Type II", "intramolecular hydrogen abstraction", "cyclization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Reactions/Photochemical_Reactions/Norrish_Type_II_Reaction",
+        "https://pubs.acs.org/doi/10.1021/jo00292a001"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Photochemical Reactions",
+      "title": "Why do some molecules switch shape when exposed to light?",
+      "concepts": ["photoisomerization", "cis-trans isomerization", "electrocyclic reactions", "azobenzene"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Uc0Fk8QnHXs",
+        "https://pubs.rsc.org/en/content/articlelanding/2020/cs/c9cs00203k"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Photochemical Reactions",
+      "title": "How do photocycloadditions build complex ring systems?",
+      "concepts": ["photocycloaddition", "[2+2] cycloaddition", "Woodward-Hoffmann rules"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Reactions/Cycloaddition_Reactions/Photochemical_Cycloaddition",
+        "https://www.organic-chemistry.org/namedreactions/photochemical-cycloaddition.shtm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications",
+      "title": "How can light drive chemical reactions without traditional catalysts?",
+      "concepts": ["photoredox catalysis", "single-electron transfer", "visible light catalysis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=F0cPw2QqWdo",
+        "https://pubs.acs.org/doi/10.1021/acs.chemrev.6b00057"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications",
+      "title": "What makes a good solar cell material?",
+      "concepts": ["photovoltaics", "exciton dissociation", "charge separation", "organic solar cells"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=L_q6LRgKpTw",
+        "https://www.nrel.gov/pv/organic-photovoltaic-solar-cells.html",
+        "https://www.youtube.com/watch?v=xqhLQt4PvBY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications",
+      "title": "How can light be used to treat disease?",
+      "concepts": ["photodynamic therapy", "reactive oxygen species", "singlet oxygen", "photosensitizers"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment/types/photodynamic-therapy",
+        "https://www.youtube.com/watch?v=zD5hH7N0QMc",
+        "https://www.nature.com/articles/nrc1071"
+      ],
+      "status": "pending"
+    }
+  ]
+}

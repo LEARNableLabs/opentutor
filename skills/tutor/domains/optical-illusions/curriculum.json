@@ -1,0 +1,384 @@
+{
+  "topic": "Optical illusions — the neuroscience of visual deception",
+  "slug": "optical-illusions",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic neuroscience (neurons, synapses, brain anatomy)",
+    "high school physics (light, optics)",
+    "comfort with scientific reasoning"
+  ],
+  "exit_criteria": [
+    "explain 10+ major illusions using neural mechanisms",
+    "distinguish low-level (retinal/V1) from high-level (cognitive) illusions",
+    "predict which visual contexts will produce illusions and why",
+    "critique evolutionary and Bayesian theories of perception",
+    "design simple illusion demonstrations using known principles"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Early Visual Processing",
+      "title": "Why do your eyes lie about edges?",
+      "concepts": ["lateral inhibition", "center-surround receptive fields", "Mach bands"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://michaelbach.de/ot/lum-mach/index.html",
+        "https://www.ncbi.nlm.nih.gov/books/NBK11084/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Early Visual Processing",
+      "title": "What makes the Hermann grid shimmer?",
+      "concepts": ["retinal ganglion cells", "simultaneous contrast", "Hermann grid"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://michaelbach.de/ot/lum-herGrid/index.html",
+        "https://www.exploratorium.edu/snacks/hermann-grid"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Early Visual Processing",
+      "title": "How does V1 detect edges that aren't there?",
+      "concepts": ["orientation selectivity", "simple cells", "illusory contours"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrn1903",
+        "https://michaelbach.de/ot/cog-kanizsa/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Early Visual Processing",
+      "title": "Why do afterimages haunt you?",
+      "concepts": ["photoreceptor adaptation", "opponent processing", "negative aftereffects"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://michaelbach.de/ot/col-adapt/index.html",
+        "https://www.scientificamerican.com/article/how-do-afterimages-work/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Early Visual Processing",
+      "title": "Can you design your own Hermann grid illusion?",
+      "concepts": ["receptive field spacing", "experimental design"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://psychopy.org/",
+        "https://www.jspsych.org/7.3/tutorials/rt-task/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Gestalt & Organization",
+      "title": "How do photons become percepts?",
+      "concepts": ["retina-to-cortex pathway", "low-level illusions"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://michaelbach.de/ot/",
+        "https://ocw.mit.edu/courses/9-13-the-human-brain-spring-2019/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Gestalt & Organization",
+      "title": "Why do dots clump into groups?",
+      "concepts": ["proximity", "similarity", "Gestalt grouping laws"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.interaction-design.org/literature/topics/gestalt-principles",
+        "https://michaelbach.de/ot/cog-gestaltGrouping/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Gestalt & Organization",
+      "title": "Is it a vase or two faces?",
+      "concepts": ["figure-ground segregation", "ambiguous images", "bistable perception"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.exploratorium.edu/snacks/ambiguous-figures",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3482909/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Gestalt & Organization",
+      "title": "How does your brain fill in missing edges?",
+      "concepts": ["perceptual completion", "Kanizsa triangle", "modal vs amodal completion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://michaelbach.de/ot/cog-kanizsa/index.html",
+        "https://www.cell.com/neuron/fulltext/S0896-6273(03)00500-0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Gestalt & Organization",
+      "title": "Can you break the Gestalt rules?",
+      "concepts": ["competing grouping cues", "perceptual organization"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor/sensory-perception-topic/v/gestalt-principles",
+        "https://observablehq.com/@d3/gallery"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Gestalt & Organization",
+      "title": "What makes logos memorable?",
+      "concepts": ["closure", "good continuation", "real-world applications"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.logodesignlove.com/gestalt-principles",
+        "https://www.smashingmagazine.com/2014/03/design-principles-visual-perception-and-the-principles-of-gestalt/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Motion & Depth",
+      "title": "How does your brain organize visual chaos?",
+      "concepts": ["Gestalt principles", "grouping", "completion"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://michaelbach.de/ot/",
+        "https://www.exploratorium.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Motion & Depth",
+      "title": "Why do still images move?",
+      "concepts": ["peripheral drift", "motion energy", "Kitaoka's rotating snakes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ritsumei.ac.jp/~akitaoka/index-e.html",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3162194/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Motion & Depth",
+      "title": "What happens after you stare at a waterfall?",
+      "concepts": ["motion aftereffect", "directional adaptation", "MT/V5"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://michaelbach.de/ot/mot-adapt/index.html",
+        "https://www.youtube.com/watch?v=GkRHN0rnzRs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Motion & Depth",
+      "title": "How do movies trick your brain?",
+      "concepts": ["apparent motion", "phi phenomenon", "beta movement"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://michaelbach.de/ot/mot-feetLin/index.html",
+        "https://www.scientificamerican.com/article/why-does-film-work/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Motion & Depth",
+      "title": "Why does that line look longer?",
+      "concepts": ["Müller-Lyer illusion", "size constancy", "misapplied depth cues"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://michaelbach.de/ot/sze-muelue/index.html",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2742614/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Motion & Depth",
+      "title": "Can you build an impossible object?",
+      "concepts": ["Penrose triangle", "impossible figures", "local vs global consistency"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://mathworld.wolfram.com/PenroseTriangle.html",
+        "https://mcescher.com/gallery/impossible-constructions/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Motion & Depth",
+      "title": "How does the Ames room distort reality?",
+      "concepts": ["perspective projection", "forced perspective", "size-distance invariance"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.exploratorium.edu/snacks/ames-room",
+        "https://www.youtube.com/watch?v=gJhyu6nlGt8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Color & Lightness",
+      "title": "What connects motion, depth, and impossible worlds?",
+      "concepts": ["motion adaptation", "depth cues", "impossible figures"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ritsumei.ac.jp/~akitaoka/index-e.html",
+        "https://michaelbach.de/ot/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Color & Lightness",
+      "title": "Is this square black or white?",
+      "concepts": ["lightness constancy", "checkerboard shadow illusion", "intrinsic vs extrinsic properties"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://michaelbach.de/ot/lum-adelsonCheckShadow/index.html",
+        "http://web.mit.edu/persci/people/adelson/checkershadow_illusion.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Color & Lightness",
+      "title": "Why can't we agree on the color of that dress?",
+      "concepts": ["color constancy", "illuminant estimation", "individual differences"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.scientificamerican.com/article/the-science-of-why-no-one-agrees-on-the-color-of-this-dress/",
+        "https://www.cell.com/current-biology/fulltext/S0960-9822(15)00502-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Color & Lightness",
+      "title": "What do statistics have to do with seeing gray?",
+      "concepts": ["empirical approach", "natural scene statistics", "Purves' theory"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4348270/",
+        "https://www.pnas.org/doi/10.1073/pnas.0810526105"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Color & Lightness",
+      "title": "Can you design an illusion that breaks color constancy?",
+      "concepts": ["experimental manipulation", "stimulus design"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.shadertoy.com/",
+        "https://threejs.org/examples/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Top-Down Processing",
+      "title": "How does context shape what colors you see?",
+      "concepts": ["lightness constancy", "color constancy", "empirical approach"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://michaelbach.de/ot/",
+        "http://web.mit.edu/persci/people/adelson/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Top-Down Processing",
+      "title": "Is your brain predicting what you see?",
+      "concepts": ["predictive coding", "Bayesian inference", "top-down modulation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrn2787",
+        "https://www.ted.com/talks/anil_seth_your_brain_hallucinates_your_conscious_reality"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Top-Down Processing",
+      "title": "Why don't you notice the gorilla?",
+      "concepts": ["inattentional blindness", "change blindness", "attention limits"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=vJG698U2Mvo",
+        "https://www.simplypsychology.org/inattentional-blindness.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Top-Down Processing",
+      "title": "Can your ears change what you see?",
+      "concepts": ["McGurk effect", "multisensory integration", "cross-modal illusions"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=G-lN8vWm3m0",
+        "https://www.nature.com/articles/264746a0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Top-Down Processing",
+      "title": "What have illusions taught us about brains?",
+      "concepts": ["synthesis", "theoretical frameworks", "future directions"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.scientificamerican.com/article/10-mind-expanding-optical-illusions/",
+        "https://www.annualreviews.org/doi/10.1146/annurev-vision-030320-041239"
+      ],
+      "status": "pending"
+    }
+  ]
+}

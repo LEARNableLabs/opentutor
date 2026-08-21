@@ -1,0 +1,346 @@
+{
+  "topic": "History of cryptography — from Caesar to Enigma",
+  "slug": "history-of-cryptography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic arithmetic",
+    "familiarity with alphabets and language patterns",
+    "comfort with logical reasoning"
+  ],
+  "exit_criteria": [
+    "explain how major historical ciphers work and why they were eventually broken",
+    "perform encryption and decryption using classical ciphers by hand",
+    "analyze ciphers using frequency analysis and pattern recognition",
+    "understand the evolution from simple substitution to mechanical encryption",
+    "describe the historical impact of cryptography on warfare and diplomacy",
+    "recognize the mathematical foundations that make ciphers strong or weak"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Ancient & Classical Ciphers",
+      "title": "Why did Julius Caesar need secret messages?",
+      "concepts": ["caesar cipher", "substitution", "military cryptography"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/computing/computer-science/cryptography",
+        "https://cryptii.com/pipes/caesar-cipher"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Ancient & Classical Ciphers",
+      "title": "How do you hide a message when everyone knows your trick?",
+      "concepts": ["key space", "brute force", "cipher strength"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.dcode.fr/caesar-cipher",
+        "https://simonsingh.net/cryptography/caesar-shift/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Ancient & Classical Ciphers",
+      "title": "What if we scramble letters instead of shifting them?",
+      "concepts": ["monoalphabetic substitution", "general substitution cipher", "key complexity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cryptomuseum.com/crypto/substitution.htm",
+        "https://pages.mtu.edu/~shene/NSF-4/Tutorial/VIG/Vig-Base.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Ancient & Classical Ciphers",
+      "title": "Can you break a cipher without trying every possible key?",
+      "concepts": ["frequency analysis", "letter distribution", "cryptanalysis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.dcode.fr/frequency-analysis",
+        "https://www.youtube.com/watch?v=uNzaMrcuTM0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Ancient & Classical Ciphers",
+      "title": "What happens when you rearrange instead of replace?",
+      "concepts": ["transposition ciphers", "scytale", "columnar transposition"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cryptomuseum.com/crypto/transposition.htm",
+        "https://crypto.interactive-maths.com/columnar-transposition-cipher.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ancient & Classical Ciphers",
+      "title": "Review: How did ancient cryptographers think about secrecy?",
+      "concepts": ["substitution review", "transposition review", "cryptanalysis basics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://simonsingh.net/cryptography/cipher-challenge/",
+        "https://www.cryptool.org/en/cto/caesar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Medieval & Renaissance Cryptography",
+      "title": "Who first realized letters have personalities?",
+      "concepts": ["Al-Kindi", "frequency analysis discovery", "statistical cryptanalysis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Al-Kindi#Cryptography",
+        "https://www.youtube.com/watch?v=2s4X85pJc1I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Medieval & Renaissance Cryptography",
+      "title": "Can you make each letter look different every time it appears?",
+      "concepts": ["polyalphabetic ciphers", "Alberti disk", "cipher evolution"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cryptomuseum.com/crypto/alberti/",
+        "https://cryptii.com/pipes/alberti-cipher"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Medieval & Renaissance Cryptography",
+      "title": "Why was the Vigenère cipher called 'le chiffre indéchiffrable'?",
+      "concepts": ["Vigenère cipher", "keyword encryption", "polyalphabetic security"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pages.mtu.edu/~shene/NSF-4/Tutorial/VIG/Vig-Base.html",
+        "https://cryptii.com/pipes/vigenere-cipher"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Medieval & Renaissance Cryptography",
+      "title": "How did European courts mix codes and ciphers?",
+      "concepts": ["nomenclators", "codebooks", "hybrid systems"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cryptomuseum.com/crypto/nomenclator.htm",
+        "https://www.youtube.com/watch?v=4qZ3EKQmHuI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Medieval & Renaissance Cryptography",
+      "title": "What made Mary Queen of Scots' cipher fail?",
+      "concepts": ["Babington plot", "nomenclator weaknesses", "historical consequences"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://simonsingh.net/cryptography/mary-queen-of-scots/",
+        "https://en.wikipedia.org/wiki/Babington_Plot#Cipher"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Medieval & Renaissance Cryptography",
+      "title": "Review: How did cryptography become a science?",
+      "concepts": ["frequency analysis mastery", "polyalphabetic understanding", "historical context"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.dcode.fr/tools-list",
+        "https://cryptii.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Early Modern Era",
+      "title": "Could a cipher really stay unbroken for 200 years?",
+      "concepts": ["Great Cipher", "homophonic substitution", "nomenclator evolution"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Great_Cipher",
+        "https://www.youtube.com/watch?v=VaudiJzKg6Y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Early Modern Era",
+      "title": "What if a machine could encipher for you?",
+      "concepts": ["Jefferson disk", "mechanical cryptography", "cipher wheels"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cryptomuseum.com/crypto/jefferson/",
+        "https://www.monticello.org/thomas-jefferson/jefferson-s-wheel-cipher/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Early Modern Era",
+      "title": "How did the telegraph change secret communication?",
+      "concepts": ["telegraph codes", "commercial cryptography", "codebook systems"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Commercial_code_(communications)",
+        "https://www.cryptomuseum.com/crypto/telegraph.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Early Modern Era",
+      "title": "Why did Babbage keep his Vigenère breakthrough secret?",
+      "concepts": ["Kasiski test", "Babbage cryptanalysis", "period detection"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Kasiski_examination",
+        "https://pages.mtu.edu/~shene/NSF-4/Tutorial/VIG/Vig-Kasiski.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Early Modern Era",
+      "title": "Can you crack a Vigenère cipher using repeating patterns?",
+      "concepts": ["index of coincidence", "Kasiski method practice", "statistical attacks"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.dcode.fr/kasiski-test",
+        "https://www.youtube.com/watch?v=LaWp_Kq0cKs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Early Modern Era",
+      "title": "Review: From hand ciphers to mechanical aids",
+      "concepts": ["mechanical encryption", "cryptanalysis maturity", "era transition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.cryptool.org/en/cto/",
+        "https://simonsingh.net/cryptography/cipher-challenge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "World War Cryptography",
+      "title": "How did a single telegram change history?",
+      "concepts": ["Zimmermann telegram", "Room 40", "diplomatic cryptanalysis"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Zimmermann_Telegram",
+        "https://www.youtube.com/watch?v=qk8PrhO8FeA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "World War Cryptography",
+      "title": "What makes a rotor machine different from a cipher wheel?",
+      "concepts": ["rotor machines", "wiring permutations", "mechanical complexity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cryptomuseum.com/crypto/enigma/working.htm",
+        "https://www.youtube.com/watch?v=G2_Q9FoD-oQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "World War Cryptography",
+      "title": "Why did Enigma's reflector make it stronger and weaker?",
+      "concepts": ["Enigma machine", "reflector principle", "involution property"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.cryptomuseum.com/crypto/enigma/",
+        "https://enigma.hoerenberg.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "World War Cryptography",
+      "title": "How did Polish mathematicians crack Enigma before WWII?",
+      "concepts": ["Polish Cipher Bureau", "Rejewski's method", "mathematical cryptanalysis"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Marian_Rejewski",
+        "https://www.youtube.com/watch?v=kj_7Jc1mS9k"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "World War Cryptography",
+      "title": "What were the Bletchley Park bombes really doing?",
+      "concepts": ["bombe machine", "crib-based attack", "Turing's contribution"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cryptomuseum.com/crypto/bombe/",
+        "https://www.youtube.com/watch?v=d2NWPG2gB_A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "World War Cryptography",
+      "title": "Did breaking Enigma actually shorten the war?",
+      "concepts": ["Ultra intelligence", "operational security", "historical impact"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Ultra",
+        "https://www.bletchleypark.org.uk/our-story/bletchley-park-and-the-war"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "World War Cryptography",
+      "title": "Review: What lessons did modern cryptography learn from history?",
+      "concepts": ["historical synthesis", "security principles", "cryptography evolution"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://simonsingh.net/cryptography/",
+        "https://www.cryptool.org/en/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

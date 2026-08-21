@@ -1,0 +1,355 @@
+{
+  "topic": "Medical imaging — from X-rays to MRI",
+  "slug": "medical-imaging",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (mechanics, electricity & magnetism, waves)",
+    "basic anatomy and physiology",
+    "algebra and trigonometry"
+  ],
+  "exit_criteria": [
+    "explain the physics behind X-ray, CT, ultrasound, MRI, and nuclear medicine imaging",
+    "identify common imaging artifacts and their causes",
+    "choose appropriate imaging modalities for different clinical scenarios",
+    "understand tradeoffs between image quality, scan time, and radiation dose",
+    "interpret basic medical images and understand contrast mechanisms"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Radiation & X-rays",
+      "title": "How do X-rays see through your body?",
+      "concepts": ["electromagnetic radiation", "X-ray production", "tissue attenuation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nibib.nih.gov/science-education/science-topics/x-rays",
+        "https://radiopaedia.org/articles/x-ray-production"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Radiation & X-rays",
+      "title": "Why do bones look white on X-rays?",
+      "concepts": ["photoelectric effect", "Compton scattering", "attenuation coefficients"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/physics/quantum-physics/photons/v/photoelectric-effect",
+        "https://radiopaedia.org/articles/x-ray-interaction-with-matter"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Radiation & X-rays",
+      "title": "What makes a good X-ray image sharp?",
+      "concepts": ["spatial resolution", "focal spot size", "geometric unsharpness", "detector resolution"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://radiopaedia.org/articles/spatial-resolution-radiology",
+        "https://www.aapm.org/education/SAM/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Radiation & X-rays",
+      "title": "How much radiation is too much?",
+      "concepts": ["radiation dose", "ALARA principle", "effective dose", "dose limits"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nibib.nih.gov/science-education/science-topics/radiation-safety",
+        "https://www.radiologyinfo.org/en/info/safety-xray"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Radiation & X-rays",
+      "title": "Why does scatter make images worse?",
+      "concepts": ["scatter radiation", "anti-scatter grids", "contrast degradation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://radiopaedia.org/articles/scatter-radiation",
+        "https://radiopaedia.org/articles/anti-scatter-grid"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Radiation & X-rays",
+      "title": "Review: From photons to images",
+      "concepts": ["X-ray physics review", "image quality factors"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://radiopaedia.org/articles/x-ray-physics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Computed Tomography",
+      "title": "How does CT turn X-rays into 3D slices?",
+      "concepts": ["projection data", "tomography", "filtered back-projection"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nibib.nih.gov/science-education/science-topics/computed-tomography-ct",
+        "https://radiopaedia.org/articles/ct-image-reconstruction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Computed Tomography",
+      "title": "What are Hounsfield units measuring?",
+      "concepts": ["Hounsfield scale", "CT numbers", "tissue characterization", "windowing"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://radiopaedia.org/articles/hounsfield-unit",
+        "https://radiopaedia.org/articles/windowing-ct"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Computed Tomography",
+      "title": "Why do metal implants create streaks in CT?",
+      "concepts": ["CT artifacts", "beam hardening", "metal artifacts", "partial volume effect"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://radiopaedia.org/articles/ct-artifacts",
+        "https://radiopaedia.org/articles/metal-artefact"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Computed Tomography",
+      "title": "How do modern CTs scan so fast?",
+      "concepts": ["helical CT", "multi-detector CT", "pitch", "temporal resolution"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://radiopaedia.org/articles/helical-ct",
+        "https://radiopaedia.org/articles/multi-detector-ct"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Ultrasound",
+      "title": "How does sound create medical images?",
+      "concepts": ["acoustic waves", "piezoelectric effect", "pulse-echo imaging", "time-of-flight"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nibib.nih.gov/science-education/science-topics/ultrasound",
+        "https://radiopaedia.org/articles/ultrasound-physics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Ultrasound",
+      "title": "Why can't ultrasound see through bone or air?",
+      "concepts": ["acoustic impedance", "reflection", "transmission", "shadowing artifacts"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://radiopaedia.org/articles/acoustic-impedance",
+        "https://radiopaedia.org/articles/acoustic-shadowing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Ultrasound",
+      "title": "Review: Waves and imaging",
+      "concepts": ["CT vs ultrasound comparison", "modality selection"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://radiopaedia.org/articles/imaging-modality"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Ultrasound",
+      "title": "How does Doppler measure blood flow?",
+      "concepts": ["Doppler effect", "color Doppler", "spectral Doppler", "aliasing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://radiopaedia.org/articles/doppler-ultrasound",
+        "https://www.khanacademy.org/science/physics/mechanical-waves-and-sound/doppler-effect"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "MRI Fundamentals",
+      "title": "Why do protons spin in a magnetic field?",
+      "concepts": ["nuclear magnetic resonance", "spin", "Larmor frequency", "precession"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nibib.nih.gov/science-education/science-topics/magnetic-resonance-imaging-mri",
+        "https://ocw.mit.edu/courses/hst-583-functional-magnetic-resonance-imaging-data-acquisition-and-analysis-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "MRI Fundamentals",
+      "title": "What makes different tissues bright or dark in MRI?",
+      "concepts": ["T1 relaxation", "T2 relaxation", "proton density", "contrast weighting"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://radiopaedia.org/articles/t1-relaxation-time",
+        "https://radiopaedia.org/articles/t2-relaxation-time"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "MRI Fundamentals",
+      "title": "How does MRI know where signals come from?",
+      "concepts": ["frequency encoding", "phase encoding", "k-space", "spatial localization"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://radiopaedia.org/articles/k-space",
+        "https://radiopaedia.org/articles/frequency-encoding"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "MRI Fundamentals",
+      "title": "Why do MRI scans take so long?",
+      "concepts": ["pulse sequences", "spin echo", "gradient echo", "acquisition time"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://radiopaedia.org/articles/spin-echo",
+        "https://radiopaedia.org/articles/gradient-echo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "MRI Fundamentals",
+      "title": "How do fast MRI techniques speed things up?",
+      "concepts": ["turbo spin echo", "EPI (echo planar imaging)", "parallel imaging", "compressed sensing"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://radiopaedia.org/articles/echo-planar-imaging",
+        "https://radiopaedia.org/articles/parallel-imaging"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "MRI Fundamentals",
+      "title": "Review: MRI physics essentials",
+      "concepts": ["MRI signal generation", "contrast mechanisms", "sequence types"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://radiopaedia.org/articles/mri-physics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Nuclear Medicine & Advanced Topics",
+      "title": "How do radioactive tracers light up cancer?",
+      "concepts": ["radiotracers", "PET", "FDG uptake", "metabolic imaging"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nibib.nih.gov/science-education/science-topics/positron-emission-tomography-pet",
+        "https://radiopaedia.org/articles/fluorodeoxyglucose-f-18"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Nuclear Medicine & Advanced Topics",
+      "title": "What's the difference between PET and SPECT?",
+      "concepts": ["SPECT", "PET", "coincidence detection", "gamma cameras"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://radiopaedia.org/articles/single-photon-emission-computed-tomography",
+        "https://radiopaedia.org/articles/positron-emission-tomography-pet"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Nuclear Medicine & Advanced Topics",
+      "title": "How does AI read medical images?",
+      "concepts": ["deep learning", "convolutional neural networks", "image segmentation", "computer-aided diagnosis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nibib.nih.gov/science-education/science-topics/artificial-intelligence-ai",
+        "https://radiopaedia.org/articles/artificial-intelligence-in-radiology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Nuclear Medicine & Advanced Topics",
+      "title": "What can functional MRI reveal about the brain?",
+      "concepts": ["fMRI", "BOLD signal", "brain mapping", "neurovascular coupling"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://radiopaedia.org/articles/functional-mri",
+        "https://ocw.mit.edu/courses/hst-583-functional-magnetic-resonance-imaging-data-acquisition-and-analysis-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Clinical Integration",
+      "title": "Which imaging test should I order?",
+      "concepts": ["modality selection", "clinical indications", "risk-benefit analysis", "imaging appropriateness"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.radiologyinfo.org/en/info/choosing-imaging-exam",
+        "https://www.acr.org/Clinical-Resources/ACR-Appropriateness-Criteria"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Clinical Integration",
+      "title": "What's next in medical imaging?",
+      "concepts": ["photon-counting CT", "ultra-high-field MRI", "molecular imaging", "theranostics"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nibib.nih.gov/research-funding/emerging-imaging-technologies",
+        "https://radiopaedia.org/articles/photon-counting-ct"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "topic": "Molecular biology — DNA to protein",
+  "slug": "molecular-biology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (atoms, bonds, pH)",
+    "cell biology fundamentals",
+    "basic biochemistry (proteins, nucleic acids)"
+  ],
+  "exit_criteria": [
+    "explain the molecular mechanisms of transcription and translation",
+    "predict how mutations affect protein production",
+    "analyze gene regulation strategies in different contexts",
+    "connect molecular events to cellular and organismal phenotypes",
+    "interpret experimental data from molecular biology techniques"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "DNA Structure & Information",
+      "title": "Why does DNA twist into a double helix?",
+      "concepts": ["DNA structure", "base pairing", "antiparallel strands", "hydrogen bonds"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/dna-as-the-genetic-material/structure-of-dna",
+        "https://www.rcsb.org/structure/1BNA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "DNA Structure & Information",
+      "title": "How do just four nucleotides encode all biological information?",
+      "concepts": ["genetic code", "information storage", "sequence specificity", "complementarity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/dna-is-a-structure-that-encodes-biological-6493050/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "DNA Structure & Information",
+      "title": "Why does chromatin packaging matter for gene expression?",
+      "concepts": ["chromatin", "nucleosomes", "histones", "DNA accessibility"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26834/",
+        "https://www.ibiology.org/genetics-and-gene-regulation/chromatin-structure/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "DNA Structure & Information",
+      "title": "What makes a DNA sequence recognizable as a gene?",
+      "concepts": ["promoters", "regulatory sequences", "transcription start sites", "gene architecture"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Transcription",
+      "title": "How does RNA polymerase find where to start?",
+      "concepts": ["RNA polymerase", "promoter recognition", "transcription factors", "initiation complex"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26887/",
+        "https://www.youtube.com/watch?v=SMtWvDbfHLo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Transcription",
+      "title": "How does information flow from DNA structure to RNA synthesis?",
+      "concepts": ["DNA structure review", "transcription overview", "RNA vs DNA"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/gene-expression-central-dogma"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Transcription",
+      "title": "Why do bacteria transcribe genes so differently than eukaryotes?",
+      "concepts": ["prokaryotic transcription", "eukaryotic transcription", "operons", "coupled transcription-translation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26850/",
+        "https://www.nature.com/scitable/topicpage/gene-expression-14121669/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Transcription",
+      "title": "What happens when transcription errors occur?",
+      "concepts": ["transcriptional fidelity", "RNA polymerase proofreading", "error rates", "biological consequences"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3130749/",
+        "https://www.nature.com/articles/nrm.2017.83"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Transcription",
+      "title": "How do cells decide which genes to transcribe right now?",
+      "concepts": ["transcriptional regulation", "activators", "repressors", "signal transduction"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK9956/",
+        "https://www.ibiology.org/genetics-and-gene-regulation/gene-regulation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "RNA Processing",
+      "title": "Why do eukaryotic mRNAs get a cap and tail?",
+      "concepts": ["5' capping", "3' polyadenylation", "mRNA stability", "translation enhancement"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26887/",
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/translation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "RNA Processing",
+      "title": "How does the spliceosome cut and paste RNA with such precision?",
+      "concepts": ["splicing", "spliceosome", "introns", "exons", "splice sites"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26887/",
+        "https://www.youtube.com/watch?v=aVgwr0QpYNE",
+        "https://www.rcsb.org/structure/3JB9"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "RNA Processing",
+      "title": "Can one gene really make hundreds of different proteins?",
+      "concepts": ["alternative splicing", "protein isoforms", "splicing regulation", "tissue-specific expression"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nrg2776",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3123065/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "RNA Processing",
+      "title": "What transformations turn pre-mRNA into mature mRNA?",
+      "concepts": ["RNA processing overview", "splicing review", "mRNA modifications"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/regulation-of-gene-expression-and-cell-specialization"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Translation",
+      "title": "How does each tRNA know which amino acid belongs to it?",
+      "concepts": ["aminoacyl-tRNA synthetases", "tRNA charging", "genetic code", "wobble base pairing"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26876/",
+        "https://www.khanacademy.org/science/biology/gene-expression-central-dogma/translation-polypeptides"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Translation",
+      "title": "What makes the ribosome such a remarkable molecular machine?",
+      "concepts": ["ribosome structure", "catalytic RNA", "peptidyl transferase", "tRNA binding sites"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.rcsb.org/structure/4V6X",
+        "https://www.ibiology.org/molecular-biology/ribosome-structure/",
+        "https://www.youtube.com/watch?v=TfYf_rPWUdY",
+        "https://www.nature.com/articles/nature08403"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Translation",
+      "title": "How does the ribosome find the correct start codon?",
+      "concepts": ["translation initiation", "start codon", "ribosome binding site", "Shine-Dalgarno sequence", "Kozak sequence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26876/",
+        "https://www.nature.com/scitable/topicpage/translation-dna-to-mrna-to-protein-393/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Translation",
+      "title": "Why is translation both incredibly fast and amazingly accurate?",
+      "concepts": ["elongation mechanism", "translational fidelity", "proofreading", "speed-accuracy tradeoff"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3767230/",
+        "https://www.nature.com/articles/nature04656"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Translation",
+      "title": "What happens to proteins after they emerge from the ribosome?",
+      "concepts": ["protein folding", "post-translational modifications", "chaperones", "quality control"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26884/",
+        "https://www.ibiology.org/cell-biology/protein-folding/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Regulation & Integration",
+      "title": "How do all the steps connect from DNA sequence to functional protein?",
+      "concepts": ["central dogma review", "transcription and translation integration", "regulation overview"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/gene-expression-central-dogma",
+        "https://www.nature.com/scitable/topicpage/gene-expression-14121669/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Regulation & Integration",
+      "title": "How do cells coordinate regulation at multiple levels?",
+      "concepts": ["multi-level regulation", "transcriptional control", "post-transcriptional regulation", "translational control", "feedback loops"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26813/",
+        "https://www.nature.com/articles/nrg2102"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Regulation & Integration",
+      "title": "What do genetic diseases teach us about the central dogma?",
+      "concepts": ["mutations", "disease mechanisms", "loss-of-function", "gain-of-function", "therapeutic targets"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK1116/",
+        "https://www.nature.com/articles/nrg2578",
+        "https://www.omim.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Regulation & Integration",
+      "title": "Where is molecular biology taking medicine and biotechnology?",
+      "concepts": ["gene therapy", "mRNA vaccines", "CRISPR", "personalized medicine", "synthetic biology"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/s41576-020-0258-0",
+        "https://www.science.org/doi/10.1126/science.abe0075",
+        "https://www.ibiology.org/human-disease/mrna-vaccines/",
+        "https://www.broadinstitute.org/what-broad/areas-focus/project-spotlight/questions-and-answers-about-crispr"
+      ],
+      "status": "pending"
+    }
+  ]
+}

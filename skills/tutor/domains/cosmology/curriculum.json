@@ -1,0 +1,520 @@
+{
+  "topic": "Cosmology — from the Big Bang to dark energy",
+  "slug": "cosmology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "calculus (derivatives, integrals, basic differential equations)",
+    "basic physics (mechanics, electromagnetism, thermodynamics)",
+    "special relativity basics (time dilation, length contraction, E=mc²)"
+  ],
+  "exit_criteria": [
+    "explain observational evidence for the Big Bang and cosmic expansion",
+    "calculate key cosmological quantities using Hubble's law and Friedmann equations",
+    "interpret CMB power spectra and understand what they reveal about the universe",
+    "describe the role of dark matter and dark energy in cosmic evolution",
+    "evaluate current cosmological models and identify open questions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "The Expanding Universe",
+      "title": "Why do distant galaxies appear red?",
+      "concepts": [
+        "cosmological redshift",
+        "Doppler effect",
+        "spectral lines"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/physics/8-286-the-early-universe-fall-2013/",
+        "https://www.youtube.com/c/pbsspacetime"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "The Expanding Universe",
+      "title": "How did Hubble discover the universe is expanding?",
+      "concepts": [
+        "Hubble's law",
+        "recession velocity",
+        "distance measurements"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://hubblesite.org/science/universe",
+        "https://astrobites.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "The Expanding Universe",
+      "title": "What does it mean for space itself to expand?",
+      "concepts": [
+        "scale factor",
+        "comoving coordinates",
+        "metric expansion"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://theoreticalminimum.com/courses/cosmology/2013/winter",
+        "https://www.youtube.com/c/pbsspacetime"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "The Expanding Universe",
+      "title": "Can you derive the relationship between redshift and expansion?",
+      "concepts": [
+        "redshift formula",
+        "scale factor evolution",
+        "cosmic time"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/physics/8-286-the-early-universe-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "The Expanding Universe",
+      "title": "What equations govern cosmic expansion?",
+      "concepts": [
+        "Friedmann equations",
+        "energy density",
+        "cosmic dynamics"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://theoreticalminimum.com/courses/cosmology/2013/winter",
+        "https://arxiv.org/list/astro-ph.CO/recent"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "The Hot Big Bang",
+      "title": "What happened in the first second after the Big Bang?",
+      "concepts": [
+        "early universe timeline",
+        "particle physics",
+        "temperature evolution"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/physics/8-286-the-early-universe-fall-2013/",
+        "https://www.youtube.com/c/pbsspacetime"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "The Hot Big Bang",
+      "title": "Why is the universe mostly hydrogen and helium?",
+      "concepts": [
+        "Big Bang nucleosynthesis",
+        "light element abundance",
+        "nuclear reactions"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://astrobites.org/",
+        "https://www.sdss.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Hot Big Bang",
+      "title": "How do we know the early universe was hot?",
+      "concepts": [
+        "thermal history",
+        "blackbody radiation",
+        "temperature-redshift relation"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://map.gsfc.nasa.gov/",
+        "https://www.cosmos.esa.int/web/planck"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "The Hot Big Bang",
+      "title": "What problems does inflation solve?",
+      "concepts": [
+        "horizon problem",
+        "flatness problem",
+        "inflation mechanism"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/physics/8-286-the-early-universe-fall-2013/",
+        "https://theoreticalminimum.com/courses/cosmology/2013/winter"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Hot Big Bang",
+      "title": "Review: The expanding universe and early cosmic history",
+      "concepts": [
+        "expansion",
+        "redshift",
+        "nucleosynthesis",
+        "inflation"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://astrobites.org/",
+        "https://www.youtube.com/c/pbsspacetime"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The Hot Big Bang",
+      "title": "Can you explain the Big Bang to a skeptic?",
+      "concepts": [
+        "observational evidence",
+        "scientific reasoning",
+        "competing theories"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://hubblesite.org/science/universe"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Cosmic Microwave Background",
+      "title": "What is the afterglow of the Big Bang?",
+      "concepts": [
+        "CMB discovery",
+        "recombination",
+        "last scattering surface"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cosmos.esa.int/web/planck",
+        "https://map.gsfc.nasa.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Cosmic Microwave Background",
+      "title": "Why isn't the CMB perfectly uniform?",
+      "concepts": [
+        "temperature anisotropies",
+        "density perturbations",
+        "quantum fluctuations"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://lambda.gsfc.nasa.gov/toolbox/tb_cmbfast_ov.cfm",
+        "https://www.cosmos.esa.int/web/planck"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Cosmic Microwave Background",
+      "title": "What are acoustic oscillations in the early universe?",
+      "concepts": [
+        "baryon-photon fluid",
+        "sound waves",
+        "acoustic peaks"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/physics/8-286-the-early-universe-fall-2013/",
+        "https://theoreticalminimum.com/courses/cosmology/2013/winter"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Cosmic Microwave Background",
+      "title": "How do CMB measurements constrain cosmological parameters?",
+      "concepts": [
+        "power spectrum",
+        "parameter estimation",
+        "Planck results"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://pla.esac.esa.int/",
+        "https://lambda.gsfc.nasa.gov/toolbox/tb_cmbfast_ov.cfm",
+        "https://arxiv.org/list/astro-ph.CO/recent"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Cosmic Microwave Background",
+      "title": "Review: CMB physics and observational cosmology",
+      "concepts": [
+        "recombination",
+        "anisotropies",
+        "power spectrum",
+        "cosmological parameters"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.cosmos.esa.int/web/planck",
+        "https://www.youtube.com/c/pbsspacetime"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Structure Formation",
+      "title": "How did tiny fluctuations become galaxies?",
+      "concepts": [
+        "gravitational instability",
+        "Jeans length",
+        "perturbation growth"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.illustris-project.org/",
+        "https://ocw.mit.edu/courses/physics/8-286-the-early-universe-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Structure Formation",
+      "title": "What is the cosmic web?",
+      "concepts": [
+        "large-scale structure",
+        "filaments",
+        "voids",
+        "clusters"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.sdss.org/",
+        "https://www.illustris-project.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Structure Formation",
+      "title": "Why do simulations need dark matter?",
+      "concepts": [
+        "N-body simulations",
+        "dark matter halos",
+        "bottom-up formation"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.illustris-project.org/",
+        "https://astrobites.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Structure Formation",
+      "title": "Can you trace structure from quantum fluctuations to galaxies?",
+      "concepts": [
+        "inflation to structure",
+        "scale dependence",
+        "transfer function"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://theoreticalminimum.com/courses/cosmology/2013/winter",
+        "https://arxiv.org/list/astro-ph.CO/recent"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Structure Formation",
+      "title": "How do we map the universe's structure?",
+      "concepts": [
+        "galaxy surveys",
+        "redshift surveys",
+        "correlation functions"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.sdss.org/",
+        "https://hubblesite.org/science/universe"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Structure Formation",
+      "title": "Review: From quantum fluctuations to the cosmic web",
+      "concepts": [
+        "gravitational instability",
+        "large-scale structure",
+        "structure formation",
+        "simulations"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.illustris-project.org/",
+        "https://www.sdss.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Dark Matter",
+      "title": "What evidence proves dark matter exists?",
+      "concepts": [
+        "rotation curves",
+        "gravitational lensing",
+        "bullet cluster"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/pbsspacetime",
+        "https://hubblesite.org/science/universe"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Dark Matter",
+      "title": "What could dark matter be made of?",
+      "concepts": [
+        "WIMPs",
+        "axions",
+        "particle candidates",
+        "non-baryonic matter"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://astrobites.org/",
+        "https://arxiv.org/list/astro-ph.CO/recent"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Dark Matter",
+      "title": "How do we search for dark matter particles?",
+      "concepts": [
+        "direct detection",
+        "indirect detection",
+        "collider searches"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/pbsspacetime",
+        "https://astrobites.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Dark Matter",
+      "title": "Review: Structure formation and dark matter",
+      "concepts": [
+        "perturbation growth",
+        "cosmic web",
+        "dark matter evidence",
+        "detection"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.sdss.org/",
+        "https://www.illustris-project.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Dark Energy and the Future",
+      "title": "Why is the universe's expansion accelerating?",
+      "concepts": [
+        "cosmic acceleration",
+        "Type Ia supernovae",
+        "1998 discovery"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/pbsspacetime",
+        "https://hubblesite.org/science/universe"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Dark Energy and the Future",
+      "title": "Is dark energy Einstein's cosmological constant?",
+      "concepts": [
+        "cosmological constant",
+        "vacuum energy",
+        "dark energy models",
+        "equation of state"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://theoreticalminimum.com/courses/cosmology/2013/winter",
+        "https://arxiv.org/list/astro-ph.CO/recent"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Dark Energy and the Future",
+      "title": "What is the ultimate fate of the universe?",
+      "concepts": [
+        "cosmological future",
+        "heat death",
+        "big rip",
+        "observational constraints"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/pbsspacetime",
+        "https://astrobites.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "topic": "Special and General Relativity",
+  "slug": "special-and-general-relativity",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "linear algebra",
+    "classical mechanics",
+    "electromagnetism basics"
+  ],
+  "exit_criteria": [
+    "explain why simultaneity is relative and time dilation occurs",
+    "work with Lorentz transformations and 4-vectors",
+    "describe the equivalence principle and its implications",
+    "explain how mass curves spacetime and what geodesics represent",
+    "interpret the Einstein field equations conceptually",
+    "analyze black hole properties and gravitational wave signatures",
+    "connect relativistic effects to real experiments (GPS, LIGO, particle physics)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why did Maxwell's equations threaten Newtonian physics?",
+      "concepts": ["electromagnetic waves", "speed of light", "Galilean relativity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-033-relativity-fall-2006/",
+        "https://en.wikipedia.org/wiki/Michelson%E2%80%93Morley_experiment"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What if the speed of light is actually constant for everyone?",
+      "concepts": ["postulates of special relativity", "inertial frames", "light postulate"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/pbsspacetime",
+        "https://en.wikipedia.org/wiki/Postulates_of_special_relativity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do we measure space and time in relativity?",
+      "concepts": ["spacetime events", "worldlines", "light cones"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=1rLWVZVWfdY",
+        "https://www.geogebra.org/m/HYD7hB9v"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Special Relativity Basics",
+      "title": "Why do moving clocks tick slower?",
+      "concepts": ["time dilation", "proper time", "light clock"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-033-relativity-fall-2006/pages/lecture-notes/",
+        "https://en.wikipedia.org/wiki/Time_dilation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Special Relativity Basics",
+      "title": "Does a meter stick shrink when it moves?",
+      "concepts": ["length contraction", "proper length", "simultaneity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=wteiuxyqtoM",
+        "https://en.wikipedia.org/wiki/Length_contraction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Special Relativity Basics",
+      "title": "How can events be simultaneous for you but not for me?",
+      "concepts": ["relativity of simultaneity", "spacetime diagrams", "reference frames"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=vVKb3vKd8Tw",
+        "https://www.real-world-physics-problems.com/relativity-of-simultaneity.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Review",
+      "title": "Special Relativity Basics Checkpoint",
+      "concepts": ["review", "time dilation", "length contraction", "simultaneity"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-033-relativity-fall-2006/pages/assignments/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Special Relativity Basics",
+      "title": "Why does the traveling twin age slower?",
+      "concepts": ["twin paradox", "acceleration", "proper time paths"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Twin_paradox",
+        "https://www.youtube.com/watch?v=0iJZ_QGMLD0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Special Relativity Basics",
+      "title": "What transformations connect different observers?",
+      "concepts": ["Lorentz transformations", "rapidity", "velocity addition"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-033-relativity-fall-2006/",
+        "https://en.wikipedia.org/wiki/Lorentz_transformation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Spacetime Geometry",
+      "title": "What replaces Euclidean distance in spacetime?",
+      "concepts": ["spacetime interval", "Minkowski metric", "invariant quantities"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Minkowski_space",
+        "https://www.youtube.com/watch?v=7VPBRs8z_Rc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Spacetime Geometry",
+      "title": "How do we do physics with 4-vectors?",
+      "concepts": ["4-vectors", "4-velocity", "4-momentum"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-033-relativity-fall-2006/",
+        "https://en.wikipedia.org/wiki/Four-vector"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Spacetime Geometry",
+      "title": "Why is E=mc² inevitable in special relativity?",
+      "concepts": ["relativistic energy", "mass-energy equivalence", "rest mass"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Mass%E2%80%93energy_equivalence",
+        "https://www.youtube.com/watch?v=Xo232kyTsO0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Spacetime Geometry",
+      "title": "How do cosmic ray muons reach Earth's surface?",
+      "concepts": ["particle decay", "time dilation experiments", "experimental evidence"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Time_dilation_of_moving_particles",
+        "https://www.youtube.com/watch?v=QVKj3LADCnA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Review",
+      "title": "Spacetime Geometry Checkpoint",
+      "concepts": ["review", "4-vectors", "spacetime interval", "energy-momentum"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-033-relativity-fall-2006/pages/assignments/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Equivalence and Curvature",
+      "title": "Why can't you tell gravity from acceleration?",
+      "concepts": ["equivalence principle", "local inertial frames", "gravitational redshift"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Equivalence_principle",
+        "https://www.youtube.com/watch?v=NblR01hHK6U"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Equivalence and Curvature",
+      "title": "What does it mean for spacetime to be curved?",
+      "concepts": ["curved spacetime", "Riemannian geometry", "intrinsic curvature"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/",
+        "https://en.wikipedia.org/wiki/Curved_space"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Equivalence and Curvature",
+      "title": "Why do freely falling objects follow geodesics?",
+      "concepts": ["geodesics", "geodesic equation", "parallel transport"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/",
+        "https://en.wikipedia.org/wiki/Geodesics_in_general_relativity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Equivalence and Curvature",
+      "title": "How do we measure curvature mathematically?",
+      "concepts": ["Riemann curvature tensor", "Ricci tensor", "curvature scalars"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/",
+        "https://en.wikipedia.org/wiki/Riemann_curvature_tensor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Equivalence and Curvature",
+      "title": "Can you explain gravity as curved spacetime to a friend?",
+      "concepts": ["geometric interpretation", "teaching back", "conceptual clarity"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=tzQC3uYL67U"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Review",
+      "title": "Curvature Concepts Checkpoint",
+      "concepts": ["review", "equivalence principle", "geodesics", "curvature"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/pages/assignments/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Einstein's Equations",
+      "title": "What tells spacetime how to curve?",
+      "concepts": ["stress-energy tensor", "energy density", "momentum flux"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/",
+        "https://en.wikipedia.org/wiki/Stress%E2%80%93energy_tensor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Einstein's Equations",
+      "title": "How does matter curve spacetime?",
+      "concepts": ["Einstein field equations", "cosmological constant", "gravitational coupling"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/",
+        "https://en.wikipedia.org/wiki/Einstein_field_equations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applications",
+      "title": "What is the geometry around a non-rotating black hole?",
+      "concepts": ["Schwarzschild solution", "event horizon", "singularity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Schwarzschild_metric",
+        "https://www.youtube.com/watch?v=vNaEBbFbvcY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications",
+      "title": "How does GPS prove general relativity?",
+      "concepts": ["gravitational time dilation", "practical applications", "experimental tests"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Error_analysis_for_the_Global_Positioning_System",
+        "https://www.youtube.com/watch?v=xo-YqeYZbJ0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications",
+      "title": "What are gravitational waves and how did LIGO detect them?",
+      "concepts": ["gravitational waves", "LIGO", "spacetime ripples"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ligo.caltech.edu/page/what-are-gw",
+        "https://www.youtube.com/watch?v=4GbWfNHtHRg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications",
+      "title": "How does general relativity explain the expanding universe?",
+      "concepts": ["cosmology", "FRW metric", "Hubble expansion"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Friedmann%E2%80%93Lema%C3%AEtre%E2%80%93Robertson%E2%80%93Walker_metric",
+        "https://www.youtube.com/watch?v=XBr4GkRnY04"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Final Review",
+      "title": "Journey Through Spacetime: Final Integration",
+      "concepts": ["comprehensive review", "connections", "future directions"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/",
+        "https://preposterousuniverse.com/grnotes/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

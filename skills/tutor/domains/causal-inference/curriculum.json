@@ -1,0 +1,282 @@
+{
+  "topic": "Causal inference in machine learning",
+  "slug": "causal-inference",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "supervised learning basics",
+    "probability and statistics",
+    "linear regression",
+    "Python programming"
+  ],
+  "exit_criteria": [
+    "distinguish correlation from causation and explain when each matters",
+    "use DAGs to identify confounders and determine adjustment sets",
+    "apply propensity score methods and doubly robust estimators",
+    "estimate heterogeneous treatment effects with meta-learners",
+    "implement causal analyses using DoWhy or EconML",
+    "critique causal claims in ML papers and A/B tests"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why does your ML model predict well but make terrible decisions?",
+      "concepts": ["correlation vs causation", "prediction vs intervention", "Simpson's paradox"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://www.bradyneal.com/causal-inference-course"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What would have happened if we did something different?",
+      "concepts": ["potential outcomes", "counterfactuals", "treatment and control"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do we formalize causal assumptions?",
+      "concepts": ["SUTVA", "consistency", "ignorability", "positivity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://arxiv.org/abs/2002.02770"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can you spot the causal flaw in this analysis?",
+      "concepts": ["confounding", "selection bias", "measurement error"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.bradyneal.com/causal-inference-course"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Graphical Models",
+      "title": "How can a simple diagram encode causal assumptions?",
+      "concepts": ["DAGs", "nodes and edges", "directed graphs", "causal pathways"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://mitpress.mit.edu/9780262037310/causal-inference-in-statistics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Graphical Models",
+      "title": "What makes a variable a confounder vs a mediator vs a collider?",
+      "concepts": ["confounders", "mediators", "colliders", "causal roles"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.bradyneal.com/causal-inference-course"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Graphical Models",
+      "title": "Can you draw and interpret causal graphs from scratch?",
+      "concepts": ["DAG construction", "identifying variable roles"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://github.com/py-why/dowhy"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Graphical Models",
+      "title": "When does information flow through a graph?",
+      "concepts": ["d-separation", "blocking paths", "conditioning"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.bradyneal.com/causal-inference-course"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Graphical Models",
+      "title": "Why does controlling for a collider make things worse?",
+      "concepts": ["collider bias", "Berkson's paradox", "selection effects"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://arxiv.org/abs/2002.02770"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Graphical Models",
+      "title": "How would you build a causal DAG for a real ML system?",
+      "concepts": ["practical DAG construction", "domain knowledge", "testable implications"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://github.com/py-why/dowhy"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Identification",
+      "title": "What does it mean to identify a causal effect?",
+      "concepts": ["identifiability", "causal estimands", "observational vs experimental"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://mitpress.mit.edu/9780262037310/causal-inference-in-statistics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Identification",
+      "title": "Which variables should you adjust for?",
+      "concepts": ["backdoor criterion", "adjustment sets", "sufficient adjustment"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.bradyneal.com/causal-inference-course"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Identification",
+      "title": "What if there's no way to block all backdoor paths?",
+      "concepts": ["frontdoor criterion", "instrumental variables", "alternative identification"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://causalinference.gitlab.io/kdd-tutorial/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Identification",
+      "title": "Can you identify causal effects from graphs using multiple strategies?",
+      "concepts": ["backdoor adjustment", "frontdoor adjustment", "IV conditions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://github.com/py-why/dowhy"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Estimation Methods",
+      "title": "How do we estimate effects after we've identified them?",
+      "concepts": ["estimation vs identification", "regression adjustment", "stratification"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Estimation Methods",
+      "title": "What if treatment assignment isn't random?",
+      "concepts": ["propensity scores", "inverse probability weighting", "matching"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://github.com/py-why/dowhy"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Estimation Methods",
+      "title": "Can we protect against model misspecification?",
+      "concepts": ["doubly robust estimation", "AIPW", "augmented IPW"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://github.com/py-why/econml"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Estimation Methods",
+      "title": "How do you implement and validate a propensity score analysis?",
+      "concepts": ["DoWhy workflow", "refutation tests", "sensitivity analysis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://github.com/py-why/dowhy"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Estimation Methods",
+      "title": "What natural experiments can tell us about causation?",
+      "concepts": ["regression discontinuity", "difference-in-differences", "natural experiments"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Estimation Methods",
+      "title": "Which estimation strategy should you choose and why?",
+      "concepts": ["estimation method selection", "trade-offs", "assumptions"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://github.com/py-why/dowhy"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Heterogeneity & ML",
+      "title": "Why does the same treatment affect different people differently?",
+      "concepts": ["treatment effect heterogeneity", "CATE", "subgroup effects"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://github.com/py-why/econml"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Heterogeneity & ML",
+      "title": "How can ML estimate personalized treatment effects?",
+      "concepts": ["meta-learners", "S-learner", "T-learner", "X-learner"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://github.com/uber/causalml"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Heterogeneity & ML",
+      "title": "What are causal forests and when should you use them?",
+      "concepts": ["causal trees", "causal forests", "honest splitting"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://github.com/py-why/econml"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Heterogeneity & ML",
+      "title": "How would you build a CATE estimator for personalized targeting?",
+      "concepts": ["uplift modeling", "targeting", "policy learning"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://github.com/uber/causalml"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications",
+      "title": "How do causal methods improve A/B testing and beyond?",
+      "concepts": ["experimental design", "variance reduction", "CUPED"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.microsoft.com/en-us/research/project/econml/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications",
+      "title": "Can you execute a complete causal inference workflow from problem to critique?",
+      "concepts": ["causal workflow", "pitfalls", "best practices", "critique"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://github.com/py-why/dowhy"],
+      "status": "pending"
+    }
+  ]
+}

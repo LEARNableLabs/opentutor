@@ -1,0 +1,420 @@
+{
+  "topic": "History of color — pigments, dyes, and cultural meaning",
+  "slug": "history-of-color",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (elements, compounds, reactions)",
+    "general art history awareness",
+    "curiosity about cultural history"
+  ],
+  "exit_criteria": [
+    "student can explain the difference between pigments and dyes",
+    "student can trace the development of key colors (purple, blue, red) from ancient to modern times",
+    "student can identify how color meanings vary across cultures",
+    "student can connect color chemistry to art history and social change",
+    "student can discuss the impact of synthetic color on industry and culture"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What's the difference between a pigment and a dye?",
+      "concepts": ["pigments", "dyes", "binding mechanisms", "material properties"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.getty.edu/conservation/publications_resources/teaching/",
+        "https://www.colourlex.com/learn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why did prehistoric humans paint with dirt?",
+      "concepts": ["ochres", "iron oxides", "cave paintings", "ritual use"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.bradshawfoundation.com/lascaux/",
+        "https://www.nature.com/articles/nature12109"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do we know what colors ancient artists actually used?",
+      "concepts": ["archaeometry", "spectroscopy", "pigment analysis", "conservation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.getty.edu/conservation/our_projects/science/",
+        "https://www.vam.ac.uk/articles/conservation-techniques"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What made Egyptian blue the world's first synthetic color?",
+      "concepts": ["calcium copper silicate", "synthesis", "innovation", "Egyptian technology"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britishmuseum.org/collection/term/x44996",
+        "https://pubs.acs.org/doi/10.1021/ac404564r"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Ancient World",
+      "title": "Why was Tyrian purple worth more than gold?",
+      "concepts": ["murex snails", "Phoenician trade", "royal monopoly", "labor intensity"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/dyes/hd_dyes.htm",
+        "https://www.smithsonianmag.com/science-nature/the-color-purple-180975629/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ancient World",
+      "title": "How did Romans make vermilion without modern chemistry?",
+      "concepts": ["cinnabar", "mercury sulfide", "alchemical processes", "toxicity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.colourlex.com/project/vermilion/",
+        "https://www.metmuseum.org/art/collection/search/255417"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Ancient World",
+      "title": "Review: Ancient color technologies",
+      "concepts": ["ochres", "Egyptian blue", "Tyrian purple", "vermilion"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.getty.edu/conservation/publications_resources/teaching/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Ancient World",
+      "title": "What connected indigo plantations to global trade?",
+      "concepts": ["indigo", "indigotin", "colonial agriculture", "trade routes"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.vam.ac.uk/articles/a-history-of-indigo",
+        "https://naturalhistory.si.edu/research/botany/about/historical-perspectives/economic-botany/indigo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Ancient World",
+      "title": "Why did madder root create an entire dye industry?",
+      "concepts": ["madder", "alizarin", "textile dyeing", "color fastness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.vam.ac.uk/articles/madder",
+        "https://www.colourlex.com/project/madder-lake/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Medieval to Renaissance",
+      "title": "Why was ultramarine reserved for the Virgin Mary's robes?",
+      "concepts": ["lapis lazuli", "pigment value", "religious symbolism", "patronage"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nationalgallery.org.uk/paintings/glossary/ultramarine",
+        "https://www.metmuseum.org/art/collection/search/459118"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Medieval to Renaissance",
+      "title": "How did alchemists accidentally improve color chemistry?",
+      "concepts": ["alchemy", "experimental method", "lead-tin yellow", "vermilion synthesis"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.chemheritage.org/historical-profile/alchemy-and-chemistry",
+        "https://www.colourlex.com/project/lead-tin-yellow/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Medieval to Renaissance",
+      "title": "What did oil painting unlock that tempera couldn't?",
+      "concepts": ["binders", "oil medium", "glazing", "color depth"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nationalgallery.org.uk/paintings/learn-about-art/paintings-in-depth/oil-painting",
+        "https://www.tate.org.uk/art/art-terms/o/oil-paint"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Medieval to Renaissance",
+      "title": "Why did some Renaissance colors disappear from paintings?",
+      "concepts": ["pigment degradation", "copper resinate", "smalt", "conservation challenges"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.getty.edu/conservation/our_projects/science/postprints/",
+        "https://www.nationalgallery.org.uk/about-us/conservation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Medieval to Renaissance",
+      "title": "Review: Medieval and Renaissance color innovations",
+      "concepts": ["ultramarine", "alchemy", "oil painting", "pigment degradation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nationalgallery.org.uk/paintings/glossary"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Chemistry Revolution",
+      "title": "How did a teenager accidentally invent the color purple?",
+      "concepts": ["William Perkin", "mauveine", "synthetic dyes", "serendipity"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencehistory.org/historical-profile/william-henry-perkin",
+        "https://www.rsc.org/images/perkin-booklet_tcm18-215077.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Chemistry Revolution",
+      "title": "What made synthetic alizarin destroy the madder industry?",
+      "concepts": ["synthetic alizarin", "industrial chemistry", "economic disruption", "standardization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.chemheritage.org/historical-profile/karl-graebe-and-carl-liebermann",
+        "https://pubs.acs.org/doi/10.1021/ed034p660"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Chemistry Revolution",
+      "title": "Why did coal tar become the source of a rainbow?",
+      "concepts": ["coal tar derivatives", "aniline dyes", "chemical industry", "German chemistry"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.sciencehistory.org/distillations/magazine/the-coal-tar-revolution",
+        "https://www.chemheritage.org/historical-profile/adolf-von-baeyer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Chemistry Revolution",
+      "title": "How did synthetic color change fashion and social class?",
+      "concepts": ["democratization of color", "fashion industry", "social mobility", "mass production"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.vam.ac.uk/articles/synthetic-dyes",
+        "https://www.metmuseum.org/toah/hd/synt/hd_synt.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Chemistry Revolution",
+      "title": "What connects aspirin, explosives, and yellow dye?",
+      "concepts": ["chemical industry integration", "dual-use chemistry", "IG Farben", "military-industrial"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.sciencehistory.org/historical-profile/ig-farben",
+        "https://www.chemheritage.org/historical-profile/fritz-haber"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Chemistry Revolution",
+      "title": "Review: The synthetic color revolution",
+      "concepts": ["mauveine", "alizarin", "coal tar", "social impact"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.sciencehistory.org/distillations/magazine/the-coal-tar-revolution"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Cultural Meanings",
+      "title": "Why does white mean mourning in China but purity in the West?",
+      "concepts": ["color symbolism", "cultural variation", "semiotics", "funeral practices"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/ccol/hd_ccol.htm",
+        "https://www.vam.ac.uk/articles/the-meaning-of-colour"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Cultural Meanings",
+      "title": "How did blue become the color of boys and pink the color of girls?",
+      "concepts": ["gender and color", "20th century shift", "marketing", "social construction"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.smithsonianmag.com/arts-culture/when-did-girls-start-wearing-pink-1370097/",
+        "https://www.theatlantic.com/sexes/archive/2013/08/pink-wasnt-always-girly/278535/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Cultural Meanings",
+      "title": "Why is saffron sacred in Buddhism and Hinduism?",
+      "concepts": ["religious color", "saffron robes", "ritual significance", "South Asian traditions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/budd/hd_budd.htm",
+        "https://www.vam.ac.uk/articles/sacred-colour-in-hindu-and-buddhist-traditions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Cultural Meanings",
+      "title": "What do red flags, yellow stars, and green ribbons communicate?",
+      "concepts": ["political color", "symbolism", "resistance", "solidarity"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.smithsonianmag.com/history/the-color-of-revolution-180975513/",
+        "https://www.colourlex.com/learn/symbolism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Cultural Meanings",
+      "title": "How do color preferences vary across cultures?",
+      "concepts": ["cross-cultural perception", "color naming", "linguistic relativity", "universal vs. cultural"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.pnas.org/doi/10.1073/pnas.0503281102",
+        "https://www.scientificamerican.com/article/how-language-shapes-color-perception/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Cultural Meanings",
+      "title": "Review: Cultural meanings of color",
+      "concepts": ["color symbolism", "cultural variation", "gender and color", "religious color", "political color"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.vam.ac.uk/articles/the-meaning-of-colour",
+        "https://www.metmuseum.org/toah/hd/ccol/hd_ccol.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Modern Color",
+      "title": "What did Newton and Goethe disagree about?",
+      "concepts": ["color theory", "prismatic spectrum", "subjective experience", "competing models"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00001",
+        "https://www.tate.org.uk/art/art-terms/c/colour-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Modern Color",
+      "title": "How do cones, rods, and opponent processing create color vision?",
+      "concepts": ["retinal cells", "trichromacy", "opponent process", "color blindness"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/color-vision-6567858/",
+        "https://www.nei.nih.gov/learn-about-eye-health/healthy-vision/how-eyes-work"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Modern Color",
+      "title": "Why can't RGB printers mix all the colors you see on screen?",
+      "concepts": ["additive vs. subtractive", "RGB", "CMYK", "gamut limitations"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.adobe.com/creativecloud/design/discover/rgb-vs-cmyk.html",
+        "https://www.pantone.com/color-systems/pantone-color-systems-explained"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Modern Color",
+      "title": "What happens to pigments over centuries, and how do we save them?",
+      "concepts": ["degradation", "light damage", "chemical reactions", "conservation science"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.getty.edu/conservation/our_projects/",
+        "https://www.nationalgallery.org.uk/about-us/conservation/conservation-department"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Modern Color",
+      "title": "Review: Modern color science and the future",
+      "concepts": ["color theory", "perception", "digital color", "conservation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.colourlex.com/learn/",
+        "https://www.getty.edu/conservation/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

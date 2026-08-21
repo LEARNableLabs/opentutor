@@ -1,0 +1,542 @@
+{
+  "topic": "Permaculture Design",
+  "slug": "permaculture-design",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic ecology",
+    "gardening or land management experience",
+    "sustainability concepts"
+  ],
+  "exit_criteria": [
+    "student can conduct comprehensive site analysis",
+    "student can design a small-scale permaculture system",
+    "student can apply all 12 design principles",
+    "student can create water management plans",
+    "student can design polyculture guilds",
+    "student understands zone and sector planning",
+    "student can integrate multiple system elements"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Ethics",
+      "title": "What are the three ethics and why do they matter?",
+      "concepts": [
+        "earth care",
+        "people care",
+        "fair share",
+        "ethical framework"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permacultureprinciples.com/ethics/",
+        "https://www.permaculturenews.org/what-is-permaculture/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Ethics",
+      "title": "How does nature solve problems without waste?",
+      "concepts": [
+        "systems thinking",
+        "closed-loop systems",
+        "observation",
+        "natural patterns"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.permacultureprinciples.com/principles/",
+        "https://www.youtube.com/watch?v=0mwRAf3z9ag"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Ethics",
+      "title": "Why is observation the most important design tool?",
+      "concepts": [
+        "protracted observation",
+        "pattern recognition",
+        "baseline data",
+        "phenology"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.permacultureprinciples.com/principles/_1/",
+        "https://www.permaculturenews.org/2016/06/13/art-observation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Observation & Analysis",
+      "title": "What story does your site's water tell?",
+      "concepts": [
+        "water flow",
+        "catchment",
+        "hydrology",
+        "erosion patterns"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.permaculturenews.org/2015/07/20/reading-the-landscape/",
+        "https://www.youtube.com/watch?v=YBLZmwlPa8A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Observation & Analysis",
+      "title": "How do zones organize energy and frequency of use?",
+      "concepts": [
+        "zone planning",
+        "zone 0-5",
+        "energy efficiency",
+        "access patterns"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permacultureprinciples.com/permaculture-design/",
+        "https://www.permaculturenews.org/2012/06/08/understanding-zones-and-sectors/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Observation & Analysis",
+      "title": "What forces act on your site from outside?",
+      "concepts": [
+        "sector analysis",
+        "sun paths",
+        "wind",
+        "wildfire risk",
+        "external energies"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permaculturenews.org/2012/06/08/understanding-zones-and-sectors/",
+        "https://www.suncalc.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Observation & Analysis",
+      "title": "Review: Can you map a real site's zones and sectors?",
+      "concepts": [
+        "site analysis",
+        "mapping",
+        "integration"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.permaculturenews.org/2016/02/12/permaculture-site-analysis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Design Principles",
+      "title": "How does catching and storing energy create abundance?",
+      "concepts": [
+        "principle 2",
+        "energy flows",
+        "storage systems",
+        "surplus"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permacultureprinciples.com/principles/_2/",
+        "https://www.permaculturenews.org/2015/01/16/permaculture-principle-2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Design Principles",
+      "title": "Why should every element serve multiple functions?",
+      "concepts": [
+        "stacking functions",
+        "redundancy",
+        "resilience",
+        "efficiency"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.permacultureprinciples.com/principles/_4/",
+        "https://www.youtube.com/watch?v=hftgWcD-1Nw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Design Principles",
+      "title": "What happens at the edge between forest and meadow?",
+      "concepts": [
+        "edge effect",
+        "ecotones",
+        "diversity",
+        "productivity"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.permacultureprinciples.com/principles/_11/",
+        "https://www.permaculturenews.org/2016/03/04/edge-effect-permaculture/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Design Principles",
+      "title": "How do small, slow solutions create lasting change?",
+      "concepts": [
+        "principle 9",
+        "scale",
+        "succession",
+        "incremental design"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permacultureprinciples.com/principles/_9/",
+        "https://www.permaculturenews.org/2014/11/13/small-slow-solutions/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Design Principles",
+      "title": "Review: Which principles apply to this garden redesign?",
+      "concepts": [
+        "design principles",
+        "application",
+        "integration"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.permacultureprinciples.com/",
+        "https://www.permaculturenews.org/2016/04/15/applying-permaculture-principles/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Water & Earth",
+      "title": "Where should water go on a sloped site?",
+      "concepts": [
+        "swales",
+        "keyline design",
+        "erosion control",
+        "passive irrigation"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permaculturenews.org/2010/07/16/swales/",
+        "https://www.youtube.com/watch?v=zTEuPjSW2I4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Water & Earth",
+      "title": "How can earthworks transform a degraded landscape?",
+      "concepts": [
+        "ponds",
+        "berms",
+        "water storage",
+        "landscape regeneration"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.permaculturenews.org/2015/08/21/water-harvesting-earthworks/",
+        "https://www.youtube.com/watch?v=IDgDWbQtlKI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Water & Earth",
+      "title": "What lives in healthy soil?",
+      "concepts": [
+        "soil food web",
+        "mycorrhizae",
+        "bacteria",
+        "decomposition"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/health/biology/",
+        "https://www.permaculturenews.org/2016/05/20/soil-food-web/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Water & Earth",
+      "title": "Why does sheet mulching build soil faster than tilling?",
+      "concepts": [
+        "no-dig",
+        "lasagna gardening",
+        "carbon layering",
+        "soil building"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.permaculturenews.org/2013/02/15/sheet-mulching/",
+        "https://www.youtube.com/watch?v=_I6WzT_4rLw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Water & Earth",
+      "title": "Review: Can you design water systems and build soil for this site?",
+      "concepts": [
+        "water management",
+        "soil building",
+        "earthworks",
+        "site analysis"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.permaculturenews.org/2015/07/20/reading-the-landscape/",
+        "https://www.permaculturenews.org/2016/02/12/permaculture-site-analysis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Biological Systems",
+      "title": "How do you design a plant guild?",
+      "concepts": [
+        "guilds",
+        "companion planting",
+        "nitrogen fixers",
+        "dynamic accumulators"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permaculturenews.org/2016/07/08/plant-guilds/",
+        "https://www.youtube.com/watch?v=HXLbEl_W0YU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Biological Systems",
+      "title": "What makes a food forest different from an orchard?",
+      "concepts": [
+        "forest gardens",
+        "vertical layers",
+        "succession",
+        "perennial systems"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.permaculturenews.org/2012/09/14/how-to-design-and-build-a-food-forest/",
+        "https://www.youtube.com/watch?v=Q_m_6y2SJGk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Biological Systems",
+      "title": "Can chickens be part of the design?",
+      "concepts": [
+        "animal integration",
+        "chicken tractors",
+        "pest management",
+        "fertility cycling"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.permaculturenews.org/2015/05/08/integrating-chickens/",
+        "https://www.youtube.com/watch?v=CxB1hLhGb6E"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Biological Systems",
+      "title": "How do beneficial insects fit into IPM?",
+      "concepts": [
+        "integrated pest management",
+        "predator-prey",
+        "habitat",
+        "biodiversity"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permaculturenews.org/2016/08/12/beneficial-insects/",
+        "https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/plantsanimals/pollinate/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Biological Systems",
+      "title": "Review: Design a guild for a fruit tree in your climate.",
+      "concepts": [
+        "guild design",
+        "climate adaptation",
+        "plant selection"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.permaculturenews.org/2016/07/08/plant-guilds/",
+        "https://plants.usda.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration & Design",
+      "title": "What is the scale of permanence and why does it matter?",
+      "concepts": [
+        "Yeomans scale",
+        "design sequence",
+        "climate",
+        "landform",
+        "water"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permaculturenews.org/2013/03/08/scale-of-permanence/",
+        "https://www.youtube.com/watch?v=fjTDIfhK4E8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration & Design",
+      "title": "How do you design from pattern to details?",
+      "concepts": [
+        "pattern language",
+        "fractals",
+        "natural forms",
+        "design methodology"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.permacultureprinciples.com/principles/_12/",
+        "https://www.permaculturenews.org/2015/09/18/pattern-understanding/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration & Design",
+      "title": "Can you analyze this failed design and propose fixes?",
+      "concepts": [
+        "troubleshooting",
+        "system feedback",
+        "adaptive design",
+        "problem solving"
+      ],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.permaculturenews.org/2016/10/14/common-mistakes/",
+        "https://www.youtube.com/watch?v=YPHb6aVRC5Y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration & Design",
+      "title": "What would a 1-acre homestead design look like?",
+      "concepts": [
+        "site planning",
+        "whole systems",
+        "integration",
+        "priorities"
+      ],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://www.permaculturenews.org/2014/05/16/design-examples/",
+        "https://www.youtube.com/watch?v=zSXPA5gfN-M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration & Design",
+      "title": "Review: Walk through your complete design process.",
+      "concepts": [
+        "design methodology",
+        "integration",
+        "presentation"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.permacultureprinciples.com/design/",
+        "https://www.permaculturenews.org/2016/11/11/design-process/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Implementation",
+      "title": "How do you phase implementation over years?",
+      "concepts": [
+        "phasing",
+        "succession",
+        "budget",
+        "timing",
+        "priorities"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.permaculturenews.org/2015/12/04/implementation-strategies/",
+        "https://www.youtube.com/watch?v=xzTHjlueqFI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Implementation",
+      "title": "What does maintenance look like in a mature system?",
+      "concepts": [
+        "maintenance",
+        "observation",
+        "adaptation",
+        "long-term thinking"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.permaculturenews.org/2016/12/16/maintaining-permaculture-systems/",
+        "https://www.youtube.com/watch?v=LQ0kJKbQq_k"
+      ],
+      "status": "pending"
+    }
+  ]
+}

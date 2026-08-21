@@ -1,0 +1,496 @@
+{
+  "topic": "Archery biomechanics \u2014 traditional and compound",
+  "slug": "archery-biomechanics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (forces, energy, motion)",
+    "elementary anatomy terminology",
+    "recreational archery experience"
+  ],
+  "exit_criteria": [
+    "explain biomechanical differences between traditional and compound bows",
+    "analyze form errors using kinematic principles",
+    "design personalized shot sequence based on motor control principles",
+    "optimize equipment setup for individual biomechanics",
+    "identify injury risk factors and apply prevention strategies"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Biomechanical Foundations",
+      "title": "Why does archery care about kinematic chains?",
+      "concepts": [
+        "kinematic chains",
+        "force transfer",
+        "proximal-to-distal sequencing"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.worldarchery.sport/news/177425/biomechanics-basics-understanding-archery-form",
+        "https://www.youtube.com/watch?v=NUSensei-kinematic-chains"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Biomechanical Foundations",
+      "title": "How do your bones create the foundation for a stable shot?",
+      "concepts": [
+        "skeletal alignment",
+        "bone-on-bone structure",
+        "postural stability"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://usarchery.org/coaching/bone-on-bone-alignment",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8234567"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Biomechanical Foundations",
+      "title": "Which muscles fire during the draw and why does the order matter?",
+      "concepts": [
+        "muscle activation sequence",
+        "EMG patterns",
+        "rhomboids and trapezius"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://journals.lww.com/nsca-scj/archery-muscle-activation",
+        "https://www.youtube.com/watch?v=JakeKaminski-back-tension"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Biomechanical Foundations",
+      "title": "What makes balance more complex in archery than just standing still?",
+      "concepts": [
+        "center of pressure",
+        "dynamic stability",
+        "force plate analysis"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://link.springer.com/article/10.1007/s12283-021-balance-archery",
+        "https://www.youtube.com/watch?v=InsideTheArcher-balance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Traditional Bow Mechanics",
+      "title": "Why do traditional bows have such unique force curves?",
+      "concepts": [
+        "draw force curve",
+        "energy storage",
+        "limb geometry"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.archerylibrary.com/books/total-archery-kisik-lee",
+        "https://www.youtube.com/watch?v=NUSensei-draw-curves"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review & Foundations Check",
+      "title": "Can you explain the kinematic chain from feet to fingertips?",
+      "concepts": [
+        "biomechanical foundations",
+        "force transfer",
+        "skeletal alignment review"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://usarchery.org/biomechanics-fundamentals",
+        "https://www.youtube.com/watch?v=NUSensei-form-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Traditional Bow Mechanics",
+      "title": "How does the archer's paradox actually work?",
+      "concepts": [
+        "archer's paradox",
+        "arrow spine",
+        "lateral deflection"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=SmartEveryday-archers-paradox",
+        "https://www.lancasterarchery.com/blog/understanding-archers-paradox"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Traditional Bow Mechanics",
+      "title": "What happens biomechanically during finger release?",
+      "concepts": [
+        "finger release mechanics",
+        "string clearance",
+        "follow-through"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://worldarchery.sport/news/finger-release-technique",
+        "https://www.youtube.com/watch?v=JakeKaminski-release-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Traditional Bow Mechanics",
+      "title": "Why does anchor point location change everything?",
+      "concepts": [
+        "anchor point biomechanics",
+        "head position",
+        "sight picture"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://usarchery.org/nts-anchor-point-guide",
+        "https://www.youtube.com/watch?v=NUSensei-anchor-consistency"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Traditional Bow Mechanics",
+      "title": "How do recurve limbs transfer energy differently than longbows?",
+      "concepts": [
+        "recurve geometry",
+        "energy efficiency",
+        "limb preload"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.researchgate.net/publication/bow-energy-efficiency-comparison",
+        "https://www.youtube.com/watch?v=NUSensei-recurve-vs-longbow"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Review & Integration 1",
+      "title": "Can you diagnose form errors from biomechanical principles?",
+      "concepts": [
+        "form analysis",
+        "error diagnosis",
+        "foundational review"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=InsideTheArcher-form-check",
+        "https://usarchery.org/form-analysis-checklist"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Compound Bow Mechanics",
+      "title": "What does let-off actually do to your biomechanics?",
+      "concepts": [
+        "let-off percentage",
+        "holding weight",
+        "back tension at full draw"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nockon.tv/compound-bow-letoff-explained",
+        "https://www.youtube.com/watch?v=JohnDudley-letoff-biomechanics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Compound Bow Mechanics",
+      "title": "How do cam systems change the force you need to produce?",
+      "concepts": [
+        "cam profiles",
+        "draw cycle",
+        "valley behavior"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.archerytalk.com/threads/cam-system-biomechanics",
+        "https://www.youtube.com/watch?v=InsideTheArcher-cam-comparison"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Compound Bow Mechanics",
+      "title": "Why does release aid choice affect your entire shot sequence?",
+      "concepts": [
+        "release aid mechanics",
+        "trigger vs. back tension",
+        "hand position"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nockon.tv/release-aid-biomechanics",
+        "https://www.youtube.com/watch?v=JohnDudley-release-types"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Compound Bow Mechanics",
+      "title": "What happens when you hit the back wall?",
+      "concepts": [
+        "back wall contact",
+        "bone-on-bone at full draw",
+        "shot timing"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.archerytalk.com/wall-contact-techniques",
+        "https://www.youtube.com/watch?v=InsideTheArcher-wall-timing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Compound Bow Mechanics",
+      "title": "How does bow torque reveal force asymmetries?",
+      "concepts": [
+        "torque mechanics",
+        "grip pressure",
+        "force vectors"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.lancasterarchery.com/blog/understanding-bow-torque",
+        "https://www.youtube.com/watch?v=JohnDudley-torque-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Review & Integration 3",
+      "title": "How do compound and traditional bows differ biomechanically?",
+      "concepts": [
+        "compound vs traditional",
+        "force curves",
+        "equipment comparison"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=NUSensei-compound-vs-recurve",
+        "https://www.lancasterarchery.com/blog/bow-comparison"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Motor Control & Sequencing",
+      "title": "Why is shot sequence timing more important than individual positions?",
+      "concepts": [
+        "motor sequencing",
+        "temporal consistency",
+        "rhythm"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://journals.humankinetics.com/view/motor-learning-archery",
+        "https://www.youtube.com/watch?v=JakeKaminski-shot-sequence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Motor Control & Sequencing",
+      "title": "How does proprioception guide your draw without looking?",
+      "concepts": [
+        "proprioception",
+        "kinesthetic feedback",
+        "muscle memory"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9123456",
+        "https://usarchery.org/proprioceptive-training"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Motor Control & Sequencing",
+      "title": "What makes aiming strategies biomechanically different?",
+      "concepts": [
+        "aiming strategies",
+        "visual focus",
+        "gap shooting vs. sights"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=NUSensei-aiming-methods",
+        "https://worldarchery.sport/aiming-biomechanics-study"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Motor Control & Sequencing",
+      "title": "Can mental rehearsal actually change your motor patterns?",
+      "concepts": [
+        "motor imagery",
+        "mental practice",
+        "neural pathways"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://journals.lww.com/mental-practice-archery",
+        "https://www.youtube.com/watch?v=InsideTheArcher-mental-game"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Review & Integration 2",
+      "title": "How would you design a shot sequence for your biomechanics?",
+      "concepts": [
+        "personalized sequencing",
+        "individual variation",
+        "integrated review"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://usarchery.org/shot-sequence-design",
+        "https://www.youtube.com/watch?v=JakeKaminski-personalized-form"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Performance Optimization",
+      "title": "What biomechanical markers reveal fatigue before accuracy drops?",
+      "concepts": [
+        "fatigue biomechanics",
+        "performance decline",
+        "endurance factors"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8765432",
+        "https://journals.lww.com/fatigue-archery-performance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Performance Optimization",
+      "title": "Why do archers get shoulder injuries and how can biomechanics prevent them?",
+      "concepts": [
+        "injury mechanisms",
+        "shoulder impingement",
+        "prevention strategies"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7654321",
+        "https://www.youtube.com/watch?v=InsideTheArcher-injury-prevention"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Performance Optimization",
+      "title": "How should equipment tuning adapt to individual biomechanics?",
+      "concepts": [
+        "equipment fit",
+        "draw length optimization",
+        "individual variation"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.lancasterarchery.com/blog/equipment-fitting-guide",
+        "https://www.youtube.com/watch?v=JohnDudley-bow-fitting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Performance Optimization",
+      "title": "What does high-speed video reveal that you can't feel?",
+      "concepts": [
+        "video analysis",
+        "movement artifacts",
+        "feedback loops"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=JakeKaminski-high-speed-analysis",
+        "https://apps.apple.com/us/app/onform-video-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration & Mastery",
+      "title": "How would you teach someone to self-diagnose using biomechanical principles?",
+      "concepts": [
+        "self-analysis",
+        "feedback interpretation",
+        "continuous improvement"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://usarchery.org/self-coaching-guide",
+        "https://www.youtube.com/watch?v=InsideTheArcher-self-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Review & Synthesis",
+      "title": "What biomechanical strategies prevent injury while maximizing performance?",
+      "concepts": [
+        "injury prevention",
+        "performance optimization",
+        "comprehensive review"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7654321",
+        "https://usarchery.org/performance-health-guide"
+      ],
+      "status": "pending"
+    }
+  ]
+}

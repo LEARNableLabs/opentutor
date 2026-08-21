@@ -1,0 +1,381 @@
+{
+  "topic": "Privacy Law and Data Protection",
+  "slug": "privacy-law",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic legal concepts",
+    "understanding of personal data",
+    "familiarity with internet technologies"
+  ],
+  "exit_criteria": [
+    "explain the differences between EU and US privacy frameworks",
+    "identify lawful bases for data processing under GDPR",
+    "assess privacy compliance requirements for common business scenarios",
+    "understand data subject rights and how to respond to requests",
+    "evaluate cross-border data transfer mechanisms",
+    "recognize privacy risks in emerging technologies like AI"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Privacy Law",
+      "title": "Why do we even need privacy laws?",
+      "concepts": ["privacy as a human right", "informational self-determination", "historical context"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.eff.org/issues/privacy",
+        "https://privacyinternational.org/explainer/56/what-privacy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Privacy Law",
+      "title": "What are Fair Information Practice Principles and why do they matter?",
+      "concepts": ["FIPPs", "notice and choice", "data minimization", "accountability"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ftc.gov/reports/privacy-online-report-congress",
+        "https://iapp.org/resources/article/fair-information-practices/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Privacy Law",
+      "title": "Why did Europe and the US develop such different approaches to privacy?",
+      "concepts": ["comprehensive vs sectoral regulation", "cultural differences", "regulatory philosophy"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://fpf.org/blog/the-privacy-regulatory-landscape/",
+        "https://iapp.org/news/a/looking-to-comply-with-gdpr-heres-a-primer/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Privacy Law",
+      "title": "What exactly counts as 'personal data' anyway?",
+      "concepts": ["personal data definition", "identifiability", "pseudonymization vs anonymization"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://gdpr-info.eu/issues/personal-data/",
+        "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/personal-information-what-is-it/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Privacy Law",
+      "title": "How do data controllers and processors differ in responsibility?",
+      "concepts": ["controller vs processor", "joint controllers", "contractual obligations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://gdpr-info.eu/art-4-gdpr/",
+        "https://ico.org.uk/for-organisations/controllers-and-processors/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Privacy Law",
+      "title": "Can you teach back the key privacy principles we've covered?",
+      "concepts": ["review of FIPPs", "personal data", "controller/processor"],
+      "difficulty": 1,
+      "type": "teach-back",
+      "resources": [
+        "https://iapp.org/resources/article/privacy-law-fundamentals/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "GDPR Deep Dive",
+      "title": "What makes the GDPR so powerful and far-reaching?",
+      "concepts": ["territorial scope", "extraterritoriality", "penalties up to 4% revenue"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://gdpr-info.eu/art-3-gdpr/",
+        "https://edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "GDPR Deep Dive",
+      "title": "How do you actually justify processing someone's data legally?",
+      "concepts": ["lawful bases for processing", "consent", "legitimate interests", "contract necessity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://gdpr-info.eu/art-6-gdpr/",
+        "https://ico.org.uk/for-organisations/lawful-basis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "GDPR Deep Dive",
+      "title": "Why is consent much harder to get right than it seems?",
+      "concepts": ["valid consent requirements", "freely given", "specific and informed", "dark patterns"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://gdpr-info.eu/art-7-gdpr/",
+        "https://edpb.europa.eu/our-work-tools/documents/public-consultations/2020/guidelines-022020-consent-under-regulation_en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "GDPR Deep Dive",
+      "title": "What rights do individuals actually have over their data?",
+      "concepts": ["data subject rights", "right to access", "right to erasure", "right to portability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://gdpr-info.eu/chapter-3/",
+        "https://ico.org.uk/for-organisations/individual-rights/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "GDPR Deep Dive",
+      "title": "When must you conduct a Data Protection Impact Assessment?",
+      "concepts": ["DPIA requirements", "high-risk processing", "systematic monitoring", "large-scale special category data"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://gdpr-info.eu/art-35-gdpr/",
+        "https://ico.org.uk/for-organisations/dpia-guidance/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "GDPR Deep Dive",
+      "title": "What happens when things go wrong with a data breach?",
+      "concepts": ["breach notification", "72-hour rule", "risk assessment", "supervisory authority reporting"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://gdpr-info.eu/art-33-gdpr/",
+        "https://ico.org.uk/for-organisations/report-a-breach/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "GDPR Deep Dive",
+      "title": "Review: Can you solve these GDPR compliance scenarios?",
+      "concepts": ["GDPR principles", "lawful bases", "data subject rights", "breach response"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://iapp.org/resources/article/gdpr-at-a-glance/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "US Privacy Law",
+      "title": "Why does the US take a sectoral approach to privacy?",
+      "concepts": ["sectoral regulation", "HIPAA", "FERPA", "GLBA", "COPPA"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ftc.gov/business-guidance/privacy-security",
+        "https://iapp.org/resources/article/us-privacy-law-overview/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "US Privacy Law",
+      "title": "How does the FTC enforce privacy without a comprehensive law?",
+      "concepts": ["FTC Section 5", "unfair and deceptive practices", "consent decrees", "enforcement actions"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ftc.gov/enforcement/statutes/federal-trade-commission-act",
+        "https://www.ftc.gov/news-events/news/press-releases/2023"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "US Privacy Law",
+      "title": "What makes the California Consumer Privacy Act revolutionary?",
+      "concepts": ["CCPA/CPRA", "consumer rights", "opt-out", "business obligations"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oag.ca.gov/privacy/ccpa",
+        "https://iapp.org/resources/article/ccpa-compliance-framework/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "US Privacy Law",
+      "title": "How are other US states building on California's model?",
+      "concepts": ["state comprehensive laws", "Virginia CDPA", "Colorado CPA", "harmonization challenges"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://iapp.org/resources/article/us-state-privacy-legislation-tracker/",
+        "https://fpf.org/blog/state-privacy-law-tracker/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "US Privacy Law",
+      "title": "Can children's privacy be protected differently than adults'?",
+      "concepts": ["COPPA", "verifiable parental consent", "age-appropriate design", "teen privacy"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ftc.gov/business-guidance/resources/childrens-online-privacy-protection-rule-six-step-compliance-plan-your-business",
+        "https://iapp.org/news/a/coppa-2-0-what-you-need-to-know/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "US Privacy Law",
+      "title": "Review: Compare and contrast GDPR and US privacy frameworks?",
+      "concepts": ["regulatory approaches", "enforcement mechanisms", "individual rights", "compliance burdens"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://iapp.org/resources/article/gdpr-vs-ccpa-comparison/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Cross-Border Data Transfers",
+      "title": "Why can't data just flow freely across borders?",
+      "concepts": ["data sovereignty", "adequacy", "onward transfer restrictions"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://gdpr-info.eu/chapter-5/",
+        "https://edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices/guidelines-22018-territorial_en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Cross-Border Data Transfers",
+      "title": "What are Standard Contractual Clauses and when do they work?",
+      "concepts": ["SCCs", "transfer impact assessments", "supplementary measures"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en",
+        "https://edpb.europa.eu/our-work-tools/documents/public-consultations/2021/recommendations-012020-measures-supplement-transfer_en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Cross-Border Data Transfers",
+      "title": "What did the Schrems cases change about EU-US data flows?",
+      "concepts": ["Schrems I and II", "Privacy Shield invalidation", "surveillance concerns", "EU-US Data Privacy Framework"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/",
+        "https://www.datatransferframework.eu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Privacy by Design and Technical Measures",
+      "title": "How can you build privacy into systems from the start?",
+      "concepts": ["privacy by design", "privacy by default", "data minimization", "PETs"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://gdpr-info.eu/art-25-gdpr/",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Privacy by Design and Technical Measures",
+      "title": "Can anonymization actually protect privacy or is it a myth?",
+      "concepts": ["anonymization", "pseudonymization", "k-anonymity", "differential privacy", "re-identification risks"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ico.org.uk/for-organisations/anonymisation-and-pseudonymisation/",
+        "https://www.nist.gov/blogs/cybersecurity-insights/exploring-differential-privacy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Privacy by Design and Technical Measures",
+      "title": "What privacy-enhancing technologies should every practitioner know?",
+      "concepts": ["encryption", "homomorphic encryption", "secure multi-party computation", "zero-knowledge proofs"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.enisa.europa.eu/publications/pets",
+        "https://privacytools.seas.harvard.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Emerging Issues",
+      "title": "Review: Apply privacy frameworks to a complex cross-border scenario?",
+      "concepts": ["transfer mechanisms", "privacy by design", "compliance strategy"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://iapp.org/resources/topics/international-transfer-mechanisms/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Emerging Issues",
+      "title": "How should privacy law address AI and automated decision-making?",
+      "concepts": ["automated decision-making", "profiling", "algorithmic transparency", "AI regulation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://gdpr-info.eu/art-22-gdpr/",
+        "https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Emerging Issues",
+      "title": "What are the biggest privacy challenges on the horizon?",
+      "concepts": ["biometric data", "workplace surveillance", "health data from wearables", "genetic privacy"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://privacyinternational.org/topics",
+        "https://www.eff.org/deeplinks/2023"
+      ],
+      "status": "pending"
+    }
+  ]
+}

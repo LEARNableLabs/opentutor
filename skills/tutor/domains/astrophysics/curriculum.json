@@ -1,0 +1,399 @@
+{
+  "topic": "Astrophysics — Stellar Structure and Evolution",
+  "slug": "astrophysics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "thermodynamics and statistical mechanics",
+    "electromagnetism",
+    "quantum mechanics (basic atomic physics)",
+    "differential equations",
+    "fluid mechanics (helpful but not essential)"
+  ],
+  "exit_criteria": [
+    "interpret H-R diagrams and explain stellar populations",
+    "derive and apply the stellar structure equations",
+    "explain energy transport mechanisms in stars",
+    "trace the evolutionary path of stars of different masses",
+    "calculate stellar lifetimes and energy generation rates",
+    "describe the physics of stellar endpoints (white dwarfs, neutron stars, black holes)",
+    "understand nucleosynthesis and chemical evolution",
+    "work with stellar evolution codes at a basic level"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Stellar Observations",
+      "title": "Why do stars have different colors and brightnesses?",
+      "concepts": ["stellar luminosity", "temperature", "blackbody radiation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
+        "https://sci.esa.int/web/gaia"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Stellar Observations",
+      "title": "What can we learn from a star's spectrum?",
+      "concepts": ["spectral classification", "absorption lines", "chemical composition"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://lweb.cfa.harvard.edu/~pberlind/atlas/htmls/atlas.html",
+        "https://www.sdss.org/dr12/spectro/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Stellar Observations",
+      "title": "Why does the H-R diagram organize stars into patterns?",
+      "concepts": ["Hertzsprung-Russell diagram", "main sequence", "stellar populations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "http://astro.unl.edu/classaction/animations/stellarprops/hrexplorer.html",
+        "https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Stellar Observations",
+      "title": "How do we measure stellar masses?",
+      "concepts": ["binary stars", "Kepler's laws", "mass determination"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "http://astro.unl.edu/naap/ebs/ebs.html",
+        "https://arxiv.org/abs/1507.07279"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Stellar Structure Equations",
+      "title": "Why don't stars collapse under their own gravity?",
+      "concepts": ["hydrostatic equilibrium", "pressure gradient", "gravitational potential"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Hydrostatic_equilibrium"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Stellar Structure Equations",
+      "title": "How do observations connect to stellar structure?",
+      "concepts": ["H-R diagram", "spectral types", "hydrostatic equilibrium"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "http://astro.unl.edu/classaction/animations/stellarprops/hrexplorer.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Stellar Structure Equations",
+      "title": "How does energy flow from a star's core to its surface?",
+      "concepts": ["radiative transfer", "diffusion approximation", "optical depth"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
+        "https://en.wikipedia.org/wiki/Radiative_transfer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Stellar Structure Equations",
+      "title": "When does a star boil instead of radiate?",
+      "concepts": ["convection", "Schwarzschild criterion", "mixing length theory"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Convection_zone"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Stellar Structure Equations",
+      "title": "What determines a star's internal pressure and density?",
+      "concepts": ["equation of state", "ideal gas law", "degeneracy pressure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Equation_of_state"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Stellar Structure Equations",
+      "title": "Can we build a simple stellar model?",
+      "concepts": ["polytropic models", "Lane-Emden equation", "approximate solutions"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Polytrope"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Main Sequence Stars",
+      "title": "What powers a star for billions of years?",
+      "concepts": ["nuclear fusion", "binding energy", "mass-energy conversion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nobelprize.org/prizes/physics/1967/bethe/lecture/",
+        "https://en.wikipedia.org/wiki/Nuclear_fusion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Main Sequence Stars",
+      "title": "How do stellar structure equations and energy transport work together?",
+      "concepts": ["stellar structure equations", "energy transport", "nuclear fusion"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Main Sequence Stars",
+      "title": "Why do low-mass stars use different nuclear reactions than high-mass stars?",
+      "concepts": ["pp-chain", "CNO cycle", "temperature sensitivity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/CNO_cycle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Main Sequence Stars",
+      "title": "Why are massive stars so much brighter than the Sun?",
+      "concepts": ["mass-luminosity relation", "energy generation rate", "stellar lifetime"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
+        "http://astro.unl.edu/classaction/animations/stellarprops/mlr.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Main Sequence Stars",
+      "title": "How do we compute a realistic stellar model?",
+      "concepts": ["stellar evolution codes", "MESA", "numerical integration"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "http://mesa.sourceforge.net/",
+        "https://docs.mesastar.org/en/release-r22.11.1/",
+        "http://user.astro.wisc.edu/~townsend/static.php?ref=ez-web"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Post-Main Sequence Evolution",
+      "title": "What happens when a star runs out of hydrogen in its core?",
+      "concepts": ["shell burning", "core contraction", "envelope expansion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
+        "https://en.wikipedia.org/wiki/Red_giant"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Post-Main Sequence Evolution",
+      "title": "Why do red giants climb up the H-R diagram?",
+      "concepts": ["red giant branch", "Hayashi track", "convective envelope"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "http://astro.unl.edu/classaction/animations/stellarprops/hrexplorer.html",
+        "https://www.astro.princeton.edu/~gk/A403/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Post-Main Sequence Evolution",
+      "title": "How does a star evolve from the main sequence to a red giant?",
+      "concepts": ["main sequence lifetime", "post-MS evolution", "shell burning"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "http://astro.unl.edu/classaction/animations/stellarprops/hrexplorer.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Post-Main Sequence Evolution",
+      "title": "What triggers the helium flash in low-mass stars?",
+      "concepts": ["electron degeneracy", "helium ignition", "core helium burning"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Helium_flash"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Post-Main Sequence Evolution",
+      "title": "Why do stars blow off their outer layers?",
+      "concepts": ["stellar winds", "mass loss", "radiation pressure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
+        "https://en.wikipedia.org/wiki/Stellar_wind"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Post-Main Sequence Evolution",
+      "title": "How do massive stars burn through heavier elements?",
+      "concepts": ["advanced burning stages", "carbon burning", "silicon burning"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Silicon-burning_process"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Stellar Endpoints",
+      "title": "What holds up a white dwarf against gravity?",
+      "concepts": ["white dwarfs", "electron degeneracy pressure", "Chandrasekhar mass"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/White_dwarf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Stellar Endpoints",
+      "title": "Why do some white dwarfs explode as supernovae?",
+      "concepts": ["Type Ia supernovae", "accretion", "carbon detonation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Type_Ia_supernova"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Stellar Endpoints",
+      "title": "What are the possible fates of stars after the main sequence?",
+      "concepts": ["post-MS evolution", "white dwarfs", "supernovae"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://astro.unl.edu/classaction/animations/stellarprops/hrexplorer.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Stellar Endpoints",
+      "title": "What happens when a massive star's core collapses?",
+      "concepts": ["core-collapse supernovae", "neutron stars", "neutrino burst"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Supernova"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Stellar Endpoints",
+      "title": "Can anything resist the collapse to a black hole?",
+      "concepts": ["neutron degeneracy", "TOV limit", "black holes"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Tolman%E2%80%93Oppenheimer%E2%80%93Volkoff_limit"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Special Topics",
+      "title": "How do binary stars change each other's evolution?",
+      "concepts": ["binary evolution", "mass transfer", "Roche lobe overflow"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.astro.princeton.edu/~gk/A403/",
+        "https://en.wikipedia.org/wiki/Binary_star"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Special Topics",
+      "title": "Where did the elements in your body come from?",
+      "concepts": ["nucleosynthesis", "chemical evolution", "stellar yields"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nobelprize.org/prizes/physics/1983/fowler/lecture/",
+        "https://en.wikipedia.org/wiki/Nucleosynthesis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Special Topics",
+      "title": "Can you trace the full life cycle of stars across the H-R diagram?",
+      "concepts": ["stellar evolution", "H-R diagram", "stellar structure", "nucleosynthesis", "stellar endpoints"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://astro.unl.edu/classaction/animations/stellarprops/hrexplorer.html",
+        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

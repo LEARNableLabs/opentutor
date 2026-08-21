@@ -1,0 +1,402 @@
+{
+  "topic": "Birdwatching — identification, behavior, and citizen science",
+  "slug": "birdwatching",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic familiarity with common backyard birds",
+    "access to binoculars (8x or 10x recommended)",
+    "field guide or bird ID app (Merlin recommended)"
+  ],
+  "exit_criteria": [
+    "confidently identify 80+ regional bird species by sight and sound",
+    "interpret bird behavior to infer species, breeding status, and foraging strategy",
+    "submit high-quality eBird checklists following best practices",
+    "use vocalizations and spectrograms for identification",
+    "age and sex common species using plumage patterns",
+    "document rare bird sightings with proper photos and field notes",
+    "understand migration patterns and predict local abundance by season"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamentals of Bird Identification",
+      "title": "What do expert birders actually look at when they ID a bird?",
+      "concepts": ["field marks", "GISS (general impression size & shape)", "systematic observation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.allaboutbirds.org/news/the-basics-how-to-identify-birds/",
+        "https://merlin.allaboutbirds.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamentals of Bird Identification",
+      "title": "Why does habitat tell you half the story before you even see the bird?",
+      "concepts": ["habitat association", "ecological niches", "range maps"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.allaboutbirds.org/",
+        "https://ebird.org/explore"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamentals of Bird Identification",
+      "title": "How can you remember field marks without drowning in details?",
+      "concepts": ["visual anchors", "comparison species", "elimination strategy"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://academy.allaboutbirds.org/product/joy-of-birdwatching/",
+        "https://www.allaboutbirds.org/news/bird-id-skills-using-comparison-species/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamentals of Bird Identification",
+      "title": "What separates a sharp-shinned hawk from a Cooper's hawk in 3 seconds?",
+      "concepts": ["similar species discrimination", "proportions", "flight style"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.allaboutbirds.org/guide/Sharp-shinned_Hawk/",
+        "https://www.allaboutbirds.org/guide/Coopers_Hawk/",
+        "https://academy.allaboutbirds.org/product/hawk-watch/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fundamentals of Bird Identification",
+      "title": "How do you use a field guide efficiently in the field?",
+      "concepts": ["guide organization", "range maps", "quick reference sections"],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.sibleyguides.com/",
+        "https://www.audubon.org/content/how-use-field-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Fundamentals of Bird Identification",
+      "title": "Review: Building your identification foundation",
+      "concepts": ["field marks", "habitat association", "systematic observation", "comparison species"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://merlin.allaboutbirds.org/",
+        "https://www.allaboutbirds.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Identifying by Habitat & Behavior",
+      "title": "Why does a bird's silhouette reveal its lifestyle?",
+      "concepts": ["bill shape", "wing structure", "tail configuration", "ecological adaptation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.allaboutbirds.org/news/bird-anatomy-form-and-function/",
+        "https://academy.allaboutbirds.org/product/bird-biology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Identifying by Habitat & Behavior",
+      "title": "What does foraging behavior tell you about a mystery warbler?",
+      "concepts": ["foraging guilds", "gleaning vs. hawking", "behavioral jizz"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.allaboutbirds.org/news/how-to-identify-warblers/",
+        "https://ebird.org/news/warbler-guide-2023"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Identifying by Habitat & Behavior",
+      "title": "How do flight patterns differentiate woodpeckers from flickers from sapsuckers?",
+      "concepts": ["undulating flight", "species-specific movement", "flight silhouettes"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.allaboutbirds.org/guide/browse/taxonomy/Picidae",
+        "https://academy.allaboutbirds.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Identifying by Habitat & Behavior",
+      "title": "What can flocking behavior reveal about species identity and season?",
+      "concepts": ["mixed-species flocks", "social structure", "seasonal behavior shifts"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.birds.cornell.edu/home/mixed-flocks/",
+        "https://www.allaboutbirds.org/news/why-do-birds-flock/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Identifying by Habitat & Behavior",
+      "title": "Why does learning to recognize shorebird postures unlock entire families?",
+      "concepts": ["posture variation", "feeding strategies", "family-level patterns"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.allaboutbirds.org/news/shorebird-identification/",
+        "https://academy.allaboutbirds.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Identifying by Habitat & Behavior",
+      "title": "Review: Behavioral ecology and identification",
+      "concepts": ["behavioral jizz", "foraging guilds", "flight patterns", "ecological adaptation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ebird.org/explore",
+        "https://merlin.allaboutbirds.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Bird Vocalizations & Communication",
+      "title": "Why do songs and calls sound completely different, and when is each used?",
+      "concepts": ["song vs. call", "territorial defense", "alarm calls", "contact calls"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.allaboutbirds.org/news/what-are-bird-songs-and-calls/",
+        "https://academy.allaboutbirds.org/product/the-wonderful-world-of-bird-songs/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Bird Vocalizations & Communication",
+      "title": "How can you learn bird songs when they all seem to blur together?",
+      "concepts": ["mnemonics", "pitch patterns", "repetition structure", "learning by family"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://academy.allaboutbirds.org/product/be-a-better-birder-learning-bird-songs/",
+        "https://www.macaulaylibrary.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Bird Vocalizations & Communication",
+      "title": "What does a spectrogram show that your ear might miss?",
+      "concepts": ["spectrograms", "frequency vs. time", "visual song analysis"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://academy.allaboutbirds.org/how-to-read-a-spectrogram/",
+        "https://www.xeno-canto.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Bird Vocalizations & Communication",
+      "title": "How do you distinguish confusing song pairs like Eastern and Western Meadowlarks?",
+      "concepts": ["similar songs", "regional variations", "quality differences"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.allaboutbirds.org/guide/Eastern_Meadowlark/sounds",
+        "https://www.allaboutbirds.org/guide/Western_Meadowlark/sounds",
+        "https://merlin.allaboutbirds.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Bird Vocalizations & Communication",
+      "title": "When should you use playback, and when is it harmful?",
+      "concepts": ["ethical playback", "stress responses", "breeding season impacts"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.audubon.org/news/when-and-when-not-use-playback-birding",
+        "https://ebird.org/about/policy/ethics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Bird Vocalizations & Communication",
+      "title": "Review: Mastering bird vocalizations",
+      "concepts": ["song vs. call", "mnemonics", "spectrograms", "ethical listening"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://merlin.allaboutbirds.org/",
+        "https://www.macaulaylibrary.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Seasonal Patterns & Migration",
+      "title": "Why do some species migrate thousands of miles while others stay put year-round?",
+      "concepts": ["migration strategies", "resident vs. migratory species", "evolutionary trade-offs"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://academy.allaboutbirds.org/product/bird-biology/",
+        "https://www.allaboutbirds.org/news/extraordinary-bird-migration/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Seasonal Patterns & Migration",
+      "title": "How can you predict migration peaks in your region?",
+      "concepts": ["migration timing", "weather patterns", "eBird trends", "BirdCast forecasts"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://birdcast.info/",
+        "https://ebird.org/science/status-and-trends"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Seasonal Patterns & Migration",
+      "title": "What do molt patterns reveal about a bird's age and breeding status?",
+      "concepts": ["molt cycles", "feather replacement", "plumage progression"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://academy.allaboutbirds.org/aging-and-sexing-birds/",
+        "https://www.audubon.org/news/bird-molts-demystified"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Seasonal Patterns & Migration",
+      "title": "How does tracking seasonal patterns make you a better identifier?",
+      "concepts": ["temporal patterns", "seasonal behavior", "phenology"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://ebird.org/explore",
+        "https://birdcast.info/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Citizen Science & Data Quality",
+      "title": "How does eBird turn your checklists into scientific research?",
+      "concepts": ["citizen science data", "eBird protocols", "data applications"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ebird.org/science",
+        "https://ebird.org/news/ebird-best-practices"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Citizen Science & Data Quality",
+      "title": "Review: Seasonal patterns and citizen science foundations",
+      "concepts": ["migration timing", "molt cycles", "eBird protocols", "data quality"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ebird.org/explore",
+        "https://birdcast.info/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Citizen Science & Data Quality",
+      "title": "What makes a complete checklist more valuable than a casual list?",
+      "concepts": ["complete checklists", "effort tracking", "detection vs. abundance"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ebird.org/news/ebird-best-practices",
+        "https://support.ebird.org/en/support/solutions/articles/48000838205"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Citizen Science & Data Quality",
+      "title": "How do you document an unusual sighting to maximize its scientific value?",
+      "concepts": ["rare bird documentation", "field notes", "photographic evidence", "vetting process"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ebird.org/about/reporting-unusual-sightings",
+        "https://support.ebird.org/en/support/solutions/articles/48000795623"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Identification Skills",
+      "title": "How do you age and sex birds using subtle plumage differences?",
+      "concepts": ["aging by plumage", "sexing dimorphism", "seasonal variation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://academy.allaboutbirds.org/aging-and-sexing-birds/",
+        "https://www.macaulaylibrary.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Identification Skills",
+      "title": "When should you consider subspecies, and how do you distinguish them?",
+      "concepts": ["subspecies variation", "geographic races", "clinal variation"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://www.sibleyguides.com/bird-info/subspecies/",
+        "https://ebird.org/news/the-ebird-taxonomy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Advanced Identification Skills",
+      "title": "Capstone: Build your own local birding guide and share your expertise",
+      "concepts": ["knowledge synthesis", "community contribution", "teaching others"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://ebird.org/explore",
+        "https://www.inaturalist.org/",
+        "https://academy.allaboutbirds.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

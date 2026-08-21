@@ -1,0 +1,322 @@
+{
+  "topic": "Poetry — forms, meter, and close reading",
+  "slug": "poetry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "reading comprehension",
+    "basic literary terminology (metaphor, simile, imagery)",
+    "comfort with ambiguity in literature"
+  ],
+  "exit_criteria": [
+    "scan a poem and identify its meter with confidence",
+    "recognize and name major poetic forms (sonnet, villanelle, sestina, etc.)",
+    "perform close reading that connects form to meaning",
+    "articulate how a poet's formal choices shape interpretation",
+    "analyze the relationship between sound and sense in a poem"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Sound & Rhythm",
+      "title": "What makes a line of poetry sound different from prose?",
+      "concepts": ["rhythm", "natural speech patterns", "line breaks"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://prosody.lib.virginia.edu/instructions/",
+        "https://poetry.harvard.edu/guide-prosody"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Sound & Rhythm",
+      "title": "Can you hear the beat in 'Tiger, tiger, burning bright'?",
+      "concepts": ["stress", "syllable emphasis", "listening for rhythm"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://public.archive.wsu.edu/campbelld/public_html/amlit/prostips.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Meter & Scansion",
+      "title": "What is a metrical foot and why should we care?",
+      "concepts": ["metrical feet", "iamb", "trochee", "scansion notation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://prosody.lib.virginia.edu/instructions/",
+        "https://jpellegrino.com/cheatsheets/TheEnglishMajorsProsodyCheatSheet-6x9.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Meter & Scansion",
+      "title": "How do you mark the rhythm you hear?",
+      "concepts": ["scansion practice", "marking stress", "identifying feet"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://versecraft.app/",
+        "https://prosody.lib.virginia.edu/instructions/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Meter & Scansion",
+      "title": "Why does Shakespeare's 'da-DUM da-DUM' sound so natural?",
+      "concepts": ["iambic pentameter", "natural speech rhythm", "metrical variation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://poemanalysis.com/poetry-plus/scansion-tool/",
+        "https://ocw.mit.edu/courses/21l-004-reading-poetry-spring-2018/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Meter & Scansion",
+      "title": "What happens when poets break the pattern?",
+      "concepts": ["metrical substitution", "variation for emphasis", "tension and release"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://theliteraryscholar.com/prosody-the-music-of-poetry/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Meter & Scansion",
+      "title": "Can you scan and name the meter in these examples?",
+      "concepts": ["scansion review", "meter identification", "foot patterns"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://versecraft.app/",
+        "https://poemanalysis.com/poetry-plus/scansion-tool/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Meter & Scansion",
+      "title": "How do anapests and dactyls create different energies?",
+      "concepts": ["anapestic meter", "dactylic meter", "triple meters"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://poetry.harvard.edu/guide-prosody",
+        "https://egyankosh.ac.in/bitstream/123456789/47660/1/Unit-2.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Poetic Forms",
+      "title": "Why do poets still write sonnets after 700 years?",
+      "concepts": ["sonnet form", "14 lines", "rhyme schemes", "turn/volta"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://openoregon.pressbooks.pub/bockovenpoetry/chapter/chapter-8-poetic-form-open-and-closed/",
+        "https://writers.com/course/crafting-poems-in-form-rhyme-meter-fixed-forms-and-more"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Poetic Forms",
+      "title": "What makes a villanelle haunt you?",
+      "concepts": ["villanelle", "refrains", "circular structure", "obsession"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://writers.com/course/crafting-poems-in-form-rhyme-meter-fixed-forms-and-more",
+        "https://openlab.citytech.cuny.edu/noonanpoetryfall2020/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Poetic Forms",
+      "title": "How does a sestina build its obsessive logic?",
+      "concepts": ["sestina", "end-word rotation", "mathematical structure", "envoi"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://writers.com/course/crafting-poems-in-form-rhyme-meter-fixed-forms-and-more"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Poetic Forms",
+      "title": "Can constraints actually create freedom?",
+      "concepts": ["constraint as generative", "form vs. content", "creative problem-solving"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://openoregon.pressbooks.pub/bockovenpoetry/chapter/chapter-8-poetic-form-open-and-closed/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Poetic Forms",
+      "title": "What did free verse poets reject and what did they keep?",
+      "concepts": ["free verse", "open form", "prosody without meter", "organic form"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://openoregon.pressbooks.pub/bockovenpoetry/chapter/chapter-8-poetic-form-open-and-closed/",
+        "https://ocw.mit.edu/courses/21l-004-reading-poetry-spring-2018/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Poetic Forms",
+      "title": "Can you identify the form and explain why it matters?",
+      "concepts": ["form recognition", "structure vs. freedom", "constraint review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://openoregon.pressbooks.pub/bockovenpoetry/chapter/chapter-8-poetic-form-open-and-closed/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Close Reading Integration",
+      "title": "How do you read a poem closely without killing it?",
+      "concepts": ["close reading methodology", "attention to detail", "interpretive moves"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21l-004-reading-poetry-spring-2018/pages/syllabus/",
+        "https://www.libarts.colostate.edu/english/wp-content/Cimy_User_Extra_Fields/airicap/file/Poetry-Syllabus-incl.-Poetic-Terms.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Close Reading Integration",
+      "title": "What decisions did the poet make in this line?",
+      "concepts": ["diction analysis", "syntax", "word choice", "poet's craft"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://openlab.citytech.cuny.edu/noonanpoetryfall2020/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Close Reading Integration",
+      "title": "How does sound shape meaning in this poem?",
+      "concepts": ["sound devices", "alliteration", "assonance", "consonance", "euphony/cacophony"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://theliteraryscholar.com/prosody-the-music-of-poetry/",
+        "https://bergen.edu/wp-content/uploads/LIT-227.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Close Reading Integration",
+      "title": "Why did the poet break the line *there*?",
+      "concepts": ["line breaks", "enjambment", "end-stopped lines", "lineation as meaning"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.techlearning.com/news/best-digital-resources-for-teaching-poetry"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Close Reading Integration",
+      "title": "How does the speaker's voice differ from the poet's?",
+      "concepts": ["speaker", "dramatic situation", "persona", "voice vs. biography"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21l-004-reading-poetry-spring-2018/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Synthesis",
+      "title": "How does form contribute to this poem's meaning?",
+      "concepts": ["form-meaning relationship", "integrated analysis", "holistic reading"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://college.uchicago.edu/sites/default/files/documents/humanities-core-courses/Poetry%20and%20the%20Human%20sample%20syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Synthesis",
+      "title": "Can you combine meter, form, and close reading in one analysis?",
+      "concepts": ["comprehensive review", "meter + form + close reading", "integration"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://poemanalysis.com/poetry-plus/study-tools/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Synthesis",
+      "title": "Can you analyze a new poem from scratch?",
+      "concepts": ["independent analysis", "synthesis", "confidence building"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://poemanalysis.com/poetry-plus/study-tools/",
+        "https://versecraft.app/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Synthesis",
+      "title": "How do historical and cultural contexts shape poetic form?",
+      "concepts": ["historical evolution", "cultural context", "form as social practice"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.princeton.edu/news/2015/02/09/princeton-prosody-archive-brings-digital-tools-study-poetry",
+        "https://shc.stanford.edu/arcade/interventions/after-scansion-visualizing-deforming-and-listening-poetic-prosody"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Synthesis",
+      "title": "What will you notice in poems now that you couldn't see before?",
+      "concepts": ["metacognition", "skills reflection", "ongoing practice"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ncte.org/blog/2016/04/online-tools-apps-poetry/",
+        "https://versecraft.app/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

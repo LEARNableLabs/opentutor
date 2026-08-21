@@ -1,0 +1,381 @@
+{
+  "topic": "International Law and Human Rights",
+  "slug": "international-law",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic understanding of legal systems and concepts",
+    "awareness of global governance institutions (UN, regional organizations)",
+    "familiarity with political science fundamentals"
+  ],
+  "exit_criteria": [
+    "student can explain the sources and subjects of international law",
+    "student can analyze human rights violations using international legal frameworks",
+    "student can distinguish between international human rights law and international humanitarian law",
+    "student can evaluate enforcement mechanisms and their limitations",
+    "student can apply international legal principles to contemporary global challenges"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of International Law",
+      "title": "Why do sovereign states follow international law?",
+      "concepts": ["sovereignty", "consent", "international legal order"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.icj-cij.org/en/history",
+        "https://www.un.org/en/about-us/history-of-the-un"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of International Law",
+      "title": "When does international law override domestic law?",
+      "concepts": ["monism", "dualism", "hierarchy of norms"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://legal.un.org/avl/ha/vclt/vclt.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of International Law",
+      "title": "How did human rights become international law?",
+      "concepts": ["Universal Declaration of Human Rights", "post-WWII order", "Nuremberg principles"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.un.org/en/about-us/universal-declaration-of-human-rights",
+        "https://www.ohchr.org/en/what-are-human-rights"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of International Law",
+      "title": "Can individuals hold states accountable under international law?",
+      "concepts": ["individual standing", "locus standi", "international legal personality"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.hrw.org/",
+        "https://www.amnesty.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Sources and Actors",
+      "title": "What makes a treaty binding?",
+      "concepts": ["treaty formation", "Vienna Convention", "pacta sunt servanda"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://legal.un.org/avl/ha/vclt/vclt.html",
+        "https://treaties.un.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Sources and Actors",
+      "title": "How do sovereignty and treaties structure international law?",
+      "concepts": ["sovereignty", "treaties", "legal personality"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.icj-cij.org/en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Sources and Actors",
+      "title": "How does customary international law emerge?",
+      "concepts": ["custom", "opinio juris", "state practice"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.icj-cij.org/en/cases",
+        "https://legal.un.org/ilc/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Sources and Actors",
+      "title": "Who are the actors in international law?",
+      "concepts": ["states", "international organizations", "NGOs", "individuals"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.un.org/en/",
+        "https://www.icrc.org/en/who-we-are"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Sources and Actors",
+      "title": "What happens when treaties conflict?",
+      "concepts": ["treaty hierarchy", "jus cogens", "peremptory norms"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://legal.un.org/avl/ha/vclt/vclt.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Human Rights Framework",
+      "title": "Are human rights truly universal?",
+      "concepts": ["universalism", "cultural relativism", "indivisibility"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ohchr.org/en/universal-declaration-of-human-rights",
+        "https://www.ohchr.org/en/special-procedures-human-rights-council"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Human Rights Framework",
+      "title": "What rights does the ICCPR protect?",
+      "concepts": ["civil and political rights", "derogation", "state obligations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-civil-and-political-rights"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Human Rights Framework",
+      "title": "How do economic and social rights differ from civil rights?",
+      "concepts": ["ICESCR", "progressive realization", "resource availability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Human Rights Framework",
+      "title": "What obligations do human rights treaties create for states?",
+      "concepts": ["UDHR", "ICCPR", "ICESCR", "state obligations"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ohchr.org/en/what-are-human-rights"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Human Rights Framework",
+      "title": "Why do women and children have separate rights treaties?",
+      "concepts": ["CEDAW", "CRC", "vulnerability", "special protection"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-elimination-all-forms-discrimination-against-women",
+        "https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-child"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Human Rights Framework",
+      "title": "How do regional human rights systems compare?",
+      "concepts": ["European Court of Human Rights", "Inter-American system", "African system"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.echr.coe.int/",
+        "https://www.corteidh.or.cr/index-en.cfm",
+        "https://www.achpr.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "International Humanitarian Law",
+      "title": "When does IHL apply instead of human rights law?",
+      "concepts": ["armed conflict", "IHL-HR relationship", "lex specialis"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.icrc.org/en/war-and-law",
+        "https://ihl-databases.icrc.org/en/ihl-treaties"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "International Humanitarian Law",
+      "title": "What do the Geneva Conventions protect?",
+      "concepts": ["Geneva Conventions", "protected persons", "Additional Protocols"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.icrc.org/en/war-and-law/treaties-customary-law/geneva-conventions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "International Humanitarian Law",
+      "title": "Why is targeting civilians always illegal?",
+      "concepts": ["distinction", "proportionality", "military necessity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.icrc.org/en/war-and-law/protected-persons"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "International Humanitarian Law",
+      "title": "What makes a war crime different from a crime against humanity?",
+      "concepts": ["war crimes", "crimes against humanity", "genocide"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.icc-cpi.int/about/how-the-court-works"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "International Humanitarian Law",
+      "title": "How does IHL protect people during armed conflict?",
+      "concepts": ["Geneva Conventions", "distinction", "war crimes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.icrc.org/en/war-and-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Enforcement and Accountability",
+      "title": "How does the International Court of Justice work?",
+      "concepts": ["ICJ jurisdiction", "contentious cases", "advisory opinions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.icj-cij.org/en/how-court-works"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Enforcement and Accountability",
+      "title": "Can the ICC prosecute anyone for atrocities?",
+      "concepts": ["ICC jurisdiction", "complementarity", "Rome Statute"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.icc-cpi.int/about"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Enforcement and Accountability",
+      "title": "What can UN treaty bodies actually do?",
+      "concepts": ["treaty bodies", "state reporting", "individual complaints"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ohchr.org/en/treaty-bodies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Enforcement and Accountability",
+      "title": "When can states prosecute foreign officials?",
+      "concepts": ["universal jurisdiction", "immunities", "Pinochet case"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.hrw.org/topic/international-justice/universal-jurisdiction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Enforcement and Accountability",
+      "title": "How are states held responsible for violations?",
+      "concepts": ["state responsibility", "reparations", "non-repetition"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://legal.un.org/ilc/texts/instruments/english/draft_articles/9_6_2001.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Contemporary Challenges",
+      "title": "Is there a human right to climate protection?",
+      "concepts": ["climate change", "environmental rights", "intergenerational justice"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ohchr.org/en/climate-change"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Contemporary Challenges",
+      "title": "What protections do refugees have under international law?",
+      "concepts": ["1951 Refugee Convention", "non-refoulement", "asylum"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.unhcr.org/en-us/1951-refugee-convention.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Enforcement and Accountability",
+      "title": "What are the limits of international law enforcement?",
+      "concepts": ["ICJ", "ICC", "treaty bodies", "state responsibility"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.icj-cij.org/en",
+        "https://www.icc-cpi.int/",
+        "https://www.ohchr.org/en/treaty-bodies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Contemporary Challenges",
+      "title": "Can corporations be held accountable for human rights abuses?",
+      "concepts": ["business and human rights", "UN Guiding Principles", "due diligence"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ohchr.org/en/business"
+      ],
+      "status": "pending"
+    }
+  ]
+}

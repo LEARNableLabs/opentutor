@@ -1,0 +1,412 @@
+{
+  "topic": "Condensed Matter Physics",
+  "slug": "condensed-matter-physics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "quantum mechanics",
+    "statistical mechanics",
+    "electromagnetism",
+    "linear algebra",
+    "multivariable calculus"
+  ],
+  "exit_criteria": [
+    "explain how crystal symmetry determines physical properties",
+    "compute band structures using simple models",
+    "distinguish metals, insulators, and semiconductors from band theory",
+    "describe phonon modes and their role in thermal properties",
+    "explain the origin of ferromagnetism and antiferromagnetism",
+    "understand Cooper pairing and the BCS mechanism for superconductivity",
+    "recognize topological phases and their edge states"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Crystal Structure & Symmetry",
+      "title": "Why do atoms arrange themselves in repeating patterns?",
+      "concepts": ["crystal lattices", "unit cells", "Bravais lattices"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/",
+        "https://www.doitpoms.ac.uk/tlplib/crystallography3/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Crystal Structure & Symmetry",
+      "title": "How does symmetry simplify a crystal's description?",
+      "concepts": ["symmetry operations", "point groups", "space groups"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.cryst.ehu.es/",
+        "http://www.physics.udel.edu/~bnikolic/teaching/phys624/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Crystal Structure & Symmetry",
+      "title": "What is reciprocal space and why do we need it?",
+      "concepts": ["reciprocal lattice", "Brillouin zone", "Miller indices"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html",
+        "https://phet.colorado.edu/en/simulations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Crystal Structure & Symmetry",
+      "title": "How do X-rays reveal atomic positions?",
+      "concepts": ["X-ray diffraction", "Bragg's law", "structure factor"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.materialsproject.org/",
+        "https://www.doitpoms.ac.uk/tlplib/xray-diffraction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Crystal Structure & Symmetry",
+      "title": "Can you predict a crystal's properties from its symmetry?",
+      "concepts": ["tensor properties", "symmetry constraints", "piezoelectricity"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Crystal Structure & Symmetry",
+      "title": "Review: Crystal Structure Foundations",
+      "concepts": ["crystal lattices", "symmetry operations", "reciprocal space"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Lattice Dynamics & Phonons",
+      "title": "Why do atoms in a solid vibrate?",
+      "concepts": ["harmonic approximation", "normal modes", "dispersion relations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html",
+        "https://nanohub.org/resources/phonons"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Lattice Dynamics & Phonons",
+      "title": "What happens when we quantize lattice vibrations?",
+      "concepts": ["phonons", "acoustic modes", "optical modes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Lattice Dynamics & Phonons",
+      "title": "Why does heat capacity change with temperature?",
+      "concepts": ["Debye model", "Einstein model", "thermal properties"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Lattice Dynamics & Phonons",
+      "title": "How do phonons scatter and carry heat?",
+      "concepts": ["thermal conductivity", "phonon scattering", "Umklapp processes"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://nanohub.org/resources/thermal"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Lattice Dynamics & Phonons",
+      "title": "Review: Lattice Vibrations and Thermal Properties",
+      "concepts": ["phonons", "thermal properties", "Debye model"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Electronic Structure",
+      "title": "What happens when we treat electrons as a free gas?",
+      "concepts": ["Drude model", "Sommerfeld model", "Fermi energy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html",
+        "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Electronic Structure",
+      "title": "How does the periodic potential change everything?",
+      "concepts": ["Bloch theorem", "Bloch waves", "crystal momentum"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Electronic Structure",
+      "title": "Why do energy gaps open at Brillouin zone boundaries?",
+      "concepts": ["nearly free electrons", "band gaps", "Bragg reflection"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/band-structure",
+        "https://nanohub.org/resources/bandstructure"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Electronic Structure",
+      "title": "How do atomic orbitals form bands?",
+      "concepts": ["tight-binding model", "hopping amplitude", "bandwidth"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html",
+        "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Electronic Structure",
+      "title": "What makes a material a metal, insulator, or semiconductor?",
+      "concepts": ["band filling", "Fermi surface", "density of states"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.doitpoms.ac.uk/tlplib/semiconductors/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Electronic Structure",
+      "title": "How do semiconductors power modern electronics?",
+      "concepts": ["doping", "p-n junctions", "carrier dynamics"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://nanohub.org/resources/semiconductors",
+        "https://www.doitpoms.ac.uk/tlplib/semiconductors/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Electronic Structure",
+      "title": "Review: Electrons in Solids",
+      "concepts": ["band theory", "Fermi surfaces", "metals vs insulators"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Magnetism",
+      "title": "Why are most materials weakly magnetic?",
+      "concepts": ["diamagnetism", "paramagnetism", "Curie law"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html",
+        "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Magnetism",
+      "title": "How do electron spins align spontaneously in ferromagnets?",
+      "concepts": ["exchange interaction", "Heisenberg model", "Curie temperature"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Magnetism",
+      "title": "What is antiferromagnetism and why does it matter?",
+      "concepts": ["antiferromagnetism", "Néel temperature", "spin waves"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.doitpoms.ac.uk/tlplib/magnetism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Magnetism",
+      "title": "Why do magnets have domains?",
+      "concepts": ["magnetic domains", "domain walls", "hysteresis"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.doitpoms.ac.uk/tlplib/magnetism/domains.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Magnetism",
+      "title": "Review: Magnetic Order in Solids",
+      "concepts": ["paramagnetism", "ferromagnetism", "antiferromagnetism"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Superconductivity",
+      "title": "What is superconductivity and why is it surprising?",
+      "concepts": ["zero resistance", "Meissner effect", "critical temperature"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html",
+        "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Superconductivity",
+      "title": "How do electrons form Cooper pairs?",
+      "concepts": ["Cooper pairs", "phonon-mediated attraction", "BCS theory"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Superconductivity",
+      "title": "What breaks down superconductivity at high fields?",
+      "concepts": ["Type I vs Type II", "vortices", "critical fields"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.doitpoms.ac.uk/tlplib/superconductivity/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Superconductivity",
+      "title": "Why are high-temperature superconductors still mysterious?",
+      "concepts": ["cuprates", "unconventional pairing", "open problems"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html",
+        "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Superconductivity",
+      "title": "How are superconductors used in quantum technology?",
+      "concepts": ["SQUIDs", "Josephson junctions", "quantum computing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://nanohub.org/resources/superconductivity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Superconductivity",
+      "title": "Review: Superconductivity and Quantum Applications",
+      "concepts": ["Cooper pairs", "BCS theory", "superconducting applications"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Topological Phases",
+      "title": "What is topology and why does it matter in physics?",
+      "concepts": ["Berry phase", "topological invariants", "bulk-edge correspondence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html",
+        "https://arxiv.org/abs/1002.3895"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Topological Phases",
+      "title": "How does the quantum Hall effect reveal topology?",
+      "concepts": ["quantum Hall effect", "Chern number", "edge states"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Topological Phases",
+      "title": "What are topological insulators and why are they special?",
+      "concepts": ["topological insulators", "spin-orbit coupling", "protected surface states"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://arxiv.org/abs/1002.3895",
+        "https://www.nature.com/articles/nphys1270"
+      ],
+      "status": "pending"
+    }
+  ]
+}

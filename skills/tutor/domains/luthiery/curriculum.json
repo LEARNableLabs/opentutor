@@ -1,0 +1,357 @@
+{
+  "topic": "Luthiery — building stringed instruments",
+  "slug": "luthiery",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic woodworking",
+    "hand tool use (planes, chisels, saws)",
+    "wood grain awareness",
+    "precision measurement"
+  ],
+  "exit_criteria": [
+    "select and evaluate tonewoods for acoustic properties",
+    "construct a complete neck with proper geometry",
+    "carve or brace a soundboard with appropriate stiffness",
+    "execute clean joinery for body assembly",
+    "set up an instrument for playability (action, intonation)",
+    "apply a traditional finish (varnish or French polish)",
+    "diagnose and correct common acoustic issues"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Wood Science",
+      "title": "Why do some woods sing while others thud?",
+      "concepts": ["tonewood properties", "stiffness-to-weight ratio", "grain structure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.lmii.com/learning-center/tonewood-101",
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/tone-wood-guitar-choices/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Wood Science",
+      "title": "How does moisture ruin an instrument before you even finish it?",
+      "concepts": ["equilibrium moisture content", "wood movement", "seasoning"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.luth.org/articles/moisture-and-wood-stability",
+        "https://www.wood-database.com/wood-articles/understanding-wood-moisture-content/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Wood Science",
+      "title": "What makes a $50 top different from a $500 top?",
+      "concepts": ["wood grading", "visual vs. sonic selection", "quarter-sawn vs. slab-cut"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.lmii.com/learning-center/wood-grading",
+        "https://www.thewoodwhisperer.com/articles/quartersawn-vs-flatsawn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Wood Science",
+      "title": "Can carbon fiber replace spruce, or is tradition holding us back?",
+      "concepts": ["alternative materials", "composite soundboards", "tradition vs. innovation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.emeraldguitars.com/carbon-fiber-guitars",
+        "https://www.youtube.com/watch?v=qXJv8V8kZ8Q"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Acoustic Principles",
+      "title": "Why does tapping a soundboard tell you if it will sound good?",
+      "concepts": ["tap tones", "plate modes", "resonant frequencies"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.luth.org/articles/tap-tuning-basics",
+        "https://www.youtube.com/watch?v=_7lH5K8mXYo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Acoustic Principles",
+      "title": "Review: Wood, Moisture, and Sound Fundamentals",
+      "concepts": ["tonewood review", "moisture review", "tap tone practice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Acoustic Principles",
+      "title": "How does the bridge transmit vibration without choking the top?",
+      "concepts": ["bridge mass", "vibration transmission", "coupling efficiency"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.luth.org/articles/bridge-design-acoustics",
+        "https://www.frets.com/FretsPages/Musician/Guitar/Setup/BridgeSetup/bridgesetup.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Acoustic Principles",
+      "title": "What's actually happening when a guitar 'booms' in the low end?",
+      "concepts": ["Helmholtz resonance", "air cavity modes", "soundhole tuning"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://newt.phys.unsw.edu.au/jw/guitars.html",
+        "https://www.youtube.com/watch?v=qK7p5WLlYYk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Essential Techniques & Tools",
+      "title": "Why do luthiers obsess over plane sharpness?",
+      "concepts": ["edge sharpening", "surface preparation", "scraping vs. sanding"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-instrument-building-and-repair/sharpening-basics/",
+        "https://www.youtube.com/watch?v=Ki8tt-VjwqI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Essential Techniques & Tools",
+      "title": "How do you bend wood without breaking it?",
+      "concepts": ["steam bending", "heat bending", "bending jigs"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/bending-guitar-sides/",
+        "https://www.youtube.com/watch?v=Y0m8E7Q7TgM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Essential Techniques & Tools",
+      "title": "When should precision be 0.1mm vs. 1mm?",
+      "concepts": ["tolerance stacking", "functional precision", "obsession vs. efficiency"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.luth.org/articles/precision-in-lutherie",
+        "https://www.maestronet.com/forum/index.php?/topic/333291-how-precise-do-you-need-to-be/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Neck Construction",
+      "title": "Review: Tools, Techniques, and Material Behavior",
+      "concepts": ["sharpening review", "bending review", "precision review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-instrument-building-and-repair/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Neck Construction",
+      "title": "What makes a neck straight, and why does it matter?",
+      "concepts": ["neck relief", "truss rod function", "action height"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.frets.com/FretsPages/Musician/Guitar/Setup/NeckRod/neckrod.html",
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-and-bass-setup-and-maintenance/understanding-guitar-neck-relief/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Neck Construction",
+      "title": "Why is the Spanish heel joint so revered (and so hard)?",
+      "concepts": ["Spanish heel", "neck-to-body joinery", "structural integrity"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.luth.org/articles/spanish-heel-construction",
+        "https://www.youtube.com/watch?v=7KW4GxZ7WpQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Neck Construction",
+      "title": "How do you cut fret slots that actually play in tune?",
+      "concepts": ["fret spacing math", "scale length", "intonation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.stewmac.com/fret-calculator",
+        "https://www.liutaiomottola.com/formulae/fret.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Body & Soundboard",
+      "title": "What's the difference between X-bracing and fan bracing?",
+      "concepts": ["bracing patterns", "structural vs. acoustic function", "tradition vs. experimentation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.luth.org/articles/guitar-bracing-patterns",
+        "https://www.youtube.com/watch?v=Zq9K8kZ3wXg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Body & Soundboard",
+      "title": "How thin is too thin for a soundboard?",
+      "concepts": ["thickness graduation", "stiffness targets", "flexibility vs. durability"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.luth.org/articles/soundboard-thickness",
+        "https://maestronet.com/forum/index.php?/topic/330045-top-thickness-for-violins/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Body & Soundboard",
+      "title": "Review: Neck Geometry and Soundboard Design",
+      "concepts": ["neck relief review", "bracing review", "thickness review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Body & Soundboard",
+      "title": "Why do violin makers carve arched plates instead of bending them?",
+      "concepts": ["arched plate construction", "carving techniques", "graduated thickness"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.maestronet.com/forum/index.php?/topic/333456-carving-violin-plates/",
+        "https://www.youtube.com/watch?v=3VhN0Z2Z7vE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Body & Soundboard",
+      "title": "What does purfling actually do besides look pretty?",
+      "concepts": ["purfling function", "crack prevention", "aesthetic vs. structural"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.maestronet.com/forum/index.php?/topic/330256-purpose-of-purfling/",
+        "https://www.luth.org/articles/purfling-inlay"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Assembly & Setup",
+      "title": "How do you glue a guitar together without it twisting?",
+      "concepts": ["clamping strategy", "glue squeeze-out", "alignment jigs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=oJ5KjZ8X9zE",
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/gluing-a-guitar-body/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Assembly & Setup",
+      "title": "Why does soundpost position change a violin's entire character?",
+      "concepts": ["soundpost fitting", "tonal adjustment", "pressure distribution"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.maestronet.com/forum/index.php?/topic/331982-soundpost-positioning/",
+        "https://www.youtube.com/watch?v=8Z7qK8vZ8Zg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Assembly & Setup",
+      "title": "How low can the action go before buzzing ruins playability?",
+      "concepts": ["action height", "fret leveling", "playability vs. tone"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.frets.com/FretsPages/Musician/Guitar/Setup/GeneralSetup/gensetup.html",
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-and-bass-setup-and-maintenance/guitar-action-how-low-can-you-go/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Finishing",
+      "title": "Does the finish type actually affect tone, or is that mythology?",
+      "concepts": ["finish mass", "damping effects", "tone myths"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.luth.org/articles/finish-and-tone",
+        "https://www.youtube.com/watch?v=d8kZ9K8X9zE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Finishing",
+      "title": "Review: Assembly, Setup, and Finishing Foundations",
+      "concepts": ["assembly review", "setup review", "finish review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-and-bass-setup-and-maintenance/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Finishing",
+      "title": "How do you French polish without leaving witness lines?",
+      "concepts": ["French polishing", "shellac application", "rubbing technique"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.luth.org/articles/french-polishing",
+        "https://www.youtube.com/watch?v=qK7p5WLlYYo"
+      ],
+      "status": "pending"
+    }
+  ]
+}

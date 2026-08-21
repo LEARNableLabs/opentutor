@@ -1,0 +1,270 @@
+{
+  "topic": "Competitive puzzle solving — speedcubing theory",
+  "slug": "speedcubing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Basic cube solving (beginner method)",
+    "Layer-by-layer approach",
+    "Standard cube notation (F, R, U, etc.)"
+  ],
+  "exit_criteria": [
+    "Student can solve using full CFOP method",
+    "Student understands lookahead and finger trick principles",
+    "Student can analyze their own solves for inefficiencies",
+    "Student can learn and execute new algorithms systematically",
+    "Student has a framework for continued improvement"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Cross Foundations",
+      "title": "Why does the cross make or break your solve?",
+      "concepts": ["cross importance", "inspection time", "efficient cross"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://www.cubeskills.com/tutorials/improving-your-cross"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Cross Foundations",
+      "title": "How can you plan the cross before touching the cube?",
+      "concepts": ["inspection strategy", "cross planning", "move count optimization"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://jperm.net/algs/cfop/cross"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Cross Foundations",
+      "title": "What makes a cross 'efficient'?",
+      "concepts": ["move efficiency", "cross in <8 moves", "tracking first pair"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.speedsolving.com/wiki/index.php/Cross"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Cross Foundations",
+      "title": "Should you always solve cross on bottom?",
+      "concepts": ["cross orientation", "color neutrality", "cross-to-F2L transition"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.cubeskills.com/tutorials/colour-neutrality"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "F2L Fundamentals",
+      "title": "What is F2L really solving?",
+      "concepts": ["first two layers", "corner-edge pairing", "slot insertion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://jperm.net/algs/cfop/f2l"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "F2L Fundamentals",
+      "title": "Review: Cross Foundations",
+      "concepts": ["cross efficiency", "inspection strategy", "cross planning"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://cstimer.net"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "F2L Fundamentals",
+      "title": "Why learn intuitive F2L before algorithms?",
+      "concepts": ["intuitive solving", "pair manipulation", "understanding over memorization"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://ruwix.com/the-rubiks-cube/advanced-cfop-fridrich/first-two-layers-f2l/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "F2L Fundamentals",
+      "title": "What are the 41 F2L cases really showing you?",
+      "concepts": ["F2L case patterns", "corner-edge relationships", "algorithmic F2L"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://www.speedsolving.com/wiki/index.php/F2L", "https://algdb.net/puzzle/333/f2l"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "F2L Fundamentals",
+      "title": "How do you solve F2L without ruining the cross?",
+      "concepts": ["cross preservation", "slot choice", "pair insertion technique"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.cubeskills.com/tutorials/advanced-cross-techniques"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "F2L Fundamentals",
+      "title": "Review: Cross and F2L Foundations",
+      "concepts": ["cross efficiency", "F2L recognition", "inspection-to-F2L flow"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://cstimer.net"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Last Layer Strategy",
+      "title": "Why split the last layer into orientation and permutation?",
+      "concepts": ["OLL vs PLL", "last layer structure", "CFOP method logic"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://jperm.net/algs/cfop"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Last Layer Strategy",
+      "title": "Can you solve OLL in just two algorithms?",
+      "concepts": ["2-look OLL", "edge orientation", "corner orientation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://jperm.net/algs/2lookoll"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Last Layer Strategy",
+      "title": "What patterns should you recognize for full OLL?",
+      "concepts": ["57 OLL cases", "pattern recognition", "OLL algorithm selection"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://www.speedsolving.com/wiki/index.php/OLL", "https://algdb.net/puzzle/333/oll"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Last Layer Strategy",
+      "title": "How does 2-look PLL get you to one algorithm?",
+      "concepts": ["2-look PLL", "corner permutation", "edge permutation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://jperm.net/algs/2lookpll"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Last Layer Strategy",
+      "title": "Review: F2L and Last Layer Basics",
+      "concepts": ["F2L technique", "2-look OLL", "2-look PLL"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://cstimer.net"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Speed Techniques",
+      "title": "What makes finger tricks faster than wrist turns?",
+      "concepts": ["finger tricks", "turning technique", "ergonomic movement"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.cubeskills.com/tutorials/finger-tricks-and-fast-turning"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Speed Techniques",
+      "title": "Why is lookahead the key to sub-20?",
+      "concepts": ["lookahead", "tracking next pair", "pause reduction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.cubeskills.com/tutorials/improving-lookahead"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Speed Techniques",
+      "title": "How do you practice lookahead without going slower?",
+      "concepts": ["slow turning", "lookahead drills", "deliberate practice"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.youtube.com/c/JPerm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Speed Techniques",
+      "title": "What's the difference between TPS and efficiency?",
+      "concepts": ["turns per second", "move count", "speed vs efficiency tradeoff"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.speedsolving.com/wiki/index.php/Turns_Per_Second"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Speed Techniques",
+      "title": "Review: Speed Fundamentals",
+      "concepts": ["finger tricks", "lookahead", "TPS vs efficiency"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://cstimer.net"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Topics",
+      "title": "When should you learn alternative algorithms?",
+      "concepts": ["algorithm variants", "fingertrick optimization", "situational algorithms"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://algdb.net"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Topics",
+      "title": "What can you learn from reconstructing fast solves?",
+      "concepts": ["solve reconstruction", "world record analysis", "decision-making patterns"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.speedsolving.com/wiki/index.php/Reconstruction"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Topics",
+      "title": "How do Roux and ZZ compare to CFOP?",
+      "concepts": ["alternative methods", "Roux method", "ZZ method", "method comparison"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.speedsolving.com/wiki/index.php/Roux_method", "https://www.speedsolving.com/wiki/index.php/ZZ_method"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Topics",
+      "title": "What should you focus on to keep improving?",
+      "concepts": ["practice strategy", "weakness identification", "progress tracking"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.cubeskills.com/blog/how-to-practice-efficiently"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "Where do you go from here?",
+      "concepts": ["advanced F2L", "ZBLL", "competition preparation", "continued learning"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.worldcubeassociation.org", "https://www.speedsolving.com/wiki"],
+      "status": "pending"
+    }
+  ]
+}

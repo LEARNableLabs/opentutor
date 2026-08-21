@@ -1,0 +1,381 @@
+{
+  "topic": "Synthetic Biology",
+  "slug": "synthetic-biology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "molecular biology fundamentals",
+    "basic genetics",
+    "biochemistry",
+    "introductory programming"
+  ],
+  "exit_criteria": [
+    "design and analyze simple genetic circuits",
+    "understand CRISPR-based genome engineering approaches",
+    "evaluate metabolic pathway designs for bioproduction",
+    "critically assess synthetic biology applications and ethical implications",
+    "use computational tools for circuit design and modeling"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Synthetic Biology",
+      "title": "Why treat cells like programmable machines?",
+      "concepts": ["biological engineering", "abstraction hierarchy", "modularity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/20-020-introduction-to-biological-engineering-design-spring-2009/",
+        "https://www.nature.com/articles/nrg2775"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Synthetic Biology",
+      "title": "How can biological parts be standardized like electronic components?",
+      "concepts": ["BioBricks", "genetic parts", "standardization", "RFC standards"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "http://parts.igem.org/",
+        "https://www.addgene.org/molecular-biology-reference/synthetic-biology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Synthetic Biology",
+      "title": "What are the building blocks: promoters, RBS, and terminators?",
+      "concepts": ["promoters", "ribosome binding sites", "terminators", "transcription control"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.addgene.org/mol-bio-reference/bacterial-promoters/",
+        "https://2020.igem.org/Resources/Getting_Started"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Synthetic Biology",
+      "title": "How do you actually assemble DNA parts in the lab?",
+      "concepts": ["Gibson assembly", "Golden Gate", "restriction enzymes", "DNA assembly"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.addgene.org/protocols/gibson-assembly/",
+        "https://www.neb.com/protocols/2018/10/02/golden-gate-assembly-protocol-e1601"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Synthetic Biology",
+      "title": "Can you design a simple gene expression system?",
+      "concepts": ["gene expression", "constitutive promoters", "inducible systems", "design principles"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://benchling.com",
+        "https://www.nature.com/articles/nbt.1568"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Synthetic Biology",
+      "title": "Review: From parts to systems",
+      "concepts": ["review", "integration", "troubleshooting"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/20-020-introduction-to-biological-engineering-design-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Genetic Circuit Design",
+      "title": "How can DNA encode logic gates like AND and OR?",
+      "concepts": ["genetic logic gates", "transcriptional regulation", "boolean logic"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nature11500",
+        "https://2006.igem.org/wiki/index.php/ETH_Zurich"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Genetic Circuit Design",
+      "title": "What makes a genetic toggle switch flip between states?",
+      "concepts": ["bistability", "toggle switch", "positive feedback", "hysteresis"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/35002131",
+        "https://www.cell.com/trends/genetics/fulltext/S0168-9525(14)00067-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Genetic Circuit Design",
+      "title": "How do you build a biological clock that oscillates?",
+      "concepts": ["oscillators", "repressilator", "negative feedback", "periodicity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/35002125",
+        "https://www.science.org/doi/10.1126/science.1203441"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Genetic Circuit Design",
+      "title": "Why do genetic circuits fail in real cells?",
+      "concepts": ["context dependence", "retroactivity", "resource competition", "circuit failure modes"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cell.com/cell/fulltext/S0092-8674(13)01402-8",
+        "https://www.nature.com/articles/nbt.2287"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Genetic Circuit Design",
+      "title": "Can you model your circuit with differential equations?",
+      "concepts": ["ODE modeling", "rate equations", "steady states", "simulation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.Async.ece.utah.edu/iBioSim/",
+        "https://github.com/MyersResearchGroup/iBioSim"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Genetic Circuit Design",
+      "title": "Review: Circuit design principles",
+      "concepts": ["review", "design patterns", "debugging"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/nrg2775"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Genome Engineering",
+      "title": "How does CRISPR-Cas9 find and cut DNA with such precision?",
+      "concepts": ["CRISPR-Cas9", "guide RNA", "PAM sequence", "double-strand breaks"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.addgene.org/crispr/guide/",
+        "https://www.science.org/doi/10.1126/science.1225829"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Genome Engineering",
+      "title": "What can you do beyond cutting: base editing and prime editing?",
+      "concepts": ["base editors", "prime editing", "precision editing", "non-DSB editing"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/nature17946",
+        "https://www.nature.com/articles/s41586-019-1711-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Genome Engineering",
+      "title": "Could we build a minimal genome from scratch?",
+      "concepts": ["minimal genome", "genome synthesis", "essential genes", "JCVI-syn3.0"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.aad6253",
+        "https://www.science.org/doi/10.1126/science.abf8834"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Genome Engineering",
+      "title": "How do orthogonal systems prevent genetic crosstalk?",
+      "concepts": ["orthogonality", "genetic isolation", "xenobiology", "orthogonal ribosomes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nature12314",
+        "https://www.science.org/doi/10.1126/science.aaf3639"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Genome Engineering",
+      "title": "Can you evolve better proteins through directed evolution?",
+      "concepts": ["directed evolution", "phage display", "selection", "protein engineering"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nbt1251",
+        "https://www.nobelprize.org/prizes/chemistry/2018/summary/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Genome Engineering",
+      "title": "Review: Genome engineering toolkit",
+      "concepts": ["review", "tool comparison", "application selection"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.addgene.org/crispr/guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Metabolic Engineering",
+      "title": "How do you design a pathway to make a molecule cells don't naturally produce?",
+      "concepts": ["metabolic pathways", "pathway design", "heterologous expression", "enzyme selection"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nbt.2637",
+        "https://www.cell.com/trends/biotechnology/fulltext/S0167-7799(15)00137-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Metabolic Engineering",
+      "title": "What is flux balance analysis and why does it matter?",
+      "concepts": ["flux balance analysis", "stoichiometry", "constraints", "optimization"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nbt.1614",
+        "https://cobramethods.readthedocs.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Metabolic Engineering",
+      "title": "How do you optimize enzyme expression for maximum production?",
+      "concepts": ["enzyme optimization", "expression tuning", "cofactor balance", "bottleneck identification"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nature.com/articles/nchembio.2083",
+        "https://www.science.org/doi/10.1126/science.aac9373"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Metabolic Engineering",
+      "title": "Can microbes really replace oil refineries for chemical production?",
+      "concepts": ["biomanufacturing", "industrial biotechnology", "scale-up", "techno-economics"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nature11478",
+        "https://synbiobeta.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Metabolic Engineering",
+      "title": "Review: From pathway to production",
+      "concepts": ["review", "design-build-test-learn", "optimization strategies"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/nbt.2637"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications & Impact",
+      "title": "How can engineered cells detect diseases or pollutants?",
+      "concepts": ["biosensors", "whole-cell sensors", "diagnostics", "environmental monitoring"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/s41589-019-0244-3",
+        "https://2019.igem.org/Team:Heidelberg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications & Impact",
+      "title": "What makes CAR-T cells a synthetic biology therapy?",
+      "concepts": ["CAR-T cells", "immunotherapy", "therapeutic applications", "cell therapy"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/nri.2017.36",
+        "https://www.cell.com/cell/fulltext/S0092-8674(17)30154-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications & Impact",
+      "title": "Could engineered organisms clean up environmental disasters?",
+      "concepts": ["bioremediation", "environmental applications", "engineered consortia", "containment"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41579-018-0041-0",
+        "https://www.science.org/doi/10.1126/science.aad8373"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Ethics & Future Directions",
+      "title": "What are the biosafety and biosecurity risks we must address?",
+      "concepts": ["biosafety", "biosecurity", "dual-use", "containment strategies"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nbt.3672",
+        "https://www.frontiersin.org/articles/10.3389/fbioe.2019.00435/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Ethics & Future Directions",
+      "title": "Where is synthetic biology heading in the next decade?",
+      "concepts": ["future directions", "emerging technologies", "societal impact", "governance"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/s41587-020-0740-4",
+        "https://www.engineeringbiologybook.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

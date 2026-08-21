@@ -1,0 +1,332 @@
+{
+  "topic": "History of jazz — improvisation as a practice",
+  "slug": "history-of-jazz",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic music theory (scales, chords, rhythm)",
+    "listening experience with jazz recordings",
+    "familiarity with musical notation or instrument practice"
+  ],
+  "exit_criteria": [
+    "trace the evolution of improvisation from early embellishment to free jazz",
+    "identify key stylistic shifts and their improvisational innovations",
+    "understand pedagogical approaches from different eras",
+    "apply historical insights to contemporary practice",
+    "recognize connections between cultural context and improvisational style"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Roots and Origins",
+      "title": "What did jazz inherit from blues and ragtime?",
+      "concepts": ["blues tradition", "call-and-response", "ragtime syncopation", "melodic embellishment"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://brevemusicrecords.com/a-deep-dive-into-the-history-and-techniques-of-jazz-improvisation/",
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Roots and Origins",
+      "title": "How did African rhythms shape improvisational thinking?",
+      "concepts": ["polyrhythm", "cyclic structures", "conversational music-making", "oral tradition"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://music.columbia.edu/course/jazz-improvisation-theory-history-practice",
+        "https://cas.nyu.edu/content/dam/nyu-as/casCore/documents/syllabi2023-24/730_Jazz_Daughtry.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Roots and Origins",
+      "title": "What was 'ragging' and why did it matter?",
+      "concepts": ["melodic ragging", "syncopation", "early improvisation pedagogy", "popular song transformation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mtosmt.org/issues/mto.25.31.3/mto.25.31.3.martin.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Early Jazz",
+      "title": "How did New Orleans musicians create collective improvisation?",
+      "concepts": ["polyphonic texture", "role-based improvisation", "frontline interaction", "collective creativity"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://jazz.uoregon.edu/course-offerings/",
+        "https://www.colorado.edu/music/academics/departments/jazz-studies/jazz-studies-courses"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Early Jazz",
+      "title": "Why was the 'break' revolutionary?",
+      "concepts": ["solo break", "rhythmic suspension", "individual voice", "tension and release"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mtosmt.org/issues/mto.25.31.3/mto.25.31.3.martin.html",
+        "https://brevemusicrecords.com/a-deep-dive-into-the-history-and-techniques-of-jazz-improvisation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Early Jazz",
+      "title": "How do the roots connect to modern improvisation?",
+      "concepts": ["historical progression", "stylistic foundations", "early techniques", "listening practice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/",
+        "https://brevemusicrecords.com/a-deep-dive-into-the-history-and-techniques-of-jazz-improvisation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Swing Era",
+      "title": "What tensions emerged between arranged music and soloists?",
+      "concepts": ["big band arrangements", "featured soloists", "composed vs. improvised", "commercial pressures"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://cas.nyu.edu/content/dam/nyu-as/casCore/documents/syllabi2023-24/730_Jazz_Daughtry.pdf",
+        "https://music.columbia.edu/course/jazz-improvisation-theory-history-practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Swing Era",
+      "title": "How did the first formal teaching methods approach 'hot' playing?",
+      "concepts": ["Vincent Lopez method", "playing hot", "form and harmony awareness", "pedagogical codification"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mtosmt.org/issues/mto.25.31.3/mto.25.31.3.martin.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Swing Era",
+      "title": "How did Louis Armstrong change everything?",
+      "concepts": ["melodic improvisation", "rhythmic freedom", "narrative solo construction", "virtuosity as expression"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/",
+        "https://jazz.uoregon.edu/course-offerings/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Bebop Revolution",
+      "title": "What made bebop improvisation so different?",
+      "concepts": ["harmonic complexity", "fast tempos", "extended chords", "linear melodic thinking"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/jazz-improvisation",
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Bebop Revolution",
+      "title": "How did Charlie Parker hear chord changes?",
+      "concepts": ["chord substitution", "upper extensions", "chromatic approach", "melodic fluency"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.learnjazzstandards.com/zerotoimprov/",
+        "https://www.coursera.org/learn/jazz-improvisation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Bebop Revolution",
+      "title": "What defines the bebop revolution in your practice?",
+      "concepts": ["harmonic thinking", "bebop vocabulary", "melodic fluency", "listening analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/jazz-improvisation",
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Bebop Revolution",
+      "title": "What can you steal from Dizzy Gillespie's rhythmic approach?",
+      "concepts": ["rhythmic displacement", "phrase placement", "Afro-Cuban integration", "rhythmic improvisation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.nyjazzacademy.com/program/introduction-to-improvisation-and-jazz-theory-full-online-course-content-only/",
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Modal Revolution",
+      "title": "How does modal thinking free the improviser?",
+      "concepts": ["modal scales", "harmonic stasis", "melodic exploration", "reduced chord changes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/jazz-improvisation",
+        "https://music.columbia.edu/course/jazz-improvisation-theory-history-practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Modal Revolution",
+      "title": "What did Kind of Blue teach about space and restraint?",
+      "concepts": ["melodic space", "motivic development", "less-is-more", "compositional improvisation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/",
+        "https://brevemusicrecords.com/a-deep-dive-into-the-history-and-techniques-of-jazz-improvisation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Modal Revolution",
+      "title": "How did Coltrane's 'sheets of sound' work?",
+      "concepts": ["vertical improvisation", "chord stacking", "scalar density", "rhythmic subdivision"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.learnjazzstandards.com/zerotoimprov/",
+        "https://www.coursera.org/learn/jazz-improvisation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Modal Revolution",
+      "title": "Why did Lennie Tristano's teaching method matter?",
+      "concepts": ["transcription practice", "pattern study", "ear training", "12-key mastery"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mtosmt.org/issues/mto.25.31.3/mto.25.31.3.martin.html",
+        "https://allan-chase.com/2019/04/29/teaching-free-improvisation-part-3-resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Free Jazz and Avant-Garde",
+      "title": "How has improvisation evolved from bebop through modal jazz?",
+      "concepts": ["harmonic evolution", "modal thinking", "improvisational approaches", "historical continuity"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/",
+        "https://music.columbia.edu/course/jazz-improvisation-theory-history-practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Free Jazz and Avant-Garde",
+      "title": "What happens when you remove all harmonic constraints?",
+      "concepts": ["free improvisation", "collective spontaneity", "textural focus", "liberation from form"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://allan-chase.com/2019/04/29/teaching-free-improvisation-part-3-resources/",
+        "https://brevemusicrecords.com/a-deep-dive-into-the-history-and-techniques-of-jazz-improvisation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Free Jazz and Avant-Garde",
+      "title": "How do you practice for something unpredictable?",
+      "concepts": ["extended techniques", "timbral vocabulary", "listening skills", "structural awareness"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://allan-chase.com/2019/04/29/teaching-free-improvisation-part-3-resources/",
+        "https://thisisjazz.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Contemporary Practice",
+      "title": "What are the core disciplines of modern jazz pedagogy?",
+      "concepts": ["transcription", "pattern practice", "tune study", "ear training", "technique building"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.learnjazzstandards.com/zerotoimprov/",
+        "https://www.nyjazzacademy.com/program/introduction-to-improvisation-and-jazz-theory-full-online-course-content-only/",
+        "https://jazzvideolessons.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Contemporary Practice",
+      "title": "Why is transcription the universal practice method?",
+      "concepts": ["aural learning", "language acquisition", "stylistic internalization", "analytical listening"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/",
+        "https://www.coursera.org/learn/jazz-improvisation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Contemporary Practice",
+      "title": "How do you build your own improvisational voice?",
+      "concepts": ["personal vocabulary", "stylistic synthesis", "authentic expression", "tradition and innovation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/jazz-improvisation",
+        "https://ejazznews.com/jazz-education/jazz-improvisation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Synthesis",
+      "title": "Where does your improvisational voice come from?",
+      "concepts": ["personal lineage", "historical awareness", "integrated practice", "future directions"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.jazzadvice.com/lessons/jazz-improvisation-ultimate-guide/",
+        "https://www.learnjazzstandards.com/zerotoimprov/",
+        "https://thisisjazz.com/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

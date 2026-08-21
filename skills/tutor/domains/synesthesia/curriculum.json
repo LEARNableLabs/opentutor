@@ -1,0 +1,280 @@
+{
+  "topic": "Synesthesia — cross-modal perception research",
+  "slug": "synesthesia",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic neuroscience (neurons, cortical organization)",
+    "cognitive psychology fundamentals",
+    "research methods basics"
+  ],
+  "exit_criteria": [
+    "explain major theories of synesthetic binding mechanisms",
+    "critically evaluate synesthesia research using behavioral and neural methods",
+    "distinguish synesthesia from other forms of cross-modal perception",
+    "identify applications of synesthesia research to broader perception science",
+    "design a basic study to test synesthetic consistency"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction and Phenomenology",
+      "title": "What does it mean to taste a word or see music in color?",
+      "concepts": ["synesthesia definition", "phenomenological reports", "inducer-concurrent pairs"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://www.synesthete.org/", "https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction and Phenomenology",
+      "title": "How do we know someone isn't just making it up?",
+      "concepts": ["test-retest consistency", "Synesthesia Battery", "automatic binding"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.synesthete.org/", "https://www.sussex.ac.uk/profiles/155"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction and Phenomenology",
+      "title": "Why do some people see A as red while others see it as blue?",
+      "concepts": ["grapheme-color synesthesia", "individual differences", "consistency within individuals"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.synesthete.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Introduction and Phenomenology",
+      "title": "What are the wildest types of synesthesia beyond colors and letters?",
+      "concepts": ["lexical-gustatory", "mirror-touch", "spatial sequences", "personification"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Introduction and Phenomenology",
+      "title": "How does synesthesia change the subjective experience of the world?",
+      "concepts": ["qualia", "conscious experience", "automaticity vs voluntary"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Introduction and Phenomenology",
+      "title": "Can you distinguish real synesthesia from vivid imagination?",
+      "concepts": ["synesthesia types", "consistency testing", "phenomenology"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.synesthete.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Neural Mechanisms",
+      "title": "Why would the color area respond to letters?",
+      "concepts": ["cross-activation theory", "adjacent cortical areas", "V4 and grapheme area"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Neural Mechanisms",
+      "title": "Could too many connections cause synesthesia?",
+      "concepts": ["hyperconnectivity hypothesis", "white matter", "DTI studies"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Neural Mechanisms",
+      "title": "What does fMRI actually show us about synesthetic brains?",
+      "concepts": ["activation patterns", "V4 activation to graphemes", "functional imaging"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Neural Mechanisms",
+      "title": "Is synesthesia about too much feedback from higher to lower areas?",
+      "concepts": ["disinhibited feedback", "top-down processing", "parietal involvement"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Neural Mechanisms",
+      "title": "Can we distinguish competing theories with brain data?",
+      "concepts": ["hypothesis testing", "cross-activation vs feedback", "critical evidence"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Genetics and Development",
+      "title": "Why does synesthesia run in families?",
+      "concepts": ["heritability", "familial clustering", "X-linked patterns"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Genetics and Development",
+      "title": "What connects brain wiring to genetic inheritance in synesthesia?",
+      "concepts": ["neural theories", "genetics", "brain structure"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Genetics and Development",
+      "title": "Are all babies synesthetes who lose it with age?",
+      "concepts": ["neonatal synesthesia hypothesis", "pruning", "critical periods"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Genetics and Development",
+      "title": "How could genes build cross-wired perception?",
+      "concepts": ["axon guidance", "synaptic pruning", "gene expression"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Cross-Modal Perception Fundamentals",
+      "title": "Don't we all integrate senses? What makes synesthesia special?",
+      "concepts": ["multisensory integration", "binding problem", "synesthesia vs normal cross-modal"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Cross-Modal Perception Fundamentals",
+      "title": "Why does the McGurk effect trick everyone, not just synesthetes?",
+      "concepts": ["McGurk effect", "audio-visual integration", "temporal binding"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Cross-Modal Perception Fundamentals",
+      "title": "Where in the brain do senses normally meet?",
+      "concepts": ["superior colliculus", "multisensory convergence zones", "parietal cortex"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Cross-Modal Perception Fundamentals",
+      "title": "How does synesthetic binding differ from everyday sensory integration?",
+      "concepts": ["multisensory integration", "synesthesia specificity", "binding mechanisms"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Research Methods",
+      "title": "How do you design a Stroop task for colors you can't see?",
+      "concepts": ["Stroop paradigm", "interference", "behavioral measures"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.synesthete.org/", "http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Research Methods",
+      "title": "What would convince you someone has synesthesia?",
+      "concepts": ["converging evidence", "test-retest reliability", "implicit measures"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.synesthete.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Research Methods",
+      "title": "Can we induce synesthesia in non-synesthetes?",
+      "concepts": ["training studies", "drug-induced synesthesia", "sensory substitution"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Cognitive and Cultural Implications",
+      "title": "Do synesthetes remember better because of their colors?",
+      "concepts": ["memory advantages", "dual encoding", "cognitive load"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Cognitive and Cultural Implications",
+      "title": "Why are so many artists and musicians synesthetes?",
+      "concepts": ["creativity", "metaphor", "selection bias"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Cognitive and Cultural Implications",
+      "title": "What can synesthesia teach us about normal perception?",
+      "concepts": ["perception as construction", "modularity", "consciousness"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Cognitive and Cultural Implications",
+      "title": "What does synesthesia reveal about the architecture of perception?",
+      "concepts": ["synesthesia theories", "research methods", "implications"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.synesthete.org/", "http://website.education.wisc.edu/edneurolab/"],
+      "status": "pending"
+    }
+  ]
+}

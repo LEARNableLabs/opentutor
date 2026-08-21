@@ -1,0 +1,458 @@
+{
+  "topic": "Bioethics — technology and moral boundaries",
+  "slug": "bioethics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic philosophical reasoning",
+    "familiarity with ethical frameworks (consequentialism, deontology)",
+    "high school biology"
+  ],
+  "exit_criteria": [
+    "analyze bioethical dilemmas using multiple ethical frameworks",
+    "identify stakeholder perspectives in medical technology debates",
+    "evaluate real-world policies on genetic engineering, AI healthcare, and enhancement",
+    "construct reasoned arguments on contested bioethics issues",
+    "recognize when technological capabilities outpace ethical consensus"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Bioethics",
+      "title": "Why do doctors take the Hippocratic Oath in the age of gene editing?",
+      "concepts": ["medical ethics history", "autonomy", "beneficence", "non-maleficence"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/bioethics/",
+        "https://www.nih.gov/health-information/nih-clinical-research-trials-you/bioethics-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Bioethics",
+      "title": "What makes a medical decision truly voluntary?",
+      "concepts": ["informed consent", "autonomy", "power dynamics", "capacity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://bioethicsarchive.georgetown.edu/pcsbi/",
+        "https://www.thehastingscenter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Bioethics",
+      "title": "Can justice mean different things to a doctor and a public health official?",
+      "concepts": ["distributive justice", "clinical vs public health ethics", "resource allocation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/justice-distributive/",
+        "https://www.edx.org/course/justice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Bioethics",
+      "title": "Should a surgeon prioritize their patient over five strangers?",
+      "concepts": ["trolley problem", "consequentialism", "deontology", "virtue ethics"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PL30C13C91CFFEFEA6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Genetic Engineering",
+      "title": "How did CRISPR change what we can—and should—edit in humans?",
+      "concepts": ["CRISPR mechanism", "somatic vs germline editing", "designer babies"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing",
+        "https://www.who.int/groups/expert-advisory-committee-on-developing-global-standards-for-governance-and-oversight-of-human-genome-editing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Genetic Engineering",
+      "title": "What went wrong when He Jiankui edited human embryos in 2018?",
+      "concepts": ["research ethics violations", "informed consent", "risk assessment", "international norms"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Genetic Engineering",
+      "title": "Is editing out Huntington's disease different from editing for blue eyes?",
+      "concepts": ["therapy vs enhancement", "medical necessity", "slippery slope arguments"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/enhancement/",
+        "https://bioethics.georgetown.edu/online-learning/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Genetic Engineering",
+      "title": "Who owns your genetic data—and who profits from it?",
+      "concepts": ["genetic privacy", "data ownership", "commodification", "GINA legislation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.genome.gov/about-genomics/policy-issues/Privacy",
+        "https://kennedyinstitute.georgetown.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Genetic Engineering",
+      "title": "Review: Genetic Engineering Frameworks",
+      "concepts": ["CRISPR", "therapy vs enhancement", "consent", "privacy"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Reproductive Technologies",
+      "title": "Why does IVF access vary so much by country and class?",
+      "concepts": ["reproductive justice", "access inequality", "insurance coverage", "state funding"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.thehastingscenter.org/",
+        "https://bioethicsarchive.georgetown.edu/pcsbi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Reproductive Technologies",
+      "title": "Does preimplantation genetic testing lead to a 'designer baby' future?",
+      "concepts": ["PGD/PGT", "embryo selection", "disability rights", "eugenics concerns"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing",
+        "https://plato.stanford.edu/entries/disability/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Reproductive Technologies",
+      "title": "Is commercial surrogacy exploitation or empowerment?",
+      "concepts": ["surrogacy ethics", "commodification", "autonomy", "global justice"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/feminist-ethics/",
+        "https://www.thehastingscenter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Reproductive Technologies",
+      "title": "When does a fetus's interests conflict with a pregnant person's?",
+      "concepts": ["maternal-fetal conflict", "bodily autonomy", "personhood", "viability"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/feminism-autonomy/",
+        "https://www.edx.org/course/justice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "AI & Healthcare",
+      "title": "Can an algorithm diagnose disease better than your doctor?",
+      "concepts": ["AI diagnostics", "accuracy vs interpretability", "algorithmic bias", "clinical integration"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://incidentdatabase.ai/",
+        "https://ocw.mit.edu/courses/res-9-003-brains-minds-and-machines-summer-course-summer-2015/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "AI & Healthcare",
+      "title": "What happened when a dermatology AI failed on darker skin tones?",
+      "concepts": ["training data bias", "health equity", "algorithmic fairness", "testing standards"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://incidentdatabase.ai/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "AI & Healthcare",
+      "title": "Review: Applications and Limits",
+      "concepts": ["genetic technologies", "reproductive tech", "AI diagnostics", "bias"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.thehastingscenter.org/",
+        "https://kennedyinstitute.georgetown.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "AI & Healthcare",
+      "title": "Who's liable when an AI surgical assistant makes a mistake?",
+      "concepts": ["liability", "black box problem", "accountability", "regulatory frameworks"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://incidentdatabase.ai/",
+        "https://plato.stanford.edu/entries/ethics-ai/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "AI & Healthcare",
+      "title": "Should an algorithm decide who gets the last ICU bed during a pandemic?",
+      "concepts": ["resource allocation", "triage protocols", "transparency", "fairness criteria"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://bioethicsarchive.georgetown.edu/pcsbi/",
+        "https://www.thehastingscenter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Enhancement & Human Nature",
+      "title": "Are smart pills cheating or just optimizing your brain?",
+      "concepts": ["cognitive enhancement", "fairness", "coercion", "authenticity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/enhancement/",
+        "https://www.thehastingscenter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Enhancement & Human Nature",
+      "title": "Would living to 200 change what it means to be human?",
+      "concepts": ["life extension", "meaning and mortality", "intergenerational justice", "enhancement limits"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLEA18FAF1AD9047B0",
+        "https://plato.stanford.edu/entries/enhancement/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Enhancement & Human Nature",
+      "title": "Why do some people want to stay deaf when cochlear implants exist?",
+      "concepts": ["disability identity", "medical vs social model", "diversity", "normalcy"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/disability/",
+        "https://www.thehastingscenter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Enhancement & Human Nature",
+      "title": "Will enhancement technologies increase or reduce inequality?",
+      "concepts": ["distributive justice", "genetic divide", "access barriers", "leveling down"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/justice-distributive/",
+        "https://www.edx.org/course/justice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Digital Health & Privacy",
+      "title": "How much of your health data do tech companies already own?",
+      "concepts": ["data ownership", "privacy laws", "HIPAA limits", "third-party apps"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nih.gov/health-information/nih-clinical-research-trials-you/bioethics-resources",
+        "https://incidentdatabase.ai/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Digital Health & Privacy",
+      "title": "Review: Enhancement and Data Ethics",
+      "concepts": ["enhancement", "fairness", "privacy", "consent"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/enhancement/",
+        "https://plato.stanford.edu/entries/privacy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Digital Health & Privacy",
+      "title": "Can you truly consent to terms you'll never read?",
+      "concepts": ["informed consent limits", "digital contracts", "complexity", "power asymmetry"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/informed-consent/",
+        "https://www.thehastingscenter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Digital Health & Privacy",
+      "title": "Should your fitness tracker data be used to set your insurance rates?",
+      "concepts": ["surveillance", "risk pooling", "discrimination", "behavioral incentives"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://incidentdatabase.ai/",
+        "https://plato.stanford.edu/entries/privacy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "End-of-Life Technologies",
+      "title": "When does a person legally and ethically die?",
+      "concepts": ["brain death", "cardiac death", "organ donation", "cultural variation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/death-definition/",
+        "https://www.youtube.com/playlist?list=PLEA18FAF1AD9047B0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "End-of-Life Technologies",
+      "title": "How do doctors decide when to stop life support?",
+      "concepts": ["medical futility", "quality of life", "family conflict", "advance directives"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://bioethicsarchive.georgetown.edu/pcsbi/",
+        "https://www.thehastingscenter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "End-of-Life Technologies",
+      "title": "Is there a moral difference between letting die and killing?",
+      "concepts": ["active vs passive euthanasia", "doctrine of double effect", "physician-assisted death"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/euthanasia-voluntary/",
+        "https://www.edx.org/course/justice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "End-of-Life Technologies",
+      "title": "Why is assisted dying legal in Oregon but not in most US states?",
+      "concepts": ["legal frameworks", "safeguards", "slippery slope", "autonomy vs protection"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/euthanasia-voluntary/",
+        "https://bioethicsarchive.georgetown.edu/pcsbi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Emerging Frontiers",
+      "title": "Review: End-of-Life and Synthesis",
+      "concepts": ["death definition", "futility", "assisted dying", "autonomy"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/death-definition/",
+        "https://www.thehastingscenter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Emerging Frontiers",
+      "title": "Could brain-computer interfaces blur the line between thought and action?",
+      "concepts": ["BCIs", "mental privacy", "agency", "neural rights"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/res-9-003-brains-minds-and-machines-summer-course-summer-2015/",
+        "https://plato.stanford.edu/entries/neuroscience-bioethics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Emerging Frontiers",
+      "title": "Should gain-of-function virus research be published or suppressed?",
+      "concepts": ["dual-use research", "biosecurity", "scientific freedom", "pandemic risk"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nih.gov/health-information/nih-clinical-research-trials-you/bioethics-resources",
+        "https://www.unesco.org/en/ethics-science-and-technology/bioethics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Emerging Frontiers",
+      "title": "What bioethical challenges will your generation face that mine never imagined?",
+      "concepts": ["climate health justice", "synthetic biology", "AI autonomy", "space medicine"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.unesco.org/en/ethics-science-and-technology/bioethics",
+        "https://www.thehastingscenter.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

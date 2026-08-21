@@ -1,0 +1,419 @@
+{
+  "topic": "Soil Ecology and Regenerative Agriculture",
+  "slug": "soil-ecology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (cells, ecosystems, nutrient cycles)",
+    "basic chemistry (pH, chemical compounds, reactions)",
+    "general ecology concepts"
+  ],
+  "exit_criteria": [
+    "explain the structure and function of the soil food web",
+    "identify and measure key soil health indicators",
+    "design a regenerative agriculture plan for a specific context",
+    "evaluate carbon sequestration potential of different practices",
+    "troubleshoot soil health problems using biological and chemical indicators"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Soil as a Living Ecosystem",
+      "title": "What makes soil alive?",
+      "concepts": ["soil as ecosystem", "biodiversity", "soil layers"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health",
+        "https://www.soils.org/about-soils/basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Soil as a Living Ecosystem",
+      "title": "How do soil organisms actually create soil structure?",
+      "concepts": ["aggregation", "exudates", "microbial glues", "soil architecture"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/soil-carbon-storage-84223790",
+        "https://soilhealthinstitute.org/what-is-soil-health/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Soil as a Living Ecosystem",
+      "title": "Why does a teaspoon of soil contain more organisms than people on Earth?",
+      "concepts": ["microbial diversity", "biomass", "scale"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=0-uAOEI4p8Y",
+        "https://rodaleinstitute.org/science/articles/the-soil-food-web/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Soil as a Living Ecosystem",
+      "title": "What's the difference between dirt and soil?",
+      "concepts": ["organic matter", "living vs dead systems", "degradation"],
+      "difficulty": 1,
+      "type": "teach-back",
+      "resources": [
+        "https://kisstheground.com/education/",
+        "https://www.fao.org/soils-portal/en/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Soil as a Living Ecosystem",
+      "title": "How do plants and soil microbes communicate?",
+      "concepts": ["root exudates", "chemical signaling", "plant-microbe symbiosis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrmicro.2016.16",
+        "https://www.soilfoodweb.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Soil as a Living Ecosystem",
+      "title": "What are the key principles that make soil a living ecosystem?",
+      "concepts": ["soil ecosystem", "microbial diversity", "soil structure", "plant-microbe interactions"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nrcs.usda.gov/sites/default/files/2022-09/Soil-Biology-Primer-Full.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "The Soil Food Web",
+      "title": "What are mycorrhizal fungi and why are they called the 'wood wide web'?",
+      "concepts": ["mycorrhizae", "fungal networks", "nutrient exchange", "ectomycorrhizae vs arbuscular"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nature.2016.19775",
+        "https://www.youtube.com/watch?v=yxUzz5gNRuM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Soil Food Web",
+      "title": "How does bacterial vs fungal dominance change soil ecology?",
+      "concepts": ["bacteria:fungi ratio", "succession", "ecosystem function"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.soilfoodweb.com/soil-food-web/",
+        "https://rodaleinstitute.org/science/articles/fungi-bacteria-ratio/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "The Soil Food Web",
+      "title": "Why are earthworms considered ecosystem engineers?",
+      "concepts": ["bioturbation", "casting", "soil fauna", "nutrient cycling"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.scientificamerican.com/article/why-are-earthworms-good-for-soil/",
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health/soil-biology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Soil Food Web",
+      "title": "What role do protozoa and nematodes play in nutrient release?",
+      "concepts": ["microbivores", "predator-prey dynamics", "nitrogen mineralization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soils.org/files/science-policy/fact-sheets/soil-organisms.pdf",
+        "https://www.ars.usda.gov/ARSUserFiles/np212/SoilBiology/soilbiologyprimer.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The Soil Food Web",
+      "title": "How does the soil food web regulate nutrient availability?",
+      "concepts": ["trophic levels", "nutrient immobilization", "mineralization", "C:N ratio"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health",
+        "https://extension.oregonstate.edu/soil-health/soil-food-web-its-role-soil-health"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The Soil Food Web",
+      "title": "Can you map the energy flow from photosynthesis to decomposition?",
+      "concepts": ["energy flow", "decomposition pathways", "carbon allocation"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.soilfoodweb.com/",
+        "https://www.youtube.com/watch?v=UOqvwZzWjzY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Soil Food Web",
+      "title": "How do all the players in the soil food web work together?",
+      "concepts": ["mycorrhizae", "trophic levels", "nutrient cycling", "soil fauna"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nrcs.usda.gov/sites/default/files/2022-09/Soil-Biology-Primer-Full.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Soil Health Indicators",
+      "title": "What does 'soil health' actually mean and how do we measure it?",
+      "concepts": ["soil health definition", "physical/chemical/biological indicators", "context-dependency"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://soilhealthinstitute.org/what-is-soil-health/",
+        "https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-health-assessment"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Soil Health Indicators",
+      "title": "Why is aggregate stability a better indicator than texture?",
+      "concepts": ["aggregation", "water stability", "erosion resistance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nrcs.usda.gov/sites/default/files/2022-10/Aggregate-Stability-Soil-Health-Indicator.pdf",
+        "https://www.youtube.com/watch?v=8ORRWkSjgT8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Soil Health Indicators",
+      "title": "How can you assess soil health with just a shovel and your eyes?",
+      "concepts": ["visual soil assessment", "slake test", "field indicators", "smell and color"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nrcs.usda.gov/resources/guides-and-instructions/visual-soil-assessment",
+        "https://www.youtube.com/watch?v=_XjuTcWjJdw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Soil Health Indicators",
+      "title": "What does a soil respiration test tell you about microbial activity?",
+      "concepts": ["soil respiration", "CO2 release", "microbial biomass", "biological activity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://soiltesting.okstate.edu/soil-test-interpretations",
+        "https://understandingag.com/soil-health-tests/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Soil Health Indicators",
+      "title": "Why is organic matter the master variable of soil health?",
+      "concepts": ["organic matter", "carbon storage", "cation exchange capacity", "water holding capacity"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nrcs.usda.gov/sites/default/files/2022-10/Soil-Organic-Matter-Soil-Health-Indicator.pdf",
+        "https://rodaleinstitute.org/science/articles/soil-organic-matter/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Soil Health Indicators",
+      "title": "How do you choose and interpret the right soil health indicators?",
+      "concepts": ["indicators", "aggregation", "visual assessment", "organic matter"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://soilhealthinstitute.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Regenerative Practices",
+      "title": "How do cover crops feed the soil food web?",
+      "concepts": ["cover crops", "root exudates", "nitrogen fixation", "living roots"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sare.org/publications/managing-cover-crops-profitably/",
+        "https://www.nrcs.usda.gov/conservation-basics/conservation-by-state/cover-crops"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Regenerative Practices",
+      "title": "Why does tillage destroy soil structure and how does no-till rebuild it?",
+      "concepts": ["tillage effects", "no-till", "soil disturbance", "fungal networks"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://rodaleinstitute.org/science/farming-systems-trial/",
+        "https://www.nrcs.usda.gov/conservation-basics/conservation-by-state/no-till"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Regenerative Practices",
+      "title": "What makes a successful crop rotation from a soil ecology perspective?",
+      "concepts": ["crop rotation", "diversity", "pest/disease suppression", "nutrient management"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sare.org/publications/crop-rotation-on-organic-farms/",
+        "https://rodaleinstitute.org/science/articles/crop-rotation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Regenerative Practices",
+      "title": "How does holistic planned grazing regenerate grassland soils?",
+      "concepts": ["rotational grazing", "trampling", "manure distribution", "grassland ecology"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://savory.global/holistic-management/",
+        "https://www.youtube.com/watch?v=vpTHi7O66pI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Regenerative Practices",
+      "title": "What happens to soil when you compost vs when you apply raw manure?",
+      "concepts": ["composting", "C:N ratio", "pathogen reduction", "nutrient availability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://rodaleinstitute.org/science/articles/compost-101/",
+        "https://extension.psu.edu/composting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Regenerative Practices",
+      "title": "How do agroforestry systems build soil while producing food?",
+      "concepts": ["agroforestry", "silvopasture", "deep roots", "leaf litter"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.fs.usda.gov/nac/practices/index.shtml",
+        "https://www.youtube.com/watch?v=a7UvQ4RJN9s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Regenerative Practices",
+      "title": "Can you design a regenerative system for a specific climate and crop?",
+      "concepts": ["systems design", "context-specificity", "integration", "feedback loops"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://rodaleinstitute.org/science/regenerative-organic-agriculture/",
+        "https://regenerationinternational.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Regenerative Practices",
+      "title": "Which regenerative practices would you combine for maximum soil health impact?",
+      "concepts": ["cover crops", "no-till", "rotation", "grazing", "compost", "agroforestry"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nrcs.usda.gov/conservation-basics/conservation-by-state"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Carbon, Climate, and Scale",
+      "title": "How much carbon can healthy soil actually sequester?",
+      "concepts": ["carbon sequestration", "SOC", "permanence", "measurement"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nclimate2870",
+        "https://rodaleinstitute.org/science/articles/regenerative-organic-agriculture-and-climate-change/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Carbon, Climate, and Scale",
+      "title": "What are the limits and controversies around soil carbon credits?",
+      "concepts": ["carbon markets", "verification", "additionality", "permanence challenges"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S0016706120322990",
+        "https://www.nori.com/resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Carbon, Climate, and Scale",
+      "title": "Why can't we just replace industrial agriculture overnight?",
+      "concepts": ["transition challenges", "economics", "knowledge barriers", "infrastructure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://rodaleinstitute.org/science/farming-systems-trial/",
+        "https://www.youtube.com/watch?v=fSEtiixgRJI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Carbon, Climate, and Scale",
+      "title": "What does the future of regenerative agriculture look like at scale?",
+      "concepts": ["scaling solutions", "policy", "farmer networks", "research frontiers"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://regenerationinternational.org/",
+        "https://kisstheground.com/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

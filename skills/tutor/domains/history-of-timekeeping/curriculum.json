@@ -1,0 +1,371 @@
+{
+  "topic": "History of Timekeeping — Sundials to Atomic Clocks",
+  "slug": "history-of-timekeeping",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (oscillation, frequency)",
+    "scientific notation",
+    "historical context (medieval to modern era)"
+  ],
+  "exit_criteria": [
+    "explain how each major timekeeping innovation improved accuracy by orders of magnitude",
+    "connect physical principles (resonance, isochronism, quantum states) to clock designs",
+    "trace the societal drivers behind timekeeping precision (navigation, railways, telecommunications)",
+    "understand how atomic clocks work and why they're needed for GPS and fundamental physics",
+    "recognize the interplay between measurement precision and scientific discovery"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Ancient Timekeeping",
+      "title": "How did ancient civilizations know what time it was?",
+      "concepts": ["shadow clocks", "celestial timekeeping", "seasonal variation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/history-time-measurement",
+        "https://www.britannica.com/technology/sundial"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Ancient Timekeeping",
+      "title": "Why does a sundial's shadow move at different speeds through the day?",
+      "concepts": ["solar motion", "gnomon geometry", "hour angle"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.suncalc.org",
+        "https://www.youtube.com/watch?v=8y1mVPp3Bnk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Ancient Timekeeping",
+      "title": "How can water measure time?",
+      "concepts": ["clepsydra", "flow rate regulation", "ancient engineering"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/art/collection/search/544634",
+        "https://en.wikipedia.org/wiki/Water_clock"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Ancient Timekeeping",
+      "title": "What did people do when the sun didn't shine?",
+      "concepts": ["nighttime timekeeping", "star clocks", "water clocks", "limitations"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.scientificamerican.com/article/ancient-egyptians-used-the-night-sky-as-a-clock/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Ancient Timekeeping",
+      "title": "Why couldn't ancient clocks keep accurate time?",
+      "concepts": ["precision limits", "environmental sensitivity", "lack of regulators"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.sciencedirect.com/topics/engineering/timekeeping"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ancient Timekeeping",
+      "title": "What did we just learn about ancient timekeeping?",
+      "concepts": ["sundials", "water clocks", "environmental limits", "pre-mechanical era"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/history-time-measurement"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Mechanical Revolution",
+      "title": "What makes a mechanical clock tick?",
+      "concepts": ["escapement mechanism", "verge and foliot", "weight-driven power"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=528hcposes4",
+        "https://www.britannica.com/technology/escapement"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Mechanical Revolution",
+      "title": "How did medieval monks know when to pray?",
+      "concepts": ["monastery clocks", "canonical hours", "civic timekeeping"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.historytoday.com/archive/months-past/first-public-clock"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Mechanical Revolution",
+      "title": "Why did springs revolutionize clockmaking?",
+      "concepts": ["mainspring", "fusee", "portable clocks", "miniaturization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.hautehorlogerie.org/en/encyclopaedia/history-of-watchmaking/s/mainspring/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Mechanical Revolution",
+      "title": "What makes a pendulum special for timekeeping?",
+      "concepts": ["isochronism", "Christiaan Huygens", "pendulum period", "simple harmonic motion"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.aps.org/publications/apsnews/200606/history.cfm",
+        "https://www.youtube.com/watch?v=OeYAz4hmmo0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Mechanical Revolution",
+      "title": "How accurate were the best pendulum clocks?",
+      "concepts": ["escapement improvements", "temperature compensation", "precision engineering", "seconds accuracy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://collections.rmg.co.uk/collections/objects/79120.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Mechanical Revolution",
+      "title": "How far have we come from sundials to pendulums?",
+      "concepts": ["sundials", "water clocks", "mechanical escapements", "pendulums", "accuracy evolution"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=qP94MWbh5Lg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Precision and Navigation",
+      "title": "Why did sailors die for lack of a good clock?",
+      "concepts": ["longitude problem", "navigation", "marine chronometer", "economic stakes"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/longitude-problem",
+        "https://www.youtube.com/watch?v=sYqdXCLEsHY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Precision and Navigation",
+      "title": "How did John Harrison solve the longitude problem?",
+      "concepts": ["H1-H4 chronometers", "temperature compensation", "grasshopper escapement", "precision vs. environment"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/harrisons-clocks",
+        "https://www.youtube.com/c/Clickspring"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Precision and Navigation",
+      "title": "What happens when every town has its own time?",
+      "concepts": ["local solar time", "railway accidents", "time standardization", "time zones"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.scientificamerican.com/article/the-clocks-that-changed-the-world/",
+        "https://education.nationalgeographic.org/resource/standard-time/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Precision and Navigation",
+      "title": "How did clocks enable the Industrial Revolution?",
+      "concepts": ["factory time", "shift work", "productivity", "synchronization"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.bbc.co.uk/history/british/victorians/time_01.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Precision and Navigation",
+      "title": "Why did electric clocks matter?",
+      "concepts": ["electromagnetic pendulum", "master-slave systems", "grid synchronization", "millisecond accuracy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://spectrum.ieee.org/the-surprisingly-short-history-of-electric-clocks"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Precision and Navigation",
+      "title": "Where are we in the timekeeping journey from 1300 to 1900?",
+      "concepts": ["mechanical escapement", "pendulum", "chronometer", "electric clock", "accuracy evolution"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.timeanddate.com/time/timeline-clocks.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Quartz and Electronics",
+      "title": "What makes a quartz crystal vibrate?",
+      "concepts": ["piezoelectric effect", "crystal oscillator", "resonant frequency", "32.768 kHz"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/quartz-oscillators",
+        "https://www.youtube.com/watch?v=1pM6uD8nePo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Quartz and Electronics",
+      "title": "Why is quartz more accurate than a pendulum?",
+      "concepts": ["Q factor", "frequency stability", "temperature control", "microsecond precision"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://tf.nist.gov/general/pdf/654.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Quartz and Electronics",
+      "title": "How does your phone keep time?",
+      "concepts": ["MEMS oscillators", "network time protocol", "TCXO/OCXO", "real-world quartz"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.qualcomm.com/news/onq/2019/09/how-your-smartphone-knows-what-time-it",
+        "https://www.ntp.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Quartz and Electronics",
+      "title": "What limits quartz clock accuracy?",
+      "concepts": ["aging", "temperature drift", "quantum noise", "need for atomic standards"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/primary-standard-accuracy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Quartz and Electronics",
+      "title": "What makes one oscillator better than another?",
+      "concepts": ["pendulum oscillation", "quartz resonance", "frequency stability", "environmental factors"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=p2R4Roay7kI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Atomic Age",
+      "title": "How can atoms be a clock?",
+      "concepts": ["atomic transitions", "cesium-133 hyperfine structure", "microwave resonance", "quantum precision"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/primary-standard",
+        "https://www.youtube.com/watch?v=p2BxAu6WZI8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Atomic Age",
+      "title": "Why is one second defined by cesium vibrations?",
+      "concepts": ["SI second definition", "9,192,631,770 cycles", "reproducibility", "international standards"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "https://physics.nist.gov/cuu/Units/second.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Atomic Age",
+      "title": "How accurate is an atomic clock?",
+      "concepts": ["nanosecond precision", "fountain clocks", "optical lattice clocks", "10^-18 accuracy"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nist.gov/news-events/news/2022/02/jila-atomic-clock-sets-new-record",
+        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/optical-frequency-standards"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Atomic Age",
+      "title": "Why does GPS need relativity corrections?",
+      "concepts": ["gravitational time dilation", "velocity time dilation", "satellite clocks", "38 microseconds/day"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit5/gps.html",
+        "https://www.youtube.com/watch?v=EvwCDu3d5OM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Atomic Age",
+      "title": "What comes after atomic clocks?",
+      "concepts": ["optical clocks", "nuclear clocks", "quantum logic", "fundamental physics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/s41586-019-1225-7",
+        "https://www.quantamagazine.org/the-new-science-of-old-clocks-20210921/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "topic": "Paleontology and the history of life",
+  "slug": "paleontology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (evolution, cellular biology)",
+    "general chemistry",
+    "familiarity with geological time scales"
+  ],
+  "exit_criteria": [
+    "student can explain major transitions in the history of life",
+    "student can interpret fossil evidence and understand preservation biases",
+    "student can read and construct phylogenetic trees",
+    "student can describe the causes and consequences of mass extinctions",
+    "student can connect deep time patterns to modern evolutionary theory"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Paleontology",
+      "title": "How do organisms become fossils?",
+      "concepts": ["fossilization processes", "taphonomy", "preservation bias"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ucmp.berkeley.edu/education/explorations/tours/fossil/",
+        "https://www.youtube.com/watch?v=d0uNwY0hp7g"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Paleontology",
+      "title": "Why is the fossil record incomplete?",
+      "concepts": ["taphonomic bias", "sampling", "fossilization conditions"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.smithsonianmag.com/science-nature/why-fossil-record-incomplete-180975853/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Paleontology",
+      "title": "How do we know how old a fossil is?",
+      "concepts": ["relative dating", "absolute dating", "radiometric methods", "stratigraphy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ucmp.berkeley.edu/education/explorations/tours/geotime/",
+        "https://www.khanacademy.org/science/cosmology-and-astronomy/earth-history-topic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Paleontology",
+      "title": "What can trace fossils tell us that body fossils cannot?",
+      "concepts": ["trace fossils", "ichnology", "behavior preservation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ucmp.berkeley.edu/science/paleontology/ichnology.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Paleontology",
+      "title": "How do we reconstruct evolutionary relationships from fossils?",
+      "concepts": ["phylogenetics", "cladistics", "morphological characters"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://evolution.berkeley.edu/evolibrary/article/phylogenetics_01",
+        "https://www.onezoom.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Deep Time and the Origin of Life",
+      "title": "How did life begin on a lifeless planet?",
+      "concepts": ["prebiotic chemistry", "RNA world", "origin of life hypotheses"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=QImCld9YubE",
+        "https://ucmp.berkeley.edu/education/events/cowen1b.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Foundations of Paleontology",
+      "title": "How do paleontologists build reliable knowledge from incomplete evidence?",
+      "concepts": ["methods synthesis", "fossilization review", "dating review", "phylogenetics review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ucmp.berkeley.edu/education/explorations/tours/fossil/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Deep Time and the Origin of Life",
+      "title": "What were Earth's first organisms and how do we know?",
+      "concepts": ["stromatolites", "microbial mats", "Archean fossils"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ucmp.berkeley.edu/bacteria/bacterialh.html",
+        "https://www.youtube.com/watch?v=cKOJ2dP_3qY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Deep Time and the Origin of Life",
+      "title": "How did oxygen transform the planet and enable complex life?",
+      "concepts": ["Great Oxidation Event", "cyanobacteria", "banded iron formations"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=DE4CPmLRVXs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Deep Time and the Origin of Life",
+      "title": "Why did it take billions of years for eukaryotes to evolve?",
+      "concepts": ["endosymbiosis", "eukaryogenesis", "complexity evolution"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://evolution.berkeley.edu/the-origin-of-complex-life-it-was-a-freak-accident/",
+        "https://www.youtube.com/watch?v=Z5jYqxLhBb0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Deep Time and the Origin of Life",
+      "title": "What were the mysterious Ediacaran organisms?",
+      "concepts": ["Ediacaran biota", "body plans", "Precambrian-Cambrian transition"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=bZW_kJjarCQ",
+        "https://ucmp.berkeley.edu/vendian/critters.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Deep Time and the Origin of Life",
+      "title": "What triggered the Cambrian Explosion?",
+      "concepts": ["Cambrian Explosion", "adaptive radiation", "ecological triggers"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=pKA384OSeZw",
+        "https://ucmp.berkeley.edu/cambrian/camb.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Deep Time and the Origin of Life",
+      "title": "Review: From sterile rock to complex animals",
+      "concepts": ["deep time synthesis", "major transitions", "timeline"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ucmp.berkeley.edu/education/explorations/tours/geotime/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Paleozoic: Life Conquers Land",
+      "title": "How did plants move from water to land?",
+      "concepts": ["land plant evolution", "vascular tissue", "Devonian forests"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ucmp.berkeley.edu/plants/plantae.html",
+        "https://www.youtube.com/watch?v=L93nR_mCAHs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "The Paleozoic: Life Conquers Land",
+      "title": "Why did arthropods invade land before vertebrates?",
+      "concepts": ["terrestrialization", "exoskeletons", "respiratory adaptations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=Np3pGhoHxfA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "The Paleozoic: Life Conquers Land",
+      "title": "How did fish evolve into the first land vertebrates?",
+      "concepts": ["tetrapod evolution", "lobe-finned fish", "Tiktaalik"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Gj-c4NnbZMA",
+        "https://tiktaalik.uchicago.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "The Paleozoic: Life Conquers Land",
+      "title": "What made the Carboniferous coal swamps unique?",
+      "concepts": ["Carboniferous period", "giant arthropods", "coal formation"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=ehnFt-buLrk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "The Paleozoic: Life Conquers Land",
+      "title": "What killed 96% of marine species at the end of the Permian?",
+      "concepts": ["Permian-Triassic extinction", "mass extinction", "Siberian Traps"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=KeJgLxSrZ3g",
+        "https://ucmp.berkeley.edu/education/events/cowen2a.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "The Mesozoic: Age of Reptiles",
+      "title": "How did dinosaurs rise to dominance after the Great Dying?",
+      "concepts": ["Triassic recovery", "archosaur radiation", "competitive replacement"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=RqMAdKbLB0A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "The Mesozoic: Age of Reptiles",
+      "title": "Were all dinosaurs giant lizards?",
+      "concepts": ["dinosaur diversity", "theropods vs sauropods", "ornithischians"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.amnh.org/explore/videos/dinosaurs/dinosaurs-among-us",
+        "https://ucmp.berkeley.edu/diapsids/dinosaur.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "The Mesozoic: Age of Reptiles",
+      "title": "How do we know some dinosaurs had feathers?",
+      "concepts": ["feathered dinosaurs", "preservation", "theropod-bird transition"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=mZnVwGLKsNE",
+        "https://www.smithsonianmag.com/science-nature/how-dinosaurs-shrank-became-birds-180949895/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "The Mesozoic: Age of Reptiles",
+      "title": "What ruled the Mesozoic seas and skies?",
+      "concepts": ["marine reptiles", "pterosaurs", "flight evolution"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=EM0Ztq_bWvA",
+        "https://www.youtube.com/watch?v=nsF4jbjNhpA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "The Mesozoic: Age of Reptiles",
+      "title": "How did mammals survive in a dinosaur world?",
+      "concepts": ["Mesozoic mammals", "ecological niches", "nocturnal adaptations"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=F5H0rPVUsZc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "The Mesozoic: Age of Reptiles",
+      "title": "What does the evidence tell us about the asteroid impact?",
+      "concepts": ["K-Pg extinction", "Chicxulub crater", "iridium layer", "impact winter"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=dFCbJmgeHmA",
+        "https://www.lpi.usra.edu/science/kring/Chicxulub/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "The Mesozoic: Age of Reptiles",
+      "title": "Review: The rise and fall of the dinosaurs",
+      "concepts": ["Mesozoic synthesis", "extinction selectivity", "survivor lineages"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ucmp.berkeley.edu/mesozoic/mesozoic.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "The Cenozoic: Age of Mammals and Humans",
+      "title": "How did mammals radiate after the dinosaurs?",
+      "concepts": ["mammalian radiation", "adaptive radiation", "ecological release"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=Rh7RCbb_JLI",
+        "https://ucmp.berkeley.edu/mammal/mammal.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "The Cenozoic: Age of Mammals and Humans",
+      "title": "Why did whales return to the ocean?",
+      "concepts": ["cetacean evolution", "transitional fossils", "convergent evolution"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=bm7eZ0vXBaE",
+        "https://evolution.berkeley.edu/the-evolution-of-whales/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "The Cenozoic: Age of Mammals and Humans",
+      "title": "What does the fossil record reveal about human origins?",
+      "concepts": ["hominin fossils", "bipedalism", "human evolution", "Out of Africa"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://humanorigins.si.edu/evidence",
+        "https://www.youtube.com/watch?v=lLgPmK72CBA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "The Cenozoic: Age of Mammals and Humans",
+      "title": "What killed the Ice Age megafauna?",
+      "concepts": ["Pleistocene extinctions", "overkill hypothesis", "climate change"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=zfn0d_fVZoI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "The Cenozoic: Age of Mammals and Humans",
+      "title": "Are we living through a sixth mass extinction?",
+      "concepts": ["Anthropocene", "modern extinctions", "biodiversity crisis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=iSO3GA9HqPc",
+        "https://www.smithsonianmag.com/science-nature/what-is-the-anthropocene-and-are-we-in-it-164801414/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Synthesis and Frontiers",
+      "title": "What big questions remain in paleontology?",
+      "concepts": ["paleontology frontiers", "exceptional preservation", "future directions"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.annualreviews.org/journal/earth",
+        "https://www.youtube.com/c/PBS_Eons/videos"
+      ],
+      "status": "pending"
+    }
+  ]
+}

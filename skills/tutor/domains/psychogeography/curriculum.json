@@ -1,0 +1,358 @@
+{
+  "topic": "Psychogeography — the emotional geography of cities",
+  "slug": "psychogeography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic geography",
+    "comfort with abstract concepts",
+    "willingness to walk and explore cities"
+  ],
+  "exit_criteria": [
+    "conduct a dérive and document the experience",
+    "create a psychogeographic map of a familiar area",
+    "analyze how urban design shapes emotional experience",
+    "explain Situationist theory in contemporary context",
+    "identify psychogeographic patterns in any city"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Origins and Context",
+      "title": "What if cities have emotional landscapes invisible on normal maps?",
+      "concepts": ["psychogeography definition", "emotional geography", "subjective space"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=YwHo25U5YZY",
+        "https://www.theguardian.com/cities/2014/dec/10/psychogeography-drifting-cities-emotional-map"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Origins and Context",
+      "title": "Why did 1950s Paris radicals want to revolutionize how we experience cities?",
+      "concepts": ["Situationist International", "Guy Debord", "1950s Paris", "May 1968"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cddc.vt.edu/sionline/",
+        "https://www.tate.org.uk/art/art-terms/s/situationist-international"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Origins and Context",
+      "title": "How does capitalism turn cities into spectacles we consume rather than live?",
+      "concepts": ["society of the spectacle", "commodity fetishism", "urbanism as ideology"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=0blWjssVoUQ",
+        "https://www.marxists.org/reference/archive/debord/society.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Origins and Context",
+      "title": "What earlier movements inspired the Situationists' urban experiments?",
+      "concepts": ["Letterist International", "Surrealism", "Dadaism", "avant-garde"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ubu.com/film/debord.html",
+        "https://monoskop.org/Situationist_International"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Core Concepts",
+      "title": "What is a dérive and how does drifting differ from wandering?",
+      "concepts": ["dérive", "drift", "rapid passage", "playful-constructive behavior"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cddc.vt.edu/sionline/si/theory.html",
+        "https://www.youtube.com/watch?v=bXUzg8vgCdM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Core Concepts",
+      "title": "Review: How do psychogeography and Situationism challenge conventional urbanism?",
+      "concepts": ["review of modules 1-2", "synthesis", "connections"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://psychogeographicreview.com/",
+        "https://www.theguardian.com/books/2016/jul/30/merlin-coverley-walking-the-streets-psychogeography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Core Concepts",
+      "title": "How can you hijack and repurpose the city's own signs against itself?",
+      "concepts": ["détournement", "subversion", "culture jamming", "recontextualization"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://beautifultrouble.org/toolbox/tool/detournement-detourn-the-spectacular",
+        "https://www.notbored.org/the-SI.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Core Concepts",
+      "title": "What makes certain urban zones pull you in while others push you away?",
+      "concepts": ["ambiance", "atmosphere", "unities of ambiance", "psychic terrain"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://placesjournal.org/article/urban-ambiance-and-the-idiorhythmic-city/",
+        "https://www.youtube.com/watch?v=Qj11lZOGCJc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Core Concepts",
+      "title": "Why did the Situationists imagine cities without streets or fixed functions?",
+      "concepts": ["unitary urbanism", "New Babylon", "Constant Nieuwenhuys", "ludic space"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.architecturalreview.com/essays/revisiting-new-babylon",
+        "https://www.youtube.com/watch?v=N-LiKdQ8fVk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Dérive in Practice",
+      "title": "How do you prepare for a dérive without planning the route?",
+      "concepts": ["dérive preparation", "duration", "starting points", "documentation tools"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.writersintheworld.com/psychogeography-a-practical-guide/",
+        "https://www.youtube.com/watch?v=9iR8DqjYCCY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The Dérive in Practice",
+      "title": "What do you notice when you let the city guide your movements?",
+      "concepts": ["observation", "attention", "urban signs", "chance encounters"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://theconversation.com/the-art-of-urban-wandering-psychogeography-and-the-derive-107543",
+        "https://www.walklondon.org.uk/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The Dérive in Practice",
+      "title": "Why do edgelands and forgotten zones reveal hidden urban truths?",
+      "concepts": ["liminal spaces", "thresholds", "non-places", "urban margins"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.theguardian.com/books/2011/mar/19/edgelands-paul-farley-michael-symmons",
+        "https://www.youtube.com/watch?v=mjQhCSR2NxU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Dérive in Practice",
+      "title": "Review: What are the key steps for conducting your first dérive?",
+      "concepts": ["review of dérive theory", "practical planning", "synthesis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.smithsonianmag.com/travel/psychogeography-art-drifting-through-city-180971673/",
+        "https://www.youtube.com/watch?v=_TqxfJKdlTc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "The Dérive in Practice",
+      "title": "How does walking at night transform the emotional geography of a city?",
+      "concepts": ["temporal psychogeography", "night walking", "diurnal rhythms", "urban fear"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.theguardian.com/books/2015/nov/20/night-walks-matthew-beaumont-review",
+        "https://www.atlasobscura.com/articles/why-we-walk-at-night"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Psychogeographic Mapping",
+      "title": "Why can't conventional maps show you how a city actually feels?",
+      "concepts": ["map critique", "cartographic bias", "objective vs subjective space"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.radicalcartography.net/",
+        "https://www.youtube.com/watch?v=lPNrtjboISg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Psychogeographic Mapping",
+      "title": "What did Debord's Naked City map reveal about Paris that Google Maps hides?",
+      "concepts": ["The Naked City", "psychogeographic cartography", "affective mapping"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.moma.org/collection/works/145638",
+        "https://www.youtube.com/watch?v=VhHLPKk_sRA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Psychogeographic Mapping",
+      "title": "How do you map feelings, memories, and atmospheres instead of streets?",
+      "concepts": ["mapping techniques", "emotional data", "visual representation", "subjective cartography"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.degruyter.com/document/doi/10.7312/fren17157/html",
+        "https://emotionaldatalab.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Psychogeographic Mapping",
+      "title": "What happens when you overlay different time periods on the same map?",
+      "concepts": ["temporal mapping", "layering", "urban palimpsest", "historical memory"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.oldmapsonline.org/",
+        "https://www.youtube.com/watch?v=b_C4KdpqLqU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Psychogeographic Mapping",
+      "title": "How do digital tools change psychogeographic practice?",
+      "concepts": ["GPS tracking", "digital mapping", "location-based media", "dataveillance"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.gpsdrawing.com/",
+        "https://qgis.org/en/site/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Contemporary Applications",
+      "title": "Review: How do you create your own psychogeographic map from theory to practice?",
+      "concepts": ["review of mapping methods", "synthesis", "application"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.creativemappingmethods.net/",
+        "https://www.youtube.com/watch?v=fv_8GfBmxQ0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Contemporary Applications",
+      "title": "Can psychogeography inform more humane urban design?",
+      "concepts": ["participatory planning", "tactical urbanism", "placemaking", "right to the city"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.pps.org/article/what-is-placemaking",
+        "https://www.youtube.com/watch?v=Q1ZeXnmDZMQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Contemporary Applications",
+      "title": "How have artists and activists adapted psychogeography for today's cities?",
+      "concepts": ["contemporary practice", "political psychogeography", "spatial justice"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.theguardian.com/artanddesign/2011/jun/27/psychogeography-will-self-iain-sinclair",
+        "https://www.youtube.com/watch?v=kBzBCgIL9A4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Contemporary Applications",
+      "title": "What role does psychogeography play in resisting gentrification?",
+      "concepts": ["gentrification", "resistance", "memory preservation", "community mapping"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.citylab.com/equity/2015/11/psychogeography-gentrification-walking/417078/",
+        "https://antievictionmap.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Synthesis and Practice",
+      "title": "How would you design a dérive for someone who's never heard of psychogeography?",
+      "concepts": ["teaching others", "public engagement", "accessibility", "introduction design"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.derive.org.uk/",
+        "https://www.youtube.com/watch?v=zGZKWHmQBvQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Synthesis and Practice",
+      "title": "What psychogeographic insights can you apply to your own city or neighborhood?",
+      "concepts": ["local application", "personal practice", "sustained observation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.placesjournal.org/",
+        "https://www.youtube.com/watch?v=VdaJakiTxPE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Synthesis and Practice",
+      "title": "Review: Where do you go from here as a psychogeographer?",
+      "concepts": ["review of entire curriculum", "future directions", "continued practice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://psychogeographicreview.com/",
+        "https://www.theguardian.com/cities/2015/jun/26/psychogeography-cities-emotional-cartography-derive"
+      ],
+      "status": "pending"
+    }
+  ]
+}

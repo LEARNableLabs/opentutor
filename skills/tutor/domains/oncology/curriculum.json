@@ -1,0 +1,370 @@
+{
+  "topic": "Oncology — cancer biology and treatment",
+  "slug": "oncology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic cell biology",
+    "molecular biology fundamentals",
+    "genetics and DNA structure",
+    "basic biochemistry"
+  ],
+  "exit_criteria": [
+    "explain the molecular basis of cancer initiation and progression",
+    "describe the hallmarks of cancer and their therapeutic implications",
+    "compare major treatment modalities and their mechanisms",
+    "analyze why cancers develop drug resistance",
+    "interpret cancer staging and biomarker reports",
+    "evaluate clinical trial designs for new cancer therapies"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Cancer Biology Fundamentals",
+      "title": "Why do normal cells suddenly start dividing uncontrollably?",
+      "concepts": ["cell cycle dysregulation", "checkpoint failures", "proto-oncogenes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer",
+        "https://www.khanacademy.org/science/biology/cellular-molecular-biology/stem-cells-and-cancer/v/cancer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Cancer Biology Fundamentals",
+      "title": "What happens when the cell's 'guardian of the genome' breaks?",
+      "concepts": ["tumor suppressor genes", "TP53", "two-hit hypothesis"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/p53-the-most-frequently-altered-gene-14192717/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6986967/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Cancer Biology Fundamentals",
+      "title": "How many mutations does it take to make a cancer?",
+      "concepts": ["multistep carcinogenesis", "driver mutations", "passenger mutations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nature12912",
+        "https://cancer.sanger.ac.uk/cosmic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Cancer Biology Fundamentals",
+      "title": "Why don't cancer cells die when they're supposed to?",
+      "concepts": ["apoptosis evasion", "BCL-2 family", "death receptor pathways"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/apoptosis",
+        "https://www.nature.com/articles/nrc.2016.2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Cancer Biology Fundamentals",
+      "title": "Can you map the genetic landscape of a real cancer?",
+      "concepts": ["cancer genomics", "mutation signatures", "COSMIC database"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://cancer.sanger.ac.uk/cosmic",
+        "https://www.cbioportal.org/",
+        "https://www.cancer.gov/tcga"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Cancer Biology Fundamentals",
+      "title": "Review: From normal cell to cancer cell",
+      "concepts": ["cell cycle", "oncogenes", "tumor suppressors", "apoptosis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/test-prep/mcat/cells/cancer/v/cancer-overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Tumor Evolution and Spread",
+      "title": "What are the 'hallmarks' that all cancers share?",
+      "concepts": ["hallmarks of cancer", "Hanahan-Weinberg framework", "enabling characteristics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cell.com/fulltext/S0092-8674(11)00127-9",
+        "https://www.cancer.gov/about-cancer/understanding/hallmarks-of-cancer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Tumor Evolution and Spread",
+      "title": "How do tumors trick the body into feeding them?",
+      "concepts": ["angiogenesis", "VEGF signaling", "tumor vasculature"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment/types/immunotherapy/angiogenesis-inhibitors-fact-sheet",
+        "https://www.nature.com/articles/nrc3186"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Tumor Evolution and Spread",
+      "title": "Why are metastases more deadly than the original tumor?",
+      "concepts": ["metastatic cascade", "epithelial-mesenchymal transition", "metastatic colonization"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer/metastatic-fact-sheet",
+        "https://www.nature.com/articles/nrc.2016.76"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Tumor Evolution and Spread",
+      "title": "How does the immune system fail to stop cancer?",
+      "concepts": ["immune evasion", "PD-L1", "tumor microenvironment"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment/types/immunotherapy/checkpoint-inhibitors",
+        "https://www.nature.com/articles/nri.2017.142"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Tumor Evolution and Spread",
+      "title": "Teach back: How would you explain tumor progression to a patient?",
+      "concepts": ["hallmarks synthesis", "metastasis", "clinical implications"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cancer.net/navigating-cancer-care/cancer-basics/what-cancer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Treatment Strategies",
+      "title": "Why do we still use poison to treat cancer?",
+      "concepts": ["chemotherapy", "cytotoxic agents", "therapeutic index"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment/types/chemotherapy/what-is-chemo",
+        "https://www.cancer.org/cancer/managing-cancer/treatment-types/chemotherapy.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Treatment Strategies",
+      "title": "Review: Cancer biology meets clinical reality",
+      "concepts": ["hallmarks", "metastasis", "treatment rationale"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.cancerquest.org/patients/treatment-types"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Treatment Strategies",
+      "title": "How does radiation therapy kill cancer without destroying you?",
+      "concepts": ["radiation therapy", "DNA damage", "fractionation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment/types/radiation-therapy",
+        "https://www.nature.com/articles/nrc3896"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Treatment Strategies",
+      "title": "What if we could target just the cancer's weak points?",
+      "concepts": ["targeted therapy", "kinase inhibitors", "monoclonal antibodies"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment/types/targeted-therapies/what-are-targeted-therapies",
+        "https://www.nature.com/articles/nrd.2015.16"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Treatment Strategies",
+      "title": "Can we engineer the immune system to hunt cancer?",
+      "concepts": ["immunotherapy", "checkpoint inhibitors", "CAR-T therapy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment/types/immunotherapy",
+        "https://www.nature.com/articles/nrc.2017.28"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Treatment Strategies",
+      "title": "Which treatment should a patient choose, and why?",
+      "concepts": ["treatment selection", "combination therapy", "clinical decision-making"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cancer.net/navigating-cancer-care/how-cancer-treated",
+        "https://www.nccn.org/patients"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Treatment Strategies",
+      "title": "Compare a real treatment protocol for breast cancer",
+      "concepts": ["treatment protocols", "NCCN guidelines", "evidence-based medicine"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nccn.org/patients/guidelines/content/PDF/breast-patient.pdf",
+        "https://www.cancer.gov/types/breast/patient/breast-treatment-pdq"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Resistance and Recurrence",
+      "title": "Why do cancer treatments eventually stop working?",
+      "concepts": ["drug resistance", "tumor heterogeneity", "clonal evolution"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nrc3599",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5340865/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Resistance and Recurrence",
+      "title": "Review: From diagnosis to resistance",
+      "concepts": ["treatment modalities", "drug resistance", "tumor evolution"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cancerquest.org/patients/treatment-and-trials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Resistance and Recurrence",
+      "title": "How can we detect cancer before it comes back?",
+      "concepts": ["minimal residual disease", "liquid biopsies", "ctDNA"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cancer.gov/news-events/cancer-currents-blog/2020/liquid-biopsy-blood-test-cancer-treatment",
+        "https://www.nature.com/articles/nrclinonc.2017.14"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Resistance and Recurrence",
+      "title": "Can evolution teach us how to outsmart resistant cancer?",
+      "concepts": ["adaptive therapy", "evolutionary oncology", "competitive release"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nrc3742",
+        "https://cancercontrol.cancer.gov/research-emphasis/metastasis/evolutionary-dynamics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Clinical Practice and Future",
+      "title": "How do doctors decide if a treatment is working?",
+      "concepts": ["response criteria", "RECIST", "progression-free survival"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ctep.cancer.gov/protocoldevelopment/docs/recist_guideline.pdf",
+        "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/response-evaluation-criteria-in-solid-tumors"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Clinical Practice and Future",
+      "title": "What does 'personalized medicine' really mean in oncology?",
+      "concepts": ["precision oncology", "biomarkers", "companion diagnostics"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment/types/precision-medicine",
+        "https://www.nature.com/articles/nrc3599"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Clinical Practice and Future",
+      "title": "How do clinical trials turn experimental drugs into approved treatments?",
+      "concepts": ["clinical trial phases", "endpoints", "regulatory approval"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment/clinical-trials/what-are-trials",
+        "https://www.fda.gov/patients/drug-development-process/step-3-clinical-research"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Clinical Practice and Future",
+      "title": "Review: Resistance, detection, and clinical decision-making",
+      "concepts": ["drug resistance", "biomarkers", "clinical trials", "precision oncology"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/treatment",
+        "https://www.cancerquest.org/patients/treatment-and-trials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Clinical Practice and Future",
+      "title": "How would you design a treatment strategy for this cancer case?",
+      "concepts": ["clinical reasoning", "multimodal treatment", "risk-benefit analysis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cancer.net/navigating-cancer-care",
+        "https://www.asco.org/education-training/educational-resources"
+      ],
+      "status": "pending"
+    }
+  ]
+}

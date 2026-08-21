@@ -1,0 +1,368 @@
+{
+  "topic": "Climate Science — Modeling and Feedbacks",
+  "slug": "climate-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "calculus (derivatives and integrals)",
+    "basic thermodynamics",
+    "differential equations (introduction)",
+    "programming fundamentals (Python or Julia)"
+  ],
+  "exit_criteria": [
+    "derive and solve simple energy balance models analytically",
+    "identify and quantify positive and negative feedback mechanisms",
+    "explain how ocean and atmospheric circulation transport heat",
+    "build a zero-dimensional climate model from first principles",
+    "interpret GCM output and assess model uncertainty",
+    "evaluate climate sensitivity and feedback parameters from data"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Energy Balance and the Greenhouse Effect",
+      "title": "Why isn't Earth a frozen rock?",
+      "concepts": ["solar radiation", "planetary energy balance", "blackbody radiation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-340-global-warming-science-spring-2012/",
+        "https://www.khanacademy.org/science/ap-college-environmental-science/x0b0e430a38ebd23f:global-change"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Energy Balance and the Greenhouse Effect",
+      "title": "What happens when we balance incoming and outgoing energy?",
+      "concepts": ["Stefan-Boltzmann law", "equilibrium temperature", "zero-dimensional model"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://andreasschmittner.github.io/Teaching/ATS421-521/2015/CourseNotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Energy Balance and the Greenhouse Effect",
+      "title": "How do greenhouse gases trap heat?",
+      "concepts": ["infrared absorption", "atmospheric opacity", "radiative forcing"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/global-warming",
+        "https://cleanet.org/resources/45132.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Energy Balance and the Greenhouse Effect",
+      "title": "Why does adding CO₂ warm the planet more than our calculation predicts?",
+      "concepts": ["climate sensitivity", "feedback introduction", "amplification"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://climatechange.academy/introduction-to-climate-change/understanding-climate-feedbacks-earth-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Energy Balance and the Greenhouse Effect",
+      "title": "Can you derive Earth's temperature from scratch?",
+      "concepts": ["energy balance derivation", "albedo", "emissivity"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+12.340x+1T2020/jump_to/block-v1:MITx+12.340x+1T2020+type@sequential+block@GCMs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Energy Balance and the Greenhouse Effect",
+      "title": "What have we learned about energy balance?",
+      "concepts": ["radiation balance", "greenhouse effect", "basic sensitivity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-340-global-warming-science-spring-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Climate Feedbacks",
+      "title": "Why does melting ice accelerate warming?",
+      "concepts": ["ice-albedo feedback", "positive feedback", "Arctic amplification"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-college-environmental-science/x0b0e430a38ebd23f:global-change/x0b0e430a38ebd23f:climate-change/v/climate-emergency-feedback-loops-albedo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Climate Feedbacks",
+      "title": "How does water vapor amplify temperature changes?",
+      "concepts": ["Clausius-Clapeyron relation", "water vapor feedback", "humidity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ipcc.ch/site/assets/uploads/2018/03/TAR-07.pdf",
+        "https://cleanet.org/resources/45132.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Climate Feedbacks",
+      "title": "Are clouds warming or cooling the planet?",
+      "concepts": ["cloud radiative forcing", "cloud feedback uncertainty", "low vs high clouds"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.cambridge.org/highereducation/books/climate-system-dynamics-and-modelling/C8FC9D02159C8D9FD2146976AA8D28A6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Climate Feedbacks",
+      "title": "What keeps CO₂ levels from spiraling out of control?",
+      "concepts": ["carbon cycle", "ocean uptake", "negative feedback"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/global-warming"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Climate Feedbacks",
+      "title": "How do we measure feedback strength?",
+      "concepts": ["feedback parameter", "gain factor", "feedback loop quantification"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://climatechange.academy/introduction-to-climate-change/understanding-climate-feedbacks-earth-systems/",
+        "https://andreasschmittner.github.io/Teaching/ATS421-521/2015/CourseNotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Climate Feedbacks",
+      "title": "Can you diagnose which feedback dominates in a warming scenario?",
+      "concepts": ["feedback diagnosis", "model output analysis", "sensitivity decomposition"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ipcc.ch/site/assets/uploads/2018/03/TAR-07.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Climate Feedbacks",
+      "title": "How do all the feedbacks fit together?",
+      "concepts": ["feedback interactions", "net climate sensitivity", "uncertainty sources"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://cleanet.org/resources/45132.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Atmospheric and Ocean Circulation",
+      "title": "Why doesn't the equator keep getting hotter?",
+      "concepts": ["meridional heat transport", "atmospheric circulation cells", "Hadley circulation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/ecology/biogeography/a/climate",
+        "https://www.cambridge.org/highereducation/books/climate-system-dynamics-and-modelling/C8FC9D02159C8D9FD2146976AA8D28A6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Atmospheric and Ocean Circulation",
+      "title": "What drives the jet stream and why should we care?",
+      "concepts": ["Rossby waves", "baroclinic instability", "mid-latitude weather"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-340-global-warming-science-spring-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Atmospheric and Ocean Circulation",
+      "title": "How do oceans move heat around the planet?",
+      "concepts": ["thermohaline circulation", "ocean gyres", "heat capacity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cambridge.org/highereducation/books/climate-system-dynamics-and-modelling/C8FC9D02159C8D9FD2146976AA8D28A6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Atmospheric and Ocean Circulation",
+      "title": "What happens if the Atlantic current shuts down?",
+      "concepts": ["AMOC stability", "tipping points", "abrupt climate change"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/global-warming"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Atmospheric and Ocean Circulation",
+      "title": "Why do El Niño and La Niña matter for global climate?",
+      "concepts": ["ENSO dynamics", "ocean-atmosphere coupling", "teleconnections"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-college-environmental-science/x0b0e430a38ebd23f:global-change"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Atmospheric and Ocean Circulation",
+      "title": "How does heat move from equator to poles?",
+      "concepts": ["atmospheric cells", "ocean circulation", "coupled dynamics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-340-global-warming-science-spring-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Building Climate Models",
+      "title": "How do we turn physics into code?",
+      "concepts": ["discretization", "finite differences", "time stepping"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://climate.mit.edu/posts/climate-modeling-introduction-computational-thinking",
+        "https://andreasschmittner.github.io/Teaching/ATS421-521/2015/CourseNotes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Building Climate Models",
+      "title": "Can you build a one-dimensional climate model?",
+      "concepts": ["1D energy balance", "numerical stability", "vertical structure"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+12.340x+1T2020/jump_to/block-v1:MITx+12.340x+1T2020+type@sequential+block@GCMs",
+        "https://climate.mit.edu/posts/climate-modeling-introduction-computational-thinking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Building Climate Models",
+      "title": "What's inside a General Circulation Model?",
+      "concepts": ["GCM components", "grid resolution", "coupled model architecture"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://clasp.engin.umich.edu/wp-content/uploads/sites/6/2024/02/CLIMATE589_WN24_syllabus.pdf",
+        "https://www.cambridge.org/highereducation/books/climate-system-dynamics-and-modelling/C8FC9D02159C8D9FD2146976AA8D28A6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Building Climate Models",
+      "title": "Why do we need to parameterize clouds and convection?",
+      "concepts": ["parameterization", "subgrid processes", "scale separation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ipcc.ch/site/assets/uploads/2018/03/TAR-07.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Building Climate Models",
+      "title": "How do models represent ice sheets and land surface?",
+      "concepts": ["land surface models", "ice sheet dynamics", "component coupling"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cambridge.org/highereducation/books/climate-system-dynamics-and-modelling/C8FC9D02159C8D9FD2146976AA8D28A6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Building Climate Models",
+      "title": "What did you learn from building your own model?",
+      "concepts": ["model development", "debugging strategies", "validation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://climate.mit.edu/posts/climate-modeling-introduction-computational-thinking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Model Evaluation and Future Projections",
+      "title": "How do we know if a climate model is any good?",
+      "concepts": ["model validation", "historical simulations", "emergent constraints"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/global-warming"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Model Evaluation and Future Projections",
+      "title": "Why do different models give different answers?",
+      "concepts": ["model spread", "structural uncertainty", "CMIP ensembles"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ipcc.ch/site/assets/uploads/2018/03/TAR-07.pdf",
+        "https://clasp.engin.umich.edu/wp-content/uploads/sites/6/2024/02/CLIMATE589_WN24_syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Model Evaluation and Future Projections",
+      "title": "What can models tell us about our climate future?",
+      "concepts": ["scenario analysis", "climate projections", "uncertainty quantification"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/learn/global-warming",
+        "https://climatechange.academy/introduction-to-climate-change/understanding-climate-feedbacks-earth-systems/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

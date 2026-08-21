@@ -1,0 +1,357 @@
+{
+  "topic": "Law and Economics",
+  "slug": "law-and-economics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "microeconomics (supply/demand, optimization, game theory basics)",
+    "calculus (derivatives for optimization)",
+    "basic legal concepts helpful but not required"
+  ],
+  "exit_criteria": [
+    "analyze legal rules using economic efficiency criteria",
+    "apply the Coase theorem to property disputes",
+    "calculate optimal damages and deterrence levels in tort law",
+    "evaluate tradeoffs between negligence and strict liability regimes",
+    "assess antitrust cases using market power analysis",
+    "identify behavioral biases in legal decision-making",
+    "critique legal institutions using principal-agent models"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why should economists study law at all?",
+      "concepts": ["positive vs normative analysis", "efficiency as a goal", "law and economics origins"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.law.uchicago.edu/coase-sandor-institute",
+        "https://press.princeton.edu/books/paperback/9780691161730/law-and-economics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What does 'efficient' really mean in law?",
+      "concepts": ["Pareto efficiency", "Kaldor-Hicks efficiency", "wealth maximization"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.econlib.org/library/Enc/ParetianEconomics.html",
+        "https://plato.stanford.edu/entries/legal-economics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do property rights solve the tragedy of the commons?",
+      "concepts": ["property rights", "externalities", "tragedy of the commons", "open access"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.162.3859.1243",
+        "https://www.youtube.com/watch?v=CxC161GvMPc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Does it matter who gets the legal right if people can bargain?",
+      "concepts": ["Coase theorem", "transaction costs", "bargaining", "initial allocation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.journals.uchicago.edu/doi/10.1086/466560",
+        "https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Explain the Coase theorem to a lawyer with no economics training",
+      "concepts": ["Coase theorem application", "transaction costs in practice"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.law.harvard.edu/programs/olin_center/",
+        "https://www.youtube.com/watch?v=00HPak2RLlQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Property & Contract",
+      "title": "Review: Efficiency and the Coase theorem",
+      "concepts": ["efficiency review", "Coase theorem review", "property rights review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Property & Contract",
+      "title": "When should the government be able to take your property?",
+      "concepts": ["eminent domain", "takings", "just compensation", "public use"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.supremecourt.gov/opinions/04pdf/04-108.pdf",
+        "https://law.yale.edu/studying-law-yale/areas-study/public-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Property & Contract",
+      "title": "Why do we enforce contracts at all?",
+      "concepts": ["contract enforcement", "reliance", "expectation", "trade and specialization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://scholarship.law.columbia.edu/faculty_scholarship/",
+        "https://www.law.berkeley.edu/research/bclt/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Property & Contract",
+      "title": "Is breaking a contract ever efficient?",
+      "concepts": ["efficient breach", "expectation damages", "specific performance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.journals.uchicago.edu/doi/abs/10.1086/467063",
+        "https://www.law.nyu.edu/centers/laweconomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Property & Contract",
+      "title": "What happens when contracts leave gaps?",
+      "concepts": ["incomplete contracts", "default rules", "gap-filling", "contractual incompleteness"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://academic.oup.com/jla",
+        "https://www.nber.org/programs-projects/projects-and-centers/law-and-economics-program"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Property & Contract",
+      "title": "Should default contract rules mimic what parties would have agreed to?",
+      "concepts": ["majoritarian defaults", "penalty defaults", "information-forcing rules"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.yalelawjournal.org/article/the-content-of-our-casebooks",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2600235"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Tort & Crime",
+      "title": "How much care should people take to avoid accidents?",
+      "concepts": ["negligence", "reasonable care", "Hand formula", "cost-benefit analysis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.law.cornell.edu/wex/negligence",
+        "https://www.jstor.org/stable/724402"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Tort & Crime",
+      "title": "Review: Contracts and negligence",
+      "concepts": ["efficient breach review", "negligence standard review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/microeconomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Tort & Crime",
+      "title": "Should we hold manufacturers strictly liable for defective products?",
+      "concepts": ["strict liability", "negligence vs strict liability", "product liability", "risk allocation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.law.stanford.edu/index.html",
+        "https://scholarship.law.duke.edu/faculty_scholarship/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Tort & Crime",
+      "title": "Why punish criminals instead of just making them pay damages?",
+      "concepts": ["optimal deterrence", "criminal sanctions", "judgment-proof defendants", "moral hazard"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.aeaweb.org/articles?id=10.1257/jel.45.3.715",
+        "https://www.law.uchicago.edu/news/does-criminal-law-deter-review-evidence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Tort & Crime",
+      "title": "Design an optimal penalty for insider trading",
+      "concepts": ["sanction design", "detection probability", "expected punishment"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.sec.gov/spotlight/insidertrading.shtml",
+        "https://scholarship.law.georgetown.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Litigation & Procedure",
+      "title": "Why do most lawsuits settle before trial?",
+      "concepts": ["settlement", "litigation costs", "asymmetric information", "bargaining in the shadow of law"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.law.northwestern.edu/research-faculty/",
+        "https://www.journals.uchicago.edu/toc/jls/current"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Litigation & Procedure",
+      "title": "Should losers pay winners' legal fees?",
+      "concepts": ["fee shifting", "American rule", "English rule", "access to justice"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.rand.org/pubs/monograph_reports/MR1079.html",
+        "https://law.stanford.edu/directory/robert-cooter/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Litigation & Procedure",
+      "title": "Do class actions help or hurt consumers?",
+      "concepts": ["class actions", "collective action", "agency costs", "settlement pressure"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.uscourts.gov/rules-policies/current-rules-practice-procedure",
+        "https://www.law.virginia.edu/faculty/profile/aem7/1475"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Markets & Regulation",
+      "title": "Review: Liability rules and legal procedures",
+      "concepts": ["strict liability review", "settlement dynamics review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://mru.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Markets & Regulation",
+      "title": "When does a company have too much market power?",
+      "concepts": ["monopoly power", "market concentration", "antitrust", "consumer welfare"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.justice.gov/atr",
+        "https://www.ftc.gov/enforcement/competition-matters"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Markets & Regulation",
+      "title": "Should Microsoft have been broken up in the 1990s?",
+      "concepts": ["predatory pricing", "network effects", "tying", "antitrust remedies"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.justice.gov/atr/case-document/united-states-v-microsoft-corporation",
+        "https://www.econlib.org/library/Enc/Antitrust.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Markets & Regulation",
+      "title": "Do regulators work for the public or the industry?",
+      "concepts": ["regulatory capture", "public choice theory", "special interests", "rent-seeking"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.mercatus.org/research/research-areas/regulatory-studies",
+        "https://www.journals.uchicago.edu/doi/10.1086/466865"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Markets & Regulation",
+      "title": "Why do corporations exist at all?",
+      "concepts": ["theory of the firm", "transaction costs", "agency problems", "fiduciary duties"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0335.1937.tb00002.x",
+        "https://corpgov.law.harvard.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "Can legal rules actually change behavior if people are irrational?",
+      "concepts": ["behavioral economics", "bounded rationality", "nudges", "default effects"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.law.harvard.edu/programs/olin_center/behavioral_economics/",
+        "https://www.yalelawjournal.org/article/behavioral-analysis-of-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "Review: Putting it all together",
+      "concepts": ["synthesis", "policy evaluation", "efficiency vs equity"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.law.uchicago.edu/coase-sandor-institute",
+        "https://www.nber.org/programs-projects/projects-and-centers/law-and-economics-program"
+      ],
+      "status": "pending"
+    }
+  ]
+}

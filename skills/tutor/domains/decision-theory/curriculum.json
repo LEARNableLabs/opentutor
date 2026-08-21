@@ -1,0 +1,353 @@
+{
+  "topic": "Decision Theory — Rational Choice Under Uncertainty",
+  "slug": "decision-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "probability theory",
+    "basic calculus",
+    "set theory and logic"
+  ],
+  "exit_criteria": [
+    "construct and solve decision problems using expected utility theory",
+    "recognize when expected utility maximization applies and when it fails",
+    "apply Bayesian updating to sequential decision problems",
+    "identify common cognitive biases and paradoxes in decision making",
+    "distinguish normative, descriptive, and prescriptive approaches to decision theory",
+    "calculate certainty equivalents and risk premiums",
+    "use decision trees and influence diagrams to structure complex problems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Rational Choice",
+      "title": "What makes a choice rational?",
+      "concepts": ["rationality", "preferences", "axioms of choice"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/rationality-normative-utility/",
+        "https://www.youtube.com/watch?v=X9fEVBu2Thw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Rational Choice",
+      "title": "Why can't you always have your cake and eat it too?",
+      "concepts": ["transitivity", "preference orderings", "completeness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/preferences/",
+        "https://ocw.mit.edu/courses/14-123-microeconomic-theory-iii-spring-2015/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Rational Choice",
+      "title": "How do your choices reveal what you want?",
+      "concepts": ["revealed preference", "consistency", "weak axiom"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Revealed_preference",
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Rational Choice",
+      "title": "What's your decision-making style?",
+      "concepts": ["preference elicitation", "introspection", "choice architecture"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.lesswrong.com/posts/K9ZaZXDnL3SEmYZqB/understand-your-preferences",
+        "https://plato.stanford.edu/entries/rationality-instrumental/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Rational Choice",
+      "title": "Review: Preferences and Rationality",
+      "concepts": ["transitivity review", "completeness review", "revealed preference review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/preferences/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Expected Utility Theory",
+      "title": "Why do we need utility, not just value?",
+      "concepts": ["utility functions", "expected utility", "VNM theorem"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/rationality-normative-utility/",
+        "https://www.youtube.com/watch?v=kfFQEb4dBlY",
+        "https://ocw.mit.edu/courses/14-123-microeconomic-theory-iii-spring-2015/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Expected Utility Theory",
+      "title": "What would you pay to avoid a gamble?",
+      "concepts": ["certainty equivalent", "risk premium", "utility of money"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Certainty_equivalent",
+        "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Expected Utility Theory",
+      "title": "Are you risk-averse, and how much?",
+      "concepts": ["risk aversion", "concave utility", "Arrow-Pratt coefficient"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/rationality-normative-utility/",
+        "https://en.wikipedia.org/wiki/Risk_aversion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Expected Utility Theory",
+      "title": "Can a rational person violate expected utility?",
+      "concepts": ["Allais paradox", "independence axiom", "violations of EU"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/paradox-stpetersburg/",
+        "https://www.youtube.com/watch?v=MlJQPb-mhPI",
+        "https://en.wikipedia.org/wiki/Allais_paradox"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Expected Utility Theory",
+      "title": "Deep dive: The VNM axioms",
+      "concepts": ["continuity", "independence", "representation theorem"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/decision-theory/",
+        "https://ocw.mit.edu/courses/14-123-microeconomic-theory-iii-spring-2015/",
+        "https://en.wikipedia.org/wiki/Von_Neumann%E2%80%93Morgenstern_utility_theorem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Expected Utility Theory",
+      "title": "Review: Expected Utility",
+      "concepts": ["EU review", "risk attitudes review", "axioms review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/rationality-normative-utility/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Decision Making Under Risk",
+      "title": "Should you play a game with infinite expected value?",
+      "concepts": ["St. Petersburg paradox", "expected value vs. utility", "bounded utility"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/paradox-stpetersburg/",
+        "https://www.youtube.com/watch?v=bqMOGnovLqw",
+        "https://en.wikipedia.org/wiki/St._Petersburg_paradox"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Decision Making Under Risk",
+      "title": "How do people actually make risky choices?",
+      "concepts": ["prospect theory", "reference points", "probability weighting"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/paradox-stpetersburg/",
+        "https://www.youtube.com/watch?v=vBX-KulgJ1o",
+        "https://en.wikipedia.org/wiki/Prospect_theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Decision Making Under Risk",
+      "title": "Why do losses hurt more than gains feel good?",
+      "concepts": ["loss aversion", "endowment effect", "status quo bias"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.lesswrong.com/posts/ix7ioXbPesX2eNs9T/loss-aversion",
+        "https://en.wikipedia.org/wiki/Loss_aversion",
+        "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Decision Making Under Risk",
+      "title": "How do you build a decision tree?",
+      "concepts": ["decision trees", "decision nodes", "chance nodes", "rollback analysis"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Decision_tree",
+        "https://ocw.mit.edu/courses/15-067-competitive-decision-making-and-negotiation-spring-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Decision Making Under Risk",
+      "title": "Review: Risk and Behavioral Anomalies",
+      "concepts": ["prospect theory review", "loss aversion review", "decision trees review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Prospect_theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Decision Making Under Uncertainty",
+      "title": "What's the difference between risk and uncertainty?",
+      "concepts": ["Knightian uncertainty", "ambiguity", "unknown probabilities"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/decision-theory/",
+        "https://en.wikipedia.org/wiki/Knightian_uncertainty"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Decision Making Under Uncertainty",
+      "title": "Would you bet on an unknown urn?",
+      "concepts": ["Ellsberg paradox", "ambiguity aversion", "unknown probabilities"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/paradox-ellsberg/",
+        "https://www.youtube.com/watch?v=8v0E5cO7UT0",
+        "https://en.wikipedia.org/wiki/Ellsberg_paradox"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Decision Making Under Uncertainty",
+      "title": "How should you decide when probabilities are unknown?",
+      "concepts": ["maximin", "maximax", "minimax regret", "Hurwicz criterion"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/decision-theory/",
+        "https://en.wikipedia.org/wiki/Minimax",
+        "https://ocw.mit.edu/courses/15-067-competitive-decision-making-and-negotiation-spring-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Decision Making Under Uncertainty",
+      "title": "Can you measure subjective beliefs?",
+      "concepts": ["subjective probability", "Savage SEU", "personal probability"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/decision-theory/",
+        "https://www.lesswrong.com/posts/QGkYCwyC7wTDyt3yT/0-and-1-are-not-probabilities",
+        "https://en.wikipedia.org/wiki/Subjective_expected_utility"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Decision Making Under Uncertainty",
+      "title": "How do you update beliefs with new evidence?",
+      "concepts": ["Bayesian decision theory", "posterior distributions", "value of information"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/bayes-theorem/",
+        "https://www.youtube.com/watch?v=HZGCoVF3YvM",
+        "https://www.khanacademy.org/math/statistics-probability/probability-library"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Decision Making Under Uncertainty",
+      "title": "Review: Uncertainty and Ambiguity",
+      "concepts": ["ambiguity review", "decision rules review", "Bayesian updating review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/decision-theory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applications & Extensions",
+      "title": "How much is information worth?",
+      "concepts": ["value of information", "perfect information", "expected value of sample information"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Value_of_information",
+        "https://ocw.mit.edu/courses/15-067-competitive-decision-making-and-negotiation-spring-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications & Extensions",
+      "title": "What happens when you make decisions over time?",
+      "concepts": ["sequential decisions", "dynamic programming", "decision trees with learning"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/15-067-competitive-decision-making-and-negotiation-spring-2011/",
+        "https://en.wikipedia.org/wiki/Sequential_decision_making"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications & Extensions",
+      "title": "How do you put all these tools together?",
+      "concepts": ["integration", "normative vs. descriptive", "practical decision analysis"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/decision-theory/",
+        "https://www.lesswrong.com/posts/wAXodw6LPScjrdnkR/rationality-appreciating-the-art-of-rationality"
+      ],
+      "status": "pending"
+    }
+  ]
+}

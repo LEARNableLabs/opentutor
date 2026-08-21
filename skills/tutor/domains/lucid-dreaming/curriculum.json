@@ -1,0 +1,372 @@
+{
+  "topic": "Lucid dreaming — neuroscience and induction techniques",
+  "slug": "lucid-dreaming",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic neuroscience (neurons, brain regions)",
+    "sleep cycles and REM sleep",
+    "consciousness and metacognition concepts"
+  ],
+  "exit_criteria": [
+    "explain neural correlates of lucid dreaming and gamma band activity",
+    "apply multiple induction techniques (MILD, WILD, WBTB, reality testing)",
+    "design a personalized practice protocol based on sleep architecture",
+    "interpret research findings on induction efficacy and neurostimulation",
+    "critically evaluate therapeutic and performance applications"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Sleep Science Foundations",
+      "title": "Why does REM sleep create a world you can't control?",
+      "concepts": ["REM sleep architecture", "phasic vs tonic REM", "muscle atonia"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sleepfoundation.org/stages-of-sleep/rem-sleep",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6760012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Sleep Science Foundations",
+      "title": "What makes dreams feel real if your prefrontal cortex is offline?",
+      "concepts": ["frontal deactivation", "default mode network", "dorsolateral prefrontal cortex"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nrn.2016.22",
+        "https://pubmed.ncbi.nlm.nih.gov/19877823/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Sleep Science Foundations",
+      "title": "How do you measure consciousness during sleep?",
+      "concepts": ["neural correlates of consciousness", "EEG signatures", "eye-signal paradigm"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.cell.com/current-biology/fulltext/S0960-9822(21)00059-2",
+        "https://lucidity.com/LucidDreamingFAQ2.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Sleep Science Foundations",
+      "title": "Why don't most people remember their dreams?",
+      "concepts": ["dream recall", "hippocampal encoding", "acetylcholine", "memory consolidation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00459/full",
+        "https://asdreams.org/journal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Sleep Science Foundations",
+      "title": "Can you really talk to someone while they're dreaming?",
+      "concepts": ["real-time communication", "Konkoly experiment", "motor cortex preservation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cell.com/current-biology/fulltext/S0960-9822(21)00059-2",
+        "https://www.youtube.com/watch?v=mzW7YgQ8u3Y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Sleep Science Foundations",
+      "title": "How do sleep cycles set the stage for lucid awareness?",
+      "concepts": ["REM architecture", "frontal deactivation", "dream recall", "consciousness measurement"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.sleepfoundation.org/stages-of-sleep",
+        "https://asdreams.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "The Neuroscience of Lucidity",
+      "title": "What happens in your brain the moment you realize you're dreaming?",
+      "concepts": ["metacognition", "frontal reactivation", "insight moment"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nn.2228",
+        "https://pubmed.ncbi.nlm.nih.gov/19358232/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Neuroscience of Lucidity",
+      "title": "Why does 40 Hz gamma activity mark lucid awareness?",
+      "concepts": ["gamma band oscillations", "frontopolar cortex", "Voss study"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nn.2228",
+        "https://pubmed.ncbi.nlm.nih.gov/19358232/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "The Neuroscience of Lucidity",
+      "title": "How much control do you really have in a lucid dream?",
+      "concepts": ["dream control", "volitional action", "degrees of lucidity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://psycnet.apa.org/record/1991-97867-000",
+        "https://www.world-of-lucid-dreaming.com/dream-control.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Neuroscience of Lucidity",
+      "title": "Teach me how frontal vs. parietal activation differs in lucid vs. non-lucid REM",
+      "concepts": ["prefrontal cortex", "precuneus", "parietal lobule", "neuroimaging"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00415/full",
+        "https://pubmed.ncbi.nlm.nih.gov/23675359/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The Neuroscience of Lucidity",
+      "title": "What are the neural signatures that distinguish lucid from normal dreaming?",
+      "concepts": ["frontal reactivation", "gamma oscillations", "metacognition", "dream control"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://asdreams.org/",
+        "https://lucidity.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Core Induction Techniques",
+      "title": "Why does asking 'am I dreaming?' actually work?",
+      "concepts": ["reality testing", "critical state awareness", "prospective memory"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6082533/",
+        "https://www.world-of-lucid-dreaming.com/reality-checks.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Core Induction Techniques",
+      "title": "How do you trick your brain into staying aware while falling asleep?",
+      "concepts": ["WILD technique", "hypnagogic hallucinations", "sleep paralysis", "anchor attention"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/23427782/",
+        "https://www.dreamviews.com/wiki/WILD-Tutorial"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Core Induction Techniques",
+      "title": "What makes MILD the most evidence-backed induction method?",
+      "concepts": ["mnemonic induction", "prospective memory training", "intention setting"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202242",
+        "https://lucidity.com/NL11.RU.IncLDs.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Core Induction Techniques",
+      "title": "Why does waking up 5 hours into sleep triple your chances?",
+      "concepts": ["WBTB", "circadian rhythm", "REM rebound", "sleep pressure"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/22803500/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3156892/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Core Induction Techniques",
+      "title": "Design your own induction protocol combining MILD + WBTB",
+      "concepts": ["protocol design", "combining techniques", "sleep tracking"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202242",
+        "https://www.sleepfoundation.org/sleep-hygiene"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Core Induction Techniques",
+      "title": "How do the core induction techniques leverage brain and sleep science?",
+      "concepts": ["reality testing", "MILD", "WILD", "WBTB", "protocol design"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6082533/",
+        "https://pubmed.ncbi.nlm.nih.gov/22803500/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Advanced Methods",
+      "title": "Can external light or sound cue lucidity without waking you?",
+      "concepts": ["external cueing", "light masks", "audio cues", "incorporation vs. awakening"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/28514498/",
+        "https://www.frontiersin.org/articles/10.3389/fnins.2019.01041/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Methods",
+      "title": "Why does galantamine boost acetylcholine and lucid dream frequency?",
+      "concepts": ["pharmacological enhancement", "acetylcholinesterase inhibition", "galantamine", "cholinergic system"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/29935162/",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201246"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Advanced Methods",
+      "title": "How does transcranial direct current stimulation (tDCS) trigger lucidity?",
+      "concepts": ["tDCS", "frontal gamma enhancement", "neurostimulation", "Voss protocol"],
+      "difficulty": 5,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/nn.3719",
+        "https://pubmed.ncbi.nlm.nih.gov/24842087/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Methods",
+      "title": "What are the risks and ethics of lucid dream enhancement tech?",
+      "concepts": ["safety", "sleep disruption", "ethics", "informed consent"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.frontiersin.org/articles/10.3389/fnhum.2018.00103/full",
+        "https://asdreams.org/ethics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Methods",
+      "title": "Teach me the evidence for and against one advanced method of your choice",
+      "concepts": ["critical evaluation", "efficacy", "replication", "individual variation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6082533/",
+        "https://pubmed.ncbi.nlm.nih.gov/23427782/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Methods",
+      "title": "What have we learned about enhancing lucid dreams with technology?",
+      "concepts": ["external cueing", "pharmacological enhancement", "tDCS", "safety and ethics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/nn.3719",
+        "https://www.frontiersin.org/articles/10.3389/fnhum.2018.00103/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications and Frontiers",
+      "title": "How can lucid dreaming treat nightmares and PTSD?",
+      "concepts": ["nightmare treatment", "imagery rehearsal therapy", "exposure", "emotion regulation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/23273389/",
+        "https://www.frontiersin.org/articles/10.3389/fpsyg.2020.01746/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications and Frontiers",
+      "title": "Can you actually practice motor skills or solve problems while lucid?",
+      "concepts": ["motor rehearsal", "athletic training", "creativity", "problem-solving"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/21515224/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4911882/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications and Frontiers",
+      "title": "What are the current frontiers in two-way communication experiments?",
+      "concepts": ["interactive dreaming", "Konkoly paradigm", "cognitive tasks", "future directions"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cell.com/current-biology/fulltext/S0960-9822(21)00059-2",
+        "https://www.youtube.com/watch?v=mzW7YgQ8u3Y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications and Frontiers",
+      "title": "How does lucid dreaming connect neuroscience to real-world applications?",
+      "concepts": ["therapeutic applications", "motor rehearsal", "interactive dreaming", "research literacy"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://asdreams.org/",
+        "https://lucidity.com/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6082533/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

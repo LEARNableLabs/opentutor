@@ -1,0 +1,300 @@
+{
+  "topic": "Citizen science — participatory research methods",
+  "slug": "citizen-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic research methods",
+    "scientific literacy",
+    "familiarity with community engagement"
+  ],
+  "exit_criteria": [
+    "design a citizen science project with appropriate protocols",
+    "assess data quality and implement validation strategies",
+    "evaluate ethical considerations and power dynamics",
+    "select appropriate technology platforms and tools",
+    "measure scientific and social impacts of participatory research"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Citizen Science",
+      "title": "What makes citizen science different from traditional research?",
+      "concepts": ["participatory research", "amateur science history", "public engagement"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.citizenscience.gov/about/", "https://ecsa.ngo/ten-principles-of-citizen-science/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Citizen Science",
+      "title": "How did Galaxy Zoo revolutionize crowdsourced classification?",
+      "concepts": ["online platforms", "distributed cognition", "crowdsourcing"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.zooniverse.org/projects/zookeeper/galaxy-zoo/", "https://academic.oup.com/mnras/article/389/3/1179/1066797"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Citizen Science",
+      "title": "Why do people volunteer for science projects?",
+      "concepts": ["motivation", "learning outcomes", "social capital"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.sciencedirect.com/science/article/pii/S0006320714004029", "https://www.scistarter.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Citizen Science",
+      "title": "What are the levels of public participation in scientific research?",
+      "concepts": ["contributory projects", "collaborative projects", "co-created research", "Shirk framework"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.jstor.org/stable/27786204", "https://www.wilsoncenter.org/article/public-participation-scientific-research-framework-deliberate-design"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Citizen Science",
+      "title": "How has citizen science evolved from birding clubs to global networks?",
+      "concepts": ["historical development", "Cornell Lab", "eBird", "professionalization"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://ebird.org/about", "https://www.birds.cornell.edu/home/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Designing Participatory Projects",
+      "title": "What makes a research question suitable for citizen science?",
+      "concepts": ["scalability", "task design", "accessibility", "feasibility"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.citizenscience.gov/toolkit/", "https://link.springer.com/book/10.1007/978-3-030-58278-4"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Designing Participatory Projects",
+      "title": "What have we learned about citizen science foundations and design principles?",
+      "concepts": ["review", "synthesis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://ecsa.ngo/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Designing Participatory Projects",
+      "title": "How do you co-design a project with community members?",
+      "concepts": ["participatory design", "stakeholder engagement", "power sharing", "co-creation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.publicengagement.ac.uk/", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6086699/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Designing Participatory Projects",
+      "title": "What protocols ensure data consistency across thousands of volunteers?",
+      "concepts": ["standardization", "training materials", "protocols", "repeatability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.dataone.org/education-modules", "https://www.inaturalist.org/pages/help"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Designing Participatory Projects",
+      "title": "How does iNaturalist turn phone photos into biodiversity data?",
+      "concepts": ["mobile apps", "image recognition", "species identification", "data pipelines"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.inaturalist.org/", "https://www.inaturalist.org/pages/computer_vision_demo"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Designing Participatory Projects",
+      "title": "How would you design a mini citizen science project for your community?",
+      "concepts": ["project scoping", "protocol design", "resource planning"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.zooniverse.org/lab", "https://www.citizenscience.gov/catalog/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Engagement and Data Quality",
+      "title": "How do you recruit and retain citizen scientists?",
+      "concepts": ["recruitment strategies", "retention", "communication", "community building"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.scistarter.org/research", "https://theoryandpractice.citizenscienceassociation.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Engagement and Data Quality",
+      "title": "What happens when volunteers make mistakes?",
+      "concepts": ["error detection", "consensus models", "expert validation", "statistical filtering"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://royalsocietypublishing.org/doi/10.1098/rstb.2011.0388", "https://www.nature.com/articles/d41586-018-05083-x"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Engagement and Data Quality",
+      "title": "How do design choices and data quality strategies work together?",
+      "concepts": ["review", "data quality"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.citizenscience.gov/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Engagement and Data Quality",
+      "title": "How do training programs improve volunteer data quality?",
+      "concepts": ["training design", "calibration", "feedback loops", "skill development"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.birds.cornell.edu/home/learning/", "https://academic.oup.com/bioscience/article/59/11/977/256499"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Engagement and Data Quality",
+      "title": "Why does Foldit turn protein folding into a game?",
+      "concepts": ["gamification", "intrinsic motivation", "puzzle design", "scientific games"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://fold.it/", "https://www.nature.com/articles/nature09304"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Engagement and Data Quality",
+      "title": "How do you measure the learning outcomes of participation?",
+      "concepts": ["science literacy", "evaluation methods", "learning assessment", "impact measurement"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.informalscience.org/citizen-science", "https://www.tandfonline.com/doi/full/10.1080/09500693.2016.1221771"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Engagement and Data Quality",
+      "title": "What statistical methods validate volunteer-collected data?",
+      "concepts": ["inter-rater reliability", "occupancy models", "hierarchical modeling", "uncertainty quantification"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://esajournals.onlinelibrary.wiley.com/doi/10.1890/09-0877.1", "https://methods.sagepub.com/book/statistics-for-citizen-science"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Impact and Ethics",
+      "title": "Who owns the data in a citizen science project?",
+      "concepts": ["data ownership", "intellectual property", "open data", "licensing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://creativecommons.org/", "https://ecsa.ngo/wp-content/uploads/2020/03/ECSA_Data_Sharing_Fact_Sheet.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Impact and Ethics",
+      "title": "How has citizen science influenced environmental policy?",
+      "concepts": ["policy impact", "advocacy", "regulatory science", "evidence-based policy"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.epa.gov/citizen-science", "https://www.sciencedirect.com/science/article/pii/S000632071730383X"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Impact and Ethics",
+      "title": "What determines the quality, engagement, and impact of citizen science?",
+      "concepts": ["review", "synthesis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.citizenscience.gov/toolkit/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Impact and Ethics",
+      "title": "What are the power dynamics in researcher-community partnerships?",
+      "concepts": ["extractive research", "reciprocity", "community benefit", "decolonization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.sciencedirect.com/science/article/pii/S0016718515300051", "https://www.jstor.org/stable/j.ctt1mtz55k"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Impact and Ethics",
+      "title": "How do you ensure equity and inclusion in participation?",
+      "concepts": ["accessibility", "diversity", "digital divide", "inclusive design"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.frontiersin.org/articles/10.3389/fevo.2020.00233/full", "https://www.citizenscience.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Tools and Technology",
+      "title": "What platforms support citizen science at scale?",
+      "concepts": ["Zooniverse", "project builders", "mobile apps", "web platforms"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.zooniverse.org/", "https://citsci.org/", "https://www.scistarter.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Tools and Technology",
+      "title": "How can AI assist citizen science without replacing humans?",
+      "concepts": ["machine learning", "human-AI collaboration", "automated validation", "hybrid systems"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.nature.com/articles/s42256-019-0132-2", "https://www.pnas.org/doi/10.1073/pnas.1902299116"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Tools and Technology",
+      "title": "What sensors and IoT devices enable environmental monitoring?",
+      "concepts": ["sensor networks", "air quality", "low-cost sensors", "IoT platforms"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.epa.gov/air-sensor-toolbox", "https://www.publiclab.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Synthesis and Future",
+      "title": "How would you design and pitch your own citizen science initiative?",
+      "concepts": ["project synthesis", "integration", "implementation planning"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.citizenscience.gov/toolkit/", "https://ecsa.ngo/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Synthesis and Future",
+      "title": "What are the essential elements of successful participatory research?",
+      "concepts": ["review", "synthesis", "future directions"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.citizenscience.gov/", "https://ecsa.ngo/", "https://theoryandpractice.citizenscienceassociation.org/"],
+      "status": "pending"
+    }
+  ]
+}

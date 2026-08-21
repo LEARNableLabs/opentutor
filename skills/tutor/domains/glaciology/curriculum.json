@@ -1,0 +1,358 @@
+{
+  "topic": "Glaciology",
+  "slug": "glaciology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "calculus (single and multivariable)",
+    "basic physics (mechanics, thermodynamics)",
+    "introductory geology or earth science"
+  ],
+  "exit_criteria": [
+    "explain the physical mechanisms governing glacier flow",
+    "interpret mass balance data and predict glacier response to climate forcing",
+    "understand ice sheet modeling approaches and their limitations",
+    "analyze remote sensing data for glacier monitoring",
+    "evaluate ice core records for paleoclimate reconstruction",
+    "assess contributions of ice sheets to sea level rise"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Ice Fundamentals",
+      "title": "What makes ice flow like a slow river?",
+      "concepts": ["glacier definition", "ice deformation", "viscous flow"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.antarcticglaciers.org/glacier-processes/glacier-flow-2/glacier-flow/",
+        "https://nsidc.org/learn/parts-cryosphere/glaciers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Ice Fundamentals",
+      "title": "Why does ice have a hexagonal crystal structure?",
+      "concepts": ["ice crystal structure", "hydrogen bonding", "ice Ih"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.its.caltech.edu/~atomic/snowcrystals/ice/ice.htm",
+        "https://www.igsoc.org/education/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Ice Fundamentals",
+      "title": "How does firn transform into glacial ice?",
+      "concepts": ["firn densification", "pressure sintering", "air bubble closure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nsidc.org/cryosphere/glossary/term/firn",
+        "https://www.swisseduc.ch/glaciers/glossary/firn-en.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Ice Fundamentals",
+      "title": "What determines the temperature inside a glacier?",
+      "concepts": ["geothermal heat flux", "surface temperature forcing", "thermal regime"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.antarcticglaciers.org/glacier-processes/glacier-thermal-regime/",
+        "https://mitpress.mit.edu/books/physics-glaciers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Ice Fundamentals",
+      "title": "What are the fundamental physical properties of ice?",
+      "concepts": ["crystal structure", "densification", "thermal properties"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.igsoc.org/education/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Glacier Dynamics",
+      "title": "Why do glaciers grow in winter but shrink in summer?",
+      "concepts": ["mass balance", "accumulation", "ablation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.antarcticglaciers.org/glacier-processes/mass-balance/",
+        "https://www.usgs.gov/centers/norock/science/retreat-glaciers-glacier-national-park"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Glacier Dynamics",
+      "title": "How do we measure whether a glacier is gaining or losing mass?",
+      "concepts": ["mass balance measurement", "geodetic method", "glaciological method"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.usgs.gov/programs/climate-research-and-development-program/science/glacier-mass-balance",
+        "https://wgms.ch/products_gmb/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Glacier Dynamics",
+      "title": "What makes ice deform internally versus slide at its base?",
+      "concepts": ["internal deformation", "basal sliding", "Glen's flow law"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.antarcticglaciers.org/glacier-processes/glacier-flow-2/",
+        "https://serc.carleton.edu/NAGTWorkshops/geomorphology/activities/14423.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Glacier Dynamics",
+      "title": "Why are some glaciers frozen to their beds while others slide freely?",
+      "concepts": ["basal thermal regime", "temperate glaciers", "polar glaciers"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.antarcticglaciers.org/glacier-processes/glacier-thermal-regime/",
+        "https://www.igsoc.org/journal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Glacier Dynamics",
+      "title": "What causes some glaciers to suddenly surge forward?",
+      "concepts": ["glacier surges", "instability mechanisms", "Variegated Glacier"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.antarcticglaciers.org/glacier-processes/glacier-flow-2/surging-glaciers/",
+        "https://pubs.usgs.gov/pp/1258c/report.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Glacier Dynamics",
+      "title": "How do mass balance and glacier flow work together?",
+      "concepts": ["accumulation", "ablation", "flow mechanisms"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.antarcticglaciers.org/glacier-processes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Glacier Dynamics",
+      "title": "How would you design a monitoring program for a retreating glacier?",
+      "concepts": ["monitoring design", "measurement techniques", "data interpretation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.usgs.gov/programs/climate-research-and-development-program/science/benchmarks-glacier-mass-balance",
+        "https://wgms.ch/data_databaseversions/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Ice Sheet Modeling",
+      "title": "How do ice sheets differ from mountain glaciers?",
+      "concepts": ["ice sheets", "spatial scale", "marine margins"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nsidc.org/learn/parts-cryosphere/ice-sheets",
+        "https://www.antarcticglaciers.org/antarctica-2/west-antarctic-ice-sheet-2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Ice Sheet Modeling",
+      "title": "What equations govern ice sheet evolution?",
+      "concepts": ["mass conservation", "momentum balance", "stress-strain relations"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-475-seminar-in-geophysics-dynamics-of-glaciers-and-ice-sheets-spring-2009/",
+        "https://pism.io/docs/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Ice Sheet Modeling",
+      "title": "Why can we simplify the full Stokes equations for ice sheets?",
+      "concepts": ["shallow ice approximation", "aspect ratio", "stress regime"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://tc.copernicus.org/articles/8/2397/2014/",
+        "https://www.cambridge.org/core/books/physics-of-glaciers/E6B8D18B17F58429C0E675437A7EB3B7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Ice Sheet Modeling",
+      "title": "What makes ice streams flow so much faster than surrounding ice?",
+      "concepts": ["ice streams", "basal lubrication", "weak till"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.antarcticglaciers.org/glacier-processes/glacier-flow-2/ice-streams/",
+        "https://www.nature.com/articles/nature06599"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Ice Sheet Modeling",
+      "title": "What have we learned about ice sheet physics and modeling?",
+      "concepts": ["conservation equations", "ice streams", "numerical methods"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pism.io/docs/manual/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Ice Sheet Modeling",
+      "title": "How do we simulate ice sheets on computers?",
+      "concepts": ["numerical methods", "finite elements", "ice sheet models"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://pism.io/",
+        "https://issm.jpl.nasa.gov/",
+        "http://elmerfem.org/elmerice/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Ice Sheet Modeling",
+      "title": "Why might West Antarctica collapse catastrophically?",
+      "concepts": ["marine ice sheet instability", "grounding line", "MISI"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.antarcticglaciers.org/antarctica-2/west-antarctic-ice-sheet-2/marine-ice-sheet-instability/",
+        "https://www.nature.com/articles/nature13550"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Observations & Climate",
+      "title": "How can satellites measure ice sheet height changes?",
+      "concepts": ["radar altimetry", "laser altimetry", "ICESat-2"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://icesat-2.gsfc.nasa.gov/",
+        "https://earth.esa.int/eogateway/missions/cryosat"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Observations & Climate",
+      "title": "What can we learn from drilling ice cores?",
+      "concepts": ["ice cores", "paleoclimate proxies", "trapped air bubbles"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://icecores.org/",
+        "https://www.bas.ac.uk/project/ice-cores/",
+        "https://www.ncei.noaa.gov/products/paleoclimatology/ice-core"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Observations & Climate",
+      "title": "How do we reconstruct temperature from ice cores?",
+      "concepts": ["oxygen isotopes", "deuterium excess", "temperature reconstruction"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nature.com/articles/nature02599",
+        "https://www.ncei.noaa.gov/products/paleoclimatology/ice-core"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Observations & Climate",
+      "title": "How much will ice sheets contribute to sea level rise this century?",
+      "concepts": ["sea level contribution", "IPCC projections", "uncertainty quantification"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ipcc.ch/srocc/",
+        "http://www.imbie.org/",
+        "https://sealevel.nasa.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Observations & Climate",
+      "title": "How do observations reveal glacier-climate connections?",
+      "concepts": ["remote sensing", "ice cores", "sea level", "feedbacks"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://nsidc.org/learn/parts-cryosphere"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Observations & Climate",
+      "title": "Why do glaciers and climate form a two-way feedback loop?",
+      "concepts": ["ice-albedo feedback", "elevation-mass balance feedback", "climate sensitivity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.climate.gov/news-features/understanding-climate/climate-change-glacier-mass-balance",
+        "https://www.antarcticglaciers.org/glaciers-and-climate/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Observations & Climate",
+      "title": "How would you explain glacier retreat to a policy maker?",
+      "concepts": ["science communication", "synthesis", "policy relevance"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ipcc.ch/srocc/chapter/summary-for-policymakers/",
+        "https://www.climate.gov/news-features/understanding-climate/climate-change-glacier-mass-balance"
+      ],
+      "status": "pending"
+    }
+  ]
+}

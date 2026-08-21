@@ -1,0 +1,423 @@
+{
+  "topic": "Algebraic geometry — from curves to schemes",
+  "slug": "algebraic-geometry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "abstract algebra (rings, fields, ideals)",
+    "commutative algebra (localization, Noetherian rings)",
+    "multivariable calculus",
+    "point-set topology",
+    "linear algebra"
+  ],
+  "exit_criteria": [
+    "define and work with affine and projective varieties",
+    "compute divisors and apply Riemann-Roch for curves",
+    "construct and manipulate sheaves on topological spaces",
+    "define schemes as locally ringed spaces",
+    "translate classical results into scheme-theoretic language",
+    "work with morphisms of schemes and their properties"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Affine Varieties",
+      "title": "Why can't we solve every polynomial equation geometrically?",
+      "concepts": ["affine space", "algebraic sets", "Zariski topology"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/pages/syllabus/",
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Affine Varieties",
+      "title": "How do ideals encode geometric objects?",
+      "concepts": ["Hilbert's Nullstellensatz", "radical ideals", "coordinate rings"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/Hartshorne_engl.pdf",
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Affine Varieties",
+      "title": "What makes a function 'regular' on a variety?",
+      "concepts": ["regular functions", "function fields", "rational functions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.berkeley.edu/~mhaiman/math256-fall18-spring19/",
+        "https://www.youtube.com/watch?v=ceAtMOmyu1A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Affine Varieties",
+      "title": "How do we map varieties to each other?",
+      "concepts": ["morphisms of varieties", "dominant maps", "images of morphisms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/pages/syllabus/",
+        "https://www.youtube.com/playlist?list=PLGAwpoAbWke0NBQbHpiztQcbKQCqcsNXu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Affine Varieties",
+      "title": "Why does dimension measure degrees of freedom?",
+      "concepts": ["Krull dimension", "transcendence degree", "dimension of varieties"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/Hartshorne_engl.pdf",
+        "https://math.colorado.edu/~jonathan.wise/teaching/math6170-spring-2013/syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Projective Varieties",
+      "title": "Why do we need points at infinity?",
+      "concepts": ["projective space", "homogeneous coordinates", "projective closure"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://math.mit.edu/classes/18.721/Fall2021/syllabus.html",
+        "https://www.youtube.com/watch?v=0PNx_10tmo4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Projective Varieties",
+      "title": "What makes a polynomial 'homogeneous'?",
+      "concepts": ["homogeneous polynomials", "graded rings", "Proj construction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf",
+        "https://www.youtube.com/playlist?list=PLGAwpoAbWke0NBQbHpiztQcbKQCqcsNXu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Projective Varieties",
+      "title": "How do affine and projective views connect?",
+      "concepts": ["affine patches", "dehomogenization", "gluing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-726-algebraic-geometry-spring-2009/pages/lecture-notes/",
+        "https://math.berkeley.edu/~mhaiman/math256-fall18-spring19/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Projective Varieties",
+      "title": "Can you connect affine and projective varieties through morphisms?",
+      "concepts": ["affine varieties", "projective varieties", "regular functions", "morphisms"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://notes.dzackgarza.com/Projects/2022%20Advanced%20Qual%20Projects/Algebraic%20Geometry/002%20Resources%20Problems%20and%20Solutions.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Algebraic Curves",
+      "title": "Why are curves the simplest interesting varieties?",
+      "concepts": ["plane curves", "degree", "Bézout's theorem"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://math.mit.edu/classes/18.721/Fall2021/syllabus.html",
+        "https://www.youtube.com/watch?v=ceAtMOmyu1A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Algebraic Curves",
+      "title": "What happens when curves have singularities?",
+      "concepts": ["singular points", "tangent cones", "resolution of singularities"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/Hartshorne_engl.pdf",
+        "https://www.youtube.com/playlist?list=PLHEKZhtMXuKydxWEKZwbFj3rMiCd5ZqYh"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Algebraic Curves",
+      "title": "How do we count 'points' on a curve algebraically?",
+      "concepts": ["divisors", "principal divisors", "linear equivalence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf",
+        "https://math.berkeley.edu/~mhaiman/math256-fall18-spring19/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Algebraic Curves",
+      "title": "Why does genus measure topological complexity?",
+      "concepts": ["genus", "Riemann-Hurwitz formula", "Riemann surfaces"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/Hartshorne_engl.pdf",
+        "https://www.youtube.com/watch?v=0PNx_10tmo4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Algebraic Curves",
+      "title": "What does Riemann-Roch tell us about functions on curves?",
+      "concepts": ["Riemann-Roch theorem", "canonical divisor", "dimensions of line bundles"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/Hartshorne_engl.pdf",
+        "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Algebraic Curves",
+      "title": "How can a curve be a group?",
+      "concepts": ["elliptic curves", "group law", "Weierstrass form"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf",
+        "https://www.youtube.com/playlist?list=PLGAwpoAbWke0NBQbHpiztQcbKQCqcsNXu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Algebraic Curves",
+      "title": "How do divisors and genus relate to Riemann-Roch?",
+      "concepts": ["plane curves", "divisors", "genus", "Riemann-Roch"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://notes.dzackgarza.com/Projects/2022%20Advanced%20Qual%20Projects/Algebraic%20Geometry/002%20Resources%20Problems%20and%20Solutions.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Sheaves and Ringed Spaces",
+      "title": "Why do we need sheaves to track local data?",
+      "concepts": ["presheaves", "sheaves", "sheaf axioms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-726-algebraic-geometry-spring-2009/pages/lecture-notes/",
+        "https://www.youtube.com/watch?v=ceAtMOmyu1A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Sheaves and Ringed Spaces",
+      "title": "What information lives in a stalk?",
+      "concepts": ["stalks", "germs", "sheafification"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf",
+        "https://www.youtube.com/playlist?list=PLHEKZhtMXuKydxWEKZwbFj3rMiCd5ZqYh"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Sheaves and Ringed Spaces",
+      "title": "How do ringed spaces generalize manifolds?",
+      "concepts": ["ringed spaces", "locally ringed spaces", "structure sheaves"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-726-algebraic-geometry-spring-2009/resources/mit18_726s09_lec05_schemes/",
+        "https://math.berkeley.edu/~mhaiman/math256-fall18-spring19/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Sheaves and Ringed Spaces",
+      "title": "Can we compute with sheaves?",
+      "concepts": ["sheaf morphisms", "exact sequences", "kernel and cokernel sheaves"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/Hartshorne_engl.pdf",
+        "https://www.youtube.com/watch?v=0PNx_10tmo4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Schemes",
+      "title": "Why do prime ideals become points?",
+      "concepts": ["Spec of a ring", "Zariski topology on Spec", "points as prime ideals"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-726-algebraic-geometry-spring-2009/resources/mit18_726s09_lec05_schemes/",
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Schemes",
+      "title": "How does the structure sheaf encode algebra geometrically?",
+      "concepts": ["structure sheaf on Spec", "localization", "affine schemes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf",
+        "https://www.youtube.com/playlist?list=PLGAwpoAbWke0NBQbHpiztQcbKQCqcsNXu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Schemes",
+      "title": "How do sheaves connect to the structure of affine schemes?",
+      "concepts": ["sheaves", "ringed spaces", "Spec", "structure sheaves"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://notes.dzackgarza.com/Projects/2022%20Advanced%20Qual%20Projects/Algebraic%20Geometry/002%20Resources%20Problems%20and%20Solutions.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Schemes",
+      "title": "How do we glue schemes together?",
+      "concepts": ["gluing schemes", "open subschemes", "schemes as locally ringed spaces"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-726-algebraic-geometry-spring-2009/pages/lecture-notes/",
+        "https://math.berkeley.edu/~mhaiman/math256-fall18-spring19/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Schemes",
+      "title": "What do classical varieties look like as schemes?",
+      "concepts": ["varieties as schemes", "reduced schemes", "irreducibility"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/Hartshorne_engl.pdf",
+        "https://www.youtube.com/watch?v=ceAtMOmyu1A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Schemes",
+      "title": "Why can schemes have 'fuzzier' points than varieties?",
+      "concepts": ["nilpotents", "fat points", "non-reduced schemes"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf",
+        "https://www.youtube.com/playlist?list=PLHEKZhtMXuKydxWEKZwbFj3rMiCd5ZqYh"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Morphisms of Schemes",
+      "title": "How do morphisms of schemes generalize maps of varieties?",
+      "concepts": ["morphisms of locally ringed spaces", "spec of ring homomorphisms", "functoriality"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-726-algebraic-geometry-spring-2009/pages/lecture-notes/",
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Morphisms of Schemes",
+      "title": "What properties of morphisms are 'local' vs 'global'?",
+      "concepts": ["separated morphisms", "proper morphisms", "finite morphisms"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/Hartshorne_engl.pdf",
+        "https://math.berkeley.edu/~mhaiman/math256-fall18-spring19/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Morphisms of Schemes",
+      "title": "How does dimension behave under morphisms?",
+      "concepts": ["fiber dimension", "dominant morphisms", "dimension theory for schemes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf",
+        "https://www.youtube.com/watch?v=0PNx_10tmo4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Synthesis",
+      "title": "Why do schemes unify geometry, arithmetic, and topology?",
+      "concepts": ["arithmetic schemes", "geometry over different fields", "schemes over Spec Z"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf",
+        "https://ocw.mit.edu/courses/18-726-algebraic-geometry-spring-2009/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Synthesis",
+      "title": "What journey did we take from curves to schemes?",
+      "concepts": ["varieties", "curves", "sheaves", "schemes", "morphisms"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://notes.dzackgarza.com/Projects/2022%20Advanced%20Qual%20Projects/Algebraic%20Geometry/002%20Resources%20Problems%20and%20Solutions.html",
+        "https://www.youtube.com/playlist?list=PLGAwpoAbWke0NBQbHpiztQcbKQCqcsNXu"
+      ],
+      "status": "pending"
+    }
+  ]
+}

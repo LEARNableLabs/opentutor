@@ -1,0 +1,383 @@
+{
+  "topic": "Urban Planning and City Science",
+  "slug": "urban-planning",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic understanding of cities and urban environments",
+    "comfort with data and visualizations",
+    "familiarity with social systems and policy concepts"
+  ],
+  "exit_criteria": [
+    "analyze urban form using morphological and network concepts",
+    "evaluate land use regulations and their spatial effects",
+    "apply computational tools to urban data analysis",
+    "assess transportation systems through accessibility and equity lenses",
+    "critique development proposals using sustainability and justice frameworks",
+    "design participatory planning processes for community engagement"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Reading the City",
+      "title": "What can street patterns tell us about how a city evolved?",
+      "concepts": ["urban morphology", "street networks", "historical layering"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=3UgpfSp2t6k",
+        "https://99percentinvisible.org/episode/the-grand-model/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Reading the City",
+      "title": "Why do some neighborhoods feel walkable while others don't?",
+      "concepts": ["pedestrian experience", "human scale", "Jane Jacobs principles"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.pps.org/article/what-is-placemaking",
+        "https://gehlpeople.com/tools/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Reading the City",
+      "title": "How does density shape urban life?",
+      "concepts": ["population density", "built density", "agglomeration effects"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.lincolninst.edu/publications/articles/density-dilemma",
+        "https://www.citylab.com/design/2020/02/population-density-cities-urban-planning-coronavirus/606622/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Reading the City",
+      "title": "What patterns can you find in your own neighborhood's street network?",
+      "concepts": ["connectivity analysis", "observational methods", "spatial patterns"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.openstreetmap.org/",
+        "https://geoffboeing.com/publications/osmnx-complex-street-networks/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Reading the City",
+      "title": "What makes a public space successful?",
+      "concepts": ["public space design", "social infrastructure", "placemaking"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.pps.org/article/11steps",
+        "https://www.youtube.com/watch?v=8bLWHK4kbdg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review: Reading the City",
+      "title": "How do street patterns, scale, and density create the urban experience?",
+      "concepts": ["urban form synthesis", "morphological thinking", "observational analysis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/c/CityBeautiful"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Movement and Networks",
+      "title": "How do transportation networks shape where cities grow?",
+      "concepts": ["accessibility", "transit-oriented development", "spatial structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.itdp.org/library/standards-and-guides/tod-standard/",
+        "https://nacto.org/publication/transit-street-design-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Movement and Networks",
+      "title": "Why do highway expansions often fail to reduce traffic?",
+      "concepts": ["induced demand", "Braess's paradox", "network effects"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.wired.com/2014/06/wuwt-traffic-induced-demand/",
+        "https://www.youtube.com/watch?v=N4PW66_g6XA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Movement and Networks",
+      "title": "What does good bike infrastructure actually look like?",
+      "concepts": ["protected bike lanes", "network coherence", "modal hierarchy"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://nacto.org/publication/urban-bikeway-design-guide/",
+        "https://www.youtube.com/c/NotJustBikes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Movement and Networks",
+      "title": "How do we measure transportation equity?",
+      "concepts": ["spatial accessibility", "environmental justice", "equity metrics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/title-vi-environmental-justice",
+        "https://journals.sagepub.com/doi/10.1177/0739456X15610059"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Movement and Networks",
+      "title": "How would you design a better bus route for your city?",
+      "concepts": ["transit planning", "service design", "route optimization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://humantransit.org/basics",
+        "https://mobility.mit.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Review: Urban Form and Movement",
+      "title": "How do street networks, density, and transit systems interact?",
+      "concepts": ["systems thinking", "urban form", "transportation networks"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLv7BOfa4CxsEqVbiQQtPB5zPiY3Zs2qoX"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Land Use and Regulation",
+      "title": "Why does zoning exist and what problems does it create?",
+      "concepts": ["Euclidean zoning", "land use regulation", "regulatory impacts"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.planetizen.com/definition/zoning",
+        "https://www.youtube.com/watch?v=0lvyU1E5vHM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Land Use and Regulation",
+      "title": "How does single-family zoning shape segregation and affordability?",
+      "concepts": ["exclusionary zoning", "housing policy", "residential segregation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.brookings.edu/research/exclusionary-zoning-its-effect-on-racial-segregation-in-the-urban-united-states/",
+        "https://belonging.berkeley.edu/single-family-zoning-san-francisco-bay-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Land Use and Regulation",
+      "title": "What is form-based code and how is it different?",
+      "concepts": ["form-based codes", "new urbanism", "regulatory alternatives"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://formbasedcodes.org/",
+        "https://www.cnu.org/publicsquare/introduction-form-based-codes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Land Use and Regulation",
+      "title": "How do regulations affect the urban fabric in your neighborhood?",
+      "concepts": ["built form analysis", "regulatory archaeology", "policy impacts"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://missingmiddlehousing.com/",
+        "https://www.spur.org/publications/urbanist-article/2014-02-11/how-read-zoning-map"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Data-Driven Urbanism",
+      "title": "How can we use data to understand urban systems?",
+      "concepts": ["urban analytics", "spatial data", "computational methods"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mitpress.mit.edu/books/introduction-urban-science",
+        "https://www.tandfonline.com/doi/full/10.1080/17538947.2019.1569703"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Data-Driven Urbanism",
+      "title": "What can street network analysis reveal about urban form?",
+      "concepts": ["graph theory", "centrality measures", "network topology"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://geoffboeing.com/publications/street-network-models-indicators-world/",
+        "https://osmnx.readthedocs.io/en/stable/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Review: Regulation and Data Basics",
+      "title": "How do zoning rules and data tools help us analyze cities?",
+      "concepts": ["regulatory analysis", "computational methods", "integrated understanding"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.planetizen.com/features/120201-data-driven-planning-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Data-Driven Urbanism",
+      "title": "What can you learn from analyzing your city's open data?",
+      "concepts": ["open data", "GIS tools", "data visualization"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://qgis.org/en/site/",
+        "https://data.census.gov/",
+        "https://www.opendatanetwork.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Data-Driven Urbanism",
+      "title": "How do agent-based models help us simulate urban dynamics?",
+      "concepts": ["agent-based modeling", "emergence", "urban simulation"],
+      "difficulty": 5,
+      "type": "resource-drop",
+      "resources": [
+        "https://urbansim.com/",
+        "https://ccl.northwestern.edu/netlogo/models/community/Urban%20Suite",
+        "https://www.youtube.com/watch?v=T5Z7xeSaqTs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Sustainable and Equitable Cities",
+      "title": "How can cities adapt to climate change?",
+      "concepts": ["climate adaptation", "resilience", "green infrastructure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.c40.org/what-we-do/scaling-up-climate-action/",
+        "https://www.nature.org/en-us/what-we-do/our-priorities/build-healthy-cities/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Sustainable and Equitable Cities",
+      "title": "Why does gentrification happen and who does it harm?",
+      "concepts": ["gentrification", "displacement", "anti-displacement strategies"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.urbandisplacement.org/",
+        "https://www.youtube.com/watch?v=V0zAvlmzDFc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Sustainable and Equitable Cities",
+      "title": "What does meaningful community participation look like?",
+      "concepts": ["participatory planning", "community engagement", "power dynamics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://organizingengagement.org/",
+        "https://www.arnstein.com/ladder"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Sustainable and Equitable Cities",
+      "title": "How would you design an equity-focused planning process?",
+      "concepts": ["process design", "stakeholder analysis", "equity frameworks"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.urban.org/urban-wire/new-tool-helps-planners-implement-equitable-community-engagement",
+        "https://www.policylink.org/our-work/community/equitable-development-toolkit"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Review: Sustainable Cities",
+      "title": "How do climate resilience, equity, and community engagement connect?",
+      "concepts": ["sustainability integration", "equity synthesis", "holistic planning"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.cnu.org/our-projects/charter-new-urbanism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Synthesis and Practice",
+      "title": "How do all these systems interact in a real development project?",
+      "concepts": ["systems integration", "trade-offs", "holistic planning"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cnu.org/our-projects/charter-new-urbanism",
+        "https://www.citylab.com/solutions/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Synthesis and Practice",
+      "title": "What would you change about your city and why?",
+      "concepts": ["synthesis", "critical analysis", "vision and implementation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://civicdesign.org/",
+        "https://www.planning.org/greatplaces/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

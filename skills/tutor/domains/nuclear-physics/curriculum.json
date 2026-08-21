@@ -1,0 +1,370 @@
+{
+  "topic": "Nuclear Physics and Nuclear Engineering",
+  "slug": "nuclear-physics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "calculus (single and multivariable)",
+    "classical mechanics",
+    "electromagnetism",
+    "basic chemistry",
+    "probability and statistics"
+  ],
+  "exit_criteria": [
+    "explain nuclear structure using shell model and liquid drop model",
+    "calculate decay rates and activity for radioactive isotopes",
+    "analyze nuclear reactions using Q-values and cross-sections",
+    "understand neutron moderation and criticality in reactors",
+    "evaluate reactor safety systems and radiation protection strategies",
+    "apply nuclear physics concepts to medical and industrial applications"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Nuclear Structure",
+      "title": "Why is the nucleus stable when protons repel each other?",
+      "concepts": ["strong force", "binding energy", "mass defect"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/",
+        "https://hyperphysics.phy-astr.gsu.edu/hbase/NucEne/nucbin.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Nuclear Structure",
+      "title": "How does the liquid drop model predict nuclear behavior?",
+      "concepts": ["liquid drop model", "semi-empirical mass formula", "nuclear stability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-02-introduction-to-applied-nuclear-physics-spring-2012/",
+        "https://www.iaea.org/publications"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Nuclear Structure",
+      "title": "Why do certain neutron and proton numbers make nuclei extra stable?",
+      "concepts": ["magic numbers", "shell model", "nuclear energy levels"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://hyperphysics.phy-astr.gsu.edu/hbase/Nuclear/shell.html",
+        "https://www.nndc.bnl.gov/nudat3/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Nuclear Structure",
+      "title": "What can the chart of nuclides tell us about nuclear stability?",
+      "concepts": ["chart of nuclides", "valley of stability", "neutron-proton ratio"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.iaea.org/resources/databases/livechart-of-nuclides",
+        "https://www.nndc.bnl.gov/nudat3/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Radioactive Decay",
+      "title": "How do unstable nuclei transform themselves?",
+      "concepts": ["alpha decay", "beta decay", "gamma emission", "decay schemes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/alpha-decay",
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Radioactive Decay",
+      "title": "Why does half-life matter for nuclear waste storage?",
+      "concepts": ["half-life", "decay constant", "activity", "decay chains"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-wastes/radioactive-waste-management.aspx",
+        "https://hyperphysics.phy-astr.gsu.edu/hbase/Nuclear/halfli.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Radioactive Decay",
+      "title": "Review: Nuclear structure and decay",
+      "concepts": ["binding energy", "nuclear models", "decay modes", "half-life calculations"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Nuclear Reactions",
+      "title": "What happens when a neutron hits a nucleus?",
+      "concepts": ["neutron interactions", "elastic scattering", "inelastic scattering", "capture"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-02-introduction-to-applied-nuclear-physics-spring-2012/",
+        "https://www-nds.iaea.org/exfor/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Nuclear Reactions",
+      "title": "How do we calculate energy release in nuclear reactions?",
+      "concepts": ["Q-value", "reaction kinematics", "energy conservation", "momentum conservation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://hyperphysics.phy-astr.gsu.edu/hbase/NucEne/qval.html",
+        "https://ocw.mit.edu/courses/22-02-introduction-to-applied-nuclear-physics-spring-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Nuclear Reactions",
+      "title": "Why is the fission cross-section so important?",
+      "concepts": ["cross-section", "reaction probability", "resonances", "energy dependence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www-nds.iaea.org/exfor/",
+        "https://www.oecd-nea.org/jcms/pl_39910/janis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Nuclear Reactions",
+      "title": "What makes nuclear fission release so much energy?",
+      "concepts": ["nuclear fission", "fission fragments", "prompt neutrons", "delayed neutrons"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/nuclear-fission",
+        "https://www.world-nuclear.org/information-library/nuclear-fuel-cycle/introduction/physics-of-nuclear-energy.aspx"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Nuclear Reactions",
+      "title": "Why is nuclear fusion so hard to achieve on Earth?",
+      "concepts": ["nuclear fusion", "Coulomb barrier", "fusion cross-sections", "plasma confinement"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.iter.org/sci/whatisfusion",
+        "https://hyperphysics.phy-astr.gsu.edu/hbase/NucEne/fusion.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Nuclear Reactions",
+      "title": "Review: Nuclear reactions and energy",
+      "concepts": ["neutron interactions", "Q-values", "cross-sections", "fission", "fusion"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-02-introduction-to-applied-nuclear-physics-spring-2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Reactor Physics",
+      "title": "How does a chain reaction sustain itself?",
+      "concepts": ["chain reaction", "multiplication factor", "criticality", "neutron economy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/nuclear-fission",
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Reactor Physics",
+      "title": "Why do we need to slow down neutrons in most reactors?",
+      "concepts": ["neutron moderation", "moderators", "thermal neutrons", "scattering"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/uranium-enrichment.aspx",
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Reactor Physics",
+      "title": "What determines whether a reactor goes critical?",
+      "concepts": ["six-factor formula", "infinite multiplication", "leakage", "core geometry"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/",
+        "https://www.nrc.gov/reading-rm/basic-ref/students/for-educators/04.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Reactor Physics",
+      "title": "How do control rods regulate reactor power?",
+      "concepts": ["control rods", "reactivity", "reactor kinetics", "poison"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nrc.gov/reading-rm/basic-ref/students.html",
+        "https://www.world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-power-reactors/nuclear-power-reactors.aspx"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Reactor Physics",
+      "title": "Why do delayed neutrons make reactors controllable?",
+      "concepts": ["prompt neutrons", "delayed neutrons", "reactor period", "prompt critical"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/",
+        "https://www.nuclear-power.com/nuclear-power/reactor-physics/reactor-kinetics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Reactor Physics",
+      "title": "Review: Reactor physics fundamentals",
+      "concepts": ["criticality", "moderation", "reactivity control", "reactor kinetics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Reactor Design and Safety",
+      "title": "What are the key differences between reactor types?",
+      "concepts": ["PWR", "BWR", "CANDU", "fast reactors", "reactor generations"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-power-reactors/nuclear-power-reactors.aspx",
+        "https://www.iaea.org/topics/nuclear-power-reactors"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Reactor Design and Safety",
+      "title": "How do safety systems prevent reactor accidents?",
+      "concepts": ["defense in depth", "emergency core cooling", "containment", "passive safety"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nrc.gov/about-nrc/emerg-preparedness/about-emerg-preparedness.html",
+        "https://www.iaea.org/topics/nuclear-safety-and-security"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Reactor Design and Safety",
+      "title": "What can we learn from Three Mile Island, Chernobyl, and Fukushima?",
+      "concepts": ["accident scenarios", "lessons learned", "safety improvements", "risk assessment"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/3mile-isle.html",
+        "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/fukushima-daiichi-accident.aspx"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Reactor Design and Safety",
+      "title": "How much radiation is safe?",
+      "concepts": ["dose", "rem and sievert", "ALARA", "radiation protection"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nrc.gov/about-nrc/radiation/protects-you/protection-principles.html",
+        "https://www.epa.gov/radiation/radiation-protection"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications",
+      "title": "How do nuclear reactors help treat cancer?",
+      "concepts": ["medical isotopes", "PET imaging", "radiotherapy", "isotope production"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.world-nuclear.org/information-library/non-power-nuclear-applications/radioisotopes-research/radioisotopes-in-medicine.aspx",
+        "https://www.iaea.org/topics/nuclear-medicine"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications",
+      "title": "What is the nuclear fuel cycle from mine to waste?",
+      "concepts": ["uranium mining", "enrichment", "fuel fabrication", "reprocessing", "waste disposal"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.world-nuclear.org/information-library/nuclear-fuel-cycle.aspx",
+        "https://www.iaea.org/topics/nuclear-fuel-cycle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications",
+      "title": "Can small modular reactors transform nuclear energy?",
+      "concepts": ["SMRs", "advanced reactors", "passive safety", "economics"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.iaea.org/topics/small-modular-reactors",
+        "https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-power-reactors/small-nuclear-power-reactors.aspx"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications",
+      "title": "Review: Safety, applications, and the future",
+      "concepts": ["reactor safety", "radiation protection", "medical applications", "fuel cycle", "advanced reactors"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

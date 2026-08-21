@@ -1,0 +1,345 @@
+{
+  "topic": "Psycholinguistics — how the brain processes language",
+  "slug": "psycholinguistics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic cognitive psychology (memory, attention)",
+    "introductory linguistics (phonetics, syntax fundamentals)",
+    "experimental design basics"
+  ],
+  "exit_criteria": [
+    "explain major models of speech perception, word recognition, and sentence processing",
+    "design and interpret reaction time and eye-tracking experiments",
+    "identify neural substrates of language and interpret aphasia patterns",
+    "critically evaluate psycholinguistic theories using experimental evidence",
+    "recognize and explain classic psycholinguistic phenomena (garden-path, priming, McGurk effect)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes language processing unique in the mind?",
+      "concepts": ["mental lexicon", "modularity", "automaticity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/",
+        "https://www.youtube.com/playlist?list=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do psycholinguists measure what happens in milliseconds?",
+      "concepts": ["reaction time", "priming paradigms", "online vs. offline measures"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.psytoolkit.org/",
+        "https://www.sciencedirect.com/topics/neuroscience/lexical-decision"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Can you design an experiment to test if we access word meanings automatically?",
+      "concepts": ["semantic priming", "experimental design", "Stroop effect"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.psytoolkit.org/experiment-library/stroop.html",
+        "https://en.wikipedia.org/wiki/Semantic_priming"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Speech Perception",
+      "title": "How does your brain turn sound waves into phonemes?",
+      "concepts": ["acoustic cues", "categorical perception", "voice onset time"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/pages/lecture-notes/",
+        "https://www.youtube.com/watch?v=1ttz09mfMxo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Speech Perception",
+      "title": "Why can you hear words that aren't there?",
+      "concepts": ["phoneme restoration", "top-down processing", "context effects"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Phonemic_restoration_effect",
+        "https://www.youtube.com/watch?v=G-lN8vWm3m0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Speech Perception",
+      "title": "What are the key phenomena in speech perception?",
+      "concepts": ["categorical perception", "phoneme restoration", "McGurk effect"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=2k8fHR9jKVM",
+        "https://www.sciencedirect.com/topics/psychology/mcgurk-effect"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Speech Perception",
+      "title": "What does the McGurk effect reveal about multimodal integration?",
+      "concepts": ["audiovisual integration", "multimodal perception", "sensory fusion"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=2k8fHR9jKVM",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6037939/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Word Recognition",
+      "title": "How do you find a word among 50,000 in 200 milliseconds?",
+      "concepts": ["lexical access", "cohort model", "frequency effects"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/",
+        "https://en.wikipedia.org/wiki/Cohort_model"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Word Recognition",
+      "title": "Why is 'cat' easier to recognize than 'yacht'?",
+      "concepts": ["word frequency", "neighborhood effects", "lexical competition"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://link.springer.com/referenceworkentry/10.1007/978-3-319-91035-3_11",
+        "https://www.psytoolkit.org/experiment-library/lexical_decision.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Word Recognition",
+      "title": "What do tip-of-the-tongue moments tell us about word storage?",
+      "concepts": ["lexical retrieval", "phonological encoding", "partial activation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Tip_of_the_tongue",
+        "https://www.annualreviews.org/doi/10.1146/annurev.psych.52.1.1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Word Recognition",
+      "title": "Can you explain semantic priming using spreading activation?",
+      "concepts": ["spreading activation", "semantic networks", "automatic vs. controlled processing"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Spreading_activation",
+        "https://www.sciencedirect.com/topics/psychology/spreading-activation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sentence Processing",
+      "title": "How does your brain decide what attaches to what?",
+      "concepts": ["syntactic parsing", "phrase structure", "attachment preferences"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/",
+        "https://en.wikipedia.org/wiki/Syntactic_parsing_(psycholinguistics)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sentence Processing",
+      "title": "How do we get from sounds to sentences?",
+      "concepts": ["integration review", "lexical access", "parsing"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW",
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sentence Processing",
+      "title": "Why do garden-path sentences trick you?",
+      "concepts": ["garden-path sentences", "reanalysis", "incremental processing"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Garden-path_sentence",
+        "https://www.sciencedirect.com/topics/psychology/garden-path-sentence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Sentence Processing",
+      "title": "What do eye movements reveal about reading comprehension?",
+      "concepts": ["eye-tracking", "fixations", "regressions", "immediacy of processing"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.sciencedirect.com/topics/neuroscience/eye-tracking",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2763483/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sentence Processing",
+      "title": "Can you use self-paced reading to test parsing preferences?",
+      "concepts": ["self-paced reading", "reading time measures", "spillover effects"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ibexfarm.net/",
+        "https://doc.pcibex.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Language Production",
+      "title": "How do you get from thought to speech?",
+      "concepts": ["conceptualization", "formulation", "articulation", "Levelt's model"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Language_production",
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Language Production",
+      "title": "What do speech errors reveal about production stages?",
+      "concepts": ["slips of the tongue", "phonological errors", "lexical selection"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Speech_error",
+        "https://www.sciencedirect.com/topics/psychology/speech-errors"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Language Production",
+      "title": "Why is speaking in your native language so effortless?",
+      "concepts": ["automaticity", "monitoring", "self-repair"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.annualreviews.org/doi/10.1146/annurev.psych.50.1.683",
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Reading & Bilingualism",
+      "title": "What are the key differences between production and comprehension?",
+      "concepts": ["asymmetries", "feedback", "monitoring"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW",
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Reading & Bilingualism",
+      "title": "How does reading hijack the brain's visual system?",
+      "concepts": ["visual word recognition", "dual-route model", "orthography"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Dual-route_hypothesis_to_reading_aloud",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3868356/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Reading & Bilingualism",
+      "title": "What happens in a bilingual's brain when they switch languages?",
+      "concepts": ["code-switching", "language control", "inhibition"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Psycholinguistics_of_bilingualism",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3583091/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Neural Basis",
+      "title": "Where is language in the brain?",
+      "concepts": ["Broca's area", "Wernicke's area", "language networks"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Neuroscience_of_multilingualism",
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Neural Basis",
+      "title": "What can aphasia teach us about language modularity?",
+      "concepts": ["aphasia syndromes", "double dissociation", "localization vs. networks"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Aphasia",
+        "https://www.asha.org/practice-portal/clinical-topics/aphasia/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Neural Basis",
+      "title": "How do N400 and P600 reveal semantic and syntactic processing?",
+      "concepts": ["event-related potentials", "N400", "P600", "temporal resolution"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/N400_(neuroscience)",
+        "https://en.wikipedia.org/wiki/P600_(neuroscience)"
+      ],
+      "status": "pending"
+    }
+  ]
+}

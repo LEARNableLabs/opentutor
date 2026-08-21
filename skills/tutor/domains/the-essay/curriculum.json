@@ -1,0 +1,327 @@
+{
+  "topic": "The essay — from Montaigne to the personal essay",
+  "slug": "the-essay",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "close reading skills",
+    "basic literary analysis",
+    "familiarity with non-fiction prose"
+  ],
+  "exit_criteria": [
+    "student can identify characteristics of the personal essay across historical periods",
+    "student can analyze how Montaigne's innovations shaped the form",
+    "student can trace the evolution from philosophical essay to personal essay",
+    "student can recognize and describe key craft elements (voice, digression, reflection)",
+    "student can write a short personal essay using techniques from the tradition"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Montaigne and the Birth of the Essay",
+      "title": "Why did Montaigne call his writing 'attempts'?",
+      "concepts": ["etymology of 'essay'", "Renaissance self-fashioning", "literary innovation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://iep.utm.edu/montaigne/",
+        "https://www.thecollector.com/michel-de-montaigne-essay/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Montaigne and the Birth of the Essay",
+      "title": "What makes Montaigne's self-portrait impossible?",
+      "concepts": ["self-reflection", "subjectivity", "digression as method"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.neh.gov/humanities/2015/marchapril/feature/our-contemporary-montaigne-he-pioneered-the-personal-essay-and-ma",
+        "https://www.gutenberg.org/files/3600/3600-h/3600-h.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Montaigne and the Birth of the Essay",
+      "title": "How does 'Of Cannibals' use the personal to reach the universal?",
+      "concepts": ["particular to universal", "cultural critique", "first-person authority"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.earlymoderntexts.com/assets/pdfs/montaigne1580book1.pdf",
+        "http://www.essaydaily.org/2016/07/of-bedrock-reading-michel-de-montaignes.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Montaigne and the Birth of the Essay",
+      "title": "Why do Montaigne's later essays get longer and more digressive?",
+      "concepts": ["evolution of style", "thinking on the page", "associative structure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Essays_(Montaigne)",
+        "https://archive.org/details/essaysofmontaign02mont"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Montaigne and the Birth of the Essay",
+      "title": "What did 16th-century readers think of this weird new form?",
+      "concepts": ["genre innovation", "reception history", "literary context"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mla.org/Publications/Bookstore/Approaches-to-Teaching-World-Literature/Approaches-to-Teaching-Montaigne-s-Essays"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Montaigne and the Birth of the Essay",
+      "title": "What makes Montaigne's essays revolutionary for their time?",
+      "concepts": ["synthesis", "close reading practice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.gutenberg.org/files/3600/3600-h/3600-h.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Evolution and Varieties",
+      "title": "How does Bacon's essay differ from Montaigne's?",
+      "concepts": ["English vs French tradition", "aphoristic style", "pragmatic philosophy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://academic.oup.com/book/36719"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Evolution and Varieties",
+      "title": "Why did Enlightenment writers choose the essay for philosophy?",
+      "concepts": ["public philosophy", "periodical essay", "rational argumentation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://academic.oup.com/book/36719"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Evolution and Varieties",
+      "title": "What makes the periodical essay a social form?",
+      "concepts": ["Addison and Steele", "public sphere", "character sketches"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://academic.oup.com/book/36719"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Evolution and Varieties",
+      "title": "How do you tell an essay from an article?",
+      "concepts": ["genre boundaries", "essay vs journalism", "formality spectrum"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.coursera.org/learn/personal-essay"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Evolution and Varieties",
+      "title": "Why does the essay resist definition?",
+      "concepts": ["genre fluidity", "essay as attitude", "formal flexibility"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://academic.oup.com/book/36719"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Evolution and Varieties",
+      "title": "How has the essay transformed from Montaigne to the Enlightenment?",
+      "concepts": ["comparative analysis", "genre history"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://academic.oup.com/book/36719"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Personal Turn",
+      "title": "What did the Romantics bring back from Montaigne?",
+      "concepts": ["return to the personal", "subjectivity", "Hazlitt and Lamb"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://academic.oup.com/book/36719"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "The Personal Turn",
+      "title": "How does Emerson make the essay transcendental?",
+      "concepts": ["American essay", "philosophical personal", "nature writing roots"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://academic.oup.com/book/36719"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "The Personal Turn",
+      "title": "Why is the personal essay different from memoir?",
+      "concepts": ["meditation vs narrative", "reflection vs chronology", "lens vs subject"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/personal-essay",
+        "https://writers.com/online-personal-essay-writing-courses"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "The Personal Turn",
+      "title": "How does Woolf turn a moth's death into meditation on meaning?",
+      "concepts": ["close observation", "metaphor", "mortality and meaning"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.coursera.org/learn/personal-essay"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "The Personal Turn",
+      "title": "What does the personal essay owe to the familiar letter?",
+      "concepts": ["intimacy", "conversational tone", "epistolary tradition"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://academic.oup.com/book/36719"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "The Personal Turn",
+      "title": "How does the personal voice differ across centuries and writers?",
+      "concepts": ["voice analysis", "historical comparison"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/personal-essay"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "20th Century Masters",
+      "title": "How does James Baldwin make the personal political?",
+      "concepts": ["social critique", "authority from experience", "urgency and intimacy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/personal-essay"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "20th Century Masters",
+      "title": "What makes Joan Didion's sentences feel like thinking?",
+      "concepts": ["syntax as thought", "self-consciousness", "cool observational stance"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/personal-essay"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "20th Century Masters",
+      "title": "Why do essayists return to the same subjects?",
+      "concepts": ["obsession and theme", "the essay series", "deepening inquiry"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://www.essaydaily.org/2016/07/of-bedrock-reading-michel-de-montaignes.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "20th Century Masters",
+      "title": "Map the essay from Montaigne to now — what changed, what stayed?",
+      "concepts": ["continuity and change", "tradition and innovation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://academic.oup.com/book/36719"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Craft and Your Voice",
+      "title": "What tradition are you entering when you write an essay?",
+      "concepts": ["synthesis", "historical awareness"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/personal-essay"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Craft and Your Voice",
+      "title": "How do you find the universal in your particular experience?",
+      "concepts": ["personal to universal", "significance", "the 'so what' question"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.uclaextension.edu/writing/creative-writing/course/personal-essay-i-writing-x-4221",
+        "https://writingworkshops.com/products/6-week-online-intro-to-personal-essay"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Craft and Your Voice",
+      "title": "Write your first essay: What are you trying?",
+      "concepts": ["voice", "structure", "revision", "essaying as attempt"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/learn/personal-essay",
+        "https://www.uclaextension.edu/writing/creative-writing/course/personal-essay-i-writing-x-4221"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "topic": "Electrochemistry and Batteries",
+  "slug": "electrochemistry-and-batteries",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "general chemistry",
+    "thermodynamics basics",
+    "oxidation-reduction reactions",
+    "basic calculus",
+    "elementary differential equations"
+  ],
+  "exit_criteria": [
+    "calculate cell potentials using the Nernst equation for any electrochemical system",
+    "explain the electrochemical kinetics of electrode reactions using Butler-Volmer formalism",
+    "design and analyze battery systems for specific applications",
+    "interpret electrochemical impedance spectroscopy and cyclic voltammetry data",
+    "evaluate battery degradation mechanisms and mitigation strategies",
+    "compare different battery chemistries based on performance metrics",
+    "understand the physics and chemistry of lithium-ion intercalation",
+    "critically assess emerging battery technologies and their trade-offs"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Electrochemical Foundations",
+      "title": "Why do batteries produce voltage without moving parts?",
+      "concepts": ["galvanic cells", "spontaneous redox reactions", "chemical potential"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=9Xncz_mMc5g",
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Electrochemical Foundations",
+      "title": "How do we predict which reaction happens at each electrode?",
+      "concepts": ["standard reduction potentials", "electrochemical series", "electrode sign conventions"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/physical-chemistry-essentials-class-12/x1dda8a4b826d5e6c:electrochemistry",
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Electrochemical Foundations",
+      "title": "What happens when battery voltage drops as it drains?",
+      "concepts": ["Nernst equation", "activity", "concentration effects on potential"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Electrochemical Foundations",
+      "title": "Can we extract useful work from a battery reaction?",
+      "concepts": ["Gibbs free energy", "thermodynamic efficiency", "reversible potential"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Electrochemical Foundations",
+      "title": "Why does the electrode-electrolyte interface act like a capacitor?",
+      "concepts": ["double layer", "Helmholtz layer", "diffuse layer", "capacitance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Electrochemical Foundations",
+      "title": "Review: From spontaneous reactions to practical cells",
+      "concepts": ["galvanic cells", "Nernst equation", "double layer", "cell voltage"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/physical-chemistry-essentials-class-12/x1dda8a4b826d5e6c:electrochemistry"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Electrode Kinetics and Transport",
+      "title": "Why do reactions slow down even when thermodynamics says they should happen?",
+      "concepts": ["activation energy", "charge transfer resistance", "exchange current density"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Electrode Kinetics and Transport",
+      "title": "How does voltage drive reaction rates at electrodes?",
+      "concepts": ["Butler-Volmer equation", "overpotential", "symmetry factor"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Electrode Kinetics and Transport",
+      "title": "Can we linearize electrode kinetics for small perturbations?",
+      "concepts": ["Tafel equation", "linear kinetics", "limiting cases"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Electrode Kinetics and Transport",
+      "title": "Why do batteries fail at high power draw?",
+      "concepts": ["mass transport", "diffusion limitation", "concentration overpotential"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Electrode Kinetics and Transport",
+      "title": "How do we model diffusion in battery electrodes?",
+      "concepts": ["Fick's laws", "concentration profiles", "porous electrode theory"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Electrode Kinetics and Transport",
+      "title": "What can impedance spectroscopy tell us about battery internals?",
+      "concepts": ["electrochemical impedance spectroscopy", "Nyquist plots", "equivalent circuits"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Electrode Kinetics and Transport",
+      "title": "Review: Kinetics, transport, and characterization",
+      "concepts": ["Butler-Volmer equation", "diffusion", "impedance spectroscopy"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Classical Battery Systems",
+      "title": "How does a car battery deliver huge currents on demand?",
+      "concepts": ["lead-acid battery", "sponge lead", "lead dioxide", "sulfuric acid"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=PQ48N5jaG2w",
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/resources/mit10_626s14_s11lec09/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Classical Battery Systems",
+      "title": "Why are some batteries rechargeable and others not?",
+      "concepts": ["primary batteries", "secondary batteries", "reversibility", "dendrite formation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/physical-chemistry-essentials-class-12/x1dda8a4b826d5e6c:electrochemistry"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Classical Battery Systems",
+      "title": "What makes a AAA battery work in your remote for years?",
+      "concepts": ["alkaline batteries", "zinc-manganese dioxide", "dry cell design"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=h5jkCBMyTAU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Classical Battery Systems",
+      "title": "How do nickel-metal hydride batteries store hydrogen safely?",
+      "concepts": ["NiMH batteries", "metal hydride", "hydrogen storage", "memory effect"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Classical Battery Systems",
+      "title": "What are the fundamental limits of aqueous battery chemistries?",
+      "concepts": ["water stability window", "voltage limits", "energy density constraints"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Lithium-Ion Batteries",
+      "title": "Why did lithium revolutionize portable electronics?",
+      "concepts": ["lithium-ion advantages", "energy density", "voltage", "rocking chair design"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/resources/mit10_626s14_lec13_lithi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Lithium-Ion Batteries",
+      "title": "Review: Battery systems from lead-acid to lithium-ion",
+      "concepts": ["lead-acid", "alkaline", "NiMH", "lithium-ion", "electrochemical comparison"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Lithium-Ion Batteries",
+      "title": "How do lithium ions shuffle between graphite layers without destroying the structure?",
+      "concepts": ["intercalation", "staging", "graphite anode", "layered structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/resources/mit10_626s14_lec13_lithi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Lithium-Ion Batteries",
+      "title": "What protects lithium metal from reacting with the electrolyte?",
+      "concepts": ["solid electrolyte interphase", "SEI formation", "passivation", "capacity fade"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/resources/mit10_626s14_lec13_lithi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Lithium-Ion Batteries",
+      "title": "Why do different cathode materials trade off power for energy?",
+      "concepts": ["cathode chemistries", "LCO", "NMC", "LFP", "structural stability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/resources/mit10_626s14_lec13_lithi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Lithium-Ion Batteries",
+      "title": "How do batteries degrade over thousands of charge cycles?",
+      "concepts": ["capacity fade mechanisms", "resistance growth", "lithium plating", "particle cracking"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/resources/mit10_626s14_lec13_lithi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Lithium-Ion Batteries",
+      "title": "What causes thermal runaway and how can we prevent it?",
+      "concepts": ["thermal runaway", "safety mechanisms", "thermal management", "separator shutdown"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Lithium-Ion Batteries",
+      "title": "Review: Lithium-ion batteries from intercalation to degradation",
+      "concepts": ["intercalation", "SEI", "cathode chemistries", "capacity fade", "thermal runaway"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/resources/mit10_626s14_lec13_lithi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics and Future Directions",
+      "title": "Can solid electrolytes solve lithium-ion's safety problems?",
+      "concepts": ["solid-state batteries", "ionic conductivity", "ceramic electrolytes", "interfacial resistance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Topics and Future Directions",
+      "title": "Why is sodium-ion emerging as a lithium alternative?",
+      "concepts": ["sodium-ion batteries", "resource abundance", "performance trade-offs", "hard carbon"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Advanced Topics and Future Directions",
+      "title": "How do we design batteries for grid-scale energy storage vs electric vehicles?",
+      "concepts": ["application-driven design", "cost vs performance", "cycle life", "safety requirements"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

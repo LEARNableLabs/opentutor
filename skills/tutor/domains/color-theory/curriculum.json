@@ -1,0 +1,291 @@
+{
+  "topic": "Color theory — perception, systems, and application",
+  "slug": "color-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic design awareness",
+    "visual observation skills",
+    "curiosity about how things work"
+  ],
+  "exit_criteria": [
+    "student can explain how human color vision works from photons to perception",
+    "student can work fluently with RGB, CMYK, HSL, and Munsell color models",
+    "student can identify and create effective color harmonies using the color wheel",
+    "student can analyze how color affects emotion and meaning in cultural contexts",
+    "student can build accessible, purposeful color palettes for digital and print media",
+    "student can articulate why colors appear different in different contexts (simultaneous contrast, color constancy)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Light and Perception",
+      "title": "What is color, really?",
+      "concepts": ["wavelength", "visible spectrum", "color as perception"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://phet.colorado.edu/en/simulations/color-vision", "https://www.khanacademy.org/computing/pixar/color"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Light and Perception",
+      "title": "Why do we see different colors?",
+      "concepts": ["cones and rods", "trichromatic theory", "spectral response"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.khanacademy.org/computing/pixar/color", "https://horizon-lab.org/colorvis/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Light and Perception",
+      "title": "How does your eye turn light into color?",
+      "concepts": ["photoreceptors", "opponent process theory", "color channels"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://libguides.nypl.org/colortheory/perception"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Light and Perception",
+      "title": "What if you're colorblind?",
+      "concepts": ["color vision deficiency", "cone deficiencies", "deuteranopia"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://phet.colorado.edu/en/simulations/color-vision"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Light and Perception",
+      "title": "Why does color look different in different lighting?",
+      "concepts": ["color constancy", "adaptation", "white balance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.khanacademy.org/computing/pixar/color"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Color Systems and Models",
+      "title": "Review: Light and Vision",
+      "concepts": ["wavelength to perception", "trichromatic vision", "adaptation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://phet.colorado.edu/en/simulations/color-vision"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Color Systems and Models",
+      "title": "Why do screens mix red, green, and blue?",
+      "concepts": ["additive color", "RGB model", "light emission"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.simbucket.com/teaching-color-theory-with-simbucket-simulations/", "https://phet.colorado.edu/en/simulations/color-vision"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Color Systems and Models",
+      "title": "What's the difference between painting and lighting?",
+      "concepts": ["subtractive color", "CMYK model", "pigment absorption"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.simbucket.com/teaching-color-theory-with-simbucket-simulations/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Color Systems and Models",
+      "title": "How do you organize all possible colors?",
+      "concepts": ["Munsell system", "hue", "value", "chroma"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://munsell.com/color-blog/color-theory-simulation-tool/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Color Systems and Models",
+      "title": "Why is HSL better for designers than RGB?",
+      "concepts": ["HSL model", "hue-saturation-lightness", "perceptual organization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://swatchery.com/color-theory"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Color Systems and Models",
+      "title": "Can computers see color like humans?",
+      "concepts": ["CIE color spaces", "perceptual uniformity", "LAB color"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://horizon-lab.org/colorvis/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Color Relationships and Harmony",
+      "title": "What makes colors go together?",
+      "concepts": ["color wheel", "color relationships", "visual harmony"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://swatchery.com/color-theory", "https://ocw.mit.edu/courses/es-298-art-of-color-spring-2005/pages/syllabus/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Color Relationships and Harmony",
+      "title": "Review: Color Models in Practice",
+      "concepts": ["RGB vs CMYK", "HSL organization", "Munsell system"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://swatchery.com/color-theory"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Color Relationships and Harmony",
+      "title": "Why do complementary colors vibrate?",
+      "concepts": ["complementary colors", "simultaneous contrast", "afterimages"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/es-298-art-of-color-spring-2005/pages/syllabus/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Color Relationships and Harmony",
+      "title": "How does context change what you see?",
+      "concepts": ["Josef Albers", "color interaction", "relative perception"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://ocw.mit.edu/courses/es-298-art-of-color-spring-2005/pages/syllabus/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Color Relationships and Harmony",
+      "title": "What's the secret to color harmony?",
+      "concepts": ["analogous colors", "triadic schemes", "split-complementary"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://swatchery.com/color-theory"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Color Relationships and Harmony",
+      "title": "Why does value matter more than hue?",
+      "concepts": ["value contrast", "light-dark relationships", "color temperature"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://munsell.com/color-blog/color-theory-simulation-tool/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Color Relationships and Harmony",
+      "title": "How do artists use contrast?",
+      "concepts": ["contrast types", "focal points", "visual hierarchy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/es-298-art-of-color-spring-2005/pages/syllabus/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Color Psychology and Culture",
+      "title": "Why does red mean danger?",
+      "concepts": ["color associations", "biological responses", "cultural learning"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.behavioraldesign.academy/wp-content/uploads/color_psychology_book_alterspark_25_42347951.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Color Psychology and Culture",
+      "title": "Review: Harmony and Contrast",
+      "concepts": ["color schemes", "simultaneous contrast", "value relationships"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://swatchery.com/color-theory"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Color Psychology and Culture",
+      "title": "Do colors have universal meanings?",
+      "concepts": ["cultural color symbolism", "cross-cultural variation", "context dependence"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.behavioraldesign.academy/wp-content/uploads/color_psychology_book_alterspark_25_42347951.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Color Psychology and Culture",
+      "title": "How does color affect emotion?",
+      "concepts": ["warm vs cool", "arousal and valence", "color mood"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.behavioraldesign.academy/wp-content/uploads/color_psychology_book_alterspark_25_42347951.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Color Psychology and Culture",
+      "title": "What makes a brand's color palette work?",
+      "concepts": ["brand identity", "color consistency", "emotional positioning"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.behavioraldesign.academy/wp-content/uploads/color_psychology_book_alterspark_25_42347951.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Application in Design and Art",
+      "title": "How do you build a color palette from scratch?",
+      "concepts": ["palette generation", "60-30-10 rule", "color testing"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://swatchery.com/color-theory"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Application in Design and Art",
+      "title": "Why does color look different on screen vs. print?",
+      "concepts": ["color gamut", "RGB to CMYK conversion", "color profiles"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://horizon-lab.org/colorvis/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Application in Design and Art",
+      "title": "What makes color accessible?",
+      "concepts": ["WCAG contrast ratios", "colorblind-safe palettes", "inclusive design"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://simulations4all.com/simulations/color-vision-rgb-mixing", "https://phet.colorado.edu/en/simulations/color-vision"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Application in Design and Art",
+      "title": "Review: Putting It All Together",
+      "concepts": ["perception to application", "color systems", "design principles"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://swatchery.com/color-theory", "https://ocw.mit.edu/courses/es-298-art-of-color-spring-2005/pages/syllabus/"],
+      "status": "pending"
+    }
+  ]
+}

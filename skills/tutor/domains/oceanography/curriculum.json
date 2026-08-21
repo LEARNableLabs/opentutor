@@ -1,0 +1,382 @@
+{
+  "topic": "Oceanography",
+  "slug": "oceanography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (especially water chemistry and chemical bonds)",
+    "basic physics (fluid dynamics, pressure, waves)",
+    "earth science fundamentals",
+    "comfort with scientific notation and unit conversions"
+  ],
+  "exit_criteria": [
+    "explain the major ocean circulation patterns and what drives them",
+    "describe how ocean chemistry affects marine life and climate",
+    "analyze bathymetric data and interpret seafloor features",
+    "connect ocean processes to global climate systems",
+    "evaluate the impact of human activities on ocean ecosystems",
+    "interpret real oceanographic data from buoys, satellites, and research vessels"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Ocean Basics & Water Properties",
+      "title": "Why do oceans cover 71% of Earth but contain only 0.02% of our water?",
+      "concepts": ["ocean basins", "hydrologic cycle", "ocean volume"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-808-introduction-to-observational-physical-oceanography-fall-2004/",
+        "https://www.youtube.com/watch?v=ZplA8A-bbWo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Ocean Basics & Water Properties",
+      "title": "What makes seawater so different from freshwater?",
+      "concepts": ["salinity", "density", "dissolved ions", "conservative vs non-conservative properties"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-808-introduction-to-observational-physical-oceanography-fall-2004/pages/lecture-notes/",
+        "https://sealenslabs.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Ocean Basics & Water Properties",
+      "title": "Why does cold water sink and warm water float?",
+      "concepts": ["temperature-density relationship", "thermal stratification", "thermocline"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceancurrents.rsmas.miami.edu/",
+        "https://www.edumedia.com/en/media/890-interactive-earth-oceanic-currents"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Ocean Basics & Water Properties",
+      "title": "How do oceanographers measure the invisible ocean?",
+      "concepts": ["CTD sensors", "remote sensing", "ocean observation methods", "satellite altimetry"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.gfdl.noaa.gov/visualization/visualizations-oceans/",
+        "https://cleanet.org/resources/59275.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Physical Oceanography - Circulation",
+      "title": "What happens when wind drags on the ocean surface?",
+      "concepts": ["wind stress", "Ekman transport", "Ekman spiral", "Coriolis effect"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-808-introduction-to-observational-physical-oceanography-fall-2004/pages/lecture-notes/",
+        "https://simulations4all.com/simulations/ocean-currents-and-climate-explorer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Physical Oceanography - Circulation",
+      "title": "Can you connect water density to wind-driven ocean motion?",
+      "concepts": ["density", "stratification", "Ekman transport"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://education.nationalgeographic.org/resource/mapmaker-ocean-currents/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Physical Oceanography - Circulation",
+      "title": "Why do ocean gyres spin in giant circles?",
+      "concepts": ["subtropical gyres", "western intensification", "Gulf Stream", "geostrophic balance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://oceancurrents.rsmas.miami.edu/",
+        "https://www.edumedia.com/en/media/890-interactive-earth-oceanic-currents"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Physical Oceanography - Circulation",
+      "title": "What drives the ocean's global conveyor belt?",
+      "concepts": ["thermohaline circulation", "deep water formation", "meridional overturning circulation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://education.nationalgeographic.org/resource/mapmaker-ocean-currents/",
+        "https://simulations4all.com/simulations/ocean-currents-and-climate-explorer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Physical Oceanography - Circulation",
+      "title": "How do tides pull billions of tons of water twice a day?",
+      "concepts": ["tidal forces", "spring and neap tides", "tidal currents", "amphidromic points"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://sealenslabs.com/",
+        "https://www.coursera.org/learn/oceanography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Physical Oceanography - Circulation",
+      "title": "Why do waves break?",
+      "concepts": ["wave formation", "wave energy", "shallow water waves", "breaking waves"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://sealenslabs.com/",
+        "https://ocw.mit.edu/courses/12-808-introduction-to-observational-physical-oceanography-fall-2004/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Physical Oceanography - Circulation",
+      "title": "How does upwelling bring the deep ocean to the surface?",
+      "concepts": ["coastal upwelling", "Ekman pumping", "nutrient supply", "upwelling zones"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://sealenslabs.com/",
+        "https://oceancurrents.rsmas.miami.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Chemical Oceanography",
+      "title": "How does water move from the surface to the abyss and back again?",
+      "concepts": ["gyres", "thermohaline circulation", "upwelling"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://simulations4all.com/simulations/ocean-currents-and-climate-explorer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Chemical Oceanography",
+      "title": "Why isn't the ocean just salty water?",
+      "concepts": ["major ions", "trace elements", "residence time", "conservative elements"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/oceanography",
+        "https://ocw.mit.edu/courses/12-808-introduction-to-observational-physical-oceanography-fall-2004/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Chemical Oceanography",
+      "title": "How do nutrients flow through ocean food webs?",
+      "concepts": ["nitrogen cycle", "phosphorus cycle", "limiting nutrients", "Redfield ratio"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://ocean.stanford.edu/bomc/",
+        "https://www.coursera.org/learn/oceanography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Chemical Oceanography",
+      "title": "Why is the ocean becoming more acidic?",
+      "concepts": ["carbonate chemistry", "pH", "ocean acidification", "CO2 uptake"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.gfdl.noaa.gov/visualization/visualizations-oceans/",
+        "https://cleanet.org/resources/59275.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Chemical Oceanography",
+      "title": "Where does oxygen in the ocean come from and where does it go?",
+      "concepts": ["dissolved oxygen", "oxygen minimum zones", "photosynthesis", "respiration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://ocean.stanford.edu/bomc/",
+        "https://sealenslabs.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Biological Oceanography",
+      "title": "What makes the ocean productive?",
+      "concepts": ["primary productivity", "phytoplankton", "light limitation", "nutrient limitation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "http://ocean.stanford.edu/bomc/",
+        "https://www.coursera.org/learn/oceanography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Biological Oceanography",
+      "title": "How do chemical cycles power ocean life?",
+      "concepts": ["nutrients", "ocean acidification", "primary productivity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://sealenslabs.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Biological Oceanography",
+      "title": "How do microscopic plankton drive the ocean's food web?",
+      "concepts": ["zooplankton", "trophic levels", "energy transfer", "plankton blooms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://ocean.stanford.edu/bomc/",
+        "https://www.youtube.com/channel/UCEBb1b_L6zDS3xTUrIALZOw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Biological Oceanography",
+      "title": "Why are coral reefs the rainforests of the sea?",
+      "concepts": ["coral symbiosis", "reef ecosystems", "biodiversity hotspots", "coral bleaching"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://sealenslabs.com/",
+        "https://www.coursera.org/learn/oceanography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Biological Oceanography",
+      "title": "What lives in the deep ocean where there's no sunlight?",
+      "concepts": ["chemosynthesis", "hydrothermal vents", "deep sea adaptations", "bioluminescence"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://nautiluslive.org/resource/seafloor-mapping-simulation",
+        "https://www.youtube.com/channel/UCEBb1b_L6zDS3xTUrIALZOw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Geological Oceanography",
+      "title": "How do we map the ocean floor we can't see?",
+      "concepts": ["bathymetry", "sonar", "multibeam mapping", "seafloor features"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://gizmos.explorelearning.com/find-gizmos/lesson-info?resourceId=373",
+        "https://nautiluslive.org/resource/seafloor-mapping-simulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Geological Oceanography",
+      "title": "Why are ocean trenches the deepest places on Earth?",
+      "concepts": ["plate tectonics", "subduction zones", "ocean trenches", "seafloor spreading"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://gizmos.explorelearning.com/find-gizmos/lesson-info?resourceId=373",
+        "https://www.coursera.org/learn/oceanography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Geological Oceanography",
+      "title": "What stories do ocean sediments tell?",
+      "concepts": ["sediment types", "sedimentation rates", "paleoceanography", "sediment cores"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/res-12-000-evolution-of-physical-oceanography-spring-2007/",
+        "https://www.coursera.org/learn/oceanography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Geological Oceanography",
+      "title": "How do living ecosystems connect to the geology beneath them?",
+      "concepts": ["food webs", "seafloor mapping", "plate tectonics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://nautiluslive.org/resource/seafloor-mapping-simulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Ocean & Climate",
+      "title": "How does the ocean control Earth's climate?",
+      "concepts": ["heat capacity", "ocean heat transport", "climate regulation", "ocean-atmosphere coupling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.gfdl.noaa.gov/visualization/visualizations-oceans/",
+        "https://simulations4all.com/simulations/ocean-currents-and-climate-explorer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Ocean & Climate",
+      "title": "What is El Niño and why does it matter worldwide?",
+      "concepts": ["ENSO", "teleconnections", "climate variability", "Pacific Ocean dynamics"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://simulations4all.com/simulations/ocean-currents-and-climate-explorer",
+        "https://www.gfdl.noaa.gov/visualization/visualizations-oceans/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Ocean & Climate",
+      "title": "What happens when the ocean gets too hot?",
+      "concepts": ["sea level rise", "coral bleaching", "marine heatwaves", "climate feedback loops"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://cleanet.org/resources/59275.html",
+        "https://www.gfdl.noaa.gov/visualization/visualizations-oceans/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

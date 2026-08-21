@@ -1,0 +1,352 @@
+{
+  "topic": "Vexillology — flag design principles and history",
+  "slug": "vexillology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": ["basic design principles", "world history overview", "cultural awareness"],
+  "exit_criteria": [
+    "evaluate flags using NAVA's five principles",
+    "explain the historical and cultural symbolism in national flags",
+    "design an original flag with justified design choices",
+    "identify regional vexillological traditions and their characteristics",
+    "critique contemporary flag designs with technical and semiotic reasoning"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes a flag instantly recognizable from 100 feet away?",
+      "concepts": ["simplicity", "readability", "visual hierarchy"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://nava.org/good-flag-bad-flag/",
+        "https://www.ted.com/talks/roman_mars_why_city_flags_may_be_the_worst_designed_thing_you_ve_never_noticed"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why do vexillologists hate words on flags?",
+      "concepts": ["NAVA principles", "scalability", "universal symbols"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nava.org/good-flag-bad-flag/",
+        "https://www.fotw.info/flags/vxt-prin.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How many colors are too many?",
+      "concepts": ["color limitation", "visual complexity", "manufacturing constraints"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://99percentinvisible.org/episode/vexillology-revisited/",
+        "https://www.crwflags.com/fotw/flags/vxt-dsgn.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What's the difference between a flag and a logo?",
+      "concepts": ["distinctive design", "purpose", "context of use"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://portlandflag.org/",
+        "https://vexillology.fandom.com/wiki/Design_principles"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Can you design a flag for your neighborhood using NAVA's principles?",
+      "concepts": ["NAVA principles", "meaningful symbolism", "design iteration"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://flagmakerjr.stg7.net/",
+        "https://tennessine.co.uk/flags/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Color & Symbolism",
+      "title": "Why does red mean valor in Western flags but celebration in Chinese flags?",
+      "concepts": ["color symbolism", "cultural context", "cross-cultural meaning"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.flagcolorcodes.com/",
+        "https://www.worldatlas.com/articles/what-do-the-colors-and-symbols-of-the-national-flag-of-china-mean.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Color & Symbolism",
+      "title": "How did Pan-African colors unite a continent?",
+      "concepts": ["Pan-African colors", "political symbolism", "shared identity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fotw.info/flags/vxt-pafr.html",
+        "https://africanhistory.about.com/od/flags/a/PanAfricanFlag.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Color & Symbolism",
+      "title": "What do stars, crescents, and suns actually symbolize?",
+      "concepts": ["celestial symbols", "religious iconography", "universal motifs"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.fotw.info/flags/vxt-symb.html",
+        "https://en.wikipedia.org/wiki/Star_and_crescent"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Color & Symbolism",
+      "title": "Can you decode the symbolism in five national flags?",
+      "concepts": ["semiotic analysis", "layered meaning", "historical references"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cia.gov/the-world-factbook/",
+        "https://flagpedia.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Color & Symbolism",
+      "title": "Can you apply NAVA principles and decode flag symbolism?",
+      "concepts": ["NAVA principles", "color symbolism", "cultural meaning"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://nava.org/good-flag-bad-flag/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Historical Traditions",
+      "title": "How did medieval knights' shields become modern flags?",
+      "concepts": ["heraldry", "coat of arms", "vexillology origins"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.heraldsnet.org/saitou/parker/index.htm",
+        "https://www.fotw.info/flags/vxt-hera.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Historical Traditions",
+      "title": "Why do so many European flags use three stripes?",
+      "concepts": ["tricolor tradition", "French Revolution influence", "simplicity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.britannica.com/topic/flag-vexillology/Tricolour-flags",
+        "https://www.fotw.info/flags/vxt-tric.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Historical Traditions",
+      "title": "What's special about the Nordic cross, and why is it everywhere in Scandinavia?",
+      "concepts": ["Nordic cross", "regional identity", "Christian symbolism"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.fotw.info/flags/vxt-nord.html",
+        "https://satwcomic.com/flag-day"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Historical Traditions",
+      "title": "How did maritime signal flags evolve into national identity?",
+      "concepts": ["maritime flags", "signal systems", "national ensigns"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.imo.org/en/OurWork/Safety/Pages/SignalsCode.aspx",
+        "https://www.fotw.info/flags/vxt-mari.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Historical Traditions",
+      "title": "Why did newly independent nations in the 1960s design such bold flags?",
+      "concepts": ["post-colonial design", "national identity", "break from colonizers"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.bbc.com/news/world-africa-42946013",
+        "https://africanarguments.org/2020/07/flags-africa-symbols-independence/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Historical Traditions",
+      "title": "How did historical traditions shape regional flag designs?",
+      "concepts": ["heraldry", "tricolors", "Nordic cross", "post-colonial flags"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.fotw.info/flags/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Design Principles",
+      "title": "What aspect ratio should a flag use, and does it matter?",
+      "concepts": ["aspect ratio", "proportions", "international standards"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.crwflags.com/fotw/flags/vxt-rat.html",
+        "https://en.wikipedia.org/wiki/List_of_aspect_ratios_of_national_flags"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Design Principles",
+      "title": "How do you specify a flag design so anyone can reproduce it exactly?",
+      "concepts": ["construction sheets", "geometric specification", "Pantone colors"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fotw.info/flags/us.html#const",
+        "https://www.vexilla-mundi.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Design Principles",
+      "title": "Why do some flags look terrible as emoji?",
+      "concepts": ["scalability", "digital constraints", "pixel-level design"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://emojipedia.org/flags/",
+        "https://blog.emojipedia.org/emoji-flags-explained/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Design Principles",
+      "title": "What makes a flag distinctive when 195+ countries need unique designs?",
+      "concepts": ["distinctiveness", "visual differentiation", "avoiding confusion"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://krikienoid.github.io/flagwaver/",
+        "https://www.fotw.info/flags/vxt-dist.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Design Principles",
+      "title": "Can you redesign a poorly-rated state or city flag?",
+      "concepts": ["design critique", "NAVA principles application", "iteration"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://nava.org/surveys/state-provincial-territory-flags/state-and-provincial-survey-results/",
+        "https://flagmakerjr.stg7.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Design Principles",
+      "title": "What design principles distinguish great flags from mediocre ones?",
+      "concepts": ["aspect ratio", "construction sheets", "scalability", "distinctiveness"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://nava.org/good-flag-bad-flag/",
+        "https://www.fotw.info/flags/vxt-prin.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Modern Practice",
+      "title": "What happened when New Zealand held a flag referendum?",
+      "concepts": ["democratic design", "public consultation", "tradition vs innovation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.govt.nz/browse/engaging-with-government/the-nz-flag-your-chance-to-decide/",
+        "https://www.bbc.com/news/world-asia-35890566"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Modern Practice",
+      "title": "How do vexillologists rate and critique flags objectively?",
+      "concepts": ["design evaluation", "NAVA surveys", "objective criteria"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nava.org/surveys/",
+        "https://www.reddit.com/r/vexillology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Modern Practice",
+      "title": "Should flags be inclusive, or preserve historical symbolism?",
+      "concepts": ["inclusive design", "contested symbols", "evolving meaning"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.theatlantic.com/politics/archive/2020/06/confederate-flag-history/613269/",
+        "https://time.com/5900679/minnesota-state-flag-redesign/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Modern Practice",
+      "title": "Can you design and defend a flag for a real or imagined place?",
+      "concepts": ["comprehensive design", "rationale", "presentation"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://tennessine.co.uk/flags/",
+        "https://www.reddit.com/r/vexillology/wiki/submitting"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "topic": "Screenwriting and Dramatic Structure",
+  "slug": "screenwriting",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic narrative understanding",
+    "familiarity with film/TV storytelling",
+    "ability to analyze stories critically"
+  ],
+  "exit_criteria": [
+    "construct a complete feature film outline using three-act structure",
+    "apply Save the Cat beat sheet to original story ideas",
+    "identify and fix structural problems in screenplay drafts",
+    "write scenes with clear goal-conflict-disaster structure",
+    "develop character arcs that drive plot progression",
+    "pitch a story concept with logline and treatment"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Story Structure",
+      "title": "Why do all great stories feel like they have a beginning, middle, and end?",
+      "concepts": ["three-act structure", "setup-confrontation-resolution", "narrative arc"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://darkwing.uoregon.edu/~jlesage/Juliafolder/screenwriting/screenwritingsyllbus.htm",
+        "https://www.studiobinder.com/blog/three-act-structure/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Story Structure",
+      "title": "What single event throws your protagonist's world into chaos?",
+      "concepts": ["inciting incident", "catalyst", "status quo disruption"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://reedsy.com/blog/guide/story-structure/save-the-cat-beat-sheet/",
+        "https://www.studiobinder.com/blog/what-is-inciting-incident/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Story Structure",
+      "title": "How do plot points force your character to make irreversible decisions?",
+      "concepts": ["plot points", "turning points", "point of no return"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.flyingwrestler.com/save-the-cat-beat-sheet/",
+        "https://dox.utdallas.edu/syl27282"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Story Structure",
+      "title": "Why does the midpoint flip everything we thought we knew?",
+      "concepts": ["midpoint", "false victory", "false defeat", "stakes escalation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.studiobinder.com/blog/save-the-cat-beat-sheet/",
+        "https://timstout.wordpress.com/story-structure/blake-snyders-beat-sheet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Story Structure",
+      "title": "What makes a climax feel earned instead of convenient?",
+      "concepts": ["climax", "resolution", "payoff", "thematic unity"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.masterclass.com/classes/aaron-sorkin-teaches-screenwriting",
+        "https://class-tools.app.utah.edu/syllabus/1254/11957/U%20of%20U_%20Screenwriting%20%20_%20Film%204820%20-%20Syllabus%20_%20Spring%202025.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Story Structure",
+      "title": "Review: Can you map the three-act structure of your favorite film?",
+      "concepts": ["structural analysis", "beat identification", "act breaks"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.studiobinder.com/blog/three-act-structure/",
+        "https://reedsy.com/blog/guide/story-structure/save-the-cat-beat-sheet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Character and Conflict",
+      "title": "What does your protagonist want, and what do they actually need?",
+      "concepts": ["want vs need", "external goal", "internal arc", "character flaw"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.masterclass.com/classes/aaron-sorkin-teaches-screenwriting",
+        "https://courses.videoschool.com/p/screenwriting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Character and Conflict",
+      "title": "How does the antagonist force the hero to become who they need to be?",
+      "concepts": ["antagonist function", "opposition", "thematic antagonist", "pressure"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://dox.utdallas.edu/syl27282",
+        "https://www.studiobinder.com/blog/antagonist-vs-villain/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Character and Conflict",
+      "title": "Why do character biographies matter if they never appear on screen?",
+      "concepts": ["character biography", "backstory", "motivation", "consistency"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.scribd.com/document/718268606/19237",
+        "https://darkwing.uoregon.edu/~jlesage/Juliafolder/screenwriting/screenwritingsyllbus.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Character and Conflict",
+      "title": "What happens when internal and external conflict align at the climax?",
+      "concepts": ["internal conflict", "external conflict", "dual climax", "transformation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.masterclass.com/classes/aaron-sorkin-teaches-screenwriting",
+        "https://blog.janicehardy.com/2013/10/plotting-with-save-cat-beat-sheet.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Character and Conflict",
+      "title": "How would you defend your character's choices to a skeptical producer?",
+      "concepts": ["character motivation", "believability", "agency", "active protagonist"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://courses.videoschool.com/p/screenwriting",
+        "https://r.summer.ucla.edu/pdf/2019_FTVSI_Syllabus_TVWriting.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Character and Conflict",
+      "title": "Review: Build a character arc from scratch",
+      "concepts": ["character creation", "arc design", "want-need integration"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.studiobinder.com/blog/character-arc/",
+        "https://dox.utdallas.edu/syl27282"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Three-Act Architecture",
+      "title": "Where exactly should your first act end, and why does timing matter?",
+      "concepts": ["act one break", "page count", "pacing", "screenplay pages"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.studiobinder.com/blog/three-act-structure/",
+        "https://ensemblewriter.com/docs/best-screenwriting-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Three-Act Architecture",
+      "title": "How do you keep Act Two from sagging in the middle?",
+      "concepts": ["act two challenges", "rising tension", "complications", "B-story"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://reedsy.com/blog/guide/story-structure/save-the-cat-beat-sheet/",
+        "https://class-tools.app.utah.edu/syllabus/1254/11957/U%20of%20U_%20Screenwriting%20%20_%20Film%204820%20-%20Syllabus%20_%20Spring%202025.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Three-Act Architecture",
+      "title": "What is the B-story teaching your protagonist while the A-story tests them?",
+      "concepts": ["A-story vs B-story", "thematic subplot", "relationship subplot", "parallel narrative"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://r.summer.ucla.edu/pdf/2019_FTVSI_Syllabus_TVWriting.pdf",
+        "https://www.studiobinder.com/blog/a-story-b-story-c-story/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Three-Act Architecture",
+      "title": "Why must your hero lose everything before they can win?",
+      "concepts": ["all is lost", "dark night of the soul", "lowest point", "despair beat"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.studiobinder.com/blog/save-the-cat-beat-sheet/",
+        "https://www.flyingwrestler.com/save-the-cat-beat-sheet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Three-Act Architecture",
+      "title": "How does Act Three deliver on every promise you made in Act One?",
+      "concepts": ["narrative payoff", "setup and payoff", "thematic resolution", "closing the loop"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.masterclass.com/classes/aaron-sorkin-teaches-screenwriting",
+        "https://darkwing.uoregon.edu/~jlesage/Juliafolder/screenwriting/screenwritingsyllbus.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Three-Act Architecture",
+      "title": "Review: Diagram the three-act structure of a screenplay you're developing",
+      "concepts": ["structural mapping", "act breaks", "beat placement"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.studiobinder.com/blog/save-the-cat-beat-sheet/",
+        "https://reedsy.com/blog/guide/story-structure/save-the-cat-beat-sheet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Frameworks",
+      "title": "What are the 15 beats that Blake Snyder swears every story needs?",
+      "concepts": ["Save the Cat", "15-beat structure", "beat sheet", "page targets"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://reedsy.com/blog/guide/story-structure/save-the-cat-beat-sheet/",
+        "https://www.studiobinder.com/blog/what-is-save-the-cat-screenwriting/",
+        "https://timstout.wordpress.com/story-structure/blake-snyders-beat-sheet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Advanced Frameworks",
+      "title": "How does the Hero's Journey map onto modern film structure?",
+      "concepts": ["Hero's Journey", "Campbell's monomyth", "archetypal structure", "universal patterns"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.studiobinder.com/blog/heros-journey/",
+        "https://ensemblewriter.com/docs/best-screenwriting-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Frameworks",
+      "title": "Can you break your feature into eight 10-15 page sequences?",
+      "concepts": ["sequence method", "eight sequences", "mini-movies", "modular structure"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://class-tools.app.utah.edu/syllabus/1254/11957/U%20of%20U_%20Screenwriting%20%20_%20Film%204820%20-%20Syllabus%20_%20Spring%202025.pdf",
+        "https://www.scribd.com/document/718268606/19237"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Frameworks",
+      "title": "How do genre conventions shape structure in thriller vs. romance vs. comedy?",
+      "concepts": ["genre structure", "genre conventions", "structural expectations", "genre hybrids"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://savethecat.com/how-to-write-a-screenplay",
+        "https://www.masterclass.com/classes/aaron-sorkin-teaches-screenwriting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Frameworks",
+      "title": "How do you choose which structural framework fits your story best?",
+      "concepts": ["framework comparison", "structural flexibility", "analysis methods"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://reedsy.com/blog/guide/story-structure/save-the-cat-beat-sheet/",
+        "https://www.studiobinder.com/blog/three-act-structure/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Scene Craft and Execution",
+      "title": "What makes a scene essential versus just filler?",
+      "concepts": ["scene purpose", "goal-conflict-disaster", "scene vs. sequel", "essential beats"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://dox.utdallas.edu/syl27282",
+        "https://courses.videoschool.com/p/screenwriting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Scene Craft and Execution",
+      "title": "Review: Show character through action in your own scenes",
+      "concepts": ["show don't tell", "action reveals character", "visual storytelling", "subtext"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.masterclass.com/classes/aaron-sorkin-teaches-screenwriting",
+        "https://darkwing.uoregon.edu/~jlesage/Juliafolder/screenwriting/screenwritingsyllbus.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Scene Craft and Execution",
+      "title": "Can you pitch your screenplay in one compelling sentence?",
+      "concepts": ["logline", "pitch", "high concept", "story compression"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://collab.sundance.org/catalog/Screenwriting-Core-Elements-Self-paced",
+        "https://courses.videoschool.com/p/screenwriting"
+      ],
+      "status": "pending"
+    }
+  ]
+}

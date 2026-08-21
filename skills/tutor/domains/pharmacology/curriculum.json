@@ -1,0 +1,399 @@
+{
+  "topic": "Pharmacology — how drugs work",
+  "slug": "pharmacology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (functional groups, acid-base chemistry)",
+    "cell biology (cell structure, membranes, proteins)",
+    "basic human physiology (organ systems)"
+  ],
+  "exit_criteria": [
+    "explain drug mechanisms using receptor theory and signal transduction",
+    "predict drug behavior using pharmacokinetic principles (ADME, half-life, steady-state)",
+    "analyze dose-response curves and therapeutic index",
+    "evaluate drug interactions and adverse effects from mechanisms",
+    "compare drug classes by mechanism and clinical application",
+    "understand pharmacogenomics and personalized medicine concepts"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Drug Fundamentals",
+      "title": "What makes a molecule a 'drug'?",
+      "concepts": ["drug definition", "therapeutic vs toxic effects", "selectivity"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK554445/",
+        "https://www.khanacademy.org/science/health-and-medicine/executive-systems-of-the-brain/drug-dependence/v/pharmacology-introduction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Drug Fundamentals",
+      "title": "Why do some drugs need a prescription while others don't?",
+      "concepts": ["therapeutic index", "safety margin", "risk-benefit analysis"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.fda.gov/drugs/drug-information-consumers/prescription-drugs-and-over-counter-otc-drugs-questions-and-answers",
+        "https://accesspharmacy.mhmedical.com/content.aspx?bookid=2189&sectionid=170302295"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Drug Fundamentals",
+      "title": "How does a drug find its target in a body of trillions of cells?",
+      "concepts": ["molecular recognition", "binding specificity", "drug-receptor interaction"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=SPC58eNHFHE",
+        "https://www.drugbank.com/guides/drug-targets"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Drug Fundamentals",
+      "title": "What's the difference between a drug that activates vs. one that blocks?",
+      "concepts": ["agonists", "antagonists", "partial agonists", "inverse agonists"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=PZxccXxTJ2k",
+        "https://www.ncbi.nlm.nih.gov/books/NBK537166/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Drug Fundamentals",
+      "title": "Can you explain how drugs find and interact with their targets?",
+      "concepts": ["drug-receptor interaction", "agonists vs antagonists", "selectivity", "therapeutic index review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK554445/",
+        "https://www.drugbank.com/guides/drug-targets"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Drug Fundamentals",
+      "title": "Why does doubling the dose not always double the effect?",
+      "concepts": ["dose-response curves", "EC50", "Emax", "saturation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK546673/",
+        "https://ocw.mit.edu/courses/20-201-mechanisms-of-drug-actions-fall-2013/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Pharmacokinetics",
+      "title": "What happens to a pill after you swallow it?",
+      "concepts": ["absorption", "bioavailability", "first-pass metabolism", "routes of administration"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.osmosis.org/learn/Pharmacokinetics:_Absorption",
+        "https://www.ncbi.nlm.nih.gov/books/NBK557636/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Pharmacokinetics",
+      "title": "How does a drug get from your gut to your brain?",
+      "concepts": ["distribution", "blood-brain barrier", "volume of distribution", "plasma protein binding"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=ZiR2g8tTNHs",
+        "https://www.ncbi.nlm.nih.gov/books/NBK547662/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Pharmacokinetics",
+      "title": "Why does your liver sabotage drugs?",
+      "concepts": ["metabolism", "Phase I and Phase II reactions", "CYP450 enzymes", "prodrugs"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=6kJGXc8k8TU",
+        "https://www.pharmgkb.org/page/cyp450RefMaterials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Pharmacokinetics",
+      "title": "How long until a drug leaves your system?",
+      "concepts": ["excretion", "half-life", "clearance", "elimination kinetics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK535428/",
+        "https://www.khanacademy.org/science/health-and-medicine/advanced-hematologic-system/x6e556f83:plasma-concentration-over-time/v/pharmacokinetics-clearance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Pharmacokinetics",
+      "title": "Why do some drugs need daily dosing while others are weekly?",
+      "concepts": ["steady-state concentration", "loading dose", "maintenance dose", "dosing intervals"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK557801/",
+        "https://accesspharmacy.mhmedical.com/content.aspx?bookid=2189&sectionid=170302301"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Pharmacokinetics",
+      "title": "Can you predict when a drug reaches peak concentration?",
+      "concepts": ["ADME integration", "PK calculations", "compartment models"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=JuWQF8aTc_E",
+        "https://www.osmosis.org/learn/Pharmacokinetics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Pharmacodynamics",
+      "title": "What are the main types of drug targets in cells?",
+      "concepts": ["receptors", "enzymes", "ion channels", "transporters"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK539735/",
+        "https://www.youtube.com/watch?v=QYKdNPH24SI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Pharmacodynamics",
+      "title": "How does one drug binding event trigger a cascade of 10,000 molecules?",
+      "concepts": ["signal transduction", "second messengers", "amplification", "GPCRs"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=OmXDsq6T4Eg",
+        "https://www.ncbi.nlm.nih.gov/books/NBK499843/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Pharmacodynamics",
+      "title": "Why do beta-blockers slow your heart rate?",
+      "concepts": ["receptor subtypes", "adrenergic receptors", "sympathetic blockade", "selectivity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=dNWEu9pCgPM",
+        "https://www.ncbi.nlm.nih.gov/books/NBK532906/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Pharmacodynamics",
+      "title": "Why do some drugs stop working over time?",
+      "concepts": ["tolerance", "desensitization", "receptor downregulation", "tachyphylaxis"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK547663/",
+        "https://www.youtube.com/watch?v=y4XNhvXXxec"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Pharmacodynamics",
+      "title": "How do you measure how well a drug binds to its receptor?",
+      "concepts": ["binding affinity", "Kd", "potency vs efficacy", "competitive vs non-competitive binding"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bindingdb.org/bind/index.jsp",
+        "https://www.ncbi.nlm.nih.gov/books/NBK539745/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Pharmacodynamics",
+      "title": "What's the relationship between dose, drug level, and effect?",
+      "concepts": ["PK/PD integration", "hysteresis", "effect compartment"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=2Lx4Y1VJzMI",
+        "https://www.ncbi.nlm.nih.gov/books/NBK554518/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Drug Classes & Mechanisms",
+      "title": "How do NSAIDs like ibuprofen stop pain and inflammation?",
+      "concepts": ["COX inhibition", "prostaglandins", "anti-inflammatory mechanisms"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=6B_YIwQgZAY",
+        "https://www.ncbi.nlm.nih.gov/books/NBK547742/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Drug Classes & Mechanisms",
+      "title": "Why do antibiotics kill bacteria but not human cells?",
+      "concepts": ["selective toxicity", "bacterial cell wall synthesis", "ribosomal differences", "antibiotic classes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=IFbaEhfN-VY",
+        "https://www.ncbi.nlm.nih.gov/books/NBK535443/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Drug Classes & Mechanisms",
+      "title": "What makes antidepressants take weeks to work?",
+      "concepts": ["SSRIs", "serotonin neurotransmission", "neuroplasticity", "delayed therapeutic effect"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=kRCdxOHQz6I",
+        "https://www.ncbi.nlm.nih.gov/books/NBK554406/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Drug Classes & Mechanisms",
+      "title": "How do anesthetics make you unconscious?",
+      "concepts": ["GABA receptors", "anesthetic mechanisms", "MAC", "stages of anesthesia"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=ApFMKxLVKv8",
+        "https://www.ncbi.nlm.nih.gov/books/NBK537076/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Drug Classes & Mechanisms",
+      "title": "Why do chemotherapy drugs have such severe side effects?",
+      "concepts": ["cancer cell targeting", "therapeutic index in oncology", "cytotoxic mechanisms", "normal tissue damage"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=TtRPJdK1NY8",
+        "https://www.ncbi.nlm.nih.gov/books/NBK564367/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Drug Classes & Mechanisms",
+      "title": "How are biologics different from traditional pills?",
+      "concepts": ["monoclonal antibodies", "large molecule drugs", "targeted therapy", "biologic vs small molecule"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fda.gov/drugs/therapeutic-biologics-applications-bla/biosimilars",
+        "https://www.youtube.com/watch?v=sBOQ1_-dQHg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Drug Classes & Mechanisms",
+      "title": "Can you match drug mechanisms to their clinical uses?",
+      "concepts": ["mechanism-based prescribing", "rational drug selection"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.drugbank.com/",
+        "https://www.osmosis.org/learn/Pharmacology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Clinical & Advanced Topics",
+      "title": "Why does the same drug dose work differently in different people?",
+      "concepts": ["pharmacogenomics", "genetic polymorphisms", "CYP450 variants", "personalized medicine"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.pharmgkb.org/",
+        "https://www.youtube.com/watch?v=kxXWOqR31L4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Clinical & Advanced Topics",
+      "title": "What happens when you mix alcohol with sedatives?",
+      "concepts": ["drug-drug interactions", "additive effects", "enzyme induction/inhibition", "pharmacovigilance"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK537009/",
+        "https://www.youtube.com/watch?v=KUz-qbHPPRE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Clinical & Advanced Topics",
+      "title": "Why is antibiotic resistance a bigger threat than new diseases?",
+      "concepts": ["drug resistance mechanisms", "evolution under selection pressure", "stewardship", "resistance spread"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.cdc.gov/antibiotic-use/antibiotic-resistance.html",
+        "https://www.youtube.com/watch?v=znnp-Iwoeic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Clinical & Advanced Topics",
+      "title": "How do we discover and approve new drugs?",
+      "concepts": ["drug discovery pipeline", "preclinical testing", "clinical trials", "FDA approval", "pharmacoeconomics"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.fda.gov/patients/drug-development-process/step-3-clinical-research",
+        "https://www.coursera.org/learn/drug-development",
+        "https://www.youtube.com/watch?v=SnwLkiyQfOc"
+      ],
+      "status": "pending"
+    }
+  ]
+}

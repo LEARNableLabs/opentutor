@@ -1,0 +1,359 @@
+{
+  "topic": "Monetary policy and central banking",
+  "slug": "monetary-policy",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "macroeconomic foundations",
+    "supply and demand",
+    "basic financial markets",
+    "inflation and unemployment concepts"
+  ],
+  "exit_criteria": [
+    "explain how central banks influence the economy through multiple transmission channels",
+    "analyze real-world monetary policy decisions using policy frameworks like the Taylor Rule",
+    "compare different policy regimes (inflation targeting, dual mandate, etc.) and their tradeoffs",
+    "interpret central bank communications and forward guidance",
+    "evaluate unconventional monetary policy tools and their effectiveness"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Central Banking Foundations",
+      "title": "Why do we need central banks in the first place?",
+      "concepts": ["central bank mandate", "price stability", "financial stability"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.federalreserveeducation.org/about-the-fed/structure-and-functions",
+        "https://www.bankofengland.co.uk/knowledgebank/what-is-a-central-bank"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Central Banking Foundations",
+      "title": "What happens when central banks are controlled by politicians?",
+      "concepts": ["central bank independence", "time inconsistency", "credibility"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.imf.org/en/Publications/fandd/issues/2019/09/central-bank-independence-in-crisis-times-waller",
+        "https://www.ecb.europa.eu/ecb/educational/explainers/tell-me-more/html/why_independent.en.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Central Banking Foundations",
+      "title": "How does a central bank's balance sheet actually work?",
+      "concepts": ["central bank balance sheet", "assets and liabilities", "monetary base"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.federalreserve.gov/monetarypolicy/bst_recenttrends.htm",
+        "https://fred.stlouisfed.org/series/WALCL"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Central Banking Foundations",
+      "title": "What's the dual mandate and why does it create tension?",
+      "concepts": ["dual mandate", "inflation-unemployment tradeoff", "Phillips curve"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.chicagofed.org/research/dual-mandate/dual-mandate",
+        "https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics/economic-iondicators-and-the-business-cycle/the-phillips-curve/v/phillips-curve"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Central Banking Foundations",
+      "title": "How would you explain central banking to someone who thinks it's a scam?",
+      "concepts": ["central bank legitimacy", "accountability mechanisms", "transparency"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.federalreserve.gov/faqs/about_12594.htm",
+        "https://www.bis.org/publ/work872.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Central Banking Foundations",
+      "title": "Review: Core Concepts of Central Banking",
+      "concepts": ["central bank foundations review", "mandate and independence", "institutional design"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.federalreserveeducation.org/about-the-fed/structure-and-functions",
+        "https://www.bis.org/about/index.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Monetary Policy Tools",
+      "title": "How does changing one interest rate ripple through the entire economy?",
+      "concepts": ["policy rate", "federal funds rate", "interest rate transmission"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.federalreserveeducation.org/about-the-fed/monetary-policy/interest-rates",
+        "https://fred.stlouisfed.org/series/FEDFUNDS"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Monetary Policy Tools",
+      "title": "What are open market operations and why do they happen every day?",
+      "concepts": ["open market operations", "repo markets", "liquidity management"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.newyorkfed.org/markets/desk-operations",
+        "https://www.investopedia.com/terms/o/openmarketoperations.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Monetary Policy Tools",
+      "title": "When interest rates hit zero, what tools are left?",
+      "concepts": ["quantitative easing", "asset purchases", "unconventional policy"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.bankofengland.co.uk/monetary-policy/quantitative-easing",
+        "https://www.federalreserve.gov/monetarypolicy/bst_fedsbalancesheet.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Monetary Policy Tools",
+      "title": "Why do central bank speeches move markets?",
+      "concepts": ["forward guidance", "communication policy", "expectations management"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.brookings.edu/articles/the-power-of-words-how-does-the-fed-move-markets/",
+        "https://www.ecb.europa.eu/press/key/html/index.en.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Monetary Policy Tools",
+      "title": "Review: Tools in the Central Bank Toolkit",
+      "concepts": ["policy instruments review", "conventional vs unconventional", "effectiveness assessment"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.imf.org/en/Publications/WP/Issues/2019/04/26/Monetary-Policy-Toolbox-Past-Present-and-Future-46813"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Transmission Mechanisms",
+      "title": "How does a rate hike actually slow down the economy?",
+      "concepts": ["interest rate channel", "cost of capital", "investment decisions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.federalreserve.gov/econres/notes/feds-notes/the-transmission-of-monetary-policy-through-bank-lending-20180813.htm",
+        "https://www.ecb.europa.eu/mopo/intro/transmission/html/index.en.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Transmission Mechanisms",
+      "title": "Why do banks matter for monetary policy effectiveness?",
+      "concepts": ["credit channel", "bank lending", "financial intermediation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.clevelandfed.org/publications/economic-commentary/2018/ec-201815-monetary-policy-and-bank-lending",
+        "https://www.bis.org/publ/work278.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Transmission Mechanisms",
+      "title": "How do exchange rates amplify or dampen monetary policy?",
+      "concepts": ["exchange rate channel", "currency appreciation", "trade balance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.bis.org/publ/qtrpdf/r_qt1709f.htm",
+        "https://fred.stlouisfed.org/series/DTWEXBGS"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Transmission Mechanisms",
+      "title": "Why does monetary policy work with such long and variable lags?",
+      "concepts": ["policy lags", "recognition lag", "implementation lag", "impact lag"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.stlouisfed.org/on-the-economy/2022/mar/long-variable-lags-monetary-policy",
+        "https://www.brookings.edu/articles/the-hutchins-center-explains-monetary-policy-lags/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Transmission Mechanisms",
+      "title": "How did the Fed's 2020 rate cuts transmit through the economy?",
+      "concepts": ["transmission synthesis", "empirical analysis", "policy evaluation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.federalreserve.gov/monetarypolicy/timeline-forward-guidance-about-the-federal-funds-rate.htm",
+        "https://fred.stlouisfed.org/series/MORTGAGE30US",
+        "https://fred.stlouisfed.org/series/UNRATE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Policy Frameworks",
+      "title": "What's inflation targeting and why did everyone adopt it?",
+      "concepts": ["inflation targeting", "target band", "flexible vs strict"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bankofengland.co.uk/monetary-policy/inflation",
+        "https://www.rbnz.govt.nz/monetary-policy/about-monetary-policy/inflation-targeting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Policy Frameworks",
+      "title": "Review: Connecting Tools, Transmission, and Targets",
+      "concepts": ["policy synthesis", "causal chains", "framework coherence"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.imf.org/en/Publications/WP/Issues/2018/03/23/Evolution-of-Monetary-Policy-Frameworks-in-the-Post-Crisis-Environment-45720"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Policy Frameworks",
+      "title": "How does the Taylor Rule predict central bank decisions?",
+      "concepts": ["Taylor Rule", "policy reaction function", "interest rate rules"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.atlantafed.org/cqer/research/taylor-rule",
+        "https://web.stanford.edu/~johntayl/Onlinepaperscombinedbyyear/1993/Discretion_versus_Policy_Rules_in_Practice.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Policy Frameworks",
+      "title": "What if central banks targeted nominal GDP instead of inflation?",
+      "concepts": ["nominal GDP targeting", "alternative frameworks", "level targeting"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.mercatus.org/research/policy-briefs/case-nominal-gdp-targeting",
+        "https://www.brookings.edu/articles/the-case-for-a-nominal-gdp-target/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Policy Frameworks",
+      "title": "What does the latest FOMC statement reveal about policy direction?",
+      "concepts": ["policy statement analysis", "signaling", "dot plot interpretation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Contemporary Challenges",
+      "title": "Can interest rates really go negative—and should they?",
+      "concepts": ["negative interest rates", "zero lower bound", "NIRP effectiveness"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.brookings.edu/articles/the-case-for-negative-interest-rates/",
+        "https://www.ecb.europa.eu/press/key/date/2016/html/sp160908.en.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Contemporary Challenges",
+      "title": "Should central banks care about climate change?",
+      "concepts": ["climate risk", "green monetary policy", "mandate expansion"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ecb.europa.eu/press/blog/date/2021/03/html/ecb.blog210318~3bbc68ffc5.en.html",
+        "https://www.bis.org/publ/othp31.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Contemporary Challenges",
+      "title": "What are central bank digital currencies and why the rush?",
+      "concepts": ["CBDCs", "digital money", "payment systems"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.atlantafed.org/cenfis/publications/cbdc",
+        "https://www.bis.org/publ/othp33.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Contemporary Challenges",
+      "title": "How did central banks handle the 2021-2023 inflation surge?",
+      "concepts": ["inflation shock response", "tightening cycle", "policy evaluation"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20230503.htm",
+        "https://fred.stlouisfed.org/series/CPIAUCSL",
+        "https://www.ecb.europa.eu/press/accounts/2023/html/ecb.mg230316~54c9dc6cd9.en.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Contemporary Challenges",
+      "title": "How would you design a monetary policy framework for a country facing both high inflation and unemployment?",
+      "concepts": ["framework design", "institutional choices", "policy integration"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.imf.org/en/Publications/WP/Issues/2016/12/31/Monetary-Policy-Frameworks-for-Emerging-Markets-43808",
+        "https://www.bis.org/publ/bppdf/bispap24.htm"
+      ],
+      "status": "pending"
+    }
+  ]
+}

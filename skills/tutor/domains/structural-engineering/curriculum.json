@@ -1,0 +1,381 @@
+{
+  "topic": "Structural Engineering — Bridges and Skyscrapers",
+  "slug": "structural-engineering",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (forces, moments, equilibrium)",
+    "algebra and trigonometry",
+    "familiarity with vectors"
+  ],
+  "exit_criteria": [
+    "explain how different bridge types resist loads",
+    "identify structural systems used in tall buildings",
+    "analyze load paths in real structures",
+    "evaluate why certain structures failed and how design prevents failure",
+    "compare structural solutions for different engineering challenges"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Structural Fundamentals",
+      "title": "What holds up a building when gravity pulls it down?",
+      "concepts": ["structural systems", "load paths", "equilibrium"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-050-solid-mechanics-fall-2004/",
+        "https://www.youtube.com/c/PracticalEngineeringChannel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Structural Fundamentals",
+      "title": "Why do some structures push while others pull?",
+      "concepts": ["tension", "compression", "shear", "force types"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/physics/forces-newtons-laws",
+        "https://www.youtube.com/c/TheEfficientEngineer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Structural Fundamentals",
+      "title": "How does a beam bend without breaking?",
+      "concepts": ["bending moments", "stress distribution", "neutral axis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-050-solid-mechanics-fall-2004/pages/lecture-notes/",
+        "https://skyciv.com/docs/tutorials/beam-tutorials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Structural Fundamentals",
+      "title": "What invisible forces does wind put on a skyscraper?",
+      "concepts": ["wind loads", "lateral forces", "dynamic loads"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ctbuh.org/resource/wind-engineering",
+        "https://en.wikipedia.org/wiki/Wind_engineering"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Structural Fundamentals",
+      "title": "Why do earthquakes topple some buildings but not others?",
+      "concepts": ["seismic loads", "resonance", "damping", "ductility"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://earthquake.usgs.gov/learn/topics/buildingdesign.php",
+        "https://www.youtube.com/watch?v=kzVvd4Dk6sw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Materials and Forces",
+      "title": "Review: Forces, Loads, and Structural Behavior",
+      "concepts": ["equilibrium", "load types", "force resolution"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/physics/forces-newtons-laws/equilibrium-topic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Materials and Forces",
+      "title": "Why is steel strong in both tension and compression?",
+      "concepts": ["material properties", "yield strength", "elastic vs plastic behavior"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.steel.org/steel-technology/",
+        "https://www.youtube.com/watch?v=BHZALtqAjeM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Materials and Forces",
+      "title": "What makes concrete strong in compression but weak in tension?",
+      "concepts": ["concrete behavior", "reinforcement", "composite materials"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.cement.org/learn/concrete-technology",
+        "https://ocw.mit.edu/courses/1-054-mechanics-and-design-of-concrete-structures-spring-2004/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Materials and Forces",
+      "title": "How do engineers decide: steel or concrete?",
+      "concepts": ["material selection", "cost vs performance", "construction methods"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.asce.org/publications-and-news/civil-engineering-source/",
+        "https://www.structuremag.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Materials and Forces",
+      "title": "What safety margin keeps structures from failing?",
+      "concepts": ["factor of safety", "ultimate vs working loads", "reliability"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.asce.org/publications-and-news/asce-7/",
+        "https://en.wikipedia.org/wiki/Factor_of_safety"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Materials and Forces",
+      "title": "Why did the Tacoma Narrows Bridge twist itself apart?",
+      "concepts": ["resonance", "aerodynamics", "torsional instability", "failure analysis"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=3mclp9QmCGs",
+        "https://en.wikipedia.org/wiki/Tacoma_Narrows_Bridge_(1940)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Bridge Engineering",
+      "title": "Review: Materials, Safety, and Real Failures",
+      "concepts": ["material behavior", "safety factors", "failure modes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/physics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Bridge Engineering",
+      "title": "What makes a simple beam bridge so simple?",
+      "concepts": ["beam bridges", "span limits", "support reactions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.pbs.org/wgbh/nova/bridge/build.html",
+        "https://www.fhwa.dot.gov/bridge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Bridge Engineering",
+      "title": "How does an arch bridge push its weight into the ground?",
+      "concepts": ["arch bridges", "compression paths", "thrust forces", "abutments"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Arch_bridge",
+        "https://www.youtube.com/watch?v=jkDZ3xCAb5I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Bridge Engineering",
+      "title": "Why can suspension bridges span distances other bridges can't?",
+      "concepts": ["suspension bridges", "cable systems", "catenary curves", "anchorages"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Golden_Gate_Bridge",
+        "https://www.youtube.com/watch?v=Mjt1YjxjFoo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Bridge Engineering",
+      "title": "What happens in the cables of the Golden Gate Bridge?",
+      "concepts": ["cable analysis", "tension distribution", "tower loads"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.goldengate.org/bridge/bridge-design-construction/",
+        "https://www.pbs.org/wgbh/americanexperience/features/goldengate-bridge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Bridge Engineering",
+      "title": "How do cable-stayed bridges differ from suspension bridges?",
+      "concepts": ["cable-stayed bridges", "fan vs harp arrangement", "deck-cable interaction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Cable-stayed_bridge",
+        "https://www.youtube.com/watch?v=VXCZpMK5rIo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Bridge Engineering",
+      "title": "Which bridge type would you choose for a 500-meter span over water?",
+      "concepts": ["bridge type selection", "span limitations", "site conditions", "economics"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.fhwa.dot.gov/bridge/prefab/",
+        "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2021/03/building-bridges"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Skyscraper Systems",
+      "title": "Review: Bridge Types and Load Paths",
+      "concepts": ["bridge types", "compression vs tension", "span capabilities"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.pbs.org/wgbh/nova/bridge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Skyscraper Systems",
+      "title": "Why don't skyscrapers tip over in the wind?",
+      "concepts": ["lateral load resistance", "overturning moments", "foundation design"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ctbuh.org/resource/height",
+        "https://www.youtube.com/watch?v=f2pSFZwzQQ0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Skyscraper Systems",
+      "title": "What structural system turned buildings into hollow tubes?",
+      "concepts": ["tube structures", "framed tube", "bundled tube", "Burj Khalifa"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ctbuh.org/resource/structural-systems",
+        "https://en.wikipedia.org/wiki/Tube_(structure)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Skyscraper Systems",
+      "title": "How does a diagrid make a building both strong and elegant?",
+      "concepts": ["diagrid structures", "diagonal members", "load efficiency"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ctbuh.org/resource/diagrid-structures",
+        "https://www.youtube.com/watch?v=0eTSkUbLQ0s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Skyscraper Systems",
+      "title": "What's the secret inside Taipei 101 that stops it from swaying?",
+      "concepts": ["tuned mass dampers", "dynamic control", "vibration reduction"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.taipei-101.com.tw/en/observatory-damper.aspx",
+        "https://www.youtube.com/watch?v=ohKqE_mwMmo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Skyscraper Systems",
+      "title": "How do outriggers multiply a building's strength?",
+      "concepts": ["outrigger systems", "core-outrigger interaction", "perimeter columns"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ctbuh.org/resource/outrigger-design",
+        "https://www.structuremag.org/?p=13067"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Skyscraper Systems",
+      "title": "Review: Skyscraper Structural Systems and Innovations",
+      "concepts": ["lateral resistance", "tube structures", "dampers", "outriggers"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ctbuh.org/resource/height"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Skyscraper Systems",
+      "title": "Why do some skyscrapers have exoskeletons?",
+      "concepts": ["exoskeleton structures", "exterior bracing", "architectural expression"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/John_Hancock_Center",
+        "https://www.ctbuh.org/resource/exterior-bracing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration and Advanced Topics",
+      "title": "How would you design a structure for both earthquake and hurricane zones?",
+      "concepts": ["multi-hazard design", "ductility", "redundancy", "performance-based design"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.fema.gov/emergency-managers/risk-management/earthquake/hazus",
+        "https://www.asce.org/publications-and-news/asce-7/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Integration and Advanced Topics",
+      "title": "What can we learn from structures that failed?",
+      "concepts": ["failure analysis", "lessons learned", "design evolution", "case studies"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=IW4TCDkoHfw",
+        "https://ascelibrary.org/journal/jpeodx",
+        "https://en.wikipedia.org/wiki/List_of_bridge_failures"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "topic": "Programming Language Theory",
+  "slug": "programming-language-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "functional programming basics",
+    "discrete mathematics",
+    "propositional logic",
+    "recursion and induction"
+  ],
+  "exit_criteria": [
+    "student can read and write lambda calculus expressions and perform beta reduction",
+    "student can read typing rules and understand type safety arguments",
+    "student can implement a simple type checker for a typed lambda calculus",
+    "student can explain operational semantics using small-step and big-step approaches",
+    "student understands type inference and the Hindley-Milner algorithm",
+    "student can connect PLT concepts to features in real programming languages"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations: Lambda Calculus",
+      "title": "Why do we need a minimal model of computation?",
+      "concepts": ["lambda calculus", "abstraction", "application"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://softwarefoundations.cis.upenn.edu/", "https://plzoo.andrej.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations: Lambda Calculus",
+      "title": "What happens when we substitute variables?",
+      "concepts": ["variable binding", "substitution", "alpha conversion"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.cs.cornell.edu/courses/cs6110/", "https://www.youtube.com/watch?v=eis11j_iGMs"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations: Lambda Calculus",
+      "title": "How do programs reduce to values?",
+      "concepts": ["beta reduction", "reduction strategies", "normal forms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://plzoo.andrej.com/", "http://www.lambdacalculator.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations: Lambda Calculus",
+      "title": "Can we encode everything without primitive data?",
+      "concepts": ["Church encodings", "booleans", "numerals", "pairs"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.cs.princeton.edu/~dpw/courses/cos326/", "https://plzoo.andrej.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations: Lambda Calculus",
+      "title": "How does the Y combinator enable recursion?",
+      "concepts": ["fixed points", "recursion", "combinators"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://mvanier.livejournal.com/2897.html", "https://www.youtube.com/watch?v=9T8A89jgeTI"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Type Systems: Foundations",
+      "title": "Why do untyped programs get stuck?",
+      "concepts": ["runtime errors", "stuck terms", "type safety motivation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://www.cs.cmu.edu/~rwh/pfpl/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Type Systems: Foundations",
+      "title": "What is a type system, really?",
+      "concepts": ["typing judgments", "typing rules", "type derivations"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://www.cs.cornell.edu/courses/cs6110/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Type Systems: Foundations",
+      "title": "How does simply typed lambda calculus prevent errors?",
+      "concepts": ["simple types", "function types", "type checking"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://plzoo.andrej.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Type Systems: Foundations",
+      "title": "What does 'well-typed programs don't go wrong' actually mean?",
+      "concepts": ["type soundness", "progress", "preservation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://www.cs.cmu.edu/~rwh/pfpl/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Type Systems: Foundations",
+      "title": "How do product and sum types model data structures?",
+      "concepts": ["product types", "sum types", "algebraic data types"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.haskell.org/tutorial/", "https://fsharpforfunandprofit.com/posts/type-size-and-design/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Type Systems: Foundations",
+      "title": "What constraints do types place on computation?",
+      "concepts": ["lambda calculus review", "type systems review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://softwarefoundations.cis.upenn.edu/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Operational Semantics",
+      "title": "How do we formally describe program execution?",
+      "concepts": ["operational semantics", "reduction relations", "evaluation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.cs.cmu.edu/~rwh/pfpl/", "https://www.cs.cornell.edu/courses/cs6110/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Operational Semantics",
+      "title": "What's the difference between small-step and big-step semantics?",
+      "concepts": ["small-step semantics", "big-step semantics", "evaluation strategies"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.cs.cmu.edu/~rwh/pfpl/", "https://www.cs.washington.edu/education/courses/cse505/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Operational Semantics",
+      "title": "Why does evaluation order matter?",
+      "concepts": ["call-by-value", "call-by-name", "evaluation contexts"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.cs.cmu.edu/~rwh/pfpl/", "https://docs.scala-lang.org/tour/by-name-parameters.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Operational Semantics",
+      "title": "How do we prove properties about our semantics?",
+      "concepts": ["determinism", "confluence", "normalization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://softwarefoundations.cis.upenn.edu/plf-current/", "https://www.cs.cmu.edu/~rwh/pfpl/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Operational Semantics",
+      "title": "How can we visualize semantic modeling interactively?",
+      "concepts": ["semantic modeling", "reduction visualization"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://redex.racket-lang.org/", "https://www.youtube.com/watch?v=BuCRTock1_k"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Type Inference",
+      "title": "Why manually annotate types when machines can infer them?",
+      "concepts": ["type inference", "principal types", "ML-style inference"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://ocaml.org/manual/types.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Type Inference",
+      "title": "What are the essential building blocks of type systems?",
+      "concepts": ["type systems review", "semantics review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://www.cs.cmu.edu/~rwh/pfpl/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Type Inference",
+      "title": "How does unification find the most general type?",
+      "concepts": ["unification", "substitution", "most general unifier"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://course.ccs.neu.edu/cs4410/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Type Inference",
+      "title": "What is the Hindley-Milner algorithm?",
+      "concepts": ["Hindley-Milner", "constraint generation", "let-polymorphism"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "http://dev.stephendiehl.com/fun/006_hindley_milner.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Type Inference",
+      "title": "How would you implement a type inference engine?",
+      "concepts": ["type checker implementation", "inference algorithm"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": ["http://dev.stephendiehl.com/fun/", "https://github.com/tomprimozic/type-systems"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Type Features",
+      "title": "How does parametric polymorphism enable code reuse?",
+      "concepts": ["parametric polymorphism", "generics", "type variables"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://doc.rust-lang.org/book/ch10-00-generics.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Type Features",
+      "title": "What is subtyping and how does it relate to OOP?",
+      "concepts": ["subtyping", "subsumption", "variance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://www.cs.cornell.edu/courses/cs6110/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Type Features",
+      "title": "How do effect systems track computational effects?",
+      "concepts": ["effect systems", "algebraic effects", "monads"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.eff-lang.org/", "https://overreacted.io/algebraic-effects-for-the-rest-of-us/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Type Features",
+      "title": "What are dependent types and why are they powerful?",
+      "concepts": ["dependent types", "types depending on values", "type-level computation"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": ["https://www.idris-lang.org/", "https://agda.readthedocs.io/en/latest/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Type Features",
+      "title": "How do different type features compose into cohesive systems?",
+      "concepts": ["polymorphism review", "subtyping review", "effects review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.cis.upenn.edu/~bcpierce/tapl/", "https://www.cs.cmu.edu/~rwh/pfpl/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Verification and Applications",
+      "title": "How does the Curry-Howard correspondence link types and proofs?",
+      "concepts": ["Curry-Howard correspondence", "propositions as types", "proofs as programs"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://softwarefoundations.cis.upenn.edu/", "https://www.youtube.com/watch?v=IOiZatlZtGU"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Verification and Applications",
+      "title": "What can we prove with proof assistants?",
+      "concepts": ["proof assistants", "certified programming", "verified software"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://coq.inria.fr/", "https://leanprover.github.io/", "https://www.cs.cmu.edu/~15414/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Verification and Applications",
+      "title": "How does PLT connect to language features you use daily?",
+      "concepts": ["real-world applications", "language design", "type-driven development"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.typescriptlang.org/docs/", "https://doc.rust-lang.org/book/", "https://www.haskell.org/"],
+      "status": "pending"
+    }
+  ]
+}

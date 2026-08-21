@@ -1,0 +1,422 @@
+{
+  "topic": "Ethnobotany — plants and human cultures",
+  "slug": "ethnobotany",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology",
+    "general ecology concepts",
+    "awareness of cultural diversity"
+  ],
+  "exit_criteria": [
+    "identify major domestication centers and their crops",
+    "explain how traditional knowledge systems classify and use plants",
+    "analyze medicinal plant research using ethnopharmacological methods",
+    "evaluate conservation approaches that integrate cultural and biological diversity",
+    "design an ethnobotanical research project with appropriate methods",
+    "recognize ethical issues in bioprospecting and benefit sharing"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Ethnobotany",
+      "title": "What makes a plant relationship 'ethnobotanical'?",
+      "concepts": ["ethnobotany definition", "human-plant coevolution", "interdisciplinary methods"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nybg.org/plant-research-and-conservation/institute-of-economic-botany/",
+        "https://people.wku.edu/charles.smith/biogeog/ETHN0002.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Ethnobotany",
+      "title": "How do ethnobotanists actually collect data in the field?",
+      "concepts": ["field methods", "participatory research", "informed consent", "documentation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://toolkit.culturalsurvival.org/references/gary-j-martin-ethnobotany-methods-manual",
+        "https://ethnobiology.org/what-we-do/core-programs/ethics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Ethnobotany",
+      "title": "Why did Richard Schultes spend 14 years in the Amazon?",
+      "concepts": ["history of ethnobotany", "plant exploration", "bioprospecting"],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.kew.org/read-and-watch/richard-evans-schultes",
+        "https://www.youtube.com/watch?v=vD76s8EqMl4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Ethnobotany",
+      "title": "Can you design an ethnobotanical survey for your local community?",
+      "concepts": ["research design", "sampling methods", "interview techniques"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://edepot.wur.nl/234098",
+        "https://www.ethnobiology.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Plant Domestication and Agriculture",
+      "title": "Where did our food actually come from?",
+      "concepts": ["Vavilov centers", "centers of diversity", "crop wild relatives"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ars.usda.gov/oc/timeline/vavilov/",
+        "https://www.croptrust.org/our-work/supporting-crop-conservation/vavilov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Plant Domestication and Agriculture",
+      "title": "How did maize become so radically different from its wild ancestor?",
+      "concepts": ["domestication syndrome", "artificial selection", "crop evolution"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.pnas.org/doi/10.1073/pnas.1820997116",
+        "https://www.sciencemag.org/content/302/5648/1206.abstract"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Review — Foundations and Domestication",
+      "title": "Review: What have you learned about ethnobotanical methods and domestication?",
+      "concepts": ["field methods review", "ethics review", "domestication basics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ethnobiology.org/what-we-do/core-programs/education"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Plant Domestication and Agriculture",
+      "title": "What is the Three Sisters system actually teaching us?",
+      "concepts": ["companion planting", "traditional agriculture", "polyculture"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.reneesgarden.com/blogs/gardening-resources/the-three-sisters",
+        "http://naeb.brit.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Plant Domestication and Agriculture",
+      "title": "Why are Indigenous farmers better at preserving crop diversity than seed banks?",
+      "concepts": ["in situ conservation", "seed sovereignty", "agrobiodiversity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.bioversityinternational.org/e-library/publications/detail/in-situ-conservation/",
+        "https://seedsavers.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Traditional Ecological Knowledge",
+      "title": "How do different cultures 'see' the plant world differently?",
+      "concepts": ["folk taxonomy", "cultural cognition", "ethnoclassification"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sapiens.org/culture/traditional-ecological-knowledge/",
+        "https://www.fs.usda.gov/pnw/pubs/journals/pnw_2004_berkes001.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Traditional Ecological Knowledge",
+      "title": "What does a Hanunóo farmer know that a botanist doesn't?",
+      "concepts": ["local knowledge", "observation skills", "practical wisdom"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "http://naeb.brit.org/uses/",
+        "https://unesdoc.unesco.org/ark:/48223/pf0000139068"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Traditional Ecological Knowledge",
+      "title": "Can traditional knowledge predict where medicinal compounds will be found?",
+      "concepts": ["TEK validation", "scientific collaboration", "knowledge integration"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6273146/",
+        "https://www.nature.com/articles/nplants201523"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Traditional Ecological Knowledge",
+      "title": "How is traditional plant knowledge transmitted across generations?",
+      "concepts": ["cultural transmission", "knowledge erosion", "language loss"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.culturalsurvival.org/publications/cultural-survival-quarterly",
+        "https://www.terralingua.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Review — Traditional Knowledge",
+      "title": "Review: How do cultures organize and transmit plant knowledge?",
+      "concepts": ["TEK review", "folk taxonomy review", "cultural transmission"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ethnobiology.org/what-we-do/core-programs/education"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Medicinal Plants and Ethnopharmacology",
+      "title": "Why did ancient peoples figure out which plants heal?",
+      "concepts": ["traditional medicine systems", "empirical knowledge", "trial and error"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.who.int/health-topics/traditional-complementary-and-integrative-medicine",
+        "https://www.nccih.nih.gov/health/traditional-chinese-medicine-what-you-need-to-know"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Medicinal Plants and Ethnopharmacology",
+      "title": "How do we test if a traditional remedy actually works?",
+      "concepts": ["ethnopharmacology", "bioassays", "clinical trials", "evidence hierarchy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/journal/journal-of-ethnopharmacology",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3002804/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Medicinal Plants and Ethnopharmacology",
+      "title": "What is the story behind aspirin, quinine, and artemisinin?",
+      "concepts": ["drug discovery", "bioactive compounds", "pharmaceutical development"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.acs.org/content/acs/en/education/whatischemistry/landmarks/flemingpenicillin.html",
+        "https://www.nobelprize.org/prizes/medicine/2015/tu/facts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Medicinal Plants and Ethnopharmacology",
+      "title": "Explain how you would investigate a healer's claim about a new plant medicine",
+      "concepts": ["research pipeline", "ethical protocols", "interdisciplinary methods"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK92773/",
+        "https://link.springer.com/journal/10787"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Plants in Culture and Ritual",
+      "title": "Why are certain plants considered sacred across many cultures?",
+      "concepts": ["sacred plants", "ritual use", "symbolic meaning"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kew.org/read-and-watch/sacred-plants",
+        "https://plants.jstor.org/stable/10.5555/al.ap.visual.pe000028"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Plants in Culture and Ritual",
+      "title": "How do psychoactive plants shape religious experience and worldview?",
+      "concepts": ["ethnomycology", "psychoactive compounds", "shamanic practices"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://maps.org/news/media/7421-the-new-yorker-the-promise-of-psychedelic-therapy",
+        "https://www.jstor.org/stable/40316683"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Review — Ethnopharmacology and Culture",
+      "title": "Review: How do medicinal and ritual plant uses intersect?",
+      "concepts": ["ethnopharmacology review", "sacred plants review", "cultural contexts"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ethnopharmacology.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Plants in Culture and Ritual",
+      "title": "What role do flowers play in festivals from Día de Muertos to Holi?",
+      "concepts": ["ceremonial plants", "cultural festivals", "symbolic communication"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.amnh.org/explore/news-blogs/on-exhibit-posts/the-meaning-of-marigolds",
+        "https://www.britannica.com/topic/Holi"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Plants in Culture and Ritual",
+      "title": "How have colonialism and globalization changed plant ritual practices?",
+      "concepts": ["cultural change", "syncretism", "plant trade", "cultural appropriation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.culturalsurvival.org/",
+        "https://localcontexts.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Material Culture and Economic Botany",
+      "title": "How did cotton and indigo shape world history?",
+      "concepts": ["fiber plants", "dye plants", "economic history", "trade routes"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.kew.org/read-and-watch/cotton-plant",
+        "https://www.smithsonianmag.com/history/true-story-of-indigo-slave-rebellion-180973318/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Material Culture and Economic Botany",
+      "title": "What can traditional materials teach us about sustainable design?",
+      "concepts": ["biomaterials", "traditional technology", "sustainability", "innovation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.kew.org/read-and-watch/useful-plants",
+        "https://www.biohabitats.com/newsletter/biomimicry/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Material Culture and Economic Botany",
+      "title": "Map the plant origins of objects in your daily life",
+      "concepts": ["economic botany", "plant products", "supply chains"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.pfaf.org/",
+        "https://www.cbd.int/abs/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Material Culture and Economic Botany",
+      "title": "Why did humans develop so many different uses for bamboo?",
+      "concepts": ["multipurpose plants", "material innovation", "cultural adaptation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.kew.org/read-and-watch/bamboo",
+        "https://www.worldbamboo.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Review — Material Culture",
+      "title": "Review: What can plants teach us about material culture and sustainability?",
+      "concepts": ["economic botany review", "material culture review", "sustainable practices"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://economicbotany.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Conservation and Contemporary Issues",
+      "title": "Why is preserving languages as important as preserving species?",
+      "concepts": ["biocultural diversity", "language documentation", "knowledge preservation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.bioversityinternational.org/",
+        "https://www.terralingua.org/biocultural-diversity/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Conservation and Contemporary Issues",
+      "title": "How can ethnobotany address biopiracy and promote benefit sharing?",
+      "concepts": ["Nagoya Protocol", "intellectual property", "traditional knowledge rights", "equitable partnerships"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cbd.int/abs/",
+        "https://www.wipo.int/tk/en/",
+        "https://localcontexts.org/labels/traditional-knowledge-labels/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Conservation and Contemporary Issues",
+      "title": "What role can you play in ethnobotanical conservation and ethical practice?",
+      "concepts": ["personal engagement", "ethical practice", "future directions", "citizen science"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.inaturalist.org/",
+        "https://www.ethnobiology.org/",
+        "https://localcontexts.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

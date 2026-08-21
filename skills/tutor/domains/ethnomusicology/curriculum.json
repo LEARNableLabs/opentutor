@@ -1,0 +1,420 @@
+{
+  "topic": "Ethnomusicology — music across cultures",
+  "slug": "ethnomusicology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic music theory (notation, scales, rhythm)",
+    "familiarity with Western music history",
+    "cultural anthropology basics (helpful but not required)"
+  ],
+  "exit_criteria": [
+    "analyze music from diverse cultures using appropriate theoretical frameworks",
+    "identify and describe musical elements beyond Western notation (tuning systems, rhythmic patterns, timbres)",
+    "critically evaluate ethnomusicological research through emic and etic lenses",
+    "understand ethical considerations in music research and cultural representation",
+    "conduct basic fieldwork documentation (recording, interviewing, transcription)",
+    "engage with contemporary debates in ethnomusicology (appropriation, preservation, globalization)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Ethnomusicology",
+      "title": "What makes ethnomusicology different from musicology?",
+      "concepts": ["comparative musicology", "anthropology of music", "field history"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.amazon.com/Study-Ethnomusicology-Thirty-Three-Discussions/dp/0252039289",
+        "https://www.ethnomusicology.org/page/Resources_CareersPublicSyl"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Ethnomusicology",
+      "title": "Why do we study music as culture, not just sound?",
+      "concepts": ["music as social behavior", "cultural context", "functionalism"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://books.google.com/books/about/Worlds_of_Music_An_Introduction_to_the_M.html?id=KzWmpqPTCwYC",
+        "https://learn.soundcollective.com/courses/ethnomusicology-and-modern-music/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Ethnomusicology",
+      "title": "How does the emic/etic distinction change what we hear?",
+      "concepts": ["emic perspective", "etic perspective", "insider vs outsider"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://archive.org/details/theorymethodinet0000nett",
+        "https://music.uchicago.edu/taxonomy/term/68?page=3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Ethnomusicology",
+      "title": "What can we learn from music that Western notation cannot capture?",
+      "concepts": ["transcription limitations", "microtones", "timbral nuance", "performance practice"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.classcentral.com/subject/ethnomusicology",
+        "https://guides.library.ucla.edu/ethno/av"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Ethnomusicology",
+      "title": "Who owns music, and why does it matter?",
+      "concepts": ["cultural ownership", "appropriation", "ethics in fieldwork"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ethnomusicology.org/page/Resources_CareersPublicSyl",
+        "https://learn.soundcollective.com/courses/ethnomusicology-and-modern-music/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Ethnomusicology",
+      "title": "Review: Foundations checkpoint",
+      "concepts": ["emic/etic", "ethics", "transcription", "field history"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.classcentral.com/course/worldmusic-355"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Music and Culture",
+      "title": "How does music construct identity?",
+      "concepts": ["music and identity", "ethnicity", "nationalism", "gender in music"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cengage.com/c/worlds-of-music-an-introduction-to-the-music-of-the-world-s-peoples-6e-titon/9781133953906/",
+        "https://music.utexas.edu/academics/programs-study/musicology-ethnomusicology/course-descriptions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Music and Culture",
+      "title": "Why is music central to ritual and religion?",
+      "concepts": ["sacred music", "ritual function", "trance and ecstasy", "ceremonial contexts"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://guides.library.ucla.edu/ethno/av",
+        "https://www.classcentral.com/course/worldmusic-355"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Music and Culture",
+      "title": "What role does music play in political resistance?",
+      "concepts": ["music and power", "protest songs", "colonialism", "decolonization"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://learn.soundcollective.com/courses/ethnomusicology-and-modern-music/",
+        "https://www.ethnomusicology.org/page/Resources_CareersPublicSyl"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Music and Culture",
+      "title": "How do we analyze music on its own cultural terms?",
+      "concepts": ["analytical frameworks", "avoiding ethnocentrism", "culturally-grounded analysis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://archive.org/details/theorymethodinet0000nett",
+        "https://music.uchicago.edu/taxonomy/term/68?page=3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Music and Culture",
+      "title": "Can music be universal if every culture does it differently?",
+      "concepts": ["musical universals", "cultural specificity", "comparative analysis"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.amazon.com/Study-Ethnomusicology-Thirty-Three-Discussions/dp/0252039289",
+        "https://www.classcentral.com/subject/ethnomusicology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Music and Culture",
+      "title": "Review: Music in cultural context",
+      "concepts": ["identity", "ritual", "power", "analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.classcentral.com/course/worldmusic-355"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Musical Systems Across Cultures",
+      "title": "Why don't all cultures divide the octave into 12 equal parts?",
+      "concepts": ["tuning systems", "equal temperament", "just intonation", "gamelan tuning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cengage.com/c/worlds-of-music-an-introduction-to-the-music-of-the-world-s-peoples-6e-titon/9781133953906/",
+        "https://www.classcentral.com/subject/ethnomusicology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Musical Systems Across Cultures",
+      "title": "How does the maqam system organize pitch differently than Western scales?",
+      "concepts": ["maqam", "modal systems", "Middle Eastern music theory"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://guides.library.ucla.edu/ethno/av",
+        "https://learn.soundcollective.com/courses/ethnomusicology-and-modern-music/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Musical Systems Across Cultures",
+      "title": "What makes African polyrhythm more than just 'complex rhythm'?",
+      "concepts": ["polyrhythm", "cyclic rhythm", "timeline patterns", "rhythmic density"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://guides.libraries.emory.edu/c.php?g=50335&p=324879",
+        "https://www.classcentral.com/course/worldmusic-355"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Musical Systems Across Cultures",
+      "title": "Why is timbre central to some music traditions but peripheral in Western classical music?",
+      "concepts": ["timbre", "texture", "vocal techniques", "instrument construction"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://bowdoin.libguides.com/c.php?g=271745&p=1812939",
+        "https://guides.library.ucla.edu/ethno/av"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Musical Systems Across Cultures",
+      "title": "How do call-and-response and cyclical forms organize musical time?",
+      "concepts": ["call-and-response", "cyclical forms", "improvisation", "formal structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cengage.com/c/worlds-of-music-an-introduction-to-the-world-s-peoples-6e-titon/9781133953906/",
+        "https://archive.org/details/theorymethodinet0000nett"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Musical Systems Across Cultures",
+      "title": "Review: Musical elements checkpoint",
+      "concepts": ["tuning", "rhythm", "timbre", "form"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.classcentral.com/subject/ethnomusicology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Regional Case Studies",
+      "title": "What makes West African drumming an ensemble conversation?",
+      "concepts": ["West African music", "master drummer", "ensemble interlock", "social function"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://guides.libraries.emory.edu/c.php?g=50335&p=324879",
+        "https://www.classcentral.com/course/worldmusic-355"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Regional Case Studies",
+      "title": "How does gamelan music embody Javanese cosmology?",
+      "concepts": ["gamelan", "Indonesian music", "colotomic structure", "music and worldview"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://guides.library.ucla.edu/ethno/av",
+        "https://www.cengage.com/c/worlds-of-music-an-introduction-to-the-music-of-the-world-s-peoples-6e-titon/9781133953906/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Regional Case Studies",
+      "title": "Why is Hindustani classical music both highly structured and improvised?",
+      "concepts": ["Hindustani music", "raga", "tala", "improvisation within structure"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://guides.library.ucla.edu/ethno/av",
+        "https://www.classcentral.com/subject/ethnomusicology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Regional Case Studies",
+      "title": "What role does music play in Indigenous North American ceremonies?",
+      "concepts": ["Native American music", "powwow", "ceremonial music", "cultural sovereignty"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cengage.com/c/worlds-of-music-an-introduction-to-the-music-of-the-world-s-peoples-6e-titon/9781133953906/",
+        "https://www.ethnomusicology.org/page/Resources_CareersPublicSyl"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Regional Case Studies",
+      "title": "How did Tuvan throat singers become world music superstars?",
+      "concepts": ["throat singing", "Central Asian music", "world music market", "globalization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.classcentral.com/course/worldmusic-355",
+        "https://bowdoin.libguides.com/c.php?g=271745&p=1812939"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Regional Case Studies",
+      "title": "Review: Case studies synthesis",
+      "concepts": ["regional traditions", "comparative analysis", "cultural context"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.classcentral.com/subject/ethnomusicology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Fieldwork and Contemporary Issues",
+      "title": "What ethical dilemmas arise when recording someone else's music?",
+      "concepts": ["fieldwork ethics", "informed consent", "representation", "reciprocity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ethnomusicology.org/page/Resources_CareersPublicSyl",
+        "https://music.utexas.edu/academics/programs-study/musicology-ethnomusicology/course-descriptions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Fieldwork and Contemporary Issues",
+      "title": "How has globalization changed what we mean by 'world music'?",
+      "concepts": ["globalization", "world music industry", "cultural hybridity", "authenticity debates"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://learn.soundcollective.com/courses/ethnomusicology-and-modern-music/",
+        "https://www.amazon.com/Study-Ethnomusicology-Thirty-Three-Discussions/dp/0252039289"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Fieldwork and Contemporary Issues",
+      "title": "Should endangered music traditions be preserved, and by whom?",
+      "concepts": ["music preservation", "UNESCO", "digital archives", "repatriation", "living traditions"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://guides.library.ucla.edu/ethno/av",
+        "https://learn.soundcollective.com/courses/ethnomusicology-and-modern-music/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Fieldwork and Contemporary Issues",
+      "title": "How do you design a fieldwork project that respects cultural protocols?",
+      "concepts": ["fieldwork methods", "research design", "cultural protocols", "collaborative research"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://archive.org/details/theorymethodinet0000nett",
+        "https://www.ethnomusicology.org/page/Resources_CareersPublicSyl"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Fieldwork and Contemporary Issues",
+      "title": "What is the future of ethnomusicology in a digital age?",
+      "concepts": ["digital ethnomusicology", "online communities", "streaming", "methodology evolution"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://learn.soundcollective.com/courses/ethnomusicology-and-modern-music/",
+        "https://music.utexas.edu/academics/programs-study/musicology-ethnomusicology/course-descriptions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Fieldwork and Contemporary Issues",
+      "title": "Review: Final synthesis — ethnomusicology in practice",
+      "concepts": ["ethics", "fieldwork", "globalization", "preservation", "methodology"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.amazon.com/Study-Ethnomusicology-Thirty-Three-Discussions/dp/0252039289",
+        "https://www.classcentral.com/subject/ethnomusicology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Fieldwork and Contemporary Issues",
+      "title": "How will you apply ethnomusicology to your own listening and research?",
+      "concepts": ["reflection", "personal practice", "ongoing learning", "applied ethnomusicology"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ethnomusicology.org/page/Resources_CareersPublicSyl",
+        "https://www.cengage.com/c/worlds-of-music-an-introduction-to-the-music-of-the-world-s-peoples-6e-titon/9781133953906/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

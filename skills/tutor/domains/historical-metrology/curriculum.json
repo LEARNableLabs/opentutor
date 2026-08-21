@@ -1,0 +1,345 @@
+{
+  "topic": "Historical metrology — how civilizations measured things",
+  "slug": "historical-metrology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic world history",
+    "familiarity with fractions and ratios",
+    "understanding of cultural context in history"
+  ],
+  "exit_criteria": [
+    "student can explain why body-based measurements were universal but problematic",
+    "student can trace the evolution from local to universal standards",
+    "student can identify standardization pressures (trade, science, governance)",
+    "student can compare measurement philosophies across cultures",
+    "student can explain the relationship between precision and technological advancement"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Body-Based Measurement",
+      "title": "Why did every ancient culture measure with their bodies?",
+      "concepts": ["anthropometric units", "convenience vs. standardization", "cultural universals"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Ancient_Egyptian_units_of_measurement",
+        "https://www.youtube.com/watch?v=VpWw_cjMWT0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Body-Based Measurement",
+      "title": "What happens when everyone's thumb is a different size?",
+      "concepts": ["measurement variability", "standardization problem", "practical constraints"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.britannica.com/science/measurement-system",
+        "https://www.youtube.com/watch?v=SmSJXC6_qQ8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Body-Based Measurement",
+      "title": "How do you measure your own cubit and compare it to ancient standards?",
+      "concepts": ["hands-on measurement", "cubit definition", "historical reconstruction"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Cubit",
+        "https://www.metmuseum.org/art/collection/search/544746"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Body-Based Measurement",
+      "title": "Could you build a pyramid with inconsistent measurements?",
+      "concepts": ["architectural precision", "standardization necessity", "ancient engineering"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Egyptian_pyramid_construction_techniques",
+        "https://archive.org/details/ancientegyptians00will"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Ancient Near East",
+      "title": "What's the oldest recorded measurement standard in history?",
+      "concepts": ["Mesopotamian metrology", "cuneiform records", "barley-corn standard"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Ancient_Mesopotamian_units_of_measurement",
+        "https://cdli.ucla.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ancient Near East",
+      "title": "How did Egyptian pharaohs enforce their standard cubit?",
+      "concepts": ["royal cubit", "state standardization", "enforcement mechanisms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Royal_cubit",
+        "https://www.britishmuseum.org/collection/object/Y_EA24357"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Ancient Near East",
+      "title": "How did measurement evolve from thumbs to tablets?",
+      "concepts": ["body measurements review", "early standardization review", "cultural contexts"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/History_of_measurement",
+        "https://www.youtube.com/watch?v=VpWw_cjMWT0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Ancient Near East",
+      "title": "Why did Babylonians count in base 60 for time and angles?",
+      "concepts": ["sexagesimal system", "astronomical measurement", "mathematical convenience"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Sexagesimal",
+        "https://www.youtube.com/watch?v=R9m2jck1f90"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Classical World",
+      "title": "How did Greek athletes know they'd run exactly one stade?",
+      "concepts": ["Greek stade", "athletic standardization", "Olympic measurement"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Stadion_(unit)",
+        "https://www.britannica.com/sports/ancient-Olympic-Games"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Classical World",
+      "title": "What made the Roman mile stick around for 2000 years?",
+      "concepts": ["Roman mile", "military pacing", "road system standardization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Roman_roads",
+        "https://en.wikipedia.org/wiki/Mile"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Classical World",
+      "title": "How do you design a water clock that actually keeps time?",
+      "concepts": ["clepsydra", "time measurement", "hydraulic precision"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Water_clock",
+        "https://www.youtube.com/watch?v=J7sXRSL5omY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Classical World",
+      "title": "Teach a Roman architect: how did Vitruvius standardize proportions?",
+      "concepts": ["Vitruvian principles", "architectural ratios", "aesthetic standardization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/De_architectura",
+        "https://archive.org/details/vitruviustenbook00vitr"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Medieval Fragmentation",
+      "title": "How did measurement systems differ across ancient empires?",
+      "concepts": ["Mesopotamian to Roman systems", "standardization strategies", "measurement purposes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/History_of_measurement",
+        "https://www.britannica.com/science/measurement-system"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Medieval Fragmentation",
+      "title": "Why did every European town have different weights and measures?",
+      "concepts": ["medieval fragmentation", "feudal control", "local monopolies"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Medieval_weights_and_measures",
+        "https://www.britannica.com/topic/weights-and-measures"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Medieval Fragmentation",
+      "title": "How did merchants cheat with false weights?",
+      "concepts": ["measurement fraud", "guild regulation", "market control"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/False_weights_and_measures",
+        "https://www.metmuseum.org/art/collection/search/464941"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Medieval Fragmentation",
+      "title": "What was an acre, and why did it vary wildly?",
+      "concepts": ["land measurement", "agricultural standards", "regional variation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Acre",
+        "https://www.britannica.com/science/acre"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Medieval Fragmentation",
+      "title": "How would you convince a medieval merchant that standardization helps trade?",
+      "concepts": ["economic efficiency", "transaction costs", "trust in measurement"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Standardization",
+        "https://www.youtube.com/watch?v=SmSJXC6_qQ8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Global Traditions",
+      "title": "How did Chinese emperors use measurement to control their empire?",
+      "concepts": ["Chinese chi", "imperial standardization", "political measurement"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Chinese_units_of_measurement",
+        "https://www.britannica.com/topic/Chinese-measurement-system"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Global Traditions",
+      "title": "What happens when Silk Road traders meet with different measurement systems?",
+      "concepts": ["cross-cultural measurement", "conversion challenges", "trade adaptation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Silk_Road",
+        "https://www.metmuseum.org/exhibitions/listings/2019/world-between-empires"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Global Traditions",
+      "title": "How have rulers used measurement as a tool of power?",
+      "concepts": ["standardization as control", "regional diversity", "economic impacts"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/History_of_measurement",
+        "https://www.britannica.com/science/measurement-system"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Modern Standardization",
+      "title": "Why did the French Revolution invent the meter?",
+      "concepts": ["metric system origins", "rational measurement", "revolutionary ideology"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Metric_system",
+        "https://www.youtube.com/watch?v=SmSJXC6_qQ8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Modern Standardization",
+      "title": "How do you define a meter using nothing but nature?",
+      "concepts": ["natural standards", "Earth's meridian", "universal constants"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/History_of_the_metre",
+        "https://www.nist.gov/si-redefinition/meet-constants"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Modern Standardization",
+      "title": "What can the International Bureau of Weights and Measures archives reveal?",
+      "concepts": ["BIPM", "international cooperation", "measurement standards"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.bipm.org/en/about-us/",
+        "https://en.wikipedia.org/wiki/International_Bureau_of_Weights_and_Measures"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Modern Standardization",
+      "title": "Why does the meter's definition keep changing?",
+      "concepts": ["increasing precision", "atomic standards", "SI unit evolution"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nist.gov/si-redefinition",
+        "https://en.wikipedia.org/wiki/2019_redefinition_of_the_SI_base_units"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Modern Standardization",
+      "title": "From thumbs to atoms: what have we gained and lost?",
+      "concepts": ["precision vs. accessibility", "measurement philosophy", "historical synthesis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/History_of_measurement",
+        "https://www.nist.gov/pml/weights-and-measures"
+      ],
+      "status": "pending"
+    }
+  ]
+}

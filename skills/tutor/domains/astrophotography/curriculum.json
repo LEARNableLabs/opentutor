@@ -1,0 +1,310 @@
+{
+  "topic": "Night sky photography — astrophotography techniques",
+  "slug": "astrophotography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic photography fundamentals (exposure triangle, RAW format)",
+    "manual camera operation",
+    "basic image editing in Photoshop or similar"
+  ],
+  "exit_criteria": [
+    "student can plan and execute a deep-sky imaging session",
+    "student can perform polar alignment and track targets accurately",
+    "student can stack and process multi-exposure images",
+    "student understands calibration frames and noise reduction",
+    "student can identify and correct common astrophotography issues"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Night Sky Basics",
+      "title": "Why does the sky rotate around Polaris?",
+      "concepts": ["celestial sphere", "Earth's rotation", "circumpolar motion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.skyandtelescope.com/astronomy-resources/the-celestial-sphere/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Night Sky Basics",
+      "title": "How does light pollution ruin your photos (and what can you do about it)?",
+      "concepts": ["light pollution", "Bortle scale", "dark sky sites", "filters"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.lightpollutionmap.info/", "https://www.darksitefinder.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Night Sky Basics",
+      "title": "What's the best tool for planning your night sky shots?",
+      "concepts": ["planetarium software", "Stellarium", "PhotoPills", "ephemeris"],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": ["https://stellarium.org/", "https://www.photopills.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Night Sky Basics",
+      "title": "Why should you fear (or embrace) the Moon?",
+      "concepts": ["moon phases", "lunar calendar", "moonlight effects", "timing"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.timeanddate.com/moon/phases/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Night Sky Basics",
+      "title": "How do you choose the right target for tonight?",
+      "concepts": ["target visibility", "altitude", "meridian transit", "seasonal sky"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.skyandtelescope.com/observing/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Night Sky Basics",
+      "title": "Review: Plan your first night sky imaging session",
+      "concepts": ["celestial sphere", "light pollution", "target selection", "moon phases"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.stellarium.org/", "https://www.photopills.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Wide-Field Imaging",
+      "title": "What camera settings capture the Milky Way core?",
+      "concepts": ["exposure triangle for astro", "ISO noise", "wide aperture", "long exposure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.lonelyspeck.com/milky-way-exposure-calculator/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Wide-Field Imaging",
+      "title": "Why do stars become trails after 20 seconds?",
+      "concepts": ["star trailing", "500 rule", "NPF rule", "pixel size"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.lonelyspeck.com/advanced-astrophotography-shutter-time-calculator/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Wide-Field Imaging",
+      "title": "How do you compose a nightscape that tells a story?",
+      "concepts": ["foreground interest", "rule of thirds", "leading lines", "Milky Way framing"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.lonelyspeck.com/composition-and-the-milky-way/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Wide-Field Imaging",
+      "title": "What's the fastest way to achieve perfect focus at night?",
+      "concepts": ["manual focus", "live view", "focus peaking", "infinity focus myth"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://astrobackyard.com/focusing-camera-lens-astrophotography/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Wide-Field Imaging",
+      "title": "How do you stack images to reveal fainter details?",
+      "concepts": ["image stacking", "signal-to-noise ratio", "median stacking", "Sequator"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://sites.google.com/view/sequator/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Wide-Field Imaging",
+      "title": "Review: Plan and shoot a Milky Way panorama",
+      "concepts": ["planning", "exposure", "composition", "focus", "stacking"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.lonelyspeck.com/milky-way-photography-101/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Tracked Deep-Sky Imaging",
+      "title": "Why does tracking let you expose 10x longer?",
+      "concepts": ["star tracking", "sidereal rate", "field rotation", "mount types"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://astrobackyard.com/star-tracker/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Tracked Deep-Sky Imaging",
+      "title": "What's the secret to perfect polar alignment?",
+      "concepts": ["polar alignment", "Polaris offset", "drift alignment", "SharpCap"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://astrobackyard.com/polar-alignment/", "https://www.sharpcap.co.uk/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Tracked Deep-Sky Imaging",
+      "title": "How do you balance exposure time, ISO, and total integration?",
+      "concepts": ["sub-exposure length", "ISO invariance", "read noise", "total integration time"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://astrobackyard.com/dslr-astrophotography-settings/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Tracked Deep-Sky Imaging",
+      "title": "What's dithering and why does it eliminate those ugly patterns?",
+      "concepts": ["dithering", "walking noise", "pattern suppression", "hot pixels"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://astrobackyard.com/dithering/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Tracked Deep-Sky Imaging",
+      "title": "How does a Bahtinov mask help you nail focus every time?",
+      "concepts": ["Bahtinov mask", "diffraction spikes", "critical focus", "temperature drift"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://astrobackyard.com/bahtinov-mask/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Tracked Deep-Sky Imaging",
+      "title": "Review: Execute a tracked imaging session from setup to packup",
+      "concepts": ["polar alignment", "framing", "focus", "exposure planning", "dithering"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://astrobackyard.com/deep-sky-imaging-session/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Image Processing",
+      "title": "What are dark frames, flat frames, and bias frames, and why do you need them?",
+      "concepts": ["calibration frames", "dark current", "vignetting", "read noise"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://astrobackyard.com/calibration-frames/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Image Processing",
+      "title": "How do you stack 100 images into one brilliant final frame?",
+      "concepts": ["DeepSkyStacker", "Siril", "stacking workflow", "rejection algorithms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["http://deepskystacker.free.fr/english/index.html", "https://siril.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Image Processing",
+      "title": "Why does stretching your histogram reveal hidden nebulosity?",
+      "concepts": ["histogram stretch", "linear data", "non-linear adjustments", "clipping"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://astrobackyard.com/stretching-images/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Image Processing",
+      "title": "How do you remove gradients and light pollution from your image?",
+      "concepts": ["gradient removal", "background extraction", "artificial light", "dynamic background extraction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://astrobackyard.com/remove-gradient/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Image Processing",
+      "title": "What's the best way to reduce noise without losing detail?",
+      "concepts": ["noise reduction", "luminance vs chrominance", "selective masking", "non-linear noise reduction"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.cloudynights.com/topic/573106-noise-reduction-techniques/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Image Processing",
+      "title": "Review: Process a deep-sky image from stacking to final export",
+      "concepts": ["stacking", "stretching", "gradient removal", "noise reduction", "color balance"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.youtube.com/c/NebulaPhotos"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Techniques",
+      "title": "How do narrowband filters reveal invisible hydrogen and oxygen?",
+      "concepts": ["narrowband imaging", "Ha", "OIII", "SII", "Hubble palette"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://astrobackyard.com/narrowband-imaging/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Techniques",
+      "title": "What techniques capture sharp planetary detail despite atmospheric turbulence?",
+      "concepts": ["lucky imaging", "planetary imaging", "stacking percentile", "AutoStakkert"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.autostakkert.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Techniques",
+      "title": "How do you combine multiple nights of data into one deep image?",
+      "concepts": ["multi-session stacking", "registration", "normalization", "integration"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://astrobackyard.com/multi-night-stacking/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Techniques",
+      "title": "What affordable equipment upgrades give the biggest image quality improvements?",
+      "concepts": ["equipment selection", "upgrade path", "cost-benefit analysis", "diminishing returns"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://astrobackyard.com/equipment/", "https://www.cloudynights.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Capstone",
+      "title": "Review: Design and execute your own deep-sky imaging project",
+      "concepts": ["target selection", "acquisition planning", "polar alignment", "stacking", "processing workflow", "advanced techniques"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://astrobackyard.com/", "https://www.cloudynights.com/"],
+      "status": "pending"
+    }
+  ]
+}

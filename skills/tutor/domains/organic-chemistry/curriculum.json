@@ -1,0 +1,360 @@
+{
+  "topic": "Organic Chemistry — Reaction Mechanisms",
+  "slug": "organic-chemistry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "general chemistry (bonding, thermodynamics, kinetics)",
+    "basic organic chemistry (nomenclature, functional groups)",
+    "Lewis structures and resonance",
+    "stereochemistry fundamentals"
+  ],
+  "exit_criteria": [
+    "predict reaction products given starting materials and conditions",
+    "propose detailed mechanisms using curved arrow notation",
+    "identify rate-determining steps and key intermediates",
+    "explain how structure affects reactivity (electronic and steric effects)",
+    "compare and contrast mechanistic pathways (SN1/SN2, E1/E2)",
+    "apply mechanism knowledge to solve synthesis problems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Electron Flow Fundamentals",
+      "title": "What makes electrons move in organic reactions?",
+      "concepts": ["electron density", "partial charges", "electronegativity", "polar bonds"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/organic-chemistry/organic-structures/electronegativity-tutorial/v/electronegativity-and-bond-polarity",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/06%3A_An_Overview_of_Organic_Reactions/6.05%3A_An_Example_of_a_Polar_Reaction_-_Addition_of_HBr_to_Ethylene"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Electron Flow Fundamentals",
+      "title": "Why do curved arrows point from here to there?",
+      "concepts": ["curved arrow notation", "electron pair movement", "mechanism formalism"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/pages/lecture-notes/",
+        "https://www.masterorganicchemistry.com/2011/02/03/introduction-to-curved-arrows-in-organic-chemistry/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Electron Flow Fundamentals",
+      "title": "How do you spot a nucleophile versus an electrophile?",
+      "concepts": ["nucleophilicity", "electrophilicity", "HOMO-LUMO interactions", "Lewis acid-base"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=IKxlXvY1bkU",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/06%3A_An_Overview_of_Organic_Reactions/6.07%3A_Describing_a_Reaction_-_Nucleophiles_and_Electrophiles"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Electron Flow Fundamentals",
+      "title": "How do drug designers use electron flow to target enzymes?",
+      "concepts": ["covalent inhibitors", "mechanism-based drug design", "nucleophilic attack in biology"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=PF36HoQ8Qfw",
+        "https://chemistry.stackexchange.com/questions/39896/mechanism-of-action-of-aspirin"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Electron Flow Fundamentals",
+      "title": "Can you predict where electrons will flow in these reactions?",
+      "concepts": ["curved arrows", "nucleophiles", "electrophiles", "practice problems"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2017/01/27/practice-problems-nucleophiles-electrophiles/",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/06%3A_An_Overview_of_Organic_Reactions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Substitution Mechanisms",
+      "title": "Why do some substitutions happen in one concerted step?",
+      "concepts": ["SN2 mechanism", "backside attack", "transition state", "inversion of configuration"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/organic-chemistry/substitution-elimination-reactions/sn2-tutorial/v/sn2-mechanism",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/11%3A_Reactions_of_Alkyl_Halides-_Nucleophilic_Substitutions_and_Eliminations/11.02%3A_The_SN2_Reaction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Substitution Mechanisms",
+      "title": "What makes an SN2 reaction go faster or slower?",
+      "concepts": ["nucleophile strength", "substrate structure", "leaving group ability", "solvent effects"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2012/05/16/what-makes-a-good-nucleophile/",
+        "https://www.youtube.com/watch?v=LMXJ-EIW_uw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Substitution Mechanisms",
+      "title": "When does a carbocation intermediate form?",
+      "concepts": ["SN1 mechanism", "carbocation stability", "rate-determining step", "racemization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/organic-chemistry/substitution-elimination-reactions/sn1-tutorial/v/sn1-reaction-mechanism",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/11%3A_Reactions_of_Alkyl_Halides-_Nucleophilic_Substitutions_and_Eliminations/11.04%3A_The_SN1_Reaction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Substitution Mechanisms",
+      "title": "How do you choose between SN1 and SN2 for a given substrate?",
+      "concepts": ["mechanism selection", "reaction prediction", "structure-reactivity relationships"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2012/05/24/deciding-sn1sn2e1e2-the-decision-chart/",
+        "https://www.organic-chemistry.org/namedreactions/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Substitution Mechanisms",
+      "title": "How would you explain the key differences between SN1 and SN2 to a classmate?",
+      "concepts": ["mechanism comparison", "rate laws", "stereochemistry outcomes", "competing pathways"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=5hKXLs2NUug",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/11%3A_Reactions_of_Alkyl_Halides-_Nucleophilic_Substitutions_and_Eliminations/11.06%3A_A_Comparison_of_SN1_and_SN2_Reactions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Substitution Mechanisms",
+      "title": "Can you predict the mechanism and products for these substitution reactions?",
+      "concepts": ["SN1", "SN2", "mechanism practice", "prediction problems"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2012/06/01/practice-problems-for-sn1-sn2-e1-e2/",
+        "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/pages/study-materials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Elimination and Addition",
+      "title": "Why does elimination compete with substitution?",
+      "concepts": ["E2 mechanism", "anti-periplanar geometry", "base versus nucleophile", "Zaitsev's rule"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/organic-chemistry/substitution-elimination-reactions/e2-tutorial/v/e2-mechanism",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/11%3A_Reactions_of_Alkyl_Halides-_Nucleophilic_Substitutions_and_Eliminations/11.08%3A_Elimination_Reactions_-_Zaitsev's_Rule"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Elimination and Addition",
+      "title": "What determines which hydrogen gets removed in elimination?",
+      "concepts": ["regioselectivity", "Zaitsev product", "Hofmann product", "steric effects on base"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2012/06/15/regiochemistry-in-elimination-reactions/",
+        "https://www.youtube.com/watch?v=ZZnHAP3UQPE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Elimination and Addition",
+      "title": "How do alkenes grow from small molecules?",
+      "concepts": ["electrophilic addition", "carbocation formation", "Markovnikov's rule", "addition mechanism"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/organic-chemistry/alkenes-alkynes/alkene-reactions-v/v/markovnikov-s-rule-and-carbocation-stability",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/08%3A_Alkenes-_Reactions_and_Synthesis/8.05%3A_Electrophilic_Addition_of_HX_to_Alkenes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Elimination and Addition",
+      "title": "Why does the positive charge end up where it does?",
+      "concepts": ["carbocation stability", "hyperconjugation", "resonance stabilization", "rearrangements preview"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2011/02/10/3-factors-that-stabilize-carbocations/",
+        "https://www.youtube.com/watch?v=aS-V6vJ4Q1A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Elimination and Addition",
+      "title": "How do polymer chemists use addition mechanisms to make plastics?",
+      "concepts": ["radical polymerization", "cationic polymerization", "chain growth", "industrial chemistry"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Rj2c58Pgxxw",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Polymers/Synthesis_of_Polymers/Addition_Polymers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Elimination and Addition",
+      "title": "Which products form when you combine these reagents and conditions?",
+      "concepts": ["E1", "E2", "addition to alkenes", "regioselectivity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2012/06/01/practice-problems-for-sn1-sn2-e1-e2/",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/08%3A_Alkenes-_Reactions_and_Synthesis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Aromatic and Carbonyl Chemistry",
+      "title": "Why is benzene so resistant to addition reactions?",
+      "concepts": ["aromaticity", "resonance energy", "electrophilic aromatic substitution", "arenium ion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/organic-chemistry/aromatic-compounds/aromatic-stability-and-reactions/v/aromatic-stability",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/16%3A_Chemistry_of_Benzene-_Electrophilic_Aromatic_Substitution/16.01%3A_Electrophilic_Aromatic_Substitution_Reactions-_Bromination"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Aromatic and Carbonyl Chemistry",
+      "title": "How do you control where new groups attach to benzene?",
+      "concepts": ["directing effects", "activating groups", "deactivating groups", "ortho/meta/para selectivity"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2011/06/22/electrophilic-aromatic-substitution-ortho-meta-para-directors/",
+        "https://www.youtube.com/watch?v=CLXFQW3VVfE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Aromatic and Carbonyl Chemistry",
+      "title": "What makes carbonyl groups so reactive?",
+      "concepts": ["carbonyl polarity", "nucleophilic addition", "tetrahedral intermediate", "carbonyl types"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/organic-chemistry/aldehydes-ketones/aldehyde-ketone-addition-reactions/v/addition-to-carbonyls",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/19%3A_Aldehydes_and_Ketones-_Nucleophilic_Addition_Reactions/19.04%3A_Nucleophilic_Addition_Reactions_of_Aldehydes_and_Ketones"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Aromatic and Carbonyl Chemistry",
+      "title": "How do you work backwards from a target molecule to choose the right reactions?",
+      "concepts": ["retrosynthetic analysis", "functional group transformations", "strategic disconnections"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2015/03/13/retrosynthesis-organic-chemistry/",
+        "https://www.organic-chemistry.org/topics/retrosynthesis.shtm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Aromatic and Carbonyl Chemistry",
+      "title": "Why do enolates open up so many synthesis pathways?",
+      "concepts": ["enolate formation", "aldol condensation", "α-carbon acidity", "nucleophilic carbons"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/organic-chemistry/carbon-nuclear-magnetic-resonance-spectroscopy-ir/enols-enolates-tutorial/v/enols-and-enolates",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/23%3A_Carbonyl_Condensation_Reactions/23.01%3A_Carbonyl_Alpha-Substitution_Reactions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Aromatic and Carbonyl Chemistry",
+      "title": "What are the critical differences between nucleophilic addition and acyl substitution?",
+      "concepts": ["mechanism comparison", "leaving group departure", "reactivity differences", "product outcomes"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=OVhzEcZMpL4",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/21%3A_Carboxylic_Acid_Derivatives-_Nucleophilic_Acyl_Substitution_Reactions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Aromatic and Carbonyl Chemistry",
+      "title": "Can you design a synthesis route using aromatic and carbonyl transformations?",
+      "concepts": ["EAS", "nucleophilic addition", "enolates", "synthesis planning"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.masterorganicchemistry.com/tips/big-topics-in-org-1-and-org-2/",
+        "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/pages/exams/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Mechanisms",
+      "title": "When do carbocations rearrange to more stable forms?",
+      "concepts": ["carbocation rearrangements", "hydride shifts", "alkyl shifts", "pinacol rearrangement"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2013/04/05/carbocation-rearrangements/",
+        "https://www.youtube.com/watch?v=nAz0PqYFAG8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Mechanisms",
+      "title": "How do radical mechanisms differ from ionic ones?",
+      "concepts": ["radical initiation", "radical stability", "chain reactions", "selectivity patterns"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/organic-chemistry/alkanes-cycloalkanes-n-functional-groups/free-radical-reaction-alkanes-tutorial/v/free-radical-halogenation",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/10%3A_Organohalides/10.03%3A_Radical_Reactions"
+      ],
+      "status": "pending"
+    }
+  ]
+}

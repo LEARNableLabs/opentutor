@@ -1,0 +1,342 @@
+{
+  "topic": "Cellular automata and Conway's Game of Life",
+  "slug": "cellular-automata",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic programming (any language)",
+    "discrete mathematics basics",
+    "binary/boolean logic"
+  ],
+  "exit_criteria": [
+    "understand how simple rules create complex behavior",
+    "implement cellular automata from scratch",
+    "analyze and classify patterns in Game of Life",
+    "explain computational universality in Life",
+    "design and experiment with custom CA rules"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes a grid of cells come alive?",
+      "concepts": ["cellular automata", "discrete models", "state transitions"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathworld.wolfram.com/CellularAutomaton.html",
+        "https://conwaylife.com/wiki/Cellular_automaton"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why do neighbors determine your fate?",
+      "concepts": ["neighborhoods", "Moore neighborhood", "von Neumann neighborhood", "local rules"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://conwaylife.com/wiki/Neighbourhood",
+        "https://en.wikipedia.org/wiki/Moore_neighborhood"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How can 256 rules create infinite possibilities?",
+      "concepts": ["elementary CA", "Wolfram rules", "rule numbering"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathworld.wolfram.com/ElementaryCellularAutomaton.html",
+        "https://plato.stanford.edu/entries/cellular-automata/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can you predict which rules create order versus chaos?",
+      "concepts": ["Wolfram classification", "classes I-IV", "complexity emergence"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://mathworld.wolfram.com/WolframsClassification.html",
+        "https://en.wikipedia.org/wiki/Cellular_automaton#Wolfram's_classification"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "How do you build your first cellular automaton?",
+      "concepts": ["implementation", "grid representation", "rule application", "visualization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://golly.sourceforge.net/",
+        "https://copy.sh/life/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "What patterns have you discovered so far?",
+      "concepts": ["pattern recognition", "rule behavior", "complexity classes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://mathworld.wolfram.com/Rule30.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Conway's Game of Life",
+      "title": "Why did four simple rules create a phenomenon?",
+      "concepts": ["Game of Life rules", "birth", "survival", "death", "B3/S23"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://conwaylife.com/wiki/Conway%27s_Game_of_Life",
+        "https://playgameoflife.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Conway's Game of Life",
+      "title": "What patterns never change?",
+      "concepts": ["still lifes", "blocks", "beehives", "stability"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://conwaylife.com/wiki/Still_life",
+        "https://conwaylife.com/wiki/Block"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Conway's Game of Life",
+      "title": "How do patterns breathe?",
+      "concepts": ["oscillators", "period", "blinker", "toad", "pulsar"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://conwaylife.com/wiki/Oscillator",
+        "https://conwaylife.com/wiki/Pulsar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Conway's Game of Life",
+      "title": "Can a pattern walk across the grid forever?",
+      "concepts": ["spaceships", "glider", "translation", "lightweight spaceship"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://conwaylife.com/wiki/Glider",
+        "https://conwaylife.com/wiki/Spaceship"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Conway's Game of Life",
+      "title": "How do you design patterns with specific behaviors?",
+      "concepts": ["pattern design", "intentional creation", "prediction"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://conwaylife.com/wiki/LifeWiki",
+        "https://golly.sourceforge.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Emergent Complexity",
+      "title": "Why does Life feel alive?",
+      "concepts": ["emergence", "self-organization", "unpredictability", "complexity from simplicity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Emergence",
+        "https://conwaylife.com/wiki/Conway%27s_Game_of_Life#Why_is_it_called_a_game?"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Emergent Complexity",
+      "title": "What have you learned about pattern evolution?",
+      "concepts": ["still lifes", "oscillators", "spaceships", "emergence"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://conwaylife.com/wiki/Main_Page"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Emergent Complexity",
+      "title": "Can patterns create other patterns?",
+      "concepts": ["guns", "glider gun", "Gosper glider gun", "pattern generation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://conwaylife.com/wiki/Gun",
+        "https://conwaylife.com/wiki/Gosper_glider_gun"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Emergent Complexity",
+      "title": "How do patterns eat each other?",
+      "concepts": ["eaters", "pattern collision", "annihilation", "interaction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://conwaylife.com/wiki/Eater",
+        "https://conwaylife.com/wiki/Eater_1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Emergent Complexity",
+      "title": "What is the methuselah problem?",
+      "concepts": ["methuselahs", "lifespan", "r-pentomino", "acorn", "stabilization"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://conwaylife.com/wiki/Methuselah",
+        "https://conwaylife.com/wiki/R-pentomino"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Emergent Complexity",
+      "title": "Can you build a pattern that travels while creating?",
+      "concepts": ["puffer trains", "rakes", "breeders", "complex spaceships"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://conwaylife.com/wiki/Puffer",
+        "https://conwaylife.com/wiki/Rake"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Emergent Complexity",
+      "title": "What treasures live in the pattern zoo?",
+      "concepts": ["pattern library", "classification", "discovery", "community"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://conwaylife.com/wiki/Category:Patterns",
+        "https://conwaylife.com/ref/lexicon/lex.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Universal Computation",
+      "title": "How do simple rules build complex machines?",
+      "concepts": ["emergence", "guns", "collisions", "computational potential"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://conwaylife.com/wiki/Conway%27s_Game_of_Life"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Universal Computation",
+      "title": "Can Life compute anything?",
+      "concepts": ["Turing completeness", "universal computation", "Church-Turing thesis"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://conwaylife.com/wiki/Turing_machine",
+        "https://en.wikipedia.org/wiki/Turing_completeness#Conway's_Game_of_Life"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Universal Computation",
+      "title": "How do you build logic gates in Life?",
+      "concepts": ["logic gates", "AND", "OR", "NOT", "glider streams", "timing"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://conwaylife.com/wiki/Logic_gate",
+        "https://conwaylife.com/wiki/Glider_synthesis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Universal Computation",
+      "title": "What is the smallest computer in Life?",
+      "concepts": ["computers in Life", "OTCA metapixel", "Turing machine construction", "self-replication"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://conwaylife.com/wiki/OTCA_metapixel",
+        "https://www.youtube.com/watch?v=xP5-iIeKXE8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Universal Computation",
+      "title": "Why does computational universality matter?",
+      "concepts": ["implications", "complexity theory", "artificial life", "fundamental limits"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/cellular-automata/",
+        "https://en.wikipedia.org/wiki/A_New_Kind_of_Science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Beyond Life",
+      "title": "What happens when you change the rules?",
+      "concepts": ["Life-like rules", "B/S notation", "HighLife", "Day & Night", "rule space"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://conwaylife.com/wiki/Cellular_automaton#Well-known_Life-like_cellular_automata",
+        "https://conwaylife.com/wiki/Rulestring"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Beyond Life",
+      "title": "Where do cellular automata appear in the real world?",
+      "concepts": ["applications", "physics modeling", "biology", "traffic flow", "pattern formation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Cellular_automaton#Applications",
+        "https://mathworld.wolfram.com/CellularAutomaton.html"
+      ],
+      "status": "pending"
+    }
+  ]
+}

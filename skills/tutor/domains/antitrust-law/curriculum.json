@@ -1,0 +1,381 @@
+{
+  "topic": "Antitrust and Competition Law",
+  "slug": "antitrust-law",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "microeconomics (supply/demand, market structures)",
+    "basic legal reasoning",
+    "understanding of contracts and torts"
+  ],
+  "exit_criteria": [
+    "analyze whether conduct violates Section 1 or 2 of Sherman Act",
+    "apply rule of reason vs. per se framework to horizontal and vertical restraints",
+    "evaluate merger competitive effects using unilateral and coordinated theories",
+    "compare US and EU enforcement approaches",
+    "identify anticompetitive concerns in digital platform cases",
+    "design remedies for competition law violations"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do we need antitrust law at all?",
+      "concepts": ["market failure", "monopoly deadweight loss", "consumer welfare"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws",
+        "https://www.oecd.org/competition/toolkit/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What exactly is a 'market' in antitrust analysis?",
+      "concepts": ["market definition", "SSNIP test", "product and geographic markets"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.justice.gov/atr/horizontal-merger-guidelines-08192010",
+        "https://ec.europa.eu/competition/mergers/legislation/notices_on_substance.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do economists measure market concentration?",
+      "concepts": ["Herfindahl-Hirschman Index", "concentration ratios", "market shares"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.justice.gov/atr/herfindahl-hirschman-index",
+        "https://www.ftc.gov/enforcement/competition-matters"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Chicago School vs. post-Chicago: What's the fight about?",
+      "concepts": ["Chicago School economics", "consumer welfare standard", "enforcement philosophy"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.yalejreg.com/print/neo-brandeisian-antitrust/",
+        "https://www.ftc.gov/system/files/attachments/us-submissions-oecd-2010-present-other-international-competition-fora/the_goals_of_competition_law_us.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Horizontal Restraints",
+      "title": "Why are price-fixing cartels per se illegal?",
+      "concepts": ["per se illegality", "horizontal agreements", "price fixing"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.justice.gov/atr/price-fixing-bid-rigging-and-market-allocation-schemes",
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:12012E/TXT"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Horizontal Restraints",
+      "title": "Can competitors ever talk to each other legally?",
+      "concepts": ["trade associations", "information exchange", "plus factors"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ftc.gov/tips-advice/competition-guidance/guide-antitrust-laws/dealings-competitors",
+        "https://ec.europa.eu/competition/antitrust/legislation/horizontal.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Horizontal Restraints",
+      "title": "What made the Apple e-books case a conspiracy?",
+      "concepts": ["hub-and-spoke conspiracy", "facilitating practices", "circumstantial evidence"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.justice.gov/atr/case/us-v-apple-inc-et-al",
+        "https://www.supremecourt.gov/opinions/14pdf/13-983_0pm1.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Horizontal Restraints",
+      "title": "When do joint ventures escape antitrust liability?",
+      "concepts": ["ancillary restraints doctrine", "rule of reason", "procompetitive justifications"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ftc.gov/legal-library/browse/cases-proceedings/public-statements/statement-federal-trade-commission-concerning-competitor-collaborations",
+        "https://www.justice.gov/atr/competitor-collaboration-guidelines-april-2000"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Horizontal Restraints",
+      "title": "What did you learn about cartels?",
+      "concepts": ["per se vs. rule of reason", "direct vs. circumstantial evidence", "ancillary restraints"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ftc.gov/enforcement/competition-matters"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Monopolization",
+      "title": "Is it illegal to be a monopoly?",
+      "concepts": ["monopolization", "market power", "Section 2 Sherman Act"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws/single-firm-conduct",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12012E102"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Monopolization",
+      "title": "How do courts distinguish exclusionary conduct from hard competition?",
+      "concepts": ["exclusionary conduct", "anticompetitive intent", "no economic sense test"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.justice.gov/atr/competition-and-monopoly-single-firm-conduct-under-section-2-sherman-act",
+        "https://supreme.justia.com/cases/federal/us/504/451/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Monopolization",
+      "title": "Why did Microsoft lose but Apple won in their monopolization cases?",
+      "concepts": ["tying", "technological integration", "consumer harm"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.justice.gov/atr/case/us-v-microsoft-corp",
+        "https://caselaw.findlaw.com/us-dc-circuit/1206146.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Monopolization",
+      "title": "When must a dominant firm share its assets with rivals?",
+      "concepts": ["essential facilities", "refusal to deal", "duty to deal"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://supreme.justia.com/cases/federal/us/540/398/",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:61973CJ0006"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Monopolization",
+      "title": "Can you teach back the monopolization framework?",
+      "concepts": ["market power", "exclusionary conduct", "anticompetitive effects"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws/single-firm-conduct"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Vertical Restraints",
+      "title": "Why did resale price maintenance flip from per se to rule of reason?",
+      "concepts": ["resale price maintenance", "Leegin decision", "interbrand competition"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://supreme.justia.com/cases/federal/us/551/877/",
+        "https://www.ftc.gov/news-events/news/speeches/vertical-restraints-competition-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Vertical Restraints",
+      "title": "When does exclusive dealing foreclose competition?",
+      "concepts": ["exclusive dealing", "foreclosure", "market foreclosure percentage"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ftc.gov/legal-library/browse/cases-proceedings/051-0214-mcwane-inc",
+        "https://ec.europa.eu/competition/antitrust/cases/dec_docs/39315/39315_239_2.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Vertical Restraints",
+      "title": "How do most-favored-nation clauses harm competition?",
+      "concepts": ["MFN clauses", "price coherence", "platform parity agreements"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ftc.gov/news-events/news/press-releases/2015/04/ftc-federal-antitrust-probe-leads-major-e-book-retailers-end-agreements-restricting-retail-price",
+        "https://ec.europa.eu/commission/presscorner/detail/en/IP_19_2970"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Vertical Restraints",
+      "title": "What did you learn about vertical restraints?",
+      "concepts": ["resale price maintenance", "exclusive dealing", "MFN clauses", "tying arrangements"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws/dealings-supply-chain"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Merger Control",
+      "title": "Why do we pre-clear mergers instead of suing after the fact?",
+      "concepts": ["HSR Act", "pre-merger notification", "ex-ante vs. ex-post"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ftc.gov/enforcement/premerger-notification-program",
+        "https://ec.europa.eu/competition/mergers/procedures_en.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Merger Control",
+      "title": "What's the difference between unilateral and coordinated effects?",
+      "concepts": ["unilateral effects", "coordinated effects", "upward pricing pressure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.justice.gov/atr/horizontal-merger-guidelines-08192010",
+        "https://www.ftc.gov/news-events/news/speeches/economic-analysis-coordinated-effects"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Merger Control",
+      "title": "Why did the FTC block Staples-Office Depot but clear Amazon-Whole Foods?",
+      "concepts": ["market definition battles", "merger specificity", "competitive effects evidence"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ftc.gov/news-events/news/press-releases/2016/05/ftc-challenges-proposed-merger-staples-inc-office-depot-inc",
+        "https://www.ftc.gov/news-events/news/press-releases/2017/08/ftc-closes-investigation-amazon-whole-foods-market-merger"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Merger Control",
+      "title": "When are behavioral remedies better than blocking a merger?",
+      "concepts": ["structural remedies", "behavioral remedies", "divestiture"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ftc.gov/news-events/news/speeches/behavioral-merger-remedies",
+        "https://ec.europa.eu/competition/mergers/legislation/remedies.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Merger Control",
+      "title": "Can you walk through a merger review analysis?",
+      "concepts": ["market definition", "concentration", "competitive effects", "efficiencies"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ftc.gov/enforcement/merger-review"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Digital Markets",
+      "title": "Why do traditional antitrust tools struggle with platform markets?",
+      "concepts": ["two-sided markets", "network effects", "multi-homing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.oecd.org/competition/rethinking-antitrust-tools-for-multi-sided-platforms.htm",
+        "https://ec.europa.eu/competition/publications/reports/kd0419345enn.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Digital Markets",
+      "title": "How did Google Shopping violate EU competition law?",
+      "concepts": ["self-preferencing", "search bias", "leveraging dominance"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ec.europa.eu/commission/presscorner/detail/en/IP_17_1784",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62017CJ0501"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Digital Markets",
+      "title": "Can algorithms collude without human agreement?",
+      "concepts": ["algorithmic pricing", "tacit collusion", "parallel conduct"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.oecd.org/competition/algorithms-collusion-competition-policy-in-the-digital-age.htm",
+        "https://www.ftc.gov/news-events/news/speeches/algorithms-collusion-antitrust-artificial-intelligence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Digital Markets",
+      "title": "EU Digital Markets Act vs. US antitrust: What's the difference?",
+      "concepts": ["ex-ante regulation", "gatekeepers", "interoperability"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-markets-act-ensuring-fair-and-open-digital-markets_en",
+        "https://www.ftc.gov/news-events/news/speeches/digital-markets-competition-policy-innovation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Digital Markets",
+      "title": "What are the biggest open questions in competition law today?",
+      "concepts": ["data as barrier to entry", "innovation competition", "platform regulation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.oecd.org/competition/",
+        "https://www.ftc.gov/reports/report-workshop-examining-competition-consumer-protection-issues-created-digital-technologies"
+      ],
+      "status": "pending"
+    }
+  ]
+}

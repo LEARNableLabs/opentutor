@@ -1,0 +1,275 @@
+{
+  "topic": "Ethnoastronomy — how cultures mapped the sky",
+  "slug": "ethnoastronomy",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": ["basic astronomy concepts", "cultural anthropology basics", "spherical coordinates"],
+  "exit_criteria": [
+    "student can explain how at least 3 cultures used the sky for navigation or timekeeping",
+    "student can distinguish astronomical observations from cosmological interpretations",
+    "student can evaluate archaeoastronomy claims using proper methodology",
+    "student can use tools like Stellarium to explore different cultural sky perspectives"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Ethnoastronomy",
+      "title": "What can the sky tell us without telescopes?",
+      "concepts": ["naked-eye astronomy", "celestial sphere", "cultural astronomy vs ethnoastronomy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.iau.org/public/themes/cultural_astronomy/", "https://stellarium.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Ethnoastronomy",
+      "title": "How do we know what ancient people saw in the stars?",
+      "concepts": ["oral traditions", "archaeological evidence", "ethnographic records", "cultural context"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.worldarchaeoastronomy.com/", "https://arxiv.org/abs/1901.00062"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Ethnoastronomy",
+      "title": "Why do different cultures see different constellations?",
+      "concepts": ["pattern recognition", "cultural meaning-making", "asterisms vs constellations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.adlerplanetarium.org/education/resources/indigenous-astronomy/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Ethnoastronomy",
+      "title": "How did pre-industrial societies track time?",
+      "concepts": ["lunar calendars", "solar calendars", "heliacal rising", "seasonal markers"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://eclipse.gsfc.nasa.gov/SEhelp/calendars.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Ethnoastronomy",
+      "title": "What is archaeoastronomy and why is it controversial?",
+      "concepts": ["statistical significance", "alignment testing", "cultural context", "confirmation bias"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.archaeoastronomy.org/", "https://www.cambridge.org/core/journals/antiquity"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Ethnoastronomy",
+      "title": "Can you explain how we study ancient sky knowledge?",
+      "concepts": ["naked-eye astronomy", "cultural context", "archaeoastronomy methods"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://stellarium.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Indigenous Australian & Polynesian Sky Knowledge",
+      "title": "What is the Emu in the Sky?",
+      "concepts": ["dark constellations", "dust lanes", "Aboriginal astronomy", "Milky Way structure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.atnf.csiro.au/outreach/education/senior/astrophysics/indigenous_astronomy.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Indigenous Australian & Polynesian Sky Knowledge",
+      "title": "How do songlines connect sky and land?",
+      "concepts": ["songlines", "celestial navigation", "oral knowledge systems", "cultural astronomy"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.csiro.au/en/research/indigenous-science", "https://www.youtube.com/watch?v=8_FGKEm3R60"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Indigenous Australian & Polynesian Sky Knowledge",
+      "title": "How did Polynesians navigate thousands of miles of open ocean?",
+      "concepts": ["star compass", "zenith stars", "latitude determination", "non-instrument navigation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://pvs.kcc.hawaii.edu/ike/hookele/on_wayfinding.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Indigenous Australian & Polynesian Sky Knowledge",
+      "title": "Can you navigate using the star compass?",
+      "concepts": ["rising and setting points", "star houses", "seasonal variation", "practical wayfinding"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://hokulea.com/education-at-sea/navigation/", "https://pvs.kcc.hawaii.edu/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Indigenous Australian & Polynesian Sky Knowledge",
+      "title": "What role did the Pleiades play across Pacific cultures?",
+      "concepts": ["Pleiades visibility cycle", "agricultural calendars", "cultural significance", "heliacal rising"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.ifa.hawaii.edu/Jahana_Kainoa_2020.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Indigenous Australian & Polynesian Sky Knowledge",
+      "title": "How did seasonal sky knowledge guide hunting and gathering?",
+      "concepts": ["seasonal markers", "animal behavior", "plant cycles", "ecological astronomy"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.anu.edu.au/news/all-news/aboriginal-astronomy"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Indigenous Australian & Polynesian Sky Knowledge",
+      "title": "How did Pacific cultures use the sky differently from Western astronomy?",
+      "concepts": ["dark constellations", "star compass navigation", "seasonal calendars"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://stellarium.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Americas: Native American & Maya Astronomy",
+      "title": "What are medicine wheels and why do they point skyward?",
+      "concepts": ["medicine wheels", "solstice alignment", "cairn astronomy", "Plains cultures"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.nps.gov/articles/medicine-wheel.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Americas: Native American & Maya Astronomy",
+      "title": "How does the Chaco Canyon Sun Dagger work?",
+      "concepts": ["sun dagger", "spiral petroglyphs", "solstice markers", "Ancestral Puebloan astronomy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.nps.gov/chcu/learn/historyculture/archaeoastronomy.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Americas: Native American & Maya Astronomy",
+      "title": "Why were the Pleiades so important to Native American agriculture?",
+      "concepts": ["Pleiades disappearance", "agricultural timing", "regional variations", "cosmology"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://native-land.ca/", "https://airandspace.si.edu/exhibitions/native-skies"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Americas: Native American & Maya Astronomy",
+      "title": "What makes the Maya Venus tables so accurate?",
+      "concepts": ["Venus cycle", "Dresden Codex", "synodic period", "ritual calendars"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.famsi.org/research/graz/dresdensis/index.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Americas: Native American & Maya Astronomy",
+      "title": "How did the Maya Long Count calendar work?",
+      "concepts": ["vigesimal system", "calendar rounds", "world ages", "astronomical basis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.britannica.com/topic/Long-Count", "https://maya.nmai.si.edu/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Americas: Native American & Maya Astronomy",
+      "title": "What can we learn from Maya architectural alignments?",
+      "concepts": ["equinox alignments", "El Caracol observatory", "zenith passages", "ceremonial architecture"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.mesoweb.com/", "https://www.youtube.com/watch?v=BVZ5_ItVqU4"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Americas: Native American & Maya Astronomy",
+      "title": "What patterns do you see across American Indigenous astronomy?",
+      "concepts": ["architectural alignments", "Venus observations", "agricultural calendars"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://stellarium.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Asian & Islamic Astronomy",
+      "title": "How did ancient China organize the sky?",
+      "concepts": ["Chinese constellations", "28 lunar mansions", "circumpolar stars", "celestial bureaucracy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.chinapage.com/astronomy.html", "https://www2.hao.ucar.edu/Education/AncientObs"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Asian & Islamic Astronomy",
+      "title": "Why are Chinese historical records of supernovae so valuable?",
+      "concepts": ["guest stars", "historical astronomy", "supernovae", "Crab Nebula"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://adsabs.harvard.edu/full/1977QJRAS..18..197C"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Asian & Islamic Astronomy",
+      "title": "How did Islamic astronomers determine the qibla?",
+      "concepts": ["qibla direction", "mosque orientation", "spherical trigonometry", "mathematical astronomy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://muslimheritage.com/astronomy-and-astrology-in-the-medieval-islamic-world/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Asian & Islamic Astronomy",
+      "title": "What is an astrolabe and how does it work?",
+      "concepts": ["astrolabe construction", "stereographic projection", "timekeeping", "altitude measurement"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.astrolabes.org/", "https://www.youtube.com/watch?v=2X2n3BYE8mI"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Asian & Islamic Astronomy",
+      "title": "How do different cultures' sky maps reveal their worldviews?",
+      "concepts": ["cosmology vs astronomy", "cultural values in sky mapping", "synthesis across traditions"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.iau.org/public/images/detail/ann19029a/", "https://stellarium.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Asian & Islamic Astronomy",
+      "title": "What unites and divides different cultures' sky knowledge?",
+      "concepts": ["comparative ethnoastronomy", "universal patterns", "cultural specificity", "methodology"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.iau.org/public/themes/cultural_astronomy/"],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "topic": "Cartography — the art and science of maps",
+  "slug": "cartography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic geography",
+    "coordinate geometry",
+    "familiarity with latitude/longitude",
+    "comfort with visual design concepts"
+  ],
+  "exit_criteria": [
+    "explain how map projections work and choose appropriate ones for different purposes",
+    "critique maps for design quality, clarity, and potential bias",
+    "create effective thematic maps using principles of visual hierarchy and symbolization",
+    "understand and apply cartographic generalization",
+    "recognize how maps shape perception and can be used persuasively",
+    "use basic GIS and web mapping tools",
+    "read and interpret coordinate reference systems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Cartography",
+      "title": "Why is every map a lie?",
+      "concepts": ["map as representation", "abstraction", "generalization", "cartographic license"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://alg.manifoldapp.org/read/introduction-to-cartography",
+        "https://www.youtube.com/watch?v=zTL0yhItfMk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Cartography",
+      "title": "How do we pin down locations on a bumpy Earth?",
+      "concepts": ["coordinate systems", "datums", "ellipsoids", "WGS84"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/res-str-001-geographic-information-system-gis-tutorial-january-iap-2022/pages/gis-level-1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Cartography",
+      "title": "What does 1:50,000 really mean when you zoom in?",
+      "concepts": ["scale", "representative fraction", "scale bar", "large-scale vs small-scale"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://meghankelly-cartography.github.io/teaching_materials.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Cartography",
+      "title": "Why can't we show every building on a world map?",
+      "concepts": ["cartographic generalization", "selection", "simplification", "scale-dependent detail"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://cartography-playground.gitlab.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Cartography",
+      "title": "Explore how your favorite maps make choices",
+      "concepts": ["map critique", "design analysis", "purpose-driven design"],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.coursera.org/courses?query=cartography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Map Projections",
+      "title": "How do you peel an orange and flatten it without tearing?",
+      "concepts": ["projection problem", "developable surfaces", "distortion", "projection families"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://observablehq.com/@floledermann/projection-playground",
+        "https://www.giss.nasa.gov/tools/gprojector/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Map Projections",
+      "title": "What happens to Greenland when we project the globe?",
+      "concepts": ["equal-area projections", "conformal projections", "equidistant projections", "compromise projections"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.mysimulator.uk/gis/gps-map-projection/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Map Projections",
+      "title": "How do Tissot's ellipses reveal a map's secrets?",
+      "concepts": ["Tissot's indicatrix", "distortion visualization", "projection properties"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mysimulator.uk/gis/gps-map-projection/",
+        "https://projections.mgis.psu.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Map Projections",
+      "title": "Which projection should you use for your map?",
+      "concepts": ["projection selection", "purpose-driven choice", "extent considerations", "distortion properties"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://projectionwizard.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Map Projections",
+      "title": "Why does Google Maps distort the world the way it does?",
+      "concepts": ["Web Mercator", "EPSG:3857", "conformal properties", "controversy"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://observablehq.com/@floledermann/projection-playground"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Map Projections",
+      "title": "Projections you've learned so far — can you explain them?",
+      "concepts": ["projection review", "distortion patterns", "use cases"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://projections.mgis.psu.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Cartographic Design",
+      "title": "What makes a map easy to read in 3 seconds?",
+      "concepts": ["visual hierarchy", "figure-ground", "contrast", "composition"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://meghankelly-cartography.github.io/teaching_materials.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Cartographic Design",
+      "title": "How do typefaces shape what a map communicates?",
+      "concepts": ["typography", "label placement", "text hierarchy", "readability"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.classcentral.com/subject/cartography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Cartographic Design",
+      "title": "Why does red mean danger on almost every map?",
+      "concepts": ["color theory", "color conventions", "ColorBrewer", "accessibility"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.classcentral.com/subject/cartography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Cartographic Design",
+      "title": "Explore ColorBrewer and design your own color scheme",
+      "concepts": ["sequential palettes", "diverging palettes", "qualitative palettes", "colorblind-safe design"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://colorbrewer2.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Cartographic Design",
+      "title": "How do symbols speak without words?",
+      "concepts": ["symbolization", "semiotics", "mimetic symbols", "abstract symbols"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://meghankelly-cartography.github.io/teaching_materials.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Cartographic Design",
+      "title": "How does your audience shape every design choice you make?",
+      "concepts": ["audience-driven design", "context", "purpose", "constraints"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.coursera.org/specializations/gis-mapping-spatial-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Cartographic Design",
+      "title": "What design mistakes can you spot in real-world maps?",
+      "concepts": ["design critique", "hierarchy", "color", "typography"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=zTL0yhItfMk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Thematic Mapping",
+      "title": "How do you show numbers on a map?",
+      "concepts": ["thematic mapping", "data types", "visual variables", "Bertin's semiology"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.classcentral.com/subject/cartography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Thematic Mapping",
+      "title": "Why do election maps lie about landslides?",
+      "concepts": ["choropleth maps", "normalization", "classification schemes", "modifiable areal unit problem"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/specializations/gis-mapping-spatial-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Thematic Mapping",
+      "title": "When should circles be proportional to area vs. radius?",
+      "concepts": ["proportional symbols", "graduated symbols", "perceptual scaling", "Flannery compensation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://cartography-playground.gitlab.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Thematic Mapping",
+      "title": "How can you visualize multivariate data on one map?",
+      "concepts": ["bivariate mapping", "multivariate symbols", "small multiples", "trade-offs"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.classcentral.com/subject/cartography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Thematic Mapping",
+      "title": "Can you defend every choice you made in your thematic map?",
+      "concepts": ["thematic design process", "data-driven decisions", "iteration"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.coursera.org/specializations/gis-mapping-spatial-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Critical Cartography & Modern Practice",
+      "title": "Who gets to be at the center of the map?",
+      "concepts": ["map power", "Eurocentrism", "political cartography", "decolonizing maps"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=zTL0yhItfMk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Critical Cartography & Modern Practice",
+      "title": "How do maps persuade and manipulate?",
+      "concepts": ["persuasive cartography", "propaganda maps", "bias recognition", "ethical cartography"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://alg.manifoldapp.org/read/introduction-to-cartography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Critical Cartography & Modern Practice",
+      "title": "What can interactive and animated maps do that paper can't?",
+      "concepts": ["web mapping", "interactivity", "animation", "temporal visualization"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.coursera.org/specializations/gis-mapping-spatial-analysis",
+        "https://observablehq.com/@floledermann/projection-playground"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Critical Cartography & Modern Practice",
+      "title": "What have you learned about how maps shape reality?",
+      "concepts": ["synthesis", "map literacy", "critical thinking", "cartographic responsibility"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://alg.manifoldapp.org/read/introduction-to-cartography"
+      ],
+      "status": "pending"
+    }
+  ]
+}

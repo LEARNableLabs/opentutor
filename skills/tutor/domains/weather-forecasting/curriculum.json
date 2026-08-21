@@ -1,0 +1,270 @@
+{
+  "topic": "Weather forecasting — reading clouds and pressure systems",
+  "slug": "weather-forecasting",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic atmospheric science (temperature, pressure, humidity concepts)",
+    "comfort with observational data interpretation",
+    "familiarity with maps and spatial reasoning"
+  ],
+  "exit_criteria": [
+    "identify all 10 cloud genera and interpret their forecasting significance",
+    "read surface pressure maps and identify highs, lows, fronts, and gradients",
+    "synthesize multi-indicator observations to make 6-24 hour local forecasts",
+    "explain physical mechanisms behind cloud formation and frontal weather",
+    "assess forecast skill and identify common forecasting errors"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Cloud Fundamentals",
+      "title": "Why do clouds come in such different shapes?",
+      "concepts": ["cloud classification", "atmospheric stability", "WMO system"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://cloudatlas.wmo.int/en/home.html", "https://www.weather.gov/jetstream/clouds"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Cloud Fundamentals",
+      "title": "What stories do low clouds tell?",
+      "concepts": ["stratus", "stratocumulus", "cumulus", "fog"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://cloudatlas.wmo.int/en/clouds-low-etage.html", "https://scijinks.gov/clouds/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Cloud Fundamentals",
+      "title": "How do middle clouds signal changing weather?",
+      "concepts": ["altocumulus", "altostratus", "mid-level moisture"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://cloudatlas.wmo.int/en/clouds-middle-etage.html", "https://www.metoffice.gov.uk/weather/learn-about/weather/types-of-weather/clouds"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Cloud Fundamentals",
+      "title": "What do wispy high clouds reveal about the atmosphere?",
+      "concepts": ["cirrus", "cirrostratus", "cirrocumulus", "ice crystals"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://cloudatlas.wmo.int/en/clouds-high-etage.html", "https://www.weather.gov/jetstream/cirrus"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Cloud Fundamentals",
+      "title": "Why do towering clouds mean dramatic weather?",
+      "concepts": ["cumulonimbus", "vertical development", "convection", "precipitation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.weather.gov/jetstream/cumulonimbus", "https://scijinks.gov/thunderstorms/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Cloud Fundamentals",
+      "title": "Cloud classification review — can you read the sky?",
+      "concepts": ["cloud genera review", "pattern recognition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://cloudatlas.wmo.int/en/observation-guidelines.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Atmospheric Pressure",
+      "title": "What is atmospheric pressure really measuring?",
+      "concepts": ["pressure fundamentals", "millibars", "isobars", "surface analysis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.weather.gov/jetstream/pressure", "https://aviationweather.gov/data/obs/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Atmospheric Pressure",
+      "title": "Why does high pressure mean clear skies?",
+      "concepts": ["anticyclones", "subsidence", "fair weather patterns"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.weather.gov/jetstream/high", "https://www.metoffice.gov.uk/weather/learn-about/weather/atmosphere/pressure"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Atmospheric Pressure",
+      "title": "What makes low pressure systems the weather-makers?",
+      "concepts": ["cyclones", "convergence", "lifting mechanisms", "storminess"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.weather.gov/jetstream/cyclone", "https://scijinks.gov/low-pressure/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Atmospheric Pressure",
+      "title": "How do cold fronts crash the weather party?",
+      "concepts": ["cold fronts", "squall lines", "frontal lifting", "post-frontal clearing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.weather.gov/jetstream/cfront", "https://www.metoffice.gov.uk/weather/learn-about/weather/types-of-weather/fronts"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Atmospheric Pressure",
+      "title": "Why do warm fronts bring steady rain and gradual change?",
+      "concepts": ["warm fronts", "overrunning", "stratiform precipitation", "cloud sequences"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.weather.gov/jetstream/wfront", "https://aviationweather.gov/data/obs/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Atmospheric Pressure",
+      "title": "Pressure systems review — reading the big picture",
+      "concepts": ["fronts review", "pressure pattern synthesis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://aviationweather.gov/progchart/sfc"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Reading the Sky",
+      "title": "What's the synoptic observation workflow?",
+      "concepts": ["systematic observation", "METAR basics", "multi-indicator approach"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.cocorahs.org/Content.aspx?page=training_portal", "https://www.weather.gov/jetstream/ll_metar"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Reading the Sky",
+      "title": "Is pressure rising, falling, or holding steady — and why does it matter?",
+      "concepts": ["pressure tendency", "three-hour change", "trend interpretation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.weather.gov/source/zhu/ZHU_Training_Page/pressure_tendency/pressure_tendency.html", "https://aviationweather.gov/metar/data"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Reading the Sky",
+      "title": "How do cloud sequences predict incoming fronts?",
+      "concepts": ["cloud progression", "warm front sequence", "cold front sequence", "timing estimates"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.weather.gov/jetstream/forecasting", "https://cloudatlas.wmo.int/en/forecasting-cloud-observations.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Reading the Sky",
+      "title": "Can you teach back how wind patterns reveal pressure systems?",
+      "concepts": ["geostrophic wind", "wind shift", "backing and veering", "Buys Ballot's law"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.weather.gov/jetstream/wind", "https://www.metoffice.gov.uk/weather/guides/observations"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Reading the Sky",
+      "title": "Why does the same cloud produce rain, snow, or freezing rain?",
+      "concepts": ["precipitation types", "thermal profiles", "melting layer", "surface temperature"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.weather.gov/jetstream/precip_types", "https://scijinks.gov/rain-snow-sleet/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Reading the Sky",
+      "title": "Sky reading review — synthesizing the signals",
+      "concepts": ["observation synthesis", "pattern recognition review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.cocorahs.org/Content.aspx?page=training_intensity"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Forecasting Techniques",
+      "title": "What's happening in the next hour? (Nowcasting)",
+      "concepts": ["nowcasting", "radar interpretation", "convective initiation", "trend extrapolation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.weather.gov/jetstream/radar_intro", "https://radar.weather.gov/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Forecasting Techniques",
+      "title": "Your turn: make a 6-hour forecast",
+      "concepts": ["short-term forecasting", "confidence assessment", "verification planning"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.windy.com/", "https://aviationweather.gov/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Forecasting Techniques",
+      "title": "How far ahead can you reliably forecast without models?",
+      "concepts": ["24-hour forecasting", "forecast limits", "uncertainty quantification"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.weather.gov/jetstream/fcst", "https://www.metoffice.gov.uk/weather/guides/forecasts"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Forecasting Techniques",
+      "title": "Model output dive — GFS and NAM basics",
+      "concepts": ["numerical weather prediction", "model guidance", "model interpretation", "ensemble thinking"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://www.weather.gov/jetstream/nwp", "https://www.tropicaltidbits.com/analysis/models/", "https://zoom.earth/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Forecasting Techniques",
+      "title": "How do you verify your forecasts and improve?",
+      "concepts": ["forecast verification", "skill scores", "bias correction", "learning from errors"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.weather.gov/jetstream/verif", "https://www.cocorahs.org/Content.aspx?page=obs_guidelines"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Topics & Practice",
+      "title": "What cloud features scream 'severe weather ahead'?",
+      "concepts": ["severe weather indicators", "mammatus", "wall clouds", "shelf clouds", "anvil characteristics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.weather.gov/jetstream/severewx", "https://www.spc.noaa.gov/misc/about.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics & Practice",
+      "title": "Final integration: reading clouds, pressure, and forecasting as one skill",
+      "concepts": ["integrated forecasting", "continuing practice", "citizen science participation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.cocorahs.org/", "https://www.weather.gov/skywarn/", "https://cloudatlas.wmo.int/"],
+      "status": "pending"
+    }
+  ]
+}

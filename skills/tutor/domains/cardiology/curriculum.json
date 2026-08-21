@@ -1,0 +1,385 @@
+{
+  "topic": "Cardiology — the heart as an engineering system",
+  "slug": "cardiology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (cell structure, tissues)",
+    "introductory physics (fluids, electricity)",
+    "calculus (derivatives, integrals)",
+    "basic chemistry (pH, ions)"
+  ],
+  "exit_criteria": [
+    "calculate cardiac output, stroke volume, and ejection fraction from clinical data",
+    "interpret pressure-volume loops and predict effects of loading conditions",
+    "read and analyze basic ECGs, identifying conduction pathways",
+    "apply hemodynamic principles to predict flow and pressure in vascular networks",
+    "explain autonomic control mechanisms and baroreceptor reflexes quantitatively",
+    "diagnose heart failure modes using engineering failure analysis",
+    "evaluate cardiac devices (pacemakers, LVADs) using systems engineering principles"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "The Heart as a Pump",
+      "title": "Why does the heart need four chambers instead of one?",
+      "concepts": ["cardiac anatomy", "pulmonary vs systemic circulation", "pressure gradients"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/circulatory-system/heart-muscle-contraction/v/anatomy-of-the-heart",
+        "https://www.cvphysiology.com/Heart%20Disease/HD003"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "The Heart as a Pump",
+      "title": "What happens during a single heartbeat?",
+      "concepts": ["cardiac cycle", "systole and diastole", "valve timing", "Wiggers diagram"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Heart%20Disease/HD001",
+        "https://phet.colorado.edu/en/simulations/filter?subjects=biology&type=html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "The Heart as a Pump",
+      "title": "How do we measure the heart's pumping performance?",
+      "concepts": ["cardiac output", "stroke volume", "heart rate", "ejection fraction"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.cvphysiology.com/Cardiac%20Function/CF003",
+        "https://www.khanacademy.org/science/health-and-medicine/circulatory-system"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "The Heart as a Pump",
+      "title": "Why does stretching the heart make it pump harder?",
+      "concepts": ["Frank-Starling mechanism", "preload", "sarcomere length-tension", "venous return"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Cardiac%20Function/CF004",
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "The Heart as a Pump",
+      "title": "What does a pressure-volume loop tell us about heart function?",
+      "concepts": ["PV loops", "contractility", "afterload", "wall stress", "Laplace's law"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Cardiac%20Function/CF013",
+        "https://www.osmosis.org/learn/Pressure-volume_loop"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "The Heart as a Pump",
+      "title": "Can you predict how this drug will change the PV loop?",
+      "concepts": ["inotropes", "vasodilators", "loop shifts", "clinical applications"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cvphysiology.com/Cardiac%20Function/CF014"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Review: The Heart as a Pump",
+      "title": "How would you explain the cardiac cycle to an engineer who has never studied biology?",
+      "concepts": ["cardiac cycle integration", "PV loops", "Frank-Starling", "pumping mechanics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cvphysiology.com/Cardiac%20Function/CF001"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Electrical System",
+      "title": "How do heart cells generate electrical signals without a battery?",
+      "concepts": ["action potentials", "ion channels", "Nernst equation", "resting potential"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Arrhythmias/A002",
+        "https://www.khanacademy.org/science/biology/human-biology/neuron-nervous-system/v/electrotonic-and-action-potentials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Electrical System",
+      "title": "Why don't all heart cells beat at the same rate?",
+      "concepts": ["pacemaker cells", "SA node", "funny current", "automaticity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cvphysiology.com/Arrhythmias/A003"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Electrical System",
+      "title": "How does the electrical signal travel through the heart?",
+      "concepts": ["conduction pathway", "AV node delay", "Purkinje fibers", "gap junctions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Arrhythmias/A001",
+        "https://www.khanacademy.org/science/health-and-medicine/circulatory-system/heart-muscle-contraction/v/electrical-system-of-the-heart"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Electrical System",
+      "title": "What can we read from an ECG trace?",
+      "concepts": ["ECG waves", "P-QRS-T", "intervals", "heart rate from ECG"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ecg.bidmc.harvard.edu/maven/mavenmain.asp",
+        "https://www.cvphysiology.com/Arrhythmias/A004"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Electrical System",
+      "title": "How do arrhythmias break the normal conduction pattern?",
+      "concepts": ["arrhythmias", "reentry circuits", "heart block", "fibrillation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cvphysiology.com/Arrhythmias/A010",
+        "https://litfl.com/ecg-library/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Review: Pumps and Circuits",
+      "title": "What is the relationship between the mechanical heartbeat and the ECG trace?",
+      "concepts": ["cardiac cycle integration", "mechanical-electrical coupling", "PV loops", "ECG"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cvphysiology.com/Heart%20Disease/HD001"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Hemodynamics",
+      "title": "Why does blood pressure drop as you move away from the heart?",
+      "concepts": ["pressure gradients", "resistance", "Poiseuille's law", "viscosity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Hemodynamics/H003",
+        "https://www.khanacademy.org/science/health-and-medicine/circulatory-system/blood-pressure"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Hemodynamics",
+      "title": "How do blood vessels work as a resistance network?",
+      "concepts": ["series and parallel resistance", "vascular tree", "total peripheral resistance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cvphysiology.com/Hemodynamics/H007"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Hemodynamics",
+      "title": "Why is blood pressure pulsatile instead of constant?",
+      "concepts": ["compliance", "pulse pressure", "windkessel effect", "arterial stiffness"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Hemodynamics/H004"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Hemodynamics",
+      "title": "What causes turbulent flow and heart murmurs?",
+      "concepts": ["laminar vs turbulent flow", "Reynolds number", "stenosis", "murmurs"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cvphysiology.com/Hemodynamics/H008",
+        "https://www.osmosis.org/learn/Heart_murmurs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Hemodynamics",
+      "title": "How do we measure blood flow without opening vessels?",
+      "concepts": ["Doppler ultrasound", "fick principle", "indicator dilution", "cardiac catheterization"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cvphysiology.com/Hemodynamics/H014"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Hemodynamics",
+      "title": "Why does exercise increase cardiac output fivefold?",
+      "concepts": ["hemodynamic response to exercise", "oxygen delivery", "arteriovenous O2 difference", "cardiac reserve"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cvphysiology.com/Cardiac%20Function/CF007"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Review: Hemodynamics",
+      "title": "How would you design the circulatory system if you were engineering it from scratch?",
+      "concepts": ["pressure gradients", "resistance networks", "compliance", "flow regulation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cvphysiology.com/Hemodynamics/H001"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Control Systems",
+      "title": "How does the body regulate blood pressure automatically?",
+      "concepts": ["baroreceptor reflex", "negative feedback", "set point", "sympathetic/parasympathetic"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Blood%20Pressure/BP005",
+        "https://www.khanacademy.org/science/health-and-medicine/circulatory-system/autonomic-nervous-system"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Control Systems",
+      "title": "Why do you feel dizzy when you stand up too fast?",
+      "concepts": ["orthostatic hypotension", "venous pooling", "reflex compensation", "response time"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.cvphysiology.com/Blood%20Pressure/BP007"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Control Systems",
+      "title": "How do hormones control blood pressure over days and weeks?",
+      "concepts": ["renin-angiotensin-aldosterone system", "volume regulation", "kidney-heart axis", "long-term control"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Blood%20Pressure/BP009"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Control Systems",
+      "title": "What happens when control systems fail?",
+      "concepts": ["hypertension", "heart failure", "compensatory mechanisms", "decompensation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.cvphysiology.com/Heart%20Failure/HF002"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Control Systems",
+      "title": "How do drugs hijack cardiovascular control?",
+      "concepts": ["beta blockers", "ACE inhibitors", "diuretics", "pharmacological targets"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cvphysiology.com/Pharmacology/P001"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Review: Systems Integration",
+      "title": "How does the cardiovascular system maintain homeostasis across different timescales?",
+      "concepts": ["feedback loops", "hemodynamics", "autonomic control", "integration"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cvphysiology.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Clinical Engineering",
+      "title": "Why does heart failure happen, and how can we model it?",
+      "concepts": ["systolic vs diastolic failure", "failure modes", "compensatory remodeling", "decompensation cascade"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cvphysiology.com/Heart%20Failure/HF001",
+        "https://www.nejm.org/doi/full/10.1056/NEJMra021498"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Clinical Engineering",
+      "title": "How do pacemakers and LVADs restore function?",
+      "concepts": ["cardiac devices", "pacemaker programming", "left ventricular assist devices", "device-heart interaction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cvphysiology.com/Arrhythmias/A011",
+        "https://www.ahajournals.org/journal/circ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Clinical Engineering",
+      "title": "Can you design a diagnostic test for this patient's symptoms?",
+      "concepts": ["diagnostic reasoning", "clinical integration", "testing strategy", "probabilistic diagnosis"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cvphysiology.com/Clinical%20Cases/CC001"
+      ],
+      "status": "pending"
+    }
+  ]
+}

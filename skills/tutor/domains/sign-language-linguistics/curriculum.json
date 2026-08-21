@@ -1,0 +1,502 @@
+{
+  "topic": "Sign Language Linguistics",
+  "slug": "sign-language-linguistics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic linguistics (phonology, morphology, syntax)",
+    "familiarity with at least one sign language (ASL, BSL, etc.)",
+    "understanding of language as a cognitive system"
+  ],
+  "exit_criteria": [
+    "analyze sign language structure using formal linguistic methods",
+    "identify phonological, morphological, and syntactic patterns in sign languages",
+    "compare sign language features across different languages",
+    "critically evaluate claims about iconicity and modality effects",
+    "read and understand primary research in sign language linguistics"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Modality",
+      "title": "Why do sign languages count as real languages?",
+      "concepts": [
+        "linguistic universals",
+        "signed vs. spoken modality",
+        "historical misconceptions"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.gallaudet.edu/documents/Research-Support-and-International-Affairs/ASL_Linguistics.pdf",
+        "https://www.lifeprint.com/asl101/topics/linguistics.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Modality",
+      "title": "How does the visual-gestural modality shape language structure?",
+      "concepts": [
+        "modality effects",
+        "simultaneity",
+        "spatial grammar",
+        "iconicity"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/4178916",
+        "https://www.youtube.com/watch?v=pZC3hKNS7fg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Modality",
+      "title": "What can emerging sign languages tell us about language evolution?",
+      "concepts": [
+        "Nicaraguan Sign Language",
+        "Al-Sayyid Bedouin Sign Language",
+        "creolization",
+        "nativization"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.1154146",
+        "https://www.pnas.org/doi/10.1073/pnas.0405448101"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Modality",
+      "title": "How many sign languages exist, and how are they related?",
+      "concepts": [
+        "sign language families",
+        "typological diversity",
+        "language contact",
+        "linguistic imperialism"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ethnologue.com/subgroups/sign-language",
+        "https://www.signlanguagestudies.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations & Modality",
+      "title": "Can you explain the difference between natural sign languages and invented systems?",
+      "concepts": [
+        "natural vs. manual codes",
+        "Signed English",
+        "linguistic vs. educational goals"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.lifeprint.com/asl101/topics/signedenglis.htm",
+        "https://doi.org/10.1093/oxfordhb/9780199935345.013.55"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations & Modality",
+      "title": "Review: Sign languages as real languages",
+      "concepts": [
+        "modality effects",
+        "language universals",
+        "emerging sign languages",
+        "sign language diversity"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.gallaudet.edu/documents/Research-Support-and-International-Affairs/ASL_Linguistics.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Phonology",
+      "title": "What are the building blocks of signs?",
+      "concepts": [
+        "phonological parameters",
+        "handshape",
+        "location",
+        "movement",
+        "orientation"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=Yr_pQJJJXXM",
+        "https://www.lifeprint.com/asl101/pages-signs/s/phonology.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Phonology",
+      "title": "How do we know handshape and location are like phonemes?",
+      "concepts": [
+        "minimal pairs",
+        "phonemic contrast",
+        "commutation test"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1515/9783110261325",
+        "https://www.signbank.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Phonology",
+      "title": "Why do signs change when they're next to each other?",
+      "concepts": [
+        "assimilation",
+        "coarticulation",
+        "movement epenthesis",
+        "hold deletion"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1016/B978-012493553-3/50004-0",
+        "https://www.youtube.com/watch?v=8aNqZ0JK5Tc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Phonology",
+      "title": "What role do non-manual signals play in phonology?",
+      "concepts": [
+        "facial expressions",
+        "head movements",
+        "body lean",
+        "prosody"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1093/acprof:oso/9780199727698.003.0002",
+        "https://www.signlang.uni-hamburg.de/dgs-korpus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Phonology",
+      "title": "Do sign languages have syllables?",
+      "concepts": [
+        "syllable structure",
+        "movement as nucleus",
+        "timing units",
+        "prosodic structure"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1162/ling_a_00116",
+        "https://www.jstor.org/stable/4615764"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Phonology",
+      "title": "Review: Phonological structure",
+      "concepts": [
+        "parameters",
+        "minimal pairs",
+        "phonological processes",
+        "non-manuals"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.lifeprint.com/asl101/topics/phonology-review.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Morphology",
+      "title": "How do sign languages build complex words?",
+      "concepts": [
+        "compounding",
+        "derivation",
+        "simultaneous morphology",
+        "sequential morphology"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1093/oxfordhb/9780199935345.013.31",
+        "https://www.youtube.com/watch?v=jKZQR7YZxmg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Morphology",
+      "title": "What makes classifier constructions so controversial?",
+      "concepts": [
+        "classifier predicates",
+        "depicting signs",
+        "productive vs. lexical",
+        "iconicity debate"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1093/oxfordhb/9780199935345.013.63",
+        "https://www.semanticsarchive.net/Archive/TI1MTlhY/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Morphology",
+      "title": "How do verbs agree with their arguments in space?",
+      "concepts": [
+        "verb agreement",
+        "spatial loci",
+        "directionality",
+        "plain vs. agreeing verbs"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1515/9783110261325",
+        "https://www.lifeprint.com/asl101/topics/verb-agreement.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Morphology",
+      "title": "Can you identify aspect marking in a signed sentence?",
+      "concepts": [
+        "aspectual inflection",
+        "reduplication",
+        "movement modification",
+        "temporal markers"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://doi.org/10.1093/acprof:oso/9780199921218.003.0008",
+        "https://www.signbank.org/signpuddle2.0/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Morphology",
+      "title": "Why is iconicity both everywhere and nowhere in morphology?",
+      "concepts": [
+        "form-meaning mapping",
+        "arbitrary vs. iconic",
+        "conventionalization",
+        "grammaticalization"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1017/langcog.2016.23",
+        "https://www.youtube.com/watch?v=VfTmTQC4K6E"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Morphology",
+      "title": "Review: Morphological processes",
+      "concepts": [
+        "compounding",
+        "classifiers",
+        "agreement",
+        "aspect",
+        "iconicity"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.gallaudet.edu/asl-connect/grammar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Syntax & Discourse",
+      "title": "What determines word order in sign languages?",
+      "concepts": [
+        "basic word order",
+        "SOV vs. SVO",
+        "topicalization",
+        "information structure"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1093/acprof:oso/9780199921218.003.0011",
+        "https://www.jstor.org/stable/4615755"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Syntax & Discourse",
+      "title": "How does role shift work grammatically?",
+      "concepts": [
+        "constructed action",
+        "constructed dialogue",
+        "perspective shift",
+        "quotation vs. demonstration"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1093/oxfordhb/9780199935345.013.56",
+        "https://www.youtube.com/watch?v=3L4YrGaR8E4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Syntax & Discourse",
+      "title": "Why do sign languages drop so many arguments?",
+      "concepts": [
+        "null arguments",
+        "pro-drop",
+        "spatial reference",
+        "discourse continuity"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1093/acprof:oso/9780199921218.003.0012",
+        "https://www.signlang.uni-hamburg.de/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Syntax & Discourse",
+      "title": "Can you map the structure of a complex signed sentence?",
+      "concepts": [
+        "clause structure",
+        "embedding",
+        "relative clauses",
+        "conditionals"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://doi.org/10.1515/9783110261325",
+        "https://www.signwriting.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Syntax & Discourse",
+      "title": "How do non-manual markers signal syntactic boundaries?",
+      "concepts": [
+        "syntactic non-manuals",
+        "clause boundaries",
+        "question marking",
+        "negation"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://doi.org/10.1093/acprof:oso/9780199727698.001.0001",
+        "https://www.youtube.com/watch?v=4p6dkMIEOfw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Syntax & Discourse",
+      "title": "Review: Syntactic structure and discourse",
+      "concepts": [
+        "word order",
+        "role shift",
+        "null arguments",
+        "non-manual syntax"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.gallaudet.edu/asl-connect/grammar/syntax"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Variation & Beyond",
+      "title": "How does regional variation work in sign languages?",
+      "concepts": [
+        "regional dialects",
+        "lexical variation",
+        "sociolinguistic factors",
+        "language standardization"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1093/oxfordhb/9780199935345.013.24",
+        "https://www.spreadthesign.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Variation & Beyond",
+      "title": "What happens when deaf signers are bilingual or multilingual?",
+      "concepts": [
+        "code-blending",
+        "language contact",
+        "bimodal bilingualism",
+        "language maintenance"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1017/CBO9781139108607",
+        "https://www.youtube.com/watch?v=dQxZ0q4HZu0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Variation & Beyond",
+      "title": "Where is sign language linguistics heading next?",
+      "concepts": [
+        "neurolinguistics",
+        "computational approaches",
+        "typological databases",
+        "technology and accessibility"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://signlang.mpi.nl",
+        "https://www.sign-lang.uni-hamburg.de/lrec/pub/",
+        "https://doi.org/10.1146/annurev-linguistics-011718-011820"
+      ],
+      "status": "pending"
+    }
+  ]
+}

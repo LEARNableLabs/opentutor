@@ -1,0 +1,291 @@
+{
+  "topic": "Combinatorics and counting",
+  "slug": "combinatorics-and-counting",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic discrete mathematics",
+    "proof techniques (induction, contradiction)",
+    "set theory",
+    "algebra (polynomials, series)"
+  ],
+  "exit_criteria": [
+    "solve multi-step counting problems using appropriate principles",
+    "construct bijective proofs to show combinatorial identities",
+    "apply inclusion-exclusion to complex overlap scenarios",
+    "use generating functions to solve recurrence relations",
+    "recognize and count special sequences (Catalan, Stirling, partitions)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamental Principles",
+      "title": "Why do we multiply when counting sequences of choices?",
+      "concepts": ["multiplication principle", "counting sequences", "decision trees"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/18-s66-the-art-of-counting-spring-2003/pages/syllabus/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamental Principles",
+      "title": "When do we add instead of multiply?",
+      "concepts": ["addition principle", "disjoint cases", "case analysis"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://probability.oer.math.uconn.edu/wp-content/uploads/sites/2187/2018/01/prob3160ch1.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamental Principles",
+      "title": "How can matching objects help us count?",
+      "concepts": ["bijections", "one-to-one correspondence", "counting by matching"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.whitman.edu/mathematics/cgt_online/cgt.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamental Principles",
+      "title": "Why does counting by complement sometimes make problems easier?",
+      "concepts": ["complement counting", "overcounting", "subtraction principle"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://opentext.uleth.ca/PDF/Combinatorics.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fundamental Principles",
+      "title": "What makes two counting problems the same?",
+      "concepts": ["isomorphic problems", "problem transformation", "abstraction"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.learnmathclass.com/combinatorics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Arrangements and Selections",
+      "title": "How do you choose the right counting principle for a problem?",
+      "concepts": ["principle selection", "problem classification", "strategy choice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://data.artofproblemsolving.com/course-docs/syllabi/intermediate-counting-syllabus.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Arrangements and Selections",
+      "title": "How many ways can we arrange distinct objects?",
+      "concepts": ["permutations", "factorial", "ordered arrangements"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.learnmathclass.com/combinatorics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Arrangements and Selections",
+      "title": "What if some objects look identical?",
+      "concepts": ["permutations with repetition", "multinomial coefficients", "indistinguishable objects"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://opentext.uleth.ca/PDF/Combinatorics.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Arrangements and Selections",
+      "title": "Why does order sometimes not matter?",
+      "concepts": ["combinations", "binomial coefficients", "unordered selection"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://probability.oer.math.uconn.edu/wp-content/uploads/sites/2187/2018/01/prob3160ch1.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Arrangements and Selections",
+      "title": "How does Pascal's triangle hide combinatorial secrets?",
+      "concepts": ["Pascal's triangle", "binomial identities", "recursive structure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.learnmathclass.com/combinatorics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Arrangements and Selections",
+      "title": "Can you choose with repetition allowed?",
+      "concepts": ["multisets", "stars and bars", "combinations with repetition"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://users.math.msu.edu/users/bsagan/Books/Aoc/final.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Advanced Counting Techniques",
+      "title": "Can you match problems to their counting formulas?",
+      "concepts": ["arrangement review", "formula selection", "problem solving"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://data.artofproblemsolving.com/course-docs/syllabi/intermediate-counting-syllabus.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Advanced Counting Techniques",
+      "title": "Why must some pigeons share a hole?",
+      "concepts": ["pigeonhole principle", "existence proofs", "counting arguments"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.whitman.edu/mathematics/cgt_online/cgt.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Advanced Counting Techniques",
+      "title": "How do we count when sets overlap?",
+      "concepts": ["inclusion-exclusion principle", "overlapping sets", "Venn diagrams"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://opentext.uleth.ca/PDF/Combinatorics.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Advanced Counting Techniques",
+      "title": "Why are derangements harder to count than permutations?",
+      "concepts": ["derangements", "fixed points", "inclusion-exclusion application"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://users.math.msu.edu/users/bsagan/Books/Aoc/final.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Advanced Counting Techniques",
+      "title": "Can we prove identities just by counting?",
+      "concepts": ["combinatorial proofs", "bijective arguments", "double counting"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://ocw.mit.edu/courses/18-s66-the-art-of-counting-spring-2003/pages/syllabus/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Advanced Counting Techniques",
+      "title": "Real-world application: DNA sequences and error correction",
+      "concepts": ["sequence counting", "constraint satisfaction", "applied combinatorics"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.coursera.org/learn/combinatorics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Advanced Counting Techniques",
+      "title": "How well can you apply pigeonhole and inclusion-exclusion?",
+      "concepts": ["computational tools", "verification", "exploration"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.learnmathclass.com/", "https://www.codingame.com/learn/combinatorics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Generating Functions",
+      "title": "How can polynomials encode counting information?",
+      "concepts": ["generating functions", "power series", "coefficient extraction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://opentext.uleth.ca/PDF/Combinatorics.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Generating Functions",
+      "title": "Why do we multiply generating functions?",
+      "concepts": ["product of generating functions", "counting with multiple constraints", "convolution"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://users.math.msu.edu/users/bsagan/Books/Aoc/final.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Generating Functions",
+      "title": "How do recurrence relations become equations?",
+      "concepts": ["recursion", "recurrence relations", "characteristic equations"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://data.artofproblemsolving.com/course-docs/syllabi/intermediate-counting-syllabus.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Generating Functions",
+      "title": "Can generating functions solve Fibonacci-style problems?",
+      "concepts": ["linear recurrences", "closed form solutions", "Fibonacci numbers"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://opentext.uleth.ca/PDF/Combinatorics.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Generating Functions",
+      "title": "What's the difference between ordinary and exponential generating functions?",
+      "concepts": ["exponential generating functions", "labeled vs unlabeled", "factorial coefficients"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": ["https://users.math.msu.edu/users/bsagan/Books/Aoc/final.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Special Sequences and Applications",
+      "title": "Can you solve counting problems using generating functions?",
+      "concepts": ["recurrence review", "generating function review", "solution techniques"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.coursera.org/learn/combinatorics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Special Sequences and Applications",
+      "title": "Why do Catalan numbers appear everywhere?",
+      "concepts": ["Catalan numbers", "recursive structure", "ballot sequences"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://opentext.uleth.ca/PDF/Combinatorics.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Special Sequences and Applications",
+      "title": "How do we count ways to partition a set?",
+      "concepts": ["Stirling numbers", "set partitions", "Bell numbers"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://users.math.msu.edu/users/bsagan/Books/Aoc/final.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Special Sequences and Applications",
+      "title": "What can we count in graphs?",
+      "concepts": ["graph enumeration", "trees", "paths and cycles", "graph coloring"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.whitman.edu/mathematics/cgt_online/cgt.pdf", "https://ocw.mit.edu/courses/18-212-algebraic-combinatorics-spring-2019/"],
+      "status": "pending"
+    }
+  ]
+}

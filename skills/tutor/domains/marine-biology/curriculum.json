@@ -1,0 +1,371 @@
+{
+  "topic": "Marine biology — deep ocean ecosystems",
+  "slug": "marine-biology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (cellular structure, metabolism)",
+    "ecology fundamentals (food webs, energy flow)",
+    "basic chemistry (chemical bonds, pH)"
+  ],
+  "exit_criteria": [
+    "student can explain adaptations to deep ocean conditions (pressure, darkness, temperature)",
+    "student can describe chemosynthesis and compare it to photosynthesis",
+    "student can identify major deep ocean zones and their characteristics",
+    "student can explain the role of bioluminescence in deep sea ecosystems",
+    "student can trace energy flow in deep sea food webs from chemosynthesis and marine snow",
+    "student can discuss current conservation challenges facing deep ocean ecosystems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to Deep Ocean Zones",
+      "title": "What makes the deep ocean 'deep'?",
+      "concepts": ["ocean zonation", "aphotic zone", "bathyal zone"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/zones.html",
+        "https://ocean.si.edu/ecosystems/deep-sea/deep-sea"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to Deep Ocean Zones",
+      "title": "How much pressure can life withstand?",
+      "concepts": ["hydrostatic pressure", "pressure adaptation", "hadal zone"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.mbari.org/pressure-in-the-deep-sea/",
+        "https://www.whoi.edu/know-your-ocean/ocean-topics/how-the-ocean-works/ocean-pressure/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to Deep Ocean Zones",
+      "title": "Where does the sunlight zone end and why does it matter?",
+      "concepts": ["euphotic zone", "disphotic zone", "light attenuation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/light-distributed.html",
+        "https://www.oceannetworks.ca/learning/get-involved/educators/deep-sea"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Introduction to Deep Ocean Zones",
+      "title": "Why is the ocean floor both a desert and an oasis?",
+      "concepts": ["nutrient limitation", "patchiness", "oases"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ocean.si.edu/ecosystems/deep-sea/deep-sea-oases",
+        "https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-exploration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Adaptations to Extreme Conditions",
+      "title": "How do deep sea fish survive crushing pressure?",
+      "concepts": ["osmotic pressure", "protein adaptation", "TMAO"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mbari.org/adaptations-to-the-deep-sea/",
+        "https://oceanexplorer.noaa.gov/facts/pressure-adapt.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Adaptations to Extreme Conditions",
+      "title": "How do ocean zones and physical conditions shape deep sea life?",
+      "concepts": ["zonation", "pressure", "light penetration"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/edu/oceanage/welcome.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Adaptations to Extreme Conditions",
+      "title": "Why are so many deep sea creatures gelatinous and translucent?",
+      "concepts": ["body composition", "buoyancy", "predator avoidance"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.mbari.org/products/creature-feature/gelatinous-zooplankton/",
+        "https://ocean.si.edu/ocean-life/invertebrates/gelatinous-zooplankton"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Adaptations to Extreme Conditions",
+      "title": "What happens when you bring a deep sea fish to the surface?",
+      "concepts": ["decompression", "gas expansion", "sampling challenges"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.whoi.edu/multimedia/v-deep-sea-fish-challenges/",
+        "https://www.mbari.org/science/upper-ocean-systems/biological-oceanography/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Adaptations to Extreme Conditions",
+      "title": "How do organisms find food and mates in eternal darkness?",
+      "concepts": ["chemoreception", "mechanoreception", "bioluminescent signals"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/senses.html",
+        "https://www.nationalgeographic.com/animals/article/deep-sea-creatures"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Adaptations to Extreme Conditions",
+      "title": "Can you design an organism for the abyssal zone?",
+      "concepts": ["adaptation synthesis", "trade-offs", "evolutionary constraints"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.mbari.org/products/creature-feature/",
+        "http://www.coml.org/image-gallery"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Hydrothermal Vent Ecosystems",
+      "title": "What lives at the hottest places in the ocean?",
+      "concepts": ["hydrothermal vents", "thermophiles", "vent fauna"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/vents.html",
+        "https://www.whoi.edu/know-your-ocean/ocean-topics/volcanoes-and-hydrothermal-vents/hydrothermal-vents/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Hydrothermal Vent Ecosystems",
+      "title": "How can life exist without sunlight?",
+      "concepts": ["chemosynthesis", "hydrogen sulfide oxidation", "primary production"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/chemosynthesis.html",
+        "https://www.mbari.org/chemosynthesis-comes-to-light/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Hydrothermal Vent Ecosystems",
+      "title": "What are the key differences between chemosynthesis and photosynthesis?",
+      "concepts": ["energy sources", "chemical vs. light energy", "electron donors"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocean.si.edu/ocean-life/microbes/chemosynthesis-vs-photosynthesis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Hydrothermal Vent Ecosystems",
+      "title": "Why do giant tubeworms need bacteria to survive?",
+      "concepts": ["symbiosis", "endosymbionts", "metabolic dependence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/tubeworms.html",
+        "https://www.mbari.org/vent-tubeworms-can-live-astonishingly-long/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Hydrothermal Vent Ecosystems",
+      "title": "What does a real hydrothermal vent expedition look like?",
+      "concepts": ["exploration", "ROV technology", "in situ observation"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://schmidtocean.org/cruise-log/",
+        "https://www.mbari.org/products/video-lab/",
+        "https://oceanexplorer.noaa.gov/okeanos/explorations/explorations.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Bioluminescence and Communication",
+      "title": "Why do 90% of deep sea animals glow in the dark?",
+      "concepts": ["bioluminescence", "luciferin-luciferase", "ecological functions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/biolum.html",
+        "https://ocean.si.edu/ocean-life/fish/bioluminescence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Bioluminescence and Communication",
+      "title": "How does counter-illumination camouflage work?",
+      "concepts": ["counter-illumination", "photophores", "predator evasion"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.mbari.org/bioluminescence-in-the-deep-sea/",
+        "https://ocean.si.edu/ocean-life/fish/why-do-animals-deep-sea-glow"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Bioluminescence and Communication",
+      "title": "Can you predict which organisms use bioluminescence and how?",
+      "concepts": ["function prediction", "ecological niche", "light patterns"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mbari.org/products/creature-feature/bioluminescent-jellies/",
+        "http://www.coml.org/bioluminescence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Bioluminescence and Communication",
+      "title": "How does bioluminescence work and why do deep sea organisms use it?",
+      "concepts": ["bacterial vs. intrinsic", "communication", "defense"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/edu/learning/player/lesson09.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Bioluminescence and Communication",
+      "title": "What does bioluminescence look like in the wild ocean?",
+      "concepts": ["in situ bioluminescence", "diversity", "visual observation"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.mbari.org/products/video-lab/video-search/?search=bioluminescence",
+        "https://schmidtocean.org/technology/bioluminescence-camera/",
+        "https://www.nationalgeographic.com/video/bioluminescence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Deep Sea Food Webs",
+      "title": "What is marine snow and why does it feed the abyss?",
+      "concepts": ["marine snow", "detrital pathway", "particulate organic carbon"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/marine-snow.html",
+        "https://www.mbari.org/marine-snow-connecting-surface-and-seafloor/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Deep Sea Food Webs",
+      "title": "How does a dead whale create an underwater oasis for decades?",
+      "concepts": ["whale falls", "succession", "chemosynthetic stage"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/facts/whalefall.html",
+        "https://www.mbari.org/whale-fall/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Deep Sea Food Webs",
+      "title": "Why are giant squid so rarely seen despite being huge?",
+      "concepts": ["mesopelagic predators", "elusive behavior", "deep scattering layer"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocean.si.edu/ocean-life/invertebrates/giant-squid",
+        "https://www.nationalgeographic.com/animals/invertebrates/facts/giant-squid"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Deep Sea Food Webs",
+      "title": "Can you map energy flow in a deep sea food web?",
+      "concepts": ["trophic levels", "energy transfer", "detrital vs. chemosynthetic pathways"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/edu/learning/player/lesson08.html",
+        "https://www.whoi.edu/oceanus/feature/food-webs-in-the-deep-sea/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Conservation and Exploration",
+      "title": "How do all the pieces of deep ocean ecology fit together?",
+      "concepts": ["adaptations", "energy sources", "biodiversity"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/edu/materials/deepocean-background.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Conservation and Exploration",
+      "title": "What threatens the least-explored ecosystem on Earth?",
+      "concepts": ["deep sea mining", "bottom trawling", "climate change impacts"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.savethehighseas.org/",
+        "https://ocean.si.edu/conservation/threats-ocean/deep-sea-mining"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Conservation and Exploration",
+      "title": "How do we explore the final frontier on our own planet?",
+      "concepts": ["ROV technology", "AUV", "submersibles", "future exploration"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://oceanexplorer.noaa.gov/technology/technology.html",
+        "https://www.mbari.org/technology/",
+        "https://schmidtocean.org/technology/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "topic": "Cryptographic Protocols",
+  "slug": "cryptographic-protocols",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "symmetric encryption basics",
+    "public-key cryptography",
+    "hash functions and MACs",
+    "discrete logarithm problem",
+    "basic probability",
+    "TCP/IP fundamentals"
+  ],
+  "exit_criteria": [
+    "analyze protocol security goals and threat models",
+    "design and implement basic authentication protocols",
+    "identify common protocol vulnerabilities and attacks",
+    "understand TLS handshake and session establishment",
+    "explain zero-knowledge proof concepts and applications",
+    "implement secure key exchange protocols",
+    "read and interpret protocol specifications (RFCs)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Key Exchange",
+      "title": "What security goals do protocols actually guarantee?",
+      "concepts": ["security goals", "threat models", "protocol properties"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cryptobook.us/",
+        "https://crypto.stanford.edu/~dabo/courses/OnlineCrypto/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Key Exchange",
+      "title": "Why can't Alice and Bob just share a password?",
+      "concepts": ["key establishment", "key transport", "Diffie-Hellman"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/crypto",
+        "https://cryptopals.com/sets/5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Key Exchange",
+      "title": "How does Diffie-Hellman work without revealing secrets?",
+      "concepts": ["discrete logarithm", "ephemeral keys", "forward secrecy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://crypto.stanford.edu/~dabo/courses/OnlineCrypto/",
+        "https://cryptopals.com/sets/5/challenges/33"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Key Exchange",
+      "title": "What happens when Eve sits in the middle?",
+      "concepts": ["man-in-the-middle attack", "authenticated key exchange", "MITM prevention"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://cryptobook.us/",
+        "https://tools.ietf.org/html/rfc2631"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations & Key Exchange",
+      "title": "Why do modern protocols use elliptic curves?",
+      "concepts": ["ECDH", "curve25519", "key size efficiency"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cr.yp.to/ecdh.html",
+        "https://www.rfc-editor.org/rfc/rfc7748"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations & Key Exchange",
+      "title": "Can you break this key exchange?",
+      "concepts": ["protocol analysis", "attack patterns", "security proofs"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://cryptopals.com/",
+        "https://cryptobook.us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Foundations & Key Exchange",
+      "title": "Review: How do key exchange protocols prevent attacks?",
+      "concepts": ["key establishment review", "DH review", "MITM prevention"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://cryptobook.us/",
+        "https://crypto.stanford.edu/~dabo/courses/OnlineCrypto/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Authentication & Digital Signatures",
+      "title": "How do you prove you know a secret without revealing it?",
+      "concepts": ["challenge-response", "authentication protocols", "replay attacks"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://crypto.stanford.edu/~dabo/courses/OnlineCrypto/",
+        "https://www.coursera.org/learn/crypto"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Authentication & Digital Signatures",
+      "title": "What makes a digital signature unforgeable?",
+      "concepts": ["signature schemes", "RSA signatures", "DSA/ECDSA"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cryptobook.us/",
+        "https://www.rfc-editor.org/rfc/rfc6979"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Authentication & Digital Signatures",
+      "title": "Why did PlayStation 3 get hacked because of random numbers?",
+      "concepts": ["nonce reuse", "ECDSA vulnerabilities", "randomness in protocols"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.bbc.com/news/technology-12116051",
+        "https://www.rfc-editor.org/rfc/rfc6979"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Authentication & Digital Signatures",
+      "title": "How do certificates create a web of trust?",
+      "concepts": ["PKI", "certificate authorities", "chain of trust"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://letsencrypt.org/how-it-works/",
+        "https://www.rfc-editor.org/rfc/rfc5280"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Authentication & Digital Signatures",
+      "title": "What happens when a CA gets compromised?",
+      "concepts": ["certificate revocation", "CRL", "OCSP"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.rfc-editor.org/rfc/rfc6960",
+        "https://letsencrypt.org/docs/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Authentication & Digital Signatures",
+      "title": "How do you authenticate with just a password over the internet?",
+      "concepts": ["PAKE", "SRP", "password protocols"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rfc-editor.org/rfc/rfc2945",
+        "https://cryptobook.us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Authentication & Digital Signatures",
+      "title": "Review: Can you design a secure authentication protocol?",
+      "concepts": ["protocol design", "authentication review", "common pitfalls"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://cryptopals.com/",
+        "https://crypto.stanford.edu/~dabo/courses/OnlineCrypto/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Real-World Protocols",
+      "title": "What happens during an HTTPS handshake?",
+      "concepts": ["TLS handshake", "cipher suites", "session keys"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://tls13.xargs.org/",
+        "https://www.rfc-editor.org/rfc/rfc8446"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Real-World Protocols",
+      "title": "Why did TLS 1.3 remove so many cipher suites?",
+      "concepts": ["protocol evolution", "deprecated algorithms", "security vs compatibility"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://blog.cloudflare.com/rfc-8446-aka-tls-1-3/",
+        "https://www.rfc-editor.org/rfc/rfc8446"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Real-World Protocols",
+      "title": "How do SSH keys work without passwords?",
+      "concepts": ["public key authentication", "SSH protocol", "authorized_keys"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.rfc-editor.org/rfc/rfc4253",
+        "https://www.ssh.com/academy/ssh/protocol"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Real-World Protocols",
+      "title": "What makes Signal so secure?",
+      "concepts": ["Double Ratchet", "forward secrecy", "post-compromise security"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://signal.org/docs/",
+        "https://signal.org/docs/specifications/doubleratchet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Real-World Protocols",
+      "title": "Why does OAuth use tokens instead of passwords?",
+      "concepts": ["OAuth 2.0", "delegated authorization", "bearer tokens"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.rfc-editor.org/rfc/rfc6749",
+        "https://oauth.net/2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Real-World Protocols",
+      "title": "How do VPNs protect your traffic?",
+      "concepts": ["IPsec", "tunneling protocols", "VPN architecture"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rfc-editor.org/rfc/rfc4301",
+        "https://www.wireguard.com/protocol/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Real-World Protocols",
+      "title": "Can you build your own mini TLS handshake?",
+      "concepts": ["protocol implementation", "handshake flow", "practical cryptography"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://cryptopals.com/sets/5",
+        "https://tls13.xargs.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Real-World Protocols",
+      "title": "Review: What can go wrong in real protocols?",
+      "concepts": ["protocol attacks", "implementation bugs", "timing attacks"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://cryptopals.com/",
+        "https://www.rfc-editor.org/rfc/rfc8446"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced & Privacy",
+      "title": "How can you prove something without revealing anything?",
+      "concepts": ["zero-knowledge proofs", "interactive proofs", "ZK applications"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://crypto.stanford.edu/~dabo/courses/OnlineCrypto/",
+        "https://z.cash/technology/zksnarks/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced & Privacy",
+      "title": "Why do blockchains need consensus protocols?",
+      "concepts": ["Byzantine consensus", "proof-of-work", "proof-of-stake"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://bitcoin.org/bitcoin.pdf",
+        "https://ethereum.org/en/developers/docs/consensus-mechanisms/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced & Privacy",
+      "title": "How can multiple parties compute without trusting each other?",
+      "concepts": ["multi-party computation", "secret sharing", "MPC protocols"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cryptobook.us/",
+        "https://crypto.stanford.edu/~dabo/courses/OnlineCrypto/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced & Privacy",
+      "title": "What if your private key gets stolen next year?",
+      "concepts": ["threshold cryptography", "key splitting", "distributed trust"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.rfc-editor.org/rfc/rfc9380",
+        "https://cryptobook.us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced & Privacy",
+      "title": "How do you send messages anonymously?",
+      "concepts": ["mixing networks", "onion routing", "Tor protocol"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.torproject.org/",
+        "https://svn-archive.torproject.org/svn/projects/design-paper/tor-design.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced & Privacy",
+      "title": "Review: What advanced techniques enable privacy and trust?",
+      "concepts": ["zero-knowledge review", "MPC review", "privacy protocols"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://cryptobook.us/",
+        "https://crypto.stanford.edu/~dabo/courses/OnlineCrypto/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

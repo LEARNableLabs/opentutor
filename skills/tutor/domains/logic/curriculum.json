@@ -1,0 +1,259 @@
+{
+  "topic": "Logic — from Aristotle to Gödel",
+  "slug": "logic",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Basic mathematical reasoning",
+    "Comfort with abstract thinking",
+    "High school algebra"
+  ],
+  "exit_criteria": [
+    "Can construct formal proofs in propositional and first-order logic",
+    "Understands the historical progression from syllogistic to modern logic",
+    "Can explain Gödel's incompleteness theorems and their implications",
+    "Recognizes the limits of formal systems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Ancient Foundations",
+      "title": "Can you prove all truth with words alone?",
+      "concepts": ["syllogism", "categorical proposition", "validity"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["historyoflogic.com - Aristotle's Organon", "Natural Deduction Proof Editor"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Ancient Foundations",
+      "title": "Why did Aristotle think there were exactly 256 syllogisms?",
+      "concepts": ["categorical logic", "term logic", "valid forms"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["Handbook of the History of Logic - Volume 1"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Ancient Foundations",
+      "title": "What happens when you say 'This sentence is false'?",
+      "concepts": ["paradox", "self-reference", "liar paradox"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["Medieval Logic - supposition theory"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "The Algebraic Turn",
+      "title": "Can you do algebra with truth itself?",
+      "concepts": ["Boolean algebra", "logical operators", "truth tables"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["Logictools.org - Boolean logic toolkit"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "The Algebraic Turn",
+      "title": "How did Boole turn logic into equations?",
+      "concepts": ["algebraic logic", "laws of thought", "symbolic logic"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["Computational Logic Lecture Notes - Kohlhase"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review: Ancient to Modern",
+      "title": "From Aristotle to algebra — what changed?",
+      "concepts": ["syllogistic logic", "Boolean algebra", "historical development"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["History of Logic from Aristotle to Gödel"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Frege's Revolution",
+      "title": "Why couldn't Aristotle say 'every prime has a successor'?",
+      "concepts": ["quantifiers", "predicate logic", "scope"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["MIT Logic II - 24.242", "Natural Deduction Proof Editor"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Frege's Revolution",
+      "title": "Can you translate English into symbols without losing meaning?",
+      "concepts": ["formalization", "translation", "first-order logic"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["Natural Deduction Proof Editor", "Logictools first-order toolkit"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Frege's Revolution",
+      "title": "What is a formal proof, really?",
+      "concepts": ["proof systems", "natural deduction", "inference rules"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["LogicProof theorem prover", "The Logic Machine"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Frege's Revolution",
+      "title": "Can you prove that ∀x P(x) implies P(a)?",
+      "concepts": ["universal elimination", "proof construction", "formal derivation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Natural Deduction Proof Editor", "LogicProof"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Review: The Quantifier Revolution",
+      "title": "Why did quantifiers change everything?",
+      "concepts": ["predicate logic", "quantification", "expressive power"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["Gödel's Basic Logic Course manuscript"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Hilbert's Dream",
+      "title": "Could mathematics be reduced to symbol manipulation?",
+      "concepts": ["formalism", "axiomatization", "Hilbert's program"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["MIT Theory of Computation - 18.404J"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Hilbert's Dream",
+      "title": "What does it mean for a formal system to be 'complete'?",
+      "concepts": ["completeness", "consistency", "decidability"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["Incompleteness and Computability - Open Logic Project"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Hilbert's Dream",
+      "title": "Can you design a formal system for basic arithmetic?",
+      "concepts": ["formal systems", "axioms", "Peano arithmetic"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["A Course in Mathematical Logic for Mathematicians - Manin"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Gödel's Bombshell",
+      "title": "What if truth is bigger than proof?",
+      "concepts": ["completeness theorem", "semantic vs syntactic truth"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["MIT Logic II - 24.242", "Gödel's Basic Logic Course"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Gödel's Bombshell",
+      "title": "How can a sentence talk about itself?",
+      "concepts": ["Gödel numbering", "self-reference", "diagonal argument"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": ["Incompleteness and Computability - Open Logic Project"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Review: From Formalism to Limits",
+      "title": "What did Gödel destroy — and what survived?",
+      "concepts": ["Hilbert's program", "incompleteness", "completeness vs incompleteness"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["MIT Theory of Computation", "History of Logic"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Gödel's Bombshell",
+      "title": "Why can't any system prove its own consistency?",
+      "concepts": ["second incompleteness theorem", "consistency", "meta-mathematics"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": ["MIT Logic II", "Incompleteness and Computability"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Gödel's Bombshell",
+      "title": "What is an undecidable problem?",
+      "concepts": ["decidability", "halting problem", "Church-Turing thesis"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["MIT Theory of Computation - 18.404J"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Beyond Gödel",
+      "title": "Can you define truth inside a formal system?",
+      "concepts": ["Tarski's undefinability", "semantic truth", "metalanguage"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["Handbook of the History of Logic - Tarski volume"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Beyond Gödel",
+      "title": "What can computation teach us about proof?",
+      "concepts": ["computability", "algorithmic decidability", "lambda calculus"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["MIT Theory of Computation"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Beyond Gödel",
+      "title": "Where does logic live now — in math, CS, or philosophy?",
+      "concepts": ["model theory", "proof theory", "computational logic"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Computational Logic Lecture Notes", "MIT OCW courses"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Final Integration",
+      "title": "What are the limits of formal reasoning?",
+      "concepts": ["incompleteness", "undecidability", "formal limits"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["Incompleteness and Computability - Open Logic Project"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Final Integration",
+      "title": "How would you explain Gödel's theorem to a curious friend?",
+      "concepts": ["incompleteness theorems", "self-reference", "limits of proof"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["History of Logic from Aristotle to Gödel"],
+      "status": "pending"
+    }
+  ]
+}

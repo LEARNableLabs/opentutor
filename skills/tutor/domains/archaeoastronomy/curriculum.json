@@ -1,0 +1,328 @@
+{
+  "topic": "Archaeoastronomy — ancient observatories and alignments",
+  "slug": "archaeoastronomy",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic astronomy (celestial coordinates, solar system)",
+    "familiarity with ancient civilizations",
+    "basic geometry and trigonometry",
+    "comfort with interpreting archaeological evidence"
+  ],
+  "exit_criteria": [
+    "identify and explain solstice/equinox alignments at major sites",
+    "use Stellarium to reconstruct ancient skies and verify alignments",
+    "critically evaluate claims of astronomical alignments using statistical methods",
+    "describe astronomical practices of at least 3 ancient cultures",
+    "explain common pitfalls in archaeoastronomical interpretation",
+    "design a basic survey protocol for investigating new site alignments"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Celestial Foundations",
+      "title": "Why does the Sun's rising point wander along the horizon?",
+      "concepts": ["solar declination", "solstices and equinoxes", "ecliptic", "horizon astronomy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://stellarium.org",
+        "https://www.timeanddate.com/astronomy/different-types-twilight.html",
+        "https://earthsky.org/astronomy-essentials/everything-you-need-to-know-june-solstice/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Celestial Foundations",
+      "title": "How did ancient peoples track the Moon's complex dance?",
+      "concepts": ["lunar phases", "lunar standstills", "synodic vs sidereal month", "nodes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://eclipse.gsfc.nasa.gov/SEhelp/moonorbit.html",
+        "https://www.youtube.com/watch?v=wz01pTvuMa0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Celestial Foundations",
+      "title": "What makes a star rise 'heliacally' and why did ancients care?",
+      "concepts": ["heliacal rising", "stellar calendars", "Sirius and the Nile", "precession preview"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.britannica.com/science/heliacal-rising",
+        "https://www.cambridge.org/core/journals/journal-for-the-history-of-astronomy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Celestial Foundations",
+      "title": "Why don't the stars stay fixed over millennia?",
+      "concepts": ["axial precession", "pole star changes", "Age of Aries vs Age of Pisces", "26,000-year cycle"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Axial_precession",
+        "https://www.youtube.com/watch?v=IjWNH8vCYnE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Celestial Foundations",
+      "title": "How do local mountains and valleys shape astronomical observations?",
+      "concepts": ["horizon profile", "azimuth and altitude", "topographic effects", "horizon calendars"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.peakfinder.org",
+        "https://suncalc.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Detection Methods",
+      "title": "When is an alignment just a coincidence?",
+      "concepts": ["statistical significance", "null hypothesis", "target richness", "confirmation bias"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://journals.equinoxpub.com/JSA/article/view/10484",
+        "https://www.cambridge.org/core/books/records-in-stone/9E463A8F8F7B0C6E6A8B5B7D5F5E5A5B"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Detection Methods",
+      "title": "Review: Celestial mechanics and statistical thinking",
+      "concepts": ["solar/lunar cycles review", "precession", "significance testing"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://quizlet.com/subject/archaeoastronomy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Detection Methods",
+      "title": "How do you measure an ancient alignment in the field?",
+      "concepts": ["theodolite surveying", "GPS coordinates", "magnetic vs true north", "field protocols"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=surveying-techniques",
+        "https://www.archaeoastronomy.org/fieldwork-guide.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Detection Methods",
+      "title": "Can software help us see the sky as ancient peoples saw it?",
+      "concepts": ["Stellarium tutorial", "setting location and date", "precession correction", "horizon profiles"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://stellarium.org/doc/head/",
+        "https://www.youtube.com/watch?v=stellarium-tutorial"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Detection Methods",
+      "title": "What are the Schaefer and Ruggles methods really testing?",
+      "concepts": ["Schaefer test", "Ruggles declination distribution", "Monte Carlo simulation", "p-values in archaeology"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://academic.oup.com/astrogeo/article/49/2/2.14/246121",
+        "https://www.cambridge.org/core/journals/antiquity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Case Studies",
+      "title": "Why does Stonehenge capture our imagination?",
+      "concepts": ["Stonehenge phases", "Heel Stone alignment", "Aubrey holes", "solar/lunar theories"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.english-heritage.org.uk/visit/places/stonehenge/",
+        "https://www.youtube.com/watch?v=stonehenge-secrets"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Case Studies",
+      "title": "How does Newgrange's winter solstice lightbox work?",
+      "concepts": ["passage tomb astronomy", "roofbox alignment", "solar penetration", "Irish Neolithic culture"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.worldheritageireland.ie/bru-na-boinne/built-heritage/newgrange/",
+        "https://www.youtube.com/watch?v=newgrange-solstice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Case Studies",
+      "title": "What astronomical knowledge did the Maya encode in their pyramids?",
+      "concepts": ["El Caracol observatory", "Venus tables", "Uaxactun E-Group", "Maya calendar systems"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cambridge.org/core/books/maya-astronomy",
+        "https://www.youtube.com/watch?v=maya-astronomy-documentary"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Case Studies",
+      "title": "Review: Major sites and alignment types",
+      "concepts": ["Stonehenge", "Newgrange", "Maya observatories", "solar vs lunar vs stellar"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Case Studies",
+      "title": "Did the ancient Egyptians align the pyramids to true north?",
+      "concepts": ["Giza alignment precision", "stellar alignment methods", "Abu Simbel solar event", "Egyptian decans"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nature-giza-alignment",
+        "https://www.aeraweb.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Case Studies",
+      "title": "What can we learn from Chaco Canyon's Sun Dagger?",
+      "concepts": ["Fajada Butte petroglyph", "Chacoan roads and solstice", "Pueblo cosmology", "erosion and preservation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nps.gov/chcu/learn/historyculture/sun-dagger.htm",
+        "https://www.youtube.com/watch?v=chaco-sun-dagger"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Case Studies",
+      "title": "How do medicine wheels encode astronomical knowledge?",
+      "concepts": ["Bighorn Medicine Wheel", "cairn alignments", "Plains Indian cosmology", "summer solstice ceremonies"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fs.usda.gov/detail/bighorn/learning/history-culture",
+        "https://journals.sagepub.com/archaeoastronomy-north-america"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Case Studies",
+      "title": "What makes Angkor Wat an astronomical masterpiece?",
+      "concepts": ["Angkor Wat orientation", "equinox alignment", "Hindu cosmology in architecture", "Khmer astronomy"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cambridge.org/core/journals/journal-southeast-asian-studies",
+        "https://www.youtube.com/watch?v=angkor-wat-astronomy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Cultural Context",
+      "title": "How did different cultures conceptualize the cosmos?",
+      "concepts": ["cosmology vs cosmography", "three-world vs four-world models", "sacred directions", "astronomy and power"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.anthrosource.net",
+        "https://yalebooks.yale.edu/skywatchers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Cultural Context",
+      "title": "Why must we avoid 'astro-babble' in interpretation?",
+      "concepts": ["overinterpretation", "cherry-picking data", "indigenous perspectives", "ethical archaeology"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://journals.equinoxpub.com/JSA/article/view/interpretation-ethics",
+        "https://www.archaeoastronomy.org/best-practices"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Cultural Context",
+      "title": "Review: Interpretation challenges and cultural sensitivity",
+      "concepts": ["statistical pitfalls", "cultural context", "cosmology", "ethics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Cultural Context",
+      "title": "How did ancient calendars blend astronomy and agriculture?",
+      "concepts": ["solar calendars", "lunar calendars", "lunisolar calendars", "agricultural cycles"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.cambridge.org/ancient-calendars",
+        "https://www.timeanddate.com/calendar/ancient.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Modern Methods",
+      "title": "Can LiDAR and remote sensing reveal hidden alignments?",
+      "concepts": ["LiDAR archaeology", "digital elevation models", "3D site reconstruction", "modern discovery examples"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nationalgeographic.com/lidar-archaeology",
+        "https://www.youtube.com/watch?v=lidar-mayan-cities"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Modern Methods",
+      "title": "Where is archaeoastronomy headed in the 21st century?",
+      "concepts": ["interdisciplinary methods", "indigenous collaboration", "exoplanet analogy", "future research frontiers"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://journals.equinoxpub.com/JSA/issue/archive",
+        "https://oxfordre.com/planetaryscience/archaeoastronomy"
+      ],
+      "status": "pending"
+    }
+  ]
+}

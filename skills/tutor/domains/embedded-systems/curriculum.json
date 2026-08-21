@@ -1,0 +1,343 @@
+{
+  "topic": "Embedded Systems Design",
+  "slug": "embedded-systems",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "C programming fundamentals",
+    "basic digital logic",
+    "binary and hexadecimal arithmetic",
+    "pointers and memory concepts"
+  ],
+  "exit_criteria": [
+    "read datasheets and configure microcontroller peripherals",
+    "implement interrupt-driven I/O systems",
+    "design and debug communication protocols (UART, SPI, I2C)",
+    "apply real-time constraints and scheduling principles",
+    "build complete embedded projects from specification to hardware"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Hardware Foundations",
+      "title": "What makes a microcontroller different from a CPU?",
+      "concepts": ["microcontroller architecture", "peripherals", "memory-mapped I/O"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.embedded.com/introduction-to-microcontrollers/",
+        "https://web.eecs.umich.edu/~prabal/teaching/eecs373-f10/readings/ARM_v7M_ARM.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Hardware Foundations",
+      "title": "Why do embedded systems care so much about every byte?",
+      "concepts": ["memory constraints", "Flash vs SRAM", "memory layout"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://interrupt.memfault.com/blog/get-the-most-out-of-the-linker-map-file",
+        "https://embeddedartistry.com/blog/2019/04/08/a-general-overview-of-what-happens-before-main/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Hardware Foundations",
+      "title": "How do you talk to hardware with code?",
+      "concepts": ["registers", "bit manipulation", "volatile keyword"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.embedded.com/introduction-to-the-volatile-keyword/",
+        "https://embeddedartistry.com/blog/2018/08/01/c-volatile-the-most-common-keyword/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Hardware Foundations",
+      "title": "What's actually inside a datasheet?",
+      "concepts": ["datasheets", "register maps", "electrical characteristics"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.st.com/resource/en/reference_manual/rm0008-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+        "https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "I/O and Peripherals",
+      "title": "What did we learn about hardware foundations?",
+      "concepts": ["microcontroller architecture", "memory", "registers", "datasheets"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://github.com/embedded-artistry/embedded-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "I/O and Peripherals",
+      "title": "How do you make an LED blink without Arduino's digitalWrite?",
+      "concepts": ["GPIO", "output configuration", "push-pull vs open-drain"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://deepbluembedded.com/stm32-gpio-tutorial-examples/",
+        "https://www.allaboutcircuits.com/technical-articles/what-is-a-push-pull-output/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "I/O and Peripherals",
+      "title": "Why doesn't reading a button always work the first time?",
+      "concepts": ["GPIO input", "pull-up/pull-down resistors", "debouncing"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.embeddedrelated.com/showarticle/71.php",
+        "https://www.ganssle.com/debouncing.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "I/O and Peripherals",
+      "title": "How do you read analog sensors in a digital world?",
+      "concepts": ["ADC", "sampling", "resolution vs accuracy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.analog.com/en/analog-dialogue/articles/understanding-adc-specifications.html",
+        "https://www.embedded.com/how-to-use-adc-in-embedded-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "I/O and Peripherals",
+      "title": "Can you create an analog voltage with digital hardware?",
+      "concepts": ["PWM", "duty cycle", "DAC alternatives"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/pulse-width-modulation",
+        "https://www.embedded.com/how-to-implement-pwm-control/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Interrupts and Timing",
+      "title": "Why does your processor need to be interrupted?",
+      "concepts": ["interrupts", "polling vs interrupts", "responsiveness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://interrupt.memfault.com/blog/arm-cortex-m-exceptions-and-nvic",
+        "https://www.embedded.com/introduction-to-interrupts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Interrupts and Timing",
+      "title": "What should you never do inside an ISR?",
+      "concepts": ["ISR constraints", "atomicity", "shared data"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://embeddedartistry.com/blog/2017/05/17/creating-a-circular-buffer-in-c-and-c/",
+        "https://www.embedded.com/how-to-write-interrupt-service-routines/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Interrupts and Timing",
+      "title": "How do interrupts and I/O work together?",
+      "concepts": ["GPIO", "ADC", "PWM", "interrupts", "ISRs"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://github.com/nhivp/Awesome-Embedded"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Interrupts and Timing",
+      "title": "How do you keep accurate time without an operating system?",
+      "concepts": ["hardware timers", "tick rates", "overflow handling"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://interrupt.memfault.com/blog/hardware-watchdog-timers",
+        "https://www.embedded.com/how-to-use-timers-in-embedded-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Communication Protocols",
+      "title": "What's the simplest way two chips can talk?",
+      "concepts": ["UART", "baud rate", "framing"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/serial-communication",
+        "https://www.analog.com/en/analog-dialogue/articles/uart-a-hardware-communication-protocol.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Communication Protocols",
+      "title": "Why do buses need a boss?",
+      "concepts": ["master-slave", "SPI", "clock polarity and phase"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi",
+        "https://www.analog.com/en/analog-dialogue/articles/introduction-to-spi-interface.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Communication Protocols",
+      "title": "How can dozens of sensors share two wires?",
+      "concepts": ["I2C", "addressing", "ACK/NACK"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://learn.sparkfun.com/tutorials/i2c",
+        "https://www.embedded.com/how-to-use-i2c-in-embedded-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Communication Protocols",
+      "title": "How do you build a sensor network that survives noise?",
+      "concepts": ["error detection", "CRC", "robustness"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://interrupt.memfault.com/blog/testing-vs-checking",
+        "https://www.embedded.com/error-detection-and-correction-in-embedded-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Communication Protocols",
+      "title": "When should you use DMA instead of the CPU?",
+      "concepts": ["DMA", "memory transfer", "CPU offloading"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://interrupt.memfault.com/blog/zero-to-dma",
+        "https://www.embedded.com/how-to-use-dma-in-embedded-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Real-Time Concepts",
+      "title": "What makes communication protocols robust?",
+      "concepts": ["UART", "SPI", "I2C", "DMA", "error handling"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://github.com/istarc/awesome-embedded-systems"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Real-Time Concepts",
+      "title": "What does 'real-time' actually mean?",
+      "concepts": ["hard vs soft deadlines", "latency", "determinism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.embedded.com/introduction-to-real-time-operating-systems/",
+        "https://ptolemy.berkeley.edu/books/leeseshia/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Real-Time Concepts",
+      "title": "How do you run multiple tasks without an OS?",
+      "concepts": ["cooperative scheduling", "state machines", "superloop"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.embedded.com/how-to-use-state-machines/",
+        "https://interrupt.memfault.com/blog/building-a-cli-for-firmware-projects"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Real-Time Concepts",
+      "title": "When is bare-metal not enough?",
+      "concepts": ["RTOS basics", "tasks", "priority", "context switching"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.freertos.org/RTOS.html",
+        "https://www.embedded.com/how-to-choose-an-rtos/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "System Design",
+      "title": "Why does your device die overnight?",
+      "concepts": ["power management", "sleep modes", "wake sources"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.embedded.com/low-power-design-for-embedded-systems/",
+        "https://interrupt.memfault.com/blog/reducing-firmware-size"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "System Design",
+      "title": "How do you debug when printf doesn't work?",
+      "concepts": ["JTAG/SWD", "breakpoints", "watch variables", "logic analyzers"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://interrupt.memfault.com/blog/cortex-m-breakpoints",
+        "https://www.embedded.com/debugging-embedded-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "System Design",
+      "title": "What separates a prototype from a product?",
+      "concepts": ["reliability", "fault tolerance", "production testing", "design constraints"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://interrupt.memfault.com/blog/device-heartbeat-metrics",
+        "https://www.embedded.com/designing-reliable-embedded-systems/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

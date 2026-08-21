@@ -1,0 +1,370 @@
+{
+  "topic": "Lichenology — symbiosis, ecology, and bioindication",
+  "slug": "lichenology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology",
+    "ecology fundamentals",
+    "introductory mycology or botany"
+  ],
+  "exit_criteria": [
+    "explain the tripartite symbiotic relationship in lichens and its evolutionary significance",
+    "identify major lichen growth forms and reproductive strategies",
+    "design and execute a bioindication survey using lichen diversity metrics",
+    "use morphological and chemical keys to identify common lichen genera",
+    "interpret lichen community patterns in terms of ecological succession and environmental gradients",
+    "evaluate lichen response to air pollution and climate change stressors"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Symbiotic Foundations",
+      "title": "What is a lichen, and why isn't it a single organism?",
+      "concepts": ["symbiosis", "mycobiont", "photobiont", "holobiont"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britishlichensociety.org.uk/what-are-lichens",
+        "https://www.fs.usda.gov/wildflowers/beauty/lichens/biology.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Symbiotic Foundations",
+      "title": "How do fungi and algae benefit from their partnership?",
+      "concepts": ["mutualism", "nutrient exchange", "carbon flow", "nitrogen fixation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.nhm.ac.uk/discover/what-are-lichens.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Symbiotic Foundations",
+      "title": "Why do some lichens have three partners instead of two?",
+      "concepts": ["cyanobacteria", "tripartite lichens", "cephalodia", "nitrogen metabolism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1126/science.aaf8287",
+        "https://lichenportal.org/cnalh/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Symbiotic Foundations",
+      "title": "Could the lichen symbiosis be exploitative rather than mutualistic?",
+      "concepts": ["controlled parasitism", "symbiotic continuum", "fitness costs", "evolutionary dynamics"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://abls.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Symbiotic Foundations",
+      "title": "How specific are fungal-algal partnerships?",
+      "concepts": ["specificity", "co-evolution", "photobiont switching", "horizontal transmission"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.inaturalist.org/guides/16028"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Symbiotic Foundations",
+      "title": "Review: Symbiotic Foundations",
+      "concepts": ["symbiosis review", "mycobiont-photobiont partnerships", "tripartite lichens", "co-evolution"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.britishlichensociety.org.uk/what-are-lichens",
+        "https://www.nhm.ac.uk/discover/what-are-lichens.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Lichen Form and Function",
+      "title": "Why do lichens come in such different shapes?",
+      "concepts": ["growth forms", "crustose", "foliose", "fruticose"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fs.usda.gov/wildflowers/beauty/lichens/morphology.shtml",
+        "https://www.britishlichensociety.org.uk/lichen-forms"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Lichen Form and Function",
+      "title": "What determines where on a tree trunk you'll find different lichen species?",
+      "concepts": ["microhabitat preferences", "bark pH", "moisture gradients", "substrate chemistry"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.inaturalist.org/taxa/54743-Lichens"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Lichen Form and Function",
+      "title": "How do lichens reproduce if they're two organisms?",
+      "concepts": ["asexual propagules", "soredia", "isidia", "fragmentation", "sexual spores"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britishlichensociety.org.uk/reproduction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Lichen Form and Function",
+      "title": "What are lichen secondary metabolites, and why do they matter?",
+      "concepts": ["secondary chemistry", "usnic acid", "depsides", "depsidones", "chemical defense"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://doi.org/10.1007/s13199-010-0104-4",
+        "https://lichenportal.org/portal/checklists/checklist.php?clid=1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Lichen Form and Function",
+      "title": "Review: Lichen Form and Function",
+      "concepts": ["growth forms review", "reproduction strategies", "secondary metabolites"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.fs.usda.gov/wildflowers/beauty/lichens/index.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Ecology and Succession",
+      "title": "Why are lichens called pioneer species?",
+      "concepts": ["primary succession", "substrate weathering", "soil formation", "facilitation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nps.gov/articles/lichens-primary-succession.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Ecology and Succession",
+      "title": "How do lichens survive extreme desiccation and cold?",
+      "concepts": ["poikilohydry", "stress tolerance", "photosynthetic recovery", "cryoprotection"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1007/s00442-003-1404-y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Ecology and Succession",
+      "title": "What happens when lichen communities change over time?",
+      "concepts": ["succession patterns", "competitive displacement", "climax communities", "disturbance regimes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://lichenportal.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Ecology and Succession",
+      "title": "How do lichen dispersal mechanisms shape community assembly?",
+      "concepts": ["dispersal limitation", "propagule types", "long-distance dispersal", "establishment probability"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.inaturalist.org/taxa/54743-Lichens/browse_photos"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Ecology and Succession",
+      "title": "Why do old-growth forests have different lichens than young forests?",
+      "concepts": ["forest age gradients", "substrate continuity", "legacy species", "conservation biology"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.fs.usda.gov/pnw/lwm/lichens"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Ecology and Succession",
+      "title": "Review: Ecological Patterns and Processes",
+      "concepts": ["succession", "stress tolerance", "dispersal", "community assembly"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.britishlichensociety.org.uk/ecology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Bioindication and Environmental Monitoring",
+      "title": "How can lichens tell us about air quality?",
+      "concepts": ["bioindication", "pollution sensitivity", "diversity indices", "monitoring protocols"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fs.usda.gov/fia/topics/lichen-monitoring/",
+        "https://gml.noaa.gov/education/info_activities/pdfs/TBI_lichens_and_air_quality.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Bioindication and Environmental Monitoring",
+      "title": "Why are some lichen species sensitive to sulfur dioxide while others tolerate it?",
+      "concepts": ["physiological sensitivity", "sulfur dioxide effects", "acidophily", "tolerance gradients"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1111/j.1469-8137.1973.tb04821.x"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Bioindication and Environmental Monitoring",
+      "title": "How do you design a lichen biomonitoring study?",
+      "concepts": ["sampling design", "transect methods", "species abundance", "statistical analysis"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.fs.usda.gov/research/treesearch/41546",
+        "https://lichenportal.org/cnalh/projects/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Bioindication and Environmental Monitoring",
+      "title": "Can lichens track heavy metal pollution?",
+      "concepts": ["heavy metal accumulation", "transplant studies", "element analysis", "urban biomonitoring"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://doi.org/10.1016/j.ecolind.2015.08.052"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Bioindication and Environmental Monitoring",
+      "title": "How are lichens responding to climate change?",
+      "concepts": ["climate sensitivity", "range shifts", "phenological changes", "bioclimatic modeling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1016/j.funeco.2015.09.011",
+        "https://www.fs.usda.gov/pnw/news/article/lichens-are-climate-change-indicators"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Bioindication and Environmental Monitoring",
+      "title": "Review: Bioindication and Monitoring Design",
+      "concepts": ["air quality assessment", "study design", "climate impacts"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.fs.usda.gov/fia/topics/lichen-monitoring/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Biodiversity and Identification",
+      "title": "How do you identify a lichen in the field?",
+      "concepts": ["morphological characters", "growth form", "color", "reproductive structures", "dichotomous keys"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.inaturalist.org/guides/16028",
+        "https://www.britishlichensociety.org.uk/resources/identification"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Biodiversity and Identification",
+      "title": "Why do lichenologists use chemical spot tests?",
+      "concepts": ["chemical taxonomy", "spot tests", "K C KC P reagents", "chemotypes"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://lichenportal.org/portal/taxa/index.php?taxon=Lichens",
+        "https://www.britishlichensociety.org.uk/chemical-spot-tests"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Biodiversity and Identification",
+      "title": "What are the most diverse lichen genera, and where do you find them?",
+      "concepts": ["taxonomic diversity", "biogeography", "habitat specialists", "regional floras"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://lichenportal.org/cnalh/",
+        "https://www.inaturalist.org/observations?place_id=any&taxon_id=54743&view=species"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Biodiversity and Identification",
+      "title": "How would you document and conserve rare lichen species?",
+      "concepts": ["conservation priorities", "voucher specimens", "habitat management", "citizen science"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.fs.usda.gov/pnw/lwm/lichens/conservation.shtml",
+        "https://lichenportal.org/cnalh/collections/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Biodiversity and Identification",
+      "title": "Review: Identification and Conservation",
+      "concepts": ["field identification", "chemical taxonomy", "biodiversity patterns", "conservation strategies"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.britishlichensociety.org.uk/resources/identification",
+        "https://lichenportal.org/cnalh/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

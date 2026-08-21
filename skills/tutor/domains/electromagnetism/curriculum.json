@@ -1,0 +1,302 @@
+{
+  "topic": "Electromagnetism — from Maxwell to photonics",
+  "slug": "electromagnetism",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "vector calculus (div, grad, curl, Stokes' theorem, divergence theorem)",
+    "differential equations (wave equation, boundary value problems)",
+    "introductory E&M (electric fields, magnetic fields, circuits)",
+    "linear algebra (eigenvalues, eigenvectors)",
+    "complex analysis (phasors, complex exponentials)"
+  ],
+  "exit_criteria": [
+    "derive the wave equation from Maxwell's equations",
+    "apply boundary conditions to solve reflection and refraction problems",
+    "calculate waveguide modes and cutoff frequencies",
+    "analyze fiber optic dispersion and design optical systems",
+    "explain the quantum-classical boundary in electromagnetic phenomena"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundation",
+      "title": "How did Maxwell unify electricity and magnetism into a single framework?",
+      "concepts": ["Maxwell's equations", "electromagnetic field unification", "integral vs differential forms"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/8-07-electromagnetism-ii-fall-2012/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundation",
+      "title": "What is the displacement current and why did Maxwell need it?",
+      "concepts": ["displacement current", "Ampère's law", "charge conservation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["http://hyperphysics.phy-astr.gsu.edu/hbase/electric/maxeq.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundation",
+      "title": "Why do we use potentials instead of fields to solve Maxwell's equations?",
+      "concepts": ["electromagnetic potentials", "scalar potential", "vector potential", "gauge freedom"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/2D2C1A88F496953FB6D39A4C69B86BB1"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundation",
+      "title": "What happens to electromagnetic fields at the boundary between two materials?",
+      "concepts": ["boundary conditions", "field discontinuities", "normal and tangential components"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["http://hyperphysics.phy-astr.gsu.edu/hbase/electric/elesht.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundation",
+      "title": "How do Maxwell's equations predict electromagnetic waves?",
+      "concepts": ["wave equation", "speed of light", "transverse waves"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.youtube.com/watch?v=oI_X2cMHNe0"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Wave Phenomena",
+      "title": "Review: Maxwell's equations and the wave equation",
+      "concepts": ["Maxwell's equations", "displacement current", "boundary conditions", "wave equation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["http://hyperphysics.phy-astr.gsu.edu/hbase/emcon.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Wave Phenomena",
+      "title": "How does energy flow in an electromagnetic wave?",
+      "concepts": ["Poynting vector", "energy flux", "electromagnetic momentum"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Wave Phenomena",
+      "title": "What determines how much light reflects off glass vs. transmits through?",
+      "concepts": ["Fresnel equations", "reflection coefficient", "transmission coefficient", "s and p polarization"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.edmundoptics.com/knowledge-center/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Wave Phenomena",
+      "title": "Why are electromagnetic waves polarized and what does that mean?",
+      "concepts": ["polarization", "linear polarization", "circular polarization", "elliptical polarization"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://phet.colorado.edu/en/simulations/wave-interference"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Wave Phenomena",
+      "title": "How does light bend around obstacles and through small openings?",
+      "concepts": ["diffraction", "Huygens principle", "Fraunhofer diffraction", "Fresnel diffraction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.animations.physics.unsw.edu.au/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Wave Phenomena",
+      "title": "Review: Energy, reflection, polarization, and diffraction",
+      "concepts": ["Poynting vector", "Fresnel equations", "polarization", "diffraction"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["http://hyperphysics.phy-astr.gsu.edu/hbase/emcon.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Wave Phenomena",
+      "title": "How can we describe diffraction patterns using spatial frequencies?",
+      "concepts": ["Fourier optics", "spatial frequency", "transfer function", "coherence"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.wiley.com/en-us/Fundamentals+of+Photonics%2C+3rd+Edition-p-9781119506874"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Matter Interactions",
+      "title": "What happens inside a dielectric when an electric field is applied?",
+      "concepts": ["dielectric materials", "polarization density", "electric susceptibility", "refractive index"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/2D2C1A88F496953FB6D39A4C69B86BB1"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Matter Interactions",
+      "title": "Why do electromagnetic waves decay exponentially inside metals?",
+      "concepts": ["conducting media", "skin depth", "complex wave vector", "ohmic loss"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.microwaves101.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Matter Interactions",
+      "title": "Why does white light spread into a rainbow when passing through a prism?",
+      "concepts": ["dispersion", "frequency-dependent refractive index", "group velocity", "phase velocity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://phet.colorado.edu/en/simulations/bending-light"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Matter Interactions",
+      "title": "How do crystals split light into two beams with different polarizations?",
+      "concepts": ["birefringence", "ordinary and extraordinary rays", "optic axis", "anisotropic materials"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.rp-photonics.com/birefringence.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Matter Interactions",
+      "title": "Review: Dielectrics, conductors, dispersion, and birefringence",
+      "concepts": ["refractive index", "skin depth", "group velocity", "birefringence"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["http://hyperphysics.phy-astr.gsu.edu/hbase/emcon.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Matter Interactions",
+      "title": "How do lasers produce coherent light through stimulated emission?",
+      "concepts": ["stimulated emission", "population inversion", "laser operation", "gain and feedback"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.rp-photonics.com/lasers.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Guided Waves",
+      "title": "What are waveguide modes and how do they differ from free-space waves?",
+      "concepts": ["waveguides", "waveguide modes", "TE modes", "TM modes", "TEM modes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.falstad.com/emwave/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Guided Waves",
+      "title": "Why can't low-frequency waves propagate through small waveguides?",
+      "concepts": ["cutoff frequency", "evanescent modes", "waveguide dispersion"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Guided Waves",
+      "title": "How do resonant cavities trap electromagnetic waves?",
+      "concepts": ["resonant cavities", "quality factor", "standing waves", "cavity modes"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.microwaves101.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Guided Waves",
+      "title": "How does the Smith chart help design impedance matching networks?",
+      "concepts": ["Smith chart", "impedance matching", "reflection coefficient", "characteristic impedance"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://www.microwaves101.com/encyclopedias/smith-chart"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Guided Waves",
+      "title": "Review: Waveguides, modes, cavities, and transmission lines",
+      "concepts": ["waveguide modes", "cutoff frequency", "resonant cavities", "impedance matching"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.wiley.com/en-us/Microwave+Engineering%2C+4th+Edition-p-9780470631553"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Photonics",
+      "title": "How do optical fibers guide light over thousands of kilometers?",
+      "concepts": ["optical fibers", "total internal reflection", "single-mode vs multi-mode", "fiber dispersion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.rp-photonics.com/fibers.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Photonics",
+      "title": "What happens when light becomes so intense that materials respond nonlinearly?",
+      "concepts": ["nonlinear optics", "second-harmonic generation", "chi-2 nonlinearity", "phase matching"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.rp-photonics.com/nonlinear_optics.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Photonics",
+      "title": "How do photonic crystals create forbidden frequency bands for light?",
+      "concepts": ["photonic crystals", "photonic bandgap", "Bragg scattering", "periodic structures"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://ab-initio.mit.edu/photons/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Photonics",
+      "title": "Can we engineer materials that bend light backward?",
+      "concepts": ["metamaterials", "negative refraction", "negative index", "split-ring resonators"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.rp-photonics.com/metamaterials.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Photonics",
+      "title": "When does classical electromagnetism break down and require photons?",
+      "concepts": ["photons", "wave-particle duality", "photon statistics", "quantum entanglement"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.youtube.com/@pbsspacetime"],
+      "status": "pending"
+    }
+  ]
+}

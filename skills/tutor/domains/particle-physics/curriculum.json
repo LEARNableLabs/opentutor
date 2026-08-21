@@ -1,0 +1,391 @@
+{
+  "topic": "Particle physics — the Standard Model",
+  "slug": "particle-physics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "quantum mechanics (wave functions, operators, Hilbert spaces)",
+    "special relativity (Lorentz transformations, 4-vectors)",
+    "classical electromagnetism (Maxwell equations, gauge potentials)",
+    "linear algebra (matrices, eigenvalues, vector spaces)",
+    "basic group theory (groups, representations)"
+  ],
+  "exit_criteria": [
+    "explain the Standard Model's gauge group structure and particle content",
+    "describe how symmetries dictate conservation laws and particle properties",
+    "understand the Higgs mechanism and mass generation",
+    "classify particles by quantum numbers and explain their interactions",
+    "interpret Feynman diagrams for fundamental processes",
+    "connect theoretical predictions to experimental observations",
+    "discuss open questions beyond the Standard Model"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Symmetries",
+      "title": "Why do physicists obsess over symmetry?",
+      "concepts": ["symmetry principles", "Noether's theorem", "conservation laws"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/",
+        "https://home.cern/science/physics/standard-model"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Symmetries",
+      "title": "What does it mean for a law of physics to be 'invariant'?",
+      "concepts": ["continuous symmetries", "discrete symmetries", "Poincaré group"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://pdg.lbl.gov/2024/reviews/contents_sports.html",
+        "https://www.youtube.com/watch?v=MO0r930Sn_8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Symmetries",
+      "title": "How do internal symmetries differ from spacetime symmetries?",
+      "concepts": ["internal symmetries", "gauge groups", "U(1) SU(2) SU(3)"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/hep-ph/0001283",
+        "https://www.perimeterinstitute.ca/research/research-areas/particle-physics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Symmetries",
+      "title": "Can you predict a particle's properties just from symmetry?",
+      "concepts": ["quantum numbers", "symmetry representations", "selection rules"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://pdg.lbl.gov/",
+        "https://home.cern/resources/faqs/facts-and-figures-about-lhc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Quantum Field Theory Basics",
+      "title": "Why do we need fields instead of particles?",
+      "concepts": ["classical fields", "quantum fields", "particle creation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/",
+        "https://www.youtube.com/watch?v=zNVQfWC_evg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Quantum Field Theory Basics",
+      "title": "What's actually happening in a Feynman diagram?",
+      "concepts": ["Feynman diagrams", "virtual particles", "perturbation theory", "scattering amplitudes"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-feynman-diagrams.pdf",
+        "https://home.cern/science/physics/antimatter"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Quantum Field Theory Basics",
+      "title": "How do symmetries connect to quantum fields?",
+      "concepts": ["symmetries", "conservation laws", "quantum fields", "Feynman diagrams"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/",
+        "https://home.cern/science/physics/standard-model"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Gauge Principle",
+      "title": "Why must forces exist if symmetries are local?",
+      "concepts": ["local gauge invariance", "gauge bosons", "minimal coupling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/1506.05957",
+        "https://home.cern/science/physics/higgs-boson"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "The Gauge Principle",
+      "title": "How does the photon emerge from U(1) symmetry?",
+      "concepts": ["electromagnetic gauge theory", "QED", "charge conservation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-qed.pdf",
+        "https://www.youtube.com/watch?v=gEKSpZPByD0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Gauge Principle",
+      "title": "What breaks when you try to give gauge bosons mass?",
+      "concepts": ["gauge boson mass problem", "spontaneous symmetry breaking", "Goldstone theorem"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/1110.2253",
+        "https://home.cern/science/physics/higgs-boson/higgs-boson-discovery"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The Gauge Principle",
+      "title": "How does the Higgs field solve the mass problem?",
+      "concepts": ["Higgs mechanism", "electroweak symmetry breaking", "Higgs boson"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://home.cern/science/physics/higgs-boson",
+        "https://arxiv.org/abs/1207.7214"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Particle Classifications",
+      "title": "Why are there exactly two types of matter particles?",
+      "concepts": ["fermions vs bosons", "spin-statistics theorem", "Pauli exclusion"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-spin-statistics.pdf",
+        "https://www.youtube.com/watch?v=TxwZLNF9Wdk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Particle Classifications",
+      "title": "How do gauge theories determine particle properties?",
+      "concepts": ["gauge invariance", "Higgs mechanism", "fermions", "bosons"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://home.cern/science/physics/standard-model",
+        "https://pdg.lbl.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Particle Classifications",
+      "title": "What makes leptons different from quarks?",
+      "concepts": ["lepton families", "quark families", "flavor", "generation structure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://home.cern/science/physics/quarks",
+        "https://pdg.lbl.gov/2024/tables/contents_tables.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Particle Classifications",
+      "title": "Why can't you isolate a single quark?",
+      "concepts": ["color charge", "confinement", "hadrons", "mesons and baryons"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://arxiv.org/abs/hep-ph/9901374",
+        "https://home.cern/science/physics/strong-force"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Particle Classifications",
+      "title": "How do we organize the particle zoo?",
+      "concepts": ["Standard Model table", "quantum numbers", "interaction vertices"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://home.cern/science/physics/standard-model",
+        "https://pdg.lbl.gov/2024/tables/contents_tables.html",
+        "https://particleadventure.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Electroweak Theory",
+      "title": "Why did physicists think weak and EM forces were related?",
+      "concepts": ["weak interactions", "parity violation", "V-A structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/0812.1594",
+        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-weak-interactions.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Electroweak Theory",
+      "title": "What role do W and Z bosons play in radioactive decay?",
+      "concepts": ["W bosons", "Z bosons", "charged currents", "neutral currents"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://home.cern/science/physics/w-boson-z-boson",
+        "https://www.youtube.com/watch?v=RVMZNksLy_I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Electroweak Theory",
+      "title": "How does SU(2) × U(1) unify two forces?",
+      "concepts": ["electroweak unification", "weak isospin", "weak hypercharge", "mixing angle"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/1201.0537",
+        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-electroweak-model.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Electroweak Theory",
+      "title": "Can you derive particle masses from the Standard Model?",
+      "concepts": ["Yukawa couplings", "fermion masses", "mass hierarchy", "CKM matrix"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-ckm-matrix.pdf",
+        "https://arxiv.org/abs/0906.1271"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Electroweak Theory",
+      "title": "How does the electroweak theory unify forces?",
+      "concepts": ["weak force", "electroweak mixing", "Yukawa couplings", "W/Z bosons"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://home.cern/science/physics/standard-model",
+        "https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Quantum Chromodynamics",
+      "title": "Why does the strong force get weaker at high energy?",
+      "concepts": ["asymptotic freedom", "running coupling constant", "QCD energy scales"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/abs/hep-ph/0409313",
+        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-qcd.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Quantum Chromodynamics",
+      "title": "How do gluons carry color charge themselves?",
+      "concepts": ["gluons", "color octet", "non-abelian gauge theory", "self-interaction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://home.cern/science/physics/strong-force",
+        "https://arxiv.org/abs/1011.5131"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Quantum Chromodynamics",
+      "title": "What's inside a proton?",
+      "concepts": ["parton model", "deep inelastic scattering", "quark distributions", "sea quarks"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-structure-functions.pdf",
+        "https://home.cern/science/accelerators/large-hadron-collider"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Beyond & Open Questions",
+      "title": "How do we actually detect these particles?",
+      "concepts": ["particle detectors", "calorimeters", "tracking chambers", "LHC experiments"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://home.cern/science/experiments/atlas",
+        "https://home.cern/science/experiments/cms",
+        "https://www.youtube.com/watch?v=pQhbhpU9Wrg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Beyond & Open Questions",
+      "title": "Why do neutrinos oscillate, and what does that tell us?",
+      "concepts": ["neutrino oscillations", "neutrino mass", "PMNS matrix", "beyond Standard Model"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-neutrino-mixing.pdf",
+        "https://arxiv.org/abs/1601.07512"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Beyond & Open Questions",
+      "title": "What don't we understand about the Standard Model?",
+      "concepts": ["hierarchy problem", "dark matter", "matter-antimatter asymmetry", "gravity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/abs/1709.07852",
+        "https://home.cern/science/physics/beyond-standard-model"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Beyond & Open Questions",
+      "title": "What holds the Standard Model together?",
+      "concepts": ["gauge theories", "particle content", "symmetry breaking", "open questions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://home.cern/science/physics/standard-model",
+        "https://pdg.lbl.gov/2024/reviews/contents_sports.html",
+        "https://particleadventure.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

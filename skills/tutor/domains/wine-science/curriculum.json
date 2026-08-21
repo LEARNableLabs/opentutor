@@ -1,0 +1,398 @@
+{
+  "topic": "Wine Science — Viticulture and Enology",
+  "slug": "wine-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (organic chemistry helpful)",
+    "basic biology (plant biology helpful)",
+    "general familiarity with wine as a beverage"
+  ],
+  "exit_criteria": [
+    "explain how terroir influences grape composition and wine style",
+    "describe the microbiology and chemistry of alcoholic and malolactic fermentation",
+    "evaluate vineyard management decisions and their impact on fruit quality",
+    "identify common wine faults and their chemical origins",
+    "design a basic winemaking protocol for different wine styles",
+    "interpret sensory evaluation data and conduct structured tastings"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Vine Biology & Terroir",
+      "title": "How does a grapevine turn sunlight into sugar?",
+      "concepts": ["photosynthesis in vines", "vine phenology", "carbohydrate partitioning"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques",
+        "https://grapesandwine.cals.cornell.edu/resources/viticulture/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Vine Biology & Terroir",
+      "title": "Why do Pinot Noir and Cabernet Sauvignon taste so different?",
+      "concepts": ["varietal differences", "secondary metabolites", "genetic expression"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://winefolly.com/tips/wine-characteristics/",
+        "https://www.oiv.int/standards/compendium-of-international-methods-of-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Vine Biology & Terroir",
+      "title": "What makes Burgundy soil different from Napa Valley?",
+      "concepts": ["soil composition", "terroir", "mineral uptake", "water relations"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://winefolly.com/deep-dive/the-concept-of-terroir-in-wine/",
+        "https://www.jancisrobinson.com/learn/categories/wine-terroir"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Vine Biology & Terroir",
+      "title": "How does climate shape a vineyard's potential?",
+      "concepts": ["climate classification", "heat accumulation", "growing degree days", "diurnal temperature variation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://grapesandwine.cals.cornell.edu/resources/viticulture/",
+        "https://wine.wsu.edu/research/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Vine Biology & Terroir",
+      "title": "Can you predict wine quality from a weather forecast?",
+      "concepts": ["vintage variation", "climate vs weather", "phenological timing"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://winefolly.com/tips/vintage-charts/",
+        "https://www.guildsomm.com/public_content"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Vine Biology & Terroir",
+      "title": "Review: Vine to Vineyard",
+      "concepts": ["vine physiology", "varietal differences", "terroir factors", "climate influence"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://winefolly.com/review/viticulture-basics/",
+        "https://grapesandwine.cals.cornell.edu/resources/viticulture/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Vineyard Management",
+      "title": "Why do vintners prune away 90% of their vines each year?",
+      "concepts": ["vine balance", "crop load", "pruning systems", "yield management"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://grapesandwine.cals.cornell.edu/resources/viticulture/",
+        "https://wineserver.ucdavis.edu/industry-info/enology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Vineyard Management",
+      "title": "How does leaf arrangement affect grape chemistry?",
+      "concepts": ["canopy management", "light exposure", "microclimate", "phenolic development"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://grapesandwine.cals.cornell.edu/resources/viticulture/",
+        "https://wine.wsu.edu/extension/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Vineyard Management",
+      "title": "What happens when you plant European vines on American roots?",
+      "concepts": ["rootstocks", "grafting", "phylloxera resistance", "vigor control"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://winefolly.com/tips/phylloxera-how-a-bug-changed-wine/",
+        "https://wineserver.ucdavis.edu/industry-info/enology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Vineyard Management",
+      "title": "When is a grape actually ripe?",
+      "concepts": ["phenolic ripeness", "physiological ripeness", "sugar-acid balance", "harvest timing"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques",
+        "https://grapesandwine.cals.cornell.edu/resources/enology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Vineyard Management",
+      "title": "How do vintners fight powdery mildew without destroying the vineyard?",
+      "concepts": ["integrated pest management", "fungal diseases", "spray timing", "organic viticulture"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://grapesandwine.cals.cornell.edu/resources/ipm/",
+        "https://wine.wsu.edu/research/plant-pathology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Vineyard Management",
+      "title": "Review: From Vine to Harvest",
+      "concepts": ["terroir synthesis", "vine physiology", "harvest decisions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://winefolly.com/review/viticulture-basics/",
+        "https://www.guildsomm.com/public_content"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Fermentation Science",
+      "title": "What turns grape juice into alcohol?",
+      "concepts": ["yeast metabolism", "glycolysis", "alcoholic fermentation", "fermentation kinetics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques",
+        "https://grapesandwine.cals.cornell.edu/resources/enology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Fermentation Science",
+      "title": "Why do winemakers argue about wild yeast vs cultured strains?",
+      "concepts": ["native fermentation", "yeast ecology", "inoculation strategies", "fermentation reliability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology",
+        "https://www.oiv.int/standards/resolution-archive"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Fermentation Science",
+      "title": "How do temperature and nutrients shape a wine's aroma?",
+      "concepts": ["fermentation temperature", "yeast nutrition", "volatile compounds", "ester formation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques",
+        "https://www.guildsomm.com/public_content/features"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Fermentation Science",
+      "title": "Why do some wines go through a second fermentation?",
+      "concepts": ["malolactic fermentation", "lactic acid bacteria", "diacetyl", "wine stability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://grapesandwine.cals.cornell.edu/resources/enology/",
+        "https://wineserver.ucdavis.edu/industry-info/enology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Fermentation Science",
+      "title": "What happens when fermentation gets stuck?",
+      "concepts": ["stuck fermentation", "residual sugar", "troubleshooting", "yeast stress"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques",
+        "https://wine.wsu.edu/extension/winemaking/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Fermentation Science",
+      "title": "Review: Fermentation Fundamentals",
+      "concepts": ["yeast metabolism", "fermentation kinetics", "malolactic fermentation", "troubleshooting"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology",
+        "https://grapesandwine.cals.cornell.edu/resources/enology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Winemaking Techniques",
+      "title": "How do you extract color from grape skins without harsh tannins?",
+      "concepts": ["maceration techniques", "cap management", "phenolic extraction", "tannin polymerization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques",
+        "https://grapesandwine.cals.cornell.edu/resources/enology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Winemaking Techniques",
+      "title": "Why does Chardonnay taste different from steel vs oak?",
+      "concepts": ["oak aging", "barrel types", "toasting levels", "micro-oxygenation", "oak alternatives"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://winefolly.com/deep-dive/oak-wine-aging/",
+        "https://www.guildsomm.com/public_content"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Winemaking Techniques",
+      "title": "How do bubbles get into Champagne?",
+      "concepts": ["méthode traditionnelle", "secondary fermentation", "riddling", "disgorgement", "dosage"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://winefolly.com/deep-dive/champagne-method/",
+        "https://www.guildsomm.com/public_content/features"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Winemaking Techniques",
+      "title": "What's the difference between fining and filtration?",
+      "concepts": ["clarification", "fining agents", "filtration", "protein stability", "unfined wines"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques",
+        "https://grapesandwine.cals.cornell.edu/resources/enology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Winemaking Techniques",
+      "title": "How do you keep wine stable without adding chemicals?",
+      "concepts": ["cold stabilization", "tartrate precipitation", "minimal intervention", "sulfur dioxide alternatives"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology",
+        "https://wine.wsu.edu/extension/winemaking/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Winemaking Techniques",
+      "title": "Review: Fermentation to Bottle",
+      "concepts": ["fermentation control", "extraction", "aging", "stabilization"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://winefolly.com/review/winemaking-process/",
+        "https://www.guildsomm.com/public_content"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Wine Chemistry & Sensory",
+      "title": "What chemical reactions happen as wine ages in the bottle?",
+      "concepts": ["oxidation-reduction", "phenolic polymerization", "ester hydrolysis", "aging potential"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques",
+        "https://www.jancisrobinson.com/learn/wine-chemistry"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Wine Chemistry & Sensory",
+      "title": "Why does some wine smell like wet cardboard or Band-Aids?",
+      "concepts": ["wine faults", "TCA", "Brett", "volatile acidity", "hydrogen sulfide", "oxidation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://winefolly.com/deep-dive/wine-faults/",
+        "https://wineserver.ucdavis.edu/industry-info/enology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Wine Chemistry & Sensory",
+      "title": "How does your brain turn chemicals into 'blackberry' and 'toast'?",
+      "concepts": ["sensory perception", "aroma compounds", "orthonasal vs retronasal", "threshold detection"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology",
+        "https://www.guildsomm.com/public_content/features/articles"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Wine Chemistry & Sensory",
+      "title": "Can you taste climate change in a glass of wine?",
+      "concepts": ["climate impact on viticulture", "heat stress", "phenological shifts", "adaptation strategies", "sustainability"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://wineserver.ucdavis.edu/research/climate-change",
+        "https://www.oiv.int/what-we-do/climate-change"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Wine Chemistry & Sensory",
+      "title": "Design a tasting protocol for comparing Burgundy and Oregon Pinot Noir",
+      "concepts": ["sensory evaluation", "descriptive analysis", "tasting methodology", "terroir expression"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://wineserver.ucdavis.edu/industry-info/enology/sensory-analysis",
+        "https://www.guildsomm.com/public_content"
+      ],
+      "status": "pending"
+    }
+  ]
+}

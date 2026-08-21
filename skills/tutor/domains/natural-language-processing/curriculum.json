@@ -1,0 +1,393 @@
+{
+  "topic": "Natural Language Processing",
+  "slug": "natural-language-processing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Python programming",
+    "basic machine learning",
+    "linear algebra",
+    "probability and statistics"
+  ],
+  "exit_criteria": [
+    "preprocess and tokenize text for different NLP tasks",
+    "implement classical NLP methods (n-grams, TF-IDF, POS tagging)",
+    "build and fine-tune transformer models for common tasks",
+    "evaluate NLP systems using appropriate metrics",
+    "debug and analyze model behavior on real text",
+    "choose appropriate techniques for different problem types"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Text",
+      "title": "Why can't computers just read words like we do?",
+      "concepts": ["text as data", "tokenization", "vocabulary"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/2.pdf",
+        "https://www.nltk.org/book/ch01.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Text",
+      "title": "What happens when you split 'don't' into tokens?",
+      "concepts": ["subword tokenization", "BPE", "WordPiece"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://huggingface.co/learn/nlp-course/chapter2/4",
+        "https://arxiv.org/abs/1508.07909"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Text",
+      "title": "How do you measure if two documents talk about the same thing?",
+      "concepts": ["TF-IDF", "cosine similarity", "bag of words"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/6.pdf",
+        "https://scikit-learn.org/stable/modules/feature_extraction.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Text",
+      "title": "Can word meanings be captured by numbers?",
+      "concepts": ["word embeddings", "distributional semantics", "word2vec"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/6.pdf",
+        "https://arxiv.org/abs/1301.3781"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Text",
+      "title": "Why does 'bank' mean different things in 'river bank' and 'bank account'?",
+      "concepts": ["polysemy", "context", "word sense disambiguation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/23.pdf",
+        "https://demo.allennlp.org/reading-comprehension"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Text",
+      "title": "How do tokenization, embeddings, and similarity work together?",
+      "concepts": ["tokenization review", "embeddings review", "similarity review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://huggingface.co/learn/nlp-course/chapter1/1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Classical Language Models",
+      "title": "How can you predict the next word in a sentence?",
+      "concepts": ["n-grams", "Markov assumption", "language modeling"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/3.pdf",
+        "https://www.nltk.org/book/ch02.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Classical Language Models",
+      "title": "What happens when you encounter a word you've never seen before?",
+      "concepts": ["smoothing", "out-of-vocabulary", "unknown words"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/3.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Classical Language Models",
+      "title": "How does your phone know if 'their' or 'there' is correct?",
+      "concepts": ["part-of-speech tagging", "Hidden Markov Models", "Viterbi algorithm"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/8.pdf",
+        "https://spacy.io/usage/linguistic-features"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Classical Language Models",
+      "title": "Can we diagram sentences like in grade school, but automatically?",
+      "concepts": ["syntactic parsing", "dependency grammar", "constituency"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/12.pdf",
+        "https://demo.allennlp.org/dependency-parsing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Classical Language Models",
+      "title": "How would you build a simple autocomplete system?",
+      "concepts": ["n-gram application", "probability estimation", "text generation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nltk.org/book/ch02.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Neural Approaches",
+      "title": "Why do RNNs process text one word at a time?",
+      "concepts": ["recurrent neural networks", "sequential processing", "hidden state"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/9.pdf",
+        "https://www.deeplearningbook.org/contents/rnn.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Neural Approaches",
+      "title": "What changes when we move from classical to neural NLP?",
+      "concepts": ["classical vs neural", "representations", "sequential models"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://web.stanford.edu/class/cs224n/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Neural Approaches",
+      "title": "Why can't RNNs remember the beginning of a long sentence?",
+      "concepts": ["vanishing gradients", "LSTM", "GRU"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/9.pdf",
+        "https://colah.github.io/posts/2015-08-Understanding-LSTMs/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Neural Approaches",
+      "title": "How does a translator know which foreign word to focus on?",
+      "concepts": ["attention mechanism", "alignment", "context vectors"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/1409.0473",
+        "https://web.stanford.edu/~jurafsky/slp3/10.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Neural Approaches",
+      "title": "What makes seq2seq models different from classification?",
+      "concepts": ["encoder-decoder", "sequence-to-sequence", "beam search"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/10.pdf",
+        "https://arxiv.org/abs/1409.3215"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Neural Approaches",
+      "title": "How do you build a sentiment classifier with embeddings?",
+      "concepts": ["text classification", "neural networks for NLP", "embeddings in practice"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.tensorflow.org/tutorials/text/text_classification_rnn",
+        "https://huggingface.co/learn/nlp-course/chapter3/1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Transformers & Pre-training",
+      "title": "Why did transformers replace RNNs as the dominant architecture?",
+      "concepts": ["self-attention", "parallel processing", "transformers"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/1706.03762",
+        "https://jalammar.github.io/illustrated-transformer/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Transformers & Pre-training",
+      "title": "What are the key differences between RNN and transformer architectures?",
+      "concepts": ["RNN vs transformer", "attention mechanisms", "architecture tradeoffs"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://web.stanford.edu/class/cs224n/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Transformers & Pre-training",
+      "title": "How can BERT understand language without any labeled data?",
+      "concepts": ["pre-training", "masked language modeling", "self-supervised learning"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/abs/1810.04805",
+        "https://jalammar.github.io/illustrated-bert/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Transformers & Pre-training",
+      "title": "What's the difference between BERT and GPT?",
+      "concepts": ["encoder vs decoder", "bidirectional vs autoregressive", "task design"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://huggingface.co/learn/nlp-course/chapter1/4",
+        "https://jalammar.github.io/illustrated-gpt2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Transformers & Pre-training",
+      "title": "How do you adapt a pre-trained model to your specific task?",
+      "concepts": ["fine-tuning", "transfer learning", "task-specific heads"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://huggingface.co/learn/nlp-course/chapter3/1",
+        "https://www.fast.ai/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Transformers & Pre-training",
+      "title": "What can you discover by experimenting with Hugging Face transformers?",
+      "concepts": ["model hub", "pipelines", "practical pre-trained models"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://huggingface.co/models",
+        "https://huggingface.co/learn/nlp-course/chapter2/1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications & Evaluation",
+      "title": "How do you extract names and places from text automatically?",
+      "concepts": ["named entity recognition", "sequence labeling", "information extraction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/8.pdf",
+        "https://spacy.io/usage/linguistic-features#named-entities"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications & Evaluation",
+      "title": "Why is question answering harder than search?",
+      "concepts": ["reading comprehension", "extractive QA", "span prediction"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/abs/1606.05250",
+        "https://demo.allennlp.org/reading-comprehension"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications & Evaluation",
+      "title": "What have we learned about transformers and modern NLP?",
+      "concepts": ["pre-training review", "fine-tuning review", "architecture review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://huggingface.co/learn/nlp-course/chapter1/1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications & Evaluation",
+      "title": "How do you measure if your NLP model is actually good?",
+      "concepts": ["evaluation metrics", "precision/recall/F1", "BLEU", "perplexity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~jurafsky/slp3/3.pdf",
+        "https://huggingface.co/spaces/evaluate-metric"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applications & Evaluation",
+      "title": "What biases do language models learn from their training data?",
+      "concepts": ["bias in NLP", "fairness", "model behavior analysis"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://arxiv.org/abs/1607.06520",
+        "https://arxiv.org/abs/1909.00161"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Applications & Evaluation",
+      "title": "How do you build and evaluate a complete NLP pipeline?",
+      "concepts": ["end-to-end systems", "evaluation", "deployment considerations"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://spacy.io/usage/projects",
+        "https://huggingface.co/learn/nlp-course/chapter7/1"
+      ],
+      "status": "pending"
+    }
+  ]
+}

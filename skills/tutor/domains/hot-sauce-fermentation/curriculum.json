@@ -1,0 +1,371 @@
+{
+  "topic": "Hot sauce fermentation — capsaicin, lacto-fermentation, and flavor",
+  "slug": "hot-sauce-fermentation",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (acids, pH, molecules)",
+    "basic microbiology (bacteria, anaerobic vs aerobic)",
+    "kitchen safety and food handling"
+  ],
+  "exit_criteria": [
+    "design and execute fermented hot sauce recipes with intentional flavor profiles",
+    "troubleshoot fermentation issues (pH, mold, off-flavors)",
+    "understand capsaicin chemistry and heat perception",
+    "control lactic acid fermentation variables (salt, temp, time)",
+    "evaluate safety risks and implement proper acidification"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Capsaicin & Heat",
+      "title": "Why does spicy food burn your mouth but not your hand?",
+      "concepts": ["capsaicin structure", "TRPV1 receptors", "heat perception"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.science.org/content/article/why-do-we-love-spicy-food",
+        "https://www.youtube.com/watch?v=zhFEHFcSDQ8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Capsaicin & Heat",
+      "title": "How is a jalapeño different from a ghost pepper at the molecular level?",
+      "concepts": ["capsaicinoid profiles", "Scoville scale", "pepper varieties"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41598-019-49001-7",
+        "https://www.seriouseats.com/the-scoville-scale-a-guide-to-hot-peppers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Capsaicin & Heat",
+      "title": "What happens to capsaicin when you ferment it?",
+      "concepts": ["capsaicin stability", "pH effects", "extraction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://onlinelibrary.wiley.com/doi/10.1111/j.1750-3841.2010.01774.x",
+        "https://www.researchgate.net/publication/capsaicin-degradation-fermentation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Capsaicin & Heat",
+      "title": "Can you design a hot sauce that builds slowly instead of hitting all at once?",
+      "concepts": ["heat perception timing", "capsaicinoid ratios", "mouthfeel"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.chilipeppermadness.com/chili-pepper-types/",
+        "https://www.bonappetit.com/story/how-to-make-hot-sauce"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Lactic Acid Fermentation Fundamentals",
+      "title": "Why does sauerkraut not rot while cabbage in your fridge does?",
+      "concepts": ["lactic acid bacteria", "anaerobic fermentation", "preservation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/topics/food-science/lactic-acid-fermentation",
+        "https://www.youtube.com/watch?v=R3nCv38fGKg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Lactic Acid Fermentation Fundamentals",
+      "title": "Which bacteria are working in your ferment and what are they doing?",
+      "concepts": ["Lactobacillus species", "metabolic pathways", "succession"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.frontiersin.org/articles/10.3389/fmicb.2019.00594",
+        "https://www.culturesforhealth.com/learn/recipe/lacto-fermentation-recipes/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6780695/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Lactic Acid Fermentation Fundamentals",
+      "title": "How much salt is too much, and how much is not enough?",
+      "concepts": ["salt percentage", "osmotic pressure", "microbial selection"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.wildfermentation.com/salt-in-fermentation/",
+        "https://nchfp.uga.edu/publications/uga/uga_pickled_products.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Lactic Acid Fermentation Fundamentals",
+      "title": "Why does temperature control matter more than you think?",
+      "concepts": ["fermentation kinetics", "temperature effects", "LAB growth rates"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.tandfonline.com/doi/full/10.1080/10408398.2019.1631752",
+        "https://www.youtube.com/watch?v=iMwMqXEKJ8U"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Lactic Acid Fermentation Fundamentals",
+      "title": "What's actually happening day by day in your fermentation jar?",
+      "concepts": ["fermentation stages", "pH curves", "visual indicators"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.reddit.com/r/fermentation/wiki/index",
+        "https://www.makesauerkraut.com/fermentation-timeline/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Review",
+      "title": "Review: From pepper to jar — what have we learned?",
+      "concepts": ["capsaicin", "LAB", "salt", "pH"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://thenomaproject.com/fermentation-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Flavor Chemistry",
+      "title": "Why does fermented hot sauce taste so different from fresh salsa?",
+      "concepts": ["flavor compounds", "volatiles", "organic acids"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/fermented-flavor-profiles",
+        "https://www.seriouseats.com/why-ferment-hot-sauce"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Flavor Chemistry",
+      "title": "How do you balance sour, sweet, and umami in a fermented sauce?",
+      "concepts": ["acid balance", "residual sugars", "amino acids", "taste integration"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.molecularrecipes.com/molecular-gastronomy/flavor-pairing/",
+        "https://www.researchgate.net/publication/flavor-balance-fermentation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Flavor Chemistry",
+      "title": "What makes Tabasco taste like Tabasco?",
+      "concepts": ["barrel aging", "oak interactions", "time-dependent changes"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.tabasco.com/visit-avery-island/production-process/",
+        "https://www.youtube.com/watch?v=x7_Fn5bYq54"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Flavor Chemistry",
+      "title": "Can you predict which peppers pair well with which fruits?",
+      "concepts": ["flavor pairing", "volatile matching", "sweetness-heat balance"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.foodpairing.com/en/applications/pairing-theory",
+        "https://www.chilipeppermadness.com/recipes/hot-sauces/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Flavor Chemistry",
+      "title": "Why does fermentation time change the flavor profile so dramatically?",
+      "concepts": ["fermentation curves", "compound evolution", "aging chemistry"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/journal/jafcau",
+        "https://www.winemag.com/2023/fermentation-aging-chemistry/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Review",
+      "title": "Review: Flavor chemistry and compound evolution check-in",
+      "concepts": ["flavor compounds", "acid balance", "aging", "pairing"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://thenomaproject.com/fermentation-guide",
+        "https://www.seriouseats.com/why-ferment-hot-sauce"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Microbiology & Safety",
+      "title": "When is mold dangerous and when is it just ugly?",
+      "concepts": ["mold types", "mycotoxins", "surface contamination"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cdc.gov/foodsafety/foods-linked-illness.html",
+        "https://www.reddit.com/r/fermentation/comments/mold-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Microbiology & Safety",
+      "title": "How does pH protect you from botulism?",
+      "concepts": ["Clostridium botulinum", "pH thresholds", "acid safety"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp/acidified-foods",
+        "https://nchfp.uga.edu/publications/usda/GUIDE01_HomeCan_rev0715.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Microbiology & Safety",
+      "title": "What's the difference between wild fermentation and using a starter?",
+      "concepts": ["starter cultures", "wild fermentation", "consistency vs. adventure"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.culturesforhealth.com/learn/fermentation/wild-vs-cultured-fermentation/",
+        "https://www.youtube.com/watch?v=GNRMeaz6QRI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Microbiology & Safety",
+      "title": "How do you know when something has gone wrong?",
+      "concepts": ["off-odors", "visual inspection", "pH testing", "troubleshooting"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.wildfermentation.com/troubleshooting-fermentation-problems/",
+        "https://www.reddit.com/r/fermentation/wiki/faq"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Microbiology & Safety",
+      "title": "Should you pasteurize your finished hot sauce?",
+      "concepts": ["pasteurization", "live cultures", "shelf stability", "trade-offs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/topics/food-science/pasteurization",
+        "https://www.seriouseats.com/how-to-bottle-hot-sauce"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Review",
+      "title": "Review: Safety, troubleshooting, and microbe management",
+      "concepts": ["safety protocols", "pH thresholds", "mold identification", "problem diagnosis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.wildfermentation.com/",
+        "https://www.reddit.com/r/FermentedHotSauce/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Recipe Design & Practice",
+      "title": "How do you reverse-engineer a commercial hot sauce you love?",
+      "concepts": ["tasting analysis", "ingredient identification", "process inference"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.seriouseats.com/taste-test-hot-sauce",
+        "https://www.youtube.com/watch?v=UGjCeAbWKPo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Recipe Design & Practice",
+      "title": "What's your hot sauce design philosophy?",
+      "concepts": ["recipe frameworks", "ingredient selection", "style archetypes"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.chilipeppermadness.com/chili-pepper-recipes/hot-sauces/",
+        "https://www.bonappetit.com/gallery/best-hot-sauce-recipes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Recipe Design & Practice",
+      "title": "How do adjuncts change your fermentation?",
+      "concepts": ["garlic", "onions", "fruit additions", "sugar impact", "microbial effects"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fermentingforfoodies.com/fermented-hot-sauce-with-fruit/",
+        "https://www.culturesforhealth.com/learn/recipe/lacto-fermentation-recipes/fermented-salsa/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Recipe Design & Practice",
+      "title": "When do you blend, when do you strain, and when do you age?",
+      "concepts": ["post-fermentation processing", "texture control", "secondary aging"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.seriouseats.com/fermented-hot-sauce-technique",
+        "https://www.youtube.com/watch?v=9g0kNxb3Qj4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Recipe Design & Practice",
+      "title": "What will your signature hot sauce be?",
+      "concepts": ["recipe synthesis", "creative iteration", "personal style"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.reddit.com/r/FermentedHotSauce/top/",
+        "https://thenomaproject.com/fermentation-recipes"
+      ],
+      "status": "pending"
+    }
+  ]
+}

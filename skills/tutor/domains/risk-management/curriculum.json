@@ -1,0 +1,404 @@
+{
+  "topic": "Risk Management and Actuarial Science",
+  "slug": "risk-management",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "linear algebra",
+    "probability theory",
+    "statistics fundamentals"
+  ],
+  "exit_criteria": [
+    "student can build and analyze life contingency models",
+    "student can fit parametric distributions to loss data",
+    "student can calculate credibility-weighted premiums",
+    "student can compute ruin probabilities using the adjustment coefficient",
+    "student can construct aggregate loss distributions",
+    "student can evaluate enterprise risk using economic capital models"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do actuaries care about the shape of a distribution's tail?",
+      "concepts": ["heavy-tailed distributions", "extreme events", "Pareto models"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soa.org/education/exam-req/edu-exam-p-detail/",
+        "https://www.casact.org/exams-admissions/exam-study-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How does maximum likelihood capture what we believe from data?",
+      "concepts": ["MLE", "likelihood function", "parameter estimation", "Fisher information"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.coachingactuaries.com/",
+        "https://www.khanacademy.org/math/statistics-probability"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What happens when we transform a random variable?",
+      "concepts": ["transformation method", "Jacobian", "change of variables"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Why does the survival function reveal more than the CDF?",
+      "concepts": ["survival function", "hazard rate", "force of mortality"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.soa.org/education/resources/",
+        "https://mort.soa.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Can you explain the memoryless property to a skeptical underwriter?",
+      "concepts": ["exponential distribution", "memoryless property", "constant hazard"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.beanactuary.org/study/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "What patterns connect tail behavior, estimation, and survival analysis?",
+      "concepts": ["distribution fitting", "parameter estimation", "survival models"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.soa.org/education/exam-req/syllabus-study-materials/edu-multiple-choice-exam.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Life Contingencies",
+      "title": "How do actuaries price the unpriceable: your life?",
+      "concepts": ["life tables", "mortality rates", "qx notation", "cohort analysis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mort.soa.org/",
+        "https://www.ssa.gov/oact/STATS/table4c6.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Life Contingencies",
+      "title": "Why is the expected present value of death payments not enough?",
+      "concepts": ["APV", "actuarial present value", "life insurance premiums", "net single premium"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.soa.org/education/exam-req/edu-fam-detail/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Life Contingencies",
+      "title": "What changes when we promise to pay only if you survive?",
+      "concepts": ["annuities", "life annuities", "annuity-due vs immediate", "whole life annuity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soa.org/education/exam-req/edu-fam-detail/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Life Contingencies",
+      "title": "Where does the money come from to pay future claims?",
+      "concepts": ["reserves", "policy values", "prospective vs retrospective", "Thiele's equation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.soa.org/globalassets/assets/files/edu/edu-2018-10-ltam-syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Life Contingencies",
+      "title": "How do we handle lives that fail faster than expected?",
+      "concepts": ["select mortality", "mortality improvement", "substandard lives"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soa.org/research/experience-studies/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Loss and Frequency Models",
+      "title": "Why do insurance losses never follow a normal distribution?",
+      "concepts": ["loss distributions", "right-skewness", "parametric families", "gamma and lognormal"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://instruction.bus.wisc.edu/jfrees/jfreesbooks/Regression%20Modeling/BookWebDec2010/data.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Loss and Frequency Models",
+      "title": "How do mortality tables, present values, and reserves work together?",
+      "concepts": ["mortality", "APV", "life insurance", "annuities"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.coachingactuaries.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Loss and Frequency Models",
+      "title": "What happens when the insurer only pays part of a claim?",
+      "concepts": ["policy modifications", "deductibles", "policy limits", "coinsurance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.casact.org/sites/default/files/2021-02/pubs_proceed_proceed96_96201.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Loss and Frequency Models",
+      "title": "Can you derive the distribution of losses above a threshold?",
+      "concepts": ["excess distributions", "limited expected value", "mean residual life"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.soa.org/education/exam-req/edu-fam-detail/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Loss and Frequency Models",
+      "title": "How many claims arrive in a year, and why does it matter?",
+      "concepts": ["frequency models", "Poisson distribution", "negative binomial", "overdispersion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.casact.org/exams-admissions/exam-study-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Loss and Frequency Models",
+      "title": "What if we only observe claims that were actually reported?",
+      "concepts": ["truncation", "censoring", "zero-truncated models", "observational bias"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.soa.org/sections/technology/technology-newsletter/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Loss and Frequency Models",
+      "title": "How do we build the total loss distribution from parts?",
+      "concepts": ["aggregate loss models", "compound distributions", "convolution", "Panjer recursion"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cran.r-project.org/web/packages/actuar/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Loss and Frequency Models",
+      "title": "Can you calculate aggregate losses when frequency is negative binomial?",
+      "concepts": ["Panjer's algorithm", "recursive methods", "computational efficiency"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.soa.org/education/resources/",
+        "https://github.com/open-actuarial/computational-actuarial-models"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Risk Theory",
+      "title": "Can you trace a claim from arrival to aggregate loss distribution?",
+      "concepts": ["severity", "frequency", "policy modifications", "compound distributions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.coachingactuaries.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Risk Theory",
+      "title": "Why does the insurance company care about ruin probability?",
+      "concepts": ["ruin theory", "surplus process", "adjustment coefficient", "Cramér-Lundberg model"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.casact.org/sites/default/files/2021-02/ratemaking_werner_modlin_1.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Risk Theory",
+      "title": "How does the adjustment coefficient bound ruin probability?",
+      "concepts": ["Lundberg inequality", "exponential bound", "safety loading"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soa.org/education/exam-req/edu-asm-detail/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Risk Theory",
+      "title": "What breaks when claim sizes are infinite in expectation?",
+      "concepts": ["heavy-tailed claims", "subexponential distributions", "net profit condition"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://www.casact.org/monographs-and-textbooks"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Credibility and Pricing",
+      "title": "How much should we trust last year's claims data?",
+      "concepts": ["credibility theory", "limited fluctuation", "full credibility", "partial credibility"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.casact.org/sites/default/files/2021-02/pubs_proceed_proceed01_01103.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Credibility and Pricing",
+      "title": "Why is the credibility-weighted premium a Bayesian posterior mean?",
+      "concepts": ["Bühlmann credibility", "empirical Bayes", "greatest accuracy", "credibility factor Z"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.casact.org/exams-admissions/exam-mas-i"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Credibility and Pricing",
+      "title": "Can you price a new driver's insurance using group experience?",
+      "concepts": ["experience rating", "class rating", "merit rating", "bonus-malus systems"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.casact.org/exams-admissions/exam-study-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Credibility and Pricing",
+      "title": "When does an insurer face ruin, and how do we price against it?",
+      "concepts": ["ruin", "adjustment coefficient", "credibility", "experience rating"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.soa.org/education/exam-req/syllabus-study-materials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Enterprise Risk Management",
+      "title": "How does an insurer think about all risks at once?",
+      "concepts": ["ERM framework", "risk taxonomy", "risk appetite", "COSO framework"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soa.org/professional-development/e-learning/erm/",
+        "https://www.casact.org/exams-admissions/exam-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Enterprise Risk Management",
+      "title": "What's the minimum capital needed to survive extreme events?",
+      "concepts": ["economic capital", "VaR", "Tail-VaR", "solvency requirements"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.soa.org/sections/financial-reporting/financial-reporting-newsletter/",
+        "https://eiopa.europa.eu/browse/solvency-2_en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Enterprise Risk Management",
+      "title": "How do climate risk and pandemics challenge traditional actuarial models?",
+      "concepts": ["emerging risks", "model uncertainty", "parameter uncertainty", "tail dependence"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.soa.org/resources/research-reports/2020/climate-change-scenarios/",
+        "https://www.casact.org/newsletter/article/advancing-actuarial-profession-age-climate-change"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Enterprise Risk Management",
+      "title": "How do we model dependence when all risks fail together?",
+      "concepts": ["copulas", "tail dependence", "multivariate risk", "catastrophe modeling", "systemic risk"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soa.org/professional-development/e-learning/erm/",
+        "https://www.casact.org/monographs-and-textbooks",
+        "https://people.math.ethz.ch/~embrechts/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+  "topic": "Atmospheric chemistry and air quality",
+  "slug": "atmospheric-chemistry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "general chemistry",
+    "chemical kinetics",
+    "basic thermodynamics",
+    "environmental science fundamentals"
+  ],
+  "exit_criteria": [
+    "student can explain major tropospheric and stratospheric chemical cycles",
+    "student can interpret Air Quality Index and understand pollutant formation",
+    "student can analyze emission sources and their atmospheric transformations",
+    "student can describe aerosol formation mechanisms and impacts",
+    "student can connect atmospheric chemistry to climate and health outcomes"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Atmospheric Basics",
+      "title": "Why does the atmosphere have layers with different chemistry?",
+      "concepts": [
+        "atmospheric structure",
+        "temperature profile",
+        "troposphere vs stratosphere"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://earthobservatory.nasa.gov/features/AtmosphereOverview",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap1.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Atmospheric Basics",
+      "title": "What determines how long a gas stays in the atmosphere?",
+      "concepts": [
+        "residence time",
+        "atmospheric lifetime",
+        "mixing ratios",
+        "global budgets"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://gml.noaa.gov/education/info_activities/pdfs/TBI_air_composition.pdf",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap2.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Atmospheric Basics",
+      "title": "How do we measure what's in the atmosphere?",
+      "concepts": [
+        "in-situ monitoring",
+        "remote sensing",
+        "satellite observations",
+        "measurement uncertainty"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.epa.gov/outdoor-air-quality-data/air-data-basic-information",
+        "https://worldview.earthdata.nasa.gov/",
+        "https://waqi.info/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Chemical Kinetics & Photochemistry",
+      "title": "Why do some atmospheric reactions happen in milliseconds while others take years?",
+      "concepts": [
+        "reaction rates",
+        "activation energy",
+        "temperature dependence",
+        "pressure effects"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap9.html",
+        "https://csl.noaa.gov/groups/csl7/measurements/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Chemical Kinetics & Photochemistry",
+      "title": "What happens when sunlight breaks apart molecules?",
+      "concepts": [
+        "photodissociation",
+        "quantum yield",
+        "actinic flux",
+        "photostationary state"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap7.html",
+        "https://www.esrl.noaa.gov/gmd/grad/solcalc/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Chemical Kinetics & Photochemistry",
+      "title": "Why is the OH radical called 'the atmosphere's detergent'?",
+      "concepts": [
+        "hydroxyl radical",
+        "oxidation capacity",
+        "radical chemistry",
+        "daytime chemistry"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap9.html",
+        "https://csl.noaa.gov/groups/csl7/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Chemical Kinetics & Photochemistry",
+      "title": "Teach back: Explain photochemistry to someone who's only taken intro chemistry",
+      "concepts": [
+        "photochemistry review",
+        "radical mechanisms",
+        "rate laws"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Tropospheric Chemistry",
+      "title": "Why is ozone good up there but bad down here?",
+      "concepts": [
+        "tropospheric ozone",
+        "ozone formation",
+        "NOx-VOC chemistry",
+        "ozone as pollutant"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/ground-level-ozone-pollution",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap11.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Tropospheric Chemistry",
+      "title": "How do car exhaust and trees conspire to make smog?",
+      "concepts": [
+        "NOx emissions",
+        "volatile organic compounds",
+        "urban photochemistry",
+        "smog formation"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.epa.gov/ground-level-ozone-pollution/ground-level-ozone-basics",
+        "https://www.airnow.gov/aqi/aqi-basics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Tropospheric Chemistry",
+      "title": "What's the difference between rural and urban air chemistry?",
+      "concepts": [
+        "NOx-limited vs VOC-limited",
+        "emission ratios",
+        "ozone isopleth diagrams",
+        "regional transport"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap11.html",
+        "https://www.epa.gov/ozone-pollution-and-your-patients-health"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Tropospheric Chemistry",
+      "title": "What chemical reactions happen at night when there's no sunlight?",
+      "concepts": [
+        "nighttime chemistry",
+        "NO3 radical",
+        "heterogeneous reactions",
+        "nocturnal boundary layer"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap9.html",
+        "https://csl.noaa.gov/groups/csl7/measurements/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Tropospheric Chemistry",
+      "title": "Review: Build a chemical mechanism for your city's air quality",
+      "concepts": [
+        "tropospheric chemistry review",
+        "mechanism building",
+        "pollutant cycles"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.airnow.gov/",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Stratospheric Chemistry",
+      "title": "How does the ozone layer protect us from UV radiation?",
+      "concepts": [
+        "Chapman cycle",
+        "oxygen photochemistry",
+        "ozone layer",
+        "UV absorption"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ozonewatch.gsfc.nasa.gov/",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap10.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Stratospheric Chemistry",
+      "title": "Why did CFCs create a hole in the ozone layer over Antarctica?",
+      "concepts": [
+        "catalytic ozone destruction",
+        "chlorine chemistry",
+        "polar stratospheric clouds",
+        "polar vortex"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ozonewatch.gsfc.nasa.gov/facts/hole_SH.html",
+        "https://www.esrl.noaa.gov/csd/assessments/ozone/",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap10.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Stratospheric Chemistry",
+      "title": "Is the Montreal Protocol working? Analyze the data yourself",
+      "concepts": [
+        "ozone recovery",
+        "CFC phase-out",
+        "Montreal Protocol",
+        "long-term trends"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ozonewatch.gsfc.nasa.gov/",
+        "https://gml.noaa.gov/hats/",
+        "https://www.esrl.noaa.gov/csd/assessments/ozone/2018/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Aerosols & Air Quality",
+      "title": "What are the tiny particles floating in the air we breathe?",
+      "concepts": [
+        "aerosols",
+        "particulate matter",
+        "PM2.5",
+        "size distributions",
+        "composition"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap13.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Aerosols & Air Quality",
+      "title": "Review: How do gas-phase chemistry and aerosols connect?",
+      "concepts": [
+        "stratospheric chemistry review",
+        "aerosol formation review",
+        "gas-to-particle conversion"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/",
+        "https://ozonewatch.gsfc.nasa.gov/",
+        "https://www.epa.gov/pm-pollution"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Aerosols & Air Quality",
+      "title": "How do particles form from gases?",
+      "concepts": [
+        "nucleation",
+        "condensation",
+        "coagulation",
+        "secondary aerosol formation"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap13.html",
+        "https://csl.noaa.gov/groups/csl8/aerosol/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Aerosols & Air Quality",
+      "title": "Why are wildfires and diesel exhaust so different but both so harmful?",
+      "concepts": [
+        "emission sources",
+        "black carbon",
+        "organic aerosols",
+        "health impacts"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.epa.gov/pm-pollution/health-and-environmental-effects-particulate-matter-pm",
+        "https://earthobservatory.nasa.gov/images/events/smoke"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Aerosols & Air Quality",
+      "title": "What does the Air Quality Index actually measure?",
+      "concepts": [
+        "Air Quality Index",
+        "pollutant standards",
+        "health categories",
+        "AQI calculation"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.airnow.gov/aqi/aqi-basics/",
+        "https://www.epa.gov/outdoor-air-quality-data/air-quality-index-daily-values-report"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Applications & Modeling",
+      "title": "How do we predict where pollution will go?",
+      "concepts": [
+        "atmospheric transport",
+        "dispersion modeling",
+        "trajectory models",
+        "chemical transport models"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ready.noaa.gov/HYSPLIT.php",
+        "https://www.epa.gov/scram/air-quality-dispersion-modeling"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Applications & Modeling",
+      "title": "Can satellites see pollution from space?",
+      "concepts": [
+        "satellite observations",
+        "column measurements",
+        "NO2 from space",
+        "aerosol optical depth"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://worldview.earthdata.nasa.gov/",
+        "https://giovanni.gsfc.nasa.gov/",
+        "https://earth.gsfc.nasa.gov/climate/data/deep-blue/science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applications & Modeling",
+      "title": "Review: How do we observe and model atmospheric chemistry?",
+      "concepts": [
+        "atmospheric modeling review",
+        "satellite remote sensing",
+        "transport and dispersion"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ready.noaa.gov/HYSPLIT.php",
+        "https://worldview.earthdata.nasa.gov/",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications & Modeling",
+      "title": "How does air pollution affect climate and vice versa?",
+      "concepts": [
+        "aerosol-climate interactions",
+        "radiative forcing",
+        "feedback mechanisms",
+        "chemistry-climate models"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ipcc.ch/report/ar6/wg1/",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap14.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications & Modeling",
+      "title": "How would you design an air quality monitoring network for a growing city?",
+      "concepts": [
+        "monitoring design",
+        "sensor networks",
+        "data quality",
+        "policy applications"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.epa.gov/amtic",
+        "https://www.openaq.org/",
+        "https://www.purpleair.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications & Modeling",
+      "title": "Final synthesis: How would you solve your region's air quality problem?",
+      "concepts": [
+        "synthesis",
+        "policy interventions",
+        "multi-pollutant strategies",
+        "real-world application"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.epa.gov/air-trends",
+        "https://www.eea.europa.eu/themes/air/intro",
+        "http://acmg.seas.harvard.edu/people/faculty/djj/book/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

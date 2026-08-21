@@ -1,0 +1,376 @@
+{
+  "topic": "Materials Science — Metamaterials and Smart Materials",
+  "slug": "materials-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "introductory physics (waves, optics, mechanics)",
+    "basic materials science or chemistry",
+    "vector calculus (for field descriptions)",
+    "linear algebra (tensor basics helpful)"
+  ],
+  "exit_criteria": [
+    "explain how metamaterials achieve properties not found in nature",
+    "describe the design principles for electromagnetic and mechanical metamaterials",
+    "compare different types of smart materials and their mechanisms",
+    "analyze a metamaterial unit cell and predict effective properties",
+    "identify appropriate smart materials for engineering applications",
+    "understand fabrication constraints and scaling challenges"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes a material 'meta'?",
+      "concepts": ["effective medium theory", "unit cell design", "emergent properties"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/",
+        "https://www.youtube.com/watch?v=gJ3pv-ZMsGE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do we describe material response to fields?",
+      "concepts": ["permittivity", "permeability", "constitutive relations", "dispersion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/wave-on-a-string",
+        "https://www.nature.com/articles/nmat4082"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Why can't natural materials have negative refractive index?",
+      "concepts": ["refractive index", "Veselago's hypothesis", "double negativity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://physicstoday.scitation.org/doi/10.1063/1.1784272",
+        "https://www.youtube.com/watch?v=zRxNFQQF_W8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What's the difference between smart and passive materials?",
+      "concepts": ["stimuli-responsive", "adaptivity", "reversibility"],
+      "difficulty": 1,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/topics/materials-science/smart-materials",
+        "https://www.youtube.com/watch?v=r0vN1KvnPzk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Electromagnetic Metamaterials",
+      "title": "How do split-ring resonators create magnetic response?",
+      "concepts": ["split-ring resonators", "LC circuits", "magnetic dipole moment"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencemag.org/content/292/5514/77",
+        "https://demonstrations.wolfram.com/SplitRingResonator/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Electromagnetic Metamaterials",
+      "title": "Could we really build an invisibility cloak?",
+      "concepts": ["transformation optics", "cloaking", "coordinate mapping"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.sciencemag.org/content/312/5781/1777",
+        "https://www.youtube.com/watch?v=AXOxUwhKO3A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Electromagnetic Metamaterials",
+      "title": "Why do photonic crystals create bandgaps?",
+      "concepts": ["photonic bandgap", "Bragg scattering", "periodic structures"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/",
+        "https://nanohub.org/resources/photonic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Electromagnetic Metamaterials",
+      "title": "How would you design a perfect lens?",
+      "concepts": ["superlens", "evanescent waves", "subwavelength imaging"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.1096796",
+        "https://www.youtube.com/watch?v=wKbSr-9hT4Q"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Electromagnetic Metamaterials",
+      "title": "What limits metamaterial performance at optical frequencies?",
+      "concepts": ["material losses", "plasmonic damping", "fabrication constraints"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nphoton.2007.249",
+        "https://comsol.com/blogs/modeling-metamaterials-comsol-multiphysics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Review",
+      "title": "How do electromagnetic metamaterials achieve unusual optical properties?",
+      "concepts": ["negative index", "resonators", "photonic crystals", "applications"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/nmat3431",
+        "https://ocw.mit.edu/courses/6-007-electromagnetic-energy-from-motors-to-lasers-spring-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Mechanical Metamaterials",
+      "title": "Why do some materials expand when stretched?",
+      "concepts": ["auxetic materials", "Poisson's ratio", "re-entrant structures"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.sciencemag.org/content/235/4792/1038",
+        "https://www.youtube.com/watch?v=5wAXG3Y3v7c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Mechanical Metamaterials",
+      "title": "How can we design materials with zero shear modulus?",
+      "concepts": ["pentamode metamaterials", "acoustic cloaking", "Willis coupling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.105101",
+        "https://demonstrations.wolfram.com/PentamodeMetamaterials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Mechanical Metamaterials",
+      "title": "What determines the speed of sound in a metamaterial?",
+      "concepts": ["phononic crystals", "band structure", "effective density"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/3-052-nanomechanics-of-materials-and-biomaterials-spring-2007/",
+        "https://pubs.aip.org/aip/apl/article/84/21/4400/126906"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Mechanical Metamaterials",
+      "title": "Could we 3D print a structure with programmable stiffness?",
+      "concepts": ["origami metamaterials", "kirigami", "bistable structures", "additive manufacturing"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/nmat4540",
+        "https://www.youtube.com/watch?v=VHk0q3cCZMg",
+        "https://github.com/paulmasson/origami-metamaterials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Smart Materials",
+      "title": "How do shape memory alloys remember their shape?",
+      "concepts": ["martensitic transformation", "austenite-martensite", "hysteresis", "training"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/3-22-mechanical-properties-of-materials-spring-2008/",
+        "https://www.youtube.com/watch?v=wI-qAxKJoSQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Smart Materials",
+      "title": "Why do some crystals generate voltage when squeezed?",
+      "concepts": ["piezoelectricity", "crystal symmetry", "direct and converse effects", "d33 coefficient"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.sciencedirect.com/topics/engineering/piezoelectric-effect",
+        "https://phet.colorado.edu/sims/html/capacitor-lab-basics/latest/capacitor-lab-basics_en.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Review",
+      "title": "How do mechanical metamaterials and smart materials differ in their design principles?",
+      "concepts": ["auxetics", "pentamodes", "phononic crystals", "SMAs", "piezoelectrics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/s41578-017-0066-z",
+        "https://www.annualreviews.org/doi/10.1146/annurev-matsci-070214-020815"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Smart Materials",
+      "title": "What makes electroactive polymers actuate?",
+      "concepts": ["dielectric elastomers", "Maxwell stress", "ionic polymer-metal composites"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nmat1834",
+        "https://www.youtube.com/watch?v=8JOZzWkwQAc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Smart Materials",
+      "title": "How can a fluid become solid in milliseconds?",
+      "concepts": ["magnetorheological fluids", "electrorheological fluids", "chain formation", "yield stress"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=j_aig3fhGdw",
+        "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.56.4328"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Smart Materials",
+      "title": "Can materials heal themselves like living tissue?",
+      "concepts": ["self-healing polymers", "microcapsules", "vascular networks", "reversible bonding"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nature00991",
+        "https://www.youtube.com/watch?v=iCUTJ3I8Pr8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Smart Materials",
+      "title": "Why do phase-change materials store so much energy?",
+      "concepts": ["latent heat", "phase transitions", "thermal energy storage", "Ge-Sb-Te alloys"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/topics/engineering/phase-change-material",
+        "https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Smart Materials",
+      "title": "How would you choose a smart material for a robotic gripper?",
+      "concepts": ["material selection criteria", "actuation strain", "response time", "power density"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.science.org/doi/10.1126/scirobotics.aat3276",
+        "https://softroboticstoolkit.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Smart Materials",
+      "title": "What are the environmental costs of smart materials?",
+      "concepts": ["rare earth elements", "recyclability", "energy consumption", "lifecycle analysis"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/s41893-019-0388-x",
+        "https://www.youtube.com/watch?v=VWF_Ig-3Rew"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Review",
+      "title": "Which smart material would you select for different engineering challenges?",
+      "concepts": ["SMAs", "piezoelectrics", "EAPs", "MR fluids", "self-healing", "selection criteria"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.annualreviews.org/doi/10.1146/annurev-matsci-070214-020815",
+        "https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Design and Applications",
+      "title": "How do you simulate a metamaterial before building it?",
+      "concepts": ["finite element analysis", "FDTD methods", "homogenization", "multiscale modeling"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://comsol.com/c/7azr",
+        "https://meep.readthedocs.io/en/latest/",
+        "https://www.youtube.com/watch?v=QqPxF7V5Lnw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Design and Applications",
+      "title": "What's preventing metamaterials from reaching the market?",
+      "concepts": ["scalable fabrication", "cost constraints", "durability", "standardization"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41578-018-0061-4",
+        "https://www.youtube.com/watch?v=ykOdON8oj0M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Design and Applications",
+      "title": "Where will metamaterials have the biggest impact in the next decade?",
+      "concepts": ["antenna design", "acoustic absorption", "biomedical devices", "energy harvesting", "structural materials"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nature.com/articles/s41578-021-00340-w",
+        "https://www.science.org/doi/10.1126/science.aaz0941",
+        "https://www.youtube.com/watch?v=Uk3h_5KqG3k"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "topic": "Espresso machine engineering — pressure, temperature, and extraction",
+  "slug": "espresso-machine-engineering",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (pressure, temperature, energy)",
+    "comfort with technical diagrams",
+    "familiarity with espresso brewing basics"
+  ],
+  "exit_criteria": [
+    "student can explain how pressure profiling affects extraction",
+    "student can diagnose temperature stability issues",
+    "student can predict extraction outcomes from grind, dose, pressure, and temperature",
+    "student can evaluate machine designs and their tradeoffs",
+    "student can design basic pressure or temperature profiles for different coffee types"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Pressure Fundamentals",
+      "title": "Why does espresso need 9 bars of pressure?",
+      "concepts": ["pressure basics", "bar vs psi", "extraction threshold"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.baristahustle.com/blog/espresso-extraction-and-pressure/",
+        "https://www.home-barista.com/tips/pressure-profiling-basics-t1234.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Pressure Fundamentals",
+      "title": "How do vibratory and rotary pumps differ?",
+      "concepts": ["pump types", "vibratory pumps", "rotary pumps", "pressure curves"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=pump-comparison-hoffmann",
+        "https://www.home-barista.com/espresso-machines/pump-types-explained-t5678.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Pressure Fundamentals",
+      "title": "What happens during pre-infusion?",
+      "concepts": ["pre-infusion", "wetting phase", "channeling prevention"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://coffeeadastra.com/2019/07/16/preinfusion/",
+        "https://www.baristahustle.com/blog/pre-infusion-at-home/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Pressure Fundamentals",
+      "title": "How does an OPV regulate pressure?",
+      "concepts": ["over-pressure valve", "pressure regulation", "bypass flow"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.home-barista.com/espresso-machines/opv-adjustment-guide-t9012.html",
+        "https://www.youtube.com/watch?v=opv-setup-tutorial"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Pressure Fundamentals",
+      "title": "Can you predict extraction from a pressure gauge?",
+      "concepts": ["pressure measurement", "gauge reading", "flow resistance"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.baristahustle.com/blog/pressure-gauges/",
+        "https://coffeeadastra.com/2021/09/07/pressure-measurement/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Heat and Temperature",
+      "title": "Why is temperature stability so hard to achieve?",
+      "concepts": ["thermal mass", "heat capacity", "recovery time"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/physics/thermodynamics-heat-transfer/",
+        "https://www.home-barista.com/espresso-machines/temperature-stability-t3456.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Heat and Temperature",
+      "title": "How do single boiler, HX, and dual boiler machines compare?",
+      "concepts": ["boiler types", "heat exchanger", "dual boiler", "thermoblock"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=boiler-comparison-hoffmann",
+        "https://www.baristahustle.com/blog/boiler-systems-explained/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Heat and Temperature",
+      "title": "What does a PID controller actually do?",
+      "concepts": ["PID control", "proportional-integral-derivative", "setpoint", "tuning"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.home-barista.com/espresso-machines/pid-control-explained-t2345.html",
+        "https://coffeeadastra.com/2018/12/20/temperature-control/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Heat and Temperature",
+      "title": "How do you tune a PID for fast recovery without overshoot?",
+      "concepts": ["PID tuning", "Kp Ki Kd parameters", "overshoot", "settling time"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=pid-tuning-tutorial",
+        "https://www.home-barista.com/espresso-machines/pid-tuning-guide-t6789.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Heat and Temperature",
+      "title": "Review: Pressure and Temperature Systems",
+      "concepts": ["pressure review", "temperature review", "integration"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.baristahustle.com/blog/espresso-machine-basics/",
+        "https://coffeeadastra.com/espresso-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Extraction Science",
+      "title": "Why does coffee extract in stages?",
+      "concepts": ["extraction kinetics", "solubility curves", "under/over extraction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.baristahustle.com/blog/the-coffee-extraction-and-how-to-taste-it/",
+        "https://coffeeadastra.com/2018/11/05/extraction-and-how-to-measure-it/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Extraction Science",
+      "title": "What determines coffee bed resistance?",
+      "concepts": ["coffee bed physics", "percolation", "resistance", "channeling"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.baristahustle.com/blog/the-impact-of-contact-time/",
+        "https://www.home-barista.com/tips/understanding-channeling-t4567.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Extraction Science",
+      "title": "How does grind size affect extraction speed and yield?",
+      "concepts": ["particle size distribution", "surface area", "extraction rate"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.baristahustle.com/blog/grind-size-and-brew-time/",
+        "https://coffeeadastra.com/2019/04/07/an-introduction-to-grinders/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Extraction Science",
+      "title": "Why does water chemistry matter for extraction?",
+      "concepts": ["water hardness", "TDS", "alkalinity", "mineral content"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.baristahustle.com/blog/water-for-coffee/",
+        "https://coffeeadastra.com/2018/12/16/water-for-coffee-extraction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Extraction Science",
+      "title": "Can you design an extraction experiment?",
+      "concepts": ["experimental design", "variables", "measurement", "TDS refractometry"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.baristahustle.com/blog/how-to-use-a-refractometer/",
+        "https://coffeeadastra.com/2019/01/08/measuring-extraction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Extraction Science",
+      "title": "Review: Extraction Variables and Control",
+      "concepts": ["extraction review", "variable interaction", "troubleshooting"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.baristahustle.com/blog/espresso-recipes-putting-it-all-together/",
+        "https://coffeeadastra.com/espresso-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Integration and Control",
+      "title": "How are flow rate and pressure coupled?",
+      "concepts": ["flow vs pressure", "hydraulic resistance", "Darcy's law"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://coffeeadastra.com/2020/01/12/flow-profiling/",
+        "https://www.home-barista.com/tips/flow-control-vs-pressure-profiling-t7890.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Integration and Control",
+      "title": "What's the difference between pressure and flow profiling?",
+      "concepts": ["pressure profiling", "flow profiling", "control modes"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://decentespresso.com/blog/pressure-vs-flow-profiling",
+        "https://www.youtube.com/watch?v=profiling-comparison-hedrick"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Integration and Control",
+      "title": "Why do some profiles start low and ramp up?",
+      "concepts": ["declining pressure profiles", "blooming profiles", "extraction uniformity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://coffeeadastra.com/2019/08/30/blooming-espresso/",
+        "https://decentespresso.com/blog/adaptive-profiles"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Integration and Control",
+      "title": "How do you troubleshoot a sour or bitter shot?",
+      "concepts": ["troubleshooting", "flavor diagnosis", "adjustment strategy"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.baristahustle.com/blog/espresso-compass/",
+        "https://www.youtube.com/watch?v=troubleshooting-hoffmann"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Integration and Control",
+      "title": "Can you reverse-engineer a pressure profile from taste?",
+      "concepts": ["sensory analysis", "profile design", "iterative refinement"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://coffeeadastra.com/2021/03/15/taste-driven-profiling/",
+        "https://decentespresso.com/blog/profile-library"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Integration and Control",
+      "title": "Review: System Integration and Diagnostics",
+      "concepts": ["system thinking", "variable interaction", "diagnostic workflow"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.baristahustle.com/blog/dialing-in-espresso/",
+        "https://coffeeadastra.com/espresso-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Applications",
+      "title": "How do turbo shots challenge conventional wisdom?",
+      "concepts": ["turbo shots", "high flow", "unconventional ratios"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=turbo-shots-hoffmann",
+        "https://coffeeadastra.com/2020/08/28/turbulent-extraction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Applications",
+      "title": "What makes a great pressure profile for light roasts vs dark roasts?",
+      "concepts": ["roast-specific profiling", "solubility differences", "profile adaptation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://decentespresso.com/blog/roast-specific-profiles",
+        "https://www.baristahustle.com/blog/roast-and-extraction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Applications",
+      "title": "How do you design a complete brewing protocol for a new coffee?",
+      "concepts": ["protocol design", "systematic dialing", "documentation"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://coffeeadastra.com/2019/07/29/espresso-recipes/",
+        "https://www.baristahustle.com/blog/espresso-recipe-design/",
+        "https://decentespresso.com/blog/workflow-guide"
+      ],
+      "status": "pending"
+    }
+  ]
+}

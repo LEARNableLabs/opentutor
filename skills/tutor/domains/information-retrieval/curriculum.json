@@ -1,0 +1,401 @@
+{
+  "topic": "Information Retrieval and Search Engines",
+  "slug": "information-retrieval",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic programming (Python or Java)",
+    "data structures (arrays, hash tables, trees)",
+    "probability and statistics fundamentals",
+    "basic linear algebra (vectors, dot products)"
+  ],
+  "exit_criteria": [
+    "implement a basic inverted index from scratch",
+    "explain and compare major retrieval models (Boolean, vector space, BM25)",
+    "evaluate search quality using precision, recall, MAP, and NDCG",
+    "understand how modern search engines rank and retrieve documents",
+    "build a simple search application using Lucene or Elasticsearch"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why can't computers just 'understand' what we're searching for?",
+      "concepts": ["information needs", "query formulation", "retrieval task taxonomy"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/01bool.pdf",
+        "https://www.youtube.com/watch?v=kNkbFfEGSFY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How does a search engine know which documents contain 'cat' AND 'dog'?",
+      "concepts": ["boolean retrieval", "inverted index", "term-document matrix"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/01bool.pdf",
+        "https://lucene.apache.org/core/9_0_0/core/org/apache/lucene/index/package-summary.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What if I search for 'color' but the document says 'colour'?",
+      "concepts": ["tolerant retrieval", "edit distance", "wildcard queries", "spelling correction"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/03dict.pdf",
+        "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Why does 'the' appear in almost every document but tell us nothing?",
+      "concepts": ["term frequency", "document frequency", "tf-idf", "zipf's law"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/06vect.pdf",
+        "https://www.youtube.com/watch?v=hc3CrezcCSE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Text Processing and Indexing",
+      "title": "How do you turn 'running' and 'runs' into the same search term?",
+      "concepts": ["tokenization", "normalization", "stemming", "lemmatization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/02voc.pdf",
+        "https://www.nltk.org/howto/stem.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Text Processing and Indexing",
+      "title": "Can you build an inverted index for 1 million documents?",
+      "concepts": ["index construction", "blocked sort-based indexing", "single-pass in-memory indexing"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/04const.pdf",
+        "https://lucene.apache.org/core/9_0_0/core/org/apache/lucene/index/IndexWriter.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Text Processing and Indexing",
+      "title": "Why do search engines compress their indexes?",
+      "concepts": ["index compression", "gap encoding", "variable byte codes", "gamma codes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/05comp.pdf",
+        "https://www.elastic.co/blog/index-compression-in-elasticsearch"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Text Processing and Indexing",
+      "title": "What happens when new documents arrive every second?",
+      "concepts": ["dynamic indexing", "auxiliary index", "logarithmic merge", "update strategies"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/04const.pdf",
+        "https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Text Processing and Indexing",
+      "title": "Can you explain how indexes are built and managed at scale?",
+      "concepts": ["index review", "spaced repetition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/04const.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Retrieval Models",
+      "title": "How do you rank documents when there's no exact match?",
+      "concepts": ["vector space model", "document vectors", "cosine similarity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/06vect.pdf",
+        "https://www.youtube.com/watch?v=V1K8B4VMBYw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Retrieval Models",
+      "title": "Why is BM25 still used in production search engines?",
+      "concepts": ["probabilistic retrieval", "BM25", "term saturation", "document length normalization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/11prob.pdf",
+        "https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-similarity.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Retrieval Models",
+      "title": "Can we model search as 'what language generated this query'?",
+      "concepts": ["language models", "query likelihood", "smoothing", "jelinek-mercer"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/12lmodel.pdf",
+        "https://arxiv.org/pdf/cs/0108005.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Retrieval Models",
+      "title": "How do neural networks change the game for search?",
+      "concepts": ["neural IR", "dense retrieval", "BERT for search", "semantic matching"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=V2h3IOBDvrA",
+        "https://huggingface.co/sentence-transformers",
+        "https://arxiv.org/abs/1901.04085"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Retrieval Models",
+      "title": "Can you implement and compare three retrieval models?",
+      "concepts": ["model comparison", "implementation", "experimentation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://github.com/terrier-org/pyterrier",
+        "https://lucene.apache.org/core/9_0_0/core/org/apache/lucene/search/similarities/package-summary.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Retrieval Models",
+      "title": "What are the key differences between vector space, probabilistic, and neural retrieval models?",
+      "concepts": ["model comparison", "spaced repetition"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/06vect.pdf",
+        "https://nlp.stanford.edu/IR-book/pdf/11prob.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Ranking and Evaluation",
+      "title": "How do you know if your search engine is any good?",
+      "concepts": ["precision", "recall", "F-measure", "evaluation methodology"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/08eval.pdf",
+        "https://trec.nist.gov/overview.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Ranking and Evaluation",
+      "title": "Why does Google care more about the top 10 results than result 100?",
+      "concepts": ["ranked retrieval evaluation", "MAP", "NDCG", "MRR", "precision@k"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/08eval.pdf",
+        "https://github.com/cvangysel/pytrec_eval"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Ranking and Evaluation",
+      "title": "Can your search engine learn from user clicks?",
+      "concepts": ["relevance feedback", "query expansion", "pseudo-relevance feedback", "Rocchio algorithm"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/09expand.pdf",
+        "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Ranking and Evaluation",
+      "title": "How do you make search results respect diversity?",
+      "concepts": ["result diversification", "maximal marginal relevance", "coverage", "intent diversity"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=JcW9kDGOZNo",
+        "https://dl.acm.org/doi/10.1145/1571941.1572012"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Ranking and Evaluation",
+      "title": "How do you evaluate search quality and improve it with user feedback?",
+      "concepts": ["evaluation review", "spaced repetition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/08eval.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Web Search Engines",
+      "title": "How does a crawler visit billions of pages without getting stuck?",
+      "concepts": ["web crawling", "frontier management", "politeness", "robots.txt"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/20crawl.pdf",
+        "https://scrapy.org/",
+        "https://www.robotstxt.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Web Search Engines",
+      "title": "Why do links matter for ranking web pages?",
+      "concepts": ["link analysis", "PageRank", "HITS", "authority and hub scores"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/21link.pdf",
+        "http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf",
+        "https://www.youtube.com/watch?v=P8Kt6Abq_rM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Web Search Engines",
+      "title": "How do search engines fight spam and manipulation?",
+      "concepts": ["web spam", "link spam", "content spam", "cloaking", "spam detection"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/19web.pdf",
+        "https://www.youtube.com/watch?v=ltZbHPXNfLY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Web Search Engines",
+      "title": "What does Google do before even looking at the index?",
+      "concepts": ["query understanding", "query intent", "query rewriting", "spell correction at scale"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=kNkbFfEGSFY",
+        "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-analyzer.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Web Search Engines",
+      "title": "Can you build a complete search engine from crawler to results?",
+      "concepts": ["end-to-end system", "integration", "deployment"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://lucene.apache.org/core/9_0_0/index.html",
+        "https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html",
+        "https://solr.apache.org/guide/solr/latest/getting-started/tutorial-techproducts.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Web Search Engines",
+      "title": "How do web crawlers, link analysis, and spam detection work together?",
+      "concepts": ["web search review", "spaced repetition", "system integration"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/20crawl.pdf",
+        "https://nlp.stanford.edu/IR-book/pdf/21link.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "Can machines learn to rank better than hand-tuned formulas?",
+      "concepts": ["learning to rank", "LambdaMART", "pairwise ranking", "listwise ranking"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf",
+        "https://www.elastic.co/guide/en/elasticsearch/reference/current/learning-to-rank.html",
+        "https://www.youtube.com/watch?v=E2UBGKR4gqo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Topics",
+      "title": "How do you search across languages?",
+      "concepts": ["cross-lingual IR", "translation-based retrieval", "multilingual embeddings"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/pdf/09expand.pdf",
+        "https://huggingface.co/sentence-transformers/LaBSE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Advanced Topics",
+      "title": "How has information retrieval evolved from Boolean search to neural ranking?",
+      "concepts": ["comprehensive review", "synthesis", "future directions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://nlp.stanford.edu/IR-book/",
+        "https://www.youtube.com/watch?v=kNkbFfEGSFY"
+      ],
+      "status": "pending"
+    }
+  ]
+}

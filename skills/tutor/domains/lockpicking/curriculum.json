@@ -1,0 +1,359 @@
+{
+  "topic": "Lockpicking — mechanics, security, and sport",
+  "slug": "lockpicking",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic understanding of mechanical systems",
+    "patience for hands-on practice",
+    "access to practice locks or willingness to acquire them"
+  ],
+  "exit_criteria": [
+    "student can single-pin-pick standard pin tumbler locks",
+    "student can identify common lock vulnerabilities",
+    "student understands security implications of physical attacks",
+    "student can explain mechanical differences between lock types",
+    "student can participate in locksport competitions",
+    "student can assess lock quality and recommend improvements"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Lock Mechanics & Engineering",
+      "title": "Why do billions of people trust a handful of metal pins?",
+      "concepts": ["pin tumbler mechanism", "shear line", "driver and key pins"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.lysator.liu.se/mit-guide/MITLockGuide.pdf",
+        "https://www.art-of-lockpicking.com/courses/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Lock Mechanics & Engineering",
+      "title": "What happens inside a lock when you turn a key?",
+      "concepts": ["plug rotation", "binding order", "manufacturing tolerances"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.art-of-lockpicking.com/courses/",
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Lock Mechanics & Engineering",
+      "title": "How do wafer locks differ from pin tumblers?",
+      "concepts": ["wafer mechanisms", "spring pressure", "lock variations"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://locksmithingschool.com/lock-picking/",
+        "https://www.lysator.liu.se/mit-guide/MITLockGuide.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Lock Mechanics & Engineering",
+      "title": "Why can't you pick a combination lock with a pick?",
+      "concepts": ["mechanical diversity", "combination mechanisms", "attack surface"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://locksport.net/",
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Lock Mechanics & Engineering",
+      "title": "What makes a lock 'high security'?",
+      "concepts": ["security pins", "sidebars", "false gates", "drill resistance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.art-of-lockpicking.com/courses/",
+        "https://github.com/fabacab/awesome-lockpicking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Lock Mechanics & Engineering",
+      "title": "How do manufacturing flaws become security vulnerabilities?",
+      "concepts": ["tolerances", "binding defects", "exploitable imperfections"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.lysator.liu.se/mit-guide/MITLockGuide.pdf",
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Picking Techniques & Mastery",
+      "title": "Review: What have we learned about lock internals?",
+      "concepts": ["pin tumblers", "wafers", "security features"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.art-of-lockpicking.com/courses/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Picking Techniques & Mastery",
+      "title": "What does 'feedback' mean when you're holding a pick?",
+      "concepts": ["tactile feedback", "tension control", "pin states"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.lysator.liu.se/mit-guide/MITLockGuide.pdf",
+        "https://courses.atlasobscura.com/course/on-demand-lockpicking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Picking Techniques & Mastery",
+      "title": "Why does single-pin-picking feel impossible at first?",
+      "concepts": ["SPP technique", "mental model", "practice progression"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.art-of-lockpicking.com/courses/",
+        "https://www.udemy.com/course/the-ultimate-guide-to-lock-picking/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Picking Techniques & Mastery",
+      "title": "When should you rake instead of pick?",
+      "concepts": ["raking techniques", "speed vs precision", "lock assessment"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://locksmithingschool.com/lock-picking/",
+        "https://github.com/fabacab/awesome-lockpicking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Picking Techniques & Mastery",
+      "title": "How does lock bumping exploit physics?",
+      "concepts": ["bump keys", "kinetic energy transfer", "pin jumping"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking",
+        "https://locksport.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Picking Techniques & Mastery",
+      "title": "What tools do you actually need versus what's marketing?",
+      "concepts": ["essential tools", "pick profiles", "improvisation"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://locklab.com/resources/books-on-lock-picking/",
+        "https://github.com/topics/locksport"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Picking Techniques & Mastery",
+      "title": "Can you explain why tension direction matters?",
+      "concepts": ["bottom of keyway", "top of keyway", "tension dynamics"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.lysator.liu.se/mit-guide/MITLockGuide.pdf",
+        "https://courses.atlasobscura.com/course/on-demand-lockpicking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Advanced Mechanisms",
+      "title": "Review: Core picking techniques and when to use them",
+      "concepts": ["SPP", "raking", "bumping", "tool selection"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.art-of-lockpicking.com/courses/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Advanced Mechanisms",
+      "title": "How do spool pins defeat your picking technique?",
+      "concepts": ["security pins", "counter-rotation", "false sets"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking",
+        "https://www.art-of-lockpicking.com/courses/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Advanced Mechanisms",
+      "title": "Why do disc detainer locks laugh at your hook picks?",
+      "concepts": ["disc detainer mechanisms", "rotating discs", "specialized tools"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://github.com/fabacab/awesome-lockpicking",
+        "https://locksport.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Advanced Mechanisms",
+      "title": "What makes Medeco locks the bane of lockpickers?",
+      "concepts": ["rotating pins", "sidebar mechanisms", "multi-dimensional security"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking",
+        "https://locksport.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Advanced Mechanisms",
+      "title": "How do you decode a lock without opening it?",
+      "concepts": ["impressioning", "decoding techniques", "key creation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://locksmithingschool.com/resources/",
+        "https://www.udemy.com/course/the-ultimate-guide-to-lock-picking/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Mechanisms",
+      "title": "When should you bypass the lock entirely?",
+      "concepts": ["shimming", "door gaps", "latch manipulation", "non-destructive entry"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking",
+        "https://github.com/fabacab/awesome-lockpicking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Security & Vulnerabilities",
+      "title": "How do you assess a lock's real-world security?",
+      "concepts": ["threat modeling", "attack vectors", "installation quality"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking",
+        "https://www.art-of-lockpicking.com/courses/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Security & Vulnerabilities",
+      "title": "Review: Advanced mechanisms and bypass techniques",
+      "concepts": ["security pins", "specialized locks", "bypasses", "decoding"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://locksport.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Security & Vulnerabilities",
+      "title": "Why do security ratings often mislead consumers?",
+      "concepts": ["grading standards", "marketing vs reality", "testing methodology"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking",
+        "https://github.com/fabacab/awesome-lockpicking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Security & Vulnerabilities",
+      "title": "What vulnerabilities persist even in 'unpickable' locks?",
+      "concepts": ["destructive entry", "installation flaws", "social engineering", "defense in depth"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sciencedirect.com/book/9781597499897/practical-lock-picking",
+        "https://www.art-of-lockpicking.com/courses/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Locksport & Community",
+      "title": "What are the rules of ethical lockpicking?",
+      "concepts": ["locksport ethics", "legal frameworks", "responsible disclosure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://toool.us/",
+        "https://toool.nl/Lockpicking",
+        "https://www.lysator.liu.se/mit-guide/MITLockGuide.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Locksport & Community",
+      "title": "How do lockpicking competitions actually work?",
+      "concepts": ["competition formats", "speed picking", "scoring systems"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://toool.us/",
+        "https://locksport.net/",
+        "https://github.com/topics/locksport"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Locksport & Community",
+      "title": "Where does lockpicking go from here?",
+      "concepts": ["smart locks", "biometric hybrids", "future of physical security", "community growth"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://toool.us/",
+        "https://github.com/fabacab/awesome-lockpicking",
+        "https://locksport.net/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

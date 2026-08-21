@@ -1,0 +1,369 @@
+{
+  "topic": "Foraging — wild edible identification and ecology",
+  "slug": "foraging",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic botany (plant parts, flower structure)",
+    "outdoor navigation and safety",
+    "awareness of local ecosystems"
+  ],
+  "exit_criteria": [
+    "identify edible plants using family characteristics, not just pictures",
+    "assess habitat and seasonality to predict what's available",
+    "distinguish toxic lookalikes using morphological features",
+    "evaluate population health and harvest sustainably",
+    "process and prepare foraged foods safely"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundation: Plant Families",
+      "title": "Why do plant families matter more than memorizing species?",
+      "concepts": ["plant families", "pattern recognition", "morphological consistency"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.wildflowers-and-weeds.com/Plant_Families/",
+        "https://www.youtube.com/watch?v=xR5QF6lLeJU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundation: Plant Families",
+      "title": "How can you spot a member of the Rose family from across a field?",
+      "concepts": ["Rosaceae characteristics", "5-petaled flowers", "aggregate fruits"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.inaturalist.org/taxa/47124-Rosaceae",
+        "https://www.botanical-online.com/en/botany/rosaceae-family"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundation: Plant Families",
+      "title": "What makes the Carrot family both delicious and deadly?",
+      "concepts": ["Apiaceae identification", "umbel structure", "toxic lookalikes"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.inaturalist.org/taxa/47602-Apiaceae",
+        "https://www.wildflowerfinder.org.uk/Families/Apiaceae.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundation: Plant Families",
+      "title": "Can you recognize the Mustard family's secret signal?",
+      "concepts": ["Brassicaceae features", "4-petaled cross pattern", "silique fruits"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.inaturalist.org/taxa/47125-Brassicaceae",
+        "https://www.eattheweeds.com/brassicaceae-broccolis-kin-2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundation: Plant Families",
+      "title": "Practice: Which family does this mystery plant belong to?",
+      "concepts": ["family identification", "diagnostic features", "elimination process"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.inaturalist.org/observations/identify",
+        "https://gobotany.nativeplanttrust.org/simple/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ecology and Habitat",
+      "title": "Review: What have you learned about plant families so far?",
+      "concepts": ["family characteristics review", "pattern consolidation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=kR1lKPElLiw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Ecology and Habitat",
+      "title": "Why do the best wild edibles love disturbed ground?",
+      "concepts": ["ecological succession", "disturbance ecology", "ruderal species"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.eattheweeds.com/why-weeds-are-successful/",
+        "https://www.fs.usda.gov/wildflowers/ethnobotany/food/index.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Ecology and Habitat",
+      "title": "What does finding nettles tell you about the soil?",
+      "concepts": ["indicator species", "soil indicators", "plant communities"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.permaculturenews.org/2016/06/24/indicator-plants-and-what-they-tell-us/",
+        "https://www.inaturalist.org/taxa/52849-Urtica-dioica"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Ecology and Habitat",
+      "title": "How do you predict when wild asparagus will emerge?",
+      "concepts": ["phenology", "growing degree days", "seasonal timing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usanpn.org/data/forecasts/Phenology_Forecast_Maps",
+        "https://extension.umaine.edu/gardening/manual/phenology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Ecology and Habitat",
+      "title": "Why does the same species taste different in shade versus sun?",
+      "concepts": ["environmental plasticity", "chemical variation", "microhabitat effects"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=M7w099FPrh0",
+        "https://link.springer.com/article/10.1007/s11101-012-9230-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Ecology and Habitat",
+      "title": "How would you map the edible zones in your neighborhood?",
+      "concepts": ["habitat assessment", "foraging strategy", "spatial thinking"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://fallingfruit.org/",
+        "https://www.inaturalist.org/projects/neighborhood-wild-edibles"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Safety and Lookalikes",
+      "title": "Review: Which habitats have you explored so far?",
+      "concepts": ["habitat review", "ecological thinking consolidation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.foragecast.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Safety and Lookalikes",
+      "title": "What's the difference between 'poisonous' and 'toxic'?",
+      "concepts": ["toxin types", "dose-response", "preparation effects"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ars.usda.gov/pacific-west-area/burns-or/forage-and-range-research/docs/poisonous-plants/",
+        "https://www.wildedible.com/plant-toxins"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Safety and Lookalikes",
+      "title": "How can you tell wild carrot from poison hemlock?",
+      "concepts": ["negative identification", "critical features", "multi-sense verification"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.inaturalist.org/taxa/51905-Daucus-carota",
+        "https://www.inaturalist.org/taxa/51905-Conium-maculatum",
+        "https://www.youtube.com/watch?v=7MbHFYJ4L0M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Safety and Lookalikes",
+      "title": "Why do some foragers avoid white-flowered Apiaceae entirely?",
+      "concepts": ["risk calibration", "probability of error", "severity hierarchy"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.eattheweeds.com/apiaceae-the-carrot-family/",
+        "https://www.youtube.com/watch?v=qJaQ6RLxF0A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Safety and Lookalikes",
+      "title": "What environmental toxins concentrate in wild greens?",
+      "concepts": ["bioaccumulation", "heavy metals", "contamination risk"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.atsdr.cdc.gov/csem/lead/docs/lead.pdf",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6766499/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Safety and Lookalikes",
+      "title": "What went wrong in this forager's misidentification mistake?",
+      "concepts": ["error analysis", "cognitive bias", "confirmation bias"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.poison.org/articles/what-you-need-to-know-about-poisonous-plants",
+        "https://www.youtube.com/watch?v=Vl92hqINPh4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Safety and Lookalikes",
+      "title": "Which plants should be on your personal 'do not forage' list?",
+      "concepts": ["personal risk threshold", "knowledge boundaries", "safe defaults"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.wildedible.com/deadly-plants-north-america",
+        "https://www.inaturalist.org/guides/2488"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Seasonal Strategies",
+      "title": "Review: What safety principles guide your foraging decisions?",
+      "concepts": ["safety review", "risk assessment consolidation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=kMfh0SXk8CQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Seasonal Strategies",
+      "title": "Why is early spring the easiest time to learn foraging?",
+      "concepts": ["seasonal progression", "spring ephemerals", "limited options advantage"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.wildedible.com/spring-foraging",
+        "https://www.youtube.com/watch?v=C0hd7u8lRgU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Seasonal Strategies",
+      "title": "What changes when the same plant bolts and flowers?",
+      "concepts": ["life cycle stages", "chemical changes", "palatability shifts"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.eattheweeds.com/plant-profiles-alphabetically/",
+        "https://www.inaturalist.org/observation_fields/6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Seasonal Strategies",
+      "title": "How do you forage in winter when everything looks dead?",
+      "concepts": ["winter foraging", "root identification", "evergreen greens"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=YLTnJMozcKc",
+        "https://www.wildedible.com/winter-foraging-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Seasonal Strategies",
+      "title": "How would you design a year-round foraging calendar for your region?",
+      "concepts": ["phenology calendar", "succession planning", "seasonal abundance"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.foragecast.com/",
+        "https://www.usanpn.org/data/maps"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Seasonal Strategies",
+      "title": "Review: How do you predict what's available across the seasons?",
+      "concepts": ["seasonal review", "phenology consolidation", "life cycle integration"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.foragecast.com/",
+        "https://www.youtube.com/watch?v=C0hd7u8lRgU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Ethics and Practice",
+      "title": "When does foraging harm the ecosystem?",
+      "concepts": ["population dynamics", "sustainable harvest", "impact assessment"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://unitedplantsavers.org/species-at-risk/",
+        "https://www.wildcrafting.net/ethics.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Ethics and Practice",
+      "title": "Why should you target invasive species for heavy harvest?",
+      "concepts": ["invasive species", "ecological restoration", "foraging as management"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.invasive.org/browse/subinfo.cfm?sub=3",
+        "https://www.eattheinvaders.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Ethics and Practice",
+      "title": "Final reflection: What's your foraging philosophy?",
+      "concepts": ["ethical framework", "personal practice", "ongoing learning"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=kPFBXZVZWMw",
+        "https://www.wildedible.com/foraging-ethics"
+      ],
+      "status": "pending"
+    }
+  ]
+}

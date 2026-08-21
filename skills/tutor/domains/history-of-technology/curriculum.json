@@ -1,0 +1,370 @@
+{
+  "topic": "History and Philosophy of Technology",
+  "slug": "history-of-technology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic history (world history survey)",
+    "critical reading skills",
+    "comfort with abstract concepts"
+  ],
+  "exit_criteria": [
+    "distinguish technological determinism from social constructivism",
+    "analyze how technologies shape and are shaped by society",
+    "critically evaluate ethical dimensions of technological change",
+    "trace major technological transitions from ancient to modern",
+    "apply philosophical frameworks to contemporary technology debates",
+    "recognize how values and politics are embedded in technological artifacts"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "What is Technology?",
+      "title": "What counts as technology—just smartphones or also hammers?",
+      "concepts": ["technology definition", "artifacts vs processes", "technics"],
+      "difficulty": 1,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/technology/",
+        "https://iep.utm.edu/technolo/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "What is Technology?",
+      "title": "Why do we call it 'philosophy of technology' instead of 'technology studies'?",
+      "concepts": ["philosophy vs history", "normative questions", "essence of technology"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/technology/",
+        "https://mitpress.mit.edu/books/philosophy-technology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "What is Technology?",
+      "title": "Is a beaver's dam technology?",
+      "concepts": ["human vs animal technology", "intentionality", "cultural transmission"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/3105710",
+        "https://plato.stanford.edu/entries/technology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Ancient to Industrial",
+      "title": "How did agriculture change everything about being human?",
+      "concepts": ["Neolithic revolution", "sedentism", "surplus and specialization"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Z_P5rqHcw_A",
+        "https://archive.org/details/gunsgermssteelfa00diam"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Ancient to Industrial",
+      "title": "Why didn't the ancient Greeks industrialize despite having steam power?",
+      "concepts": ["social context of invention", "labor and slavery", "contingency in history"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/228962",
+        "https://ocw.mit.edu/courses/21h-210-history-of-technology-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ancient to Industrial",
+      "title": "What made printing revolutionary beyond just copying books faster?",
+      "concepts": ["printing press", "knowledge dissemination", "standardization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=Rnj11kVgWdE",
+        "https://www.historyextra.com/period/medieval/printing-press-gutenberg-revolution-europe/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Industrial Revolutions",
+      "title": "Why did the Industrial Revolution happen in Britain and not China?",
+      "concepts": ["Great Divergence", "coal and geography", "institutional factors"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21h-210-history-of-technology-spring-2013/",
+        "https://www.jstor.org/stable/40060472"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Industrial Revolutions",
+      "title": "How did the steam engine transform work, time, and daily life?",
+      "concepts": ["mechanization", "factory system", "temporal discipline"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=zhL5DCizj5c",
+        "https://archive.org/details/technicsciviliza00mumf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Industrial Revolutions",
+      "title": "What changes when electricity replaces steam?",
+      "concepts": ["second industrial revolution", "electrification", "decentralization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ieeexplore.ieee.org/document/5306893",
+        "https://www.computerhistory.org/revolution/analog-computers/3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Industrial Revolutions",
+      "title": "How did revolutions in agriculture, printing, and industry reshape human society?",
+      "concepts": ["agricultural revolution", "printing", "industrialization", "steam and electricity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/21h-210-history-of-technology-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Industrial Revolutions",
+      "title": "Why do we say the computer revolution but not the telephone revolution?",
+      "concepts": ["information technology", "general-purpose vs specific technology", "network effects"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.computerhistory.org/timeline/computers/",
+        "https://www.youtube.com/watch?v=O5nskjZ_GoI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Philosophical Foundations",
+      "title": "Does technology drive history or do humans drive technology?",
+      "concepts": ["technological determinism", "social construction", "dialectical view"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/technology/",
+        "https://www.jstor.org/stable/285546"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Philosophical Foundations",
+      "title": "What did Heidegger mean by technology as 'enframing'?",
+      "concepts": ["Heidegger", "enframing (Gestell)", "revealing and concealing"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/heidegger/",
+        "https://archive.org/details/questionconcerni00heid"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Philosophical Foundations",
+      "title": "Is modern life trapped in what Ellul called the 'technological system'?",
+      "concepts": ["Jacques Ellul", "technique", "autonomy of technology"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/3791520",
+        "https://archive.org/details/technologicalsoc00ellu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Philosophical Foundations",
+      "title": "Can we reshape technology or does it reshape us?",
+      "concepts": ["human agency", "technological mediation", "postphenomenology"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/phenomenology/",
+        "https://www.jstor.org/stable/40928654"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Philosophical Foundations",
+      "title": "How do technologies mediate our perception of the world?",
+      "concepts": ["Don Ihde", "technological mediation", "embodiment relations"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mitpress.mit.edu/books/technology-and-lifeworld",
+        "https://www.jstor.org/stable/3750485"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Technology and Society",
+      "title": "Do bridges and buildings have politics built into them?",
+      "concepts": ["Langdon Winner", "politics of artifacts", "inscribed values"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/20024652",
+        "https://www.cc.gatech.edu/~beki/cs4001/Winner.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Technology and Society",
+      "title": "What does it mean to say technology is 'socially constructed'?",
+      "concepts": ["SCOT", "interpretive flexibility", "closure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/285743",
+        "https://mitpress.mit.edu/books/social-construction-technological-systems"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Technology and Society",
+      "title": "Who decides which technologies succeed and which fail?",
+      "concepts": ["innovation diffusion", "path dependence", "QWERTY problem"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/2234208",
+        "https://www.youtube.com/watch?v=ZLtlntKZ8IE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Technology and Society",
+      "title": "How do philosophical frameworks help us understand technology's role in society?",
+      "concepts": ["determinism vs construction", "Heidegger", "Ellul", "Winner", "mediation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/technology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Contemporary Debates",
+      "title": "Should we fear or embrace the idea of becoming cyborgs?",
+      "concepts": ["cyborg", "Donna Haraway", "posthumanism"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/3178066",
+        "https://archive.org/details/modestwitnessse00hara"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Contemporary Debates",
+      "title": "Is AI different from previous technologies or just another tool?",
+      "concepts": ["artificial intelligence", "automation anxiety", "technological singularity"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/artificial-intelligence/",
+        "https://www.youtube.com/watch?v=gn4nRCC9TwQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Contemporary Debates",
+      "title": "Can technology save the planet or is it what's destroying it?",
+      "concepts": ["Anthropocene", "techno-solutionism", "degrowth vs innovation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/26269791",
+        "https://mitpress.mit.edu/books/nature-technology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Contemporary Debates",
+      "title": "Who owns your data and should you care?",
+      "concepts": ["surveillance capitalism", "data privacy", "platform power"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.publicbooks.org/the-age-of-surveillance-capitalism/",
+        "https://www.eff.org/issues/privacy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Contemporary Debates",
+      "title": "What would Ellul or Heidegger say about smartphones?",
+      "concepts": ["applying classical frameworks", "synthesis", "critical analysis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.jstor.org/stable/3791520",
+        "https://plato.stanford.edu/entries/heidegger/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Contemporary Debates",
+      "title": "Where do we go from here?",
+      "concepts": ["democratic technology", "appropriate technology", "future directions"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.jstor.org/stable/3105247",
+        "https://mitpress.mit.edu/books/questioning-technology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Contemporary Debates",
+      "title": "What arc connects fire, steam engines, and artificial intelligence?",
+      "concepts": ["historical progression", "philosophical frameworks", "contemporary applications", "critical evaluation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/technology/",
+        "https://ocw.mit.edu/courses/21h-210-history-of-technology-spring-2013/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

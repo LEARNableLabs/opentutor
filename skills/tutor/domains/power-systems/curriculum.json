@@ -1,0 +1,370 @@
+{
+  "topic": "Power Systems and the Electrical Grid",
+  "slug": "power-systems",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "AC circuits (phasors, impedance, basic circuit analysis)",
+    "complex numbers",
+    "basic calculus (derivatives and integrals)",
+    "linear algebra fundamentals"
+  ],
+  "exit_criteria": [
+    "Analyze three-phase power systems using single-line diagrams and per-unit systems",
+    "Calculate power flow, voltage regulation, and losses in transmission networks",
+    "Explain generation-load balance, frequency control, and economic dispatch",
+    "Identify fault types and understand protection schemes",
+    "Evaluate renewable integration challenges and smart grid technologies",
+    "Use power system simulation tools (PowerWorld, GridLAB-D) for basic analysis"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Grid Fundamentals",
+      "title": "Why doesn't your phone charger care what power plant it's connected to?",
+      "concepts": ["grid structure", "synchronous interconnections", "voltage levels"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=v1BMWczn7JM",
+        "https://www.energy.gov/oe/articles/how-does-electric-grid-work"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Grid Fundamentals",
+      "title": "What's really flowing through power lines?",
+      "concepts": ["AC power", "three-phase systems", "transmission vs distribution"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=MViVyocQDME",
+        "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/readings/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Grid Fundamentals",
+      "title": "Why do we use three phases instead of one?",
+      "concepts": ["three-phase advantages", "balanced loads", "Y and delta connections"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=4oRT7PoXSS0",
+        "https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Grid Fundamentals",
+      "title": "How do you represent a 10,000-bus power system on one page?",
+      "concepts": ["single-line diagrams", "per-unit systems", "base quantities"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+        "https://www.powerworld.com/products/simulator/educational-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Grid Fundamentals",
+      "title": "Why does Texas have its own grid?",
+      "concepts": ["interconnections", "frequency control", "regional grids"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=08mwXICY4JM",
+        "https://www.ercot.com/about"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Grid Fundamentals",
+      "title": "Can you draw a single-line diagram in per-unit?",
+      "concepts": ["three-phase systems", "single-line diagrams", "per-unit"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.powerworld.com/products/simulator/educational-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "AC Power Analysis",
+      "title": "Why do we care about reactive power if it does no work?",
+      "concepts": ["complex power", "real and reactive power", "power factor"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=hL2tKdJbHyA",
+        "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "AC Power Analysis",
+      "title": "What does power factor correction actually correct?",
+      "concepts": ["power factor", "capacitor compensation", "reactive power management"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=C4jwKW7JjHU",
+        "https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "AC Power Analysis",
+      "title": "How do you measure power flow when voltage and current aren't in phase?",
+      "concepts": ["phasor representation", "power measurement", "three-phase power"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.3blue1brown.com/lessons/eulers-formula",
+        "https://nptel.ac.in/courses/108105053"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "AC Power Analysis",
+      "title": "Build a power flow calculator for a simple grid",
+      "concepts": ["power flow equations", "bus types", "slack bus"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.pandapower.org/start/",
+        "https://www.powerworld.com/products/simulator/educational-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Transmission and Distribution",
+      "title": "Why do long transmission lines behave differently from short ones?",
+      "concepts": ["transmission line models", "distributed parameters", "ABCD parameters"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+        "https://nptel.ac.in/courses/108105053"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Transmission and Distribution",
+      "title": "How much voltage do you lose over 100 miles of wire?",
+      "concepts": ["voltage regulation", "line losses", "Ferranti effect"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/PracticalEngineeringChannel",
+        "https://www.epri.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Transmission and Distribution",
+      "title": "How does reactive power affect voltage regulation?",
+      "concepts": ["reactive power", "power factor", "voltage regulation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.powerworld.com/products/simulator/educational-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Transmission and Distribution",
+      "title": "Why do transformers use per-unit values instead of actual volts?",
+      "concepts": ["transformers", "per-unit impedance", "tap changers"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=UchitHGF4n8",
+        "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Transmission and Distribution",
+      "title": "What caused the 2003 Northeast blackout?",
+      "concepts": ["cascading failures", "N-1 contingency", "transmission limits"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=KciAzYfXNwU",
+        "https://www.nerc.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Transmission and Distribution",
+      "title": "Design a radial distribution system for a neighborhood",
+      "concepts": ["distribution networks", "radial vs mesh", "voltage drop"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.gridlabd.org/",
+        "https://www.epri.com/pages/sa/opendss"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Generation and Dispatch",
+      "title": "How does a generator know to spin at exactly 60 Hz?",
+      "concepts": ["synchronous generators", "frequency control", "inertia"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=jvhnLFvbWRs",
+        "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Generation and Dispatch",
+      "title": "Why can't we just store all our electricity in batteries?",
+      "concepts": ["energy storage", "grid-scale storage", "pumped hydro"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/PracticalEngineeringChannel",
+        "https://www.nrel.gov/grid/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Generation and Dispatch",
+      "title": "How do grid operators decide which power plant runs next?",
+      "concepts": ["economic dispatch", "marginal cost", "merit order"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.caiso.com/",
+        "https://nptel.ac.in/courses/108105053"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Generation and Dispatch",
+      "title": "What happens when the wind stops blowing?",
+      "concepts": ["renewable integration", "variability", "capacity factor"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nrel.gov/grid/",
+        "https://www.iea.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Generation and Dispatch",
+      "title": "How do we balance generation and load in real time?",
+      "concepts": ["synchronous machines", "economic dispatch", "renewable integration"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.powerworld.com/products/simulator/educational-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Protection and Stability",
+      "title": "Why don't all faults cause blackouts?",
+      "concepts": ["fault analysis", "symmetrical components", "circuit breakers"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+        "https://nptel.ac.in/courses/108105053"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Protection and Stability",
+      "title": "How does a relay know the difference between normal load and a fault?",
+      "concepts": ["protective relays", "overcurrent protection", "distance relays"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/TheEngineeringMindset",
+        "https://www.epri.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Protection and Stability",
+      "title": "What keeps generators from flying apart when a fault clears?",
+      "concepts": ["transient stability", "swing equation", "critical clearing time"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nptel.ac.in/courses/108105053",
+        "https://www.powerworld.com/products/simulator/educational-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Protection and Stability",
+      "title": "Simulate a fault and watch the grid recover",
+      "concepts": ["fault simulation", "protection coordination", "stability analysis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.powerworld.com/products/simulator/educational-resources",
+        "https://www.pandapower.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Modern Grid",
+      "title": "How does the grid know your air conditioner is running?",
+      "concepts": ["smart grid", "AMI", "demand response"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://smartgrid.ieee.org/",
+        "https://www.energy.gov/oe/activities/technology-development/grid-modernization-and-smart-grid"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Modern Grid",
+      "title": "Could your neighborhood run on its own microgrid?",
+      "concepts": ["microgrids", "distributed energy resources", "grid edge"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nrel.gov/grid/",
+        "https://www.gridlabd.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

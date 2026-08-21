@@ -1,0 +1,358 @@
+{
+  "topic": "Additive manufacturing — 3D printing science",
+  "slug": "additive-manufacturing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic materials science",
+    "thermodynamics fundamentals",
+    "understanding of manufacturing processes"
+  ],
+  "exit_criteria": [
+    "design parts optimized for additive manufacturing",
+    "select appropriate AM process for given material and application requirements",
+    "predict process-property relationships in AM parts",
+    "identify and troubleshoot common AM defects",
+    "evaluate design tradeoffs using topology optimization and lattice structures"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why does building layer-by-layer change everything about manufacturing?",
+      "concepts": ["layer-by-layer fabrication", "additive vs subtractive", "design freedom"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nist.gov/ambench",
+        "https://www.astm.org/f2792-12a.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do you classify the seven families of 3D printing?",
+      "concepts": ["process taxonomy", "material extrusion", "vat photopolymerization", "powder bed fusion"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.astm.org/f2792-12a.html",
+        "https://www.americamakes.us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What happens to material as it transforms from feedstock to solid part?",
+      "concepts": ["phase transitions", "solidification", "thermal cycles"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/",
+        "https://www.journals.elsevier.com/additive-manufacturing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Why does heat transfer dominate every AM process?",
+      "concepts": ["heat transfer modes", "melt pool dynamics", "cooling rates"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nist.gov/ambench",
+        "https://www.ge.com/additive/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Can you map any part geometry to the right AM process?",
+      "concepts": ["process selection", "material-process-property triangle"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.americamakes.us/",
+        "https://www.youtube.com/c/MakersMuse"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Polymer Processes",
+      "title": "How does a plastic filament become a precise part in FDM?",
+      "concepts": ["fused deposition modeling", "extrusion temperature", "layer adhesion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/TeachingTech",
+        "https://www.youtube.com/c/CNCKitchen"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Polymer Processes",
+      "title": "What determines if your FDM layers stick or separate?",
+      "concepts": ["interlayer bonding", "thermal gradients", "print speed"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/CNCKitchen",
+        "https://www.journals.elsevier.com/additive-manufacturing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Polymer Processes",
+      "title": "How does light turn liquid resin into solid geometry in SLA?",
+      "concepts": ["stereolithography", "photopolymerization", "layer curing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/",
+        "https://www.youtube.com/c/MakersMuse"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Polymer Processes",
+      "title": "Why do polymer AM parts show anisotropic mechanical properties?",
+      "concepts": ["anisotropy", "build direction effects", "raster patterns"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/CNCKitchen",
+        "https://www.journals.elsevier.com/additive-manufacturing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Polymer Processes",
+      "title": "Review: Can you troubleshoot polymer printing failures?",
+      "concepts": ["warping", "stringing", "layer delamination", "support strategies"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/c/TeachingTech",
+        "https://www.youtube.com/c/MakersMuse"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Metal Processes",
+      "title": "What makes melting metal powder with a laser so precise yet so complex?",
+      "concepts": ["powder bed fusion", "selective laser melting", "laser-material interaction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ge.com/additive/",
+        "https://www.nist.gov/ambench"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Metal Processes",
+      "title": "How do process parameters sculpt the melt pool?",
+      "concepts": ["laser power", "scan speed", "hatch spacing", "melt pool geometry"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nist.gov/ambench",
+        "https://www.journals.elsevier.com/additive-manufacturing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Metal Processes",
+      "title": "Why does rapid solidification create unique microstructures?",
+      "concepts": ["solidification rates", "grain morphology", "columnar grains", "epitaxial growth"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.journals.elsevier.com/additive-manufacturing",
+        "https://ocw.mit.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Metal Processes",
+      "title": "What causes porosity and how can you control it?",
+      "concepts": ["porosity", "keyholing", "lack of fusion", "gas entrapment"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.nist.gov/ambench",
+        "https://www.ge.com/additive/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Metal Processes",
+      "title": "How does binder jetting build metal parts without melting?",
+      "concepts": ["binder jetting", "sintering", "infiltration"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.americamakes.us/",
+        "https://www.youtube.com/c/MakersMuse"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Metal Processes",
+      "title": "Review: Can you predict defects from process choices?",
+      "concepts": ["process-defect relationships", "parameter optimization", "build failures"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nist.gov/ambench",
+        "https://www.journals.elsevier.com/additive-manufacturing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Design for AM",
+      "title": "How does design for AM differ from design for machining?",
+      "concepts": ["design for additive manufacturing", "complexity for free", "minimum feature size"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.americamakes.us/",
+        "https://www.ge.com/additive/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Design for AM",
+      "title": "What makes topology optimization the killer app for AM?",
+      "concepts": ["topology optimization", "load path design", "mass reduction"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ge.com/additive/",
+        "https://ocw.mit.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Design for AM",
+      "title": "How do lattice structures give you strength without weight?",
+      "concepts": ["lattice structures", "unit cells", "relative density", "mechanical metamaterials"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.journals.elsevier.com/additive-manufacturing",
+        "https://www.americamakes.us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Design for AM",
+      "title": "Why are supports both essential and problematic?",
+      "concepts": ["support structures", "overhangs", "part orientation", "support removal"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/TeachingTech",
+        "https://www.youtube.com/c/MakersMuse"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Design for AM",
+      "title": "Can you redesign a bracket to exploit AM capabilities?",
+      "concepts": ["design iteration", "functional integration", "part consolidation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ge.com/additive/",
+        "https://www.americamakes.us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Quality & Applications",
+      "title": "Review: Can you design a part that exploits AM's unique capabilities?",
+      "concepts": ["design for additive manufacturing", "topology optimization", "lattice structures", "support strategies", "part consolidation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ge.com/additive/",
+        "https://www.americamakes.us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Quality & Applications",
+      "title": "What post-processing turns a rough build into a finished part?",
+      "concepts": ["heat treatment", "hot isostatic pressing", "surface finishing", "stress relief"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ge.com/additive/",
+        "https://www.americamakes.us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Quality & Applications",
+      "title": "Why did GE bet on AM for jet engine fuel nozzles?",
+      "concepts": ["aerospace applications", "part consolidation", "geometric complexity", "buy-to-fly ratio"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ge.com/additive/",
+        "https://www.youtube.com/c/MakersMuse"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Quality & Applications",
+      "title": "How does AM enable patient-specific medical implants?",
+      "concepts": ["biomedical applications", "customization", "biocompatible materials", "porous implants"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.journals.elsevier.com/additive-manufacturing",
+        "https://www.americamakes.us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Quality & Applications",
+      "title": "Review: Can you make the build-or-buy decision for a new part?",
+      "concepts": ["economic analysis", "process selection", "design constraints", "supply chain integration"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.americamakes.us/",
+        "https://www.ge.com/additive/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

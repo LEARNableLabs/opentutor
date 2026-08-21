@@ -1,0 +1,270 @@
+{
+  "topic": "Philosophy of Probability and Statistics",
+  "slug": "philosophy-of-probability",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic probability theory",
+    "introductory statistics",
+    "logical reasoning or introduction to philosophy"
+  ],
+  "exit_criteria": [
+    "can articulate and compare major interpretations of probability",
+    "can critically evaluate statistical claims in scientific papers",
+    "understands the philosophical foundations of Bayesian and frequentist inference",
+    "can identify causal vs correlational reasoning",
+    "recognizes common statistical fallacies and misuses"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "What is Probability?",
+      "title": "What does it mean when we say something is 70% likely?",
+      "concepts": ["probability interpretations", "frequentist basics", "Bayesian basics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://plato.stanford.edu/entries/probability-interpret/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "What is Probability?",
+      "title": "Can probability be about the world or just our beliefs?",
+      "concepts": ["objective vs subjective", "epistemic probability", "physical probability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://plato.stanford.edu/entries/probability-interpret/", "https://www.youtube.com/watch?v=BrK7X_XlGB8"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "What is Probability?",
+      "title": "Why do frequentists care about infinite repetitions?",
+      "concepts": ["frequentist interpretation", "long-run frequency", "von Mises collectives"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://plato.stanford.edu/entries/probability-interpret/#Fre", "https://seeing-theory.brown.edu/basic-probability/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "What is Probability?",
+      "title": "How can you have probabilities for one-off events like elections?",
+      "concepts": ["single-case probability", "propensity interpretation", "Bayesian credences"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://plato.stanford.edu/entries/probability-interpret/#ProInt"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "What is Probability?",
+      "title": "What makes a probability assignment rational?",
+      "concepts": ["coherence", "Dutch book arguments", "axioms of probability"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://plato.stanford.edu/entries/dutch-book/", "https://www.lesswrong.com/posts/RQpNHSiWaXTvDxt6R/coherent-decisions-imply-consistent-utilities"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "What is Probability?",
+      "title": "Review: Which interpretation fits which problem?",
+      "concepts": ["interpretation comparison", "application domains"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://plato.stanford.edu/entries/probability-interpret/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Statistical Inference",
+      "title": "What are we doing when we update beliefs from data?",
+      "concepts": ["Bayes' theorem", "prior and posterior", "likelihood"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://plato.stanford.edu/entries/bayes-theorem/", "https://seeing-theory.brown.edu/bayesian-inference/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Statistical Inference",
+      "title": "Where do priors come from and why does it matter?",
+      "concepts": ["prior selection", "subjective priors", "reference priors", "conjugate priors"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://arxiv.org/abs/0906.4032", "https://statmodeling.stat.columbia.edu/2009/07/05/objective_bayes/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Statistical Inference",
+      "title": "Why did Fisher and Neyman-Pearson disagree so bitterly?",
+      "concepts": ["significance testing", "hypothesis testing", "Neyman-Pearson framework", "Fisher's approach"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://errorstatistics.com/2016/06/24/s-senn-fisher-and-the-logic-of-inductive-inference-2/", "http://www.stat.columbia.edu/~gelman/research/published/pvalues3.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Statistical Inference",
+      "title": "Does all the evidence live in the likelihood?",
+      "concepts": ["likelihood principle", "sufficiency", "ancillarity", "conditionality principle"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://plato.stanford.edu/entries/statistics/#LikPri", "https://www.stat.cmu.edu/~larry/=stat705/Lecture13.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Statistical Inference",
+      "title": "When does your statistical model match reality?",
+      "concepts": ["model assumptions", "robustness", "model checking", "Box's aphorism"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.stat.columbia.edu/~gelman/research/published/philosophy.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Statistical Inference",
+      "title": "Review: Bayesian vs frequentist — what's really at stake?",
+      "concepts": ["paradigm comparison", "philosophical commitments"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Statistical Inference",
+      "title": "Can you be a Bayesian about some things and frequentist about others?",
+      "concepts": ["pragmatism", "calibration", "workflow"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.stat.columbia.edu/~gelman/research/published/badbayesmain.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Causality",
+      "title": "Why doesn't correlation imply causation?",
+      "concepts": ["correlation vs causation", "confounding", "spurious correlation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://plato.stanford.edu/entries/causation-probabilistic/", "https://www.tylervigen.com/spurious-correlations"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Causality",
+      "title": "How do causal graphs capture what we think causes what?",
+      "concepts": ["directed acyclic graphs", "causal models", "d-separation", "Pearl's framework"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["http://bayes.cs.ucla.edu/PRIMER/", "https://www.inference.vc/untitled/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Causality",
+      "title": "What makes randomized experiments the gold standard?",
+      "concepts": ["randomization", "RCTs", "exchangeability", "selection bias"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://plato.stanford.edu/entries/causation-probabilistic/#RanConTri"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Causality",
+      "title": "Can we learn about causation from observational data?",
+      "concepts": ["observational studies", "instrumental variables", "regression discontinuity", "natural experiments"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://mixtape.scunning.com/", "https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Causality",
+      "title": "Review: Spotting causal claims in the wild",
+      "concepts": ["causal inference", "critical reading"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-Bradford-hill-s-criteria"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Practice and Problems",
+      "title": "What's actually wrong with p-values?",
+      "concepts": ["p-value interpretation", "p-hacking", "ASA statement", "misuse of NHST"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.tandfonline.com/doi/full/10.1080/00031305.2016.1154108", "http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Practice and Problems",
+      "title": "Why can't we just replicate our way out of the crisis?",
+      "concepts": ["replication crisis", "publication bias", "file drawer problem", "incentive structures"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://plato.stanford.edu/entries/scientific-reproducibility/", "https://replicationindex.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Practice and Problems",
+      "title": "How many false discoveries are we making?",
+      "concepts": ["multiple testing", "false discovery rate", "family-wise error rate", "Bonferroni"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.stat.berkeley.edu/~mgoldman/Section0402.pdf", "https://www.jstor.org/stable/2346101"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Practice and Problems",
+      "title": "When is a difference statistically significant but meaningless?",
+      "concepts": ["effect size", "practical significance", "statistical vs substantive"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://rpsychologist.com/cohend/", "https://lakens.github.io/statistical_inferences/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Practice and Problems",
+      "title": "Should we retire statistical significance?",
+      "concepts": ["reform proposals", "estimation over testing", "Bayesian alternatives"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.nature.com/articles/d41586-019-00857-9", "https://statmodeling.stat.columbia.edu/2019/03/20/retire-statistical-significance-the-discussion/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Practice and Problems",
+      "title": "Review: Auditing a published result",
+      "concepts": ["critical analysis", "methodological assessment"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://statcheck.io/", "https://errorstatistics.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Practice and Problems",
+      "title": "What statistical philosophy should guide your own research?",
+      "concepts": ["methodological pluralism", "workflow design", "transparency"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.stat.columbia.edu/~gelman/research/published/philosophy.pdf", "https://betanalpha.github.io/writing/"],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "topic": "Shorthand writing systems — Gregg, Pitman, and Teeline",
+  "slug": "shorthand-writing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic phonetics awareness",
+    "cursive handwriting proficiency",
+    "commitment to daily practice"
+  ],
+  "exit_criteria": [
+    "write basic passages in all three systems at 40+ wpm",
+    "choose the optimal system for personal goals",
+    "identify and explain key differences between systems",
+    "follow a self-directed speed building program",
+    "read and transcribe shorthand from historical documents"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why did secretaries once earn more than engineers?",
+      "concepts": ["historical context", "speed writing value", "system evolution"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/shorthand",
+        "https://archive.org/details/historyofshorthand"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes a writing system fast?",
+      "concepts": ["phonetic encoding", "stroke economy", "brief forms", "abbreviation principles"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=shorthand-principles",
+        "https://reddit.com/r/shorthand/wiki/comparison"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do Gregg, Pitman, and Teeline differ at a glance?",
+      "concepts": ["cursive vs geometric", "phonetic vs alphabetic", "system philosophy"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.omniglot.com/writing/shorthand.htm",
+        "https://long-live-pitmans-shorthand.org.uk/comparison.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Which system should you learn first?",
+      "concepts": ["selection criteria", "learning curve analysis", "career context", "regional standards"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.reddit.com/r/shorthand/wiki/choosing-system",
+        "https://shorthand.boards.net/thread/choosing-system"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Gregg System",
+      "title": "Why does Gregg use circles and loops instead of letters?",
+      "concepts": ["Gregg alphabet", "stroke direction", "size relationships", "joining principles"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://gregg.angelfishy.net/grkeybo.pdf",
+        "https://www.youtube.com/watch?v=gregg-alphabet-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Gregg System",
+      "title": "What have you learned about Gregg fundamentals so far?",
+      "concepts": ["system comparison", "Gregg fundamentals", "practice habits"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://greggshorthand.github.io/practice-drills"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Gregg System",
+      "title": "How does Gregg encode vowels without slowing you down?",
+      "concepts": ["vowel representation", "position writing", "omission strategies"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://gregg.angelfishy.net/vowels.htm",
+        "https://archive.org/details/gregg-simplified-manual"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Gregg System",
+      "title": "What are brief forms and why are they magical?",
+      "concepts": ["brief forms", "common words", "phrase writing", "frequency optimization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://greggshorthand.github.io/brief-forms-list",
+        "https://quizlet.com/gregg-brief-forms"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Gregg System",
+      "title": "Can you write your first paragraph in Gregg?",
+      "concepts": ["connected writing", "phrasing", "transcription", "accuracy"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=gregg-first-dictation",
+        "https://greggshorthand.github.io/beginner-passages"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Pitman System",
+      "title": "Why does Pitman use thick and thin strokes?",
+      "concepts": ["line weight", "consonant pairs", "geometric precision", "Pitman alphabet"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://long-live-pitmans-shorthand.org.uk/consonants.htm",
+        "https://www.pitmanshorthand.co.uk/basics.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Pitman System",
+      "title": "How does position on the line encode vowels?",
+      "concepts": ["positional vowels", "three-position system", "vowel signs", "diacritics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://long-live-pitmans-shorthand.org.uk/vowels.htm",
+        "https://www.youtube.com/watch?v=pitman-vowel-system"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Pitman System",
+      "title": "What makes Pitman grammalogues so powerful?",
+      "concepts": ["grammalogues", "special outlines", "word grouping", "Pitman phrases"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pitmanshorthand.homestead.com/grammalogues.html",
+        "https://archive.org/details/pitman-2000-manual"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Pitman System",
+      "title": "How do Gregg and Pitman compare in practice?",
+      "concepts": ["system comparison", "writing samples", "personal preference"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.reddit.com/r/shorthand/wiki/gregg-vs-pitman"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Pitman System",
+      "title": "Can you decipher a page from a Victorian diary?",
+      "concepts": ["historical documents", "reading practice", "context reconstruction", "transcription"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.pepysdiary.com/encyclopedia/shorthand/",
+        "https://long-live-pitmans-shorthand.org.uk/reading-practice.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Teeline System",
+      "title": "Why do journalists prefer Teeline over Gregg or Pitman?",
+      "concepts": ["journalism context", "learning speed", "alphabetic basis", "flexibility"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.nctj.com/journalism-skills/teeline/",
+        "https://www.teeline.org.uk/about"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Teeline System",
+      "title": "How does Teeline simplify the alphabet?",
+      "concepts": ["letter reduction", "removal of unnecessary strokes", "indicator marks", "blending"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.teeline.org.uk/alphabet",
+        "https://www.youtube.com/watch?v=teeline-alphabet"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Teeline System",
+      "title": "What are word groupings and special outlines?",
+      "concepts": ["word grouping", "special outlines", "common words", "blending techniques"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.teeline.org.uk/special-outlines",
+        "https://archive.org/details/teeline-gold-standard"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Teeline System",
+      "title": "Can you take notes at a mock press conference?",
+      "concepts": ["live dictation", "speed writing", "note-taking strategies", "transcription under pressure"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=teeline-dictation-60wpm",
+        "https://www.nctj.com/teeline-practice-material"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Speed Building",
+      "title": "How do expert shorthand writers reach 120+ wpm?",
+      "concepts": ["progressive practice", "muscle memory", "anticipation", "chunking"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://stenospeed.com/speed-building-program",
+        "https://www.youtube.com/watch?v=shorthand-speed-building"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Speed Building",
+      "title": "Which of the three systems fits your goals best?",
+      "concepts": ["comparative writing", "system mastery check", "speed benchmarks"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.reddit.com/r/shorthand/wiki/speed-tests"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Speed Building",
+      "title": "What's the optimal practice schedule for doubling your speed?",
+      "concepts": ["deliberate practice", "speed plateaus", "practice schedules", "feedback loops"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://stenospeed.com/practice-methodology",
+        "https://shorthand.boards.net/thread/practice-schedules"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Speed Building",
+      "title": "Why does reading shorthand make you faster at writing it?",
+      "concepts": ["reading practice", "pattern recognition", "fluency development", "two-way learning"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://greggshorthand.github.io/reading-exercises",
+        "https://archive.org/search.php?query=shorthand%20dictation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Speed Building",
+      "title": "Can you create your own brief forms system?",
+      "concepts": ["personalization", "frequency analysis", "system adaptation", "mnemonics"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.reddit.com/r/shorthand/wiki/personal-briefs",
+        "https://shorthand.boards.net/thread/customization"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Speed Building",
+      "title": "Where will you take shorthand from here?",
+      "concepts": ["application planning", "continued learning", "community engagement", "long-term goals"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.reddit.com/r/shorthand",
+        "https://discord.gg/shorthand-community"
+      ],
+      "status": "pending"
+    }
+  ]
+}

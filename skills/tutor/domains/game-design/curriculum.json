@@ -1,0 +1,302 @@
+{
+  "topic": "Game Design — Mechanics, Dynamics, Aesthetics",
+  "slug": "game-design",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic programming or scripting experience",
+    "familiarity with playing diverse games (board, card, video)",
+    "critical thinking about systems"
+  ],
+  "exit_criteria": [
+    "analyze any game using the MDA framework",
+    "identify mechanics, dynamics, and aesthetics in existing games",
+    "design mechanics that produce specific dynamics and aesthetics",
+    "critique and iterate on game designs using MDA lens",
+    "understand the relationship between designer and player perspectives",
+    "apply the 8 types of fun to game design decisions",
+    "prototype and playtest simple game systems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do designers and players see games differently?",
+      "concepts": ["designer perspective", "player perspective", "MDA framework overview"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://users.cs.northwestern.edu/~hunicke/MDA.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What happens when you design backwards from emotion?",
+      "concepts": ["aesthetics-first design", "player experience", "design intention"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://gamedesignskills.com/game-design/mda/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How does Tetris create flow?",
+      "concepts": ["mechanics to dynamics to aesthetics", "simple systems", "emergence"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=5DTDZ5yXFeA"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Mechanics",
+      "title": "What are the atoms of game design?",
+      "concepts": ["rules", "actions", "resources", "constraints"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://pressbooks.usnh.edu/creatinggames/chapter/mechanics-dynamics-and-aesthetics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Mechanics",
+      "title": "Why does chess have exactly those pieces?",
+      "concepts": ["action space design", "asymmetry", "meaningful choices"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://ocw.mit.edu/courses/cms-608-game-design-fall-2010/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Mechanics",
+      "title": "What makes a mechanic feel broken?",
+      "concepts": ["dominant strategies", "degenerate play", "mechanical balance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://users.cs.northwestern.edu/~hunicke/MDA.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Mechanics",
+      "title": "Review: Mechanics in Your Favorite Game",
+      "concepts": ["mechanics analysis", "rule systems", "design patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://gamedesignskills.com/game-design/mda/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Mechanics",
+      "title": "How do resources create tension?",
+      "concepts": ["resource economies", "scarcity", "resource conversion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.routledge.com/The-Cores-of-Game-Design-Mechanics-Economics-Narrative-and-Aesthetics/Serpa/p/book/9781032397542"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Mechanics",
+      "title": "Why does randomness feel different in poker vs. Mario Kart?",
+      "concepts": ["input randomness", "output randomness", "controlled chaos"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://ocw.mit.edu/courses/cms-608-game-design-fall-2010/video_galleries/audio-lectures/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Mechanics",
+      "title": "Design a simple combat mechanic",
+      "concepts": ["prototyping mechanics", "paper prototypes", "iteration"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://pressbooks.usnh.edu/creatinggames/chapter/mechanics-dynamics-and-aesthetics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Dynamics",
+      "title": "What makes simple rules create complex behavior?",
+      "concepts": ["emergence", "system behavior", "runtime dynamics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://users.cs.northwestern.edu/~hunicke/MDA.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Dynamics",
+      "title": "Why do players 'break' games you thought were balanced?",
+      "concepts": ["player agency", "unintended strategies", "metagame"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://ocw.mit.edu/courses/cms-611j-creating-video-games-fall-2014/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Dynamics",
+      "title": "How does Monopoly teach you to hate it?",
+      "concepts": ["positive feedback loops", "negative feedback loops", "runaway dynamics"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://gamedesignskills.com/game-design/mda/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Dynamics",
+      "title": "Review: Identifying Dynamics",
+      "concepts": ["dynamics vs mechanics", "emergent patterns", "player stories"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://pressbooks.usnh.edu/creatinggames/chapter/mechanics-dynamics-and-aesthetics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Dynamics",
+      "title": "What creates meaningful player choices?",
+      "concepts": ["decision-making", "risk vs reward", "information asymmetry"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/cms-608-game-design-fall-2010/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Dynamics",
+      "title": "Why does Dark Souls feel fair when you die?",
+      "concepts": ["difficulty curves", "mastery", "player perception"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=5DTDZ5yXFeA"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Dynamics",
+      "title": "Map the dynamics of Rock-Paper-Scissors",
+      "concepts": ["system mapping", "dynamic analysis", "interaction patterns"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://users.cs.northwestern.edu/~hunicke/MDA.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Aesthetics",
+      "title": "What emotions do games create?",
+      "concepts": ["aesthetic goals", "player experience", "8 types of fun"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://users.cs.northwestern.edu/~hunicke/MDA.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Aesthetics",
+      "title": "Why is Candy Crush satisfying?",
+      "concepts": ["sensation", "submission", "juice"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://gamedesignskills.com/game-design/mda/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Aesthetics",
+      "title": "How do Dungeons & Dragons and Minecraft both create 'expression'?",
+      "concepts": ["expression", "player creativity", "sandbox design"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://ocw.mit.edu/courses/cms-611j-creating-video-games-fall-2014/resources/lecture-14-aesthetics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Aesthetics",
+      "title": "Review: The 8 Types of Fun",
+      "concepts": ["sensation", "fantasy", "narrative", "challenge", "fellowship", "discovery", "expression", "submission"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://users.cs.northwestern.edu/~hunicke/MDA.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Aesthetics",
+      "title": "Why does Journey make you cry?",
+      "concepts": ["fantasy", "narrative", "emotional design"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://ocw.mit.edu/courses/cms-611j-creating-video-games-fall-2014/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Aesthetics",
+      "title": "What makes cooperative games feel different from competitive ones?",
+      "concepts": ["fellowship", "social dynamics", "cooperation vs competition"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://pressbooks.usnh.edu/creatinggames/chapter/mechanics-dynamics-and-aesthetics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Aesthetics",
+      "title": "Can you design mechanics that produce 'discovery'?",
+      "concepts": ["discovery", "exploration", "revelation mechanics"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://gamedesignskills.com/game-design/mda/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration & Practice",
+      "title": "How do you reverse-engineer a game's design intent?",
+      "concepts": ["MDA analysis", "critical play", "design archaeology"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://users.cs.northwestern.edu/~hunicke/MDA.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration & Practice",
+      "title": "Why do some mechanics undermine their own aesthetics?",
+      "concepts": ["ludonarrative dissonance", "coherent design", "MDA alignment"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": ["https://ocw.mit.edu/courses/cms-611j-creating-video-games-fall-2014/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration & Practice",
+      "title": "Playtest and iterate on your game prototype",
+      "concepts": ["playtesting", "iteration", "feedback loops", "design refinement"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://pressbooks.usnh.edu/creatinggames/chapter/mechanics-dynamics-and-aesthetics/", "https://ocw.mit.edu/courses/cms-611j-creating-video-games-fall-2014/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Integration & Practice",
+      "title": "Review: Your MDA Journey",
+      "concepts": ["MDA mastery", "design thinking", "analytical frameworks"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://gamedesignskills.com/game-design/mda/"],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "topic": "Tilings and tessellations — Penrose, Wang, and aperiodic order",
+  "slug": "tilings-and-tessellations",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic geometry (polygons, angles)",
+    "set theory and basic proofs",
+    "symmetry and transformations",
+    "linear algebra basics"
+  ],
+  "exit_criteria": [
+    "distinguish between periodic and aperiodic tilings",
+    "construct Penrose tilings using matching rules",
+    "explain the Wang tile domino problem and its undecidability",
+    "analyze substitution systems and inflation rules",
+    "connect aperiodic tilings to quasicrystals",
+    "prove basic properties of tiling systems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Periodic Tilings",
+      "title": "Why do bathroom tiles repeat forever?",
+      "concepts": ["periodic tiling", "translation symmetry", "fundamental domain"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Tessellation",
+        "https://mathworld.wolfram.com/Tessellation.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Periodic Tilings",
+      "title": "How many ways can you tile with regular polygons?",
+      "concepts": ["regular tiling", "vertex configuration", "angle sum constraint"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Euclidean_tilings_by_convex_regular_polygons",
+        "https://demonstrations.wolfram.com/RegularAndSemiregularTessellations/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Periodic Tilings",
+      "title": "What are the 17 wallpaper patterns?",
+      "concepts": ["wallpaper group", "crystallographic restriction", "symmetry classification"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Wallpaper_group",
+        "https://www.youtube.com/watch?v=o4Z4PfhT-R4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Periodic Tilings",
+      "title": "Can you create your own Escher-style tessellation?",
+      "concepts": ["isohedral tiling", "motif deformation", "artistic tessellation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.tessellations.org/",
+        "https://demonstrations.wolfram.com/EscherLikeTessellations/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Periodic Tilings",
+      "title": "Why can't you have 5-fold rotational symmetry in crystals?",
+      "concepts": ["crystallographic restriction theorem", "rotation orders", "lattice constraints"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Crystallographic_restriction_theorem",
+        "https://www.youtube.com/watch?v=48sCx-wBs34"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Introduction to Aperiodic Tilings",
+      "title": "What does it mean for a tiling to never repeat?",
+      "concepts": ["aperiodic tiling", "non-periodicity", "local vs global properties"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Aperiodic_tiling",
+        "https://tilings.math.uni-bielefeld.de/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Introduction to Aperiodic Tilings",
+      "title": "Can a single tile force aperiodicity?",
+      "concepts": ["aperiodic prototile", "einstein problem", "monotile"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Einstein_problem",
+        "https://arxiv.org/abs/2303.10798"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Introduction to Aperiodic Tilings",
+      "title": "How do substitution rules build infinite tilings?",
+      "concepts": ["substitution tiling", "inflation rule", "self-similarity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://tilings.math.uni-bielefeld.de/substitution/",
+        "https://demonstrations.wolfram.com/SubstitutionTilings/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Introduction to Aperiodic Tilings",
+      "title": "What patterns appear in the Fibonacci word?",
+      "concepts": ["Fibonacci substitution", "quasiperiodicity", "letter frequency"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Fibonacci_word",
+        "https://www.youtube.com/watch?v=kIq5CZlg8Rg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Introduction to Aperiodic Tilings",
+      "title": "How do you measure order without periodicity?",
+      "concepts": ["finite local complexity", "repetitivity", "pattern frequency"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/1501.01313",
+        "https://www.math.uni-bielefeld.de/baake/ao.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Introduction to Aperiodic Tilings",
+      "title": "What have we learned about periodic vs. aperiodic tilings?",
+      "concepts": ["periodic tiling review", "aperiodic properties review", "substitution review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.quantamagazine.org/hobbyist-finds-maths-elusive-einstein-tile-20230404/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Penrose Tilings",
+      "title": "Who discovered aperiodic tilings and why?",
+      "concepts": ["Roger Penrose", "historical context", "mathematical aesthetics"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Penrose_tiling",
+        "https://www.youtube.com/watch?v=48sCx-wBs34"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Penrose Tilings",
+      "title": "How do kites and darts tile the plane aperiodically?",
+      "concepts": ["kite-and-dart tiles", "matching rules", "deflation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Penrose_tiling#Kite_and_dart_tiling_(P2)",
+        "https://demonstrations.wolfram.com/PenroseTiling/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Penrose Tilings",
+      "title": "Can you build a patch of Penrose rhombs?",
+      "concepts": ["thin and thick rhombs", "matching rule construction", "vertex types"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Penrose_tiling#Rhombus_tiling_(P3)",
+        "https://www.mathpuzzle.com/Penrose.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Penrose Tilings",
+      "title": "Why does 5-fold symmetry appear in Penrose tilings?",
+      "concepts": ["five-fold rotational symmetry", "golden ratio", "quasisymmetry"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plus.maths.org/content/penrose-tiles-0",
+        "https://www.youtube.com/watch?v=48sCx-wBs34"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Penrose Tilings",
+      "title": "How does deflation prove aperiodicity?",
+      "concepts": ["deflation operation", "hierarchical structure", "aperiodicity proof"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/1605.03589",
+        "https://tilings.math.uni-bielefeld.de/substitution/penrose-rhomb/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Penrose Tilings",
+      "title": "What forbidden patterns emerge in Penrose tilings?",
+      "concepts": ["local matching rules", "forbidden subpatterns", "forced hierarchy"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ams.org/publicoutreach/feature-column/fcarc-penrose",
+        "https://demonstrations.wolfram.com/PenroseTiling/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Penrose Tilings",
+      "title": "How do Penrose tilings combine matching rules and substitution?",
+      "concepts": ["Penrose construction review", "matching rules review", "symmetry review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.quantamagazine.org/the-quest-to-decode-the-mandelbrot-set-maths-famed-fractal-20240126/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Wang Tiles",
+      "title": "What is the domino problem?",
+      "concepts": ["Wang tiles", "edge-matching", "domino problem"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Wang_tile",
+        "https://demonstrations.wolfram.com/WangTiles/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Wang Tiles",
+      "title": "Why is the domino problem undecidable?",
+      "concepts": ["undecidability", "Berger's theorem", "Turing machines"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Domino_problem",
+        "https://arxiv.org/abs/1404.0929"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Wang Tiles",
+      "title": "How did Robinson construct aperiodic Wang tiles?",
+      "concepts": ["Robinson tiles", "hierarchical tiling", "aperiodic Wang set"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Wang_tile#Aperiodic_sets_of_Wang_tiles",
+        "https://demonstrations.wolfram.com/RobinsonTiling/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Wang Tiles",
+      "title": "Can you design a simple Wang tile set?",
+      "concepts": ["tile design", "edge coloring", "tiling constraints"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cr31.co.uk/stagecast/wang/tiles_e.html",
+        "https://demonstrations.wolfram.com/WangTiles/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Wang Tiles",
+      "title": "How are Wang tiles used in procedural generation?",
+      "concepts": ["procedural content generation", "texture synthesis", "computational applications"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Wang_tile#Applications",
+        "https://www.youtube.com/watch?v=MhfECxSUcJE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Wang Tiles",
+      "title": "How do Wang tiles connect geometry to computation?",
+      "concepts": ["Wang tiles review", "domino problem review", "undecidability review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Wang_tile",
+        "https://en.wikipedia.org/wiki/Domino_problem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications and Connections",
+      "title": "How did quasicrystals revolutionize materials science?",
+      "concepts": ["quasicrystals", "Shechtman's discovery", "physical realizations"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Quasicrystal",
+        "https://www.youtube.com/watch?v=aj1RfaCnrAY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications and Connections",
+      "title": "What role does linear algebra play in substitution tilings?",
+      "concepts": ["substitution matrix", "eigenvalues", "scaling factors"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/1501.01313",
+        "https://www.math.uni-bielefeld.de/baake/ao.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications and Connections",
+      "title": "Where do aperiodic tilings appear in nature and art?",
+      "concepts": ["natural patterns", "Islamic art", "architectural design"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.islamicart.com/main/geometry/tilings.html",
+        "https://www.youtube.com/watch?v=dCSkXKvR19Y"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "topic": "Cognitive Psychology — Memory, Attention, Decision-Making",
+  "slug": "cognitive-psychology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "introduction to psychology",
+    "basic statistics",
+    "scientific method fundamentals"
+  ],
+  "exit_criteria": [
+    "explain and contrast major theories of attention (filter theory, capacity theory, executive control)",
+    "describe Baddeley's working memory model and its components",
+    "distinguish between encoding, storage, and retrieval processes in memory",
+    "apply Kahneman & Tversky's heuristics and biases framework to real-world decisions",
+    "design and interpret results from basic cognitive psychology experiments",
+    "evaluate claims about attention and memory using empirical evidence",
+    "explain the neural basis of cognitive processes at a systems level"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Cognitive Psychology",
+      "title": "Why did psychologists start treating the mind like a computer?",
+      "concepts": ["information processing", "cognitive revolution", "mental representations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-00sc-introduction-to-psychology-fall-2011/pages/introduction/",
+        "https://www.cmu.edu/dietrich/psychology/pdf/syllabi/85-211%20Kemp.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Cognitive Psychology",
+      "title": "How do we actually measure invisible mental processes?",
+      "concepts": ["reaction time", "experimental paradigms", "behavioral measures", "neuroimaging"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-13-the-human-brain-spring-2019/resources/lecture-4-cognitive-neuroscience-methods-i/",
+        "https://ocw.mit.edu/courses/res-9-008-brain-and-cognitive-sciences-computational-tutorials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Attention Systems",
+      "title": "Why can't you hear your friend at a noisy party, but you notice your name across the room?",
+      "concepts": ["selective attention", "cocktail party effect", "filter theory"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://psychology.unc.edu/files/2018/10/PSYC-230-Syllabus.pdf",
+        "https://ocw.metu.edu.tr/course/view.php?id=87"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Attention Systems",
+      "title": "What makes the Stroop task so impossibly hard?",
+      "concepts": ["automatic processing", "controlled processing", "interference"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.metu.edu.tr/course/view.php?id=87"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Attention Systems",
+      "title": "Can you really multitask, or is your brain just rapidly switching?",
+      "concepts": ["divided attention", "dual-task performance", "attentional resources"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cmu.edu/dietrich/psychology/pdf/syllabi/85-211%20Kemp.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Attention Systems",
+      "title": "Why do radiologists sometimes miss a gorilla in a lung scan?",
+      "concepts": ["inattentional blindness", "change blindness", "attentional capture"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://psychology.unc.edu/files/2018/10/PSYC-230-Syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Attention Systems",
+      "title": "What happens in your brain when you resist a distraction?",
+      "concepts": ["executive attention", "cognitive control", "anterior cingulate cortex"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-13-the-human-brain-spring-2019/video_galleries/lecture-videos/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Attention Systems",
+      "title": "Can you predict when attention will fail or succeed?",
+      "concepts": ["selective attention", "divided attention", "executive control"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.studocu.com/en-us/document/clemson-university/cognitive-psych/lecture-notes/lecture-notes-lecture-1-what-is-cognitive-psychology/183869/view"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Memory Systems",
+      "title": "Why can you remember a phone number for 30 seconds but not 30 minutes?",
+      "concepts": ["working memory", "short-term storage", "decay", "rehearsal"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.amazon.com/Essentials-Memory-Cognitive-Psychology-1368-4558/dp/0863775454",
+        "https://ocw.mit.edu/courses/9-00sc-introduction-to-psychology-fall-2011/resources/lecture-10-memory-i/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Memory Systems",
+      "title": "How does your brain juggle multiple pieces of information at once?",
+      "concepts": ["Baddeley's working memory model", "central executive", "phonological loop", "visuospatial sketchpad"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.amazon.com/Working-Memory-Oxford-Psychology-Baddeley/dp/0198521332",
+        "https://www.nschwartz.yourweb.csuchico.edu/1.%20Working%20Memory%20-%20Theories%20and%20Models%20and%20Controversies.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Memory Systems",
+      "title": "Why do you remember where you were on 9/11 but not last Tuesday?",
+      "concepts": ["encoding", "levels of processing", "elaborative rehearsal", "flashbulb memories"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.amazon.com/Memory-Alan-Baddeley/dp/1138326097",
+        "https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId=42045"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Memory Systems",
+      "title": "What's the difference between knowing Paris is in France and remembering your trip to Paris?",
+      "concepts": ["episodic memory", "semantic memory", "declarative memory"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.studocu.com/en-us/document/the-university-of-texas-at-san-antonio/cognitive-psychology/memory-lecture-notes/39695352"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Memory Systems",
+      "title": "Why do memories change every time you recall them?",
+      "concepts": ["retrieval", "reconstruction", "reconsolidation", "memory updating"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.amazon.com/Memory-Alan-Baddeley/dp/1138326097"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Memory Systems",
+      "title": "Why can't you remember being a baby?",
+      "concepts": ["infantile amnesia", "consolidation", "hippocampus development"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-00sc-introduction-to-psychology-fall-2011/resources/lecture-10-memory-i/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Memory Systems",
+      "title": "Is forgetting a bug or a feature of memory?",
+      "concepts": ["forgetting", "interference theory", "retrieval failure", "adaptive forgetting"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.amazon.com/Essentials-Classic-Psychology-Routledge-Editions/dp/1848721412"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Memory Systems",
+      "title": "How do working memory, encoding, retrieval, and forgetting all fit together?",
+      "concepts": ["working memory", "encoding", "retrieval", "forgetting"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.studocu.com/en-us/document/east-carolina-university/cognitive-psychology/cognitive-psychology-lecture-notes/23466680"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Decision-Making and Judgment",
+      "title": "Why do doctors make different diagnoses when the same statistics are framed differently?",
+      "concepts": ["framing effects", "prospect theory", "loss aversion"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId=42045",
+        "https://vivaopen.oercommons.org/courseware/lesson/1033/overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Decision-Making and Judgment",
+      "title": "How do mental shortcuts lead us astray?",
+      "concepts": ["heuristics", "availability heuristic", "representativeness heuristic", "anchoring"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId=42045"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Decision-Making and Judgment",
+      "title": "Why do people fear plane crashes more than car accidents?",
+      "concepts": ["probability judgment", "risk perception", "availability bias"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://vivaopen.oercommons.org/courseware/lesson/1033/overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Decision-Making and Judgment",
+      "title": "Are you using your fast brain or your slow brain?",
+      "concepts": ["dual-process theory", "System 1", "System 2", "cognitive effort"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId=42045"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Decision-Making and Judgment",
+      "title": "When is rational choice theory completely wrong about human behavior?",
+      "concepts": ["bounded rationality", "satisficing", "ecological rationality"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://vivaopen.oercommons.org/courseware/lesson/1033/overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Decision-Making and Judgment",
+      "title": "Why do experts sometimes make worse predictions than simple algorithms?",
+      "concepts": ["overconfidence", "expert judgment", "statistical prediction"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId=42045"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Decision-Making and Judgment",
+      "title": "When do mental shortcuts help vs. harm your decisions?",
+      "concepts": ["heuristics", "framing", "System 1 vs System 2"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.studocu.com/en-us/document/clemson-university/cognitive-psych/lecture-notes/lecture-notes-lecture-1-what-is-cognitive-psychology/183869/view"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration and Applications",
+      "title": "How do attention failures cause memory failures?",
+      "concepts": ["encoding failure", "attentional resources", "working memory capacity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cmu.edu/dietrich/psychology/pdf/syllabi/85-211%20Kemp.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration and Applications",
+      "title": "Why does stress make you make worse decisions?",
+      "concepts": ["cognitive load", "decision fatigue", "emotional regulation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://vivaopen.oercommons.org/courseware/lesson/1033/overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration and Applications",
+      "title": "How can you design better interfaces using cognitive psychology?",
+      "concepts": ["cognitive ergonomics", "user attention", "memory limitations", "decision architecture"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://psychology.unc.edu/files/2018/10/PSYC-230-Syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration and Applications",
+      "title": "What do attention, memory, and decision-making reveal about the computational limits of the mind?",
+      "concepts": ["information processing limits", "cognitive architecture", "computational models"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-66j-computational-cognitive-science-fall-2004/",
+        "https://ocw.mit.edu/courses/res-9-008-brain-and-cognitive-sciences-computational-tutorials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Integration and Applications",
+      "title": "Can you design an experiment that reveals how the mind really works?",
+      "concepts": ["experimental design", "hypothesis generation", "measurement", "interpretation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cmu.edu/dietrich/psychology/pdf/syllabi/85-211%20Kemp.pdf",
+        "https://psychology.unc.edu/files/2018/10/PSYC-230-Syllabus.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

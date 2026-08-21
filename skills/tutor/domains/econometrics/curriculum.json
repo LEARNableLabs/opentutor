@@ -1,0 +1,356 @@
+{
+  "topic": "Econometrics",
+  "slug": "econometrics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "introductory statistics",
+    "probability theory",
+    "linear algebra basics",
+    "calculus (single-variable)"
+  ],
+  "exit_criteria": [
+    "estimate and interpret linear regression models",
+    "diagnose and correct violations of classical assumptions",
+    "understand the difference between correlation and causation",
+    "apply instrumental variables and panel data methods",
+    "work confidently with real economic data in R, Python, or Stata",
+    "read and critique empirical economics papers"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do economists need their own statistical methods?",
+      "concepts": ["observational data", "causal inference", "econometric goals"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-32-econometrics-spring-2007/pages/lecture-notes/",
+        "https://www.youtube.com/watch?v=M_5SLG7sUa0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes an estimator 'good'?",
+      "concepts": ["unbiasedness", "consistency", "efficiency"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=tFRXsngz4UQ",
+        "https://stats.stackexchange.com/questions/31036/what-is-the-difference-between-finite-sample-and-asymptotic-properties"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do we test economic theories with messy data?",
+      "concepts": ["hypothesis testing", "p-values", "statistical significance"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample",
+        "https://www.econometrics-with-r.org/2-htaciimr.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can we ever prove causation from observational data?",
+      "concepts": ["correlation vs causation", "confounding", "randomization"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=HUti6vGctQM",
+        "https://www.coursera.org/lecture/crash-course-in-causality/introduction-to-confounding-zID6L"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Simple Regression",
+      "title": "Why is OLS the 'best' line through a scatter plot?",
+      "concepts": ["ordinary least squares", "minimization", "fitted values"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://setosa.io/ev/ordinary-least-squares-regression/",
+        "https://www.youtube.com/watch?v=PaFPbb66DxQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Simple Regression",
+      "title": "What are the building blocks of econometric inference?",
+      "concepts": ["sampling distributions", "estimators", "inference"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.econometrics-with-r.org/2-htaciimr.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Simple Regression",
+      "title": "What does a regression coefficient actually tell us?",
+      "concepts": ["interpretation", "marginal effects", "ceteris paribus"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=WWqE7YHR4Jc",
+        "https://stats.stackexchange.com/questions/18058/how-would-you-explain-the-difference-between-correlation-and-linear-regression"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Simple Regression",
+      "title": "How do we know if our result is statistically 'real'?",
+      "concepts": ["standard errors", "t-statistics", "confidence intervals"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.econometrics-with-r.org/5-htonfie.html",
+        "https://www.youtube.com/watch?v=0Rnq1NpHdmw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Simple Regression",
+      "title": "What happens when the classical assumptions break down?",
+      "concepts": ["Gauss-Markov theorem", "assumption violations", "robustness"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=VQKHTcVMXeQ",
+        "https://cran.r-project.org/web/packages/lmtest/vignettes/lmtest-intro.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Multiple Regression",
+      "title": "Why can't we just run many simple regressions?",
+      "concepts": ["multiple regression", "partial effects", "controlling for variables"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.econometrics-with-r.org/6-rmwmr.html",
+        "https://www.youtube.com/watch?v=hokALdIst8k"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Multiple Regression",
+      "title": "What is omitted variable bias really doing to our estimates?",
+      "concepts": ["omitted variable bias", "endogeneity", "bias formula"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=g0m6YEAAkO8",
+        "https://www.econometrics-with-r.org/6-2-omitted-variable-bias.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Multiple Regression",
+      "title": "How do we build and interpret regression models?",
+      "concepts": ["OLS", "coefficients", "standard errors"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.econometrics-with-r.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Multiple Regression",
+      "title": "How do we interpret interactions and polynomial terms?",
+      "concepts": ["interaction effects", "quadratic terms", "marginal effects"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=UpP-_Givhuq",
+        "https://stats.stackexchange.com/questions/11009/interpretation-of-interaction-term"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Multiple Regression",
+      "title": "When should we transform variables with logs?",
+      "concepts": ["log transformations", "elasticities", "semi-elasticities"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Rq3tGWBJL6Y",
+        "https://kenbenoit.net/assets/courses/ME104/logmodels2.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Multiple Regression",
+      "title": "Can regression detect discrimination in wages or hiring?",
+      "concepts": ["wage gaps", "residual approach", "Oaxaca decomposition"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=ZJaRZwlPQzk",
+        "https://www.nber.org/papers/w5024"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Diagnostics & Specification",
+      "title": "How do we choose which variables to include in a model?",
+      "concepts": ["model selection", "adjusted R-squared", "information criteria"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=a4NQp_W-wJY",
+        "https://www.econometrics-with-r.org/7-6-analysis-of-the-test-score-data-set.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Diagnostics & Specification",
+      "title": "What does heteroskedasticity actually break?",
+      "concepts": ["heteroskedasticity", "robust standard errors", "weighted least squares"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=GMJZuIna4wI",
+        "https://cran.r-project.org/web/packages/sandwich/vignettes/sandwich.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Diagnostics & Specification",
+      "title": "How do we know if our model is trustworthy?",
+      "concepts": ["residual analysis", "assumption testing", "specification"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.econometrics-with-r.org/5-3-asotoclrm.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Diagnostics & Specification",
+      "title": "Why do residual plots reveal model problems?",
+      "concepts": ["residual plots", "fitted vs residuals", "Q-Q plots"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.statmethods.net/stats/rdiagnostics.html",
+        "https://www.youtube.com/watch?v=eTZ4VUZHzxw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Diagnostics & Specification",
+      "title": "How do we detect and fix autocorrelation?",
+      "concepts": ["autocorrelation", "Durbin-Watson test", "Newey-West standard errors"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=tNKbkhR8bWE",
+        "https://www.econometrics-with-r.org/16-3-fixed-effects-regression.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Diagnostics & Specification",
+      "title": "What's wrong with stepwise and automated variable selection?",
+      "concepts": ["stepwise regression", "data mining", "p-hacking"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.stata.com/support/faqs/statistics/stepwise-regression-problems/",
+        "https://www.youtube.com/watch?v=QLrmWqkjzog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Methods",
+      "title": "When is correlation definitely not causation?",
+      "concepts": ["reverse causality", "simultaneity", "endogeneity sources"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=HUti6vGctQM",
+        "https://www.nber.org/system/files/working_papers/w14690/w14690.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Methods",
+      "title": "How do instrumental variables rescue causal inference?",
+      "concepts": ["instrumental variables", "two-stage least squares", "relevance and exogeneity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=sAjf4LW86hU",
+        "https://www.econometrics-with-r.org/12-ivr.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Methods",
+      "title": "What tools do we have for identifying causal effects?",
+      "concepts": ["causality", "identification", "IV", "panel methods"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://mixtape.scunning.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Methods",
+      "title": "What can panel data reveal that cross-sections can't?",
+      "concepts": ["panel data", "fixed effects", "difference-in-differences"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=iNE20hBOmWk",
+        "https://www.econometrics-with-r.org/16-2-regression-with-time-fixed-effects.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Methods",
+      "title": "How do we model binary outcomes like hiring or voting?",
+      "concepts": ["logit", "probit", "maximum likelihood"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=ARfXDSkQf1Y",
+        "https://www.econometrics-with-r.org/11-rtwabdv.html"
+      ],
+      "status": "pending"
+    }
+  ]
+}

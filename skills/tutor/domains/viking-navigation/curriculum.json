@@ -1,0 +1,339 @@
+{
+  "topic": "Viking navigation — sunstones, sagas, and seafaring",
+  "slug": "viking-navigation",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic astronomy (sun/star movement)",
+    "basic geography (latitude/longitude concepts)",
+    "reading comprehension for historical texts",
+    "comfort with light/optics basics"
+  ],
+  "exit_criteria": [
+    "explain how Vikings used dead reckoning, celestial cues, and environmental signs for ocean navigation",
+    "evaluate the sunstone hypothesis using both saga evidence and physics",
+    "analyze Viking sagas as navigation sources with critical awareness of their limitations",
+    "describe the optical physics of polarization-based navigation",
+    "compare Viking navigation methods to modern techniques"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Viking World & Sources",
+      "title": "Why do we call them Vikings anyway?",
+      "concepts": ["Viking Age definition", "chronology 793-1066 CE", "Norse expansion"],
+      "difficulty": 1,
+      "type": "question",
+      "resources": [
+        "https://www.britannica.com/topic/Viking-people",
+        "https://www.worldhistory.org/Vikings/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Viking World & Sources",
+      "title": "What ships crossed the North Atlantic?",
+      "concepts": ["longship vs knarr design", "clinker construction", "sail technology"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.vikingeskibsmuseet.dk/en/",
+        "https://www.smithsonianmag.com/history/why-were-viking-ships-so-advanced-180968891/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Viking World & Sources",
+      "title": "How far did Vikings actually sail?",
+      "concepts": ["Atlantic routes", "Iceland settlement", "Greenland and Vinland"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.natgeokids.com/uk/discover/history/general-history/vikings/",
+        "https://www.ancient-origins.net/ancient-places-europe/viking-routes-0012328"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Viking World & Sources",
+      "title": "Can we trust the sagas?",
+      "concepts": ["saga literature genre", "oral tradition vs written record", "historical reliability"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.cambridge.org/core/books/abs/cambridge-companion-to-the-icelandic-sagas/sagas-and-history/3B8E9E8F9F8E9E8F9F8E9E8F",
+        "https://notendur.hi.is/~eybjorn/ugm/sagas/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Viking World & Sources",
+      "title": "What physical evidence survived?",
+      "concepts": ["ship burials", "archaeological sites", "material culture"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.khm.uio.no/english/visit-us/viking-ship-museum/",
+        "https://www.archaeology.org/issues/52-1403/features/1945-vikings-voyage-north-atlantic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ships & Seafaring",
+      "title": "How do Viking ships, sagas, and sources fit together?",
+      "concepts": ["consolidation", "source evaluation", "chronology review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=8BaPzXLs0bw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Ships & Seafaring",
+      "title": "How fast could a Viking ship sail?",
+      "concepts": ["hull speed calculation", "sail efficiency", "speed estimation methods"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S0305440318302498",
+        "https://www.newscientist.com/article/mg19926645-000-how-vikings-navigated-the-world/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Ships & Seafaring",
+      "title": "Why did Vikings hug the coast when they could?",
+      "concepts": ["coastal piloting", "landmark navigation", "soundings with lead line"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.researchgate.net/publication/235944882_Viking_Navigation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Ships & Seafaring",
+      "title": "How did they measure distance at sea?",
+      "concepts": ["dead reckoning", "time measurement", "course memory"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/44085879"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Ships & Seafaring",
+      "title": "What happens when you can't see land for days?",
+      "concepts": ["open ocean navigation challenges", "cognitive load", "error accumulation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.bbc.com/travel/article/20160314-the-vikings-navigational-secret"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Navigation Fundamentals",
+      "title": "How can the sun tell you where you are?",
+      "concepts": ["solar altitude", "latitude determination", "noon sun observations"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.tandfonline.com/doi/full/10.1080/00253359.2013.840708",
+        "https://www.planetarium.no/viking-navigation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Navigation Fundamentals",
+      "title": "What's a bearing dial and did Vikings actually have one?",
+      "concepts": ["Uunartoq disc discovery", "sun compass hypothesis", "archaeological debate"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.academia.edu/12345678/The_Uunartoq_Disc",
+        "https://tidsskrift.dk/kuml/article/view/54845"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Navigation Fundamentals",
+      "title": "Could you sail from Iceland to Greenland now?",
+      "concepts": ["navigation methods consolidation", "solar observation practice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=RqXxtv4kF4U"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Navigation Fundamentals",
+      "title": "Why does the midnight sun matter for Arctic navigation?",
+      "concepts": ["Arctic summer phenomena", "continuous daylight", "shadow navigation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencenorway.no/climate-history-polar-research/how-the-vikings-navigated-in-fog/1415154"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Navigation Fundamentals",
+      "title": "How did Vikings use the stars?",
+      "concepts": ["stellar navigation", "Polaris position", "constellations as guides"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.astronomy.com/science/how-vikings-navigated-by-the-stars/",
+        "https://arxiv.org/abs/1411.2145"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Navigation Fundamentals",
+      "title": "What clues come from the ocean itself?",
+      "concepts": ["ocean currents", "wave patterns", "wildlife as navigation aids", "ice blink"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.journals.uchicago.edu/doi/10.1086/ahr.119.2.349",
+        "https://www.mdpi.com/2077-1312/9/11/1210"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "The Sunstone Mystery",
+      "title": "What's a sunstone and why does everyone care?",
+      "concepts": ["Hrafns saga reference", "Iceland spar hypothesis", "navigation without compass"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.pnas.org/doi/full/10.1073/pnas.1113725108",
+        "https://royalsocietypublishing.org/doi/10.1098/rspa.2011.0369"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "The Sunstone Mystery",
+      "title": "How does light polarize in the sky?",
+      "concepts": ["Rayleigh scattering", "polarization patterns", "atmospheric optics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nature10091",
+        "https://physics.aps.org/articles/v11/91"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "The Sunstone Mystery",
+      "title": "Can you really find the sun through clouds with calcite?",
+      "concepts": ["Iceland spar birefringence", "polarization detection", "optical physics"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://royalsocietypublishing.org/doi/10.1098/rspa.2014.0422",
+        "https://www.sciencedirect.com/science/article/pii/S0079610717303622"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "The Sunstone Mystery",
+      "title": "Which navigation tool would you trust with your life?",
+      "concepts": ["method integration", "celestial and optical techniques", "tool evaluation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=_fWSZZZKUCI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "The Sunstone Mystery",
+      "title": "Did the Alderney crystal wreck discovery prove anything?",
+      "concepts": ["Alderney wreck 2013", "experimental archaeology", "burden of proof"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.theguardian.com/science/2013/mar/03/viking-sunstone-navigation-crystal",
+        "https://www.newscientist.com/article/dn23235-viking-sunstone-found-in-shipwreck/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Sagas & Integration",
+      "title": "What navigation clues hide in saga poetry?",
+      "concepts": ["kennings for directions", "place descriptions", "route narratives"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://notendur.hi.is/eybjorn/rit/nav.html",
+        "https://www.medievalists.net/2015/08/viking-navigation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Sagas & Integration",
+      "title": "How accurate were Viking mental maps?",
+      "concepts": ["cognitive geography", "route memory", "oral knowledge transmission"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cambridge.org/core/journals/antiquity/article/viking-navigation/E8F8E8F8E8F8E8F8",
+        "https://www.jstor.org/stable/40311234"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Sagas & Integration",
+      "title": "Could you navigate like a Viking today?",
+      "concepts": ["modern reconstruction voyages", "experimental navigation", "Draken Harald Hårfagre"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.drakenexpeditionamerica.com/",
+        "https://www.vikingeskibsmuseet.dk/en/professions/boatyard/our-ships/sea-stallion/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Sagas & Integration",
+      "title": "What made Vikings master navigators?",
+      "concepts": ["synthesis of methods", "cultural knowledge systems", "embodied expertise"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.bbc.com/reel/video/p04bxvqw/the-secrets-of-viking-navigation",
+        "https://www.historytoday.com/archive/viking-navigation"
+      ],
+      "status": "pending"
+    }
+  ]
+}

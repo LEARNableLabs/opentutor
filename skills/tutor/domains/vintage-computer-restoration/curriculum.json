@@ -1,0 +1,304 @@
+{
+  "topic": "Vintage Computer Restoration",
+  "slug": "vintage-computer-restoration",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic electronics (voltage, current, resistance)",
+    "soldering (through-hole components)",
+    "multimeter usage",
+    "computer literacy",
+    "ESD safety awareness"
+  ],
+  "exit_criteria": [
+    "assess and safely power-on unknown vintage systems",
+    "diagnose and repair common power supply failures",
+    "perform board-level repairs (trace repair, socket replacement)",
+    "restore displays and peripherals",
+    "image and preserve software media",
+    "apply platform-specific troubleshooting knowledge",
+    "document and contribute to preservation community"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Assessment and Safe Start",
+      "title": "Why does this computer smell like a fire hazard?",
+      "concepts": ["visual inspection", "common failure indicators", "safety assessment"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=OB1xOWUalQQ"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Assessment and Safe Start",
+      "title": "What's the first rule of powering on a 40-year-old computer?",
+      "concepts": ["power-on safety", "isolation transformer", "current-limited testing", "variac usage"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.eevblog.com/forum/beginners/current-limited-power-supply-for-vintage-electronics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Assessment and Safe Start",
+      "title": "How do you read the story a dirty motherboard tells?",
+      "concepts": ["corrosion patterns", "battery leak damage", "component dating", "board revisions"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://console5.com/wiki/Identifying_Capacitor_Damage"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Assessment and Safe Start",
+      "title": "Where does your restoration project actually stand?",
+      "concepts": ["triage assessment", "scope definition", "parts availability", "realistic timelines"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.vcfed.org/forum/forum/genres/vintage-computer-restoration"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Power Supply Fundamentals",
+      "title": "Why do vintage power supplies fail so predictably?",
+      "concepts": ["electrolytic capacitor aging", "ESR (equivalent series resistance)", "capacitor plague", "failure modes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=5pIzdECPMo8", "https://console5.com/wiki/Capacitor"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Power Supply Fundamentals",
+      "title": "How do you safely recap a switching power supply?",
+      "concepts": ["recapping procedure", "capacitor polarity", "ESR testing", "bleeder resistors"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=0OTZPdD1ZVU", "https://www.mouser.com/pdfDocs/capacitor-selection.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Power Supply Fundamentals",
+      "title": "What voltage should you actually see at the edge connector?",
+      "concepts": ["load vs no-load testing", "voltage regulation", "ripple measurement", "rail diagnostics"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=Il-STRn7hEQ"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Power Supply Fundamentals",
+      "title": "Can you bring this Commodore 64 power brick back from the dead?",
+      "concepts": ["linear regulator failure", "platform-specific PSU quirks", "modern replacements", "7805 regulator"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=6swCyqY0aWw", "https://console5.com/wiki/Commodore_64"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Power Supply Fundamentals",
+      "title": "Review: From inspection to clean power",
+      "concepts": ["safety protocols", "assessment workflow", "power supply troubleshooting", "systematic diagnosis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://console5.com/wiki/Capacitor", "https://www.vcfed.org/forum/forum/genres/vintage-computer-restoration"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Board-Level Diagnosis and Repair",
+      "title": "Why won't this board boot even with good power?",
+      "concepts": ["POST process", "beep codes", "IC seating", "clock signal verification"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.minuszerodegrees.net/5150/post/5150_post.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Board-Level Diagnosis and Repair",
+      "title": "How do you chase a broken trace without the schematics?",
+      "concepts": ["continuity testing", "visual trace following", "bodge wires", "wire wrapping"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=M1WTgFqBjyA", "https://www.youtube.com/watch?v=L-63xJPC6bI"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Board-Level Diagnosis and Repair",
+      "title": "When should you replace sockets instead of chips?",
+      "concepts": ["IC socket corrosion", "socket replacement", "desoldering technique", "chip insertion force"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=Z38ws6wwkXI"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Board-Level Diagnosis and Repair",
+      "title": "What if the BIOS ROM is corrupted?",
+      "concepts": ["ROM reading", "EPROM burning", "checksum verification", "programmer hardware"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://www.minuszerodegrees.net/rom/rom.htm", "https://archive.org/details/bitsavers_dataBooksa_26667987"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Board-Level Diagnosis and Repair",
+      "title": "How do you clean battery corrosion without destroying the board?",
+      "concepts": ["alkaline corrosion chemistry", "neutralization", "vinegar vs isopropyl", "protective coating"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=4ao7CB_cyLE", "https://www.ifixit.com/Wiki/Battery_Leakage_Cleaning"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Board-Level Diagnosis and Repair",
+      "title": "What story does a dead chip tell about the system?",
+      "concepts": ["IC failure modes", "cascade failures", "preventive replacement", "socket vs soldered"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=Z38ws6wwkXI", "https://www.vcfed.org/forum/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Board-Level Diagnosis and Repair",
+      "title": "Review: Power, boards, and the path to a working system",
+      "concepts": ["integrated troubleshooting", "systematic diagnosis", "repair documentation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.vcfed.org/forum/forum/genres/vintage-computer-restoration"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Display and Video",
+      "title": "Why does working with CRTs require extra respect?",
+      "concepts": ["high voltage safety", "anode discharge", "implosion risk", "neck board hazards"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=FXgW2YLUrYs", "https://console5.com/wiki/CRT_Safety"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Display and Video",
+      "title": "How do you fix a rolling picture or missing colors?",
+      "concepts": ["composite video signals", "sync separation", "color burst", "video amplifier"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=l8l1Be3yOSM", "https://www.retrorgb.com/sync.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Display and Video",
+      "title": "Should you restore the original CRT or go LCD?",
+      "concepts": ["period-correct restoration", "LCD retrofitting", "upscaling options", "authenticity vs practicality"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.retrorgb.com/upscalers.html", "https://www.youtube.com/watch?v=RAi8AVj9GV8"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Storage and Peripherals",
+      "title": "Why won't this floppy drive read any disks?",
+      "concepts": ["read/write head alignment", "drive cleaning", "speed calibration", "belt replacement"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=EHwj3v4tktg", "https://www.kryoflux.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Storage and Peripherals",
+      "title": "How do you preserve data from dying magnetic media?",
+      "concepts": ["disk imaging", "flux transition reading", "KryoFlux and Greaseweazle", "file system recovery"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://github.com/keirf/Greaseweazle/wiki", "https://archive.org/details/software"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Storage and Peripherals",
+      "title": "What makes restoring mechanical keyboards so satisfying?",
+      "concepts": ["Alps vs Cherry switches", "keycap cleaning", "foam and foil repairs", "stabilizer restoration"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.youtube.com/watch?v=m1xF-CDmq5s", "https://deskthority.net/wiki/Alps_SKCM_series"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Storage and Peripherals",
+      "title": "Review: From video to input, completing the experience",
+      "concepts": ["end-to-end system testing", "peripheral integration", "user experience restoration"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.youtube.com/watch?v=kFREJ8OM-pI"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Platform-Specific Challenges",
+      "title": "Why is the Amiga's capacitor plague so notorious?",
+      "concepts": ["Amiga 500/600/1200 PSU", "surface-mount recapping", "Varta battery damage", "DRAM corrosion"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=0jZMRgIJ9Ks", "http://www.amiga.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Platform-Specific Challenges",
+      "title": "What makes early Macintosh restoration uniquely dangerous?",
+      "concepts": ["analog board isolation", "CRT safety protocols", "compact Mac disassembly", "PRAM battery"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=cH8GqJysOMg", "https://68kmla.org/bb/index.php?forums/compact-macs.76/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Platform-Specific Challenges",
+      "title": "How do you troubleshoot ISA card conflicts in vintage PCs?",
+      "concepts": ["IRQ and DMA assignment", "base address conflicts", "jumper configuration", "system resources"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.minuszerodegrees.net/pc_interrupt_resources.htm", "https://www.youtube.com/watch?v=1uw_nKGJz-g"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Preservation and Beyond",
+      "title": "How should restoration ethics guide your choices?",
+      "concepts": ["reversible modifications", "documentation standards", "original vs reproduction parts", "community contribution"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.vcfed.org/wp/", "https://archive.org/details/vintagecomputer"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Preservation and Beyond",
+      "title": "Where does your restoration journey go from here?",
+      "concepts": ["advanced diagnostics", "FPGA replacements", "custom solutions", "knowledge sharing"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.youtube.com/c/AdrianBlack", "https://www.youtube.com/c/NoelsRetroLab", "https://www.youtube.com/c/The8BitGuy"],
+      "status": "pending"
+    }
+  ]
+}

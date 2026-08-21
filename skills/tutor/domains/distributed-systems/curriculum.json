@@ -1,0 +1,459 @@
+{
+  "topic": "Distributed Systems",
+  "slug": "distributed-systems",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic networking (TCP/IP, HTTP)",
+    "operating systems fundamentals",
+    "concurrent programming",
+    "data structures and algorithms"
+  ],
+  "exit_criteria": [
+    "explain CAP theorem and apply it to real systems",
+    "design replication and partitioning strategies for scale",
+    "reason about consistency tradeoffs in distributed databases",
+    "understand how consensus algorithms (Raft, Paxos) work",
+    "debug and reason about distributed system failures",
+    "read and understand distributed systems papers"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Distribution",
+      "title": "Why can't we just use one big computer?",
+      "concepts": ["scalability", "fault tolerance", "geography"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://book.mixu.net/distsys/single-page.html",
+        "https://www.youtube.com/watch?v=Y6Ev8GIlbxc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Distribution",
+      "title": "What lies does your network tell you?",
+      "concepts": ["fallacies of distributed computing", "network unreliability", "latency"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.rgoarchitects.com/Files/fallacies.pdf",
+        "https://architecturenotes.co/fallacies-of-distributed-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Distribution",
+      "title": "Why can't distributed clocks agree on what time it is?",
+      "concepts": ["physical clocks", "clock skew", "NTP"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cs.rutgers.edu/~pxk/417/notes/clocks/index.html",
+        "https://jvns.ca/blog/2016/09/14/clock-skew-and-ntp/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Distribution",
+      "title": "How do we order events when time is fuzzy?",
+      "concepts": ["logical clocks", "Lamport timestamps", "happens-before"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+        "https://www.youtube.com/watch?v=x-D8iFU1d-o"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Distribution",
+      "title": "Can you have it all: consistency, availability, and partition tolerance?",
+      "concepts": ["CAP theorem", "tradeoffs", "partition tolerance"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/",
+        "https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Distribution",
+      "title": "Review: Foundations checkpoint",
+      "concepts": ["time", "ordering", "CAP", "network failures"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Consistency Models",
+      "title": "What does it mean for a system to be 'consistent'?",
+      "concepts": ["consistency spectrum", "strong vs eventual", "client perspective"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://jepsen.io/consistency",
+        "https://aphyr.com/posts/313-strong-consistency-models"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Consistency Models",
+      "title": "Why does eventual consistency feel like magic (or chaos)?",
+      "concepts": ["eventual consistency", "convergence", "CRDTs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.allthingsdistributed.com/2008/12/eventually_consistent.html",
+        "https://crdt.tech/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Consistency Models",
+      "title": "How can reads and writes appear atomic across machines?",
+      "concepts": ["linearizability", "atomic operations", "single-order semantics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://jepsen.io/consistency/models/linearizable",
+        "https://www.cs.princeton.edu/courses/archive/fall19/cos418/docs/p6-linearizability.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Consistency Models",
+      "title": "What's the difference between linearizability and serializability?",
+      "concepts": ["serializability", "transactions", "isolation levels"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.cockroachlabs.com/blog/consistency-model/",
+        "https://fauna.com/blog/serializability-vs-strict-serializability-the-dirty-secret-of-database-isolation-levels"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Consistency Models",
+      "title": "Can we preserve causality without perfect synchronization?",
+      "concepts": ["causal consistency", "vector clocks", "session guarantees"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cs.princeton.edu/courses/archive/fall16/cos418/docs/L4-vector-clocks.pdf",
+        "https://jepsen.io/consistency/models/causal"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Consistency Models",
+      "title": "Review: Consistency models in the wild",
+      "concepts": ["consistency tradeoffs", "model comparison", "real systems"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://jepsen.io/consistency"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Replication",
+      "title": "Why do we copy data across machines?",
+      "concepts": ["replication goals", "redundancy", "geographic distribution"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/ch05.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Replication",
+      "title": "How does leader-follower replication actually work?",
+      "concepts": ["leader-based replication", "write path", "replication lag"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://aws.amazon.com/rds/features/read-replicas/",
+        "https://redis.io/docs/management/replication/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Replication",
+      "title": "What happens when the leader dies?",
+      "concepts": ["failover", "split brain", "leader election"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.mongodb.com/docs/manual/replication/",
+        "https://aphyr.com/posts/284-call-me-maybe-mongodb"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Replication",
+      "title": "Can multiple leaders accept writes without chaos?",
+      "concepts": ["multi-leader replication", "conflict detection", "conflict resolution"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.datastax.com/blog/how-apache-cassandra-handles-multi-datacenter-replication",
+        "https://docs.couchdb.org/en/stable/replication/conflicts.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Replication",
+      "title": "What if there's no leader at all?",
+      "concepts": ["leaderless replication", "quorum", "dynamo-style"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf",
+        "https://docs.scylladb.com/stable/architecture/architecture-overview.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Replication",
+      "title": "Review: Replication strategies face-off",
+      "concepts": ["replication comparison", "tradeoffs", "use cases"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Replication_(computing)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Consensus",
+      "title": "Why is getting machines to agree so hard?",
+      "concepts": ["consensus problem", "FLP impossibility", "safety vs liveness"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.the-paper-trail.org/post/2008-08-13-a-brief-tour-of-flp-impossibility/",
+        "https://decentralizedthoughts.github.io/2019-12-15-consensus-model-for-FLP/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Consensus",
+      "title": "How does two-phase commit try to solve distributed transactions?",
+      "concepts": ["2PC", "coordinator", "blocking protocols"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cs.princeton.edu/courses/archive/fall16/cos418/docs/L6-2pc.pdf",
+        "https://martinfowler.com/articles/patterns-of-distributed-systems/two-phase-commit.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Consensus",
+      "title": "What makes Paxos the most infamous algorithm in distributed systems?",
+      "concepts": ["Paxos", "proposers", "acceptors", "learners"],
+      "difficulty": 5,
+      "type": "resource-drop",
+      "resources": [
+        "https://lamport.azurewebsites.net/pubs/paxos-simple.pdf",
+        "https://www.youtube.com/watch?v=d7nAGI_NZPk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Consensus",
+      "title": "How does Raft make consensus understandable?",
+      "concepts": ["Raft", "leader election", "log replication", "terms"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://raft.github.io/",
+        "https://thesecretlivesofdata.com/raft/",
+        "https://raft.github.io/raft.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Consensus",
+      "title": "Where does Raft live in real systems?",
+      "concepts": ["etcd", "consul", "raft in practice"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://etcd.io/docs/v3.5/learning/why/",
+        "https://www.consul.io/docs/architecture/consensus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Consensus",
+      "title": "Review: Consensus algorithms compared",
+      "concepts": ["2PC vs Paxos vs Raft", "consensus tradeoffs"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Partitioning",
+      "title": "Why split data across machines?",
+      "concepts": ["partitioning", "sharding", "horizontal scaling"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://aws.amazon.com/what-is/database-sharding/",
+        "https://www.mongodb.com/docs/manual/sharding/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Partitioning",
+      "title": "How do we decide which machine gets which data?",
+      "concepts": ["partitioning schemes", "range partitioning", "hash partitioning"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/ch06.html",
+        "https://cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Partitioning",
+      "title": "What is consistent hashing and why does it matter?",
+      "concepts": ["consistent hashing", "virtual nodes", "ring topology"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.toptal.com/big-data/consistent-hashing",
+        "https://tom-e-white.com/2007/11/consistent-hashing.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Partitioning",
+      "title": "How do you rebalance when traffic gets lopsided?",
+      "concepts": ["rebalancing", "hot spots", "partition strategies"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cockroachlabs.com/blog/rebalancing-and-load-distribution/",
+        "https://www.vldb.org/pvldb/vol13/p3281-tan.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Partitioning",
+      "title": "Review: Partitioning strategies in action",
+      "concepts": ["partitioning comparison", "consistent hashing", "rebalancing strategies"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Partition_(database)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Fault Tolerance",
+      "title": "What can go wrong in a distributed system?",
+      "concepts": ["failure modes", "crash faults", "Byzantine faults", "network partitions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.freecodecamp.org/news/a-thorough-introduction-to-distributed-systems-3b91562c9b3c/",
+        "https://ferd.ca/a-distributed-systems-reading-list.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Fault Tolerance",
+      "title": "How do you detect that a node has failed?",
+      "concepts": ["failure detection", "heartbeats", "timeouts", "phi accrual"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf",
+        "https://cassandra.apache.org/doc/latest/cassandra/operating/failure-detection.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Fault Tolerance",
+      "title": "Can we practice breaking things on purpose?",
+      "concepts": ["chaos engineering", "fault injection", "resilience testing"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://netflix.github.io/chaosmonkey/",
+        "https://jepsen.io/",
+        "https://principlesofchaos.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Fault Tolerance",
+      "title": "How do real systems recover from disasters?",
+      "concepts": ["recovery strategies", "checkpointing", "write-ahead log", "snapshots"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://kafka.apache.org/documentation/#design_ha",
+        "https://www.postgresql.org/docs/current/wal-intro.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Fault Tolerance",
+      "title": "Review: Building resilient distributed systems",
+      "concepts": ["fault tolerance patterns", "recovery", "testing"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://aws.amazon.com/builders-library/reliability-and-constant-work/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

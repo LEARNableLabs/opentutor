@@ -1,0 +1,397 @@
+{
+  "topic": "History and Theory of the Internet",
+  "slug": "history-of-the-internet",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic computer literacy",
+    "understanding of client-server model",
+    "familiarity with web browsers and URLs"
+  ],
+  "exit_criteria": [
+    "explain how packet switching enabled the internet",
+    "trace the evolution from ARPANET to modern web",
+    "understand the TCP/IP protocol stack and its design principles",
+    "analyze internet governance structures and debates",
+    "identify key technical and social inflection points in internet history"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Prehistory & Foundations",
+      "title": "Why couldn't computers talk to each other before the 1960s?",
+      "concepts": ["mainframe era", "time-sharing", "batch processing"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.computerhistory.org/timeline/computers/",
+        "https://www.youtube.com/watch?v=O5nskjZ_GoI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Prehistory & Foundations",
+      "title": "What problem were Paul Baran and Donald Davies trying to solve?",
+      "concepts": ["packet switching", "circuit switching", "distributed networks"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.rand.org/about/history/baran.html",
+        "https://www.livinginternet.com/i/ii_packet.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Prehistory & Foundations",
+      "title": "How does packet switching let thousands of conversations share one wire?",
+      "concepts": ["packet headers", "routing", "multiplexing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:transporting-packets/a/packet-switching",
+        "https://www.youtube.com/watch?v=ewrBalT_eBM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Prehistory & Foundations",
+      "title": "Why did the military fund networking research?",
+      "concepts": ["ARPA", "command and control", "survivability"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.darpa.mil/about-us/timeline/arpanet",
+        "https://archive.org/details/where-wizards-stay-up-late"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Prehistory & Foundations",
+      "title": "What did the first ARPANET message say, and why did it crash?",
+      "concepts": ["IMP nodes", "first transmission", "network debugging"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ucla.edu/stories/october-29-1969",
+        "https://www.computerhistory.org/revolution/networking/19/314"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "ARPANET & Early Networks",
+      "title": "How did email accidentally become the killer app?",
+      "concepts": ["ARPANET applications", "email protocols", "network effects"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.internethalloffame.org/inductees/ray-tomlinson",
+        "https://www.livinginternet.com/e/ei.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Review",
+      "title": "What are the key differences between packet switching and circuit switching?",
+      "concepts": ["packet switching review", "ARPANET foundations", "early networking"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.computerhistory.org/internethistory/",
+        "https://www.livinginternet.com/i/ii_packet.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "ARPANET & Early Networks",
+      "title": "Why couldn't different networks talk to each other in the 1970s?",
+      "concepts": ["network compatibility", "gateways", "internetworking problem"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.internetsociety.org/internet/history-internet/brief-history-internet/",
+        "https://www.rfc-editor.org/rfc/rfc675.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "ARPANET & Early Networks",
+      "title": "How did Vint Cerf and Bob Kahn design a universal language for networks?",
+      "concepts": ["TCP/IP invention", "protocol design", "layered architecture"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.internethalloffame.org/inductees/vint-cerf",
+        "https://www.youtube.com/watch?v=PG9oKZdFb7w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "ARPANET & Early Networks",
+      "title": "What happens when you type an IP address into your browser?",
+      "concepts": ["TCP handshake", "IP routing", "end-to-end principle"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://github.com/alex/what-happens-when",
+        "https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "ARPANET & Early Networks",
+      "title": "Why did ARPANET switch to TCP/IP on January 1, 1983?",
+      "concepts": ["flag day", "protocol migration", "network standardization"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.internetsociety.org/internet/history-internet/brief-history-internet/",
+        "https://www.rfc-editor.org/rfc/rfc801.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Review",
+      "title": "How does TCP/IP enable different networks to communicate?",
+      "concepts": ["packet switching review", "TCP/IP review", "ARPANET timeline"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.computerhistory.org/internethistory/",
+        "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Web Revolution",
+      "title": "How did the internet grow from 4 nodes to thousands in the 1980s?",
+      "concepts": ["NSFNET", "backbone networks", "internet growth"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nsf.gov/news/special_reports/nsfnet/timeline.jsp",
+        "https://www.computerhistory.org/timeline/networking-the-web/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "The Web Revolution",
+      "title": "What problem was Tim Berners-Lee trying to solve at CERN?",
+      "concepts": ["hypertext", "information management", "WWW invention"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.w3.org/History/1989/proposal.html",
+        "https://www.youtube.com/watch?v=OM6XIICm_qo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "The Web Revolution",
+      "title": "Why did Berners-Lee give away the web for free?",
+      "concepts": ["open standards", "patent-free web", "network effects"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://webfoundation.org/about/vision/history-of-the-web/",
+        "https://www.w3.org/People/Berners-Lee/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "The Web Revolution",
+      "title": "How did Mosaic turn the web from text into a visual medium?",
+      "concepts": ["web browsers", "inline images", "user interface"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncsa.illinois.edu/enabling/mosaic",
+        "https://www.computerhistory.org/collections/catalog/102770072"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "The Web Revolution",
+      "title": "What made Google's search different from Yahoo and AltaVista?",
+      "concepts": ["PageRank", "link analysis", "search algorithms"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://infolab.stanford.edu/~backrub/google.html",
+        "https://www.youtube.com/watch?v=qxEkY8OScYY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Review",
+      "title": "Why was the web's open design crucial to its success?",
+      "concepts": ["web evolution review", "browser wars", "open standards"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.w3.org/History.html",
+        "https://www.youtube.com/watch?v=3QEoJRjxnxQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Protocol Deep Dive",
+      "title": "How does your computer find the IP address for wikipedia.org?",
+      "concepts": ["DNS", "domain names", "hierarchical resolution"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://howdns.works/",
+        "https://www.cloudflare.com/learning/dns/what-is-dns/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Protocol Deep Dive",
+      "title": "Why can't the internet run out of domain names but can run out of IP addresses?",
+      "concepts": ["IPv4 exhaustion", "IPv6 adoption", "address space"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.internetsociety.org/deploy360/ipv6/",
+        "https://www.ripe.net/publications/ipv6-info-centre/about-ipv6/what-is-ipv6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Protocol Deep Dive",
+      "title": "How do routers decide where to send your packets?",
+      "concepts": ["routing tables", "BGP", "autonomous systems"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cloudflare.com/learning/security/glossary/what-is-bgp/",
+        "https://www.youtube.com/watch?v=gU-H77KUQAs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Protocol Deep Dive",
+      "title": "Explain the OSI model to a web developer who only knows HTTP",
+      "concepts": ["protocol layers", "abstraction", "encapsulation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/",
+        "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:internet-protocol/a/internet-protocol-suite"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Protocol Deep Dive",
+      "title": "Why does video streaming use UDP instead of TCP?",
+      "concepts": ["UDP vs TCP", "real-time protocols", "packet loss tolerance"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/user-datagram-protocol-udp/",
+        "https://www.youtube.com/watch?v=Vdc8TCESIg8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Review",
+      "title": "How do DNS, routing, and the protocol stack work together?",
+      "concepts": ["DNS review", "routing review", "protocol stack review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.submarinecablemap.com/",
+        "https://www.cloudflare.com/learning/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Modern Internet & Governance",
+      "title": "Who controls the internet?",
+      "concepts": ["ICANN", "IETF", "W3C", "internet governance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.icann.org/resources/pages/what-2012-02-25-en",
+        "https://www.internetsociety.org/issues/governance/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Modern Internet & Governance",
+      "title": "Why do some argue the internet should be treated like a utility?",
+      "concepts": ["net neutrality", "common carrier", "ISP regulation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.eff.org/issues/net-neutrality",
+        "https://www.youtube.com/watch?v=p90McT24Z6w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Modern Internet & Governance",
+      "title": "How did mobile internet change everything?",
+      "concepts": ["mobile broadband", "app ecosystems", "always-on connectivity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.gsma.com/mobileeconomy/",
+        "https://www.pewresearch.org/internet/fact-sheet/mobile/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Modern Internet & Governance",
+      "title": "What technical and social challenges face the future internet?",
+      "concepts": ["security", "privacy", "decentralization", "digital divide"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.internetsociety.org/issues/",
+        "https://www.eff.org/issues"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Modern Internet & Governance",
+      "title": "Design a protocol for a new internet service",
+      "concepts": ["protocol design", "standards process", "real-world constraints"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.rfc-editor.org/rfc/rfc2324.html",
+        "https://www.ietf.org/standards/process/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

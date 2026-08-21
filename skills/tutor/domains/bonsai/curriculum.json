@@ -1,0 +1,357 @@
+{
+  "topic": "Bonsai — horticultural science and aesthetics",
+  "slug": "bonsai",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic plant biology",
+    "familiarity with container gardening",
+    "understanding of tree anatomy"
+  ],
+  "exit_criteria": [
+    "student can explain tree physiology and how miniaturization affects growth",
+    "student can analyze bonsai design using traditional aesthetic principles",
+    "student can select and execute appropriate techniques by species and season",
+    "student can diagnose common health issues from physiological understanding",
+    "student can design a seasonal care calendar for multiple species"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Tree Biology Fundamentals",
+      "title": "How does water climb a hundred-foot tree?",
+      "concepts": ["vascular system", "xylem and phloem", "transpiration pull", "cohesion-tension theory"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bonsaiempire.com/tree-cultivation/watering",
+        "https://www.youtube.com/watch?v=BickMFHAZR0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Tree Biology Fundamentals",
+      "title": "Why do bonsai roots need more oxygen than garden trees?",
+      "concepts": ["root respiration", "soil aeration", "container constraints", "mycorrhizal fungi"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://bonsaiempire.com/tree-species/bonsai-tree-care/soil",
+        "https://www.nationalbonsai.org/bonsai-basics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Tree Biology Fundamentals",
+      "title": "What happens when you cut off the top of a tree?",
+      "concepts": ["apical dominance", "auxin distribution", "branching patterns", "hormonal control"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-tree-care/pruning",
+        "https://www.youtube.com/watch?v=dQZq6bKVONc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Tree Biology Fundamentals",
+      "title": "Can a tree starve in full sunlight?",
+      "concepts": ["photosynthesis under constraint", "leaf reduction trade-offs", "carbohydrate storage", "growth vs. maintenance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bonsaiempire.com/blog/bonsai-defoliation",
+        "https://live.bonsaimirai.com/library/video/fundamentals-energy-systems"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Tree Biology Fundamentals",
+      "title": "Why do some bonsai need winter cold to survive?",
+      "concepts": ["dormancy cycles", "chilling requirements", "temperate vs. tropical species", "vernalization"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://bonsaiempire.com/tree-species/bonsai-tree-care/overwintering-bonsai",
+        "https://www.youtube.com/watch?v=5RXmRXP5VZw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Tree Biology Fundamentals",
+      "title": "Review: Tree Physiology Fundamentals",
+      "concepts": ["vascular transport", "root function", "hormones", "seasonal cycles"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Horticultural Fundamentals",
+      "title": "Why does bonsai soil look nothing like garden soil?",
+      "concepts": ["particle size", "water retention vs. drainage", "aeration", "inorganic vs. organic components"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bonsaiempire.com/tree-species/bonsai-tree-care/soil",
+        "https://www.youtube.com/watch?v=jSDvmVr34wY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Horticultural Fundamentals",
+      "title": "How do you know when a tree is thirsty vs. drowning?",
+      "concepts": ["osmotic pressure", "field capacity", "wilting point", "species-specific water needs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://bonsaiempire.com/tree-cultivation/watering",
+        "https://www.youtube.com/watch?v=3JBbuJuER1s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Horticultural Fundamentals",
+      "title": "What's the difference between feeding a tree and feeding the soil?",
+      "concepts": ["NPK ratios", "micronutrients", "fertilization timing", "organic vs. chemical fertilizers"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://bonsaiempire.com/tree-species/bonsai-tree-care/fertilizing",
+        "https://live.bonsaimirai.com/library/video/science-fertility"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Horticultural Fundamentals",
+      "title": "Why does cutting roots make a tree healthier?",
+      "concepts": ["root pruning physiology", "fine root development", "root-shoot balance", "timing by phenology"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-tree-care/repotting",
+        "https://www.youtube.com/watch?v=BYx8MAkN5x0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Horticultural Fundamentals",
+      "title": "Teach back: Design the ideal growing environment for a species",
+      "concepts": ["light requirements", "temperature ranges", "humidity control", "species matching to climate"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://bonsaiempire.com/tree-species",
+        "https://www.absbonsai.org/species-guides"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Horticultural Fundamentals",
+      "title": "Review: Horticultural Systems",
+      "concepts": ["soil", "water", "nutrients", "root systems"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Aesthetic Principles",
+      "title": "What does 'wabi-sabi' mean in a living tree?",
+      "concepts": ["wabi-sabi", "imperfection as beauty", "age and patina", "naturalness vs. artifice"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bonsaiempire.com/inspiration/bonsai-styles",
+        "https://www.youtube.com/watch?v=1KJ_eKpVZqE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Aesthetic Principles",
+      "title": "How many ways can a tree lean?",
+      "concepts": ["classical bonsai styles", "formal upright", "informal upright", "slanting", "cascade", "literati"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://bonsaiempire.com/inspiration/bonsai-styles",
+        "https://www.youtube.com/watch?v=rrT0NkXG1CU",
+        "https://www.nationalbonsai.org/collections/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Aesthetic Principles",
+      "title": "Why do our eyes prefer asymmetry in nature?",
+      "concepts": ["visual balance", "the golden ratio", "triangular composition", "movement and flow"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://bonsaiempire.com/inspiration/bonsai-aesthetics",
+        "https://live.bonsaimirai.com/library/video/design-theory-balance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Aesthetic Principles",
+      "title": "What makes empty space more powerful than branches?",
+      "concepts": ["negative space (yohaku)", "ma (interval)", "viewer perception", "depth illusion"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://bonsaiempire.com/inspiration/bonsai-aesthetics",
+        "https://www.youtube.com/watch?v=NTXQZpJjWyU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Aesthetic Principles",
+      "title": "How does a tree tell time through the year?",
+      "concepts": ["seasonal display", "spring flowers", "autumn color", "winter silhouette", "dynamic composition"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bonsaiempire.com/blog/seasonal-display",
+        "https://www.youtube.com/watch?v=kLF8vH6gF4Y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Aesthetic Principles",
+      "title": "Review: Design Principles in Practice",
+      "concepts": ["traditional aesthetics", "styles", "balance", "negative space"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://bonsaiempire.com/inspiration/top-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Technical Practice",
+      "title": "Why does cutting a branch make others grow stronger?",
+      "concepts": ["pruning theory", "structural vs. maintenance pruning", "energy redirection", "timing by species"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-tree-care/pruning",
+        "https://www.youtube.com/watch?v=j0QaIglvIWY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Technical Practice",
+      "title": "How do you bend a tree without breaking it?",
+      "concepts": ["wiring mechanics", "cambium protection", "wire gauge selection", "removal timing"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-tree-care/wiring",
+        "https://www.youtube.com/watch?v=K5NEUsAWoHs",
+        "https://live.bonsaimirai.com/library/video/wiring-fundamentals"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Technical Practice",
+      "title": "What's the difference between repotting a bonsai and murdering it?",
+      "concepts": ["repotting technique", "root work extent", "soil replacement strategy", "aftercare protocols"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-tree-care/repotting",
+        "https://www.youtube.com/watch?v=dUPFy1KnLBs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Technical Practice",
+      "title": "Teach back: Analyze a tree's branching structure",
+      "concepts": ["branch selection", "primary-secondary-tertiary structure", "jin and shari", "deadwood aesthetics"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-tree-care/advanced-techniques",
+        "https://live.bonsaimirai.com/library/video/branch-selection-principles"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Technical Practice",
+      "title": "How do you grow a new tree from thin air?",
+      "concepts": ["air layering", "propagation techniques", "rooting hormones", "cutting vs. layering vs. grafting"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-tree-care/advanced-techniques/propagation",
+        "https://www.youtube.com/watch?v=H48KFiVcZ8s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Technical Practice",
+      "title": "Review: Seasonal Technique Calendar",
+      "concepts": ["pruning timing", "wiring windows", "repotting seasons", "technique integration"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-tree-care/seasonal-care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Species & Integration",
+      "title": "Which tree should you grow first, and why not a pine?",
+      "concepts": ["species selection", "beginner-friendly vs. advanced", "climate matching", "deciduous vs. coniferous"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://bonsaiempire.com/tree-species",
+        "https://www.youtube.com/watch?v=NxvVbKXB8Og",
+        "https://www.absbonsai.org/species-guides"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Species & Integration",
+      "title": "Build a year-long care plan for a tree in your climate",
+      "concepts": ["seasonal care integration", "species-specific calendar", "technique sequencing", "environmental adaptation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://bonsaiempire.com/origin/bonsai-tree-care/seasonal-care",
+        "https://live.bonsaimirai.com/library/video/seasonal-approaches"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "topic": "Thermodynamics and Statistical Mechanics",
+  "slug": "thermodynamics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "linear algebra",
+    "basic quantum mechanics",
+    "ordinary differential equations"
+  ],
+  "exit_criteria": [
+    "derive thermodynamic relations from partition functions",
+    "distinguish and apply microcanonical, canonical, and grand canonical ensembles",
+    "solve problems in quantum and classical statistical mechanics",
+    "explain phase transitions and critical phenomena from a statistical perspective",
+    "connect microscopic particle behavior to macroscopic thermodynamic properties",
+    "apply statistical mechanics to real systems (gases, solids, radiation)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Thermodynamic Foundations",
+      "title": "Why can't you unscramble an egg?",
+      "concepts": ["entropy", "irreversibility", "second law"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/",
+        "https://phet.colorado.edu/en/simulations/states-of-matter"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Thermodynamic Foundations",
+      "title": "What makes energy 'free'?",
+      "concepts": ["Helmholtz free energy", "Gibbs free energy", "equilibrium"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Thermodynamic Foundations",
+      "title": "How are all thermodynamic variables connected?",
+      "concepts": ["Maxwell relations", "Legendre transforms", "state functions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Thermodynamic Foundations",
+      "title": "What happens when water turns to steam?",
+      "concepts": ["phase transitions", "Clausius-Clapeyron", "latent heat"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/states-of-matter",
+        "https://physics.weber.edu/thermal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Thermodynamic Foundations",
+      "title": "Can you reach absolute zero?",
+      "concepts": ["third law", "unattainability", "residual entropy"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Thermodynamic Foundations",
+      "title": "How do the laws of thermodynamics connect?",
+      "concepts": ["thermodynamic laws", "state functions", "phase equilibrium"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://physics.weber.edu/thermal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Statistical Foundations",
+      "title": "Why do we need statistics for physics?",
+      "concepts": ["microstates", "macrostates", "ensemble averaging"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg",
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Statistical Foundations",
+      "title": "What does S = k log W really mean?",
+      "concepts": ["Boltzmann entropy", "multiplicity", "statistical interpretation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg",
+        "https://physics.weber.edu/thermal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Statistical Foundations",
+      "title": "How do you count quantum states?",
+      "concepts": ["density of states", "phase space", "quantum counting"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Statistical Foundations",
+      "title": "What's the difference between ensembles?",
+      "concepts": ["microcanonical", "canonical", "grand canonical"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg",
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Statistical Foundations",
+      "title": "Why is the partition function so powerful?",
+      "concepts": ["partition function", "free energy", "thermodynamic quantities"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Statistical Foundations",
+      "title": "How do microstates generate thermodynamics?",
+      "concepts": ["ensembles", "partition functions", "statistical entropy"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Classical Statistical Mechanics",
+      "title": "How do you derive the ideal gas law from atoms?",
+      "concepts": ["classical partition function", "ideal gas", "equation of state"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://phet.colorado.edu/en/simulations/gas-properties"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Classical Statistical Mechanics",
+      "title": "Why do different molecules have different speeds?",
+      "concepts": ["Maxwell-Boltzmann distribution", "velocity distribution", "thermal motion"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/gas-properties",
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Classical Statistical Mechanics",
+      "title": "Does each degree of freedom get the same energy?",
+      "concepts": ["equipartition theorem", "degrees of freedom", "heat capacity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Classical Statistical Mechanics",
+      "title": "What happens when particles interact?",
+      "concepts": ["virial expansion", "non-ideal gases", "van der Waals"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/",
+        "https://physics.weber.edu/thermal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Classical Statistical Mechanics",
+      "title": "When does classical mechanics fail?",
+      "concepts": ["classical limit", "thermal wavelength", "quantum regime"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Classical Statistical Mechanics",
+      "title": "How does classical statistics explain gas behavior?",
+      "concepts": ["ideal gas", "Maxwell-Boltzmann", "equipartition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://physics.weber.edu/thermal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Quantum Statistical Mechanics",
+      "title": "Why can't you put two electrons in the same state?",
+      "concepts": ["Pauli exclusion", "fermions", "symmetry"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/",
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Quantum Statistical Mechanics",
+      "title": "How do identical particles change statistics?",
+      "concepts": ["Fermi-Dirac distribution", "Bose-Einstein distribution", "quantum statistics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Quantum Statistical Mechanics",
+      "title": "What happens to a gas of fermions at low temperature?",
+      "concepts": ["Fermi gas", "Fermi energy", "degeneracy pressure"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/",
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Quantum Statistical Mechanics",
+      "title": "Can bosons all pile into one state?",
+      "concepts": ["Bose-Einstein condensation", "macroscopic occupation", "critical temperature"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://phet.colorado.edu/en/simulations/states-of-matter"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Quantum Statistical Mechanics",
+      "title": "Why do photons have no chemical potential?",
+      "concepts": ["photon gas", "black body radiation", "Planck distribution"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/",
+        "https://physics.weber.edu/thermal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Quantum Statistical Mechanics",
+      "title": "How do quantum statistics change everything?",
+      "concepts": ["Fermi-Dirac", "Bose-Einstein", "quantum gases"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications and Phase Transitions",
+      "title": "Why did Planck need to quantize energy?",
+      "concepts": ["ultraviolet catastrophe", "Planck's law", "quantum revolution"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP60gl3fdUTKRrt5t_GPx2sRg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications and Phase Transitions",
+      "title": "How do solids vibrate and store heat?",
+      "concepts": ["phonons", "Einstein model", "Debye model"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/",
+        "https://physics.weber.edu/thermal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications and Phase Transitions",
+      "title": "What makes magnets suddenly lose their magnetism?",
+      "concepts": ["phase transitions", "critical temperature", "Ising model"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/",
+        "https://github.com/topics/ising-model"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applications and Phase Transitions",
+      "title": "How do you predict chemical reactions?",
+      "concepts": ["chemical potential", "reaction equilibrium", "mass action"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Applications and Phase Transitions",
+      "title": "What connects all of statistical mechanics?",
+      "concepts": ["thermodynamic limit", "emergent phenomena", "statistical foundations"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://physics.weber.edu/thermal/",
+        "https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

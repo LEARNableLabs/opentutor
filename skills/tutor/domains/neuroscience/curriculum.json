@@ -1,0 +1,625 @@
+{
+  "topic": "Neuroscience \u2014 from neurons to cognition",
+  "slug": "neuroscience",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (cell structure, proteins, genetics)",
+    "chemistry fundamentals (ions, electrochemical gradients)",
+    "comfort with quantitative reasoning and graphs"
+  ],
+  "exit_criteria": [
+    "explain how neurons generate and propagate electrical signals",
+    "describe synaptic transmission and major neurotransmitter systems",
+    "analyze how neural circuits process sensory information",
+    "connect cellular mechanisms to systems-level functions (vision, movement, memory)",
+    "evaluate how plasticity enables learning and memory",
+    "discuss the neural basis of higher cognitive functions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "The Neuron",
+      "title": "What makes neurons different from other cells?",
+      "concepts": [
+        "neuron structure",
+        "dendrites and axons",
+        "specialized compartments"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=ob5U8zPbAX4",
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "The Neuron",
+      "title": "Why do neurons need so many different shapes?",
+      "concepts": [
+        "neuronal morphology",
+        "function-structure relationship",
+        "neuronal diversity"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "The Neuron",
+      "title": "How do glia support and protect neurons?",
+      "concepts": [
+        "glial cells",
+        "astrocytes",
+        "oligodendrocytes",
+        "microglia"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/hst-131-introduction-to-neuroscience-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "The Neuron",
+      "title": "What creates the resting potential across neuronal membranes?",
+      "concepts": [
+        "resting membrane potential",
+        "ion channels",
+        "sodium-potassium pump",
+        "electrochemical gradient"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor",
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "The Neuron",
+      "title": "Can you predict the resting potential from ion concentrations?",
+      "concepts": [
+        "Nernst equation",
+        "Goldman equation",
+        "quantitative neuroscience"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-29j-introduction-to-computational-neuroscience-spring-2004/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "The Neuron",
+      "title": "Review: Neuron structure and diversity",
+      "concepts": [
+        "neuron structure",
+        "neuronal diversity",
+        "glial cells",
+        "membrane potential basics"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Electrical Signals",
+      "title": "How does a neuron generate an action potential?",
+      "concepts": [
+        "action potential",
+        "voltage-gated channels",
+        "depolarization",
+        "threshold"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor",
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Electrical Signals",
+      "title": "Why is the action potential all-or-nothing?",
+      "concepts": [
+        "positive feedback",
+        "channel dynamics",
+        "refractory period"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-29j-introduction-to-computational-neuroscience-spring-2004/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Electrical Signals",
+      "title": "How do action potentials travel down axons?",
+      "concepts": [
+        "propagation",
+        "myelination",
+        "saltatory conduction",
+        "conduction velocity"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Electrical Signals",
+      "title": "What happens when myelin breaks down?",
+      "concepts": [
+        "demyelinating diseases",
+        "multiple sclerosis",
+        "clinical neuroscience"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/hst-131-introduction-to-neuroscience-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Electrical Signals",
+      "title": "How does the Hodgkin-Huxley model capture action potentials?",
+      "concepts": [
+        "mathematical modeling",
+        "differential equations",
+        "conductance-based models"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-29j-introduction-to-computational-neuroscience-spring-2004/",
+        "https://playground.tensorflow.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Electrical Signals",
+      "title": "Review: From resting potential to action potential",
+      "concepts": [
+        "membrane potential",
+        "ion channels",
+        "action potential propagation"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Synaptic Transmission",
+      "title": "How do neurons communicate at synapses?",
+      "concepts": [
+        "chemical synapses",
+        "neurotransmitter release",
+        "synaptic vesicles"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Synaptic Transmission",
+      "title": "Why do some synapses excite while others inhibit?",
+      "concepts": [
+        "excitatory vs inhibitory transmission",
+        "EPSP and IPSP",
+        "neurotransmitter types"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/",
+        "https://www.eneuro.org/content/4/2/ENEURO.0022-17.2017"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Synaptic Transmission",
+      "title": "How do drugs and toxins affect synaptic transmission?",
+      "concepts": [
+        "pharmacology",
+        "neurotoxins",
+        "agonists and antagonists"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/hst-131-introduction-to-neuroscience-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Synaptic Transmission",
+      "title": "What makes synapses plastic and adaptable?",
+      "concepts": [
+        "synaptic plasticity",
+        "long-term potentiation",
+        "long-term depression"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Neural Circuits",
+      "title": "How do neurons wire together into circuits?",
+      "concepts": [
+        "neural networks",
+        "connectivity patterns",
+        "feedforward and feedback"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.eneuro.org/content/4/2/ENEURO.0022-17.2017",
+        "https://ebrains.eu/data-tools-services/modelling-simulation/network-level-simulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Synaptic Transmission",
+      "title": "Review: Synaptic transmission and plasticity",
+      "concepts": [
+        "chemical synapses",
+        "excitation vs inhibition",
+        "synaptic plasticity"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Neural Circuits",
+      "title": "How do neurons wire together into circuits?",
+      "concepts": [
+        "neural networks",
+        "connectivity patterns",
+        "feedforward and feedback"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.eneuro.org/content/4/2/ENEURO.0022-17.2017",
+        "https://ebrains.eu/data-tools-services/modelling-simulation/network-level-simulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Neural Circuits",
+      "title": "Can you build a simple neural circuit that processes information?",
+      "concepts": [
+        "circuit design",
+        "computational principles",
+        "hands-on modeling"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.eneuro.org/content/4/2/ENEURO.0022-17.2017",
+        "https://playground.tensorflow.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Neural Circuits",
+      "title": "How do neural circuits encode information?",
+      "concepts": [
+        "neural coding",
+        "rate coding",
+        "temporal coding",
+        "population coding"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-29j-introduction-to-computational-neuroscience-spring-2004/",
+        "https://www.simonsfoundation.org/collaborations/global-brain/online-resources-for-systems-and-computational-neuroscience/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Sensory Systems",
+      "title": "How does the retina turn light into neural signals?",
+      "concepts": [
+        "photoreceptors",
+        "visual transduction",
+        "retinal processing"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Sensory Systems",
+      "title": "Why can we see edges and motion so well?",
+      "concepts": [
+        "visual cortex",
+        "receptive fields",
+        "feature detection",
+        "hierarchical processing"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/",
+        "https://www.nature.com/articles/s41598-026-44588-0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Neural Circuits",
+      "title": "Review: From synapses to circuits",
+      "concepts": [
+        "synaptic transmission",
+        "plasticity",
+        "neural networks",
+        "information coding"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Sensory Systems",
+      "title": "How does the cochlea decompose sound into frequencies?",
+      "concepts": [
+        "auditory system",
+        "tonotopy",
+        "hair cells",
+        "frequency coding"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Sensory Systems",
+      "title": "What can synesthesia teach us about sensory processing?",
+      "concepts": [
+        "cross-modal processing",
+        "sensory integration",
+        "perceptual anomalies"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/hst-131-introduction-to-neuroscience-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Motor Systems",
+      "title": "How does the brain control voluntary movement?",
+      "concepts": [
+        "motor cortex",
+        "motor neurons",
+        "motor pathways",
+        "descending control"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Motor Systems",
+      "title": "Why does the cerebellum matter for smooth movements?",
+      "concepts": [
+        "cerebellum",
+        "motor learning",
+        "coordination",
+        "error correction"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/",
+        "https://ebrains.eu/data-tools-services/modelling-simulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Motor Systems",
+      "title": "What happens in Parkinson's disease?",
+      "concepts": [
+        "basal ganglia",
+        "dopamine",
+        "movement disorders",
+        "clinical neuroscience"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/hst-131-introduction-to-neuroscience-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Motor Systems",
+      "title": "Review: Sensing and acting on the world",
+      "concepts": [
+        "sensory processing",
+        "motor control",
+        "sensorimotor integration"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Learning & Memory",
+      "title": "How does the hippocampus create new memories?",
+      "concepts": [
+        "hippocampus",
+        "memory formation",
+        "consolidation",
+        "episodic memory"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/",
+        "https://www.nature.com/articles/s41598-026-44588-0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Learning & Memory",
+      "title": "Why does practice make permanent?",
+      "concepts": [
+        "procedural memory",
+        "skill learning",
+        "neural plasticity",
+        "Hebbian learning"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Learning & Memory",
+      "title": "How can we enhance or impair memory formation?",
+      "concepts": [
+        "memory modulation",
+        "stress and memory",
+        "sleep and consolidation"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/hst-131-introduction-to-neuroscience-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Cognition & Beyond",
+      "title": "What makes attention selective and powerful?",
+      "concepts": [
+        "attention",
+        "executive function",
+        "prefrontal cortex",
+        "cognitive control"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-10-cognitive-neuroscience-spring-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 35,
+      "module": "Cognition & Beyond",
+      "title": "How does language emerge from neural circuits?",
+      "concepts": [
+        "language areas",
+        "Broca's and Wernicke's areas",
+        "language networks"
+      ],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-10-cognitive-neuroscience-spring-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 36,
+      "module": "Cognition & Beyond",
+      "title": "Can you connect a cognitive function to its neural mechanism?",
+      "concepts": [
+        "integrative neuroscience",
+        "structure-function mapping",
+        "systems neuroscience"
+      ],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-10-cognitive-neuroscience-spring-2006/",
+        "https://www.simonsfoundation.org/collaborations/global-brain/online-resources-for-systems-and-computational-neuroscience/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

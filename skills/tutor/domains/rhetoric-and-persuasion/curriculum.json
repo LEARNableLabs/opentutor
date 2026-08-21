@@ -1,0 +1,373 @@
+{
+  "topic": "Rhetoric and Persuasion",
+  "slug": "rhetoric-and-persuasion",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic argumentation",
+    "formal writing skills",
+    "reading comprehension"
+  ],
+  "exit_criteria": [
+    "analyze persuasive texts using classical rhetorical frameworks",
+    "identify and apply the three appeals (ethos, pathos, logos) in composition",
+    "recognize logical fallacies and construct sound arguments",
+    "adapt rhetorical strategies to different audiences and contexts",
+    "compose persuasive writing across multiple media (essays, speeches, digital)",
+    "evaluate contemporary rhetoric in political, commercial, and social contexts"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Classical Foundations",
+      "title": "What did Aristotle mean by 'the available means of persuasion'?",
+      "concepts": ["rhetoric definition", "persuasion vs. manipulation", "rhetorical situation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21w-747-rhetoric-spring-2015/pages/syllabus/",
+        "https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Classical Foundations",
+      "title": "Why do speakers fail when they ignore their audience?",
+      "concepts": ["audience analysis", "rhetorical triangle", "kairos"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.edx.org/learn/rhetoric/harvard-university-rhetoric-the-art-of-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Classical Foundations",
+      "title": "How did ancient Greeks turn rhetoric into a system?",
+      "concepts": ["sophistic tradition", "Platonic skepticism", "Aristotelian synthesis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.hillsdale.edu/courses/promo/logic",
+        "https://ocw.mit.edu/courses/21w-747-rhetoric-spring-2015/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Classical Foundations",
+      "title": "What are the five canons and why do they still matter?",
+      "concepts": ["invention", "arrangement", "style", "memory", "delivery"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://classicalacademicpress.com/products/rhetoric-alive-book-1-principles-of-persuasion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Classical Foundations",
+      "title": "How does a political speech use stasis theory?",
+      "concepts": ["stasis theory", "fact", "definition", "quality", "policy"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://canonpress.com/products/the-rhetoric-companion-package"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Classical Foundations",
+      "title": "Can you identify the classical structure in a modern TED talk?",
+      "concepts": ["exordium", "narratio", "confirmatio", "refutatio", "peroratio"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.edx.org/learn/rhetoric/harvard-university-rhetoric-the-art-of-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Classical Foundations",
+      "title": "Review: Foundations of Classical Rhetoric",
+      "concepts": ["rhetorical situation", "five canons", "stasis theory", "classical structure"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Three Appeals",
+      "title": "Why does credibility persuade even before the argument begins?",
+      "concepts": ["ethos", "character", "authority", "goodwill"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://classicalacademicpress.com/products/rhetoric-alive-book-1-principles-of-persuasion",
+        "https://www.edx.org/learn/rhetoric/harvard-university-rhetoric-the-art-of-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "The Three Appeals",
+      "title": "When does emotional appeal cross into manipulation?",
+      "concepts": ["pathos", "emotional reasoning", "audience values", "identification"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Three Appeals",
+      "title": "How does logic build the skeleton of persuasion?",
+      "concepts": ["logos", "deductive reasoning", "inductive reasoning", "enthymeme"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.hillsdale.edu/courses/promo/logic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The Three Appeals",
+      "title": "Can you dissect a commercial's appeal strategy?",
+      "concepts": ["integrated appeals", "appeal dominance", "rhetorical analysis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21w-747-rhetoric-spring-2015/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The Three Appeals",
+      "title": "Which appeal should you emphasize for different audiences?",
+      "concepts": ["appeal selection", "audience expectations", "context sensitivity"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.edx.org/learn/rhetoric/harvard-university-rhetoric-the-art-of-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Three Appeals",
+      "title": "Review: The Three Appeals",
+      "concepts": ["ethos", "pathos", "logos", "integrated appeals"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Argument Structure",
+      "title": "What makes an argument valid versus sound?",
+      "concepts": ["validity", "soundness", "premises", "conclusions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.hillsdale.edu/courses/promo/logic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Argument Structure",
+      "title": "How do you spot a straw man in political debate?",
+      "concepts": ["logical fallacies", "straw man", "ad hominem", "false dilemma"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Argument Structure",
+      "title": "Why do analogies persuade and when do they fail?",
+      "concepts": ["analogy", "metaphor", "comparison reasoning", "false analogy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.edx.org/learn/rhetoric/harvard-university-rhetoric-the-art-of-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Argument Structure",
+      "title": "Can you build a Toulmin argument from scratch?",
+      "concepts": ["Toulmin model", "claim", "grounds", "warrant", "backing", "qualifier"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://oercommons.org/browse?f.keyword=rhetoric"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Argument Structure",
+      "title": "How does evidence quality affect persuasive power?",
+      "concepts": ["evidence types", "credibility assessment", "statistical reasoning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21w-747-rhetoric-spring-2015/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Argument Structure",
+      "title": "What rhetorical moves does a Supreme Court opinion use?",
+      "concepts": ["legal reasoning", "precedent", "interpretation strategies"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Argument Structure",
+      "title": "Review: Building and Analyzing Arguments",
+      "concepts": ["logical structure", "fallacies", "Toulmin model", "evidence"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.edx.org/learn/rhetoric/harvard-university-rhetoric-the-art-of-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Style and Delivery",
+      "title": "How do rhetorical devices create memorable phrases?",
+      "concepts": ["schemes", "tropes", "parallelism", "antithesis", "anaphora"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://classicalacademicpress.com/products/rhetoric-alive-book-1-principles-of-persuasion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Style and Delivery",
+      "title": "Why does tone shift between academic and public rhetoric?",
+      "concepts": ["register", "formality", "voice", "diction"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Style and Delivery",
+      "title": "What makes a speech delivery compelling versus flat?",
+      "concepts": ["vocal delivery", "body language", "pacing", "emphasis"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.edx.org/learn/rhetoric/harvard-university-rhetoric-the-art-of-persuasive-writing-and-public-speaking",
+        "https://veritaspress.com/selfpaced/rhetoric"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Style and Delivery",
+      "title": "Can you revise bland prose into persuasive prose?",
+      "concepts": ["revision strategies", "concrete language", "active voice", "rhythm"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://oercommons.org/browse?f.keyword=rhetoric"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Style and Delivery",
+      "title": "How does visual rhetoric work in infographics?",
+      "concepts": ["visual arguments", "design principles", "multimodal rhetoric"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applied Rhetoric",
+      "title": "How has social media changed persuasive strategy?",
+      "concepts": ["digital rhetoric", "virality", "algorithmic amplification", "engagement"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.edx.org/learn/rhetoric/harvard-university-rhetoric-the-art-of-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applied Rhetoric",
+      "title": "What ethical boundaries should constrain persuasion?",
+      "concepts": ["rhetorical ethics", "truthfulness", "manipulation boundaries", "responsibility"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21w-747-rhetoric-spring-2015/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applied Rhetoric",
+      "title": "How will generative AI reshape rhetoric and persuasion?",
+      "concepts": ["AI-generated content", "authenticity", "detection", "future of persuasion"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Applied Rhetoric",
+      "title": "Can you compose and deliver a persuasive pitch?",
+      "concepts": ["synthesis", "application", "performance", "rhetorical mastery"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.edx.org/learn/rhetoric/harvard-university-rhetoric-the-art-of-persuasive-writing-and-public-speaking"
+      ],
+      "status": "pending"
+    }
+  ]
+}

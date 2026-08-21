@@ -1,0 +1,403 @@
+{
+  "topic": "Quantum Mechanics",
+  "slug": "quantum-mechanics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "linear algebra",
+    "ordinary differential equations",
+    "classical mechanics basics",
+    "complex numbers",
+    "basic probability"
+  ],
+  "exit_criteria": [
+    "solve the time-independent Schrödinger equation for standard potentials",
+    "calculate expectation values and uncertainties for quantum observables",
+    "apply raising and lowering operators to harmonic oscillator and angular momentum problems",
+    "use perturbation theory to find approximate energy corrections",
+    "explain the physical meaning of wave function collapse and measurement",
+    "work with spin-1/2 systems using Pauli matrices",
+    "apply selection rules to determine allowed atomic transitions",
+    "interpret quantum tunneling and barrier penetration phenomena"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Formalism",
+      "title": "Why do particles act like waves?",
+      "concepts": ["wave-particle duality", "de Broglie wavelength", "double-slit experiment"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/quantum-wave-interference",
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Formalism",
+      "title": "What does a wave function actually tell us?",
+      "concepts": ["wave function", "probability amplitude", "Born rule", "normalization"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://www.youtube.com/playlist?list=PLKxxVVdhQNB6CRn3f12Ro64hOL5BQV39d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Formalism",
+      "title": "Why can't we measure position and momentum at the same time?",
+      "concepts": ["Heisenberg uncertainty principle", "commutators", "complementary observables"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://phet.colorado.edu/en/simulations/quantum-measurement"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Formalism",
+      "title": "How do operators turn physical quantities into mathematics?",
+      "concepts": ["quantum operators", "eigenvalues and eigenstates", "hermitian operators", "expectation values"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://stanford.edu/~oas/SI/QM/papers/QMGreensite.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations & Formalism",
+      "title": "What really happens when we measure a quantum system?",
+      "concepts": ["wave function collapse", "measurement postulate", "superposition"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/quantum-measurement",
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/video_galleries/lecture-videos/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "One-Dimensional Systems",
+      "title": "How do we find the energy of a quantum particle?",
+      "concepts": ["time-independent Schrödinger equation", "energy eigenstates", "stationary states"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://www.youtube.com/playlist?list=PLKxxVVdhQNB6CRn3f12Ro64hOL5BQV39d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "One-Dimensional Systems",
+      "title": "Why is a particle in a box quantized?",
+      "concepts": ["infinite square well", "boundary conditions", "energy quantization", "orthonormal eigenfunctions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://www.physport.org/methods/QuVis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "One-Dimensional Systems",
+      "title": "What happens when the box has finite walls?",
+      "concepts": ["finite square well", "bound states", "wave function penetration"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://stanford.edu/~oas/SI/QM/papers/QMGreensite.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "One-Dimensional Systems",
+      "title": "Why does the quantum harmonic oscillator have evenly-spaced energy levels?",
+      "concepts": ["harmonic oscillator", "ladder operators", "ground state energy", "zero-point energy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://www.youtube.com/playlist?list=PLKxxVVdhQNB6CRn3f12Ro64hOL5BQV39d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "One-Dimensional Systems",
+      "title": "How can particles tunnel through walls they shouldn't be able to cross?",
+      "concepts": ["quantum tunneling", "transmission coefficient", "barrier penetration"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://phet.colorado.edu/en/simulations/quantum-tunneling",
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "One-Dimensional Systems",
+      "title": "Review: Can you solve the Schrödinger equation for different potentials?",
+      "concepts": ["problem-solving strategies", "boundary conditions", "energy quantization", "tunneling"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://www.physport.org/methods/QuVis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "One-Dimensional Systems",
+      "title": "What can scattering experiments tell us about quantum systems?",
+      "concepts": ["scattering states", "reflection and transmission", "phase shifts"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://stanford.edu/~oas/SI/QM/papers/QMGreensite.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Three Dimensions & Angular Momentum",
+      "title": "Why do we care about spherical coordinates in quantum mechanics?",
+      "concepts": ["spherical coordinates", "central potentials", "separation of variables", "radial equation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://www.youtube.com/playlist?list=PLKxxVVdhQNB6CRn3f12Ro64hOL5BQV39d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Three Dimensions & Angular Momentum",
+      "title": "How does quantum angular momentum differ from classical?",
+      "concepts": ["angular momentum operators", "commutation relations", "quantization of angular momentum"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Three Dimensions & Angular Momentum",
+      "title": "What do spherical harmonics describe?",
+      "concepts": ["spherical harmonics", "orbital angular momentum", "magnetic quantum number"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://www.physport.org/methods/QuVis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Three Dimensions & Angular Momentum",
+      "title": "Why does the hydrogen atom have discrete energy levels?",
+      "concepts": ["hydrogen atom", "Bohr model", "quantum numbers", "atomic orbitals"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/pages/lecture-notes/",
+        "https://www.youtube.com/playlist?list=PLKxxVVdhQNB6CRn3f12Ro64hOL5BQV39d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Three Dimensions & Angular Momentum",
+      "title": "Review: Can you visualize atomic orbitals and their symmetries?",
+      "concepts": ["orbital shapes", "quantum numbers", "degeneracy", "radial vs angular behavior"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.physport.org/methods/QuVis",
+        "https://phet.colorado.edu/en/simulations/quantum-measurement"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Three Dimensions & Angular Momentum",
+      "title": "How do we add angular momenta in quantum mechanics?",
+      "concepts": ["angular momentum addition", "Clebsch-Gordan coefficients", "total angular momentum"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://stanford.edu/~oas/SI/QM/papers/QMGreensite.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Spin & Identical Particles",
+      "title": "What is spin and why isn't it just rotation?",
+      "concepts": ["spin angular momentum", "intrinsic angular momentum", "spin-1/2", "Stern-Gerlach experiment"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://phet.colorado.edu/en/simulations/quantum-measurement"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Spin & Identical Particles",
+      "title": "How do Pauli matrices describe spin-1/2 systems?",
+      "concepts": ["Pauli matrices", "spin operators", "spinors", "spin measurements"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://www.youtube.com/playlist?list=PLKxxVVdhQNB6CRn3f12Ro64hOL5BQV39d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Spin & Identical Particles",
+      "title": "Why can't two electrons occupy the same quantum state?",
+      "concepts": ["Pauli exclusion principle", "fermions", "bosons", "symmetric and antisymmetric states"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://stanford.edu/~oas/SI/QM/papers/QMGreensite.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Spin & Identical Particles",
+      "title": "Review: Can you predict the behavior of multi-particle quantum systems?",
+      "concepts": ["identical particles", "exchange symmetry", "spin statistics", "multi-electron atoms"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://www.physport.org/methods/QuVis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Spin & Identical Particles",
+      "title": "How do we build up the periodic table quantum mechanically?",
+      "concepts": ["electron configuration", "shells and subshells", "Hund's rules", "screening"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://www.youtube.com/playlist?list=PLKxxVVdhQNB6CRn3f12Ro64hOL5BQV39d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Approximation Methods",
+      "title": "What do we do when we can't solve the Schrödinger equation exactly?",
+      "concepts": ["approximation methods", "perturbation theory", "variational principle"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://stanford.edu/~oas/SI/QM/papers/QMGreensite.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Approximation Methods",
+      "title": "How does perturbation theory give us approximate energy corrections?",
+      "concepts": ["time-independent perturbation theory", "first-order correction", "second-order correction", "degenerate perturbation theory"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://www.youtube.com/playlist?list=PLKxxVVdhQNB6CRn3f12Ro64hOL5BQV39d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Approximation Methods",
+      "title": "Why does the variational method always overestimate ground state energy?",
+      "concepts": ["variational method", "trial wave functions", "energy minimization"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://stanford.edu/~oas/SI/QM/papers/QMGreensite.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Approximation Methods",
+      "title": "How do quantum systems respond to time-varying perturbations?",
+      "concepts": ["time-dependent perturbation theory", "Fermi's golden rule", "transition rates"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://ocw.mit.edu/courses/8-06-quantum-physics-iii-spring-2016/pages/readings/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applications & Extensions",
+      "title": "Why can atoms only absorb and emit certain frequencies of light?",
+      "concepts": ["selection rules", "dipole transitions", "allowed and forbidden transitions"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/readings/",
+        "https://www.youtube.com/playlist?list=PLKxxVVdhQNB6CRn3f12Ro64hOL5BQV39d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Applications & Extensions",
+      "title": "What causes the fine structure in atomic spectra?",
+      "concepts": ["fine structure", "spin-orbit coupling", "relativistic corrections", "Lamb shift"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-06-quantum-physics-iii-spring-2016/pages/readings/",
+        "https://stanford.edu/~oas/SI/QM/papers/QMGreensite.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "topic": "Computer graphics — rendering and ray tracing",
+  "slug": "computer-graphics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic programming (loops, functions, data structures)",
+    "algebra and basic trigonometry",
+    "vectors and coordinate systems"
+  ],
+  "exit_criteria": [
+    "explain the difference between rasterization and ray tracing",
+    "implement a basic ray tracer with spheres, planes, and triangles",
+    "compute ray-object intersections using geometric algorithms",
+    "apply lighting models (Phong, diffuse, specular) to rendered scenes",
+    "implement shadows, reflections, and refraction",
+    "use acceleration structures (BVH) to optimize rendering performance",
+    "read and understand PBRT-style rendering code"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What is rendering and why do we care?",
+      "concepts": ["rendering definition", "image synthesis", "rasterization vs ray tracing"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-rendering.html",
+        "https://raytracing.github.io/books/RayTracingInOneWeekend.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do we turn numbers into colors on a screen?",
+      "concepts": ["pixels", "color spaces (RGB)", "framebuffer", "gamma correction"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/digital-imaging/digital-images.html",
+        "https://learnopengl.com/Getting-started/Hello-Window"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Why do we need so many coordinate systems?",
+      "concepts": ["world space", "camera space", "screen space", "transformations"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/geometry/coordinate-systems.html",
+        "https://learnopengl.com/Getting-started/Coordinate-Systems"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How do we describe a camera mathematically?",
+      "concepts": ["camera model", "field of view", "viewport", "projection"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/3d-viewing-pinhole-camera.html",
+        "https://raytracing.github.io/books/RayTracingInOneWeekend.html#positionablecamera"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Rasterization Primer",
+      "title": "What is rasterization and how does it differ from ray tracing?",
+      "concepts": ["rasterization pipeline", "triangles", "scanline", "Z-buffer"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation.html",
+        "https://learnopengl.com/Getting-started/Hello-Triangle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Rasterization Primer",
+      "title": "Why is rasterization so fast?",
+      "concepts": ["hardware acceleration", "GPU architecture", "parallel processing", "fragment shaders"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://learnopengl.com/Getting-started/Shaders",
+        "http://15462.courses.cs.cmu.edu/fall2015/lecture/pipeline"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Rasterization Primer",
+      "title": "Can you explain rasterization to someone who has never programmed?",
+      "concepts": ["mental model", "teaching analogy", "problem decomposition"],
+      "difficulty": 1,
+      "type": "teach-back",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Ray Tracing Fundamentals",
+      "title": "What is a ray and how do we shoot one into the scene?",
+      "concepts": ["ray definition", "parametric ray equation", "ray generation", "primary rays"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://raytracing.github.io/books/RayTracingInOneWeekend.html#rays,asimplecamera,andbackground",
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/ray-tracing-generating-camera-rays.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Ray Tracing Fundamentals",
+      "title": "How do we test if a ray hits a sphere?",
+      "concepts": ["ray-sphere intersection", "quadratic formula", "hit testing", "surface normal"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://raytracing.github.io/books/RayTracingInOneWeekend.html#addingasphere",
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes/ray-sphere-intersection.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Ray Tracing Fundamentals",
+      "title": "What about planes and triangles?",
+      "concepts": ["ray-plane intersection", "ray-triangle intersection", "barycentric coordinates"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-rendering-a-triangle/ray-triangle-intersection-geometric-solution.html",
+        "https://www.pbr-book.org/3ed-2018/Shapes/Triangle_Meshes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Ray Tracing Fundamentals",
+      "title": "How do we find the closest object a ray hits?",
+      "concepts": ["hit record", "t-min/t-max", "closest intersection", "scene management"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://raytracing.github.io/books/RayTracingInOneWeekend.html#surfacenormalsandmultipleobjects"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Ray Tracing Fundamentals",
+      "title": "Build a ray tracer that renders a scene of spheres",
+      "concepts": ["integration", "debugging", "visual output", "testing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://raytracing.github.io/books/RayTracingInOneWeekend.html",
+        "https://github.com/RayTracing/raytracing.github.io"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Ray Tracing Fundamentals",
+      "title": "Review: rays, intersections, and hit testing",
+      "concepts": ["ray generation", "intersection tests", "scene traversal"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Lighting and Shading",
+      "title": "Why do objects look 3D instead of flat?",
+      "concepts": ["shading", "surface normal", "lighting interaction", "diffuse reflection"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading.html",
+        "https://learnopengl.com/Lighting/Basic-Lighting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Lighting and Shading",
+      "title": "What is the Phong lighting model?",
+      "concepts": ["ambient", "diffuse", "specular", "Phong shading"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/shading-lights.html",
+        "https://learnopengl.com/Lighting/Basic-Lighting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Lighting and Shading",
+      "title": "How does light actually bounce off surfaces in the real world?",
+      "concepts": ["BRDF", "physically based rendering", "energy conservation", "Fresnel effect"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.pbr-book.org/3ed-2018/Reflection_Models.html",
+        "https://learnopengl.com/PBR/Theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Lighting and Shading",
+      "title": "What makes metals look different from plastic?",
+      "concepts": ["material models", "conductors vs dielectrics", "roughness", "metallic workflow"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://learnopengl.com/PBR/Theory",
+        "https://www.pbr-book.org/3ed-2018/Reflection_Models/Microfacet_Models.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Lighting and Shading",
+      "title": "Find a real-world object and explain what material model would render it",
+      "concepts": ["material analysis", "observation", "parameter estimation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://learnopengl.com/PBR/Theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Techniques",
+      "title": "How do we make shadows in ray tracing?",
+      "concepts": ["shadow rays", "occlusion testing", "point lights", "area lights"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://raytracing.github.io/books/RayTracingTheNextWeek.html",
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/adding-reflection-and-refraction.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Advanced Techniques",
+      "title": "Why do mirrors and windows work so well with ray tracing?",
+      "concepts": ["reflection", "refraction", "recursive rays", "Snell's law"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://raytracing.github.io/books/RayTracingInOneWeekend.html#dielectrics",
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/adding-reflection-and-refraction.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Techniques",
+      "title": "How do we add textures and patterns to surfaces?",
+      "concepts": ["texture mapping", "UV coordinates", "procedural textures", "normal mapping"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/texture-mapping.html",
+        "https://learnopengl.com/Getting-started/Textures"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Techniques",
+      "title": "Why is ray tracing so slow and how can we speed it up?",
+      "concepts": ["performance analysis", "bounding volumes", "spatial partitioning", "BVH"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.pbr-book.org/3ed-2018/Primitives_and_Intersection_Acceleration.html",
+        "https://raytracing.github.io/books/RayTracingTheNextWeek.html#boundingvolumehierarchies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Techniques",
+      "title": "What is Monte Carlo integration and why is it everywhere in rendering?",
+      "concepts": ["Monte Carlo methods", "sampling", "noise", "convergence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.pbr-book.org/3ed-2018/Monte_Carlo_Integration.html",
+        "https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Techniques",
+      "title": "Explore Shadertoy and explain how a shader you like works",
+      "concepts": ["shader analysis", "reverse engineering", "creative exploration"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.shadertoy.com/",
+        "https://iquilezles.org/articles/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Techniques",
+      "title": "Review: lighting, materials, and advanced techniques",
+      "concepts": ["shading models", "reflection/refraction", "acceleration", "integration"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://raytracing.github.io/books/RayTracingInOneWeekend.html",
+        "https://www.pbr-book.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Final Integration",
+      "title": "What would you add to your ray tracer next?",
+      "concepts": ["path tracing", "global illumination", "depth of field", "future learning"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html",
+        "https://www.pbr-book.org/",
+        "https://graphicscodex.com/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

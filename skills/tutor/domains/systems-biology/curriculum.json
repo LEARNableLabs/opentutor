@@ -1,0 +1,386 @@
+{
+  "topic": "Systems Biology and Biological Networks",
+  "slug": "systems-biology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (gene expression, proteins, cell signaling)",
+    "introductory calculus",
+    "basic programming (Python or R)",
+    "elementary statistics"
+  ],
+  "exit_criteria": [
+    "analyze biological networks using graph theory metrics",
+    "identify and interpret network motifs in regulatory circuits",
+    "build ODE models of simple regulatory networks",
+    "use tools like Cytoscape to visualize and analyze networks",
+    "understand robustness, feedback, and design principles in biological systems",
+    "apply network inference methods to experimental data"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Network Foundations",
+      "title": "Why do biologists suddenly care about graph theory?",
+      "concepts": ["networks as graphs", "nodes and edges", "biological networks"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrg1272",
+        "https://ocw.mit.edu/courses/7-32-systems-biology-fall-2014/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Network Foundations",
+      "title": "What makes a network 'small-world' and why does it matter for cells?",
+      "concepts": ["network topology", "small-world networks", "path length", "clustering coefficient"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://networkscience.igraph.org/",
+        "https://www.youtube.com/watch?v=EQ7WGUD0bLI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Network Foundations",
+      "title": "How can most proteins have few connections while a few have hundreds?",
+      "concepts": ["scale-free networks", "degree distribution", "hubs"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.286.5439.509",
+        "https://networkscience.igraph.org/book.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Network Foundations",
+      "title": "What patterns show up over and over in gene circuits?",
+      "concepts": ["network motifs", "feed-forward loops", "negative autoregulation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.weizmann.ac.il/mcb/UriAlon/",
+        "https://www.youtube.com/playlist?list=PLtQIpL_Q5W0x1B0LM3UWWHkRAQUlsqYKn"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Network Foundations",
+      "title": "Can you spot the feed-forward loop in the lactose system?",
+      "concepts": ["motif detection", "biological function of motifs", "arabinose and lactose systems"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cell.com/fulltext/S0092-8674(02)00808-7",
+        "https://cytoscape.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Network Foundations",
+      "title": "What have we learned about networks, topology, and motifs?",
+      "concepts": ["graph theory review", "motifs recap", "topology metrics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/networks-illustrated"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Biological Network Types",
+      "title": "How does a cell decide which genes to turn on?",
+      "concepts": ["gene regulatory networks", "transcription factors", "regulatory logic"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.genome.gov/genetics-glossary/Gene-Regulation",
+        "https://www.nature.com/articles/nrg2102"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Biological Network Types",
+      "title": "What keeps metabolism from spiraling out of control?",
+      "concepts": ["metabolic networks", "flux", "stoichiometry", "pathways"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.genome.jp/kegg/pathway.html",
+        "https://reactome.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Biological Network Types",
+      "title": "Why do proteins need to talk to each other?",
+      "concepts": ["protein-protein interactions", "complexes", "interaction databases"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://string-db.org/",
+        "https://www.ebi.ac.uk/intact/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Biological Network Types",
+      "title": "How does a signal at the cell surface reach the nucleus?",
+      "concepts": ["signaling networks", "cascades", "phosphorylation", "crosstalk"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cellsignal.com/science-resources/pathway-resources",
+        "https://www.signaling-gateway.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Biological Network Types",
+      "title": "Can you map the interactions in a signaling pathway?",
+      "concepts": ["network visualization", "Cytoscape", "pathway curation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://cytoscape.org/documentation.html",
+        "https://manual.cytoscape.org/en/stable/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Biological Network Types",
+      "title": "Where can you find curated biological network data?",
+      "concepts": ["KEGG", "STRING", "Reactome", "BioGRID"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.genome.jp/kegg/",
+        "https://string-db.org/",
+        "https://thebiogrid.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Biological Network Types",
+      "title": "What distinguishes the four major biological network types?",
+      "concepts": ["GRNs", "metabolic", "PPI", "signaling"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/nrg1272"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Mathematical Modeling",
+      "title": "How do you write down how fast a protein is made and degraded?",
+      "concepts": ["ordinary differential equations", "production and degradation", "steady state"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/7-32-systems-biology-fall-2014/",
+        "https://www.youtube.com/watch?v=0MJWp7N1mZQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Mathematical Modeling",
+      "title": "What happens when a gene represses itself?",
+      "concepts": ["negative feedback", "stability", "response time"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.weizmann.ac.il/mcb/UriAlon/materials",
+        "https://www.cell.com/fulltext/S0092-8674(02)00808-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Mathematical Modeling",
+      "title": "Can genes be modeled with just ON and OFF states?",
+      "concepts": ["Boolean networks", "logical gates", "attractors"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.pnas.org/doi/10.1073/pnas.0806977105",
+        "http://ginsim.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Mathematical Modeling",
+      "title": "How do you predict metabolic flux without kinetic parameters?",
+      "concepts": ["flux balance analysis", "constraints", "optimization", "FBA"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://opencobra.github.io/cobrapy/",
+        "https://www.nature.com/articles/nbt.1614"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Mathematical Modeling",
+      "title": "Can you build and simulate a toggle switch model?",
+      "concepts": ["bistability", "positive feedback", "simulation tools"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://copasi.org/",
+        "https://vcell.org/",
+        "https://www.nature.com/articles/35002125"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Network Dynamics and Control",
+      "title": "Why doesn't your body temperature drift when you walk outside?",
+      "concepts": ["homeostasis", "negative feedback", "integral control"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.cell.com/cell/fulltext/S0092-8674(15)01610-4",
+        "https://www.youtube.com/watch?v=M8xlOm2wPAA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Network Dynamics and Control",
+      "title": "How do we move from network structure to network dynamics?",
+      "concepts": ["ODEs", "Boolean", "FBA", "feedback"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/7-32-systems-biology-fall-2014/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Network Dynamics and Control",
+      "title": "How can biological systems be both precise and robust to noise?",
+      "concepts": ["robustness", "noise", "redundancy", "fail-safe mechanisms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nature03524",
+        "https://www.sciencedirect.com/science/article/pii/S0092867404003027"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Network Dynamics and Control",
+      "title": "What makes a biological clock tick like clockwork?",
+      "concepts": ["oscillations", "circadian rhythms", "delay", "nonlinearity"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.nobelprize.org/prizes/medicine/2017/summary/",
+        "https://www.nature.com/articles/nature08734"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Network Dynamics and Control",
+      "title": "How do you reverse-engineer a network from gene expression data?",
+      "concepts": ["network inference", "correlation vs causation", "perturbation experiments"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrg2623",
+        "https://bioconductor.org/packages/release/bioc/html/minet.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Network Dynamics and Control",
+      "title": "Can you identify essential genes from network structure alone?",
+      "concepts": ["centrality measures", "betweenness", "hubs vs bottlenecks", "lethality"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nature.com/articles/nature01250",
+        "https://cytoscape.org/cytoscape-tutorials/protocols/network-analysis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications and Future Directions",
+      "title": "How can network analysis help find new drug targets?",
+      "concepts": ["network medicine", "disease modules", "druggable proteins"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nrd4199",
+        "https://disease-connect.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications and Future Directions",
+      "title": "Can you design a synthetic biological circuit from scratch?",
+      "concepts": ["synthetic biology", "genetic circuits", "design principles"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/35002125",
+        "https://parts.igem.org/Main_Page",
+        "http://www.celldesigner.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications and Future Directions",
+      "title": "How can we apply network thinking to real-world problems?",
+      "concepts": ["drug targets", "synthetic biology", "personalized medicine"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/collections/systems-biology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applications and Future Directions",
+      "title": "What are the frontiers of systems biology today?",
+      "concepts": ["single-cell networks", "spatial modeling", "multi-scale integration", "AI in systems biology"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cell.com/cell-systems/home",
+        "https://www.nature.com/subjects/systems-biology",
+        "https://www.embopress.org/journal/14609183"
+      ],
+      "status": "pending"
+    }
+  ]
+}

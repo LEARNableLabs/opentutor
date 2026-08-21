@@ -1,0 +1,449 @@
+{
+  "topic": "Art history — Renaissance to contemporary",
+  "slug": "art-history",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic visual literacy",
+    "familiarity with major historical periods",
+    "willingness to look closely at images"
+  ],
+  "exit_criteria": [
+    "can identify major art movements from Renaissance to contemporary by visual characteristics",
+    "can analyze artworks using formal, contextual, and comparative methods",
+    "can explain how historical context shapes artistic production",
+    "can articulate connections between movements and trace artistic lineages",
+    "can critically discuss contemporary art using established frameworks"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Renaissance & Mannerism",
+      "title": "How did Renaissance artists create the illusion of three-dimensional space?",
+      "concepts": ["linear perspective", "humanism", "classical revival"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/linear-perspective-interactive/",
+        "https://www.khanacademy.org/humanities/renaissance-reformation/early-renaissance1/beginners-renaissance-florence/a/linear-perspective-interactive"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Renaissance & Mannerism",
+      "title": "Why does the Sistine Chapel ceiling still astound viewers 500 years later?",
+      "concepts": ["Michelangelo", "fresco technique", "biblical narrative", "human anatomy"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://smarthistory.org/michelangelo-ceiling-of-the-sistine-chapel/",
+        "https://artsandculture.google.com/story/explore-the-sistine-chapel/jAKCv4KBUAniJg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Renaissance & Mannerism",
+      "title": "How did Northern Renaissance artists see the world differently from their Italian counterparts?",
+      "concepts": ["oil painting technique", "symbolism", "domestic interiors", "religious reform"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://smarthistory.org/northern-renaissance-an-introduction/",
+        "https://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Renaissance & Mannerism",
+      "title": "What happens when classical harmony gives way to emotional intensity?",
+      "concepts": ["Mannerism", "elongation", "artifice", "courtly culture"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/mannerism-an-introduction/",
+        "https://www.khanacademy.org/humanities/renaissance-reformation/mannerism1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Renaissance & Mannerism",
+      "title": "Compare two portraits: what can formal analysis reveal?",
+      "concepts": ["formal analysis", "portraiture", "patronage"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://smarthistory.org/a-beginners-guide-to-renaissance-art/",
+        "https://www.metmuseum.org/toah/hd/renp/hd_renp.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Renaissance Foundations Review",
+      "title": "Can you identify Renaissance techniques and explain their revolutionary impact?",
+      "concepts": ["linear perspective", "humanism", "Northern vs Italian Renaissance", "Mannerism"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://smarthistory.org/a-beginners-guide-to-renaissance-art/",
+        "https://www.metmuseum.org/toah/hd/renp/hd_renp.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Baroque & Rococo",
+      "title": "Why does Baroque sculpture look like it's in motion?",
+      "concepts": ["Bernini", "movement", "theatrical space", "viewer engagement"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://smarthistory.org/bernini-ecstasy-of-st-theresa/",
+        "https://artsandculture.google.com/asset/the-ecstasy-of-saint-teresa/bAFyef8DGDVbNw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Baroque & Rococo",
+      "title": "What makes Vermeer's domestic scenes feel so intimate and timeless?",
+      "concepts": ["Dutch Golden Age", "genre painting", "light effects", "everyday life"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://smarthistory.org/vermeer/",
+        "https://www.rijksmuseum.nl/en/vermeer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Baroque & Rococo",
+      "title": "How did Rococo art reflect aristocratic leisure culture?",
+      "concepts": ["Rococo style", "ornamentation", "pastel palette", "fête galante"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/rococo-an-introduction/",
+        "https://www.khanacademy.org/humanities/monarchy-enlightenment/rococo/a/rococo-in-painting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Baroque & Rococo",
+      "title": "How did Caravaggio use light and shadow to create drama?",
+      "concepts": ["chiaroscuro", "tenebrism", "Baroque naturalism", "Counter-Reformation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/caravaggio/",
+        "https://www.khanacademy.org/humanities/monarchy-enlightenment/baroque-art1/baroque-italy/a/caravaggio"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Neoclassicism & Romanticism",
+      "title": "Why did artists return to ancient Greece and Rome during political revolution?",
+      "concepts": ["Neoclassicism", "classical order", "political allegory", "French Revolution"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/neoclassicism-an-introduction/",
+        "https://www.khanacademy.org/humanities/monarchy-enlightenment/neo-classicism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Neoclassicism & Romanticism",
+      "title": "How did Romantic artists express emotion and the sublime in nature?",
+      "concepts": ["Romanticism", "sublime", "individual expression", "landscape painting"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://smarthistory.org/romanticism/",
+        "https://www.tate.org.uk/art/art-terms/r/romanticism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Baroque to Romanticism Review",
+      "title": "How did art shift from Baroque drama to Romantic emotion?",
+      "concepts": ["Baroque", "Rococo", "Neoclassicism", "Romanticism", "stylistic evolution"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://smarthistory.org/a-beginners-guide-to-romanticism/",
+        "https://www.metmuseum.org/toah/hd/baro/hd_baro.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Neoclassicism & Romanticism",
+      "title": "Debate: does art serve reason or emotion?",
+      "concepts": ["Enlightenment values", "artistic philosophy", "historical dialectic"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.khanacademy.org/humanities/monarchy-enlightenment",
+        "https://smarthistory.org/a-beginners-guide-to-romanticism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Realism & Impressionism",
+      "title": "Why did Courbet's paintings of ordinary people shock the art world?",
+      "concepts": ["Realism", "social class", "rejection of idealization", "Salon system"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/realism/",
+        "https://www.khanacademy.org/humanities/becoming-modern/avant-garde-france/realism/a/courbet-the-stone-breakers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Realism & Impressionism",
+      "title": "How did Impressionists capture the fleeting effects of light?",
+      "concepts": ["Impressionism", "plein-air painting", "broken color", "modern life"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://smarthistory.org/impressionism-an-introduction/",
+        "https://www.metmuseum.org/toah/hd/imml/hd_imml.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Realism & Impressionism",
+      "title": "What makes Monet's water lilies more than just pretty pictures?",
+      "concepts": ["series painting", "abstraction emergence", "perceptual experience"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://smarthistory.org/monet-water-lilies/",
+        "https://www.moma.org/collection/works/79802"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Realism & Impressionism",
+      "title": "How did Post-Impressionists break with visual reality?",
+      "concepts": ["Post-Impressionism", "subjective color", "structural form", "symbolism"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/post-impressionism/",
+        "https://www.khanacademy.org/humanities/becoming-modern/avant-garde-france/post-impressionism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "19th Century Review",
+      "title": "Trace the shift from Neoclassicism to Post-Impressionism: what changed?",
+      "concepts": ["artistic evolution", "modernization", "academic vs avant-garde"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/imml/hd_imml.htm",
+        "https://smarthistory.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Early Modernism",
+      "title": "Why did Picasso and Braque fracture form into geometric planes?",
+      "concepts": ["Cubism", "multiple perspectives", "fourth dimension", "collage"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/cubism/",
+        "https://www.moma.org/learn/moma_learning/themes/cubism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Early Modernism",
+      "title": "How did Expressionists use color to convey inner emotional states?",
+      "concepts": ["Expressionism", "Fauvism", "emotional color", "psychological intensity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://smarthistory.org/expressionism-an-introduction/",
+        "https://www.khanacademy.org/humanities/art-1010/early-abstraction/german-expressionism/a/expressionism-an-introduction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Early Modernism",
+      "title": "What happens when artists reject logic and embrace absurdity?",
+      "concepts": ["Dada", "anti-art", "readymades", "World War I impact"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://smarthistory.org/dada/",
+        "https://www.moma.org/learn/moma_learning/themes/dada/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Early Modernism",
+      "title": "How did Surrealists visualize the unconscious mind?",
+      "concepts": ["Surrealism", "automatism", "dream imagery", "Freudian influence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/surrealism/",
+        "https://www.moma.org/learn/moma_learning/themes/surrealism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Early Modernism",
+      "title": "When did painting break free from representation entirely?",
+      "concepts": ["abstraction", "Kandinsky", "non-objective art", "spiritual in art"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://smarthistory.org/abstraction/",
+        "https://www.guggenheim.org/artwork/artist/wassily-kandinsky"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "High Modernism",
+      "title": "Why did Abstract Expressionists make huge canvases with gestural marks?",
+      "concepts": ["Abstract Expressionism", "action painting", "existentialism", "New York School"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/abstract-expressionism-part-i/",
+        "https://www.moma.org/learn/moma_learning/themes/abstract-expressionism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Early Modernism Review",
+      "title": "From Cubism to Abstract Expressionism: which modernist revolution mattered most?",
+      "concepts": ["Cubism", "Expressionism", "Dada", "Surrealism", "abstraction", "Abstract Expressionism"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.moma.org/learn/moma_learning/themes/",
+        "https://smarthistory.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "High Modernism",
+      "title": "What happens when art strips away everything but pure form?",
+      "concepts": ["Minimalism", "reduction", "phenomenology", "industrial materials"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://smarthistory.org/minimalism/",
+        "https://www.tate.org.uk/art/art-terms/m/minimalism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "High Modernism",
+      "title": "Can an idea be more important than the art object itself?",
+      "concepts": ["Conceptual art", "dematerialization", "institutional critique", "language"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://smarthistory.org/conceptual-art/",
+        "https://www.moma.org/learn/moma_learning/themes/conceptual-art/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "High Modernism",
+      "title": "How did Pop Art blur the line between high art and popular culture?",
+      "concepts": ["Pop Art", "consumerism", "mass media", "irony"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://smarthistory.org/pop-art/",
+        "https://www.moma.org/learn/moma_learning/themes/pop-art/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Contemporary Art",
+      "title": "How did Postmodernism challenge modernist certainties?",
+      "concepts": ["Postmodernism", "appropriation", "irony", "pluralism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://smarthistory.org/postmodernism/",
+        "https://www.tate.org.uk/art/art-terms/p/postmodernism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Contemporary Art",
+      "title": "Why is installation art about experiencing space, not just looking?",
+      "concepts": ["installation art", "viewer participation", "site-specificity", "immersive experience"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.tate.org.uk/art/art-terms/i/installation-art",
+        "https://artsandculture.google.com/story/installation-art/wAKCHnJJ_fKdKg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Contemporary Art",
+      "title": "How has globalization transformed whose art we see and value?",
+      "concepts": ["global contemporary", "decolonization", "biennale culture", "non-Western perspectives"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.tate.org.uk/research/tate-papers/08/contemporary-art-and-globalization",
+        "https://smarthistory.org/art-since-1980/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Contemporary Art",
+      "title": "What can art do about social justice, climate change, and inequality?",
+      "concepts": ["social practice", "activist art", "participatory art", "relational aesthetics"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.moma.org/learn/moma_learning/themes/what-is-contemporary-art/",
+        "https://www.tate.org.uk/art/art-terms/s/social-practice"
+      ],
+      "status": "pending"
+    }
+  ]
+}

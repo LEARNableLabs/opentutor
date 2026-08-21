@@ -1,0 +1,373 @@
+{
+  "topic": "Sourdough Science — Microbiology of Wild Fermentation",
+  "slug": "sourdough-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (cells, metabolism)",
+    "introductory chemistry (pH, acids/bases, organic molecules)",
+    "familiarity with sourdough baking (at least attempted it once)"
+  ],
+  "exit_criteria": [
+    "explain the symbiotic relationship between LAB and wild yeast in sourdough starters",
+    "predict how temperature, hydration, and flour type affect microbial populations",
+    "diagnose common starter problems (over-acidification, poor rise, off-flavors) using microbial ecology principles",
+    "design feeding schedules and environmental conditions to optimize flavor profiles",
+    "describe the biochemical pathways that produce lactic acid, acetic acid, CO2, and flavor compounds",
+    "interpret fermentation curves and pH changes during bulk fermentation",
+    "communicate sourdough science accurately to other bakers"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Wild Fermentation",
+      "title": "What makes sourdough different from packaged yeast?",
+      "concepts": ["wild fermentation", "microbial diversity", "spontaneous inoculation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S0924224414002386",
+        "https://www.youtube.com/watch?v=yYkTrGHNxCg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Wild Fermentation",
+      "title": "Who lives in your starter jar?",
+      "concepts": ["lactic acid bacteria", "wild yeast", "microbial consortium"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-020-00875-w",
+        "https://www.asmscience.org/content/journal/microbiolspec"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Wild Fermentation",
+      "title": "Why does your starter smell sour?",
+      "concepts": ["lactic acid", "acetic acid", "pH", "acid production"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163316/",
+        "https://www.youtube.com/watch?v=hmZOWQyLGrk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Wild Fermentation",
+      "title": "How do microbes colonize flour and water from thin air?",
+      "concepts": ["ecological succession", "niche construction", "environmental sources"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://apsjournals.apsnet.org/doi/10.1094/ASBCJ-2012-0502-01",
+        "https://www.frontiersin.org/articles/10.3389/fmicb.2016.00068/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "The Microbial Cast",
+      "title": "What species of Lactobacillus dominate sourdough starters?",
+      "concepts": ["Lactobacillus sanfranciscensis", "L. plantarum", "L. brevis", "species diversity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4809863/",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/1541-4337.12063"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "The Microbial Cast",
+      "title": "Why aren't Saccharomyces cerevisiae the only yeast in sourdough?",
+      "concepts": ["Candida milleri", "Kazachstania exigua", "acid tolerance", "yeast diversity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://journals.asm.org/doi/10.1128/AEM.02955-10",
+        "https://link.springer.com/article/10.1007/s00253-018-9438-y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "The Microbial Cast",
+      "title": "How do LAB and yeast help each other?",
+      "concepts": ["syntrophy", "cross-feeding", "maltose metabolism", "amino acid exchange"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5446770/",
+        "https://academic.oup.com/femsre/article/41/Supp_1/S152/3862635"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Microbial Cast",
+      "title": "Can you explain how LAB and yeast work together in your starter?",
+      "concepts": ["microbial diversity review", "acid production review", "symbiosis review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=vJhEsq-sKMU",
+        "https://www.breadwerx.com/sourdough-science/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Fermentation Chemistry",
+      "title": "What enzymes break down flour into sugar for microbes?",
+      "concepts": ["amylase", "maltose", "starch hydrolysis", "enzymatic activity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6406342/",
+        "https://www.sciencedirect.com/science/article/pii/S0733521017308426"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Fermentation Chemistry",
+      "title": "Why does lactic acid make bread taste better than acetic acid?",
+      "concepts": ["heterofermentation", "homofermentation", "acid ratio", "flavor perception"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2621.2006.01344.x",
+        "https://www.youtube.com/watch?v=vmb0wWKITBQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Fermentation Chemistry",
+      "title": "How does pH control microbial populations?",
+      "concepts": ["pH buffering", "acid tolerance", "competitive exclusion", "pathogen inhibition"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3911095/",
+        "https://sfamjournals.onlinelibrary.wiley.com/doi/full/10.1111/jam.14868"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Fermentation Chemistry",
+      "title": "How do proteases change gluten and why should you care?",
+      "concepts": ["proteolysis", "gluten degradation", "dough extensibility", "amino acid release"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315838/",
+        "https://link.springer.com/article/10.1007/s00217-004-1052-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Fermentation Chemistry",
+      "title": "Where does CO2 come from and how much do LAB contribute?",
+      "concepts": ["yeast respiration", "heterofermentative LAB", "gas production", "leavening"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S0963996915000764",
+        "https://www.youtube.com/watch?v=kzJEz1mpwDk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Fermentation Chemistry",
+      "title": "How does flour become the flavors you taste in bread?",
+      "concepts": ["enzymatic pathways review", "acid chemistry review", "CO2 production review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.breadwerx.com/understanding-sourdough-chemistry/",
+        "https://www.theperfectloaf.com/sourdough-bread-baking-schedule/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Environmental Control",
+      "title": "How does temperature shift the LAB-to-yeast ratio?",
+      "concepts": ["optimal growth temperature", "thermophilic vs mesophilic LAB", "temperature curves"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4161275/",
+        "https://www.youtube.com/watch?v=beKzcRNEsPo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Environmental Control",
+      "title": "Why does a stiff starter behave differently than a liquid one?",
+      "concepts": ["hydration ratio", "oxygen availability", "LAB metabolism shifts", "dough consistency"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1750-3841.2011.02088.x",
+        "https://www.thefreshloaf.com/node/10901/hydration-and-sourdough"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Environmental Control",
+      "title": "What does whole grain flour add to the microbial party?",
+      "concepts": ["bran microbiota", "mineral content", "enzymatic load", "phytic acid"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6770287/",
+        "https://www.sciencedirect.com/science/article/pii/S0924224418307416"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Environmental Control",
+      "title": "How does salt inhibit (and why we add it anyway)?",
+      "concepts": ["osmotic stress", "ionic strength", "flavor enhancement", "microbial inhibition"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4161272/",
+        "https://www.kingarthurbaking.com/blog/2017/08/22/salt-in-sourdough"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Environmental Control",
+      "title": "How would you design a feeding schedule for a mild, sweet loaf?",
+      "concepts": ["feeding ratio", "fermentation time", "young vs mature starter", "flavor tuning"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.theperfectloaf.com/guides/sourdough-starter/",
+        "https://brodandtaylor.com/sourdough-feeding-schedules/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Environmental Control",
+      "title": "Which fermentation variables have the biggest impact on your bread?",
+      "concepts": ["temperature control review", "hydration effects review", "flour choice review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=HlJEjW-QSnQ",
+        "https://www.breadwerx.com/optimizing-sourdough-fermentation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Flavor & Texture",
+      "title": "What volatile compounds create that tangy sourdough aroma?",
+      "concepts": ["alcohols", "esters", "aldehydes", "volatile organic compounds", "sensory chemistry"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/jf0487776",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5746035/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Flavor & Texture",
+      "title": "How do exopolysaccharides make dough sticky and bread moist?",
+      "concepts": ["EPS production", "dextran", "water retention", "texture modification"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4951208/",
+        "https://link.springer.com/article/10.1007/s00253-009-2154-0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Flavor & Texture",
+      "title": "Why does long fermentation improve digestibility?",
+      "concepts": ["FODMAP reduction", "phytate degradation", "gluten hydrolysis", "bioavailability"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6723813/",
+        "https://gut.bmj.com/content/67/9/1683"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Flavor & Texture",
+      "title": "Can you trace a bread's flavor back to specific microbes?",
+      "concepts": ["sensory analysis", "flavor wheel", "metabolite-to-flavor correlation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S0963996919304995",
+        "https://www.youtube.com/watch?v=rYwPJgszIL0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applied Science",
+      "title": "What went wrong with your starter and how can you fix it?",
+      "concepts": ["over-acidification", "yeast death", "contamination", "troubleshooting"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.theperfectloaf.com/sourdough-starter-troubleshooting/",
+        "https://www.thefreshloaf.com/handbook/sourdough-starter-faq"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applied Science",
+      "title": "How do commercial bakeries maintain starter consistency?",
+      "concepts": ["scaling", "mother culture", "propagation schedules", "quality control"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S0924224413001689",
+        "https://www.youtube.com/watch?v=r1ATvb-_8yA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applied Science",
+      "title": "How would you build a starter from scratch to achieve a specific flavor?",
+      "concepts": ["experimental design", "parameter optimization", "sensory-driven science"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6523910/",
+        "https://www.theperfectloaf.com/my-sourdough-starter-maintenance-routine/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

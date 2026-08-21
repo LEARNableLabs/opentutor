@@ -1,0 +1,397 @@
+{
+  "topic": "Political science — institutions and voting theory",
+  "slug": "political-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic probability and logic",
+    "familiarity with democratic government structures",
+    "comfort with abstract reasoning"
+  ],
+  "exit_criteria": [
+    "explain why no voting system can satisfy all fairness criteria (Arrow's theorem)",
+    "analyze how electoral systems shape party systems and strategic behavior",
+    "compare institutional designs and predict their effects on governance",
+    "identify voting paradoxes in real-world elections",
+    "evaluate trade-offs between different democratic institutions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Political Institutions",
+      "title": "Why do democracies structure power so differently?",
+      "concepts": ["institutional variety", "separation of powers", "comparative politics"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/17-20-introduction-to-american-politics-spring-2013/",
+        "https://www.khanacademy.org/humanities/us-government-and-civics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Political Institutions",
+      "title": "What happens when the president and legislature disagree?",
+      "concepts": ["presidential systems", "checks and balances", "gridlock"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=bO7FQsCcbD8",
+        "https://ocw.mit.edu/courses/17-20-introduction-to-american-politics-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Political Institutions",
+      "title": "Why do some countries make the legislature choose the executive?",
+      "concepts": ["parliamentary systems", "confidence votes", "coalition government"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/parliamentary-system",
+        "https://www.youtube.com/playlist?list=PL8dPuuaLjXtOfse2ncvffeelTrqvhrz8H"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Political Institutions",
+      "title": "How do federal systems prevent tyranny of the majority?",
+      "concepts": ["federalism", "vertical power-sharing", "subsidiarity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/federalism/",
+        "https://www.khanacademy.org/humanities/us-government-and-civics/us-gov-foundations/us-gov-federalism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Political Institutions",
+      "title": "Can judges protect democracy from itself?",
+      "concepts": ["judicial review", "constitutional courts", "counter-majoritarian difficulty"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/judicial-review",
+        "https://ocw.mit.edu/courses/17-20-introduction-to-american-politics-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Political Institutions",
+      "title": "Why do veto players make policy so sticky?",
+      "concepts": ["veto players", "policy stability", "status quo bias"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.jstor.org/stable/2586011",
+        "https://www.cambridge.org/core/journals/perspectives-on-politics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Electoral Systems",
+      "title": "How does the way we count votes change who wins?",
+      "concepts": ["electoral formulas", "plurality vs majority", "runoff systems"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ncase.me/ballot/",
+        "https://www.electology.org/voting-methods-101"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Electoral Systems",
+      "title": "Why do single-member districts favor two parties?",
+      "concepts": ["Duverger's Law", "strategic entry", "wasted votes"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/voting-methods/",
+        "https://www.britannica.com/topic/Duvergers-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Electoral Systems",
+      "title": "Can we make every vote count equally?",
+      "concepts": ["proportional representation", "party lists", "district magnitude"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/proportional-representation",
+        "https://www.electology.org/proportional"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Electoral Systems",
+      "title": "What happens when voters rank candidates instead of picking one?",
+      "concepts": ["ranked-choice voting", "instant runoff", "single transferable vote"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ncase.me/ballot/",
+        "https://www.youtube.com/watch?v=3Y3jE3B8HsE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Electoral Systems",
+      "title": "Why do some countries split seats two different ways?",
+      "concepts": ["mixed electoral systems", "MMP", "parallel voting"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/election-political-science",
+        "https://aceproject.org/main/english/es/esd.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Electoral Systems",
+      "title": "How do we choose the right electoral system for a democracy?",
+      "concepts": ["electoral system comparison", "trade-offs", "design choices"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ncase.me/ballot/",
+        "https://www.electology.org/voting-methods-101"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Electoral Systems",
+      "title": "Can we design elections that parties can't game?",
+      "concepts": ["gerrymandering", "malapportionment", "electoral manipulation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.quantamagazine.org/the-mathematics-of-gerrymandering-20171012/",
+        "https://www.youtube.com/watch?v=Mky11UJb9AY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Social Choice Theory",
+      "title": "What do we mean when we say voters have 'preferences'?",
+      "concepts": ["preference orderings", "transitivity", "rational choice"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/social-choice/",
+        "https://www.youtube.com/watch?v=yhO6jfHPFQU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Social Choice Theory",
+      "title": "Can the majority contradict itself?",
+      "concepts": ["Condorcet paradox", "cyclical preferences", "intransitivity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/voting-methods/",
+        "https://ncase.me/ballot/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Social Choice Theory",
+      "title": "Why does adding a losing candidate change the winner?",
+      "concepts": ["independence of irrelevant alternatives", "spoiler effect", "IIA violation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.electology.org/spoiler-effect",
+        "https://ncase.me/ballot/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Social Choice Theory",
+      "title": "What does it mean for a voting system to be 'fair'?",
+      "concepts": ["fairness criteria", "May's theorem", "Condorcet criterion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/voting-methods/",
+        "https://www.electology.org/approval-voting-versus-irv"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Social Choice Theory",
+      "title": "Why can't any voting system satisfy all fairness criteria?",
+      "concepts": ["Arrow's impossibility theorem", "dictatorship", "trade-offs"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/arrows-theorem/",
+        "https://www.youtube.com/watch?v=AhVR7gFMKNg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Social Choice Theory",
+      "title": "Why is every voting system doomed to fail some fairness test?",
+      "concepts": ["impossibility theorems", "voting paradoxes", "design constraints"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/arrows-theorem/",
+        "https://ncase.me/ballot/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Social Choice Theory",
+      "title": "Can we prevent strategic manipulation of voting systems?",
+      "concepts": ["Gibbard-Satterthwaite theorem", "strategy-proofness", "incentive compatibility"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/social-choice/",
+        "https://www.jstor.org/stable/1914083"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Strategic Voting and Game Theory",
+      "title": "Why do voters sometimes lie about their preferences?",
+      "concepts": ["strategic voting", "sincere voting", "pivot probabilities"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/voting-methods/",
+        "https://www.electology.org/tactical-voting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Strategic Voting and Game Theory",
+      "title": "Do candidates converge to the center?",
+      "concepts": ["median voter theorem", "spatial models", "policy positioning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=yhO6jfHPFQU",
+        "https://ocw.mit.edu/courses/14-770-introduction-to-political-economy-fall-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Strategic Voting and Game Theory",
+      "title": "Who gets to decide what we vote on?",
+      "concepts": ["agenda-setting", "proposal power", "structure-induced equilibrium"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/2585397",
+        "https://ocw.mit.edu/courses/14-770-introduction-to-political-economy-fall-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Strategic Voting and Game Theory",
+      "title": "Why do parties form coalitions after elections?",
+      "concepts": ["coalition formation", "minimum winning coalition", "portfolio allocation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/coalition-government",
+        "https://www.youtube.com/playlist?list=PL8dPuuaLjXtOfse2ncvffeelTrqvhrz8H"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Strategic Voting and Game Theory",
+      "title": "How does game theory help us predict political behavior?",
+      "concepts": ["strategic voting", "equilibrium concepts", "coalition dynamics", "agenda-setting"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/voting-methods/",
+        "https://ocw.mit.edu/courses/14-770-introduction-to-political-economy-fall-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Strategic Voting and Game Theory",
+      "title": "Can we measure voting power beyond seat counts?",
+      "concepts": ["Shapley-Shubik index", "Banzhaf power index", "weighted voting"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/voting-power/",
+        "https://www.cut-the-knot.org/Curriculum/SocialScience/PowerIndex.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Comparative Institutions",
+      "title": "How do we measure if democracy is working?",
+      "concepts": ["democracy indices", "institutional quality", "governance metrics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.v-dem.net/",
+        "https://www.idea.int/gsod/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Comparative Institutions",
+      "title": "Why do bad institutions persist?",
+      "concepts": ["path dependence", "institutional inertia", "constitutional rigidity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/2944595",
+        "https://www.cambridge.org/core/journals/perspectives-on-politics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Comparative Institutions",
+      "title": "What would you change about your country's political system?",
+      "concepts": ["institutional reform", "constitutional design", "trade-off analysis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://constitutionnet.org/",
+        "https://www.idea.int/publications/catalogue/constitution-building-primer"
+      ],
+      "status": "pending"
+    }
+  ]
+}

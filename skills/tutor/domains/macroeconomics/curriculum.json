@@ -1,0 +1,424 @@
+{
+  "topic": "Macroeconomics — growth, cycles, and policy",
+  "slug": "macroeconomics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "introductory economics",
+    "basic calculus",
+    "algebra and graphs"
+  ],
+  "exit_criteria": [
+    "explain long-run growth using the Solow model",
+    "analyze business cycle fluctuations with AS-AD framework",
+    "evaluate monetary and fiscal policy trade-offs",
+    "interpret real-world macro data (GDP, unemployment, inflation)",
+    "compare open economy dynamics across exchange rate regimes"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Measuring the Economy",
+      "title": "Why doesn't GDP capture everything we care about?",
+      "concepts": ["GDP", "national income accounting", "GDP limitations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/01.html",
+        "https://fred.stlouisfed.org/series/GDP"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Measuring the Economy",
+      "title": "How can prices rise while 'real' output stays flat?",
+      "concepts": ["real vs. nominal GDP", "price indices", "deflators"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-indicators-and-the-business-cycle/macro-real-vs-nominal-gdp/v/real-gdp-and-nominal-gdp",
+        "https://fred.stlouisfed.org/series/GDPDEF"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Measuring the Economy",
+      "title": "What does the unemployment rate actually measure?",
+      "concepts": ["unemployment rate", "labor force participation", "measurement issues"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.bls.gov/cps/cps_htgm.htm",
+        "https://fred.stlouisfed.org/series/UNRATE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Economic Growth",
+      "title": "Why are some countries rich and others poor?",
+      "concepts": ["economic growth", "cross-country income differences", "convergence"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mru.org/courses/principles-economics-macroeconomics/solow-model-economic-growth",
+        "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Economic Growth",
+      "title": "How does capital accumulation drive growth?",
+      "concepts": ["capital stock", "investment", "depreciation", "steady state"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-05-intermediate-macroeconomics-spring-2013/resources/mit14_05s13_chp2_solow/",
+        "https://fred.stlouisfed.org/series/GPDIC1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Economic Growth",
+      "title": "What happens when a country saves more?",
+      "concepts": ["savings rate", "golden rule", "dynamic effects"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/13.html",
+        "https://fred.stlouisfed.org/series/PSAVERT"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Economic Growth",
+      "title": "Why hasn't growth slowed down despite diminishing returns?",
+      "concepts": ["technological progress", "total factor productivity", "Solow residual"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-growth/v/total-factor-productivity",
+        "https://fred.stlouisfed.org/series/MFPUS"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Economic Growth",
+      "title": "Can innovation and ideas sustain endless growth?",
+      "concepts": ["endogenous growth", "human capital", "R&D"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mru.org/courses/principles-economics-macroeconomics/endogenous-growth-model",
+        "https://data.oecd.org/rd/gross-domestic-spending-on-r-d.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Economic Growth",
+      "title": "Review: From capital to productivity — how growth works",
+      "concepts": ["Solow model", "steady state", "technological progress"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-05-intermediate-macroeconomics-spring-2013/",
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-growth"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Business Cycles",
+      "title": "Why does output fluctuate in the short run?",
+      "concepts": ["business cycles", "recessions", "booms", "stylized facts"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nber.org/research/business-cycle-dating",
+        "https://fred.stlouisfed.org/series/USREC"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Business Cycles",
+      "title": "What drives consumption spending?",
+      "concepts": ["consumption function", "marginal propensity to consume", "permanent income"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/14.html",
+        "https://fred.stlouisfed.org/series/PCE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Business Cycles",
+      "title": "Why is investment so volatile?",
+      "concepts": ["investment", "interest rates", "accelerator effect", "expectations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-05-intermediate-macroeconomics-spring-2013/",
+        "https://fred.stlouisfed.org/series/GPDI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Business Cycles",
+      "title": "How do spending shocks ripple through the economy?",
+      "concepts": ["multiplier effect", "aggregate demand", "keynesian cross"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/income-and-expenditure-topic/keynesian-cross/v/keynesian-cross",
+        "https://www.core-econ.org/the-economy/book/text/14.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Business Cycles",
+      "title": "What happens when prices and wages are sticky?",
+      "concepts": ["aggregate supply", "short-run AS curve", "price stickiness"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/aggregate-supply-demand-topic/macro-aggregate-supply/v/aggregate-supply",
+        "https://research.stlouisfed.org/publications/page1-econ/2018/09/04/the-mystery-of-sticky-inflation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Business Cycles",
+      "title": "Why does unemployment exist even in good times?",
+      "concepts": ["natural rate of unemployment", "frictional unemployment", "structural unemployment"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-indicators-and-the-business-cycle/macro-unemployment/v/natural-cyclical-structural-and-frictional-unemployment-rates",
+        "https://fred.stlouisfed.org/series/NROU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Business Cycles",
+      "title": "Review: Aggregate demand, spending, and short-run fluctuations",
+      "concepts": ["business cycles", "consumption", "investment", "multiplier", "aggregate demand"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/aggregate-supply-demand-topic",
+        "https://fred.stlouisfed.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Labor Markets",
+      "title": "How do workers and firms match in the labor market?",
+      "concepts": ["job search", "matching function", "beveridge curve"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/09.html",
+        "https://fred.stlouisfed.org/series/JTSJOL"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Labor Markets",
+      "title": "Why do wages sometimes exceed market-clearing levels?",
+      "concepts": ["efficiency wages", "wage rigidity", "insider-outsider theory"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/09.html",
+        "https://fred.stlouisfed.org/series/CES0500000003"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Money and Inflation",
+      "title": "What gives money its value?",
+      "concepts": ["money", "money supply", "functions of money", "monetary base"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/monetary-system-topic/macro-money-and-monetary-policy/v/what-is-money",
+        "https://fred.stlouisfed.org/series/M2SL"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Money and Inflation",
+      "title": "Why does inflation happen?",
+      "concepts": ["inflation", "quantity theory of money", "money growth"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/monetary-system-topic/macro-the-monetary-system/v/inflation-and-quantity-theory-of-money",
+        "https://fred.stlouisfed.org/series/FPCPITOTLZGUSA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Money and Inflation",
+      "title": "Is there really a trade-off between inflation and unemployment?",
+      "concepts": ["Phillips curve", "expectations", "NAIRU"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/inflation-topic/phillips-curve-tutorial/v/the-phillips-curve",
+        "https://research.stlouisfed.org/publications/economic-synopses/2018/02/09/the-phillips-curve-a-poor-guide-for-monetary-policy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Money and Inflation",
+      "title": "How do central banks control inflation?",
+      "concepts": ["monetary policy", "interest rate targeting", "Taylor rule", "inflation targeting"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm",
+        "https://fred.stlouisfed.org/series/FEDFUNDS"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Money and Inflation",
+      "title": "Review: Labor markets, unemployment, and inflation fundamentals",
+      "concepts": ["unemployment", "labor markets", "money", "inflation", "Phillips curve"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/inflation-topic",
+        "https://fred.stlouisfed.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Fiscal Policy",
+      "title": "Can government spending stabilize the business cycle?",
+      "concepts": ["fiscal policy", "government purchases", "automatic stabilizers", "discretionary policy"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/income-and-expenditure-topic/macro-fiscal-policy/v/fiscal-policy-to-address-output-gaps",
+        "https://fred.stlouisfed.org/series/FGEXPND"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Fiscal Policy",
+      "title": "Should we worry about government debt?",
+      "concepts": ["budget deficit", "government debt", "debt sustainability", "crowding out"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cbo.gov/topics/budget",
+        "https://fred.stlouisfed.org/series/GFDEGDQ188S"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Fiscal Policy",
+      "title": "Do tax cuts pay for themselves?",
+      "concepts": ["taxation", "Ricardian equivalence", "supply-side effects"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/14.html",
+        "https://www.taxpolicycenter.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Open Economy",
+      "title": "How do exchange rates affect trade and output?",
+      "concepts": ["exchange rates", "trade balance", "net exports", "real exchange rate"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/forex-trade-topic/macro-the-foreign-exchange-market/v/currency-exchange-introduction",
+        "https://fred.stlouisfed.org/series/DEXUSEU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Open Economy",
+      "title": "What are the trade-offs between fixed and floating exchange rates?",
+      "concepts": ["exchange rate regimes", "monetary policy autonomy", "impossible trinity"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.imf.org/en/About/Factsheets/Sheets/2023/exchange-rate-regimes",
+        "https://www.core-econ.org/the-economy/book/text/10.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Open Economy",
+      "title": "How do capital flows shape economic outcomes?",
+      "concepts": ["capital flows", "balance of payments", "current account", "financial account"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Balance-of-Payments",
+        "https://fred.stlouisfed.org/series/BOPBCA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Open Economy",
+      "title": "How did the 2008 crisis reshape our understanding of finance and policy?",
+      "concepts": ["financial crises", "banking system", "credit cycles", "policy response"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.federalreserve.gov/econres/notes/feds-notes/the-financial-crisis-at-10-will-we-ever-recover-20180813.htm",
+        "https://www.imf.org/external/pubs/ft/fandd/2018/09/pdf/what-caused-2008-global-financial-crisis-balakrishnan.pdf",
+        "https://www.core-econ.org/the-economy/book/text/17.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Open Economy",
+      "title": "Review: Open economy dynamics and macroeconomic synthesis",
+      "concepts": ["exchange rates", "capital flows", "policy integration", "macro frameworks"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/10.html",
+        "https://www.imf.org/en/Publications"
+      ],
+      "status": "pending"
+    }
+  ]
+}

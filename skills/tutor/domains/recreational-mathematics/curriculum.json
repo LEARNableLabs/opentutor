@@ -1,0 +1,369 @@
+{
+  "topic": "Recreational Mathematics — Martin Gardner's Legacy",
+  "slug": "recreational-mathematics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic algebra",
+    "geometric intuition",
+    "comfort with abstract thinking",
+    "basic probability concepts"
+  ],
+  "exit_criteria": [
+    "analyze simple combinatorial games using Nim-sum and Sprague-Grundy theory",
+    "construct and understand flexagons, Möbius strips, and other topological curiosities",
+    "recognize and explain classic probability paradoxes (Monty Hall, birthday problem)",
+    "design and implement simple cellular automata and analyze emergent patterns",
+    "solve logic puzzles using systematic reasoning and recognize self-referential paradoxes",
+    "appreciate the aesthetic and philosophical dimensions of recreational mathematics"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Gardner's Approach",
+      "title": "Why did a magazine columnist change mathematics forever?",
+      "concepts": ["recreational mathematics", "mathematical play", "Gardner's methodology"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.maa.org/press/periodicals/convergence/mathematical-treasure-martin-gardners-mathematical-games-columns",
+        "https://www.scientificamerican.com/article/martin-gardner-1914-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Gardner's Approach",
+      "title": "Can a paper hexagon have six faces?",
+      "concepts": ["hexaflexagons", "paper folding", "hidden geometry"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=VIVIegSt81k",
+        "https://www.cutoutfoldup.com/hexaflexagons.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Gardner's Approach",
+      "title": "What happens when you fold the corners in?",
+      "concepts": ["origami mathematics", "angle relationships", "paper constructions"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=thOifuHs6eY",
+        "https://origami.me/diagrams/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Logic and Paradoxes",
+      "title": "Can a sentence prove its own falsity?",
+      "concepts": ["self-reference", "logical paradoxes", "Gödel's influence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/liar-paradox/",
+        "https://www.youtube.com/watch?v=O4ndIDcDSGc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Logic and Paradoxes",
+      "title": "How do you find the truth-teller on an island of liars?",
+      "concepts": ["knights and knaves", "logical deduction", "systematic reasoning"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://philosophy.hku.hk/think/logic/knights.php",
+        "https://www.cut-the-knot.org/SimpleGames/LiarsAndTruthTellers.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Logic and Paradoxes",
+      "title": "Review: Gardner's world and early logic",
+      "concepts": ["review", "integration", "foundational patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.maa.org/press/maa-reviews/the-colossal-book-of-mathematics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Logic and Paradoxes",
+      "title": "Why can't you be surprised by the unexpected?",
+      "concepts": ["unexpected hanging paradox", "epistemic paradoxes", "reasoning about knowledge"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemic-paradoxes/",
+        "https://www.youtube.com/watch?v=x_xoXF9T5IE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Logic and Paradoxes",
+      "title": "What would Raymond Smullyan ask you?",
+      "concepts": ["puzzle design", "meta-reasoning", "elegant problem formulation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.scientificamerican.com/article/raymond-smullyan-puzzles/",
+        "https://philosophy.hku.hk/think/logic/smullyan.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Logic and Paradoxes",
+      "title": "Can you explain why switching doors wins?",
+      "concepts": ["Monty Hall problem", "conditional probability", "counterintuitive results"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=4Lb-6rxZxx0",
+        "https://brilliant.org/wiki/monty-hall-problem/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Geometry and Dissections",
+      "title": "Why are there exactly five perfect solids?",
+      "concepts": ["Platonic solids", "Euler's formula", "geometric constraints"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathworld.wolfram.com/PlatonicSolid.html",
+        "https://www.youtube.com/watch?v=gVzu1_12FUc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Geometry and Dissections",
+      "title": "Can you cut a square into a triangle?",
+      "concepts": ["dissection puzzles", "conservation of area", "geometric proofs"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.cut-the-knot.org/Curriculum/Geometry/Dissection.shtml",
+        "https://mathworld.wolfram.com/Dissection.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Geometry and Dissections",
+      "title": "What makes a Penrose tiling never repeat?",
+      "concepts": ["aperiodic tilings", "quasi-crystals", "local vs global rules"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=48sCx-wBs34",
+        "https://mathworld.wolfram.com/PenroseTiles.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Geometry and Dissections",
+      "title": "Review: Paradoxes and geometric play",
+      "concepts": ["review", "integration", "pattern recognition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.maa.org/press/maa-reviews/the-colossal-book-of-mathematics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Geometry and Dissections",
+      "title": "How does geometry prove the Pythagorean theorem through play?",
+      "concepts": ["visual proofs", "dissection proofs", "mathematical aesthetics"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.cut-the-knot.org/pythagoras/index.shtml",
+        "https://www.youtube.com/watch?v=CAkMUdeB06o"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Games and Strategy",
+      "title": "Why does Nim have a secret binary structure?",
+      "concepts": ["Nim game", "binary arithmetic", "winning strategies"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.archimedes-lab.org/game_nim/nim.html",
+        "https://www.youtube.com/watch?v=niMjT9Gp3sE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Games and Strategy",
+      "title": "What did John Conway discover in the endgame of Go?",
+      "concepts": ["combinatorial game theory", "surreal numbers", "infinitesimal values"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.maa.org/press/maa-reviews/winning-ways-for-your-mathematical-plays",
+        "https://www.youtube.com/watch?v=ZYj4NkeGPdM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Games and Strategy",
+      "title": "Can you force a win in Sprouts?",
+      "concepts": ["graph games", "topological games", "strategic analysis"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://mathworld.wolfram.com/Sprouts.html",
+        "https://nrich.maths.org/1190"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Probability Paradoxes",
+      "title": "Why do birthday matches happen so often?",
+      "concepts": ["birthday paradox", "combinatorial counting", "exponential growth"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.scientificamerican.com/article/bring-science-home-probability-birthday-paradox/",
+        "https://betterexplained.com/articles/understanding-the-birthday-paradox/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Probability Paradoxes",
+      "title": "How can a treatment work for everyone but fail overall?",
+      "concepts": ["Simpson's paradox", "confounding variables", "aggregation effects"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/paradox-simpson/",
+        "https://www.youtube.com/watch?v=ebEkn-BiW5k"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Probability Paradoxes",
+      "title": "Review: Strategy, geometry, and probability",
+      "concepts": ["review", "game analysis", "pattern application"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.maa.org/press/periodicals/convergence/martin-gardners-mathematical-games"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Probability Paradoxes",
+      "title": "Should you take both boxes or just one?",
+      "concepts": ["Newcomb's paradox", "decision theory", "free will and prediction"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/paradox-newcomb/",
+        "https://www.youtube.com/watch?v=R3B_rKI94qI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Probability Paradoxes",
+      "title": "Can you design a counterintuitive probability puzzle?",
+      "concepts": ["puzzle construction", "intuition vs calculation", "teaching through examples"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cut-the-knot.org/Probability/",
+        "https://brilliant.org/wiki/probability-paradoxes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Beyond the Board",
+      "title": "What happens when simple rules create complex life?",
+      "concepts": ["Conway's Game of Life", "cellular automata", "emergent complexity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://playgameoflife.com/",
+        "https://www.youtube.com/watch?v=C2vgICfQawE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Beyond the Board",
+      "title": "Why is a Möbius strip one-sided?",
+      "concepts": ["topology", "surfaces", "orientability"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://mathworld.wolfram.com/MoebiusStrip.html",
+        "https://www.youtube.com/watch?v=3sM7yRvV2jI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Beyond the Board",
+      "title": "How do mathematicians make magic tricks inevitable?",
+      "concepts": ["mathematical magic", "invariants", "hidden structure"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.maa.org/press/maa-reviews/magical-mathematics",
+        "https://www.youtube.com/watch?v=l7lP9y7Bb5g"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Beyond the Board",
+      "title": "What connects all of Gardner's puzzles?",
+      "concepts": ["aesthetic mathematics", "playful inquiry", "pattern appreciation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://g4g.org/",
+        "https://www.gathering4gardner.org/g4g-celebration/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Beyond the Board",
+      "title": "Review: The Gardner legacy",
+      "concepts": ["review", "synthesis", "mathematical culture"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.maa.org/press/maa-reviews/martin-gardner-in-the-twenty-first-century"
+      ],
+      "status": "pending"
+    }
+  ]
+}

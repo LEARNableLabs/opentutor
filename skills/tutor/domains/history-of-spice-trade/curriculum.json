@@ -1,0 +1,342 @@
+{
+  "topic": "History of spice trade routes",
+  "slug": "history-of-spice-trade",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic world geography",
+    "general historical chronology (ancient, medieval, early modern)",
+    "basic economic concepts (supply, demand, trade)"
+  ],
+  "exit_criteria": [
+    "student can trace major spice routes across different historical periods",
+    "student can explain the economic motivations behind European exploration",
+    "student can identify key spices, their origins, and why they were valuable",
+    "student can analyze the cultural and political impact of the spice trade",
+    "student can connect historical trade patterns to modern globalization"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Ancient Foundations",
+      "title": "Why were spices worth more than gold in ancient times?",
+      "concepts": ["scarcity and value", "preservation", "luxury goods", "early trade motivations"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history/ancient-medieval",
+        "https://www.smithsonianmag.com/history/the-spice-that-built-empires-180972352/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Ancient Foundations",
+      "title": "How did ancient traders survive crossing the Arabian Desert?",
+      "concepts": ["caravan routes", "overland trade", "Arabian peninsula geography", "oasis networks"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nationalgeographic.org/encyclopedia/trade-route/",
+        "https://www.youtube.com/watch?v=vfe-eNq-Qyg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Ancient Foundations",
+      "title": "What made the Indian Ocean the world's first 'spice highway'?",
+      "concepts": ["monsoon winds", "maritime trade", "Indian Ocean networks", "seasonal navigation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history/medieval-times/cross-cultural-transfers/v/indian-ocean-trade",
+        "https://orbis.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Ancient Foundations",
+      "title": "If you were a Roman merchant, which spice would you buy and why?",
+      "concepts": ["pepper trade", "Roman demand", "profit margins", "risk assessment"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.britannica.com/topic/spice-trade",
+        "https://www.metmuseum.org/toah/hd/trad/hd_trad.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Ancient Foundations",
+      "title": "Who controlled the spice supply chain before Rome fell?",
+      "concepts": ["intermediaries", "Arab traders", "Axumite kingdom", "price markup through layers"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.worldhistory.org/Spice_Trade/",
+        "https://www.bl.uk/collection-items/periplus-of-the-erythraean-sea"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ancient Foundations",
+      "title": "Can you explain how ancient spice routes connected different civilizations?",
+      "concepts": ["routes", "spices", "traders", "economics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history/ancient-medieval"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Medieval Networks",
+      "title": "How did Islamic traders revolutionize the spice trade?",
+      "concepts": ["Islamic Golden Age", "dhow ships", "merchant networks", "mathematical navigation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history/medieval-times/islamic-world-route/v/overview-islamic-golden-age",
+        "https://www.metmuseum.org/toah/hd/carr/hd_carr.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Medieval Networks",
+      "title": "Why was Venice built on impossible swampland?",
+      "concepts": ["Venetian Republic", "Mediterranean monopoly", "strategic geography", "galley trade"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=rRl76zK9U58",
+        "https://www.britannica.com/place/Venice/History"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Medieval Networks",
+      "title": "What did Marco Polo actually bring back from China?",
+      "concepts": ["Silk Road", "Mongol Empire trade", "cultural exchange", "travel narratives"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.loc.gov/exhibits/world/world-trade.html",
+        "https://www.britannica.com/biography/Marco-Polo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Medieval Networks",
+      "title": "How did spices get 1000% more expensive from field to table?",
+      "concepts": ["markup economics", "layers of intermediaries", "transportation costs", "monopoly pricing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.worldhistory.org/article/1453/the-spice-trade--the-age-of-exploration/",
+        "https://eh.net/encyclopedia/the-european-spice-trade-in-the-middle-ages/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Medieval Networks",
+      "title": "Could you map a spice route using only medieval descriptions?",
+      "concepts": ["geographic knowledge", "Ibn Battuta", "navigation techniques", "portolan charts"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.bl.uk/maps",
+        "https://www.youtube.com/watch?v=a6XtBLDmPA0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Medieval Networks",
+      "title": "How did medieval traders create the first global trade network?",
+      "concepts": ["Islamic traders", "Venice", "pricing", "routes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history/medieval-times"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Age of Exploration",
+      "title": "Why did the Portuguese sail around Africa instead of crossing it?",
+      "concepts": ["Portuguese exploration", "Cape of Good Hope", "Henry the Navigator", "caravel technology"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history/renaissance-and-reformation/exploration/v/portuguese-exploration",
+        "https://www.britannica.com/topic/Portuguese-exploration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Age of Exploration",
+      "title": "What happened when Vasco da Gama reached India in 1498?",
+      "concepts": ["direct sea route", "Calicut", "breaking the monopoly", "Portuguese Estado da Índia"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.britannica.com/biography/Vasco-da-Gama",
+        "https://www.youtube.com/watch?v=ILn85WKo0Qk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Age of Exploration",
+      "title": "Why did Columbus think he could reach spices by sailing west?",
+      "concepts": ["geographic misconceptions", "Spanish exploration", "Columbian Exchange", "unintended discoveries"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history/renaissance-and-reformation/exploration/v/columbus-and-the-new-world",
+        "https://www.youtube.com/watch?v=xuCn8ux2gbs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Age of Exploration",
+      "title": "How did Magellan's crew find the actual Spice Islands?",
+      "concepts": ["Maluku Islands", "circumnavigation", "nutmeg and cloves origin", "Treaty of Tordesillas"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/biography/Ferdinand-Magellan",
+        "https://www.nationalgeographic.org/encyclopedia/spice-islands/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Age of Exploration",
+      "title": "What made the Dutch East India Company the world's first megacorporation?",
+      "concepts": ["VOC", "joint-stock company", "monopoly enforcement", "Amsterdam spice market"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/Dutch-East-India-Company",
+        "https://www.worldhistory.org/Dutch_East_India_Company/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Age of Exploration",
+      "title": "Could the English break the Dutch spice monopoly?",
+      "concepts": ["English East India Company", "Anglo-Dutch Wars", "competitive strategies", "colonization"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.britannica.com/topic/East-India-Company",
+        "https://www.historytoday.com/archive/spice-islands"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Age of Exploration",
+      "title": "Which European power won the race for spice routes and why?",
+      "concepts": ["Portuguese", "Spanish", "Dutch", "English", "competition"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history/renaissance-and-reformation/exploration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Impact and Legacy",
+      "title": "How did the spice trade reshape global cuisine?",
+      "concepts": ["cultural exchange", "Columbian Exchange", "food preservation", "fusion cuisines"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.smithsonianmag.com/history/columbian-exchange-history-180972813/",
+        "https://www.youtube.com/watch?v=HQPA5oNpfM4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Impact and Legacy",
+      "title": "Why did nutmeg cost as much as a house in 1600?",
+      "concepts": ["price history", "monopoly pricing", "scarcity manipulation", "speculation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.historicalpriceindex.com/",
+        "https://www.mentalfloss.com/article/532447/nutmeg-wars-how-spice-changed-world"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Impact and Legacy",
+      "title": "What violence was hidden in your spice cabinet?",
+      "concepts": ["colonial exploitation", "Banda Islands massacre", "enslaved labor", "ethical history"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nytimes.com/2021/03/24/books/review/the-nutmeg-curse-amitav-ghosh.html",
+        "https://www.bbc.com/news/world-asia-39806162"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Impact and Legacy",
+      "title": "When and why did spices become cheap?",
+      "concepts": ["plantation cultivation", "refrigeration", "substitute goods", "market transformation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/spice-trade",
+        "https://www.worldhistory.org/article/1453/the-spice-trade--the-age-of-exploration/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Impact and Legacy",
+      "title": "How do spice trade routes connect to today's globalization?",
+      "concepts": ["supply chains", "shipping lanes", "economic patterns", "modern parallels"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=ZfahtCrMnIU",
+        "https://www.cfr.org/backgrounder/shipping-and-globalization"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Impact and Legacy",
+      "title": "How did spices shape the world we live in today?",
+      "concepts": ["chronology", "routes", "economics", "impact", "legacy"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history",
+        "https://www.youtube.com/watch?v=HQPA5oNpfM4"
+      ],
+      "status": "pending"
+    }
+  ]
+}

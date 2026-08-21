@@ -1,0 +1,394 @@
+{
+  "topic": "History of Photography",
+  "slug": "history-of-photography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic art history concepts",
+    "visual literacy",
+    "familiarity with camera basics"
+  ],
+  "exit_criteria": [
+    "identify major photographic movements and their aesthetic principles",
+    "explain how technical innovations shaped photographic practice",
+    "analyze photographs within historical and cultural contexts",
+    "trace the evolution from camera obscura to computational photography",
+    "recognize key photographers and their contributions",
+    "understand photography's contested status as art vs. document"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Pre-Photographic Imaging",
+      "title": "How did artists capture reality before photography?",
+      "concepts": ["camera obscura", "light projection", "visual technology"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/camo/hd_camo.htm",
+        "https://www.vam.ac.uk/articles/a-brief-history-of-the-camera"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Pre-Photographic Imaging",
+      "title": "Why did it take centuries to make camera obscura images permanent?",
+      "concepts": ["light-sensitive materials", "chemical experimentation", "technological barriers"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.getty.edu/art/collection/search?q=early+photography",
+        "https://www.eastman.org/early-photography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Invention Era",
+      "title": "What made Daguerre's 1839 announcement revolutionary?",
+      "concepts": ["daguerreotype process", "one-of-a-kind images", "public reaction"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/dagu/hd_dagu.htm",
+        "https://www.eastman.org/daguerreotype-process"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Invention Era",
+      "title": "How did Talbot's negative-positive process change photography's potential?",
+      "concepts": ["calotype", "reproducibility", "paper negatives"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.vam.ac.uk/articles/william-henry-fox-talbot",
+        "https://www.eastman.org/calotype-process"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Invention Era",
+      "title": "Why were early portrait subjects always so serious?",
+      "concepts": ["exposure times", "technical constraints", "early portraiture"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/phpt/hd_phpt.htm",
+        "https://www.getty.edu/art/collection/search?q=19th+century+portrait+photography"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Expansion & Democratization",
+      "title": "How did wet plate collodion enable photography to go everywhere?",
+      "concepts": ["wet plate process", "traveling photographers", "glass negatives"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.eastman.org/wet-plate-collodion",
+        "https://www.vam.ac.uk/articles/wet-collodion-process"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Expansion & Democratization",
+      "title": "Review: Early Processes and Innovations",
+      "concepts": ["daguerreotype vs calotype", "technical evolution", "social impact"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/phot/hd_phot.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Expansion & Democratization",
+      "title": "What stories did Civil War photography tell that paintings could not?",
+      "concepts": ["documentary photography", "Matthew Brady", "photography as evidence"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/cwph/hd_cwph.htm",
+        "https://www.loc.gov/collections/civil-war-photographs/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Expansion & Democratization",
+      "title": "How did George Eastman's slogan 'You press the button, we do the rest' democratize photography?",
+      "concepts": ["Kodak camera", "roll film", "amateur photography"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.eastman.org/kodak-camera",
+        "https://www.loc.gov/collections/george-eastman/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Pictorialism",
+      "title": "Why did photographers start making their images look like paintings?",
+      "concepts": ["Pictorialism", "art vs. craft debate", "soft focus"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/pict/hd_pict.htm",
+        "https://www.moma.org/collection/terms/pictorialism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Pictorialism",
+      "title": "What was Alfred Stieglitz trying to prove with Photo-Secession?",
+      "concepts": ["Photo-Secession", "gallery 291", "photography as fine art"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/stgp/hd_stgp.htm",
+        "https://www.moma.org/artists/5594"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Pictorialism",
+      "title": "What manipulation techniques can you identify in Pictorialist photographs?",
+      "concepts": ["gum bichromate", "combination printing", "handwork"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.getty.edu/art/collection/search?q=pictorialist+photography",
+        "https://www.vam.ac.uk/articles/pictorialism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Modernism",
+      "title": "Why did modernists reject soft focus for 'straight photography'?",
+      "concepts": ["straight photography", "f/64 Group", "pure vision"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/strt/hd_strt.htm",
+        "https://www.moma.org/collection/terms/f-64"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Modernism",
+      "title": "Review: From Pictorialism to Modernism",
+      "concepts": ["aesthetic shifts", "art photography movements", "technical approaches"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/phmo/hd_phmo.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Modernism",
+      "title": "How did the Bauhaus reimagine photography's possibilities?",
+      "concepts": ["New Vision", "Bauhaus photography", "experimental techniques"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.moma.org/collection/terms/bauhaus",
+        "https://www.metmuseum.org/toah/hd/bauh/hd_bauh.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Modernism",
+      "title": "What did Edward Weston see in a pepper that made it iconic?",
+      "concepts": ["formalism", "close observation", "abstraction through framing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.getty.edu/art/collection/object/106S2P",
+        "https://www.eastman.org/edward-weston"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Documentary & Social Photography",
+      "title": "How did FSA photographers shape America's self-image during the Depression?",
+      "concepts": ["FSA photography", "documentary tradition", "social advocacy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.loc.gov/collections/fsa-owi-black-and-white-negatives/",
+        "https://www.moma.org/collection/terms/fsa"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Documentary & Social Photography",
+      "title": "Can a photograph lie while showing the truth?",
+      "concepts": ["objectivity vs. subjectivity", "framing choices", "photographic manipulation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/docp/hd_docp.htm",
+        "https://aperture.org/editorial/photography-truth/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Documentary & Social Photography",
+      "title": "What made Henri Cartier-Bresson's 'decisive moment' revolutionary?",
+      "concepts": ["street photography", "decisive moment", "handheld camera"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.moma.org/artists/1000",
+        "https://www.magnumphotos.com/photographer/henri-cartier-bresson/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Documentary & Social Photography",
+      "title": "How do photojournalistic images construct narrative beyond what they show?",
+      "concepts": ["photojournalism", "visual narrative", "ethical considerations"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.magnumphotos.com/",
+        "https://www.worldpressphoto.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Documentary & Social Photography",
+      "title": "Review: Documentary Traditions and Ethics",
+      "concepts": ["documentary modes", "truth claims", "social impact"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/phjo/hd_phjo.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Color Photography",
+      "title": "Why was color photography dismissed as 'not serious' for decades?",
+      "concepts": ["color vs. black-and-white", "art world hierarchies", "commercial associations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.moma.org/collection/terms/color-photography",
+        "https://www.metmuseum.org/toah/hd/clph/hd_clph.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Color Photography",
+      "title": "How did William Eggleston legitimize color in fine art photography?",
+      "concepts": ["Eggleston", "New Color Photography", "vernacular subjects"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.moma.org/artists/1741",
+        "https://www.getty.edu/art/exhibitions/eggleston/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Postmodern Photography",
+      "title": "What happens when photographers stage reality instead of capturing it?",
+      "concepts": ["constructed photography", "Cindy Sherman", "performance"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.moma.org/artists/5392",
+        "https://www.metmuseum.org/toah/hd/pomo/hd_pomo.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Postmodern Photography",
+      "title": "How does appropriation art challenge photography's truth claim?",
+      "concepts": ["appropriation", "Richard Prince", "authorship"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.moma.org/collection/terms/appropriation",
+        "https://aperture.org/editorial/pictures-generation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Postmodern Photography",
+      "title": "Review: Modernism to Postmodernism Shifts",
+      "concepts": ["truth vs. construction", "aesthetic values", "theoretical frameworks"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/poph/hd_poph.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Digital Revolution",
+      "title": "How did digital sensors change what a photograph could be?",
+      "concepts": ["digital imaging", "manipulation possibilities", "instant feedback"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.moma.org/collection/terms/digital-photography",
+        "https://www.metmuseum.org/toah/hd/digi/hd_digi.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Digital Revolution",
+      "title": "What does computational photography mean for the medium's future?",
+      "concepts": ["computational photography", "AI enhancement", "photography without cameras"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.moma.org/calendar/exhibitions/5159",
+        "https://aperture.org/editorial/computational-photography/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Digital Revolution",
+      "title": "How has social media transformed who makes and sees photographs?",
+      "concepts": ["democratization", "image circulation", "contemporary practice"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.moma.org/collection/works/topics/photography-now",
+        "https://aperture.org/editorial/photography-social-media-age/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

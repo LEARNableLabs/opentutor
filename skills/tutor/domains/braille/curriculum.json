@@ -1,0 +1,355 @@
+{
+  "topic": "Braille — history, literacy, and tactile design",
+  "slug": "braille",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic understanding of disability and accessibility",
+    "familiarity with reading and writing systems"
+  ],
+  "exit_criteria": [
+    "explain the historical and social context of Braille's invention",
+    "decode Grade 1 Braille and understand Grade 2 contractions",
+    "analyze literacy teaching approaches for blind learners",
+    "evaluate modern assistive technology and its impact on Braille literacy",
+    "apply tactile design principles to wayfinding and information graphics",
+    "critique accessibility policies and advocate for universal design"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Origins and Revolution",
+      "title": "Why did blind students need a secret military code?",
+      "concepts": ["Charles Barbier", "night writing", "pre-Braille tactile systems"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.afb.org/aw/2/2/14534",
+        "https://www.perkins.org/history-of-braille"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Origins and Revolution",
+      "title": "How did a teenager revolutionize reading for millions?",
+      "concepts": ["Louis Braille biography", "1824 invention", "six-dot cell innovation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.afb.org/blindness-and-low-vision/braille/what-braille",
+        "https://www.perkins.org/resource/louis-braille-designer-of-braille-alphabet"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Origins and Revolution",
+      "title": "Why did it take 30 years for schools to accept Braille?",
+      "concepts": ["institutional resistance", "standardization battles", "adoption timeline"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.loc.gov/nls/about/organization/laws-regulations/braille-history",
+        "https://www.brailleinstitute.org/wp-content/uploads/2021/06/History-of-Braille.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Origins and Revolution",
+      "title": "What happens when every country writes Braille differently?",
+      "concepts": ["international variants", "World Braille Council", "Unified English Braille"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.iceb.org/ueb.html",
+        "https://www.perkins.org/unified-english-braille"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Decoding the Dots",
+      "title": "How do six dots encode an entire alphabet?",
+      "concepts": ["six-dot cell", "dot numbering", "63 possible combinations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.afb.org/blindness-and-low-vision/braille/braille-basics",
+        "https://www.braillebug.org/braille_print.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Decoding the Dots",
+      "title": "How did we get from night writing to the six-dot revolution?",
+      "concepts": ["historical timeline", "system comparison", "Braille structure"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.perkins.org/braille-alphabet-letters-numbers-symbols-punctuation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Decoding the Dots",
+      "title": "Why do expert readers use 180 contractions?",
+      "concepts": ["Grade 1 vs Grade 2", "contractions", "reading speed"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.afb.org/aw/18/10/15211",
+        "https://www.uebonline.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Decoding the Dots",
+      "title": "How do you write calculus in dots?",
+      "concepts": ["Nemeth Code", "mathematical notation", "specialized codes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.brailleauthority.org/nemeth/nemeth.html",
+        "https://www.perkins.org/resource/nemeth-braille"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Decoding the Dots",
+      "title": "Can you play Beethoven by touch alone?",
+      "concepts": ["music Braille", "tactile music notation", "performance from Braille"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.afb.org/aw/15/4/14904",
+        "http://www.brailleauthority.org/music/music.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Decoding the Dots",
+      "title": "Why did computers force Braille to grow two more dots?",
+      "concepts": ["eight-dot Braille", "computer Braille code", "ASCII representation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Eight-dot_braille",
+        "https://www.unicode.org/charts/PDF/U2800.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Teaching and Learning",
+      "title": "Is Braille literacy dying in the age of audiobooks?",
+      "concepts": ["literacy rates", "Braille vs audio debate", "employment outcomes"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://nfb.org/images/nfb/publications/fr/fr33/1/fr330102.html",
+        "https://www.afb.org/research-and-initiatives/statistics/adults"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Teaching and Learning",
+      "title": "How do you teach reading to someone who has never seen letters?",
+      "concepts": ["early literacy", "pre-braille skills", "tactile exploration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.perkins.org/resource/pre-braille-skills-checklist",
+        "https://www.pathstoliterate.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Teaching and Learning",
+      "title": "Why do we have so many different Braille codes?",
+      "concepts": ["Braille codes", "literacy pedagogy", "reading methods"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.teachingvisuallyimpaired.com/braille.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Teaching and Learning",
+      "title": "What if you lost both sight and hearing — how would you learn?",
+      "concepts": ["deafblindness", "tactile signing", "dual sensory loss"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.perkins.org/deafblind-program",
+        "https://nationaldb.org/library/page/1941"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Teaching and Learning",
+      "title": "Why do some teachers say whole-word works better than phonics?",
+      "concepts": ["teaching methodologies", "whole-word vs phonics", "evidence-based practice"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.afb.org/aw/18/9/15184",
+        "https://www.teachingvisuallyimpaired.com/reading.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Technology and Innovation",
+      "title": "How does a refreshable display make dots dance under your fingers?",
+      "concepts": ["refreshable Braille displays", "piezoelectric pins", "electronic Braille"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.afb.org/blindness-and-low-vision/using-technology/assistive-technology-products/refreshable-braille-displays",
+        "https://www.humanware.com/en-usa/products/blindness/braille-displays"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Technology and Innovation",
+      "title": "Why does a 40-cell Braille display cost more than a laptop?",
+      "concepts": ["cost barriers", "market size", "technology economics"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.afb.org/node/16207/refreshable-braille-displays",
+        "https://nfb.org/programs-services/center-excellence-nonvisual-access/braille-displays"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Technology and Innovation",
+      "title": "Can software translate English to Braille perfectly?",
+      "concepts": ["Braille translation software", "Duxbury", "Liblouis", "context rules"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.duxburysystems.com",
+        "https://liblouis.io"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Technology and Innovation",
+      "title": "What happens when screen readers and Braille displays team up?",
+      "concepts": ["screen reader integration", "JAWS", "NVDA", "dual-output systems"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.freedomscientific.com/products/software/jaws",
+        "https://www.nvaccess.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Technology and Innovation",
+      "title": "How has technology changed the way we read Braille?",
+      "concepts": ["assistive technology", "Braille devices", "software tools"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.perkins.org/assistive-technology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Tactile Design",
+      "title": "How do you draw a graph someone can feel?",
+      "concepts": ["tactile graphics", "raised-line drawings", "texture and contrast"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.afb.org/blindness-and-low-vision/creating-accessible-print-braille-audio-materials/producing-tactile-graphics",
+        "https://www.pathstoliteracy.org/tactile-graphics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Tactile Design",
+      "title": "Why is finding the restroom harder than it should be?",
+      "concepts": ["wayfinding", "environmental signage", "ADA requirements"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.access-board.gov/ada/guides",
+        "https://www.lighthouseguild.org/programs-services/environmental-design"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Tactile Design",
+      "title": "Can a 3D printer make better tactile maps than embossers?",
+      "concepts": ["3D printing", "additive manufacturing", "tactile map production"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.perkins.org/resource/3d-printing-tactile-learning",
+        "https://www.thingiverse.com/tag:tactile"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Tactile Design",
+      "title": "What makes a museum exhibit touchable for everyone?",
+      "concepts": ["universal design", "multisensory exhibits", "inclusive curation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.afb.org/consulting/afb-consulting-design-services/tactile-design-solutions",
+        "https://artbeyondsight.org/mei/museum-education-and-interpretation-resources-for-museums-and-cultural-institutions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Future and Policy",
+      "title": "Does Braille on packaging actually help or just check a box?",
+      "concepts": ["product labeling", "functional accessibility", "user testing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.afb.org/consulting/afb-consulting-design-services/product-accessibility",
+        "https://nfb.org/programs-services/braille-literacy/prescription-bottle-labeling-project"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Future and Policy",
+      "title": "Will touchscreens kill Braille — or can they coexist?",
+      "concepts": ["digital accessibility", "haptic feedback", "future of tactile interfaces"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.afb.org/aw/20/3/15580",
+        "https://nfb.org/images/nfb/publications/bm/bm15/bm1501/bm150102.htm"
+      ],
+      "status": "pending"
+    }
+  ]
+}

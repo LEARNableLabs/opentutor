@@ -1,0 +1,383 @@
+{
+  "topic": "Translation Studies",
+  "slug": "translation-studies",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "proficiency in at least one foreign language",
+    "basic understanding of linguistics or language structure",
+    "awareness of cross-cultural communication",
+    "reading comprehension in multiple genres"
+  ],
+  "exit_criteria": [
+    "analyze translations using descriptive and theoretical frameworks",
+    "identify and apply different translation strategies based on text type and purpose",
+    "evaluate translation quality using established metrics and error typologies",
+    "use CAT tools and manage translation memories effectively",
+    "understand the cultural, ethical, and professional dimensions of translation work",
+    "post-edit machine translation output with awareness of common MT errors"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Translation",
+      "title": "What makes a translation good or bad?",
+      "concepts": ["translation quality", "equivalence", "source vs. target orientation"],
+      "difficulty": 1,
+      "type": "question",
+      "resources": [
+        "https://routledgetranslationstudiesportal.com/",
+        "https://courses.middlebury.edu/hub/miis/201498/tiag/8640a/syllabus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Translation",
+      "title": "Why do translators make different choices for the same text?",
+      "concepts": ["translation norms", "decision-making", "translator agency"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.unlv.edu/sites/default/files/media/document/2023-01/WLC715-Syllabus.pdf",
+        "https://translationjournal.net/translation-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Translation",
+      "title": "How did translation theory evolve from linguistics to culture?",
+      "concepts": ["linguistic turn", "cultural turn", "theoretical paradigms"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.intercultural.urv.cat/en/resources/video-lectures/",
+        "https://www.amazon.com/Introducing-Translation-Studies-Theories-Applications/dp/1032516569"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Translation",
+      "title": "What gets lost in translation, and what gets gained?",
+      "concepts": ["translation shift", "gain and loss", "untranslatability"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://dox.utdallas.edu/syl5039",
+        "https://routledgetextbooks.com/textbooks/9780367370510/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Translation",
+      "title": "Can we map all the ways translation is studied?",
+      "concepts": ["Holmes' map", "pure vs. applied", "translation studies branches"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.intercultural.urv.cat/en/resources/video-lectures/",
+        "https://catalog.depaul.edu/course-descriptions/tis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Translation Theory",
+      "title": "Review: What have we learned about translation so far?",
+      "concepts": ["equivalence", "norms", "theoretical foundations"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://routledgetranslationstudiesportal.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Translation Theory",
+      "title": "Why do translations reflect the culture that produces them?",
+      "concepts": ["descriptive translation studies", "Toury's norms", "target culture"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.unlv.edu/sites/default/files/media/document/2023-01/WLC715-Syllabus.pdf",
+        "https://www.drps.ed.ac.uk/15-16/dpt/cxcllc11039.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Translation Theory",
+      "title": "How does polysystem theory explain why some translations become classics?",
+      "concepts": ["polysystem theory", "literary systems", "canonization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.intercultural.urv.cat/en/resources/video-lectures/",
+        "https://translationjournal.net/translation-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Translation Theory",
+      "title": "What happens when function matters more than form?",
+      "concepts": ["skopos theory", "functionalism", "purpose-driven translation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://egovernance.unom.ac.in/ugsyllabus/pdf/BEN-DSE3B.pdf",
+        "https://www.amazon.com/Introducing-Translation-Studies-Theories-Applications/dp/1032516569"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Translation Theory",
+      "title": "Can translation be an act of rewriting and resistance?",
+      "concepts": ["ideology in translation", "power relations", "postcolonial translation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.intercultural.urv.cat/en/resources/video-lectures/",
+        "https://catalog.depaul.edu/course-descriptions/tis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Translation Theory",
+      "title": "Compare two translations: what do their differences reveal?",
+      "concepts": ["comparative analysis", "translation norms", "descriptive methods"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.unlv.edu/sites/default/files/media/document/2023-01/WLC715-Syllabus.pdf",
+        "https://routledgetextbooks.com/textbooks/9780367370510/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Translation Types and Genres",
+      "title": "Review: How do theories shape practice?",
+      "concepts": ["theory-practice relationship", "norms", "skopos"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://routledgetranslationstudiesportal.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Translation Types and Genres",
+      "title": "How does literary translation preserve voice and style?",
+      "concepts": ["literary translation", "style", "voice preservation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.unlv.edu/sites/default/files/media/document/2023-01/WLC715-Syllabus.pdf",
+        "https://translationjournal.net/translation-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Translation Types and Genres",
+      "title": "Why do technical translations prioritize precision over beauty?",
+      "concepts": ["technical translation", "terminology", "standardization"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://seu.edu.sa/media/1113995/tra330-course-syllabus.pdf",
+        "https://catalog.depaul.edu/course-descriptions/tis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Translation Types and Genres",
+      "title": "What constraints make subtitling different from dubbing?",
+      "concepts": ["audiovisual translation", "subtitling", "dubbing", "constraints"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.translatedright.com/blog/translating-interactive-videos-on-e-learning-platforms-a-complete-guide/",
+        "https://www.wordly.ai/education-translation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Translation Types and Genres",
+      "title": "How does localization go beyond word-for-word translation?",
+      "concepts": ["localization", "cultural adaptation", "transcreation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://translated.com/resources/elearning-translation-services-educational-content-localization",
+        "https://catalog.depaul.edu/course-descriptions/tis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Translation Types and Genres",
+      "title": "Translate a real-world text: what strategies did you choose?",
+      "concepts": ["translation strategies", "genre awareness", "problem-solving"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://dox.utdallas.edu/syl5039",
+        "https://routledgetextbooks.com/textbooks/9780367370510/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Technology and Professional Practice",
+      "title": "Review: How does genre shape translation decisions?",
+      "concepts": ["genre conventions", "translation types", "strategy selection"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://routledgetranslationstudiesportal.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Technology and Professional Practice",
+      "title": "How do CAT tools change the translation workflow?",
+      "concepts": ["CAT tools", "translation memory", "productivity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://catalog.depaul.edu/course-descriptions/tis/",
+        "https://www.classcentral.com/tag/translation-studies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Technology and Professional Practice",
+      "title": "What can machine translation do well, and what does it miss?",
+      "concepts": ["machine translation", "neural MT", "MT limitations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.microsoft.com/en-us/translator/education/",
+        "https://arxiv.org/html/2510.11596"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Technology and Professional Practice",
+      "title": "How do you post-edit MT output without over-editing?",
+      "concepts": ["post-editing", "MT quality assessment", "effort metrics"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.classcentral.com/tag/translation-studies",
+        "https://catalog.depaul.edu/course-descriptions/tis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Technology and Professional Practice",
+      "title": "What competencies define a professional translator?",
+      "concepts": ["translation competence", "PACTE model", "expertise development"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.intercultural.urv.cat/en/resources/video-lectures/",
+        "https://translationjournal.net/translation-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Quality and Professional Ethics",
+      "title": "How do you measure translation quality objectively?",
+      "concepts": ["quality assessment", "error typologies", "metrics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://egovernance.unom.ac.in/ugsyllabus/pdf/BEN-DSE3B.pdf",
+        "https://catalog.depaul.edu/course-descriptions/tis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Quality and Professional Ethics",
+      "title": "Review: How has technology transformed professional translation?",
+      "concepts": ["CAT tools", "MT", "professional practice"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://routledgetranslationstudiesportal.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Quality and Professional Ethics",
+      "title": "What ethical dilemmas do translators face in practice?",
+      "concepts": ["translation ethics", "confidentiality", "cultural mediation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://seu.edu.sa/media/1113995/tra330-course-syllabus.pdf",
+        "https://translationjournal.net/translation-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Quality and Professional Ethics",
+      "title": "How do professional standards and certification work globally?",
+      "concepts": ["professional associations", "certification", "quality standards"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.classcentral.com/tag/translation-studies",
+        "https://catalog.depaul.edu/course-descriptions/tis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Quality and Professional Ethics",
+      "title": "Should translators be invisible or visible in their work?",
+      "concepts": ["translator visibility", "domestication vs. foreignization", "ethics of representation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.intercultural.urv.cat/en/resources/video-lectures/",
+        "https://www.amazon.com/Introducing-Translation-Studies-Theories-Applications/dp/1032516569"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Quality and Professional Ethics",
+      "title": "Where do you go from here in translation studies?",
+      "concepts": ["future directions", "specialization paths", "lifelong learning"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://routledgetranslationstudiesportal.com/",
+        "https://www.classcentral.com/tag/translation-studies",
+        "https://translationjournal.net/translation-books"
+      ],
+      "status": "pending"
+    }
+  ]
+}

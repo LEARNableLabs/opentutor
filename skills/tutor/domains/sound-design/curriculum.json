@@ -1,0 +1,358 @@
+{
+  "topic": "Sound Design for Film and Games",
+  "slug": "sound-design",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic audio editing",
+    "DAW fundamentals",
+    "basic music theory or audio production experience"
+  ],
+  "exit_criteria": [
+    "design and implement adaptive sound for interactive media",
+    "record and process Foley and sound effects from scratch",
+    "mix dialogue, music, and effects for film delivery",
+    "build procedural audio systems in middleware",
+    "critically analyze sound design decisions in professional work"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Psychoacoustics & Perception",
+      "title": "Why do two identical sounds feel different in different contexts?",
+      "concepts": ["psychoacoustics", "perception", "context-dependent hearing"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.filmsound.org/articles/designing_for_sound.htm",
+        "https://www.youtube.com/watch?v=SZazYFchLRI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Psychoacoustics & Perception",
+      "title": "How does frequency masking let you hide 100 sounds in a mix?",
+      "concepts": ["masking", "critical bands", "mix clarity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.soundonsound.com/techniques/practical-masking",
+        "https://www.izotope.com/en/learn/understanding-frequency-masking.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Psychoacoustics & Perception",
+      "title": "Can you design sound that moves around your head?",
+      "concepts": ["spatial audio", "HRTF", "binaural recording"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.waves.com/360-ambisonics-tools-for-vr-ar-and-360-video",
+        "https://www.youtube.com/watch?v=Yd5i7TlpzCk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Psychoacoustics & Perception",
+      "title": "What makes a sound feel 'large' versus 'small'?",
+      "concepts": ["timbre", "spectral content", "perceived size"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://designingsound.org/2010/03/22/sound-design-creating-size/",
+        "https://www.asoundeffect.com/sound-design-size/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Recording Techniques",
+      "title": "Why does the same microphone sound completely different 6 inches away?",
+      "concepts": ["proximity effect", "polar patterns", "mic placement"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soundonsound.com/sound-advice/q-what-proximity-effect",
+        "https://www.shure.com/en-US/performance-production/louder/proximity-effect"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Recording Techniques",
+      "title": "How do Foley artists make footsteps sound more real than real footsteps?",
+      "concepts": ["Foley recording", "exaggeration", "sync performance"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=U_tqB4IZvMk",
+        "https://www.asoundeffect.com/foley-recording-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Recording Techniques",
+      "title": "What have we learned about perception and recording so far?",
+      "concepts": ["psychoacoustics review", "recording fundamentals", "practical application"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.filmsound.org/",
+        "https://www.soundonsound.com/techniques"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Recording Techniques",
+      "title": "What's the secret to recording clean dialogue on a noisy location?",
+      "concepts": ["location sound", "noise reduction", "microphone selection"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.soundonsound.com/techniques/recording-dialogue-location",
+        "https://www.izotope.com/en/learn/tips-for-recording-dialogue-on-location.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Recording Techniques",
+      "title": "How do you capture the sound of something that doesn't exist?",
+      "concepts": ["creative recording", "source material", "sound design thinking"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.asoundeffect.com/sound-design-from-scratch/",
+        "https://www.youtube.com/watch?v=jDy5j0c6TrU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Sound Editorial & Design",
+      "title": "Why does layering 5 gunshots make a worse gunshot than using 3?",
+      "concepts": ["layering", "phase coherence", "less is more"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.asoundeffect.com/layering-sound-effects/",
+        "https://designingsound.org/2011/10/18/the-art-of-layering/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Sound Editorial & Design",
+      "title": "How do you build a soundscape that tells a story without dialogue?",
+      "concepts": ["worldbuilding", "ambience design", "narrative through sound"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.filmsound.org/articles/worldizing/",
+        "https://www.soundworkscollection.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sound Editorial & Design",
+      "title": "What makes a sound feel 'processed' versus 'natural'?",
+      "concepts": ["processing artifacts", "transparency", "creative effects"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.soundonsound.com/techniques/practical-audio-effects",
+        "https://www.izotope.com/en/learn/audio-effects-101.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sound Editorial & Design",
+      "title": "Can synthesis create better sound effects than recording?",
+      "concepts": ["synthesis for SFX", "procedural audio", "hybrid approaches"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://obiwannabe.co.uk/html/music/musictechcentral/synthesis-for-sound-design.html",
+        "https://www.youtube.com/watch?v=tgpc9Vq-3Xk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sound Editorial & Design",
+      "title": "How do recording and design techniques connect?",
+      "concepts": ["layering techniques", "creative processing", "workflow review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.asoundeffect.com/sound-design-tutorials/",
+        "https://designingsound.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Game Audio Implementation",
+      "title": "Why can't you just drop film sound into a game and call it done?",
+      "concepts": ["interactive audio", "non-linear media", "technical constraints"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.gamedeveloper.com/audio/intro-to-game-audio-for-film-sound-designers",
+        "https://www.fmod.com/resources/documentation-learn"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Game Audio Implementation",
+      "title": "How do you make music that never gets boring even after 100 loops?",
+      "concepts": ["adaptive music", "horizontal re-sequencing", "vertical layering"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.audiokinetic.com/en/learn/",
+        "https://www.youtube.com/watch?v=JuaXDc0W_qE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Game Audio Implementation",
+      "title": "What happens when 50 sounds try to play at once in a game?",
+      "concepts": ["voice management", "priority systems", "occlusion"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.audiokinetic.com/en/library/edge/?source=Help&id=understanding_voice_management",
+        "https://www.fmod.com/resources/documentation-api?version=2.02&page=white-papers-virtual-voices.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Game Audio Implementation",
+      "title": "How do you design footsteps that adapt to any surface in real-time?",
+      "concepts": ["event-driven design", "parameter automation", "material systems"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.audiokinetic.com/en/learn/certifications/",
+        "https://www.youtube.com/watch?v=dJfkWQy-7nU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Game Audio Implementation",
+      "title": "Can you make a gun sound different every time it fires?",
+      "concepts": ["randomization", "variation containers", "procedural variation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.fmod.com/resources/documentation-studio",
+        "https://www.gamedeveloper.com/audio/the-most-important-feature-in-game-audio"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Game Audio Implementation",
+      "title": "What makes interactive audio different from linear media?",
+      "concepts": ["middleware fundamentals", "adaptive techniques", "implementation patterns"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.audiokinetic.com/en/learn/",
+        "https://www.fmod.com/learn"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Mixing & Delivery",
+      "title": "Why does your mix sound great on headphones but terrible on TV speakers?",
+      "concepts": ["mix translation", "monitoring", "delivery formats"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.soundonsound.com/techniques/mixing-film-sound",
+        "https://www.pro-tools-expert.com/home-page/2019/5/17/mixing-for-film-and-tv"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Mixing & Delivery",
+      "title": "How do you keep dialogue clear when explosions are happening?",
+      "concepts": ["ducking", "sidechain compression", "frequency carving"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.soundonsound.com/techniques/compression-made-easy",
+        "https://www.izotope.com/en/learn/sidechain-compression-in-music-production.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Mixing & Delivery",
+      "title": "What's the difference between mixing for stereo, 5.1, and Atmos?",
+      "concepts": ["surround mixing", "object-based audio", "immersive formats"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.dolby.com/about/support/guide/dolby-atmos-workflows/",
+        "https://www.soundonsound.com/techniques/introduction-dolby-atmos"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Mixing & Delivery",
+      "title": "How do you deliver stems that won't make the re-recording mixer hate you?",
+      "concepts": ["stem organization", "deliverables", "professional standards"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.filmsound.org/terminology/stems.htm",
+        "https://www.pro-tools-expert.com/production-expert-1/2017/10/3/what-are-stems-and-why-are-they-useful"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Professional Practice",
+      "title": "What happens in a spotting session and how do you prepare?",
+      "concepts": ["spotting", "collaboration", "creative brief"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.filmsound.org/articles/designing_for_sound.htm",
+        "https://www.soundworkscollection.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Professional Practice",
+      "title": "How does the complete sound design workflow come together?",
+      "concepts": ["workflow integration", "film vs game pipelines", "creative decisions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.asoundeffect.com/",
+        "https://www.designingsound.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

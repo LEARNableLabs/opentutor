@@ -1,0 +1,300 @@
+{
+  "topic": "Acoustics and Psychoacoustics",
+  "slug": "acoustics-and-psychoacoustics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (waves, frequency, amplitude)",
+    "trigonometry",
+    "familiarity with sound or music"
+  ],
+  "exit_criteria": [
+    "explain how physical sound waves relate to perceptual experiences",
+    "describe the anatomy and function of the auditory system",
+    "predict and explain psychoacoustic phenomena (masking, localization, pitch perception)",
+    "apply psychoacoustic principles to audio engineering and music production",
+    "interpret audiograms and understand hearing loss impacts"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Physical Acoustics",
+      "title": "What makes a sound wave different from other waves?",
+      "concepts": ["sound waves", "longitudinal waves", "compression and rarefaction"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/resources/lecture-11-video-1/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Physical Acoustics",
+      "title": "Why does a guitar string produce multiple frequencies at once?",
+      "concepts": ["harmonics", "overtones", "Fourier analysis", "spectral content"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.routledge.com/Acoustics-and-Psychoacoustics/Howard-Angus/p/book/9781138859876"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Physical Acoustics",
+      "title": "How do we measure sound intensity and why does it use a logarithmic scale?",
+      "concepts": ["decibels", "sound pressure level", "logarithmic scales", "reference pressure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.pluralpublishing.com/publications/psychoacoustics-auditory-perception-of-listeners-with-normal-hearing-and-hearing-loss"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Physical Acoustics",
+      "title": "What happens when two sound waves meet?",
+      "concepts": ["interference", "constructive interference", "destructive interference", "standing waves"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://mutor-2.github.io/ScienceOfMusic/units/03/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Physical Acoustics",
+      "title": "Why does your voice sound different in a bathroom versus a concert hall?",
+      "concepts": ["reflection", "reverberation", "room acoustics", "echo"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.routledge.com/Acoustics-and-Psychoacoustics/Howard-Angus/p/book/9781138859876"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review",
+      "title": "How do sound waves work and how do we measure them?",
+      "concepts": ["sound waves", "frequency analysis", "decibels", "interference", "room acoustics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.routledge.com/Acoustics-and-Psychoacoustics/Howard-Angus/p/book/9781138859876"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Physical Acoustics",
+      "title": "How can you visualize sound in the frequency domain?",
+      "concepts": ["frequency analysis", "spectrum", "time-domain vs frequency-domain"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://online.berklee.edu/courses/psychoacoustics-for-music-production"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Hearing System",
+      "title": "How does the ear turn air vibrations into neural signals?",
+      "concepts": ["ear anatomy", "outer ear", "middle ear", "inner ear", "cochlea"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "The Hearing System",
+      "title": "Why do tiny hair cells determine everything you hear?",
+      "concepts": ["hair cells", "stereocilia", "mechanotransduction", "tonotopic organization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.pluralpublishing.com/publications/psychoacoustics-auditory-perception-of-listeners-with-normal-hearing-and-hearing-loss"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Hearing System",
+      "title": "How does the cochlea perform a Fourier transform mechanically?",
+      "concepts": ["basilar membrane", "traveling wave", "place coding", "frequency selectivity"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The Hearing System",
+      "title": "What happens when sound travels from the cochlea to the brain?",
+      "concepts": ["auditory nerve", "neural encoding", "firing patterns", "auditory pathways"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://online.berklee.edu/courses/psychoacoustics-for-music-production"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The Hearing System",
+      "title": "How would you explain the journey from sound wave to perception?",
+      "concepts": ["ear anatomy review", "signal transduction", "frequency coding"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://mutor-2.github.io/ScienceOfMusic/units/03/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Review",
+      "title": "How do physical waves become neural signals?",
+      "concepts": ["sound waves", "ear anatomy", "frequency analysis", "neural encoding"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.routledge.com/Acoustics-and-Psychoacoustics/Howard-Angus/p/book/9781138859876"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Pitch and Frequency",
+      "title": "Why isn't pitch the same as frequency?",
+      "concepts": ["pitch perception", "frequency vs pitch", "missing fundamental", "complex tones"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.pluralpublishing.com/publications/psychoacoustics-auditory-perception-of-listeners-with-normal-hearing-and-hearing-loss"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Pitch and Frequency",
+      "title": "How small a frequency difference can you hear?",
+      "concepts": ["frequency discrimination", "just noticeable difference", "critical bandwidth"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://online.berklee.edu/courses/psychoacoustics-for-music-production"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Pitch and Frequency",
+      "title": "Why do octaves sound 'the same' across different pitches?",
+      "concepts": ["octave equivalence", "pitch chroma", "pitch height", "musical scales"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://mutor-2.github.io/ScienceOfMusic/units/03/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Pitch and Frequency",
+      "title": "What happens when you hear a missing fundamental?",
+      "concepts": ["missing fundamental", "pitch of complex tones", "residue pitch"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.pluralpublishing.com/application/files/3717/0171/1755/pa2e_SamplePages.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Loudness and Intensity",
+      "title": "Why doesn't doubling sound intensity make it sound twice as loud?",
+      "concepts": ["loudness", "intensity vs loudness", "Stevens' power law", "sones and phons"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.routledge.com/Acoustics-and-Psychoacoustics/Howard-Angus/p/book/9781138859876"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Loudness and Intensity",
+      "title": "How does frequency affect perceived loudness?",
+      "concepts": ["equal-loudness contours", "Fletcher-Munson curves", "frequency-dependent sensitivity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.pluralpublishing.com/publications/psychoacoustics-auditory-perception-of-listeners-with-normal-hearing-and-hearing-loss"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Loudness and Intensity",
+      "title": "Why can't you hear conversations at loud concerts?",
+      "concepts": ["masking", "simultaneous masking", "frequency masking", "upward spread of masking"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://online.berklee.edu/courses/psychoacoustics-for-music-production"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Review",
+      "title": "Why doesn't perception match physical measurement?",
+      "concepts": ["pitch perception", "loudness perception", "psychophysical relationships", "masking"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://mutor-2.github.io/ScienceOfMusic/units/03/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Spatial Hearing",
+      "title": "How do you locate a sound with just two ears?",
+      "concepts": ["sound localization", "interaural time difference", "interaural level difference", "binaural cues"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Spatial Hearing",
+      "title": "Why is it hard to tell if a sound is in front or behind you?",
+      "concepts": ["cone of confusion", "head-related transfer function", "pinna cues", "spectral cues"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.routledge.com/Acoustics-and-Psychoacoustics/Howard-Angus/p/book/9781138859876"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Spatial Hearing",
+      "title": "How do binaural recordings create 3D soundscapes?",
+      "concepts": ["binaural recording", "3D audio", "spatial audio", "virtual acoustics"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://online.berklee.edu/courses/psychoacoustics-for-music-production"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Timbre and Complex Sounds",
+      "title": "Why does a piano sound different from a violin playing the same note?",
+      "concepts": ["timbre", "spectral envelope", "harmonic structure", "attack and decay"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://mutor-2.github.io/ScienceOfMusic/units/03/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Timbre and Complex Sounds",
+      "title": "How does temporal masking let MP3s sound good at low bitrates?",
+      "concepts": ["temporal masking", "forward masking", "backward masking", "perceptual audio coding"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://online.berklee.edu/courses/psychoacoustics-for-music-production"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Timbre and Complex Sounds",
+      "title": "How can you design an audio effect that exploits psychoacoustic principles?",
+      "concepts": ["psychoacoustic principles", "audio engineering", "perception-driven design"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.routledge.com/Acoustics-and-Psychoacoustics/Howard-Angus/p/book/9781138859876"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Review",
+      "title": "How does everything connect: from waves to perception to application?",
+      "concepts": ["physical acoustics", "psychoacoustics", "spatial hearing", "timbre", "audio engineering"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.routledge.com/Acoustics-and-Psychoacoustics/Howard-Angus/p/book/9781138859876"],
+      "status": "pending"
+    }
+  ]
+}

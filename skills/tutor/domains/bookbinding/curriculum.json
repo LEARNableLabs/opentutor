@@ -1,0 +1,370 @@
+{
+  "topic": "Bookbinding — structures, materials, and conservation",
+  "slug": "bookbinding",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic hand tools comfort",
+    "patience for detailed work",
+    "interest in book history or conservation"
+  ],
+  "exit_criteria": [
+    "identify and describe major historical binding structures",
+    "assess condition of a bound book and document findings",
+    "explain degradation mechanisms for paper, leather, and adhesives",
+    "perform basic conservation repairs with appropriate materials",
+    "apply conservation ethics and decision-making frameworks",
+    "create simple non-adhesive bindings from scratch",
+    "design appropriate storage solutions for various book formats"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Book Structures",
+      "title": "Why did the codex replace the scroll?",
+      "concepts": ["codex structure", "historical book forms", "functional advantages"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.loc.gov/preservation/care/books.html",
+        "https://www.youtube.com/watch?v=nuNfdHNTv9o"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Book Structures",
+      "title": "What holds a book together when you open it to the middle?",
+      "concepts": ["spine structure", "sewing stations", "tension distribution"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.bl.uk/collection-care/bookbinding-techniques",
+        "https://www.youtube.com/c/DASBookbinding"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Book Structures",
+      "title": "How do grain direction and fiber orientation affect a book's lifespan?",
+      "concepts": ["grain direction", "material stress", "warping and distortion"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.loc.gov/preservation/about/prd/presdig/paper-care.pdf",
+        "https://www.nedcc.org/free-resources/preservation-leaflets/2.-the-environment/2.1-temperature-humidity-light-and-air"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Book Structures",
+      "title": "What makes a binding structure 'reversible' and why does it matter?",
+      "concepts": ["reversibility", "conservation ethics", "intervention levels"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.culturalheritage.org/about-conservation/code-of-ethics",
+        "https://www.loc.gov/preservation/resources/rt/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Materials: Paper",
+      "title": "Why do some books from 1850 crumble while medieval manuscripts survive?",
+      "concepts": ["paper degradation", "acidity", "lignin content", "manufacturing history"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.loc.gov/preservation/scientists/projects/acid_paper.html",
+        "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.5-the-environmental-protection-of-books-and-related-materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Materials: Paper",
+      "title": "How do you read a book's condition like a conservator?",
+      "concepts": ["condition assessment", "documentation", "damage patterns"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.loc.gov/preservation/care/deterioratebrochure.html",
+        "https://www.youtube.com/watch?v=E8nXU3XH-4s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Materials: Paper",
+      "title": "Review: Structures and Paper Fundamentals",
+      "concepts": ["codex evolution", "grain direction", "acidity and degradation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.loc.gov/preservation/care/books.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Materials: Adhesives and Leather",
+      "title": "What makes wheat paste better than PVA for conservation work?",
+      "concepts": ["adhesive properties", "reversibility", "aging behavior", "application context"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.4-polyester-film-encapsulation",
+        "https://www.youtube.com/watch?v=Xh8Q6KT-HNo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Materials: Adhesives and Leather",
+      "title": "Why does red rot destroy leather bindings?",
+      "concepts": ["leather degradation", "tanning methods", "sulfuric acid decay", "red rot"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.loc.gov/preservation/care/leather.html",
+        "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.6-leather-and-parchment"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Materials: Adhesives and Leather",
+      "title": "How do you choose the right thread for a repair?",
+      "concepts": ["sewing materials", "thread weight", "compatibility", "strength vs. flexibility"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.talasonline.com/Bookbinding-Thread",
+        "https://www.youtube.com/watch?v=mCnKB_qPDNE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Traditional Binding Structures",
+      "title": "Why can you open a coptic binding completely flat?",
+      "concepts": ["coptic sewing", "chain stitch", "exposed spine", "historical structures"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=S2FRKZAMnvE",
+        "https://www.nedcc.org/preservation-training/training-calendar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Traditional Binding Structures",
+      "title": "What makes Japanese stab binding so flexible and durable?",
+      "concepts": ["stab binding", "non-adhesive structures", "sewing patterns", "cultural context"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=aWHkY5jOoqk",
+        "https://www.loc.gov/collections/japanese-rare-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Traditional Binding Structures",
+      "title": "How does a case binding transfer stress across the whole structure?",
+      "concepts": ["case binding", "cloth hinges", "endpapers", "stress distribution"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=Av_rU-ysPa0",
+        "https://www.nedcc.org/free-resources/preservation-leaflets/6.-reformatting/6.6-microfilm-and-microfiche"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Traditional Binding Structures",
+      "title": "Review: Materials and Structure Connections",
+      "concepts": ["adhesive selection", "leather degradation", "sewing structure function"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.loc.gov/preservation/care/books.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Traditional Binding Structures",
+      "title": "Why do library bindings sacrifice aesthetics for durability?",
+      "concepts": ["library binding", "oversewing", "functional priorities", "trade-offs"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ala.org/alcts/resources/preserve/library-binding",
+        "https://www.youtube.com/watch?v=fVq4_HhHShs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Traditional Binding Structures",
+      "title": "What can you learn from how a spine breaks?",
+      "concepts": ["failure analysis", "wear patterns", "structural weaknesses", "diagnostic observation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.loc.gov/preservation/care/deterioratebrochure.html",
+        "https://www.youtube.com/watch?v=cq01SLQdIk0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Conservation Principles",
+      "title": "When should you do nothing to a damaged book?",
+      "concepts": ["minimal intervention", "do no harm", "decision frameworks", "ethics"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.culturalheritage.org/about-conservation/code-of-ethics",
+        "https://www.nedcc.org/free-resources/preservation-leaflets/2.-the-environment"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Conservation Principles",
+      "title": "How do light and humidity work together to destroy books?",
+      "concepts": ["environmental damage", "photochemical degradation", "mold growth", "preventive conservation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nedcc.org/free-resources/preservation-leaflets/2.-the-environment/2.1-temperature-humidity-light-and-air",
+        "https://www.youtube.com/watch?v=OaVJUr0fPkA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Conservation Principles",
+      "title": "Why document everything before you touch the book?",
+      "concepts": ["documentation standards", "provenance", "treatment records", "professional practice"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.loc.gov/preservation/about/prd/presdig/",
+        "https://www.culturalheritage.org/docs/default-source/administration/governance/code-of-ethics-and-guidelines-for-practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Conservation Principles",
+      "title": "What makes a repair 'sympathetic' to the original?",
+      "concepts": ["sympathetic repair", "material compatibility", "aesthetic integration", "historical integrity"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.loc.gov/preservation/care/books.html",
+        "https://www.youtube.com/watch?v=K4M8cDVKqCg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Repair Techniques",
+      "title": "Review: Ethics, Environment, and Decision-Making",
+      "concepts": ["minimal intervention", "environmental factors", "documentation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.culturalheritage.org/about-conservation/code-of-ethics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Repair Techniques",
+      "title": "How do you mend a tear without making it worse?",
+      "concepts": ["paper mending", "Japanese tissue", "starch paste", "mending techniques"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nedcc.org/free-resources/preservation-leaflets/7.-conservation-procedures/7.2-mending-paper-artifacts",
+        "https://www.youtube.com/watch?v=pXWXlAu_-h4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Repair Techniques",
+      "title": "Why do hinge repairs fail and how do you prevent it?",
+      "concepts": ["hinge repair", "endpaper attachment", "stress points", "material selection"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.loc.gov/preservation/care/books.html",
+        "https://www.youtube.com/watch?v=W8k3Kl9CNz0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Repair Techniques",
+      "title": "What's the difference between rebacking and recasing?",
+      "concepts": ["rebacking", "recasing", "spine repair", "structural interventions"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nedcc.org/preservation-training/",
+        "https://www.youtube.com/watch?v=T9z9p7iR7zU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Repair Techniques",
+      "title": "How do you consolidate powdering leather without changing its appearance?",
+      "concepts": ["leather consolidation", "Klucel G", "surface treatments", "material science"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.loc.gov/preservation/care/leather.html",
+        "https://www.youtube.com/watch?v=K9P5yb_eGZs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "How do you design housing for oversized or fragile books?",
+      "concepts": ["protective housing", "clamshell boxes", "support design", "preventive conservation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.1-storage-methods-and-handling-practices",
+        "https://www.youtube.com/watch?v=Bv4aBQQ2FPE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "What would you save first in a flood?",
+      "concepts": ["disaster response", "triage", "salvage priorities", "emergency procedures"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nedcc.org/free-resources/preservation-leaflets/3.-emergency-management/3.1-introduction-to-disaster-planning",
+        "https://www.loc.gov/preservation/emergprep/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

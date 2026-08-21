@@ -1,0 +1,389 @@
+{
+  "topic": "Reinforcement Learning",
+  "slug": "reinforcement-learning",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "probability and statistics",
+    "linear algebra",
+    "multivariable calculus",
+    "basic machine learning (supervised learning)",
+    "Python programming",
+    "NumPy basics"
+  ],
+  "exit_criteria": [
+    "formulate real-world problems as Markov Decision Processes",
+    "implement tabular RL algorithms (Q-learning, SARSA, Monte Carlo) from scratch",
+    "explain the exploration-exploitation tradeoff and apply exploration strategies",
+    "build deep RL agents using DQN and actor-critic methods",
+    "train RL agents in standard Gymnasium environments",
+    "understand policy gradient theorem and implement REINFORCE",
+    "apply modern deep RL algorithms (PPO, A3C) using frameworks like Stable Baselines3",
+    "debug RL training issues (reward shaping, hyperparameter tuning, instability)",
+    "evaluate when RL is appropriate vs. other approaches",
+    "understand current frontiers (RLHF, model-based RL, offline RL)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes reinforcement learning different from supervised learning?",
+      "concepts": ["agent-environment interaction", "trial and error", "delayed rewards"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://web.stanford.edu/class/cs234/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do we formalize sequential decision making?",
+      "concepts": ["Markov Decision Processes", "states", "actions", "rewards", "transition dynamics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://web.mit.edu/6.7920/www/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Why do we care about long-term consequences?",
+      "concepts": ["returns", "discounting", "episodic vs. continuing tasks"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What is the optimal way to act in an environment?",
+      "concepts": ["policies", "value functions", "optimal policy", "Bellman optimality equation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "How can we compute optimal values when we know the dynamics?",
+      "concepts": ["dynamic programming", "policy iteration", "value iteration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://www.anyscale.com/blog/an-introduction-to-reinforcement-learning-with-openai-gym-rllib-and-google"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Tabular Solutions",
+      "title": "Can we learn without knowing how the world works?",
+      "concepts": ["model-free learning", "Monte Carlo methods", "sample-based estimation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://web.stanford.edu/class/cs234/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Tabular Solutions",
+      "title": "Review: From MDPs to model-free learning",
+      "concepts": ["Bellman equations", "bootstrapping", "sampling vs. sweeping"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://enjeeneer.io/posts/2021/04/notes-exercises-and-code-for-sutton-and-bartos-reinforcement-learning-an-introduction-2018/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Tabular Solutions",
+      "title": "What if we want to learn before the episode ends?",
+      "concepts": ["temporal-difference learning", "TD(0)", "bootstrapping from estimates"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Tabular Solutions",
+      "title": "How does Q-learning discover optimal actions without following them?",
+      "concepts": ["Q-learning", "off-policy learning", "action-value functions"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Tabular Solutions",
+      "title": "Can you balance a pole using only Q-values?",
+      "concepts": ["OpenAI Gym", "discretization", "learning rate tuning", "epsilon-greedy exploration"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.datacamp.com/tutorial/reinforcement-learning-with-gymnasium",
+        "https://smythos.com/developers/agent-development/reinforcement-learning-openai-gym/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Tabular Solutions",
+      "title": "Why does SARSA learn a different policy than Q-learning?",
+      "concepts": ["on-policy vs. off-policy", "SARSA", "expected SARSA", "behavioral differences"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://github.com/jekyllstein/Reinforcement-Learning-Sutton-Barto-Exercise-Solutions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Exploration Strategies",
+      "title": "How do we balance trying new things vs. exploiting what we know?",
+      "concepts": ["exploration-exploitation tradeoff", "epsilon-greedy", "Boltzmann exploration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://web.stanford.edu/class/cs234/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Exploration Strategies",
+      "title": "Can we be optimistic about uncertainty?",
+      "concepts": ["multi-armed bandits", "upper confidence bounds", "Thompson sampling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://web.mit.edu/6.7920/www/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Exploration Strategies",
+      "title": "Review: Learning algorithms and exploration",
+      "concepts": ["Q-learning vs. SARSA", "on-policy vs. off-policy", "exploration strategies"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://enjeeneer.io/posts/2021/04/notes-exercises-and-code-for-sutton-and-bartos-reinforcement-learning-an-introduction-2018/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Function Approximation",
+      "title": "What happens when the state space is too large for a table?",
+      "concepts": ["function approximation", "generalization", "linear value functions"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://cs224r.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Function Approximation",
+      "title": "How do we use gradient descent to learn value functions?",
+      "concepts": ["stochastic gradient descent", "semi-gradient methods", "deadly triad"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://lilianweng.github.io/posts/2018-05-05-drl-implementation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Deep Q-Networks",
+      "title": "Can we use neural networks as Q-functions?",
+      "concepts": ["deep Q-networks", "experience replay", "target networks"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cs224r.stanford.edu/",
+        "https://lilianweng.github.io/posts/2018-05-05-drl-implementation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Deep Q-Networks",
+      "title": "Why does DQN need experience replay and target networks?",
+      "concepts": ["correlation in data", "non-stationarity", "stability tricks"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://lilianweng.github.io/posts/2018-05-05-drl-implementation/",
+        "https://cs224r.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Deep Q-Networks",
+      "title": "Can you teach a neural network to play Atari from pixels?",
+      "concepts": ["convolutional networks", "reward clipping", "frame stacking", "hyperparameter tuning"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://www.anyscale.com/blog/an-introduction-to-reinforcement-learning-with-openai-gym-rllib-and-google",
+        "https://smythos.com/developers/agent-development/reinforcement-learning-openai-gym/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Deep Q-Networks",
+      "title": "Advanced DQN improvements explained",
+      "concepts": ["double DQN", "dueling networks", "prioritized experience replay"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://lilianweng.github.io/posts/2018-05-05-drl-implementation/",
+        "https://cs224r.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Policy Optimization",
+      "title": "Review: Value-based methods and deep RL",
+      "concepts": ["Q-learning to DQN", "function approximation challenges", "stability techniques"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://enjeeneer.io/posts/2021/04/notes-exercises-and-code-for-sutton-and-bartos-reinforcement-learning-an-introduction-2018/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Policy Optimization",
+      "title": "Can we optimize the policy directly instead of via values?",
+      "concepts": ["policy gradient theorem", "REINFORCE", "log-derivative trick"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://web.stanford.edu/class/cs234/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Policy Optimization",
+      "title": "How do actor-critic methods combine value and policy learning?",
+      "concepts": ["actor-critic", "advantage functions", "variance reduction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://cs224r.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Policy Optimization",
+      "title": "What makes PPO the default choice for modern RL?",
+      "concepts": ["Proximal Policy Optimization", "trust regions", "clipped objectives"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://cs224r.stanford.edu/",
+        "https://www.anyscale.com/blog/an-introduction-to-reinforcement-learning-with-openai-gym-rllib-and-google"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Policy Optimization",
+      "title": "Teach me how you would debug a failing RL training run",
+      "concepts": ["reward shaping", "hyperparameter sensitivity", "training instability", "diagnostic plots"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://smythos.com/developers/agent-development/reinforcement-learning-openai-gym/",
+        "https://www.anyscale.com/blog/an-introduction-to-reinforcement-learning-with-openai-gym-rllib-and-google"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "How do large language models learn from human feedback?",
+      "concepts": ["RLHF", "reward modeling", "preference learning", "InstructGPT"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://web.stanford.edu/class/cs234/",
+        "https://online.stanford.edu/courses/cs234-reinforcement-learning"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "Can agents learn a model of the world?",
+      "concepts": ["model-based RL", "planning", "Dyna-Q", "world models"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://incompleteideas.net/book/the-book-2nd.html",
+        "https://cs224r.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Topics",
+      "title": "What's next on the RL frontier?",
+      "concepts": ["offline RL", "meta-learning", "multi-agent RL", "hierarchical RL", "open problems"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://cs224r.stanford.edu/",
+        "http://rail.eecs.berkeley.edu/deeprlcourse/",
+        "https://web.stanford.edu/class/cs234/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

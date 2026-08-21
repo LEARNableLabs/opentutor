@@ -1,0 +1,420 @@
+{
+  "topic": "Cheese science — microbiology, aging, and terroir",
+  "slug": "cheese-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic microbiology (bacterial growth, fermentation)",
+    "organic chemistry fundamentals",
+    "pH and acid-base chemistry",
+    "enzymatic reactions"
+  ],
+  "exit_criteria": [
+    "explain the role of starter and secondary cultures in cheese development",
+    "describe the biochemical processes that occur during cheese aging",
+    "analyze how terroir and environment influence cheese characteristics",
+    "evaluate cheese quality and identify common defects",
+    "connect microbial ecology to flavor and texture outcomes"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Cheese Microbiology",
+      "title": "Why does milk turn into cheese instead of just spoiling?",
+      "concepts": ["lactic acid bacteria", "controlled fermentation", "acidification"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ucdavis.edu/food/news/science-cheese",
+        "https://www.journalofdairyscience.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Cheese Microbiology",
+      "title": "What makes a good starter culture?",
+      "concepts": ["Lactococcus", "Lactobacillus", "culture selection", "acid production rate"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://cdr.wisc.edu/cultures",
+        "https://www.sciencedirect.com/journal/international-dairy-journal"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Cheese Microbiology",
+      "title": "How do secondary cultures shape cheese personality?",
+      "concepts": ["Penicillium", "Brevibacterium", "Propionibacterium", "microbial succession"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cheesescience.org/cultures.html",
+        "https://aem.asm.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Cheese Microbiology",
+      "title": "Why do caves grow the best cheese microbes?",
+      "concepts": ["environmental microbiota", "bioaerosols", "microbial terroir"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/subjects/food-microbiology",
+        "https://culturechemag.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Cheese Microbiology",
+      "title": "How do bacteriophages threaten cheese production?",
+      "concepts": ["bacteriophage", "phage resistance", "culture rotation", "production failures"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.journalofdairyscience.org",
+        "https://cdr.wisc.edu/phage-control"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Cheese Microbiology",
+      "title": "Review: Mapping cheese microbes from milk to cave",
+      "concepts": ["starter cultures", "secondary cultures", "environmental influence"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.cheesescience.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Biochemistry of Cheese Aging",
+      "title": "What happens when enzymes attack milk proteins?",
+      "concepts": ["proteolysis", "casein breakdown", "peptides", "amino acids"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.journalofdairyscience.org/article/S0022-0302(17)30001-1",
+        "https://www.sciencedirect.com/topics/food-science/proteolysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Biochemistry of Cheese Aging",
+      "title": "Why does fat matter for flavor?",
+      "concepts": ["lipolysis", "fatty acids", "lipases", "volatile compounds"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ucdavis.edu/food",
+        "https://www.journalofdairyscience.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Biochemistry of Cheese Aging",
+      "title": "How do amino acids become the flavors we taste?",
+      "concepts": ["amino acid catabolism", "aldehydes", "ketones", "sulfur compounds"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/journal/food-chemistry",
+        "https://www.cheesescience.org/flavor.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Biochemistry of Cheese Aging",
+      "title": "Can you predict cheddar texture from chemistry?",
+      "concepts": ["protein matrix", "moisture content", "calcium phosphate", "pH effect on texture"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://cdr.wisc.edu/cheese-texture",
+        "https://www.journalofdairyscience.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Biochemistry of Cheese Aging",
+      "title": "What causes bitterness in aged cheese?",
+      "concepts": ["bitter peptides", "excessive proteolysis", "protease specificity", "debittering"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.journalofdairyscience.org",
+        "https://www.sciencedirect.com/topics/food-science/cheese-bitterness"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Biochemistry of Cheese Aging",
+      "title": "Review: From molecules to mouthfeel",
+      "concepts": ["proteolysis", "lipolysis", "flavor chemistry", "texture"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cheesescience.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Terroir and Environmental Microbiology",
+      "title": "Does grass really change the cheese?",
+      "concepts": ["pasture composition", "milk fatty acid profile", "seasonal variation", "terpenes"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.journalofdairyscience.org/article/S0022-0302(15)00531-7",
+        "https://www.ams.usda.gov/grades-standards/dairy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Terroir and Environmental Microbiology",
+      "title": "What microbes live in a cheese cave?",
+      "concepts": ["cave microbiome", "Geotrichum", "rind ecology", "humidity and temperature effects"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5478471/",
+        "https://www.nature.com/articles/s41467-019-08940-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Terroir and Environmental Microbiology",
+      "title": "Why do European PDO rules protect cave locations?",
+      "concepts": ["Protected Designation of Origin", "geographic microbiology", "Roquefort caves", "terroir regulation"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes",
+        "https://www.originaldiversity.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Terroir and Environmental Microbiology",
+      "title": "Can you recreate terroir in a factory?",
+      "concepts": ["controlled environment aging", "inoculation vs. spontaneous", "standardization trade-offs"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.sciencedirect.com/journal/international-dairy-journal",
+        "https://culturechemag.com/terroir-debate"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Terroir and Environmental Microbiology",
+      "title": "How do seasonal changes affect milk composition?",
+      "concepts": ["seasonal variation", "pasture cycles", "milk composition", "production planning"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.journalofdairyscience.org",
+        "https://www.ams.usda.gov/grades-standards/dairy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Terroir and Environmental Microbiology",
+      "title": "Review: The environment as ingredient",
+      "concepts": ["milk terroir", "cave microbiome", "PDO systems", "standardization"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.cheesescience.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Production Science and Quality",
+      "title": "Why does rennet coagulate milk but not other liquids?",
+      "concepts": ["chymosin", "casein micelles", "κ-casein cleavage", "coagulation chemistry"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ucdavis.edu/food/dairy-chemistry",
+        "https://www.journalofdairyscience.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Production Science and Quality",
+      "title": "What controls how much whey drains from the curd?",
+      "concepts": ["syneresis", "curd firmness", "pH and temperature", "cutting size"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://cdr.wisc.edu/syneresis",
+        "https://www.sciencedirect.com/topics/food-science/syneresis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Production Science and Quality",
+      "title": "How does salt move through cheese?",
+      "concepts": ["salt diffusion", "brine salting", "dry salting", "water activity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.journalofdairyscience.org",
+        "https://www.cheesescience.org/salting.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Production Science and Quality",
+      "title": "When should you worry about Listeria?",
+      "concepts": ["pathogen control", "pasteurization", "raw milk safety", "environmental monitoring"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.fda.gov/food/buy-store-serve-safe-food/dangers-raw-milk",
+        "https://www.cdc.gov/listeria"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Production Science and Quality",
+      "title": "What makes a cheese defect vs. a regional style?",
+      "concepts": ["sensory evaluation", "defect identification", "late gas formation", "bitterness"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cheesesociety.org/education",
+        "https://culturechemag.com/cheese-judging"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Production Science and Quality",
+      "title": "How do you scale artisanal methods to industrial production?",
+      "concepts": ["scale-up challenges", "process control", "standardization", "quality maintenance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://cdr.wisc.edu/manufacturing",
+        "https://www.sciencedirect.com/journal/international-dairy-journal"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Production Science and Quality",
+      "title": "Review: From vat to table without disaster",
+      "concepts": ["coagulation", "syneresis", "salting", "safety", "quality control"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cheesescience.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics and Integration",
+      "title": "Why are probiotics in cheese more stable than in yogurt?",
+      "concepts": ["probiotic survival", "cheese matrix protection", "functional foods", "health claims"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.journalofdairyscience.org/article/S0022-0302(18)30789-4",
+        "https://www.sciencedirect.com/journal/international-dairy-journal"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics and Integration",
+      "title": "How would you design a new cheese variety?",
+      "concepts": ["culture selection", "aging protocol", "target flavor profile", "innovation process"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://cdr.wisc.edu/innovation",
+        "https://www.cheesesociety.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Topics and Integration",
+      "title": "What can cheese science teach us about other fermented foods?",
+      "concepts": ["fermentation principles", "microbial ecology", "comparative food science", "cross-domain patterns"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.coursera.org/learn/food-fermentation",
+        "https://www.nature.com/subjects/food-microbiology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Advanced Topics and Integration",
+      "title": "What role does cheese play in sustainable food systems?",
+      "concepts": ["whey utilization", "carbon footprint", "local food systems", "sustainability trade-offs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/journal/trends-in-food-science-and-technology",
+        "https://www.nature.com/subjects/sustainability"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Advanced Topics and Integration",
+      "title": "How has molecular biology changed cheese science?",
+      "concepts": ["microbial genomics", "culture engineering", "precision fermentation", "future directions"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/subjects/food-microbiology",
+        "https://www.sciencedirect.com/journal/current-opinion-in-biotechnology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Advanced Topics and Integration",
+      "title": "Final integration: What makes a great cheese?",
+      "concepts": ["integrated understanding", "science to practice", "quality factors", "future directions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cheesescience.org",
+        "https://culturechemag.com"
+      ],
+      "status": "pending"
+    }
+  ]
+}

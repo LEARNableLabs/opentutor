@@ -1,0 +1,307 @@
+{
+  "topic": "Medieval Siege Engineering",
+  "slug": "medieval-siege-engineering",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (projectile motion, energy)",
+    "medieval history overview",
+    "basic understanding of levers and mechanical advantage"
+  ],
+  "exit_criteria": [
+    "student can explain the physics principles behind major siege engine types",
+    "student can compare and contrast torsion, traction, and counterweight engines",
+    "student can analyze why specific siege engines were used in different tactical situations",
+    "student can evaluate primary source claims using engineering principles",
+    "student understands the relationship between material constraints and design choices"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamentals of Siege Engineering",
+      "title": "Why couldn't medieval armies just climb over castle walls?",
+      "concepts": ["siege warfare context", "defensive architecture", "tactical problem space"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=4_oiHfeITC8",
+        "https://www.bl.uk/medieval-literature/articles/medieval-castles"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamentals of Siege Engineering",
+      "title": "What makes a stone fly 300 meters?",
+      "concepts": ["projectile motion", "energy transfer", "mechanical advantage"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.real-world-physics-problems.com/projectile-motion.html",
+        "https://www.pbslearningmedia.org/resource/phy03.sci.phys.mfw.lp_trebuchet/trebuchet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamentals of Siege Engineering",
+      "title": "How did medieval engineers choose between speed and power?",
+      "concepts": ["energy-range tradeoffs", "rate of fire vs impact", "tactical objectives"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=0MCAz5vCMmI",
+        "https://acoup.blog/2021/07/23/collections-the-practical-realities-of-siege-warfare/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamentals of Siege Engineering",
+      "title": "Why does doubling the size not double the power?",
+      "concepts": ["scaling laws", "square-cube law", "structural limits"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/physics/forces-newtons-laws/normal-contact-force/a/what-is-normal-force",
+        "https://trebuchet.com/2021/07/building-a-scale-model-trebuchet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Torsion Engines",
+      "title": "How does twisted rope store enough energy to pierce armor?",
+      "concepts": ["torsion springs", "ballista mechanics", "elastic potential energy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=n9fJzsgUM_A",
+        "https://myarmoury.com/feature_spot_ballista.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Torsion Engines",
+      "title": "What did Roman engineers know that medieval ones forgot?",
+      "concepts": ["technological regression", "ballista design evolution", "knowledge transmission"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/506273",
+        "https://www.historytoday.com/archive/feature/lost-technologies-ancient-world"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Torsion Engines",
+      "title": "Can you explain how energy, scaling, and torsion work together?",
+      "concepts": ["energy systems review", "scaling problems", "torsion mechanics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=XOC3vixnj_0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Traction Engines",
+      "title": "Can human muscle power compete with gravity?",
+      "concepts": ["traction trebuchet", "human power limits", "force multiplication"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=UrP8LcOLB_Y",
+        "https://www.trebuchet.com/plans/traction-trebuchet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Traction Engines",
+      "title": "Why did Chinese engineers use hundreds of pullers on one engine?",
+      "concepts": ["team coordination", "power-to-weight ratio", "Chinese traction design"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.dtic.mil/dtic/tr/fulltext/u2/a423363.pdf",
+        "https://www.youtube.com/watch?v=8vkhPGRlQ_c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Traction Engines",
+      "title": "Teach back: Explain torsion vs traction to a castle defender",
+      "concepts": ["comparative analysis", "tactical tradeoffs", "communication of technical concepts"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Counterweight Engines",
+      "title": "What happens when you replace people with a box of rocks?",
+      "concepts": ["counterweight trebuchet", "gravitational potential energy", "hybrid designs"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=kfchvCyHmsc",
+        "https://www.algobeautiful.com/orgasmica/trebuchet.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Counterweight Engines",
+      "title": "Why does the sling release at exactly the right moment?",
+      "concepts": ["sling mechanics", "release angle optimization", "timing precision"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.real-world-physics-problems.com/trebuchet-physics.html",
+        "https://arxiv.org/abs/1311.3039"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Counterweight Engines",
+      "title": "How did medieval engineers tune a trebuchet without calculus?",
+      "concepts": ["empirical optimization", "parameter tuning", "practical engineering methods"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=VbDHWxXLgzI",
+        "https://www.pbs.org/wgbh/nova/lostempires/trebuchet/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Counterweight Engines",
+      "title": "How do torsion, traction, and counterweight engines compare?",
+      "concepts": ["comparative review", "energy sources", "tactical applications"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Materials and Construction",
+      "title": "Why oak for the frame but ash for the throwing arm?",
+      "concepts": ["material properties", "wood selection", "structural engineering"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.wood-database.com/wood-articles/wood-strength/",
+        "https://www.youtube.com/watch?v=gW9w6FsF2k4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Materials and Construction",
+      "title": "What breaks first when you scale up a trebuchet?",
+      "concepts": ["failure analysis", "stress concentration", "weak points"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=JEpsKnWZrJ8",
+        "https://trebuchet.com/commentary/stress-analysis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Siege Tactics and Applications",
+      "title": "When would you throw dead horses instead of rocks?",
+      "concepts": ["biological warfare", "psychological tactics", "siege disease"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.historyextra.com/period/medieval/medieval-biological-warfare-disease-siege/",
+        "https://www.youtube.com/watch?v=yJXTXN4xrI8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Siege Tactics and Applications",
+      "title": "How did defenders destroy siege engines before they got in range?",
+      "concepts": ["counter-battery fire", "defensive trebuchets", "range estimation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=bnZBCf4JL-M",
+        "https://acoup.blog/2021/08/06/collections-the-siege-of-gondor-part-ii/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Siege Tactics and Applications",
+      "title": "What can the Siege of Acre 1291 teach us about siege engineering?",
+      "concepts": ["historical case study", "combined siege operations", "technological convergence"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=0L2iU4CiN40",
+        "https://www.jstor.org/stable/1348630",
+        "https://www.medievalists.net/2021/05/fall-of-acre-1291/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Siege Tactics and Applications",
+      "title": "How do materials, tactics, and engineering principles connect?",
+      "concepts": ["synthesis review", "integrated concepts", "cross-module connections"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Historical Context and Legacy",
+      "title": "Why did gunpowder artillery kill the trebuchet?",
+      "concepts": ["technological obsolescence", "gunpowder revolution", "comparative engineering"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=xtP0dqcBwjY",
+        "https://www.historytoday.com/archive/months-past/end-era-medieval-siege-warfare"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Historical Context and Legacy",
+      "title": "What can modern engineers learn from medieval siege machines?",
+      "concepts": ["experimental archaeology", "reverse engineering", "physics education"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=7ic_w9L0YJk",
+        "https://www.sciencefriday.com/segments/trebuchet-physics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Historical Context and Legacy",
+      "title": "Teach back: Design a siege engine for a specific castle assault",
+      "concepts": ["integrated design thinking", "tactical constraints", "engineering synthesis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [],
+      "status": "pending"
+    }
+  ]
+}

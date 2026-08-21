@@ -1,0 +1,400 @@
+{
+  "topic": "Quantum Computing",
+  "slug": "quantum-computing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "linear algebra (eigenvalues, eigenvectors, matrix operations)",
+    "complex numbers",
+    "basic probability theory",
+    "programming (Python preferred)",
+    "mathematical maturity"
+  ],
+  "exit_criteria": [
+    "explain quantum superposition and measurement using the state vector formalism",
+    "implement quantum circuits using single and multi-qubit gates",
+    "code and run Grover's search algorithm in Qiskit or Cirq",
+    "derive and explain Shor's factoring algorithm at a high level",
+    "understand quantum entanglement and its role in quantum protocols",
+    "describe the quantum error correction problem and basic approaches",
+    "evaluate which problems benefit from quantum speedup vs. classical approaches"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Quantum States & Measurement",
+      "title": "What makes quantum bits different from ordinary bits?",
+      "concepts": ["qubits", "superposition", "amplitude"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/",
+        "https://cs269q.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Quantum States & Measurement",
+      "title": "Why do we use complex numbers for quantum states?",
+      "concepts": ["complex amplitudes", "probability", "Born rule"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Quantum States & Measurement",
+      "title": "How does measurement destroy quantum information?",
+      "concepts": ["measurement", "collapse", "computational basis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Quantum States & Measurement",
+      "title": "Can you visualize a qubit on a sphere?",
+      "concepts": ["Bloch sphere", "geometric representation", "pure states"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://oreilly-qc.github.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Quantum States & Measurement",
+      "title": "What happens when we combine multiple qubits?",
+      "concepts": ["tensor products", "multi-qubit states", "basis states"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cs269q.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Quantum States & Measurement",
+      "title": "How would you explain superposition to a 10-year-old?",
+      "concepts": ["superposition", "interference", "probability interpretation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://quantumai.google/cirq"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Quantum Gates & Circuits",
+      "title": "Review: Can you build any quantum state from |0⟩?",
+      "concepts": ["state preparation", "measurement review", "basis review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Quantum Gates & Circuits",
+      "title": "Why are quantum gates reversible?",
+      "concepts": ["unitary matrices", "reversibility", "gate operations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Quantum Gates & Circuits",
+      "title": "What do the Pauli gates actually do?",
+      "concepts": ["Pauli X, Y, Z gates", "bit flip", "phase flip"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://quantumai.google/cirq",
+        "https://github.com/quantastica/quantum-circuit"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Quantum Gates & Circuits",
+      "title": "How does the Hadamard gate create superposition?",
+      "concepts": ["Hadamard gate", "basis change", "superposition creation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cs269q.stanford.edu/",
+        "https://oreilly-qc.github.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Quantum Gates & Circuits",
+      "title": "Can you code your first quantum circuit?",
+      "concepts": ["circuit model", "Qiskit basics", "gate composition"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://quantumai.google/cirq",
+        "https://cs269q.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Quantum Gates & Circuits",
+      "title": "Why can't we just copy a qubit?",
+      "concepts": ["no-cloning theorem", "linearity", "information limits"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Quantum Gates & Circuits",
+      "title": "What makes the CNOT gate so powerful?",
+      "concepts": ["CNOT gate", "controlled operations", "two-qubit gates"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE",
+        "https://quantumai.google/cirq"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Quantum Gates & Circuits",
+      "title": "Review: Can you design a circuit to create any Bell state?",
+      "concepts": ["circuit review", "gate composition", "controlled operations review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://quantumai.google/cirq",
+        "https://oreilly-qc.github.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Quantum Algorithms",
+      "title": "How do quantum computers solve problems faster?",
+      "concepts": ["quantum parallelism", "interference", "speedup sources"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Quantum Algorithms",
+      "title": "What was the first quantum algorithm that beat classical?",
+      "concepts": ["Deutsch-Jozsa algorithm", "oracle queries", "global properties"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cs269q.stanford.edu/",
+        "https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Quantum Algorithms",
+      "title": "Can you implement Deutsch-Jozsa in Qiskit?",
+      "concepts": ["algorithm implementation", "oracles", "circuit construction"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://quantumai.google/cirq",
+        "https://cs269q.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Quantum Algorithms",
+      "title": "How does Grover's algorithm search unsorted databases?",
+      "concepts": ["Grover's algorithm", "amplitude amplification", "quadratic speedup"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/",
+        "https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Quantum Algorithms",
+      "title": "Why does Grover's give exactly quadratic speedup, not more?",
+      "concepts": ["optimality bounds", "search lower bounds", "geometric interpretation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Quantum Algorithms",
+      "title": "Review: Build and run Grover's search on 4 items",
+      "concepts": ["Grover review", "circuit implementation", "measurement analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://quantumai.google/cirq",
+        "https://oreilly-qc.github.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Quantum Algorithms",
+      "title": "How did Shor's algorithm break RSA encryption?",
+      "concepts": ["Shor's algorithm", "period finding", "quantum Fourier transform"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/",
+        "https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Entanglement & Advanced Topics",
+      "title": "What makes entangled states fundamentally different?",
+      "concepts": ["entanglement", "Bell states", "non-separability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Entanglement & Advanced Topics",
+      "title": "Can you really teleport quantum information?",
+      "concepts": ["quantum teleportation", "EPR pairs", "classical communication"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/",
+        "https://cs269q.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Entanglement & Advanced Topics",
+      "title": "Why do quantum computers need error correction?",
+      "concepts": ["quantum errors", "decoherence", "noise models"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Entanglement & Advanced Topics",
+      "title": "How does quantum error correction work without measuring?",
+      "concepts": ["stabilizer codes", "syndrome measurement", "logical qubits"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Entanglement & Advanced Topics",
+      "title": "Review: Trace through a quantum teleportation circuit",
+      "concepts": ["teleportation review", "entanglement application", "protocol execution"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://quantumai.google/cirq",
+        "https://oreilly-qc.github.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Entanglement & Advanced Topics",
+      "title": "What problems can't quantum computers solve efficiently?",
+      "concepts": ["BQP complexity class", "quantum limitations", "NP-completeness"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-845-quantum-complexity-theory-fall-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "The Quantum Future",
+      "title": "What is the NISQ era and why does it matter?",
+      "concepts": ["NISQ devices", "near-term applications", "hardware constraints"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://cs269q.stanford.edu/",
+        "https://quantumai.google/cirq"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "The Quantum Future",
+      "title": "Where will quantum advantage appear first?",
+      "concepts": ["quantum chemistry", "optimization", "machine learning applications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://cs269q.stanford.edu/",
+        "https://thequantuminsider.com/2022/06/14/top-63-quantum-computer-simulators/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "The Quantum Future",
+      "title": "Design your own quantum algorithm — what would you tackle?",
+      "concepts": ["algorithm design", "problem selection", "quantum advantage criteria"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://quantumai.google/cirq",
+        "https://cs269q.stanford.edu/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

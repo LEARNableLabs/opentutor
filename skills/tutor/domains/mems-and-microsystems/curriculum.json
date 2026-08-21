@@ -1,0 +1,454 @@
+{
+  "topic": "MEMS and Microsystems",
+  "slug": "mems-and-microsystems",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (mechanics, E&M)",
+    "circuits fundamentals",
+    "introductory materials science",
+    "calculus and differential equations"
+  ],
+  "exit_criteria": [
+    "explain how scaling laws affect device behavior at microscale",
+    "design simple MEMS sensors using piezoresistive or capacitive transduction",
+    "describe major microfabrication processes and their tradeoffs",
+    "analyze electrostatic and thermal actuation mechanisms",
+    "evaluate packaging and reliability challenges for MEMS devices"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamentals and Scaling",
+      "title": "Why do tiny things behave so differently from big things?",
+      "concepts": [
+        "scaling laws",
+        "surface-to-volume ratio",
+        "dominant forces"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-777j-design-and-fabrication-of-microelectromechanical-devices-spring-2007/",
+        "https://www.youtube.com/watch?v=hW7DW9NIO9M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamentals and Scaling",
+      "title": "What happens when you shrink a beam by 1000x?",
+      "concepts": [
+        "dimensional analysis",
+        "stiffness scaling",
+        "mass scaling",
+        "resonant frequency"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.mems-exchange.org/MEMS/what-is.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamentals and Scaling",
+      "title": "Why is air so sticky at the microscale?",
+      "concepts": [
+        "Reynolds number",
+        "viscous damping",
+        "Stokes flow"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-777j-design-and-fabrication-of-microelectromechanical-devices-spring-2007/resources/lecture-2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamentals and Scaling",
+      "title": "How does a micron-sized heater cool down in microseconds?",
+      "concepts": [
+        "thermal time constant",
+        "heat capacity scaling",
+        "thermal conductivity"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nist.gov/publications/thermal-properties-mems-materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fabrication Technologies",
+      "title": "How do you draw billion-pixel patterns on silicon?",
+      "concepts": [
+        "photolithography",
+        "photoresist",
+        "exposure and development",
+        "resolution limits"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=bor0qLifjz4",
+        "https://ocw.mit.edu/courses/6-152j-micro-nano-processing-technology-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Fundamentals and Scaling",
+      "title": "Review: What makes the microscale world different?",
+      "concepts": [
+        "scaling laws review",
+        "dimensional analysis review",
+        "force and thermal scaling"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-777j-design-and-fabrication-of-microelectromechanical-devices-spring-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Fabrication Technologies",
+      "title": "What's the difference between wet and dry etching?",
+      "concepts": [
+        "isotropic vs anisotropic etching",
+        "selectivity",
+        "undercut"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=F239v99cTM4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Fabrication Technologies",
+      "title": "Why does KOH etch perfect pyramids in silicon?",
+      "concepts": [
+        "anisotropic wet etching",
+        "crystal planes",
+        "bulk micromachining"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.memsnet.org/material/siliconsibulk/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Fabrication Technologies",
+      "title": "How do you build structures in mid-air?",
+      "concepts": [
+        "surface micromachining",
+        "sacrificial layers",
+        "release etching",
+        "stiction"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=aW7ao8MvN9I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Fabrication Technologies",
+      "title": "Review: From silicon wafer to suspended structure",
+      "concepts": [
+        "process flow integration",
+        "lithography-etch-deposition cycle"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-777j-design-and-fabrication-of-microelectromechanical-devices-spring-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Sensing Mechanisms",
+      "title": "How does bending silicon change its resistance?",
+      "concepts": [
+        "piezoresistivity",
+        "stress and strain",
+        "Wheatstone bridge"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.analog.com/en/technical-articles/mems-piezoresistive-pressure-sensors.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sensing Mechanisms",
+      "title": "Why measure capacitance changes instead of resistance?",
+      "concepts": [
+        "capacitive sensing",
+        "gap-closing vs area-change",
+        "parasitic capacitance"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.analog.com/media/en/training-seminars/tutorials/MT-086.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sensing Mechanisms",
+      "title": "How do accelerometers in your phone work?",
+      "concepts": [
+        "proof mass",
+        "spring-mass-damper",
+        "differential capacitance"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=KZVgKu6v808",
+        "https://www.analog.com/en/analog-dialogue/articles/mems-accelerometer-design.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sensing Mechanisms",
+      "title": "Can you create voltage from mechanical force?",
+      "concepts": [
+        "piezoelectricity",
+        "charge generation",
+        "d33 coefficient",
+        "self-powered sensing"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.pcb.com/contentstore/mktgcontent/linkedcontent/piezoelectric_theory_techpaper.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Sensing Mechanisms",
+      "title": "What can you measure by tracking frequency shifts?",
+      "concepts": [
+        "resonant sensing",
+        "mass loading",
+        "Q factor",
+        "frequency-output sensors"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/nnano.2016.193"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sensing Mechanisms",
+      "title": "Review: Five ways to convert motion into an electrical signal",
+      "concepts": [
+        "transduction comparison",
+        "sensitivity vs noise",
+        "application matching"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ece.rice.edu/~mhp2/publications/sensors_actuators_review.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Actuation Mechanisms",
+      "title": "How strong is the force between two charged plates?",
+      "concepts": [
+        "electrostatic actuation",
+        "parallel plate",
+        "pull-in instability"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-777j-design-and-fabrication-of-microelectromechanical-devices-spring-2007/resources/lecture-7/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Actuation Mechanisms",
+      "title": "Why use comb drives instead of parallel plates?",
+      "concepts": [
+        "comb drive actuator",
+        "linear vs nonlinear force",
+        "large displacement"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.comsol.com/model/electrostatic-comb-drive-72"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Actuation Mechanisms",
+      "title": "Can heat make things move precisely?",
+      "concepts": [
+        "thermal actuation",
+        "thermal expansion",
+        "bimorph actuators",
+        "power consumption"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://iopscience.iop.org/article/10.1088/0960-1317/12/5/322"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Actuation Mechanisms",
+      "title": "How do millions of micromirrors flip in milliseconds?",
+      "concepts": [
+        "DLP technology",
+        "torsional hinges",
+        "digital addressing",
+        "bistability"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ti.com/dlp-chip/getting-started.html",
+        "https://www.youtube.com/watch?v=7V4IjHWHfNI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Devices and Applications",
+      "title": "Why are MEMS gyroscopes so hard to design?",
+      "concepts": [
+        "Coriolis effect",
+        "vibratory gyroscope",
+        "drive and sense modes",
+        "quadrature error"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.analog.com/media/en/technical-documentation/app-notes/AN-1018.pdf",
+        "https://www.youtube.com/watch?v=0oEZpRvGYzg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Devices and Applications",
+      "title": "How does your smartphone know which way is up?",
+      "concepts": [
+        "IMU integration",
+        "sensor fusion",
+        "3-axis accelerometer + gyroscope"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.invensense.com/products/motion-tracking/6-axis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Devices and Applications",
+      "title": "Review: Comparing MEMS inertial sensors",
+      "concepts": [
+        "accelerometer vs gyroscope",
+        "performance metrics",
+        "application requirements"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.bosch-sensortec.com/media/boschsensortec/downloads/application_notes_1/bst-mma150-an004.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Devices and Applications",
+      "title": "What makes microfluidics different from regular plumbing?",
+      "concepts": [
+        "laminar flow",
+        "diffusion-based mixing",
+        "lab-on-chip",
+        "surface tension"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nature05058"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Packaging and Reliability",
+      "title": "Why is packaging often more expensive than the chip?",
+      "concepts": [
+        "hermetic sealing",
+        "vacuum packaging",
+        "feedthrough",
+        "cost breakdown"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ieeexplore.ieee.org/document/1593391"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Packaging and Reliability",
+      "title": "What causes MEMS devices to fail and how do you prevent it?",
+      "concepts": [
+        "stiction",
+        "fatigue",
+        "particle contamination",
+        "shock and vibration",
+        "qualification testing"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.sandia.gov/mems/research-areas/reliability/",
+        "https://ieeexplore.ieee.org/document/942846"
+      ],
+      "status": "pending"
+    }
+  ]
+}

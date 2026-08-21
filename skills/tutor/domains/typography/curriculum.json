@@ -1,0 +1,644 @@
+{
+  "topic": "Typography and Lettering",
+  "slug": "typography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Basic design principles (composition, balance, contrast)",
+    "Design software proficiency (Illustrator, Figma, or equivalent)",
+    "Basic typography vocabulary (font, typeface, serif, sans-serif)",
+    "Color theory fundamentals"
+  ],
+  "exit_criteria": [
+    "Can analyze and articulate typographic decisions in real designs",
+    "Demonstrates optical spacing skills with 85%+ accuracy on kerning exercises",
+    "Can pair typefaces effectively with structural and aesthetic reasoning",
+    "Creates custom lettering with proper spacing and composition",
+    "Understands responsive and accessible typography requirements",
+    "Has built portfolio pieces demonstrating hierarchy, pairing, and lettering skills"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Type Foundations",
+      "title": "What structural features make letterforms recognizable and distinct?",
+      "concepts": [
+        "type anatomy",
+        "x-height",
+        "baseline",
+        "ascenders",
+        "descenders",
+        "aperture",
+        "counter",
+        "stroke"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "Thinking with Type (Chapter 1)",
+        "Typography.com anatomy guide",
+        "Type anatomy diagram exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Type Foundations",
+      "title": "How do structural features create personality in typefaces?",
+      "concepts": [
+        "visual voice",
+        "typeface personality",
+        "mood",
+        "structural variation"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "Fonts In Use mood analysis",
+        "Typeface personality comparison exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Type Foundations",
+      "title": "How did historical evolution shape serif typeface categories?",
+      "concepts": [
+        "historical classification",
+        "humanist",
+        "transitional",
+        "modern",
+        "slab serif"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "The Elements of Typographic Style (Chapter 6)",
+        "Historical specimen comparison"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Type Foundations",
+      "title": "What distinguishes geometric from humanist sans-serif typefaces?",
+      "concepts": [
+        "sans-serif classification",
+        "geometric sans",
+        "humanist sans",
+        "structural differences"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "Classification chart",
+        "Futura vs Gill Sans comparison exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Type Foundations",
+      "title": "How do you match typeface characteristics to brand voice?",
+      "concepts": [
+        "type personality",
+        "context matching",
+        "brand voice",
+        "audience consideration"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "Typewolf brand case studies",
+        "Type selection decision tree",
+        "Brand voice matching exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Spacing and Rhythm",
+      "title": "Why must letters be spaced optically rather than mathematically?",
+      "concepts": [
+        "optical spacing",
+        "visual weight",
+        "geometric vs optical measurement"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "Detail In Typography (Chapter 2)",
+        "Kern Type game",
+        "Optical spacing demonstrations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Spacing and Rhythm",
+      "title": "How do you kern letter pairs to achieve visual balance?",
+      "concepts": [
+        "kerning principles",
+        "letter pair adjustment",
+        "visual balance"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Kern Type game (target 90%+)",
+        "Problematic pair practice sheet",
+        "Before/after kerning examples"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Spacing and Rhythm",
+      "title": "When should you adjust overall letter spacing (tracking)?",
+      "concepts": [
+        "letter spacing",
+        "tracking",
+        "context-dependent spacing",
+        "readability impact"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "Practical Typography tracking guide",
+        "Tracking comparison exercise",
+        "Multi-context tracking practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Spacing and Rhythm",
+      "title": "What determines optimal line spacing for readability?",
+      "concepts": [
+        "leading",
+        "line spacing",
+        "measure relationship",
+        "reading rhythm"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "The Elements of Typographic Style (Chapter 2)",
+        "Leading comparison exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Spacing and Rhythm",
+      "title": "How do baseline grids create vertical rhythm?",
+      "concepts": [
+        "vertical rhythm",
+        "baseline grids",
+        "consistent vertical spacing",
+        "modular scale"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "Modular Scale calculator",
+        "Baseline grid setup tutorial",
+        "Grid overlay analysis",
+        "Multi-page rhythm exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Spacing and Rhythm",
+      "title": "How do kerning, tracking, and leading work together?",
+      "concepts": [
+        "rhythm integration",
+        "spacing harmony",
+        "combined spacing effects"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Multi-paragraph spacing exercise",
+        "Rhythm refinement checklist"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Hierarchy and Layout",
+      "title": "How do you guide reader attention through scale and contrast?",
+      "concepts": [
+        "visual hierarchy",
+        "scale contrast",
+        "weight variation",
+        "reader flow"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "Thinking with Type (Chapter 3)",
+        "Hierarchy analysis exercise",
+        "Eye-tracking heatmap examples"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Hierarchy and Layout",
+      "title": "Review: Can you apply spacing and hierarchy to real layouts?",
+      "concepts": [
+        "spacing review",
+        "hierarchy review",
+        "integrated application"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "Cumulative spacing and hierarchy exercise",
+        "Self-assessment checklist"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Hierarchy and Layout",
+      "title": "How do grid systems organize type and create consistency?",
+      "concepts": [
+        "grid systems",
+        "modular grids",
+        "structural frameworks",
+        "alignment"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "Grid Systems in Graphic Design excerpts",
+        "Multi-column grid exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Hierarchy and Layout",
+      "title": "How does negative space clarify and emphasize content?",
+      "concepts": [
+        "negative space",
+        "white space",
+        "breathing room",
+        "emphasis through absence"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "White space case studies",
+        "Density variation exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Hierarchy and Layout",
+      "title": "What happens when hierarchy, grids, and spacing fail?",
+      "concepts": [
+        "layout critique",
+        "failure analysis",
+        "redesign strategy"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Confusing layout examples",
+        "Redesign exercise with rationale"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Type Pairing",
+      "title": "What principles create effective contrast between typefaces?",
+      "concepts": [
+        "contrast principles",
+        "size contrast",
+        "weight contrast",
+        "style contrast",
+        "type family contrast"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "Typewolf pairing guide",
+        "Contrast matrix exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Type Pairing",
+      "title": "How do you assess structural compatibility between fonts?",
+      "concepts": [
+        "type compatibility",
+        "structural alignment",
+        "x-height matching",
+        "aperture harmony"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "Compatibility analysis worksheet",
+        "Pairing success/failure examples",
+        "Font comparison exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Type Pairing",
+      "title": "How do you pair serif and sans-serif typefaces effectively?",
+      "concepts": [
+        "serif-sans pairing",
+        "compatible contrast",
+        "structural analysis"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Font Pair tool",
+        "Pairing exercise with justification",
+        "Typewolf case studies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Type Pairing",
+      "title": "What are type superfamilies and when should you use them?",
+      "concepts": [
+        "type superfamilies",
+        "extended families",
+        "systematic design"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "Superfamily examples (Roboto, Source, IBM Plex)",
+        "Single-family system exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Lettering Foundations",
+      "title": "Review: Can you pair typefaces with structural reasoning?",
+      "concepts": [
+        "pairing review",
+        "structural analysis review",
+        "justification practice"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "Pairing critique exercise",
+        "Peer review checklist"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Lettering Foundations",
+      "title": "How does custom lettering differ from systematic type?",
+      "concepts": [
+        "lettering vs type",
+        "custom letterforms",
+        "one-off design",
+        "contextual lettering"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "Lettering & Type (Introduction)",
+        "Lettering vs type comparison"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Lettering Foundations",
+      "title": "What is the skeleton structure underlying all letterforms?",
+      "concepts": [
+        "skeleton construction",
+        "underlying structure",
+        "form independence"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "Shape Type game",
+        "Skeleton drawing exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Lettering Foundations",
+      "title": "How do stroke weight and terminals define lettering style?",
+      "concepts": [
+        "stroke logic",
+        "weight consistency",
+        "terminal treatment",
+        "style coherence"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "The Art of Hand Lettering (Chapter 3)",
+        "Stroke variation exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Lettering Foundations",
+      "title": "How do you space custom lettering optically?",
+      "concepts": [
+        "lettering spacing",
+        "optical spacing in custom work",
+        "no font assistance"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Hand-lettered spacing exercise",
+        "Digital lettering spacing practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Lettering Foundations",
+      "title": "How do you compose lettering into cohesive designs?",
+      "concepts": [
+        "lettering composition",
+        "arrangement",
+        "visual balance",
+        "integrated design"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Domestika lettering courses",
+        "Composition project with iteration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Lettering Foundations",
+      "title": "What workflow converts hand lettering to digital vectors?",
+      "concepts": [
+        "digitization workflow",
+        "vector conversion",
+        "Illustrator/Procreate",
+        "refinement process"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Digitization tutorial video",
+        "Scan-to-vector exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Type Design Introduction",
+      "title": "Review: Can you apply lettering and spacing skills together?",
+      "concepts": [
+        "lettering review",
+        "spacing integration",
+        "composition review"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "Lettering portfolio review",
+        "Spacing and composition checklist",
+        "Peer critique session"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Type Design Introduction",
+      "title": "How does systematic type design differ from lettering?",
+      "concepts": [
+        "type design scope",
+        "systematic thinking",
+        "character set design",
+        "scalability"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "Lettering & Type (Chapter 5)",
+        "Type vs lettering comparison chart"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Type Design Introduction",
+      "title": "How do you design letterforms as a systematic family?",
+      "concepts": [
+        "type system",
+        "consistent relationships",
+        "related forms",
+        "systematic patterns"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Glyphs App tutorials",
+        "Mini alphabet design exercise (n, h, o, a, d)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Type Design Introduction",
+      "title": "How do you build spacing and metrics into a font?",
+      "concepts": [
+        "type spacing and metrics",
+        "side bearings",
+        "kerning tables",
+        "built-in spacing"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "Glyphs spacing tutorial",
+        "Metrics setup exercise",
+        "Font metrics practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Real-World Application",
+      "title": "How does typography adapt across screen sizes?",
+      "concepts": [
+        "responsive typography",
+        "fluid type",
+        "viewport units",
+        "breakpoint optimization"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "Web Typography guide",
+        "Responsive type CSS examples",
+        "Variable fonts demo",
+        "Mobile-first typography project"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Real-World Application",
+      "title": "What makes typography accessible to diverse audiences?",
+      "concepts": [
+        "accessible typography",
+        "WCAG compliance",
+        "contrast ratios",
+        "readability optimization"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "WebAIM typography guide",
+        "WCAG contrast checker",
+        "Accessibility audit exercise"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Real-World Application",
+      "title": "How do typographic principles differ across print and digital?",
+      "concepts": [
+        "cross-medium typography",
+        "print vs digital",
+        "rendering differences",
+        "format-specific optimization"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Cross-medium case studies",
+        "Dual-format design project"
+      ],
+      "status": "pending"
+    }
+  ]
+}

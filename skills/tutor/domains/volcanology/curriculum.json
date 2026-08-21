@@ -1,0 +1,343 @@
+{
+  "topic": "Volcanology",
+  "slug": "volcanology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic geology",
+    "plate tectonics",
+    "rock cycle and igneous rocks",
+    "Earth's interior structure"
+  ],
+  "exit_criteria": [
+    "explain how magma forms and evolves in different tectonic settings",
+    "classify eruption styles and predict volcanic behavior from magma properties",
+    "identify volcanic landforms and interpret their formation mechanisms",
+    "assess volcanic hazards and understand monitoring techniques",
+    "analyze real-time volcano monitoring data",
+    "communicate volcanic risk to non-technical audiences"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Volcanic Anatomy & Magma Fundamentals",
+      "title": "What makes a mountain explode instead of just crack?",
+      "concepts": ["volcanic systems", "magma vs lava", "volcanic anatomy"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/volcanic-processes",
+        "https://www.youtube.com/watch?v=cvNIQtheUiM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Volcanic Anatomy & Magma Fundamentals",
+      "title": "Why does solid rock melt deep underground?",
+      "concepts": ["partial melting", "mantle geochemistry", "tectonic controls"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animation/how_magma_forms",
+        "https://www.open.edu/openlearn/science-maths-technology/volcanoes-earthquakes-and-tsunamis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Volcanic Anatomy & Magma Fundamentals",
+      "title": "How does a magma's recipe determine its temperament?",
+      "concepts": ["silica content", "basaltic vs rhyolitic magma", "viscosity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://volcano.oregonstate.edu/magma-composition",
+        "https://www.youtube.com/watch?v=4E84WICoNYY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Volcanic Anatomy & Magma Fundamentals",
+      "title": "What happens in the kitchen before the volcano serves dinner?",
+      "concepts": ["magma chambers", "fractional crystallization", "magma mixing"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/observatories/cvo/magma-reservoirs",
+        "https://www.youtube.com/watch?v=AXJJmRN_VNA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Volcanic Anatomy & Magma Fundamentals",
+      "title": "How does rock become ready to erupt?",
+      "concepts": ["melting processes", "magma composition", "pre-eruptive storage"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/volcanic-processes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Eruption Dynamics",
+      "title": "Why do some volcanoes ooze while others obliterate?",
+      "concepts": ["effusive eruptions", "explosive eruptions", "eruption controls"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/types-volcanic-eruptions",
+        "https://www.youtube.com/watch?v=kq7DDk8eLs8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Eruption Dynamics",
+      "title": "How do invisible gases make visible explosions?",
+      "concepts": ["volatile content", "gas exsolution", "fragmentation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://volcano.oregonstate.edu/role-gases",
+        "https://www.youtube.com/watch?v=BUREX8aFbMs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Eruption Dynamics",
+      "title": "Can we measure how apocalyptic an eruption is?",
+      "concepts": ["Volcanic Explosivity Index", "eruption magnitude", "intensity"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://volcano.si.edu/faq/index.cfm?question=vei",
+        "https://www.usgs.gov/programs/VHP/volcanic-explosivity-index-vei"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Eruption Dynamics",
+      "title": "What's in a name: Hawaiian, Strombolian, or Plinian?",
+      "concepts": ["eruption classification", "Hawaiian style", "Strombolian", "Vulcanian", "Plinian"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/eruption-styles",
+        "https://www.youtube.com/watch?v=9vBHlXkv-c0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Eruption Dynamics",
+      "title": "How did Pompeii's perfect preservation become its tomb?",
+      "concepts": ["Plinian eruptions", "eruption columns", "pyroclastic surges"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/observatories/hvo/1980-mount-st-helens-eruption",
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Eruption Dynamics",
+      "title": "What determines whether a volcano whispers or screams?",
+      "concepts": ["eruption styles", "VEI", "controls on explosivity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/types-volcanic-eruptions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Volcanic Products & Landforms",
+      "title": "Why does lava come in wrinkly and chunky varieties?",
+      "concepts": ["pahoehoe", "aa lava", "lava viscosity", "cooling rates"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/observatories/hvo/lava-flows",
+        "https://www.youtube.com/watch?v=gPjjhq0GC7s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Volcanic Products & Landforms",
+      "title": "Teach me: What's the difference between ash, lapilli, and bombs?",
+      "concepts": ["pyroclastic materials", "tephra classification", "volcanic bombs"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://volcano.oregonstate.edu/pyroclastic-materials",
+        "https://www.usgs.gov/programs/VHP/volcanic-ash"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Volcanic Products & Landforms",
+      "title": "What shape is your volcano, and what does it say about its past?",
+      "concepts": ["shield volcanoes", "stratovolcanoes", "cinder cones", "volcanic morphology"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/volcano-types",
+        "https://www.youtube.com/watch?v=sHl9hDs4Z4M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Volcanic Products & Landforms",
+      "title": "How does a mountain collapse into a hole in the ground?",
+      "concepts": ["calderas", "ignimbrites", "caldera formation", "resurgence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/observatories/yvo/caldera-forming-eruptions",
+        "https://www.youtube.com/watch?v=VqzJpQxgBvM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Volcanic Products & Landforms",
+      "title": "What stories do volcanic landforms tell?",
+      "concepts": ["lava types", "pyroclastics", "volcano types", "calderas"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/volcano-types"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Volcanic Hazards & Impacts",
+      "title": "When is flowing rock slower than flowing mud?",
+      "concepts": ["lava flow hazards", "lahars", "debris flows", "secondary hazards"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/volcanic-lahars",
+        "https://www.youtube.com/watch?v=lP4B2KqG9dw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Volcanic Hazards & Impacts",
+      "title": "What killed more people at Mount St. Helens: lava or clouds?",
+      "concepts": ["pyroclastic density currents", "base surges", "lateral blasts"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/observatories/cvo/pyroclastic-flows",
+        "https://www.youtube.com/watch?v=vAknJoATKIw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Volcanic Hazards & Impacts",
+      "title": "How does volcanic ash bring down planes and power grids?",
+      "concepts": ["ashfall hazards", "aviation impacts", "infrastructure disruption"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/volcanic-ash-impacts",
+        "https://volcano.si.edu/faq/index.cfm?question=ash"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Volcanic Hazards & Impacts",
+      "title": "Can a single volcano change the weather for years?",
+      "concepts": ["volcanic aerosols", "climate forcing", "volcanic winter", "sulfur dioxide"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/volcanoes-and-climate",
+        "https://www.youtube.com/watch?v=FXWm0k9v4jM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Volcanic Hazards & Impacts",
+      "title": "How many ways can a volcano threaten life?",
+      "concepts": ["lava and lahar hazards", "pyroclastic flows", "ashfall", "climate impacts"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/volcanic-hazards"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Monitoring & Forecasting",
+      "title": "What do earthquakes tell us about a restless volcano?",
+      "concepts": ["volcano seismology", "tremor", "magma movement signals"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/seismic-monitoring",
+        "https://www.iris.edu/hq/inclass/fact-sheet/volcano_seismology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Monitoring & Forecasting",
+      "title": "How do we watch a mountain swell before it bursts?",
+      "concepts": ["ground deformation", "GPS", "InSAR", "tiltmeters"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/ground-deformation",
+        "https://www.youtube.com/watch?v=Xp8vqhE9z4A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Monitoring & Forecasting",
+      "title": "Why can't we predict eruptions like we predict eclipses?",
+      "concepts": ["eruption forecasting", "uncertainty", "false alarms", "volcano observatories"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/eruption-forecasting",
+        "https://www.youtube.com/watch?v=u6e6gQ9z8xs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Monitoring & Forecasting",
+      "title": "Teach me: How would you monitor a volcano threatening your hometown?",
+      "concepts": ["integrated monitoring", "risk communication", "decision-making under uncertainty"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.usgs.gov/programs/VHP/volcano-monitoring",
+        "https://volcano.si.edu"
+      ],
+      "status": "pending"
+    }
+  ]
+}

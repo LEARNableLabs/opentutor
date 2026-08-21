@@ -1,0 +1,345 @@
+{
+  "topic": "The History of Anesthesia",
+  "slug": "history-of-anesthesia",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic human anatomy",
+    "general history context (18th-20th century)",
+    "basic chemistry concepts"
+  ],
+  "exit_criteria": [
+    "student can trace the development of anesthetic techniques from ancient times to modern practice",
+    "student can explain key controversies and ethical issues in anesthesia history",
+    "student can connect historical developments to current clinical practice",
+    "student can identify major figures and their contributions",
+    "student can analyze the social and scientific context of anesthetic discoveries"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Before Anesthesia",
+      "title": "What did surgery look like before anesthesia existed?",
+      "concepts": ["pre-anesthetic surgery", "speed as surgical skill", "mortality rates"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.woodlibrarymuseum.org/history-of-anesthesia/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2900005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Before Anesthesia",
+      "title": "How did ancient civilizations try to control pain?",
+      "concepts": ["opium", "mandrake", "alcohol anesthesia", "mesmerism"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3711373/",
+        "https://pubmed.ncbi.nlm.nih.gov/24845276/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Before Anesthesia",
+      "title": "Why was speed the most valued surgical skill in 1840?",
+      "concepts": ["surgical shock", "patient restraint", "amputation techniques"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.asahq.org/about-asa/governance-and-committees/asa-committees/committee-on-library-and-archival-services/wood-library-museum",
+        "https://jamanetwork.com/journals/jama/fullarticle/328286"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Before Anesthesia",
+      "title": "What limited the scope of surgery before 1846?",
+      "concepts": ["surgical boundaries", "infection risk", "patient tolerance"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1044138/",
+        "https://www.britannica.com/science/anesthesia"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "The Discovery Era",
+      "title": "Why did laughing gas parties lead to a medical revolution?",
+      "concepts": ["nitrous oxide", "Humphry Davy", "recreational use", "Horace Wells"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.woodlibrarymuseum.org/library/database/pioneer/wells-horace/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3495188/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "The Discovery Era",
+      "title": "Review: Early pain management and discovery context",
+      "concepts": ["pre-anesthetic era", "early experiments", "social context"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.asahq.org/timeline/",
+        "https://teachmeanatomy.info/the-basics/history-of-anaesthesia/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "The Discovery Era",
+      "title": "What happened at the Ether Dome on October 16, 1846?",
+      "concepts": ["William Morton", "ether demonstration", "Massachusetts General Hospital", "public skepticism"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.massgeneral.org/museum-and-archives/ether-dome",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2991191/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Discovery Era",
+      "title": "Who really discovered anesthesia first?",
+      "concepts": ["Crawford Long", "priority dispute", "publication delay", "patent controversy"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.woodlibrarymuseum.org/library/database/pioneer/long-crawford/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1420945/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "The Discovery Era",
+      "title": "Why did James Simpson champion chloroform over ether?",
+      "concepts": ["chloroform", "obstetric anesthesia", "religious opposition", "Queen Victoria"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3155818/",
+        "https://www.rcpe.ac.uk/heritage/james-young-simpson"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Discovery Era",
+      "title": "What made John Snow the first physician-anesthetist?",
+      "concepts": ["John Snow", "anesthesia as specialty", "dosage control", "safety protocols"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.woodlibrarymuseum.org/library/database/pioneer/snow-john/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2095762/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Adoption and Controversy",
+      "title": "Why did some clergymen oppose anesthesia for childbirth?",
+      "concepts": ["religious objections", "Biblical interpretation", "gender bias", "pain theology"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2174461/",
+        "https://academic.oup.com/bjaed/article/5/4/134/363421"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Adoption and Controversy",
+      "title": "Review: Discovery era and early controversies",
+      "concepts": ["ether and chloroform", "key pioneers", "social resistance"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.asahq.org/timeline/",
+        "https://www.britannica.com/science/anesthesia/History-of-anesthesia"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Adoption and Controversy",
+      "title": "How did the Crimean War accelerate anesthesia adoption?",
+      "concepts": ["military surgery", "field anesthesia", "Florence Nightingale era", "amputation rates"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4012985/",
+        "https://journals.sagepub.com/doi/10.1177/0967772014532490"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Adoption and Controversy",
+      "title": "What were the first documented anesthesia deaths, and what did we learn?",
+      "concepts": ["chloroform toxicity", "overdose deaths", "patient monitoring", "safety standards"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2900329/",
+        "https://academic.oup.com/bja/article/87/1/3/306395"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Adoption and Controversy",
+      "title": "How did anesthesia enable entirely new types of surgery?",
+      "concepts": ["thoracic surgery", "abdominal surgery", "surgical expansion", "antisepsis synergy"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3195058/",
+        "https://www.sciencedirect.com/science/article/pii/S0039606016300939"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Local and Regional Techniques",
+      "title": "Why did Sigmund Freud miss discovering local anesthesia?",
+      "concepts": ["cocaine", "Carl Koller", "ophthalmology", "priority and publication"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1121371/",
+        "https://www.woodlibrarymuseum.org/library/database/pioneer/koller-carl/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Local and Regional Techniques",
+      "title": "How did spinal anesthesia change surgery forever?",
+      "concepts": ["spinal anesthesia", "August Bier", "neuraxial techniques", "conscious surgery"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2697561/",
+        "https://academic.oup.com/bja/article/81/5/799/269122"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Local and Regional Techniques",
+      "title": "Review: Local and regional anesthesia development",
+      "concepts": ["cocaine discovery", "spinal techniques", "regional vs general"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.asahq.org/timeline/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3140225/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Local and Regional Techniques",
+      "title": "What made procaine (Novocain) safer than cocaine?",
+      "concepts": ["synthetic local anesthetics", "toxicity reduction", "dental anesthesia", "chemical modification"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2763561/",
+        "https://pubmed.ncbi.nlm.nih.gov/15449934/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Modern Anesthesiology",
+      "title": "How did curare transform surgery in the 1940s?",
+      "concepts": ["muscle relaxants", "controlled ventilation", "intubation", "complex surgery"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2989888/",
+        "https://academic.oup.com/bja/article/83/1/18/282815"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Modern Anesthesiology",
+      "title": "Why did anesthesiology become a recognized medical specialty?",
+      "concepts": ["professionalization", "board certification", "ASA founding", "academic departments"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.asahq.org/about-asa/asa-history",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4124653/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Modern Anesthesiology",
+      "title": "What role did nurse anesthetists play in the profession's development?",
+      "concepts": ["nurse anesthesia", "Alice Magaw", "role disputes", "collaborative practice"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.aana.com/membership/become-a-crna/history-of-nurse-anesthesia",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3207089/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Modern Anesthesiology",
+      "title": "How did monitoring technology make anesthesia safer?",
+      "concepts": ["pulse oximetry", "capnography", "patient monitoring", "safety revolution"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3252934/",
+        "https://www.asahq.org/standards-and-guidelines/standards-for-basic-anesthetic-monitoring"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Modern Anesthesiology",
+      "title": "Review: Modern era and professionalization",
+      "concepts": ["muscle relaxants", "specialty development", "safety advances"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.asahq.org/timeline/",
+        "https://academic.oup.com/bja/article/120/4/659/4829409"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Modern Anesthesiology",
+      "title": "What ethical lessons does anesthesia history teach us?",
+      "concepts": ["research ethics", "priority disputes", "racial inequities", "access to pain relief"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4843483/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6532368/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

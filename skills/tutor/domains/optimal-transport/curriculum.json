@@ -1,261 +1,383 @@
 {
   "topic": "Optimal Transport",
   "slug": "optimal-transport",
-  "created": "2026-04-10",
-  "student_level": "advanced",
-  "intensity": "deep",
-  "scope": "Full picture — theory, computation, ML applications",
-  "exit_criteria": [
-    "Explain the Monge vs Kantorovich formulation and why the relaxation matters",
-    "Derive and interpret Kantorovich duality for a simple cost",
-    "Implement Sinkhorn algorithm from scratch and explain its convergence",
-    "Explain Brenier's theorem and its geometric meaning",
-    "Describe gradient flows in Wasserstein space and the JKO scheme",
-    "Use POT library to solve OT problems on real data",
-    "Explain how Wasserstein distance is used in GANs and flow matching",
-    "Read a modern OT paper and understand its contribution"
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "linear algebra",
+    "measure theory basics",
+    "probability theory",
+    "functional analysis fundamentals"
   ],
-  "prerequisites": ["measure theory basics", "linear algebra", "probability", "convex optimization basics", "Python/numpy"],
-  "primary_textbook": "Peyré & Cuturi — Computational Optimal Transport (free PDF)",
+  "exit_criteria": [
+    "formulate and solve discrete optimal transport problems",
+    "distinguish between Monge and Kantorovich formulations",
+    "apply Kantorovich duality to existence and uniqueness questions",
+    "compute Wasserstein distances for simple distributions",
+    "implement the Sinkhorn algorithm for entropic regularization",
+    "recognize optimal transport applications in machine learning and data science",
+    "understand geometric structure of Wasserstein space"
+  ],
   "lessons": [
     {
-      "day": 1,
-      "module": "Foundations",
-      "title": "Why does moving dirt cost money?",
-      "concepts": ["Monge's original problem", "cost function", "transport map", "physical intuition"],
-      "resources": ["Williams blog post", "Peyré & Cuturi Ch 1", "Kantorovich Initiative intro"],
+      "lesson": 1,
+      "module": "Introduction & Discrete Transport",
+      "title": "Why did Monge care about moving piles of dirt?",
+      "concepts": ["Monge problem", "mass transportation", "cost minimization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/research/cia/files/teaching/Optimal_Transport_Notes.pdf",
+        "https://alexhwilliams.info/itsneuronalblog/2020/10/09/optimal-transport/"
+      ],
       "status": "pending"
     },
     {
-      "day": 2,
-      "module": "Foundations",
-      "title": "What if you could split the dirt?",
-      "concepts": ["Kantorovich relaxation", "transport plans/couplings", "linear programming", "existence of optimal plans"],
-      "resources": ["Peyré & Cuturi Ch 2", "Figalli & Glaudo Ch 1"],
+      "lesson": 2,
+      "module": "Introduction & Discrete Transport",
+      "title": "What happens when we have finitely many points?",
+      "concepts": ["discrete optimal transport", "coupling matrix", "finite measures"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www3.cs.stonybrook.edu/~gu/lectures/OMT/OMT.html",
+        "https://cran.r-project.org/web/packages/transport/transport.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 3,
-      "module": "Foundations",
-      "title": "The dual side — prices instead of plans",
-      "concepts": ["Kantorovich duality", "c-transforms", "strong duality", "dual interpretation"],
-      "resources": ["Villani (2003) Ch 2", "Santambrogio Ch 1"],
+      "lesson": 3,
+      "module": "Introduction & Discrete Transport",
+      "title": "How is optimal transport just a linear program?",
+      "concepts": ["linear programming formulation", "transportation polytope", "marginal constraints"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://optimaltransport.github.io/slides-peyre/CourseOT.pdf",
+        "https://www.dataknobs.com/blog/data-centric/what-is-optimal-transport.html"
+      ],
       "status": "pending"
     },
     {
-      "day": 4,
-      "module": "Foundations",
-      "title": "When everything lives on a line",
-      "concepts": ["1-D optimal transport", "quantile functions", "monotone rearrangement", "closed-form solution"],
-      "resources": ["Santambrogio Ch 2", "POT 1-D examples"],
+      "lesson": 4,
+      "module": "Introduction & Discrete Transport",
+      "title": "Can you match wine producers to consumers optimally?",
+      "concepts": ["assignment problem", "bipartite matching", "real-world applications"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://link.springer.com/book/10.1007/978-3-030-72162-6",
+        "https://mf02511.github.io/Optimal-Transport-Visualization/"
+      ],
       "status": "pending"
     },
     {
-      "day": 5,
-      "module": "Foundations",
-      "title": "How far apart are two distributions, really?",
-      "concepts": ["Wasserstein distances W_p", "metric properties", "comparison with KL/TV/MMD", "topology"],
-      "resources": ["Peyré & Cuturi Ch 5", "Figalli & Glaudo", "Wasserman lecture notes"],
+      "lesson": 5,
+      "module": "Introduction & Discrete Transport",
+      "title": "What have we learned about discrete transport?",
+      "concepts": ["discrete transport review", "linear programming", "computational complexity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/research/cia/files/teaching/Optimal_Transport_Notes.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 6,
-      "module": "Foundations",
-      "title": "Review: build your OT intuition from scratch",
-      "concepts": ["hands-on exercises", "1-D transport by hand", "POT first steps"],
-      "resources": ["POT quickstart", "Michiel Stock blog"],
+      "lesson": 6,
+      "module": "Continuous Formulation",
+      "title": "Why did Monge's problem have no solution?",
+      "concepts": ["existence problems", "non-convexity", "splitting mass"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cvgmt.sns.it/media/doc/paper/1008/trasporto.pdf",
+        "https://www.math.ru.nl/~cristoferi/pdf/LectureNotes/Cristoferi-Optimal%20Transport%20-%20Lecture%20Notes.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 7,
-      "module": "Structure",
-      "title": "Optimal maps are secretly convex",
-      "concepts": ["Brenier's theorem", "gradients of convex functions", "cyclical monotonicity", "existence and uniqueness"],
-      "resources": ["Villani (2003) Ch 4", "Brenier 1991 paper"],
+      "lesson": 7,
+      "module": "Continuous Formulation",
+      "title": "How did Kantorovich save optimal transport?",
+      "concepts": ["Kantorovich formulation", "transport plans", "couplings", "convex relaxation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://link.springer.com/book/10.1007/978-3-030-72162-6",
+        "https://www.stat.cmu.edu/~larry/=sml/Opt.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 8,
-      "module": "Structure",
-      "title": "The PDE hiding inside optimal transport",
-      "concepts": ["Monge-Ampère equation", "regularity", "Caffarelli's regularity theory"],
-      "resources": ["Villani (2003) Ch 5", "Ambrosio et al. Lecture 7"],
+      "lesson": 8,
+      "module": "Continuous Formulation",
+      "title": "What's the difference between a map and a plan?",
+      "concepts": ["transport maps", "transport plans", "push-forward measures"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://alexhwilliams.info/itsneuronalblog/2020/10/09/optimal-transport/",
+        "https://courses.mai.liu.se/FU/MAI0140/opttrans.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 9,
-      "module": "Structure",
-      "title": "Walking between distributions",
-      "concepts": ["displacement interpolation", "McCann interpolation", "geodesics in Wasserstein space"],
-      "resources": ["Villani (2003) Ch 6"],
+      "lesson": 9,
+      "module": "Continuous Formulation",
+      "title": "When does an optimal transport map actually exist?",
+      "concepts": ["absolute continuity", "Brenier's theorem", "c-cyclical monotonicity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www3.cs.stonybrook.edu/~gu/lectures/OMT/OMT.html",
+        "https://www.damtp.cam.ac.uk/research/cia/files/teaching/Optimal_Transport_Notes.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 10,
-      "module": "Structure",
-      "title": "When is a functional well-behaved on probability space?",
-      "concepts": ["displacement convexity", "functionals on measures", "Wasserstein space metric structure"],
-      "resources": ["Villani (2009) Ch 16-17", "Ambrosio et al. Lectures 8-10"],
+      "lesson": 10,
+      "module": "Continuous Formulation",
+      "title": "Can you prove Brenier's theorem for 1D Gaussians?",
+      "concepts": ["quadratic cost", "optimal maps for Gaussians", "monotone rearrangement"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://cvgmt.sns.it/media/doc/paper/1008/trasporto.pdf",
+        "https://www.stat.cmu.edu/~larry/=sml/Opt.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 11,
-      "module": "Computation",
-      "title": "Solving OT the hard way",
-      "concepts": ["network simplex", "Hungarian algorithm", "auction algorithm", "complexity bounds"],
-      "resources": ["Peyré & Cuturi numerical methods", "POT exact solvers"],
+      "lesson": 11,
+      "module": "Continuous Formulation",
+      "title": "Review: How far have we come from Monge?",
+      "concepts": ["Monge vs Kantorovich", "existence theory", "transport maps vs plans"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.math.ru.nl/~cristoferi/pdf/LectureNotes/Cristoferi-Optimal%20Transport%20-%20Lecture%20Notes.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 12,
-      "module": "Computation",
-      "title": "The paper that changed everything — Sinkhorn",
-      "concepts": ["entropic regularization", "Sinkhorn-Knopp algorithm", "convergence", "O(n²/ε²) complexity"],
-      "resources": ["Cuturi NeurIPS 2013", "Peyré & Cuturi Ch 3"],
+      "lesson": 12,
+      "module": "Duality & Existence Theory",
+      "title": "What does duality reveal about optimal transport?",
+      "concepts": ["Kantorovich duality", "dual problem", "Legendre-Fenchel conjugate"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www3.cs.stonybrook.edu/~gu/lectures/OMT/OMT.html",
+        "https://optimaltransport.github.io/slides-peyre/CourseOT.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 13,
-      "module": "Computation",
-      "title": "Sinkhorn lies (a little) — debiasing",
-      "concepts": ["bias of entropic OT", "Sinkhorn divergence", "interpolation Wasserstein↔MMD"],
-      "resources": ["Genevay, Peyré & Cuturi 2018"],
+      "lesson": 13,
+      "module": "Duality & Existence Theory",
+      "title": "Why are dual potentials like price functions?",
+      "concepts": ["Kantorovich potentials", "c-transforms", "economic interpretation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/research/cia/files/teaching/Optimal_Transport_Notes.pdf",
+        "https://link.springer.com/book/10.1007/978-3-030-72162-6"
+      ],
       "status": "pending"
     },
     {
-      "day": 14,
-      "module": "Computation",
-      "title": "What if one side is continuous?",
-      "concepts": ["semidiscrete OT", "power diagrams", "Laguerre tessellation"],
-      "resources": ["Peyré & Cuturi Ch 4"],
+      "lesson": 14,
+      "module": "Duality & Existence Theory",
+      "title": "How does c-cyclical monotonicity characterize optimality?",
+      "concepts": ["c-cyclical monotonicity", "optimality conditions", "subdifferentials"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cvgmt.sns.it/media/doc/paper/1008/trasporto.pdf",
+        "https://www.math.ru.nl/~cristoferi/pdf/LectureNotes/Cristoferi-Optimal%20Transport%20-%20Lecture%20Notes.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 15,
-      "module": "Computation",
-      "title": "The shortcut — slice and project",
-      "concepts": ["sliced Wasserstein distance", "Radon transform", "generalized slicing", "computational advantages"],
-      "resources": ["Kolouri et al. NeurIPS 2019"],
+      "lesson": 15,
+      "module": "Duality & Existence Theory",
+      "title": "What happens when the cost isn't smooth?",
+      "concepts": ["lower semicontinuity", "compactness", "existence via duality"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://courses.mai.liu.se/FU/MAI0140/opttrans.pdf",
+        "https://link.springer.com/book/10.1007/978-3-030-72162-6"
+      ],
       "status": "pending"
     },
     {
-      "day": 16,
-      "module": "Computation",
-      "title": "Workshop: OT in code",
-      "concepts": ["POT hands-on", "OTT-JAX", "exact vs Sinkhorn vs sliced", "barycenters"],
-      "resources": ["POT tutorials", "OTT-JAX docs", "Numerical Tours"],
+      "lesson": 16,
+      "module": "Duality & Existence Theory",
+      "title": "Checkpoint: Can you state the dual problem?",
+      "concepts": ["duality theory review", "dual formulation", "optimality conditions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/research/cia/files/teaching/Optimal_Transport_Notes.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 17,
-      "module": "Dynamics",
-      "title": "OT as fluid mechanics",
-      "concepts": ["Benamou-Brenier formula", "continuity equation", "dynamic formulation", "action minimization"],
-      "resources": ["Benamou & Brenier 2000", "Ambrosio et al. Lecture 17"],
+      "lesson": 17,
+      "module": "Wasserstein Geometry",
+      "title": "What makes Wasserstein distance a true metric?",
+      "concepts": ["Wasserstein distance", "p-Wasserstein metrics", "metric properties"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.stat.cmu.edu/~larry/=sml/Opt.pdf",
+        "https://alexhwilliams.info/itsneuronalblog/2020/10/09/optimal-transport/"
+      ],
       "status": "pending"
     },
     {
-      "day": 18,
-      "module": "Dynamics",
-      "title": "Wasserstein space has a Riemannian structure?!",
-      "concepts": ["Otto calculus", "tangent space", "Riemannian gradient", "formal calculations"],
-      "resources": ["Otto 2001", "Villani (2009) Ch 15", "Ambrosio et al. Lecture 18"],
+      "lesson": 18,
+      "module": "Wasserstein Geometry",
+      "title": "Why is W₂ called the Earth Mover's Distance?",
+      "concepts": ["Earth Mover's Distance", "quadratic Wasserstein", "physical intuition"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://mf02511.github.io/Optimal-Transport-Visualization/",
+        "https://www.dataknobs.com/blog/data-centric/what-is-optimal-transport.html"
+      ],
       "status": "pending"
     },
     {
-      "day": 19,
-      "module": "Dynamics",
-      "title": "PDEs are just rolling downhill",
-      "concepts": ["gradient flows in Wasserstein space", "JKO scheme", "minimizing movements", "heat equation as gradient flow"],
-      "resources": ["Jordan, Kinderlehrer & Otto 1998", "Figalli & Glaudo", "AGS book Part II"],
+      "lesson": 19,
+      "module": "Wasserstein Geometry",
+      "title": "How do we move between distributions along geodesics?",
+      "concepts": ["displacement interpolation", "McCann interpolation", "geodesics in P₂"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www3.cs.stonybrook.edu/~gu/lectures/OMT/OMT.html",
+        "https://www.math.ru.nl/~cristoferi/pdf/LectureNotes/Cristoferi-Optimal%20Transport%20-%20Lecture%20Notes.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 20,
-      "module": "Dynamics",
-      "title": "Fokker-Planck and friends",
-      "concepts": ["Fokker-Planck as gradient flow", "porous medium equation", "aggregation equations"],
-      "resources": ["Ambrosio et al. Lectures 13-14"],
+      "lesson": 20,
+      "module": "Wasserstein Geometry",
+      "title": "What is the Riemannian structure of Wasserstein space?",
+      "concepts": ["Otto calculus", "formal Riemannian metric", "tangent space of P₂"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cvgmt.sns.it/media/doc/paper/1008/trasporto.pdf",
+        "https://link.springer.com/book/10.1007/978-3-030-72162-6"
+      ],
       "status": "pending"
     },
     {
-      "day": 21,
-      "module": "Extensions",
-      "title": "What if the masses don't match?",
-      "concepts": ["unbalanced OT", "partial OT", "KL penalty", "robust OT", "handling outliers"],
-      "resources": ["Peyré & Cuturi extensions section"],
+      "lesson": 21,
+      "module": "Wasserstein Geometry",
+      "title": "How does gradient flow work in Wasserstein space?",
+      "concepts": ["gradient flows", "Fokker-Planck equation", "JKO scheme"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/research/cia/files/teaching/Optimal_Transport_Notes.pdf",
+        "https://courses.mai.liu.se/FU/MAI0140/opttrans.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 22,
-      "module": "Extensions",
-      "title": "Comparing spaces that don't share a ground metric",
-      "concepts": ["Gromov-Wasserstein distance", "relational OT", "shape matching", "cross-domain comparison"],
-      "resources": ["Peyré & Cuturi", "OTT-JAX Gromov-Wasserstein"],
+      "lesson": 22,
+      "module": "Wasserstein Geometry",
+      "title": "Synthesis: What makes Wasserstein geometry special?",
+      "concepts": ["geometric summary", "metric structure", "gradient flows"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://alexhwilliams.info/itsneuronalblog/2020/10/09/optimal-transport/"
+      ],
       "status": "pending"
     },
     {
-      "day": 23,
-      "module": "Extensions",
-      "title": "OT meets statistics — the curse of dimensionality",
-      "concepts": ["sample complexity", "minimax rates", "curse of dimensionality", "regularization as smoothing"],
-      "resources": ["Peyré & Cuturi Ch 6", "Wasserman lecture notes"],
+      "lesson": 23,
+      "module": "Computational Methods",
+      "title": "Why is computing optimal transport so hard?",
+      "concepts": ["computational complexity", "curse of dimensionality", "scalability challenges"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://optimaltransport.github.io/slides-peyre/CourseOT.pdf",
+        "https://www3.cs.stonybrook.edu/~gu/lectures/OMT/OMT.html"
+      ],
       "status": "pending"
     },
     {
-      "day": 24,
-      "module": "ML Applications",
-      "title": "Why GANs needed a better distance",
-      "concepts": ["WGAN objective", "weight clipping", "gradient penalty", "training stability", "mode collapse"],
-      "resources": ["Arjovsky et al. 2017", "Gulrajani et al. 2017"],
+      "lesson": 24,
+      "module": "Computational Methods",
+      "title": "How does entropy regularization make everything tractable?",
+      "concepts": ["entropic regularization", "Sinkhorn divergence", "regularization parameter"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://optimaltransport.github.io/slides-peyre/CourseOT.pdf",
+        "https://www.dataknobs.com/blog/data-centric/what-is-optimal-transport.html"
+      ],
       "status": "pending"
     },
     {
-      "day": 25,
-      "module": "ML Applications",
-      "title": "Transporting one dataset to look like another",
-      "concepts": ["OT for domain adaptation", "distribution matching", "DeepJDOT", "label-preserving transport"],
-      "resources": ["Courty et al. 2017"],
+      "lesson": 25,
+      "module": "Computational Methods",
+      "title": "Can you implement the Sinkhorn algorithm from scratch?",
+      "concepts": ["Sinkhorn algorithm", "matrix scaling", "iterative projections"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://optimaltransport.github.io/slides-peyre/CourseOT.pdf",
+        "https://mf02511.github.io/Optimal-Transport-Visualization/"
+      ],
       "status": "pending"
     },
     {
-      "day": 26,
-      "module": "ML Applications",
-      "title": "Flow matching — OT meets generative models",
-      "concepts": ["OT-CFM", "conditional flow matching", "neural OT maps", "ICNNs", "diffusion model connections"],
-      "resources": ["Tong et al. 2024", "Lipman et al. 2023", "Makkuva et al. 2020", "TorchCFM"],
+      "lesson": 26,
+      "module": "Computational Methods",
+      "title": "Where does optimal transport appear in machine learning?",
+      "concepts": ["domain adaptation", "generative models", "Wasserstein GANs", "neural OT"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www3.cs.stonybrook.edu/~gu/lectures/OMT/OMT.html",
+        "http://faculty.bicmr.pku.edu.cn/~wenzw/bigdata/lect-ot.pdf"
+      ],
       "status": "pending"
     },
     {
-      "day": 27,
-      "module": "ML Applications",
-      "title": "OT everywhere — NLP, vision, biology, fairness",
-      "concepts": ["Word Mover's Distance", "color transfer", "Waddington-OT", "Wasserstein barycenters for fairness"],
-      "resources": ["Kusner et al. 2015", "Broad Institute primer", "Survey papers"],
+      "lesson": 27,
+      "module": "Computational Methods",
+      "title": "How would you use OT to compare real datasets?",
+      "concepts": ["distribution comparison", "barycenter computation", "practical applications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://cran.r-project.org/web/packages/transport/transport.pdf",
+        "https://royalsocietypublishing.org/doi/10.1098/rspa.2021.0875"
+      ],
       "status": "pending"
     },
     {
-      "day": 28,
-      "module": "ML Applications",
-      "title": "Workshop: build something with OT",
-      "concepts": ["hands-on project", "pick an application", "implement end-to-end"],
-      "resources": ["POT", "TorchCFM", "Awesome-OT-in-Deep-Learning"],
-      "status": "pending"
-    },
-    {
-      "day": 29,
-      "module": "Frontiers",
-      "title": "OT and the shape of space itself",
-      "concepts": ["Ricci curvature via OT", "Lott-Sturm-Villani theory", "synthetic curvature"],
-      "resources": ["Villani (2009) Part III"],
-      "status": "pending"
-    },
-    {
-      "day": 30,
-      "module": "Frontiers",
-      "title": "Where is OT going?",
-      "concepts": ["scalability challenges", "neural OT benchmarks", "OT in transformers", "inverse OT", "open problems"],
-      "resources": ["Peyré 2025 course notes", "Korotin et al.", "Recent survey papers"],
+      "lesson": 28,
+      "module": "Computational Methods",
+      "title": "Final Review: What can you do with optimal transport?",
+      "concepts": ["comprehensive review", "theory to practice", "applications synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.damtp.cam.ac.uk/research/cia/files/teaching/Optimal_Transport_Notes.pdf",
+        "https://alexhwilliams.info/itsneuronalblog/2020/10/09/optimal-transport/"
+      ],
       "status": "pending"
     }
   ]

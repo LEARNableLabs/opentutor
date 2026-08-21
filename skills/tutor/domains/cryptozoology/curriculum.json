@@ -1,0 +1,331 @@
+{
+  "topic": "Cryptozoology as a case study in pseudoscience",
+  "slug": "cryptozoology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic scientific method",
+    "logical reasoning",
+    "willingness to question beliefs"
+  ],
+  "exit_criteria": [
+    "can identify pseudoscientific claims using falsifiability",
+    "can evaluate evidence quality (anecdotal vs. empirical)",
+    "can recognize cognitive biases in self and others",
+    "can explain the demarcation problem with concrete examples",
+    "can separate wonder and curiosity from uncritical belief"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Pseudoscience",
+      "title": "What makes something 'pseudoscience' instead of just wrong?",
+      "concepts": ["pseudoscience definition", "demarcation problem", "science vs non-science"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://www.csicop.org/si/show/what_is_pseudoscience"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Pseudoscience",
+      "title": "Why does Karl Popper's falsifiability matter for Bigfoot?",
+      "concepts": ["falsifiability", "Popper's criterion", "testable hypotheses"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.scientificamerican.com/article/what-is-falsifiability/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Pseudoscience",
+      "title": "How do we draw the line between science and non-science?",
+      "concepts": ["boundary work", "science in practice", "gray areas"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://mitpress.mit.edu/books/philosophy-pseudoscience",
+        "https://www.csicop.org/si/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Pseudoscience",
+      "title": "Can you identify pseudoscientific reasoning in this claim?",
+      "concepts": ["demarcation", "falsifiability", "critical analysis"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.csicop.org/si/show/baloney_detection"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Scientific Method Meets Cryptozoology",
+      "title": "What evidence would actually prove Bigfoot exists?",
+      "concepts": ["evidence types", "burden of proof", "extraordinary claims"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://skepticsguide.org/episodes/episode-1",
+        "https://www.scientificamerican.com/article/extraordinary-claims/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Scientific Method Meets Cryptozoology",
+      "title": "Why is the burden of proof on the claimant?",
+      "concepts": ["burden of proof", "null hypothesis", "Russell's teapot"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemology-bayesian/",
+        "https://www.csicop.org/si/show/burden_of_proof"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Scientific Method Meets Cryptozoology",
+      "title": "Review: What makes evidence scientific?",
+      "concepts": ["evidence types", "burden of proof", "falsifiability"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.csicop.org/si/show/baloney_detection",
+        "https://skepticsguide.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Scientific Method Meets Cryptozoology",
+      "title": "Can eyewitness testimony be scientific evidence?",
+      "concepts": ["eyewitness reliability", "memory fallibility", "controlled observation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.innocenceproject.org/eyewitness-identification-reform/",
+        "https://www.scientificamerican.com/article/do-the-eyes-have-it/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Scientific Method Meets Cryptozoology",
+      "title": "How would you design a proper cryptid investigation?",
+      "concepts": ["research design", "controls", "evidence standards"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://skepticsguide.org/",
+        "https://www.csicop.org/si/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Famous Cases Under the Microscope",
+      "title": "Why did the Loch Ness Monster capture the world's imagination?",
+      "concepts": ["cultural context", "media amplification", "tourist economics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.smithsonianmag.com/smart-news/loch-ness-monster-hoax-180968854/",
+        "https://skeptoid.com/episodes/4220"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Famous Cases Under the Microscope",
+      "title": "What does the Patterson-Gimlin film really show?",
+      "concepts": ["photographic analysis", "frame rate", "costume hypothesis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://skeptoid.com/episodes/4375",
+        "https://www.csicop.org/si/show/bigfoot_at_50_evaluating_half-century_of_bigfoot_evidence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Famous Cases Under the Microscope",
+      "title": "How did the 'Surgeon's Photograph' hoax work for 60 years?",
+      "concepts": ["confirmation bias in action", "hoax anatomy", "authority bias"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.smithsonianmag.com/smart-news/loch-ness-monster-hoax-180968854/",
+        "https://www.nhm.ac.uk/discover/loch-ness-monster.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Famous Cases Under the Microscope",
+      "title": "Review: Evaluating famous cryptid cases",
+      "concepts": ["evidence quality", "hoax detection", "confirmation bias"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://skeptoid.com/",
+        "https://www.csicop.org/si/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Famous Cases Under the Microscope",
+      "title": "What separates legitimate zoological discoveries from cryptids?",
+      "concepts": ["okapi vs Bigfoot", "priors and evidence", "scientific process"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.theguardian.com/science/2013/oct/05/cryptozoology-bigfoot-yeti-real-science",
+        "https://www.scientificamerican.com/article/real-animals-found-cryptozoology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Famous Cases Under the Microscope",
+      "title": "Does the coelacanth prove cryptozoologists right?",
+      "concepts": ["false analogy", "base rates", "absence of evidence"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nationalgeographic.com/animals/fish/facts/coelacanth",
+        "https://skeptoid.com/episodes/4040"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Why We Believe",
+      "title": "Why do smart people believe in Bigfoot?",
+      "concepts": ["intelligence vs rationality", "compartmentalization", "motivated cognition"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://michaelshermer.com/the-believing-brain/",
+        "https://skepticsguide.org/podcast/sgu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Why We Believe",
+      "title": "How does confirmation bias turn blurry photos into 'proof'?",
+      "concepts": ["confirmation bias", "pattern matching", "motivated reasoning"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/user/1veritasium",
+        "https://www.scientificamerican.com/article/how-our-brains-fool-us/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Why We Believe",
+      "title": "What is pareidolia and why do we see faces in tree bark?",
+      "concepts": ["pareidolia", "pattern recognition", "evolutionary psychology"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.scientificamerican.com/article/why-do-we-see-faces-in-objects/",
+        "https://skeptoid.com/episodes/4695"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Why We Believe",
+      "title": "Can you explain motivated reasoning to a cryptozoologist?",
+      "concepts": ["motivated reasoning", "identity-protective cognition", "belief defense"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.scientificamerican.com/article/how-to-convince-someone-when-facts-fail/",
+        "https://skepticsguide.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Why We Believe",
+      "title": "Review: Catching yourself in cognitive traps",
+      "concepts": ["metacognition", "bias awareness", "intellectual humility"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.csicop.org/si/show/baloney_detection",
+        "https://www.youtube.com/user/1veritasium"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Modern Cryptozoology",
+      "title": "How did reality TV transform cryptozoology?",
+      "concepts": ["media economics", "entertainment vs evidence", "cultural impact"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.theguardian.com/tv-and-radio/2018/mar/06/finding-bigfoot-animal-planet",
+        "https://skeptoid.com/episodes/4648"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Modern Cryptozoology",
+      "title": "Why do news outlets give 'equal time' to pseudoscience?",
+      "concepts": ["false balance", "media literacy", "journalistic norms"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.scientificamerican.com/article/how-to-avoid-false-balance/",
+        "https://www.csicop.org/si/show/false_balance_in_science_journalism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Modern Cryptozoology",
+      "title": "What economic forces keep cryptozoology alive?",
+      "concepts": ["crypto-tourism", "books and media", "conference circuits"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.smithsonianmag.com/travel/searching-for-cryptids-180956713/",
+        "https://skeptoid.com/episodes/4040"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Modern Cryptozoology",
+      "title": "Can wonder and critical thinking coexist?",
+      "concepts": ["awe without credulity", "science as exploration", "intellectual honesty"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.brainpickings.org/2016/01/13/carl-sagan-demon-haunted-world-science/",
+        "https://www.scientificamerican.com/article/science-wonder-and-awe/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

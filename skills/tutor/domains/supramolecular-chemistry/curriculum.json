@@ -1,0 +1,331 @@
+{
+  "topic": "Supramolecular chemistry — self-assembly",
+  "slug": "supramolecular-chemistry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "general chemistry",
+    "organic chemistry fundamentals",
+    "basic thermodynamics",
+    "molecular orbital theory"
+  ],
+  "exit_criteria": [
+    "student can identify and rank the strength of non-covalent interactions in a given system",
+    "student can predict whether self-assembly will be enthalpy- or entropy-driven",
+    "student can design simple self-assembling systems using complementary interactions",
+    "student can distinguish between kinetic and thermodynamic control in assembly",
+    "student can explain how molecular recognition leads to specific architectures",
+    "student can propose supramolecular strategies for real-world applications"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Non-Covalent Interactions",
+      "title": "Why do molecules stick together without forming bonds?",
+      "concepts": ["non-covalent interactions", "interaction strength hierarchy", "supramolecular vs molecular chemistry"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rsc.org/education/teachers/resources/inspirational/supramolecular-chemistry",
+        "https://www.chemtube3d.com/intermolecular-forces"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Non-Covalent Interactions",
+      "title": "What makes hydrogen bonds so special in chemistry and biology?",
+      "concepts": ["hydrogen bonding", "directionality", "cooperativity", "strength tuning"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/cr9411886",
+        "https://www.youtube.com/watch?v=nO0D6M4rPAE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Non-Covalent Interactions",
+      "title": "How do aromatic rings recognize each other?",
+      "concepts": ["π-π stacking", "electron donor-acceptor interactions", "geometric preferences", "aromaticity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/ar800202z",
+        "https://www.chemtube3d.com/aromatics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Non-Covalent Interactions",
+      "title": "Why do oil and water hate each other so much?",
+      "concepts": ["hydrophobic effect", "entropy-driven assembly", "solvation", "amphiphiles"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nature04162",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2760825/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Non-Covalent Interactions",
+      "title": "Can we use metal ions to control molecular geometry?",
+      "concepts": ["metal-ligand coordination", "coordination geometry", "kinetic lability", "directional bonding"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.rsc.org/en/content/articlelanding/2015/cs/c4cs00210e",
+        "https://www.chemtube3d.com/coordination-complexes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Non-Covalent Interactions",
+      "title": "Review: Which interaction should I use when?",
+      "concepts": ["interaction comparison", "design strategy", "context-dependent selection"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.rsc.org/periodic-table/trends/non-covalent-bonding"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Thermodynamics of Self-Assembly",
+      "title": "What's really driving this assembly: heat or entropy?",
+      "concepts": ["enthalpy vs entropy", "Gibbs free energy", "temperature dependence", "driving forces"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/ed100697w",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3870145/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Thermodynamics of Self-Assembly",
+      "title": "Why do some systems self-correct their errors?",
+      "concepts": ["reversibility", "thermodynamic control", "error correction", "self-healing"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nchem.1145",
+        "https://pubs.acs.org/doi/10.1021/jacs.5b03932"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Thermodynamics of Self-Assembly",
+      "title": "How does cooperativity amplify weak interactions?",
+      "concepts": ["cooperativity", "positive cooperativity", "allosteric effects", "binding curves"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.rsc.org/en/content/articlelanding/2008/cs/b718768h",
+        "https://www.youtube.com/watch?v=kJ3wPU2YXq0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Thermodynamics of Self-Assembly",
+      "title": "What happens when kinetics and thermodynamics disagree?",
+      "concepts": ["kinetic vs thermodynamic control", "kinetic traps", "pathway complexity", "metastability"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/jacs.7b03334",
+        "https://www.nature.com/articles/nature14574"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Thermodynamics of Self-Assembly",
+      "title": "Can we measure how well molecules recognize each other?",
+      "concepts": ["binding constants", "association equilibria", "isothermal titration calorimetry", "quantitative analysis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/ed400808e",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945991/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Thermodynamics of Self-Assembly",
+      "title": "How can we predict assembly outcomes from thermodynamic data?",
+      "concepts": ["thermodynamic prediction", "stability analysis", "reaction coordinate"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.8b00286"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Self-Assembly Mechanisms",
+      "title": "How does molecular shape determine what assembles?",
+      "concepts": ["complementarity", "lock-and-key", "induced fit", "preorganization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.rsc.org/en/content/articlelanding/2016/cs/c5cs00656b",
+        "https://www.chemtube3d.com/host-guest-chemistry"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Self-Assembly Mechanisms",
+      "title": "Why does using a template make assembly easier?",
+      "concepts": ["template effects", "chelate effect", "macrocycle synthesis", "effective molarity"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/cr9603800",
+        "https://www.rsc.org/suppdata/cs/c7/c7cs00885f/c7cs00885f1.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Self-Assembly Mechanisms",
+      "title": "Can molecules self-sort into different structures simultaneously?",
+      "concepts": ["self-sorting", "narcissistic self-assembly", "social self-assembly", "orthogonal interactions"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/ja809590n",
+        "https://www.nature.com/articles/nchem.481"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Self-Assembly Mechanisms",
+      "title": "How do small pieces build into hierarchical structures?",
+      "concepts": ["hierarchical assembly", "primary/secondary/tertiary structure", "multiscale organization", "emergence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.1071063",
+        "https://pubs.rsc.org/en/content/articlelanding/2008/cs/b800312m"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Self-Assembly Mechanisms",
+      "title": "Design challenge: Build your own host-guest system",
+      "concepts": ["molecular recognition", "cavity design", "binding selectivity", "synthesis strategy"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://pubs.rsc.org/en/content/articlelanding/2013/cs/c3cs60061e",
+        "https://www.youtube.com/watch?v=0dKrUll2f7Q"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Self-Assembly Mechanisms",
+      "title": "How do we use mechanism to predict what will assemble?",
+      "concepts": ["mechanistic analysis", "assembly pathway prediction", "design principles"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.chemrev.5b00009"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Supramolecular Architectures",
+      "title": "What determines if we get a cage, a fiber, or a sheet?",
+      "concepts": ["dimensionality control", "architectural outcomes", "packing geometry", "structure-property"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nchem.2013.166",
+        "https://pubs.rsc.org/en/content/articlelanding/2009/cs/b800796j"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Supramolecular Architectures",
+      "title": "How do we trap guest molecules in molecular containers?",
+      "concepts": ["molecular capsules", "encapsulation", "confined space", "guest stabilization"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/ar200174y",
+        "https://www.chemtube3d.com/capsules"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Supramolecular Architectures",
+      "title": "Can self-assembly create porous materials like MOFs?",
+      "concepts": ["metal-organic frameworks", "coordination polymers", "porosity", "crystalline order"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nature01650",
+        "https://pubs.acs.org/doi/10.1021/cr200190s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Supramolecular Architectures",
+      "title": "What makes a supramolecular gel hold together?",
+      "concepts": ["gelation", "fiber networks", "viscoelasticity", "small-molecule gelators"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubs.rsc.org/en/content/articlelanding/2005/cs/b316898k",
+        "https://www.youtube.com/watch?v=8dJAH9Q9VC4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applications and Design",
+      "title": "How can we use self-assembly to deliver drugs?",
+      "concepts": ["drug delivery", "nanocarriers", "stimuli-responsive release", "biocompatibility"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nrd3591",
+        "https://pubs.acs.org/doi/10.1021/acs.chemrev.5b00589"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications and Design",
+      "title": "Can you design a self-assembling system to solve a real problem?",
+      "concepts": ["integrated design", "application-driven synthesis", "constraint analysis", "innovation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pubs.rsc.org/en/content/articlelanding/2017/cs/c7cs00163k",
+        "https://www.nature.com/collections/self-assembly"
+      ],
+      "status": "pending"
+    }
+  ]
+}

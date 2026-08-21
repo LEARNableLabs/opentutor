@@ -1,0 +1,378 @@
+{
+  "topic": "Stargazing — naked-eye astronomy and telescope use",
+  "slug": "stargazing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic astronomy concepts (planets, stars, galaxies)",
+    "comfort with spatial reasoning",
+    "willingness to observe outdoors in dark conditions"
+  ],
+  "exit_criteria": [
+    "identify 20+ constellations and navigate the night sky without aids",
+    "select appropriate telescope and mount for specific observing goals",
+    "locate deep sky objects using star hopping and finder charts",
+    "optimize telescope performance through collimation and cooling",
+    "plan observing sessions based on sky conditions and target visibility",
+    "maintain detailed observing logs with sketches"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Sky Fundamentals",
+      "title": "Why do the stars appear to move across the sky?",
+      "concepts": ["celestial sphere", "diurnal motion", "rotation vs revolution"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-resources/celestial-sphere/",
+        "https://stellarium-web.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Sky Fundamentals",
+      "title": "How can you use your fist to measure the sky?",
+      "concepts": ["angular measurement", "degrees and arcminutes", "hand techniques"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-resources/measuring-the-sky-by-hand/",
+        "https://www.astronomy.com/observing/get-to-know-the-night-sky/2020/04/measure-the-sky"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Sky Fundamentals",
+      "title": "Why do different constellations appear in summer vs winter?",
+      "concepts": ["ecliptic", "seasonal constellations", "Earth's orbit"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.astronomy.com/observing/constellations/",
+        "https://www.iau.org/public/themes/constellations/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Sky Fundamentals",
+      "title": "What can you see with just your eyes?",
+      "concepts": ["naked-eye limiting magnitude", "Andromeda galaxy", "star clusters", "Milky Way"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.skyandtelescope.com/observing/naked-eye-objects/",
+        "https://www.astronomy.com/observing/observe-the-solar-system/2019/09/the-top-25-binocular-objects"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Sky Fundamentals",
+      "title": "How does light pollution steal the stars?",
+      "concepts": ["light pollution", "dark adaptation", "Bortle scale", "dark sky sites"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.lightpollutionmap.info",
+        "https://www.darksky.org/our-work/grassroots-advocacy/resources/",
+        "https://skyandtelescope.org/astronomy-resources/light-pollution-and-astronomy-the-bortle-dark-sky-scale/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Sky Fundamentals",
+      "title": "Can you find north using only the stars?",
+      "concepts": ["Polaris", "circumpolar stars", "celestial navigation", "star trailing"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.astronomy.com/observing/how-to-find-polaris/",
+        "https://skyandtelescope.org/astronomy-resources/find-the-north-star/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Sky Fundamentals",
+      "title": "Can you map your local sky from memory?",
+      "concepts": ["constellation recognition", "sky motion", "seasonal patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://stellarium.org/",
+        "https://in-the-sky.org/skymap.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Optics and Instruments",
+      "title": "Why do bigger telescopes see fainter objects?",
+      "concepts": ["aperture", "light gathering power", "limiting magnitude"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-equipment/how-to-choose-a-telescope/",
+        "https://www.astronomy.com/observing/how-to-choose-your-first-telescope/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Optics and Instruments",
+      "title": "What's the real difference between refractors and reflectors?",
+      "concepts": ["refraction", "reflection", "telescope designs", "chromatic aberration"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.skyandtelescope.com/astronomy-equipment/types-of-telescopes/",
+        "https://www.cloudynights.com/topic/445064-telescope-basics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Optics and Instruments",
+      "title": "How does magnification actually work in a telescope?",
+      "concepts": ["focal length", "eyepieces", "magnification formula", "exit pupil"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-equipment/how-to-use-telescope-eyepieces/",
+        "https://www.astronomy.com/observing/eyepieces-the-ultimate-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Optics and Instruments",
+      "title": "Why can't you just crank up magnification to see more detail?",
+      "concepts": ["resolution limits", "diffraction", "seeing conditions", "useful magnification"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.skyandtelescope.com/astronomy-resources/astronomy-questions-answers/what-is-the-maximum-magnification-for-a-telescope/",
+        "https://www.cloudynights.com/articles/cat/articles/visual-astronomy/magnification-and-the-dawes-limit-r2634"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Optics and Instruments",
+      "title": "Should your first telescope be binoculars?",
+      "concepts": ["binocular astronomy", "field of view", "stability", "aperture vs portability trade-offs"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.skyandtelescope.com/astronomy-equipment/binoculars-for-astronomy/",
+        "https://www.astronomy.com/observing/binocular-basics-for-astronomy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Telescope Selection and Setup",
+      "title": "Alt-az or equatorial: which mount matches your observing style?",
+      "concepts": ["alt-azimuth mounts", "equatorial mounts", "tracking", "polar alignment"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-equipment/telescope-mounts/",
+        "https://www.astronomy.com/observing/how-to-polar-align-your-telescope/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Telescope Selection and Setup",
+      "title": "What telescope should you buy for your first serious instrument?",
+      "concepts": ["aperture priority", "mount stability", "portability", "budget constraints"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cloudynights.com/topic/415643-beginner-telescope-buyers-guide/",
+        "https://skyandtelescope.org/astronomy-equipment/the-right-telescope-for-you/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Telescope Selection and Setup",
+      "title": "Why won't your telescope show sharp images right out of the box?",
+      "concepts": ["collimation", "optical alignment", "thermal equilibrium", "cool-down time"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://garyseronik.com/a-beginners-guide-to-collimation/",
+        "https://skyandtelescope.org/astronomy-equipment/how-to-align-your-newtonian-reflector-telescope/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Telescope Selection and Setup",
+      "title": "How do you polar align without expensive gadgets?",
+      "concepts": ["celestial pole", "drift alignment", "polar scope", "latitude adjustment"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.skyandtelescope.com/astronomy-equipment/polar-alignment-made-easy/",
+        "https://astrobackyard.com/polar-alignment/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Observing Techniques",
+      "title": "What's the secret to seeing faint fuzzy objects?",
+      "concepts": ["averted vision", "dark adaptation", "rod vs cone cells", "patience"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-resources/observing-faint-objects/",
+        "https://www.astronomy.com/observing/learn-the-secret-of-successful-observing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Observing Techniques",
+      "title": "How do you find objects without a computerized mount?",
+      "concepts": ["star hopping", "finder charts", "asterisms", "reference stars"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-resources/star-hopping/",
+        "https://www.astronomy.com/observing/learn-to-star-hop-your-way-around-the-sky/",
+        "https://www.skymaps.com/downloads.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Observing Techniques",
+      "title": "Why do planets need different techniques than deep sky objects?",
+      "concepts": ["planetary observation", "seeing vs transparency", "high magnification", "filters"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.skyandtelescope.com/observing/celestial-objects-to-watch/planets-observing-essentials/",
+        "https://www.astronomy.com/observing/observe-the-solar-system/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Observing Techniques",
+      "title": "What can filters reveal that you couldn't see before?",
+      "concepts": ["light pollution filters", "narrowband filters", "planetary filters", "OIII and H-beta"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-equipment/telescope-filters-guide/",
+        "https://www.cloudynights.com/articles/cat/articles/visual-astronomy/visual-filters-r3020"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Observing Techniques",
+      "title": "How do you keep an observing log that actually helps?",
+      "concepts": ["observing logs", "sketching", "recording conditions", "progressive observation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-resources/the-value-of-keeping-an-observing-log/",
+        "https://www.astronomy.com/observing/how-to-keep-an-astronomical-observing-log/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Observing Techniques",
+      "title": "How do you plan and execute a successful observing session?",
+      "concepts": ["session planning", "target selection", "conditions", "setup sequence"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.skyandtelescope.com/astronomy-resources/planning-your-observing-session/",
+        "https://clearoutside.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Topics",
+      "title": "Can you photograph the night sky with just a camera and tripod?",
+      "concepts": ["astrophotography basics", "exposure triangle", "stacking", "tracking"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://astrobackyard.com/beginner-astrophotography/",
+        "https://skyandtelescope.org/astronomy-equipment/astrophotography-getting-started/",
+        "https://www.lonelyspeck.com/milky-way-exposure-calculator/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Topics",
+      "title": "What causes atmospheric turbulence to ruin your images?",
+      "concepts": ["seeing", "atmospheric layers", "jet stream", "local turbulence", "timing observations"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://skyandtelescope.org/astronomy-resources/atmospheric-seeing-turbulence/",
+        "https://www.astronomy.com/observing/what-is-astronomical-seeing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "How do observatory astronomers actually spend their observing time?",
+      "concepts": ["professional vs amateur", "research programs", "time allocation", "remote observing"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.skyandtelescope.com/astronomy-resources/how-professional-astronomers-observe/",
+        "https://public.nrao.edu/telescopes/",
+        "https://www.eso.org/public/teles-instr/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "What citizen science projects need your observations?",
+      "concepts": ["citizen science", "variable stars", "AAVSO", "asteroid hunting", "exoplanet transits"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.aavso.org/",
+        "https://www.zooniverse.org/projects?discipline=astronomy",
+        "https://skyandtelescope.org/observing/citizen-science-projects-for-amateur-astronomers/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration and Practice",
+      "title": "How would you design your own year-long observing program?",
+      "concepts": ["observing goals", "seasonal planning", "skill progression", "documentation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.astroleague.org/observing.html",
+        "https://skyandtelescope.org/observing/messier-objects/",
+        "https://www.cloudynights.com/topic/442266-observing-programs/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

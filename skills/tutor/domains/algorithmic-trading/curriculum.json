@@ -1,0 +1,585 @@
+{
+  "topic": "Algorithmic trading and market microstructure",
+  "slug": "algorithmic-trading",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic probability and statistics",
+    "programming (Python or similar)",
+    "financial markets fundamentals",
+    "time series concepts"
+  ],
+  "exit_criteria": [
+    "understand how modern markets process orders and form prices",
+    "implement and backtest basic trading strategies",
+    "analyze order book data and market microstructure metrics",
+    "evaluate execution quality and transaction costs",
+    "recognize common pitfalls in algorithmic trading research",
+    "design and test market-making or statistical arbitrage strategies"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Market Fundamentals",
+      "title": "How do electronic markets match buyers and sellers?",
+      "concepts": [
+        "order types",
+        "limit order book",
+        "matching engines"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.interactivebrokers.com/en/trading/orders.php",
+        "https://ocw.mit.edu/courses/15-433-investments-spring-2003/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Market Fundamentals",
+      "title": "Why does the bid-ask spread exist?",
+      "concepts": [
+        "bid-ask spread",
+        "liquidity provision",
+        "adverse selection"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://quant.stackexchange.com/questions/tagged/market-microstructure",
+        "https://www.investopedia.com/terms/b/bid-askspread.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Market Fundamentals",
+      "title": "What does it mean for a market to be liquid?",
+      "concepts": [
+        "liquidity",
+        "market depth",
+        "resilience"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=jYjHOP-fs-M",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1976691"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Market Fundamentals",
+      "title": "How do large orders move prices?",
+      "concepts": [
+        "market impact",
+        "price discovery",
+        "Kyle's lambda"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://arxiv.org/abs/1206.0682",
+        "https://quantpedia.com/market-impact-models/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Market Fundamentals",
+      "title": "Why would anyone become a market maker?",
+      "concepts": [
+        "market making",
+        "inventory risk",
+        "quote management"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.quantstart.com/articles/market-making-strategy-introduction/",
+        "https://www.youtube.com/watch?v=b1e4t2k2KJE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Market Fundamentals",
+      "title": "How do market structure and price formation work together?",
+      "concepts": [
+        "order types",
+        "liquidity",
+        "market impact",
+        "market making"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.investopedia.com/articles/trading/11/automated-trading-systems.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Order Book Dynamics",
+      "title": "What information does the order book reveal?",
+      "concepts": [
+        "order book levels",
+        "book imbalance",
+        "queue position"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.quantstart.com/articles/high-frequency-trading-II-limit-order-book/",
+        "https://lobsterdata.com/info/WhatIsLOBSTER.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Order Book Dynamics",
+      "title": "Can we predict price moves from order flow?",
+      "concepts": [
+        "order flow imbalance",
+        "predictive features",
+        "microstructure signals"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/abs/1710.03870",
+        "https://github.com/lobsterdata/lobster_tutorial"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Order Book Dynamics",
+      "title": "How fast is fast in high-frequency trading?",
+      "concepts": [
+        "latency",
+        "co-location",
+        "speed advantages"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=OTjyO2ztAOQ",
+        "https://blog.quantinsti.com/high-frequency-trading/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Order Book Dynamics",
+      "title": "What happens during a flash crash?",
+      "concepts": [
+        "flash crashes",
+        "circuit breakers",
+        "systemic risk"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sec.gov/news/studies/2010/marketevents-report.pdf",
+        "https://www.youtube.com/watch?v=E1xqSZy9_4I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Order Book Dynamics",
+      "title": "How do hidden orders affect market dynamics?",
+      "concepts": [
+        "iceberg orders",
+        "dark pools",
+        "order exposure"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/d/dark-pool.asp",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2314079"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Order Book Dynamics",
+      "title": "What patterns emerge from order book dynamics?",
+      "concepts": [
+        "order book levels",
+        "book imbalance",
+        "order flow",
+        "latency"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.quantstart.com/articles/high-frequency-trading-II-limit-order-book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Market Data and Infrastructure",
+      "title": "What are the different levels of market data?",
+      "concepts": [
+        "Level 1/2/3 data",
+        "market data feeds",
+        "consolidated feeds"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.interactivebrokers.com/en/index.php?f=14193",
+        "https://polygon.io/docs/stocks/getting-started"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Market Data and Infrastructure",
+      "title": "How do we clean and normalize tick data?",
+      "concepts": [
+        "tick data",
+        "data cleaning",
+        "timestamp alignment"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://quantconnect.com/docs/v2/writing-algorithms/importing-data/streaming-data/tick-data",
+        "https://github.com/quantopian/qgrid"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Market Data and Infrastructure",
+      "title": "What is the FIX protocol and why does it matter?",
+      "concepts": [
+        "FIX protocol",
+        "exchange connectivity",
+        "message types"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.fixtrading.org/standards/",
+        "https://www.onixs.biz/fix-dictionary.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Market Data and Infrastructure",
+      "title": "How do we build a real-time data pipeline?",
+      "concepts": [
+        "streaming data",
+        "message queues",
+        "data architecture"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://kafka.apache.org/documentation/",
+        "https://www.alpaca.markets/docs/market-data/streaming/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Market Data and Infrastructure",
+      "title": "Why do microseconds matter in trading?",
+      "concepts": [
+        "latency optimization",
+        "system design",
+        "performance tuning"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://mechanical-sympathy.blogspot.com/",
+        "https://www.youtube.com/watch?v=BD9cRbxWQx8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Market Data and Infrastructure",
+      "title": "How does market data infrastructure enable trading?",
+      "concepts": [
+        "market data levels",
+        "data cleaning",
+        "protocols",
+        "latency"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://blog.quantinsti.com/market-data/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Trading Strategies",
+      "title": "What makes a good trading signal?",
+      "concepts": [
+        "alpha signals",
+        "signal quality",
+        "predictive power"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.quantopian.com/lectures",
+        "https://www.quantstart.com/articles/Trading-Strategy-What-Is-A-Trading-Signal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Trading Strategies",
+      "title": "How does pairs trading exploit mean reversion?",
+      "concepts": [
+        "pairs trading",
+        "cointegration",
+        "mean reversion"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.quantstart.com/articles/Cointegration-and-Pairs-Trading-with-Python/",
+        "https://github.com/hudson-and-thames/arbitragelab"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Trading Strategies",
+      "title": "Can momentum strategies still work in efficient markets?",
+      "concepts": [
+        "momentum",
+        "trend following",
+        "risk premia"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2435323",
+        "https://www.investopedia.com/articles/trading/08/momentum-trading.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Trading Strategies",
+      "title": "What is VWAP and when should we use it?",
+      "concepts": [
+        "VWAP",
+        "TWAP",
+        "execution algorithms"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/v/vwap.asp",
+        "https://quantpedia.com/execution-algorithms-vwap-twap/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Trading Strategies",
+      "title": "How do market makers manage inventory risk?",
+      "concepts": [
+        "inventory management",
+        "Avellaneda-Stoikov model",
+        "optimal quoting"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://arxiv.org/abs/1105.3115",
+        "https://www.youtube.com/watch?v=wukJBlX_8to"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Trading Strategies",
+      "title": "How would you build a simple statistical arbitrage strategy?",
+      "concepts": [
+        "statistical arbitrage",
+        "factor models",
+        "portfolio construction"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://quantconnect.com/tutorials/strategy-library/statistical-arbitrage",
+        "https://github.com/quantopian/research_public"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Trading Strategies",
+      "title": "What distinguishes successful trading strategies?",
+      "concepts": [
+        "pairs trading",
+        "momentum",
+        "execution algorithms",
+        "market making"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.quantstart.com/articles/Algorithmic-Trading-Strategy-Development/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Risk and Execution",
+      "title": "How do we measure and manage trading risk?",
+      "concepts": [
+        "VaR",
+        "expected shortfall",
+        "risk metrics"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.quantstart.com/articles/Value-at-Risk-VaR-for-Algorithmic-Trading-Risk-Management/",
+        "https://www.investopedia.com/terms/v/var.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Risk and Execution",
+      "title": "Why do most backtests lie?",
+      "concepts": [
+        "backtesting bias",
+        "overfitting",
+        "look-ahead bias",
+        "survivorship bias"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.quantstart.com/articles/Ten-Common-Mistakes-in-Backtesting/",
+        "https://arxiv.org/abs/1308.6078"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Risk and Execution",
+      "title": "How do we optimize position sizing?",
+      "concepts": [
+        "position sizing",
+        "Kelly criterion",
+        "risk of ruin"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/articles/trading/04/091504.asp",
+        "https://quantpedia.com/kelly-criterion-position-sizing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Risk and Execution",
+      "title": "What is transaction cost analysis and why does it matter?",
+      "concepts": [
+        "TCA",
+        "implementation shortfall",
+        "execution quality"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.investopedia.com/terms/t/transactioncosts.asp",
+        "https://www.bis.org/publ/mktc05.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Risk and Execution",
+      "title": "How do you analyze transaction costs in practice?",
+      "concepts": [
+        "slippage",
+        "commission modeling",
+        "market impact estimation"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://quantconnect.com/docs/v2/writing-algorithms/reality-modeling/transaction-fees",
+        "https://www.quantopian.com/lectures/transaction-costs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Advanced Topics",
+      "title": "How does machine learning fit into algorithmic trading?",
+      "concepts": [
+        "ML in trading",
+        "feature engineering",
+        "model validation"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/machine-learning-trading",
+        "https://github.com/stefan-jansen/machine-learning-for-trading"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Advanced Topics",
+      "title": "What regulatory constraints affect algorithmic trading?",
+      "concepts": [
+        "regulation",
+        "market manipulation",
+        "best execution"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.sec.gov/rules/concept/2010/34-61358.pdf",
+        "https://www.esma.europa.eu/policy-rules/mifid-ii-and-mifir"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Advanced Topics",
+      "title": "What separates successful traders from failed ones?",
+      "concepts": [
+        "risk management",
+        "backtesting",
+        "TCA",
+        "ML",
+        "regulation"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.quantstart.com/articles/Algorithmic-Trading-The-Complete-Guide/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

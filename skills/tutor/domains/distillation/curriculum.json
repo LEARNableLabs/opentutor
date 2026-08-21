@@ -1,0 +1,358 @@
+{
+  "topic": "Distillation — the chemistry of spirits",
+  "slug": "distillation",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "general chemistry (stoichiometry, equilibrium)",
+    "basic organic chemistry (functional groups)",
+    "introductory thermodynamics (energy, phase changes)"
+  ],
+  "exit_criteria": [
+    "explain vapor-liquid equilibrium and its role in distillation",
+    "design a distillation run for a specific spirit style",
+    "identify major congeners and their sensory impact",
+    "troubleshoot common distillation problems using chemistry principles",
+    "compare production methods for whiskey, vodka, rum, and gin"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Distillation",
+      "title": "What makes alcohol different from water when you boil them?",
+      "concepts": ["boiling point", "vapor pressure", "volatility"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/chemistry/states-of-matter-and-intermolecular-forces/states-of-matter",
+        "https://phet.colorado.edu/en/simulations/states-of-matter"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Distillation",
+      "title": "How do yeast cells turn sugar into the alcohol we distill?",
+      "concepts": ["fermentation", "glycolysis", "yeast metabolism", "ethanol production"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=7PCUy3LqLQM",
+        "https://www.ncbi.nlm.nih.gov/books/NBK22593/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Distillation",
+      "title": "Why does a simple distillation only work once?",
+      "concepts": ["simple distillation", "condensation", "collection"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Book%3A_Organic_Chemistry_Lab_Techniques_(Nichols)/05%3A_Distillation",
+        "https://www.youtube.com/watch?v=JHVGs37lWe0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Distillation",
+      "title": "What happens when you mix water and ethanol at the molecular level?",
+      "concepts": ["hydrogen bonding", "ideal vs non-ideal mixtures", "molecular interactions"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.chemguide.co.uk/physical/phaseeqia/idealmix.html",
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Solutions_and_Mixtures/Ideal_Solutions/Deviations_from_Raoult's_Law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Distillation",
+      "title": "Why can't you just keep distilling to reach 100% alcohol?",
+      "concepts": ["azeotrope", "ethanol-water system", "maximum proof"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Solutions_and_Mixtures/Nonideal_Solutions/Azeotropes",
+        "https://www.youtube.com/watch?v=XQRQvx1fVkI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Distillation",
+      "title": "Can you explain the journey from yeast to vapor?",
+      "concepts": ["fermentation review", "distillation basics", "azeotrope"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.artisan-distiller.com/distillation-basics",
+        "https://homedistiller.org/intro/basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Distillation Theory",
+      "title": "How do you read a phase diagram to predict what happens in your still?",
+      "concepts": ["phase diagrams", "vapor-liquid equilibrium", "T-x-y diagrams"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=JPErPFFauVQ",
+        "https://ocw.mit.edu/courses/10-213j-chemical-and-biological-reaction-engineering-spring-2006/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Distillation Theory",
+      "title": "What's the difference between a pot still and a column still?",
+      "concepts": ["pot still", "column still", "theoretical plates", "equipment design"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=yFLM8GkFF3k",
+        "https://www.diffordsguide.com/encyclopedia/1273/spirits/pot-still-vs-column-still"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Distillation Theory",
+      "title": "Why does reflux make your spirit cleaner but less flavorful?",
+      "concepts": ["reflux ratio", "purity vs flavor", "separation efficiency"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Analytical_Chemiluminescence/Distillation_I_-_Fractional_Distillation",
+        "https://www.youtube.com/watch?v=qU7XUdqFJjw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Distillation Theory",
+      "title": "How would you calculate how many times you need to redistill?",
+      "concepts": ["McCabe-Thiele method", "equilibrium stages", "calculation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-32-separation-processes-spring-2005/",
+        "https://www.youtube.com/watch?v=zPYYk5JZPLU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Distillation Theory",
+      "title": "What temperature should you collect each fraction and why?",
+      "concepts": ["cut points", "temperature monitoring", "fraction collection"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.clawhammersupply.com/blogs/moonshine-still-blog/how-to-make-moonshine",
+        "https://homedistiller.org/forum/viewtopic.php?f=17&t=42890"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Congener Chemistry",
+      "title": "What are congeners and why should distillers care about them?",
+      "concepts": ["congeners", "flavor compounds", "sensory chemistry"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.artisan-distiller.com/congeners-in-spirits",
+        "https://academic.oup.com/jat/article/31/8/462/750541"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Congener Chemistry",
+      "title": "How do equipment choices, reflux, and temperature cuts work together?",
+      "concepts": ["still types", "reflux", "temperature cuts"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=pMiGK7P-LEM",
+        "https://www.artisan-distiller.com/distillation-equipment-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Congener Chemistry",
+      "title": "Why do heads smell like nail polish remover?",
+      "concepts": ["acetone", "methanol", "acetaldehyde", "heads chemistry"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://homedistiller.org/wiki/htm/config/methanol.htm",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6099584/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Congener Chemistry",
+      "title": "Which esters create fruity flavors and how are they formed?",
+      "concepts": ["esters", "esterification", "fruity aromas", "fermentation byproducts"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.masterclass.com/articles/guide-to-esters-in-spirits",
+        "https://pubs.acs.org/doi/10.1021/jf049347w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Congener Chemistry",
+      "title": "What makes fusel alcohols both desirable and dangerous?",
+      "concepts": ["fusel alcohols", "higher alcohols", "tails chemistry", "hangover compounds"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/fusel-oil",
+        "https://academic.oup.com/jaoac/article/85/6/1333/5656665"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Spirit Production",
+      "title": "How does malting barley unlock the sugars for whiskey?",
+      "concepts": ["malting", "enzymatic conversion", "mashing", "grain chemistry"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.whisky.com/information/knowledge/production/malting.html",
+        "https://www.youtube.com/watch?v=YZGwLx5_Ipw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Spirit Production",
+      "title": "Why is vodka distilled to such high proof if you just dilute it later?",
+      "concepts": ["neutral spirit", "high-proof distillation", "filtration", "purity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.diffordsguide.com/encyclopedia/467/spirits/vodka-production",
+        "https://imbibemagazine.com/vodka-production-methods/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Spirit Production",
+      "title": "What makes rum's flavor profile so different from whiskey?",
+      "concepts": ["molasses chemistry", "tropical fermentation", "dunder pits", "ester formation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.rumproject.com/rumforum/viewtopic.php?t=1634",
+        "https://cocktailwonker.com/2016/06/science-of-rum-congeners.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Spirit Production",
+      "title": "How do congeners shape different spirit production methods?",
+      "concepts": ["heads-hearts-tails", "spirit-specific chemistry", "flavor control"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.artisan-distiller.com/spirit-flavor-chemistry",
+        "https://www.youtube.com/watch?v=Dp4vD3PkESI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Spirit Production",
+      "title": "How does vapor infusion extract botanical flavors in gin?",
+      "concepts": ["vapor extraction", "essential oils", "botanical chemistry", "distillation vs maceration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.diffordsguide.com/encyclopedia/468/spirits/gin-distillation-methods",
+        "https://www.youtube.com/watch?v=7k8FACq_YTo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Spirit Production",
+      "title": "Why does cooking agave change tequila's flavor chemistry?",
+      "concepts": ["agave chemistry", "inulin hydrolysis", "caramelization", "mezcal vs tequila"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://modernist-pantry.com/blogs/news/the-science-of-tequila",
+        "https://pubs.acs.org/doi/10.1021/jf901742b"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Maturation & Advanced Topics",
+      "title": "What chemical reactions happen when whiskey ages in a barrel?",
+      "concepts": ["wood chemistry", "lignin breakdown", "oxidation", "esterification"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.whiskyscience.com/2016/11/maturation-chemistry.html",
+        "https://pubs.acs.org/doi/10.1021/jf048715c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Maturation & Advanced Topics",
+      "title": "How does temperature cycling accelerate aging chemistry?",
+      "concepts": ["temperature effects", "angel's share", "tropical aging", "climate impact"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.whiskyscience.com/2016/09/the-angels-share.html",
+        "https://www.youtube.com/watch?v=XbHCvs5FhAE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Maturation & Advanced Topics",
+      "title": "Can you design a distillation run for your ideal spirit profile?",
+      "concepts": ["process design", "parameter optimization", "flavor targeting"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.artisan-distiller.com/distillation-recipe-development",
+        "https://homedistiller.org/forum/viewforum.php?f=17"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Maturation & Advanced Topics",
+      "title": "Can you connect fermentation, distillation, congeners, and maturation into one complete picture?",
+      "concepts": ["fermentation", "distillation theory", "congeners", "spirit production", "maturation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.artisan-distiller.com/complete-distillation-guide",
+        "https://www.youtube.com/watch?v=vFJMVdNRG6I"
+      ],
+      "status": "pending"
+    }
+  ]
+}

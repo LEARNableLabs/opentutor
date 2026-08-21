@@ -1,0 +1,366 @@
+{
+  "topic": "Sleep Science",
+  "slug": "sleep-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (cell structure, metabolism)",
+    "basic neuroscience (neuroanatomy, neurotransmission)",
+    "introductory psychology"
+  ],
+  "exit_criteria": [
+    "explain the neurobiology of sleep-wake regulation",
+    "describe the two-process model of sleep regulation",
+    "identify major sleep disorders and their mechanisms",
+    "apply sleep science principles to optimize sleep health",
+    "critically evaluate sleep research claims in popular media",
+    "understand the relationship between sleep and memory consolidation",
+    "explain the glymphatic system and brain waste clearance during sleep"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Sleep Fundamentals",
+      "title": "What actually happens when we sleep?",
+      "concepts": ["sleep stages", "NREM sleep", "REM sleep", "sleep architecture"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/the-science-of-sleep",
+        "https://online.umich.edu/courses/sleep-neurobiology-medicine-and-society/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Sleep Fundamentals",
+      "title": "Why do we cycle through sleep stages all night?",
+      "concepts": ["ultradian rhythms", "sleep cycles", "stage progression"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/the-science-of-sleep"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Sleep Fundamentals",
+      "title": "How do scientists measure sleep?",
+      "concepts": ["polysomnography", "EEG", "EMG", "EOG"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://global.oup.com/academic/product/sleep-science-9780190923259"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Sleep Fundamentals",
+      "title": "Why do we get sleepy the longer we stay awake?",
+      "concepts": ["sleep homeostasis", "adenosine", "sleep pressure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://press.uchicago.edu/ucp/books/book/chicago/S/bo27346926.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Circadian Rhythms",
+      "title": "What is the brain's master clock and where does it live?",
+      "concepts": ["suprachiasmatic nucleus", "circadian pacemaker", "hypothalamus"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.umich.edu/courses/sleep-neurobiology-medicine-and-society/",
+        "https://ocw.mit.edu/courses/9-01-neuroscience-and-behavior-fall-2003/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Circadian Rhythms",
+      "title": "Review: Sleep stages, homeostasis, and circadian foundations",
+      "concepts": ["consolidation", "spaced repetition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/the-science-of-sleep"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Circadian Rhythms",
+      "title": "How do light and darkness reset our biological clock?",
+      "concepts": ["zeitgebers", "photoentrainment", "melanopsin", "melatonin"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.umich.edu/courses/sleep-neurobiology-medicine-and-society/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Circadian Rhythms",
+      "title": "Why are some people night owls and others early birds?",
+      "concepts": ["chronotypes", "phase differences", "genetic factors"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Sleep Neurobiology",
+      "title": "What brain regions orchestrate the switch between wake and sleep?",
+      "concepts": ["flip-flop switch", "VLPO", "ascending arousal system"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://global.oup.com/academic/product/sleep-science-9780190923259",
+        "https://ocw.mit.edu/courses/9-01-neuroscience-and-behavior-fall-2003/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Sleep Neurobiology",
+      "title": "How does orexin keep us awake?",
+      "concepts": ["orexin", "hypocretin", "lateral hypothalamus", "arousal"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://press.uchicago.edu/ucp/books/book/chicago/S/bo27346926.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Sleep Neurobiology",
+      "title": "What neurotransmitters are the conductors of the sleep orchestra?",
+      "concepts": ["GABA", "acetylcholine", "serotonin", "norepinephrine"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://online.umich.edu/courses/sleep-neurobiology-medicine-and-society/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sleep Neurobiology",
+      "title": "How does the brain take out the trash during sleep?",
+      "concepts": ["glymphatic system", "waste clearance", "beta-amyloid"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5863668/",
+        "https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Functions of Sleep",
+      "title": "Review: Circadian biology and sleep neurobiology",
+      "concepts": ["integration", "mechanisms"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/the-science-of-sleep"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Functions of Sleep",
+      "title": "Why does sleeping on it help you remember?",
+      "concepts": ["memory consolidation", "hippocampus", "sleep-dependent learning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316",
+        "https://online.umich.edu/courses/sleep-neurobiology-medicine-and-society/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Functions of Sleep",
+      "title": "What makes REM sleep special for learning?",
+      "concepts": ["REM sleep", "procedural memory", "emotional processing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://global.oup.com/academic/product/sleep-science-9780190923259"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Functions of Sleep",
+      "title": "How does sleep regulate metabolism and appetite?",
+      "concepts": ["leptin", "ghrelin", "glucose regulation", "metabolic homeostasis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://press.uchicago.edu/ucp/books/book/chicago/S/bo27346926.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Functions of Sleep",
+      "title": "Why does sleep boost immune function?",
+      "concepts": ["immune system", "cytokines", "infection response"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Sleep Across the Lifespan",
+      "title": "Why do babies sleep so much and teenagers sleep so late?",
+      "concepts": ["developmental changes", "adolescent phase delay", "sleep ontogeny"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://psych.cms.arts.ubc.ca/wp-content/uploads/sites/2/2020/02/PSYC-208-901-2019WT1-PERRINO-syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Sleep Across the Lifespan",
+      "title": "How does aging change our sleep?",
+      "concepts": ["sleep fragmentation", "advanced phase", "sleep efficiency"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/the-science-of-sleep"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Sleep Across the Lifespan",
+      "title": "Review: Sleep functions and development",
+      "concepts": ["synthesis", "life course perspective"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://global.oup.com/academic/product/sleep-science-9780190923259"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Sleep Disorders",
+      "title": "What goes wrong in the brain during insomnia?",
+      "concepts": ["insomnia", "hyperarousal", "chronic insomnia"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://press.uchicago.edu/ucp/books/book/chicago/S/bo27346926.html",
+        "https://www.sleepresearchsociety.org/wp-content/uploads/2020/07/11-Scullin-Syllabus-3375.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Sleep Disorders",
+      "title": "Why do some people stop breathing in their sleep?",
+      "concepts": ["sleep apnea", "upper airway", "hypoxia", "CPAP"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://global.oup.com/academic/product/sleep-science-9780190923259"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Sleep Disorders",
+      "title": "What causes sudden sleep attacks in narcolepsy?",
+      "concepts": ["narcolepsy", "orexin deficiency", "cataplexy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.umich.edu/courses/sleep-neurobiology-medicine-and-society/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Sleep Disorders",
+      "title": "Why do people act out their dreams?",
+      "concepts": ["parasomnias", "REM behavior disorder", "sleepwalking"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://press.uchicago.edu/ucp/books/book/chicago/S/bo27346926.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Sleep & Health",
+      "title": "How does chronic sleep loss damage the cardiovascular system?",
+      "concepts": ["cardiovascular disease", "hypertension", "inflammation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Sleep & Health",
+      "title": "What's the connection between sleep and mental health?",
+      "concepts": ["depression", "anxiety", "bidirectional relationship"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.umich.edu/courses/sleep-neurobiology-medicine-and-society/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Sleep & Health",
+      "title": "Does sleep protect against Alzheimer's disease?",
+      "concepts": ["neurodegeneration", "protein clearance", "cognitive reserve"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5863668/",
+        "https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Final Integration",
+      "title": "Review: Sleep science synthesis — from molecules to society",
+      "concepts": ["comprehensive review", "integration", "clinical applications"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/the-science-of-sleep",
+        "https://global.oup.com/academic/product/sleep-science-9780190923259"
+      ],
+      "status": "pending"
+    }
+  ]
+}

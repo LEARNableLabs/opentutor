@@ -1,0 +1,381 @@
+{
+  "topic": "Complexity science — emergence, networks, adaptation",
+  "slug": "complexity-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic calculus",
+    "linear algebra fundamentals",
+    "probability and statistics",
+    "some programming experience"
+  ],
+  "exit_criteria": [
+    "student can identify emergence in real-world systems",
+    "student can analyze network structure and dynamics quantitatively",
+    "student can build and interpret agent-based models",
+    "student can explain how adaptation and evolution operate in complex systems",
+    "student can apply complexity concepts across multiple domains"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Complexity",
+      "title": "What makes a system complex?",
+      "concepts": ["complexity", "simple vs complicated", "emergence"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.complexityexplorer.org/courses/104-introduction-to-complexity",
+        "https://www.youtube.com/watch?v=oi7MdC6ALRU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Complexity",
+      "title": "How do flocks of birds organize without a leader?",
+      "concepts": ["self-organization", "local rules", "collective behavior"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://complexity-explorables.org/explorables/flock/",
+        "https://www.youtube.com/watch?v=QbUPfMXXQIY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Complexity",
+      "title": "Why does adding one grain of sand trigger an avalanche?",
+      "concepts": ["criticality", "phase transitions", "power laws"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://complexity-explorables.org/explorables/a-patchwork-darwinian-life/",
+        "https://arxiv.org/abs/1310.5417"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Complexity",
+      "title": "What is emergence and why can't we predict it?",
+      "concepts": ["strong emergence", "weak emergence", "downward causation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/properties-emergent/",
+        "https://www.santafe.edu/research/results/working-papers/emergence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Complexity",
+      "title": "Can we simulate consciousness?",
+      "concepts": ["computational modeling", "agent-based models", "cellular automata"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://ccl.northwestern.edu/netlogo/models/",
+        "https://plato.stanford.edu/entries/cellular-automata/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Complexity",
+      "title": "How do emergence and self-organization work together?",
+      "concepts": ["emergence", "self-organization", "criticality"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.complexityexplorer.org/courses/104-introduction-to-complexity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Network Science Foundations",
+      "title": "What is a network and why are they everywhere?",
+      "concepts": ["graphs", "nodes and edges", "network representation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "http://networksciencebook.com/chapter/1",
+        "https://www.complexityexplorer.org/courses/89-introduction-to-dynamical-systems-and-chaos"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Network Science Foundations",
+      "title": "Why do most people have fewer friends than their friends do?",
+      "concepts": ["degree distribution", "hubs", "friendship paradox"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "http://networksciencebook.com/chapter/4",
+        "https://arxiv.org/abs/1111.4503"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Network Science Foundations",
+      "title": "How many steps to Kevin Bacon?",
+      "concepts": ["small-world networks", "six degrees of separation", "clustering"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "http://networksciencebook.com/chapter/3",
+        "https://oracleofbacon.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Network Science Foundations",
+      "title": "Why does the internet look like a brain?",
+      "concepts": ["scale-free networks", "preferential attachment", "Barabási-Albert model"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://networksciencebook.com/chapter/5",
+        "https://complexity-explorables.org/explorables/baraba/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Network Science Foundations",
+      "title": "How would you build your own network model?",
+      "concepts": ["network generation", "network metrics", "visualization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://networkx.org/documentation/stable/tutorial.html",
+        "https://gephi.org/users/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Network Dynamics",
+      "title": "How do epidemics spread through social networks?",
+      "concepts": ["SIR model", "epidemic threshold", "network immunization"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "http://networksciencebook.com/chapter/10",
+        "https://complexity-explorables.org/explorables/epidemonic/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Network Dynamics",
+      "title": "What connects network structure to dynamics?",
+      "concepts": ["network topology", "scale-free networks", "epidemic spreading"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "http://networksciencebook.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Network Dynamics",
+      "title": "Why do some networks collapse when a single node fails?",
+      "concepts": ["network robustness", "cascading failures", "percolation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://networksciencebook.com/chapter/8",
+        "https://arxiv.org/abs/cond-mat/0007300"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Network Dynamics",
+      "title": "Can we detect communities in networks?",
+      "concepts": ["community detection", "modularity", "hierarchical structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://networksciencebook.com/chapter/9",
+        "https://arxiv.org/abs/0906.0612"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Adaptation and Evolution",
+      "title": "How do species evolve without foresight?",
+      "concepts": ["natural selection", "variation", "fitness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.complexityexplorer.org/courses/67-introduction-to-agent-based-modeling-2017",
+        "https://plato.stanford.edu/entries/natural-selection/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Adaptation and Evolution",
+      "title": "What is a fitness landscape?",
+      "concepts": ["fitness landscapes", "local optima", "ruggedness"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.santafe.edu/research/results/working-papers/the-structure-of-the-space-of-genotypes-and-it",
+        "https://complexity-explorables.org/explorables/nk-ruggedness/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Adaptation and Evolution",
+      "title": "Can evolution get stuck?",
+      "concepts": ["evolutionary traps", "path dependence", "punctuated equilibrium"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://evolution.berkeley.edu/evolibrary/article/evo_31",
+        "https://www.youtube.com/watch?v=plVk4NVIUh8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Adaptation and Evolution",
+      "title": "How do genetic algorithms solve problems?",
+      "concepts": ["genetic algorithms", "crossover", "mutation", "selection pressure"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=qv6UVOQ0F44",
+        "https://arxiv.org/abs/1308.4675"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Adaptation and Evolution",
+      "title": "How do fitness landscapes shape evolution?",
+      "concepts": ["natural selection", "fitness landscapes", "genetic algorithms"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.complexityexplorer.org/courses/67-introduction-to-agent-based-modeling-2017"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Adaptation and Evolution",
+      "title": "What happens when species evolve together?",
+      "concepts": ["co-evolution", "arms races", "mutualism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=vf7nj01ccNM",
+        "https://plato.stanford.edu/entries/evolution-cooperation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Adaptation and Evolution",
+      "title": "Can cooperation evolve in a selfish world?",
+      "concepts": ["game theory", "prisoner's dilemma", "tit-for-tat", "spatial games"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://complexity-explorables.org/explorables/the-beauty-of-bacteria/",
+        "https://ncase.me/trust/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration and Applications",
+      "title": "Why do cities look the same everywhere?",
+      "concepts": ["scaling laws", "urban metabolism", "superlinear scaling"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.santafe.edu/research/results/working-papers/growth-innovation-scaling-and-the-pace-of-life",
+        "https://arxiv.org/abs/0704.0861"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration and Applications",
+      "title": "Is the economy a complex adaptive system?",
+      "concepts": ["agent-based economics", "heterogeneous agents", "market dynamics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.santafe.edu/research/results/working-papers/agent-based-computational-economics",
+        "https://www.youtube.com/watch?v=S7d-VbsXClg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration and Applications",
+      "title": "How does the brain create mind?",
+      "concepts": ["neural networks", "brain connectivity", "criticality in the brain"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/nrn3214",
+        "https://www.youtube.com/watch?v=JZBccyBvbUY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration and Applications",
+      "title": "Can we predict ecosystem collapse?",
+      "concepts": ["resilience", "tipping points", "regime shifts"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/461472a",
+        "https://complexity-explorables.org/explorables/oh-shoot/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration and Applications",
+      "title": "How does complexity science apply across different domains?",
+      "concepts": ["scaling laws", "tipping points", "complex adaptive systems"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.complexityexplorer.org/courses/104-introduction-to-complexity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Integration and Applications",
+      "title": "How would you model X as a complex system?",
+      "concepts": ["systems thinking", "modeling choices", "integration"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.complexityexplorer.org/",
+        "https://ccl.northwestern.edu/netlogo/models/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

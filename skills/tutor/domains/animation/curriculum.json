@@ -1,0 +1,358 @@
+{
+  "topic": "Animation — principles and techniques",
+  "slug": "animation",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic drawing or digital art skills",
+    "familiarity with animation software (2D or 3D)",
+    "understanding of keyframes and basic motion"
+  ],
+  "exit_criteria": [
+    "student can identify and apply all 12 principles of animation",
+    "student can analyze professional animation and articulate what makes it work",
+    "student can create believable character performances with weight and timing",
+    "student can make informed artistic choices about timing, spacing, and exaggeration",
+    "student can critique their own work using animation vocabulary"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundation — The 12 Principles",
+      "title": "Why does squashing a ball make it feel alive?",
+      "concepts": ["squash and stretch", "weight perception", "energy conservation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/user/noogai89",
+        "https://www.khanacademy.org/computing/pixar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundation — The 12 Principles",
+      "title": "How do you make an audience expect the unexpected?",
+      "concepts": ["anticipation", "staging", "viewer attention"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.animationmentor.com/",
+        "https://www.youtube.com/c/NewFramePlus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundation — The 12 Principles",
+      "title": "What's the difference between planning a journey and taking it?",
+      "concepts": ["straight ahead animation", "pose-to-pose", "workflow strategies"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.schoolism.com/",
+        "https://www.youtube.com/c/HowardWimshurst"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundation — The 12 Principles",
+      "title": "Why does a cape never stop moving when its hero does?",
+      "concepts": ["follow-through", "overlapping action", "drag and settle"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/user/noogai89",
+        "https://www.ianimate.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundation — The 12 Principles",
+      "title": "How do objects know when to speed up and slow down?",
+      "concepts": ["slow in and slow out", "easing", "natural motion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/computing/pixar",
+        "https://www.blender.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundation — The 12 Principles",
+      "title": "Can you animate a perfect circle that feels wrong?",
+      "concepts": ["arcs", "natural movement paths", "mechanical vs organic"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/c/TonikoPantoja",
+        "https://www.animationmentor.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Foundation — The 12 Principles",
+      "title": "Review: Which principle fixes this broken animation?",
+      "concepts": ["principle recognition", "diagnostic thinking", "critical analysis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/c/NewFramePlus",
+        "https://www.youtube.com/user/noogai89"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Timing Mastery",
+      "title": "What's the difference between happy bouncing and sad bouncing?",
+      "concepts": ["timing and emotion", "rhythm", "performance timing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.schoolism.com/",
+        "https://www.youtube.com/c/HowardWimshurst"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Timing Mastery",
+      "title": "How many frames does it take to punch someone?",
+      "concepts": ["impact frames", "smear frames", "action timing"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/user/noogai89",
+        "https://www.ianimate.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Timing Mastery",
+      "title": "Why do animators work on 2s, 3s, or 4s?",
+      "concepts": ["frame timing strategies", "on-ones vs on-twos", "stylistic choices"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/computing/pixar",
+        "https://krita.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Timing Mastery",
+      "title": "How do you make a feather and a brick fall believably?",
+      "concepts": ["weight through timing", "spacing gradients", "mass perception"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.animationmentor.com/",
+        "https://www.blender.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Timing Mastery",
+      "title": "What makes a movement feel hesitant vs confident?",
+      "concepts": ["personality through timing", "decisiveness", "character psychology"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.schoolism.com/",
+        "https://www.youtube.com/c/TonikoPantoja"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Timing Mastery",
+      "title": "Review: Timing diagnostics challenge",
+      "concepts": ["timing analysis", "problem identification", "correction strategies"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/c/NewFramePlus",
+        "https://www.animationmentor.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Character Performance",
+      "title": "Where does a walk cycle actually begin?",
+      "concepts": ["contact positions", "passing position", "weight shift", "breakdown poses"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ianimate.net/",
+        "https://www.youtube.com/user/noogai89"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Character Performance",
+      "title": "Can you tell if a character is thinking just by their pose?",
+      "concepts": ["line of action", "silhouette", "gesture", "intent through posing"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.schoolism.com/",
+        "https://www.animationmentor.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Character Performance",
+      "title": "Why do animators say 'show the thought before the action'?",
+      "concepts": ["anticipation in performance", "thinking poses", "acting for animators"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/HowardWimshurst",
+        "https://www.khanacademy.org/computing/pixar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Character Performance",
+      "title": "How does a villain walk differently than a hero?",
+      "concepts": ["personality in movement", "character design through motion", "visual language"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/c/TonikoPantoja",
+        "https://www.youtube.com/c/NewFramePlus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Character Performance",
+      "title": "What's the difference between animating dialogue and lip-sync?",
+      "concepts": ["facial animation", "phonemes", "expression primacy", "subtext"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ianimate.net/",
+        "https://www.animationmentor.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Character Performance",
+      "title": "Review: Can you diagnose and fix character performance issues?",
+      "concepts": ["walk cycle analysis", "gesture critique", "personality in movement", "performance diagnostics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.animationmentor.com/",
+        "https://www.youtube.com/c/NewFramePlus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Physics and Weight",
+      "title": "Why does a boulder hitting water look different than a balloon?",
+      "concepts": ["momentum", "kinetic energy", "impact physics", "material response"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/computing/pixar",
+        "https://www.blender.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Physics and Weight",
+      "title": "How do you make cloth feel like silk vs burlap?",
+      "concepts": ["material properties", "secondary motion", "draping and folding"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.schoolism.com/",
+        "https://www.youtube.com/user/noogai89"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Physics and Weight",
+      "title": "What makes water look like water in animation?",
+      "concepts": ["fluid dynamics", "effects animation", "stylization vs realism"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.blender.org/",
+        "https://www.youtube.com/c/NewFramePlus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Physics and Weight",
+      "title": "Review: Weight, timing, and physics integration",
+      "concepts": ["integrated problem solving", "multidimensional thinking", "physics intuition"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/computing/pixar",
+        "https://www.animationmentor.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Integration",
+      "title": "How do you choose between exaggeration and realism?",
+      "concepts": ["stylistic intent", "exaggeration principle", "audience expectations", "genre conventions"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/TonikoPantoja",
+        "https://www.ianimate.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Integration",
+      "title": "Can breaking the rules make animation better?",
+      "concepts": ["artistic license", "intentional violations", "style development", "visual language creation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/NewFramePlus",
+        "https://www.schoolism.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Integration",
+      "title": "What's your animation philosophy?",
+      "concepts": ["personal style", "critical self-assessment", "artistic identity", "synthesis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.animationmentor.com/",
+        "https://www.youtube.com/c/HowardWimshurst"
+      ],
+      "status": "pending"
+    }
+  ]
+}

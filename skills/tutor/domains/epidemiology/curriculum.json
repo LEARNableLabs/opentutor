@@ -1,0 +1,304 @@
+{
+  "topic": "Epidemiology",
+  "slug": "epidemiology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic statistics (mean, variance, probability)",
+    "hypothesis testing and p-values",
+    "fundamental biology or health sciences",
+    "understanding of scientific method"
+  ],
+  "exit_criteria": [
+    "design and critique epidemiologic studies (cohort, case-control, RCTs)",
+    "calculate and interpret measures of disease frequency and association",
+    "identify sources of bias and confounding in studies",
+    "apply causal inference frameworks using DAGs",
+    "investigate disease outbreaks using descriptive epidemiology",
+    "evaluate screening tests using sensitivity, specificity, and predictive values",
+    "model infectious disease transmission dynamics",
+    "critically appraise published epidemiologic literature"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Epidemiology",
+      "title": "What patterns reveal how diseases spread through populations?",
+      "concepts": ["descriptive epidemiology", "person-place-time", "epidemic curves"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://www.coursera.org/learn/epidemiology"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Epidemiology",
+      "title": "Why do we count disease differently in snapshots versus movies?",
+      "concepts": ["prevalence", "incidence", "disease frequency measures"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.biointeractive.org/classroom-resources/modeling-disease-spread"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Epidemiology",
+      "title": "How do rates capture the true risk of disease over time?",
+      "concepts": ["incidence rate", "person-time", "mortality rate"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.biostatistics.ca/epidemiology-fundamentals/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Epidemiology",
+      "title": "What story does an outbreak's epidemic curve tell?",
+      "concepts": ["epidemic curves", "outbreak characterization", "disease surveillance"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://operationoutbreak.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Study Designs",
+      "title": "Why does comparing forward versus backward in time change everything?",
+      "concepts": ["cohort studies", "prospective design", "exposure ascertainment"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://coursebrowser.dce.harvard.edu/course/introduction-to-epidemiology-and-biostatistics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Study Designs",
+      "title": "Foundations checkpoint: Can you identify the right measure for the question?",
+      "concepts": ["prevalence vs incidence", "rates", "epidemic curves"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.coursera.org/learn/epidemiology"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Study Designs",
+      "title": "How do case-control studies work backwards to find causes?",
+      "concepts": ["case-control design", "retrospective analysis", "odds of exposure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://e-catalogue.jhu.edu/course-descriptions/epidemiology/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Study Designs",
+      "title": "When should you randomize versus observe?",
+      "concepts": ["randomized controlled trials", "randomization", "internal validity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.biostatistics.ca/epidemiology-fundamentals/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Study Designs",
+      "title": "Why are cross-sectional studies just snapshots without causation?",
+      "concepts": ["cross-sectional design", "prevalence studies", "temporal ambiguity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.coursera.org/learn/epidemiology"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Study Designs",
+      "title": "Which study design would you choose to investigate this outbreak?",
+      "concepts": ["study design selection", "research question", "practical constraints"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC6924897/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Measures of Association",
+      "title": "How much more likely are exposed people to get sick?",
+      "concepts": ["relative risk", "risk ratio", "measures of association"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://global.oup.com/academic/product/epidemiology-9780197751541"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Measures of Association",
+      "title": "Why do case-control studies force us to use odds instead of risks?",
+      "concepts": ["odds ratio", "case-control analysis", "rare disease assumption"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.biostatistics.ca/epidemiology-fundamentals/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Measures of Association",
+      "title": "Study design checkpoint: Can you match the design to the measure?",
+      "concepts": ["cohort vs case-control", "RR vs OR", "study design review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://e-catalogue.jhu.edu/course-descriptions/epidemiology/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Measures of Association",
+      "title": "How many cases could we prevent by eliminating this exposure?",
+      "concepts": ["attributable risk", "population attributable fraction", "public health impact"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.coursera.org/learn/epidemiology"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Measures of Association",
+      "title": "What do confidence intervals really tell us about associations?",
+      "concepts": ["confidence intervals", "statistical precision", "null hypothesis"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://coursebrowser.dce.harvard.edu/course/introduction-to-epidemiology-and-biostatistics/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Bias, Confounding & Validity",
+      "title": "How does who you select warp your entire study?",
+      "concepts": ["selection bias", "participation bias", "loss to follow-up"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://global.oup.com/academic/product/epidemiology-9780197751541"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Bias, Confounding & Validity",
+      "title": "Why does measurement error matter more than you think?",
+      "concepts": ["information bias", "misclassification", "differential vs non-differential"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.biostatistics.ca/epidemiology-fundamentals/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Bias, Confounding & Validity",
+      "title": "What makes a third variable a confounder instead of just a coincidence?",
+      "concepts": ["confounding", "confounding triangle", "common cause"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://e-catalogue.jhu.edu/course-descriptions/epidemiology/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Bias, Confounding & Validity",
+      "title": "How do we control confounding after data collection?",
+      "concepts": ["stratification", "standardization", "multivariable adjustment"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.coursera.org/learn/epidemiology"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Bias, Confounding & Validity",
+      "title": "Validity checkpoint: Can you spot the bias in these studies?",
+      "concepts": ["selection bias", "information bias", "confounding review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://global.oup.com/academic/product/epidemiology-9780197751541"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Bias, Confounding & Validity",
+      "title": "Can we ever prove causation or just accumulate evidence?",
+      "concepts": ["causal inference", "Hill's criteria", "counterfactual framework"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": ["https://e-catalogue.jhu.edu/course-descriptions/epidemiology/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Infectious Disease Epidemiology",
+      "title": "What determines whether an outbreak explodes or fizzles out?",
+      "concepts": ["basic reproduction number", "R0", "transmission dynamics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.biointeractive.org/classroom-resources/modeling-disease-spread"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Infectious Disease Epidemiology",
+      "title": "How does herd immunity protect people who can't be vaccinated?",
+      "concepts": ["herd immunity", "vaccination threshold", "indirect protection"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://operationoutbreak.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Infectious Disease Epidemiology",
+      "title": "What steps turn outbreak data into actionable public health decisions?",
+      "concepts": ["outbreak investigation", "case definition", "attack rates"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC6924897/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Infectious Disease Epidemiology",
+      "title": "How do contact networks shape epidemic spread differently than random mixing?",
+      "concepts": ["contact tracing", "network structure", "superspreaders"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://operationoutbreak.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Special Topics & Synthesis",
+      "title": "When does finding disease early actually save lives?",
+      "concepts": ["screening", "sensitivity", "specificity", "predictive values"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.coursera.org/learn/epidemiology"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Special Topics & Synthesis",
+      "title": "Synthesis checkpoint: Can you design, analyze, and critique a full study?",
+      "concepts": ["integrated review", "study design", "analysis", "interpretation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://e-catalogue.jhu.edu/course-descriptions/epidemiology/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Special Topics & Synthesis",
+      "title": "How would you investigate an outbreak in your own community?",
+      "concepts": ["outbreak response", "public health practice", "evidence synthesis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC6924897/", "https://operationoutbreak.org/"],
+      "status": "pending"
+    }
+  ]
+}

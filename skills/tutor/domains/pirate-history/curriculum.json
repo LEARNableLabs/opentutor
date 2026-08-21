@@ -1,0 +1,331 @@
+{
+  "topic": "Pirate history — golden age and maritime law",
+  "slug": "pirate-history",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Basic European colonial history (1500s-1700s)",
+    "Familiarity with Age of Sail technology",
+    "Basic understanding of common law systems"
+  ],
+  "exit_criteria": [
+    "Distinguish between privateering and piracy across different legal contexts",
+    "Trace the evolution of maritime law from ancient Rome through modern UNCLOS",
+    "Analyze the economic and social factors that created the Golden Age of Piracy",
+    "Evaluate primary sources critically (trial records, contemporary accounts)",
+    "Compare historical piracy with modern maritime piracy",
+    "Explain the internal governance and culture of pirate communities"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Origins and Context",
+      "title": "Why did the Caribbean become a pirate paradise?",
+      "concepts": ["colonial trade routes", "Spanish treasure fleets", "geographic factors"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/golden-age-piracy",
+        "https://www.britannica.com/topic/piracy-international-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Origins and Context",
+      "title": "What's the difference between a pirate and a privateer?",
+      "concepts": ["letters of marque", "legal privateering", "state-sponsored raiding"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://avalon.law.yale.edu/subject_menus/letters.asp",
+        "https://www.history.com/news/privateers-pirates-difference"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Origins and Context",
+      "title": "How did economic desperation drive sailors to piracy?",
+      "concepts": ["merchant marine wages", "naval demobilization", "unemployment cycles"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/2636690",
+        "https://www.youtube.com/watch?v=T0fAznO1wA8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Origins and Context",
+      "title": "What technologies made piracy possible in the 1600s?",
+      "concepts": ["ship design", "navigation tools", "weaponry"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.marinersmuseum.org/sites/micro/pirates/pirates.htm",
+        "https://archive.org/details/searoverspracti00litt"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "The Buccaneering Era",
+      "title": "Who were the buccaneers and why did they attack Spanish ships?",
+      "concepts": ["buccaneers", "Spanish colonial monopoly", "Tortuga haven"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.worldhistory.org/Buccaneer/",
+        "https://www.rmg.co.uk/stories/topics/who-were-buccaneers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "The Buccaneering Era",
+      "title": "How did Henry Morgan become a knight after raiding Panama?",
+      "concepts": ["Henry Morgan", "political legitimacy", "Anglo-Spanish relations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.britannica.com/biography/Henry-Morgan-Welsh-buccaneer",
+        "https://www.youtube.com/watch?v=b9pGfJcgAH8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "The Buccaneering Era",
+      "title": "What was the 'Pirate Round' and why did it boom in the 1690s?",
+      "concepts": ["Pirate Round", "Red Sea route", "Madagascar base"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/pirate-round",
+        "https://archive.org/details/piratesofcolonia00zack"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Buccaneering Era",
+      "title": "Review: From buccaneers to the Pirate Round",
+      "concepts": ["periodization", "geographic expansion", "escalation patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/humanities/world-history/1600-1800"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Peak Piracy (1715-1726)",
+      "title": "Why did the War of Spanish Succession create a pirate explosion?",
+      "concepts": ["post-war unemployment", "Treaty of Utrecht", "demobilized privateers"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.britannica.com/event/War-of-the-Spanish-Succession",
+        "https://avalon.law.yale.edu/18th_century/sp1713.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Peak Piracy (1715-1726)",
+      "title": "How did Nassau become the 'Pirate Republic'?",
+      "concepts": ["Nassau Bahamas", "failed governance", "pirate democracy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/nassau-pirate-republic",
+        "https://www.youtube.com/watch?v=T0fAznO1wA8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Peak Piracy (1715-1726)",
+      "title": "Was Blackbeard really that terrifying, or just good at theater?",
+      "concepts": ["Blackbeard", "psychological warfare", "reputation building"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncpedia.org/biography/teach-edward",
+        "https://www.history.com/topics/exploration/blackbeard"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Peak Piracy (1715-1726)",
+      "title": "How did Bartholomew Roberts capture over 400 ships?",
+      "concepts": ["Bartholomew Roberts", "tactical innovation", "operational scale"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/biography/Bartholomew-Roberts",
+        "https://archive.org/details/generalhistoryof00john"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Peak Piracy (1715-1726)",
+      "title": "Review: The golden age explosion (1715-1726)",
+      "concepts": ["post-war conditions", "pirate republic", "peak operations", "famous pirates"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/golden-age-piracy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Peak Piracy (1715-1726)",
+      "title": "What can we learn from reading 'A General History of the Pyrates'?",
+      "concepts": ["primary sources", "Captain Charles Johnson", "historical reliability"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://archive.org/details/generalhistoryof00john",
+        "https://www.gutenberg.org/ebooks/40580"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Maritime Law Evolution",
+      "title": "Why did Romans call pirates 'enemies of all mankind'?",
+      "concepts": ["hostis humani generis", "universal jurisdiction", "ancient precedent"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.britannica.com/topic/piracy-international-law",
+        "https://www.law.berkeley.edu/research/the-robbins-collection/robbins-collection-resources/property-law-and-legal-history/special-topics-in-legal-history/piracy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Maritime Law Evolution",
+      "title": "How did admiralty courts decide what was legal plunder?",
+      "concepts": ["admiralty courts", "prize law", "legal procedures"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://avalon.law.yale.edu/subject_menus/lawofwar.asp",
+        "https://www.jstor.org/stable/2194256"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Maritime Law Evolution",
+      "title": "How does modern piracy law connect to the Golden Age?",
+      "concepts": ["UNCLOS", "Somali piracy", "legal precedents"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.un.org/depts/los/convention_agreements/texts/unclos/unclos_e.pdf",
+        "https://www.jstor.org/stable/43923442"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Pirate Society and Culture",
+      "title": "Were pirate ships really democratic?",
+      "concepts": ["pirate codes", "voting rights", "officer elections"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/pirate-code",
+        "https://www.youtube.com/watch?v=T0fAznO1wA8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Pirate Society and Culture",
+      "title": "Review: Maritime law and pirate governance",
+      "concepts": ["legal continuity", "jurisdictional evolution", "pirate democracy", "social structures"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.britannica.com/topic/piracy-international-law",
+        "https://www.rmg.co.uk/stories/topics/pirate-code"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Pirate Society and Culture",
+      "title": "How did pirates divide plunder and handle injuries?",
+      "concepts": ["share system", "compensation schemes", "disability payments"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://archive.org/details/generalhistoryof00john",
+        "https://www.marinersmuseum.org/sites/micro/pirates/pirates.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Pirate Society and Culture",
+      "title": "Who were Anne Bonny and Mary Read, and why do they matter?",
+      "concepts": ["women pirates", "gender disguise", "historical sources"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.rmg.co.uk/stories/topics/anne-bonny-mary-read",
+        "https://www.history.com/news/female-pirates-anne-bonny-mary-read"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Pirate Society and Culture",
+      "title": "What role did escaped slaves play in pirate crews?",
+      "concepts": ["multi-ethnic crews", "escaped slaves", "racial dynamics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/2636690",
+        "https://www.youtube.com/watch?v=b9pGfJcgAH8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Decline and Legacy",
+      "title": "How did Woodes Rogers crush the Nassau pirates?",
+      "concepts": ["Woodes Rogers", "royal pardons", "naval enforcement"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/biography/Woodes-Rogers",
+        "https://www.rmg.co.uk/stories/topics/woodes-rogers-pirate-hunter"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Decline and Legacy",
+      "title": "What can the trial of Captain Kidd teach us about piracy law?",
+      "concepts": ["Captain Kidd trial", "legal procedures", "political factors"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.oldbaileyonline.org/browse.jsp?div=t16990510-39",
+        "https://www.britannica.com/biography/William-Kidd"
+      ],
+      "status": "pending"
+    }
+  ]
+}

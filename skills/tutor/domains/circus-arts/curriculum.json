@@ -1,0 +1,339 @@
+{
+  "topic": "Circus arts — aerial silks physics and rigging",
+  "slug": "circus-arts",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (force, torque, vectors)",
+    "fundamental anatomy and kinesiology",
+    "beginner-level aerial silks practice"
+  ],
+  "exit_criteria": [
+    "calculate load factors for common aerial silks movements",
+    "design and inspect a safe rigging system for aerial fabric",
+    "identify fabric stress patterns and equipment wear indicators",
+    "analyze biomechanical efficiency of aerial techniques",
+    "apply safety standards and redundancy principles to rigging setups"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamentals of Force and Load",
+      "title": "What forces act on your body when you hang from fabric?",
+      "concepts": ["tension", "weight distribution", "equilibrium"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/physics/forces-newtons-laws/tension-tutorial",
+        "https://circussciences.org/basics-of-aerial-forces"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamentals of Force and Load",
+      "title": "Why does wrapping the fabric change how hard you need to grip?",
+      "concepts": ["friction", "normal force", "coefficient of friction", "wrap mechanics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://aerialphysique.com/physics-of-fabric-friction",
+        "https://www.youtube.com/watch?v=example-friction-demo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamentals of Force and Load",
+      "title": "How much force does a single-leg hang create on the rigging point?",
+      "concepts": ["static load", "safe working load", "safety factor"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://dragonflyaerial.com/rigging-load-basics",
+        "https://etcprigging.org/load-calculations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamentals of Force and Load",
+      "title": "Why do drops multiply the force on your rigging by 3x or more?",
+      "concepts": ["dynamic loading", "impact force", "deceleration", "load factor"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://circussciences.org/dynamic-forces-in-aerial",
+        "https://www.youtube.com/watch?v=example-drop-force-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fundamentals of Force and Load",
+      "title": "What have you learned about forces, friction, and load factors?",
+      "concepts": ["force review", "load calculation practice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://aerialphysique.com/force-fundamentals-quiz"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Rigging Systems and Hardware",
+      "title": "What makes a carabiner safe for aerial rigging?",
+      "concepts": ["carabiner ratings", "gate types", "strength specifications", "UIAA/CE standards"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.petzl.com/US/en/Sport/Carabiners-and-quickdraws",
+        "https://dragonflyaerial.com/hardware-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Rigging Systems and Hardware",
+      "title": "When should you use a swivel vs. a static connection?",
+      "concepts": ["rotation management", "swivel mechanics", "twist accumulation"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://aerialrigging.com/swivel-guide",
+        "https://www.youtube.com/watch?v=example-swivel-comparison"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Rigging Systems and Hardware",
+      "title": "How does rigging point angle affect load distribution?",
+      "concepts": ["vector resolution", "angle dependency", "bridle geometry", "cosine losses"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://etcprigging.org/bridle-angle-calculator",
+        "https://theatrecrafts.com/pages/home/topics/rigging/bridle-geometry"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Rigging Systems and Hardware",
+      "title": "Why is a 90-degree bridle angle dangerous?",
+      "concepts": ["force multiplication", "stress concentration", "safe angle limits"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://dragonflyaerial.com/bridle-angles-explained",
+        "https://circussciences.org/dangerous-rigging-configurations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Rigging Systems and Hardware",
+      "title": "Can you explain the load path from performer to ceiling beam?",
+      "concepts": ["system redundancy", "load path analysis", "weak link identification"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://aerialrigging.com/load-path-fundamentals"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Rigging Systems and Hardware",
+      "title": "How do hardware, angles, and load paths work together?",
+      "concepts": ["rigging system design", "hardware selection practice"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://dragonflyaerial.com/rigging-quiz-intermediate"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Fabric Physics and Behavior",
+      "title": "Why does nylon behave differently than polyester in aerial silks?",
+      "concepts": ["material properties", "elasticity", "stretch characteristics", "durability"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://aerialessentials.com/fabric-material-comparison",
+        "https://verticalwise.com/silk-fabric-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Fabric Physics and Behavior",
+      "title": "How does fabric width affect pressure on your body?",
+      "concepts": ["pressure distribution", "contact area", "force per unit area"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://aerialphysique.com/fabric-width-biomechanics",
+        "https://www.youtube.com/watch?v=example-pressure-demo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Fabric Physics and Behavior",
+      "title": "What happens to fabric strength when it's knotted or abraded?",
+      "concepts": ["stress concentration", "knot strength reduction", "abrasion damage", "inspection criteria"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://dragonflyaerial.com/fabric-wear-patterns",
+        "https://verticalwise.com/when-to-retire-aerial-fabric"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Fabric Physics and Behavior",
+      "title": "Why did this performer's fabric fail during a routine?",
+      "concepts": ["failure analysis", "root cause identification", "UV degradation", "cyclic loading fatigue"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://circussciences.org/case-study-fabric-failure",
+        "https://etcprigging.org/incident-reports-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Fabric Physics and Behavior",
+      "title": "How would you teach someone to inspect fabric for retirement criteria?",
+      "concepts": ["visual inspection", "tactile assessment", "documentation", "replacement schedules"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://aerialessentials.com/fabric-inspection-protocol"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Fabric Physics and Behavior",
+      "title": "What are the key relationships between material properties, wear patterns, and safety?",
+      "concepts": ["fabric selection", "inspection practice"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://verticalwise.com/fabric-safety-review"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Dynamic Movement Analysis",
+      "title": "How do climbs distribute force between hands and fabric wraps?",
+      "concepts": ["climbing biomechanics", "muscular force", "friction-assisted movement"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://aerialphysique.com/climbing-mechanics",
+        "https://www.youtube.com/watch?v=example-climb-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Dynamic Movement Analysis",
+      "title": "Why does a hip key drop load your shoulders asymmetrically?",
+      "concepts": ["rotational mechanics", "angular momentum", "torque on joints", "asymmetric loading"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://circussciences.org/biomechanics-of-drops",
+        "https://aerialphysique.com/hip-key-physics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Dynamic Movement Analysis",
+      "title": "What forces can you identify in this performer's sequence?",
+      "concepts": ["video analysis", "force estimation", "peak load timing", "injury risk assessment"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=example-sequence-breakdown",
+        "https://circussciences.org/video-analysis-tools"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Dynamic Movement Analysis",
+      "title": "What role does timing play in reducing impact forces during drops?",
+      "concepts": ["momentum control", "deceleration distance", "impulse-momentum theorem", "active vs passive catches"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://aerialphysique.com/timing-in-drops",
+        "https://khanacademy.org/science/physics/linear-momentum/impulse-momentum"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Dynamic Movement Analysis",
+      "title": "How do biomechanics, forces in movement, and impact reduction connect?",
+      "concepts": ["movement analysis", "force management"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://aerialphysique.com/dynamic-movement-quiz"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Safety Systems and Risk Management",
+      "title": "How do you design redundancy into an aerial rigging system?",
+      "concepts": ["redundancy principles", "backup systems", "failure modes", "SPOF elimination"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://etcprigging.org/redundancy-design",
+        "https://dragonflyaerial.com/building-backup-systems"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Safety Systems and Risk Management",
+      "title": "What should be on your pre-flight checklist before every aerial session?",
+      "concepts": ["inspection protocols", "systematic checks", "documentation", "go/no-go criteria"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://aerialrigging.com/pre-flight-checklist",
+        "https://circussciences.org/safety-protocols"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Safety Systems and Risk Management",
+      "title": "How would you conduct a complete rigging safety audit?",
+      "concepts": ["comprehensive safety assessment", "documentation standards", "risk mitigation", "compliance verification"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://etcprigging.org/audit-guidelines",
+        "https://dragonflyaerial.com/rigging-audit-template"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "topic": "Philosophy of Mind — Consciousness and Computation",
+  "slug": "philosophy-of-mind",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic logic and argumentation",
+    "familiarity with philosophical reasoning",
+    "general understanding of scientific method",
+    "basic knowledge of brain/neuroscience concepts (neurons, brain regions) helpful but not required"
+  ],
+  "exit_criteria": [
+    "articulate the mind-body problem and evaluate major proposed solutions",
+    "explain and critique functionalism and computational theories of mind",
+    "distinguish the hard problem from easy problems of consciousness",
+    "analyze the Chinese Room argument and formulate responses",
+    "compare scientific theories of consciousness (GWT, IIT, HOT)",
+    "evaluate arguments for and against machine consciousness",
+    "apply philosophical concepts to real-world AI and neuroscience debates",
+    "construct original arguments about consciousness using philosophical tools"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "The Mind-Body Problem",
+      "title": "What makes the mind-body problem so hard?",
+      "concepts": ["mind-body problem", "Cartesian dualism", "mental vs physical"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/",
+        "https://mechanism.ucsd.edu/bill/teaching/philmind.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "The Mind-Body Problem",
+      "title": "Could your mind exist without your brain?",
+      "concepts": ["substance dualism", "interaction problem", "Descartes"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://philosophy.uchicago.edu/taxonomy/term/197",
+        "https://www.bbk.ac.uk/courses/modules/sspl/SSPL232S5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "The Mind-Body Problem",
+      "title": "Why did philosophers give up on dualism?",
+      "concepts": ["problems with dualism", "causal closure", "Occam's razor"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/video_galleries/video-lectures/",
+        "https://philosophy.duke.edu/courses/philosophy-mind"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Materialism and Behaviorism",
+      "title": "Can mental states just be behaviors?",
+      "concepts": ["logical behaviorism", "dispositions", "Ryle"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bbk.ac.uk/courses/modules/sspl/SSPL243S7",
+        "https://philosophy.rutgers.edu/undergraduate-course-descriptions/undergraduate-course-description/1265-01-730-218-introduction-to-philosophy-of-mind"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Materialism and Behaviorism",
+      "title": "What if pain is identical to C-fibers firing?",
+      "concepts": ["type identity theory", "mind-brain identity", "Place and Smart"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://mechanism.ucsd.edu/bill/teaching/philmind.html",
+        "https://hass.rpi.edu/cognitive-science/philosophy-logic-computation-and-mind"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Materialism and Behaviorism",
+      "title": "Could an octopus feel pain without C-fibers?",
+      "concepts": ["multiple realizability", "token identity", "species chauvinism"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.bbk.ac.uk/courses/modules/sspl/SSPL232S5",
+        "https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Functionalism",
+      "title": "Review: From dualism to multiple realizability",
+      "concepts": ["review", "mind-body theories", "materialist alternatives"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://philosophy.uchicago.edu/taxonomy/term/197"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Functionalism",
+      "title": "What if mental states are defined by what they do?",
+      "concepts": ["functionalism", "causal roles", "Putnam and Lewis"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+24.09x+3T2019/about",
+        "https://www.carlottapavese.org/resources/Mindsandmachinessyllabus.doc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Functionalism",
+      "title": "Could silicon chips think like neurons?",
+      "concepts": ["computational functionalism", "substrate independence", "Turing machines"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://books.google.com/books/about/The_Conscious_Mind.html?id=0fZZQHOfdAAC",
+        "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+24.09x+3T2019/about"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Functionalism",
+      "title": "Can a room understand Chinese?",
+      "concepts": ["Chinese Room argument", "Searle", "syntax vs semantics"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.carlottapavese.org/resources/Mindsandmachinessyllabus.doc",
+        "https://philosophy.tamucc.edu/courses/spring-2022/minds-and-machines/syllabus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Functionalism",
+      "title": "How do functionalists respond to Searle?",
+      "concepts": ["systems reply", "robot reply", "virtual mind reply"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+24.09x+3T2019/about",
+        "https://www.bbk.ac.uk/courses/modules/sspl/SSPL243S7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The Hard Problem",
+      "title": "What's it like to be a bat?",
+      "concepts": ["subjective experience", "Nagel", "first-person perspective"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/linguistics-and-philosophy/24-08j-philosophical-issues-in-brain-science-spring-2009/video-lectures/lecture-17-theories-of-consciousness-that-neuroscientists-take-seriously/",
+        "https://books.google.com/books/about/The_Conscious_Mind.html?id=0fZZQHOfdAAC"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Hard Problem",
+      "title": "Why is consciousness the hard problem?",
+      "concepts": ["hard problem", "easy problems", "explanatory gap", "Chalmers"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://global.oup.com/academic/product/the-conscious-mind-9780195117899",
+        "https://personal.lse.ac.uk/ROBERT49/teaching/ph103/pdf/Chalmers_The_Conscious_Mind.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "The Hard Problem",
+      "title": "Review: Functionalism meets consciousness",
+      "concepts": ["review", "computational theory limits", "consciousness challenges"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.bbk.ac.uk/courses/modules/sspl/SSPL232S5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "The Hard Problem",
+      "title": "What would Mary learn when she sees red?",
+      "concepts": ["qualia", "knowledge argument", "Mary's Room", "phenomenal properties"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/linguistics-and-philosophy/24-08j-philosophical-issues-in-brain-science-spring-2009/video-lectures/lecture-19-theories-of-consciousness/",
+        "https://en.wikipedia.org/wiki/The_Conscious_Mind"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "The Hard Problem",
+      "title": "Could there be zombies among us?",
+      "concepts": ["philosophical zombies", "conceivability argument", "modal reasoning"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://books.google.com/books/about/The_Conscious_Mind.html?id=0fZZQHOfdAAC",
+        "https://www.sentienceinstitute.org/blog/is-artificial-consciousness-possible"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Consciousness Theories",
+      "title": "Is consciousness just global access?",
+      "concepts": ["Global Workspace Theory", "Baars", "access consciousness"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/linguistics-and-philosophy/24-08j-philosophical-issues-in-brain-science-spring-2009/video-lectures/lecture-17-theories-of-consciousness-that-neuroscientists-take-seriously/",
+        "https://routledgetextbooks.com/textbooks/9781138801318/people/david-chalmers.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Consciousness Theories",
+      "title": "Can we measure consciousness mathematically?",
+      "concepts": ["Integrated Information Theory", "IIT", "phi", "Tononi"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/linguistics-and-philosophy/24-08j-philosophical-issues-in-brain-science-spring-2009/video-lectures/lecture-19-theories-of-consciousness/",
+        "https://www.sentienceinstitute.org/blog/is-artificial-consciousness-possible"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Consciousness Theories",
+      "title": "Does consciousness require thinking about thinking?",
+      "concepts": ["Higher-Order Thought theory", "HOT", "Rosenthal", "metacognition"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/video_galleries/video-lectures/",
+        "https://www.bbk.ac.uk/courses/modules/sspl/SSPL243S7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Consciousness Theories",
+      "title": "Why does Dennett deny qualia exist?",
+      "concepts": ["Dennett's heterophenomenology", "illusionism", "multiple drafts"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.thenewatlantis.com/publications/what-consciousness-is-not",
+        "https://ocw.mit.edu/courses/linguistics-and-philosophy/24-08j-philosophical-issues-in-brain-science-spring-2009/video-lectures/lecture-19-theories-of-consciousness/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Consciousness Theories",
+      "title": "Review: Comparing consciousness theories",
+      "concepts": ["review", "GWT vs IIT vs HOT", "explanatory power"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/linguistics-and-philosophy/24-08j-philosophical-issues-in-brain-science-spring-2009/video-lectures/lecture-17-theories-of-consciousness-that-neuroscientists-take-seriously/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "AI and Machine Consciousness",
+      "title": "Can machines be conscious?",
+      "concepts": ["artificial consciousness", "strong AI", "Turing Test"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+24.09x+3T2019/about",
+        "https://www.sentienceinstitute.org/blog/is-artificial-consciousness-possible"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "AI and Machine Consciousness",
+      "title": "Does substrate independence solve or ignore the hard problem?",
+      "concepts": ["substrate independence", "implementation neutrality", "Chalmers on AI"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://global.oup.com/academic/product/the-conscious-mind-9780195117899",
+        "https://routledgetextbooks.com/textbooks/9781032292564/people/david-chalmers.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "AI and Machine Consciousness",
+      "title": "Should we care if AI suffers?",
+      "concepts": ["AI ethics", "machine sentience", "moral status"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.sentienceinstitute.org/blog/is-artificial-consciousness-possible",
+        "https://philosophy.tamucc.edu/courses/spring-2022/minds-and-machines/syllabus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "AI and Machine Consciousness",
+      "title": "How would we test for machine consciousness?",
+      "concepts": ["consciousness detection", "empirical tests", "behavioral vs structural criteria"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sentienceinstitute.org/blog/is-artificial-consciousness-possible",
+        "https://ocw.mit.edu/courses/6-868j-the-society-of-mind-fall-2011/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Synthesis",
+      "title": "Can consciousness ever be explained physically?",
+      "concepts": ["physicalism vs property dualism", "explanatory closure", "future of consciousness science"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://personal.lse.ac.uk/ROBERT49/teaching/ph103/pdf/Chalmers_The_Conscious_Mind.pdf",
+        "https://ocw.mit.edu/courses/linguistics-and-philosophy/24-08j-philosophical-issues-in-brain-science-spring-2009/video-lectures/lecture-19-theories-of-consciousness/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Synthesis",
+      "title": "What have we learned about minds and machines?",
+      "concepts": ["synthesis", "open problems", "computational limits", "consciousness frontiers"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/24-08j-philosophical-issues-in-brain-science-spring-2009/",
+        "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+24.09x+3T2019/about"
+      ],
+      "status": "pending"
+    }
+  ]
+}

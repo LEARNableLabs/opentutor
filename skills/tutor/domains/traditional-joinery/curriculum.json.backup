@@ -1,0 +1,350 @@
+{
+  "topic": "Traditional joinery — Japanese and Western wood joints",
+  "slug": "traditional-joinery",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic woodworking hand tools",
+    "wood identification and grain reading",
+    "fundamental measuring and marking",
+    "chisel and saw sharpening"
+  ],
+  "exit_criteria": [
+    "student can select appropriate joint types for structural and aesthetic requirements",
+    "student can hand-cut mortise and tenon, through dovetail, and basic Japanese hozo joints",
+    "student understands wood movement and designs joints to accommodate it",
+    "student can compare Western and Japanese approaches and explain their philosophical differences",
+    "student can diagnose joint failure and select repair strategies",
+    "student can read and interpret joint diagrams from both traditions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Wood & Joinery Fundamentals",
+      "title": "Why does wood movement destroy poorly designed joints?",
+      "concepts": ["wood movement", "grain orientation", "seasonal expansion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.finewoodworking.com/2011/11/03/understanding-wood-movement",
+        "https://www.woodmagazine.com/wood-movement-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Wood & Joinery Fundamentals",
+      "title": "How does grain direction determine joint strength?",
+      "concepts": ["grain direction", "long grain vs end grain", "shear strength"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.popularwoodworking.com/article/grain-direction-matters/",
+        "https://www.youtube.com/watch?v=uJRX6ZqLxHo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Wood & Joinery Fundamentals",
+      "title": "What makes a joint mechanical versus adhesive?",
+      "concepts": ["mechanical advantage", "glue surface area", "hybrid joints"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.finewoodworking.com/2008/09/11/glue-vs-mechanical-strength",
+        "https://www.popularwoodworking.com/woodworking-blogs/editors-blog/joints-glue-mechanical-advantage/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Western Joinery Foundations",
+      "title": "Why is the mortise and tenon called the universal joint?",
+      "concepts": ["mortise and tenon", "through vs blind", "sizing ratios"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.finewoodworking.com/project-guides/joinery/mortise-and-tenon",
+        "https://www.youtube.com/user/PaulSellersWoodwork"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Western Joinery Foundations",
+      "title": "How do you cut a mortise by hand without tearout?",
+      "concepts": ["chopping technique", "mortise chisel", "waste removal"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.popularwoodworking.com/projects/chopping-mortises-by-hand/",
+        "https://www.youtube.com/watch?v=4VVWvxKLh5o"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Western Joinery Foundations",
+      "title": "What's the secret to sawing a perfect tenon?",
+      "concepts": ["tenon shoulder", "kerf accuracy", "saw technique"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.finewoodworking.com/2017/08/23/cut-perfect-tenons",
+        "https://www.woodmagazine.com/woodworking-how-to/joinery/mortise-tenon"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Western Joinery Foundations",
+      "title": "Why do dovetails lock together so perfectly?",
+      "concepts": ["dovetail geometry", "pin-to-tail ratio", "mechanical locking"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.finewoodworking.com/project-guides/joinery/dovetails",
+        "https://www.youtube.com/watch?v=OCYjoj2jSgQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Western Joinery Foundations",
+      "title": "How do you lay out dovetails that look balanced?",
+      "concepts": ["dovetail layout", "spacing", "slope angles"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.popularwoodworking.com/projects/dovetail-layout-secrets/",
+        "https://www.finewoodworking.com/2011/04/01/laying-out-dovetails"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Western Joinery Foundations",
+      "title": "When should you use a bridle joint instead of a mortise and tenon?",
+      "concepts": ["bridle joint", "corner bridle", "design choices"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.finewoodworking.com/2013/12/18/bridle-joints-basics",
+        "https://www.woodmagazine.com/woodworking-tips/techniques/joinery/bridle-joint"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Western Joinery Foundations",
+      "title": "Review: Western Foundations — Can you match joints to their best applications?",
+      "concepts": ["joint selection", "structural analysis", "review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.finewoodworking.com/membership/pdf/48652/011176052.pdf",
+        "https://www.popularwoodworking.com/article/joinery-comparison-chart/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Japanese Joinery Foundations",
+      "title": "Why does Japanese joinery avoid nails and glue?",
+      "concepts": ["Japanese philosophy", "disassembly", "mechanical joinery"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.finewoodworking.com/2019/08/07/japanese-joinery-philosophy",
+        "https://www.youtube.com/watch?v=rMbeGxBxYGQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Japanese Joinery Foundations",
+      "title": "How is a Japanese hozo different from a Western mortise and tenon?",
+      "concepts": ["hozo joint", "wedging", "locking mechanisms"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.popularwoodworking.com/article/japanese-mortise-and-tenon/",
+        "https://www.finewoodworking.com/2016/03/22/japanese-joinery-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Japanese Joinery Foundations",
+      "title": "What makes Japanese pull saws cut differently than Western saws?",
+      "concepts": ["pull saw mechanics", "dozuki", "cut direction"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.finewoodworking.com/2012/09/17/japanese-saws-basics",
+        "https://www.youtube.com/watch?v=KxYQoMN_cjY",
+        "https://www.popularwoodworking.com/article/japanese-saws-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Japanese Joinery Foundations",
+      "title": "Why does the shachi-sen wedge lock without glue?",
+      "concepts": ["shachi-sen", "gooseneck wedge", "compound locking"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.finewoodworking.com/2020/02/12/japanese-wedge-joint",
+        "https://www.youtube.com/watch?v=8wZ1v2GiTjU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Japanese Joinery Foundations",
+      "title": "How do you cut a Japanese dovetail (ari) by hand?",
+      "concepts": ["ari joint", "sliding dovetail", "hand techniques"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.popularwoodworking.com/article/japanese-sliding-dovetail/",
+        "https://www.youtube.com/watch?v=3KiWHT5XFSc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Japanese Joinery Foundations",
+      "title": "What is kumiko and why is precision critical?",
+      "concepts": ["kumiko", "lattice work", "geometric patterns"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.finewoodworking.com/2018/11/14/kumiko-basics",
+        "https://www.youtube.com/watch?v=xVv43K9ihZA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Japanese Joinery Foundations",
+      "title": "Review: Japanese Foundations — Can you identify joints from temple architecture?",
+      "concepts": ["joint identification", "structural applications", "review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.finewoodworking.com/membership/pdf/301174/fwjapanesejoinery.pdf",
+        "https://www.youtube.com/watch?v=rMbeGxBxYGQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Advanced Techniques",
+      "title": "How do you design a joint for reversible disassembly?",
+      "concepts": ["reversible joinery", "design principles", "maintenance access"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.finewoodworking.com/2015/06/23/knockdown-joinery",
+        "https://www.popularwoodworking.com/article/demountable-joinery/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Techniques",
+      "title": "Why do compound angle joints fail and how do you prevent it?",
+      "concepts": ["compound angles", "miter joints", "reinforcement"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.finewoodworking.com/2014/03/05/compound-angle-joinery",
+        "https://www.woodmagazine.com/woodworking-tips/techniques/joinery/compound-angles"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Advanced Techniques",
+      "title": "What's the difference between a sliding dovetail in each tradition?",
+      "concepts": ["sliding dovetail", "cross-tradition comparison", "applications"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.finewoodworking.com/2013/09/25/sliding-dovetails-east-west",
+        "https://www.popularwoodworking.com/article/sliding-dovetails/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Techniques",
+      "title": "How do you repair a failed joint without replacing it?",
+      "concepts": ["joint repair", "dutchman patch", "consolidation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.finewoodworking.com/2009/11/05/repairing-wood-joints",
+        "https://www.popularwoodworking.com/article/joint-repair-techniques/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Comparative Analysis & Design",
+      "title": "When should you choose Japanese techniques over Western ones?",
+      "concepts": ["technique selection", "design context", "cultural considerations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.finewoodworking.com/2019/10/22/east-meets-west-joinery",
+        "https://www.popularwoodworking.com/article/comparing-joinery-traditions/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Comparative Analysis & Design",
+      "title": "How do historical furniture styles reflect their joinery traditions?",
+      "concepts": ["furniture history", "style evolution", "regional variations"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.finewoodworking.com/project-guides/furniture/furniture-styles",
+        "https://www.popularwoodworking.com/article/furniture-styles-timeline/",
+        "https://www.youtube.com/watch?v=U_eZmEiyJ6I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Comparative Analysis & Design",
+      "title": "Can you design a hybrid joint combining both traditions?",
+      "concepts": ["hybrid design", "innovation", "synthesis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.finewoodworking.com/2021/05/18/modern-joinery-innovations",
+        "https://www.popularwoodworking.com/article/contemporary-joinery/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Comparative Analysis & Design",
+      "title": "Final Review: Can you select, design, and execute joints for a complete project?",
+      "concepts": ["project planning", "joint selection matrix", "comprehensive review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.finewoodworking.com/project-guides/joinery",
+        "https://www.popularwoodworking.com/woodworking-projects/",
+        "https://www.woodmagazine.com/woodworking-plans"
+      ],
+      "status": "pending"
+    }
+  ]
+}

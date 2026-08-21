@@ -1,0 +1,293 @@
+{
+  "topic": "Chess strategy — from openings to endgame theory",
+  "slug": "chess-strategy",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "chess rules and piece movement",
+    "basic tactical patterns (forks, pins, skewers)",
+    "piece values and material counting",
+    "checkmate patterns with queen and rook"
+  ],
+  "exit_criteria": [
+    "evaluate positions using multiple strategic factors (material, activity, pawn structure, king safety)",
+    "create and execute middlegame plans based on position type",
+    "play standard openings with understanding of key ideas rather than pure memorization",
+    "recognize and exploit common pawn structures",
+    "convert winning endgames using technique and theoretical knowledge",
+    "identify tactical opportunities emerging from strategic imbalances",
+    "analyze own games to find strategic and tactical improvements"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Opening Principles",
+      "title": "Why do masters fight for the center instead of the edges?",
+      "concepts": ["center control", "piece mobility", "development principles"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://lichess.org/learn#/3", "https://www.youtube.com/watch?v=Ao9iOeK_jvU"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Opening Principles",
+      "title": "What makes a move 'developing' versus just moving pieces around?",
+      "concepts": ["development tempo", "piece coordination", "useful squares"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://lichess.org/practice", "https://www.chess.com/article/view/chess-opening-principles"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Opening Principles",
+      "title": "How do you transition from memorized opening moves to your own plan?",
+      "concepts": ["opening to middlegame transition", "strategic themes", "typical plans"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=U2huVf1l4UE", "https://www.chessable.com/blog/opening-principles/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Opening Principles",
+      "title": "Should you play e4 or d4, and what's the philosophical difference?",
+      "concepts": ["open games", "closed games", "opening repertoire building"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.chess.com/article/view/1-e4-vs-1-d4", "https://lichess.org/study"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Opening Principles",
+      "title": "When is castling urgent and when can you delay it?",
+      "concepts": ["king safety", "timing in chess", "center tension"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=mFEWLEQ0lW8", "https://lichess.org/training"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Pawn Structures",
+      "title": "Why are isolated pawns both weak and strong at the same time?",
+      "concepts": ["isolated queen pawn", "dynamic compensation", "structural weaknesses"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.chess.com/article/view/pawn-structures-101-the-isolani", "https://www.youtube.com/watch?v=rG-sRR8D5jc"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Pawn Structures",
+      "title": "Review: Opening ideas and pawn structure basics",
+      "concepts": ["center control", "development", "pawn structure evaluation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://lichess.org/training/themes", "https://www.chesstempo.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Pawn Structures",
+      "title": "What happens when pawns stack up in a chain?",
+      "concepts": ["pawn chains", "attacking the base", "typical plans by structure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.chess.com/article/view/pawn-chains", "https://www.youtube.com/watch?v=4vTgPQJLRdY"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Pawn Structures",
+      "title": "Are doubled pawns always a weakness you should avoid?",
+      "concepts": ["doubled pawns", "open files", "compensation for structural damage"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://lichess.org/study/pawn-structure", "https://www.chess.com/lessons/pawn-structures"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Pawn Structures",
+      "title": "How do you create a plan from your pawn structure?",
+      "concepts": ["schematic thinking", "structure-based planning", "minority attack"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=y7Nf3b5qJH4", "https://www.chessable.com/pawn-structures/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Piece Play & Tactics",
+      "title": "What makes a square a perfect outpost for a knight?",
+      "concepts": ["outposts", "knight placement", "controlling key squares"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.chess.com/article/view/the-mighty-outpost", "https://lichess.org/practice/intermediate-tactics/outpost/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Piece Play & Tactics",
+      "title": "When is a bishop better than a knight, and vice versa?",
+      "concepts": ["piece imbalances", "good vs bad bishops", "minor piece endgames"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=mVRNMZ_ySug", "https://www.chess.com/article/view/bishop-vs-knight"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Piece Play & Tactics",
+      "title": "Why do rooks belong on open files even if there's nothing to attack yet?",
+      "concepts": ["rook activity", "open files", "prophylaxis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://lichess.org/practice/intermediate-tactics/rook-placement/", "https://www.chess.com/lessons/rook-activity"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Piece Play & Tactics",
+      "title": "Review: Pawn structures and piece coordination",
+      "concepts": ["structure evaluation", "piece placement", "plan creation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://lichess.org/training", "https://www.chesstempo.com/tactical-motifs/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Piece Play & Tactics",
+      "title": "When should you trade pieces and when should you avoid trades?",
+      "concepts": ["exchanges", "simplification", "material vs. activity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=eHqNQ8r0kpY", "https://www.chess.com/article/view/when-to-trade-pieces"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Piece Play & Tactics",
+      "title": "How do you calculate forcing sequences without missing defensive resources?",
+      "concepts": ["candidate moves", "calculation technique", "defensive tactics"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.youtube.com/watch?v=KdIPlCHP-rE", "https://lichess.org/training/daily"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Positional Understanding",
+      "title": "What does it mean to have 'the initiative' and how do you keep it?",
+      "concepts": ["initiative", "threats", "tempo"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.chess.com/article/view/the-initiative-in-chess", "https://www.youtube.com/watch?v=wvMhWrHPVhg"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Positional Understanding",
+      "title": "Can you sacrifice material for purely positional advantages?",
+      "concepts": ["positional sacrifices", "compensation", "long-term pressure"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=ybD3EbzOEcQ", "https://www.chessable.com/positional-play/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Positional Understanding",
+      "title": "How do you evaluate a position when both sides have different advantages?",
+      "concepts": ["imbalances", "positional evaluation", "creating plans from imbalances"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.chess.com/article/view/elements-of-positional-evaluation", "https://lichess.org/practice"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Positional Understanding",
+      "title": "Review: Strategic thinking and position evaluation",
+      "concepts": ["evaluation factors", "planning", "imbalances"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://lichess.org/training/themes", "https://www.chesstempo.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Endgame Essentials",
+      "title": "Why is king activity suddenly valuable in the endgame?",
+      "concepts": ["king activity", "endgame principles", "centralization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://lichess.org/practice/pawn-endgames/king-activity/", "https://www.youtube.com/watch?v=K6YEkOQCnIQ"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Endgame Essentials",
+      "title": "What is opposition and why does it decide king and pawn endgames?",
+      "concepts": ["opposition", "key squares", "pawn endgames"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.chess.com/article/view/the-opposition-in-chess", "https://lichess.org/practice/pawn-endgames/opposition/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Endgame Essentials",
+      "title": "How do you win or draw the Lucena and Philidor positions?",
+      "concepts": ["rook endgames", "theoretical positions", "endgame technique"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://www.youtube.com/watch?v=WokLu_6V4mA", "https://lichess.org/practice/rook-endgames/lucena/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Endgame Essentials",
+      "title": "Why do you need to know theoretical endgames if computers exist?",
+      "concepts": ["practical endgame play", "conversion technique", "pattern recognition"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.chess.com/article/view/practical-endgame-tips", "https://www.youtube.com/watch?v=DYR03Qv8GS8"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration & Mastery",
+      "title": "How do you analyze your own games to improve fastest?",
+      "concepts": ["game analysis", "mistake patterns", "improvement methodology"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://lichess.org/analysis", "https://www.youtube.com/watch?v=RiKd8BdMf9c", "https://www.chess.com/analysis"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration & Mastery",
+      "title": "Can you combine opening preparation, middlegame strategy, and endgame knowledge in one complete game?",
+      "concepts": ["strategic coherence", "phase transitions", "complete game understanding"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/c/DanielNaroditskyGM", "https://lichess.org/study", "https://www.chess.com/games"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration & Mastery",
+      "title": "Review: Complete strategic toolkit from opening to endgame",
+      "concepts": ["endgame technique", "positional evaluation", "game phases", "strategic planning", "tactical calculation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://lichess.org/training", "https://www.chesstempo.com/", "https://www.chess.com/lessons"],
+      "status": "pending"
+    }
+  ]
+}

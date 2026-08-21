@@ -1,0 +1,373 @@
+{
+  "topic": "Podcast and Audio Storytelling",
+  "slug": "podcast-storytelling",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic audio editing skills",
+    "familiarity with DAW software",
+    "understanding of basic narrative structure",
+    "podcast listening experience"
+  ],
+  "exit_criteria": [
+    "design and execute a complete narrative podcast episode from concept to distribution",
+    "conduct compelling interviews that reveal emotional truth",
+    "use sound design to create atmosphere and enhance storytelling",
+    "mix and master audio to professional broadcast standards",
+    "develop a unique hosting voice and storytelling style",
+    "apply ethical principles in documentary and interview work"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Narrative Craft",
+      "title": "What makes audio storytelling different from writing?",
+      "concepts": ["audio-first thinking", "sonic narrative", "intimacy of voice"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://transom.org/2012/sounding-natural/",
+        "https://www.youtube.com/watch?v=f6ezU57J8YI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Narrative Craft",
+      "title": "How do you hook a listener in the first 30 seconds?",
+      "concepts": ["cold opens", "stakes establishment", "curiosity gaps"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://training.npr.org/2017/01/31/openings-that-hook-listeners/",
+        "https://transom.org/2011/radiolab-howsound/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Narrative Craft",
+      "title": "Why does the three-act structure still work for podcasts?",
+      "concepts": ["story arc", "tension building", "narrative payoff"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://transom.org/2011/storytelling-for-radio/",
+        "https://www.prx.org/articles/how-to-structure-your-podcast"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Narrative Craft",
+      "title": "What's the difference between a scene and a summary?",
+      "concepts": ["scene construction", "showing vs telling", "temporal pacing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://transom.org/2015/scene-and-summary/",
+        "https://www.thisamericanlife.org/about/make-radio"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Narrative Craft",
+      "title": "How do transitions guide listeners through time and space?",
+      "concepts": ["sonic signposting", "narrative bridges", "musical transitions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://transom.org/2014/tape-transitions/",
+        "https://www.youtube.com/watch?v=_VAa3LfLTK4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Narrative Craft",
+      "title": "When should you use silence as a storytelling tool?",
+      "concepts": ["pause and space", "emotional weight", "listener processing time"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://transom.org/2013/the-power-of-silence/",
+        "https://www.prx.org/articles/silence-in-audio-storytelling"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Narrative Craft",
+      "title": "Review: Break down the narrative structure of a favorite podcast episode",
+      "concepts": ["cold opens", "story arc", "transitions", "narrative payoff"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://transom.org/showcase/",
+        "https://www.thisamericanlife.org/archive"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Interview & Field Recording",
+      "title": "How do you prepare for an interview that reveals truth?",
+      "concepts": ["research depth", "question design", "interview arc"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://training.npr.org/2018/06/06/interviewing-101/",
+        "https://transom.org/2013/interviewing-principles/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Interview & Field Recording",
+      "title": "Why do the best questions often start with 'why' or 'how'?",
+      "concepts": ["open-ended questions", "emotional access", "detail elicitation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://transom.org/2017/studs-terkel-interview-advice/",
+        "https://www.youtube.com/watch?v=7XTHdcmjenI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Interview & Field Recording",
+      "title": "How do you capture great sound in less-than-ideal locations?",
+      "concepts": ["field recording technique", "acoustic problem-solving", "portable gear"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://transom.org/2008/field-recording-basics/",
+        "https://www.youtube.com/watch?v=xHF0rGFzLwE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Interview & Field Recording",
+      "title": "What ethical responsibilities do you have to your interview subjects?",
+      "concepts": ["informed consent", "representation", "vulnerable populations"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://transom.org/2015/ethics-in-audio/",
+        "https://www.prx.org/articles/ethics-documentary-storytelling"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Interview & Field Recording",
+      "title": "Review: Analyze an interview from your favorite podcast",
+      "concepts": ["question strategy", "tape quality", "emotional arc"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://transom.org/showcase/",
+        "https://thirdcoastfestival.org/library"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sound Design",
+      "title": "How does ambient sound create a sense of place?",
+      "concepts": ["room tone", "environmental sound", "sonic world-building"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://transom.org/2011/the-uses-of-ambient-sound/",
+        "https://www.youtube.com/watch?v=dqPxDYzbWeI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sound Design",
+      "title": "When does music enhance a story vs. manipulate the listener?",
+      "concepts": ["musical underscoring", "emotional manipulation", "diegetic vs non-diegetic"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://transom.org/2014/music-in-radio/",
+        "https://www.prx.org/articles/using-music-podcasts"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Sound Design",
+      "title": "What makes sound effects believable in narrative audio?",
+      "concepts": ["foley", "sound effects layering", "sonic realism"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://transom.org/2010/sound-effects/",
+        "https://www.youtube.com/watch?v=7-Yo5TdTPRo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sound Design",
+      "title": "How do you layer sounds without creating sonic mud?",
+      "concepts": ["frequency space", "panning", "mix depth"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://transom.org/2012/layering-sound/",
+        "https://training.npr.org/2019/03/28/mixing-audio-for-podcasts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Sound Design",
+      "title": "Why does Radiolab sound the way it does?",
+      "concepts": ["signature sound", "maximalist production", "style as story"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://transom.org/2011/radiolab-howsound/",
+        "https://www.youtube.com/watch?v=P5aw76Oi_DY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Sound Design",
+      "title": "Review: Design a 60-second soundscape for a simple scene",
+      "concepts": ["layering", "atmosphere", "narrative clarity"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://freesound.org/",
+        "https://www.youtube.com/watch?v=U_tqB4IZvMk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Production & Mixing",
+      "title": "What's the difference between editing for clarity and editing for rhythm?",
+      "concepts": ["cutting technique", "pacing", "energy management"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://transom.org/2013/tape-editing/",
+        "https://training.npr.org/2017/03/02/editing-audio-storytelling/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Production & Mixing",
+      "title": "How do EQ and compression make voices sound professional?",
+      "concepts": ["equalization", "dynamic range compression", "vocal processing"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://transom.org/2017/audio-processing-basics/",
+        "https://www.youtube.com/watch?v=PhVcJV_XqKQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Production & Mixing",
+      "title": "What are LUFS and why do they matter for podcast distribution?",
+      "concepts": ["loudness normalization", "broadcast standards", "platform compliance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.buzzsprout.com/blog/podcast-loudness",
+        "https://www.youtube.com/watch?v=gZPvDv_KdT4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Production & Mixing",
+      "title": "How do you create consistent sound across multiple speakers and locations?",
+      "concepts": ["tonal matching", "noise reduction", "mix coherence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://transom.org/2019/multitrack-mixing/",
+        "https://www.youtube.com/watch?v=qMfZvSKOYdE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Production & Mixing",
+      "title": "Review: Mix a short interview segment to broadcast standards",
+      "concepts": ["EQ", "compression", "loudness", "coherence"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://transom.org/topics/mixing/",
+        "https://training.npr.org/audio/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Voice & Distribution",
+      "title": "How do you develop an authentic hosting voice?",
+      "concepts": ["vocal delivery", "conversational tone", "avoiding affectation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://transom.org/2015/finding-your-voice/",
+        "https://www.youtube.com/watch?v=loxJ3FtCJJA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Voice & Distribution",
+      "title": "What makes a podcast title and description click-worthy without being clickbait?",
+      "concepts": ["metadata optimization", "discoverability", "honest marketing"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.buzzsprout.com/blog/write-podcast-description",
+        "https://www.prx.org/articles/podcast-discovery-seo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Voice & Distribution",
+      "title": "How do RSS feeds and podcast hosting actually work?",
+      "concepts": ["RSS mechanics", "hosting platforms", "distribution networks"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.buzzsprout.com/blog/what-is-podcast-rss-feed",
+        "https://podnews.net/article/what-is-a-podcast-rss-feed"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Voice & Distribution",
+      "title": "What does your analytics data actually tell you about your audience?",
+      "concepts": ["listener metrics", "engagement patterns", "growth indicators"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.buzzsprout.com/blog/podcast-analytics",
+        "https://www.thepodcasthost.com/planning/podcast-analytics-guide/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

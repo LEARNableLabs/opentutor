@@ -1,0 +1,365 @@
+{
+  "topic": "Geometric Group Theory",
+  "slug": "geometric-group-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic group theory",
+    "fundamental group",
+    "covering spaces",
+    "metric space topology",
+    "graph theory basics"
+  ],
+  "exit_criteria": [
+    "construct and analyze Cayley graphs for concrete groups",
+    "determine whether groups act on trees and extract structural information",
+    "recognize and verify hyperbolicity using thin triangles",
+    "apply quasi-isometry to classify groups geometrically",
+    "identify CAT(0) properties in metric spaces",
+    "solve word problems using geometric techniques",
+    "connect group-theoretic and topological properties"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do we study groups through their geometry?",
+      "concepts": ["geometric group theory motivation", "groups as symmetries", "geometric invariants"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.math.ucsb.edu/~jon.mccammond/geogrouptheory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes a group presentation tell us how elements combine?",
+      "concepts": ["group presentations", "generators and relations", "free groups"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/280-2009/bhb-ggtcourse.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How can we decide if two words represent the same group element?",
+      "concepts": ["word problem", "Dehn's problems", "algorithmic decidability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/EPR/ggt.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What does a free group look like as a tree?",
+      "concepts": ["free groups", "tree structure", "unique reduced words"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "http://groupexplorer.sourceforge.net"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Cayley Graphs and Geometry",
+      "title": "How do we visualize a group as a geometric object?",
+      "concepts": ["Cayley graphs", "vertices and edges", "graph metrics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/280-2009/bhb-ggtcourse.pdf",
+        "http://groupexplorer.sourceforge.net"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Cayley Graphs and Geometry",
+      "title": "Review: From presentations to pictures",
+      "concepts": ["group presentations review", "Cayley graphs review", "word problem"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://web.math.ucsb.edu/~jon.mccammond/geogrouptheory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Cayley Graphs and Geometry",
+      "title": "Why do different generating sets give the same large-scale geometry?",
+      "concepts": ["quasi-isometry", "geometric equivalence", "coarse geometry"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/EPR/ggt.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Cayley Graphs and Geometry",
+      "title": "What can we learn from how fast a ball grows in a Cayley graph?",
+      "concepts": ["growth functions", "polynomial growth", "exponential growth"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.classcentral.com/subject/geometric-group-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Cayley Graphs and Geometry",
+      "title": "How many 'directions to infinity' does a group have?",
+      "concepts": ["ends of groups", "topological ends", "Stallings' theorem"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/280-2009/bhb-ggtcourse.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Groups Acting on Trees",
+      "title": "Why do trees make group actions transparent?",
+      "concepts": ["group actions on trees", "stabilizers", "fundamental domains"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.southampton.ac.uk/courses/2026-27/modules/math6138"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Groups Acting on Trees",
+      "title": "Can we build any group acting on a tree from simpler pieces?",
+      "concepts": ["Bass-Serre theory", "graphs of groups", "amalgamated products"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/EPR/ggt.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Groups Acting on Trees",
+      "title": "Review: Geometric actions and structure theorems",
+      "concepts": ["quasi-isometry review", "tree actions review", "Bass-Serre theory"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://sites.google.com/site/melderau/teaching/ggtresources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Groups Acting on Trees",
+      "title": "What makes Baumslag-Solitar groups geometrically weird?",
+      "concepts": ["Baumslag-Solitar groups", "HNN extensions", "non-Hopfian groups"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://math.gatech.edu/courses/math/4803-mar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Hyperbolic Groups",
+      "title": "Why do thin triangles capture the essence of negative curvature?",
+      "concepts": ["Gromov hyperbolicity", "δ-hyperbolic spaces", "thin triangles"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/280-2009/bhb-ggtcourse.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Hyperbolic Groups",
+      "title": "How does the hyperbolic plane serve as the model space?",
+      "concepts": ["hyperbolic plane", "Poincaré disk", "hyperbolic metric"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.southampton.ac.uk/courses/2026-27/modules/math6138",
+        "https://www.classcentral.com/subject/geometric-group-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Hyperbolic Groups",
+      "title": "What properties do hyperbolic groups automatically satisfy?",
+      "concepts": ["hyperbolic groups", "Dehn's algorithm", "finitely presented"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/EPR/ggt.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Hyperbolic Groups",
+      "title": "What does the boundary at infinity tell us about a hyperbolic group?",
+      "concepts": ["boundary at infinity", "Gromov boundary", "compactification"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://courses.maths.ox.ac.uk/course/view.php?id=747"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Hyperbolic Groups",
+      "title": "Review: Hyperbolicity and its consequences",
+      "concepts": ["δ-hyperbolic review", "hyperbolic groups review", "boundary"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://web.math.ucsb.edu/~jon.mccammond/geogrouptheory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "CAT(0) Spaces",
+      "title": "What does it mean for a metric space to have non-positive curvature?",
+      "concepts": ["CAT(0) spaces", "geodesic triangles", "comparison geometry"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.classcentral.com/subject/geometric-group-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "CAT(0) Spaces",
+      "title": "How do cube complexes provide combinatorial models of CAT(0) geometry?",
+      "concepts": ["cube complexes", "CAT(0) cube complexes", "hyperplane structures"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.southampton.ac.uk/courses/2026-27/modules/math6138"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "CAT(0) Spaces",
+      "title": "Why must abelian subgroups be bounded in CAT(0) spaces?",
+      "concepts": ["flat torus theorem", "abelian subgroups", "Euclidean factors"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/EPR/ggt.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Examples and Applications",
+      "title": "How do surface groups encode the geometry of surfaces?",
+      "concepts": ["surface groups", "Fuchsian groups", "fundamental groups"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.southampton.ac.uk/courses/2026-27/modules/math6138"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Examples and Applications",
+      "title": "What can triangle groups teach us about reflection symmetries?",
+      "concepts": ["triangle groups", "reflection groups", "Coxeter groups"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.gatech.edu/courses/math/4803-mar",
+        "https://www.classcentral.com/subject/geometric-group-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Examples and Applications",
+      "title": "Review: Classical examples and their geometric properties",
+      "concepts": ["surface groups review", "triangle groups review", "CAT(0) review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://sites.google.com/site/melderau/teaching/ggtresources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Examples and Applications",
+      "title": "Why are Thompson groups geometrically mysterious?",
+      "concepts": ["Thompson groups", "piecewise-linear homeomorphisms", "amenability"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://math.gatech.edu/courses/math/4803-mar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Examples and Applications",
+      "title": "How do lamplighter groups model wreath products geometrically?",
+      "concepts": ["lamplighter groups", "wreath products", "undecidable problems"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://faculty.math.illinois.edu/~kapovich/503-12/503-12.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Examples and Applications",
+      "title": "What automatic group structures reveal about computational complexity?",
+      "concepts": ["automatic groups", "regular languages", "word problem complexity"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/EPR/ggt.pdf",
+        "https://courses.maths.ox.ac.uk/course/view.php?id=747"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Examples and Applications",
+      "title": "Where does geometric group theory connect to low-dimensional topology?",
+      "concepts": ["3-manifold groups", "Mostow rigidity", "geometric structures"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.math.ucdavis.edu/~kapovich/EPR/ggt.pdf",
+        "https://web.math.ucsb.edu/~jon.mccammond/geogrouptheory/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

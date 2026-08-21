@@ -1,0 +1,345 @@
+{
+  "topic": "Slacklining Physics and Proprioception",
+  "slug": "slacklining",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (forces, vectors, energy)",
+    "human anatomy fundamentals",
+    "basic understanding of the nervous system"
+  ],
+  "exit_criteria": [
+    "explain the physics of tension, catenary curves, and dynamic oscillations on a slackline",
+    "describe how proprioceptive and vestibular systems integrate to maintain balance",
+    "analyze how material properties affect line behavior and training outcomes",
+    "design evidence-based training progressions that optimize motor learning",
+    "understand the neuromechanics of skill acquisition from novice to expert"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundation Physics",
+      "title": "Why does a slackline sag into a curve instead of staying straight?",
+      "concepts": ["catenary curves", "gravity", "tension distribution"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/physics/forces-newtons-laws",
+        "https://www.youtube.com/watch?v=example-catenary-demo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundation Physics",
+      "title": "How does your weight create force on the anchors?",
+      "concepts": ["force vectors", "anchor loads", "mechanical equilibrium"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://slacklineindustries.com/rigging-basics",
+        "https://www.youtube.com/watch?v=example-force-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundation Physics",
+      "title": "What happens when you jump on a slackline?",
+      "concepts": ["dynamic loading", "oscillations", "energy transfer"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.physicsclassroom.com/class/waves/Lesson-0/Waves-and-Wavelike-Motion",
+        "https://balancecommunity.com/dynamic-slacklining"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundation Physics",
+      "title": "Why does a slackline bounce at certain frequencies?",
+      "concepts": ["resonance", "natural frequency", "standing waves"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=example-resonance-slackline",
+        "https://www.isa-slackline.org/physics-fundamentals"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundation Physics",
+      "title": "How tight should you really tension a slackline?",
+      "concepts": ["safety factors", "working load limits", "risk assessment"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.slackline.com/safety-guidelines",
+        "https://www.youtube.com/watch?v=example-tensioning-demo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Material Mechanics",
+      "title": "Why do nylon and polyester lines feel so different?",
+      "concepts": ["material elasticity", "stretch characteristics", "damping properties"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://slacklineindustries.com/webbing-comparison",
+        "https://www.youtube.com/watch?v=example-material-comparison"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Material Mechanics",
+      "title": "How does line width affect your balance challenge?",
+      "concepts": ["base of support", "stability margins", "sensory feedback"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://balancecommunity.com/choosing-your-line",
+        "https://www.youtube.com/watch?v=example-line-width-effects"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Material Mechanics",
+      "title": "What changes when you double the length of your line?",
+      "concepts": ["span-to-sag ratio", "effective stiffness", "feedback latency"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.isa-slackline.org/line-dynamics",
+        "https://www.youtube.com/watch?v=example-length-progression"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Material Mechanics",
+      "title": "Can you predict how a line will behave from its specs?",
+      "concepts": ["material properties", "system modeling", "practical prediction"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://slacklinetools.com/tension-calculator",
+        "https://github.com/slackline-physics/simulator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Review Checkpoint 1",
+      "title": "Can you connect forces, materials, and real-world predictions?",
+      "concepts": ["physics integration", "material selection", "problem-solving"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/physics",
+        "https://balancecommunity.com/physics-quiz"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Biomechanics Basics",
+      "title": "Where exactly is your center of mass, and why does it matter?",
+      "concepts": ["center of mass", "stability", "postural control"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.physio-pedia.com/Center_of_Mass",
+        "https://www.youtube.com/watch?v=example-COM-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Biomechanics Basics",
+      "title": "How do your ankles, knees, and hips work together on a slackline?",
+      "concepts": ["joint articulation", "kinematic chains", "moment distribution"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-balance-biomechanics",
+        "https://www.youtube.com/watch?v=example-joint-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Biomechanics Basics",
+      "title": "Why do your muscles shake when you first step on the line?",
+      "concepts": ["muscle co-contraction", "agonist-antagonist pairs", "motor unit recruitment"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=example-muscle-activation-EMG",
+        "https://balancecommunity.com/muscle-mechanics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Biomechanics Basics",
+      "title": "What makes walking on a slackline different from walking on the ground?",
+      "concepts": ["gait adaptation", "dynamic stability", "perturbation response"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-gait-perturbation",
+        "https://www.youtube.com/watch?v=example-slackline-gait"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Biomechanics Basics",
+      "title": "How do expert slackliners make it look effortless?",
+      "concepts": ["movement efficiency", "minimal intervention control", "anticipatory adjustments"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=example-expert-analysis",
+        "https://balancecommunity.com/expert-vs-novice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Proprioceptive Systems",
+      "title": "What are your body's invisible balance sensors?",
+      "concepts": ["proprioceptors", "muscle spindles", "Golgi tendon organs", "joint receptors"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.physio-pedia.com/Proprioception",
+        "https://www.youtube.com/watch?v=example-proprioception-explained"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Proprioceptive Systems",
+      "title": "How does your inner ear know which way is up?",
+      "concepts": ["vestibular system", "semicircular canals", "otolith organs"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor/vestibular-system",
+        "https://www.youtube.com/watch?v=example-vestibular-demo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Proprioceptive Systems",
+      "title": "Why can you balance better with your eyes closed after practice?",
+      "concepts": ["sensory reweighting", "visual dependence", "proprioceptive training"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-sensory-integration",
+        "https://balancecommunity.com/eyes-closed-training"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Proprioceptive Systems",
+      "title": "What happens in your brain during a near-fall?",
+      "concepts": ["feedback loops", "latency", "predictive control", "reactive correction"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-control",
+        "https://www.youtube.com/watch?v=example-neuroscience-balance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Proprioceptive Systems",
+      "title": "How does your nervous system resolve conflicting sensory signals?",
+      "concepts": ["sensory conflict", "multisensory integration", "Bayesian inference"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-sensory-conflict",
+        "https://www.youtube.com/watch?v=example-perception-illusions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Review Checkpoint 2",
+      "title": "How do body mechanics and sensory systems work together?",
+      "concepts": ["biomechanics integration", "proprioception", "vestibular function"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://balancecommunity.com/quiz-biomechanics",
+        "https://www.youtube.com/watch?v=example-review-sensory-systems"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Integration and Expertise",
+      "title": "How does motor learning change your brain?",
+      "concepts": ["motor learning stages", "skill acquisition", "neural plasticity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-learning",
+        "https://www.youtube.com/watch?v=example-skill-acquisition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration and Expertise",
+      "title": "Why is varied practice better than repetition?",
+      "concepts": ["contextual interference", "transfer of learning", "adaptive expertise"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-practice-variability",
+        "https://balancecommunity.com/training-design"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration and Expertise",
+      "title": "How should you design your training progression?",
+      "concepts": ["progressive overload", "specificity", "recovery", "periodization"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://balancecommunity.com/training-programs",
+        "https://www.isa-slackline.org/coaching-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration and Expertise",
+      "title": "Can you build your own internal model of slackline physics?",
+      "concepts": ["internal models", "forward prediction", "motor expertise", "system integration"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-internal-models",
+        "https://www.youtube.com/watch?v=example-expert-cognition"
+      ],
+      "status": "pending"
+    }
+  ]
+}

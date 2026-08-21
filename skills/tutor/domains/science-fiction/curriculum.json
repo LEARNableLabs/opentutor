@@ -1,0 +1,560 @@
+{
+  "topic": "Science fiction as a genre of ideas",
+  "slug": "science-fiction",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "familiarity with basic literary analysis",
+    "exposure to classic and contemporary science fiction works",
+    "comfort with abstract conceptual thinking",
+    "basic understanding of genre distinctions"
+  ],
+  "exit_criteria": [
+    "student can identify cognitive estrangement and the novum in SF texts",
+    "student can analyze how SF explores ideas through extrapolation and thought experiments",
+    "student can distinguish idea-driven SF from other speculative approaches",
+    "student can apply multiple critical frameworks to SF analysis",
+    "student can trace how specific ideas evolved across SF movements and eras",
+    "student can evaluate the philosophical and social implications of SF worldbuilding",
+    "student can articulate why SF is uniquely suited to exploring certain questions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Genre Theory",
+      "title": "What makes science fiction different from fantasy?",
+      "concepts": [
+        "genre boundaries",
+        "rationality vs. magic",
+        "speculative fiction spectrum"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/",
+        "https://ocw.mit.edu/courses/21w-759-writing-science-fiction-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Genre Theory",
+      "title": "Why does estrangement help us see reality more clearly?",
+      "concepts": [
+        "cognitive estrangement",
+        "defamiliarization",
+        "Darko Suvin's theory"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/",
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Genre Theory",
+      "title": "What is the novum and why does every SF story need one?",
+      "concepts": [
+        "the novum",
+        "innovation as driver",
+        "singular difference"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Genre Theory",
+      "title": "How do you recognize idea-driven SF when you see it?",
+      "concepts": [
+        "theme vs. plot",
+        "SF as thought experiment",
+        "recognition criteria"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616",
+        "https://ocw.mit.edu/courses/21l-434-the-science-fiction-of-freedom-fall-2024/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations & Genre Theory",
+      "title": "Can you map the landscape of speculative ideas?",
+      "concepts": [
+        "genre theory synthesis",
+        "key distinctions",
+        "pattern recognition"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Core Mechanisms",
+      "title": "How does extrapolation turn questions into stories?",
+      "concepts": [
+        "extrapolation",
+        "if-then thinking",
+        "logical progression"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=-6HOdHEeosc",
+        "https://ocw.mit.edu/courses/21w-759-writing-science-fiction-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Core Mechanisms",
+      "title": "What makes a thought experiment work in fiction?",
+      "concepts": [
+        "thought experiments",
+        "controlled variables",
+        "philosophical fiction"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21l-434-the-science-fiction-of-freedom-fall-2024/pages/syllabus/",
+        "https://thescst.org/blog/using-science-fiction-to-teach-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Core Mechanisms",
+      "title": "Why is worldbuilding a philosophical act?",
+      "concepts": [
+        "worldbuilding as argument",
+        "systems thinking",
+        "coherent alternatives"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=-6HOdHEeosc",
+        "https://ocw.mit.edu/courses/21a-270-anthropology-through-speculative-fiction-fall-2009/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Core Mechanisms",
+      "title": "How does SF use the scientific method as narrative structure?",
+      "concepts": [
+        "hypothesis and testing",
+        "scientific method in fiction",
+        "iterative discovery"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://thescst.org/blog/using-science-fiction-to-teach-science",
+        "https://www.researchgate.net/publication/282350899_Science_Fiction_in_Education_case_studies_from_classroom_implementations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Core Mechanisms",
+      "title": "Can you design your own novum and trace its implications?",
+      "concepts": [
+        "novum design",
+        "consequence chains",
+        "systematic thinking"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=-6HOdHEeosc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Core Mechanisms",
+      "title": "What's in your toolkit for analyzing idea-driven SF?",
+      "concepts": [
+        "analytical tools synthesis",
+        "recognition patterns",
+        "application practice"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Major Themes & Ideas",
+      "title": "Why is time SF's favorite conceptual playground?",
+      "concepts": [
+        "time as theme",
+        "temporal paradoxes",
+        "causality questions"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/",
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Major Themes & Ideas",
+      "title": "What can time travel teach us about causality and free will?",
+      "concepts": [
+        "time travel paradoxes",
+        "determinism vs. agency",
+        "philosophical implications"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21l-434-the-science-fiction-of-freedom-fall-2024/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Major Themes & Ideas",
+      "title": "How does SF question what it means to be human?",
+      "concepts": [
+        "identity",
+        "consciousness",
+        "humanity boundaries"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21a-270-anthropology-through-speculative-fiction-fall-2009/pages/syllabus/",
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Major Themes & Ideas",
+      "title": "Why does consciousness fascinate SF writers and philosophers alike?",
+      "concepts": [
+        "consciousness studies",
+        "mind-body problem",
+        "subjective experience"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/21l-434-the-science-fiction-of-freedom-fall-2024/pages/syllabus/",
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Major Themes & Ideas",
+      "title": "What happens when technology reshapes society?",
+      "concepts": [
+        "technological determinism",
+        "social change",
+        "co-evolution of tech and culture"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21a-270-anthropology-through-speculative-fiction-fall-2009/pages/syllabus/",
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Major Themes & Ideas",
+      "title": "How well can you recognize themes across different stories?",
+      "concepts": [
+        "thematic analysis",
+        "pattern recognition",
+        "comparative reading"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Major Themes & Ideas",
+      "title": "Why is the alien always a mirror?",
+      "concepts": [
+        "the Other",
+        "alien encounters",
+        "self-reflection through difference"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21a-270-anthropology-through-speculative-fiction-fall-2009/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Major Themes & Ideas",
+      "title": "How do utopias and dystopias argue with each other?",
+      "concepts": [
+        "utopian thought",
+        "dystopian critique",
+        "political imagination"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/",
+        "https://ocw.mit.edu/courses/21l-434-the-science-fiction-of-freedom-fall-2024/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Major Themes & Ideas",
+      "title": "What makes a compelling political thought experiment?",
+      "concepts": [
+        "political SF",
+        "social systems",
+        "governance alternatives"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21l-434-the-science-fiction-of-freedom-fall-2024/pages/syllabus/",
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Major Themes & Ideas",
+      "title": "What patterns do you see in SF's big thematic questions?",
+      "concepts": [
+        "thematic synthesis",
+        "conceptual patterns",
+        "comparative analysis"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616",
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Historical Movements",
+      "title": "What was the Golden Age really about?",
+      "concepts": [
+        "Golden Age SF",
+        "ideas as puzzles",
+        "technological optimism"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/",
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Historical Movements",
+      "title": "Why did the New Wave turn inward to explore inner space?",
+      "concepts": [
+        "New Wave SF",
+        "literary experimentation",
+        "psychological focus"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616",
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Historical Movements",
+      "title": "How did cyberpunk critique the technological future?",
+      "concepts": [
+        "cyberpunk",
+        "dystopian tech",
+        "corporate power"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21w-763j-transmedia-storytelling-modern-science-fiction-spring-2014/",
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Historical Movements",
+      "title": "What are contemporary movements bringing to the genre?",
+      "concepts": [
+        "climate fiction",
+        "Afrofuturism",
+        "hopepunk",
+        "solarpunk"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21w-763j-transmedia-storytelling-modern-science-fiction-spring-2014/",
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Historical Movements",
+      "title": "How have SF's big ideas evolved across eras?",
+      "concepts": [
+        "historical continuity",
+        "evolving concerns",
+        "recurring themes"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Historical Movements",
+      "title": "Can you trace how one idea transformed across different movements?",
+      "concepts": [
+        "diachronic analysis",
+        "idea evolution",
+        "contextual reading"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616",
+        "https://literariness.org/2018/07/26/introduction-to-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Critical Approaches",
+      "title": "How do Marxist critics read science fiction?",
+      "concepts": [
+        "Marxist criticism",
+        "ideology critique",
+        "production relations"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/",
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Critical Approaches",
+      "title": "What does feminist SF theory reveal about gender and power?",
+      "concepts": [
+        "feminist SF theory",
+        "gender critique",
+        "power structures"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616",
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Critical Approaches",
+      "title": "Why does postcolonial SF matter in a globalized world?",
+      "concepts": [
+        "postcolonial criticism",
+        "decolonization",
+        "global perspectives"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616",
+        "https://ocw.mit.edu/courses/21a-270-anthropology-through-speculative-fiction-fall-2009/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Critical Approaches",
+      "title": "How do you evaluate whether an SF story succeeds as a thought experiment?",
+      "concepts": [
+        "evaluative criteria",
+        "critical judgment",
+        "analytical rigor"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616",
+        "https://ocw.mit.edu/courses/21l-434-the-science-fiction-of-freedom-fall-2024/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Critical Approaches",
+      "title": "What's in your critical toolkit for analyzing idea-driven SF?",
+      "concepts": [
+        "synthesis",
+        "multiple frameworks",
+        "practical application"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.amazon.com/Science-Fiction-Criticism-Anthology-Essential/dp/1474248616",
+        "https://www.weslpress.org/9780819574541/critical-theory-and-science-fiction/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

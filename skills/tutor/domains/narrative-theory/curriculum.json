@@ -1,0 +1,354 @@
+{
+  "topic": "Narrative Theory — How Stories Work",
+  "slug": "narrative-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "close reading skills",
+    "familiarity with literary/film analysis",
+    "basic understanding of semiotics or structuralism (helpful but not required)"
+  ],
+  "exit_criteria": [
+    "distinguish between story (fabula) and discourse (syuzhet) in any narrative",
+    "identify and analyze focalization, narrative voice, and narrative levels",
+    "map narrative time manipulations (analepsis, prolepsis, duration, frequency)",
+    "apply Genette's narratological framework to literary and non-literary texts",
+    "recognize and categorize character functions using actantial models",
+    "analyze how narrative structure shapes audience interpretation",
+    "apply narrative theory to transmedia storytelling (film, games, serial formats)",
+    "articulate the differences between classical and postclassical narratology"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What's the difference between a story and how it's told?",
+      "concepts": ["story vs. discourse", "fabula vs. syuzhet", "narrative mediation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "http://oldsite.english.ucsb.edu/faculty/pabbott/courses/english236/syllabus.html",
+        "https://literariness.org/2016/12/03/gerard-genette-and-structural-narratology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why do detective stories hide information you need?",
+      "concepts": ["narrative ordering", "causality", "emplotment"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21l-012-forms-of-western-narrative-spring-2004/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How does narrative structure differ across media?",
+      "concepts": ["medium specificity", "remediation", "narrative affordances"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21w-763j-transmedia-storytelling-modern-science-fiction-spring-2014/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What is narratology and why does it matter?",
+      "concepts": ["narratology", "structuralism", "systematic analysis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.signosemio.com/pages/genette/narratology.php",
+        "https://www.ebsco.com/research-starters/literature-and-writing/narratology-literary-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Narrative Time",
+      "title": "Why does a story's timeline rarely match reading order?",
+      "concepts": ["order", "analepsis (flashback)", "prolepsis (flashforward)"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://dn790007.ca.archive.org/0/items/NarrativeDiscourseAnEssayInMethod/NarrativeDiscourse-AnEssayInMethod.pdf",
+        "https://www.researchgate.net/publication/318041820_Time_Structure_in_the_Story_Gerard_Genette_'Narrative_Discourse'_Narrative_Theory_3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Narrative Time",
+      "title": "How can a novel cover 50 years in 300 pages?",
+      "concepts": ["duration", "summary", "ellipsis", "scene", "pause"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.signosemio.com/pages/genette/narratology.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Narrative Time",
+      "title": "Why does Groundhog Day repeat the same day?",
+      "concepts": ["frequency", "singulative", "repeating", "iterative"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://dn790007.ca.archive.org/0/items/NarrativeDiscourseAnEssayInMethod/NarrativeDiscourse-AnEssayInMethod.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Narrative Time",
+      "title": "Can you map the timeline of your favorite complex narrative?",
+      "concepts": ["temporal analysis", "narrative reconstruction", "chronology vs. plot"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "http://oldsite.english.ucsb.edu/faculty/pabbott/courses/english236/syllabus.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Perspective and Voice",
+      "title": "Who sees versus who speaks in a story?",
+      "concepts": ["focalization", "point of view", "narrative perspective"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://literariness.org/2016/12/03/gerard-genette-and-structural-narratology/",
+        "https://www.signosemio.com/pages/genette/narratology.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Perspective and Voice",
+      "title": "What happens when the narrator knows less than you do?",
+      "concepts": ["internal focalization", "restricted knowledge", "dramatic irony"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://dn790007.ca.archive.org/0/items/NarrativeDiscourseAnEssayInMethod/NarrativeDiscourse-AnEssayInMethod.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Perspective and Voice",
+      "title": "Can you map how a story manipulates time and perspective?",
+      "concepts": ["order", "duration", "frequency", "focalization"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.signosemio.com/pages/genette/narratology.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Perspective and Voice",
+      "title": "Who is narrating, and where are they?",
+      "concepts": ["narrative levels", "diegesis", "homodiegetic vs. heterodiegetic"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://literariness.org/2016/12/03/gerard-genette-and-structural-narratology/",
+        "https://www.signosemio.com/pages/genette/narratology.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Perspective and Voice",
+      "title": "Why do frame narratives use stories-within-stories?",
+      "concepts": ["metalepsis", "narrative embedding", "frame narratives"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "http://oldsite.english.ucsb.edu/faculty/pabbott/courses/english236/syllabus.html",
+        "https://ocw.mit.edu/courses/21l-012-forms-of-western-narrative-spring-2004/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Perspective and Voice",
+      "title": "Can a narrator lie to you?",
+      "concepts": ["unreliable narration", "narrative reliability", "implied author"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://cfs.osu.edu/sites/cfs.osu.edu/files/Eng6761.01,%20AU%202017,%20Shuman.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Perspective and Voice",
+      "title": "How does free indirect discourse blur narrator and character?",
+      "concepts": ["free indirect discourse", "narrative voice", "style indirect libre"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://dn790007.ca.archive.org/0/items/NarrativeDiscourseAnEssayInMethod/NarrativeDiscourse-AnEssayInMethod.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Character and Action",
+      "title": "Are characters people or narrative functions?",
+      "concepts": ["character theory", "flat vs. round characters", "actants"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://oldsite.english.ucsb.edu/faculty/pabbott/courses/english236/syllabus.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Character and Action",
+      "title": "Why do folktales reuse the same character roles?",
+      "concepts": ["Propp's functions", "character archetypes", "actantial model"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ebsco.com/research-starters/literature-and-writing/narratology-literary-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Character and Action",
+      "title": "Can you identify who sees, who speaks, and who acts in a story?",
+      "concepts": ["focalization", "narrative levels", "character functions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://literariness.org/2016/12/03/gerard-genette-and-structural-narratology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Character and Action",
+      "title": "How do narratives create causality from chronology?",
+      "concepts": ["plot vs. story", "causation", "narrative logic"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21l-012-forms-of-western-narrative-spring-2004/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Plot and Structure",
+      "title": "What makes a narrative arc feel satisfying?",
+      "concepts": ["narrative arc", "rising action", "resolution", "closure"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/courses?query=storytelling"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Plot and Structure",
+      "title": "How do genres create narrative expectations?",
+      "concepts": ["genre conventions", "narrative schemas", "reader expectations"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cfs.osu.edu/sites/cfs.osu.edu/files/Eng6761.01,%20AU%202017,%20Shuman.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Plot and Structure",
+      "title": "Why do serial narratives work differently than novels?",
+      "concepts": ["seriality", "episodic structure", "narrative suspension"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21l-430-popular-culture-and-narrative-serial-storytelling-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Plot and Structure",
+      "title": "How do readers fill in narrative gaps?",
+      "concepts": ["narrative gaps", "reader response", "inferential walks"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://oldsite.english.ucsb.edu/faculty/pabbott/courses/english236/syllabus.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Contemporary Applications",
+      "title": "What patterns do you see across all the stories you know?",
+      "concepts": ["causation", "narrative arc", "genre", "reader response"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.signosemio.com/pages/genette/narratology.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Contemporary Applications",
+      "title": "How does storytelling work across different media?",
+      "concepts": ["transmedia narratology", "medium-specific affordances", "adaptation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/21w-763j-transmedia-storytelling-modern-science-fiction-spring-2014/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Contemporary Applications",
+      "title": "Can narratives violate the laws of story logic?",
+      "concepts": ["unnatural narratology", "narrative impossibilities", "experimental fiction"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://cfs.osu.edu/sites/cfs.osu.edu/files/Eng6761.01,%20AU%202017,%20Shuman.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Contemporary Applications",
+      "title": "What can you now see in stories that you couldn't before?",
+      "concepts": ["analytical synthesis", "framework application", "critical perspective"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://openlearning.mit.edu/news/fuel-your-passion-storytelling-16-free-online-courses-mit",
+        "https://www.coursera.org/courses?query=storytelling"
+      ],
+      "status": "pending"
+    }
+  ]
+}

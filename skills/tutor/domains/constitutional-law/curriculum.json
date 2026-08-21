@@ -1,0 +1,373 @@
+{
+  "topic": "Constitutional Law — Comparative Systems",
+  "slug": "constitutional-law",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic understanding of your own country's constitutional system",
+    "familiarity with separation of powers concept",
+    "general knowledge of judicial systems"
+  ],
+  "exit_criteria": [
+    "analyze constitutional design choices across different systems",
+    "compare judicial review mechanisms and their political implications",
+    "evaluate rights protection frameworks using proportionality analysis",
+    "assess federal vs. unitary systems and their trade-offs",
+    "understand constitutional change mechanisms and their legitimacy",
+    "apply comparative constitutional reasoning to contemporary issues"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Constitutional Foundations",
+      "title": "Why do some countries write down their constitutions while others don't?",
+      "concepts": ["written constitutions", "unwritten constitutions", "constitutional functions", "legitimacy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.constituteproject.org/",
+        "https://plato.stanford.edu/entries/constitutionalism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Constitutional Foundations",
+      "title": "How does the UK have a constitution without a constitutional document?",
+      "concepts": ["uncodified constitution", "parliamentary sovereignty", "constitutional conventions", "rule of law"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.parliament.uk/about/how/role/constitution/",
+        "https://www.ucl.ac.uk/constitution-unit/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Constitutional Foundations",
+      "title": "What makes a constitution legitimate in the eyes of citizens?",
+      "concepts": ["constituent power", "constitutional legitimacy", "founding moments", "popular sovereignty"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.idea.int/publications/catalogue/what-makes-constitution-legitimate",
+        "https://www.constituteproject.org/content/legitimacy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Constitutional Foundations",
+      "title": "Should constitutions be easy or hard to change?",
+      "concepts": ["entrenchment", "amendment procedures", "rigidity vs flexibility", "constitutional stability"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "http://comparativeconstitutionsproject.org/amendment-difficulty/",
+        "https://www.law.nyu.edu/sites/default/files/upload_documents/Constitutional%20Rigidity.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Structural Design",
+      "title": "Why did Montesquieu think separating powers would protect liberty?",
+      "concepts": ["separation of powers", "checks and balances", "tyranny prevention", "institutional design"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/montesquieu/",
+        "https://www.law.cornell.edu/wex/separation_of_powers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Structural Design",
+      "title": "What happens when the prime minister is also the majority leader in parliament?",
+      "concepts": ["parliamentary systems", "fusion of powers", "Westminster model", "responsible government"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://oxcon.ouplaw.com/browse?t=OXCON_HUB.parliamentary",
+        "https://www.parliament.uk/about/how/role/system/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Structural Design",
+      "title": "How do constitutional foundations shape institutional structures?",
+      "concepts": ["constitutional legitimacy", "written vs unwritten", "separation of powers", "amendment"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.constituteproject.org/",
+        "http://comparativeconstitutionsproject.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Structural Design",
+      "title": "Can a president and prime minister share power without constant conflict?",
+      "concepts": ["semi-presidentialism", "cohabitation", "dual executive", "France's Fifth Republic"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.conseil-constitutionnel.fr/en",
+        "https://oxcon.ouplaw.com/view/10.1093/law/9780198578390.001.0001/law-9780198578390"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Structural Design",
+      "title": "Why do federal systems give states/provinces their own constitutions?",
+      "concepts": ["federalism", "divided sovereignty", "subsidiarity", "federal-state relations"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.law.cornell.edu/wex/federalism",
+        "https://www.idea.int/publications/catalogue/federalism-constitutional-design"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Structural Design",
+      "title": "Does having two legislative chambers make better laws or just slower ones?",
+      "concepts": ["bicameralism", "second chambers", "legislative review", "regional representation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.idea.int/publications/catalogue/bicameralism",
+        "http://www.ipu.org/wmn-e/classif.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Judicial Review",
+      "title": "How did nine unelected judges in America gain the power to strike down laws?",
+      "concepts": ["judicial review", "Marbury v. Madison", "counter-majoritarian difficulty", "constitutional supremacy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.law.cornell.edu/supremecourt/text/5/137",
+        "https://constitution.congress.gov/browse/essay/artIII-S2-C1-2/ALDE_00013340/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Judicial Review",
+      "title": "Should constitutional review be concentrated in one special court or spread across all courts?",
+      "concepts": ["centralized review", "decentralized review", "Kelsenian model", "constitutional courts"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.bundesverfassungsgericht.de/EN/Home/home_node.html",
+        "https://oxcon.ouplaw.com/view/10.1093/law/9780198578390.001.0001/law-9780198578390"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Judicial Review",
+      "title": "Why does Germany's Constitutional Court review laws before they cause harm?",
+      "concepts": ["abstract review", "concrete review", "preventive review", "German Basic Law"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.bundesverfassungsgericht.de/EN/Homepage/home_node.html",
+        "https://www.gesetze-im-internet.de/englisch_gg/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Judicial Review",
+      "title": "How do different governmental structures affect judicial power?",
+      "concepts": ["parliamentary vs presidential", "federalism", "bicameralism", "judicial review models"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://comparativeconstitutionsproject.org/",
+        "https://www.constituteproject.org/search"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Judicial Review",
+      "title": "When should courts refuse to answer constitutional questions?",
+      "concepts": ["justiciability", "political questions", "standing", "ripeness and mootness"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.law.cornell.edu/wex/justiciability",
+        "https://www.law.cornell.edu/wex/political_question"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Rights Protection",
+      "title": "Does your constitution promise you a job, housing, and healthcare?",
+      "concepts": ["positive rights", "negative rights", "socioeconomic rights", "enforceability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.constitutionnet.org/vl/positive-rights",
+        "https://www.law.berkeley.edu/research/the-chief-justice-earl-warren-institute-on-law-and-social-policy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Rights Protection",
+      "title": "Can constitutional rights stop private companies from discriminating?",
+      "concepts": ["horizontal effect", "state action doctrine", "Drittwirkung", "private actors"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/EN/",
+        "https://oxcon.ouplaw.com/view/10.1093/law/9780198578390.001.0001/law-9780198578390"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Rights Protection",
+      "title": "How do you balance free speech against national security?",
+      "concepts": ["proportionality analysis", "balancing test", "limitations clauses", "necessity and suitability"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.law.utoronto.ca/utfl_file/count/documents/conferences/proportionality_conf08.pdf",
+        "https://www.echr.coe.int/Documents/Guide_Art_10_ENG.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Rights Protection",
+      "title": "Can governments suspend constitutional rights during emergencies?",
+      "concepts": ["emergency powers", "derogation", "states of exception", "constitutional crisis"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.idea.int/publications/catalogue/emergency-law-responses-covid-19",
+        "https://www.echr.coe.int/Documents/FS_Derogation_ENG.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Rights Protection",
+      "title": "How did South Africa's constitution try to heal a divided nation?",
+      "concepts": ["transformative constitutionalism", "transitional justice", "dignity", "ubuntu"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.constitutionalcourt.org.za/",
+        "https://www.justice.gov.za/legislation/constitution/SAConstitution-web-eng.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Rights Protection",
+      "title": "How do courts decide which rights claims deserve protection?",
+      "concepts": ["constitutional courts", "justiciability", "positive vs negative rights", "proportionality"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.constituteproject.org/search?lang=en&key=rights",
+        "https://oxcon.ouplaw.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Constitutional Change",
+      "title": "Why does the US Constitution have only 27 amendments in 235 years?",
+      "concepts": ["supermajority requirements", "ratification processes", "amendment difficulty", "constitutional stability"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://constitution.congress.gov/browse/amendment-27/",
+        "https://www.archives.gov/federal-register/constitution"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Constitutional Change",
+      "title": "Can courts change the constitution without amending the text?",
+      "concepts": ["living constitutionalism", "interpretive change", "constitutional evolution", "precedent"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.law.cornell.edu/wex/living_constitution",
+        "https://plato.stanford.edu/entries/constitutionalism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Constitutional Change",
+      "title": "Are some constitutional provisions so fundamental they can never be amended?",
+      "concepts": ["basic structure doctrine", "unamendable provisions", "eternity clauses", "constituent vs constituted power"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.gesetze-im-internet.de/englisch_gg/englisch_gg.html#p0427",
+        "https://www.sci.gov.in/jonew/judis/1321.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Synthesis & Application",
+      "title": "Is the European Union's constitutional order fundamentally different from national constitutions?",
+      "concepts": ["supranational constitutionalism", "constitutional pluralism", "EU law supremacy", "multilevel governance"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://eur-lex.europa.eu/collection/eu-law/treaties.html",
+        "https://curia.europa.eu/jcms/jcms/j_6/en/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Synthesis & Application",
+      "title": "What can newer democracies learn from older constitutional failures?",
+      "concepts": ["constitutional design", "lessons from failure", "Weimar Germany", "comparative methodology"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.idea.int/publications/catalogue/annual-review-constitution-building-processes",
+        "http://comparativeconstitutionsproject.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Synthesis & Application",
+      "title": "What comparative constitutional patterns emerge across different systems?",
+      "concepts": ["constitutional design", "judicial review", "rights protection", "federal systems", "constitutional change"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.constituteproject.org/",
+        "http://comparativeconstitutionsproject.org/",
+        "https://oxcon.ouplaw.com/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

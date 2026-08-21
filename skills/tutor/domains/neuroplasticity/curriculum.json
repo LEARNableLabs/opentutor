@@ -1,0 +1,415 @@
+{
+  "topic": "Neuroplasticity and Brain Rehabilitation",
+  "slug": "neuroplasticity",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": ["basic neuroscience", "neuron structure", "synaptic transmission"],
+  "exit_criteria": [
+    "explain the cellular and molecular mechanisms of neuroplasticity",
+    "analyze evidence-based rehabilitation protocols for stroke and TBI",
+    "evaluate the effectiveness of clinical interventions using neuroplasticity principles",
+    "design rehabilitation strategies based on timing, intensity, and task-specificity"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Neuroplasticity",
+      "title": "What is neuroplasticity and why does it challenge old views of the brain?",
+      "concepts": ["neuroplasticity definition", "brain malleability", "historical context"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ninds.nih.gov/health-information/patient-caregiver-education/brain-basics-know-your-brain",
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Neuroplasticity",
+      "title": "How did we discover the brain can change throughout life?",
+      "concepts": ["critical experiments", "Michael Merzenich", "phantom limb"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ted.com/talks/michael_merzenich_growing_evidence_of_brain_plasticity",
+        "https://pubmed.ncbi.nlm.nih.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Neuroplasticity",
+      "title": "What are the limits of brain plasticity?",
+      "concepts": ["constraints on plasticity", "critical periods", "age-related decline"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/",
+        "https://www.nature.com/subjects/neuroplasticity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Neuroplasticity",
+      "title": "Why do critical periods exist and can we reopen them?",
+      "concepts": ["critical periods", "developmental plasticity", "visual system development"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/synapses",
+        "https://www.ncbi.nlm.nih.gov/pmc/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Neuroplasticity",
+      "title": "Review: How does the brain's capacity for change shape who we are?",
+      "concepts": ["neuroplasticity fundamentals", "historical development", "critical periods"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Mechanisms of Brain Change",
+      "title": "How do synapses strengthen and weaken?",
+      "concepts": ["synaptic plasticity", "Hebbian learning", "use-dependent change"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/user/khanacademy",
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Mechanisms of Brain Change",
+      "title": "What is long-term potentiation and why is it the foundation of learning?",
+      "concepts": ["LTP", "NMDA receptors", "calcium signaling", "AMPA trafficking"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3753797/",
+        "https://www.coursera.org/learn/synapses"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Mechanisms of Brain Change",
+      "title": "How does neurogenesis happen in adult brains?",
+      "concepts": ["adult neurogenesis", "hippocampus", "neural stem cells"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nrn.2016.142",
+        "https://www.ncbi.nlm.nih.gov/pmc/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Mechanisms of Brain Change",
+      "title": "What role do neurotrophic factors play in plasticity?",
+      "concepts": ["BDNF", "NGF", "growth factors", "activity-dependent expression"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6549780/",
+        "https://www.nature.com/articles/nrn2897"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Mechanisms of Brain Change",
+      "title": "How does experience change brain structure?",
+      "concepts": ["structural plasticity", "dendritic spines", "gray matter changes", "London taxi drivers"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.pnas.org/doi/10.1073/pnas.070039597",
+        "https://www.ted.com/talks/marian_diamond_on_enriched_environments"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Mechanisms of Brain Change",
+      "title": "Review: How do neurons wire together and why does it matter?",
+      "concepts": ["synaptic plasticity", "LTP/LTD", "neurogenesis", "structural change"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Clinical Applications in Rehabilitation",
+      "title": "How does stroke damage the brain and what can recover?",
+      "concepts": ["ischemic stroke", "penumbra", "diaschisis", "spontaneous recovery"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ahajournals.org/journal/str",
+        "https://www.ninds.nih.gov/health-information/disorders/stroke"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Clinical Applications in Rehabilitation",
+      "title": "What is constraint-induced movement therapy and why does it work?",
+      "concepts": ["CIMT", "learned non-use", "massed practice", "forced use"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3878384/",
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD004433.pub3/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Clinical Applications in Rehabilitation",
+      "title": "Why does motor imagery work for rehabilitation?",
+      "concepts": ["motor imagery", "mirror neurons", "mental practice", "cortical activation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3243774/",
+        "https://jneuroengrehab.biomedcentral.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Clinical Applications in Rehabilitation",
+      "title": "How can brain-computer interfaces aid recovery?",
+      "concepts": ["BCI", "neurofeedback", "closed-loop stimulation", "motor cortex control"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/s41586-021-03506-2",
+        "https://www.youtube.com/watch?v=QRt8QCx3BCo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Clinical Applications in Rehabilitation",
+      "title": "What makes spinal cord injury rehabilitation so challenging?",
+      "concepts": ["spinal cord injury", "central pattern generators", "incomplete injury", "locomotor training"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6234172/",
+        "https://www.ninds.nih.gov/health-information/disorders/spinal-cord-injury"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Clinical Applications in Rehabilitation",
+      "title": "Review: What principles guide effective neurorehabilitation?",
+      "concepts": ["stroke recovery", "CIMT", "motor imagery", "BCI", "task-specificity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ahajournals.org/doi/10.1161/STR.0000000000000098"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Rehabilitation Techniques and Protocols",
+      "title": "How does repetitive transcranial magnetic stimulation work?",
+      "concepts": ["rTMS", "non-invasive brain stimulation", "cortical excitability", "frequency-dependent effects"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5476783/",
+        "https://www.nature.com/articles/nrn.2017.13"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Rehabilitation Techniques and Protocols",
+      "title": "What is the evidence for virtual reality in rehabilitation?",
+      "concepts": ["virtual reality", "immersive therapy", "ecological validity", "gamification"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008349.pub4/full",
+        "https://jneuroengrehab.biomedcentral.com/articles/10.1186/s12984-017-0238-0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Rehabilitation Techniques and Protocols",
+      "title": "Why is timing critical in rehabilitation protocols?",
+      "concepts": ["critical period for recovery", "early intervention", "dose-response", "windows of opportunity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4695198/",
+        "https://www.ahajournals.org/doi/10.1161/STROKEAHA.115.009040"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Rehabilitation Techniques and Protocols",
+      "title": "How do we measure recovery and progress in rehabilitation?",
+      "concepts": ["outcome measures", "Fugl-Meyer assessment", "functional independence", "neuroimaging biomarkers"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.sralab.org/rehabilitation-measures",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4975322/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Rehabilitation Techniques and Protocols",
+      "title": "What role does enriched environment play in recovery?",
+      "concepts": ["environmental enrichment", "multisensory stimulation", "social interaction", "physical activity"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4509538/",
+        "https://www.nature.com/articles/nrn.2016.114"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Rehabilitation Techniques and Protocols",
+      "title": "Review: How do we design effective rehabilitation interventions?",
+      "concepts": ["rTMS", "virtual reality", "timing", "outcome measures", "enrichment"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ahajournals.org/doi/10.1161/STR.0000000000000098"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Special Populations and Emerging Frontiers",
+      "title": "How does neuroplasticity work differently in aging brains?",
+      "concepts": ["aging brain", "cognitive reserve", "compensatory plasticity", "senescence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3269625/",
+        "https://www.nature.com/articles/nrn3256"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Special Populations and Emerging Frontiers",
+      "title": "What can we learn from pediatric brain injury recovery?",
+      "concepts": ["pediatric plasticity", "cerebral palsy", "developmental trajectories", "Kennard principle"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5854417/",
+        "https://www.ninds.nih.gov/health-information/disorders/cerebral-palsy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Special Populations and Emerging Frontiers",
+      "title": "How might pharmacology enhance plasticity in rehabilitation?",
+      "concepts": ["plasticity-enhancing drugs", "SSRIs", "amphetamines", "chondroitinase", "metaplasticity"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6620061/",
+        "https://www.nature.com/articles/s41583-019-0109-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Special Populations and Emerging Frontiers",
+      "title": "What are the frontiers in brain rehabilitation research?",
+      "concepts": ["optogenetics", "closed-loop neuromodulation", "personalized medicine", "biomarker-driven therapy"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/s41586-021-03506-2",
+        "https://www.science.org/journal/scitranslmed",
+        "https://jneuroengrehab.biomedcentral.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Special Populations and Emerging Frontiers",
+      "title": "How does traumatic brain injury differ from stroke in rehabilitation needs?",
+      "concepts": ["TBI pathophysiology", "diffuse axonal injury", "heterogeneity", "cognitive rehabilitation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ninds.nih.gov/health-information/disorders/traumatic-brain-injury",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5560555/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Special Populations and Emerging Frontiers",
+      "title": "How would you design an evidence-based rehabilitation protocol for a specific patient?",
+      "concepts": ["patient assessment", "protocol design", "evidence synthesis", "outcome prediction"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ahajournals.org/doi/10.1161/STR.0000000000000098",
+        "https://www.sralab.org/rehabilitation-measures"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Special Populations and Emerging Frontiers",
+      "title": "What will precision neurorehabilitation look like in 10 years?",
+      "concepts": ["predictive biomarkers", "adaptive protocols", "AI-guided therapy", "translational gaps"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41583-019-0109-2",
+        "https://jneuroengrehab.biomedcentral.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Synthesis",
+      "title": "Review: How do we harness neuroplasticity to rebuild brains?",
+      "concepts": ["plasticity mechanisms", "clinical applications", "rehabilitation techniques", "future directions", "evidence-based practice"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ahajournals.org/doi/10.1161/STR.0000000000000098",
+        "https://www.nature.com/subjects/neuroplasticity"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "topic": "Paleography — reading historical handwriting",
+  "slug": "paleography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic knowledge of medieval and early modern history",
+    "familiarity with historical periods (medieval, Renaissance, early modern)",
+    "reading comfort with academic texts"
+  ],
+  "exit_criteria": [
+    "identify and date major medieval and early modern scripts within 50-year windows",
+    "transcribe manuscripts from Carolingian, Gothic, and Humanistic scripts",
+    "expand common abbreviations and suspensions",
+    "use paleographical evidence for manuscript dating and attribution",
+    "apply transcription skills to archival research"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why does handwriting change over time?",
+      "concepts": ["script evolution", "regional variation", "historical context"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bl.uk/catalogues/illuminatedmanuscripts/glossary.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do you read what you can't read?",
+      "concepts": ["contextual reading", "pattern recognition", "letterform analysis"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What clues does the manuscript itself reveal?",
+      "concepts": ["codicology", "manuscript dating", "material evidence"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.e-codices.ch/en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Early Medieval Scripts",
+      "title": "What makes Insular scripts so distinctive?",
+      "concepts": ["Insular letterforms", "Celtic influence", "minims and wedges"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.digipal.eu/",
+        "https://parker.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Early Medieval Scripts",
+      "title": "How did Charlemagne standardize medieval writing?",
+      "concepts": ["Carolingian minuscule", "script reform", "Tours scriptorium"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bl.uk/manuscripts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Early Medieval Scripts",
+      "title": "Can you identify these early scripts?",
+      "concepts": ["script identification", "comparative analysis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.digipal.eu/",
+        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Early Medieval Scripts",
+      "title": "Can you transcribe a 9th-century charter?",
+      "concepts": ["Carolingian transcription", "documentary hands", "diplomatic formulae"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.e-codices.ch/en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Gothic and Its Variants",
+      "title": "Why did medieval writing become so compressed?",
+      "concepts": ["Gothic textualis", "space economy", "biting letters"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bl.uk/catalogues/illuminatedmanuscripts/TourGenre.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Gothic and Its Variants",
+      "title": "How many Gothic scripts are there?",
+      "concepts": ["textualis variants", "rotunda", "cursiva", "bastarda"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.bl.uk/manuscripts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Gothic and Its Variants",
+      "title": "What regional differences distinguish Gothic scripts?",
+      "concepts": ["French Gothic", "English Gothic", "Italian Gothic", "regional features"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://gallica.bnf.fr/",
+        "https://www.bl.uk/manuscripts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Gothic and Its Variants",
+      "title": "Can you read a 14th-century legal document?",
+      "concepts": ["Gothic cursiva", "legal abbreviations", "documentary context"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Gothic and Its Variants",
+      "title": "Gothic script gallery — can you date and localize these examples?",
+      "concepts": ["comparative paleography", "dating features", "localization"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.e-codices.ch/en",
+        "https://gallica.bnf.fr/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Humanistic and Early Modern",
+      "title": "Why did Renaissance scribes reject Gothic?",
+      "concepts": ["Humanistic minuscule", "antiqua", "Renaissance humanism"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bl.uk/catalogues/illuminatedmanuscripts/TourHumSci.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Humanistic and Early Modern",
+      "title": "How did printing change handwriting?",
+      "concepts": ["print-manuscript interaction", "standardization", "italic script"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.bl.uk/collection-guides/early-european-printed-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Humanistic and Early Modern",
+      "title": "What is Secretary hand and why does it matter?",
+      "concepts": ["Secretary hand", "English documents 1500-1700", "cursive forms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Humanistic and Early Modern",
+      "title": "Can you decipher a 16th-century letter?",
+      "concepts": ["Secretary transcription", "early modern conventions", "personal correspondence"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Abbreviations and Conventions",
+      "title": "Why did medieval scribes abbreviate so much?",
+      "concepts": ["abbreviation systems", "economy of effort", "parchment cost"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.bl.uk/catalogues/illuminatedmanuscripts/glossary.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Abbreviations and Conventions",
+      "title": "What abbreviations appear across all scripts?",
+      "concepts": ["suspension", "contraction", "nomina sacra", "standard forms"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Abbreviations and Conventions",
+      "title": "How do you expand unfamiliar abbreviations?",
+      "concepts": ["contextual expansion", "abbreviation dictionaries", "problem-solving"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.bl.uk/manuscripts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Abbreviations and Conventions",
+      "title": "What conventions did scribes follow?",
+      "concepts": ["ruling and layout", "punctuation", "scribal practices"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.e-codices.ch/en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Dating and Attribution",
+      "title": "How can you date a manuscript from its script?",
+      "concepts": ["diagnostic features", "dating criteria", "script chronology"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bl.uk/manuscripts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Dating and Attribution",
+      "title": "What other clues help establish provenance?",
+      "concepts": ["watermarks", "bindings", "marginalia", "ownership marks"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.e-codices.ch/en",
+        "https://www.bl.uk/manuscripts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Dating and Attribution",
+      "title": "Can you attribute this manuscript?",
+      "concepts": ["attribution methods", "comparative analysis", "scribal hands"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.digipal.eu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Practical Application",
+      "title": "Can you read manuscripts from all periods?",
+      "concepts": ["synthesis", "multi-script reading", "integrated skills"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nationalarchives.gov.uk/palaeography/default.htm",
+        "https://www.e-codices.ch/en"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Practical Application",
+      "title": "How do paleographers work today?",
+      "concepts": ["digital paleography", "research applications", "scholarly editing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.digipal.eu/",
+        "https://dms.stanford.edu/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

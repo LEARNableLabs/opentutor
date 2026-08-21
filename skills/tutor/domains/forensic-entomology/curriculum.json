@@ -1,0 +1,356 @@
+{
+  "topic": "Forensic entomology — insects and death investigation",
+  "slug": "forensic-entomology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic entomology (insect anatomy, metamorphosis, taxonomy)",
+    "general biology (ecology, physiology)",
+    "basic statistics"
+  ],
+  "exit_criteria": [
+    "estimate postmortem interval using insect evidence and accumulated degree hours",
+    "identify key forensic indicator species at different life stages",
+    "collect and preserve entomological evidence following chain of custody protocols",
+    "interpret succession patterns to determine environmental and temporal factors",
+    "evaluate the reliability and limitations of entomological evidence in court cases",
+    "apply toxicology and environmental corrections to PMI estimates"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do insects arrive at a crime scene before investigators?",
+      "concepts": ["decomposition stages", "insect chemoreception", "forensic timeline"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6474513/",
+        "https://www.youtube.com/watch?v=tGQ8N0xYMsg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes certain insects reliable forensic clocks?",
+      "concepts": ["indicator species", "predictable development", "Calliphoridae", "Sarcophagidae"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://bugguide.net/node/view/186",
+        "https://www.forensicentomology.com/indicator-species.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How does decomposition create different ecological niches?",
+      "concepts": ["decomposition stages", "ecological succession", "microbial activity", "chemical changes"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/decomposition",
+        "https://www.youtube.com/watch?v=hP2jkXP5P9k"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What's the difference between PMI estimation methods?",
+      "concepts": ["PMI minimum", "development-based methods", "succession-based methods", "methodological limitations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5832884/",
+        "https://www.abfe.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Why must forensic entomologists think like detectives AND biologists?",
+      "concepts": ["chain of custody", "scientific method", "courtroom standards", "Daubert criteria"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.abfe.org/certification",
+        "https://www.ncjrs.gov/pdffiles1/nij/228091.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Insect Biology & Development",
+      "title": "Review: From crime scene to courtroom",
+      "concepts": ["decomposition stages", "indicator species", "PMI methods", "scientific testimony"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.forensicentomology.com/review-basics.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Insect Biology & Development",
+      "title": "How do blow flies complete their life cycle in a week?",
+      "concepts": ["holometabolous development", "larval instars", "pupariation", "adult emergence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=xaZvSZB84Y8",
+        "https://entnemdept.ufl.edu/creatures/misc/flies/blow_flies.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Insect Biology & Development",
+      "title": "Why does temperature control everything in forensic entomology?",
+      "concepts": ["poikilothermic organisms", "development rate", "temperature thresholds", "degree-day models"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6474513/",
+        "https://www.weather.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Insect Biology & Development",
+      "title": "How do you identify a maggot that could be five different species?",
+      "concepts": ["larval morphology", "spiracle patterns", "posterior respiratory slits", "dichotomous keys"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://bugguide.net/node/view/304/data",
+        "https://www.youtube.com/watch?v=kDN4vY9s7Ks"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Insect Biology & Development",
+      "title": "What happens when insects feed on drugged or poisoned tissue?",
+      "concepts": ["toxicological analysis", "entomotoxicology", "altered development rates", "bioaccumulation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6062302/",
+        "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/entomotoxicology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Insect Biology & Development",
+      "title": "Can you extract viable DNA from an insect's last meal?",
+      "concepts": ["molecular identification", "gut content analysis", "DNA degradation", "forensic genetics"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5343516/",
+        "https://www.youtube.com/watch?v=uNM-Q2e0m1k"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "PMI Estimation Methods",
+      "title": "Review: The biology behind the clock",
+      "concepts": ["developmental stages", "temperature dependence", "species identification", "toxicology effects"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.forensicentomology.com/biology-review.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "PMI Estimation Methods",
+      "title": "How do you calculate accumulated degree hours from weather data?",
+      "concepts": ["ADH formula", "thermal summation", "development thresholds", "historical weather data"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.weather.gov/climate/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4380547/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "PMI Estimation Methods",
+      "title": "Why is the oldest life stage the most important evidence?",
+      "concepts": ["minimum PMI", "developmental progression", "oviposition timing", "confidence intervals"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.forensicentomology.com/pmi-estimation.html",
+        "https://www.youtube.com/watch?v=Q9kC2e8P2zU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "PMI Estimation Methods",
+      "title": "What if the body was moved, burned, or buried?",
+      "concepts": ["succession disruption", "microclimate effects", "delayed colonization", "taphonomic variables"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5832884/",
+        "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/taphonomy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "PMI Estimation Methods",
+      "title": "How does succession timing change with season and geography?",
+      "concepts": ["regional databases", "seasonal variation", "biogeographic patterns", "climate zones"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.inaturalist.org/",
+        "https://bugguide.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "PMI Estimation Methods",
+      "title": "Can you estimate PMI when there are no blow flies?",
+      "concepts": ["alternative indicators", "Piophilidae", "Coleoptera", "late-stage succession"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6062302/",
+        "https://bugguide.net/node/view/57"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "PMI Estimation Methods",
+      "title": "What are the error bars on a forensic entomology estimate?",
+      "concepts": ["confidence intervals", "sources of uncertainty", "methodological limitations", "statistical reporting"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5832884/",
+        "https://www.abfe.org/standards"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Field Practice",
+      "title": "Review: From larvae to timeline",
+      "concepts": ["ADH calculations", "succession patterns", "uncertainty quantification", "regional variation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.forensicentomology.com/pmi-review.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Field Practice",
+      "title": "How do you collect insects without contaminating a crime scene?",
+      "concepts": ["collection protocols", "chain of custody", "scene preservation", "documentation standards"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncjrs.gov/pdffiles1/nij/228091.pdf",
+        "https://www.youtube.com/watch?v=T7gN7yZ0zVY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Field Practice",
+      "title": "Why must you kill, preserve, and rear specimens at the same time?",
+      "concepts": ["preservation methods", "rearing protocols", "adult emergence", "voucher specimens"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://entnemdept.ufl.edu/creatures/misc/flies/collection_preservation.htm",
+        "https://www.abfe.org/field-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Field Practice",
+      "title": "What environmental data do you need from the scene?",
+      "concepts": ["temperature logging", "microclimate measurement", "habitat description", "photographic documentation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.weather.gov/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6474513/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Field Practice",
+      "title": "How do you turn field notes into a court-ready report?",
+      "concepts": ["scientific reporting", "peer review", "methodology transparency", "defensible conclusions"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.abfe.org/standards",
+        "https://www.ncjrs.gov/pdffiles1/nij/228091.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Case Studies & Applications",
+      "title": "Review: Scene to lab to report",
+      "concepts": ["collection protocols", "preservation", "environmental data", "documentation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.forensicentomology.com/field-review.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Case Studies & Applications",
+      "title": "What does a forensic entomologist do on the witness stand?",
+      "concepts": ["expert testimony", "Daubert standard", "cross-examination", "communicating uncertainty"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.abfe.org/testimony-guide",
+        "https://www.ncjrs.gov/pdffiles1/nij/228091.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Case Studies & Applications",
+      "title": "Can entomology solve cold cases, exonerate the innocent, or locate clandestine graves?",
+      "concepts": ["case applications", "limitations and possibilities", "ethical considerations", "future directions"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.innocenceproject.org/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6062302/",
+        "https://www.youtube.com/watch?v=4l6BbFt9k3Q"
+      ],
+      "status": "pending"
+    }
+  ]
+}

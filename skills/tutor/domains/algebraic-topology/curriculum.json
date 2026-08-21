@@ -1,0 +1,358 @@
+{
+  "topic": "Algebraic topology — homotopy and homology",
+  "slug": "algebraic-topology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "point-set topology",
+    "group theory",
+    "linear algebra",
+    "real analysis"
+  ],
+  "exit_criteria": [
+    "compute fundamental groups of common spaces (circles, tori, spheres)",
+    "apply Van Kampen's theorem to decompose spaces",
+    "calculate homology groups using simplicial, singular, and cellular methods",
+    "use Mayer-Vietoris sequence for computational problems",
+    "prove topological invariance of homological invariants",
+    "apply fixed-point theorems (Brouwer, Lefschetz)",
+    "understand cohomology and Poincaré duality for manifolds"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamental Group & Homotopy",
+      "title": "Why can't you continuously deform a loop on a torus to a point?",
+      "concepts": ["homotopy of paths", "path equivalence", "fundamental intuition"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www.youtube.com/playlist?list=PL41FDABC6AA085E78"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamental Group & Homotopy",
+      "title": "How do we turn loops into algebra?",
+      "concepts": ["fundamental group definition", "basepoint", "loop composition"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://web.ma.utexas.edu/users/perutz/PDF_files/AlgTop.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamental Group & Homotopy",
+      "title": "What is the fundamental group of the circle?",
+      "concepts": ["covering space", "lifting property", "π₁(S¹) = ℤ"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamental Group & Homotopy",
+      "title": "How do you glue fundamental groups together?",
+      "concepts": ["Van Kampen's theorem", "amalgamated free product", "pushout"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www.utsc.utoronto.ca/people/kupers/wp-content/uploads/sites/50/algtop-2020.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fundamental Group & Homotopy",
+      "title": "Can you compute the fundamental group of a pretzel?",
+      "concepts": ["Van Kampen applications", "fundamental group of surfaces", "presentations"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://loeh.app.uni-regensburg.de/teaching/topologie1_ws1819/lecture_notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Fundamental Group & Homotopy",
+      "title": "Review: Homotopy and the fundamental group",
+      "concepts": ["fundamental group", "homotopy equivalence", "Van Kampen"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Covering Spaces",
+      "title": "What spaces live 'above' a given space?",
+      "concepts": ["covering space definition", "deck transformations", "local homeomorphism"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www.youtube.com/playlist?list=PL41FDABC6AA085E78"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Covering Spaces",
+      "title": "Why can you lift paths to covering spaces?",
+      "concepts": ["lifting criterion", "path lifting", "homotopy lifting"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://web.ma.utexas.edu/users/perutz/PDF_files/AlgTop.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Covering Spaces",
+      "title": "How are covering spaces classified?",
+      "concepts": ["classification theorem", "subgroup correspondence", "universal cover"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www.utsc.utoronto.ca/people/kupers/wp-content/uploads/sites/50/algtop-2020.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Covering Spaces",
+      "title": "What makes the helix the universal cover of the circle?",
+      "concepts": ["universal covering space", "simply connected", "R as universal cover"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Covering Spaces",
+      "title": "How do deck transformations form a group?",
+      "concepts": ["deck transformation group", "automorphisms", "regular covers"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://loeh.app.uni-regensburg.de/teaching/topologie1_ws1819/lecture_notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Covering Spaces",
+      "title": "Review: Covering spaces and lifting",
+      "concepts": ["covering spaces", "lifting property", "classification"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Homology Theory",
+      "title": "What algebraic data captures 'holes' in spaces?",
+      "concepts": ["homology intuition", "cycles and boundaries", "Betti numbers"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www2.math.upenn.edu/~ghrist/preprints/HAD.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Homology Theory",
+      "title": "How do simplicial complexes triangulate spaces?",
+      "concepts": ["simplicial complex", "simplices", "triangulation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www.youtube.com/playlist?list=PL41FDABC6AA085E78"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Homology Theory",
+      "title": "Why do boundaries have no boundary?",
+      "concepts": ["chain complex", "boundary operator", "∂∂ = 0"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Homology Theory",
+      "title": "How do you compute homology from a triangulation?",
+      "concepts": ["simplicial homology", "kernel and image", "homology groups"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www.utsc.utoronto.ca/people/kupers/wp-content/uploads/sites/50/algtop-2020.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Homology Theory",
+      "title": "Review: Simplicial homology and chain complexes",
+      "concepts": ["simplicial complexes", "chain complex", "homology computation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Cellular Homology & Applications",
+      "title": "What if your space isn't built from triangles?",
+      "concepts": ["CW complex", "cells", "attaching maps"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Cellular Homology & Applications",
+      "title": "How does cellular homology simplify calculations?",
+      "concepts": ["cellular homology", "cellular chain complex", "degree of attaching map"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://loeh.app.uni-regensburg.de/teaching/topologie1_ws1819/lecture_notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Cellular Homology & Applications",
+      "title": "Can you cut a space into simpler pieces to compute homology?",
+      "concepts": ["Mayer-Vietoris sequence", "long exact sequence", "excision"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www.utsc.utoronto.ca/people/kupers/wp-content/uploads/sites/50/algtop-2020.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Cellular Homology & Applications",
+      "title": "Why does every continuous map from a disk to itself have a fixed point?",
+      "concepts": ["Brouwer fixed point theorem", "degree theory", "topological applications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www2.math.upenn.edu/~ghrist/preprints/HAD.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Cellular Homology & Applications",
+      "title": "What does homology tell us about surfaces?",
+      "concepts": ["Euler characteristic", "classification of surfaces", "genus"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www.youtube.com/playlist?list=PL41FDABC6AA085E78"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Cellular Homology & Applications",
+      "title": "Review: Cellular homology and applications",
+      "concepts": ["CW complexes", "Mayer-Vietoris", "fixed point theorems"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Cohomology & Duality",
+      "title": "What's the dual story to homology?",
+      "concepts": ["cohomology", "cochain complex", "contravariance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Cohomology & Duality",
+      "title": "How does the cup product make cohomology a ring?",
+      "concepts": ["cup product", "cohomology ring", "multiplicative structure"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://www.utsc.utoronto.ca/people/kupers/wp-content/uploads/sites/50/algtop-2020.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Cohomology & Duality",
+      "title": "Why do manifolds have a beautiful duality between homology and cohomology?",
+      "concepts": ["Poincaré duality", "orientation", "fundamental class"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/",
+        "https://ems.press/books/etb/57"
+      ],
+      "status": "pending"
+    }
+  ]
+}

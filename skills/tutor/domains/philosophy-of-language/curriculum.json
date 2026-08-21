@@ -1,0 +1,386 @@
+{
+  "topic": "Philosophy of language — meaning and reference",
+  "slug": "philosophy-of-language",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic propositional logic",
+    "familiarity with philosophical argumentation",
+    "understanding of necessary vs. contingent truths"
+  ],
+  "exit_criteria": [
+    "distinguish between sense and reference and explain why the distinction matters",
+    "evaluate competing theories of reference (descriptivism vs. causal theory)",
+    "analyze modal arguments for rigid designation",
+    "apply semantic externalism to thought experiments",
+    "critically assess the division of linguistic labor",
+    "explain how indexicals and demonstratives challenge classical theories"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do 'the Morning Star' and 'the Evening Star' mean different things even though they refer to the same object?",
+      "concepts": ["sense vs. reference", "cognitive significance", "informative identity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/frege/",
+        "https://iep.utm.edu/frege/#H3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What does 'Sherlock Holmes' refer to if Holmes doesn't exist?",
+      "concepts": ["empty names", "existence presuppositions", "fictional reference"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/nonexistent-objects/",
+        "https://iep.utm.edu/emp-name/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How does the meaning of a sentence depend on the meanings of its parts?",
+      "concepts": ["compositionality", "semantic structure", "Frege's principle"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/compositionality/",
+        "https://ocw.mit.edu/courses/24-251-introduction-to-philosophy-of-language-fall-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Why can't we say 'Boston' is a city, only that Boston is a city?",
+      "concepts": ["use-mention distinction", "quotation", "metalanguage"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/quotation/",
+        "https://iep.utm.edu/quine-la/#H3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "How do names and descriptions differ in what they contribute to meaning?",
+      "concepts": ["singular terms", "predicates", "referential vs. attributive use"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/descriptions/",
+        "https://plato.stanford.edu/entries/reference/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "What have we learned about the foundations of meaning and reference?",
+      "concepts": ["sense", "reference", "compositionality", "singular terms"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/meaning/",
+        "https://iep.utm.edu/ref-desc/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Description Theory",
+      "title": "What is the logical form of 'The present King of France is bald'?",
+      "concepts": ["Russell's theory of descriptions", "logical form", "quantification"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/descriptions/",
+        "https://iep.utm.edu/desc/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Description Theory",
+      "title": "Why does Russell think definite descriptions are not referring expressions?",
+      "concepts": ["incomplete symbols", "existential commitment", "scope distinctions"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/russell/",
+        "https://ocw.mit.edu/courses/24-251-introduction-to-philosophy-of-language-fall-2011/pages/readings/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Description Theory",
+      "title": "Does 'The present King of France is bald' presuppose or assert that France has a king?",
+      "concepts": ["presupposition", "assertion", "Strawson's critique", "truth-value gaps"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/presupposition/",
+        "https://iep.utm.edu/strawson/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Description Theory",
+      "title": "How can 'Every student read a book' have two different meanings?",
+      "concepts": ["scope ambiguity", "wide vs. narrow scope", "quantifier interaction"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/descriptions/#ScoAmb",
+        "https://plato.stanford.edu/entries/logic-intensional/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Description Theory",
+      "title": "Can proper names be disguised definite descriptions?",
+      "concepts": ["descriptivism about names", "Frege-Russell view", "cluster theory"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/proper-names/",
+        "https://iep.utm.edu/prop-nam/#H2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Description Theory",
+      "title": "What happens when we mistake the reference of a name we use?",
+      "concepts": ["reference borrowing", "semantic deference", "ignorance and error"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/reference/#RefBor",
+        "https://philpapers.org/browse/descriptivism-about-proper-names"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Description Theory",
+      "title": "How does description theory explain reference, and what challenges does it face?",
+      "concepts": ["theory of descriptions", "presupposition", "descriptivism", "scope"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/descriptions/",
+        "https://iep.utm.edu/ref-desc/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Causal Theory",
+      "title": "Why does 'Aristotle' refer to Aristotle even if most of what we believe about him is false?",
+      "concepts": ["causal-historical theory", "naming ceremony", "reference fixing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/reference/#CauTheRef",
+        "https://iep.utm.edu/prop-nam/#H3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Causal Theory",
+      "title": "How does a causal chain connect my use of 'Plato' to the ancient philosopher?",
+      "concepts": ["causal chains", "transmission of reference", "historical continuity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/proper-names/#CauTheProNam",
+        "https://philpapers.org/browse/causal-theories-of-reference"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Causal Theory",
+      "title": "What does it mean for a term to be a rigid designator?",
+      "concepts": ["rigid designation", "possible worlds", "modal semantics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/rigid-designators/",
+        "https://iep.utm.edu/kripke/#H4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Causal Theory",
+      "title": "Could Aristotle have been a baker instead of a philosopher?",
+      "concepts": ["modal arguments", "counterfactual scenarios", "essential vs. accidental properties"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/essential-accidental/",
+        "https://plato.stanford.edu/entries/modality-epistemology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Causal Theory",
+      "title": "Why can't 'the last great philosopher of antiquity' rigidly designate Aristotle?",
+      "concepts": ["non-rigid descriptions", "contingent satisfaction", "modal profile differences"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/rigid-designators/#RigDesVerNonRigDes",
+        "https://ocw.mit.edu/courses/24-251-introduction-to-philosophy-of-language-fall-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Causal Theory",
+      "title": "What distinguishes the causal theory from descriptivism, and why does rigid designation matter?",
+      "concepts": ["causal chains", "rigid designation", "modal arguments", "Kripke"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/reference/",
+        "https://iep.utm.edu/prop-nam/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Natural Kinds",
+      "title": "Why does 'water' refer to H2O even on Twin Earth where the liquid is XYZ?",
+      "concepts": ["Twin Earth", "semantic externalism", "natural kinds"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/content-externalism/",
+        "https://iep.utm.edu/int-ext/#H3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Natural Kinds",
+      "title": "How can I refer to gold without knowing its chemical structure?",
+      "concepts": ["division of linguistic labor", "expert deference", "social externalism"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/meaning-social/",
+        "https://philpapers.org/browse/the-division-of-linguistic-labor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Natural Kinds",
+      "title": "Does the underlying essence of water determine what 'water' means?",
+      "concepts": ["reference fixing vs. meaning", "hidden structure", "scientific essentialism"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/natural-kinds/",
+        "https://plato.stanford.edu/entries/essentialism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Natural Kinds",
+      "title": "Are meanings really 'just not in the head'?",
+      "concepts": ["internalism vs. externalism", "narrow vs. wide content", "methodological solipsism"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/content-narrow/",
+        "https://iep.utm.edu/int-ext/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Natural Kinds",
+      "title": "How does semantic externalism change our understanding of natural kind terms?",
+      "concepts": ["Twin Earth", "division of labor", "externalism", "natural kinds"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/content-externalism/",
+        "https://plato.stanford.edu/entries/natural-kinds/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "Why does 'I' refer to different people when different people say it?",
+      "concepts": ["indexicals", "context-sensitivity", "character vs. content"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/indexicals/",
+        "https://iep.utm.edu/kaplan/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "How can 'that' demonstrate something without describing it?",
+      "concepts": ["demonstratives", "direct reference", "perceptual salience"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/indexicals/#Dem",
+        "https://philpapers.org/browse/demonstratives"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "Can a statement be necessarily true but knowable only through experience?",
+      "concepts": ["necessary a posteriori", "two-dimensional semantics", "epistemic vs. metaphysical modality"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/two-dimensional-semantics/",
+        "https://plato.stanford.edu/entries/apriori/#NecApo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Topics",
+      "title": "How do all these theories fit together, and what questions remain open?",
+      "concepts": ["theory integration", "remaining puzzles", "contemporary debates"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/reference/",
+        "https://philpapers.org/browse/philosophy-of-language",
+        "https://iep.utm.edu/lang-phi/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

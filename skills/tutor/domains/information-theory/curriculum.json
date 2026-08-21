@@ -1,0 +1,384 @@
+{
+  "topic": "Information Theory",
+  "slug": "information-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "probability theory (random variables, distributions, expectation)",
+    "calculus (derivatives, integrals, logarithms)",
+    "basic linear algebra (vectors, matrices)",
+    "discrete mathematics (sets, functions)"
+  ],
+  "exit_criteria": [
+    "compute entropy, mutual information, and KL divergence for discrete distributions",
+    "design and analyze Huffman codes for data compression",
+    "calculate channel capacity for simple discrete memoryless channels",
+    "apply Shannon's theorems to prove fundamental limits of compression and communication",
+    "explain the source coding and channel coding theorems and their practical implications",
+    "analyze rate-distortion tradeoffs in lossy compression",
+    "connect information theory concepts to machine learning (cross-entropy loss, KL regularization)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Information Measures",
+      "title": "What does it mean to measure information?",
+      "concepts": ["information content", "surprise", "uncertainty"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://colah.github.io/posts/2015-09-Visual-Information/",
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Information Measures",
+      "title": "Why does a fair coin flip carry exactly 1 bit of information?",
+      "concepts": ["Shannon entropy", "binary entropy function", "bits"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.tensortonic.com/ml-math/information-theory/shannon-entropy",
+        "https://arxiv.org/html/2206.07867v3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Information Measures",
+      "title": "How do we measure information in multiple random variables?",
+      "concepts": ["joint entropy", "conditional entropy", "chain rule"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf",
+        "https://colah.github.io/posts/2015-09-Visual-Information/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Information Measures",
+      "title": "Why does knowing the weather reduce uncertainty about what to wear?",
+      "concepts": ["mutual information", "information gain", "data processing inequality"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://arxiv.org/abs/2206.07867",
+        "https://nimasarang.com/blog/2024-08-24-information-theory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Information Measures",
+      "title": "How far apart are two probability distributions?",
+      "concepts": ["KL divergence", "relative entropy", "Jensen-Shannon divergence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://colah.github.io/posts/2015-09-Visual-Information/",
+        "https://nimasarang.com/blog/2024-08-24-information-theory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Information Measures",
+      "title": "Review: Information measures and their relationships",
+      "concepts": ["entropy", "mutual information", "divergence", "inequalities"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Source Coding",
+      "title": "What is the fundamental limit of data compression?",
+      "concepts": ["lossless compression", "source coding", "expected code length"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://web.stanford.edu/class/ee376a/",
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Source Coding",
+      "title": "Why can't every symbol have a short codeword?",
+      "concepts": ["prefix-free codes", "Kraft inequality", "uniquely decodable codes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf",
+        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Source Coding",
+      "title": "Design an optimal code for English text",
+      "concepts": ["Huffman coding", "optimal prefix codes", "greedy algorithm"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/",
+        "https://colah.github.io/posts/2015-09-Visual-Information/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Source Coding",
+      "title": "Can we compress data down to its entropy?",
+      "concepts": ["Shannon source coding theorem", "asymptotic equipartition property", "typical sequences"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf",
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_course_notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Source Coding",
+      "title": "How do modern file compressors work?",
+      "concepts": ["arithmetic coding", "adaptive coding", "practical compression"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=BCiZc0n6COY",
+        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Source Coding",
+      "title": "Can we compress data we haven't seen yet?",
+      "concepts": ["universal source coding", "Lempel-Ziv algorithms", "adaptivity"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/",
+        "https://web.stanford.edu/class/ee376a/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Source Coding",
+      "title": "Review: Compression fundamentals and optimal codes",
+      "concepts": ["entropy bounds", "Huffman coding", "source coding theorem"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://colah.github.io/posts/2015-09-Visual-Information/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Channel Theory",
+      "title": "What happens when messages travel through noisy channels?",
+      "concepts": ["noisy channels", "channel model", "error probability"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://arxiv.org/html/2206.07867v3",
+        "https://web.stanford.edu/class/ee376a/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Channel Theory",
+      "title": "How much information can a channel reliably transmit?",
+      "concepts": ["channel capacity", "maximizing mutual information", "channel coding rate"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/",
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Channel Theory",
+      "title": "Why can a coin-flip channel still transmit information reliably?",
+      "concepts": ["binary symmetric channel", "crossover probability", "capacity calculation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://arxiv.org/abs/2206.07867",
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Channel Theory",
+      "title": "Can we communicate reliably over any noisy channel below capacity?",
+      "concepts": ["Shannon channel coding theorem", "random coding", "achievability and converse"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_course_notes/",
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Channel Theory",
+      "title": "Design an error-correcting code for space communication",
+      "concepts": ["error-correcting codes", "Hamming codes", "parity check matrices"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html",
+        "https://web.stanford.edu/class/ee376a/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Channel Theory",
+      "title": "Review: Channels, capacity, and reliable communication",
+      "concepts": ["channel capacity", "error correction", "channel coding theorem"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://colah.github.io/posts/2015-09-Visual-Information/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Rate-Distortion Theory",
+      "title": "What if we allow some loss to compress more?",
+      "concepts": ["lossy compression", "distortion measures", "rate-distortion tradeoff"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/",
+        "https://web.stanford.edu/class/ee376a/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Rate-Distortion Theory",
+      "title": "How do we optimally lose information?",
+      "concepts": ["quantization", "scalar quantization", "vector quantization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf",
+        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Rate-Distortion Theory",
+      "title": "What is the fundamental limit of lossy compression?",
+      "concepts": ["rate-distortion function", "rate-distortion theorem", "separation principle"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_course_notes/",
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Rate-Distortion Theory",
+      "title": "Why does JPEG compress images so well?",
+      "concepts": ["practical lossy compression", "perceptual distortion", "transform coding"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html",
+        "https://www.youtube.com/watch?v=BCiZc0n6COY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Topics",
+      "title": "How do we measure information in continuous distributions?",
+      "concepts": ["differential entropy", "continuous distributions", "Gaussian distribution"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf",
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "Why is the Gaussian channel the worst additive noise channel?",
+      "concepts": ["Gaussian channel", "additive white Gaussian noise", "water-filling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_course_notes/",
+        "https://web.stanford.edu/class/ee376a/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "What happens when multiple users share a channel?",
+      "concepts": ["multiple access channel", "broadcast channel", "Slepian-Wolf theorem"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/",
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "Why is cross-entropy loss used to train neural networks?",
+      "concepts": ["information theory in ML", "cross-entropy loss", "KL divergence in variational inference"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://nimasarang.com/blog/2024-08-24-information-theory/",
+        "https://colah.github.io/posts/2015-09-Visual-Information/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Synthesis",
+      "title": "Review: From lossy compression to continuous channels to modern ML",
+      "concepts": ["rate-distortion tradeoffs", "differential entropy", "Gaussian channels", "multi-user systems", "information theory applications"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/",
+        "https://colah.github.io/posts/2015-09-Visual-Information/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

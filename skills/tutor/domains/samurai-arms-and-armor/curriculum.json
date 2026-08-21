@@ -1,0 +1,333 @@
+{
+  "topic": "Samurai arms and armor — metallurgy and martial culture",
+  "slug": "samurai-arms-and-armor",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (elements, carbon, iron)",
+    "general Japanese history (feudal periods)",
+    "materials science concepts helpful but not required"
+  ],
+  "exit_criteria": [
+    "explain tamahagane production and differential hardening processes",
+    "identify armor components and construction techniques",
+    "analyze the relationship between metallurgy and martial culture",
+    "evaluate historical evolution from Heian to Meiji periods",
+    "distinguish ceremonial from functional weapons design"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why did Japanese swords become legendary?",
+      "concepts": ["sword mythology", "metallurgical excellence", "cultural symbolism"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/art/collection/search#!/search?q=japanese%20sword",
+        "https://www.touken.or.jp/english/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes steel different from iron?",
+      "concepts": ["carbon content", "iron-carbon phase diagram", "hardness vs. toughness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/",
+        "https://www.tf.uni-kiel.de/matwis/amat/iss/kap_6/backbone/r6_1_2.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How did the samurai class emerge in feudal Japan?",
+      "concepts": ["Heian period warfare", "bushi class formation", "land ownership and loyalty"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.coursera.org/learn/asian-history",
+        "https://www.britannica.com/topic/samurai"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Sword Metallurgy",
+      "title": "How is tamahagane made from iron sand?",
+      "concepts": ["satetsu (iron sand)", "tatara furnace", "smelting process", "carbon absorption"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www3.nhk.or.jp/nhkworld/en/shows/",
+        "https://www.youtube.com/c/kiwamijapan"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Sword Metallurgy",
+      "title": "Why fold steel hundreds of times?",
+      "concepts": ["impurity removal", "carbon distribution", "jihada grain patterns", "welding layers"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nbthk.or.jp/",
+        "https://www.tf.uni-kiel.de/matwis/amat/iss/kap_6/backbone/r6_1_2.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "Review: How do metallurgy and history connect?",
+      "concepts": ["steel basics", "samurai origins", "technology and culture"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Sword Metallurgy",
+      "title": "What creates the hamon line on a blade?",
+      "concepts": ["differential hardening", "clay coating (yakire)", "quenching", "martensite formation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/art/collection/search#!/search?q=japanese%20sword",
+        "https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Sword Metallurgy",
+      "title": "How do smiths control carbon content in different blade regions?",
+      "concepts": ["composite structure", "edge vs. core hardness", "forge welding", "carbon migration"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.touken.or.jp/english/",
+        "https://www.nbthk.or.jp/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Sword Metallurgy",
+      "title": "Can you identify jihada grain patterns in real blades?",
+      "concepts": ["masame (straight grain)", "mokume (wood-burl)", "ayasugi (wavy)", "pattern recognition"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.militaria.co.za/nmb/",
+        "https://www.metmuseum.org/art/collection/search#!/search?q=japanese%20sword"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Sword Metallurgy",
+      "title": "Why did some famous blades fail catastrophically in battle?",
+      "concepts": ["metallurgical defects", "stress concentration", "historical blade testing", "material failure modes"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nbthk.or.jp/",
+        "https://www.britannica.com/technology/sword"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Armor Construction",
+      "title": "How is yoroi armor assembled from thousands of parts?",
+      "concepts": ["kozane (small plates)", "odoshi (lacing)", "lacquer coating", "modular assembly"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/art/online-features/metkids/videos/armor-unboxed-samurai",
+        "https://www.britishmuseum.org/collection/term/BIOG60874"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sword Metallurgy",
+      "title": "Review: Tamahagane to hamon — can you trace the process?",
+      "concepts": ["smelting", "folding", "differential hardening", "grain patterns"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Armor Construction",
+      "title": "What materials could stop arrows and blade strikes?",
+      "concepts": ["iron plates", "leather (nerigawa)", "silk and fabric", "impact absorption vs. penetration resistance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/art/collection/search#!/search?q=samurai%20armor",
+        "https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Armor Construction",
+      "title": "Why lace armor plates together instead of using solid pieces?",
+      "concepts": ["flexibility vs. protection", "weight distribution", "repair and replacement", "aesthetic display"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.britishmuseum.org/collection/term/BIOG60874",
+        "https://www.tnm.jp/modules/r_free_page/index.php?id=97"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Armor Construction",
+      "title": "How did kabuto helmet designs signal rank and clan identity?",
+      "concepts": ["maedate (front crest)", "mon (family crest)", "kuwagata (horns)", "status signaling"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.metmuseum.org/art/collection/search#!/search?q=kabuto",
+        "https://www.tnm.jp/modules/r_free_page/index.php?id=97"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Armor Construction",
+      "title": "Build a virtual do-maru armor set — what order and why?",
+      "concepts": ["do (cuirass)", "kote (sleeves)", "suneate (shin guards)", "assembly sequence", "functional priority"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.metmuseum.org/art/online-features/metkids/videos/armor-unboxed-samurai",
+        "https://www.britishmuseum.org/collection/term/BIOG60874"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Armor Construction",
+      "title": "Review: Could you outfit a samurai for battle?",
+      "concepts": ["armor components", "materials and construction", "functional design"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Weapons Arsenal",
+      "title": "What weapons did samurai actually carry into battle?",
+      "concepts": ["daisho pair (katana + wakizashi)", "yari (spear)", "naginata", "yumi (bow)", "battlefield primacy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/art/collection/search#!/search?q=samurai%20weapons",
+        "https://www.britannica.com/topic/samurai"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Weapons Arsenal",
+      "title": "Why is the yumi bow asymmetric?",
+      "concepts": ["asymmetric design", "horseback archery", "bamboo and wood lamination", "kyudo tradition"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.kyudousa.org/",
+        "https://www.metmuseum.org/art/collection/search#!/search?q=yumi"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Weapons Arsenal",
+      "title": "How did firearms change the battlefield role of samurai?",
+      "concepts": ["tanegashima (matchlock)", "Sengoku period warfare", "armor adaptation", "decline of mounted archery"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.britannica.com/event/Battle-of-Nagashino",
+        "https://www.metmuseum.org/art/collection/search#!/search?q=tanegashima"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Weapons Arsenal",
+      "title": "When is a sword ceremonial versus combat-ready?",
+      "concepts": ["koshirae (mounting)", "Edo period formalization", "functional vs. display quality", "shinken vs. iaito"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.touken.or.jp/english/",
+        "https://www.nbthk.or.jp/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Weapons Arsenal",
+      "title": "Review: Match the weapon to the battlefield situation",
+      "concepts": ["weapon selection", "tactical context", "historical evolution"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Martial Culture",
+      "title": "How did bushido shape samurai identity beyond combat?",
+      "concepts": ["warrior code evolution", "Zen influence", "honor and loyalty", "Hagakure and Go Rin no Sho"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britannica.com/topic/Bushido",
+        "https://www.coursera.org/learn/asian-history"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Martial Culture",
+      "title": "What is actually transmitted in a martial ryu school?",
+      "concepts": ["kata (forms)", "koryu (classical schools)", "menkyo kaiden (license system)", "soke (headmaster lineage)"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.koryu.com/",
+        "https://en.wikipedia.org/wiki/Kory%C5%AB"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Martial Culture",
+      "title": "Why did the Edo period transform warriors into bureaucrats?",
+      "concepts": ["Tokugawa peace", "samurai as administrators", "cultural refinement", "Meiji restoration and sword ban"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.britannica.com/event/Tokugawa-shogunate",
+        "https://www.britannica.com/event/Meiji-Restoration"
+      ],
+      "status": "pending"
+    }
+  ]
+}

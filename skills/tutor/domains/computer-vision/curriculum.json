@@ -1,0 +1,421 @@
+{
+  "topic": "Computer Vision",
+  "slug": "computer-vision",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "linear algebra",
+    "calculus",
+    "Python programming",
+    "basic machine learning"
+  ],
+  "exit_criteria": [
+    "implement classical feature detectors from scratch",
+    "train and fine-tune CNNs for image classification",
+    "build object detection pipelines using modern frameworks",
+    "understand camera geometry and 3D reconstruction basics",
+    "analyze and debug vision systems in real-world applications"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Image Fundamentals",
+      "title": "How does a computer see an image?",
+      "concepts": ["pixels", "color spaces", "image arrays"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "http://szeliski.org/Book/",
+        "https://docs.opencv.org/master/d9/df8/tutorial_root.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Image Fundamentals",
+      "title": "Why do cameras distort straight lines?",
+      "concepts": ["camera models", "lens distortion", "calibration"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "http://szeliski.org/Book/",
+        "https://docs.opencv.org/master/dc/dbb/tutorial_py_calibration.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Image Fundamentals",
+      "title": "What happens when you change RGB to HSV?",
+      "concepts": ["color transformations", "HSV", "LAB color space"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://docs.opencv.org/master/df/d9d/tutorial_py_colorspaces.html",
+        "http://szeliski.org/Book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Image Fundamentals",
+      "title": "How do you measure image quality?",
+      "concepts": ["image statistics", "histograms", "quality metrics", "PSNR"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pyimagesearch.com/",
+        "http://szeliski.org/Book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Image Processing & Filtering",
+      "title": "Why does blurring an image involve multiplication?",
+      "concepts": ["convolution", "kernels", "filtering"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://cs231n.stanford.edu/",
+        "https://docs.opencv.org/master/d4/d13/tutorial_py_filtering.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Image Processing & Filtering",
+      "title": "Can you find edges without derivatives?",
+      "concepts": ["edge detection", "Sobel", "Canny", "gradients"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://docs.opencv.org/master/da/d22/tutorial_py_canny.html",
+        "http://szeliski.org/Book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Image Processing & Filtering",
+      "title": "What makes Gaussian blur special?",
+      "concepts": ["Gaussian kernel", "separable filters", "frequency domain"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "http://szeliski.org/Book/",
+        "https://pyimagesearch.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Image Processing & Filtering",
+      "title": "Can you explain how convolution, edges, and color spaces connect?",
+      "concepts": ["convolution", "edge detection", "color spaces"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://docs.opencv.org/master/d9/df8/tutorial_root.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Image Processing & Filtering",
+      "title": "How would you remove noise from a medical scan?",
+      "concepts": ["noise reduction", "bilateral filter", "non-local means"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://docs.opencv.org/master/d4/d13/tutorial_py_filtering.html",
+        "http://szeliski.org/Book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Feature Detection",
+      "title": "What makes a good corner?",
+      "concepts": ["Harris corner detector", "corner response", "eigenvalues"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://szeliski.org/Book/",
+        "https://docs.opencv.org/master/dc/d0d/tutorial_py_features_harris.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Feature Detection",
+      "title": "Why do we need rotation-invariant features?",
+      "concepts": ["SIFT", "keypoint detection", "descriptor matching"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://szeliski.org/Book/",
+        "https://docs.opencv.org/master/da/df5/tutorial_py_sift_intro.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Feature Detection",
+      "title": "Can you match images from different viewpoints?",
+      "concepts": ["feature matching", "RANSAC", "homography"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://docs.opencv.org/master/d1/de0/tutorial_py_feature_homography.html",
+        "http://szeliski.org/Book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Feature Detection",
+      "title": "How would you build an image matching system from scratch?",
+      "concepts": ["corners", "descriptors", "matching"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://docs.opencv.org/master/d9/df8/tutorial_root.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Deep Learning Foundations",
+      "title": "Why do CNNs work better than manual features?",
+      "concepts": ["convolutional neural networks", "learned features", "receptive fields"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://cs231n.stanford.edu/",
+        "https://paperswithcode.com/area/computer-vision"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Deep Learning Foundations",
+      "title": "What does each layer of a CNN learn?",
+      "concepts": ["feature hierarchy", "activation visualization", "layer analysis"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "http://cs231n.stanford.edu/",
+        "https://distill.pub/2017/feature-visualization/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Deep Learning Foundations",
+      "title": "How do you train on millions of images without overfitting?",
+      "concepts": ["data augmentation", "dropout", "batch normalization", "regularization"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://cs231n.stanford.edu/",
+        "https://pyimagesearch.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Deep Learning Foundations",
+      "title": "Can you use ImageNet to classify medical images?",
+      "concepts": ["transfer learning", "fine-tuning", "domain adaptation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "http://cs231n.stanford.edu/",
+        "https://paperswithcode.com/task/transfer-learning"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Deep Learning Foundations",
+      "title": "What are the key decisions when designing a CNN?",
+      "concepts": ["convolution", "pooling", "training", "transfer learning"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://cs231n.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Object Detection & Recognition",
+      "title": "How do you find objects at different scales?",
+      "concepts": ["image pyramids", "sliding windows", "scale invariance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://szeliski.org/Book/",
+        "https://pyimagesearch.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Object Detection & Recognition",
+      "title": "Why is object detection harder than classification?",
+      "concepts": ["localization", "bounding boxes", "IoU", "region proposals"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://cs231n.stanford.edu/",
+        "https://paperswithcode.com/task/object-detection"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Object Detection & Recognition",
+      "title": "What's the difference between R-CNN, Fast R-CNN, and Faster R-CNN?",
+      "concepts": ["region-based detection", "RPN", "detector evolution"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://paperswithcode.com/method/faster-r-cnn",
+        "http://cs231n.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Object Detection & Recognition",
+      "title": "How does YOLO detect objects in real-time?",
+      "concepts": ["single-shot detection", "YOLO", "speed-accuracy tradeoffs"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://paperswithcode.com/method/yolo",
+        "https://pyimagesearch.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Object Detection & Recognition",
+      "title": "What tradeoffs guide your choice of object detector?",
+      "concepts": ["region proposals", "single-shot detectors", "evaluation metrics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://paperswithcode.com/task/object-detection"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Segmentation",
+      "title": "Why predict a class for every pixel?",
+      "concepts": ["semantic segmentation", "FCN", "U-Net", "pixel-wise classification"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://cs231n.stanford.edu/",
+        "https://paperswithcode.com/task/semantic-segmentation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Segmentation",
+      "title": "How do you separate overlapping objects?",
+      "concepts": ["instance segmentation", "Mask R-CNN", "panoptic segmentation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://paperswithcode.com/method/mask-r-cnn",
+        "http://cs231n.stanford.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "3D Vision",
+      "title": "How do two cameras create depth?",
+      "concepts": ["stereo vision", "disparity", "triangulation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://szeliski.org/Book/",
+        "https://docs.opencv.org/master/dd/d53/tutorial_py_depthmap.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "3D Vision",
+      "title": "Can you reconstruct 3D from many photos?",
+      "concepts": ["structure from motion", "bundle adjustment", "point clouds"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://szeliski.org/Book/",
+        "https://paperswithcode.com/task/3d-reconstruction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "3D Vision",
+      "title": "How does autonomous driving estimate distance?",
+      "concepts": ["depth estimation", "monocular depth", "sensor fusion"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://paperswithcode.com/task/monocular-depth-estimation",
+        "https://pyimagesearch.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "3D Vision",
+      "title": "What can you build when you understand depth and geometry?",
+      "concepts": ["stereo", "depth", "reconstruction"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://szeliski.org/Book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Integration & Applications",
+      "title": "How would you build a complete vision system?",
+      "concepts": ["pipeline design", "system integration", "debugging strategies", "performance optimization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://pyimagesearch.com/",
+        "http://cs231n.stanford.edu/",
+        "https://paperswithcode.com/area/computer-vision"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Integration & Applications",
+      "title": "What Computer Vision challenges excite you most?",
+      "concepts": ["emerging techniques", "research frontiers", "vision transformers", "self-supervised learning", "neural rendering"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://paperswithcode.com/area/computer-vision",
+        "https://distill.pub/",
+        "http://cs231n.stanford.edu/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

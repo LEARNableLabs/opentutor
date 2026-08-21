@@ -1,0 +1,342 @@
+{
+  "topic": "Evolutionary Biology and Phylogenetics",
+  "slug": "evolutionary-biology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "Basic genetics (genes, alleles, inheritance)",
+    "Population statistics (mean, variance, probability)",
+    "Tree structures and graph interpretation",
+    "Comfort with quantitative reasoning"
+  ],
+  "exit_criteria": [
+    "Read and interpret phylogenetic trees accurately",
+    "Explain the five major mechanisms of evolution with examples",
+    "Construct simple phylogenies using parsimony and distance methods",
+    "Evaluate when to use different phylogenetic inference methods",
+    "Apply molecular clock concepts to real-world datasets",
+    "Critique evolutionary hypotheses using phylogenetic evidence"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do some traits spread while others vanish?",
+      "concepts": ["natural selection", "fitness", "adaptation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["Khan Academy: Natural Selection", "Futuyma Ch. 11"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Can evolution happen without natural selection?",
+      "concepts": ["genetic drift", "gene flow", "mutation", "mechanisms of evolution"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["Futuyma Ch. 9", "MIT OCW Evolution lecture"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What happens when allele frequencies stop changing?",
+      "concepts": ["Hardy-Weinberg equilibrium", "population genetics", "allele frequency"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["Khan Academy: Hardy-Weinberg", "Georgia Tech lecture notes"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How do we measure whether a trait is actually helping survival?",
+      "concepts": ["fitness", "selection coefficient", "quantitative genetics"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["Futuyma Ch. 12", "Yale EEB 122 Lecture 7"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Why aren't organisms perfectly adapted to their environments?",
+      "concepts": ["evolutionary constraints", "trade-offs", "fitness landscapes"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["Futuyma Ch. 13", "Scientific American article on constraints"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "What have we learned about how evolution works?",
+      "concepts": ["natural selection", "genetic drift", "Hardy-Weinberg", "fitness"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["Review worksheet", "Khan Academy practice problems"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Speciation",
+      "title": "When do populations become separate species?",
+      "concepts": ["speciation", "reproductive isolation", "species concepts"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["Futuyma Ch. 17", "Yale EEB 122 Lecture 9"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Speciation",
+      "title": "Can new species arise without geographic separation?",
+      "concepts": ["allopatric speciation", "sympatric speciation", "parapatric speciation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Emory BIOL 241 lecture", "Nature article on cichlid speciation"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Speciation",
+      "title": "Design an experiment to test whether two populations are separate species",
+      "concepts": ["reproductive isolation", "species concepts", "experimental design"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["Scientific literature examples", "Futuyma Ch. 17"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Molecular Evolution",
+      "title": "Do all mutations matter for evolution?",
+      "concepts": ["neutral theory", "molecular evolution", "synonymous vs nonsynonymous mutations"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["Bromham Ch. 3", "Futuyma Ch. 10"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Molecular Evolution",
+      "title": "How do genomes record evolutionary history?",
+      "concepts": ["molecular evolution", "sequence divergence", "homology"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["Bromham Ch. 1", "MIT OCW Lecture 18"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Molecular Evolution",
+      "title": "Can we test how evolution actually works at the molecular level?",
+      "concepts": ["speciation", "neutral theory", "molecular evolution"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["Cumulative review problems", "Practice dataset"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Phylogenetic Trees",
+      "title": "How do we read evolutionary relationships from a tree?",
+      "concepts": ["phylogenetic trees", "nodes", "branches", "clades", "common ancestors"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["Khan Academy: Understanding phylogenetic trees", "iTOL examples"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Phylogenetic Trees",
+      "title": "Which species are more closely related: humans and chimps, or chimps and gorillas?",
+      "concepts": ["phylogenetic trees", "sister groups", "most recent common ancestor"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["Khan Academy practice", "Tree thinking exercises"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Phylogenetic Trees",
+      "title": "Why do different traits sometimes suggest different evolutionary trees?",
+      "concepts": ["homology", "homoplasy", "convergent evolution", "character evolution"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Futuyma Ch. 2", "Examples from vertebrate evolution"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Phylogenetic Trees",
+      "title": "Teach me how to spot common tree-reading mistakes",
+      "concepts": ["phylogenetic trees", "tree thinking", "common misconceptions"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["Tree thinking paper", "Interactive exercises"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Phylogenetic Methods",
+      "title": "How do we build a tree from scratch using traits?",
+      "concepts": ["parsimony", "character-based methods", "phylogenetic inference"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["University of Illinois IB 467 notes", "Bromham Ch. 5"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Phylogenetic Methods",
+      "title": "What's the simplest evolutionary explanation for these character states?",
+      "concepts": ["parsimony", "character evolution", "tree length"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["Practice dataset", "MEGA software tutorial"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Phylogenetic Methods",
+      "title": "Can we build trees from genetic distances instead of trait-by-trait comparison?",
+      "concepts": ["distance-based methods", "neighbor-joining", "UPGMA", "genetic distance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["Bromham Ch. 6", "MEGA distance methods tutorial"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Phylogenetic Methods",
+      "title": "How confident should we be in this phylogenetic tree?",
+      "concepts": ["bootstrap", "statistical support", "phylogenetic uncertainty"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["MIT OCW Lecture 18", "RAxML bootstrap guide"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Phylogenetic Methods",
+      "title": "What methods work best for building evolutionary trees?",
+      "concepts": ["parsimony", "distance methods", "phylogenetic inference"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["Method comparison chart", "Practice problems"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Statistical Phylogenetics",
+      "title": "How do we find the tree that best explains our DNA data?",
+      "concepts": ["maximum likelihood", "substitution models", "statistical phylogenetics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["Bromham Ch. 7", "IQ-TREE documentation", "MIT CompBio Lecture 19"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Statistical Phylogenetics",
+      "title": "Why do we need different models for how DNA sequences evolve?",
+      "concepts": ["substitution models", "JC69", "GTR", "rate heterogeneity"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["Bromham Ch. 4", "Model selection guide"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Statistical Phylogenetics",
+      "title": "Can we estimate the probability distribution over all possible trees?",
+      "concepts": ["Bayesian inference", "MCMC", "posterior probability", "priors"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": ["BEAST tutorial", "BEAUti guide", "Bayesian phylogenetics primer"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Statistical Phylogenetics",
+      "title": "Track the spread of a viral outbreak using phylogenetics",
+      "concepts": ["Bayesian inference", "maximum likelihood", "substitution models", "real-world application"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["BEAST viral tutorial", "Nextstrain examples", "Genomics Aotearoa module"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Molecular Clocks",
+      "title": "Can DNA act like a clock to date evolutionary events?",
+      "concepts": ["molecular clock", "substitution rate", "calibration"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["Bromham Ch. 8", "BEAST molecular clock tutorial"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Molecular Clocks",
+      "title": "Why don't all genes evolve at the same rate?",
+      "concepts": ["molecular clock", "rate variation", "relaxed clock models"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["BEAST relaxed clock tutorial", "Bromham Ch. 8"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Molecular Clocks",
+      "title": "When did the common ancestor of humans and chimps live?",
+      "concepts": ["molecular clock", "calibration", "fossil calibration", "time-calibrated trees"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["BEAST dating tutorial", "Primate phylogeny literature"],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Applications",
+      "title": "How can phylogenetics help save endangered species?",
+      "concepts": ["conservation genetics", "biodiversity", "phylogenetic diversity"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["Conservation biology case studies", "Phylogenetic diversity metrics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Applications",
+      "title": "What can phylogenetics tell us about COVID-19 transmission patterns?",
+      "concepts": ["epidemiology", "viral evolution", "phylogenetic inference", "molecular clocks"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["Nextstrain COVID-19 tracker", "Viral phylodynamics papers"],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Applications",
+      "title": "Evaluate a published phylogenetic study in your field of interest",
+      "concepts": ["phylogenetic inference", "method evaluation", "scientific critique"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["Recent phylogenetics papers", "Critical reading guide"],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Synthesis",
+      "title": "How does phylogenetics connect to everything we've learned about evolution?",
+      "concepts": ["evolution", "phylogenetics", "synthesis", "applications"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["Comprehensive review materials", "Final synthesis questions"],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "topic": "Architecture — space, form, and meaning",
+  "slug": "architecture",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic design principles",
+    "visual literacy (reading drawings and diagrams)",
+    "art history fundamentals"
+  ],
+  "exit_criteria": [
+    "analyze buildings for spatial strategies and formal composition",
+    "understand how architecture creates meaning through form and experience",
+    "read architectural drawings (plans, sections, elevations)",
+    "connect theoretical concepts to built examples across history",
+    "articulate how space, form, and meaning interact in specific buildings"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamentals of Space",
+      "title": "What makes a space feel enclosed?",
+      "concepts": ["enclosure", "spatial definition", "boundaries"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/4-401-environmental-design-fall-2017/",
+        "https://www.khanacademy.org/humanities/art-history"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamentals of Space",
+      "title": "How does light shape what we see and feel?",
+      "concepts": ["natural light", "shadow", "temporal qualities"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.archdaily.com/tag/light",
+        "https://www.youtube.com/c/TheB1M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamentals of Space",
+      "title": "Why do some doorways feel monumental and others invisible?",
+      "concepts": ["threshold", "transition", "spatial hierarchy"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.archdaily.com/tag/threshold",
+        "https://architecture.mit.edu/lecture-series"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamentals of Space",
+      "title": "How does movement reveal architecture?",
+      "concepts": ["procession", "sequence", "time-based experience"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/30by40DesignWorkshop",
+        "https://vimeo.com/channels/architecture"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fundamentals of Space",
+      "title": "Can you map your journey through a building you know?",
+      "concepts": ["spatial sequence", "diagram", "analysis"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://archfoundation.org.uk/learn/",
+        "https://www.archdaily.com/tag/diagram"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Fundamentals of Space",
+      "title": "Review: Analyzing spatial experience",
+      "concepts": ["spatial analysis", "review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/4-401-environmental-design-fall-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Form and Geometry",
+      "title": "What organizing systems bring order to buildings?",
+      "concepts": ["axis", "grid", "symmetry", "geometric order"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.archdaily.com/tag/geometry",
+        "https://www.khanacademy.org/humanities/art-history/ancient-art-civilizations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Form and Geometry",
+      "title": "How do architects compose three-dimensional forms?",
+      "concepts": ["massing", "composition", "solid and void"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.archdaily.com/tag/massing",
+        "https://architecture.yale.edu/news"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Form and Geometry",
+      "title": "Why does scale change everything?",
+      "concepts": ["scale", "proportion", "human measure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/TheB1M",
+        "https://www.archdaily.com/tag/scale"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Form and Geometry",
+      "title": "What can typology teach us?",
+      "concepts": ["typology", "architectural type", "formal patterns"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.archdaily.com/tag/typology",
+        "https://ocw.mit.edu/courses/4-663-architecture-studios-building-in-landscapes-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Form and Geometry",
+      "title": "How does structure become expression?",
+      "concepts": ["structure", "tectonics", "expression"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.archdaily.com/tag/structure",
+        "https://www.youtube.com/c/30by40DesignWorkshop"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Form and Geometry",
+      "title": "Can you explain a building's formal strategy?",
+      "concepts": ["formal analysis", "diagram", "synthesis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.archdaily.com/tag/analysis",
+        "https://archfoundation.org.uk/learn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Form and Geometry",
+      "title": "Review: Reading form and order",
+      "concepts": ["formal systems", "review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.archdaily.com/tag/diagram"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Meaning and Culture",
+      "title": "How does architecture carry cultural meaning?",
+      "concepts": ["cultural context", "symbolism", "social expression"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/humanities/art-history",
+        "https://www.archdaily.com/tag/culture"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Meaning and Culture",
+      "title": "What makes a place meaningful?",
+      "concepts": ["place", "genius loci", "context"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.archdaily.com/tag/place",
+        "https://architecture.mit.edu/lecture-series"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Meaning and Culture",
+      "title": "Can buildings function as sign systems?",
+      "concepts": ["semiotics", "sign", "meaning-making"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/4-205-analysis-of-contemporary-architecture-fall-2009/",
+        "https://www.archdaily.com/tag/theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Meaning and Culture",
+      "title": "How do sacred spaces create meaning differently?",
+      "concepts": ["sacred architecture", "ritual", "symbolism"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/humanities/art-history/ancient-art-civilizations",
+        "https://www.archdaily.com/tag/religious-architecture"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Meaning and Culture",
+      "title": "What role does memory play in architectural experience?",
+      "concepts": ["memory", "narrative", "collective identity"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.archdaily.com/tag/memorial",
+        "https://vimeo.com/channels/architecture"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Meaning and Culture",
+      "title": "Can vernacular traditions inform contemporary design?",
+      "concepts": ["vernacular", "tradition", "local knowledge"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.archdaily.com/tag/vernacular-architecture",
+        "https://www.youtube.com/c/TheB1M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Meaning and Culture",
+      "title": "Review: Decoding architectural meaning",
+      "concepts": ["meaning systems", "review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/humanities/art-history"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Materials and Experience",
+      "title": "How do materials communicate?",
+      "concepts": ["materiality", "texture", "sensory experience"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.archdaily.com/tag/materials",
+        "https://www.youtube.com/c/30by40DesignWorkshop"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Materials and Experience",
+      "title": "What is phenomenology in architecture?",
+      "concepts": ["phenomenology", "embodied experience", "perception"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/4-205-analysis-of-contemporary-architecture-fall-2009/",
+        "https://archfoundation.org.uk/learn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Materials and Experience",
+      "title": "How do atmosphere and mood emerge from design?",
+      "concepts": ["atmosphere", "mood", "quality of space"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.archdaily.com/tag/atmosphere",
+        "https://vimeo.com/channels/architecture"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Materials and Experience",
+      "title": "Can you describe the experiential qualities of a space you know?",
+      "concepts": ["experiential analysis", "synthesis", "articulation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.archdaily.com/tag/experience",
+        "https://architecture.yale.edu/news"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Materials and Experience",
+      "title": "Review: Synthesis — space, form, and meaning together",
+      "concepts": ["integrated analysis", "synthesis", "review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.archdaily.com/",
+        "https://ocw.mit.edu/courses/4-401-environmental-design-fall-2017/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

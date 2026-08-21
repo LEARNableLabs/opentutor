@@ -1,0 +1,371 @@
+{
+  "topic": "Chocolate — from cacao genetics to tempering physics",
+  "slug": "chocolate",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (organic molecules, functional groups)",
+    "basic biology (genetics, microbiology)",
+    "basic physics (thermodynamics, phase transitions)",
+    "scientific method and experimental design"
+  ],
+  "exit_criteria": [
+    "student can explain the genetic basis of cacao flavor diversity",
+    "student can describe the biochemical cascade from bean to bar",
+    "student can predict fermentation outcomes based on microbial activity",
+    "student can explain polymorphism in cocoa butter and its impact on texture",
+    "student can execute proper tempering technique and diagnose failures",
+    "student can conduct systematic chocolate tasting and quality assessment",
+    "student can connect molecular structure to sensory properties"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Cacao Origins",
+      "title": "Why does chocolate grow only near the equator?",
+      "concepts": ["Theobroma cacao", "tropical cultivation", "geographic constraints"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.worldcocoafoundation.org/about-cocoa/",
+        "https://ucce.ucdavis.edu/newsletters/Coffee_Grapevine30832.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Cacao Origins",
+      "title": "What makes Criollo beans worth 10x more than Forastero?",
+      "concepts": ["genetic varieties", "Criollo vs Forastero", "flavor genetics"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6356213/",
+        "https://www.finecacao.org/cacao-varieties"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Cacao Origins",
+      "title": "How does terroir encode itself in a cacao genome?",
+      "concepts": ["gene expression", "environmental factors", "phenotype plasticity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0216071",
+        "https://www.nature.com/articles/s41467-018-05013-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Cacao Origins",
+      "title": "Why are cacao trees so vulnerable to disease?",
+      "concepts": ["genetic diversity", "disease resistance", "monoculture risks"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S0959652619309837",
+        "https://www.youtube.com/watch?v=70FyDAQxPZg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fermentation",
+      "title": "What happens when you pile wet cacao beans under banana leaves?",
+      "concepts": ["fermentation overview", "microbial succession", "anaerobic conditions"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5445975/",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0963996915301472"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Fermentation",
+      "title": "How do yeasts and bacteria collaborate to transform flavor?",
+      "concepts": ["yeast metabolism", "bacterial succession", "acetic acid production"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://aem.asm.org/content/76/7/2357",
+        "https://www.youtube.com/watch?v=3kfSg7MgYZQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Fermentation",
+      "title": "Why does the bean die during fermentation?",
+      "concepts": ["seed death", "enzyme activation", "flavor precursors"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S0308814616309670",
+        "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2621.2003.tb05796.x"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Fermentation",
+      "title": "Can you predict chocolate flavor from fermentation temperature curves?",
+      "concepts": ["temperature monitoring", "phenolic compounds", "predictive models"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mdpi.com/2304-8158/8/10/467",
+        "https://www.sciencedirect.com/science/article/pii/S0023643815302411"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Fermentation",
+      "title": "Can you trace a chocolate's journey from genetics to fermentation?",
+      "concepts": ["genetics to fermentation", "microbial processes", "quality markers"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=mLAkDKNaWiA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Roasting & Chemistry",
+      "title": "Why does chocolate smell like chocolate only after roasting?",
+      "concepts": ["Maillard reaction", "pyrazine formation", "volatile compounds"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubs.acs.org/doi/abs/10.1021/jf0114709",
+        "https://www.youtube.com/watch?v=8cQQwZLrOWM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Roasting & Chemistry",
+      "title": "How do 600+ flavor compounds emerge from 30 precursors?",
+      "concepts": ["chemical cascades", "thermal decomposition", "flavor complexity"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S0308814608001878",
+        "https://link.springer.com/article/10.1007/s00217-012-1784-0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Roasting & Chemistry",
+      "title": "What's the optimal roast profile for fruity vs nutty chocolate?",
+      "concepts": ["roasting curves", "flavor development", "time-temperature profiles"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.seriouseats.com/the-science-of-roasting-cocoa-beans",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0308814617313948"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Roasting & Chemistry",
+      "title": "Why does roasting kill bitterness but conching reduces it?",
+      "concepts": ["polyphenol changes", "volatile removal", "conching mechanism"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6429260/",
+        "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1750-3841.2008.00823.x"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Processing",
+      "title": "How small do you need to grind particles for smooth chocolate?",
+      "concepts": ["particle size", "texture perception", "micron targets"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S0260877408004391",
+        "https://www.youtube.com/watch?v=Dy8aSHgFD2M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Processing",
+      "title": "What actually happens during 72 hours of conching?",
+      "concepts": ["conching chemistry", "moisture removal", "flavor evolution"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S0924224410002207",
+        "https://link.springer.com/article/10.1007/s00217-003-0720-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Processing",
+      "title": "What chemical story does a roasted bean tell?",
+      "concepts": ["flavor development", "chemical reactions", "processing effects"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=dC2LBH8iMVw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Crystallization Physics",
+      "title": "Why does cocoa butter have six different crystal forms?",
+      "concepts": ["polymorphism", "crystal structure", "thermodynamics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/abs/10.1021/cg060354t",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0308814614019207"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Crystallization Physics",
+      "title": "What makes Form V crystals so special?",
+      "concepts": ["crystal stability", "melting points", "Form V properties"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S0963996913003943",
+        "https://www.youtube.com/watch?v=093Gq8kbBq8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Crystallization Physics",
+      "title": "How does seeding control nucleation?",
+      "concepts": ["nucleation", "seed crystals", "crystallization kinetics"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://onlinelibrary.wiley.com/doi/abs/10.1002/ejlt.200800226",
+        "https://link.springer.com/article/10.1007/s00217-012-1691-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Tempering",
+      "title": "Why does chocolate bloom when tempering fails?",
+      "concepts": ["fat bloom", "crystal migration", "visual defects"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S0260877410003973",
+        "https://www.youtube.com/watch?v=RlW4FxnJIIU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Tempering",
+      "title": "What's happening at each temperature stage in tempering?",
+      "concepts": ["tempering curve", "nucleation control", "temperature precision"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S0308814615018082",
+        "https://www.chefsteps.com/activities/tempering-chocolate"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Tempering",
+      "title": "Can you temper chocolate with a sous vide?",
+      "concepts": ["precision temperature control", "alternative methods", "equipment"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.seriouseats.com/how-to-temper-chocolate",
+        "https://www.youtube.com/watch?v=XwX8TifJaF4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Tempering",
+      "title": "Could you diagnose a tempering failure from crystal analysis?",
+      "concepts": ["crystal forms", "tempering technique", "troubleshooting"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=AHrqP8JFb9w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Sensory Science",
+      "title": "Why does chocolate melt at body temperature?",
+      "concepts": ["melting point design", "mouthfeel", "thermal properties"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S0963996909002129",
+        "https://www.youtube.com/watch?v=v8f7c_OIZAs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Sensory Science",
+      "title": "How do professional tasters dissect chocolate flavor?",
+      "concepts": ["tasting methodology", "flavor wheels", "quality assessment"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.finecacao.org/cacao-of-excellence-flavour-map",
+        "https://www.youtube.com/watch?v=90OwRxp0rGw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Sensory Science",
+      "title": "Can you reverse-engineer a chocolate's origin from taste alone?",
+      "concepts": ["flavor profiling", "origin markers", "integrated knowledge"],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7353467/",
+        "https://onlinelibrary.wiley.com/doi/abs/10.1111/joss.12312"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration",
+      "title": "What does a single bite reveal about the entire bean-to-bar chain?",
+      "concepts": ["genetics", "fermentation", "roasting", "crystallization", "sensory"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=elAeRteSsXA",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0260877416302065"
+      ],
+      "status": "pending"
+    }
+  ]
+}

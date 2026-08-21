@@ -1,0 +1,356 @@
+{
+  "topic": "Philosophy of Science",
+  "slug": "philosophy-of-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic logic",
+    "critical thinking",
+    "familiarity with scientific concepts"
+  ],
+  "exit_criteria": [
+    "distinguish scientific from non-scientific claims",
+    "explain the problem of induction and major responses",
+    "compare falsificationism, verificationism, and Kuhnian paradigms",
+    "analyze case studies using different philosophy of science frameworks",
+    "evaluate the role of evidence in theory confirmation",
+    "articulate the realism vs. instrumentalism debate"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "What Is Science?",
+      "title": "What makes something 'scientific'?",
+      "concepts": ["demarcation problem", "pseudoscience", "scientific method"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/pseudo-science/",
+        "https://www.youtube.com/watch?v=pJdVT-Usls0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "What Is Science?",
+      "title": "Why can't astrology be tested the same way physics is?",
+      "concepts": ["testability", "falsifiability preview", "empirical content"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://ocw.mit.edu/courses/24-00-problems-in-philosophy-fall-2019/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "What Is Science?",
+      "title": "How do observations become theories?",
+      "concepts": ["observation", "theory formation", "induction"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-method/",
+        "https://www.youtube.com/watch?v=n4WN2X3-pck"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "What Is Science?",
+      "title": "Can you observe without a theory?",
+      "concepts": ["theory-ladenness", "observation vs interpretation", "paradigms preview"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/science-theory-observation/",
+        "https://ocw.mit.edu/courses/24-01-classics-of-western-philosophy-spring-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "What Is Science?",
+      "title": "What happens when two theories fit the same data?",
+      "concepts": ["underdetermination", "theory choice", "auxiliary hypotheses"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-underdetermination/",
+        "https://www.youtube.com/watch?v=WZgkd4u8K8c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "The Problem of Induction",
+      "title": "Why can't past patterns guarantee future ones?",
+      "concepts": ["Hume's problem", "inductive reasoning", "uniformity of nature"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/induction-problem/",
+        "https://www.youtube.com/watch?v=_bQFS9VYpdw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "The Problem of Induction",
+      "title": "How do scientists justify induction if Hume is right?",
+      "concepts": ["pragmatic justification", "inference to best explanation", "naturalized epistemology"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemology-naturalized/",
+        "https://ocw.mit.edu/courses/24-118-paradox-and-infinity-fall-2019/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Problem of Induction",
+      "title": "Does probability solve the induction problem?",
+      "concepts": ["probabilistic induction", "Bayesian reasoning", "confirmation theory"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/confirmation/",
+        "https://www.youtube.com/watch?v=HZGCoVF3YvM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Review: Foundations",
+      "title": "Review: What have we learned about science so far?",
+      "concepts": ["demarcation review", "observation review", "induction review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-method/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Logical Positivism",
+      "title": "What did the Vienna Circle want to do to philosophy?",
+      "concepts": ["logical positivism", "verificationism", "meaningfulness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/logical-empiricism/",
+        "https://www.youtube.com/watch?v=nA6LOT2cPTU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Logical Positivism",
+      "title": "Is 'God exists' meaningless or just false?",
+      "concepts": ["verification principle", "cognitive meaning", "analytic vs synthetic"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/analytic-synthetic/",
+        "https://ocw.mit.edu/courses/24-09-minds-and-machines-fall-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Logical Positivism",
+      "title": "Why did logical positivism collapse?",
+      "concepts": ["self-refutation", "Quine's critique", "holism"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/quine/",
+        "https://www.youtube.com/watch?v=NKEhdsnKKHs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Popper & Falsificationism",
+      "title": "What if science advances by proving theories wrong?",
+      "concepts": ["falsificationism", "asymmetry of verification", "bold conjectures"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/popper/",
+        "https://www.youtube.com/watch?v=wf-sGqBsWv4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Popper & Falsificationism",
+      "title": "How do scientists respond when experiments fail?",
+      "concepts": ["auxiliary hypotheses", "ad hoc modifications", "Duhem-Quine thesis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-progress/",
+        "https://ocw.mit.edu/courses/24-00-problems-in-philosophy-fall-2019/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Popper & Falsificationism",
+      "title": "Was Einstein's theory really more falsifiable than Newton's?",
+      "concepts": ["degrees of falsifiability", "corroboration", "scientific progress"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/physics-Rpcc/",
+        "https://www.youtube.com/watch?v=7ImvlS8PLIo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Review: Classical Philosophy of Science",
+      "title": "Review: How do verification and falsification differ?",
+      "concepts": ["positivism review", "Popper review", "comparison"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/popper/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Kuhn & Scientific Revolutions",
+      "title": "Do scientists live in different worlds?",
+      "concepts": ["paradigms", "normal science", "incommensurability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/thomas-kuhn/",
+        "https://www.youtube.com/watch?v=O7omWW9S6Qo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Kuhn & Scientific Revolutions",
+      "title": "Why don't anomalies immediately overthrow theories?",
+      "concepts": ["crisis", "revolutionary science", "gestalt shifts"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-revolutions/",
+        "https://ocw.mit.edu/courses/sts-003-the-rise-of-modern-science-fall-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Kuhn & Scientific Revolutions",
+      "title": "Is science progressing or just changing?",
+      "concepts": ["relativism", "rationality", "progress in science"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-progress/",
+        "https://www.youtube.com/watch?v=m_-q2JWjRHI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Confirmation & Evidence",
+      "title": "What counts as evidence for a theory?",
+      "concepts": ["confirmation", "Hempel's ravens", "paradoxes of confirmation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/confirmation/",
+        "https://www.youtube.com/watch?v=w-T-Y4gqDDg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Confirmation & Evidence",
+      "title": "How should we update beliefs with new data?",
+      "concepts": ["Bayesian epistemology", "prior probabilities", "likelihood ratios"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemology-bayesian/",
+        "https://www.youtube.com/watch?v=HZGCoVF3YvM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Confirmation & Evidence",
+      "title": "Can a single experiment prove a theory?",
+      "concepts": ["crucial experiments", "holism", "underdetermination revisited"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-underdetermination/",
+        "https://ocw.mit.edu/courses/24-09-minds-and-machines-fall-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Review: Evidence & Change",
+      "title": "Review: How does science test and change theories?",
+      "concepts": ["Kuhn review", "confirmation review", "synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-method/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Explanation & Laws",
+      "title": "What makes a good scientific explanation?",
+      "concepts": ["covering law model", "deductive-nomological", "explanation types"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-explanation/",
+        "https://www.youtube.com/watch?v=jV1n0A1WaWs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Explanation & Laws",
+      "title": "Are scientific laws discovered or invented?",
+      "concepts": ["laws of nature", "necessity", "realism vs instrumentalism"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/laws-of-nature/",
+        "https://plato.stanford.edu/entries/scientific-realism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Synthesis",
+      "title": "How do all these views of science fit together?",
+      "concepts": ["philosophical integration", "case study analysis", "ongoing debates"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/scientific-method/",
+        "https://ocw.mit.edu/courses/24-00-problems-in-philosophy-fall-2019/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

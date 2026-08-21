@@ -1,0 +1,383 @@
+{
+  "topic": "Music cognition — why music moves us",
+  "slug": "music-cognition",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic music theory (scales, chords, rhythm)",
+    "introductory psychology (memory, emotion, perception)",
+    "basic neuroscience (brain regions, neurons)"
+  ],
+  "exit_criteria": [
+    "explain multiple theories of why music evokes emotion",
+    "identify neural systems involved in music processing",
+    "analyze how expectation and prediction drive musical experience",
+    "evaluate evolutionary and social functions of music",
+    "connect music cognition research to real-world phenomena (chills, earworms, preferences)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Music Perception",
+      "title": "How does your brain turn vibrations into melodies?",
+      "concepts": ["auditory system", "pitch perception", "frequency encoding"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor/sound-and-hearing/v/sound-properties-amplitude-period-frequency-wavelength",
+        "https://musiccognition.org/basics/pitch-perception"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Music Perception",
+      "title": "Why can you tap your foot to the beat but not to speech?",
+      "concepts": ["rhythm perception", "temporal processing", "beat induction"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=XJk8ijAUCiI",
+        "https://musiccognition.org/basics/rhythm-and-meter"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Music Perception",
+      "title": "What makes a violin sound different from a trumpet?",
+      "concepts": ["timbre", "harmonic spectrum", "sound envelope"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.animations.physics.unsw.edu.au/jw/sound-timbre.htm",
+        "https://musiclab.chromeexperiments.com/Spectrogram"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Music Perception",
+      "title": "How do you hear separate instruments in an orchestra?",
+      "concepts": ["auditory scene analysis", "grouping principles", "streaming"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.mcgill.ca/spl/research/auditory-scene-analysis",
+        "https://musiccognition.org/research/auditory-streaming"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Music Perception",
+      "title": "Why does the same melody sound different at different speeds?",
+      "concepts": ["gestalt principles", "perceptual constancy", "context effects"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=NvgtzYCSpRk",
+        "https://musiccognition.org/basics/musical-gestalt"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Emotion and Expectation",
+      "title": "What actually happens when music gives you chills?",
+      "concepts": ["frisson", "aesthetic chills", "autonomic responses"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3541678/",
+        "https://www.scientificamerican.com/article/why-does-music-give-us-chills/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Emotion and Expectation",
+      "title": "How does your brain predict what note comes next?",
+      "concepts": ["expectation", "statistical learning", "musical syntax"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://music-cognition.com/expectation-and-prediction/",
+        "https://www.mitpressjournals.org/doi/abs/10.1162/jocn.2009.21085"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Emotion and Expectation",
+      "title": "How does perception shape emotional experience?",
+      "concepts": ["pitch", "rhythm", "timbre", "expectation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://musiccognition.org/quiz/perception-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Emotion and Expectation",
+      "title": "Why does violated expectation sometimes feel good?",
+      "concepts": ["prediction error", "surprise", "tension-resolution", "ITPRA theory"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cognitrn.psych.indiana.edu/rgoldsto/courses/concepts/huron.pdf",
+        "https://www.musiccognition.org/huron-itpra-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Emotion and Expectation",
+      "title": "Are emotional responses to music universal or cultural?",
+      "concepts": ["cross-cultural music perception", "enculturation", "musical universals"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41586-019-0962-3",
+        "https://musiclab.citizenscience.ch/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Emotion and Expectation",
+      "title": "Can instrumental music convey specific meanings?",
+      "concepts": ["musical semantics", "embodied cognition", "emotional contagion"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=_kZsOISarzg",
+        "https://musiccognition.org/research/meaning-in-music"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Memory and Learning",
+      "title": "Why can't you get that song out of your head?",
+      "concepts": ["earworms", "involuntary musical imagery", "memory loops"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3543404/",
+        "https://musicpsychology.co.uk/earworms/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Memory and Learning",
+      "title": "How do you recognize a song after hearing just one note?",
+      "concepts": ["musical memory", "episodic memory", "semantic memory", "recognition"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.psych.mcgill.ca/levitin.html",
+        "https://musiccognition.org/memory/recognition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Memory and Learning",
+      "title": "Does listening to music help you study?",
+      "concepts": ["Mozart effect", "background music", "cognitive load", "research methods"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/365611a0",
+        "https://journals.sagepub.com/doi/10.1177/1747021819893124",
+        "https://musiccognition.org/research/music-and-cognition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Memory and Learning",
+      "title": "How do expectation and memory work together?",
+      "concepts": ["prediction", "violation", "earworms", "recognition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://musiccognition.org/quiz/emotion-memory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Social and Evolutionary Dimensions",
+      "title": "Why do humans make music at all?",
+      "concepts": ["evolutionary theories", "sexual selection", "social bonding"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.01090/full",
+        "https://musiccognition.org/evolution/theories"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Social and Evolutionary Dimensions",
+      "title": "How does singing together make groups stronger?",
+      "concepts": ["synchrony", "entrainment", "group cohesion", "oxytocin"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4531613/",
+        "https://musiccognition.org/social/synchrony"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Social and Evolutionary Dimensions",
+      "title": "Is there a mother-infant connection through music?",
+      "concepts": ["infant-directed singing", "motherese", "developmental origins"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=NvYPZlDRMME",
+        "https://musiccognition.org/development/infant-music"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Social and Evolutionary Dimensions",
+      "title": "Why do different cultures share musical features?",
+      "concepts": ["musical universals", "statistical universals", "cultural evolution"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.aax0868",
+        "https://themusiclab.org/publications/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Brain and Neural Systems",
+      "title": "Where does music live in the brain?",
+      "concepts": ["neural correlates", "distributed networks", "auditory cortex"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrn2152",
+        "https://musiccognition.org/neuroscience/brain-regions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Brain and Neural Systems",
+      "title": "Why does music activate the brain's reward system?",
+      "concepts": ["dopamine", "nucleus accumbens", "reward pathways", "pleasure"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nn.2726",
+        "https://musiccognition.org/neuroscience/reward"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Brain and Neural Systems",
+      "title": "How do social functions connect to neural systems?",
+      "concepts": ["evolution", "synchrony", "brain networks", "reward"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://musiccognition.org/quiz/social-neural"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Brain and Neural Systems",
+      "title": "Does music share brain circuits with language?",
+      "concepts": ["music-language relationship", "syntax processing", "Broca's area"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://mitpress.mit.edu/books/music-language-and-brain",
+        "https://www.annualreviews.org/doi/10.1146/annurev.psych.56.091103.070225",
+        "https://musiccognition.org/neuroscience/music-language"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Brain and Neural Systems",
+      "title": "How does musical training change the brain?",
+      "concepts": ["neuroplasticity", "structural changes", "transfer effects"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nrn2882",
+        "https://musiccognition.org/training/brain-changes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration and Applications",
+      "title": "Can music be therapeutic for brain disorders?",
+      "concepts": ["music therapy", "neurological rehabilitation", "clinical applications"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.frontiersin.org/articles/10.3389/fnhum.2013.00687/full",
+        "https://musiccognition.org/clinical/music-therapy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration and Applications",
+      "title": "How can we use music cognition to improve music education?",
+      "concepts": ["pedagogical applications", "learning theories", "practice strategies"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.musiccognition.org/education/",
+        "https://journals.sagepub.com/home/pom"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration and Applications",
+      "title": "What's next in music cognition research?",
+      "concepts": ["open questions", "emerging methods", "interdisciplinary frontiers"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.frontiersin.org/journals/psychology/sections/auditory-cognitive-neuroscience",
+        "https://smpc.ucsd.edu/",
+        "https://musiccognition.org/resources/future-directions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Integration and Applications",
+      "title": "Why does music move us?",
+      "concepts": ["emotion", "expectation", "memory", "evolution", "neural systems"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://musiccognition.org/resources/comprehensive-review"
+      ],
+      "status": "pending"
+    }
+  ]
+}

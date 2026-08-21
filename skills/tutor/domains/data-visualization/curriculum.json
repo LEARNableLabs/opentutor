@@ -1,0 +1,563 @@
+{
+  "topic": "Information Design and Data Visualization",
+  "slug": "data-visualization",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic statistics (mean, median, distribution)",
+    "familiarity with spreadsheets or basic data manipulation",
+    "exposure to common chart types"
+  ],
+  "exit_criteria": [
+    "select appropriate visualization types for different data and questions",
+    "apply perceptual principles to create effective encodings",
+    "design accessible visualizations with proper color and contrast",
+    "build interactive visualizations using modern tools (D3.js, Observable, or similar)",
+    "critique existing visualizations and identify misleading techniques",
+    "tell compelling stories with data through annotation and narrative flow"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations: Perception and Encoding",
+      "title": "Why do some charts feel instant while others make you think?",
+      "concepts": [
+        "pre-attentive processing",
+        "visual encoding",
+        "cognitive load"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://eagereyes.org/basics/preattentive-processing",
+        "https://observablehq.com/@observablehq/plot-marks"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations: Perception and Encoding",
+      "title": "What makes position more powerful than color or size?",
+      "concepts": [
+        "marks and channels",
+        "encoding effectiveness",
+        "Cleveland-McGill hierarchy"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://observablehq.com/@d3/cleveland-mcgill",
+        "https://www.jstor.org/stable/2288400"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations: Perception and Encoding",
+      "title": "How does your brain group visual elements without thinking?",
+      "concepts": [
+        "Gestalt principles",
+        "proximity",
+        "similarity",
+        "continuity"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.interaction-design.org/literature/article/the-gestalt-principles",
+        "https://observablehq.com/@observablehq/plot-facets"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations: Perception and Encoding",
+      "title": "What's the difference between data types, and why does it matter?",
+      "concepts": [
+        "quantitative vs categorical",
+        "ordinal data",
+        "temporal and spatial data"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://vega.github.io/vega-lite/docs/type.html",
+        "https://academy.datawrapper.de/article/117-which-data-types-can-be-visualized"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations: Perception and Encoding",
+      "title": "Can you explain to a friend why bar charts beat pie charts?",
+      "concepts": [
+        "angle perception",
+        "area perception",
+        "comparison accuracy"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://eagereyes.org/blog/2016/an-illustrated-tour-of-the-pie-chart-study-results",
+        "https://www.storytellingwithdata.com/blog/2020/5/14/what-is-a-pie-chart"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review: Foundations",
+      "title": "Review: Can you identify effective visual encodings in real charts?",
+      "concepts": [
+        "visual encoding",
+        "perception principles",
+        "data types"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://eagereyes.org/basics",
+        "https://observablehq.com/@observablehq/plot-cheatsheets"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Chart Selection and Data Types",
+      "title": "When should you use a scatter plot vs a line chart?",
+      "concepts": [
+        "relationship encoding",
+        "temporal data",
+        "continuous vs discrete"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://observablehq.com/@observablehq/plot-line",
+        "https://flowingdata.com/2010/01/07/11-ways-to-visualize-changes-over-time-a-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Chart Selection and Data Types",
+      "title": "How do you show distribution: histogram, density plot, or box plot?",
+      "concepts": [
+        "distribution visualization",
+        "binning",
+        "outliers",
+        "quartiles"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://observablehq.com/@observablehq/plot-histogram",
+        "https://academy.datawrapper.de/article/120-what-to-consider-when-creating-a-histogram"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Chart Selection and Data Types",
+      "title": "Why are treemaps and sunbursts better than nested pie charts?",
+      "concepts": [
+        "hierarchical data",
+        "space-filling layouts",
+        "part-to-whole"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://observablehq.com/@d3/treemap",
+        "https://www.storytellingwithdata.com/blog/2020/6/23/how-to-make-a-treemap-in-excel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Chart Selection and Data Types",
+      "title": "What's the best way to compare multiple categories across groups?",
+      "concepts": [
+        "grouped bars",
+        "stacked bars",
+        "small multiples",
+        "faceting"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://observablehq.com/@observablehq/plot-group",
+        "https://academy.datawrapper.de/article/146-stacked-column-and-bar-charts"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Chart Selection and Data Types",
+      "title": "How would you visualize this messy dataset?",
+      "concepts": [
+        "data cleaning",
+        "aggregation",
+        "chart selection strategy"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://flowingdata.com/2021/06/08/visualize-this-the-book/",
+        "https://github.com/rfordatascience/tidytuesday"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Design Principles",
+      "title": "What is chartjunk and why does Tufte hate it?",
+      "concepts": [
+        "data-ink ratio",
+        "chartjunk",
+        "minimalism",
+        "signal vs noise"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.edwardtufte.com/tufte/",
+        "https://infovis-wiki.net/wiki/Data-Ink_Ratio"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Review: Chart Selection",
+      "title": "Review: Which chart type would you choose for these datasets?",
+      "concepts": [
+        "chart selection",
+        "data types",
+        "comparison methods"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.data-to-viz.com/",
+        "https://academy.datawrapper.de/article/127-what-charts-do"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Design Principles",
+      "title": "When should you break the rules and add decoration?",
+      "concepts": [
+        "clarity vs engagement",
+        "audience needs",
+        "context matters"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pudding.cool/",
+        "https://www.storytellingwithdata.com/blog/2018/5/30/declutter-this"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Design Principles",
+      "title": "How do aspect ratio and scale distort perception?",
+      "concepts": [
+        "lie factor",
+        "axis scaling",
+        "aspect ratio",
+        "truncated axes"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.callingbullshit.org/tools/tools_misleading_axes.html",
+        "https://flowingdata.com/2015/08/11/real-chart-rules-to-follow/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Design Principles",
+      "title": "Can you spot what's misleading in these famous charts?",
+      "concepts": [
+        "visual manipulation",
+        "ethical visualization",
+        "critical analysis"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.callingbullshit.org/",
+        "https://viz.wtf/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Color and Accessibility",
+      "title": "Why do some color schemes make data pop while others confuse?",
+      "concepts": [
+        "sequential palettes",
+        "diverging palettes",
+        "categorical colors",
+        "perceptual uniformity"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://colorbrewer2.org/",
+        "https://blog.datawrapper.de/colors/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Color and Accessibility",
+      "title": "How do you design for colorblind users?",
+      "concepts": [
+        "color vision deficiency",
+        "redundant encoding",
+        "accessibility standards"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://davidmathlogic.com/colorblind/",
+        "https://www.storytellingwithdata.com/blog/2018/6/26/accessible-data-viz-is-better-data-viz"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Color and Accessibility",
+      "title": "What makes a visualization accessible beyond color?",
+      "concepts": [
+        "screen readers",
+        "WCAG standards",
+        "alt text",
+        "keyboard navigation"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.w3.org/WAI/tutorials/images/complex/",
+        "https://observablehq.com/@frankelavsky/accessible-visualizations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Review: Design Principles",
+      "title": "Review: Can you spot what makes these visualizations misleading?",
+      "concepts": [
+        "design critique",
+        "ethical visualization",
+        "perception"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://viz.wtf/",
+        "https://www.callingbullshit.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Storytelling and Narrative",
+      "title": "What's the difference between exploring data and explaining it?",
+      "concepts": [
+        "exploratory vs explanatory",
+        "narrative arc",
+        "audience goals"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.storytellingwithdata.com/",
+        "https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Storytelling and Narrative",
+      "title": "How do you guide attention without being manipulative?",
+      "concepts": [
+        "visual hierarchy",
+        "annotation",
+        "highlighting",
+        "progressive disclosure"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pudding.cool/process/how-to-implement-scrollytelling/",
+        "https://observablehq.com/@tophtucker/animating-svg-paths-in-observable"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Storytelling and Narrative",
+      "title": "Why does The Pudding's work feel like a story and not a report?",
+      "concepts": [
+        "narrative structure",
+        "scrollytelling",
+        "emotional engagement"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://pudding.cool/",
+        "https://pudding.cool/process/how-to-make-dope-shit-part-1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Storytelling and Narrative",
+      "title": "Can you transform a boring table into a compelling visual story?",
+      "concepts": [
+        "narrative design",
+        "context",
+        "comparison",
+        "synthesis"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.storytellingwithdata.com/blog/2020/4/9/bring-on-the-tables",
+        "https://flowingdata.com/2016/10/26/make-better-tables/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Tools and Interactivity",
+      "title": "How does D3.js give you control that Tableau can't?",
+      "concepts": [
+        "declarative vs imperative",
+        "library comparison",
+        "tool selection"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://d3js.org/",
+        "https://observablehq.com/@d3/learn-d3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Tools and Interactivity",
+      "title": "What interaction patterns make exploration feel natural?",
+      "concepts": [
+        "filter",
+        "zoom",
+        "brush and link",
+        "drill-down",
+        "tooltips"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://observablehq.com/@d3/brushable-scatterplot",
+        "https://idl.cs.washington.edu/papers/interaction-dynamics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Review: Color and Storytelling",
+      "title": "Review: How would you improve the accessibility and narrative of this chart?",
+      "concepts": [
+        "accessibility",
+        "color design",
+        "narrative structure"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.storytellingwithdata.com/makeovers",
+        "https://davidmathlogic.com/colorblind/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Tools and Interactivity",
+      "title": "How do you design a dashboard that doesn't overwhelm?",
+      "concepts": [
+        "dashboard design",
+        "KPI selection",
+        "layout hierarchy",
+        "progressive disclosure"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.stephen-few.com/",
+        "https://www.storytellingwithdata.com/blog/2021/6/8/what-is-a-dashboard"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Tools and Interactivity",
+      "title": "How do you build your first interactive visualization from scratch?",
+      "concepts": [
+        "data binding",
+        "event handlers",
+        "state management",
+        "responsive design"
+      ],
+      "difficulty": 5,
+      "type": "real-world",
+      "resources": [
+        "https://observablehq.com/@observablehq/introduction-to-data",
+        "https://github.com/d3/d3/wiki/Gallery"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Advanced Topics",
+      "title": "How do you visualize uncertainty without causing confusion?",
+      "concepts": [
+        "confidence intervals",
+        "error bars",
+        "gradient of uncertainty",
+        "ensemble displays"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://observablehq.com/@mjskay/uncertainty-visualization",
+        "https://mucollective.northwestern.edu/project/uncertainty-visualization"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Advanced Topics",
+      "title": "What does good network and graph visualization look like?",
+      "concepts": [
+        "node-link diagrams",
+        "adjacency matrices",
+        "force-directed layout",
+        "graph readability"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://observablehq.com/@d3/force-directed-graph",
+        "https://www.visualcinnamon.com/2019/09/node-link-diagrams"
+      ],
+      "status": "pending"
+    }
+  ]
+}

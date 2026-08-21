@@ -1,0 +1,428 @@
+{
+  "topic": "Mycology — the hidden kingdom of fungi",
+  "slug": "mycology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic cell biology",
+    "evolution and natural selection",
+    "ecological concepts (food webs, nutrient cycling)",
+    "basic chemistry (organic molecules)"
+  ],
+  "exit_criteria": [
+    "distinguish major fungal phyla by structure and reproduction",
+    "explain fungal life cycles including sexual and asexual reproduction",
+    "describe ecological roles of fungi in decomposition and symbiosis",
+    "identify mycorrhizal associations and their importance to plants",
+    "evaluate fungal applications in biotechnology, medicine, and food production",
+    "recognize common pathogenic fungi and their disease mechanisms",
+    "interpret fungal taxonomy using both morphological and molecular methods",
+    "design experiments to study fungal ecology or physiology"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to the Fungal Kingdom",
+      "title": "Why are fungi neither plants nor animals?",
+      "concepts": ["fungal characteristics", "phylogenetic position", "chitin cell walls", "absorptive nutrition"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.sbs.utexas.edu/mycology/bio341/bio341_topic_01.htm",
+        "https://www.youtube.com/watch?v=wqKNm_evkYA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to the Fungal Kingdom",
+      "title": "How did fungi conquer the land before plants?",
+      "concepts": ["fungal evolution", "fossil record", "terrestrial colonization", "plant symbiosis"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://gzahn.github.io/mycology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to the Fungal Kingdom",
+      "title": "What can fungi do that nothing else can?",
+      "concepts": ["decomposition", "lignin degradation", "ecological niches", "unique enzymes"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=lP0Slzga9uU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fungal Biology & Structure",
+      "title": "Why do fungi grow as threads instead of cells?",
+      "concepts": ["hyphae", "mycelium", "growth patterns", "surface area optimization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.sbs.utexas.edu/mycology/bio341/bio341_topic_01.htm",
+        "https://www.labster.com/blog/fungi-labs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fungal Biology & Structure",
+      "title": "How does a fungal cell wall differ from plants?",
+      "concepts": ["chitin structure", "glucans", "cell wall function", "osmotic regulation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.easybiologyclass.com/fungi-mycology-online-tutorials-lecture-notes-study-materials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Fungal Biology & Structure",
+      "title": "What makes fungal nuclei so weird?",
+      "concepts": ["dikaryotic cells", "heterokaryosis", "nuclear migration", "septal pores"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLcxX_UL0wb5-2iUex09T69l2Sx-fv5fqf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Fungal Biology & Structure",
+      "title": "What makes a fungus fundamentally different from plants and animals?",
+      "concepts": ["fungal characteristics review", "cell structure synthesis", "comparative biology"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://gzahn.github.io/mycology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Major Fungal Groups",
+      "title": "Why are chytrids the only fungi with flagella?",
+      "concepts": ["Chytridiomycota", "zoospores", "aquatic fungi", "ancestral traits"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.sbs.utexas.edu/mycology/bio341/bio341_topic_01.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Major Fungal Groups",
+      "title": "What killed the frogs around the world?",
+      "concepts": ["Batrachochytrium", "chytrid pandemic", "amphibian decline", "fungal pathogens"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLcxX_UL0wb5-2iUex09T69l2Sx-fv5fqf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Major Fungal Groups",
+      "title": "How do bread molds reproduce so explosively?",
+      "concepts": ["Zygomycota", "sporangia", "coenocytic hyphae", "zygospores"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.labster.com/blog/fungi-labs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Major Fungal Groups",
+      "title": "Why are arbuscular mycorrhizal fungi missing from labs?",
+      "concepts": ["Glomeromycota", "obligate biotrophs", "plant symbiosis", "arbuscules"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://mycology.cornell.edu/fteach.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Major Fungal Groups",
+      "title": "What makes sac fungi the most diverse fungal group?",
+      "concepts": ["Ascomycota", "ascus structure", "ascocarp diversity", "ascospores"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.sbs.utexas.edu/mycology/bio341/bio341_topic_01.htm",
+        "https://www.youtube.com/playlist?list=PLcxX_UL0wb5-2iUex09T69l2Sx-fv5fqf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Major Fungal Groups",
+      "title": "How do the major fungal groups relate to each other?",
+      "concepts": ["phylum comparison", "evolutionary relationships", "taxonomic keys"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://gzahn.github.io/mycology/",
+        "http://mycology.cornell.edu/fteach.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Major Fungal Groups",
+      "title": "Why do mushrooms have gills?",
+      "concepts": ["Basidiomycota", "basidium", "basidiocarp", "spore dispersal"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLcxX_UL0wb5-2iUex09T69l2Sx-fv5fqf",
+        "https://www.labster.com/blog/fungi-labs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Major Fungal Groups",
+      "title": "What's the difference between a morel and a mushroom?",
+      "concepts": ["ascomycete vs basidiomycete fruiting bodies", "morphological diversity", "field identification"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "http://mycology.cornell.edu/fteach.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Reproduction & Life Cycles",
+      "title": "How can fungi reproduce without sex?",
+      "concepts": ["asexual reproduction", "conidia", "budding", "fragmentation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.easybiologyclass.com/fungi-mycology-online-tutorials-lecture-notes-study-materials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Reproduction & Life Cycles",
+      "title": "Why do some fungi have thousands of mating types?",
+      "concepts": ["heterothallism", "mating systems", "genetic diversity", "compatibility genes"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://www.sbs.utexas.edu/mycology/bio341/bio341_topic_01.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Reproduction & Life Cycles",
+      "title": "What happens when fungal cells merge but nuclei don't?",
+      "concepts": ["plasmogamy", "dikaryotic phase", "delayed karyogamy", "clamp connections"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLcxX_UL0wb5-2iUex09T69l2Sx-fv5fqf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Reproduction & Life Cycles",
+      "title": "How do yeast and mold forms switch in pathogenic fungi?",
+      "concepts": ["dimorphism", "morphological switching", "temperature-dependent growth", "virulence factors"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=hULry4ePQKs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Reproduction & Life Cycles",
+      "title": "Why do fungi reproduce in so many different ways?",
+      "concepts": ["reproductive strategies", "life cycle comparison", "sexual vs asexual trade-offs"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://gzahn.github.io/mycology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Fungal Ecology & Symbiosis",
+      "title": "Why would forests collapse without fungi?",
+      "concepts": ["decomposition", "nutrient cycling", "carbon cycle", "ecosystem engineers"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=lP0Slzga9uU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Fungal Ecology & Symbiosis",
+      "title": "How do trees trade sugar for minerals with fungi?",
+      "concepts": ["mycorrhizae", "nutrient exchange", "symbiotic networks", "common mycorrhizal networks"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.sbs.utexas.edu/mycology/bio341/bio341_topic_01.htm",
+        "http://mycology.cornell.edu/fteach.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Fungal Ecology & Symbiosis",
+      "title": "What's the difference between ecto and endo mycorrhizae?",
+      "concepts": ["ectomycorrhizae", "arbuscular mycorrhizae", "structural differences", "host specificity"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.labster.com/blog/fungi-labs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Fungal Ecology & Symbiosis",
+      "title": "Are lichens fungi or algae?",
+      "concepts": ["lichen symbiosis", "photobiont", "mycobiont", "lichen diversity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLcxX_UL0wb5-2iUex09T69l2Sx-fv5fqf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Fungal Ecology & Symbiosis",
+      "title": "How do fungi help clean up oil spills and toxic waste?",
+      "concepts": ["mycoremediation", "bioremediation", "pollutant degradation", "environmental applications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=lP0Slzga9uU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Fungal Ecology & Symbiosis",
+      "title": "How do fungi connect and shape entire ecosystems?",
+      "concepts": ["symbiosis patterns", "ecological roles", "network ecology"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "http://mycology.cornell.edu/fteach.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applied Mycology & Human Impacts",
+      "title": "How did a fungus give us the first antibiotic?",
+      "concepts": ["Penicillium", "antibiotics", "secondary metabolites", "pharmaceutical discovery"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLcxX_UL0wb5-2iUex09T69l2Sx-fv5fqf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applied Mycology & Human Impacts",
+      "title": "What makes some mushrooms edible and others deadly?",
+      "concepts": ["edible fungi", "toxic compounds", "amatoxins", "mushroom poisoning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://mycology.cornell.edu/fteach.html",
+        "https://www.labster.com/blog/fungi-labs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Applied Mycology & Human Impacts",
+      "title": "Why can't we cure fungal infections as easily as bacterial ones?",
+      "concepts": ["antifungal drugs", "drug resistance", "eukaryotic targets", "medical mycology"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=hULry4ePQKs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Applied Mycology & Human Impacts",
+      "title": "How do fungi make beer, bread, and cheese possible?",
+      "concepts": ["fermentation", "Saccharomyces", "food production", "industrial mycology"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.easybiologyclass.com/fungi-mycology-online-tutorials-lecture-notes-study-materials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Applied Mycology & Human Impacts",
+      "title": "Could fungi help solve the plastic crisis?",
+      "concepts": ["biodegradation", "plastic-eating fungi", "biotechnology applications", "sustainability"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=lP0Slzga9uU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Applied Mycology & Human Impacts",
+      "title": "What happens when fungi turn into pandemics?",
+      "concepts": ["emerging pathogens", "white-nose syndrome", "wheat rust", "agricultural threats"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLcxX_UL0wb5-2iUex09T69l2Sx-fv5fqf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Applied Mycology & Human Impacts",
+      "title": "Where will fungi take you next?",
+      "concepts": ["mycology careers", "research frontiers", "conservation priorities", "synthesis"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "http://mycology.cornell.edu/fteach.html",
+        "https://gzahn.github.io/mycology/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

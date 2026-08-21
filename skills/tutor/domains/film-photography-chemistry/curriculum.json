@@ -1,0 +1,290 @@
+{
+  "topic": "Film Photography Chemistry — Silver Halide Processes",
+  "slug": "film-photography-chemistry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (redox reactions, pH)",
+    "exposure to film photography basics",
+    "understanding of light and optics"
+  ],
+  "exit_criteria": [
+    "explain latent image formation at the molecular level",
+    "design custom developer formulations for specific aesthetic goals",
+    "troubleshoot development problems from first principles",
+    "understand the chemistry behind alternative silver processes",
+    "evaluate archival processing methods using chemistry knowledge"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Silver Halide Fundamentals",
+      "title": "Why does silver turn black when exposed to light?",
+      "concepts": ["photosensitivity", "silver halide crystals", "reduction reactions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.georgeeastmanmuseum.org/photography-chemistry"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Silver Halide Fundamentals",
+      "title": "What makes a latent image invisible but developable?",
+      "concepts": ["latent image", "sensitivity specks", "Gurney-Mott theory"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.ilfordphoto.com/amfile/file/download/file/1964/product/696/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Silver Halide Fundamentals",
+      "title": "How do you make film see red light?",
+      "concepts": ["spectral sensitization", "dye sensitizers", "orthochromatic vs panchromatic"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.kodak.com/en/motion/page/spectral-sensitivity"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Silver Halide Fundamentals",
+      "title": "Why does grain size matter for sharpness and speed?",
+      "concepts": ["grain structure", "surface-to-volume ratio", "T-grain vs conventional grain"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.fujifilm.com/us/en/consumer/film-quicksnap/film-education"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Silver Halide Fundamentals",
+      "title": "What happens inside an emulsion from exposure to print?",
+      "concepts": ["emulsion layers", "gelatin matrix", "silver migration"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://photo.net/learn/gelatin-emulsion/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Silver Halide Fundamentals",
+      "title": "How does light become a latent image in silver halide crystals?",
+      "concepts": ["photosensitivity review", "silver halide fundamentals", "emulsion structure"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.ilfordphoto.com/amfile/file/download/file/1964/product/696/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Film Development Chemistry",
+      "title": "How does a developer choose which crystals to reduce?",
+      "concepts": ["selective reduction", "reducing agents", "developer activity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.digitaltruth.com/devchart.php"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Film Development Chemistry",
+      "title": "Why do developers turn brown and then stop working?",
+      "concepts": ["oxidation", "preservatives", "sulfite function", "developer exhaustion"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.kodak.com/en/motion/page/developer-chemistry"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Film Development Chemistry",
+      "title": "What makes D-76 forgiving and Rodinal sharp?",
+      "concepts": ["solvent developers", "compensating developers", "acutance", "edge effects"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.ilfordphoto.com/ilfotec-dd-x"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Film Development Chemistry",
+      "title": "How do you control contrast without changing exposure?",
+      "concepts": ["development contrast control", "gamma", "push/pull processing", "N-1/N+1"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://unblinkingeye.com/Articles/WBM/wbm.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Film Development Chemistry",
+      "title": "Why does fixer turn milky and what does that mean?",
+      "concepts": ["sodium thiosulfate", "ammonium thiosulfate", "silver complexes", "fixer exhaustion"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.ilfordphoto.com/rapid-fixer"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Film Development Chemistry",
+      "title": "What's the complete journey from exposed grain to metallic silver?",
+      "concepts": ["development chain", "redox chemistry", "control variables"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.apug.org/forums/forum/photographic-technique/darkroom-techniques"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Printing & Enlarging Chemistry",
+      "title": "How is paper emulsion different from film emulsion?",
+      "concepts": ["paper emulsion structure", "resin-coated vs fiber-based", "contrast grades"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.ilfordphoto.com/multigrade-rc-deluxe"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Printing & Enlarging Chemistry",
+      "title": "Why do variable contrast papers respond to colored light?",
+      "concepts": ["variable contrast emulsions", "two-emulsion system", "filtration"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.ilfordphoto.com/multigrade-filters"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Printing & Enlarging Chemistry",
+      "title": "What makes a print developer different from a film developer?",
+      "concepts": ["print developer formulation", "warm tone vs cold tone", "chlorobromide papers"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.kodak.com/en/motion/page/dektol"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Printing & Enlarging Chemistry",
+      "title": "How does selenium toning make prints last centuries?",
+      "concepts": ["selenium toning", "silver selenide", "archival stability", "color shifts"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.kodak.com/en/motion/page/selenium-toner"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Printing & Enlarging Chemistry",
+      "title": "Can you turn a black-and-white print sepia just by chemistry?",
+      "concepts": ["sepia toning", "bleach and redevelopment", "sulfide toning", "image color control"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.ilfordphoto.com/sepia-toner"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Printing & Enlarging Chemistry",
+      "title": "How do you get from enlarger light to an archival print?",
+      "concepts": ["printing workflow", "toning choices", "paper chemistry"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.apug.org/forums/forum/photographic-technique/darkroom-techniques/printing"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Alternative & Advanced Processes",
+      "title": "How did photographers make images before gelatin emulsions?",
+      "concepts": ["wet plate collodion", "albumen printing", "historical processes"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.georgeeastmanmuseum.org/wet-plate-collodion"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Alternative & Advanced Processes",
+      "title": "Why does cyanotype chemistry turn Prussian blue?",
+      "concepts": ["iron-based processes", "ferric ammonium citrate", "potassium ferricyanide", "blueprint chemistry"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.alternativephotography.com/cyanotype-process/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Alternative & Advanced Processes",
+      "title": "What makes platinum prints so expensive and beautiful?",
+      "concepts": ["platinum/palladium printing", "noble metals", "contact printing", "tonal range"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.bostick-sullivan.com/platinum-palladium-printing/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Alternative & Advanced Processes",
+      "title": "How do you sensitize paper to UV light for contact printing?",
+      "concepts": ["UV sensitization", "coating techniques", "digital negatives for alt process"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.alternativephotography.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Alternative & Advanced Processes",
+      "title": "What chemistry lets you split-tone a print with two colors?",
+      "concepts": ["split toning", "selective toning", "highlight vs shadow chemistry", "multi-bath toning"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://unblinkingeye.com/Articles/Toning/toning.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Alternative & Advanced Processes",
+      "title": "What can the periodic table teach us about photographic processes?",
+      "concepts": ["process comparison", "chemistry trade-offs", "aesthetic choices"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.alternativephotography.com/process-index/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Archival & Advanced Topics",
+      "title": "Why do unfixed prints turn purple in light?",
+      "concepts": ["residual silver salts", "photolytic silver", "fixing failures", "permanence"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.imagepermanenceinstitute.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Archival & Advanced Topics",
+      "title": "How do you test if your washing actually removed all the chemicals?",
+      "concepts": ["residual hypo test", "archival washing standards", "HT-2 test", "permanence testing"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.ilfordphoto.com/archival-wash"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Archival & Advanced Topics",
+      "title": "Can you reverse-engineer a historic print from its chemistry?",
+      "concepts": ["chemical forensics", "process identification", "conservation chemistry", "analyzing degradation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.getty.edu/conservation/publications_resources/"],
+      "status": "pending"
+    }
+  ]
+}

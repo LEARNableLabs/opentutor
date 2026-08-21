@@ -1,0 +1,543 @@
+{
+  "topic": "Microeconomics — markets, incentives, and failures",
+  "slug": "microeconomics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic algebra",
+    "graphing and coordinate systems",
+    "derivatives and optimization (calculus I)",
+    "basic statistics"
+  ],
+  "exit_criteria": [
+    "analyze market equilibria using supply and demand",
+    "derive consumer demand from utility maximization",
+    "compute firm profit maximization and supply curves",
+    "evaluate welfare effects of market interventions",
+    "identify and explain major market failures",
+    "apply game theory to strategic situations",
+    "distinguish between different market structures"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Market Fundamentals",
+      "title": "Why do prices exist?",
+      "concepts": ["scarcity", "opportunity cost", "markets as coordination mechanisms"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/01.html",
+        "https://mru.org/courses/principles-economics-microeconomics/introduction-economics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Market Fundamentals",
+      "title": "What makes you willing to buy less when prices rise?",
+      "concepts": ["demand curve", "law of demand", "willingness to pay"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium/demand-curve-tutorial",
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Market Fundamentals",
+      "title": "Why do sellers produce more when they can charge higher prices?",
+      "concepts": ["supply curve", "law of supply", "marginal cost"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium/supply-curve-tutorial",
+        "https://mru.org/courses/principles-economics-microeconomics/supply-curve-economics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Market Fundamentals",
+      "title": "How do markets find the right price?",
+      "concepts": ["market equilibrium", "market clearing", "comparative statics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium/market-equilibrium-tutorial",
+        "https://www.core-econ.org/the-economy/book/text/08.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Market Fundamentals",
+      "title": "Why do gas prices spike when hurricanes threaten refineries?",
+      "concepts": ["elasticity", "price responsiveness", "short-run vs long-run"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/elasticity-tutorial",
+        "https://mru.org/courses/principles-economics-microeconomics/elasticity-definition-economics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Market Fundamentals",
+      "title": "How do taxes and subsidies shift market equilibrium?",
+      "concepts": ["tax incidence", "deadweight loss", "subsidies", "welfare effects"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-producer-surplus/deadweight-loss-tutorial",
+        "https://mru.org/courses/principles-economics-microeconomics/taxes-deadweight-loss"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Review",
+      "title": "How do markets coordinate buyers and sellers?",
+      "concepts": ["supply and demand", "equilibrium", "elasticity", "government intervention"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium",
+        "https://mru.org/courses/principles-economics-microeconomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Consumer Theory",
+      "title": "Can we measure happiness?",
+      "concepts": ["utility", "ordinal vs cardinal utility", "preferences"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/",
+        "https://www.core-econ.org/the-economy/book/text/03.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Consumer Theory",
+      "title": "Why can't you buy everything you want?",
+      "concepts": ["budget constraint", "opportunity cost", "feasible set"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-producer-surplus/consumer-surplus-tutorial",
+        "https://mru.org/courses/principles-economics-microeconomics/budget-constraint"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Consumer Theory",
+      "title": "How do you choose the best bundle you can afford?",
+      "concepts": ["utility maximization", "marginal rate of substitution", "tangency condition"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/",
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-producer-surplus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Consumer Theory",
+      "title": "When prices change, why do you substitute toward cheaper goods?",
+      "concepts": ["substitution effect", "income effect", "Slutsky decomposition"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/",
+        "https://mru.org/courses/principles-economics-microeconomics/income-substitution-effects"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Consumer Theory",
+      "title": "Can we learn your preferences from watching what you buy?",
+      "concepts": ["revealed preference", "WARP", "rationality"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/",
+        "https://www.core-econ.org/the-economy/book/text/03.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Consumer Theory",
+      "title": "Why do you buy more steak when income rises but less ramen?",
+      "concepts": ["normal goods", "inferior goods", "income elasticity", "Engel curves"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/elasticity-tutorial",
+        "https://mru.org/courses/principles-economics-microeconomics/income-elasticity-demand"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Review",
+      "title": "Can you think like a utility-maximizing consumer?",
+      "concepts": ["utility maximization", "budget constraints", "substitution and income effects", "revealed preference"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics",
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Producer Theory",
+      "title": "How do firms turn inputs into outputs?",
+      "concepts": ["production function", "isoquants", "marginal product"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit",
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Producer Theory",
+      "title": "Why do costs matter more at the margin than on average?",
+      "concepts": ["marginal cost", "average cost", "cost curves"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit/economic-profit-tutorial",
+        "https://mru.org/courses/principles-economics-microeconomics/marginal-cost"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Producer Theory",
+      "title": "How much should a firm produce to maximize profit?",
+      "concepts": ["profit maximization", "MR = MC rule", "shutdown condition"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/",
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/perfect-competition-topic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Producer Theory",
+      "title": "Why do airlines keep flying half-empty planes?",
+      "concepts": ["fixed costs", "sunk costs", "variable costs", "short-run vs long-run"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://mru.org/courses/principles-economics-microeconomics/fixed-variable-costs",
+        "https://www.core-econ.org/the-economy/book/text/07.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Producer Theory",
+      "title": "Why do firms stay in business when making zero economic profit?",
+      "concepts": ["economic profit vs accounting profit", "normal profit", "opportunity cost", "long-run equilibrium"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit",
+        "https://mru.org/courses/principles-economics-microeconomics/economic-profit"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Producer Theory",
+      "title": "How do costs change with the scale of production?",
+      "concepts": ["economies of scale", "diseconomies of scale", "returns to scale", "minimum efficient scale"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit",
+        "https://mru.org/courses/principles-economics-microeconomics/economies-scale"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Review",
+      "title": "How do firms decide what to produce and at what price?",
+      "concepts": ["production functions", "cost curves", "profit maximization", "economies of scale"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit",
+        "https://mru.org/courses/principles-economics-microeconomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Market Structures",
+      "title": "What happens when no one has market power?",
+      "concepts": ["perfect competition", "price-taking", "zero economic profit"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/perfect-competition-topic",
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Market Structures",
+      "title": "Why do monopolies charge higher prices and produce less?",
+      "concepts": ["monopoly", "market power", "deadweight loss"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/imperfect-competition",
+        "https://mru.org/courses/principles-economics-microeconomics/monopoly"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Market Structures",
+      "title": "How does price discrimination let firms capture more surplus?",
+      "concepts": ["price discrimination", "first-degree", "second-degree", "third-degree"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://mru.org/courses/principles-economics-microeconomics/price-discrimination",
+        "https://www.core-econ.org/the-economy/book/text/07.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Market Structures",
+      "title": "Why do Coke and Pepsi watch each other so closely?",
+      "concepts": ["oligopoly", "strategic interdependence", "collusion"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/imperfect-competition",
+        "https://mru.org/courses/principles-economics-microeconomics/oligopoly"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Market Structures",
+      "title": "What makes monopolistic competition different from perfect competition?",
+      "concepts": ["monopolistic competition", "product differentiation", "excess capacity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/imperfect-competition",
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Market Structures",
+      "title": "How do firms compete when there are only a few players?",
+      "concepts": ["Cournot competition", "Bertrand competition", "strategic quantity vs price setting", "reaction functions"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/",
+        "https://mru.org/courses/principles-economics-microeconomics/oligopoly"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Review",
+      "title": "What determines how competitive a market is?",
+      "concepts": ["perfect competition", "monopoly", "oligopoly", "monopolistic competition", "market power"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics",
+        "https://mru.org/courses/principles-economics-microeconomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Market Failures",
+      "title": "When do markets fail to maximize social welfare?",
+      "concepts": ["market failures", "Pareto efficiency", "welfare theorems"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/11.html",
+        "https://mru.org/courses/principles-economics-microeconomics/market-failures"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Market Failures",
+      "title": "Why does pollution happen when nobody wants it?",
+      "concepts": ["externalities", "negative externalities", "Pigouvian taxes", "cap-and-trade"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/externalities-topic",
+        "https://mru.org/courses/principles-economics-microeconomics/externalities"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Market Failures",
+      "title": "Why can't markets provide clean air and national defense?",
+      "concepts": ["public goods", "non-excludability", "non-rivalry", "free-rider problem"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/externalities-topic/public-goods-tutorial",
+        "https://mru.org/courses/principles-economics-microeconomics/public-goods"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Market Failures",
+      "title": "Why do used car markets collapse when sellers know more than buyers?",
+      "concepts": ["asymmetric information", "adverse selection", "market for lemons"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/12.html",
+        "https://mru.org/courses/principles-economics-microeconomics/asymmetric-information"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Market Failures",
+      "title": "How do insurance companies deal with moral hazard?",
+      "concepts": ["moral hazard", "hidden actions", "incentive design"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/12.html",
+        "https://mru.org/courses/principles-economics-microeconomics/moral-hazard"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Market Failures",
+      "title": "Why do common resources get overused?",
+      "concepts": ["tragedy of the commons", "common pool resources", "rival but non-excludable goods", "overfishing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/externalities-topic",
+        "https://www.core-econ.org/the-economy/book/text/04.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 35,
+      "module": "Review",
+      "title": "When should governments intervene in markets?",
+      "concepts": ["market failures", "externalities", "public goods", "information asymmetries", "common resources"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/externalities-topic",
+        "https://www.core-econ.org/the-economy/book/text/11.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 36,
+      "module": "Game Theory",
+      "title": "How should you think when your choices affect others?",
+      "concepts": ["game theory", "Nash equilibrium", "dominant strategies"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/nash-equilibrium-tutorial",
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 37,
+      "module": "Game Theory",
+      "title": "Why is it hard to cooperate in one-shot interactions?",
+      "concepts": ["prisoner's dilemma", "cooperation", "credible commitment"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/nash-equilibrium-tutorial/prisoners-dilemma-tutorial",
+        "https://mru.org/courses/principles-economics-microeconomics/prisoners-dilemma-game-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 38,
+      "module": "Game Theory",
+      "title": "How does repeated interaction enable cooperation?",
+      "concepts": ["repeated games", "tit-for-tat", "folk theorem"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.core-econ.org/the-economy/book/text/04.html",
+        "https://mru.org/courses/principles-economics-microeconomics/repeated-games"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 39,
+      "module": "Game Theory",
+      "title": "How do you solve games that unfold over time?",
+      "concepts": ["sequential games", "backward induction", "subgame perfect equilibrium", "commitment"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/nash-equilibrium-tutorial",
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 40,
+      "module": "Integration",
+      "title": "Can you think like an economist about markets, failures, and strategy?",
+      "concepts": ["market equilibrium", "efficiency", "market failures", "strategic behavior", "policy analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics",
+        "https://www.core-econ.org/the-economy/book/text/0-3-contents.html"
+      ],
+      "status": "pending"
+    }
+  ]
+}

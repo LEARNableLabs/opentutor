@@ -1,0 +1,381 @@
+{
+  "topic": "Intellectual property — patents, copyright, trade secrets",
+  "slug": "intellectual-property",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic legal reasoning",
+    "ability to read contracts and statutes",
+    "understanding of market competition",
+    "familiarity with business concepts"
+  ],
+  "exit_criteria": [
+    "student can identify which type of IP protection applies to a given innovation",
+    "student can read and interpret patent claims",
+    "student can analyze fair use scenarios",
+    "student can spot trade secret misappropriation issues",
+    "student can advise on basic IP portfolio strategy",
+    "student can explain the policy tradeoffs in IP law"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "IP Foundations",
+      "title": "Why does society grant monopolies on ideas?",
+      "concepts": ["incentive theory", "public domain", "constitutional basis", "limited times"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.uspto.gov/sites/default/files/documents/USPTO-IPBasics-Resources-06192020-508Compliant.pdf",
+        "https://law.stanford.edu/courses/introduction-to-intellectual-property/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "IP Foundations",
+      "title": "How do you choose between patent, copyright, and trade secret?",
+      "concepts": ["exclusivity vs secrecy", "disclosure requirements", "duration comparison", "strategic choice"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.acc.com/sites/default/files/2019-08/Know%20Your%20IP%20-%20A%20Refresher%20on%20Trademarks%20Copyrights%20Trade%20Secrets.pdf",
+        "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/business-assessments/intellectual-property-simulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "IP Foundations",
+      "title": "What are the constitutional limits on IP protection?",
+      "concepts": ["progress clause", "first amendment", "idea-expression dichotomy", "preemption"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/intellectual-property-law-the-information-society-cases-and-materials",
+        "https://libguides.law.uga.edu/OER/IP-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "IP Foundations",
+      "title": "Which IP protection fits your innovation?",
+      "concepts": ["IP types", "policy rationales", "constitutional framework"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.uspto.gov/ip-policy/global-intellectual-property-academy/ip-elearning-modules"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Trade Secrets",
+      "title": "What makes a recipe worth $3 billion in secrecy?",
+      "concepts": ["trade secret value", "secrecy vs disclosure", "competitive advantage", "Coca-Cola case study"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.uspto.gov/ip-policy/global-intellectual-property-academy/ip-elearning-modules",
+        "https://libguides.law.uga.edu/OER/IP-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Trade Secrets",
+      "title": "How do you prove information is actually secret?",
+      "concepts": ["secrecy requirement", "independent economic value", "not generally known", "UTSA elements"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.vermontlaw.edu/wp-content/uploads/2025/01/Syllabus-Intellectual-Property-Law-2025.pdf",
+        "https://open.umn.edu/opentextbooks/textbooks/intellectual-property-law-the-information-society-cases-and-materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Trade Secrets",
+      "title": "What counts as reasonable measures to protect secrets?",
+      "concepts": ["reasonable measures", "NDAs", "physical security", "information architecture"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.acc.com/sites/default/files/2019-08/Know%20Your%20IP%20-%20A%20Refresher%20on%20Trademarks%20Copyrights%20Trade%20Secrets.pdf",
+        "https://www.coursera.org/specializations/introduction-intellectual-property"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Trade Secrets",
+      "title": "When does an employee taking knowledge become misappropriation?",
+      "concepts": ["inevitable disclosure", "general skills exception", "DTSA", "non-compete agreements"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.vermontlaw.edu/wp-content/uploads/2025/01/Syllabus-Intellectual-Property-Law-2025.pdf",
+        "https://www.coursera.org/learn/introduction-intellectual-property"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Trade Secrets",
+      "title": "Can you spot the trade secret vulnerabilities?",
+      "concepts": ["secrecy", "reasonable measures", "misappropriation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.uspto.gov/ip-policy/global-intellectual-property-academy/ip-elearning-modules"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Patents",
+      "title": "Why isn't every useful invention patentable?",
+      "concepts": ["patentable subject matter", "abstract ideas", "laws of nature", "judicial exceptions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.uspto.gov/sites/default/files/documents/USPTO-IPBasics-Resources-06192020-508Compliant.pdf",
+        "https://www.coursera.org/courses?query=patent"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Patents",
+      "title": "How do you read a patent claim like a lawyer?",
+      "concepts": ["claim construction", "preamble", "limitations", "dependent claims"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://navsea-navy-mil.libguides.com/c.php?g=924236&p=6661424",
+        "https://www.coursera.org/courses?query=patent"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Patents",
+      "title": "What makes an invention obvious to a person skilled in the art?",
+      "concepts": ["non-obviousness", "Graham factors", "PHOSITA", "secondary considerations"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/intellectual-property-law-the-information-society-cases-and-materials",
+        "https://www.coursera.org/specializations/introduction-intellectual-property"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Patents",
+      "title": "How does the patent prosecution journey unfold?",
+      "concepts": ["patent application", "examination", "office actions", "prosecution strategy"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.uspto.gov/ip-policy/global-intellectual-property-academy/ip-elearning-modules",
+        "https://navsea-navy-mil.libguides.com/c.php?g=924236&p=6661424",
+        "https://www.coursera.org/courses?query=patent"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Patents",
+      "title": "Would your invention pass the patent office test?",
+      "concepts": ["subject matter", "novelty", "non-obviousness", "utility"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.uspto.gov/sites/default/files/documents/USPTO-IPBasics-Resources-06192020-508Compliant.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Patents",
+      "title": "When does a product literally infringe a patent?",
+      "concepts": ["literal infringement", "all elements rule", "claim mapping", "infringement analysis"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.vermontlaw.edu/wp-content/uploads/2025/01/Syllabus-Intellectual-Property-Law-2025.pdf",
+        "https://www.coursera.org/specializations/introduction-intellectual-property"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Patents",
+      "title": "How do you defend against a patent infringement claim?",
+      "concepts": ["invalidity defense", "non-infringement", "doctrine of equivalents", "prior art"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/intellectual-property-law-the-information-society-cases-and-materials",
+        "https://navsea-navy-mil.libguides.com/c.php?g=924236&p=6661424"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Patents",
+      "title": "Why do some software inventions get patents while others don't?",
+      "concepts": ["software patents", "Alice test", "technological improvement", "patent eligibility evolution"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/specializations/introduction-intellectual-property",
+        "https://libguides.law.uga.edu/OER/IP-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Patents",
+      "title": "How would you win this patent battle?",
+      "concepts": ["infringement analysis", "defenses", "software patents"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.uspto.gov/ip-policy/global-intellectual-property-academy/ip-elearning-modules"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Copyright",
+      "title": "What can and cannot be copyrighted?",
+      "concepts": ["copyrightable subject matter", "originality", "fixation", "exclusions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.uspto.gov/sites/default/files/documents/USPTO-IPBasics-Resources-06192020-508Compliant.pdf",
+        "https://libguides.law.uga.edu/OER/IP-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Copyright",
+      "title": "How original is original enough for copyright?",
+      "concepts": ["Feist standard", "minimal creativity", "selection and arrangement", "sweat of the brow"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/intellectual-property-law-the-information-society-cases-and-materials",
+        "https://www.coursera.org/specializations/introduction-intellectual-property"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Copyright",
+      "title": "When is copying actually fair use?",
+      "concepts": ["fair use factors", "transformative use", "commercial use", "Campbell v. Acuff-Rose"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.vermontlaw.edu/wp-content/uploads/2025/01/Syllabus-Intellectual-Property-Law-2025.pdf",
+        "https://open.umn.edu/opentextbooks/textbooks/intellectual-property-law-the-information-society-cases-and-materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Copyright",
+      "title": "How does the DMCA reshape copyright enforcement?",
+      "concepts": ["DMCA takedown", "safe harbor", "anti-circumvention", "technological protection"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://libguides.law.uga.edu/OER/IP-law",
+        "https://www.coursera.org/learn/introduction-intellectual-property"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Copyright",
+      "title": "Is this copyright infringement or fair use?",
+      "concepts": ["copyrightability", "originality", "fair use", "DMCA"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.uspto.gov/ip-policy/global-intellectual-property-academy/ip-elearning-modules"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Copyright",
+      "title": "Who owns the copyright when you commission creative work?",
+      "concepts": ["work for hire", "independent contractor", "assignment", "scope of employment"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.vermontlaw.edu/wp-content/uploads/2025/01/Syllabus-Intellectual-Property-Law-2025.pdf",
+        "https://www.coursera.org/specializations/introduction-intellectual-property"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Copyright",
+      "title": "How do derivative works and compilations get protection?",
+      "concepts": ["derivative works", "compilations", "thin copyright", "underlying rights"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://open.umn.edu/opentextbooks/textbooks/intellectual-property-law-the-information-society-cases-and-materials",
+        "https://libguides.law.uga.edu/OER/IP-law"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Copyright",
+      "title": "Who really owns this creative work?",
+      "concepts": ["ownership", "derivative works", "compilations"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.uspto.gov/ip-policy/global-intellectual-property-academy/ip-elearning-modules"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "IP Strategy and Integration",
+      "title": "How do successful companies build IP portfolios?",
+      "concepts": ["portfolio strategy", "layered protection", "licensing", "enforcement priorities"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/business-assessments/intellectual-property-simulation",
+        "https://www.coursera.org/specializations/introduction-intellectual-property"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "IP Strategy and Integration",
+      "title": "What's the future of IP law in the age of AI?",
+      "concepts": ["AI authorship", "training data copyright", "generative AI", "evolving doctrine"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/courses?query=intellectual+property",
+        "https://law.stanford.edu/courses/introduction-to-intellectual-property/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

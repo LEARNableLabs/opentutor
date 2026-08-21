@@ -1,0 +1,353 @@
+{
+  "topic": "Freediving — physiology and breath-hold science",
+  "slug": "freediving",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic human anatomy",
+    "cardiovascular system fundamentals",
+    "respiratory system basics",
+    "gas laws (Boyle's law, Dalton's law)"
+  ],
+  "exit_criteria": [
+    "explain the mammalian dive reflex and its three primary components",
+    "distinguish between hypoxic and hypercapnic responses during breath-hold",
+    "describe cardiovascular adaptations that occur during apnea",
+    "calculate theoretical depth limits using lung volumes and Boyle's law",
+    "identify mechanisms of shallow water blackout and prevention strategies",
+    "explain training adaptations in competitive freedivers",
+    "analyze safety protocols based on physiological understanding"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Breath-Hold Foundations",
+      "title": "Why do we share diving reflexes with whales and seals?",
+      "concepts": ["mammalian dive reflex", "evolutionary adaptation", "trigeminal nerve"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/15798847/",
+        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/mammalian-diving-reflex/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Breath-Hold Foundations",
+      "title": "What triggers the dive response when you submerge your face?",
+      "concepts": ["facial immersion", "cold water stimulation", "autonomic activation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/16316431/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Breath-Hold Foundations",
+      "title": "How does your body prioritize oxygen for vital organs?",
+      "concepts": ["peripheral vasoconstriction", "blood redistribution", "organ prioritization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/11316498/",
+        "https://www.aida-international.org/Education/Medical"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Breath-Hold Foundations",
+      "title": "Why does your heart slow down when you hold your breath?",
+      "concepts": ["bradycardia", "parasympathetic response", "heart rate variability"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/19433807/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Breath-Hold Foundations",
+      "title": "Can you improve your dive reflex through training?",
+      "concepts": ["individual variation", "training effects", "adaptation potential"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/19092328/",
+        "https://www.molchanovs.com/blogs/education"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Respiratory Control",
+      "title": "How do facial immersion, heart rate changes, and blood flow work together in the dive reflex?",
+      "concepts": ["mammalian dive reflex", "bradycardia", "vasoconstriction"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Respiratory Control",
+      "title": "Why is the urge to breathe NOT about running out of oxygen?",
+      "concepts": ["CO2 drive", "chemoreceptors", "breathing control"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/19211945/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK482414/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Respiratory Control",
+      "title": "What's the difference between hypoxia and hypercapnia?",
+      "concepts": ["hypoxia", "hypercapnia", "partial pressures", "gas thresholds"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/21558571/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Respiratory Control",
+      "title": "Where are the sensors that detect rising CO2 levels?",
+      "concepts": ["central chemoreceptors", "peripheral chemoreceptors", "carotid bodies"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/15831840/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK541060/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Respiratory Control",
+      "title": "How does holding your breath change blood gas composition?",
+      "concepts": ["PaO2 decline", "PaCO2 rise", "blood gas timeline", "oxygen cascade"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/11316498/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Respiratory Control",
+      "title": "What happens to your lungs at total lung capacity vs residual volume?",
+      "concepts": ["lung volumes", "total lung capacity", "residual volume", "functional residual capacity"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK539858/",
+        "https://www.youtube.com/watch?v=hAqDPEP7z74"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Cardiovascular Response",
+      "title": "Why does CO2 buildup trigger breathing before oxygen runs low, and where does your body sense these changes?",
+      "concepts": ["CO2 drive", "chemoreceptors", "blood gases"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Cardiovascular Response",
+      "title": "Why doesn't your blood pressure spike when vessels constrict?",
+      "concepts": ["blood pressure regulation", "cardiac output", "compensatory mechanisms"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/19211942/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Cardiovascular Response",
+      "title": "What role does your spleen play in breath-hold diving?",
+      "concepts": ["splenic contraction", "hematocrit increase", "oxygen storage"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/19092328/",
+        "https://www.dan.org/alert-diver/article/the-spleen-and-diving/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Cardiovascular Response",
+      "title": "How does your brain maintain oxygen supply during apnea?",
+      "concepts": ["cerebral blood flow", "autoregulation", "oxygen priority"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/20595458/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Cardiovascular Response",
+      "title": "Can you measure your own cardiovascular dive response?",
+      "concepts": ["heart rate monitoring", "dive reflex measurement", "training assessment"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.molchanovs.com/blogs/education/dive-response"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Pressure and Depth",
+      "title": "How do blood vessel constriction, heart rate slowing, and spleen activation work together to extend breath-hold time?",
+      "concepts": ["vasoconstriction", "bradycardia", "splenic contraction"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Pressure and Depth",
+      "title": "Why do your lungs compress to the size of a fist at depth?",
+      "concepts": ["Boyle's law", "pressure-volume relationship", "lung compression"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/18689573/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK556121/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Pressure and Depth",
+      "title": "What prevents your lungs from collapsing below residual volume?",
+      "concepts": ["blood shift", "thoracic blood pooling", "pulmonary capillary engorgement"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/19211945/",
+        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/blood-shift/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Pressure and Depth",
+      "title": "How do you calculate theoretical depth limits from lung volumes?",
+      "concepts": ["residual volume", "total lung capacity", "depth limit calculation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/11316498/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Pressure and Depth",
+      "title": "What causes barotrauma and how do equalization techniques prevent it?",
+      "concepts": ["barotrauma", "equalization", "middle ear pressure", "sinus pressure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/24298996/",
+        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/equalization/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Training and Adaptation",
+      "title": "How does increasing pressure compress your lungs, and what mechanisms prevent them from collapsing at depth?",
+      "concepts": ["Boyle's law", "blood shift", "equalization"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Training and Adaptation",
+      "title": "How does CO2 tolerance training change your physiology?",
+      "concepts": ["CO2 tolerance", "chemoreceptor adaptation", "training protocols"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/21558571/",
+        "https://www.molchanovs.com/blogs/education/co2-tolerance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Training and Adaptation",
+      "title": "What physiological changes distinguish elite freedivers from novices?",
+      "concepts": ["training adaptations", "genetic factors", "performance predictors"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/19092328/",
+        "https://pubmed.ncbi.nlm.nih.gov/19211942/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Training and Adaptation",
+      "title": "How quickly do dive adaptations reverse when you stop training?",
+      "concepts": ["detraining", "reversibility", "maintenance training"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.aida-international.org/Education/Medical"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Safety and Limits",
+      "title": "Why is shallow water blackout more dangerous than deep blackout?",
+      "concepts": ["shallow water blackout", "ascent hypoxia", "pressure-oxygen relationship"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/21558571/",
+        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/shallow-water-blackout/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Safety and Limits",
+      "title": "What medical conditions are absolute contraindications for freediving?",
+      "concepts": ["contraindications", "risk assessment", "medical screening", "safety protocols"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/contraindications-freediving/",
+        "https://www.aida-international.org/Education/Medical"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "topic": "Financial derivatives — options, futures, swaps",
+  "slug": "financial-derivatives",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "probability and statistics fundamentals",
+    "basic finance (present value, risk/return)",
+    "calculus (partial derivatives)",
+    "financial markets basics"
+  ],
+  "exit_criteria": [
+    "price forwards and futures using no-arbitrage arguments",
+    "construct and analyze option payoff diagrams for basic strategies",
+    "apply the binomial model to price European options",
+    "explain the Black-Scholes model and interpret the Greeks",
+    "value a plain vanilla interest rate swap",
+    "design hedging strategies using derivatives",
+    "identify arbitrage opportunities in derivatives markets"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do derivatives exist?",
+      "concepts": ["derivatives definition", "hedging vs speculation", "market functions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/d/derivative.asp",
+        "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What stops you from getting something for nothing?",
+      "concepts": ["no-arbitrage principle", "law of one price", "arbitrage strategies"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities",
+        "https://www.cmegroup.com/education/courses/introduction-to-futures.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do you price a promise to buy gold next year?",
+      "concepts": ["forward contracts", "forward price formula", "cost of carry"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.investopedia.com/terms/f/forwardcontract.asp",
+        "https://www.cmegroup.com/education/courses/introduction-to-futures.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What happens if your trading partner defaults?",
+      "concepts": ["counterparty risk", "credit risk", "collateral"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.investopedia.com/terms/c/counterpartyrisk.asp",
+        "https://www.bis.org/publ/qtrpdf/r_qt1612e.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Can you explain no-arbitrage pricing back to me?",
+      "concepts": ["no-arbitrage", "forward pricing", "replication"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "What have we learned about derivatives foundations?",
+      "concepts": ["derivatives overview", "no-arbitrage", "forwards and futures intro"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.investopedia.com/terms/d/derivative.asp",
+        "https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Futures Markets",
+      "title": "How does a futures exchange eliminate default risk?",
+      "concepts": ["futures mechanics", "clearinghouse", "margin requirements"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cmegroup.com/education/courses/introduction-to-futures.html",
+        "https://www.investopedia.com/terms/f/futurescontract.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Futures Markets",
+      "title": "Why do futures and forwards have different prices?",
+      "concepts": ["marking to market", "daily settlement", "interest rate effects"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.cmegroup.com/education/courses/introduction-to-futures.html",
+        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Futures Markets",
+      "title": "How do farmers lock in corn prices without a corn futures contract?",
+      "concepts": ["basis risk", "cross-hedging", "hedge ratio"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cmegroup.com/education/courses/introduction-to-hedging.html",
+        "https://www.investopedia.com/terms/b/basisrisk.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Futures Markets",
+      "title": "Why does the futures price converge to spot at expiration?",
+      "concepts": ["convergence", "basis", "arbitrage at maturity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/b/basis.asp",
+        "https://www.cmegroup.com/education/courses/introduction-to-futures.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Futures Markets",
+      "title": "How would you design a hedge for an oil refiner?",
+      "concepts": ["hedging strategies", "crack spreads", "optimal hedge ratio"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cmegroup.com/education/courses/introduction-to-hedging.html",
+        "https://www.investopedia.com/terms/c/crackspread.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Futures Markets",
+      "title": "How well do you understand futures markets?",
+      "concepts": ["futures mechanics", "basis", "hedging"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.cmegroup.com/education/courses/introduction-to-futures.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Options Theory",
+      "title": "What gives you the right but not the obligation?",
+      "concepts": ["call options", "put options", "option payoffs"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cboe.com/education/getting-started/",
+        "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/put-call-options"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Options Theory",
+      "title": "How do you profit from thinking a stock won't move?",
+      "concepts": ["option strategies", "straddles", "strangles"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cboe.com/education/tools/option-strategy-quick-guide/",
+        "https://www.investopedia.com/terms/s/shortstraddle.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Options Theory",
+      "title": "Why must call-put parity hold?",
+      "concepts": ["put-call parity", "synthetic positions", "arbitrage"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/p/putcallparity.asp",
+        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Options Theory",
+      "title": "How do you price an option with a coin flip?",
+      "concepts": ["binomial model", "risk-neutral probability", "replication"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/b/binomialoptionpricing.asp",
+        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/",
+        "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/black-scholes/v/binomial-option-pricing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Options Theory",
+      "title": "Where can you explore options pricing interactively?",
+      "concepts": ["binomial trees", "option value", "early exercise"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cboe.com/education/tools/",
+        "https://www.investopedia.com/simulator/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Options Theory",
+      "title": "What have you learned about options so far?",
+      "concepts": ["option payoffs", "put-call parity", "binomial pricing"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.cboe.com/education/getting-started/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Black-Scholes and Greeks",
+      "title": "What happens when you flip the coin infinitely many times?",
+      "concepts": ["continuous time", "Black-Scholes formula", "lognormal distribution"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/b/blackscholes.asp",
+        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/",
+        "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/black-scholes/v/introduction-to-the-black-scholes-formula"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Black-Scholes and Greeks",
+      "title": "What assumptions does the Black-Scholes model make?",
+      "concepts": ["geometric Brownian motion", "no arbitrage", "model assumptions"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.investopedia.com/terms/b/blackscholes.asp",
+        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Black-Scholes and Greeks",
+      "title": "How sensitive is your option to a stock price wiggle?",
+      "concepts": ["delta", "gamma", "delta hedging"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/g/greeks.asp",
+        "https://www.cboe.com/education/tools/greeks-calculator/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Black-Scholes and Greeks",
+      "title": "Why does time decay hurt your long options?",
+      "concepts": ["theta", "time decay", "vega", "rho"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.investopedia.com/terms/t/theta.asp",
+        "https://www.cboe.com/education/tools/greeks-calculator/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Black-Scholes and Greeks",
+      "title": "What does the market think volatility will be?",
+      "concepts": ["implied volatility", "volatility smile", "VIX"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/i/iv.asp",
+        "https://www.cboe.com/tradable_products/vix/",
+        "https://www.investopedia.com/terms/v/vix.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Black-Scholes and Greeks",
+      "title": "How well do you understand the Black-Scholes model and Greeks?",
+      "concepts": ["Black-Scholes", "Greeks", "implied volatility"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.investopedia.com/terms/b/blackscholes.asp",
+        "https://www.cboe.com/education/tools/greeks-calculator/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Interest Rate Swaps",
+      "title": "Why would two parties swap their cash flows?",
+      "concepts": ["interest rate swaps", "fixed-for-floating", "swap mechanics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.investopedia.com/terms/i/interestrateswap.asp",
+        "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/interest-rate-swaps-tut"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Interest Rate Swaps",
+      "title": "How do you value a swap using zero rates?",
+      "concepts": ["swap valuation", "zero curves", "LIBOR/SOFR"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.investopedia.com/terms/s/swaprate.asp",
+        "https://www.investopedia.com/terms/s/sofr.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Interest Rate Swaps",
+      "title": "What advanced derivative instruments should you explore next?",
+      "concepts": ["exotic options", "barrier options", "credit default swaps"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.investopedia.com/terms/e/exoticoption.asp",
+        "https://www.investopedia.com/terms/c/creditdefaultswap.asp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Integration",
+      "title": "How do all these derivatives concepts fit together?",
+      "concepts": ["pricing principles", "hedging strategies", "risk management"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/",
+        "https://www.cmegroup.com/education/",
+        "https://www.cboe.com/education/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

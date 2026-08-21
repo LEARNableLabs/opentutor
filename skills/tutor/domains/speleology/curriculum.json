@@ -1,0 +1,353 @@
+{
+  "topic": "Speleology — cave formation and exploration",
+  "slug": "speleology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (acids, pH, chemical reactions)",
+    "earth science fundamentals (rock types, water cycle)",
+    "comfort with 3D spatial reasoning"
+  ],
+  "exit_criteria": [
+    "explain how caves form through chemical and physical processes",
+    "identify major cave types and speleothems by formation mechanism",
+    "interpret cave hydrology and groundwater flow patterns",
+    "understand basic cave survey and mapping techniques",
+    "apply safety protocols and conservation ethics to cave exploration"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to Caves",
+      "title": "What makes a space underground count as a cave?",
+      "concepts": ["cave definition", "natural vs artificial", "karst vs non-karst"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nps.gov/subjects/caves/what-is-a-cave.htm",
+        "http://www.goodearthgraphics.com/virtual_cave/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to Caves",
+      "title": "Why do most caves form in limestone rather than granite?",
+      "concepts": ["soluble rocks", "limestone", "dolomite", "gypsum"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/karst-landscape",
+        "http://www.goodearthgraphics.com/virtual_cave/vccave.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to Caves",
+      "title": "How do lava tubes form without any water at all?",
+      "concepts": ["lava tubes", "non-karst caves", "thermal erosion"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nps.gov/labe/learn/nature/lava-tube-formation.htm",
+        "https://www.hawaii.edu/news/2018/05/25/lava-tube-discovery/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Chemical Foundations",
+      "title": "Why does rainwater become acidic enough to dissolve rock?",
+      "concepts": ["carbonic acid", "CO2 dissolution", "pH and dissolution"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/acidic-water",
+        "http://www.goodearthgraphics.com/virtual_cave/vcdissol.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Chemical Foundations",
+      "title": "What controls how fast limestone dissolves in acidic water?",
+      "concepts": ["dissolution kinetics", "saturation state", "flow rate effects"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/vcchem.html",
+        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Chemical Foundations",
+      "title": "How does rain transform into a rock-dissolving agent?",
+      "concepts": ["carbonic acid review", "dissolution review", "rock solubility"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Cave Formation Processes",
+      "title": "How does the water table control where caves form?",
+      "concepts": ["phreatic zone", "vadose zone", "water table"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/aquifers-and-groundwater",
+        "http://www.goodearthgraphics.com/virtual_cave/vcwater.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Cave Formation Processes",
+      "title": "Why do phreatic passages look like tubes while vadose passages look like canyons?",
+      "concepts": ["phreatic morphology", "vadose morphology", "passage shape"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/vcmorph.html",
+        "https://caves.org/section/comms/books/nssguidebookseries.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Cave Formation Processes",
+      "title": "What happens when the water table drops and a phreatic cave drains?",
+      "concepts": ["cave evolution", "multi-stage development", "relict passages"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/vcspelgen.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Cave Formation Processes",
+      "title": "Where do inception horizons guide cave development?",
+      "concepts": ["inception horizons", "bedding planes", "fractures"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Cave Formation Processes",
+      "title": "Can you predict passage orientation from regional geology?",
+      "concepts": ["structural control", "joint patterns", "dip and strike"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.usgs.gov/programs/earthquake-hazards/faults",
+        "http://www.goodearthgraphics.com/virtual_cave/vcspelgen.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Cave Features",
+      "title": "What are the key stages in transforming solid bedrock into a cave system?",
+      "concepts": ["speleogenesis review", "phreatic vs vadose", "structural control"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Cave Features",
+      "title": "How do stalactites grow downward from cave ceilings?",
+      "concepts": ["stalactites", "calcite precipitation", "drip water"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nps.gov/subjects/caves/speleothems.htm",
+        "http://www.goodearthgraphics.com/virtual_cave/vcstalac.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Cave Features",
+      "title": "Why don't stalactites and stalagmites always meet in the middle?",
+      "concepts": ["stalagmites", "columns", "growth rates"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/vcstalag.html",
+        "https://www.nps.gov/cave/learn/nature/speleothem-growth-rates.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Cave Features",
+      "title": "What causes helictites to defy gravity and grow sideways?",
+      "concepts": ["helictites", "capillary forces", "crystallization pressure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/vchelict.html",
+        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Cave Features",
+      "title": "How do cave pearls form from dripping water?",
+      "concepts": ["cave pearls", "rimstone dams", "nucleation"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/vcpearl.html",
+        "https://www.youtube.com/watch?v=cave-pearls-example"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Cave Hydrology",
+      "title": "Where does water go when it sinks into a karst landscape?",
+      "concepts": ["sinking streams", "sinkholes", "karst drainage"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/sinkholes",
+        "http://www.goodearthgraphics.com/virtual_cave/vckarst.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Cave Hydrology",
+      "title": "How can you trace underground water flow through a cave system?",
+      "concepts": ["dye tracing", "groundwater flow", "springs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/mission-areas/water-resources/science/dye-tracing",
+        "https://caves.org/grotto/dcg/conserve/dyetracing.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Cave Hydrology",
+      "title": "How does water move from the surface through a karst system to emerge as a spring?",
+      "concepts": ["karst hydrology review", "sinking streams", "dye tracing"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/vcwater.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Exploration and Survey",
+      "title": "Why do cavers use a single rope technique instead of ladders?",
+      "concepts": ["single rope technique", "vertical caving", "rappelling"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://caves.org/section/vertical/index.shtml",
+        "https://www.youtube.com/watch?v=SRT-basics-example"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Exploration and Survey",
+      "title": "How do you create an accurate map of a cave you're exploring for the first time?",
+      "concepts": ["cave surveying", "compass and tape", "station placement"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://caves.org/section/survey/index.shtml",
+        "http://www.goodearthgraphics.com/virtual_cave/vcsurvey.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Exploration and Survey",
+      "title": "What can modern 3D laser scanning reveal that traditional surveys miss?",
+      "concepts": ["LIDAR", "3D cave models", "digital mapping"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml",
+        "https://www.youtube.com/watch?v=3D-cave-scanning-example"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Safety and Conservation",
+      "title": "Why is cave flooding the most dangerous hazard in exploration?",
+      "concepts": ["flash flooding", "siphons", "weather awareness"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://caves.org/pub/aca/index.htm",
+        "https://www.nss.org/safety/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Safety and Conservation",
+      "title": "How does white-nose syndrome threaten cave ecosystems?",
+      "concepts": ["white-nose syndrome", "bat conservation", "decontamination"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.whitenosesyndrome.org/",
+        "https://caves.org/WNS/index.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Safety and Conservation",
+      "title": "What does 'take nothing but pictures, leave nothing but footprints' mean in a cave?",
+      "concepts": ["cave conservation", "minimal impact", "restoration ethics"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://caves.org/conservation/index.htm",
+        "https://www.nss.org/about-nss/nss-policy-statements/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration",
+      "title": "How do chemical processes, geological structures, and human exploration come together in speleology?",
+      "concepts": ["speleogenesis synthesis", "hydrology synthesis", "exploration synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://www.goodearthgraphics.com/virtual_cave/index.html",
+        "https://caves.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

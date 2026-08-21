@@ -1,0 +1,466 @@
+{
+  "topic": "3D Printer Firmware \u2014 Motion Planning and Kinematics",
+  "slug": "3d-printer-firmware",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic programming (C/C++ helpful)",
+    "basic physics (vectors, forces)",
+    "basic calculus (derivatives for velocity/acceleration)",
+    "understanding of 3D coordinate systems"
+  ],
+  "exit_criteria": [
+    "student can explain how stepper motors are controlled in firmware",
+    "student can implement forward/inverse kinematics for Cartesian and CoreXY systems",
+    "student can describe motion planning algorithms including lookahead and acceleration profiles",
+    "student can read and modify motion control code in open-source firmware",
+    "student can tune motion parameters for print quality and speed",
+    "student can compare tradeoffs between different kinematic architectures"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Motion Control Fundamentals",
+      "title": "How does firmware make a motor move one tiny step at a time?",
+      "concepts": [
+        "stepper motors",
+        "step/direction signals",
+        "microstepping"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://marlinfw.org/docs/hardware/stepper_drivers.html",
+        "https://www.youtube.com/watch?v=eyqwLiowZiU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Motion Control Fundamentals",
+      "title": "Why does timing matter so much in real-time motion control?",
+      "concepts": [
+        "interrupt-driven control",
+        "real-time constraints",
+        "timer precision"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://github.com/MarlinFirmware/Marlin/blob/2.1.x/Marlin/src/module/stepper.cpp",
+        "https://www.klipper3d.org/Kinematics.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Motion Control Fundamentals",
+      "title": "What happens when we translate G-code commands into motor steps?",
+      "concepts": [
+        "G-code parsing",
+        "coordinate transformation",
+        "feed rate calculation"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://marlinfw.org/meta/gcode/",
+        "https://reprap.org/wiki/G-code"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Motion Control Fundamentals",
+      "title": "How would you explain motion control to someone building their first printer?",
+      "concepts": [
+        "teaching synthesis",
+        "motor control recap"
+      ],
+      "difficulty": 1,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/c/TeachingTech"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Motion Control Fundamentals",
+      "title": "Why can't we just instantly change motor speed?",
+      "concepts": [
+        "inertia",
+        "resonance",
+        "physical constraints"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/CNCKitchen"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Motion Control Fundamentals",
+      "title": "What have we learned about stepper control and motion fundamentals?",
+      "concepts": [
+        "stepper recap",
+        "timing and G-code processing"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://marlinfw.org/docs/hardware/stepper_drivers.html",
+        "https://reprap.org/wiki/Motion_control"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Kinematics Basics",
+      "title": "What's the simplest way to map toolhead position to motor positions?",
+      "concepts": [
+        "Cartesian kinematics",
+        "forward kinematics",
+        "1:1 mapping"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.klipper3d.org/Kinematics.html#cartesian-kinematics",
+        "https://reprap.org/wiki/Kinematics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Kinematics Basics",
+      "title": "How does CoreXY let two motors control X and Y without moving parts?",
+      "concepts": [
+        "CoreXY kinematics",
+        "coupled motors",
+        "belt routing"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://corexy.com/theory.html",
+        "https://www.klipper3d.org/Kinematics.html#corexy-kinematics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Kinematics Basics",
+      "title": "Why do delta printers need inverse kinematics?",
+      "concepts": [
+        "delta kinematics",
+        "inverse kinematics",
+        "parallel robots"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.klipper3d.org/Kinematics.html#delta-kinematics",
+        "https://reprap.org/wiki/Delta_geometry"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Kinematics Basics",
+      "title": "How do you calculate motor positions for a given toolhead position in CoreXY?",
+      "concepts": [
+        "kinematics implementation",
+        "matrix transformations"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://github.com/Klipper3d/klipper/blob/master/klippy/kinematics/corexy.py"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Kinematics Basics",
+      "title": "What have we learned about kinematics and coordinate systems?",
+      "concepts": [
+        "kinematics recap",
+        "coordinate transforms"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://reprap.org/wiki/Kinematics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Motion Planning Algorithms",
+      "title": "How do we move smoothly from point A to point B?",
+      "concepts": [
+        "linear interpolation",
+        "bresenham algorithm",
+        "path generation"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://github.com/MarlinFirmware/Marlin/blob/2.1.x/Marlin/src/module/planner.cpp",
+        "https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Motion Planning Algorithms",
+      "title": "Why does acceleration need to ramp gradually?",
+      "concepts": [
+        "acceleration profiles",
+        "trapezoidal motion",
+        "jerk"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://marlinfw.org/docs/features/linear_advance.html",
+        "https://www.klipper3d.org/Kinematics.html#acceleration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Motion Planning Algorithms",
+      "title": "What's the difference between trapezoidal and S-curve acceleration?",
+      "concepts": [
+        "S-curve acceleration",
+        "jerk control",
+        "smooth motion"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://github.com/MarlinFirmware/Marlin/blob/2.1.x/Marlin/src/module/planner.cpp",
+        "https://marlinfw.org/docs/features/s_curve.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Motion Planning Algorithms",
+      "title": "How does lookahead prevent the printer from stopping at every corner?",
+      "concepts": [
+        "lookahead buffer",
+        "junction deviation",
+        "continuous motion"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html",
+        "https://onehossshay.wordpress.com/2011/09/24/improving_grbl_cornering_algorithm/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Motion Planning Algorithms",
+      "title": "Can you debug this motion planner implementation?",
+      "concepts": [
+        "code reading",
+        "debugging motion"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://github.com/MarlinFirmware/Marlin/blob/2.1.x/Marlin/src/module/planner.cpp",
+        "https://github.com/Klipper3d/klipper/blob/master/klippy/toolhead.py"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Motion Planning Algorithms",
+      "title": "How would you tune acceleration and jerk for a specific printer?",
+      "concepts": [
+        "parameter tuning",
+        "physical testing",
+        "optimization"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://teachingtechyt.github.io/calibration.html#accel",
+        "https://www.klipper3d.org/Resonance_Compensation.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Motion Planning Algorithms",
+      "title": "What have we learned about motion planning and acceleration?",
+      "concepts": [
+        "motion planning recap",
+        "acceleration profiles"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://marlinfw.org/docs/features/s_curve.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Kinematics",
+      "title": "How do we compute delta arm positions from XYZ coordinates?",
+      "concepts": [
+        "delta inverse kinematics",
+        "trigonometry",
+        "parallel linkages"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.klipper3d.org/Kinematics.html#delta-kinematics",
+        "https://github.com/Klipper3d/klipper/blob/master/klippy/kinematics/delta.py"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Advanced Kinematics",
+      "title": "Why is delta calibration so challenging?",
+      "concepts": [
+        "delta calibration",
+        "error sources",
+        "auto-calibration algorithms"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.klipper3d.org/Delta_Calibrate.html",
+        "https://reprap.org/wiki/Delta_geometry#Calibration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Kinematics",
+      "title": "What are the tradeoffs between Cartesian, CoreXY, and Delta?",
+      "concepts": [
+        "architecture comparison",
+        "design tradeoffs",
+        "use cases"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://reprap.org/wiki/Kinematics",
+        "https://www.youtube.com/c/CNCKitchen"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Kinematics",
+      "title": "How would you implement a simple kinematics solver?",
+      "concepts": [
+        "implementation practice",
+        "kinematics code"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://github.com/Klipper3d/klipper/tree/master/klippy/kinematics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Kinematics",
+      "title": "What have we learned about comparing kinematic systems?",
+      "concepts": [
+        "kinematics review",
+        "system comparison"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://reprap.org/wiki/Kinematics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Real-World Optimization",
+      "title": "How does input shaping eliminate ringing artifacts?",
+      "concepts": [
+        "input shaping",
+        "resonance compensation",
+        "signal processing"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.klipper3d.org/Resonance_Compensation.html",
+        "https://github.com/Klipper3d/klipper/blob/master/docs/Resonance_Compensation.md"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Real-World Optimization",
+      "title": "Why does pressure advance improve print quality?",
+      "concepts": [
+        "pressure advance",
+        "extrusion compensation",
+        "bowden vs direct drive"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://marlinfw.org/docs/features/lin_advance.html",
+        "https://www.klipper3d.org/Pressure_Advance.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Real-World Optimization",
+      "title": "How do Marlin and Klipper's motion control approaches compare?",
+      "concepts": [
+        "firmware architectures",
+        "split vs monolithic",
+        "performance tradeoffs"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.klipper3d.org/Features.html",
+        "https://marlinfw.org/docs/basics/introduction.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Real-World Optimization",
+      "title": "What would your ideal motion control system look like?",
+      "concepts": [
+        "synthesis",
+        "architecture design",
+        "optimization goals"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://github.com/MarlinFirmware/Marlin",
+        "https://github.com/Klipper3d/klipper"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+{
+  "topic": "Mathematics of Voting and Fair Division",
+  "slug": "mathematics-of-voting",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic discrete mathematics",
+    "combinatorics fundamentals",
+    "proof techniques",
+    "basic probability"
+  ],
+  "exit_criteria": [
+    "student can analyze voting systems and identify paradoxes",
+    "student can prove Arrow's impossibility theorem",
+    "student can execute and analyze fair division protocols",
+    "student can compare fairness criteria and their trade-offs",
+    "student can recognize strategic voting opportunities",
+    "student can apply voting and division mathematics to real scenarios"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to Voting Systems",
+      "title": "Why can't we just count votes?",
+      "concepts": [
+        "preference aggregation",
+        "voting rules",
+        "plurality voting"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/voting/",
+        "https://ncase.me/ballot/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to Voting Systems",
+      "title": "What happens when voters rank candidates?",
+      "concepts": [
+        "ranked ballots",
+        "preference profiles",
+        "majority rule"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=yhO6jfHPFQU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to Voting Systems",
+      "title": "How does Borda count turn rankings into points?",
+      "concepts": [
+        "Borda count",
+        "positional voting",
+        "score aggregation"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cut-the-knot.org/Curriculum/SocialScience/Borda.shtml",
+        "https://en.wikipedia.org/wiki/Borda_count"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Introduction to Voting Systems",
+      "title": "Can we eliminate the worst candidate and try again?",
+      "concepts": [
+        "instant runoff voting",
+        "ranked choice",
+        "sequential elimination"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.fairvote.org/rcv",
+        "https://www.youtube.com/watch?v=3Y3jE3B8HsE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Introduction to Voting Systems",
+      "title": "What if voters could approve multiple candidates?",
+      "concepts": [
+        "approval voting",
+        "ballot types",
+        "voting strategy basics"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://electionscience.org/library/approval-voting/",
+        "https://ncase.me/ballot/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Voting Paradoxes and Impossibilities",
+      "title": "Can three voters create an infinite loop?",
+      "concepts": [
+        "Condorcet paradox",
+        "majority cycles",
+        "transitivity"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/voting-methods/#ConPar",
+        "https://www.youtube.com/watch?v=HoAnYQZrNrQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Introduction to Voting Systems",
+      "title": "How do different voting systems handle the same preferences?",
+      "concepts": [
+        "voting systems comparison",
+        "ranked vs approval voting",
+        "plurality limitations"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ncase.me/ballot/",
+        "https://www.youtube.com/watch?v=yhO6jfHPFQU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Voting Paradoxes and Impossibilities",
+      "title": "Why does adding a losing candidate change the winner?",
+      "concepts": [
+        "independence of irrelevant alternatives",
+        "spoiler effect",
+        "IIA criterion"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=yhO6jfHPFQU",
+        "https://en.wikipedia.org/wiki/Independence_of_irrelevant_alternatives"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Voting Paradoxes and Impossibilities",
+      "title": "What does Arrow's theorem actually say?",
+      "concepts": [
+        "Arrow's impossibility theorem",
+        "fairness criteria",
+        "mathematical impossibility"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/arrows-theorem/",
+        "https://www.youtube.com/watch?v=AhVR7gFMKNg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Voting Paradoxes and Impossibilities",
+      "title": "Can you walk through Arrow's proof yourself?",
+      "concepts": [
+        "proof structure",
+        "logical deduction",
+        "impossibility proofs"
+      ],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://web.stanford.edu/~jdlevin/Econ%20202/Arrow.pdf",
+        "https://math.stackexchange.com/questions/tagged/arrows-theorem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Voting Paradoxes and Impossibilities",
+      "title": "Do all voting systems allow manipulation?",
+      "concepts": [
+        "Gibbard-Satterthwaite theorem",
+        "strategy-proofness",
+        "truthful voting"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/social-choice/#StrVot",
+        "https://en.wikipedia.org/wiki/Gibbard%E2%80%93Satterthwaite_theorem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Fair Division: Discrete Problems",
+      "title": "How do you split indivisible items fairly?",
+      "concepts": [
+        "discrete fair division",
+        "indivisible goods",
+        "allocation problems"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Fair_division",
+        "https://www.youtube.com/watch?v=VLz9VqFuqh4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Fair Division: Discrete Problems",
+      "title": "What does it mean to be envy-free?",
+      "concepts": [
+        "envy-freeness",
+        "fairness criteria",
+        "valuation functions"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/social-choice/#FaiDiv",
+        "https://arxiv.org/abs/1907.04505"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Voting Paradoxes and Impossibilities",
+      "title": "What are the breaking points of voting systems?",
+      "concepts": [
+        "voting systems recap",
+        "paradoxes review",
+        "impossibility theorems"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ncase.me/ballot/",
+        "https://www.youtube.com/watch?v=yhO6jfHPFQU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Fair Division: Discrete Problems",
+      "title": "Can envy-free always exist with indivisible goods?",
+      "concepts": [
+        "existence results",
+        "counterexamples",
+        "approximate envy-freeness"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Envy-free_item_allocation",
+        "https://www.cs.cmu.edu/~sandholm/cs15-892F13/Fair%20division.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Fair Division: Discrete Problems",
+      "title": "How would you divide your family's estate fairly?",
+      "concepts": [
+        "practical division",
+        "preference elicitation",
+        "real constraints"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.spliddit.org/",
+        "https://www.fairoutcomes.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Fair Division: Cake Cutting",
+      "title": "Why is cake cutting more than just halving?",
+      "concepts": [
+        "continuous division",
+        "cake cutting",
+        "heterogeneous goods"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Fair_cake-cutting",
+        "https://www.youtube.com/watch?v=kaMKInkV7Vs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Fair Division: Cake Cutting",
+      "title": "How does cut-and-choose guarantee fairness?",
+      "concepts": [
+        "cut-and-choose",
+        "proportionality",
+        "two-player protocols"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Divide_and_choose",
+        "https://www.cut-the-knot.org/Curriculum/SocialScience/CakeCutting.shtml"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Fair Division: Cake Cutting",
+      "title": "Can three people divide a cake with no envy?",
+      "concepts": [
+        "Selfridge-Conway protocol",
+        "envy-free cake cutting",
+        "multi-party algorithms"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Selfridge%E2%80%93Conway_procedure",
+        "https://www.youtube.com/watch?v=kaMKInkV7Vs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Fair Division: Cake Cutting",
+      "title": "What are the trade-offs between fairness and efficiency?",
+      "concepts": [
+        "Pareto efficiency",
+        "fairness vs efficiency",
+        "impossibility of both"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Pareto_efficiency",
+        "https://plato.stanford.edu/entries/social-choice/#FaiEffTra"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Strategic Behavior",
+      "title": "When should you vote dishonestly?",
+      "concepts": [
+        "strategic voting",
+        "tactical manipulation",
+        "sincere vs strategic"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/social-choice/#StrVot",
+        "https://ncase.me/ballot/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Fair Division: Cake Cutting",
+      "title": "What guarantees do fair division protocols provide?",
+      "concepts": [
+        "division algorithms recap",
+        "fairness criteria review",
+        "protocol comparison"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.spliddit.org/",
+        "https://en.wikipedia.org/wiki/Fair_cake-cutting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Strategic Behavior",
+      "title": "How much power does your vote actually have?",
+      "concepts": [
+        "voting power indices",
+        "Shapley-Shubik index",
+        "Banzhaf power"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Shapley%E2%80%93Shubik_power_index",
+        "https://www.youtube.com/watch?v=V62eBDnWPMw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Strategic Behavior",
+      "title": "Can you game a fair division protocol?",
+      "concepts": [
+        "manipulation in division",
+        "preference misreporting",
+        "mechanism design"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Mechanism_design",
+        "https://www.cs.cmu.edu/~sandholm/cs15-892F13/Fair%20division.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Real-World Applications",
+      "title": "How do countries decide election systems?",
+      "concepts": [
+        "electoral systems",
+        "real-world voting",
+        "comparative politics"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.idea.int/data-tools/data/electoral-system-design",
+        "https://www.fairvote.org/where_is_ranked_choice_voting_used"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Real-World Applications",
+      "title": "Where else does fair division show up in life?",
+      "concepts": [
+        "applications",
+        "computational social choice",
+        "algorithmic fairness"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.spliddit.org/",
+        "https://arxiv.org/abs/1606.06732",
+        "https://www.youtube.com/watch?v=kaMKInkV7Vs"
+      ],
+      "status": "pending"
+    }
+  ]
+}

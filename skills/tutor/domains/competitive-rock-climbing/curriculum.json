@@ -1,0 +1,371 @@
+{
+  "topic": "Competitive rock climbing — route reading and training science",
+  "slug": "competitive-rock-climbing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic climbing technique (footwork, body positioning)",
+    "familiarity with climbing grades and styles",
+    "consistent climbing practice (2-3x/week minimum)"
+  ],
+  "exit_criteria": [
+    "read and sequence competition-style routes efficiently under time pressure",
+    "design and execute periodized training blocks for climbing performance",
+    "identify and train specific energy systems and strength qualities",
+    "apply mental strategies for competition anxiety and flow state",
+    "prevent common climbing injuries through load management and movement quality"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Route Reading Fundamentals",
+      "title": "What are you actually looking for when you scan a route?",
+      "concepts": ["visual scanning patterns", "hold identification", "rest position spotting"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://latticetraining.com/route-reading-skills/",
+        "https://www.youtube.com/watch?v=Zyqd58mCbdw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Route Reading Fundamentals",
+      "title": "Why do elite climbers sequence from rest to rest instead of hold to hold?",
+      "concepts": ["rest position identification", "sequence chunking", "energy management"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.trainingbeta.com/route-reading/",
+        "https://www.youtube.com/watch?v=kNWJ0XE3Dho"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Route Reading Fundamentals",
+      "title": "How does body positioning change your reading of a sequence?",
+      "concepts": ["body position analysis", "hip orientation", "movement efficiency"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.davemacleod.com/blog/route-reading-technique",
+        "https://www.youtube.com/channel/UC6-rliFvsdCUTZndrZTQjMA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Route Reading Fundamentals",
+      "title": "What's the difference between reading for onsight vs. redpoint?",
+      "concepts": ["onsight strategy", "beta refinement", "observation time management"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.trainingforclimbing.com/onsight-climbing-tips/",
+        "https://latticetraining.com/onsight-vs-redpoint/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Route Reading Fundamentals",
+      "title": "Can you teach back what you learned about reading a competition boulder?",
+      "concepts": ["sequence visualization", "beta communication", "critical observation points"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "https://www.ifsc-climbing.org/index.php/world-competition/calendar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Route Reading Fundamentals",
+      "title": "Review: Route reading fundamentals and competition scanning",
+      "concepts": ["visual scanning review", "sequence reading", "rest position identification"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://latticetraining.com/route-reading-skills/",
+        "https://www.trainingbeta.com/route-reading/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Training Science Fundamentals",
+      "title": "Why do climbers need different energy systems for a 10-move boulder vs. a 40-move route?",
+      "concepts": ["energy systems", "ATP-CP system", "anaerobic vs. aerobic", "climbing duration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://latticetraining.com/energy-systems-climbing/",
+        "https://www.trainingforclimbing.com/energy-system-training/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Training Science Fundamentals",
+      "title": "What happens when you train hard every day without rest?",
+      "concepts": ["supercompensation", "recovery adaptation", "overtraining syndrome"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.trainingbeta.com/recovery-for-climbers/",
+        "https://latticetraining.com/recovery-climbing-performance/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Training Science Fundamentals",
+      "title": "How do you structure training phases to peak for a competition?",
+      "concepts": ["periodization", "training blocks", "tapering", "peaking"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.trainingforclimbing.com/periodization-training/",
+        "https://latticetraining.com/periodisation-for-climbers/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Training Science Fundamentals",
+      "title": "Review: Energy systems, recovery, and periodization",
+      "concepts": ["energy system review", "periodization review", "recovery principles"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.trainingforclimbing.com/training-basics/",
+        "https://latticetraining.com/training-principles/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Physical Training Methods",
+      "title": "Why do max hangs build strength while repeaters build endurance?",
+      "concepts": ["fingerboard protocols", "recruitment vs. capacity", "strength-endurance continuum"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://latticetraining.com/fingerboard-training-guide/",
+        "https://www.trainingforclimbing.com/fingerboard-training/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Physical Training Methods",
+      "title": "How do you know if you're ready for campus board training?",
+      "concepts": ["power training readiness", "campus board protocols", "injury risk assessment"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.trainingforclimbing.com/campus-training/",
+        "https://latticetraining.com/campus-board-training/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Physical Training Methods",
+      "title": "What makes limit bouldering different from volume bouldering?",
+      "concepts": ["limit bouldering", "recruitment training", "volume training", "training stimulus"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.trainingbeta.com/limit-bouldering/",
+        "https://latticetraining.com/limit-bouldering-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Physical Training Methods",
+      "title": "Why does core strength matter more on steep terrain?",
+      "concepts": ["core tension", "body positioning", "steep climbing mechanics", "antagonist training"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.trainingforclimbing.com/core-training/",
+        "https://latticetraining.com/core-strength-climbing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Physical Training Methods",
+      "title": "How flexible do you actually need to be for high steps and stemming?",
+      "concepts": ["mobility requirements", "hip flexibility", "movement range", "functional flexibility"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.trainingbeta.com/flexibility-for-climbers/",
+        "https://latticetraining.com/mobility-for-climbers/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Physical Training Methods",
+      "title": "Design a training week that balances strength, power, and endurance",
+      "concepts": ["training week structure", "stimulus variation", "recovery distribution"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.trainingforclimbing.com/sample-training-programs/",
+        "https://latticetraining.com/training-plans/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Physical Training Methods",
+      "title": "Review: Physical training methods and program design",
+      "concepts": ["fingerboard review", "training method selection", "program design principles"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.trainingforclimbing.com/training-overview/",
+        "https://latticetraining.com/training-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Mental Training and Competition Psychology",
+      "title": "What's actually happening in your body when you get scared on a route?",
+      "concepts": ["fight-or-flight response", "performance anxiety", "physiological arousal"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.davemacleod.com/blog/mental-training-fear",
+        "https://www.trainingbeta.com/managing-fear-climbing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Mental Training and Competition Psychology",
+      "title": "How does visualization actually improve climbing performance?",
+      "concepts": ["mental rehearsal", "motor imagery", "visualization protocols", "neural priming"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://latticetraining.com/mental-training-climbing/",
+        "https://www.trainingforclimbing.com/mental-training/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Mental Training and Competition Psychology",
+      "title": "Why do you climb differently in isolation than in warm-up?",
+      "concepts": ["competition psychology", "isolation zone management", "performance under pressure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.trainingbeta.com/competition-climbing-psychology/",
+        "https://latticetraining.com/competition-psychology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Mental Training and Competition Psychology",
+      "title": "Can you identify your flow state triggers?",
+      "concepts": ["flow state", "optimal arousal", "performance zone", "trigger conditions"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.davemacleod.com/blog/flow-state-climbing",
+        "https://www.trainingbeta.com/flow-state-performance/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Competition Tactics",
+      "title": "What's the optimal warm-up protocol before a competition round?",
+      "concepts": ["warm-up structure", "activation without fatigue", "psychological priming"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://latticetraining.com/competition-warm-up/",
+        "https://www.trainingforclimbing.com/competition-warm-up/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Competition Tactics",
+      "title": "How do you manage time and effort across multiple boulder problems?",
+      "concepts": ["time management", "effort distribution", "strategic rest", "problem selection"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.trainingbeta.com/competition-tactics/",
+        "https://latticetraining.com/boulder-comp-strategy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Competition Tactics",
+      "title": "Review: Mental training and competition tactics",
+      "concepts": ["mental training review", "competition strategy", "performance optimization"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.trainingforclimbing.com/competition-guide/",
+        "https://latticetraining.com/competition-prep/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Injury Prevention and Recovery",
+      "title": "Why do finger pulleys get injured and how do you prevent it?",
+      "concepts": ["pulley anatomy", "load management", "progressive overload", "injury mechanisms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.trainingforclimbing.com/finger-injury-prevention/",
+        "https://latticetraining.com/pulley-injury-prevention/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Injury Prevention and Recovery",
+      "title": "How do you know when to push through discomfort vs. stop training?",
+      "concepts": ["pain vs. injury signals", "autoregulation", "recovery monitoring", "training load management"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.trainingbeta.com/injury-prevention-climbers/",
+        "https://latticetraining.com/injury-prevention-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Injury Prevention and Recovery",
+      "title": "Synthesize: Design your own periodized training plan with injury prevention built in",
+      "concepts": ["program design integration", "load monitoring", "recovery strategies", "long-term athlete development"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.trainingforclimbing.com/training-plans/",
+        "https://latticetraining.com/coaching-resources/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

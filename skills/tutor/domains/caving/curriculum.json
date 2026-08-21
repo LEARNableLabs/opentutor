@@ -1,0 +1,282 @@
+{
+  "topic": "Caving and Vertical Rope Techniques",
+  "slug": "caving",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic caving safety and etiquette",
+    "familiarity with caving equipment (helmets, lights, harnesses)",
+    "experience with basic knots (figure-8, bowline)",
+    "understanding of anchor principles"
+  ],
+  "exit_criteria": [
+    "rig and safely descend multi-pitch vertical drops independently",
+    "ascend efficiently using frog or ropewalker systems",
+    "perform rope-to-rope changeovers and pass rebelays smoothly",
+    "execute basic self-rescue techniques (prusik escape, ascending past a knot)",
+    "evaluate rope condition and anchor integrity in the field",
+    "understand trade-offs between different rigging approaches"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Safety",
+      "title": "Why does rope selection matter more underground than on the surface?",
+      "concepts": ["static vs dynamic rope", "kernmantle construction", "rope degradation in caves"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://caves.org/pub/bnl/bnl.htm", "https://www.petzl.com/US/en/Sport/Ropes"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Safety",
+      "title": "What makes a bombproof anchor in a cave environment?",
+      "concepts": ["natural anchors", "bolt placement", "load distribution", "redundancy"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://caves.org/section/vertical/", "https://www.petzl.com/US/en/Professional/Anchors-and-textile-anchors"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Safety",
+      "title": "How do you build a personal rigging system that won't fail?",
+      "concepts": ["harness selection", "rack configuration", "cow's tails", "safety checks"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://caves.org/pub/bnl/bnl.htm", "https://www.petzl.com/US/en/Sport/Harnesses"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Safety",
+      "title": "Why do cavers use different standards than rock climbers?",
+      "concepts": ["NSS standards", "NFPA ratings", "wet rope behavior", "abrasion resistance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://caves.org/committee/salonsafety/", "https://www.nfpa.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations & Safety",
+      "title": "What actually kills people on rope in caves?",
+      "concepts": ["accident analysis", "human factors", "equipment failure modes", "risk assessment"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://caves.org/committee/salonsafety/aam.html", "https://ncrc.us/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ascending Systems",
+      "title": "How does the frog system turn your legs into an elevator?",
+      "concepts": ["frog system mechanics", "croll", "hand ascender", "foot loop length"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://caves.org/section/vertical/bnl/50/www_5.htm", "https://www.petzl.com/US/en/Sport/Ascenders"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Ascending Systems",
+      "title": "Why does ropewalker feel like climbing stairs while frog feels like doing sit-ups?",
+      "concepts": ["ropewalker system", "upper ascender placement", "ergonomics", "efficiency comparison"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://caves.org/section/vertical/", "https://www.youtube.com/watch?v=YourVideoID"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Ascending Systems",
+      "title": "What's the physics behind why your ascender grip matters?",
+      "concepts": ["cam mechanics", "rope sheath damage", "toothed vs smooth cams", "ascender selection"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.petzl.com/US/en/Sport/Ascenders", "https://caves.org/pub/bnl/bnl.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Ascending Systems",
+      "title": "How do you keep ascending when you're exhausted halfway up a 300-foot drop?",
+      "concepts": ["rest positions", "breathing technique", "pacing strategies", "mental game"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://caves.org/section/vertical/bnl/50/www_6.htm", "https://ncrc.us/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Ascending Systems",
+      "title": "When should you use a Mitchell system instead of frog or ropewalker?",
+      "concepts": ["Mitchell system", "system trade-offs", "tight spaces", "backup systems"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://caves.org/section/vertical/", "https://www.ukclimbing.com/articles/skills/series/caving_techniques-5167"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Ascending Systems",
+      "title": "Review: Ascending systems and efficiency",
+      "concepts": ["system comparison", "troubleshooting", "personal optimization"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://caves.org/section/vertical/", "https://caves.org/pub/bnl/bnl.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Descending & Control",
+      "title": "Why does a rappel rack give you more control than a figure-8?",
+      "concepts": ["rack mechanics", "bar configuration", "heat dissipation", "friction control"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://caves.org/section/vertical/bnl/50/www_7.htm", "https://www.petzl.com/US/en/Sport/Descenders"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Descending & Control",
+      "title": "What happens when you descend too fast on a long drop?",
+      "concepts": ["rope heating", "glove failure", "speed management", "locked-off descent"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://caves.org/committee/salonsafety/", "https://www.petzl.com/US/en/Sport/Descenders"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Descending & Control",
+      "title": "How do you choose between a rack, a bobbin, and a Petzl Stop?",
+      "concepts": ["descender comparison", "auto-locking devices", "simplicity vs control", "backup considerations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.petzl.com/US/en/Sport/Descenders", "https://caves.org/section/vertical/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Descending & Control",
+      "title": "Why is edge protection the most important part of rigging a drop?",
+      "concepts": ["edge geometry", "rope protectors", "deviation rigging", "abrasion prevention"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://caves.org/section/vertical/bnl/50/www_8.htm", "https://www.petzl.com/US/en/Professional/Edge-rollers"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Descending & Control",
+      "title": "What's the safest way to start a descent on an exposed edge?",
+      "concepts": ["edge transition", "cow's tail management", "body positioning", "commitment point"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://caves.org/section/vertical/", "https://ncrc.us/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Descending & Control",
+      "title": "How do you descend and survey at the same time without dropping your instruments?",
+      "concepts": ["multi-tasking on rope", "equipment management", "survey stations", "field efficiency"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://caves.org/section/survey/", "https://caves.org/section/vertical/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Changeovers & Complex Systems",
+      "title": "Review: Descending systems and edge work",
+      "concepts": ["descender trade-offs", "edge protection", "speed control"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://caves.org/section/vertical/", "https://www.petzl.com/US/en/Sport/Descenders"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Changeovers & Complex Systems",
+      "title": "Why is changeover technique the mark of a competent vertical caver?",
+      "concepts": ["descent-to-ascent changeover", "ascent-to-descent changeover", "efficiency", "safety sequence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://caves.org/section/vertical/bnl/50/www_9.htm", "https://ncrc.us/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Changeovers & Complex Systems",
+      "title": "How do you pass a rebelay without becoming a pendulum?",
+      "concepts": ["rebelay mechanics", "rope-to-rope transfer", "anchor loading", "fall potential"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://caves.org/section/vertical/", "https://www.petzl.com/US/en/Professional/Connectors"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Changeovers & Complex Systems",
+      "title": "What makes a deviation different from a rebelay, and when do you use each?",
+      "concepts": ["deviation vs rebelay", "rigging strategy", "rope management", "clean descents"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://caves.org/section/vertical/bnl/50/www_10.htm", "https://www.ukclimbing.com/articles/skills/series/caving_techniques-5167"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Changeovers & Complex Systems",
+      "title": "How do you ascend past a knot without getting stuck?",
+      "concepts": ["passing knots", "prusik loop technique", "ascender repositioning", "problem-solving"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://caves.org/section/vertical/", "https://ncrc.us/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Changeovers & Complex Systems",
+      "title": "Review: Changeovers, rebelays, and complex rigging",
+      "concepts": ["changeover technique", "rebelay navigation", "deviation strategy", "obstacle management"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://caves.org/section/vertical/", "https://caves.org/section/vertical/bnl/50/www_9.htm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Rescue & Advanced",
+      "title": "What's the fastest way to escape a jammed ascender at 200 feet?",
+      "concepts": ["prusik escape", "self-rescue", "backup prusiks", "emergency procedures"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://ncrc.us/", "https://caves.org/committee/salonsafety/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Rescue & Advanced",
+      "title": "How do you haul an injured caver up when you're alone?",
+      "concepts": ["haul systems", "mechanical advantage", "pulley placement", "solo rescue limits"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": ["https://ncrc.us/", "https://www.petzl.com/US/en/Professional/Pulleys"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Rescue & Advanced",
+      "title": "When should you cut your rope and rappel off a knot?",
+      "concepts": ["emergency decision-making", "contingency planning", "rope sacrifice", "risk calculation"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": ["https://caves.org/committee/salonsafety/aam.html", "https://ncrc.us/"],
+      "status": "pending"
+    }
+  ]
+}

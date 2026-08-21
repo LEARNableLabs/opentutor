@@ -1,0 +1,324 @@
+{
+  "topic": "Handedness and laterality — brain asymmetry research",
+  "slug": "handedness-and-laterality",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic neuroanatomy (brain lobes, hemispheres, major structures)",
+    "intro psychology or cognitive science",
+    "research methods basics (correlation, experimental design)"
+  ],
+  "exit_criteria": [
+    "explain the neural basis of handedness and hemispheric asymmetry",
+    "critically evaluate genetic vs. environmental contributions to laterality",
+    "describe how laterality is measured behaviorally and neurally",
+    "connect handedness to language lateralization and other cognitive asymmetries",
+    "interpret research findings on atypical laterality in clinical populations",
+    "discuss evolutionary theories of why lateralization exists"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Laterality",
+      "title": "Why are most people right-handed, and what does that even mean?",
+      "concepts": ["hand preference", "population asymmetry", "behavioral laterality"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.scientificamerican.com/article/what-causes-some-people-to-be-left-handed/",
+        "https://pubmed.ncbi.nlm.nih.gov/32668444/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Laterality",
+      "title": "How do scientists actually measure handedness?",
+      "concepts": ["Edinburgh Handedness Inventory", "laterality quotient", "measurement validity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.brainmapping.org/NITP/NITP_Edinburgh_Handedness_Inventory.pdf",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0206297"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Laterality",
+      "title": "What about footedness, eyedness, and ear preference?",
+      "concepts": ["multidimensional laterality", "limb preference", "sensory dominance"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6927748/",
+        "https://link.springer.com/article/10.1007/s00221-013-3544-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Laterality",
+      "title": "Is being ambidextrous an advantage or a red flag?",
+      "concepts": ["mixed-handedness", "atypical laterality", "cognitive correlates"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/s41598-020-74469-9",
+        "https://www.youtube.com/watch?v=k0BWVmwJJrs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Laterality",
+      "title": "How has handedness been viewed across history and cultures?",
+      "concepts": ["cultural attitudes", "forced conversion", "historical stigma"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.bbc.com/future/article/20141215-why-lefties-were-losers",
+        "https://psychcentral.com/lib/left-handedness-history-and-myths"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Laterality",
+      "title": "Review: What have we learned about handedness so far?",
+      "concepts": ["handedness measurement", "population patterns", "cultural context"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Neural Basis of Asymmetry",
+      "title": "Which brain structures show left-right differences?",
+      "concepts": ["hemispheric asymmetry", "planum temporale", "motor cortex lateralization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3761624/",
+        "https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00234/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Neural Basis of Asymmetry",
+      "title": "Why is language usually in the left hemisphere?",
+      "concepts": ["language lateralization", "Broca's area", "Wernicke's area"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nrn755",
+        "https://www.youtube.com/watch?v=k61nJkx5aDQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Neural Basis of Asymmetry",
+      "title": "How do fMRI and DTI reveal brain asymmetries?",
+      "concepts": ["functional neuroimaging", "diffusion tensor imaging", "white matter tracts"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4107326/",
+        "https://www.humanconnectome.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Neural Basis of Asymmetry",
+      "title": "Does your handedness predict your language hemisphere?",
+      "concepts": ["handedness-language correlation", "crossed dominance", "atypical lateralization"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://academic.oup.com/brain/article/137/4/1009/356415",
+        "https://pubmed.ncbi.nlm.nih.gov/25499042/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Neural Basis of Asymmetry",
+      "title": "What happens when the corpus callosum is cut?",
+      "concepts": ["split-brain patients", "interhemispheric communication", "disconnection syndrome"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/nrn2986",
+        "https://www.youtube.com/watch?v=ZMLzP1VCANo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Neural Basis of Asymmetry",
+      "title": "Review: How does the asymmetric brain produce lateralized behavior?",
+      "concepts": ["brain structure asymmetry", "functional lateralization", "imaging methods"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Development of Laterality",
+      "title": "Are babies already showing hand preferences in the womb?",
+      "concepts": ["prenatal development", "ultrasound studies", "early asymmetry"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3062967/",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0028393209003479"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Development of Laterality",
+      "title": "Is handedness genetic, and which genes are involved?",
+      "concepts": ["heritability", "LRRTM1", "PCSK6", "genetic architecture"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41562-021-01085-3",
+        "https://pubmed.ncbi.nlm.nih.gov/31048045/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Development of Laterality",
+      "title": "How do environment and learning shape laterality?",
+      "concepts": ["epigenetics", "cultural pressures", "practice effects", "plasticity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.frontiersin.org/articles/10.3389/fpsyg.2012.00302/full",
+        "https://journals.sagepub.com/doi/10.1177/0956797617727459"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Development of Laterality",
+      "title": "When does handedness stabilize in childhood?",
+      "concepts": ["developmental trajectory", "critical periods", "stabilization age"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3530567/",
+        "https://psycnet.apa.org/record/2019-21895-001"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Evolution and Function",
+      "title": "Do other animals show population-level handedness?",
+      "concepts": ["comparative laterality", "primate handedness", "evolutionary conservation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://royalsocietypublishing.org/doi/10.1098/rstb.2008.0304",
+        "https://www.youtube.com/watch?v=sXyWCgFOWKU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Evolution and Function",
+      "title": "Review: How does laterality develop from genes to behavior?",
+      "concepts": ["developmental origins", "genetic contributions", "environmental influences"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Evolution and Function",
+      "title": "Why did brain asymmetry evolve in the first place?",
+      "concepts": ["computational efficiency", "neural efficiency hypothesis", "dual-task coordination"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2993460/",
+        "https://www.annualreviews.org/doi/abs/10.1146/annurev.psych.59.103006.093739"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Evolution and Function",
+      "title": "Could language have driven hemispheric specialization?",
+      "concepts": ["language evolution", "tool use", "co-evolution hypothesis"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S1364661308001307",
+        "https://pubmed.ncbi.nlm.nih.gov/20542537/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Evolution and Function",
+      "title": "Does handedness affect tool design and innovation?",
+      "concepts": ["tool adaptation", "right-handed world", "design bias"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.lefthandersday.com/statistics",
+        "https://designmuseum.org/discover-design/all-stories/left-handed-design"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Clinical and Applied Perspectives",
+      "title": "Why is atypical laterality linked to neurodevelopmental disorders?",
+      "concepts": ["autism spectrum", "dyslexia", "ADHD", "atypical brain organization"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41398-019-0666-8",
+        "https://pubmed.ncbi.nlm.nih.gov/25646265/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Clinical and Applied Perspectives",
+      "title": "Can studying laterality help stroke recovery?",
+      "concepts": ["plasticity after injury", "hemispheric reorganization", "rehabilitation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5476762/",
+        "https://stroke.ahajournals.org/content/49/11/2770"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Clinical and Applied Perspectives",
+      "title": "Final review: What does handedness reveal about brain organization?",
+      "concepts": ["brain asymmetry synthesis", "laterality across levels", "future directions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.annualreviews.org/doi/10.1146/annurev-neuro-071714-033948",
+        "https://www.nature.com/articles/s41583-019-0206-2"
+      ],
+      "status": "pending"
+    }
+  ]
+}

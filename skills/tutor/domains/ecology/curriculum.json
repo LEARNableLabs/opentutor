@@ -1,0 +1,331 @@
+{
+  "topic": "Ecology and Population Dynamics",
+  "slug": "ecology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (cell biology, genetics)",
+    "evolution and natural selection",
+    "basic calculus (exponential functions, derivatives)",
+    "reading graphs and interpreting data"
+  ],
+  "exit_criteria": [
+    "student can build and interpret population growth models (exponential and logistic)",
+    "student can analyze species interactions using mathematical frameworks",
+    "student can predict community dynamics and succession patterns",
+    "student can trace energy and nutrient flows through ecosystems",
+    "student can apply ecological principles to conservation and management problems",
+    "student can critically evaluate ecological case studies and datasets"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Population Fundamentals",
+      "title": "Why do some species boom while others barely survive?",
+      "concepts": ["population definition", "demographic parameters", "scale and boundaries"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/population-ecology-ap/a/population-size-density-and-dispersal",
+        "https://www.nature.com/scitable/knowledge/library/how-populations-grow-the-exponential-and-logistic-13240157/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Population Fundamentals",
+      "title": "How does age structure predict a population's future?",
+      "concepts": ["age distribution", "survivorship curves", "life tables"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/population-ecology-ap/a/life-tables-survivorship-age-sex-structure",
+        "https://serc.carleton.edu/quantskills/methods/quantlit/PopulationPyramids.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Population Fundamentals",
+      "title": "What strategies do organisms use: many offspring or heavy parental investment?",
+      "concepts": ["r vs K selection", "life history strategies", "reproductive trade-offs"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/life-history-evolution-68245673/",
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/population-ecology-ap/v/r-selected-and-k-selected-population-growth-strategies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Population Growth Models",
+      "title": "When can a population grow forever?",
+      "concepts": ["exponential growth", "intrinsic rate of increase", "doubling time"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/how-populations-grow-the-exponential-and-logistic-13240157/",
+        "https://ocw.mit.edu/courses/1-018j-ecology-i-the-earth-system-fall-2009/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Population Growth Models",
+      "title": "Why don't rabbits cover the earth?",
+      "concepts": ["carrying capacity", "logistic growth", "density dependence"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/population-ecology-ap/a/exponential-logistic-growth",
+        "https://ccl.northwestern.edu/netlogo/models/Rabbits"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Population Growth Models",
+      "title": "Can a population be too small to survive?",
+      "concepts": ["Allee effects", "minimum viable population", "extinction vortex"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/extinction-causes-and-consequences-25679729/",
+        "https://www.biointeractive.org/classroom-resources/rhinos-in-kenya"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Population Growth Models",
+      "title": "Can you predict when a population will crash or explode?",
+      "concepts": ["exponential vs logistic", "interpreting growth curves", "applying models"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://serc.carleton.edu/quantskills/activities/popgrowth.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Species Interactions",
+      "title": "What happens when two species need the same resources?",
+      "concepts": ["interspecific competition", "competitive exclusion", "resource partitioning"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/niches-competition",
+        "https://www.nature.com/scitable/knowledge/library/community-ecology-13228167/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Species Interactions",
+      "title": "Why do predator and prey populations cycle together?",
+      "concepts": ["predator-prey dynamics", "Lotka-Volterra model", "population oscillations"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ccl.northwestern.edu/netlogo/models/WolfSheepPredation",
+        "https://www.nature.com/scitable/knowledge/library/dynamics-of-predation-13229468/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Species Interactions",
+      "title": "What happens when you tweak the parameters of a predator-prey system?",
+      "concepts": ["parameter sensitivity", "stability analysis", "chaos"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ccl.northwestern.edu/netlogo/models/PredatorPrey",
+        "https://www.ecolab.com.au/",
+        "https://services.math.duke.edu/education/ccp/materials/diffeq/predprey/pred1.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Species Interactions",
+      "title": "Can cooperation be more powerful than competition?",
+      "concepts": ["mutualism", "symbiosis", "coevolution"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/symbiosis-mutualism-commensalism-parasitism",
+        "https://www.biointeractive.org/classroom-resources/some-animals-are-more-equal-than-others-keystone-species"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Species Interactions",
+      "title": "How would you explain species interactions to someone who's never studied ecology?",
+      "concepts": ["synthesizing interaction types", "real-world examples", "trade-offs"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/species-interactions-and-competition-102131429/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Community Ecology",
+      "title": "What makes a community more than a random collection of species?",
+      "concepts": ["community structure", "species diversity", "evenness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/community-structure",
+        "https://www.nature.com/scitable/knowledge/library/what-maintains-high-species-diversity-in-tropical-13262708/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Community Ecology",
+      "title": "How do species interactions shape the structure of communities?",
+      "concepts": ["competition vs cooperation", "diversity metrics", "community patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://serc.carleton.edu/quantskills/activities/biodiversity.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Community Ecology",
+      "title": "How does a barren landscape become a forest?",
+      "concepts": ["ecological succession", "pioneer species", "climax community"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/succession",
+        "https://www.biointeractive.org/classroom-resources/returning-the-forest"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Community Ecology",
+      "title": "Can removing one species collapse an entire ecosystem?",
+      "concepts": ["keystone species", "trophic cascades", "ecosystem engineers"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.biointeractive.org/classroom-resources/some-animals-are-more-equal-than-others-keystone-species",
+        "https://www.youtube.com/watch?v=ysa5OBhXz-Q"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Energy and Nutrients",
+      "title": "Where does energy go in an ecosystem?",
+      "concepts": ["trophic levels", "energy pyramids", "10% rule"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/energy-flow-through-ecosystems/a/food-chains-food-webs",
+        "https://www.nature.com/scitable/knowledge/library/energy-flow-in-ecosystems-15650937/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Energy and Nutrients",
+      "title": "Why are food webs more realistic than food chains?",
+      "concepts": ["food web complexity", "omnivory", "web stability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/energy-flow-through-ecosystems/a/food-chains-food-webs",
+        "https://ccl.northwestern.edu/netlogo/models/SimpleEcosystem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Energy and Nutrients",
+      "title": "How do nutrients cycle while energy flows through?",
+      "concepts": ["biogeochemical cycles", "carbon cycle", "nitrogen cycle"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/biogeochemical-cycles/a/introduction-to-biogeochemical-cycles",
+        "https://www.biointeractive.org/classroom-resources/carbon-cycle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Energy and Nutrients",
+      "title": "Can you trace a carbon atom's journey from atmosphere to fossil fuel and back?",
+      "concepts": ["carbon reservoirs", "residence time", "anthropogenic carbon"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.biointeractive.org/classroom-resources/carbon-cycle",
+        "https://earthobservatory.nasa.gov/features/CarbonCycle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Applied Ecology",
+      "title": "How do energy and nutrient flows keep ecosystems functioning?",
+      "concepts": ["energy transfer", "nutrient cycling", "ecosystem processes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://serc.carleton.edu/quantskills/activities/nutrient_cycling.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Applied Ecology",
+      "title": "How do invasive species reshape entire ecosystems?",
+      "concepts": ["invasion ecology", "competitive release", "novel ecosystems"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.biointeractive.org/classroom-resources/anole-lizards",
+        "https://www.nature.com/scitable/knowledge/library/biological-invasions-89450090/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applied Ecology",
+      "title": "Is one large reserve better than several small ones?",
+      "concepts": ["island biogeography", "SLOSS debate", "metapopulation theory"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/island-biogeography-an-overview-82641429/",
+        "https://www.biointeractive.org/classroom-resources/ecology-biodiversity-and-evolution-of-darwins-finches"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applied Ecology",
+      "title": "What makes a conservation strategy successful for threatened species?",
+      "concepts": ["population viability analysis", "habitat corridors", "adaptive management"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.biointeractive.org/classroom-resources/great-elephant-census",
+        "https://www.nature.com/scitable/knowledge/library/conservation-biology-132391290/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

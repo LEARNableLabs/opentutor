@@ -1,0 +1,342 @@
+{
+  "topic": "Constructed languages — from Esperanto to Toki Pona",
+  "slug": "constructed-languages",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic linguistics (phonetics, morphology, syntax)",
+    "understanding of language variation",
+    "familiarity with at least one Indo-European language"
+  ],
+  "exit_criteria": [
+    "student can classify constructed languages by type and purpose",
+    "student can analyze phonological and morphological systems of conlangs",
+    "student can identify design trade-offs in language construction",
+    "student can create a basic phonology and core vocabulary for a simple conlang",
+    "student understands the historical and cultural context of major conlangs"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Why Build Languages?",
+      "title": "Why would anyone invent a language from scratch?",
+      "concepts": ["constructed languages", "auxlangs", "artistic languages"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/@janMisali",
+        "https://conlang.org/what-is-a-conlang/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Why Build Languages?",
+      "title": "What were philosophers trying to solve with universal languages?",
+      "concepts": ["philosophical languages", "taxonomies", "Wilkins"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/artificial-languages/",
+        "https://www.youtube.com/watch?v=_nMv5TveI8c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Why Build Languages?",
+      "title": "How did Klingon end up on Duolingo?",
+      "concepts": ["modern conlangs", "media conlangs", "language learning"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.duolingo.com/course/tlh/en/Learn-Klingon",
+        "https://www.youtube.com/watch?v=eLJQ8E5K82E"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Why Build Languages?",
+      "title": "What's the difference between Esperanto and Elvish?",
+      "concepts": ["a posteriori", "a priori", "auxlangs vs artlangs"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://conlang.org/cms/the-basics-of-language-creation/",
+        "https://zompist.com/kitlong.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Building Blocks",
+      "title": "How do you pick sounds that feel alien without being unpronounceable?",
+      "concepts": ["phonology", "phonotactics", "phonetic inventory"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/@Artifexian",
+        "https://zompist.com/sounds.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Building Blocks",
+      "title": "What are the key differences between conlang types and sound systems?",
+      "concepts": ["classification review", "phonology review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/@janMisali"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Building Blocks",
+      "title": "Should words change shape or stay constant?",
+      "concepts": ["morphology", "agglutination", "isolating languages", "fusion"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/@Artifexian",
+        "https://zompist.com/morphology.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Building Blocks",
+      "title": "What happens when you throw away word order rules?",
+      "concepts": ["syntax", "word order", "case systems", "free word order"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/@Biblaridion",
+        "https://zompist.com/syntax.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Building Blocks",
+      "title": "How could semantic primes build a minimal language?",
+      "concepts": ["semantics", "semantic primes", "meaning organization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=3i-cJ_6RhqE",
+        "https://tokipona.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The European Dream",
+      "title": "Why did Esperanto succeed where hundreds of others failed?",
+      "concepts": ["Esperanto history", "Zamenhof", "language community"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://lernu.net/en/esperanto",
+        "https://www.youtube.com/watch?v=UzDS2WyemBI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The European Dream",
+      "title": "Can you decode this Esperanto sentence using only the rules?",
+      "concepts": ["Esperanto grammar", "agglutination", "correlatives"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://lernu.net/en/gramatiko",
+        "https://www.duolingo.com/course/eo/en/Learn-Esperanto"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The European Dream",
+      "title": "How do morphological systems work in practice?",
+      "concepts": ["morphology review", "Esperanto analysis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://lernu.net"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The European Dream",
+      "title": "What did Interlingua and Ido try to improve?",
+      "concepts": ["Interlingua", "Ido", "naturalism", "auxlang competition"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=35jGemlQt8E",
+        "https://en.wikipedia.org/wiki/Interlingua",
+        "https://en.wikipedia.org/wiki/Ido"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Radical Departures",
+      "title": "How does Toki Pona express everything with just 120 words?",
+      "concepts": ["Toki Pona", "minimalism", "semantic composition"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://tokipona.org",
+        "https://www.youtube.com/watch?v=3i-cJ_6RhqE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Radical Departures",
+      "title": "What would a language based on logic actually look like?",
+      "concepts": ["Lojban", "predicate logic", "unambiguity", "selbri-sumti"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://mw.lojban.org/papri/Lojban",
+        "https://www.youtube.com/watch?v=K4Mp9yAaNhY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Radical Departures",
+      "title": "How would you express a complex idea in a minimal language?",
+      "concepts": ["semantic composition", "circumlocution", "compound expressions"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://tokipona.org/nimi_pu.txt",
+        "https://mw.lojban.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Radical Departures",
+      "title": "What constraints shape a priori language design?",
+      "concepts": ["Toki Pona review", "Lojban review", "design constraints"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/@janMisali"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Radical Departures",
+      "title": "What's the most extreme conlang ever attempted?",
+      "concepts": ["Ithkuil", "engelangs", "design extremes"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "http://www.ithkuil.net",
+        "https://www.youtube.com/watch?v=E4zEYlmJfY8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Art and Fiction",
+      "title": "How did Tolkien make Quenya feel like an ancient language?",
+      "concepts": ["artistic conlangs", "Quenya", "linguistic aesthetics", "sound symbolism"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=YrRj_1vPXMA",
+        "https://folk.uib.no/hnohf/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Art and Fiction",
+      "title": "How does Dothraki sound like a real warrior culture's language?",
+      "concepts": ["modern media conlangs", "Dothraki", "cultural linguistics", "worldbuilding"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=QF93l-AShII",
+        "https://dedalvs.com/dothraki.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Art and Fiction",
+      "title": "What makes a conlang feel natural vs. artificial?",
+      "concepts": ["naturalism", "irregularity", "language change", "typological patterns"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/@Biblaridion",
+        "https://zompist.com/kit.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Art and Fiction",
+      "title": "How do artistic languages balance aesthetics and usability?",
+      "concepts": ["artistic design review", "naturalism vs regularity"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://conlang.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Your Turn",
+      "title": "What design choices define a language's personality?",
+      "concepts": ["design philosophy", "trade-offs", "purpose-driven design"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://zompist.com/kit.html",
+        "https://www.youtube.com/@Artifexian"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Your Turn",
+      "title": "How would you design a phonology for your own language?",
+      "concepts": ["practical application", "phonological design", "constraint satisfaction"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://zompist.com/gen/phonology.html",
+        "https://www.youtube.com/@Artifexian"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Your Turn",
+      "title": "How would you balance regularity and naturalism in your language?",
+      "concepts": ["synthesis", "design iteration", "evaluation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://conlang.org/resources/",
+        "https://www.reddit.com/r/conlangs/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

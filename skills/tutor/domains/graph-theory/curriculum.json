@@ -1,0 +1,356 @@
+{
+  "topic": "Graph Theory",
+  "slug": "graph-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "discrete mathematics basics",
+    "proof techniques (induction, contradiction)",
+    "basic combinatorics",
+    "set theory and relations"
+  ],
+  "exit_criteria": [
+    "student can model real-world networks as graphs and choose appropriate representations",
+    "student can determine if a graph has Eulerian or Hamiltonian paths and explain why",
+    "student can apply graph coloring to scheduling and resource allocation problems",
+    "student can recognize planar graphs and apply Euler's formula",
+    "student can compute maximum flow and minimum cut in networks",
+    "student can analyze connectivity and prove basic graph properties using induction"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes a network a graph?",
+      "concepts": ["vertices", "edges", "graph representations", "degree"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/f471f7b7034fabe8bbba5507df7d307f_MIT6_042JF10_chap05.pdf",
+        "https://d3gt.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why do handshakes always add up evenly?",
+      "concepts": ["handshaking lemma", "degree sequence", "even-odd parity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-6-graph-theory-and-coloring/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Can you always find a tree inside any graph?",
+      "concepts": ["spanning trees", "acyclic graphs", "minimum spanning tree"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/archive/cs/cs103/cs103.1176/lectures/10/Small10.pdf",
+        "https://csacademy.com/app/graph_editor/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How should you store a million-node network?",
+      "concepts": ["adjacency matrix", "adjacency list", "space-time tradeoffs"],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": [
+        "https://graph.mogproject.com/",
+        "https://memgraph.com/blog/top-7-graph-algorithm-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "How do we measure a graph's resilience to failure?",
+      "concepts": ["connectivity", "vertex cuts", "edge cuts", "k-connected graphs"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-225-graph-theory-and-additive-combinatorics-fall-2023/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "What have we learned about graph structure?",
+      "concepts": ["review: representations", "review: degree", "review: trees", "review: connectivity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://d3gt.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Paths and Traversals",
+      "title": "Can you walk across all bridges exactly once?",
+      "concepts": ["Eulerian paths", "Eulerian circuits", "Königsberg problem"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-10-graph-theory-iii/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Paths and Traversals",
+      "title": "Why is the traveling salesman problem so hard?",
+      "concepts": ["Hamiltonian paths", "Hamiltonian cycles", "NP-completeness"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP62qauV_CpT1zKaGG_Vj5igX"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Paths and Traversals",
+      "title": "Explain Euler vs Hamilton to a friend",
+      "concepts": ["contrast: Eulerian vs Hamiltonian", "polynomial vs NP-hard"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://mikedombo.github.io/graphPlayground/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Paths and Traversals",
+      "title": "How do dating apps find perfect matches?",
+      "concepts": ["matchings", "bipartite matching", "Hall's theorem", "maximum matching"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-225-graph-theory-and-additive-combinatorics-fall-2023/lists/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Paths and Traversals",
+      "title": "What's the fastest way through a maze?",
+      "concepts": ["shortest paths", "BFS", "Dijkstra's algorithm", "path finding"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mikedombo.github.io/graphPlayground/",
+        "https://csacademy.com/app/graph_editor/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Paths and Traversals",
+      "title": "How well do you know paths and cycles?",
+      "concepts": ["review: Euler", "review: Hamilton", "review: matchings", "review: shortest paths"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://d3gt.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Coloring",
+      "title": "Why do maps need at most four colors?",
+      "concepts": ["graph coloring", "chromatic number", "four color theorem"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-6-graph-theory-and-coloring/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Coloring",
+      "title": "Can your graph's coloring beat its maximum degree?",
+      "concepts": ["Brooks' theorem", "greedy coloring", "upper bounds"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP62qauV_CpT1zKaGG_Vj5igX"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Coloring",
+      "title": "How do you schedule exams without conflicts?",
+      "concepts": ["interval scheduling", "register allocation", "frequency assignment"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1244/lectures/24-graphs/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Coloring",
+      "title": "What algorithms solve graph coloring?",
+      "concepts": ["greedy algorithms", "backtracking", "heuristics"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://mikedombo.github.io/graphPlayground/",
+        "https://memgraph.com/blog/top-7-graph-algorithm-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Coloring",
+      "title": "Can you color any graph efficiently?",
+      "concepts": ["review: chromatic number", "review: Brooks' theorem", "review: applications"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://d3gt.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Planarity",
+      "title": "Can you draw this graph without crossing edges?",
+      "concepts": ["planar graphs", "planarity testing", "drawing conventions"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-225-graph-theory-and-additive-combinatorics-fall-2023/resources/lecture-notes/",
+        "https://graph.mogproject.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Planarity",
+      "title": "Why does V - E + F always equal 2?",
+      "concepts": ["Euler's formula", "faces", "planar graph properties"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/f471f7b7034fabe8bbba5507df7d307f_MIT6_042JF10_chap05.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Planarity",
+      "title": "Which graphs can never be drawn flat?",
+      "concepts": ["Kuratowski's theorem", "K5", "K3,3", "graph minors"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP62qauV_CpT1zKaGG_Vj5igX"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Planarity",
+      "title": "What graph hides behind every planar drawing?",
+      "concepts": ["dual graphs", "face-vertex duality", "planar duality"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://graph.mogproject.com/",
+        "https://csacademy.com/app/graph_editor/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Planarity",
+      "title": "What makes planar graphs special?",
+      "concepts": ["review: Euler's formula", "review: Kuratowski", "review: dual graphs"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://d3gt.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Network Flow",
+      "title": "How much traffic can this network handle?",
+      "concepts": ["network flow", "capacity", "flow conservation", "maximum flow"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://mikedombo.github.io/graphPlayground/",
+        "https://ocw.mit.edu/courses/1-022-introduction-to-network-models-fall-2018/resources/mit1_022f18_lec2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Network Flow",
+      "title": "Why is max flow always equal to min cut?",
+      "concepts": ["max-flow min-cut theorem", "Ford-Fulkerson", "augmenting paths"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP62qauV_CpT1zKaGG_Vj5igX",
+        "https://memgraph.com/blog/top-7-graph-algorithm-books"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Network Flow",
+      "title": "How does the internet route your data?",
+      "concepts": ["routing algorithms", "network optimization", "flow applications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/1-022-introduction-to-network-models-fall-2018/resources/mit1_022f18_lec2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Network Flow",
+      "title": "Teach someone how flow networks work",
+      "concepts": ["flow networks recap", "max-flow algorithms", "applications synthesis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://csacademy.com/app/graph_editor/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "What makes random graphs so surprisingly structured?",
+      "concepts": ["random graphs", "Erdős-Rényi model", "phase transitions", "giant component"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-225-graph-theory-and-additive-combinatorics-fall-2023/",
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP62qauV_CpT1zKaGG_Vj5igX"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "topic": "Ancient Greek Philosophy",
+  "slug": "ancient-greek-philosophy",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic philosophical concepts (ethics, metaphysics, epistemology)",
+    "comfort with abstract reasoning",
+    "reading comprehension for philosophical texts"
+  ],
+  "exit_criteria": [
+    "student can explain the major philosophical positions of Pre-Socratics, Socrates, Plato, Aristotle, and Hellenistic schools",
+    "student can compare and contrast key concepts across different thinkers",
+    "student can read and analyze excerpts from primary sources",
+    "student can apply ancient philosophical frameworks to contemporary questions",
+    "student understands the historical development and influence of Greek philosophy"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Pre-Socratic Beginnings",
+      "title": "Why did the Greeks start asking 'what is everything made of?'",
+      "concepts": ["natural philosophy", "cosmology", "archē"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/presocratics/",
+        "https://iep.utm.edu/presoc/",
+        "https://www.perseus.tufts.edu/hopper/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Pre-Socratic Beginnings",
+      "title": "What if everything is really just water?",
+      "concepts": ["Thales", "Milesian school", "material monism"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/thales/",
+        "https://www.historyofphilosophy.net/thales"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Pre-Socratic Beginnings",
+      "title": "How did Heraclitus see unity in constant change?",
+      "concepts": ["flux", "logos", "unity of opposites", "fire as archē"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/heraclitus/",
+        "https://classics.mit.edu/Heraclitus/heraclitus.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Pre-Socratic Beginnings",
+      "title": "Can change be an illusion?",
+      "concepts": ["Parmenides", "being vs. becoming", "monism", "logic"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/parmenides/",
+        "https://iep.utm.edu/parmenid/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Pre-Socratic Beginnings",
+      "title": "What if reality is made of tiny, indivisible pieces?",
+      "concepts": ["atomism", "Democritus", "void", "mechanistic universe"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/democritus/",
+        "https://iep.utm.edu/democrit/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Pre-Socratic Beginnings",
+      "title": "Review: What were the Pre-Socratics really arguing about?",
+      "concepts": ["synthesis", "archē debates", "method comparison"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/presocratics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Socrates and the Sophists",
+      "title": "Why did the Sophists teach that truth is relative?",
+      "concepts": ["sophistry", "relativism", "rhetoric", "Protagoras"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/sophists/",
+        "https://plato.stanford.edu/entries/protagoras/",
+        "https://iep.utm.edu/sophists/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Socrates and the Sophists",
+      "title": "What is the Socratic method and why is it so annoying?",
+      "concepts": ["elenchus", "dialectic", "aporia", "intellectual humility"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/socrates/",
+        "https://iep.utm.edu/socrates/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Socrates and the Sophists",
+      "title": "Is virtue the same as knowledge?",
+      "concepts": ["Socratic intellectualism", "virtue", "akrasia", "the examined life"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/socrates/",
+        "https://classics.mit.edu/Plato/apology.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Socrates and the Sophists",
+      "title": "Why did Socrates choose death over exile?",
+      "concepts": ["civil disobedience", "integrity", "Crito dialogue"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://classics.mit.edu/Plato/crito.html",
+        "https://plato.stanford.edu/entries/socrates/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Plato's World of Forms",
+      "title": "What if perfect things exist in another realm?",
+      "concepts": ["Theory of Forms", "participation", "two worlds", "the Good"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/plato/",
+        "https://plato.stanford.edu/entries/plato-ethics/",
+        "https://iep.utm.edu/platonic-forms/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Plato's World of Forms",
+      "title": "How does the Allegory of the Cave explain enlightenment?",
+      "concepts": ["allegory of the cave", "epistemology", "education", "divided line"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://classics.mit.edu/Plato/republic.html",
+        "https://plato.stanford.edu/entries/plato-ethics-shorter/#AlleCave"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Plato's World of Forms",
+      "title": "Review: From Socrates to Forms — what changed?",
+      "concepts": ["Socratic vs Platonic philosophy", "metaphysics emerges"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/plato/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Plato's World of Forms",
+      "title": "What does the soul have to do with justice?",
+      "concepts": ["tripartite soul", "justice", "cardinal virtues", "psyche"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/plato-ethics/",
+        "https://classics.mit.edu/Plato/republic.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Plato's World of Forms",
+      "title": "Should philosophers be kings?",
+      "concepts": ["philosopher-king", "ideal state", "guardian class", "political philosophy"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/plato-politics/",
+        "https://classics.mit.edu/Plato/republic.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Plato's World of Forms",
+      "title": "How does Plato's theory of love lead to wisdom?",
+      "concepts": ["eros", "ascent", "beauty", "Symposium", "Diotima"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://classics.mit.edu/Plato/symposium.html",
+        "https://plato.stanford.edu/entries/plato-friendship/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Aristotle's System",
+      "title": "How did Aristotle disagree with his teacher Plato?",
+      "concepts": ["immanent forms", "substance", "critique of Platonic Forms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/aristotle/",
+        "https://plato.stanford.edu/entries/aristotle-metaphysics/",
+        "https://iep.utm.edu/aristotl/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Aristotle's System",
+      "title": "What are the four causes and why does everything need them?",
+      "concepts": ["four causes", "material cause", "formal cause", "efficient cause", "final cause"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/aristotle-causality/",
+        "https://plato.stanford.edu/entries/aristotle-metaphysics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Aristotle's System",
+      "title": "Why is the golden mean better than extremes?",
+      "concepts": ["virtue ethics", "golden mean", "eudaimonia", "character"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/aristotle-ethics/",
+        "https://classics.mit.edu/Aristotle/nicomachaen.html",
+        "https://iep.utm.edu/aris-eth/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Aristotle's System",
+      "title": "Review: How do Socrates, Plato, and Aristotle differ in method and substance?",
+      "concepts": ["synthesis", "method comparison", "legacy"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/aristotle/",
+        "https://plato.stanford.edu/entries/plato/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Aristotle's System",
+      "title": "Are humans really 'political animals'?",
+      "concepts": ["polis", "political nature", "community", "Politics"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/aristotle-politics/",
+        "https://classics.mit.edu/Aristotle/politics.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Aristotle's System",
+      "title": "How did Aristotle invent logic?",
+      "concepts": ["syllogism", "categories", "Organon", "deduction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/aristotle-logic/",
+        "https://iep.utm.edu/aris-log/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Hellenistic Philosophy",
+      "title": "How did Stoicism help people endure chaos?",
+      "concepts": ["Stoicism", "virtue as sufficient", "dichotomy of control", "cosmopolitanism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/stoicism/",
+        "https://iep.utm.edu/stoicism/",
+        "https://classics.mit.edu/Epictetus/epicench.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Hellenistic Philosophy",
+      "title": "Why did Epicurus say pleasure is the highest good?",
+      "concepts": ["Epicureanism", "ataraxia", "pleasure", "atomism", "garden"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/epicurus/",
+        "https://iep.utm.edu/epicur/",
+        "https://classics.mit.edu/Epicurus/menoec.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Hellenistic Philosophy",
+      "title": "What if we suspended all judgment?",
+      "concepts": ["Skepticism", "Pyrrhonism", "epochē", "ataraxia"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/skepticism-ancient/",
+        "https://iep.utm.edu/skepanci/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Hellenistic Philosophy",
+      "title": "Why did Diogenes live in a barrel and insult everyone?",
+      "concepts": ["Cynicism", "living according to nature", "autarkeia", "shamelessness"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/cynics/",
+        "https://iep.utm.edu/cynics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Hellenistic Philosophy",
+      "title": "Review: What's your philosophy of life?",
+      "concepts": ["synthesis", "practical philosophy", "schools comparison", "personal framework"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/hellenistic-epistemology/",
+        "https://iep.utm.edu/hellenistic/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

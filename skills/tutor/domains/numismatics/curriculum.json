@@ -1,0 +1,348 @@
+{
+  "topic": "Numismatics — coins as historical evidence",
+  "slug": "numismatics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic world history",
+    "chronology of ancient civilizations",
+    "familiarity with archaeological methods"
+  ],
+  "exit_criteria": [
+    "student can date and attribute coins using multiple lines of evidence",
+    "student can interpret iconography and political messaging on ancient coins",
+    "student can use coins to answer historical questions about economy, politics, and culture",
+    "student can critically evaluate numismatic sources in archaeological context",
+    "student can use digital numismatic databases for research"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamentals of Numismatics",
+      "title": "What makes a coin different from other metal objects?",
+      "concepts": ["coin definition", "monetary vs non-monetary", "numismatic terminology"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://numismatics.org/learn/introduction-to-coins/",
+        "https://www.britishmuseum.org/collection/subjects/coins-and-medals"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamentals of Numismatics",
+      "title": "How do you describe what you see on a coin?",
+      "concepts": ["obverse and reverse", "legend reading", "field and exergue", "coin anatomy"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://numismatics.org/digitallibrary/",
+        "https://www.doaks.org/resources/online-exhibits/byzantine-coins"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamentals of Numismatics",
+      "title": "Why does handling technique matter for ancient artifacts?",
+      "concepts": ["conservation", "documentation standards", "photography", "ethical collecting"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://numismatics.org/mantis/",
+        "https://www.numismatics.org/library/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamentals of Numismatics",
+      "title": "What can you discover in online coin databases?",
+      "concepts": ["digital collections", "OCRE", "CoinArchives", "search strategies"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "http://numismatics.org/ocre/",
+        "https://www.coinarchives.com/",
+        "https://www.britishmuseum.org/collection"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fundamentals of Numismatics",
+      "title": "How did ancient people actually use these coins?",
+      "concepts": ["monetary systems", "denominations", "purchasing power", "circulation patterns"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.numismatics.org/publications/",
+        "https://romaneconomy.ox.ac.uk/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Dating and Attribution",
+      "title": "What have we learned about reading and analyzing coins?",
+      "concepts": ["terminology review", "database practice", "visual analysis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "http://numismatics.org/ocre/",
+        "https://numismatics.org/learn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Dating and Attribution",
+      "title": "How can style reveal when a coin was made?",
+      "concepts": ["stylistic analysis", "artistic periods", "die cutting techniques", "regional styles"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/grkc/hd_grkc.htm",
+        "https://numismatics.org/digitallibrary/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Dating and Attribution",
+      "title": "What secrets do mint marks and magistrate names reveal?",
+      "concepts": ["mint identification", "officials and dating", "regional attribution", "epigraphic evidence"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://numismatics.org/ocre/",
+        "https://www.numismatics.org/collections/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Dating and Attribution",
+      "title": "Can you trace coins from the same dies?",
+      "concepts": ["die studies", "die linkage", "production sequences", "workshop identification"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://numismatics.org/digitallibrary/",
+        "https://www.academia.edu/Documents/in/Die_Studies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Dating and Attribution",
+      "title": "Why do overstrikes and countermarks matter for dating?",
+      "concepts": ["overstriking", "countermarking", "reuse evidence", "chronological sequences"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.britishmuseum.org/collection",
+        "https://numismatics.org/publications/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Iconography and Meaning",
+      "title": "What were rulers trying to communicate on their coins?",
+      "concepts": ["political propaganda", "portrait types", "legitimacy claims", "messaging strategies"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/marc/hd_marc.htm",
+        "https://numismatics.org/learn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Iconography and Meaning",
+      "title": "How do gods and myths appear on ancient money?",
+      "concepts": ["religious iconography", "mythological types", "divine associations", "symbolism"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.theoi.com/",
+        "https://www.britishmuseum.org/collection"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Iconography and Meaning",
+      "title": "How well can you date, attribute, and interpret coins now?",
+      "concepts": ["stylistic dating", "iconographic interpretation", "attribution methods"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "http://numismatics.org/ocre/",
+        "https://numismatics.org/digitallibrary/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Iconography and Meaning",
+      "title": "What can coins tell us about imperial succession crises?",
+      "concepts": ["succession iconography", "civil war coinages", "usurpation", "competing claimants"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://numismatics.org/publications/",
+        "https://romaneconomy.ox.ac.uk/databases/roman_imperial_coinage/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Iconography and Meaning",
+      "title": "Where can you find the best examples of commemorative coins?",
+      "concepts": ["commemorative issues", "historical events", "military victories", "building programs"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.britishmuseum.org/collection",
+        "https://www.metmuseum.org/art/collection/search#!?q=roman%20coins",
+        "http://numismatics.org/ocre/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Metallurgy and Minting",
+      "title": "How were ancient coins actually manufactured?",
+      "concepts": ["minting technology", "striking process", "die production", "casting vs striking"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/coin/hd_coin.htm",
+        "https://numismatics.org/learn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Metallurgy and Minting",
+      "title": "Why did empires debase their silver coinages?",
+      "concepts": ["metal composition", "debasement", "fineness", "fiscal crisis", "inflation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://romaneconomy.ox.ac.uk/",
+        "https://numismatics.org/digitallibrary/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Metallurgy and Minting",
+      "title": "Can you explain how XRF analysis reveals metal content?",
+      "concepts": ["XRF analysis", "metallurgical testing", "non-destructive analysis", "alloy composition"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.britishmuseum.org/blog/how-do-we-analyse-ancient-coins",
+        "https://numismatics.org/mantis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Metallurgy and Minting",
+      "title": "How do experts spot ancient vs modern forgeries?",
+      "concepts": ["authentication", "forgery detection", "die analysis", "metallurgy and patina", "tooling marks"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://numismatics.org/digitallibrary/",
+        "https://www.numismatics.org/library/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Coins as Historical Evidence",
+      "title": "What are the key techniques for using coins as evidence?",
+      "concepts": ["metallurgy review", "iconography review", "attribution review", "context importance"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "http://numismatics.org/ocre/",
+        "https://numismatics.org/learn/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Coins as Historical Evidence",
+      "title": "How do coin hoards reconstruct ancient trade routes?",
+      "concepts": ["hoard evidence", "distribution patterns", "trade networks", "find context", "GIS mapping"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://finds.org.uk/",
+        "https://romaneconomy.ox.ac.uk/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Coins as Historical Evidence",
+      "title": "What caused the third-century monetary crisis?",
+      "concepts": ["economic history", "inflation", "monetary policy", "debasement cycles", "historical interpretation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://romaneconomy.ox.ac.uk/",
+        "https://numismatics.org/publications/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Coins as Historical Evidence",
+      "title": "How do coins reveal cultural exchange across empires?",
+      "concepts": ["cross-cultural influence", "iconographic borrowing", "language spread", "trade evidence"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.britishmuseum.org/collection",
+        "https://numismatics.org/digitallibrary/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Coins as Historical Evidence",
+      "title": "Can you build a historical argument from numismatic evidence?",
+      "concepts": ["historical methodology", "source criticism", "integrating evidence", "building arguments"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://numismatics.org/publications/",
+        "http://numismatics.org/ocre/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Coins as Historical Evidence",
+      "title": "What have you learned about reading history in metal?",
+      "concepts": ["synthesis", "methodology review", "future directions", "research skills"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://numismatics.org/learn/",
+        "https://www.britishmuseum.org/collection",
+        "http://numismatics.org/ocre/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

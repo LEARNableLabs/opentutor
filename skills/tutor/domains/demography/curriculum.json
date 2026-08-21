@@ -1,0 +1,357 @@
+{
+  "topic": "Demography — population structure and change",
+  "slug": "demography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic statistics (mean, median, rates)",
+    "algebra (exponents, logarithms)",
+    "understanding of percentages and ratios"
+  ],
+  "exit_criteria": [
+    "calculate and interpret demographic rates (CBR, CDR, TFR, IMR)",
+    "construct and interpret life tables",
+    "analyze population pyramids and identify demographic patterns",
+    "explain the demographic transition model and its policy implications",
+    "project population using the cohort-component method",
+    "evaluate demographic data quality and sources of bias"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Demographic Fundamentals",
+      "title": "Why do countries count their people?",
+      "concepts": ["census", "vital registration", "population size", "data quality"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.census.gov/programs-surveys/decennial-census/about.html",
+        "https://population.un.org/wpp/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Demographic Fundamentals",
+      "title": "What makes a good demographic measure?",
+      "concepts": ["crude rates", "age-specific rates", "standardization", "person-years"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.prb.org/resources/population-handbook/",
+        "https://ourworldindata.org/what-are-crude-birth-and-death-rates"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Demographic Fundamentals",
+      "title": "How fast is the world's population really growing?",
+      "concepts": ["growth rate", "doubling time", "balancing equation", "natural increase"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.prb.org/resources/2024-world-population-data-sheet/",
+        "https://ourworldindata.org/population-growth"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Demographic Fundamentals",
+      "title": "Why do demographers care so much about age?",
+      "concepts": ["age structure", "population pyramid", "cohort", "period effects"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.populationpyramid.net/",
+        "https://ourworldindata.org/age-structure"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Demographic Fundamentals",
+      "title": "Can you spot Japan's aging crisis in 10 seconds?",
+      "concepts": ["dependency ratio", "aging index", "median age", "visual literacy"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.populationpyramid.net/japan/2024/",
+        "https://population.un.org/wpp/Graphs/DemographicProfiles/Pyramid/392"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review",
+      "title": "Review: Fundamentals checkpoint",
+      "concepts": ["rates", "growth", "age structure", "data sources"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.prb.org/resources/population-handbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Mortality and Survival",
+      "title": "What does it mean to live to 80 on average?",
+      "concepts": ["life expectancy", "period vs cohort", "survival probability", "infant mortality"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ourworldindata.org/life-expectancy",
+        "https://www.cdc.gov/nchs/fastats/life-expectancy.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Mortality and Survival",
+      "title": "How do actuaries calculate life insurance premiums?",
+      "concepts": ["life table", "lx column", "dx column", "qx probability"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ssa.gov/oact/STATS/table4c6.html",
+        "https://mortality.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Mortality and Survival",
+      "title": "Why does life expectancy at birth differ from life expectancy at 65?",
+      "concepts": ["age-specific life expectancy", "remaining life", "survivorship curve", "mortality compression"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ourworldindata.org/life-expectancy-at-different-ages",
+        "https://www.prb.org/resources/life-expectancy-at-birth-vs-remaining-life-expectancy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Mortality and Survival",
+      "title": "Did COVID-19 reverse decades of mortality progress?",
+      "concepts": ["excess mortality", "period effects", "cause-specific mortality", "health transitions"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ourworldindata.org/excess-mortality-covid",
+        "https://www.cdc.gov/nchs/nvss/vsrr/covid19/excess_deaths.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Mortality and Survival",
+      "title": "Can you build a life table from scratch?",
+      "concepts": ["life table construction", "person-years lived", "stationary population", "Lx and Tx columns"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.prb.org/resources/calculating-life-table-functions/",
+        "https://www.mortality.org/Data/ExplanatoryNotes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Review",
+      "title": "Review: Mortality and life tables",
+      "concepts": ["life expectancy", "survival", "life tables", "mortality patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ourworldindata.org/life-expectancy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Fertility and Reproduction",
+      "title": "Why are birth rates falling almost everywhere?",
+      "concepts": ["total fertility rate", "replacement level", "fertility decline", "below-replacement"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ourworldindata.org/fertility-rate",
+        "https://www.prb.org/resources/countries-with-tfr-below-replacement/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Fertility and Reproduction",
+      "title": "How do demographers separate age from time effects in fertility?",
+      "concepts": ["age-specific fertility rate", "gross reproduction rate", "net reproduction rate", "tempo vs quantum"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.prb.org/resources/age-specific-fertility-rates/",
+        "https://population.un.org/wpp/Publications/Files/WPP2024_Methodology.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Fertility and Reproduction",
+      "title": "What determines whether women have children?",
+      "concepts": ["proximate determinants", "marriage patterns", "contraception", "postpartum infecundability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.prb.org/resources/proximate-determinants-of-fertility/",
+        "https://dhsprogram.com/topics/Fertility.cfm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Fertility and Reproduction",
+      "title": "Can policy change fertility behavior?",
+      "concepts": ["pronatalist policy", "antinatalist policy", "family planning programs", "policy effectiveness"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.prb.org/resources/pronatalist-policies-around-the-world/",
+        "https://ourworldindata.org/fertility-rate#fertility-policies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Migration and Mobility",
+      "title": "Why is migration the demographic wild card?",
+      "concepts": ["migration types", "net migration", "measurement challenges", "emigration vs immigration"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.prb.org/resources/migration-data-matters/",
+        "https://www.un.org/development/desa/pd/content/international-migration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Migration and Mobility",
+      "title": "How does migration reshape population age structure?",
+      "concepts": ["selectivity", "age-selectivity of migration", "brain drain", "demographic dividend"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ourworldindata.org/migration",
+        "https://www.prb.org/resources/migration-and-population-change/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Migration and Mobility",
+      "title": "Who really benefits from immigration?",
+      "concepts": ["economic impacts", "fiscal effects", "population replacement", "cultural change"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.prb.org/resources/the-demographic-impact-of-immigration/",
+        "https://ourworldindata.org/migration#migration-and-economic-development"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Review",
+      "title": "Review: Fertility and migration",
+      "concepts": ["TFR", "replacement level", "migration measurement", "demographic impacts"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ourworldindata.org/fertility-rate",
+        "https://ourworldindata.org/migration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Population Structure and Aging",
+      "title": "What does a 'population echo' look like?",
+      "concepts": ["cohort size", "baby boom", "population momentum", "echo effects"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.populationpyramid.net/united-states-of-america/2024/",
+        "https://www.prb.org/resources/baby-booms-and-echoes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Population Structure and Aging",
+      "title": "Why do populations keep growing even after fertility falls?",
+      "concepts": ["population momentum", "built-in growth", "age structure inertia", "stabilization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.prb.org/resources/population-momentum/",
+        "https://ourworldindata.org/future-population-growth#population-momentum"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Population Structure and Aging",
+      "title": "Is global aging a crisis or an achievement?",
+      "concepts": ["population aging", "support ratio", "old-age dependency", "silver tsunami"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.prb.org/resources/global-aging/",
+        "https://ourworldindata.org/age-structure#population-ageing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Demographic Transition and Futures",
+      "title": "How did humanity go from high death and high birth to low death and low birth?",
+      "concepts": ["demographic transition theory", "stages", "epidemiological transition", "fertility transition"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ourworldindata.org/demographic-transition",
+        "https://www.prb.org/resources/the-demographic-transition/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Demographic Transition and Futures",
+      "title": "Will the world's population peak this century?",
+      "concepts": ["population projection", "cohort-component method", "scenarios", "uncertainty"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://population.un.org/wpp/",
+        "https://ourworldindata.org/future-population-growth"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Demographic Transition and Futures",
+      "title": "Can you project a country's population 20 years forward?",
+      "concepts": ["cohort-component projection", "fertility assumptions", "mortality assumptions", "migration assumptions"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.prb.org/resources/population-projections/",
+        "https://population.un.org/wpp/Publications/Files/WPP2024_Methodology.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

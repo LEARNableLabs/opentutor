@@ -1,0 +1,331 @@
+{
+  "topic": "Stained Glass — Lead Came and Copper Foil Techniques",
+  "slug": "stained-glass",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic glass cutting and scoring",
+    "familiarity with copper foil method",
+    "soldering fundamentals",
+    "use of glass grinder"
+  ],
+  "exit_criteria": [
+    "choose the appropriate technique (lead came vs copper foil) for a given design",
+    "construct a traditional lead came panel from pattern to finishing",
+    "build complex 3D copper foil projects with structural integrity",
+    "execute professional-quality soldering on both lead and copper foil",
+    "apply proper finishing techniques including patina and reinforcement",
+    "understand and implement structural support for larger panels"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & Technique Comparison",
+      "title": "When should you choose lead came over copper foil?",
+      "concepts": ["technique selection", "structural properties", "aesthetic differences"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.delphiglass.com/blogs/stained-glass-blog/lead-vs-copper-foil",
+        "https://www.youtube.com/watch?v=XK8YzJqFGhQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & Technique Comparison",
+      "title": "Why does line quality matter more in lead came work?",
+      "concepts": ["visual weight", "lead line design", "traditional aesthetics"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.sgaaonline.com/design-principles",
+        "https://www.cmog.org/collection/exhibitions/stained-glass"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & Technique Comparison",
+      "title": "What makes Louis Comfort Tiffany's technique revolutionary?",
+      "concepts": ["copper foil history", "three-dimensional forms", "design freedom"],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.metmuseum.org/art/collection/search#!/search?q=tiffany%20glass",
+        "https://www.youtube.com/watch?v=dBnpr3pkFlk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & Technique Comparison",
+      "title": "How do you translate a design into a cutting pattern?",
+      "concepts": ["pattern making", "registration marks", "grain direction", "inside vs outside cuts"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.delphiglass.com/blogs/stained-glass-blog/pattern-making-basics",
+        "https://www.youtube.com/watch?v=vH8YJzpqNYo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations & Technique Comparison",
+      "title": "Which glass types work best with each technique?",
+      "concepts": ["cathedral glass", "opalescent glass", "textured glass", "material selection"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.bullseyeglass.com/education/",
+        "https://www.spectrumglass.com/glass-education"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations & Technique Comparison",
+      "title": "Review: Choosing Your Technique",
+      "concepts": ["technique selection review", "pattern and material fundamentals", "design translation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.delphiglass.com/blogs/stained-glass-blog/choosing-your-method"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Lead Came Mastery",
+      "title": "What are the different lead profiles and when do you use each?",
+      "concepts": ["H-channel came", "U-channel came", "came width", "structural requirements"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.delphiglass.com/lead-came-guide",
+        "https://www.youtube.com/watch?v=RKj5l5c9TYE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Lead Came Mastery",
+      "title": "Why must you stretch lead came before using it?",
+      "concepts": ["lead stretching", "structural tension", "came preparation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=Z5jPGqX8bQM",
+        "https://www.wardellpublications.com/lead-stretching"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Lead Came Mastery",
+      "title": "How do you cut and fit lead came at corners and joints?",
+      "concepts": ["came cutting", "miter joints", "T-joints", "corner technique"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=Q8yP8vN7Jxo",
+        "https://www.glasswerkzstudio.com/lead-joinery"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Lead Came Mastery",
+      "title": "What's the secret to clean solder joints on lead?",
+      "concepts": ["lead soldering", "flux for lead", "heat management", "bead formation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=kL9vN5cJgNY",
+        "https://www.delphiglass.com/blogs/stained-glass-blog/soldering-lead-came"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Lead Came Mastery",
+      "title": "Why do traditional panels need cementing and how is it done?",
+      "concepts": ["panel cementing", "weatherproofing", "structural reinforcement", "cleanup"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sgaaonline.com/cementing-techniques",
+        "https://www.youtube.com/watch?v=M7qL5kT9Pxc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Lead Came Mastery",
+      "title": "Review: Lead Came Workflow",
+      "concepts": ["workflow review", "troubleshooting", "technique synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=QfB3vJ8KNl0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Copper Foil Excellence",
+      "title": "How do you choose the right copper foil width?",
+      "concepts": ["foil sizing", "glass thickness", "seam strength", "foil types"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.delphiglass.com/copper-foil-selection",
+        "https://www.edco.com/copper-foil-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Copper Foil Excellence",
+      "title": "What's the proper technique for wrapping and burnishing foil?",
+      "concepts": ["foil application", "burnishing", "edge preparation", "adhesion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=hLqT8IvH7Gk",
+        "https://www.delphiglass.com/blogs/stained-glass-blog/perfect-foiling"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Copper Foil Excellence",
+      "title": "Why does flux choice matter for copper foil soldering?",
+      "concepts": ["flux chemistry", "liquid vs paste flux", "flux residue", "tinning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=cP5gOqL9F1Y",
+        "https://www.glasscrafters.com/flux-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Copper Foil Excellence",
+      "title": "How do you build smooth, uniform solder beads?",
+      "concepts": ["bead technique", "temperature control", "solder flow", "flat vs round beads"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=8vN5jP3qNgY",
+        "https://www.let-make-stained-glass.com/soldering-techniques"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Copper Foil Excellence",
+      "title": "What makes a 3D copper foil project structurally sound?",
+      "concepts": ["three-dimensional construction", "internal bracing", "assembly order", "geometric stability"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Q9rN8j7LKlM",
+        "https://www.glasswerkzstudio.com/3d-construction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Copper Foil Excellence",
+      "title": "Review: Copper Foil Mastery",
+      "concepts": ["foil workflow", "quality control", "common errors"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=TN9P8fL7q3M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Advanced Skills & Integration",
+      "title": "How do you add zinc or brass framing to panels?",
+      "concepts": ["came framing", "zinc channel", "brass came", "frame soldering"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=zX8TqN0L9pY",
+        "https://www.delphiglass.com/blogs/stained-glass-blog/framing-panels"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Advanced Skills & Integration",
+      "title": "When should you add reinforcement bars to a panel?",
+      "concepts": ["structural reinforcement", "rebar placement", "span calculations", "architectural work"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.sgaaonline.com/structural-support",
+        "https://www.youtube.com/watch?v=mK4bN9pQrLs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Advanced Skills & Integration",
+      "title": "What are the differences between black and copper patina?",
+      "concepts": ["patina chemistry", "copper sulfate patina", "black patina", "surface preparation", "sealing"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=fR7pK9qP1Xo",
+        "https://www.delphiglass.com/patina-application"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Skills & Integration",
+      "title": "How do you design for light: transmission vs reflection?",
+      "concepts": ["light physics", "glass opacity", "backlighting", "display considerations"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cmog.org/article/science/how-light-interacts-with-glass",
+        "https://www.bullseyeglass.com/education/light-and-glass"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Skills & Integration",
+      "title": "Can you combine lead came and copper foil in one piece?",
+      "concepts": ["hybrid techniques", "mixed methods", "design integration", "technical challenges"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=dP7qN8LkTlY",
+        "https://www.glasswerkzstudio.com/mixed-technique"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Skills & Integration",
+      "title": "Final Review: From Pattern to Installation",
+      "concepts": ["complete workflow", "professional finishing", "installation methods", "maintenance"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.sgaaonline.com/professional-practices",
+        "https://www.youtube.com/watch?v=vK8pL0qN7Qk"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,596 @@
+{
+  "topic": "Immunology",
+  "slug": "immunology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "cell biology basics",
+    "foundational biochemistry",
+    "protein structure fundamentals",
+    "basic molecular biology"
+  ],
+  "exit_criteria": [
+    "explain how innate and adaptive immunity work together to fight infection",
+    "describe antibody structure and function including mechanisms of diversity",
+    "explain MHC restriction and antigen presentation pathways",
+    "compare different T helper cell subsets and their roles",
+    "analyze clinical scenarios involving autoimmunity, immunodeficiency, or hypersensitivity",
+    "evaluate vaccine design principles and mechanisms of immunological memory"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Immunity",
+      "title": "Why do we need two immune systems?",
+      "concepts": [
+        "innate immunity",
+        "adaptive immunity",
+        "immune system overview"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.khanacademy.org/science/biology/human-biology/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Immunity",
+      "title": "How does your body know self from non-self?",
+      "concepts": [
+        "pattern recognition",
+        "PAMPs",
+        "DAMPs",
+        "self-tolerance"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.biointeractive.org/classroom-resources/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Immunity",
+      "title": "Where do immune cells come from and where do they live?",
+      "concepts": [
+        "lymphoid organs",
+        "bone marrow",
+        "thymus",
+        "spleen",
+        "lymph nodes"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.immunology.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Immunity",
+      "title": "What makes adaptive immunity adaptive?",
+      "concepts": [
+        "antigen specificity",
+        "clonal selection",
+        "immunological memory"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.youtube.com/@armandohasudungan"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Innate Immunity",
+      "title": "How do barriers keep most pathogens out before the fight even starts?",
+      "concepts": [
+        "physical barriers",
+        "antimicrobial peptides",
+        "mucosal immunity",
+        "microbiome"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.khanacademy.org/science/biology/human-biology/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review & Integration",
+      "title": "Review: What are the key principles of innate vs adaptive immunity?",
+      "concepts": [
+        "immunity overview",
+        "innate characteristics",
+        "adaptive characteristics",
+        "integration"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.khanacademy.org/science/biology/human-biology/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Innate Immunity",
+      "title": "Why is inflammation both protective and dangerous?",
+      "concepts": [
+        "inflammatory response",
+        "cytokines",
+        "chemokines",
+        "acute phase proteins"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.biointeractive.org/classroom-resources/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Innate Immunity",
+      "title": "How do phagocytes eat and destroy pathogens?",
+      "concepts": [
+        "phagocytosis",
+        "neutrophils",
+        "macrophages",
+        "dendritic cells"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.youtube.com/@armandohasudungan"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Innate Immunity",
+      "title": "What makes natural killer cells natural killers?",
+      "concepts": [
+        "NK cells",
+        "missing-self recognition",
+        "antibody-dependent cellular cytotoxicity"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.nature.com/subjects/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Innate Immunity",
+      "title": "How does the complement cascade amplify immune responses?",
+      "concepts": [
+        "complement system",
+        "opsonization",
+        "membrane attack complex",
+        "complement pathways"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.biointeractive.org/classroom-resources/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Innate Immunity",
+      "title": "Can you design a therapeutic strategy targeting innate immunity?",
+      "concepts": [
+        "pattern recognition receptors",
+        "TLRs",
+        "inflammasome",
+        "therapeutic targets"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.coursera.org/learn/hopkins-immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Review & Integration",
+      "title": "Review: From barriers to complement - how does innate immunity work?",
+      "concepts": [
+        "innate immunity synthesis",
+        "pattern recognition",
+        "effector mechanisms"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.khanacademy.org/science/biology/human-biology/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Adaptive Immunity - B Cells",
+      "title": "How do antibodies recognize millions of different antigens?",
+      "concepts": [
+        "antibody structure",
+        "variable regions",
+        "antigen binding",
+        "immunoglobulin domains"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.biointeractive.org/classroom-resources/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Adaptive Immunity - B Cells",
+      "title": "What makes IgM different from IgG, and why does it matter?",
+      "concepts": [
+        "antibody classes",
+        "isotypes",
+        "effector functions",
+        "class switching"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.youtube.com/@armandohasudungan"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Adaptive Immunity - B Cells",
+      "title": "How does V(D)J recombination generate antibody diversity?",
+      "concepts": [
+        "V(D)J recombination",
+        "RAG enzymes",
+        "junctional diversity",
+        "somatic hypermutation"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.nature.com/subjects/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Adaptive Immunity - B Cells",
+      "title": "What happens inside a germinal center?",
+      "concepts": [
+        "germinal centers",
+        "affinity maturation",
+        "plasma cells",
+        "memory B cells"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.coursera.org/learn/hopkins-immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Adaptive Immunity - B Cells",
+      "title": "Why do monoclonal antibodies work as therapies?",
+      "concepts": [
+        "monoclonal antibodies",
+        "therapeutic antibodies",
+        "antibody engineering"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.biointeractive.org/classroom-resources/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Review & Integration",
+      "title": "Review: How do B cells create antibody diversity?",
+      "concepts": [
+        "B cell development",
+        "V(D)J recombination",
+        "germinal centers",
+        "antibody synthesis"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.khanacademy.org/science/biology/human-biology/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Adaptive Immunity - T Cells",
+      "title": "Why can't T cells see whole proteins?",
+      "concepts": [
+        "antigen processing",
+        "peptide presentation",
+        "MHC molecules"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.youtube.com/@armandohasudungan"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Adaptive Immunity - T Cells",
+      "title": "How do MHC class I and II divide labor in antigen presentation?",
+      "concepts": [
+        "MHC class I",
+        "MHC class II",
+        "cross-presentation",
+        "endogenous vs exogenous antigens"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.nature.com/subjects/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Adaptive Immunity - T Cells",
+      "title": "What is MHC restriction and why does it matter for transplants?",
+      "concepts": [
+        "MHC restriction",
+        "HLA typing",
+        "transplant rejection",
+        "tissue matching"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.coursera.org/learn/hopkins-immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Adaptive Immunity - T Cells",
+      "title": "How does the T cell receptor recognize peptide-MHC complexes?",
+      "concepts": [
+        "T cell receptor",
+        "CD3 complex",
+        "TCR diversity",
+        "TCR signaling"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.biointeractive.org/classroom-resources/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Adaptive Immunity - T Cells",
+      "title": "Why do T cells need two signals to activate?",
+      "concepts": [
+        "T cell activation",
+        "signal 1",
+        "signal 2",
+        "costimulation",
+        "anergy"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.youtube.com/@armandohasudungan"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Effector Mechanisms",
+      "title": "How do CD8+ T cells kill infected cells without killing themselves?",
+      "concepts": [
+        "cytotoxic T cells",
+        "perforin",
+        "granzymes",
+        "Fas-FasL",
+        "apoptosis"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.nature.com/subjects/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Review & Integration",
+      "title": "Review: How do B cells and T cells recognize antigens differently?",
+      "concepts": [
+        "adaptive immunity synthesis",
+        "antibody vs TCR recognition",
+        "MHC restriction"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.khanacademy.org/science/biology/human-biology/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Effector Mechanisms",
+      "title": "Why are there different flavors of helper T cells?",
+      "concepts": [
+        "Th1 cells",
+        "Th2 cells",
+        "Th17 cells",
+        "regulatory T cells",
+        "cytokine polarization"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.coursera.org/learn/hopkins-immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Immune Regulation & Memory",
+      "title": "How does immune memory make vaccines work?",
+      "concepts": [
+        "immunological memory",
+        "memory T cells",
+        "memory B cells",
+        "vaccine principles"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.biointeractive.org/classroom-resources/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Immune Regulation & Memory",
+      "title": "Why doesn't your immune system attack your own tissues?",
+      "concepts": [
+        "central tolerance",
+        "peripheral tolerance",
+        "regulatory mechanisms",
+        "Treg cells"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.youtube.com/@armandohasudungan"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Clinical Immunology",
+      "title": "What goes wrong in autoimmune diseases?",
+      "concepts": [
+        "autoimmunity",
+        "self-reactivity",
+        "molecular mimicry",
+        "autoimmune diseases"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.nature.com/subjects/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Clinical Immunology",
+      "title": "How do primary immunodeficiencies reveal how the immune system works?",
+      "concepts": [
+        "immunodeficiency",
+        "SCID",
+        "DiGeorge syndrome",
+        "complement deficiencies"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.coursera.org/learn/hopkins-immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Review & Integration",
+      "title": "Review: What are the major clinical immune disorders and their mechanisms?",
+      "concepts": [
+        "autoimmunity",
+        "immunodeficiency",
+        "hypersensitivity",
+        "clinical integration"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.khanacademy.org/science/biology/human-biology/immunology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Clinical Immunology",
+      "title": "Why do allergies exist and what are the four types of hypersensitivity?",
+      "concepts": [
+        "hypersensitivity",
+        "Type I-IV reactions",
+        "allergy",
+        "IgE",
+        "mast cells"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
+        "https://www.biointeractive.org/classroom-resources/immunology"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "topic": "World mythology — comparative myths and archetypes",
+  "slug": "world-mythology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic familiarity with at least one mythological tradition",
+    "reading comprehension for primary texts in translation",
+    "openness to cultural perspectives"
+  ],
+  "exit_criteria": [
+    "identify and analyze archetypal patterns across 6+ cultural traditions",
+    "apply Campbell's monomyth framework to diverse hero narratives",
+    "compare creation myths using structural and thematic lenses",
+    "recognize trickster, divine, and hero archetypes in contemporary media",
+    "articulate both universal patterns and culturally-specific meanings in myth"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Comparative Mythology",
+      "title": "Why do cultures separated by oceans tell such similar stories?",
+      "concepts": ["comparative mythology", "universal patterns", "cultural diffusion vs independent invention"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/mythology",
+        "https://www.thearchaeologist.org/blog/the-mythologist-joseph-campbell-and-his-comparative-myth-theories"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Comparative Mythology",
+      "title": "What did Freud and Jung see when they looked at myths?",
+      "concepts": ["psychoanalytic interpretation", "collective unconscious", "archetypes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces",
+        "https://www.coursera.org/learn/mythology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Comparative Mythology",
+      "title": "How do structuralists decode the hidden grammar of myths?",
+      "concepts": ["structuralism", "binary oppositions", "myth as language"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.misterdann.com/mythologysyllabus.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Comparative Mythology",
+      "title": "What's the difference between myth, legend, and folklore?",
+      "concepts": ["myth definition", "sacred vs secular narrative", "folklore taxonomy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://courses.vccs.edu/colleges/tcc/courses/HUM256-ComparativeMythology/detail",
+        "https://www.misterdann.com/mythologysyllabus.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Creation and Cosmogony",
+      "title": "Why do so many creation myths begin with chaos or void?",
+      "concepts": ["cosmogony types", "chaos to order", "ex nihilo creation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf",
+        "https://www.coursera.org/learn/mythology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Creation and Cosmogony",
+      "title": "Can you identify the patterns we've explored so far?",
+      "concepts": ["comparative method review", "theoretical frameworks", "myth types"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.misterdann.com/mythologysyllabus.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Creation and Cosmogony",
+      "title": "How does the Enuma Elish turn violence into cosmic order?",
+      "concepts": ["Mesopotamian creation", "Marduk and Tiamat", "creation through conflict"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf",
+        "https://pages.charlotte.edu/john-reeves/course-materials/rels-1502-comparative-mythology/course-syllabus-for-rels-1502/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Creation and Cosmogony",
+      "title": "Why do so many myths separate sky from earth?",
+      "concepts": ["world parent myths", "separation motif", "Egyptian and Maori parallels"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Creation and Cosmogony",
+      "title": "What do earth-diver myths tell us about indigenous worldviews?",
+      "concepts": ["earth-diver narrative", "Native American cosmogony", "emergence myths"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf",
+        "https://mythlok.com/blogs/free-mythology-courses-and-the-universities-offering-them/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Hero's Journey",
+      "title": "What makes Campbell's monomyth so powerful—and so controversial?",
+      "concepts": ["monomyth", "departure-initiation-return", "universalism critique"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces",
+        "https://www.amazon.com/Comparative-Mythology-Singles-Joseph-Campbell-ebook/dp/B005DTSHUI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The Hero's Journey",
+      "title": "How does Gilgamesh's quest for immortality map to the monomyth?",
+      "concepts": ["Epic of Gilgamesh", "threshold crossing", "transformation through loss"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf",
+        "https://pages.charlotte.edu/john-reeves/course-materials/rels-1502-comparative-mythology/course-syllabus-for-rels-1502/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The Hero's Journey",
+      "title": "Why does Odysseus take ten years to get home?",
+      "concepts": ["nostos", "trials and ordeals", "Greek heroic code"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "http://ccat.sas.upenn.edu/~jfarrell/courses/spring96/myth/index.html",
+        "https://www.coursera.org/learn/mythology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Hero's Journey",
+      "title": "How do hero patterns vary across the cultures we've studied?",
+      "concepts": ["monomyth stages", "cultural hero variants", "comparative analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "The Hero's Journey",
+      "title": "How do female heroes challenge the monomyth model?",
+      "concepts": ["heroine's journey", "Inanna's descent", "gender and heroism"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf",
+        "https://courses.vccs.edu/colleges/tcc/courses/HUM256-ComparativeMythology/detail"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "The Hero's Journey",
+      "title": "Can you spot the monomyth in Star Wars or Harry Potter?",
+      "concepts": ["modern myth-making", "Campbell in pop culture", "archetypal recognition"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.thearchaeologist.org/blog/the-mythologist-joseph-campbell-and-his-comparative-myth-theories",
+        "https://nextlevelhomeschool.com/courses/comparative-world-mythology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Divine Archetypes",
+      "title": "Why do tricksters break rules—and why do we love them?",
+      "concepts": ["trickster archetype", "boundary crossing", "Loki, Anansi, Coyote, Eshu"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf",
+        "https://courses.vccs.edu/colleges/tcc/courses/HUM256-ComparativeMythology/detail"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Divine Archetypes",
+      "title": "What makes a sky father different from an earth mother?",
+      "concepts": ["divine gender archetypes", "sky/earth polarity", "Zeus, Odin, Gaia, Pachamama"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://ccat.sas.upenn.edu/~jfarrell/courses/spring96/myth/index.html",
+        "https://www.misterdann.com/mythologysyllabus.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Divine Archetypes",
+      "title": "How do war gods reflect their culture's values?",
+      "concepts": ["war deity archetypes", "Ares vs Athena", "Mars, Tezcatlipoca, Durga"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.coursera.org/learn/mythology",
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Divine Archetypes",
+      "title": "Why is the divine trickster also often a culture hero?",
+      "concepts": ["trickster-culture hero", "Prometheus, Maui, Raven", "theft and gift"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf",
+        "https://courses.vccs.edu/colleges/tcc/courses/HUM256-ComparativeMythology/detail"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Divine Archetypes",
+      "title": "What archetypal roles appear in divine pantheons across cultures?",
+      "concepts": ["divine archetypes", "pantheon structures", "cross-cultural patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.misterdann.com/mythologysyllabus.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Death and Transformation",
+      "title": "What do underworld journeys teach us about transformation?",
+      "concepts": ["katabasis", "Inanna, Orpheus, Izanagi", "descent and return"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/mythology",
+        "https://courses.vccs.edu/colleges/tcc/courses/HUM256-ComparativeMythology/detail"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Death and Transformation",
+      "title": "Why do so many cultures have flood myths?",
+      "concepts": ["flood narratives", "Gilgamesh, Noah, Manu, Deucalion", "destruction and renewal"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf",
+        "https://pages.charlotte.edu/john-reeves/course-materials/rels-1502-comparative-mythology/course-syllabus-for-rels-1502/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Death and Transformation",
+      "title": "How do dying and rising gods mirror agricultural cycles?",
+      "concepts": ["dying god archetype", "Osiris, Persephone, Baldr", "seasonal myth"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "http://ccat.sas.upenn.edu/~jfarrell/courses/spring96/myth/index.html",
+        "https://www.csus.edu/faculty/k/clovis.karam/docs/hrs%20151%20world%20mythology%20syllabus-spring%202018.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Synthesis and Application",
+      "title": "How does contemporary storytelling recycle ancient archetypes?",
+      "concepts": ["myth in modern media", "Marvel, Star Wars, anime", "archetypal persistence"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.thearchaeologist.org/blog/the-mythologist-joseph-campbell-and-his-comparative-myth-theories",
+        "https://nextlevelhomeschool.com/courses/comparative-world-mythology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Synthesis and Application",
+      "title": "What can comparative mythology teach us about human universals?",
+      "concepts": ["universalism vs cultural specificity", "psychic unity", "comparative method limits"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.taylorfrancis.com/books/edit/10.4324/9781315860602/uses-comparative-mythology-kenneth-golden",
+        "https://pages.charlotte.edu/john-reeves/course-materials/rels-1502-comparative-mythology/course-syllabus-for-rels-1502/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Synthesis and Application",
+      "title": "What tools do you now have for analyzing myths comparatively?",
+      "concepts": ["full curriculum review", "analytical frameworks", "pattern recognition"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.coursera.org/learn/mythology",
+        "https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces"
+      ],
+      "status": "pending"
+    }
+  ]
+}

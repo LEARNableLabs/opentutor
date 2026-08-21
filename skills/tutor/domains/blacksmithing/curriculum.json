@@ -1,0 +1,370 @@
+{
+  "topic": "Blacksmithing — forge welding and tool making",
+  "slug": "blacksmithing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic forging techniques (drawing, upsetting, bending)",
+    "hammer control and striking accuracy",
+    "fire management fundamentals",
+    "basic heat color recognition",
+    "safe anvil and hammer use"
+  ],
+  "exit_criteria": [
+    "execute reliable lap, butt, and T-welds in mild and medium carbon steel",
+    "select appropriate tool steel for specific applications",
+    "forge and heat treat functional striking tools (punches, chisels)",
+    "forge specialized tongs from forge-welded components",
+    "diagnose and prevent common welding failures (cold shuts, scale inclusion)",
+    "apply flux effectively for different steel compositions",
+    "troubleshoot failed welds and understand metallurgical causes"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fire and Heat Mastery",
+      "title": "Why does the fire's atmosphere matter more than its temperature?",
+      "concepts": ["oxidizing vs reducing atmosphere", "scale formation", "forge atmosphere control"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.anvilfire.com/FAQs/heat_treating_blades.php",
+        "https://www.youtube.com/@BlackBearForge"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fire and Heat Mastery",
+      "title": "How can you read a fire's mood from its color and sound?",
+      "concepts": ["heat color interpretation", "fire sound diagnosis", "coal quality"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.anvilfire.com/iForge/",
+        "https://www.iforgeiron.com/forums/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fire and Heat Mastery",
+      "title": "What happens when steel soaks at welding heat vs. flash heating?",
+      "concepts": ["heat soak", "thermal mass", "temperature distribution"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/@ChristCenteredIronworks"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fire and Heat Mastery",
+      "title": "Why do coal and gas forges demand different welding strategies?",
+      "concepts": ["coal vs gas welding heat", "atmosphere differences", "flux interaction"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.anvilfire.com/iForge/",
+        "https://www.centaurforge.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Steel Science for Welding",
+      "title": "Why can't you forge weld high-carbon steel as easily as mild steel?",
+      "concepts": ["carbon content limits", "eutectic melting", "steel weldability"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.anvilfire.com/21centbs/articles/W1_Tool_Steel.php",
+        "https://www.iforgeiron.com/forums/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Steel Science for Welding",
+      "title": "What's actually happening inside steel at 2,300°F?",
+      "concepts": ["austenite phase", "grain growth", "diffusion bonding"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.anvilfire.com/FAQs/heat_treating_blades.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Steel Science for Welding",
+      "title": "How does borax turn into glass and why does that help?",
+      "concepts": ["flux chemistry", "borax melting point", "scale dissolution"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.anvilfire.com/iForge/",
+        "https://www.youtube.com/@AlecSteele"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Steel Science for Welding",
+      "title": "When should you use flux and when should you skip it?",
+      "concepts": ["flux timing", "flux application methods", "fire welding"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/@BlackBearForge",
+        "https://www.iforgeiron.com/forums/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Steel Science for Welding",
+      "title": "Review: Fire, Steel, and Flux",
+      "concepts": ["atmosphere control", "carbon limits", "flux mechanics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.anvilfire.com/iForge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Core Welding Techniques",
+      "title": "Why must surfaces be scarfed before welding?",
+      "concepts": ["surface preparation", "scarfing technique", "edge geometry"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/@ChristCenteredIronworks",
+        "https://www.anvilfire.com/iForge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Core Welding Techniques",
+      "title": "How do you execute a perfect lap weld?",
+      "concepts": ["lap weld", "heat timing", "hammer technique"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/@BlackBearForge",
+        "https://www.iforgeiron.com/forums/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Core Welding Techniques",
+      "title": "What makes a butt weld so much harder than a lap weld?",
+      "concepts": ["butt weld", "upset geometry", "pressure distribution"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/@ChristCenteredIronworks",
+        "https://www.anvilfire.com/iForge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Core Welding Techniques",
+      "title": "When would you choose a T-weld over other joint types?",
+      "concepts": ["T-weld", "joint selection", "structural applications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.iforgeiron.com/forums/",
+        "https://www.youtube.com/@BlackBearForge"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Core Welding Techniques",
+      "title": "How is Damascus steel actually just organized welds?",
+      "concepts": ["pattern welding", "layer formation", "twist patterns"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/@AlecSteele",
+        "https://www.anvilfire.com/iForge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Core Welding Techniques",
+      "title": "Why does a failed weld show that dark line?",
+      "concepts": ["cold shut", "scale inclusion", "weld diagnosis"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.iforgeiron.com/forums/",
+        "https://www.anvilfire.com/iForge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Core Welding Techniques",
+      "title": "Review: Executing Clean Welds",
+      "concepts": ["scarfing", "lap/butt/T-welds", "troubleshooting failures"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/@ChristCenteredIronworks"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Tool Steel and Heat Treatment",
+      "title": "How do you pick the right steel for a chisel vs. a hammer?",
+      "concepts": ["tool steel selection", "hardness requirements", "shock resistance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.anvilfire.com/21centbs/articles/W1_Tool_Steel.php",
+        "https://www.newenglandforge.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Tool Steel and Heat Treatment",
+      "title": "What happens when you plunge red-hot steel into water?",
+      "concepts": ["quenching", "martensite formation", "quench medium selection"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.anvilfire.com/FAQs/heat_treating_blades.php",
+        "https://www.youtube.com/@AlecSteele"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Tool Steel and Heat Treatment",
+      "title": "Why must hardened steel be tempered before use?",
+      "concepts": ["tempering", "brittleness", "toughness balance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.anvilfire.com/FAQs/heat_treating_blades.php",
+        "https://www.iforgeiron.com/forums/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Tool Steel and Heat Treatment",
+      "title": "How can a file tell you if your heat treatment worked?",
+      "concepts": ["file test", "hardness testing", "quality verification"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/@BlackBearForge",
+        "https://www.anvilfire.com/iForge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Tool Steel and Heat Treatment",
+      "title": "When should you normalize steel vs. anneal it?",
+      "concepts": ["normalizing", "annealing", "grain refinement"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.anvilfire.com/FAQs/heat_treating_blades.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Tool Steel and Heat Treatment",
+      "title": "Review: Steel Selection and Heat Treatment",
+      "concepts": ["tool steel selection", "quenching", "tempering", "hardness testing"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.anvilfire.com/FAQs/heat_treating_blades.php",
+        "https://www.anvilfire.com/21centbs/articles/W1_Tool_Steel.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Making Your Arsenal",
+      "title": "Why is forging your own punches a rite of passage?",
+      "concepts": ["punch design", "tool geometry", "heat treatment application"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/@BlackBearForge",
+        "https://www.blacksmithsdepot.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Making Your Arsenal",
+      "title": "How do you forge-weld the reins onto tongs?",
+      "concepts": ["tong construction", "reins welding", "ergonomic design"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/@ChristCenteredIronworks",
+        "https://www.iforgeiron.com/forums/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Making Your Arsenal",
+      "title": "What makes a hammer feel right in your hand?",
+      "concepts": ["hammer design", "weight distribution", "handle ergonomics"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.anvilfire.com/iForge/",
+        "https://www.youtube.com/@BlackBearForge"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Making Your Arsenal",
+      "title": "How do top tools multiply your forging power?",
+      "concepts": ["swages", "fullers", "top tool design"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.centaurforge.com/",
+        "https://www.iforgeiron.com/forums/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Making Your Arsenal",
+      "title": "Review: From Steel to Tool",
+      "concepts": ["tool steel selection", "forge welding", "heat treatment", "tool design"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.anvilfire.com/iForge/",
+        "https://www.youtube.com/@AlecSteele"
+      ],
+      "status": "pending"
+    }
+  ]
+}

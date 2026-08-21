@@ -1,0 +1,295 @@
+{
+  "topic": "Beekeeping — colony biology and hive management",
+  "slug": "beekeeping",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "one full season of beekeeping experience",
+    "can perform basic hive inspections",
+    "can identify queen, workers, drones, and brood stages",
+    "understand basic Langstroth hive equipment",
+    "have successfully overwintered at least one colony"
+  ],
+  "exit_criteria": [
+    "diagnose common colony problems from inspection observations",
+    "make successful splits to prevent swarming or increase colony count",
+    "implement integrated varroa management plan with monitoring",
+    "rear and introduce queens using multiple methods",
+    "plan and execute seasonal management tasks appropriate to local climate",
+    "recognize and respond to disease symptoms",
+    "manage colonies for honey production with optimal timing",
+    "understand colony-level decision making and superorganism behavior"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Colony Biology Deep Dive",
+      "title": "Why do 50,000 bees act like one organism?",
+      "concepts": ["superorganism concept", "collective intelligence", "emergent behavior"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/c/UGAHoneyBee", "https://entnemdept.ufl.edu/honey-bee/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Colony Biology Deep Dive",
+      "title": "How does a colony decide when to swarm?",
+      "concepts": ["swarm decision-making", "quorum sensing", "scout bees"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://scientificbeekeeping.com/", "https://pollinator.cals.cornell.edu/bees/beekeeping/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Colony Biology Deep Dive",
+      "title": "What makes a winter bee different from a summer bee?",
+      "concepts": ["seasonal polymorphism", "vitellogenin", "longevity factors"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://beeinformed.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Colony Biology Deep Dive",
+      "title": "How do bees maintain 95°F in the brood nest year-round?",
+      "concepts": ["thermoregulation", "cluster dynamics", "metabolic heat production"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://entnemdept.ufl.edu/honey-bee/", "https://www.youtube.com/c/NorfolkHoneyCompany"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Colony Biology Deep Dive",
+      "title": "Why does the waggle dance encode distance AND direction?",
+      "concepts": ["waggle dance", "spatial communication", "polarized light navigation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://honey.ucdavis.edu/", "https://www.youtube.com/c/UGAHoneyBee"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Reading the Hive",
+      "title": "What does a healthy brood pattern actually tell you?",
+      "concepts": ["brood pattern analysis", "queen quality", "population dynamics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://www.hivetracks.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Reading the Hive",
+      "title": "Review: Colony biology foundations",
+      "concepts": ["superorganism", "seasonal cycles", "communication", "brood patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://beeinformed.org/", "https://scientificbeekeeping.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Reading the Hive",
+      "title": "How can you tell if your colony is preparing to swarm?",
+      "concepts": ["swarm cells", "population pressure", "behavioral indicators"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/c/NorfolkHoneyCompany", "https://pollinator.cals.cornell.edu/bees/beekeeping/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Reading the Hive",
+      "title": "What's the difference between queenless and laying worker colonies?",
+      "concepts": ["queenlessness", "laying workers", "emergency queen cells", "diagnosis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://scientificbeekeeping.com/", "https://entnemdept.ufl.edu/honey-bee/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Reading the Hive",
+      "title": "When should you actually worry about drone cells?",
+      "concepts": ["drone production", "colony health indicators", "seasonal timing"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://beeinformed.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Swarm Management",
+      "title": "Why does making a split prevent swarming?",
+      "concepts": ["population reduction", "split timing", "reproductive drive"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/c/UGAHoneyBee", "https://honey.ucdavis.edu/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Swarm Management",
+      "title": "What goes into the parent hive versus the split?",
+      "concepts": ["walk-away split", "split with queen", "resource allocation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://scientificbeekeeping.com/", "https://www.youtube.com/c/NorfolkHoneyCompany"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Swarm Management",
+      "title": "How do you catch and hive a swarm successfully?",
+      "concepts": ["swarm capture", "bait hives", "hiving techniques"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://pollinator.cals.cornell.edu/bees/beekeeping/", "https://www.youtube.com/c/UGAHoneyBee"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Swarm Management",
+      "title": "Review: Reading your colonies and swarm dynamics",
+      "concepts": ["inspection skills", "swarm prevention", "splits", "colony diagnosis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://beeinformed.org/", "https://entnemdept.ufl.edu/honey-bee/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Integrated Pest Management",
+      "title": "Why can't we just kill all the varroa mites?",
+      "concepts": ["varroa biology", "resistance development", "integrated management"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://scientificbeekeeping.com/", "https://beeinformed.org/citizen-science/loss-and-management-survey/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Integrated Pest Management",
+      "title": "What does an alcohol wash actually tell you?",
+      "concepts": ["varroa monitoring", "alcohol wash", "sugar roll", "threshold levels"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://honey.ucdavis.edu/", "https://www.youtube.com/c/UGAHoneyBee"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Integrated Pest Management",
+      "title": "When do you use chemical versus mechanical varroa treatments?",
+      "concepts": ["treatment options", "brood breaks", "screened bottom boards", "treatment timing"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://scientificbeekeeping.com/", "https://extension.psu.edu/honeybee-biology-and-behavior"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Integrated Pest Management",
+      "title": "How do you recognize American foulbrood before it's too late?",
+      "concepts": ["disease diagnosis", "American foulbrood", "ropiness test", "quarantine"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.nationalbeeunit.com/", "https://entnemdept.ufl.edu/honey-bee/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Integrated Pest Management",
+      "title": "What's your integrated pest management plan for next season?",
+      "concepts": ["IPM planning", "monitoring schedule", "treatment rotation", "record keeping"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://beeinformed.org/", "https://www.hivetracks.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Queen Rearing and Requeening",
+      "title": "Why do beekeepers requeen colonies that seem fine?",
+      "concepts": ["queen quality", "genetic diversity", "planned requeening", "productivity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://www.youtube.com/c/NorfolkHoneyCompany"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Queen Rearing and Requeening",
+      "title": "Review: Pest management and colony health",
+      "concepts": ["varroa monitoring", "IPM strategies", "disease recognition", "treatment timing"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://scientificbeekeeping.com/", "https://beeinformed.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Queen Rearing and Requeening",
+      "title": "How does the emergency queen rearing process actually work?",
+      "concepts": ["emergency cells", "larval selection", "queen development", "supersedure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://entnemdept.ufl.edu/honey-bee/", "https://honey.ucdavis.edu/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Queen Rearing and Requeening",
+      "title": "What's the safest way to introduce a new queen?",
+      "concepts": ["queen introduction", "candy plug method", "acceptance", "timing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/c/UGAHoneyBee", "https://pollinator.cals.cornell.edu/bees/beekeeping/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Production and Harvesting",
+      "title": "When is honey actually ready to harvest?",
+      "concepts": ["capping", "moisture content", "refractometer use", "nectar flow timing"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://www.youtube.com/c/NorfolkHoneyCompany"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Production and Harvesting",
+      "title": "Why does extraction method matter for honey quality?",
+      "concepts": ["extraction techniques", "crush and strain", "centrifugal extraction", "comb honey"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://honey.ucdavis.edu/", "https://beeinformed.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Seasonal Management",
+      "title": "How do you prepare colonies for winter in YOUR climate?",
+      "concepts": ["overwintering prep", "cluster size", "food stores", "regional variation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://scientificbeekeeping.com/", "https://beeinformed.org/citizen-science/loss-and-management-survey/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Seasonal Management",
+      "title": "What's your full-season management plan?",
+      "concepts": ["annual cycle", "task calendar", "resource planning", "adaptive management"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.hivetracks.com/", "https://pollinator.cals.cornell.edu/bees/beekeeping/"],
+      "status": "pending"
+    }
+  ]
+}

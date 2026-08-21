@@ -1,0 +1,374 @@
+{
+  "topic": "Lie groups and Lie algebras",
+  "slug": "lie-groups-and-lie-algebras",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "linear algebra (eigenvalues, eigenvectors, matrix operations)",
+    "abstract algebra (groups, vector spaces, homomorphisms)",
+    "multivariable calculus (partial derivatives, tangent spaces)",
+    "basic topology (continuity, open/closed sets)"
+  ],
+  "exit_criteria": [
+    "compute the Lie algebra of classical matrix groups",
+    "use the exponential map to connect group and algebra structure",
+    "classify simple Lie algebras using root systems and Dynkin diagrams",
+    "construct representations of sl(2,C) and other simple algebras",
+    "recognize Lie theory applications in physics and geometry"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Classical Matrix Groups",
+      "title": "Why are rotations and matrices both groups?",
+      "concepts": ["matrix groups", "group axioms", "continuous symmetry"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-745-lie-groups-and-lie-algebras-i-fall-2020/",
+        "https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Classical Matrix Groups",
+      "title": "What makes GL(n) different from a discrete group?",
+      "concepts": ["general linear group", "topology on matrix groups", "smooth manifolds"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.math.toronto.edu/mein/teaching/LectureNotes/lie.pdf",
+        "https://aalok.uk/projects/lietheory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Classical Matrix Groups",
+      "title": "How do we preserve volume, angles, and orientation?",
+      "concepts": ["SL(n)", "O(n)", "SO(n)", "defining equations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-745-lie-groups-and-lie-algebras-i-fall-2020/",
+        "https://www.jgibson.id.au/lievis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Classical Matrix Groups",
+      "title": "Why does quantum mechanics care about unitary matrices?",
+      "concepts": ["unitary groups U(n)", "special unitary SU(n)", "Hermitian structure"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf",
+        "https://aalok.uk/projects/lietheory/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Classical Matrix Groups",
+      "title": "How do groups act on spaces, and why should we care?",
+      "concepts": ["group actions", "homogeneous spaces", "cosets"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/MAT552s15.html",
+        "https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2018/04/m273.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Classical Matrix Groups",
+      "title": "Can you explain what makes a matrix group continuous?",
+      "concepts": ["review: matrix groups", "review: topology", "review: classical groups"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-745-lie-groups-and-lie-algebras-i-fall-2020/",
+        "https://www.jgibson.id.au/lievis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Lie Algebras and the Exponential Map",
+      "title": "What if we zoom in at the identity element?",
+      "concepts": ["tangent space", "infinitesimal generators", "Lie algebra definition"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=kN-LZvrKJck",
+        "https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Lie Algebras and the Exponential Map",
+      "title": "Why doesn't matrix multiplication commute, and what's the correction?",
+      "concepts": ["Lie bracket", "commutator", "Jacobi identity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf",
+        "https://www.youtube.com/watch?v=xVbfWunObYQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Lie Algebras and the Exponential Map",
+      "title": "How do we get from the algebra back to the group?",
+      "concepts": ["exponential map", "matrix exponential", "one-parameter subgroups"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.toronto.edu/mein/teaching/LectureNotes/lie.pdf",
+        "https://github.com/byu-magicc/lie_groups"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Lie Algebras and the Exponential Map",
+      "title": "What happens when we compose exponentials?",
+      "concepts": ["Baker-Campbell-Hausdorff formula", "logarithm on groups"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kamenova/homepage_files/MAT552s15.html",
+        "https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Lie Algebras and the Exponential Map",
+      "title": "Can you compute the Lie algebras of SO(3) and SU(2)?",
+      "concepts": ["computing Lie algebras", "skew-symmetric matrices", "traceless Hermitian"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf",
+        "https://github.com/byu-magicc/lie_groups"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Lie Algebras and the Exponential Map",
+      "title": "How does the exponential map connect groups and algebras?",
+      "concepts": ["review: exponential map", "review: Lie bracket", "review: classical groups"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-745-lie-groups-and-lie-algebras-i-fall-2020/",
+        "https://www.jgibson.id.au/lievis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Structure Theory",
+      "title": "What does it mean for a Lie algebra to be solvable or nilpotent?",
+      "concepts": ["solvable Lie algebras", "nilpotent Lie algebras", "derived series"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-745-lie-groups-and-lie-algebras-i-fall-2020/",
+        "https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Structure Theory",
+      "title": "Why do nilpotent Lie algebras have upper-triangular representations?",
+      "concepts": ["Engel's theorem", "ad-nilpotency", "upper triangular form"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf",
+        "https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2018/04/m273.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Structure Theory",
+      "title": "How do we decompose any Lie algebra into simple pieces?",
+      "concepts": ["semisimple Lie algebras", "radical", "Levi decomposition"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf",
+        "https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Structure Theory",
+      "title": "What does the Killing form measure about a Lie algebra?",
+      "concepts": ["Killing form", "trace form", "Cartan's criterion"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.toronto.edu/mein/teaching/LectureNotes/lie.pdf",
+        "https://ocw.mit.edu/courses/18-745-lie-groups-and-lie-algebras-i-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Structure Theory",
+      "title": "How do physicists use su(2) and su(3) in the Standard Model?",
+      "concepts": ["simple Lie algebras", "su(2) and angular momentum", "su(3) and quarks"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://aalok.uk/projects/lietheory/",
+        "https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Structure Theory",
+      "title": "What distinguishes solvable, nilpotent, and semisimple algebras?",
+      "concepts": ["review: structure theory", "review: Killing form", "review: simple algebras"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-745-lie-groups-and-lie-algebras-i-fall-2020/",
+        "https://www.jgibson.id.au/lievis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Root Systems and Classification",
+      "title": "What's special about simultaneously diagonalizable elements?",
+      "concepts": ["Cartan subalgebras", "maximal toral subalgebras", "regular elements"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf",
+        "https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Root Systems and Classification",
+      "title": "How do root spaces organize a semisimple Lie algebra?",
+      "concepts": ["root space decomposition", "roots", "root vectors"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jgibson.id.au/lievis/",
+        "https://github.com/colton5007/AlgebrasDontLie"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Root Systems and Classification",
+      "title": "Why do roots live in a Euclidean space with symmetry?",
+      "concepts": ["root systems", "Weyl group", "reflections"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.jgibson.id.au/lievis/",
+        "https://github.com/teake/simplie"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Root Systems and Classification",
+      "title": "What information does a Dynkin diagram encode?",
+      "concepts": ["simple roots", "Dynkin diagrams", "Cartan matrix"],
+      "difficulty": 5,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.jgibson.id.au/lievis/",
+        "https://github.com/colton5007/AlgebrasDontLie",
+        "https://github.com/teake/simplie"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Root Systems and Classification",
+      "title": "Can you recognize A_n, B_n, C_n, D_n, and the exceptional algebras?",
+      "concepts": ["classification of simple Lie algebras", "classical series", "exceptional algebras E6, E7, E8, F4, G2"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf",
+        "https://www.jgibson.id.au/lievis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Root Systems and Classification",
+      "title": "How do roots and Dynkin diagrams classify simple Lie algebras?",
+      "concepts": ["review: root systems", "review: Dynkin diagrams", "review: classification"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.jgibson.id.au/lievis/",
+        "https://github.com/teake/simplie"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Representation Theory",
+      "title": "How do Lie groups and algebras act on vector spaces?",
+      "concepts": ["representations", "irreducible representations", "complete reducibility"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf",
+        "http://www.liegroups.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Representation Theory",
+      "title": "Why are weights the eigenvalues that classify representations?",
+      "concepts": ["weight spaces", "highest weight", "dominant weights"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf",
+        "https://ocw.mit.edu/courses/18-755-lie-groups-and-lie-algebras-ii-spring-2024/mit18_755_s24_lec_full.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Representation Theory",
+      "title": "How do roboticists use SO(3) and SE(3) for motion planning?",
+      "concepts": ["applications to robotics", "rotation groups", "rigid motion"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://github.com/byu-magicc/lie_groups",
+        "https://aalok.uk/projects/lietheory/",
+        "https://ajpancollantes.github.io/%E2%98%95REFLECTIONS/visualization%20of%20Lie%20groups.md.html"
+      ],
+      "status": "pending"
+    }
+  ]
+}

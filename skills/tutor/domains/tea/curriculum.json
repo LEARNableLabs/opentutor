@@ -1,0 +1,369 @@
+{
+  "topic": "Tea — cultivar science, processing, and gongfu practice",
+  "slug": "tea",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (organic molecules, oxidation-reduction)",
+    "basic botany (plant anatomy, growth cycles)",
+    "familiarity with tea as a beverage"
+  ],
+  "exit_criteria": [
+    "identify major tea cultivars and their flavor profiles",
+    "explain the chemistry behind each processing category",
+    "perform gongfu brewing with appropriate parameters for different tea types",
+    "conduct basic sensory evaluation and quality assessment",
+    "understand terroir factors and their chemical expression"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Tea Plant & Cultivars",
+      "title": "What makes Camellia sinensis so special?",
+      "concepts": ["Camellia sinensis taxonomy", "var. sinensis vs. var. assamica", "domestication history"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.worldteaacademy.com/tea-plant-species",
+        "https://pubmed.ncbi.nlm.nih.gov/tea-plant-genetics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Tea Plant & Cultivars",
+      "title": "Why do different cultivars taste so different?",
+      "concepts": ["genetic diversity", "phenolic compounds", "cultivar selection"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.tres.gov.tw/cultivar-database",
+        "https://www.youtube.com/watch?v=tea-cultivar-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Tea Plant & Cultivars",
+      "title": "How does terroir shape a tea's chemistry?",
+      "concepts": ["altitude effects", "soil chemistry", "climate impact", "secondary metabolites"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/terroir-tea-chemistry",
+        "https://teageek.net/blog/altitude-and-tea-quality"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Tea Plant & Cultivars",
+      "title": "What can you taste in a cultivar comparison?",
+      "concepts": ["varietal tasting", "sensory markers", "cultivar identification"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://meileaf.com/article/cultivar-comparison-guide",
+        "https://www.globalteachampionship.com/sensory-protocols"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Tea Plant & Cultivars",
+      "title": "How are new tea cultivars developed?",
+      "concepts": ["tea breeding", "hybrid development", "trait selection", "modern cultivars"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.tres.gov.tw/breeding-programs",
+        "https://link.springer.com/tea-cultivar-development"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Processing Chemistry",
+      "title": "What happens when a tea leaf is picked?",
+      "concepts": ["enzymatic activity", "polyphenol oxidase", "withering", "cell damage"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/food-chemistry-oxidation",
+        "https://www.teaguardian.com/oxidation-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Processing Chemistry",
+      "title": "Why does white tea stay so light?",
+      "concepts": ["minimal processing", "enzymatic browning inhibition", "white tea chemistry"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/white-tea-antioxidants",
+        "https://www.seriouseats.com/white-tea-processing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Processing Chemistry",
+      "title": "How does kill-green lock in green tea's character?",
+      "concepts": ["sha qing", "enzyme deactivation", "temperature control", "pan-firing vs. steaming"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=green-tea-processing-science",
+        "https://www.specialtyteainstitute.org/green-tea-methods"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Processing Chemistry",
+      "title": "Review: Cultivars to Processing Basics",
+      "concepts": ["cultivar science review", "oxidation fundamentals", "processing categories"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://quizlet.com/tea-science-fundamentals"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Processing Chemistry",
+      "title": "What makes oolong the most complex category?",
+      "concepts": ["partial oxidation", "bruising technique", "oxidation gradients", "rolling timing"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.seriouseats.com/oolong-processing-science",
+        "https://taiwanoolongs.com/processing-deep-dive"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Processing Chemistry",
+      "title": "Why is black tea called 'red tea' in Chinese?",
+      "concepts": ["full oxidation", "theaflavins", "thearubigins", "color chemistry"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.sciencedirect.com/black-tea-oxidation-products",
+        "https://www.chineseteastory.com/red-tea-terminology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Processing Chemistry",
+      "title": "How does microbial fermentation transform dark tea?",
+      "concepts": ["pile fermentation", "microbial activity", "puerh processing", "aging chemistry"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/puerh-microbiology",
+        "https://www.youtube.com/watch?v=sheng-vs-shou-puerh"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sensory Science",
+      "title": "What compounds create tea's flavor universe?",
+      "concepts": ["catechins", "amino acids", "volatile compounds", "flavor chemistry"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/tea-flavor-chemistry",
+        "https://www.coffeeandteachemistry.com/tea-compounds"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sensory Science",
+      "title": "Why does green tea taste umami?",
+      "concepts": ["L-theanine", "glutamate receptors", "umami chemistry", "shade-growing effects"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/l-theanine-tea",
+        "https://www.yunomi.life/theanine-umami-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Sensory Science",
+      "title": "Review: Processing Chemistry Mastery",
+      "concepts": ["six processing categories", "oxidation levels", "fermentation types"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.worldteaacademy.com/processing-quiz"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sensory Science",
+      "title": "How does astringency work on your tongue?",
+      "concepts": ["tannins", "protein binding", "astringency perception", "EGCG"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/astringency-mechanisms",
+        "https://www.seriouseats.com/tea-astringency-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Sensory Science",
+      "title": "What creates that complex aroma in your cup?",
+      "concepts": ["aromatic compounds", "terpenes", "aldehydes", "volatile extraction"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/tea-aroma-chemistry",
+        "https://www.youtube.com/watch?v=tea-aroma-wheel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Gongfu Technique",
+      "title": "Why use gongfu brewing instead of Western style?",
+      "concepts": ["extraction control", "multiple infusions", "leaf-to-water ratio", "gongfu philosophy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://meileaf.com/article/gongfu-brewing-guide",
+        "https://www.youtube.com/watch?v=gongfu-introduction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Gongfu Technique",
+      "title": "How do vessel materials affect extraction?",
+      "concepts": ["heat retention", "porosity", "yixing clay", "porcelain vs. glass"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.teaguardian.com/teaware-science",
+        "https://crimsonlotustea.com/blogs/teawareguide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Gongfu Technique",
+      "title": "What's the right water for your tea?",
+      "concepts": ["water chemistry", "mineral content", "pH effects", "water temperature"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.seriouseats.com/tea-water-quality",
+        "https://www.specialtyteainstitute.org/water-standards"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Gongfu Technique",
+      "title": "Review: Sensory Science & Gongfu Foundations",
+      "concepts": ["flavor chemistry", "gongfu basics", "sensory evaluation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.worldteaacademy.com/intermediate-review"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Gongfu Technique",
+      "title": "How do you dial in the perfect infusion time?",
+      "concepts": ["extraction curves", "timing by tea type", "flash infusions", "taste calibration"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=gongfu-timing-masterclass",
+        "https://meileaf.com/article/infusion-timing-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Gongfu Technique",
+      "title": "Can you taste the difference across infusions?",
+      "concepts": ["flavor evolution", "compound extraction order", "session tasting"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.globalteachampionship.com/tasting-protocols",
+        "https://www.youtube.com/watch?v=oolong-session-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Quality & Mastery",
+      "title": "How do professionals grade tea quality?",
+      "concepts": ["grading systems", "visual assessment", "defect recognition", "quality markers"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.specialtyteainstitute.org/grading-standards",
+        "https://www.tres.gov.tw/quality-assessment-protocol"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Quality & Mastery",
+      "title": "What happens to tea as it ages?",
+      "concepts": ["storage chemistry", "aging mechanisms", "humidity effects", "flavor development"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/tea-aging-chemistry",
+        "https://www.youtube.com/watch?v=puerh-aging-science"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Quality & Mastery",
+      "title": "Can you trace a tea from cultivar to cup?",
+      "concepts": ["integrated analysis", "cultivar identification", "processing deduction", "brewing optimization", "complete evaluation"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.specialtyteainstitute.org/comprehensive-evaluation",
+        "https://www.globalteachampionship.com/masterclass-protocols",
+        "https://www.youtube.com/watch?v=tea-identification-masterclass"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Quality & Mastery",
+      "title": "Review: Complete Tea Mastery",
+      "concepts": ["cultivar science synthesis", "processing chemistry integration", "gongfu technique mastery", "quality assessment", "comprehensive tea knowledge"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.worldteaacademy.com/mastery-assessment",
+        "https://www.specialtyteainstitute.org/certification-prep"
+      ],
+      "status": "pending"
+    }
+  ]
+}

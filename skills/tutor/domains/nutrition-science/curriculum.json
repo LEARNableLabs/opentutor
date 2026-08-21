@@ -1,0 +1,338 @@
+{
+  "topic": "Nutrition Science — Metabolism and Diet",
+  "slug": "nutrition-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic cell biology",
+    "basic organic chemistry",
+    "enzyme function"
+  ],
+  "exit_criteria": [
+    "explain the major metabolic pathways for carbohydrates, fats, and proteins",
+    "evaluate dietary claims using biochemical reasoning",
+    "predict metabolic consequences of different dietary patterns",
+    "identify nutrient roles in enzymatic reactions and regulation",
+    "apply metabolic principles to real-world nutrition decisions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Energy and Metabolism Fundamentals",
+      "title": "Why do we need to eat at all?",
+      "concepts": ["cellular respiration", "ATP", "metabolic energy"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/cellular-respiration-and-fermentation/intro-to-cellular-respiration/a/intro-to-cellular-respiration-and-redox"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Energy and Metabolism Fundamentals",
+      "title": "How does your body measure energy in food?",
+      "concepts": ["calories", "calorimetry", "macronutrient energy density"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK22436/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Energy and Metabolism Fundamentals",
+      "title": "Where does food go after you swallow?",
+      "concepts": ["digestion", "absorption", "nutrient transport"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/high-school-biology/hs-human-body-systems/hs-the-digestive-and-excretory-systems/a/the-digestive-system"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Energy and Metabolism Fundamentals",
+      "title": "Why do some organs burn more calories at rest than others?",
+      "concepts": ["basal metabolic rate", "organ-specific metabolism", "energy expenditure"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3139779/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Energy and Metabolism Fundamentals",
+      "title": "What happens during the fed vs fasted state?",
+      "concepts": ["anabolic pathways", "catabolic pathways", "hormonal regulation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK22436/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Carbohydrate Metabolism",
+      "title": "Can you explain the basics of how food becomes energy?",
+      "concepts": ["ATP production", "metabolic states", "energy balance"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/test-prep/mcat/biomolecules/carbohydrates/a/carbohydrates"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Carbohydrate Metabolism",
+      "title": "How does glucose become ATP?",
+      "concepts": ["glycolysis", "pyruvate oxidation", "citric acid cycle"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/cellular-respiration-and-fermentation/glycolysis/a/glycolysis",
+        "https://www.ncbi.nlm.nih.gov/books/NBK22395/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Carbohydrate Metabolism",
+      "title": "Why does your body store glucose as glycogen instead of just keeping it in the blood?",
+      "concepts": ["glycogen synthesis", "glycogenolysis", "blood glucose regulation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK26055/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Carbohydrate Metabolism",
+      "title": "Can your body make glucose from scratch?",
+      "concepts": ["gluconeogenesis", "substrate sources", "metabolic regulation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK22591/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Carbohydrate Metabolism",
+      "title": "What makes fiber different from other carbohydrates?",
+      "concepts": ["dietary fiber", "gut microbiome", "short-chain fatty acids"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6041804/",
+        "https://ods.od.nih.gov/factsheets/Fiber-Consumer/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Fat Metabolism",
+      "title": "How does your body break down fat for energy?",
+      "concepts": ["beta-oxidation", "fatty acid catabolism", "acetyl-CoA"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK22554/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Fat Metabolism",
+      "title": "Why do ketones appear when you fast or eat very low carb?",
+      "concepts": ["ketogenesis", "ketone bodies", "metabolic adaptation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK554523/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6640868/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Fat Metabolism",
+      "title": "How do carbohydrate and fat metabolism work together?",
+      "concepts": ["glucose metabolism", "fat metabolism", "pathway regulation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/cellular-respiration-and-fermentation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Fat Metabolism",
+      "title": "How does your body make fat from excess food?",
+      "concepts": ["lipogenesis", "de novo lipogenesis", "fat storage"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6019055/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Fat Metabolism",
+      "title": "Are all dietary fats created equal?",
+      "concepts": ["saturated fats", "unsaturated fats", "essential fatty acids", "trans fats"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/fats-and-cholesterol/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4488002/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Protein and Amino Acids",
+      "title": "What happens to protein after you eat it?",
+      "concepts": ["protein digestion", "amino acid absorption", "nitrogen balance"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK22600/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Protein and Amino Acids",
+      "title": "Can amino acids be used for energy?",
+      "concepts": ["amino acid catabolism", "glucogenic amino acids", "ketogenic amino acids", "urea cycle"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK22600/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Protein and Amino Acids",
+      "title": "Why do you need to eat some amino acids but not others?",
+      "concepts": ["essential amino acids", "protein quality", "complete proteins"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://ods.od.nih.gov/factsheets/Protein-HealthProfessional/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Micronutrients and Regulation",
+      "title": "How do vitamins enable metabolic reactions?",
+      "concepts": ["coenzymes", "cofactors", "B vitamins in metabolism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ods.od.nih.gov/factsheets/list-VitaminsMinerals/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6470929/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Micronutrients and Regulation",
+      "title": "How does the entire system work — from food to energy?",
+      "concepts": ["integrated metabolism", "nutrient synergy", "metabolic regulation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK22436/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Micronutrients and Regulation",
+      "title": "Why does iron deficiency make you tired?",
+      "concepts": ["mineral cofactors", "iron metabolism", "electron transport chain"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Diet Patterns and Applications",
+      "title": "Does meal timing affect metabolism?",
+      "concepts": ["circadian rhythm", "meal frequency", "intermittent fasting"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6627766/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Diet Patterns and Applications",
+      "title": "What happens metabolically on a ketogenic diet?",
+      "concepts": ["ketogenic adaptation", "metabolic flexibility", "substrate switching"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6640868/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Diet Patterns and Applications",
+      "title": "How does insulin resistance develop?",
+      "concepts": ["insulin signaling", "metabolic syndrome", "glucose homeostasis"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3934755/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Diet Patterns and Applications",
+      "title": "Can you trust popular nutrition claims?",
+      "concepts": ["evidence hierarchy", "correlation vs causation", "study design"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.hsph.harvard.edu/nutritionsource/nutrition-and-immunity/",
+        "https://examine.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Diet Patterns and Applications",
+      "title": "How can you use metabolism to make better nutrition decisions?",
+      "concepts": ["dietary patterns", "metabolic health", "evidence-based nutrition"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://health.gov/our-work/nutrition-physical-activity/dietary-guidelines"
+      ],
+      "status": "pending"
+    }
+  ]
+}

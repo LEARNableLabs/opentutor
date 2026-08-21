@@ -1,0 +1,434 @@
+{
+  "topic": "Fermentation science — from beer to kimchi",
+  "slug": "fermentation-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology (cell structure, metabolism)",
+    "basic chemistry (pH, acids and bases, organic molecules)",
+    "exposure to microbiology concepts"
+  ],
+  "exit_criteria": [
+    "student can explain the biochemistry of alcoholic and lactic acid fermentation",
+    "student can identify the key microbes in different fermentation processes",
+    "student can design and troubleshoot fermentation recipes for beer, kimchi, and other fermented foods",
+    "student can evaluate fermentation safety and quality control measures",
+    "student understands the role of temperature, pH, and oxygen in fermentation outcomes"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fermentation Fundamentals",
+      "title": "What is fermentation and why does it matter?",
+      "concepts": ["fermentation definition", "anaerobic metabolism", "historical importance"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(Boundless)/17:_Industrial_Microbiology/17.05:_Food_Preservation/17.5A:_Fermented_Foods",
+        "https://pll.harvard.edu/course/food-fermentation-science-cooking-microbes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fermentation Fundamentals",
+      "title": "Why do cells ferment when oxygen runs out?",
+      "concepts": ["aerobic vs anaerobic respiration", "ATP production", "electron acceptors"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/cellular-respiration-and-fermentation",
+        "https://video.ucdavis.edu/media/Fermentation+lecture/0_8hoa0yvc/151672082"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fermentation Fundamentals",
+      "title": "How does glycolysis power fermentation?",
+      "concepts": ["glycolysis pathway", "NAD+ regeneration", "pyruvate conversion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/cellular-respiration-and-fermentation",
+        "https://www.pearson.com/channels/biology/explore/respiration/fermentation-anaerobic-respiration-Bio-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fermentation Fundamentals",
+      "title": "What's the difference between brewing beer and making kimchi?",
+      "concepts": ["alcoholic fermentation", "lactic acid fermentation", "end products"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator",
+        "https://journals.asm.org/doi/10.1128/jmbe.v15i2.695"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fermentation Fundamentals",
+      "title": "Can you predict what a recipe will ferment into?",
+      "concepts": ["substrate specificity", "fermentation pathways", "product prediction"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://agriculture.institute/food-chemistry-and-physiology/microbiology-biochemistry-fermentation-overview/",
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Microbial Players",
+      "title": "Who are the microbes behind fermentation?",
+      "concepts": ["bacteria", "yeast", "molds", "microbial diversity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(Boundless)/17:_Industrial_Microbiology/17.05:_Food_Preservation/17.5A:_Fermented_Foods",
+        "https://asm.org/articles/2020/august/culturally-inclusive-teaching-using-fermentation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Microbial Players",
+      "title": "What have we learned about metabolism and microbes so far?",
+      "concepts": ["glycolysis review", "fermentation types", "microbial roles"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/cellular-respiration-and-fermentation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Microbial Players",
+      "title": "Why do we love Saccharomyces cerevisiae?",
+      "concepts": ["brewing yeast", "baker's yeast", "industrial applications"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://video.ucdavis.edu/media/Fermentation+lecture/0_8hoa0yvc/151672082",
+        "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/food-science-technology/food-science-sustainable-technologies-bs-hbs/fermentation-science-option/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Microbial Players",
+      "title": "How do lactic acid bacteria transform vegetables?",
+      "concepts": ["LAB species", "enrichment", "selection pressure"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://journals.asm.org/doi/10.1128/jmbe.v15i2.695",
+        "https://www.ars.usda.gov/ARSUserFiles/60702500/Fermented%20Veg%20Manuscripts/p437.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Microbial Players",
+      "title": "What role do molds play in fermentation?",
+      "concepts": ["koji molds", "cheese molds", "enzymatic activity"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(Boundless)/17:_Industrial_Microbiology/17.05:_Food_Preservation/17.5A:_Fermented_Foods",
+        "https://asm.org/articles/2020/august/culturally-inclusive-teaching-using-fermentation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Microbial Players",
+      "title": "Can multiple microbes work together?",
+      "concepts": ["mixed cultures", "symbiosis", "succession"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://news.ncsu.edu/2025/08/kimchi-public-microbiology/",
+        "https://www.foodunfolded.com/article/kimchi-kombucha-how-its-made"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Alcoholic Fermentation",
+      "title": "How does yeast turn sugar into alcohol?",
+      "concepts": ["ethanol pathway", "CO2 production", "Embden-Meyerhof pathway"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.pearson.com/channels/biology/asset/015ead7e/alcohol-or-ethanol-fermentation-cellular-respiration-biology-khan-academy",
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Alcoholic Fermentation",
+      "title": "Why does beer taste different from wine?",
+      "concepts": ["substrate differences", "fermentation conditions", "flavor compounds"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/food-science-technology/food-science-sustainable-technologies-bs-hbs/fermentation-science-option/",
+        "https://video.ucdavis.edu/media/Fermentation+lecture/0_8hoa0yvc/151672082"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Alcoholic Fermentation",
+      "title": "How does yeast metabolism actually work?",
+      "concepts": ["ethanol fermentation", "yeast biology", "process control"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/cellular-respiration-and-fermentation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Alcoholic Fermentation",
+      "title": "What makes a great brewing environment?",
+      "concepts": ["temperature control", "pH optimization", "nutrient requirements"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator",
+        "https://professional.mit.edu/course-catalog/fermentation-technology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Alcoholic Fermentation",
+      "title": "How do we control fermentation temperature?",
+      "concepts": ["Arrhenius effect", "enzyme kinetics", "temperature ranges"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator",
+        "https://courses.landfood.ubc.ca/syllabus/term/2022W1_V/course/FNH_V%20405%20101%202022W1/source/FNH_405_syllabus.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Alcoholic Fermentation",
+      "title": "Can you design a beer recipe?",
+      "concepts": ["recipe formulation", "ingredient selection", "process design"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator",
+        "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/food-science-technology/food-science-sustainable-technologies-bs-hbs/fermentation-science-option/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Alcoholic Fermentation",
+      "title": "What goes wrong when fermentation fails?",
+      "concepts": ["stuck fermentation", "contamination", "troubleshooting"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://professional.mit.edu/course-catalog/fermentation-technology",
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Lactic Acid Fermentation",
+      "title": "Why do vegetables become sour and crunchy?",
+      "concepts": ["lactic acid production", "pH drop", "texture changes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ars.usda.gov/ARSUserFiles/60702500/Fermented%20Veg%20Manuscripts/p437.pdf",
+        "https://journals.asm.org/doi/10.1128/jmbe.v15i2.695"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Lactic Acid Fermentation",
+      "title": "How does kimchi naturally select its microbes?",
+      "concepts": ["natural fermentation", "enrichment culture", "ecological succession"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://journals.asm.org/doi/10.1128/jmbe.v15i2.695",
+        "https://news.ncsu.edu/2025/08/kimchi-public-microbiology/",
+        "https://www.wpunj.edu/coe/departments/elps/assets/AdamFleisher_UnderstandingOsmosisKimchiPickling.pdf?language_id=1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Lactic Acid Fermentation",
+      "title": "What makes alcoholic and lactic acid fermentation different?",
+      "concepts": ["pathway comparison", "product differences", "microbial differences"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/biology/cellular-respiration-and-fermentation",
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Lactic Acid Fermentation",
+      "title": "What makes yogurt thick and tangy?",
+      "concepts": ["dairy fermentation", "protein coagulation", "starter cultures"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(Boundless)/17:_Industrial_Microbiology/17.05:_Food_Preservation/17.5A:_Fermented_Foods",
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Lactic Acid Fermentation",
+      "title": "Can you ferment anything?",
+      "concepts": ["substrate requirements", "fermentation versatility", "cultural diversity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://asm.org/articles/2020/august/culturally-inclusive-teaching-using-fermentation",
+        "https://news.ncsu.edu/2025/08/kimchi-public-microbiology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Lactic Acid Fermentation",
+      "title": "How do cheese makers control cultures?",
+      "concepts": ["defined starter cultures", "culture maintenance", "industrial control"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(Boundless)/17:_Industrial_Microbiology/17.05:_Food_Preservation/17.5A:_Fermented_Foods",
+        "https://catalog.oregonstate.edu/college-departments/agricultural-sciences/food-science-technology/food-science-sustainable-technologies-bs-hbs/fermentation-science-option/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Lactic Acid Fermentation",
+      "title": "Can you design your own fermented vegetable?",
+      "concepts": ["recipe design", "process control", "creative application"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ars.usda.gov/ARSUserFiles/60702500/Fermented%20Veg%20Manuscripts/p437.pdf",
+        "https://www.bccdc.ca/resource-gallery/Documents/Educational%20Materials/EH/FPS/Food/Fermented/Fermented%20Foods%20Guideline%20-%203.3%20Kimchi.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Beyond the Basics",
+      "title": "Why does kombucha have both yeast and bacteria?",
+      "concepts": ["SCOBY", "symbiotic culture", "mixed fermentation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.foodunfolded.com/article/kimchi-kombucha-how-its-made",
+        "https://news.ncsu.edu/2025/08/kimchi-public-microbiology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Beyond the Basics",
+      "title": "How do acetic acid bacteria make vinegar?",
+      "concepts": ["acetic acid fermentation", "oxidative fermentation", "two-stage process"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(Boundless)/17:_Industrial_Microbiology/17.05:_Food_Preservation/17.5A:_Fermented_Foods",
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Beyond the Basics",
+      "title": "How do all fermentation types connect?",
+      "concepts": ["fermentation classification", "pathway summary", "microbial diversity"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://agriculture.institute/food-chemistry-and-physiology/microbiology-biochemistry-fermentation-overview/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Beyond the Basics",
+      "title": "What's happening in traditional fermentation worldwide?",
+      "concepts": ["global fermentation", "cultural practices", "traditional knowledge"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://asm.org/articles/2020/august/culturally-inclusive-teaching-using-fermentation",
+        "https://news.ncsu.edu/2025/08/kimchi-public-microbiology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Safety & Quality",
+      "title": "How do we keep fermentation safe?",
+      "concepts": ["food safety", "pathogen control", "quality assurance"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bccdc.ca/resource-gallery/Documents/Educational%20Materials/EH/FPS/Food/Fermented/Fermented%20Foods%20Guideline%20-%203.3%20Kimchi.pdf",
+        "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(Boundless)/17:_Industrial_Microbiology/17.05:_Food_Preservation/17.5A:_Fermented_Foods"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Safety & Quality",
+      "title": "Why does pH matter so much?",
+      "concepts": ["pH control", "acid production", "microbial growth inhibition"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://simulations4all.com/simulations/fermentation-kinetics-growth-curve-simulator",
+        "https://www.bccdc.ca/resource-gallery/Documents/Educational%20Materials/EH/FPS/Food/Fermented/Fermented%20Foods%20Guideline%20-%203.3%20Kimchi.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Safety & Quality",
+      "title": "Can you troubleshoot a failed ferment?",
+      "concepts": ["problem diagnosis", "corrective actions", "quality control"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://professional.mit.edu/course-catalog/fermentation-technology",
+        "https://www.bccdc.ca/resource-gallery/Documents/Educational%20Materials/EH/FPS/Food/Fermented/Fermented%20Foods%20Guideline%20-%203.3%20Kimchi.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

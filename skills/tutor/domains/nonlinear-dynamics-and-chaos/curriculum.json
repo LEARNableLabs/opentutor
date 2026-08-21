@@ -1,0 +1,426 @@
+{
+  "topic": "Nonlinear Dynamics and Chaos",
+  "slug": "nonlinear-dynamics-and-chaos",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "single-variable calculus (derivatives, integrals)",
+    "basic linear algebra (eigenvalues, eigenvectors)",
+    "ordinary differential equations (solving simple ODEs)",
+    "elementary physics (Newton's laws, oscillators)"
+  ],
+  "exit_criteria": [
+    "analyze stability of fixed points in 1D and 2D systems",
+    "sketch phase portraits and identify limit cycles",
+    "recognize and classify common bifurcations",
+    "identify chaotic behavior using Lyapunov exponents",
+    "explain sensitive dependence on initial conditions",
+    "construct bifurcation diagrams for 1D maps",
+    "apply nonlinear dynamics concepts to real-world systems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "One-Dimensional Flows",
+      "title": "What happens when change itself depends on the current state?",
+      "concepts": ["flows on the line", "fixed points", "geometric thinking"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V",
+        "https://ocw.mit.edu/courses/12-006j-nonlinear-dynamics-chaos-fall-2022/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "One-Dimensional Flows",
+      "title": "How can we tell if a fixed point is stable without solving the equation?",
+      "concepts": ["linear stability analysis", "stable vs unstable fixed points", "graphical methods"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "One-Dimensional Flows",
+      "title": "Why do fish populations suddenly collapse when overfishing crosses a threshold?",
+      "concepts": ["saddle-node bifurcation", "catastrophic transitions", "hysteresis"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://neuron.eng.wayne.edu/auth/ece3040/lectures/strogatz_nonlinear_dynamics_and_chaos.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "One-Dimensional Flows",
+      "title": "What other ways can fixed points appear or disappear?",
+      "concepts": ["transcritical bifurcation", "pitchfork bifurcation", "symmetry breaking"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-385j-nonlinear-dynamics-and-chaos-fall-2014/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "One-Dimensional Flows",
+      "title": "Can you sketch how fixed points move as a parameter changes?",
+      "concepts": ["bifurcation diagrams", "parameter space", "qualitative analysis"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://novasolver.jp/en/tools/bifurcation-diagram.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Two-Dimensional Flows",
+      "title": "What happens when two quantities change and influence each other?",
+      "concepts": ["phase plane", "vector fields", "nullclines"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Two-Dimensional Flows",
+      "title": "How do eigenvalues determine whether a fixed point is a spiral, node, or saddle?",
+      "concepts": ["linearization", "classification of fixed points", "stability in 2D"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-006j-nonlinear-dynamics-chaos-fall-2022/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Two-Dimensional Flows",
+      "title": "Why do some systems settle into repeating cycles instead of equilibrium?",
+      "concepts": ["limit cycles", "periodic orbits", "attracting cycles"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://neuron.eng.wayne.edu/auth/ece3040/lectures/strogatz_nonlinear_dynamics_and_chaos.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Two-Dimensional Flows",
+      "title": "Can a 2D system behave chaotically?",
+      "concepts": ["Poincaré-Bendixson theorem", "impossibility of chaos in 2D", "trapping regions"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-385j-nonlinear-dynamics-and-chaos-fall-2014/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Two-Dimensional Flows",
+      "title": "How does a heartbeat maintain its rhythm?",
+      "concepts": ["van der Pol oscillator", "relaxation oscillations", "biological oscillators"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Two-Dimensional Flows",
+      "title": "Explain predator-prey oscillations using a phase portrait",
+      "concepts": ["Lotka-Volterra model", "conservation of energy analogy", "centers vs limit cycles"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://neuron.eng.wayne.edu/auth/ece3040/lectures/strogatz_nonlinear_dynamics_and_chaos.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Consolidation",
+      "title": "Review: From fixed points to limit cycles",
+      "concepts": ["stability analysis", "bifurcations", "phase portraits"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-006j-nonlinear-dynamics-chaos-fall-2022/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Bifurcations in Higher Dimensions",
+      "title": "How can a stable fixed point suddenly start oscillating?",
+      "concepts": ["Hopf bifurcation", "birth of limit cycle", "supercritical vs subcritical"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Bifurcations in Higher Dimensions",
+      "title": "What causes a limit cycle to disappear catastrophically?",
+      "concepts": ["saddle-node bifurcation of cycles", "global bifurcations", "infinite period bifurcation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-385j-nonlinear-dynamics-and-chaos-fall-2014/pages/syllabus/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Bifurcations in Higher Dimensions",
+      "title": "Why do some oscillators die slowly while others vanish abruptly?",
+      "concepts": ["homoclinic bifurcation", "separatrix loops", "infinite period"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://neuron.eng.wayne.edu/auth/ece3040/lectures/strogatz_nonlinear_dynamics_and_chaos.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Bifurcations in Higher Dimensions",
+      "title": "Classify the bifurcation in this parameter sweep",
+      "concepts": ["bifurcation analysis", "normal forms", "codimension"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://novasolver.jp/en/tools/bifurcation-diagram.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Bifurcations in Higher Dimensions",
+      "title": "What happens when you explore this interactive bifurcation simulator?",
+      "concepts": ["parameter exploration", "hysteresis", "multistability"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://novasolver.jp/en/tools/bifurcation-diagram.html",
+        "https://fractalchaos.space/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Chaos Emerges",
+      "title": "Can simple deterministic rules produce unpredictable behavior?",
+      "concepts": ["deterministic chaos", "sensitive dependence", "butterfly effect"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Consolidation",
+      "title": "Review: Bifurcations and the emergence of complexity",
+      "concepts": ["bifurcation types", "limit cycles", "routes to chaos"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-006j-nonlinear-dynamics-chaos-fall-2022/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Chaos Emerges",
+      "title": "Why is long-term weather prediction fundamentally impossible?",
+      "concepts": ["Lorenz equations", "strange attractors", "practical predictability"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://simulations4all.com/simulations/lorenz-attractor-3d",
+        "https://fractalchaos.space/lorenz-attractor"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Chaos Emerges",
+      "title": "How do we know if a system is truly chaotic?",
+      "concepts": ["Lyapunov exponents", "exponential divergence", "quantifying chaos"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://simulations4all.com/simulations/lorenz-attractor-3d"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Chaos Emerges",
+      "title": "What makes the Lorenz attractor so strange?",
+      "concepts": ["strange attractors", "fractal dimension", "chaotic attractors"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mysimulator.uk/lorenz/",
+        "https://physics-simulations.org/simulation/lorenz-attractor/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Chaos Emerges",
+      "title": "Explore the Lorenz attractor and see the butterfly effect in action",
+      "concepts": ["interactive exploration", "parameter sensitivity", "initial condition sensitivity"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://simulations4all.com/simulations/lorenz-attractor-3d",
+        "https://www.mysimulator.uk/lorenz/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Chaos Emerges",
+      "title": "What's the simplest equation that produces chaos?",
+      "concepts": ["one-dimensional maps", "logistic map", "discrete dynamical systems"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://simulations4all.com/simulations/logistic-map-chaos"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Chaos Emerges",
+      "title": "Explain how tiny changes in r make the logistic map go from stable to chaotic",
+      "concepts": ["bifurcation diagram", "period-doubling cascade", "chaotic regime"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://simulations4all.com/simulations/logistic-map-chaos",
+        "https://novasolver.jp/en/tools/bifurcation-diagram.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Consolidation",
+      "title": "Review: Chaos, attractors, and the edge of predictability",
+      "concepts": ["chaos characteristics", "bifurcations to chaos", "Lyapunov exponents"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Fractals and Universality",
+      "title": "Why do coastlines, ferns, and clouds share the same mathematical structure?",
+      "concepts": ["fractals", "self-similarity", "scaling laws"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://fractalchaos.space/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Fractals and Universality",
+      "title": "How can a dimension be a fraction?",
+      "concepts": ["fractal dimension", "box-counting", "Hausdorff dimension"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://neuron.eng.wayne.edu/auth/ece3040/lectures/strogatz_nonlinear_dynamics_and_chaos.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Fractals and Universality",
+      "title": "What's so universal about Feigenbaum's constant?",
+      "concepts": ["universality", "period-doubling", "Feigenbaum constant"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Fractals and Universality",
+      "title": "Zoom into the Mandelbrot set and discover infinite complexity",
+      "concepts": ["Mandelbrot set", "Julia sets", "complex dynamics"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://fractalchaos.space/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Applications and Frontiers",
+      "title": "How does chaos theory explain the three-body problem in astronomy?",
+      "concepts": ["celestial mechanics", "orbital instability", "Poincaré's discovery"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-006j-nonlinear-dynamics-chaos-fall-2022/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Applications and Frontiers",
+      "title": "Where else does chaos appear in nature?",
+      "concepts": ["chemical oscillations", "neural dynamics", "fluid turbulence"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://neuron.eng.wayne.edu/auth/ece3040/lectures/strogatz_nonlinear_dynamics_and_chaos.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Applications and Frontiers",
+      "title": "Design a simple nonlinear system and predict its behavior",
+      "concepts": ["synthesis", "qualitative prediction", "system design"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/12-006j-nonlinear-dynamics-chaos-fall-2022/",
+        "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "topic": "Propaganda and Information Warfare",
+  "slug": "propaganda",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic psychology",
+    "media literacy fundamentals",
+    "critical thinking",
+    "understanding of social media platforms"
+  ],
+  "exit_criteria": [
+    "identify and analyze propaganda techniques in real-world media",
+    "explain psychological mechanisms that make propaganda effective",
+    "distinguish between disinformation, misinformation, and malinformation",
+    "evaluate information sources for credibility and bias",
+    "design and implement personal cognitive security practices",
+    "analyze case studies of information warfare campaigns",
+    "understand institutional responses and policy frameworks"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why did governments invest millions in posters during wartime?",
+      "concepts": ["propaganda definition", "historical context", "information as weapon"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.archives.gov/exhibits/powers_of_persuasion",
+        "https://www.iwm.org.uk/history/how-britain-used-propaganda-in-the-first-world-war"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What's the difference between persuasion and manipulation?",
+      "concepts": ["ethical boundaries", "consent", "information asymmetry", "intent"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/manipulation/",
+        "https://www.ethicsandsociety.org/propaganda-persuasion-ethics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Psychology of Persuasion",
+      "title": "Why do we believe things that feel right rather than things that are true?",
+      "concepts": ["motivated reasoning", "confirmation bias", "cognitive dissonance", "truthiness"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-102744",
+        "https://www.psychologytoday.com/us/basics/confirmation-bias"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Psychology of Persuasion",
+      "title": "How can a simple 'Like' button change what you believe?",
+      "concepts": ["social proof", "bandwagon effect", "conformity", "herd behavior"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.pnas.org/doi/10.1073/pnas.1320040111",
+        "https://sitn.hms.harvard.edu/flash/2018/brain-social-media/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Psychology of Persuasion",
+      "title": "Why are you more skeptical of 'their' news than 'ours'?",
+      "concepts": ["in-group bias", "out-group hostility", "identity-protective cognition", "tribalism"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41562-020-0850-9",
+        "https://press.princeton.edu/books/hardcover/9780691174488/network-propaganda"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Psychology of Persuasion",
+      "title": "Can you spot the manipulation in this toothpaste ad?",
+      "concepts": ["Cialdini's principles", "scarcity", "authority", "reciprocity"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.influenceatwork.com/principles-of-persuasion/",
+        "https://www.coursera.org/learn/persuasion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Foundations",
+      "title": "Review: Psychology meets propaganda",
+      "concepts": ["cognitive biases", "social influence", "persuasion vs manipulation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://thedecisionlab.com/biases",
+        "https://www.mediasmarts.ca/digital-media-literacy/media-issues/online-propaganda"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Classical Techniques",
+      "title": "How many propaganda tricks can you find in a single campaign poster?",
+      "concepts": ["card stacking", "glittering generalities", "name calling", "transfer"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://propagandacritic.com/index.php/how-to-decode-propaganda/",
+        "https://www.thirteen.org/edonline/lessons/propaganda/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Classical Techniques",
+      "title": "Why does everyone in political ads look so happy or so angry?",
+      "concepts": ["emotional manipulation", "fear appeals", "positive association", "framing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cambridge.org/core/books/abs/oxford-handbook-of-political-psychology/emotion-and-political-psychology/",
+        "https://journals.sagepub.com/doi/10.1177/1948550620923229"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Classical Techniques",
+      "title": "What makes a slogan stick in your head for decades?",
+      "concepts": ["repetition", "simplification", "memorable messaging", "cognitive fluency"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://academic.oup.com/joc/article/66/6/985/4161413",
+        "https://www.apa.org/monitor/2022/06/why-misinformation-sticks"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Digital Propaganda",
+      "title": "How did a single tweet reach 20 million people in 6 hours?",
+      "concepts": ["algorithmic amplification", "viral spread", "network effects", "engagement metrics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.aap9559",
+        "https://knightcolumbia.org/content/how-algorithms-amplify-misinformation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Digital Propaganda",
+      "title": "Can you tell which accounts in this thread are bots?",
+      "concepts": ["social bots", "coordinated inauthentic behavior", "astroturfing", "sock puppets"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://botometer.osome.iu.edu/",
+        "https://osome.iu.edu/research/publications"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Digital Propaganda",
+      "title": "Why does this video look real but feel wrong?",
+      "concepts": ["deepfakes", "synthetic media", "generative AI", "media authenticity"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.deepfakedetection.org/",
+        "https://www.media.mit.edu/projects/detect-fakes/overview/",
+        "https://sensity.ai/deepfakes-detection/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Digital Propaganda",
+      "title": "Review: From posters to pixels",
+      "concepts": ["classical vs digital techniques", "scale and speed", "detection challenges"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.rand.org/pubs/perspectives/PE198.html",
+        "https://comprop.oii.ox.ac.uk/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Information Warfare Tactics",
+      "title": "What's the difference between a mistake and a lie?",
+      "concepts": ["disinformation", "misinformation", "malinformation", "intent and harm"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://firstdraftnews.org/articles/information-disorder-the-essential-glossary/",
+        "https://www.cisa.gov/mdm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Information Warfare Tactics",
+      "title": "How does a false rumor spread faster than the truth that debunks it?",
+      "concepts": ["information operations", "firehose of falsehood", "speed vs accuracy", "narrative momentum"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.rand.org/pubs/perspectives/PE198.html",
+        "https://www.science.org/doi/10.1126/science.aap9559"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Information Warfare Tactics",
+      "title": "Why would hackers steal emails just to leak them?",
+      "concepts": ["hack-and-leak operations", "strategic timing", "weaponized transparency", "kompromat"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://cyber.fsi.stanford.edu/io/news/election-hacking",
+        "https://www.atlanticcouncil.org/in-depth-research-reports/report/breaking-trust/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Information Warfare Tactics",
+      "title": "How do you win an argument by controlling what people can't say?",
+      "concepts": ["censorship", "information control", "overton window", "strategic silence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://freedomhouse.org/report/freedom-net",
+        "https://citizenlab.ca/category/research/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Defense and Detection",
+      "title": "Can teaching someone how propaganda works make them immune to it?",
+      "concepts": ["inoculation theory", "prebunking", "psychological resistance", "critical thinking"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cam.ac.uk/research/news/fake-news-vaccine-game-reduces-susceptibility-to-misinformation",
+        "https://www.getbadnews.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Defense and Detection",
+      "title": "How do you fact-check a claim when experts disagree?",
+      "concepts": ["lateral reading", "source evaluation", "epistemic humility", "uncertainty navigation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.digitallearning.washington.edu/civicverify/",
+        "https://cor.stanford.edu/curriculum/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Defense and Detection",
+      "title": "Review: Building your cognitive security toolkit",
+      "concepts": ["detection techniques", "verification methods", "media literacy"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.newslit.org/educators/",
+        "https://www.mediasmarts.ca/digital-media-literacy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Case Studies",
+      "title": "How did a troll farm in St. Petersburg reach millions of Americans?",
+      "concepts": ["Internet Research Agency", "state-sponsored operations", "election interference", "attribution"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://intelligence.house.gov/social-media-content/",
+        "https://cyber.fsi.stanford.edu/io/news/russian-interference-2016-election"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Case Studies",
+      "title": "Why did a pizza restaurant become the center of a conspiracy theory?",
+      "concepts": ["Pizzagate", "QAnon", "conspiracy amplification", "radicalization pipelines"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nytimes.com/interactive/2021/us/conspiracy-theories.html",
+        "https://www.isdglobal.org/digital_dispatches/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Case Studies",
+      "title": "How did false health information kill people during a pandemic?",
+      "concepts": ["COVID-19 infodemic", "health misinformation", "real-world harm", "WHO response"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.who.int/teams/risk-communication/infodemic-management",
+        "https://www.nature.com/articles/s41586-021-04135-0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Systems and Solutions",
+      "title": "Who decides what's true on the internet?",
+      "concepts": ["platform governance", "content moderation", "free speech tensions", "regulatory frameworks"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.eff.org/issues/content-moderation",
+        "https://digitalservicesact.cc/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Systems and Solutions",
+      "title": "Can AI detect propaganda better than humans?",
+      "concepts": ["automated detection", "machine learning classifiers", "adversarial adaptation", "human-in-the-loop"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://arxiv.org/abs/2004.09657",
+        "https://www.cl.cam.ac.uk/~sht25/propaganda.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Systems and Solutions",
+      "title": "What would a resilient information ecosystem look like?",
+      "concepts": ["systemic solutions", "multi-stakeholder approach", "media literacy at scale", "future directions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.aspendigital.org/",
+        "https://carnegieendowment.org/specialprojects/counteringinfluenceoperations"
+      ],
+      "status": "pending"
+    }
+  ]
+}

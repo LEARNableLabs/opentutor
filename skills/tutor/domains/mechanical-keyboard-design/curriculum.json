@@ -1,0 +1,428 @@
+{
+  "topic": "Mechanical keyboard design — switches, PCBs, and firmware",
+  "slug": "mechanical-keyboard-design",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic electronics (voltage, current, resistance)",
+    "soldering fundamentals",
+    "programming basics (variables, functions, conditionals)",
+    "command line comfort"
+  ],
+  "exit_criteria": [
+    "student can select switches based on force curves and tactile profiles",
+    "student can design a keyboard PCB with proper matrix wiring and USB implementation",
+    "student can write and flash custom QMK firmware with layers and macros",
+    "student can explain how mounting style affects acoustics and typing feel",
+    "student can assemble, tune, and troubleshoot a complete custom keyboard"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Switch Fundamentals",
+      "title": "What makes a switch feel different when you press it?",
+      "concepts": ["switch anatomy", "actuation mechanisms", "tactile feedback"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://keyboard.university/100-courses/switches-101-xrEmR",
+        "https://www.keychron.com/blogs/news/keyboard-switch-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Switch Fundamentals",
+      "title": "How do force curves predict your typing experience?",
+      "concepts": ["force curves", "actuation force", "bottom-out force", "travel distance"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://deskthority.net/wiki/Force_curves",
+        "https://www.youtube.com/watch?v=xlxrfQj0F-M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Switch Fundamentals",
+      "title": "Why do some switches feel scratchy or smooth?",
+      "concepts": ["friction", "stem wobble", "manufacturing tolerances", "lubrication"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/TaehaTypes",
+        "https://thomasbaart.nl/2018/11/26/the-mod-guide-to-mechanical-keyboard-switches/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Switch Fundamentals",
+      "title": "Can you modify a switch without breaking it?",
+      "concepts": ["switch disassembly", "lubing technique", "spring swapping", "filming"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/SwitchandClick",
+        "https://switchandclick.com/ultimate-guide-to-modding-mechanical-keyboards/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Switch Fundamentals",
+      "title": "How would you design your ideal switch profile for your typing style?",
+      "concepts": ["switch selection criteria", "personal preference", "use case optimization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ergodox-ez.com/pages/our-switches",
+        "https://www.theremingoat.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Electronics & Matrix Scanning",
+      "title": "Why can't you just wire every key directly to the microcontroller?",
+      "concepts": ["matrix wiring", "row-column architecture", "GPIO limitations"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.qmk.fm/#/how_a_matrix_works",
+        "https://www.youtube.com/watch?v=3j4w8H_xdMk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Electronics & Matrix Scanning",
+      "title": "What is ghosting and how do diodes prevent it?",
+      "concepts": ["key ghosting", "diode function", "anti-ghosting", "NKRO"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://docs.qmk.fm/#/how_a_matrix_works?id=anti-ghosting",
+        "https://deskthority.net/wiki/Rollover,_blocking_and_ghosting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Electronics & Matrix Scanning",
+      "title": "How does a microcontroller scan 100+ keys efficiently?",
+      "concepts": ["matrix scanning algorithm", "debouncing", "scan rate", "input polling"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.qmk.fm/#/feature_debounce_type",
+        "https://github.com/qmk/qmk_firmware/blob/master/docs/how_a_matrix_works.md"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Electronics & Matrix Scanning",
+      "title": "Review: Switches & Scanning",
+      "concepts": ["switch selection", "matrix fundamentals", "anti-ghosting"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://keyboard.university/",
+        "https://docs.qmk.fm/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Electronics & Matrix Scanning",
+      "title": "Hotswap vs soldered — what are the tradeoffs?",
+      "concepts": ["hotswap sockets", "PCB durability", "electrical contact", "Kailh sockets"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/HipyoTech",
+        "https://thomasbaart.nl/2019/04/07/hotswap-sockets-switchable-switches/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "PCB Design",
+      "title": "What makes a keyboard PCB different from other circuit boards?",
+      "concepts": ["keyboard PCB requirements", "USB specifications", "ESD protection", "mounting holes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://github.com/ruiqimao/keyboard-pcb-guide",
+        "https://www.kicad.org/discover/pcb-design/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "PCB Design",
+      "title": "How do you route a matrix without crossing traces?",
+      "concepts": ["PCB routing", "trace layout", "vias", "layer management"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://github.com/ruiqimao/keyboard-pcb-guide#routing",
+        "https://www.youtube.com/watch?v=3D_QKIjnAPg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "PCB Design",
+      "title": "How do you implement USB-C correctly for keyboards?",
+      "concepts": ["USB-C specification", "CC pins", "resistor configuration", "ESD protection"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://github.com/ai03-2725/another-keyboard-builder/blob/master/USB-C.md",
+        "https://docs.qmk.fm/#/compatible_microcontrollers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "PCB Design",
+      "title": "What's the KiCad workflow for keyboard PCBs?",
+      "concepts": ["KiCad schematic", "footprint assignment", "PCB layout", "Gerber export"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.kicad.org/",
+        "https://github.com/ruiqimao/keyboard-pcb-guide",
+        "https://www.youtube.com/watch?v=vaCVh2SAZY4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "PCB Design",
+      "title": "How would you design a 4x4 macropad PCB from scratch?",
+      "concepts": ["end-to-end PCB design", "component selection", "schematic to layout", "design validation"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://github.com/ruiqimao/keyboard-pcb-guide",
+        "https://keyboard-layout-editor.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "PCB Design",
+      "title": "Review: Electronics & PCB Design",
+      "concepts": ["matrix scanning", "PCB layout", "USB implementation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://docs.qmk.fm/#/how_a_matrix_works",
+        "https://github.com/ruiqimao/keyboard-pcb-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Firmware Basics",
+      "title": "How does QMK turn matrix scans into keypresses?",
+      "concepts": ["QMK architecture", "matrix to keycode mapping", "USB HID protocol"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.qmk.fm/#/understanding_qmk",
+        "https://github.com/qmk/qmk_firmware"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Firmware Basics",
+      "title": "What are layers and why do 40% keyboards need them?",
+      "concepts": ["layer system", "layer switching", "momentary vs toggle", "keymap structure"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://docs.qmk.fm/#/feature_layers",
+        "https://config.qmk.fm/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Firmware Basics",
+      "title": "How do you write your first custom keymap?",
+      "concepts": ["keymap.c structure", "keycode reference", "layer definitions", "QMK Configurator"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.qmk.fm/#/newbs_building_firmware",
+        "https://config.qmk.fm/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Firmware Basics",
+      "title": "How do you flash firmware to your keyboard?",
+      "concepts": ["bootloader", "QMK Toolbox", "flashing process", "dfu-programmer"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.qmk.fm/#/newbs_flashing",
+        "https://github.com/qmk/qmk_toolbox"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Firmware Basics",
+      "title": "What do you do when a key doesn't work?",
+      "concepts": ["debugging", "matrix testing", "firmware vs hardware issues", "console output"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://docs.qmk.fm/#/faq_debug",
+        "https://docs.qmk.fm/#/feature_command"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Advanced Firmware",
+      "title": "Review: Firmware Fundamentals",
+      "concepts": ["QMK basics", "layers", "flashing", "debugging"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://docs.qmk.fm/",
+        "https://config.qmk.fm/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Firmware",
+      "title": "How do tap dance and combos work under the hood?",
+      "concepts": ["tap dance", "key combinations", "timing windows", "state machines"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.qmk.fm/#/feature_tap_dance",
+        "https://docs.qmk.fm/#/feature_combo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Firmware",
+      "title": "What's the difference between VIA and QMK for configuration?",
+      "concepts": ["VIA configurator", "EEPROM storage", "runtime vs compile-time", "VIAL"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://usevia.app/",
+        "https://github.com/the-via/via",
+        "https://get.vial.today/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Firmware",
+      "title": "How do you create custom macros and advanced key behaviors?",
+      "concepts": ["process_record_user", "custom keycodes", "macros", "quantum functions"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://docs.qmk.fm/#/custom_quantum_functions",
+        "https://docs.qmk.fm/#/feature_macros"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Firmware",
+      "title": "How do you optimize firmware for latency and power consumption?",
+      "concepts": ["scan rate optimization", "power management", "USB polling rate", "debounce tuning"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://docs.qmk.fm/#/feature_debounce_type",
+        "https://docs.qmk.fm/#/config_options"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Mechanical & Assembly",
+      "title": "Why does mounting style affect sound and typing feel?",
+      "concepts": ["mounting styles", "plate flex", "case resonance", "gasket mount vs tray mount"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.keyboard.university/200-courses/keyboard-mounting-styles-4lpp7",
+        "https://thomasbaart.nl/2019/04/13/physical-keyboard-mounting-styles/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Mechanical & Assembly",
+      "title": "What materials dampen vs amplify typing sounds?",
+      "concepts": ["acoustic properties", "dampening materials", "case materials", "foam placement"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/TaehaTypes",
+        "https://switchandclick.com/keyboard-foam-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Mechanical & Assembly",
+      "title": "How do you tune stabilizers for smooth spacebar feel?",
+      "concepts": ["stabilizer types", "clipping", "lubing stabilizers", "band-aid mod", "wire balancing"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=cD5Zj-ZgMLA",
+        "https://keyboard.university/guides/build-guides/keyboard-stabilizers-rxnRr"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Mechanical & Assembly",
+      "title": "Final Review: From Switches to Firmware to Assembly",
+      "concepts": ["integrated design", "troubleshooting", "optimization", "personal preferences"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://keyboard.university/",
+        "https://docs.qmk.fm/",
+        "https://www.reddit.com/r/MechanicalKeyboards/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Mechanical & Assembly",
+      "title": "How would you build a complete custom keyboard from concept to working prototype?",
+      "concepts": ["end-to-end integration", "design decisions", "assembly", "testing", "iteration"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://thomasbaart.nl/category/mechanical-keyboards/",
+        "https://www.youtube.com/c/TaehaTypes",
+        "https://builder.swillkb.com/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

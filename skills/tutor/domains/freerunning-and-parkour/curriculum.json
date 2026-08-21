@@ -1,0 +1,361 @@
+{
+  "topic": "Freerunning and parkour — biomechanics and training",
+  "slug": "freerunning-and-parkour",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic anatomy and physiology",
+    "fundamental movement patterns",
+    "basic physics (forces, momentum, energy)"
+  ],
+  "exit_criteria": [
+    "analyze parkour movements using biomechanical principles",
+    "identify efficient vs inefficient movement patterns",
+    "design progressive training programs for skill development",
+    "assess injury risk and implement prevention strategies",
+    "apply force management principles to landing and vaulting",
+    "optimize movement economy and transition efficiency"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Movement Biomechanics",
+      "title": "How do forces shape every parkour movement?",
+      "concepts": ["force production", "ground reaction forces", "Newton's laws"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435787/",
+        "https://www.youtube.com/watch?v=KE_EnzF1UxM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Movement Biomechanics",
+      "title": "Why does your center of mass determine where you'll land?",
+      "concepts": ["center of mass", "balance", "trajectory prediction"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://journals.humankinetics.com/view/journals/jab/jab-overview.xml",
+        "https://www.khanacademy.org/science/physics/linear-momentum/center-of-mass/v/center-of-mass"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Movement Biomechanics",
+      "title": "How does momentum conservation explain the cat pass vault?",
+      "concepts": ["momentum", "impulse", "momentum transfer"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Jq3LbRp7g8g",
+        "https://parkourvisions.org/training-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Movement Biomechanics",
+      "title": "What makes joints both powerful and vulnerable?",
+      "concepts": ["joint kinematics", "range of motion", "joint loading", "torque"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4555591/",
+        "https://www.physio-pedia.com/Biomechanics_of_Movement"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Movement Biomechanics",
+      "title": "Can you predict the forces in a precision jump?",
+      "concepts": ["force analysis", "biomechanical modeling", "movement efficiency"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=5Y0NNdZkZ3w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Landing Mechanics and Impact Management",
+      "title": "Why do impact forces in parkour exceed 10x body weight?",
+      "concepts": ["impact forces", "impulse-momentum", "force-time curves"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4555587/",
+        "https://journals.lww.com/nsca-jscr/pages/default.aspx"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Landing Mechanics and Impact Management",
+      "title": "How does the parkour roll dissipate energy across your body?",
+      "concepts": ["energy dissipation", "roll mechanics", "force distribution", "rotational motion"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=0fGPyTB5mvo",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6186985/",
+        "https://americanparkour.com/tutorial-the-shoulder-roll/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Landing Mechanics and Impact Management",
+      "title": "What's the biomechanical difference between sticking a precision vs absorbing it?",
+      "concepts": ["landing strategies", "stiffness vs compliance", "eccentric muscle action"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5054876/",
+        "https://www.youtube.com/watch?v=8C6n7aXqDEQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Landing Mechanics and Impact Management",
+      "title": "How do your ankles, knees, and hips work together to absorb shock?",
+      "concepts": ["kinetic chain", "joint coupling", "sequential absorption"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3737898/",
+        "https://www.physio-pedia.com/Kinetic_Chain"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Landing Mechanics and Impact Management",
+      "title": "How would you design a progression to increase drop height safely?",
+      "concepts": ["progressive overload", "adaptation", "landing technique progression"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://parkourvisions.org/classes-workshops",
+        "https://www.youtube.com/watch?v=qFmHjZl0w6I"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Landing Mechanics and Impact Management",
+      "title": "What landing errors create the highest injury risk?",
+      "concepts": ["landing mechanics review", "injury mechanisms", "technique correction"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435792/",
+        "https://www.youtube.com/watch?v=2P7GW9l7d_E"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Vaulting and Explosive Movements",
+      "title": "What makes a vault efficient: speed, angle, or hand placement?",
+      "concepts": ["vault biomechanics", "approach velocity", "take-off angle", "hand placement"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=NLEbIVqDGjI",
+        "https://americanparkour.com/vaults/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Vaulting and Explosive Movements",
+      "title": "How do your arms transmit force during a kong vault?",
+      "concepts": ["upper body force transmission", "plyometric push", "timing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=wRThTZZp7vs",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6413866/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Vaulting and Explosive Movements",
+      "title": "Why does triple extension matter for maximum height?",
+      "concepts": ["triple extension", "power generation", "vertical force production", "stretch-shortening cycle"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4637913/",
+        "https://www.youtube.com/watch?v=8S5YC4mXxII"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Vaulting and Explosive Movements",
+      "title": "How do you optimize horizontal vs vertical power for different vaults?",
+      "concepts": ["force vectors", "power distribution", "vault-specific mechanics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://journals.humankinetics.com/view/journals/jab/jab-overview.xml",
+        "https://www.youtube.com/watch?v=U7RJ1VdmM0A"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Vaulting and Explosive Movements",
+      "title": "What can you learn from elite parkour athletes performing vaults at different speeds?",
+      "concepts": ["technique analysis", "speed-accuracy tradeoff", "movement variation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=LAPo1x_4zsk",
+        "https://www.youtube.com/watch?v=nSSs0K7dkjw",
+        "https://www.redbull.com/int-en/films/parkour-atlas"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Movement Efficiency and Flow",
+      "title": "How do you maintain momentum through complex sequences?",
+      "concepts": ["movement economy review", "transition mechanics", "flow optimization"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=eRgGz9LmBpQ",
+        "https://parkourvisions.org/blog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Movement Efficiency and Flow",
+      "title": "Why do smooth transitions save more energy than explosive moves?",
+      "concepts": ["economy of motion", "energy cost", "movement smoothness", "efficiency metrics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4555593/",
+        "https://www.youtube.com/watch?v=J7YwRJPK_gE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Movement Efficiency and Flow",
+      "title": "How does spatial awareness reduce wasted motion?",
+      "concepts": ["proprioception", "spatial awareness", "movement planning", "motor learning"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5854281/",
+        "https://www.youtube.com/watch?v=fX8KMWND9_U"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Strength, Conditioning, and Injury Prevention",
+      "title": "What strength qualities does parkour demand most?",
+      "concepts": ["strength requirements", "relative strength", "eccentric strength", "reactive strength"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6180277/",
+        "https://www.youtube.com/watch?v=nkq3WcJMxPE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Strength, Conditioning, and Injury Prevention",
+      "title": "How does connective tissue adapt to repeated impact loading?",
+      "concepts": ["tissue adaptation", "collagen remodeling", "tendon stiffness", "progressive loading"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6658666/",
+        "https://www.physio-pedia.com/Tendon_Adaptation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Strength, Conditioning, and Injury Prevention",
+      "title": "Why do ankle sprains and wrist injuries dominate parkour?",
+      "concepts": ["common injuries", "injury mechanisms", "risk factors", "joint stress patterns"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435789/",
+        "https://www.youtube.com/watch?v=n1K9yBlVlh4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Strength, Conditioning, and Injury Prevention",
+      "title": "How do you balance mobility, stability, and strength training?",
+      "concepts": ["training balance", "mobility vs stability", "functional range", "injury prevention strategies"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4235546/",
+        "https://www.youtube.com/watch?v=2k-bV5u6q7c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Training Methodology and Progression",
+      "title": "How do you scale difficulty without increasing injury risk?",
+      "concepts": ["progressive difficulty", "training variables", "skill acquisition", "safety margins"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://parkourvisions.org/coach-training",
+        "https://www.youtube.com/watch?v=JQ8Q0LfLUFA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Training Methodology and Progression",
+      "title": "How would you design a 12-week training program for a specific parkour goal?",
+      "concepts": ["periodization", "program design", "performance metrics", "feedback loops"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://journals.lww.com/nsca-jscr/pages/default.aspx",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6413866/",
+        "https://www.youtube.com/watch?v=PnQzs3ZoFp4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Training Methodology and Progression",
+      "title": "What are the biomechanical principles that matter most?",
+      "concepts": ["course review", "integration", "applied biomechanics", "movement mastery"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=kOZTlEMxZrg",
+        "https://parkourvisions.org"
+      ],
+      "status": "pending"
+    }
+  ]
+}

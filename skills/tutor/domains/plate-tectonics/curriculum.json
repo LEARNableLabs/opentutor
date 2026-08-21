@@ -1,0 +1,386 @@
+{
+  "topic": "Plate tectonics and geodynamics",
+  "slug": "plate-tectonics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic geology",
+    "vector calculus",
+    "thermodynamics fundamentals",
+    "basic fluid mechanics"
+  ],
+  "exit_criteria": [
+    "explain the physical mechanisms driving plate motions",
+    "quantify forces at plate boundaries using force balance",
+    "interpret seismic tomography and GPS data in terms of plate dynamics",
+    "analyze mantle convection patterns and their relationship to surface tectonics",
+    "evaluate different tectonic settings (subduction, rifting, collision) using geophysical observations",
+    "use plate reconstruction tools to understand past and present motions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Plate Theory Foundations",
+      "title": "Why do continents fit together like puzzle pieces?",
+      "concepts": ["continental drift", "Wegener's hypothesis", "paleomagnetic evidence"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.usgs.gov/publications/text/historical.html",
+        "https://www.iris.edu/hq/inclass/animation/plate_tectonics_history"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Plate Theory Foundations",
+      "title": "What patterns in earthquake locations reveal the edges of plates?",
+      "concepts": ["plate boundaries", "seismicity patterns", "lithosphere vs asthenosphere"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://earthquake.usgs.gov/earthquakes/map/",
+        "https://www.iris.edu/hq/inclass/animation/global_seismicity_animation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Plate Theory Foundations",
+      "title": "How does seafloor spreading create new ocean crust?",
+      "concepts": ["mid-ocean ridges", "seafloor age patterns", "magnetic stripes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ngdc.noaa.gov/mgg/ocean_age/ocean_age_2008.html",
+        "https://earthobservatory.nasa.gov/features/MidAtlanticRidge"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Plate Theory Foundations",
+      "title": "Can you predict where two plates are moving apart right now?",
+      "concepts": ["divergent boundaries", "spreading rates", "ridge morphology"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.earthbyte.org/category/animations/",
+        "https://www.unavco.org/education/resources/modules-and-activities/plate-motions/plate-motions.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Plate Theory Foundations",
+      "title": "Why do transform faults connect offset ridge segments?",
+      "concepts": ["transform boundaries", "relative motion", "fault mechanics"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://earthquake.usgs.gov/learn/topics/plate_tectonics/san_andreas.php",
+        "https://www.iris.edu/hq/inclass/animation/transform_boundaries"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Driving Forces and Energy",
+      "title": "What forces actually push and pull the plates around?",
+      "concepts": ["slab pull", "ridge push", "driving force mechanisms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/plate-tectonics-the-basics-13228658/",
+        "https://ocw.mit.edu/courses/12-002-physics-and-chemistry-of-the-terrestrial-planets-fall-2008/resources/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Plate Theory Foundations",
+      "title": "Review: How do we know plates exist and move?",
+      "concepts": ["continental drift", "plate boundaries", "seafloor spreading", "divergent boundaries", "transform boundaries", "driving forces"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.usgs.gov/special-topics/plate-tectonics",
+        "https://www.iris.edu/hq/inclass/fact-sheet/plate_tectonics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Driving Forces and Energy",
+      "title": "Is slab pull stronger than ridge push?",
+      "concepts": ["force balance", "gravitational potential energy", "stress magnitudes"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/91RG00583",
+        "https://www.nature.com/articles/nature02042"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Driving Forces and Energy",
+      "title": "Where does the energy for plate tectonics come from?",
+      "concepts": ["heat sources", "radioactive decay", "primordial heat", "energy budget"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://earthobservatory.nasa.gov/features/EnergyBalance",
+        "https://www.amnh.org/exhibitions/permanent/earth-inside-and-out/energy-from-earth"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Driving Forces and Energy",
+      "title": "How fast does heat flow through the Earth's surface?",
+      "concepts": ["heat flow", "geotherms", "thermal boundary layers"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ihfc-iugg.org/products/global-heat-flow-database",
+        "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019GC008389"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Driving Forces and Energy",
+      "title": "Can you estimate the cooling rate of the oceanic lithosphere?",
+      "concepts": ["plate cooling model", "thermal diffusion", "bathymetry-age relationship"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ldeo.columbia.edu/~small/projects/seafloor/",
+        "https://www.whoi.edu/oceanus/feature/oceanic-heat-flow/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Mantle Dynamics",
+      "title": "Why does the mantle flow if it's solid rock?",
+      "concepts": ["mantle rheology", "viscous flow", "solid-state creep"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animation/inside_earth_mantle_properties",
+        "https://www.esa.int/Applications/Observing_the_Earth/FutureEO/GOCE/Earth_s_mantle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Mantle Dynamics",
+      "title": "How do we know convection happens in the mantle?",
+      "concepts": ["convection patterns", "seismic tomography", "temperature anomalies"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animation/seismic_tomography_slicing_into_the_earths_interior",
+        "https://www.nature.com/articles/s41598-018-38075-9"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Driving Forces and Energy",
+      "title": "Review: What drives plate motion?",
+      "concepts": ["slab pull", "ridge push", "force balance", "heat sources", "heat flow", "thermal structure", "mantle rheology", "convection"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/plate-tectonics-the-basics-13228658/",
+        "https://ocw.mit.edu/courses/12-002-physics-and-chemistry-of-the-terrestrial-planets-fall-2008/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Mantle Dynamics",
+      "title": "What makes Hawaii's volcanoes different from those at plate boundaries?",
+      "concepts": ["mantle plumes", "hotspots", "intraplate volcanism"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/observatories/hvo/hotspots",
+        "https://www.mantleplumes.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Mantle Dynamics",
+      "title": "Can mantle viscosity change with depth and temperature?",
+      "concepts": ["non-Newtonian rheology", "activation energy", "viscosity structure"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2007GC001890",
+        "https://www.nature.com/articles/s41467-018-03629-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Mantle Dynamics",
+      "title": "How do plates couple to the convecting mantle below?",
+      "concepts": ["plate-mantle coupling", "basal drag", "induced flow"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2011RG000355",
+        "https://www.nature.com/articles/nature09923"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Tectonic Settings",
+      "title": "Why do subducting slabs sink at different angles?",
+      "concepts": ["subduction geometry", "slab dip", "density contrasts"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animation/subduction_zones",
+        "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2005RG000178"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Tectonic Settings",
+      "title": "What controls where earthquakes occur in subduction zones?",
+      "concepts": ["Wadati-Benioff zones", "slab dehydration", "intermediate-deep earthquakes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://earthquake.usgs.gov/learn/topics/megaqk_facts_fantasy.php",
+        "https://www.nature.com/articles/nature14876"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Tectonic Settings",
+      "title": "How does continental rifting lead to new ocean basins?",
+      "concepts": ["rifting mechanics", "lithospheric extension", "passive margins"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/media/images/rift-valley-diagram",
+        "https://www.nature.com/articles/nature11478"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Mantle Dynamics",
+      "title": "Review: From mantle flow to tectonic settings",
+      "concepts": ["mantle plumes", "rheology", "plate-mantle coupling", "subduction geometry", "slab processes"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/fact-sheet/inside_earth",
+        "https://www.iris.edu/hq/inclass/animation/subduction_zones"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Tectonic Settings",
+      "title": "Why do the Himalayas keep rising?",
+      "concepts": ["continental collision", "crustal thickening", "isostasy", "orogeny"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/programs/earthquake-hazards/science/himalayan-mountains",
+        "https://www.nature.com/articles/nature08707"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Tectonic Settings",
+      "title": "Can you identify the tectonic setting from topography and seismicity?",
+      "concepts": ["setting classification", "geophysical signatures", "boundary recognition"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.earthbyte.org/",
+        "https://earthquake.usgs.gov/earthquakes/map/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Observing Earth's Motion",
+      "title": "How do GPS satellites measure plate motion in real time?",
+      "concepts": ["geodesy", "GPS velocity fields", "strain accumulation"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.unavco.org/what-we-do/gps-gnss/gps-gnss.html",
+        "https://www.unavco.org/highlights/2018/2018-plate-motion.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Observing Earth's Motion",
+      "title": "What do seismic waves reveal about the mantle's interior?",
+      "concepts": ["seismic tomography", "wave speed anomalies", "temperature imaging"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iris.edu/hq/inclass/animation/seismic_tomography_slicing_into_the_earths_interior",
+        "https://www.nature.com/articles/nature25742"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Observing Earth's Motion",
+      "title": "Can you reconstruct 200 million years of plate motion?",
+      "concepts": ["plate reconstruction", "paleomagnetic poles", "kinematic models"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.earthbyte.org/gplates-portal/",
+        "https://www.geodynamics.org/cig/software/gplates/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Observing Earth's Motion",
+      "title": "How will Earth's surface look 50 million years from now?",
+      "concepts": ["future predictions", "plate motion extrapolation", "geodynamic modeling"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.scotese.com/future2.htm",
+        "https://www.youtube.com/watch?v=uLahVJNnoZ4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Observing Earth's Motion",
+      "title": "Review: Integrating observations, models, and predictions",
+      "concepts": ["GPS", "seismic tomography", "plate reconstruction", "tectonic evolution", "geodynamic modeling", "future tectonics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.earthbyte.org/webgl-globe-with-time-varying-data/",
+        "https://www.unavco.org/education/professional-development/short-courses/short-courses.html"
+      ],
+      "status": "pending"
+    }
+  ]
+}

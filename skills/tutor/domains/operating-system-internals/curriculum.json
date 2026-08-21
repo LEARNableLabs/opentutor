@@ -1,0 +1,379 @@
+{
+  "topic": "Operating System Internals",
+  "slug": "operating-system-internals",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "C programming",
+    "basic assembly language",
+    "data structures (linked lists, trees, hash tables)",
+    "computer architecture (CPU, memory hierarchy, I/O)"
+  ],
+  "exit_criteria": [
+    "explain how processes are created, scheduled, and context-switched",
+    "trace virtual address translation through page tables and TLBs",
+    "describe file system organization and crash recovery mechanisms",
+    "implement basic synchronization primitives and reason about race conditions",
+    "read and understand kernel source code in xv6 or Linux"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Process Fundamentals",
+      "title": "What happens when a program becomes a process?",
+      "concepts": ["process abstraction", "address space", "process state"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf",
+        "https://pdos.csail.mit.edu/6.828/2021/xv6/book-riscv-rev2.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Process Fundamentals",
+      "title": "How does the OS juggle thousands of processes on a few CPUs?",
+      "concepts": ["time-sharing", "context switch", "process control block"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf",
+        "https://lwn.net/Articles/531114/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Process Fundamentals",
+      "title": "What makes fork() so elegant and so confusing?",
+      "concepts": ["fork system call", "copy-on-write", "parent-child relationships"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf",
+        "https://github.com/mit-pdos/xv6-riscv/blob/riscv/kernel/proc.c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Process Fundamentals",
+      "title": "Why do we need different CPU scheduling algorithms?",
+      "concepts": ["FIFO", "SJF", "round-robin", "scheduling metrics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Process Fundamentals",
+      "title": "How does Linux's Completely Fair Scheduler actually work?",
+      "concepts": ["CFS", "virtual runtime", "red-black tree scheduling"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://lwn.net/Articles/230501/",
+        "https://www.kernel.org/doc/html/latest/scheduler/sched-design-CFS.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Process Fundamentals",
+      "title": "Review: Can you trace a process from creation to termination?",
+      "concepts": ["process lifecycle review", "scheduling review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Memory Management",
+      "title": "Why does every process think it owns all the memory?",
+      "concepts": ["virtual memory", "address translation", "base and bounds"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf",
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-mechanism.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Memory Management",
+      "title": "How do page tables turn virtual addresses into physical ones?",
+      "concepts": ["paging", "page table structure", "multi-level page tables"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf",
+        "https://pdos.csail.mit.edu/6.828/2021/xv6/book-riscv-rev2.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Memory Management",
+      "title": "What makes TLBs the secret weapon of modern processors?",
+      "concepts": ["TLB", "address translation caching", "TLB shootdown"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf",
+        "https://lwn.net/Articles/582144/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Memory Management",
+      "title": "When physical memory fills up, what gets evicted and why?",
+      "concepts": ["page replacement", "LRU", "clock algorithm", "working set"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Memory Management",
+      "title": "How does the kernel manage its own memory?",
+      "concepts": ["slab allocator", "buddy system", "kernel memory zones"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.kernel.org/doc/html/latest/core-api/memory-allocation.html",
+        "https://lwn.net/Articles/229096/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Memory Management",
+      "title": "Review: Can you walk through a virtual-to-physical address translation?",
+      "concepts": ["memory management review", "paging review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "File Systems & I/O",
+      "title": "What really happens when you open a file?",
+      "concepts": ["file descriptors", "inode", "file table", "vnode"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf",
+        "https://github.com/mit-pdos/xv6-riscv/blob/riscv/kernel/file.c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "File Systems & I/O",
+      "title": "How do file systems organize billions of files efficiently?",
+      "concepts": ["directory structure", "path resolution", "hard vs soft links"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf",
+        "https://ext4.wiki.kernel.org/index.php/Main_Page"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "File Systems & I/O",
+      "title": "Why is crash consistency the hardest problem in file systems?",
+      "concepts": ["journaling", "write-ahead logging", "fsync", "barriers"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf",
+        "https://lwn.net/Articles/789024/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "File Systems & I/O",
+      "title": "What happens between a read() call and the spinning disk?",
+      "concepts": ["I/O stack", "device drivers", "interrupt handling", "DMA"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf",
+        "https://www.kernel.org/doc/html/latest/driver-api/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "File Systems & I/O",
+      "title": "How do modern file systems like ZFS detect and repair silent corruption?",
+      "concepts": ["checksums", "copy-on-write", "scrubbing", "RAID-Z"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://openzfs.github.io/openzfs-docs/",
+        "https://queue.acm.org/detail.cfm?id=1317400"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "File Systems & I/O",
+      "title": "Review: Can you trace a write from application to disk?",
+      "concepts": ["file system review", "I/O review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Concurrency & Synchronization",
+      "title": "What makes concurrent programming so dangerously subtle?",
+      "concepts": ["race conditions", "atomicity", "critical sections"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf",
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Concurrency & Synchronization",
+      "title": "How do locks actually work at the hardware level?",
+      "concepts": ["spin locks", "test-and-set", "compare-and-swap", "memory barriers"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf",
+        "https://www.kernel.org/doc/Documentation/memory-barriers.txt"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Concurrency & Synchronization",
+      "title": "Why are condition variables the secret to elegant concurrent code?",
+      "concepts": ["condition variables", "monitors", "producer-consumer"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf",
+        "https://github.com/mit-pdos/xv6-riscv/blob/riscv/kernel/sleeplock.c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Concurrency & Synchronization",
+      "title": "What causes deadlock and how do we prevent it?",
+      "concepts": ["deadlock conditions", "lock ordering", "detection vs prevention"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-deadlock.pdf",
+        "https://lwn.net/Articles/548909/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Concurrency & Synchronization",
+      "title": "How does the Linux kernel achieve massive parallelism?",
+      "concepts": ["RCU", "lockless data structures", "per-CPU variables"],
+      "difficulty": 5,
+      "type": "resource-drop",
+      "resources": [
+        "https://lwn.net/Articles/262464/",
+        "https://www.kernel.org/doc/html/latest/RCU/whatisRCU.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Concurrency & Synchronization",
+      "title": "Review: Can you spot and fix race conditions in concurrent code?",
+      "concepts": ["concurrency review", "synchronization review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "How do hypervisors create the illusion of multiple machines?",
+      "concepts": ["virtualization", "hypervisors", "trap-and-emulate", "hardware-assisted virtualization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/vmm-intro.pdf",
+        "https://www.kernel.org/doc/html/latest/virt/kvm/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "What makes containers different from VMs?",
+      "concepts": ["namespaces", "cgroups", "container isolation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html",
+        "https://lwn.net/Articles/531114/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "How does eBPF let you hack the kernel safely?",
+      "concepts": ["eBPF", "kernel tracing", "JIT compilation", "verifier"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://ebpf.io/what-is-ebpf/",
+        "https://www.kernel.org/doc/html/latest/bpf/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Topics",
+      "title": "Can you design a mini-OS from scratch and teach it back to me?",
+      "concepts": ["OS design synthesis", "trade-offs", "implementation choices"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://wiki.osdev.org/Getting_Started",
+        "https://github.com/cfenollosa/os-tutorial"
+      ],
+      "status": "pending"
+    }
+  ]
+}

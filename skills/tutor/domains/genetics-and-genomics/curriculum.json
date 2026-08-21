@@ -1,0 +1,422 @@
+{
+  "topic": "Genetics and genomics",
+  "slug": "genetics-and-genomics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic biology",
+    "cell structure and function",
+    "basic chemistry",
+    "high school algebra"
+  ],
+  "exit_criteria": [
+    "explain inheritance patterns using molecular mechanisms",
+    "interpret genomic data from browsers and databases",
+    "design basic CRISPR experiments",
+    "analyze population genetics problems quantitatively",
+    "evaluate ethical implications of genetic technologies",
+    "use bioinformatics tools to explore genomes"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Classical Genetics Revisited",
+      "title": "Why do traits skip generations?",
+      "concepts": ["Mendelian inheritance", "dominance", "alleles", "genotype vs phenotype"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/heredity/mendelian-genetics-ap/v/introduction-to-heredity",
+        "https://www.nature.com/scitable/topicpage/gregor-mendel-and-the-principles-of-inheritance-593/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Classical Genetics Revisited",
+      "title": "What happens when genes don't follow the rules?",
+      "concepts": ["incomplete dominance", "codominance", "epistasis", "pleiotropy"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/heredity/non-mendelian-genetics/v/multiple-alleles-incomplete-dominance-and-codominance",
+        "https://www.dnalc.org/view/16263-Concept-7-All-cells-arise-from-pre-existing-cells-.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Classical Genetics Revisited",
+      "title": "How do we know genes sit on chromosomes?",
+      "concepts": ["chromosomal theory", "linkage", "genetic mapping", "recombination"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/thomas-hunt-morgan-and-sex-linkage-452/",
+        "https://www.dnalc.org/view/16315-Thomas-Hunt-Morgan-s-Nobel-Prize-work-on-fruit-flies.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Classical Genetics Revisited",
+      "title": "Why are some diseases more common in males?",
+      "concepts": ["sex-linked inheritance", "X-inactivation", "pedigree analysis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/heredity/chromosomal-basis-of-genetics/v/sex-linkage",
+        "https://medlineplus.gov/genetics/understanding/inheritance/sexlinked/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Classical Genetics Revisited",
+      "title": "Can you build a genetic map?",
+      "concepts": ["recombination frequency", "map units", "three-point cross"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/genetic-mapping-fact-sheet-1/",
+        "https://ocw.mit.edu/courses/7-03-genetics-fall-2004/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Classical Genetics Revisited",
+      "title": "How do inheritance patterns connect from Mendel to chromosomes?",
+      "concepts": ["inheritance patterns", "linkage", "mapping"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/heredity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Molecular Mechanisms",
+      "title": "How does DNA actually encode information?",
+      "concepts": ["DNA structure", "base pairing", "antiparallel strands", "major and minor grooves"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.dnalc.org/resources/3d/dna-structure.html",
+        "https://www.nature.com/scitable/topicpage/discovery-of-dna-structure-and-function-watson-397/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Molecular Mechanisms",
+      "title": "What molecular machinery copies DNA without errors?",
+      "concepts": ["DNA replication", "semiconservative replication", "polymerase", "proofreading"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/dna-replication/v/molecular-mechanism-of-dna-replication",
+        "https://www.dnalc.org/resources/3d/dna-replication.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Molecular Mechanisms",
+      "title": "Why does DNA → RNA → protein, not the reverse?",
+      "concepts": ["central dogma", "transcription", "translation", "genetic code"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/translation-dna-to-mrna-to-protein-393/",
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/translation/v/rna-transcription-and-translation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Molecular Mechanisms",
+      "title": "How do cells decide which genes to turn on?",
+      "concepts": ["gene regulation", "transcription factors", "promoters", "enhancers"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/regulation-of-gene-expression-and-cell-specialization/v/gene-regulation",
+        "https://www.nature.com/scitable/topicpage/gene-expression-14121669/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Molecular Mechanisms",
+      "title": "What happens when DNA gets damaged?",
+      "concepts": ["mutations", "DNA repair mechanisms", "mutagens", "mutation types"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/dna-damage-repair-mechanisms-for-maintaining-344/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK26879/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Molecular Mechanisms",
+      "title": "Can genes be turned off without changing DNA sequence?",
+      "concepts": ["epigenetics", "DNA methylation", "histone modification", "chromatin remodeling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/epigenetic-influences-and-disease-895/",
+        "https://www.whatisepigenetics.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Molecular Mechanisms",
+      "title": "What is the molecular basis of heredity?",
+      "concepts": ["central dogma", "regulation", "epigenetics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Genomes and Sequencing",
+      "title": "How is a genome organized beyond just genes?",
+      "concepts": ["genome structure", "introns and exons", "regulatory elements", "non-coding DNA"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Fact-Sheet",
+        "https://www.ncbi.nlm.nih.gov/books/NBK21134/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Genomes and Sequencing",
+      "title": "How do you read three billion letters of DNA?",
+      "concepts": ["sequencing technologies", "Sanger sequencing", "next-generation sequencing", "read depth and coverage"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Fact-Sheet",
+        "https://www.youtube.com/watch?v=fCd6B5HRaZ8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Genomes and Sequencing",
+      "title": "What can a genome browser show you?",
+      "concepts": ["genome annotation", "gene models", "comparative tracks", "variant databases"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ensembl.org/",
+        "https://genome.ucsc.edu/",
+        "https://www.ncbi.nlm.nih.gov/genome/gdv/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Genomes and Sequencing",
+      "title": "What can you learn by comparing genomes?",
+      "concepts": ["comparative genomics", "synteny", "orthology and paralogy", "conserved sequences"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.genome.gov/genetics-glossary/Comparative-Genomics",
+        "https://www.ensembl.org/info/genome/compara/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Genomes and Sequencing",
+      "title": "How do you figure out what all those genes actually do?",
+      "concepts": ["functional genomics", "transcriptomics", "RNA-seq", "gene expression profiling"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/gene-expression-analysis-15994/",
+        "https://www.ncbi.nlm.nih.gov/geo/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Genomes and Sequencing",
+      "title": "Can you find the gene causing a disease?",
+      "concepts": ["linkage analysis", "genome-wide association studies", "variant calling", "pathogenicity prediction"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.genome.gov/genetics-glossary/Genome-Wide-Association-Studies",
+        "https://www.ncbi.nlm.nih.gov/clinvar/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Genomes and Sequencing",
+      "title": "How do you read and interpret genomes?",
+      "concepts": ["sequencing", "annotation", "functional genomics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.genome.gov/about-genomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Evolution and Populations",
+      "title": "What keeps allele frequencies stable in populations?",
+      "concepts": ["Hardy-Weinberg equilibrium", "population genetics", "allele frequency", "genotype frequency"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/natural-selection/population-genetics/v/hardy-weinberg",
+        "https://www.nature.com/scitable/knowledge/library/hardy-weinberg-equilibrium-84235612/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Evolution and Populations",
+      "title": "How do random events change gene pools?",
+      "concepts": ["genetic drift", "bottleneck effect", "founder effect", "effective population size"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/natural-selection/population-genetics/v/genetic-drift-bottleneck-effect-and-founder-effect",
+        "https://evolution.berkeley.edu/genetic-drift/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Evolution and Populations",
+      "title": "Can you trace ancestry using DNA?",
+      "concepts": ["molecular phylogenetics", "coalescent theory", "molecular clock", "ancestral reconstruction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/phylogenetic-trees-14056446/",
+        "https://evolution.berkeley.edu/the-history-of-life-looking-at-the-patterns/phylogenies-and-the-history-of-life/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Evolution and Populations",
+      "title": "Why do complex traits run in families but not follow Mendel's laws?",
+      "concepts": ["quantitative genetics", "heritability", "polygenic traits", "QTL mapping"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/quantitative-trait-locus-qtl-analysis-53904/",
+        "https://www.genome.gov/genetics-glossary/Quantitative-Trait-Loci"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Evolution and Populations",
+      "title": "How do genes change in populations over time?",
+      "concepts": ["population genetics", "evolution", "Hardy-Weinberg", "drift and selection"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/natural-selection/population-genetics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applied Genomics",
+      "title": "How does CRISPR actually work?",
+      "concepts": ["CRISPR-Cas9", "guide RNA", "gene editing", "homology-directed repair"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.biointeractive.org/classroom-resources/crispr-cas-9-mechanism-applications",
+        "https://www.yourgenome.org/facts/what-is-crispr-cas9"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applied Genomics",
+      "title": "Can your genome predict which drug will work for you?",
+      "concepts": ["pharmacogenomics", "personalized medicine", "genetic testing", "drug metabolism"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.genome.gov/genetics-glossary/Pharmacogenomics",
+        "https://www.pharmgkb.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applied Genomics",
+      "title": "How has cancer genomics changed treatment?",
+      "concepts": ["somatic mutations", "driver mutations", "tumor heterogeneity", "targeted therapy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer",
+        "https://www.mycancergenome.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Applied Genomics",
+      "title": "Should we edit the human germline?",
+      "concepts": ["genetic engineering ethics", "germline vs somatic editing", "designer babies", "genetic diversity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing",
+        "https://www.biointeractive.org/classroom-resources/crispr-and-ethics-human-genome-editing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Applied Genomics",
+      "title": "How is genomics transforming medicine?",
+      "concepts": ["CRISPR", "pharmacogenomics", "cancer genomics", "ethics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.genome.gov/about-genomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Applied Genomics",
+      "title": "How would you design your own genomics project?",
+      "concepts": ["experimental design", "genomics workflow", "bioinformatics pipeline", "data interpretation"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/",
+        "https://www.ensembl.org/",
+        "https://www.genome.gov/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

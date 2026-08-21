@@ -1,0 +1,348 @@
+{
+  "topic": "Classical Mechanics — Lagrangian and Hamiltonian Formulations",
+  "slug": "classical-mechanics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "linear algebra",
+    "Newtonian mechanics",
+    "differential equations"
+  ],
+  "exit_criteria": [
+    "derive equations of motion using Lagrangian formalism",
+    "transform between Lagrangian and Hamiltonian formulations",
+    "apply variational principles to solve mechanics problems",
+    "recognize and exploit conservation laws from symmetries",
+    "analyze phase space structure of mechanical systems",
+    "choose appropriate formulation for a given problem"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Why Do We Need New Formulations?",
+      "title": "Why would physicists reinvent mechanics after Newton solved it?",
+      "concepts": ["limitations of Newtonian mechanics", "generalized coordinates", "constraint forces"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://www.youtube.com/watch?v=7gfZNNZW_ak"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Why Do We Need New Formulations?",
+      "title": "How does a pendulum on a moving cart expose Newton's weak spots?",
+      "concepts": ["non-inertial frames", "coupled systems", "coordinates of convenience"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.myphysicslab.com/pendulum/movable-pendulum-en.html",
+        "https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_en.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Why Do We Need New Formulations?",
+      "title": "What makes energy-based thinking more powerful than force-based thinking?",
+      "concepts": ["kinetic energy", "potential energy", "configuration space"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.feynmanlectures.caltech.edu/II_19.html",
+        "https://www.youtube.com/watch?v=XRr1kaXKBsU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Why Do We Need New Formulations?",
+      "title": "Can you explain why constraint forces do no work?",
+      "concepts": ["holonomic constraints", "virtual displacement", "constraint forces"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/resources/mit8_223iap17_lec1/",
+        "https://mathworld.wolfram.com/HolonomicConstraint.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Calculus of Variations",
+      "title": "What path does a ball take rolling down a wire loop?",
+      "concepts": ["brachistochrone", "functional", "extremal path"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mathpages.com/home/kmath514/kmath514.htm",
+        "https://demonstrations.wolfram.com/BrachistochroneProblem/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Calculus of Variations",
+      "title": "How do you find extrema when the thing varying is a whole function?",
+      "concepts": ["functional derivative", "Euler-Lagrange equation", "boundary conditions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://mathworld.wolfram.com/CalculusofVariations.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Calculus of Variations",
+      "title": "Review: Constraints, coordinates, and variational thinking",
+      "concepts": ["generalized coordinates", "constraints", "functionals", "variational calculus"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=VCHFCXgYdvY",
+        "https://mathworld.wolfram.com/CalculusofVariations.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Calculus of Variations",
+      "title": "Why does soap film form minimal surfaces?",
+      "concepts": ["minimal surface", "physical variational principles", "nature optimizes"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=dAyDi1aa40E",
+        "https://mathworld.wolfram.com/MinimalSurface.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Calculus of Variations",
+      "title": "Can you derive the Euler-Lagrange equation from first principles?",
+      "concepts": ["variation of functional", "integration by parts", "fundamental lemma of calculus of variations"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://en.wikipedia.org/wiki/Calculus_of_variations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Lagrangian Mechanics",
+      "title": "What if nature minimizes action instead of applying forces?",
+      "concepts": ["principle of least action", "action functional", "Hamilton's principle"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.feynmanlectures.caltech.edu/II_19.html",
+        "https://www.youtube.com/watch?v=Nd8SsRvnuTc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Lagrangian Mechanics",
+      "title": "How does the Lagrangian L = T - V encode all of mechanics?",
+      "concepts": ["Lagrangian function", "kinetic energy", "potential energy", "generalized coordinates"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://www.youtube.com/watch?v=7gfZNNZW_ak"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Lagrangian Mechanics",
+      "title": "Why is the double pendulum chaos trivial in Lagrangian form?",
+      "concepts": ["generalized coordinates", "coupled systems", "degrees of freedom"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.myphysicslab.com/pendulum/double-pendulum-en.html",
+        "https://www.youtube.com/watch?v=U39RMUzCjiU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Lagrangian Mechanics",
+      "title": "What happens when you can't write down the potential energy?",
+      "concepts": ["generalized potential", "velocity-dependent forces", "electromagnetic Lagrangian"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://en.wikipedia.org/wiki/Lagrangian_(field_theory)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Lagrangian Mechanics",
+      "title": "Can you solve the bead-on-a-rotating-hoop problem using Lagrangian mechanics?",
+      "concepts": ["non-inertial frames", "effective potential", "equilibrium analysis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=r_bqVQq9xXI",
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Lagrangian Mechanics",
+      "title": "Review: The Lagrangian formulation and generalized coordinates",
+      "concepts": ["Lagrangian", "action principle", "generalized coordinates"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=XRr1kaXKBsU",
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Lagrangian Mechanics",
+      "title": "How do symmetries give you conservation laws for free?",
+      "concepts": ["Noether's theorem", "symmetry", "conserved quantities", "cyclic coordinates"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=04ERSb06dOg",
+        "https://en.wikipedia.org/wiki/Noether%27s_theorem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Hamiltonian Mechanics",
+      "title": "Why switch from velocities to momenta as fundamental variables?",
+      "concepts": ["Legendre transformation", "conjugate momentum", "phase space"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://www.youtube.com/watch?v=SvZPERcFBEc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Hamiltonian Mechanics",
+      "title": "What does the Hamiltonian H = T + V tell you about energy flow?",
+      "concepts": ["Hamiltonian function", "total energy", "conservation", "phase space structure"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://mathworld.wolfram.com/HamiltonianFunction.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Hamiltonian Mechanics",
+      "title": "How do Hamilton's equations unify position and momentum evolution?",
+      "concepts": ["Hamilton's equations", "canonical variables", "phase space flow"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://www.youtube.com/watch?v=BVMd4b8sLxg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Hamiltonian Mechanics",
+      "title": "What makes Poisson brackets the DNA of classical mechanics?",
+      "concepts": ["Poisson brackets", "fundamental brackets", "quantum correspondence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://mathworld.wolfram.com/PoissonBracket.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Hamiltonian Mechanics",
+      "title": "Review: Hamiltonian formulation and phase space",
+      "concepts": ["Hamiltonian", "phase space", "canonical equations"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=SvZPERcFBEc",
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Hamiltonian Mechanics",
+      "title": "Can you analyze the simple harmonic oscillator in phase space?",
+      "concepts": ["phase space portrait", "energy surfaces", "periodic orbits"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.myphysicslab.com/springs/single-spring-en.html",
+        "https://demonstrations.wolfram.com/PhaseSpacePortraitsOfLinearSystems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Symmetries and Advanced Topics",
+      "title": "How do canonical transformations simplify impossible problems?",
+      "concepts": ["canonical transformations", "generating functions", "symplectic structure"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://en.wikipedia.org/wiki/Canonical_transformation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Symmetries and Advanced Topics",
+      "title": "Why is the Hamiltonian formulation the bridge to quantum mechanics?",
+      "concepts": ["correspondence principle", "commutators", "quantization"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.feynmanlectures.caltech.edu/III_08.html",
+        "https://www.youtube.com/watch?v=gAFAj3pzvAA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Symmetries and Advanced Topics",
+      "title": "What unifies all three formulations of classical mechanics?",
+      "concepts": ["equivalence of formulations", "choice of method", "geometric mechanics"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
+        "https://www.youtube.com/watch?v=7UlPd1bp6g4",
+        "https://en.wikipedia.org/wiki/Analytical_mechanics"
+      ],
+      "status": "pending"
+    }
+  ]
+}

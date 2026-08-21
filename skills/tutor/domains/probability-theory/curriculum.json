@@ -1,0 +1,416 @@
+{
+  "topic": "Probability theory and stochastic processes",
+  "slug": "probability-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "calculus (derivatives, integrals, sequences and series)",
+    "linear algebra (matrices, eigenvalues)",
+    "basic probability (sample spaces, conditional probability)"
+  ],
+  "exit_criteria": [
+    "analyze random phenomena using measure-theoretic probability",
+    "model discrete-time processes with Markov chains",
+    "work with continuous-time processes (Poisson, Brownian motion)",
+    "apply limit theorems to real-world problems",
+    "recognize when a process has the Markov property",
+    "simulate and analyze stochastic processes computationally"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Probability Foundations",
+      "title": "Why do we need σ-algebras to talk about probability?",
+      "concepts": ["probability spaces", "σ-algebras", "measure theory intuition"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://seeing-theory.brown.edu/",
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Probability Foundations",
+      "title": "When does conditional probability break our intuition?",
+      "concepts": ["conditional probability", "independence", "Bayes' theorem"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://seeing-theory.brown.edu/",
+        "https://www.esheets.io/probability-visualisation-tool/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Probability Foundations",
+      "title": "How do random variables map outcomes to numbers?",
+      "concepts": ["random variables", "measurability", "distribution functions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://people.math.harvard.edu/~knill/books/KnillProbability.pdf",
+        "https://seeing-theory.brown.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Probability Foundations",
+      "title": "What makes expectations linear even when random variables aren't?",
+      "concepts": ["expectation", "linearity of expectation", "variance"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Probability Foundations",
+      "title": "Why does independence make computing joint distributions easy?",
+      "concepts": ["independence", "joint distributions", "marginal distributions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://seeing-theory.brown.edu/",
+        "https://www.learnmathclass.com/probability"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Random Variables and Distributions",
+      "title": "How does the Poisson distribution emerge from rare events?",
+      "concepts": ["Poisson distribution", "rare events", "Poisson limit"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://seeing-theory.brown.edu/",
+        "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/stochastic-processes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Review: Probability Foundations",
+      "title": "Review: From probability spaces to distributions",
+      "concepts": ["review", "consolidation", "probability foundations"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Random Variables and Distributions",
+      "title": "Why is the exponential distribution memoryless?",
+      "concepts": ["exponential distribution", "memoryless property", "continuous distributions"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://people.math.harvard.edu/~knill/books/KnillProbability.pdf",
+        "https://www.learnmathclass.com/probability"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Random Variables and Distributions",
+      "title": "What makes the normal distribution appear everywhere in nature?",
+      "concepts": ["normal distribution", "Gaussian", "moment generating functions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://seeing-theory.brown.edu/",
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Random Variables and Distributions",
+      "title": "When do we transform random variables to solve probability problems?",
+      "concepts": ["transformation of random variables", "change of variables", "Jacobian"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://people.math.harvard.edu/~knill/books/KnillProbability.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Random Variables and Distributions",
+      "title": "How do covariance and correlation measure dependence?",
+      "concepts": ["covariance", "correlation", "bivariate distributions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://seeing-theory.brown.edu/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10361712/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Convergence and Limit Theorems",
+      "title": "What are the different ways random variables can converge?",
+      "concepts": ["convergence in probability", "almost sure convergence", "convergence in distribution"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/",
+        "https://people.math.harvard.edu/~knill/books/KnillProbability.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Review: Distributions and Convergence",
+      "title": "Review: Random variables, transformations, and limit theorems",
+      "concepts": ["review", "consolidation", "convergence"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Convergence and Limit Theorems",
+      "title": "Why does averaging many random variables stabilize around the mean?",
+      "concepts": ["Law of Large Numbers", "weak LLN", "strong LLN"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://seeing-theory.brown.edu/",
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Convergence and Limit Theorems",
+      "title": "How does the Central Limit Theorem explain the bell curve?",
+      "concepts": ["Central Limit Theorem", "normal approximation", "standard error"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://seeing-theory.brown.edu/",
+        "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/stochastic-processes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Convergence and Limit Theorems",
+      "title": "When can we use CLT approximations in practice?",
+      "concepts": ["CLT applications", "sample size", "approximation accuracy"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.learnmathclass.com/probability",
+        "https://seeing-theory.brown.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Discrete-Time Processes",
+      "title": "What makes a stochastic process Markovian?",
+      "concepts": ["stochastic processes", "Markov property", "state space"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/video_galleries/video-lectures/",
+        "https://web.mit.edu/people/hmsallum/GradSchool/sc505notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Discrete-Time Processes",
+      "title": "How do transition matrices encode the future?",
+      "concepts": ["transition matrices", "Chapman-Kolmogorov equations", "n-step transitions"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/video_galleries/video-lectures/",
+        "https://www.youtube.com/playlist?list=PLEEF5322B331C1B98"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Review: Discrete-Time Processes",
+      "title": "Review: Markov chains and transition dynamics",
+      "concepts": ["review", "consolidation", "Markov property"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Discrete-Time Processes",
+      "title": "When does a random walk return to its starting point?",
+      "concepts": ["random walks", "recurrence", "transience"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/",
+        "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Discrete-Time Processes",
+      "title": "What is the long-run behavior of a Markov chain?",
+      "concepts": ["stationary distributions", "limiting distributions", "ergodicity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/video_galleries/video-lectures/",
+        "https://web.mit.edu/people/hmsallum/GradSchool/sc505notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Discrete-Time Processes",
+      "title": "Why are martingales fair games?",
+      "concepts": ["martingales", "conditional expectation", "stopping times"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/",
+        "https://people.math.harvard.edu/~knill/books/KnillProbability.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Continuous-Time Processes",
+      "title": "How does the Poisson process count random arrivals?",
+      "concepts": ["Poisson process", "arrival times", "interarrival times"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/stochastic-processes/",
+        "https://online.stanford.edu/courses/stats217-introduction-stochastic-processes-i"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Continuous-Time Processes",
+      "title": "What happens when we take the limit of random walks?",
+      "concepts": ["Brownian motion", "Wiener process", "continuous-time limits"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/resources/lecture-17-stochastic-processes-ii/",
+        "https://web.stanford.edu/~lindrew/18.676.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Review: Continuous-Time Processes",
+      "title": "Review: Poisson processes and Brownian motion",
+      "concepts": ["review", "consolidation", "continuous-time dynamics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/stochastic-processes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Continuous-Time Processes",
+      "title": "How do birth-death processes model population dynamics?",
+      "concepts": ["birth-death processes", "queueing theory", "continuous-time Markov chains"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://online.stanford.edu/courses/stats217-introduction-stochastic-processes-i",
+        "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Continuous-Time Processes",
+      "title": "Why can't we integrate Brownian motion the usual way?",
+      "concepts": ["stochastic calculus", "Itô integral", "quadratic variation"],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://web.stanford.edu/~lindrew/18.676.pdf",
+        "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/resources/lecture-17-stochastic-processes-ii/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Topics",
+      "title": "When do renewal processes reset themselves?",
+      "concepts": ["renewal processes", "renewal theorem", "regenerative processes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Advanced Topics",
+      "title": "How do we model family trees with branching processes?",
+      "concepts": ["Galton-Watson process", "extinction probability", "branching processes"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Advanced Topics",
+      "title": "How do hidden Markov models uncover hidden states?",
+      "concepts": ["hidden Markov models", "filtering", "Viterbi algorithm"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/video_galleries/video-lectures/",
+        "https://web.mit.edu/people/hmsallum/GradSchool/sc505notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Advanced Topics",
+      "title": "Where do stochastic processes appear in your field?",
+      "concepts": ["applications", "modeling", "simulation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/resources/lecture-5-stochastic-processes-i/",
+        "https://people.math.harvard.edu/~knill/books/KnillProbability.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

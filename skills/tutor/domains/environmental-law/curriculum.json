@@ -1,0 +1,364 @@
+{
+  "topic": "Environmental Law and Regulation",
+  "slug": "environmental-law",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic understanding of U.S. legal system",
+    "constitutional law fundamentals",
+    "familiarity with administrative law concepts"
+  ],
+  "exit_criteria": [
+    "analyze major federal environmental statutes and their regulatory frameworks",
+    "evaluate compliance requirements under CAA, CWA, ESA, and CERCLA",
+    "assess environmental justice and climate law developments",
+    "navigate EPA regulations and judicial review standards",
+    "apply NEPA process to real-world projects"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do we make developers write environmental impact statements?",
+      "concepts": ["NEPA", "environmental impact assessment", "procedural vs substantive requirements"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/nepa",
+        "https://ceq.doe.gov/laws-regulations/nepa.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What happens when an agency ignores public comments?",
+      "concepts": ["notice-and-comment rulemaking", "arbitrary and capricious review", "administrative procedure"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.regulations.gov",
+        "https://www.epa.gov/laws-regulations/regulations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Who gets to sue EPA when they think a rule is wrong?",
+      "concepts": ["standing", "injury-in-fact", "zone of interests", "ripeness"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.law.cornell.edu/wex/standing",
+        "https://supreme.justia.com/cases/federal/us/504/555/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How does the Commerce Clause let Congress regulate a wetland in your backyard?",
+      "concepts": ["Commerce Clause", "federalism", "cooperative federalism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.law.cornell.edu/wex/commerce_clause",
+        "https://www.epa.gov/regulatory-information-topic/regulatory-information-topic-laws-and-regulations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Air and Water",
+      "title": "What are we actually breathing when EPA says the air is 'unhealthy'?",
+      "concepts": ["criteria pollutants", "NAAQS", "primary vs secondary standards"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.epa.gov/criteria-air-pollutants",
+        "https://www.epa.gov/naaqs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Air and Water",
+      "title": "Why do states write their own air pollution plans instead of EPA doing it?",
+      "concepts": ["State Implementation Plans", "cooperative federalism", "SIP approval process"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/sips-tribal-tips",
+        "https://www.eli.org/vibrant-environment-blog/2019/08/state-implementation-plans-under-clean-air-act-primer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Air and Water",
+      "title": "How did EPA force car companies to reduce emissions?",
+      "concepts": ["mobile source regulation", "technology-forcing standards", "CAFE standards"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.epa.gov/regulations-emissions-vehicles-and-engines",
+        "https://www.nhtsa.gov/laws-regulations/corporate-average-fuel-economy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Air and Water",
+      "title": "Review: Foundations and Clean Air Act basics",
+      "concepts": ["NEPA review", "administrative law", "CAA structure"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.epa.gov/clean-air-act-overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Air and Water",
+      "title": "What does it mean for a river to be 'swimmable and fishable'?",
+      "concepts": ["Clean Water Act goals", "water quality standards", "designated uses"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.epa.gov/laws-regulations/summary-clean-water-act",
+        "https://www.epa.gov/wqs-tech"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Air and Water",
+      "title": "Why do factories need permits to discharge wastewater?",
+      "concepts": ["NPDES permits", "point source regulation", "effluent limitations"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/npdes",
+        "https://www.epa.gov/npdes/npdes-permit-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Air and Water",
+      "title": "When is a ditch a 'water of the United States'?",
+      "concepts": ["jurisdictional waters", "WOTUS", "Rapanos decision", "significant nexus"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.epa.gov/wotus",
+        "https://supreme.justia.com/cases/federal/us/547/715/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Waste and Cleanup",
+      "title": "What makes waste 'hazardous' under federal law?",
+      "concepts": ["RCRA hazardous waste definition", "listed vs characteristic waste", "cradle-to-grave tracking"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/hw",
+        "https://www.epa.gov/hw/learn-basics-hazardous-waste"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Waste and Cleanup",
+      "title": "Why can't companies just bury their waste anywhere anymore?",
+      "concepts": ["RCRA Subtitle C", "land disposal restrictions", "treatment standards"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.epa.gov/hw/land-disposal-restrictions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Waste and Cleanup",
+      "title": "Who pays to clean up a toxic Superfund site?",
+      "concepts": ["CERCLA liability", "strict liability", "joint and several liability", "PRPs"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.epa.gov/superfund",
+        "https://www.epa.gov/enforcement/superfund-liability"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Waste and Cleanup",
+      "title": "Review: Air, Water, and Waste regulation frameworks",
+      "concepts": ["CAA vs CWA vs RCRA", "permit systems", "liability schemes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.epa.gov/laws-regulations/laws-and-executive-orders"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Species and Land",
+      "title": "How does a species get listed as endangered?",
+      "concepts": ["ESA listing process", "critical habitat designation", "best available science"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fws.gov/program/endangered-species",
+        "https://www.fisheries.noaa.gov/topic/endangered-species-conservation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Species and Land",
+      "title": "What happens if a federal highway project might harm a spotted owl?",
+      "concepts": ["Section 7 consultation", "jeopardy standard", "reasonable and prudent alternatives"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.fws.gov/service/esa-section-7-consultation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Species and Land",
+      "title": "Can a private landowner be prosecuted for accidentally killing an endangered species?",
+      "concepts": ["Section 9 take prohibition", "incidental take permits", "habitat conservation plans"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.fws.gov/service/incidental-take-permits-under-esa"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Species and Land",
+      "title": "Why does filling a wetland require a federal permit?",
+      "concepts": ["Section 404 permits", "wetlands mitigation", "Army Corps jurisdiction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.epa.gov/cwa-404/section-404-permit-program",
+        "https://www.usace.army.mil/Missions/Civil-Works/Regulatory-Program-and-Permits/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Species and Land",
+      "title": "Teach-back: Explain ESA vs CWA wetlands protection",
+      "concepts": ["ESA Section 7 vs 9", "CWA Section 404", "overlapping jurisdiction"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.eli.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Emerging Issues",
+      "title": "Can EPA regulate greenhouse gases under the Clean Air Act?",
+      "concepts": ["Massachusetts v. EPA", "endangerment finding", "CAA climate authority"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.epa.gov/ghgemissions/basics-climate-change",
+        "https://supreme.justia.com/cases/federal/us/549/497/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Emerging Issues",
+      "title": "Review: Major regulatory frameworks and climate intersection",
+      "concepts": ["CAA", "CWA", "ESA", "climate impacts"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://climate.law.columbia.edu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Emerging Issues",
+      "title": "Why are low-income communities often near polluting facilities?",
+      "concepts": ["environmental justice", "disparate impact", "EJ screening tools", "Executive Order 12898"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.epa.gov/environmentaljustice",
+        "https://www.epa.gov/ejscreen"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Emerging Issues",
+      "title": "How do international climate agreements affect U.S. law?",
+      "concepts": ["Paris Agreement", "treaty vs executive agreement", "Nationally Determined Contributions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://unfccc.int/process-and-meetings/the-paris-agreement",
+        "https://climate.law.columbia.edu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Synthesis",
+      "title": "What should an environmental lawyer check before a client builds a new factory?",
+      "concepts": ["multi-statute compliance", "permitting strategy", "NEPA triggering", "cumulative risk"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.epa.gov/compliance",
+        "https://www.eli.org"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Synthesis",
+      "title": "Teach-back: Design an enforcement strategy for a Clean Water Act violation",
+      "concepts": ["citizen suits", "EPA enforcement", "state enforcement", "remedies"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.epa.gov/enforcement",
+        "https://www.epa.gov/enforcement/enforcement-annual-results"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Synthesis",
+      "title": "Review: Comprehensive environmental law framework",
+      "concepts": ["NEPA", "CAA", "CWA", "RCRA", "CERCLA", "ESA", "climate law", "environmental justice", "multi-statute compliance"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.epa.gov/laws-regulations",
+        "https://www.eli.org"
+      ],
+      "status": "pending"
+    }
+  ]
+}

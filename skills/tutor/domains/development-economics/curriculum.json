@@ -1,0 +1,326 @@
+{
+  "topic": "Development Economics",
+  "slug": "development-economics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": ["microeconomics", "basic statistics", "macroeconomics fundamentals"],
+  "exit_criteria": [
+    "analyze poverty measurement strategies and their limitations",
+    "evaluate development interventions using experimental and quasi-experimental methods",
+    "explain market failures in developing economies (credit, insurance, labor)",
+    "assess trade-offs in human capital investments (education, health, nutrition)",
+    "design and critique RCT studies for policy evaluation"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Poverty and Inequality",
+      "title": "How do we measure who is poor?",
+      "concepts": ["poverty lines", "absolute vs relative poverty", "multidimensional poverty"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/14-73-the-challenge-of-world-poverty-fall-2020/", "https://ourworldindata.org/poverty"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Poverty and Inequality",
+      "title": "Why do poverty traps persist across generations?",
+      "concepts": ["poverty traps", "intergenerational mobility", "nutrition-productivity linkages"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.povertyactionlab.org/policy-insight/poverty-traps", "https://www.nber.org/papers/w9694"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Poverty and Inequality",
+      "title": "What does the Gini coefficient actually tell us?",
+      "concepts": ["Gini coefficient", "Lorenz curve", "inequality measurement"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.gapminder.org/tools/", "https://data.worldbank.org/indicator/SI.POV.GINI"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Poverty and Inequality",
+      "title": "Can economic growth alone eliminate poverty?",
+      "concepts": ["growth-poverty elasticity", "pro-poor growth", "Kuznets curve"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.cgdev.org/publication/growth-still-good-poor", "https://openknowledge.worldbank.org/handle/10986/11853"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Poverty and Inequality",
+      "title": "How do informal safety nets work when formal ones fail?",
+      "concepts": ["risk-sharing networks", "informal insurance", "reciprocity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://economics.mit.edu/people/faculty/abhijit-banerjee", "https://www.povertyactionlab.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Poverty and Inequality",
+      "title": "Review: Poverty measurement and theories",
+      "concepts": ["poverty measurement", "inequality", "poverty traps"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.worldbank.org/en/topic/poverty/overview"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Human Capital",
+      "title": "Why don't poor parents invest more in education?",
+      "concepts": ["returns to schooling", "credit constraints", "opportunity costs"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.povertyactionlab.org/policy-insight/education-poor", "https://ocw.mit.edu/courses/14-73-the-challenge-of-world-poverty-fall-2020/resources/lecture-4-education/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Human Capital",
+      "title": "Does deworming improve learning or just health?",
+      "concepts": ["externalities in health", "cost-effectiveness", "Miguel-Kremer study"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.povertyactionlab.org/case-study/deworming-schools-improves-attendance-and-benefits-communities-kenya", "https://www.nber.org/papers/w8481"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Human Capital",
+      "title": "What explains the gap between schooling access and learning?",
+      "concepts": ["education quality", "teacher incentives", "learning outcomes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://riseprogramme.org/", "https://www.povertyactionlab.org/policy-insight/teacher-incentives"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Human Capital",
+      "title": "How do nutrition shocks in early childhood shape adult outcomes?",
+      "concepts": ["stunting", "critical periods", "fetal origins hypothesis"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://www.thelancet.com/series/maternal-and-child-undernutrition", "https://dhsprogram.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Human Capital",
+      "title": "Should we subsidize bednets or give them away?",
+      "concepts": ["price elasticity of demand", "screening effects", "subsidy design"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.povertyactionlab.org/evaluation/price-and-access-health-products-kenya", "https://www.sciencedirect.com/science/article/pii/S0047272710000782"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Human Capital",
+      "title": "Review: Human capital investments and trade-offs",
+      "concepts": ["education returns", "health interventions", "cost-effectiveness"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.povertyactionlab.org/policy-lessons"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Markets and Credit",
+      "title": "Why do microcredit programs have mixed results?",
+      "concepts": ["microfinance", "credit constraints", "entrepreneurship"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.povertyactionlab.org/policy-insight/microcredit", "https://www.aeaweb.org/articles?id=10.1257/app.20130533"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Markets and Credit",
+      "title": "What prevents the poor from saving?",
+      "concepts": ["commitment devices", "present bias", "self-control"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.povertyactionlab.org/policy-insight/encouraging-saving-poor", "https://www.aeaweb.org/articles?id=10.1257/app.3.1.1"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Markets and Credit",
+      "title": "How do informal moneylenders charge such high interest rates?",
+      "concepts": ["informal credit markets", "adverse selection", "moral hazard"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://economics.mit.edu/sites/default/files/publications/The%20Miracle%20of%20Microfinance.pdf", "https://www.jstor.org/stable/1942563"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Markets and Credit",
+      "title": "Can mobile money transform financial inclusion?",
+      "concepts": ["digital finance", "M-Pesa", "transaction costs"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.science.org/doi/10.1126/science.aap9580", "https://www.gsma.com/mobilefordevelopment/mobile-money/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Markets and Credit",
+      "title": "Why don't farmers insure against weather shocks?",
+      "concepts": ["index insurance", "basis risk", "demand for insurance"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.povertyactionlab.org/policy-insight/impact-index-insurance", "https://www.aeaweb.org/articles?id=10.1257/aer.103.1.37"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Markets and Credit",
+      "title": "Review: Credit markets and behavioral barriers",
+      "concepts": ["microcredit", "savings", "insurance demand"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.povertyactionlab.org/policy-area/finance"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Agriculture and Technology",
+      "title": "Why do farmers resist adopting profitable technologies?",
+      "concepts": ["technology adoption", "learning barriers", "risk aversion"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.povertyactionlab.org/policy-insight/agricultural-technology-adoption", "https://www.nber.org/papers/w16054"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Agriculture and Technology",
+      "title": "How do social networks accelerate fertilizer adoption?",
+      "concepts": ["social learning", "peer effects", "information diffusion"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.aeaweb.org/articles?id=10.1257/aer.100.1.35", "https://www.povertyactionlab.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Agriculture and Technology",
+      "title": "Do land titles unlock credit and investment?",
+      "concepts": ["property rights", "collateral", "land tenure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.aeaweb.org/articles?id=10.1257/app.1.3.94", "https://www.povertyactionlab.org/policy-insight/land-tenure-security"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Agriculture and Technology",
+      "title": "How do market linkages affect smallholder farmer incomes?",
+      "concepts": ["market access", "value chains", "intermediaries"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.povertyactionlab.org/policy-area/agriculture", "https://www.ifad.org/en/web/knowledge/-/publication/smallholder-market-access"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Agriculture and Technology",
+      "title": "Can contract farming reduce risk and increase profits?",
+      "concepts": ["contract farming", "buyer-seller relationships", "hold-up problems"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.ifpri.org/publication/contract-farming-developing-countries", "https://www.fao.org/family-farming/detail/en/c/273441/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Agriculture and Technology",
+      "title": "Review: Agriculture, technology, and market institutions",
+      "concepts": ["technology adoption", "property rights", "social learning", "market access"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.povertyactionlab.org/policy-area/agriculture"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Governance and Policy",
+      "title": "Why is corruption so persistent in developing countries?",
+      "concepts": ["corruption", "accountability", "rent-seeking"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.povertyactionlab.org/policy-insight/reducing-corruption", "https://www.cgdev.org/topics/corruption"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Governance and Policy",
+      "title": "Do conditional cash transfers reduce poverty?",
+      "concepts": ["CCTs", "targeting", "conditionality"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.povertyactionlab.org/policy-insight/conditional-cash-transfers", "https://openknowledge.worldbank.org/handle/10986/27854"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Governance and Policy",
+      "title": "Can transparency reduce leakage in public programs?",
+      "concepts": ["transparency", "monitoring", "community participation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.povertyactionlab.org/evaluation/community-monitoring-ugandas-primary-education-system", "https://academic.oup.com/qje/article/121/2/427/1884026"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Governance and Policy",
+      "title": "How do participatory budgeting and citizen engagement shape policy?",
+      "concepts": ["participatory governance", "civic engagement", "accountability mechanisms"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.worldbank.org/en/topic/socialdevelopment/brief/participatory-budgeting", "https://www.povertyactionlab.org/policy-area/political-economy-and-governance"],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Experimental Methods",
+      "title": "How do we know if a program really works?",
+      "concepts": ["randomized controlled trials", "causal inference", "internal validity"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.povertyactionlab.org/resource/introduction-randomized-evaluations", "https://runningres.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Experimental Methods",
+      "title": "What are the limits of RCTs in development?",
+      "concepts": ["external validity", "general equilibrium effects", "ethics of experimentation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.sciencedirect.com/science/article/pii/S0304387818300397", "https://www.cgdev.org/blog/randomization-development-economics-brief-history"],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Synthesis",
+      "title": "Review: Evidence-based development policy",
+      "concepts": ["causal inference", "external validity", "cost-effectiveness", "policy design", "scaling"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.povertyactionlab.org/policy-lessons", "https://www.cgdev.org/", "https://www.aeaweb.org/articles?id=10.1257/jep.31.4.103"],
+      "status": "pending"
+    }
+  ]
+}

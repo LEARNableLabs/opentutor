@@ -1,0 +1,350 @@
+{
+  "topic": "Ceramics glazing chemistry",
+  "slug": "ceramics-glazing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (atomic structure, bonding)",
+    "ceramic materials fundamentals",
+    "glaze application experience",
+    "kiln firing basics"
+  ],
+  "exit_criteria": [
+    "calculate Unity Molecular Formula from recipes",
+    "predict glaze behavior from oxide composition",
+    "formulate original glazes for specific effects",
+    "troubleshoot glaze defects using chemistry",
+    "adjust recipes for different firing temperatures",
+    "use glaze calculation software fluently",
+    "design systematic testing protocols"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do glazes melt at different temperatures?",
+      "concepts": ["glass formation", "eutectic behavior", "flux systems"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://digitalfire.com/article/why+do+glazes+melt",
+        "https://glazy.org/posts/glaze-chemistry-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What's the difference between a recipe and a formula?",
+      "concepts": ["molecular formula", "weight percentage", "UMF"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://digitalfire.com/glossary/unity+molecular+formula",
+        "https://www.youtube.com/watch?v=vJ8K7xLqE9k"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do we organize oxides by their role?",
+      "concepts": ["fluxes", "glass formers", "stabilizers", "oxide classification"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://digitalfire.com/article/understanding+oxide+roles",
+        "https://glazy.org/posts/oxide-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can you identify the flux in this recipe?",
+      "concepts": ["recipe analysis", "identifying components", "flux recognition"],
+      "difficulty": 1,
+      "type": "teach-back",
+      "resources": [
+        "https://glazy.org/recipes",
+        "https://digitalfire.com/material/feldspar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Why does silica form glass but won't melt alone?",
+      "concepts": ["silica network", "glass formers", "melting point", "viscosity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://digitalfire.com/material/silica",
+        "https://www.youtube.com/watch?v=BkR8ZqLqLmE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Oxide Chemistry",
+      "title": "What makes sodium and potassium such powerful fluxes?",
+      "concepts": ["alkali fluxes", "Na₂O", "K₂O", "feldspathic materials"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://digitalfire.com/material/sodium+feldspar",
+        "https://glazy.org/materials/feldspar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Oxide Chemistry",
+      "title": "How do alkaline earth fluxes differ from alkali fluxes?",
+      "concepts": ["CaO", "MgO", "BaO", "flux comparison", "melting behavior"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://digitalfire.com/article/flux+comparison",
+        "https://glazy.org/posts/understanding-fluxes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Oxide Chemistry",
+      "title": "Why does alumina prevent glazes from running off pots?",
+      "concepts": ["Al₂O₃", "viscosity", "glaze stability", "refractory oxides"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://digitalfire.com/material/alumina",
+        "https://www.youtube.com/watch?v=aKZ8vT9xPqM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Oxide Chemistry",
+      "title": "What happens when you combine multiple fluxes?",
+      "concepts": ["eutectic systems", "flux interaction", "synergistic melting"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://digitalfire.com/article/eutectic+interactions",
+        "https://glazy.org/posts/eutectic-behavior"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Oxide Chemistry",
+      "title": "What are the key fingerprints of each flux family?",
+      "concepts": ["flux review", "oxide properties", "melting behavior"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://digitalfire.com/glossary/flux",
+        "https://glazy.org/posts/flux-review"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Glaze Calculation",
+      "title": "How do we convert a recipe to a molecular formula?",
+      "concepts": ["molecular weight", "mole calculation", "recipe-to-formula conversion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://digitalfire.com/article/how+to+calculate+unity+formula",
+        "https://glazy.org/calculator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Glaze Calculation",
+      "title": "What is Unity Molecular Formula and why do we use it?",
+      "concepts": ["UMF", "normalization", "RO:R₂O₃:RO₂ ratio", "glaze comparison"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://digitalfire.com/glossary/unity+molecular+formula",
+        "https://www.youtube.com/watch?v=dLX7k8Hp9aQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Glaze Calculation",
+      "title": "Can you calculate the UMF for this cone 6 glaze?",
+      "concepts": ["UMF calculation", "hands-on practice", "spreadsheet methods"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://glazy.org/calculator",
+        "https://digitalfire.com/account/login"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Glaze Calculation",
+      "title": "How do we interpret limit formulas?",
+      "concepts": ["limit formulas", "oxide ranges", "glaze families", "stull charts"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://digitalfire.com/article/limit+formulas",
+        "https://glazy.org/posts/understanding-limits"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Glaze Calculation",
+      "title": "Why would you want to convert a formula back to a recipe?",
+      "concepts": ["formula-to-recipe", "material substitution", "reformulation"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://digitalfire.com/article/formula+to+recipe",
+        "https://glazy.org/recipes/new"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Glaze Calculation",
+      "title": "Which calculation workflow and tools work best for your needs?",
+      "concepts": ["calculation review", "software comparison", "workflow efficiency"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://glazy.org/help",
+        "https://digitalfire.com/insight"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Color and Surface",
+      "title": "How do transition metals create color in glazes?",
+      "concepts": ["chromophores", "crystal field theory", "oxide colorants"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://digitalfire.com/article/ceramic+colorants",
+        "https://www.youtube.com/watch?v=nLJ8YLqKz3w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Color and Surface",
+      "title": "Why does copper turn green in oxidation but red in reduction?",
+      "concepts": ["atmosphere effects", "oxidation state", "copper chemistry", "reduction firing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://digitalfire.com/material/copper+oxide",
+        "https://glazy.org/posts/copper-reds"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Color and Surface",
+      "title": "What makes a glaze matte instead of glossy?",
+      "concepts": ["surface finish", "matte mechanisms", "crystal formation", "alumina content"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://digitalfire.com/article/matte+glazes",
+        "https://glazy.org/posts/matte-surfaces"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Color and Surface",
+      "title": "How do you grow crystals in a glaze?",
+      "concepts": ["crystallization", "calcium borate", "zinc crystals", "cooling cycles"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://digitalfire.com/article/crystalline+glazes",
+        "https://www.youtube.com/watch?v=kY8LqWxK6F4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Color and Surface",
+      "title": "How do colorants and surface chemistry work together?",
+      "concepts": ["colorant review", "surface mechanisms", "testing methods"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://digitalfire.com/glossary/colorant",
+        "https://glazy.org/search?base_type=460"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Troubleshooting and Testing",
+      "title": "Why do glazes craze, and how can you fix it?",
+      "concepts": ["crazing", "thermal expansion", "glaze fit", "COE adjustment"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://digitalfire.com/article/crazing",
+        "https://glazy.org/posts/fixing-crazing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Troubleshooting and Testing",
+      "title": "How do you adjust a glaze to melt at a different temperature?",
+      "concepts": ["temperature adjustment", "flux modification", "cone equivalents"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://digitalfire.com/article/adjusting+firing+temperature",
+        "https://glazy.org/posts/temperature-adjustments"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Troubleshooting and Testing",
+      "title": "What's the best way to test glaze variations systematically?",
+      "concepts": ["line blends", "triaxial blends", "testing methodology", "documentation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://digitalfire.com/article/testing+methodology",
+        "https://www.youtube.com/watch?v=aX8vF9hLqJ0",
+        "https://glazy.org/posts/systematic-testing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Troubleshooting and Testing",
+      "title": "Can you design your own base glaze for a specific firing temperature?",
+      "concepts": ["glaze formulation", "integrated practice", "creative application"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://glazy.org/recipes/new",
+        "https://digitalfire.com/article/formulating+glazes",
+        "https://glazy.org/posts/building-base-glazes"
+      ],
+      "status": "pending"
+    }
+  ]
+}

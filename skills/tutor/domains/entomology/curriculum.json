@@ -1,0 +1,336 @@
+{
+  "topic": "Entomology — insects and their roles",
+  "slug": "entomology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": ["basic biology", "ecology fundamentals", "evolutionary concepts"],
+  "exit_criteria": [
+    "identify major insect orders and explain their evolutionary innovations",
+    "describe insect anatomy, physiology, and metamorphosis types",
+    "analyze insect behavior and ecological roles in ecosystems",
+    "evaluate the impacts of insects on human society (agriculture, disease, conservation)",
+    "apply entomological knowledge to real-world problems (pest management, pollination)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "What Makes an Insect?",
+      "title": "What makes a bug actually an insect?",
+      "concepts": ["insect definition", "arthropod characteristics", "hexapod body plan"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://www.si.edu/spotlight/buginfo/bugorinsect", "https://www.amnh.org/explore/ology/biodiversity/what-is-biodiversity/what-is-an-insect"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "What Makes an Insect?",
+      "title": "Why do insects have exoskeletons instead of bones?",
+      "concepts": ["exoskeleton structure", "cuticle layers", "molting necessity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://entomology.ca.uky.edu/ent425/c02/integument", "https://www.britannica.com/science/exoskeleton"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "What Makes an Insect?",
+      "title": "How do insects breathe without lungs?",
+      "concepts": ["tracheal system", "spiracles", "gas exchange"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://askabiologist.asu.edu/how-do-insects-breathe", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3367411/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "What Makes an Insect?",
+      "title": "What can a fly see that we cannot?",
+      "concepts": ["compound eyes", "visual processing", "UV perception"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.science.org/content/article/how-flies-fly", "https://www.nationalgeographic.com/science/article/insect-vision"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "What Makes an Insect?",
+      "title": "How does metamorphosis completely rebuild an insect?",
+      "concepts": ["holometaboly", "hemimetaboly", "imaginal discs", "hormonal control"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://entomology.ca.uky.edu/ent425/c07/metamor", "https://www.youtube.com/watch?v=3BZNUx4K7Js"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "What Makes an Insect?",
+      "title": "How do the pieces of insect anatomy fit together?",
+      "concepts": ["body plan review", "physiology integration", "metamorphosis types"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://askabiologist.asu.edu/explore/insects"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Insect Diversity",
+      "title": "Why are beetles the most successful animals on Earth?",
+      "concepts": ["Coleoptera diversity", "adaptive radiation", "ecological niches"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.smithsonianmag.com/science-nature/why-are-beetles-so-diverse-180977664/", "https://bugguide.net/node/view/60"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Insect Diversity",
+      "title": "How do butterflies and moths differ beyond day and night?",
+      "concepts": ["Lepidoptera characteristics", "wing scales", "morphological differences"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.butterfliesandmoths.org/faq", "https://www.fs.usda.gov/wildflowers/pollinators/documents/InsectSynopsesLepidoptera.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Insect Diversity",
+      "title": "What makes a wasp different from a bee?",
+      "concepts": ["Hymenoptera taxonomy", "social organization", "ecological roles"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.fs.usda.gov/wildflowers/pollinators/documents/InsectSynopsesHymenoptera.pdf", "https://entomology.ca.uky.edu/ent425/c15/hymenop"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Insect Diversity",
+      "title": "Why do flies have only two wings when most insects have four?",
+      "concepts": ["Diptera evolution", "halteres function", "flight mechanics"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.science.org/content/article/flies-bizarre-balancing-act-revealed", "https://bugguide.net/node/view/55"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Insect Diversity",
+      "title": "How do true bugs actually differ from other insects?",
+      "concepts": ["Hemiptera characteristics", "piercing-sucking mouthparts", "incomplete metamorphosis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://entomology.ca.uky.edu/ent425/c16/hemipte", "https://bugguide.net/node/view/94"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Insect Diversity",
+      "title": "What ancient insect orders still survive today?",
+      "concepts": ["insect phylogeny", "living fossils", "evolutionary history"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.nature.com/articles/s41586-018-0590-4", "https://evolution.berkeley.edu/the-history-of-life-on-earth/the-mesozoic-era/insects-take-to-the-skies/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Insect Diversity",
+      "title": "What features let you recognize each major insect order?",
+      "concepts": ["order identification", "key characteristics", "diversity patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://bugguide.net/node/view/15740", "https://www.insectidentification.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "How Insects Live",
+      "title": "How do insects grow if their skeleton doesn't?",
+      "concepts": ["molting process", "ecdysis", "ecdysone hormone"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://askabiologist.asu.edu/molting", "https://entomology.ca.uky.edu/ent425/c07/growth"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "How Insects Live",
+      "title": "Why do some insects hibernate and others migrate?",
+      "concepts": ["diapause", "migration strategies", "seasonal adaptations"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.fs.usda.gov/wildflowers/pollinators/Monarch_Butterfly/migration/", "https://entomology.wisc.edu/blog/2020/12/02/overwintering-insects/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "How Insects Live",
+      "title": "How do insects find food without a nose?",
+      "concepts": ["chemoreception", "antennae function", "olfactory receptors"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3894723/", "https://askabiologist.asu.edu/antenna-senses"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "How Insects Live",
+      "title": "What powers insect flight muscles?",
+      "concepts": ["flight muscle physiology", "metabolic rate", "energy efficiency"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://jeb.biologists.org/content/218/1/153", "https://www.annualreviews.org/doi/10.1146/annurev.ento.44.1.429"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "How Insects Live",
+      "title": "How do aquatic insects breathe underwater?",
+      "concepts": ["aquatic adaptations", "plastron respiration", "gills"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.bioone.org/doi/10.1899/0887-3593(2006)25%5B887:AIROAI%5D2.0.CO%3B2", "https://extension.oregonstate.edu/ask-expert/featured/how-do-aquatic-insects-breathe"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "How Insects Live",
+      "title": "Why do fireflies glow?",
+      "concepts": ["bioluminescence", "luciferin-luciferase reaction", "mate attraction"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.nationalgeographic.com/animals/article/fireflies", "https://www.science.org/content/article/how-fireflies-light"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "How Insects Live",
+      "title": "How do insects sense, move, and survive in extreme environments?",
+      "concepts": ["growth and development", "sensory systems", "special adaptations"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://askabiologist.asu.edu/explore/insects"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Insect Ecology & Behavior",
+      "title": "How do ants communicate without speaking?",
+      "concepts": ["pheromone trails", "chemical communication", "collective behavior"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://askabiologist.asu.edu/explore/ant-communication", "https://www.antwiki.org/wiki/Chemical_Communication"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Insect Ecology & Behavior",
+      "title": "Why do bees dance?",
+      "concepts": ["waggle dance", "spatial communication", "honey bee navigation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://askabiologist.asu.edu/bee-dance-game", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3518170/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Insect Ecology & Behavior",
+      "title": "What makes termites nature's ultimate recyclers?",
+      "concepts": ["decomposition", "cellulose digestion", "symbiosis"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.smithsonianmag.com/science-nature/how-termites-conquered-world-180976677/", "https://entomology.ca.uky.edu/ent425/c19/isoptera"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Insect Ecology & Behavior",
+      "title": "How do predatory insects hunt?",
+      "concepts": ["predation strategies", "ambush vs pursuit", "specialized structures"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.youtube.com/watch?v=EJ_y8xCJId8", "https://entomology.ca.uky.edu/ent425/c12/mantid"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Insect Ecology & Behavior",
+      "title": "Why do some insects mimic others?",
+      "concepts": ["Batesian mimicry", "Müllerian mimicry", "aposematism"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.amnh.org/explore/science-topics/biodiversity/mimicry", "https://evolution.berkeley.edu/mimicry-a-model-system-for-evolution/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Insect Ecology & Behavior",
+      "title": "How do insects shape entire ecosystems?",
+      "concepts": ["ecosystem engineers", "pollination networks", "nutrient cycling"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.science.org/doi/10.1126/science.aat8327", "https://www.annualreviews.org/doi/10.1146/annurev-ecolsys-110512-135838"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Insect Ecology & Behavior",
+      "title": "How do insects communicate, cooperate, and structure ecosystems?",
+      "concepts": ["social insects", "predator-prey dynamics", "ecosystem services"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.entsoc.org/resources/education"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Insects & Humans",
+      "title": "Why are pollinators disappearing?",
+      "concepts": ["pollinator decline", "habitat loss", "pesticides", "climate change"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.fs.usda.gov/wildflowers/pollinators/What_is_Pollination/threats.shtml", "https://www.unep.org/resources/publication/assessment-report-pollinators-pollination-and-food-production"],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Insects & Humans",
+      "title": "How do mosquitoes spread diseases so effectively?",
+      "concepts": ["disease vectors", "pathogen transmission", "vector biology"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.cdc.gov/mosquitoes/about/mosquitoes-and-disease.html", "https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases"],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Insects & Humans",
+      "title": "Can insects help solve food security?",
+      "concepts": ["integrated pest management", "biological control", "edible insects", "sustainable agriculture"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.fao.org/edible-insects/en/", "https://ipmworld.umn.edu/what-ipm"],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Insects & Humans",
+      "title": "How can you contribute to insect conservation and research?",
+      "concepts": ["citizen science", "habitat restoration", "conservation advocacy", "community engagement"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.inaturalist.org/", "https://www.xerces.org/get-involved", "https://www.monarchjointventure.org/mlmp"],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Insects & Humans",
+      "title": "What are the greatest challenges and opportunities in entomology today?",
+      "concepts": ["curriculum synthesis", "conservation priorities", "applied entomology", "future directions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.entsoc.org/resources/education", "https://entomologytoday.org/"],
+      "status": "pending"
+    }
+  ]
+}

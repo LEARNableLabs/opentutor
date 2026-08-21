@@ -1,0 +1,360 @@
+{
+  "topic": "Polymer Science",
+  "slug": "polymer-science",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "organic chemistry",
+    "physical chemistry",
+    "thermodynamics",
+    "basic materials science"
+  ],
+  "exit_criteria": [
+    "predict polymer properties from molecular structure",
+    "design synthesis routes for target polymers",
+    "interpret characterization data (SEC, DSC, rheology)",
+    "explain structure-property relationships in polymer systems",
+    "select appropriate polymers for engineering applications",
+    "understand phase behavior and glass transition phenomena"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamentals",
+      "title": "What makes a polymer different from a small molecule?",
+      "concepts": ["macromolecules", "repeat units", "degree of polymerization", "chain length"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-467-polymer-science-laboratory-fall-2005/",
+        "https://polymerdatabase.com/polymer%20chemistry/Degree%20of%20Polymerization.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamentals",
+      "title": "Why do some polymers melt while others burn?",
+      "concepts": ["thermoplastics", "thermosets", "elastomers", "crosslinking"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=d_GIL1MhEqE",
+        "https://www.essentialchemicalindustry.org/polymers/thermoplastics-and-thermosetting-polymers.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamentals",
+      "title": "How do we describe the size of a polymer chain?",
+      "concepts": ["molecular weight averages", "polydispersity", "number-average Mn", "weight-average Mw"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://polymerdatabase.com/polymer%20chemistry/Molecular%20Weight.html",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Polymer_Chemistry_(Schaller)/01%3A_Introduction_to_Polymers/1.03%3A_Polymer_Molecular_Weight"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Polymer Synthesis",
+      "title": "What happens when free radicals meet monomers?",
+      "concepts": ["radical polymerization", "initiation", "propagation", "termination"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=uZrN3wMKhvM",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Polymer_Chemistry_(Schaller)/02%3A_Synthetic_Methods_in_Polymer_Chemistry/2.02%3A_Radical_Polymerization"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Polymer Synthesis",
+      "title": "Why can't we control the length of every polymer chain?",
+      "concepts": ["chain transfer", "kinetic chain length", "living polymerization", "control vs living"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.macromol.5b02634",
+        "https://www.youtube.com/watch?v=hx_K7RwX2oU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Polymer Synthesis",
+      "title": "How do nylon and polyester actually form?",
+      "concepts": ["step-growth polymerization", "condensation", "Carothers equation", "stoichiometry"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=SMyL-VP_7oY",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Polymer_Chemistry_(Schaller)/02%3A_Synthetic_Methods_in_Polymer_Chemistry/2.03%3A_Step_Growth_Polymerization"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Polymer Synthesis",
+      "title": "Can you explain the key differences between chain-growth and step-growth polymerization?",
+      "concepts": ["synthesis review", "mechanism comparison", "problem-solving"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-467-polymer-science-laboratory-fall-2005/pages/assignments/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Polymer Synthesis",
+      "title": "What if we want polymers with two different monomer types?",
+      "concepts": ["copolymerization", "random copolymers", "block copolymers", "reactivity ratios"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://polymerdatabase.com/polymer%20chemistry/Copolymerization.html",
+        "https://www.youtube.com/watch?v=rQpZvN9KXHM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Polymer Synthesis",
+      "title": "Can we build polymers with perfect control?",
+      "concepts": ["controlled radical polymerization", "ATRP", "RAFT", "NMP"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.chemrev.0c01328",
+        "https://www.youtube.com/watch?v=bDsL6P0AYHU",
+        "https://www.sigmaaldrich.com/US/en/technical-documents/technical-article/chemistry-and-synthesis/click-chemistry/controlled-radical-polymerization"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Structure & Characterization",
+      "title": "How does a random polymer coil fill space?",
+      "concepts": ["random walk", "end-to-end distance", "radius of gyration", "Flory exponent"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://polymerdatabase.com/polymer%20physics/Flory%20Radius.html",
+        "https://www.youtube.com/watch?v=pDsPgpSt8nE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Structure & Characterization",
+      "title": "Why do we need chromatography to measure polymer size?",
+      "concepts": ["size exclusion chromatography", "SEC", "GPC", "calibration curves"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.agilent.com/en/product/molecular-spectroscopy/gel-permeation-chromatography-gpc-size-exclusion-chromatography-sec",
+        "https://www.youtube.com/watch?v=viFUkCKRGMc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Structure & Characterization",
+      "title": "What happens when a polymer tries to crystallize?",
+      "concepts": ["crystallinity", "lamellar structure", "spherulites", "chain folding"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://polymerdatabase.com/polymer%20physics/Crystallinity.html",
+        "https://www.youtube.com/watch?v=oyGVe2JZFHA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Structure & Characterization",
+      "title": "How can we see polymer structure without seeing individual atoms?",
+      "concepts": ["X-ray scattering", "SAXS", "WAXS", "scattering patterns"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=5wXDnLYuJl8",
+        "https://www.nist.gov/programs-projects/small-angle-x-ray-scattering-saxs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Structure & Characterization",
+      "title": "How would you determine the molecular weight distribution and crystallinity of an unknown polymer?",
+      "concepts": ["structure review", "characterization methods", "data interpretation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/10-467-polymer-science-laboratory-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Physical Properties",
+      "title": "Why do polymers suddenly become stiff when cooled?",
+      "concepts": ["glass transition", "Tg", "free volume", "WLF equation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://polymerdatabase.com/polymer%20physics/GlassTrans.html",
+        "https://www.youtube.com/watch?v=vKlxGNEKtbw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Physical Properties",
+      "title": "What makes rubber stretch and return?",
+      "concepts": ["elasticity", "entropic springs", "rubber elasticity", "network structure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=_DHe_44O6C8",
+        "https://polymerdatabase.com/polymer%20physics/Rubber%20Elasticity.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Physical Properties",
+      "title": "Why does silly putty behave like both a solid and a liquid?",
+      "concepts": ["viscoelasticity", "relaxation time", "Maxwell model", "Deborah number"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=QdKqUUAhvbQ",
+        "https://polymerdatabase.com/polymer%20physics/Viscoelasticity.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Physical Properties",
+      "title": "How do we measure polymer flow behavior?",
+      "concepts": ["rheology", "shear viscosity", "complex modulus", "dynamic mechanical analysis"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=_Q5Cr1F5g4w",
+        "https://www.tainstruments.com/rheology-basics/",
+        "https://www.anton-paar.com/us-en/products/applications/rheology-basics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Physical Properties",
+      "title": "Can you predict a polymer's properties from its chemical structure?",
+      "concepts": ["structure-property relationships", "group contributions", "polymer design"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://polymerdatabase.com/",
+        "https://www.youtube.com/watch?v=GkLPHFq9eMc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Physical Properties",
+      "title": "What happens when two polymers refuse to mix?",
+      "concepts": ["polymer blends", "phase separation", "Flory-Huggins theory", "compatibility"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://polymerdatabase.com/polymer%20physics/Flory-Huggins.html",
+        "https://www.youtube.com/watch?v=qF7Q7yV8Ywo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Physical Properties",
+      "title": "How do glass transition temperature and viscoelastic properties relate to a polymer's molecular structure?",
+      "concepts": ["properties review", "problem-solving", "real data analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.tainstruments.com/support/knowledge-base/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Processing & Applications",
+      "title": "How do you turn polymer pellets into useful shapes?",
+      "concepts": ["extrusion", "injection molding", "film blowing", "processing methods"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=8GK_LdT3zDg",
+        "https://www.youtube.com/watch?v=RMjtmsr3CqA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Processing & Applications",
+      "title": "Why do we mix polymers with other materials?",
+      "concepts": ["composites", "fillers", "reinforcement", "nanocomposites"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=bKwmQ9IKP0g",
+        "https://polymerdatabase.com/Composites/Composites.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Processing & Applications",
+      "title": "Can polymers conduct electricity or heal themselves?",
+      "concepts": ["functional polymers", "conducting polymers", "stimuli-responsive", "self-healing"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=mFt_e0jt0FI",
+        "https://pubs.acs.org/doi/10.1021/acs.chemrev.0c00938",
+        "https://www.nobelprize.org/prizes/chemistry/2000/summary/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Processing & Applications",
+      "title": "What happens to polymers after we're done with them?",
+      "concepts": ["degradation", "recycling", "biodegradability", "sustainability"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=DhH46ZEFJqY",
+        "https://www.ellenmacarthurfoundation.org/topics/plastics/overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Processing & Applications",
+      "title": "How would you design a polymer for a specific application?",
+      "concepts": ["polymer selection", "design strategy", "trade-offs", "synthesis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://polymerdatabase.com/",
+        "https://www.campusplastics.com/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "topic": "Formal Verification",
+  "slug": "formal-verification",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "programming fundamentals",
+    "discrete mathematics",
+    "propositional logic",
+    "basic algorithm analysis"
+  ],
+  "exit_criteria": [
+    "write formal specifications for concurrent systems",
+    "use a model checker to verify safety properties",
+    "write simple proofs in a proof assistant",
+    "apply Hoare logic to reason about program correctness",
+    "decide when formal verification is worth the cost"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why can't we just test everything?",
+      "concepts": ["testing vs verification", "state explosion", "correctness guarantees"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://lamport.azurewebsites.net/pubs/state-the-problem.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What does it mean for a program to be correct?",
+      "concepts": ["specifications", "invariants", "pre/postconditions"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.hillelwayne.com/post/spec-notation/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do we describe what a system should never do?",
+      "concepts": ["safety properties", "liveness properties", "temporal properties"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://en.wikipedia.org/wiki/Safety_and_liveness_properties"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Model Checking",
+      "title": "What if we could explore every possible execution?",
+      "concepts": ["state space", "reachability", "exhaustive search"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://spinroot.com/spin/whatispin.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Model Checking",
+      "title": "How do we write 'eventually' and 'always' in math?",
+      "concepts": ["linear temporal logic", "LTL operators", "path quantification"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://spot.lre.epita.fr/concepts.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Model Checking",
+      "title": "Can you explain specifications and state spaces to a colleague?",
+      "concepts": ["specifications", "state machines", "temporal logic"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://learntla.com/introduction/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Model Checking",
+      "title": "How does TLA+ prevent cloud disasters at AWS?",
+      "concepts": ["TLA+ language", "PlusCal", "invariant checking"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://lamport.azurewebsites.net/tla/tla.html", "https://www.hillelwayne.com/post/tla-messages/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Model Checking",
+      "title": "Can you find the bug in this concurrent algorithm?",
+      "concepts": ["counterexamples", "trace analysis", "debugging with model checkers"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://github.com/tlaplus/Examples"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Model Checking",
+      "title": "What happens when the state space is infinite?",
+      "concepts": ["abstraction", "symmetry reduction", "bounded model checking"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["http://nusmv.fbk.eu/NuSMV/tutorial/v25/tutorial.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Theorem Proving",
+      "title": "Why would we prove programs correct by hand?",
+      "concepts": ["interactive theorem proving", "proof assistants", "trusted computing base"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://softwarefoundations.cis.upenn.edu/lf-current/Preface.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Theorem Proving",
+      "title": "How do proof assistants know a proof is correct?",
+      "concepts": ["Curry-Howard correspondence", "dependent types", "proof terms"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://coq.inria.fr/refman/language/core/inductive.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Theorem Proving",
+      "title": "When should you automate verification and when should you prove it by hand?",
+      "concepts": ["automation vs interactivity", "completeness tradeoffs", "verification strategies"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.cs.cmu.edu/~15414/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Theorem Proving",
+      "title": "Can you verify a sorting algorithm is correct?",
+      "concepts": ["functional correctness", "induction", "tactics"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://softwarefoundations.cis.upenn.edu/lf-current/Sort.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Theorem Proving",
+      "title": "How was an entire C compiler proven correct?",
+      "concepts": ["CompCert", "compiler verification", "operational semantics"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://compcert.org/", "https://xavierleroy.org/publi/compcert-CACM.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Program Verification",
+      "title": "What does it mean to reason forward and backward?",
+      "concepts": ["Hoare logic", "Hoare triples", "axiomatic semantics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.cs.cmu.edu/~aldrich/courses/15-819O-13sp/resources/hoare-original.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Program Verification",
+      "title": "How do we calculate the weakest precondition?",
+      "concepts": ["weakest preconditions", "strongest postconditions", "verification conditions"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.microsoft.com/en-us/research/publication/guarded-commands-non-determinacy-formal-derivation-programs/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Program Verification",
+      "title": "Can you annotate this loop so Dafny verifies it?",
+      "concepts": ["loop invariants", "decreasing measures", "automated verification"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://dafny.org/dafny/OnlineTutorial/guide"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Program Verification",
+      "title": "How do you choose the right verification tool for your problem?",
+      "concepts": ["specification techniques", "proof strategies", "tool selection"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.cs.umd.edu/~mwh/se-tutori/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Program Verification",
+      "title": "How does separation logic let us verify pointer programs?",
+      "concepts": ["separation logic", "frame rule", "heap reasoning"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.cl.cam.ac.uk/~mjp41/SLNotes.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Program Verification",
+      "title": "Why does Facebook use formal verification for mobile apps?",
+      "concepts": ["Infer static analyzer", "compositional analysis", "scalability"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://fbinfer.com/", "https://research.facebook.com/publications/compositional-shape-analysis-by-means-of-bi-abduction/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Applications",
+      "title": "When should you NOT use formal verification?",
+      "concepts": ["cost-benefit analysis", "verification economics", "tool limitations"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.hillelwayne.com/post/when-to-use-formal-methods/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Applications",
+      "title": "How do you verify a microkernel has no security bugs?",
+      "concepts": ["seL4 verification", "information flow security", "verified OS"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://sel4.systems/", "https://trustworthy.systems/publications/papers/Klein_EHACDEEKNSTW_09.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applications",
+      "title": "What verification challenges remain unsolved?",
+      "concepts": ["research frontiers", "open problems", "future directions"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.cs.cmu.edu/~emc/papers/Conference%20Papers/Grand%20Challenges%20in%20Verified%20Software.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications",
+      "title": "What formal verification tools would you reach for in your next project?",
+      "concepts": ["model checking", "theorem proving", "program verification", "tool selection"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.cs.cmu.edu/~15414/"],
+      "status": "pending"
+    }
+  ]
+}

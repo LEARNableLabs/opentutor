@@ -1,0 +1,369 @@
+{
+  "topic": "Meditation neuroscience — what contemplative practice does to the brain",
+  "slug": "meditation-neuroscience",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic neuroscience (brain regions, neurotransmitters)",
+    "research methods (correlation vs. causation, control groups)",
+    "psychology fundamentals (attention, emotion, memory)"
+  ],
+  "exit_criteria": [
+    "explain mechanisms by which meditation changes brain structure and function",
+    "critically evaluate meditation neuroscience research claims",
+    "distinguish between different meditation types and their neural correlates",
+    "connect phenomenology of practice to measurable brain changes",
+    "design hypothetical studies to test meditation effects"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What exactly are neuroscientists measuring when they study meditation?",
+      "concepts": ["meditation definitions", "contemplative traditions", "focused attention vs. open monitoring"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4054695/",
+        "https://centerhealthyminds.org/science/meditation-research"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why can't we just ask meditators what happens in their brains?",
+      "concepts": ["first-person vs. third-person data", "neuroimaging methods", "fMRI and EEG basics"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.frontiersin.org/articles/10.3389/fnhum.2015.00249/full",
+        "https://www.nature.com/articles/nrn3916"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What makes a good meditation neuroscience study?",
+      "concepts": ["experimental design", "control groups", "expectation effects", "longitudinal vs. cross-sectional"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://journals.sagepub.com/doi/10.1177/1745691614568352",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6671026/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How much practice actually changes your brain?",
+      "concepts": ["dose-response relationships", "lifetime practice hours", "trait vs. state effects"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4142584/",
+        "https://www.annualreviews.org/doi/10.1146/annurev-psych-042716-051139"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Attention Systems",
+      "title": "What happens when your mind wanders during meditation?",
+      "concepts": ["mind-wandering", "meta-awareness", "attention lapses", "sustained attention"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3250078/",
+        "https://www.science.org/doi/10.1126/science.1136800"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Attention Systems",
+      "title": "Why do meditators perform better on boring tasks?",
+      "concepts": ["attentional blink", "executive control", "working memory", "cognitive training"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0050138",
+        "https://link.springer.com/article/10.3758/CABN.7.2.109"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Attention Systems",
+      "title": "Which brain networks control where your attention goes?",
+      "concepts": ["attention networks", "dorsal attention network", "salience network", "network switching"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrn2555",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3328883/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Attention Systems",
+      "title": "Can you train attention like you train a muscle?",
+      "concepts": ["attention training", "neuroplasticity", "practice effects", "transfer"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.pnas.org/doi/10.1073/pnas.0707678104",
+        "https://www.amishi-jha.com/lab"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Attention Systems",
+      "title": "How does meditation training reshape your attention networks?",
+      "concepts": ["attention networks review", "meditation and attention", "practice effects"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.frontiersin.org/articles/10.3389/fnhum.2012.00098/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Brain Structure",
+      "title": "Does your brain actually grow when you meditate?",
+      "concepts": ["gray matter", "cortical thickness", "structural MRI", "neuroplasticity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1361002/",
+        "https://www.psychiatryinvestigation.org/journal/view.php?doi=10.4306/pi.2011.8.1.27"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Brain Structure",
+      "title": "What's special about the insula in experienced meditators?",
+      "concepts": ["insula", "interoception", "body awareness", "anterior vs. posterior insula"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://academic.oup.com/scan/article/8/1/27/1653673",
+        "https://www.nature.com/articles/nrn894"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Brain Structure",
+      "title": "Why does the hippocampus matter for meditation research?",
+      "concepts": ["hippocampus", "memory consolidation", "stress and neurogenesis", "MBSR effects"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3004979/",
+        "https://www.sciencedirect.com/science/article/pii/S1053811910013157"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Stress and Emotion",
+      "title": "How does meditation change your stress response?",
+      "concepts": ["HPA axis", "cortisol", "stress reactivity", "allostatic load"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3964990/",
+        "https://www.annualreviews.org/doi/10.1146/annurev.psych.55.090902.141456"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Stress and Emotion",
+      "title": "What happens to the amygdala after 8 weeks of mindfulness training?",
+      "concepts": ["amygdala", "threat detection", "emotional reactivity", "MBSR structural changes"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3705194/",
+        "https://academic.oup.com/scan/article/8/1/56/1664009"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Stress and Emotion",
+      "title": "Why does connecting the prefrontal cortex to the amygdala help regulate emotion?",
+      "concepts": ["prefrontal-amygdala connectivity", "emotion regulation", "cognitive control of emotion", "reappraisal"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrn3071",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3939772/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Stress and Emotion",
+      "title": "Can meditation change how you experience pain?",
+      "concepts": ["pain processing", "sensory vs. affective pain", "anterior cingulate cortex", "pain modulation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.jneurosci.org/content/31/14/5540",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5368208/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Stress and Emotion",
+      "title": "How do meditation-induced brain changes translate to emotional resilience?",
+      "concepts": ["stress systems review", "emotion regulation pathways", "clinical applications"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3679190/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "The Default Mode",
+      "title": "What is your brain doing when you're doing nothing?",
+      "concepts": ["default mode network", "resting state", "posterior cingulate cortex", "self-referential processing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.pnas.org/doi/10.1073/pnas.0504136102",
+        "https://www.annualreviews.org/doi/10.1146/annurev-psych-122414-033634"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "The Default Mode",
+      "title": "Why does the default mode network quiet down in experienced meditators?",
+      "concepts": ["DMN deactivation", "meditation expertise", "trait effects", "non-self"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.pnas.org/doi/10.1073/pnas.1112029108",
+        "https://www.frontiersin.org/articles/10.3389/fnhum.2012.00296/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "The Default Mode",
+      "title": "How does meditation change your sense of self?",
+      "concepts": ["self-referential processing", "narrative self", "experiential self", "phenomenology"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S1364661315000790",
+        "https://journals.sagepub.com/doi/10.1177/1745691612462584"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "The Default Mode",
+      "title": "What do network transitions tell us about meditation states?",
+      "concepts": ["network dynamics", "attention-default mode anticorrelation", "meditation phases", "dynamic connectivity"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3250078/",
+        "https://www.frontiersin.org/articles/10.3389/fnhum.2013.00316/full"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Social Brain",
+      "title": "Does compassion meditation light up different circuits than mindfulness?",
+      "concepts": ["compassion meditation", "loving-kindness", "empathy networks", "prosocial behavior"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3485650/",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0001897"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Social Brain",
+      "title": "Can 8 weeks of training make you more empathic?",
+      "concepts": ["empathy training", "MBSR behavioral effects", "prosocial outcomes", "compassion fatigue"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://pubmed.ncbi.nlm.nih.gov/23796855/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3713090/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Social Brain",
+      "title": "What works for depression, anxiety, and PTSD?",
+      "concepts": ["MBSR", "MBCT", "clinical outcomes", "relapse prevention"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1809754",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848393/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Social Brain",
+      "title": "What have we learned about meditation's effects on self, attention, and social connection?",
+      "concepts": ["default mode network review", "compassion circuits", "clinical applications review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/nrn3916",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4054695/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration",
+      "title": "What can't meditation neuroscience tell us yet?",
+      "concepts": ["research limitations", "individual differences", "mechanism vs. description", "hype vs. evidence"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://journals.sagepub.com/doi/10.1177/1745691614568352",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5756946/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Integration",
+      "title": "Where is contemplative neuroscience headed next?",
+      "concepts": ["future directions", "precision medicine", "app-based interventions", "neurofeedback"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/s41583-018-0081-4",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6671026/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

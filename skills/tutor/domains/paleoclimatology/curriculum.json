@@ -1,0 +1,355 @@
+{
+  "topic": "Paleoclimatology — Earth's Climate History",
+  "slug": "paleoclimatology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (isotopes, chemical reactions)",
+    "introductory geology (stratigraphy, geologic time)",
+    "basic statistics (uncertainty, time series)",
+    "introductory climate science (greenhouse effect, energy balance)"
+  ],
+  "exit_criteria": [
+    "interpret climate proxy records and evaluate their strengths/limitations",
+    "explain major climate events from the Quaternary to deep time",
+    "connect orbital forcing to glacial/interglacial cycles",
+    "assess how paleoclimate informs our understanding of modern climate change",
+    "work with uncertainty in climate reconstructions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction & Climate Proxies",
+      "title": "Why do we need to reconstruct past climates?",
+      "concepts": ["paleoclimate motivation", "natural variability", "climate sensitivity"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncei.noaa.gov/products/paleoclimatology",
+        "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction & Climate Proxies",
+      "title": "What can ancient ice tell us about the atmosphere?",
+      "concepts": ["ice cores", "trapped air bubbles", "δ18O isotopes"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.antarcticglaciers.org/glaciers-and-climate/ice-cores/ice-core-basics/",
+        "https://www.ncei.noaa.gov/products/paleoclimatology/ice-core"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction & Climate Proxies",
+      "title": "How do tree rings record droughts and temperature?",
+      "concepts": ["dendroclimatology", "ring width patterns", "climate sensitivity"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncei.noaa.gov/products/paleoclimatology/tree-ring",
+        "https://www.ltrr.arizona.edu/about/treerings"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Introduction & Climate Proxies",
+      "title": "What stories do ocean sediments preserve?",
+      "concepts": ["marine sediment cores", "foraminifera", "biomarkers"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncei.noaa.gov/products/paleoclimatology/ocean-sediment",
+        "https://www.whoi.edu/know-your-ocean/ocean-topics/how-the-ocean-works/ocean-chemistry/marine-sediments/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Introduction & Climate Proxies",
+      "title": "Can you match the proxy to what it measures?",
+      "concepts": ["proxy comparison", "temporal resolution", "spatial coverage"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncei.noaa.gov/products/paleoclimatology/primers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Introduction & Climate Proxies",
+      "title": "How do we know if a proxy record is reliable?",
+      "concepts": ["proxy calibration", "uncertainty quantification", "validation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://doi.org/10.1038/ngeo716"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Dating the Past",
+      "title": "How do we date ancient materials?",
+      "concepts": ["radiometric dating", "radiocarbon", "half-life"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.asa3.org/ASA/education/views/radiocarbon.htm",
+        "https://www.radiocarbon.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Dating the Past",
+      "title": "Why can't radiocarbon date the dinosaurs?",
+      "concepts": ["dating method limitations", "uranium-thorium dating", "argon-argon dating"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/scitable/knowledge/library/dating-rocks-and-fossils-using-geologic-methods-107924044/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Dating the Past",
+      "title": "How do orbital cycles become a clock?",
+      "concepts": ["astronomical tuning", "Milankovitch cycles", "cyclostratigraphy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.agu.org/share-and-advocate/share/podcast-third-pod-from-the-sun/episode-26-milankovitch-cycles-and-climate-change",
+        "https://earthobservatory.nasa.gov/features/Milankovitch"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Quaternary Climate",
+      "title": "Can you connect proxies and dating methods we've learned?",
+      "concepts": ["proxy synthesis", "dating integration", "uncertainty"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.ncei.noaa.gov/products/paleoclimatology/primers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Quaternary Climate",
+      "title": "What drove the ice age cycles?",
+      "concepts": ["glacial/interglacial cycles", "Milankovitch theory", "100ka problem"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/310043a0",
+        "https://science.nasa.gov/earth/climate-change/milankovitch-orbital-cycles-and-their-role-in-earths-climate/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Quaternary Climate",
+      "title": "Where was all that ice during the Last Glacial Maximum?",
+      "concepts": ["ice sheet extent", "sea level change", "glacial geomorphology"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncei.noaa.gov/sites/default/files/2021-11/State%20of%20the%20Climate%202010%20last%20glacial%20maximum.pdf",
+        "https://www.usgs.gov/special-topics/water-science-school/science/ice-snow-and-glaciers-and-water-cycle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Quaternary Climate",
+      "title": "How did CO2 and temperature dance together during ice ages?",
+      "concepts": ["CO2-temperature coupling", "feedbacks", "lag time"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/399429a0",
+        "https://www.science.org/doi/10.1126/science.1059412"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Quaternary Climate",
+      "title": "What caused the Younger Dryas cold snap?",
+      "concepts": ["abrupt climate change", "ocean circulation", "freshwater forcing"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncei.noaa.gov/access/paleo-search/study/6080",
+        "https://www.science.org/doi/10.1126/science.1178371"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Quaternary Climate",
+      "title": "How stable has the Holocene been?",
+      "concepts": ["Holocene climate variability", "8.2ka event", "Little Ice Age"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ncei.noaa.gov/products/paleoclimatology/holocene",
+        "https://www.nature.com/articles/nature14518"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Deep Time Climate",
+      "title": "Could Earth really have frozen completely?",
+      "concepts": ["Snowball Earth hypothesis", "glacial deposits", "cap carbonates"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.281.5381.1342",
+        "https://www.nceas.ucsb.edu/snowball-earth"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Deep Time Climate",
+      "title": "How do extreme climate events in deep time connect?",
+      "concepts": ["Snowball Earth", "PETM", "hothouse climates", "deep time synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ncei.noaa.gov/products/paleoclimatology",
+        "https://www.ipcc.ch/report/ar6/wg1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Deep Time Climate",
+      "title": "What happened during the PETM heat spike?",
+      "concepts": ["Paleocene-Eocene Thermal Maximum", "carbon release", "ocean acidification"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.1090110",
+        "https://www.nature.com/articles/nature17423"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Deep Time Climate",
+      "title": "Why were the poles warm in the Cretaceous?",
+      "concepts": ["hothouse climates", "polar amplification", "high CO2 worlds"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.nature.com/articles/s41561-020-0647-z",
+        "https://www.pnas.org/doi/full/10.1073/pnas.1903656116"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Deep Time Climate",
+      "title": "How do we track CO2 before ice cores?",
+      "concepts": ["boron isotopes", "stomatal density", "paleosols"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.1203153",
+        "https://www.nature.com/articles/s41561-019-0310-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Deep Time Climate",
+      "title": "What does the Pliocene tell us about our future?",
+      "concepts": ["Pliocene warmth", "modern analog", "ice sheet stability"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nature.com/articles/s41586-020-2617-x",
+        "https://pliovar.github.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Climate Forcing & Feedbacks",
+      "title": "How do orbital wobbles change climate?",
+      "concepts": ["eccentricity", "obliquity", "precession"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://earthobservatory.nasa.gov/features/Milankovitch/milankovitch_2.php",
+        "https://climate.nasa.gov/news/2948/milankovitch-orbital-cycles-and-their-role-in-earths-climate/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Climate Forcing & Feedbacks",
+      "title": "Which feedbacks amplify climate changes?",
+      "concepts": ["ice-albedo feedback", "water vapor feedback", "carbon cycle feedbacks"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ipcc.ch/report/ar6/wg1/",
+        "https://www.nature.com/articles/nature10958"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Climate Forcing & Feedbacks",
+      "title": "How do tectonic changes reshape climate over millions of years?",
+      "concepts": ["plate tectonics", "ocean gateways", "mountain building"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.1090110",
+        "https://www.nature.com/articles/ngeo724"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Climate Forcing & Feedbacks",
+      "title": "What can paleoclimate teach us about climate sensitivity?",
+      "concepts": ["equilibrium climate sensitivity", "Earth system sensitivity", "paleo constraints"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-7/",
+        "https://www.nature.com/articles/s41586-020-2943-z"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Climate Forcing & Feedbacks",
+      "title": "What does paleoclimate reveal about our climate future?",
+      "concepts": ["synthesis", "modern relevance", "prediction limits"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.ipcc.ch/report/ar6/wg1/",
+        "https://www.ncei.noaa.gov/products/paleoclimatology"
+      ],
+      "status": "pending"
+    }
+  ]
+}

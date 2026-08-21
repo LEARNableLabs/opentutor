@@ -1,0 +1,344 @@
+{
+  "topic": "Science and Technology Studies (STS)",
+  "slug": "science-and-technology-studies",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic sociology",
+    "history of science fundamentals",
+    "critical thinking and argumentation"
+  ],
+  "exit_criteria": [
+    "analyze technological controversies using STS frameworks",
+    "apply SCOT and ANT to real-world cases",
+    "critique technological determinism",
+    "identify how social values shape scientific knowledge",
+    "use STS methods to map contemporary debates",
+    "evaluate expertise and public participation in technoscience"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why should we question the idea that science discovers 'truth'?",
+      "concepts": ["social constructivism", "scientific knowledge", "STS origins"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.mit.edu/sts/",
+        "https://plato.stanford.edu/entries/social-construction-naturalistic/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Does technology drive social change, or is it the other way around?",
+      "concepts": ["technological determinism", "social shaping of technology", "co-production"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/20024652",
+        "https://www.mitpressjournals.org/loi/daed"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How did the bicycle shape modern society—and vice versa?",
+      "concepts": ["SCOT introduction", "relevant social groups", "interpretive flexibility"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/285546",
+        "https://mitpress.mit.edu/9780262517607/the-social-construction-of-technological-systems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Do artifacts have politics?",
+      "concepts": ["Winner's thesis", "embedded values", "technological politics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/20024652",
+        "https://faculty.cc.gatech.edu/~beki/cs4001/Winner.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "What methods do STS scholars use to study science and technology?",
+      "concepts": ["ethnography", "controversy studies", "historical case analysis"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://journals.sagepub.com/home/sss",
+        "https://direct.mit.edu/books/edited-volume/3933/The-Handbook-of-Science-and-Technology-Studies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "Review: What are the core ideas of STS?",
+      "concepts": ["social constructivism", "technological determinism", "SCOT", "embedded values"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://web.mit.edu/sts/",
+        "https://direct.mit.edu/books/edited-volume/3933/The-Handbook-of-Science-and-Technology-Studies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Major Frameworks",
+      "title": "Why did Pasteur's anthrax vaccine succeed—science or politics?",
+      "concepts": ["actor-network theory", "translation", "heterogeneous networks"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.hup.harvard.edu/catalog.php?isbn=9780674792913",
+        "https://www.bruno-latour.fr/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Major Frameworks",
+      "title": "How can scallops, fishermen, and scientists all be 'actors' in a network?",
+      "concepts": ["symmetry principle", "non-human actors", "enrollment"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.prio.org/publications/7582",
+        "https://journals.sagepub.com/doi/10.1177/030631277400400301"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Major Frameworks",
+      "title": "What happens inside a laboratory when scientists 'make' facts?",
+      "concepts": ["laboratory studies", "inscription devices", "credibility"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://press.princeton.edu/books/paperback/9780691028323/laboratory-life",
+        "https://mitpress.mit.edu/9780262621199/representing-and-intervening/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Major Frameworks",
+      "title": "Can you explain SCOT and ANT to a friend—and when to use each?",
+      "concepts": ["framework comparison", "analytical tools", "case application"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.jstor.org/stable/285546",
+        "https://www.bruno-latour.fr/node/258"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Major Frameworks",
+      "title": "Why does 'black-boxing' make technologies invisible—and powerful?",
+      "concepts": ["black-boxing", "stabilization", "technological momentum"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.hup.harvard.edu/catalog.php?isbn=9780674792913",
+        "https://mitpress.mit.edu/9780262621199/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Major Frameworks",
+      "title": "How do large technological systems shape—and resist—change?",
+      "concepts": ["technological systems", "path dependence", "lock-in"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://mitpress.mit.edu/9780262517607/",
+        "https://www.jstor.org/stable/3105385"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Major Frameworks",
+      "title": "Can you connect the foundations and major frameworks we've explored?",
+      "concepts": ["SCOT", "ANT", "determinism vs. construction"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://direct.mit.edu/books/edited-volume/3933/The-Handbook-of-Science-and-Technology-Studies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Critical Perspectives",
+      "title": "Why does science need feminist critique?",
+      "concepts": ["feminist STS", "situated knowledge", "standpoint theory"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/3178066",
+        "https://press.uchicago.edu/ucp/books/book/chicago/S/bo3773607.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Critical Perspectives",
+      "title": "What would it mean to be a cyborg—and why does Haraway want us to be one?",
+      "concepts": ["cyborg theory", "hybridity", "technofeminism"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://warwick.ac.uk/fac/arts/english/currentstudents/undergraduate/modules/fictionnow/manifestly_haraway/",
+        "https://www.routledge.com/The-Cyborg-Handbook/Gray-Mentor-Figueroa-Salas/p/book/9780415908498"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Critical Perspectives",
+      "title": "How has colonialism shaped what counts as 'legitimate' science?",
+      "concepts": ["postcolonial STS", "indigenous knowledge", "epistemic justice"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.dukeupress.edu/imperial-science",
+        "https://www.jstor.org/stable/j.ctt6wpw1w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Critical Perspectives",
+      "title": "Who gets to be an 'expert'—and who decides?",
+      "concepts": ["expertise", "public understanding of science", "citizen science"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://press.uchicago.edu/ucp/books/book/chicago/D/bo20903538.html",
+        "https://www.hup.harvard.edu/catalog.php?isbn=9780674979666"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Critical Perspectives",
+      "title": "How did ordinary sheep farmers become experts on radiation?",
+      "concepts": ["lay expertise", "local knowledge", "controversy analysis"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://journals.sagepub.com/doi/10.1177/030631296026004002",
+        "https://www.cambridge.org/core/books/misunderstanding-science/57B0E5F76AB0AA5DFAE6088FEAAFB2C4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Critical Perspectives",
+      "title": "What's your take on a current STS debate?",
+      "concepts": ["argumentation", "framework application", "critical analysis"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://journals.sagepub.com/home/sss",
+        "https://www.mitpressjournals.org/loi/daed"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Critical Perspectives",
+      "title": "How do critical perspectives reshape our understanding of expertise?",
+      "concepts": ["feminist STS", "postcolonial STS", "expertise"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://direct.mit.edu/books/edited-volume/3933/The-Handbook-of-Science-and-Technology-Studies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Contemporary Issues",
+      "title": "How do algorithms and AI embody social values and biases?",
+      "concepts": ["algorithmic bias", "platform governance", "data politics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://nyupress.org/9781479837243/algorithms-of-oppression/",
+        "https://weaponsofmathdestructionbook.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Contemporary Issues",
+      "title": "Why is climate change a perfect case study for STS?",
+      "concepts": ["environmental STS", "regulatory science", "co-production"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.hup.harvard.edu/catalog.php?isbn=9780674979666",
+        "https://yalebooks.yale.edu/book/9780300209365/merchants-doubt/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Contemporary Issues",
+      "title": "How can you map a technological controversy like GMOs or vaccines?",
+      "concepts": ["controversy mapping", "visualization", "stakeholder analysis"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://controversies.ouvaton.org/",
+        "https://www.medialab.sciences-po.fr/en/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Contemporary Issues",
+      "title": "What did the pandemic reveal about science, politics, and publics?",
+      "concepts": ["pandemic response", "trust in science", "politicization"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://journals.sagepub.com/home/pus",
+        "https://www.sciencedirect.com/journal/social-science-and-medicine"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Contemporary Issues",
+      "title": "How will you use STS thinking in your life and work?",
+      "concepts": ["STS practice", "critical analysis", "real-world application"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://web.mit.edu/sts/",
+        "https://journals.sagepub.com/home/sss"
+      ],
+      "status": "pending"
+    }
+  ]
+}

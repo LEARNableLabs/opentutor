@@ -1,0 +1,302 @@
+{
+  "topic": "Fractal Geometry",
+  "slug": "fractal-geometry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "calculus (limits, sequences, series)",
+    "basic complex numbers",
+    "metric spaces and topology basics",
+    "some exposure to iterative processes"
+  ],
+  "exit_criteria": [
+    "compute Hausdorff and box-counting dimensions for standard fractal sets",
+    "construct fractals using iterated function systems",
+    "analyze and visualize Mandelbrot and Julia sets",
+    "recognize self-similarity in natural and mathematical structures",
+    "explain the connection between fractals and dynamical systems",
+    "apply fractal concepts to model real-world phenomena"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to Fractals",
+      "title": "What makes a shape fractal?",
+      "concepts": ["self-similarity", "infinite detail", "fractional dimension"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.khanacademy.org/partner-content/mit-k12/mit-k12-math-and-engineering/mit-math/v/what-is-a-fractal-and-what-are-they-good-for"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to Fractals",
+      "title": "How can the Koch snowflake have infinite perimeter but finite area?",
+      "concepts": ["Koch curve", "iterative construction", "geometric series"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.khanacademy.org/math/geometry-home/geometry-volume-surface-area/koch-snowflake/v/koch-snowflake-fractal"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to Fractals",
+      "title": "Why does zooming into the Mandelbrot set reveal the same patterns?",
+      "concepts": ["exact self-similarity", "statistical self-similarity", "scaling"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://mandelbrot.site/", "https://fractalfoundation.org/resources/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Introduction to Fractals",
+      "title": "Can you explain the Sierpinski triangle to someone who's never seen it?",
+      "concepts": ["Sierpinski triangle", "removal construction", "recursive patterns"],
+      "difficulty": 1,
+      "type": "teach-back",
+      "resources": ["http://vivianriver.github.io/HTML5_Fractal_Playground/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Introduction to Fractals",
+      "title": "What do coastlines, broccoli, and snowflakes have in common?",
+      "concepts": ["fractals in nature", "scale invariance", "measurement paradox"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://fractalfoundation.org/resources/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Dimension Theory",
+      "title": "How can something have a dimension between 1 and 2?",
+      "concepts": ["fractional dimension", "topological vs fractal dimension", "dimension intuition"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.math.uh.edu/~climenha/doc/fractals.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Dimension Theory",
+      "title": "Why does the Cantor set have measure zero but uncountable points?",
+      "concepts": ["Cantor set", "nowhere dense sets", "perfect sets"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["http://www.issp.ac.ru/ebooks/books/open/Chaos_Fractal_Geometry.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Dimension Theory",
+      "title": "What patterns emerge when you review fractal constructions?",
+      "concepts": ["review: self-similarity", "review: iteration", "review: limits"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.freebookcentre.net/maths-books-download/Lecture-Notes-on-Fractal-Geometry.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Dimension Theory",
+      "title": "How do we calculate the dimension of the Koch curve?",
+      "concepts": ["similarity dimension", "scaling factor", "self-similar sets"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.math.uh.edu/~climenha/doc/fractals.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Dimension Theory",
+      "title": "What is the Hausdorff dimension and why does it matter?",
+      "concepts": ["Hausdorff measure", "Hausdorff dimension", "covering arguments"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.wiley.com/en-us/Fractal+Geometry:+Mathematical+Foundations+and+Applications,+3rd+Edition-p-9781119942399"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Dimension Theory",
+      "title": "How does box-counting give us another way to measure dimension?",
+      "concepts": ["box-counting dimension", "Minkowski dimension", "computational dimension"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://bimsa.net/doc/notes/37395.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Dimension Theory",
+      "title": "Can you teach back the relationship between different dimension definitions?",
+      "concepts": ["dimension comparison", "when definitions agree", "computational trade-offs"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.math.uh.edu/~climenha/doc/fractals.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Complex Dynamics",
+      "title": "What happens when we iterate a simple function on the complex plane?",
+      "concepts": ["complex iteration", "orbits", "escape to infinity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://sg.iwant2study.org/ospsg/index.php/interactive-resources/mathematics/690-e-julia-set"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Complex Dynamics",
+      "title": "Why is the Mandelbrot set called the most complex object in mathematics?",
+      "concepts": ["Mandelbrot set definition", "parameter space", "connectedness"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://mandel.gart.nz/", "https://visualize-it.github.io/mandelbrot_fractal/simulation.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Complex Dynamics",
+      "title": "Review: How do iteration, escape, and dimension connect?",
+      "concepts": ["review: iteration", "review: dimension", "synthesis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://simulations4all.com/simulations/mandelbrot-julia-explorer"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Complex Dynamics",
+      "title": "How does each point in the Mandelbrot set generate its own Julia set?",
+      "concepts": ["Julia sets", "parameter vs dynamical space", "filled Julia set"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://sg.iwant2study.org/ospsg/index.php/interactive-resources/mathematics/690-e-julia-set"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Complex Dynamics",
+      "title": "What beautiful structures emerge from exploring the Mandelbrot set?",
+      "concepts": ["mini-Mandelbrots", "seahorse valley", "infinite detail"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://mandelbrot.site/", "https://icefractal.com/", "http://vivianriver.github.io/HTML5_Fractal_Playground/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Complex Dynamics",
+      "title": "How do escape-time algorithms turn math into art?",
+      "concepts": ["escape-time coloring", "iteration count", "visualization techniques"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.zazow.com/mandelbrot/index.php"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Construction Methods",
+      "title": "Can you explain how Iterated Function Systems build fractals?",
+      "concepts": ["IFS", "affine transformations", "attractor sets"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.math.uh.edu/~climenha/doc/fractals.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Construction Methods",
+      "title": "Why does the Chaos Game always create the Sierpinski triangle?",
+      "concepts": ["random iteration", "probabilistic IFS", "convergence to attractor"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["http://vivianriver.github.io/HTML5_Fractal_Playground/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Construction Methods",
+      "title": "How do L-systems generate realistic plant structures?",
+      "concepts": ["L-systems", "grammar rules", "turtle graphics"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://fractalfoundation.org/resources/fractal-software/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Construction Methods",
+      "title": "What insights come from reviewing our construction toolkit?",
+      "concepts": ["review: IFS", "review: iteration methods", "review: convergence"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.freebookcentre.net/maths-books-download/Lecture-Notes-on-Fractal-Geometry.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applications and Extensions",
+      "title": "How do fractals compress images more efficiently than traditional methods?",
+      "concepts": ["fractal compression", "self-similarity encoding", "trade-offs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://fractalfoundation.org/resources/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applications and Extensions",
+      "title": "Why does the Mandelbrot set boundary have Hausdorff dimension 2?",
+      "concepts": ["boundary complexity", "dimension of boundaries", "research frontiers"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.wiley.com/en-us/Fractal+Geometry:+Mathematical+Foundations+and+Applications,+3rd+Edition-p-9781119942399"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applications and Extensions",
+      "title": "How do fractals model turbulence, clouds, and financial markets?",
+      "concepts": ["stochastic fractals", "multifractals", "power laws"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["http://www.issp.ac.ru/ebooks/books/open/Chaos_Fractal_Geometry.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Applications and Extensions",
+      "title": "What are the deepest open questions in fractal geometry?",
+      "concepts": ["research frontiers", "unsolved problems", "connections to other fields"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://bookstore.ams.org/view?ProductCode=STML/52"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications and Extensions",
+      "title": "Can you design a curriculum for teaching fractals to someone else?",
+      "concepts": ["synthesis", "pedagogical reflection", "concept connections"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://fractalfoundation.org/resources/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applications and Extensions",
+      "title": "How has your understanding of dimension and infinity evolved?",
+      "concepts": ["review: complete journey", "conceptual integration", "future directions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.classcentral.com/subject/fractal-geometry"],
+      "status": "pending"
+    }
+  ]
+}

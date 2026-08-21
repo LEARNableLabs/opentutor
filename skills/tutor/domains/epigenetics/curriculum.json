@@ -1,0 +1,376 @@
+{
+  "topic": "Epigenetics",
+  "slug": "epigenetics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "molecular biology basics",
+    "DNA structure and replication",
+    "gene expression fundamentals",
+    "basic genetics"
+  ],
+  "exit_criteria": [
+    "explain the major epigenetic mechanisms and how they regulate gene expression",
+    "distinguish between genetic and epigenetic inheritance",
+    "analyze how environmental factors influence epigenetic marks",
+    "understand epigenetic contributions to development, disease, and evolution",
+    "interpret epigenomic data from common experimental approaches",
+    "evaluate therapeutic strategies targeting the epigenome"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What does 'epi'-genetics actually mean?",
+      "concepts": ["epigenetic definition", "heritability", "reversibility"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/epigenetic-influences-and-disease-895/",
+        "https://www.genome.gov/genetics-glossary/Epigenetics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why can identical twins have different diseases?",
+      "concepts": ["genotype vs phenotype", "environmental influence", "epigenetic variation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2996547/",
+        "https://www.youtube.com/watch?v=kp1bZEUgqVI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "DNA Methylation",
+      "title": "How does adding a methyl group silence a gene?",
+      "concepts": ["DNA methylation", "CpG islands", "methyltransferases"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrg2719",
+        "https://www.khanacademy.org/science/biology/gene-regulation/gene-regulation-in-eukaryotes"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "DNA Methylation",
+      "title": "What happens when you remove methylation marks?",
+      "concepts": ["active demethylation", "TET enzymes", "5-hydroxymethylcytosine"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cell.com/cell/fulltext/S0092-8674(13)00533-4",
+        "https://www.youtube.com/watch?v=U47G_9Y9zLo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Chromatin Structure",
+      "title": "How does DNA pack into a nucleus without tangling?",
+      "concepts": ["nucleosomes", "histones", "chromatin hierarchy"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/chromatin-regulation-and-dynamics-123/",
+        "https://pdb101.rcsb.org/motm/7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Chromatin Structure",
+      "title": "Why does the histone code matter more than you'd think?",
+      "concepts": ["histone modifications", "acetylation", "methylation", "writers-readers-erasers"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cell.com/cell/fulltext/S0092-8674(07)00127-0",
+        "https://www.youtube.com/watch?v=7iAJYKglq4M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Chromatin Structure",
+      "title": "Can you connect methylation and chromatin states?",
+      "concepts": ["DNA methylation review", "histone code review", "chromatin states"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/nrg2005",
+        "https://ocw.mit.edu/courses/7-014-introductory-biology-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Chromatin Remodeling",
+      "title": "How do cells open tightly packed DNA when they need to?",
+      "concepts": ["chromatin remodeling complexes", "ATP-dependent remodelers", "nucleosome positioning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrm3011",
+        "https://www.ibiology.org/genetics-and-gene-regulation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Chromatin Remodeling",
+      "title": "Can you visualize open vs closed chromatin in real experiments?",
+      "concepts": ["ATAC-seq", "DNase-seq", "chromatin accessibility"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374986/",
+        "https://genome.ucsc.edu/",
+        "https://www.encodeproject.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Non-coding RNAs",
+      "title": "What role do RNAs play if they don't code for proteins?",
+      "concepts": ["non-coding RNAs", "microRNAs", "lncRNAs", "RNA-mediated silencing"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nrg3074",
+        "https://www.youtube.com/watch?v=JcAfY95K6QE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Non-coding RNAs",
+      "title": "How does Xist RNA silence an entire chromosome?",
+      "concepts": ["X-inactivation", "Xist lncRNA", "dosage compensation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3368247/",
+        "https://www.nature.com/articles/nature10530"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Genomic Imprinting",
+      "title": "Why does it matter which parent a gene comes from?",
+      "concepts": ["genomic imprinting", "parent-of-origin expression", "imprinting control regions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/scitable/topicpage/genomic-imprinting-and-parent-of-origin-effects-903/",
+        "https://www.cell.com/cell/fulltext/S0092-8674(01)00192-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Genomic Imprinting",
+      "title": "What happens when imprinting goes wrong?",
+      "concepts": ["Prader-Willi syndrome", "Angelman syndrome", "imprinting disorders"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK1144/",
+        "https://rarediseases.org/rare-diseases/prader-willi-syndrome/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Development",
+      "title": "How do chromatin remodeling, ncRNAs, and imprinting work together?",
+      "concepts": ["chromatin remodeling review", "ncRNA review", "imprinting review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/nrg2613",
+        "https://www.coursera.org/learn/genomic-technologies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Development",
+      "title": "How does a fertilized egg reprogram its epigenome?",
+      "concepts": ["epigenetic reprogramming", "zygotic genome activation", "primordial germ cells"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cell.com/cell/fulltext/S0092-8674(13)00024-0",
+        "https://www.youtube.com/watch?v=gdUCijN7h44"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Development",
+      "title": "Why can't we turn a skin cell back into an embryo easily?",
+      "concepts": ["cell fate commitment", "epigenetic barriers", "pluripotency"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nobelprize.org/prizes/medicine/2012/popular-information/",
+        "https://www.nature.com/articles/nature11285"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Development",
+      "title": "Teach me: How do stem cells maintain their identity?",
+      "concepts": ["stem cell epigenetics", "bivalent chromatin", "polycomb repression"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cell.com/stem-cell-reports/home",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2753503/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Environment and Inheritance",
+      "title": "Can your diet change your genes (or your grandkids' genes)?",
+      "concepts": ["environmental epigenetics", "nutritional effects", "Dutch Hunger Winter"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3923653/",
+        "https://www.youtube.com/watch?v=oEOrnqTEULM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Environment and Inheritance",
+      "title": "Is transgenerational epigenetic inheritance real or hype?",
+      "concepts": ["transgenerational inheritance", "germline epigenetics", "evidence and controversy"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.cell.com/cell/fulltext/S0092-8674(14)00288-1",
+        "https://www.nature.com/articles/s41576-020-0232-y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Disease",
+      "title": "How do cancer cells hijack the epigenome?",
+      "concepts": ["cancer epigenetics", "CpG island hypermethylation", "tumor suppressor silencing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrc2012",
+        "https://www.cancer.gov/about-cancer/causes-prevention/genetics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Disease",
+      "title": "How does epigenetic reprogramming connect development and disease?",
+      "concepts": ["reprogramming review", "environmental effects review", "cancer epigenetics review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/articles/nrg2005",
+        "https://www.genome.gov/about-genomics/educational-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Disease",
+      "title": "Why does Rett syndrome teach us so much about epigenetics?",
+      "concepts": ["MeCP2", "Rett syndrome", "methyl-CpG binding"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK1497/",
+        "https://www.cell.com/neuron/fulltext/S0896-6273(13)00915-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Therapeutics",
+      "title": "Can we drug the epigenome to treat disease?",
+      "concepts": ["epigenetic therapy", "DNMT inhibitors", "HDAC inhibitors"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nature.com/articles/nrd.2016.256",
+        "https://www.fda.gov/drugs/resources-information-approved-drugs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Therapeutics",
+      "title": "How would you design a targeted epigenome editor?",
+      "concepts": ["CRISPR-dCas9", "epigenome editing", "targeted modifications"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/nbt.3199",
+        "https://www.addgene.org/crispr/epigenome-editing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Methods",
+      "title": "Teach me: How do we map DNA methylation genome-wide?",
+      "concepts": ["bisulfite sequencing", "WGBS", "methylation arrays"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.illumina.com/techniques/sequencing/methylation-sequencing.html",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4255445/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Methods",
+      "title": "What can ChIP-seq tell us that other methods can't?",
+      "concepts": ["ChIP-seq", "histone marks mapping", "transcription factor binding"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/nprot.2012.101",
+        "https://www.encodeproject.org/chip-seq/",
+        "https://genome.ucsc.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Synthesis",
+      "title": "What is the epigenetic landscape and where is it heading?",
+      "concepts": ["integration", "mechanisms and function", "future directions"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nature.com/collections/jgjbgnhbjf",
+        "https://www.cell.com/trends/genetics/home",
+        "https://www.youtube.com/watch?v=_aAhcNjmvhc"
+      ],
+      "status": "pending"
+    }
+  ]
+}

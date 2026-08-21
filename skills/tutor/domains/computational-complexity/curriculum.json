@@ -1,0 +1,438 @@
+{
+  "topic": "Computational complexity — P, NP, and beyond",
+  "slug": "computational-complexity",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "discrete mathematics",
+    "data structures and algorithms",
+    "mathematical proofs",
+    "basic graph theory"
+  ],
+  "exit_criteria": [
+    "Classify problems into complexity classes (P, NP, PSPACE, EXP)",
+    "Prove NP-completeness using polynomial-time reductions",
+    "Explain why P vs NP matters for real-world computing",
+    "Analyze when approximation or randomization can bypass hardness",
+    "Understand the limits of current proof techniques (barriers)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do we need a formal model of computation?",
+      "concepts": ["Turing machines", "Church-Turing thesis", "computational models"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/",
+        "https://www.youtube.com/watch?v=dNRDvLACg5Q"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do we measure how hard a problem is?",
+      "concepts": ["time complexity", "space complexity", "asymptotic analysis"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/",
+        "https://theory.cs.princeton.edu/complexity/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What makes polynomial time special?",
+      "concepts": ["polynomial vs exponential growth", "efficient algorithms", "problem size"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.scottaaronson.com/blog/",
+        "https://complexityzoo.net/Complexity_Zoo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can you describe SAT as a decision problem?",
+      "concepts": ["decision problems", "languages", "encoding schemes"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "What complexity classes have we already been using?",
+      "concepts": ["complexity classes", "P definition", "closure properties"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://complexityzoo.net/Complexity_Zoo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review",
+      "title": "What are the foundational concepts of complexity theory?",
+      "concepts": ["Turing machines", "time complexity", "polynomial time", "decision problems", "complexity classes"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "The Classes P and NP",
+      "title": "Why is finding a solution sometimes easier than checking one?",
+      "concepts": ["verification vs computation", "certificates", "witnesses"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "The Classes P and NP",
+      "title": "What does it mean for a problem to be in NP?",
+      "concepts": ["NP definition", "nondeterministic Turing machines", "polynomial verifiers"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://www.claymath.org/millennium-problems/p-vs-np-problem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "The Classes P and NP",
+      "title": "Can you prove that CLIQUE is in NP?",
+      "concepts": ["NP membership proofs", "efficient verification", "graph problems"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "The Classes P and NP",
+      "title": "Why would P = NP change everything we know about computing?",
+      "concepts": ["P vs NP problem", "implications for cryptography", "one-way functions"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.claymath.org/millennium-problems/p-vs-np-problem",
+        "https://www.scottaaronson.com/blog/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "The Classes P and NP",
+      "title": "What do we believe about P vs NP, and why?",
+      "concepts": ["P vs NP belief", "evidence against equality", "philosophical implications"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.scottaaronson.com/papers/pnp.pdf",
+        "https://rjlipton.wpcomstaging.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The Classes P and NP",
+      "title": "Are there problems harder than anything in NP?",
+      "concepts": ["NP vs EXP", "complexity hierarchy preview", "undecidability boundary"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Review",
+      "title": "How do P and NP differ, and why does it matter?",
+      "concepts": ["P", "NP", "verification vs computation", "P vs NP problem"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "NP-Completeness",
+      "title": "What does it mean for one problem to reduce to another?",
+      "concepts": ["polynomial-time reductions", "reduction direction", "hardness transfer"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "NP-Completeness",
+      "title": "Why is SAT the hardest problem in NP?",
+      "concepts": ["NP-completeness", "Cook-Levin theorem", "universality"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "NP-Completeness",
+      "title": "Can you reduce 3SAT to CLIQUE?",
+      "concepts": ["reduction construction", "correctness proof", "gadgets"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "NP-Completeness",
+      "title": "Why are so many natural problems NP-complete?",
+      "concepts": ["NP-complete problems zoo", "Vertex Cover", "Hamiltonian Path", "Subset Sum"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/List_of_NP-complete_problems",
+        "https://complexityzoo.net/Complexity_Zoo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "NP-Completeness",
+      "title": "How do you prove a new problem is NP-complete?",
+      "concepts": ["reduction strategy", "choosing source problem", "two-step proof"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "NP-Completeness",
+      "title": "Can you show that SUBSET-SUM is NP-complete?",
+      "concepts": ["reduction from 3SAT", "numerical encodings", "reduction verification"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "NP-Completeness",
+      "title": "Why do we still solve NP-complete problems in practice?",
+      "concepts": ["average-case complexity", "SAT solvers", "heuristics", "special cases"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.scottaaronson.com/blog/",
+        "https://satcompetition.github.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Review",
+      "title": "Why is NP-completeness the central concept in complexity theory?",
+      "concepts": ["P", "NP", "NP-completeness", "reductions"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Beyond NP",
+      "title": "What if we want to verify that something is impossible?",
+      "concepts": ["coNP", "complements", "good characterizations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://complexityzoo.net/Complexity_Zoo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Beyond NP",
+      "title": "Why do games lead to harder complexity classes?",
+      "concepts": ["PSPACE", "alternating quantifiers", "game evaluation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Beyond NP",
+      "title": "Can you explain why TQBF is PSPACE-complete?",
+      "concepts": ["TQBF", "PSPACE-completeness", "quantified boolean formulas"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Beyond NP",
+      "title": "How does the polynomial hierarchy organize complexity?",
+      "concepts": ["polynomial hierarchy", "Σp and Πp", "hierarchy collapse"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://complexityzoo.net/Complexity_Zoo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Beyond NP",
+      "title": "What separations do we actually know?",
+      "concepts": ["time hierarchy theorem", "space hierarchy theorem", "known separations"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://lucatrevisan.github.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Review",
+      "title": "What complexity classes exist beyond NP?",
+      "concepts": ["coNP", "PSPACE", "polynomial hierarchy", "complexity separations"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Alternative Approaches",
+      "title": "What if we settle for almost-optimal solutions?",
+      "concepts": ["approximation algorithms", "approximation ratios", "PTAS"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://ocw.mit.edu/courses/6-854j-advanced-algorithms-fall-2008/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Alternative Approaches",
+      "title": "Can randomness make hard problems easy?",
+      "concepts": ["randomized complexity", "BPP", "RP", "derandomization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://www.scottaaronson.com/blog/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Alternative Approaches",
+      "title": "What makes some hard problems tractable in practice?",
+      "concepts": ["parameterized complexity", "fixed-parameter tractability", "kernelization"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Parameterized_complexity",
+        "https://complexityzoo.net/Complexity_Zoo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Alternative Approaches",
+      "title": "Could quantum computers solve NP-complete problems efficiently?",
+      "concepts": ["quantum complexity", "BQP", "Shor's algorithm", "BQP vs NP"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.scottaaronson.com/blog/",
+        "https://complexityzoo.net/Complexity_Zoo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Alternative Approaches",
+      "title": "What are the major open questions that could reshape complexity theory?",
+      "concepts": ["P vs NP implications", "barriers to separation", "future directions", "complexity frontiers"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.scottaaronson.com/blog/",
+        "https://rjlipton.wpcomstaging.com/",
+        "https://www.claymath.org/millennium-problems/p-vs-np-problem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Review",
+      "title": "How does complexity theory organize all computational problems?",
+      "concepts": ["complexity hierarchy", "reductions", "alternative models", "open problems"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "https://complexityzoo.net/Complexity_Zoo"
+      ],
+      "status": "pending"
+    }
+  ]
+}

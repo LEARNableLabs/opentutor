@@ -1,0 +1,517 @@
+{
+  "topic": "Music Theory \u2014 Harmony, Counterpoint, Form",
+  "slug": "music-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "music reading (treble and bass clefs)",
+    "intervals (major, minor, perfect)",
+    "major and minor scales",
+    "triads (major, minor, augmented, diminished)",
+    "basic rhythm and meter"
+  ],
+  "exit_criteria": [
+    "write four-part chorale harmonizations with proper voice leading",
+    "compose species counterpoint exercises in two and three parts",
+    "analyze chord progressions using Roman numeral notation",
+    "identify chromatic harmony including secondary dominants and borrowed chords",
+    "recognize and analyze binary, ternary, rondo, and sonata forms in scores",
+    "explain voice leading principles and resolve tendency tones correctly",
+    "compose short pieces demonstrating harmonic and contrapuntal techniques"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do some chord progressions feel inevitable?",
+      "concepts": [
+        "functional harmony",
+        "tonic-dominant axis",
+        "harmonic rhythm"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/",
+        "https://www.musictheory.net/lessons/40"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes a melody singable versus awkward?",
+      "concepts": [
+        "melodic motion",
+        "conjunct vs disjunct",
+        "melodic contour"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/30",
+        "https://teoria.com/en/tutorials/melody/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do seventh chords add tension?",
+      "concepts": [
+        "seventh chords",
+        "chord quality",
+        "tendency tones"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/42",
+        "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can you harmonize 'Twinkle, Twinkle, Little Star'?",
+      "concepts": [
+        "harmonization",
+        "chord selection",
+        "cadences"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.hooktheory.com/",
+        "https://sites.google.com/view/musicalharmonysite/online-tool"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Diatonic Harmony",
+      "title": "Why does I-IV-V-I feel like home?",
+      "concepts": [
+        "primary triads",
+        "tonal center",
+        "cadential motion"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.musictheory.net/lessons/43",
+        "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Diatonic Harmony",
+      "title": "What do the 'ii', 'iii', and 'vi' chords actually do?",
+      "concepts": [
+        "pre-dominant function",
+        "mediant chords",
+        "predominant-dominant"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/44",
+        "https://teoria.com/en/tutorials/roman-numerals/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Diatonic Harmony",
+      "title": "How does a deceptive cadence create surprise?",
+      "concepts": [
+        "cadence types",
+        "deceptive resolution",
+        "harmonic expectation"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.musictheory.net/lessons/45",
+        "https://www.youtube.com/c/AdamNeely"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Diatonic Harmony",
+      "title": "Why do inversions change the bass but not the function?",
+      "concepts": [
+        "chord inversions",
+        "figured bass",
+        "bass line motion"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/41",
+        "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Diatonic Harmony",
+      "title": "What's happening when non-chord tones decorate a melody?",
+      "concepts": [
+        "passing tones",
+        "neighbor tones",
+        "suspensions"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/52",
+        "https://teoria.com/en/tutorials/embellishments/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Diatonic Harmony",
+      "title": "Can you apply everything you've learned about diatonic harmony?",
+      "concepts": [
+        "harmonic analysis",
+        "part writing",
+        "cadential patterns"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.musictheory.net/exercises",
+        "https://hooktheory.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Voice Leading & Part Writing",
+      "title": "Why do parallel fifths sound hollow?",
+      "concepts": [
+        "parallel motion",
+        "voice independence",
+        "forbidden parallels"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.musictheory.net/lessons/46",
+        "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Voice Leading & Part Writing",
+      "title": "How do you keep four voices from crashing into each other?",
+      "concepts": [
+        "voice ranges",
+        "spacing",
+        "doubling"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/47",
+        "https://musescore.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Voice Leading & Part Writing",
+      "title": "What makes a voice leading solution smooth versus awkward?",
+      "concepts": [
+        "contrary motion",
+        "oblique motion",
+        "common tones"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/48",
+        "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Voice Leading & Part Writing",
+      "title": "Can you write a four-part chorale phrase?",
+      "concepts": [
+        "chorale style",
+        "soprano-bass framework",
+        "inner voices"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://musescore.org/",
+        "https://www.musictheory.net/exercises/keyboard"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Voice Leading & Part Writing",
+      "title": "How did Bach make chorales sound both simple and sophisticated?",
+      "concepts": [
+        "Bach chorale analysis",
+        "voice leading mastery",
+        "harmonic embellishment"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/",
+        "https://musescore.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Species Counterpoint",
+      "title": "Why did Fux teach counterpoint with such strict rules?",
+      "concepts": [
+        "species counterpoint",
+        "cantus firmus",
+        "pedagogical method"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://archive.org/details/BooksOnMusicTheoryHarmonyCounterpointOrchestrationinEnglishJazzToo",
+        "https://teoria.com/en/tutorials/counterpoint/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Species Counterpoint",
+      "title": "What makes first species counterpoint 'note-against-note'?",
+      "concepts": [
+        "first species",
+        "consonant intervals",
+        "melodic independence"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://teoria.com/en/tutorials/counterpoint/index.php",
+        "https://musescore.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Species Counterpoint",
+      "title": "How does second species add rhythmic interest?",
+      "concepts": [
+        "second species",
+        "dissonant passing tones",
+        "two-against-one"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://teoria.com/en/tutorials/counterpoint/index.php",
+        "https://archive.org/details/BooksOnMusicTheoryHarmonyCounterpointOrchestrationinEnglishJazzToo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Species Counterpoint",
+      "title": "Can you write a simple two-part invention?",
+      "concepts": [
+        "imitation",
+        "subject and answer",
+        "contrapuntal texture"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://musescore.org/",
+        "https://www.youtube.com/c/DrKatiMeyer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Chromatic Harmony",
+      "title": "How do secondary dominants borrow from other keys?",
+      "concepts": [
+        "secondary dominants",
+        "tonicization",
+        "applied chords"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.musictheory.net/lessons/54",
+        "https://ocw.mit.edu/courses/21m-302-harmony-and-counterpoint-ii-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Chromatic Harmony",
+      "title": "Why does modal mixture add color and emotion?",
+      "concepts": [
+        "borrowed chords",
+        "modal interchange",
+        "parallel major/minor"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/55",
+        "https://hooktheory.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Chromatic Harmony",
+      "title": "What makes a Neapolitan sixth chord sound exotic?",
+      "concepts": [
+        "Neapolitan sixth",
+        "chromatic pre-dominants",
+        "altered chords"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.musictheory.net/lessons/56",
+        "https://ocw.mit.edu/courses/21m-302-harmony-and-counterpoint-ii-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Chromatic Harmony",
+      "title": "How well do you understand chromatic harmony techniques?",
+      "concepts": [
+        "chromatic analysis",
+        "tonicization vs modulation",
+        "altered chord function"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.musictheory.net/exercises",
+        "https://hooktheory.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Chromatic Harmony",
+      "title": "How do you actually modulate to a new key?",
+      "concepts": [
+        "modulation techniques",
+        "pivot chords",
+        "direct modulation"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/57",
+        "https://ocw.mit.edu/courses/21m-302-harmony-and-counterpoint-ii-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Musical Form",
+      "title": "Why do phrases come in twos and fours?",
+      "concepts": [
+        "phrase structure",
+        "antecedent-consequent",
+        "periodic structure"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.musictheory.net/lessons/31",
+        "https://ocw.mit.edu/courses/21m-302-harmony-and-counterpoint-ii-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Musical Form",
+      "title": "What makes binary form feel complete despite being simple?",
+      "concepts": [
+        "binary form",
+        "AB structure",
+        "rounded binary"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/32",
+        "https://teoria.com/en/tutorials/forms/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Musical Form",
+      "title": "How does a minuet and trio create contrast within unity?",
+      "concepts": [
+        "ternary form",
+        "ABA structure",
+        "da capo"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.musictheory.net/lessons/33",
+        "https://ocw.mit.edu/courses/21m-302-harmony-and-counterpoint-ii-spring-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Musical Form",
+      "title": "Why is sonata form considered the crown jewel of classical music?",
+      "concepts": [
+        "sonata form",
+        "exposition-development-recapitulation",
+        "thematic transformation"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.musictheory.net/lessons/34",
+        "https://www.youtube.com/c/AdamNeely"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Musical Form",
+      "title": "Can you analyze a Mozart sonata movement?",
+      "concepts": [
+        "formal analysis",
+        "harmonic trajectory",
+        "thematic development"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://musescore.org/",
+        "https://ocw.mit.edu/courses/21m-302-harmony-and-counterpoint-ii-spring-2005/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "topic": "Fluid Dynamics",
+  "slug": "fluid-dynamics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "vector calculus",
+    "ordinary differential equations",
+    "basic physics (Newton's laws)"
+  ],
+  "exit_criteria": [
+    "derive and apply conservation laws to fluid problems",
+    "analyze potential flows and solve elementary flow problems",
+    "understand boundary layer theory and viscous effects",
+    "apply dimensional analysis to scale physical systems",
+    "recognize flow regimes and predict transitions",
+    "interpret Navier-Stokes equations and their simplifications"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fluid Fundamentals",
+      "title": "Why can we treat fluids as continuous when they're made of molecules?",
+      "concepts": ["continuum hypothesis", "fluid properties", "length scales"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/pages/lecture-notes/",
+        "https://www.khanacademy.org/science/physics/fluids"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fluid Fundamentals",
+      "title": "What's the difference between watching a particle versus watching a point in space?",
+      "concepts": ["Lagrangian description", "Eulerian description", "material derivative"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/user/minutephysics",
+        "https://www.grc.nasa.gov/www/k-12/airplane/move.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fluid Fundamentals",
+      "title": "How do streamlines differ from the path a particle actually takes?",
+      "concepts": ["streamlines", "pathlines", "streaklines", "steady flow"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.grc.nasa.gov/www/k-12/airplane/streamline.html",
+        "https://www.cfd-online.com/Wiki/Streamlines"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fluid Fundamentals",
+      "title": "Why does fluid acceleration depend on both time and position?",
+      "concepts": ["material derivative", "convective acceleration", "local acceleration"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Conservation Laws",
+      "title": "What does it mean for mass to be conserved in a flowing fluid?",
+      "concepts": ["conservation of mass", "continuity equation", "incompressibility"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/",
+        "https://www.khanacademy.org/science/physics/fluids/fluid-dynamics/v/what-is-bernoullis-equation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Fluid Fundamentals",
+      "title": "Review: Can you describe how fluids move and change?",
+      "concepts": ["continuum hypothesis", "Lagrangian vs Eulerian", "material derivative", "streamlines"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Conservation Laws",
+      "title": "What are the Navier-Stokes equations really saying?",
+      "concepts": ["Navier-Stokes equations", "viscous stress", "pressure gradient"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/3blue1brown",
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Conservation Laws",
+      "title": "When does Bernoulli's equation work and when does it fail?",
+      "concepts": ["Bernoulli equation", "energy conservation", "inviscid flow", "steady flow"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.grc.nasa.gov/www/k-12/airplane/bern.html",
+        "https://www.khanacademy.org/science/physics/fluids/fluid-dynamics/v/what-is-bernoullis-equation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Conservation Laws",
+      "title": "Why does vorticity matter in fluid flow?",
+      "concepts": ["vorticity", "circulation", "Kelvin's theorem", "rotational flow"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cfd-online.com/Wiki/Vorticity",
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Conservation Laws",
+      "title": "How do we derive momentum conservation for a fluid element?",
+      "concepts": ["momentum equation", "stress tensor", "body forces", "surface forces"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Inviscid Flow",
+      "title": "What happens when we ignore viscosity?",
+      "concepts": ["Euler equations", "inviscid flow", "irrotational flow"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cfd-online.com/Wiki/Euler_equations",
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Conservation Laws",
+      "title": "Review: Can you connect the dots from continuity to Navier-Stokes?",
+      "concepts": ["conservation laws", "equations of motion", "Navier-Stokes", "vorticity"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Inviscid Flow",
+      "title": "What do sources, sinks, and vortices have in common?",
+      "concepts": ["elementary flows", "superposition", "source flow", "vortex flow"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.grc.nasa.gov/www/k-12/airplane/potential.html",
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Inviscid Flow",
+      "title": "How do we build complex flows from simple building blocks?",
+      "concepts": ["doublet", "uniform flow", "flow past cylinder", "superposition principle"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cfd-online.com/Wiki/Flow_around_a_circular_cylinder",
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Inviscid Flow",
+      "title": "Why does potential flow predict zero drag on a cylinder?",
+      "concepts": ["d'Alembert's paradox", "inviscid paradox", "lift and drag"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cfd-online.com/Wiki/D'Alembert's_paradox",
+        "https://www.youtube.com/user/minutephysics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Inviscid Flow",
+      "title": "How can a scalar function describe a vector velocity field?",
+      "concepts": ["velocity potential", "Laplace equation", "potential flow"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/",
+        "https://www.cfd-online.com/Wiki/Potential_flow"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Viscous Flow & Boundary Layers",
+      "title": "What determines whether flow is laminar or turbulent?",
+      "concepts": ["Reynolds number", "flow regimes", "transition", "viscous forces"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.grc.nasa.gov/www/k-12/airplane/reynolds.html",
+        "https://www.khanacademy.org/science/physics/fluids"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Inviscid Flow",
+      "title": "Review: How does potential theory connect to real physical flows?",
+      "concepts": ["potential flow", "elementary solutions", "superposition", "limitations"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Viscous Flow & Boundary Layers",
+      "title": "How do we simplify Navier-Stokes for thin boundary layers?",
+      "concepts": ["boundary layer equations", "Prandtl equations", "order of magnitude analysis"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/",
+        "https://www.cfd-online.com/Wiki/Boundary_layer_equations"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Viscous Flow & Boundary Layers",
+      "title": "What causes drag on a real airplane wing?",
+      "concepts": ["skin friction drag", "pressure drag", "separation", "wake"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.grc.nasa.gov/www/k-12/airplane/drag1.html",
+        "https://www.youtube.com/user/minutephysics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Viscous Flow & Boundary Layers",
+      "title": "Why does viscosity matter most near surfaces?",
+      "concepts": ["boundary layer", "no-slip condition", "viscous sublayer", "Prandtl's insight"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.grc.nasa.gov/www/k-12/airplane/boundlay.html",
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Dimensional Analysis & Similarity",
+      "title": "How can we test a full-scale airplane using a tiny model?",
+      "concepts": ["dimensional analysis", "Buckingham Pi theorem", "similarity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.grc.nasa.gov/www/k-12/airplane/dimoan.html",
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Dimensional Analysis & Similarity",
+      "title": "What do all those dimensionless numbers really mean?",
+      "concepts": ["Reynolds number", "Froude number", "Mach number", "Weber number"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.cfd-online.com/Wiki/Dimensionless_numbers",
+        "https://www.grc.nasa.gov/www/k-12/airplane/reynolds.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Viscous Flow & Boundary Layers",
+      "title": "Review: How do we bridge inviscid theory and real viscous flows?",
+      "concepts": ["boundary layer theory", "viscous effects", "Reynolds number", "flow separation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Topics",
+      "title": "What happens when fluid speed approaches the speed of sound?",
+      "concepts": ["compressibility", "Mach number", "speed of sound", "subsonic vs supersonic"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.grc.nasa.gov/www/k-12/airplane/mach.html",
+        "https://www.grc.nasa.gov/www/k-12/airplane/sound.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Topics",
+      "title": "Why is turbulence still an unsolved problem?",
+      "concepts": ["turbulence", "chaos", "Reynolds decomposition", "energy cascade"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/user/minutephysics",
+        "https://www.cfd-online.com/Wiki/Turbulence"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "How do we model turbulence without solving every tiny eddy?",
+      "concepts": ["RANS equations", "turbulence modeling", "closure problem"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cfd-online.com/Wiki/Turbulence_modeling",
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Topics",
+      "title": "Where do you go from here in fluid dynamics?",
+      "concepts": ["research frontiers", "applications", "computational methods", "experimental techniques"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.annualreviews.org/journal/fluid",
+        "https://www.cfd-online.com/",
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

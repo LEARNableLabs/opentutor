@@ -1,0 +1,651 @@
+{
+  "topic": "Signal Processing",
+  "slug": "signal-processing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "calculus",
+    "linear algebra",
+    "basic probability",
+    "programming fundamentals"
+  ],
+  "exit_criteria": [
+    "analyze signals in both time and frequency domains",
+    "design and implement digital filters for practical applications",
+    "apply sampling theory to avoid aliasing in real systems",
+    "use FFT for spectral analysis",
+    "understand and use convolution for system analysis",
+    "choose appropriate transforms (Fourier, Laplace, Z) for different problems",
+    "work with time-frequency representations for non-stationary signals"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Signals and Systems Fundamentals",
+      "title": "What makes a signal different from just data?",
+      "concepts": [
+        "signal definition",
+        "continuous vs. discrete",
+        "signal energy and power"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/ch2.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Signals and Systems Fundamentals",
+      "title": "Why do we care if a system is linear?",
+      "concepts": [
+        "linearity",
+        "time-invariance",
+        "system properties"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/ch5.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Signals and Systems Fundamentals",
+      "title": "How does the impulse response reveal everything about a system?",
+      "concepts": [
+        "impulse function",
+        "impulse response",
+        "LTI systems"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "https://docs.scipy.org/doc/scipy/reference/signal.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Signals and Systems Fundamentals",
+      "title": "Can you build a guitar effects pedal using system theory?",
+      "concepts": [
+        "signal processing applications",
+        "real-time processing",
+        "system design"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ccrma.stanford.edu/~jos/pasp/",
+        "https://docs.scipy.org/doc/scipy/reference/signal.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fourier Analysis",
+      "title": "Why can we build any periodic signal from sines and cosines?",
+      "concepts": [
+        "Fourier series",
+        "basis functions",
+        "orthogonality"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=spUNpyF58BY",
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Signals and Systems Fundamentals",
+      "title": "Review: What have we learned about signals and systems?",
+      "concepts": [
+        "signal classification",
+        "system properties",
+        "LTI fundamentals"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Fourier Analysis",
+      "title": "What happens when we extend Fourier to non-periodic signals?",
+      "concepts": [
+        "Fourier transform",
+        "frequency domain",
+        "continuous spectra"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=spUNpyF58BY",
+        "http://www.dspguide.com/ch8.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Fourier Analysis",
+      "title": "How do computers actually compute the Fourier transform?",
+      "concepts": [
+        "DFT",
+        "FFT algorithm",
+        "computational complexity"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.fft.html",
+        "http://www.dspguide.com/ch12.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Fourier Analysis",
+      "title": "What does a voice recording look like in frequency space?",
+      "concepts": [
+        "spectral analysis",
+        "frequency interpretation",
+        "magnitude and phase"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html",
+        "https://seeing-theory.brown.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Fourier Analysis",
+      "title": "What does a voice recording look like in frequency space?",
+      "concepts": [
+        "spectral analysis",
+        "frequency interpretation",
+        "magnitude and phase"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html",
+        "https://seeing-theory.brown.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Fourier Analysis",
+      "title": "What are the key properties of the Fourier transform?",
+      "concepts": [
+        "Fourier series review",
+        "transform properties",
+        "frequency domain thinking"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sampling and Reconstruction",
+      "title": "Why can't we just sample a signal as fast as we want?",
+      "concepts": [
+        "sampling theorem",
+        "Nyquist rate",
+        "bandwidth"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/ch3.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sampling and Reconstruction",
+      "title": "Review: How does Fourier analysis reveal signal structure?",
+      "concepts": [
+        "aliasing",
+        "frequency folding",
+        "anti-aliasing filters"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "https://docs.scipy.org/doc/scipy/reference/signal.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sampling and Reconstruction",
+      "title": "How do you perfectly reconstruct a signal from samples?",
+      "concepts": [
+        "interpolation",
+        "reconstruction filters",
+        "sinc function"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/ch3.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Sampling and Reconstruction",
+      "title": "Why does digital audio use 44.1 kHz sampling?",
+      "concepts": [
+        "audio sampling",
+        "practical considerations",
+        "standards"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ccrma.stanford.edu/~jos/pasp/",
+        "http://www.dspguide.com/ch22.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sampling and Reconstruction",
+      "title": "How do different sampling rates affect signal quality?",
+      "concepts": [
+        "Nyquist theorem",
+        "aliasing prevention",
+        "reconstruction"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/ch3.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Convolution and LTI Systems",
+      "title": "What does it mean to convolve two signals?",
+      "concepts": [
+        "convolution operation",
+        "flip and slide",
+        "convolution integral"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/ch6.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Convolution and LTI Systems",
+      "title": "Why is convolution multiplication in the frequency domain?",
+      "concepts": [
+        "convolution theorem",
+        "frequency domain analysis",
+        "duality"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=spUNpyF58BY",
+        "http://www.dspguide.com/ch9.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Convolution and LTI Systems",
+      "title": "How does correlation differ from convolution?",
+      "concepts": [
+        "correlation",
+        "autocorrelation",
+        "cross-correlation"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html",
+        "http://www.dspguide.com/ch7.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Convolution and LTI Systems",
+      "title": "Review: Can you connect time and frequency perspectives?",
+      "concepts": [
+        "LTI review",
+        "time and frequency perspectives",
+        "system characterization"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Filtering",
+      "title": "What makes a filter 'digital' versus 'analog'?",
+      "concepts": [
+        "digital filters",
+        "analog filters",
+        "discretization"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/",
+        "http://www.dspguide.com/ch14.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Filtering",
+      "title": "Why would you choose FIR over IIR?",
+      "concepts": [
+        "FIR filters",
+        "IIR filters",
+        "design tradeoffs"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/",
+        "https://docs.scipy.org/doc/scipy/reference/signal.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Filtering",
+      "title": "How do you design a filter to remove 60 Hz hum?",
+      "concepts": [
+        "notch filters",
+        "bandstop design",
+        "filter specifications"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html",
+        "http://www.dspguide.com/ch16.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Filtering",
+      "title": "What is the frequency response of a filter?",
+      "concepts": [
+        "frequency response",
+        "magnitude response",
+        "phase response"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/",
+        "http://www.dspguide.com/ch15.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Filtering",
+      "title": "Can you explain filter design to a friend?",
+      "concepts": [
+        "filter design synthesis",
+        "practical implementation",
+        "teaching understanding"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Filtering",
+      "title": "What did we learn about can you design the right filter for any problem??",
+      "concepts": [
+        "filter types",
+        "FIR vs IIR",
+        "frequency response"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html",
+        "http://www.dspguide.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Transform Methods",
+      "title": "Review: What's your filtering toolkit?",
+      "concepts": [
+        "Laplace transform",
+        "complex frequency",
+        "transform selection"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/ch32.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Transform Methods",
+      "title": "What is the Z-transform and why does it matter?",
+      "concepts": [
+        "Z-transform",
+        "discrete-time analysis",
+        "poles and zeros"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/",
+        "http://www.dspguide.com/ch33.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Transform Methods",
+      "title": "How do poles and zeros determine system stability?",
+      "concepts": [
+        "stability analysis",
+        "pole-zero plots",
+        "system behavior"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/",
+        "https://docs.scipy.org/doc/scipy/reference/signal.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Transform Methods",
+      "title": "How do you choose between different transform domains?",
+      "concepts": [
+        "transform comparison",
+        "when to use what",
+        "unified perspective"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Time-Frequency Analysis",
+      "title": "Why can't Fourier analysis handle time-varying frequencies?",
+      "concepts": [
+        "time-frequency tradeoff",
+        "uncertainty principle",
+        "limitations"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html",
+        "http://www.dspguide.com/ch11.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Time-Frequency Analysis",
+      "title": "What can you see in a spectrogram?",
+      "concepts": [
+        "STFT",
+        "spectrograms",
+        "time-frequency representations"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.spectrogram.html",
+        "http://www.dspguide.com/ch9.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Time-Frequency Analysis",
+      "title": "How do wavelets overcome Fourier's time-frequency limitations?",
+      "concepts": [
+        "wavelet transforms",
+        "multi-resolution analysis",
+        "adaptive representations"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html",
+        "http://www.dspguide.com/ch8.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Time-Frequency Analysis",
+      "title": "Review: How do transforms solve different problems?",
+      "concepts": [
+        "real-world analysis",
+        "signal detection",
+        "practical applications"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html",
+        "https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 35,
+      "module": "Time-Frequency Analysis",
+      "title": "How would you build a real-time audio equalizer?",
+      "concepts": [
+        "real-time processing",
+        "filter banks",
+        "system integration"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ccrma.stanford.edu/~jos/pasp/",
+        "https://docs.scipy.org/doc/scipy/reference/signal.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 36,
+      "module": "Integration and Applications",
+      "title": "Can you extract the heartbeat from a noisy ECG signal?",
+      "concepts": [
+        "signal analysis pipeline",
+        "filtering + frequency analysis",
+        "practical constraints"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://docs.scipy.org/doc/scipy/reference/signal.html",
+        "https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 37,
+      "module": "Integration and Applications",
+      "title": "What did we learn about what's your signal processing toolkit??",
+      "concepts": [
+        "unified framework",
+        "transform selection",
+        "practical workflow"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+        "http://www.dspguide.com/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,355 @@
+{
+  "topic": "Topology — from coffee cups to knot invariants",
+  "slug": "topology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "linear algebra",
+    "basic set theory",
+    "proof techniques"
+  ],
+  "exit_criteria": [
+    "explain why a coffee cup and donut are the same topologically",
+    "classify closed surfaces by genus and orientability",
+    "compute the fundamental group of simple spaces",
+    "distinguish knots using polynomial invariants",
+    "recognize topological properties preserved under continuous deformation",
+    "apply topological thinking to real-world problems in physics and biology"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Why Shape Doesn't Always Matter",
+      "title": "Why is a coffee cup the same as a donut?",
+      "concepts": ["homeomorphism", "continuous deformation", "topological equivalence"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://lavalle.pl/planning/node130.html",
+        "https://medium.com/@andrew-muratov/why-a-coffee-cup-is-the-same-as-a-donut-mathematically-8964a82d4612"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Why Shape Doesn't Always Matter",
+      "title": "What makes a space 'topological'?",
+      "concepts": ["topological space", "open sets", "axioms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Why Shape Doesn't Always Matter",
+      "title": "Can you build a topology from scratch?",
+      "concepts": ["basis", "subbasis", "topology generation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Why Shape Doesn't Always Matter",
+      "title": "What does 'nearby' mean without distance?",
+      "concepts": ["neighborhoods", "limit points", "closure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.math.colostate.edu/~renzo/teaching/Topology10/Notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Why Shape Doesn't Always Matter",
+      "title": "When are two topologies 'basically the same'?",
+      "concepts": ["finer topology", "coarser topology", "comparison"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Rubber Sheet Geometry",
+      "title": "What makes a function 'continuous' topologically?",
+      "concepts": ["continuous functions", "preimage", "open map"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Rubber Sheet Geometry",
+      "title": "Review: Building intuition with examples",
+      "concepts": ["topological spaces", "continuous functions", "homeomorphisms"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://mathatlas.app/topology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Rubber Sheet Geometry",
+      "title": "How do we formalize 'rubber sheet deformation'?",
+      "concepts": ["homeomorphism", "bijection", "continuous inverse"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://proofwiki.org/wiki/Coffee_Mug_and_Doughnut_are_Homeomorphic"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Rubber Sheet Geometry",
+      "title": "Can you prove two spaces are NOT homeomorphic?",
+      "concepts": ["topological invariants", "connectedness", "compactness"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.math.colostate.edu/~renzo/teaching/Topology10/Notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Rubber Sheet Geometry",
+      "title": "What does 'connected' really mean?",
+      "concepts": ["connected spaces", "path-connected", "components"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Rubber Sheet Geometry",
+      "title": "Why can't you escape a compact space?",
+      "concepts": ["compactness", "open cover", "finite subcover"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The Universe of Surfaces",
+      "title": "How many holes does a surface have?",
+      "concepts": ["genus", "torus", "sphere"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathatlas.app/topology",
+        "https://www.brianwoody.com/topology-explained/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Universe of Surfaces",
+      "title": "Review: Homeomorphisms and invariants",
+      "concepts": ["homeomorphism", "topological invariants", "connectedness", "compactness"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://mathatlas.app/topology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "The Universe of Surfaces",
+      "title": "Can you turn a sphere inside out?",
+      "concepts": ["orientability", "Möbius strip", "Klein bottle"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-900-geometry-and-topology-in-the-plane-spring-2023/",
+        "https://mathatlas.app/topology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "The Universe of Surfaces",
+      "title": "What's the Euler characteristic hiding?",
+      "concepts": ["Euler characteristic", "triangulation", "V - E + F"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-900-geometry-and-topology-in-the-plane-spring-2023/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "The Universe of Surfaces",
+      "title": "How do we classify ALL closed surfaces?",
+      "concepts": ["classification theorem", "connected sum", "normal form"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Paths and Loops",
+      "title": "What can loops tell us about a space?",
+      "concepts": ["loop", "homotopy", "fundamental group"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/pages/lecture-notes/",
+        "https://math.uchicago.edu/~may/REU2014/REUPapers/Linov.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Paths and Loops",
+      "title": "How do you 'multiply' two paths?",
+      "concepts": ["path composition", "group structure", "inverse paths"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Paths and Loops",
+      "title": "Review: Surfaces and algebraic thinking",
+      "concepts": ["genus", "orientability", "fundamental group"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://mathatlas.app/topology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Paths and Loops",
+      "title": "What's the fundamental group of a circle? A sphere?",
+      "concepts": ["π₁(S¹)", "simply connected", "covering spaces"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Paths and Loops",
+      "title": "How does algebra capture topology?",
+      "concepts": ["algebraic topology", "functoriality", "homomorphism"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Tangled Mysteries",
+      "title": "What makes a knot different from a circle?",
+      "concepts": ["knot", "embedding", "ambient isotopy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Knot_theory",
+        "https://graphics.stanford.edu/courses/cs468-02-fall/projects/desanti.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Tangled Mysteries",
+      "title": "Can you tell if two knot diagrams show the same knot?",
+      "concepts": ["knot diagram", "Reidemeister moves", "knot equivalence"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://mathatlas.app/topology",
+        "https://pubs.ams.org/ebooks/car/024"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Tangled Mysteries",
+      "title": "What invariants can distinguish knots?",
+      "concepts": ["knot invariants", "tricolorability", "linking number"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://math.uchicago.edu/~may/REU2015/REUPapers/Adkisson",
+        "https://pubs.ams.org/ebooks/car/024"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Tangled Mysteries",
+      "title": "Review: From surfaces to knots",
+      "concepts": ["genus", "fundamental group", "knot invariants"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://mathatlas.app/topology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Tangled Mysteries",
+      "title": "How do polynomials untangle knots?",
+      "concepts": ["Alexander polynomial", "Jones polynomial", "skein relations"],
+      "difficulty": 5,
+      "type": "resource-drop",
+      "resources": [
+        "https://cambridge.org/us/academic/subjects/mathematics/geometry-and-topology/introduction-vassiliev-knot-invariants",
+        "https://pubs.ams.org/ebooks/car/024"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Tangled Mysteries",
+      "title": "Where does topology appear in the real world?",
+      "concepts": ["DNA topology", "quantum field theory", "applications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Knot_theory",
+        "https://cambridge.org/us/academic/subjects/mathematics/geometry-and-topology/introduction-vassiliev-knot-invariants"
+      ],
+      "status": "pending"
+    }
+  ]
+}

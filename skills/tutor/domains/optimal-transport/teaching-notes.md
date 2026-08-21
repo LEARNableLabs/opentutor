@@ -1,92 +1,135 @@
-# Teaching Notes — Optimal Transport
+# Optimal Transport — Teaching Notes
 
-## Student Profile
+## Approach
 
-- **Name:** gcg
-- **Background:** Researcher, applied math
-- **Level:** Advanced
-- **Intensity:** Deep (15+ min lessons)
-- **Prerequisites:** Solid — measure theory, linear algebra, probability, optimization, Python
+Optimal transport sits at the intersection of analysis, geometry, probability, and computation — teach it as a **toolkit with both theoretical elegance and practical power**. For intermediate students, prioritize **intuition before rigor**: start with discrete examples and visualizations, build geometric understanding through Wasserstein distances, then layer in measure-theoretic foundations. The curriculum follows a "concrete → abstract → computational" arc: discrete transport (accessible, computational) → continuous formulation (measure theory) → geometric structure (Wasserstein space) → modern algorithms (Sinkhorn, ML applications). Balance proofs with examples; every theorem should come with a 1D or discrete illustration.
 
-## Module-by-Module Pedagogy
+## Common Misconceptions
 
-### Module 1: Foundations (Days 1-6)
+1. **"Optimal transport maps always exist"** — Students forget that Monge's problem can fail when mass needs to split. Correction: Show discrete example where a single source must split to multiple targets. Emphasize that Kantorovich's genius was allowing probabilistic splitting via couplings.
 
-**Approach:** Start physical, get abstract. The dirt-pile metaphor carries the first 3 lessons.
+2. **"A transport plan is just a transport map"** — Students conflate the two. Correction: Transport map = deterministic function T (measure over graph), transport plan = coupling γ (joint measure). Every map induces a plan γ = (id × T)#μ, but not every plan comes from a map. Use the example: uniform on {0,1} to δ_{0.5} has no map (splits mass) but an obvious plan.
 
-- **Day 1:** Don't start with math. Start with Monge's actual problem — moving earth. Use the Williams blog post visuals. Only introduce the cost function after the intuition is clear.
-- **Day 2:** The key insight is that Kantorovich's relaxation is NOT just a generalization — it's a fundamentally different object (plans vs maps). Use the "splitting dirt" analogy.
-- **Day 3:** Duality is the first hard lesson. Since gcg has optimization background, connect to LP duality they already know. c-transforms are the new concept.
-- **Day 4:** Relief day. 1-D OT is satisfying because it has a closed-form answer. Use POT to verify by hand.
-- **Day 5:** Wasserstein vs KL is the comparison that sticks. Show KL divergence breaking on non-overlapping supports while Wasserstein handles it gracefully.
-- **Day 6:** Hands-on review. First POT notebook. Build confidence before structural theory.
+3. **"Wasserstein distance depends on which transport you use"** — Students think different transports give different distances. Correction: W_p is uniquely defined as the *infimum* over all transports. Once you solve the optimization, the distance is determined.
 
-**Common struggle:** Duality (Day 3). Students often memorize the dual without understanding what it means. Spend extra time on the "price" interpretation.
+4. **"Duality is just a trick for existence proofs"** — Students miss that dual potentials have economic meaning (prices) and computational value (Sinkhorn uses them). Correction: Frame duality as revealing hidden structure, not just a technical tool. Connect to linear programming duality, economics (equilibrium prices).
 
-### Module 2: Structure (Days 7-10)
+5. **"c-cyclical monotonicity is the same as cyclical monotonicity"** — Students forget the cost function c matters. Correction: For quadratic cost c(x,y) = |x-y|²/2, c-cyclical monotonicity reduces to standard monotonicity in 1D and convexity of the potential. Different costs give different geometry.
 
-**Approach:** This is the mathematical core. Given gcg's background, go for full proofs but emphasize geometric intuition.
+6. **"Entropic regularization changes the problem"** — Students think Sinkhorn solves a different problem than OT. Correction: It's an approximation with explicit trade-off: smaller ε → closer to true OT, but slower convergence. The limit as ε→0 recovers exact OT.
 
-- **Day 7:** Brenier's theorem — the payoff of duality. "Optimal maps are gradients of convex functions" is beautiful but needs unpacking. Use 2D examples.
-- **Day 8:** Monge-Ampère is a PDE that most people have never seen. Connect to the Jacobian equation which is more familiar.
-- **Day 9:** Displacement interpolation is visually stunning. Use animations/videos. This is a "mind-blowing" day.
-- **Day 10:** Abstract but foundational. This sets up gradient flows. Don't rush.
+7. **"Geodesics in Wasserstein space are unique"** — Students assume displacement interpolation always yields a unique path. Correction: Uniqueness holds when one measure is absolutely continuous (Brenier), but can fail otherwise (e.g., discrete to discrete).
 
-**Common struggle:** Day 10 (metric space theory). Can feel dry. Motivate with "this is why we can do calculus on probability distributions."
+8. **"The JKO scheme is just implicit Euler"** — Students miss the geometry. Correction: JKO is implicit Euler in Wasserstein space, not Euclidean space. The distance is W_2, not L². This changes everything about the gradient flow.
 
-### Module 3: Computation (Days 11-16)
+9. **"Optimal transport only works for probability measures"** — Students think normalization is essential. Correction: Kantorovich formulation works for any measures with equal total mass. Unbalanced OT drops even that constraint.
 
-**Approach:** Theory-to-code. Every algorithm should be implemented.
+10. **"Sinkhorn is an approximation algorithm"** — Students think it's heuristic. Correction: Sinkhorn solves the entropy-regularized problem *exactly* (in the limit of iterations). It's not approximate; it solves a different (regularized) problem exactly.
 
-- **Day 12:** Sinkhorn is THE lesson. Cuturi's 2013 paper is readable — assign it in full. Implement Sinkhorn from scratch before using POT.
-- **Day 13:** Debiasing is subtle. Use numerical examples showing the bias.
-- **Day 16:** Full workshop day. Build something real.
+## Level Adjustments
 
-**Suggested analogies:**
-- Sinkhorn = "alternating row/column normalization until convergence" — start with this before the theory
-- Sliced Wasserstein = "project to 1D, solve the easy problem, average over directions"
+**For intermediate students** (this curriculum):
+- Assume measure theory basics (σ-algebras, Radon-Nikodym) but review push-forward and absolute continuity
+- State Brenier's theorem, sketch proof idea, work through 1D Gaussian example
+- Present Otto calculus as "formal Riemannian geometry" — emphasize intuition, don't require manifold theory rigor
+- Focus on W_2 metric (most common in applications), mention W_1 and W_∞ briefly
+- Implement Sinkhorn algorithm; skip analysis of convergence rates
+- Cover gradient flow perspective on Fokker-Planck; skip full gradient flow theory
 
-### Module 4: Dynamics (Days 17-20)
+**Compared to undergraduate level**:
+- Add measure-theoretic formulation (undergrads would stay discrete or assume densities)
+- Include duality theory (undergrads might skip or just state the dual)
+- Cover geometric structure (Wasserstein space as Riemannian) — undergrads stop at metric
+- Include computational complexity and entropic regularization — undergrads focus on small examples
 
-**Approach:** This is where OT gets deep. gcg's applied math background is an asset here.
+**Compared to advanced graduate level**:
+- Skip regularity theory for optimal maps (Caffarelli, Figalli)
+- Skip martingale OT, multi-marginal OT, unbalanced OT (mention as extensions)
+- Don't prove full Brenier theorem (require only sketch + 1D case)
+- Don't dive into Γ-convergence for JKO or full gradient flow analysis
+- Mention but don't develop: OT on Riemannian manifolds, stability theory
 
-- **Day 18:** Otto calculus — the "Wasserstein space is Riemannian" lesson. This is mind-blowing for anyone with differential geometry intuition.
-- **Day 19:** JKO scheme is THE connection between OT and PDEs. "Heat equation = gradient flow of entropy" is the punchline of the module.
+## Rabbit Holes (When to Drop Fascinating Tangents)
 
-**Common struggle:** The formal/informal divide. Otto calculus is "formal" (not rigorous). Students with strong analysis backgrounds sometimes resist this. Acknowledge it, point to AGS for rigor.
+### Monge-Ampère Equation
+**When:** After Brenier's theorem (Lesson 10)
+**What:** The optimal map T(x) = x + ∇φ(x) for quadratic cost satisfies the Monge-Ampère PDE det(D²φ) = ρ/σ(T). This connects OT to nonlinear PDEs.
+**Why fascinating:** Links geometry, analysis, PDEs. Regularity of solutions (Caffarelli, Figalli) won Fields Medal work.
 
-### Module 5: Extensions (Days 21-23)
+### Wasserstein GANs
+**When:** ML applications (Lesson 26)
+**What:** GANs trained using Wasserstein distance instead of KL divergence. Helps with mode collapse, training stability.
+**Why fascinating:** Brought OT from pure math to mainstream deep learning (2017). Still active research area.
 
-**Approach:** These are variations on the theme. Lighter intensity.
+### Otto's Heat Flow
+**When:** Gradient flows (Lesson 21)
+**What:** Heat equation is gradient flow of entropy in W_2 space. Explains why Gaussian is fixed point, why solutions converge to equilibrium.
+**Why fascinating:** Reformulating classical PDEs as geometry in infinite dimensions. Beautiful and powerful.
 
-- **Day 21:** Unbalanced OT — very practical. "What if the masses don't match?" is a real data problem.
-- **Day 22:** Gromov-Wasserstein — "comparing apples and oranges." Cross-domain is where this shines.
+### Gromov-Wasserstein Distance
+**When:** After Wasserstein distance (Lesson 17-18)
+**What:** OT between metric measure spaces with *different* underlying spaces. Align spaces while transporting.
+**Why fascinating:** Used in shape matching, graph comparison, transfer learning across domains.
 
-### Module 6: ML Applications (Days 24-28)
+### Schrödinger Bridge Problem
+**When:** After entropic regularization (Lesson 24)
+**What:** Dynamic formulation: find most likely path of particles transforming one distribution to another, subject to entropy constraint.
+**Why fascinating:** Connects stochastic control, large deviations, quantum mechanics. Sinkhorn algorithm solves it.
 
-**Approach:** Paper-reading mode. Each lesson centers on a key paper.
+### Optimal Transport for Data Science
+**When:** Applications (Lesson 27)
+**What:** Distribution comparison, clustering, dimensionality reduction, color transfer, data augmentation.
+**Why fascinating:** Practical toolkit for data scientists. Python POT library makes it accessible.
 
-- **Day 24:** WGANs — start with "why JS divergence is broken" then show how Wasserstein fixes it.
-- **Day 26:** Flow matching — the most modern application. Connect to diffusion models.
-- **Day 28:** Project day. Student picks an application and implements it.
+### Brenier vs McCann
+**When:** Displacement interpolation (Lesson 19)
+**What:** Brenier's theorem: existence + characterization. McCann: interpolation along geodesics preserves important properties (convexity, etc.).
+**Why fascinating:** McCann's displacement convexity connects to Ricci curvature bounds, optimal transport inequalities.
 
-### Module 7: Frontiers (Days 29-30)
+## Difficulty Progression
 
-**Approach:** Survey mode. Show the landscape, not the details.
+The curriculum follows this difficulty profile:
 
-## Exercise Design
+**Lessons 1-5 (Module 1):** Gentle start (difficulty 1-2). Discrete OT, linear programming, real-world examples. Build intuition, computational confidence.
 
-- **Days 1-6:** Conceptual questions + simple computations by hand + first POT notebook
-- **Days 7-10:** Proof exercises (sketch proofs, verify conditions)
-- **Days 11-16:** Implementation exercises (code from scratch, then verify with library)
-- **Days 17-20:** "Derive and interpret" exercises
-- **Days 21-23:** "Compare and contrast" exercises
-- **Days 24-28:** Paper reading + implementation exercises
-- **Days 29-30:** Open-ended exploration
+**Lessons 6-11 (Module 2):** Ramp up (difficulty 3-4). Continuous formulation, measure theory appears. Brenier's theorem is first peak. Review at lesson 11 consolidates.
 
-## Adaptation Triggers
+**Lessons 12-16 (Module 3):** Sustained challenge (difficulty 3-4). Duality theory is abstract but rewarding. Review at lesson 16 before geometry module.
 
-- If gcg breezes through Module 1 → compress to 4 lessons, move duality earlier
-- If gcg struggles with duality → add an extra day between Day 3 and 4
-- If gcg is more interested in ML → front-load Module 6, interleave with computation
-- If gcg wants more rigor → point to Villani (2009) chapters for each lesson
+**Lessons 17-22 (Module 4):** Mixed (difficulty 2-5). W_2 metric accessible (difficulty 2-3), but Otto calculus and gradient flows hit peak difficulty (5). Review at lesson 22 crucial.
+
+**Lessons 23-28 (Module 5):** Resolution phase (difficulty 3-4). Computational focus brings difficulty back to manageable. Sinkhorn is challenging but concrete. Final review (lesson 28) ties everything together.
+
+### Pacing Recommendations
+
+- Spend extra time on Lesson 8 (map vs plan) — foundational distinction
+- Lesson 12 (duality) may need two sessions — it's dense
+- Lessons 20-21 (Otto calculus, gradient flows) are the hardest — expect struggle, offer lots of examples
+- Lesson 25 (Sinkhorn implementation) is a great "reward" after theoretical heavy lifting
+- Build in flex time after each review lesson for catch-up or deeper dives
+
+## Cross-Disciplinary Connections
+
+- **Economics:** Matching markets, equilibrium prices, Kantorovich potentials as market prices
+- **Computer Graphics:** Color transfer, texture synthesis, shape interpolation
+- **Machine Learning:** GANs, domain adaptation, generative modeling, fairness
+- **PDEs:** Gradient flows, Fokker-Planck, porous medium equation
+- **Differential Geometry:** Riemannian geometry, geodesics, curvature
+- **Probability:** Coupling methods, convergence of measures, central limit theorem
+- **Operations Research:** Assignment problems, transportation networks, logistics
+
+## Assessment Ideas
+
+- **Computational:** Implement discrete OT solver, Sinkhorn algorithm, visualize transports
+- **Theoretical:** Prove Brenier's theorem for 1D case, verify duality for discrete problem
+- **Applied:** Use OT library to compare real datasets, implement Wasserstein GAN variant
+- **Conceptual:** Explain map vs plan to a peer, connect gradient flows to heat equation
+
+## Resources for Extension
+
+Point students toward:
+- **POT (Python Optimal Transport)** library for hands-on projects
+- **Gabriel Peyré's course notes** for computational focus
+- **Villani's "Optimal Transport: Old and New"** for the full monograph (warning: 1000 pages!)
+- **Filippo Santambrogio's book** for applied mathematicians
+- **Computational OT papers** for state-of-the-art algorithms

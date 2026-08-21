@@ -1,0 +1,489 @@
+{
+  "topic": "Remote Sensing and Satellite Imagery",
+  "slug": "remote-sensing",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic physics (electromagnetic waves)",
+    "elementary statistics",
+    "basic programming (any language)",
+    "GIS fundamentals (projections, coordinate systems)"
+  ],
+  "exit_criteria": [
+    "student can explain how different sensors capture Earth data and select appropriate sensors for specific applications",
+    "student can preprocess satellite imagery (radiometric and geometric corrections)",
+    "student can perform spectral analysis and calculate vegetation indices",
+    "student can classify land cover using supervised and unsupervised methods",
+    "student can detect changes over time using multi-temporal imagery",
+    "student can access and process real satellite data using open-source tools"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Remote Sensing",
+      "title": "How do satellites see the Earth without touching it?",
+      "concepts": [
+        "electromagnetic radiation",
+        "remote sensing definition",
+        "energy-matter interactions"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Remote Sensing",
+      "title": "Why does a leaf look green from space?",
+      "concepts": [
+        "spectral reflectance",
+        "electromagnetic spectrum",
+        "spectral signatures"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://earthobservatory.nasa.gov/features/MeasuringVegetation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Remote Sensing",
+      "title": "What happens to sunlight before it reaches a satellite sensor?",
+      "concepts": [
+        "atmospheric scattering",
+        "absorption",
+        "atmospheric windows"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Remote Sensing",
+      "title": "Can you identify a material just by its spectral signature?",
+      "concepts": [
+        "spectral libraries",
+        "reflectance curves",
+        "material identification"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://speclib.jpl.nasa.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Remote Sensing",
+      "title": "How do we measure energy that never touches a thermometer?",
+      "concepts": [
+        "radiance",
+        "irradiance",
+        "radiometric quantities"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/landsat-missions/landsat-collection-2-level-1-data"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations of Remote Sensing",
+      "title": "Review: How does remote sensing work?",
+      "concepts": [
+        "electromagnetic radiation",
+        "spectral signatures",
+        "atmospheric effects",
+        "radiometric quantities"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Sensors and Platforms",
+      "title": "What's the difference between a camera and a satellite sensor?",
+      "concepts": [
+        "passive sensors",
+        "active sensors",
+        "sensor components"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://earth.esa.int/eogateway/instruments"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Sensors and Platforms",
+      "title": "Why do some satellites see hundreds of colors while others see only a few?",
+      "concepts": [
+        "multispectral imaging",
+        "hyperspectral imaging",
+        "spectral bands"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.usgs.gov/landsat-missions/landsat-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Sensors and Platforms",
+      "title": "How can radar see through clouds when cameras can't?",
+      "concepts": [
+        "synthetic aperture radar",
+        "microwave remote sensing",
+        "all-weather imaging"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://earth.esa.int/eogateway/missions/sentinel-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Sensors and Platforms",
+      "title": "Why do weather satellites and land satellites orbit differently?",
+      "concepts": [
+        "geostationary orbit",
+        "sun-synchronous orbit",
+        "orbital mechanics"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://earthobservatory.nasa.gov/features/OrbitsCatalog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Sensors and Platforms",
+      "title": "Meet the workhorses: what makes Landsat and Sentinel so valuable?",
+      "concepts": [
+        "Landsat program",
+        "Sentinel missions",
+        "mission continuity"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.usgs.gov/landsat-missions",
+        "https://sentinel.esa.int/web/sentinel/missions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sensors and Platforms",
+      "title": "How does LiDAR measure the height of every tree in a forest?",
+      "concepts": [
+        "LiDAR",
+        "active remote sensing",
+        "3D point clouds"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanservice.noaa.gov/facts/lidar.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Image Properties and Quality",
+      "title": "What do we mean when we say an image has 10-meter resolution?",
+      "concepts": [
+        "spatial resolution",
+        "pixel size",
+        "ground sample distance"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Image Properties and Quality",
+      "title": "Review: Foundations and Sensors",
+      "concepts": [
+        "spectral signatures",
+        "sensor types",
+        "orbital parameters"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Image Properties and Quality",
+      "title": "Why can't one satellite do everything?",
+      "concepts": [
+        "resolution tradeoffs",
+        "temporal resolution",
+        "spectral resolution"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.earthdata.nasa.gov/sensors"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Image Properties and Quality",
+      "title": "How do we measure the signal buried in noisy satellite data?",
+      "concepts": [
+        "signal-to-noise ratio",
+        "radiometric resolution",
+        "quantization"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/landsat-missions/landsat-collection-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Image Properties and Quality",
+      "title": "What causes those weird striping patterns in satellite images?",
+      "concepts": [
+        "sensor artifacts",
+        "banding",
+        "image quality assessment"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.usgs.gov/landsat-missions/landsat-data-quality"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Processing and Correction",
+      "title": "Why doesn't raw satellite data match what we expect to see?",
+      "concepts": [
+        "digital numbers",
+        "radiometric calibration",
+        "at-sensor radiance"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/landsat-missions/using-usgs-landsat-level-1-data-product"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Processing and Correction",
+      "title": "How do we remove the atmosphere from satellite images?",
+      "concepts": [
+        "atmospheric correction",
+        "surface reflectance",
+        "dark object subtraction"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-reflectance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Processing and Correction",
+      "title": "Why do mountains appear slanted in satellite imagery?",
+      "concepts": [
+        "geometric distortion",
+        "terrain displacement",
+        "orthorectification"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Processing and Correction",
+      "title": "Review: Image Properties and Preprocessing",
+      "concepts": [
+        "resolution types",
+        "calibration",
+        "atmospheric correction"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://step.esa.int/main/doc/tutorials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Processing and Correction",
+      "title": "Can you build a processing pipeline for Sentinel-2 data?",
+      "concepts": [
+        "processing workflows",
+        "SNAP toolbox",
+        "batch processing"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://step.esa.int/main/toolboxes/snap/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Analysis and Classification",
+      "title": "How can a simple ratio tell us about plant health?",
+      "concepts": [
+        "spectral indices",
+        "NDVI",
+        "vegetation monitoring"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://earthobservatory.nasa.gov/features/MeasuringVegetation/measuring_vegetation_2.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Analysis and Classification",
+      "title": "What happens when we let algorithms find patterns without our help?",
+      "concepts": [
+        "unsupervised classification",
+        "k-means clustering",
+        "ISODATA"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://developers.google.com/earth-engine/guides/clustering"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Analysis and Classification",
+      "title": "How do we train a computer to recognize forests vs. cities?",
+      "concepts": [
+        "supervised classification",
+        "training samples",
+        "accuracy assessment"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://developers.google.com/earth-engine/guides/classification"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Analysis and Classification",
+      "title": "Review: Processing and Classification Methods",
+      "concepts": [
+        "spectral indices",
+        "classification algorithms",
+        "accuracy"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://docs.qgis.org/latest/en/docs/training_manual/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Analysis and Classification",
+      "title": "How can we detect deforestation by comparing images from different years?",
+      "concepts": [
+        "change detection",
+        "image differencing",
+        "multi-temporal analysis"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://developers.google.com/earth-engine/tutorials/tutorial_forest_02"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Real-World Applications",
+      "title": "Can satellites help predict crop yields before harvest?",
+      "concepts": [
+        "precision agriculture",
+        "crop monitoring",
+        "yield estimation"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://earthobservatory.nasa.gov/features/GlobalFoodProduction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Real-World Applications",
+      "title": "Where will you apply remote sensing next?",
+      "concepts": [
+        "application domains",
+        "project design",
+        "data selection"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://worldview.earthdata.nasa.gov/",
+        "https://apps.sentinel-hub.com/eo-browser/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

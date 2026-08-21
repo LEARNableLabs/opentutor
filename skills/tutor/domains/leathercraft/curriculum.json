@@ -1,0 +1,347 @@
+{
+  "topic": "Leathercraft — tooling, dyeing, and pattern design",
+  "slug": "leathercraft",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic hand-sewing techniques",
+    "leather types and characteristics",
+    "tool safety fundamentals",
+    "simple project completion (wallet, card holder, or similar)"
+  ],
+  "exit_criteria": [
+    "design and execute custom carved patterns using bevelers, shaders, and backgrounders",
+    "achieve consistent dye gradients and antiquing effects on tooled leather",
+    "draft original patterns from scratch with proper seam allowances and structural considerations",
+    "integrate tooling, dyeing, and custom patterns into a complete intermediate-level project"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Tooling Foundations",
+      "title": "Why does wet leather hold a carved impression?",
+      "concepts": ["case hardening", "fiber compression", "moisture control"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://tandyleather.com/pages/leather-library",
+        "https://www.youtube.com/c/LeatherHub"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Tooling Foundations",
+      "title": "What makes a swivel knife cut clean instead of ragged?",
+      "concepts": ["blade angle", "swivel knife technique", "tracing transfer"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/ChuckDorsett",
+        "https://leathercraftmasterclass.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Tooling Foundations",
+      "title": "How do bevelers create the illusion of depth?",
+      "concepts": ["beveling technique", "tool angles", "light and shadow"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/CorterLeather",
+        "https://tandyleather.com/pages/leather-library"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Tooling Foundations",
+      "title": "How do you practice beveling on a simple leaf pattern?",
+      "concepts": ["beveling practice", "pressure control", "tool sequencing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.rmleathersupply.com/",
+        "https://www.youtube.com/c/LeatherHub"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Tooling Foundations",
+      "title": "Why does backgrounding make the design pop?",
+      "concepts": ["backgrounding", "figure-ground contrast", "stamp selection"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://tandyleather.com/pages/leather-library",
+        "https://www.youtube.com/c/ChuckDorsett"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Carving & Stamping",
+      "title": "What did you learn from your first carved sample?",
+      "concepts": ["process review", "error analysis", "technique refinement"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://leatherworker.net/",
+        "https://www.reddit.com/r/Leathercraft/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Carving & Stamping",
+      "title": "How do you shade a carved flower petal realistically?",
+      "concepts": ["pear shader technique", "graduated shading", "organic forms"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/ChuckDorsett",
+        "https://leathercraftmasterclass.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Carving & Stamping",
+      "title": "What's the difference between Sheridan-style and floral carving?",
+      "concepts": ["carving styles", "traditional motifs", "design language"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://tandyleather.com/pages/leather-library",
+        "https://www.weaverleathersupply.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Carving & Stamping",
+      "title": "How do you design a simple floral border?",
+      "concepts": ["motif creation", "symmetry", "border composition"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://districtleathersupply.com/",
+        "https://www.youtube.com/c/LeatherHub"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Carving & Stamping",
+      "title": "Why do some stamps create texture while others create lines?",
+      "concepts": ["stamp categories", "geometric stamping", "texture building"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.rmleathersupply.com/",
+        "https://tandyleather.com/pages/leather-library"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Carving & Stamping",
+      "title": "How do you plan tool sequencing for a complex design?",
+      "concepts": ["workflow planning", "layering order", "tool efficiency"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/ChuckDorsett",
+        "https://leathercraftmasterclass.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Dyeing Mastery",
+      "title": "Is your carving ready for dyeing?",
+      "concepts": ["quality control", "carving assessment", "preparation for dyeing"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.reddit.com/r/Leathercraft/",
+        "https://leatherworker.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Dyeing Mastery",
+      "title": "Why do spirit dyes and water-based dyes behave so differently?",
+      "concepts": ["dye chemistry", "alcohol vs water carriers", "absorption rates"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.weaverleathersupply.com/",
+        "https://www.youtube.com/c/CorterLeather"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Dyeing Mastery",
+      "title": "How do you prevent dye from bleeding into carved highlights?",
+      "concepts": ["resist techniques", "dye control", "application methods"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/LeatherHub",
+        "https://leathercraftmasterclass.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Dyeing Mastery",
+      "title": "How do you create a three-color gradient on scrap leather?",
+      "concepts": ["gradient technique", "color blending", "dauber control"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/CorterLeather",
+        "https://www.weaverleathersupply.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Dyeing Mastery",
+      "title": "What makes antiquing bring out carved details?",
+      "concepts": ["antiquing technique", "depth enhancement", "wiping technique"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://tandyleather.com/pages/leather-library",
+        "https://www.youtube.com/c/ChuckDorsett"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Dyeing Mastery",
+      "title": "Can you explain your dye and finish process?",
+      "concepts": ["process documentation", "troubleshooting", "knowledge consolidation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.reddit.com/r/Leathercraft/",
+        "https://leatherworker.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Pattern Design",
+      "title": "Why do patterns need seam allowances and how do you calculate them?",
+      "concepts": ["seam allowances", "construction planning", "measurement precision"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://districtleathersupply.com/",
+        "https://www.weaverleathersupply.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Pattern Design",
+      "title": "What are the most common pattern mistakes and how do you avoid them?",
+      "concepts": ["error prevention", "grain direction", "fit issues"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.reddit.com/r/Leathercraft/",
+        "https://leathercraftmasterclass.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Pattern Design",
+      "title": "How do you adapt a pattern for different leather thicknesses?",
+      "concepts": ["pattern scaling", "thickness compensation", "structural adaptation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/c/LeatherHub",
+        "https://districtleathersupply.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Pattern Design",
+      "title": "How do you draft a simple card holder pattern from scratch?",
+      "concepts": ["pattern drafting", "dimensions planning", "digital tools"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://districtleathersupply.com/",
+        "https://www.weaverleathersupply.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Pattern Design",
+      "title": "Where should decorative tooling go on a functional piece?",
+      "concepts": ["design placement", "functional aesthetics", "visual balance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/c/CorterLeather",
+        "https://leathercraftmasterclass.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration & Artistry",
+      "title": "How do you plan a project combining tooling, dyeing, and custom pattern?",
+      "concepts": ["project integration", "workflow synthesis", "design-to-execution"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/c/CorterLeather",
+        "https://www.youtube.com/c/LeatherHub",
+        "https://districtleathersupply.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration & Artistry",
+      "title": "What separates a competent project from an exceptional one?",
+      "concepts": ["craftsmanship standards", "finishing quality", "design cohesion"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://leathercraftmasterclass.com/",
+        "https://www.youtube.com/c/ChuckDorsett"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration & Artistry",
+      "title": "What did you learn in your intermediate leathercraft journey?",
+      "concepts": ["skills assessment", "portfolio review", "next steps"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.reddit.com/r/Leathercraft/",
+        "https://leatherworker.net/",
+        "https://tandyleather.com/pages/leather-library"
+      ],
+      "status": "pending"
+    }
+  ]
+}

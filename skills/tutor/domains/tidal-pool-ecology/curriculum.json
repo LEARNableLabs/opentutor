@@ -1,0 +1,333 @@
+{
+  "topic": "Tidal Pool Ecology",
+  "slug": "tidal-pool-ecology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic ecology (trophic levels, competition, predation)",
+    "general biology (cell structure, physiology basics)",
+    "scientific method and hypothesis testing"
+  ],
+  "exit_criteria": [
+    "explain zonation patterns using physical and biological mechanisms",
+    "predict organism distributions based on environmental gradients",
+    "design field experiments to test ecological hypotheses in intertidal systems",
+    "evaluate conservation strategies for rocky intertidal communities",
+    "connect tidal pool ecology to broader ecological theory"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Physical Environment & Tidal Forces",
+      "title": "Why does the ocean rise and fall twice a day?",
+      "concepts": ["tidal cycles", "gravitational forcing", "tidal range"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanservice.noaa.gov/education/tutorial_tides/tides01_intro.html",
+        "https://www.youtube.com/watch?v=pwChk4S99i4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Physical Environment & Tidal Forces",
+      "title": "How long can a barnacle survive out of water?",
+      "concepts": ["emersion time", "exposure gradients", "vertical zonation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://oceanservice.noaa.gov/facts/intertidal-zone.html",
+        "https://www.montereybayaquarium.org/animals-and-exhibits/live-web-cams"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Physical Environment & Tidal Forces",
+      "title": "What turns a tide pool into a cooking pot at midday?",
+      "concepts": ["temperature extremes", "solar heating", "thermal stress"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://jeb.biologists.org/content/209/15/2813",
+        "https://www.youtube.com/watch?v=3_oDLEeDJKQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Physical Environment & Tidal Forces",
+      "title": "Why does salinity swing wildly in a high pool?",
+      "concepts": ["salinity fluctuations", "evaporation", "osmotic stress"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.marinebio.org/creatures/facts/tide-pools/",
+        "https://tidepool.org/education"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Zonation Patterns",
+      "title": "Why do barnacles live higher than mussels?",
+      "concepts": ["vertical zonation", "indicator species", "zone boundaries"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.smithsonianmag.com/science-nature/understanding-tide-pools-180976096/",
+        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.2307/1934717"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Zonation Patterns",
+      "title": "What makes a crevice a different world from open rock?",
+      "concepts": ["microhabitat heterogeneity", "refuges", "microclimates"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.inaturalist.org/guides/9087",
+        "https://www.youtube.com/watch?v=dW9NqGJpkYY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Zonation Patterns",
+      "title": "Can you map a tide pool's zones just by looking?",
+      "concepts": ["zone identification", "field observation", "pattern recognition"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.montereybayaquarium.org/animals/habitats/rocky-shore",
+        "https://serc.si.edu/labs/marine-invasions/research/monitoring"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Zonation Patterns",
+      "title": "Review: Physical Drivers and Zonation",
+      "concepts": ["tidal cycles", "thermal stress", "zonation patterns", "microhabitats"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://oceanservice.noaa.gov/education/tutorial_tides/welcome.html",
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology/v/ecological-communities"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Physiological Adaptations",
+      "title": "How does a limpet seal its shell to survive low tide?",
+      "concepts": ["desiccation resistance", "behavioral adaptations", "shell morphology"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.calacademy.org/explore-science/tide-pool-adaptations",
+        "https://www.youtube.com/watch?v=kBGJpN1NJDk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Physiological Adaptations",
+      "title": "What happens inside a mussel when the temperature hits 35°C?",
+      "concepts": ["heat shock proteins", "thermal tolerance", "cellular stress"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://jeb.biologists.org/content/211/17/2689",
+        "https://www.nature.com/articles/nclimate1876"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Physiological Adaptations",
+      "title": "Why don't tide pool animals drink the water around them?",
+      "concepts": ["osmoregulation", "osmoconformers", "ion balance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.marinebio.org/creatures/facts/osmoregulation/",
+        "https://opentext.wsu.edu/biology/chapter/marine-adaptations/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Physiological Adaptations",
+      "title": "How does a sea anemone grip a rock in crashing waves?",
+      "concepts": ["attachment strength", "wave force", "biomechanics"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://jeb.biologists.org/content/206/8/1331",
+        "https://www.youtube.com/watch?v=yzbfuI0PMdA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Physiological Adaptations",
+      "title": "Which adaptations can you spot in a field guide?",
+      "concepts": ["morphological adaptations", "field identification", "comparative anatomy"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.inaturalist.org/",
+        "https://www.montereybayaquarium.org/-/m/pdf/education/field-guide.pdf",
+        "https://naturemappingfoundation.org/natmap/maps/wa/tide_pool/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Community Interactions",
+      "title": "What did Connell's barnacles teach us about competition?",
+      "concepts": ["interspecific competition", "competitive exclusion", "realized vs fundamental niche"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.2307/1948498",
+        "https://www.nature.com/scitable/knowledge/library/intertidal-communities-13236541/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Community Interactions",
+      "title": "Review: Adaptations and Niche Segregation",
+      "concepts": ["physiological adaptations", "competition", "zonation mechanisms"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology/v/niches-and-competition",
+        "https://oceanservice.noaa.gov/education/lessons/intertidal_zonation.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Community Interactions",
+      "title": "Why does removing one sea star collapse an entire community?",
+      "concepts": ["keystone species", "trophic cascades", "predation pressure"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.journals.uchicago.edu/doi/10.1086/282400",
+        "https://www.youtube.com/watch?v=0WOw3zsoqBU"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Community Interactions",
+      "title": "How does algal canopy create a home for others?",
+      "concepts": ["facilitation", "ecosystem engineers", "habitat modification"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9658(1997)078[1958:PEACAS]2.0.CO;2",
+        "https://www.nature.com/scitable/knowledge/library/community-ecology-13228159/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Community Interactions",
+      "title": "Can you diagram a tide pool food web?",
+      "concepts": ["food webs", "trophic structure", "energy flow"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.marinebio.org/creatures/facts/food-webs/",
+        "https://oceanservice.noaa.gov/education/lessons/food_web.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Community Interactions",
+      "title": "What happens when grazing stops in a tide pool?",
+      "concepts": ["top-down control", "herbivory", "algal blooms"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.annualreviews.org/doi/abs/10.1146/annurev.es.11.110180.001121",
+        "https://www.youtube.com/watch?v=UvW_13HGB3s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Disturbance, Change & Conservation",
+      "title": "Does moderate wave action actually increase diversity?",
+      "concepts": ["intermediate disturbance hypothesis", "patch dynamics", "succession"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.journals.uchicago.edu/doi/10.1086/282519",
+        "https://www.nature.com/scitable/knowledge/library/the-intermediate-disturbance-hypothesis-the-role-96039254/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Disturbance, Change & Conservation",
+      "title": "Why do larval recruits settle in some years but not others?",
+      "concepts": ["recruitment variation", "larval supply", "oceanographic forcing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9658(2003)084[0028:LSATRV]2.0.CO;2",
+        "https://www.youtube.com/watch?v=G0LqDQqrqIc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Disturbance, Change & Conservation",
+      "title": "Review: Community Dynamics and Change",
+      "concepts": ["keystone species", "disturbance", "recruitment", "succession"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology/a/ecological-succession",
+        "https://oceanservice.noaa.gov/education/tutorial_corals/coral07_importance.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Disturbance, Change & Conservation",
+      "title": "How are marine heatwaves reshaping rocky shores?",
+      "concepts": ["climate change", "range shifts", "thermal stress events"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.science.org/doi/10.1126/science.aba9983",
+        "https://www.nature.com/articles/nclimate1876"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Disturbance, Change & Conservation",
+      "title": "Does protecting tide pools from harvesting actually work?",
+      "concepts": ["marine protected areas", "conservation effectiveness", "human impacts"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.annualreviews.org/doi/abs/10.1146/annurev.ecolsys.38.091206.095632",
+        "https://www.montereybayaquarium.org/conservation-and-science/our-priorities/ocean-conservation"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "topic": "Arachnology — spider biology and silk science",
+  "slug": "arachnology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": ["basic biology", "chemistry fundamentals", "evolution and natural selection"],
+  "exit_criteria": [
+    "student can identify major spider body systems and explain their function",
+    "student can describe the molecular basis of silk properties and relate structure to function",
+    "student can analyze spider behaviors in terms of evolutionary trade-offs",
+    "student can explain how spider adaptations solve specific ecological challenges",
+    "student can connect spider biology to biomimetic applications"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Spider Fundamentals",
+      "title": "What makes a spider different from an insect?",
+      "concepts": ["arachnid characteristics", "body plan", "Chelicerata"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://www.amnh.org/explore/ology/zoology/spiders"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Spider Fundamentals",
+      "title": "How do spiders move without extensor muscles?",
+      "concepts": ["hydraulic locomotion", "hemolymph pressure", "joint mechanics"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://ucmp.berkeley.edu/arthropoda/arachnida/spiders.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Spider Fundamentals",
+      "title": "Why do spiders molt and how does it work?",
+      "concepts": ["ecdysis", "exoskeleton growth", "developmental stages"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.burkemuseum.org/collections-and-research/biology/arachnology-and-entomology"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Spider Fundamentals",
+      "title": "What can you learn from a spider's body shape?",
+      "concepts": ["morphological diversity", "ecological niches", "functional anatomy"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://australian.museum/learn/animals/spiders/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Sensory Biology and Behavior",
+      "title": "How do spiders sense the world without good vision?",
+      "concepts": ["mechanoreception", "trichobothria", "vibration detection"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=DGIR1iKLd8I"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Sensory Biology and Behavior",
+      "title": "Why do jumping spiders have such large eyes?",
+      "concepts": ["visual acuity", "principal eyes", "prey tracking"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.nationalgeographic.com/animals/invertebrates/facts/jumping-spiders"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Sensory Biology and Behavior",
+      "title": "How do a spider's body and senses work together?",
+      "concepts": ["anatomy review", "sensory integration", "adaptation patterns"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.amnh.org/explore/ology/zoology/spiders"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Sensory Biology and Behavior",
+      "title": "How does a web-building spider know when prey is caught?",
+      "concepts": ["signal transmission", "web vibrations", "sensory filtering"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.youtube.com/watch?v=8hZl3arO7SU"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Sensory Biology and Behavior",
+      "title": "Why are some spiders social when most are solitary?",
+      "concepts": ["social behavior", "cooperative hunting", "kin selection"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.science.org/doi/10.1126/science.1154228"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Silk Science",
+      "title": "What are spider silk glands and how many types exist?",
+      "concepts": ["silk gland types", "spinneret anatomy", "gland specialization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/spider-silk"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Silk Science",
+      "title": "How can spider silk be stronger than steel yet so lightweight?",
+      "concepts": ["material properties", "tensile strength", "protein structure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.nature.com/articles/nmat4855"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Silk Science",
+      "title": "What is spidroin and why does its structure matter?",
+      "concepts": ["spidroin proteins", "amino acid composition", "molecular organization"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.rcsb.org/structure/3LR2"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Silk Science",
+      "title": "How does liquid protein become solid fiber inside a spider?",
+      "concepts": ["spinning process", "pH gradient", "shear forces", "phase transition"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.pnas.org/doi/10.1073/pnas.1509558112"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Silk Science",
+      "title": "How does silk go from molecules to functional fibers?",
+      "concepts": ["silk synthesis", "structure-function", "material science"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/spider-silk"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Silk Science",
+      "title": "Why do orb webs have different silk types in different parts?",
+      "concepts": ["web architecture", "silk specialization", "engineering trade-offs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=DoW_Yb-B4Ew"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Silk Science",
+      "title": "What silk functions have nothing to do with webs?",
+      "concepts": ["dragline silk", "egg sacs", "sperm webs", "ballooning"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.britannica.com/animal/spider-arachnid/Behaviour"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Ecology and Evolution",
+      "title": "How did venom evolve and what does it do?",
+      "concepts": ["venom evolution", "neurotoxins", "prey immobilization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5565586/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Ecology and Evolution",
+      "title": "Why do male spiders risk getting eaten during mating?",
+      "concepts": ["sexual selection", "sexual cannibalism", "reproductive strategies"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.annualreviews.org/doi/10.1146/annurev-ento-010814-020620"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Ecology and Evolution",
+      "title": "How have spiders conquered nearly every habitat on Earth?",
+      "concepts": ["adaptive radiation", "habitat diversity", "physiological tolerance"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.biodiversitylibrary.org/bibliography/6870"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Ecology and Evolution",
+      "title": "What explains the incredible diversity of hunting strategies?",
+      "concepts": ["foraging ecology", "convergent evolution", "trade-off analysis"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://academic.oup.com/beheco"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Ecology and Evolution",
+      "title": "What evolutionary patterns explain spider ecological success?",
+      "concepts": ["evolutionary patterns", "ecological niches", "adaptation synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://ucmp.berkeley.edu/arthropoda/arachnida/spiders.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Applied Arachnology",
+      "title": "How are scientists trying to make synthetic spider silk?",
+      "concepts": ["biomimetics", "recombinant proteins", "fiber spinning technology"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.science.org/doi/10.1126/science.aaf3531"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applied Arachnology",
+      "title": "Why are spiders important for agriculture?",
+      "concepts": ["biological control", "ecosystem services", "integrated pest management"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.annualreviews.org/doi/10.1146/annurev.ento.51.110104.151142"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Applied Arachnology",
+      "title": "What medical breakthroughs have come from spider venom?",
+      "concepts": ["pharmacology", "drug development", "neuroscience tools"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.nature.com/articles/nrd.2017.104"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Applied Arachnology",
+      "title": "Synthesis: What has studying spiders taught us about evolution, materials, and behavior?",
+      "concepts": ["interdisciplinary connections", "evolutionary principles", "future directions"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.amnh.org/explore/ology/zoology/spiders"],
+      "status": "pending"
+    }
+  ]
+}

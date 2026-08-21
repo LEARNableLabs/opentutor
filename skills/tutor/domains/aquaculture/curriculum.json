@@ -1,0 +1,341 @@
+{
+  "topic": "Aquaculture and fisheries science",
+  "slug": "aquaculture",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic ecology",
+    "population biology",
+    "introductory economics"
+  ],
+  "exit_criteria": [
+    "student can explain stock assessment methods and interpret fisheries data",
+    "student can compare aquaculture systems and their sustainability trade-offs",
+    "student can analyze fisheries management policies using ecological and economic frameworks",
+    "student can evaluate seafood sustainability using certification standards",
+    "student can connect climate change impacts to fisheries adaptation strategies"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Marine Ecosystems",
+      "title": "Why do we care about fish populations at all?",
+      "concepts": ["fisheries value", "protein supply", "ecosystem services"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fao.org/state-of-fisheries-aquaculture",
+        "https://www.fishwatch.gov/sustainable-seafood/the-journey-from-water-to-plate"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Marine Ecosystems",
+      "title": "How does energy flow through a marine food web?",
+      "concepts": ["trophic levels", "energy transfer", "food web structure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://oceanservice.noaa.gov/facts/food-web.html",
+        "https://www.fishbase.se/manual/english/fishbasethe_food_items_table.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Marine Ecosystems",
+      "title": "What makes a fish population grow or shrink?",
+      "concepts": ["population dynamics", "recruitment", "mortality", "growth"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.fisheries.noaa.gov/national/science-data/introduction-fisheries-science",
+        "https://www.ramlegacy.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Marine Ecosystems",
+      "title": "How do we count fish we can't see?",
+      "concepts": ["stock assessment", "catch data", "survey methods", "abundance indices"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.fisheries.noaa.gov/topic/population-assessments",
+        "https://repository.library.noaa.gov/view/noaa/3169"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Wild Fisheries Management",
+      "title": "What happens when we fish too hard?",
+      "concepts": ["overfishing", "stock collapse", "surplus production"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fisheries.noaa.gov/insight/understanding-overfishing",
+        "https://www.worldbank.org/en/topic/environment/brief/the-sunken-billions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Wild Fisheries Management",
+      "title": "Review: Can you explain to a friend how fish populations work?",
+      "concepts": ["population dynamics review", "stock assessment review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.fishbase.se/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Wild Fisheries Management",
+      "title": "How much can we catch without destroying the fishery?",
+      "concepts": ["maximum sustainable yield", "precautionary principle", "reference points"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fisheries.noaa.gov/insight/fishery-management-101",
+        "https://www.ices.dk/data/assessment-tools/Pages/default.aspx"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Wild Fisheries Management",
+      "title": "Why do fishers fight over quota allocations?",
+      "concepts": ["quota systems", "ITQs", "allocation methods", "common pool resources"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.perc.org/2015/02/19/catch-shares-in-action/",
+        "https://www.fisheries.noaa.gov/topic/fishing-quota-programs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Wild Fisheries Management",
+      "title": "What are we killing besides the target fish?",
+      "concepts": ["bycatch", "ecosystem-based management", "trophic cascades"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.fisheries.noaa.gov/topic/bycatch",
+        "https://www.worldwildlife.org/threats/bycatch"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Wild Fisheries Management",
+      "title": "Case study: How did New England groundfish collapse?",
+      "concepts": ["stock collapse case study", "management failure", "overfishing history"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.fisheries.noaa.gov/species/atlantic-cod",
+        "https://conbio.onlinelibrary.wiley.com/doi/abs/10.1111/j.1523-1739.2009.01345.x"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Wild Fisheries Management",
+      "title": "Review: Design a management plan for a fictional fishery",
+      "concepts": ["management plan synthesis", "quota design", "monitoring"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.fisheries.noaa.gov/topic/fishery-management-plans"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Aquaculture Systems",
+      "title": "Why farm fish instead of catching them wild?",
+      "concepts": ["aquaculture rationale", "production systems", "wild vs farmed"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fisheries.noaa.gov/topic/aquaculture",
+        "https://www.fao.org/aquaculture/en/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Aquaculture Systems",
+      "title": "How does pond aquaculture actually work?",
+      "concepts": ["freshwater systems", "pond culture", "water quality management"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://extension.psu.edu/pond-aquaculture",
+        "https://www.fao.org/fishery/docs/CDrom/FAO_Training/FAO_Training/General/x6709e/x6709e00.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Aquaculture Systems",
+      "title": "What makes marine cages different from ponds?",
+      "concepts": ["marine aquaculture", "offshore systems", "environmental impacts"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://marinecadastre.gov/ais/",
+        "https://www.oceansciencetrust.org/project/aquaculture-permitting/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Aquaculture Systems",
+      "title": "Can we recycle the water and grow fish indoors?",
+      "concepts": ["recirculating systems", "RAS technology", "biofilters", "intensive systems"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://thefishsite.com/articles/recirculating-aquaculture-systems-ras",
+        "https://www.usda.gov/media/blog/2021/07/13/recirculating-aquaculture-systems-future-fish-farming"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Aquaculture Systems",
+      "title": "What do farmed fish eat, and where does it come from?",
+      "concepts": ["aquaculture feeds", "fishmeal", "alternative proteins", "feed conversion ratio"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.seafoodsource.com/news/aquaculture/fishmeal-and-fish-oil-facts-figures-and-trends",
+        "https://www.iffo.com/what-fishmeal-and-fish-oil"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Aquaculture Systems",
+      "title": "Review: Compare three aquaculture systems on sustainability",
+      "concepts": ["system comparison", "sustainability trade-offs", "environmental impacts"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.asc-aqua.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Economics and Sustainability",
+      "title": "How does a fish get from ocean to plate?",
+      "concepts": ["supply chains", "market structure", "distribution", "pricing"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.fishwatch.gov/sustainable-seafood/the-journey-from-water-to-plate",
+        "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/fish-supply-chain"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Economics and Sustainability",
+      "title": "Who decides if seafood is sustainable?",
+      "concepts": ["certification schemes", "MSC", "ASC", "eco-labels"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.msc.org/standards-and-certification/msc-standards",
+        "https://www.asc-aqua.org/what-we-do/our-standards/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Economics and Sustainability",
+      "title": "Why do small-scale fishers get left behind?",
+      "concepts": ["small-scale fisheries", "community fisheries", "food security", "social equity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.fao.org/voluntary-guidelines-small-scale-fisheries/en/",
+        "https://toobigtoignore.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Economics and Sustainability",
+      "title": "What happens when the ocean warms and acidifies?",
+      "concepts": ["climate change impacts", "ocean acidification", "range shifts", "phenology"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.fisheries.noaa.gov/topic/climate",
+        "https://www.ipcc.ch/srocc/chapter/chapter-5/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Economics and Sustainability",
+      "title": "How can fisheries adapt to climate change?",
+      "concepts": ["climate adaptation", "resilient management", "shifting stocks"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.fisheries.noaa.gov/topic/climate/adaptation",
+        "https://www.nature.com/articles/s41558-018-0249-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration and Future",
+      "title": "Review: The big picture — ecology, economics, and policy together",
+      "concepts": ["integrated management", "trade-offs", "sustainability synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.fao.org/3/i9540en/I9540EN.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration and Future",
+      "title": "Can integrated multi-trophic aquaculture solve the feed problem?",
+      "concepts": ["IMTA", "polyculture", "waste recycling", "ecosystem services"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.integratedmultitrophicaquaculture.com/",
+        "https://www.fao.org/3/i1092e/i1092e.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration and Future",
+      "title": "What would a truly sustainable seafood system look like?",
+      "concepts": ["sustainability vision", "systems thinking", "policy integration", "future scenarios"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.nature.com/articles/s41586-020-2616-y",
+        "https://www.edf.org/oceans/smart-solutions-healthy-oceans"
+      ],
+      "status": "pending"
+    }
+  ]
+}

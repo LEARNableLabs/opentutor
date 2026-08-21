@@ -1,0 +1,380 @@
+{
+  "topic": "Epistemology — what can we know?",
+  "slug": "epistemology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic logic and argumentation",
+    "comfort with abstract concepts",
+    "willingness to question assumptions"
+  ],
+  "exit_criteria": [
+    "student can articulate and evaluate the JTB analysis of knowledge",
+    "student can explain Gettier problems and post-Gettier responses",
+    "student can compare foundationalism, coherentism, and reliabilism",
+    "student can present skeptical arguments and evaluate responses",
+    "student can analyze everyday knowledge claims using epistemological frameworks",
+    "student can engage with contemporary epistemological debates"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "What is Knowledge?",
+      "title": "Why do we need a theory of knowledge?",
+      "concepts": ["epistemology", "knowledge vs. belief", "epistemic standards"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemology/",
+        "https://www.wi-phi.com/video/what-is-epistemology"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "What is Knowledge?",
+      "title": "What makes justified true belief special?",
+      "concepts": ["justified true belief", "belief", "truth", "justification"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/knowledge-analysis/",
+        "https://1000wordphilosophy.com/2014/02/09/the-analysis-of-knowledge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "What is Knowledge?",
+      "title": "Can you have justified true belief without knowledge?",
+      "concepts": ["Gettier problems", "epistemic luck", "counterexamples"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/knowledge-analysis/#GettProb",
+        "https://www.jstor.org/stable/3326922"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "What is Knowledge?",
+      "title": "How have philosophers responded to Gettier?",
+      "concepts": ["no-false-lemmas", "causal theory", "sensitivity", "safety"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/knowledge-analysis/#PostGettDeve",
+        "https://1000wordphilosophy.com/2020/09/02/gettier-problems/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "What is Knowledge?",
+      "title": "Review: What is knowledge?",
+      "concepts": ["JTB", "Gettier cases", "conditions for knowledge"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/knowledge-analysis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Sources of Knowledge",
+      "title": "How much can we learn from our senses?",
+      "concepts": ["perception", "perceptual knowledge", "sensory experience", "empiricism"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/perception-episprob/",
+        "https://www.wi-phi.com/video/perception-and-knowledge"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Sources of Knowledge",
+      "title": "What can we know just by thinking?",
+      "concepts": ["a priori knowledge", "reason", "rationalism", "necessary truths"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/apriori/",
+        "https://iep.utm.edu/apriori/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Sources of Knowledge",
+      "title": "Should we believe what others tell us?",
+      "concepts": ["testimony", "trust", "epistemic dependence", "social knowledge"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/testimony-episprob/",
+        "https://1000wordphilosophy.com/2016/03/21/testimony/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Sources of Knowledge",
+      "title": "Can we trust our memories?",
+      "concepts": ["memory", "memory reliability", "reconstructive memory", "mnemic knowledge"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/memory-episprob/",
+        "https://www.wi-phi.com/video/memory-and-testimony"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Sources of Knowledge",
+      "title": "Are experience and reason compatible sources?",
+      "concepts": ["empiricism vs rationalism", "a posteriori", "synthesis", "Kant"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/rationalism-empiricism/",
+        "https://iep.utm.edu/emp-rat/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Sources of Knowledge",
+      "title": "Review: Where does knowledge come from?",
+      "concepts": ["sources of knowledge", "perception", "reason", "testimony"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemology/#SourKnowJust"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "The Structure of Justification",
+      "title": "Must knowledge rest on foundations?",
+      "concepts": ["foundationalism", "basic beliefs", "regress argument", "certainty"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/justep-foundational/",
+        "https://iep.utm.edu/found-ep/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "The Structure of Justification",
+      "title": "Can beliefs justify each other in a circle?",
+      "concepts": ["coherentism", "mutual support", "holism", "coherence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/justep-coherence/",
+        "https://iep.utm.edu/coherent/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "The Structure of Justification",
+      "title": "What if justification goes on forever?",
+      "concepts": ["infinitism", "infinite regress", "Peter Klein", "chains of reasons"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/infinite-regress/",
+        "https://philpapers.org/browse/infinitism"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "The Structure of Justification",
+      "title": "Must you have access to your reasons?",
+      "concepts": ["internalism", "externalism", "accessibility", "perspective"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/justep-intext/",
+        "https://iep.utm.edu/int-ext/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "The Structure of Justification",
+      "title": "Review: How is justification structured?",
+      "concepts": ["foundationalism", "coherentism", "regress problem", "internalism vs externalism"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemology/#StruJust"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Skepticism",
+      "title": "What did ancient skeptics believe?",
+      "concepts": ["Pyrrhonism", "Academic skepticism", "suspension of judgment", "ataraxia"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/skepticism-ancient/",
+        "https://iep.utm.edu/skepanci/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Skepticism",
+      "title": "Could an evil demon be deceiving you right now?",
+      "concepts": ["Cartesian skepticism", "evil demon", "dream argument", "global skepticism"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/descartes-epistemology/",
+        "https://www.wi-phi.com/video/descartes-evil-demon"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Skepticism",
+      "title": "How do we know there's a world outside our minds?",
+      "concepts": ["external world skepticism", "brain in a vat", "idealism", "closure principle"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/skepticism/",
+        "https://iep.utm.edu/skepcont/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Skepticism",
+      "title": "Can we defeat the skeptic?",
+      "concepts": ["anti-skeptical strategies", "Moore's proof", "contextualism", "relevant alternatives"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/skepticism/#RessSkie",
+        "https://plato.stanford.edu/entries/contextualism-epistemology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Skepticism",
+      "title": "Review: Can we know anything?",
+      "concepts": ["skeptical arguments", "responses to skepticism", "limits of knowledge"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/skepticism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Truth and Reliability",
+      "title": "What is truth anyway?",
+      "concepts": ["correspondence theory", "coherence theory", "pragmatist theory", "deflationism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/truth/",
+        "https://iep.utm.edu/truth/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Truth and Reliability",
+      "title": "Does knowledge require reliable belief-forming processes?",
+      "concepts": ["reliabilism", "process reliabilism", "Goldman", "generality problem"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/reliabilism/",
+        "https://philpapers.org/rec/GOLWIJ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Truth and Reliability",
+      "title": "Can knowledge be an intellectual virtue?",
+      "concepts": ["virtue epistemology", "intellectual virtues", "agent reliabilism", "responsibilism"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemology-virtue/",
+        "https://iep.utm.edu/virtueep/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Contemporary Extensions",
+      "title": "How does society shape what we know?",
+      "concepts": ["social epistemology", "collective knowledge", "epistemic communities", "distributed cognition"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemology-social/",
+        "https://iep.utm.edu/soc-epis/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Contemporary Extensions",
+      "title": "Can prejudice distort knowledge?",
+      "concepts": ["epistemic injustice", "testimonial injustice", "hermeneutical injustice", "Miranda Fricker"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemic-injustice/",
+        "https://1000wordphilosophy.com/2017/12/18/epistemic-injustice/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Contemporary Extensions",
+      "title": "Do we have ethical obligations about what we believe?",
+      "concepts": ["ethics of belief", "epistemic responsibility", "doxastic voluntarism", "Clifford vs James"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/ethics-belief/",
+        "https://iep.utm.edu/eth-beli/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Contemporary Extensions",
+      "title": "Review: How has epistemology evolved?",
+      "concepts": ["reliabilism", "virtue epistemology", "social epistemology", "epistemic injustice"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/epistemology/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

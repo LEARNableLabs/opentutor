@@ -1,0 +1,475 @@
+{
+  "topic": "Plasma Physics",
+  "slug": "plasma-physics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "electromagnetism",
+    "thermodynamics",
+    "statistical mechanics basics",
+    "ordinary differential equations",
+    "partial differential equations"
+  ],
+  "exit_criteria": [
+    "compute plasma parameters (Debye length, plasma frequency) for given conditions",
+    "analyze single particle trajectories in electromagnetic fields",
+    "apply kinetic and fluid descriptions to plasma phenomena",
+    "identify wave modes and instabilities in plasmas",
+    "understand confinement concepts in fusion devices"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction & Parameters",
+      "title": "What makes plasma the fourth state of matter?",
+      "concepts": [
+        "plasma definition",
+        "ionization",
+        "quasi-neutrality"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/",
+        "https://www.pppl.gov/education"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction & Parameters",
+      "title": "Why do plasmas shield out electric fields?",
+      "concepts": [
+        "Debye shielding",
+        "Debye length",
+        "collective behavior"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node5.html",
+        "https://www.plasmapy.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction & Parameters",
+      "title": "What determines if a plasma is collisional or collisionless?",
+      "concepts": [
+        "plasma frequency",
+        "collision frequency",
+        "mean free path"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node7.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Introduction & Parameters",
+      "title": "Where do we find plasmas in the universe?",
+      "concepts": [
+        "natural plasmas",
+        "astrophysical plasmas",
+        "laboratory plasmas"
+      ],
+      "difficulty": 1,
+      "type": "real-world",
+      "resources": [
+        "https://science.nasa.gov/heliophysics/focus-areas/magnetosphere-ionosphere",
+        "https://www.iter.org/sci/plasmabasics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Introduction & Parameters",
+      "title": "How do we characterize plasma regimes?",
+      "concepts": [
+        "coupling parameter",
+        "temperature regimes",
+        "density regimes",
+        "NRL Plasma Formulary"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nrl.navy.mil/News-Media/Publications/nrl-plasma-formulary/",
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node8.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Introduction & Parameters",
+      "title": "Can you calculate plasma parameters for real systems?",
+      "concepts": [
+        "parameter calculation review",
+        "Debye length",
+        "plasma frequency",
+        "regime classification"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.nrl.navy.mil/News-Media/Publications/nrl-plasma-formulary/",
+        "https://www.plasmapy.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Single Particle Dynamics",
+      "title": "How do charged particles move in uniform magnetic fields?",
+      "concepts": [
+        "Lorentz force",
+        "cyclotron motion",
+        "gyroradius"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node12.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Single Particle Dynamics",
+      "title": "Why do particles drift perpendicular to both E and B?",
+      "concepts": [
+        "E\u00d7B drift",
+        "drift velocity",
+        "guiding center"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node13.html",
+        "https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Single Particle Dynamics",
+      "title": "What causes gradient and curvature drifts?",
+      "concepts": [
+        "gradient drift",
+        "curvature drift",
+        "magnetic field inhomogeneity"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node14.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Single Particle Dynamics",
+      "title": "How do magnetic mirrors trap particles?",
+      "concepts": [
+        "magnetic mirror",
+        "mirror ratio",
+        "loss cone"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node16.html",
+        "https://www.pppl.gov/education/science-education"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Single Particle Dynamics",
+      "title": "What are adiabatic invariants and why do they matter?",
+      "concepts": [
+        "adiabatic invariants",
+        "magnetic moment",
+        "conservation laws"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node17.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Single Particle Dynamics",
+      "title": "Can you predict particle trajectories in electromagnetic fields?",
+      "concepts": [
+        "single particle motion review",
+        "drifts",
+        "trapping"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.plasmapy.org/",
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node18.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Kinetic Theory",
+      "title": "Why do we need statistical descriptions of plasmas?",
+      "concepts": [
+        "velocity distribution",
+        "phase space",
+        "statistical approach"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node19.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Kinetic Theory",
+      "title": "What does the Vlasov equation describe?",
+      "concepts": [
+        "Vlasov equation",
+        "collisionless plasma",
+        "distribution function evolution"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node20.html",
+        "https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Kinetic Theory",
+      "title": "How do collisions change the kinetic picture?",
+      "concepts": [
+        "collision operator",
+        "Fokker-Planck equation",
+        "relaxation"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node21.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Kinetic Theory",
+      "title": "What is Landau damping and why is it surprising?",
+      "concepts": [
+        "Landau damping",
+        "wave-particle interaction",
+        "collisionless dissipation"
+      ],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node34.html",
+        "https://www.youtube.com/watch?v=rlOP1fDLnAQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Kinetic Theory",
+      "title": "How do we extract fluid quantities from kinetic theory?",
+      "concepts": [
+        "velocity moments",
+        "density",
+        "flow velocity",
+        "pressure tensor"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node22.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Kinetic Theory",
+      "title": "Can you connect particle dynamics to statistical distributions?",
+      "concepts": [
+        "kinetic theory review",
+        "Vlasov equation",
+        "moments"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/",
+        "https://www.plasmapy.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Fluid & MHD",
+      "title": "When can we treat plasmas as fluids?",
+      "concepts": [
+        "fluid approximation",
+        "moment equations",
+        "closure problem"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node23.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Fluid & MHD",
+      "title": "What is magnetohydrodynamics?",
+      "concepts": [
+        "MHD",
+        "single-fluid model",
+        "frozen-in flux",
+        "ideal MHD"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node27.html",
+        "https://ocw.mit.edu/courses/22-611j-introduction-to-plasma-physics-i-fall-2003/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Fluid & MHD",
+      "title": "Why do field lines move with the plasma in ideal MHD?",
+      "concepts": [
+        "magnetic flux freezing",
+        "field line topology",
+        "magnetic reconnection"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node28.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Fluid & MHD",
+      "title": "How does two-fluid theory differ from MHD?",
+      "concepts": [
+        "two-fluid model",
+        "Hall effect",
+        "electron-ion separation"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node24.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Fluid & MHD",
+      "title": "When should you use fluid vs kinetic descriptions?",
+      "concepts": [
+        "fluid models review",
+        "MHD",
+        "closure"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/",
+        "https://www.plasmapy.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Waves & Instabilities",
+      "title": "What wave modes can propagate in plasmas?",
+      "concepts": [
+        "plasma waves",
+        "dispersion relations",
+        "electromagnetic vs electrostatic"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node30.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Waves & Instabilities",
+      "title": "Why are Alfv\u00e9n waves important in magnetized plasmas?",
+      "concepts": [
+        "Alfv\u00e9n waves",
+        "MHD waves",
+        "magnetosonic waves"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node32.html",
+        "https://science.nasa.gov/heliophysics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Waves & Instabilities",
+      "title": "What makes plasmas go unstable?",
+      "concepts": [
+        "plasma instabilities",
+        "streaming instabilities",
+        "gradient-driven instabilities"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node38.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Waves & Instabilities",
+      "title": "How do we confine plasmas for fusion?",
+      "concepts": [
+        "magnetic confinement",
+        "tokamaks",
+        "stellarators",
+        "plasma stability"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.iter.org/mach",
+        "https://www.pppl.gov/education",
+        "https://www.euro-fusion.org/wpcms/wp-content/uploads/2020/02/JET_introduction.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

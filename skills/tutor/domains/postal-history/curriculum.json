@@ -1,0 +1,280 @@
+{
+  "topic": "Postal history and philately",
+  "slug": "postal-history",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic knowledge of world history",
+    "familiarity with stamp identification",
+    "understanding of basic philatelic terminology"
+  ],
+  "exit_criteria": [
+    "student can identify major printing techniques and varieties",
+    "student can research and authenticate postal history items",
+    "student can evaluate stamp condition using standard grading criteria",
+    "student can develop a specialized collecting area with historical context",
+    "student understands market dynamics and collection building strategies"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Postal Systems",
+      "title": "Why did Rowland Hill's penny post revolutionize communication?",
+      "concepts": ["postal reform", "uniform postage", "adhesive stamps"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://postalmuseum.si.edu/exhibition/about-us-stamps-history-penny-post", "https://www.stamps.org/services/stamp-collecting-basics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Postal Systems",
+      "title": "How did letters travel before adhesive stamps existed?",
+      "concepts": ["pre-adhesive postal markings", "manuscript postage", "postal routes"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://postalmuseum.si.edu/collections/postal-history", "https://www.rpsl.org.uk/Educational.aspx"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Postal Systems",
+      "title": "What made international mail possible across borders?",
+      "concepts": ["Universal Postal Union", "international agreements", "postal treaties"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.upu.int/en/Universal-Postal-Union/About-UPU/History", "https://postalmuseum.si.edu/exhibition/customers-and-communities-international-post"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Postal Systems",
+      "title": "Why do wartime covers tell stories regular mail cannot?",
+      "concepts": ["military postal systems", "censorship markings", "emergency postal services"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.stamps.org/Military-Postal-History-Resources", "https://postalmuseum.si.edu/exhibition/victory-wwii-allied-home-fronts-postal-services-and-rationing"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Postal Systems",
+      "title": "How did postal transportation shape settlement patterns?",
+      "concepts": ["postal routes", "transportation infrastructure", "railway mail service"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://postalmuseum.si.edu/exhibition/behind-the-badge-moving-the-mail", "https://about.usps.com/who/profile/history/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations Review",
+      "title": "How did postal systems evolve from penny post to global networks?",
+      "concepts": ["postal systems", "historical development"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.stamps.org/learn/philatelic-basics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Stamp Production and Varieties",
+      "title": "Why does engraving create the most detailed stamps?",
+      "concepts": ["intaglio printing", "recess printing", "line engraving"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://postalmuseum.si.edu/exhibition/art-of-the-stamp-engraved-stamps", "https://www.linns.com/insights/u-s-stamp-production-the-basics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Stamp Production and Varieties",
+      "title": "What makes lithographed stamps different from engraved ones?",
+      "concepts": ["lithography", "offset printing", "surface printing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.stamps.org/Encyclopedia-Printing-Methods", "https://postalmuseum.si.edu/stamp-printing-methods"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Stamp Production and Varieties",
+      "title": "How do watermarks protect stamps from forgery?",
+      "concepts": ["watermarks", "paper security", "dandy rolls"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.stamps.org/Watermark-Detection-Guide", "https://www.gibbonsstampmonthly.com/watermark-identification"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Stamp Production and Varieties",
+      "title": "Why do collectors prize plate flaws and re-entries?",
+      "concepts": ["plate varieties", "re-entries", "constant plate flaws"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.stamps.org/Plate-Varieties-Guide", "https://www.linns.com/news/us-stamps-postal-history/collecting-plate-varieties"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Stamp Production and Varieties",
+      "title": "What happened when the printer got the colors wrong?",
+      "concepts": ["color errors", "inverted centers", "production errors"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://postalmuseum.si.edu/exhibition/treasures-national-postal-museum-inverted-jenny", "https://www.stamps.org/Famous-Stamp-Errors"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Stamp Production and Varieties",
+      "title": "How do modern security features prevent counterfeiting?",
+      "concepts": ["modern stamp production", "security features", "digital printing"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://about.usps.com/who/profile/history/stamp-production.htm", "https://www.upu.int/en/Postal-Solutions/Programmes-Services/Security-Solutions"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Production Review",
+      "title": "How do you identify different printing methods and varieties?",
+      "concepts": ["printing techniques", "varieties", "production"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.stamps.org/Stamp-Production-Review"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Postal History Research",
+      "title": "Why do catalogues use different numbering systems?",
+      "concepts": ["Scott catalogue", "Stanley Gibbons", "Michel catalogue"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.stamps.org/Stamp-Catalog-Systems", "https://www.stanleygibbons.com/catalogues"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Postal History Research",
+      "title": "How can you tell if a rare stamp is genuine?",
+      "concepts": ["authentication", "expertization", "forgery detection"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.stamps.org/Expertizing-Services", "https://www.rpsl.org.uk/ExpertCommittee.aspx"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Postal History Research",
+      "title": "What makes a postal history exhibit award-winning?",
+      "concepts": ["exhibition philately", "treatment", "research presentation"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://www.stamps.org/Exhibiting-Stamps", "https://www.aape.org/exhibiting-basics"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Postal History Research",
+      "title": "Where can you find primary sources for postal history research?",
+      "concepts": ["philatelic libraries", "postal archives", "research resources"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://stamps.org/american-philatelic-research-library", "https://postalmuseum.si.edu/research"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Postal History Research",
+      "title": "How do you trace the postal route of a historical cover?",
+      "concepts": ["route research", "postmark interpretation", "historical context"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.stamps.org/Postal-History-Society", "https://postalhistoryfoundation.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Specialized Collecting Areas",
+      "title": "Why are postal stationery items overlooked by collectors?",
+      "concepts": ["postal stationery", "entires", "postal cards"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.upss.org/", "https://postalmuseum.si.edu/exhibition/binding-the-nation-postal-stationery"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Research Review",
+      "title": "What research methods and authentication skills have you developed?",
+      "concepts": ["catalogues", "authentication", "research"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.stamps.org/Research-Tools"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Specialized Collecting Areas",
+      "title": "What stories do postmarks reveal about postal operations?",
+      "concepts": ["postmarks", "cancellations", "postal markings"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.stamps.org/Postmark-Collectors-Club", "https://postalmuseum.si.edu/collections/postmarks"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Specialized Collecting Areas",
+      "title": "Why did governments tax documents with stamps?",
+      "concepts": ["revenue stamps", "fiscal philately", "tax stamps"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.asdarevenue.com/", "https://postalmuseum.si.edu/exhibition/the-price-of-freedom-revenue-stamps"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Specialized Collecting Areas",
+      "title": "How can you build a thematic collection around one topic?",
+      "concepts": ["thematic collecting", "topical collecting", "collection development"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://www.stamps.org/Thematic-Philately", "https://www.aijp.net/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Authentication and Market",
+      "title": "What makes a stamp perfectly centered versus just fine?",
+      "concepts": ["grading standards", "centering", "condition factors"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.psacard.com/services/tradingcardgrading/stamps", "https://www.stamps.org/Grading-Guide"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Authentication and Market",
+      "title": "Why do auction prices vary so widely for similar stamps?",
+      "concepts": ["market dynamics", "auction strategies", "pricing factors"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.sothebys.com/en/departments/stamps", "https://www.siegelauctions.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Course Review and Next Steps",
+      "title": "How will you build and manage your specialized collection?",
+      "concepts": ["collection building", "specialization", "market knowledge"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.stamps.org/Collecting-Strategies", "https://postalmuseum.si.edu/learn"],
+      "status": "pending"
+    }
+  ]
+}

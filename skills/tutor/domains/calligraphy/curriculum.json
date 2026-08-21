@@ -1,0 +1,356 @@
+{
+  "topic": "Calligraphy — Western, Arabic, and East Asian traditions",
+  "slug": "calligraphy",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic Latin alphabet literacy",
+    "basic Arabic script familiarity or willingness to learn",
+    "basic Chinese/Japanese character exposure or willingness to learn",
+    "fine motor control and patience"
+  ],
+  "exit_criteria": [
+    "student can write basic Italic, Naskh, and regular script with proper form",
+    "student understands tool selection and maintenance across traditions",
+    "student can analyze historical manuscripts and identify scripts",
+    "student can compose simple calligraphic layouts in each tradition",
+    "student recognizes cross-cultural influences and contemporary applications"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why does the same letter look different across cultures?",
+      "concepts": ["script families", "cultural context", "writing systems"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/writ/hd_writ.htm",
+        "https://www.vam.ac.uk/articles/a-brief-history-of-writing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes a tool right or wrong for a script?",
+      "concepts": ["broad-edge pens", "pointed pens", "brushes", "tool-script matching"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.iampeth.com/lessons/tools-materials",
+        "https://www.johnnealbookseller.com/pages/calligraphy-tools-guide"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How does your body position change the letters you make?",
+      "concepts": ["posture", "arm movement", "ergonomics", "breath control"],
+      "difficulty": 1,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=videoid",
+        "https://www.calligraphy.org/resources/ergonomics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Why do master calligraphers talk about rhythm?",
+      "concepts": ["temporal flow", "spacing", "ductus", "gestural movement"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://archive.org/details/writingilluminat00john",
+        "https://www.bl.uk/collection-guides/calligraphy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Western Calligraphy",
+      "title": "How did Roman stonemasons influence modern lettering?",
+      "concepts": ["Roman capitals", "trajan column", "serif evolution", "incised vs. written"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/art/collection/search/245328",
+        "https://www.vam.ac.uk/articles/roman-lettering"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Western Calligraphy",
+      "title": "What makes Italic the foundation of Western calligraphy?",
+      "concepts": ["italic minuscules", "pen angle", "x-height", "slant"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iampeth.com/lessons/italic-calligraphy",
+        "https://www.youtube.com/c/SchinLoong"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Western Calligraphy",
+      "title": "Review: Can you identify scripts and choose the right tool?",
+      "concepts": ["script recognition", "tool selection", "warm-up drills"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.calligraphy.org/resources/script-chart"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Western Calligraphy",
+      "title": "Why is Gothic script called 'Blackletter'?",
+      "concepts": ["gothic/blackletter", "texture", "compression", "medieval aesthetics"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Royal_MS_2_B_VII",
+        "https://archive.org/details/gothicalphabet00goog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Western Calligraphy",
+      "title": "How does pressure create the thick-and-thin of Copperplate?",
+      "concepts": ["pointed pen", "pressure shading", "flourishing", "engrosser's script"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iampeth.com/lessons/engrossers-script",
+        "https://thepostmansknock.com/copperplate-calligraphy-guide/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Western Calligraphy",
+      "title": "What did Edward Johnston revive in 1906?",
+      "concepts": ["Johnston's Foundational", "Arts & Crafts movement", "calligraphy revival"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://archive.org/details/writingilluminat00john",
+        "https://www.vam.ac.uk/articles/edward-johnston"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Arabic Calligraphy",
+      "title": "Why is the reed pen cut at an angle?",
+      "concepts": ["qalam", "pen cutting", "broad-edge technique", "ink loading"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.metmuseum.org/art/collection/search/447870",
+        "https://qalam.org/tools/reed-pen"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Arabic Calligraphy",
+      "title": "How does the dot system measure letters?",
+      "concepts": ["proportional dots", "alif height", "measurement systems", "classical ratios"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.vam.ac.uk/articles/arabic-calligraphy",
+        "https://qalam.org/theory/proportions"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Arabic Calligraphy",
+      "title": "What makes Naskh the script of scholars?",
+      "concepts": ["naskh", "readability", "quranic manuscripts", "balance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.loc.gov/exhibits/world/islamic.html",
+        "https://qalam.org/scripts/naskh"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Arabic Calligraphy",
+      "title": "Review: Can you cut a qalam and write basic Naskh?",
+      "concepts": ["tool preparation", "basic strokes", "letter formation"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://qalam.org/practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Arabic Calligraphy",
+      "title": "Why is Thuluth considered monumental?",
+      "concepts": ["thuluth", "architectural calligraphy", "elongation", "curvature"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/thul/hd_thul.htm",
+        "https://asia.si.edu/learn/for-educators/teaching-china-with-the-smithsonian/explore-by-object/calligraphy-panel/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Arabic Calligraphy",
+      "title": "How do letters stack and mirror in composition?",
+      "concepts": ["composition", "mirroring", "ligatures", "tashkil placement"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.vam.ac.uk/articles/islamic-calligraphy-composition",
+        "https://weavesilk.com"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "East Asian Calligraphy",
+      "title": "What are the 'Four Treasures of the Study'?",
+      "concepts": ["brush", "ink", "paper", "inkstone", "material reverence"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/chin/hd_chin.htm",
+        "https://asia.si.edu/learn/for-educators/teaching-china-with-the-smithsonian/explore-by-topic/calligraphy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "East Asian Calligraphy",
+      "title": "How does brush loading affect stroke quality?",
+      "concepts": ["ink loading", "pressure control", "tip-to-heel ratio", "moisture balance"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/user/takumichannel",
+        "https://www.britishmuseum.org/collection/term/BIOG24564"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "East Asian Calligraphy",
+      "title": "What is the 'bone method' in brush strokes?",
+      "concepts": ["bone method", "center-tip technique", "structural integrity", "energy flow (qi)"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/chbr/hd_chbr.htm",
+        "https://archive.org/details/artofchinesecall0000nakata"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "East Asian Calligraphy",
+      "title": "Why do Chinese scripts range from rigid to wild?",
+      "concepts": ["script evolution", "seal", "clerical", "regular", "running", "cursive"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.vam.ac.uk/articles/chinese-calligraphy-styles",
+        "https://www.metmuseum.org/toah/hd/chca/hd_chca.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "East Asian Calligraphy",
+      "title": "Review: Can you identify the five Chinese script styles?",
+      "concepts": ["script recognition", "historical context", "practical drills"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://asia.si.edu/learn/for-educators/teaching-china-with-the-smithsonian/explore-by-object/examples-of-calligraphy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "East Asian Calligraphy",
+      "title": "How do Japanese kana flow differently than kanji?",
+      "concepts": ["hiragana", "katakana", "kana aesthetics", "cursive flow"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.metmuseum.org/toah/hd/jaca/hd_jaca.htm",
+        "https://archive.org/details/artofjapanesecal0000nakata"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "East Asian Calligraphy",
+      "title": "What's the relationship between calligraphy and seal carving?",
+      "concepts": ["seal script", "seal carving", "signature", "artist identity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.britishmuseum.org/collection/term/BIOG24632",
+        "https://asia.si.edu/learn/for-educators/teaching-china-with-the-smithsonian/explore-by-topic/seals/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration & Contemporary",
+      "title": "How did Islamic calligraphy influence European illumination?",
+      "concepts": ["cross-cultural exchange", "medieval trade routes", "manuscript transmission"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.bl.uk/medieval-literature/articles/the-influence-of-islamic-art",
+        "https://www.metmuseum.org/toah/hd/medm/hd_medm.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration & Contemporary",
+      "title": "Where do you see calligraphy in modern branding?",
+      "concepts": ["typography", "brand identity", "contemporary applications", "digital tools"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.fonts.com/content/learning/fontology/level-1/type-anatomy",
+        "https://www.myfonts.com/pages/calligraphic-fonts"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration & Contemporary",
+      "title": "Can you design a multi-script composition?",
+      "concepts": ["composition synthesis", "layout hierarchy", "cultural respect", "personal style"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.calligraphy.org/gallery",
+        "https://www.iampeth.com/gallery"
+      ],
+      "status": "pending"
+    }
+  ]
+}

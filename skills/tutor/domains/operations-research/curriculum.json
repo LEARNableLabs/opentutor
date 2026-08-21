@@ -1,0 +1,348 @@
+{
+  "topic": "Operations Research — Optimization in Practice",
+  "slug": "operations-research",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "linear algebra (vectors, matrices, linear systems)",
+    "basic calculus (derivatives, gradients)",
+    "programming fundamentals (Python or Julia preferred)"
+  ],
+  "exit_criteria": [
+    "formulate real-world problems as optimization models",
+    "solve linear and integer programs using modern solvers",
+    "interpret dual solutions and sensitivity analysis",
+    "implement basic optimization algorithms from scratch",
+    "choose appropriate optimization techniques for different problem types",
+    "use professional tools (OR-Tools, JuMP, CVXPY) for practical problems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Linear Programming Foundations",
+      "title": "Why can't we just guess the best solution?",
+      "concepts": ["optimization problems", "decision variables", "constraints", "objective functions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/",
+        "https://developers.google.com/optimization/introduction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Linear Programming Foundations",
+      "title": "How do you turn a messy business problem into clean math?",
+      "concepts": ["problem formulation", "linear programs", "standard form"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.informs.org/Resource-Center/Video-Library",
+        "https://coin-or.github.io/pulp/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Linear Programming Foundations",
+      "title": "What does a 10-dimensional production problem actually look like?",
+      "concepts": ["feasible region", "polyhedra", "geometric interpretation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://optimization.cbe.cornell.edu/index.php?title=Linear_programming",
+        "https://www.geogebra.org/m/XJ8aXwQu"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Linear Programming Foundations",
+      "title": "Why does the optimal solution always hide at a corner?",
+      "concepts": ["extreme points", "basic feasible solutions", "optimality conditions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~boyd/cvxbook/",
+        "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Linear Programming Foundations",
+      "title": "How does the simplex method walk from corner to corner?",
+      "concepts": ["simplex algorithm", "pivot operations", "tableau method"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://neos-guide.org/optimization-tree",
+        "https://www.coursera.org/learn/discrete-optimization"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Advanced LP & Duality",
+      "title": "What happens when there's no solution or infinite solutions?",
+      "concepts": ["infeasibility", "unboundedness", "degeneracy"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://optimization.cbe.cornell.edu/index.php?title=Degeneracy",
+        "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Advanced LP & Duality",
+      "title": "Why does every optimization problem have a secret twin?",
+      "concepts": ["duality theory", "dual formulation", "primal-dual relationship"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf",
+        "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Advanced LP & Duality",
+      "title": "How much is one more unit of constraint worth?",
+      "concepts": ["shadow prices", "sensitivity analysis", "reduced costs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.gurobi.com/documentation/",
+        "https://developers.google.com/optimization/lp/lp_advanced"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Advanced LP & Duality",
+      "title": "Can you build a portfolio optimizer in 50 lines of code?",
+      "concepts": ["modeling in practice", "solver APIs", "result interpretation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.cvxpy.org/tutorial/intro/index.html",
+        "https://jump.dev/JuMP.jl/stable/tutorials/linear/finance/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Advanced LP & Duality",
+      "title": "What did we learn about linear optimization so far?",
+      "concepts": ["LP foundations review", "formulation patterns", "solver usage"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/",
+        "https://www.informs.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Integer Programming",
+      "title": "Why does requiring whole numbers make everything exponentially harder?",
+      "concepts": ["integer programming", "combinatorial optimization", "NP-hardness"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/discrete-optimization",
+        "https://developers.google.com/optimization/mip/integer_opt"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Integer Programming",
+      "title": "How do you schedule 100 nurses across 50 shifts fairly?",
+      "concepts": ["binary variables", "logical constraints", "scheduling formulations"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://developers.google.com/optimization/scheduling/employee_scheduling",
+        "https://coin-or.github.io/pulp/CaseStudies/a_blending_problem.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Integer Programming",
+      "title": "What's the smartest way to search a billion possibilities?",
+      "concepts": ["branch and bound", "relaxation", "branching strategies"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://optimization.cbe.cornell.edu/index.php?title=Branch_and_bound",
+        "https://neos-server.org/neos/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Integer Programming",
+      "title": "Can you explain branch-and-bound to someone who only knows binary search?",
+      "concepts": ["algorithm understanding", "tree search", "pruning"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.coursera.org/learn/discrete-optimization",
+        "https://optimization.cbe.cornell.edu/index.php?title=Branch_and_bound"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Integer Programming",
+      "title": "How do cutting planes slice away bad solutions?",
+      "concepts": ["cutting plane methods", "Gomory cuts", "valid inequalities"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://optimization.cbe.cornell.edu/index.php?title=Cutting-plane_methods",
+        "https://www.gurobi.com/documentation/current/refman/cuts.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Network & Specialized Problems",
+      "title": "Why are network problems secretly linear programs in disguise?",
+      "concepts": ["network flows", "graph optimization", "special structure"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/",
+        "https://developers.google.com/optimization/flow"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Network & Specialized Problems",
+      "title": "What's the fastest route through a million-node graph?",
+      "concepts": ["shortest path", "Dijkstra's algorithm", "dynamic programming"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://developers.google.com/optimization/routing/vrp",
+        "https://networkx.org/documentation/stable/reference/algorithms/shortest_paths.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Network & Specialized Problems",
+      "title": "How does Google route delivery trucks to save millions in fuel?",
+      "concepts": ["vehicle routing", "traveling salesman", "heuristics"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://developers.google.com/optimization/routing/tsp",
+        "https://developers.google.com/optimization/routing/vrp"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Network & Specialized Problems",
+      "title": "Review: From linear programs to network flows",
+      "concepts": ["LP vs IP review", "network algorithms", "problem recognition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://optimization.cbe.cornell.edu/",
+        "https://www.informs.org/Resource-Center"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Network & Specialized Problems",
+      "title": "When should you use a specialized algorithm vs. a general solver?",
+      "concepts": ["algorithm selection", "computational efficiency", "modeling trade-offs"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://neos-guide.org/optimization-tree",
+        "https://plato.asu.edu/guide.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Nonlinear Optimization & Applications",
+      "title": "What breaks when the objective function stops being a straight line?",
+      "concepts": ["nonlinear programming", "convexity", "local vs global optima"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/~boyd/cvxbook/",
+        "https://www.cvxpy.org/examples/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Nonlinear Optimization & Applications",
+      "title": "How do gradient descent and Newton's method chase the minimum?",
+      "concepts": ["gradient methods", "Newton's method", "convergence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/ee364a/",
+        "https://www.cvxpy.org/tutorial/advanced/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Nonlinear Optimization & Applications",
+      "title": "Can you train a machine learning model as an optimization problem?",
+      "concepts": ["ML as optimization", "regularization", "loss functions"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cvxpy.org/examples/machine_learning/index.html",
+        "https://web.stanford.edu/~boyd/papers/pdf/ml_for_opt.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Nonlinear Optimization & Applications",
+      "title": "What optimization tools will you reach for first in your next project?",
+      "concepts": ["tool selection", "workflow design", "practical mastery"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://jump.dev/JuMP.jl/stable/",
+        "https://developers.google.com/optimization",
+        "https://www.cvxpy.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Mastery & Integration",
+      "title": "How has your mental model of optimization evolved?",
+      "concepts": ["nonlinear optimization review", "convexity", "algorithm selection", "practical applications"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://web.stanford.edu/~boyd/cvxbook/",
+        "https://neos-guide.org/optimization-tree",
+        "https://www.informs.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

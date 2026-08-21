@@ -1,0 +1,322 @@
+{
+  "topic": "The mathematics of paper folding and flat-foldability",
+  "slug": "paper-folding-mathematics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "linear algebra (vectors, matrices, linear transformations)",
+    "basic graph theory (vertices, edges, planar graphs)",
+    "geometric reasoning and proof techniques",
+    "discrete mathematics fundamentals"
+  ],
+  "exit_criteria": [
+    "determine if a single-vertex crease pattern is flat-foldable using Maekawa and Kawasaki theorems",
+    "construct valid mountain-valley assignments for simple crease patterns",
+    "analyze layer ordering constraints and identify conflicts",
+    "explain NP-completeness of general flat-foldability",
+    "design simple origami bases using mathematical principles",
+    "apply origami mathematics to real-world engineering problems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Introduction to Flat Folding",
+      "title": "Why is folding paper a mathematical problem?",
+      "concepts": ["crease patterns", "mountain-valley folds", "flat-foldability definition"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://erikdemaine.org/papers/",
+        "https://www.youtube.com/watch?v=ThwuT3_AG6w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Introduction to Flat Folding",
+      "title": "What can you learn by folding a piece of paper once?",
+      "concepts": ["reflections", "symmetry", "perpendicular bisectors"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://mathworld.wolfram.com/Origami.html",
+        "https://www.geogebra.org/m/origami"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Introduction to Flat Folding",
+      "title": "How do creases create constraints?",
+      "concepts": ["crease graphs", "planar embeddings", "vertex degrees"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Mathematics_of_paper_folding",
+        "https://arxiv.org/abs/cs/9907001"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Introduction to Flat Folding",
+      "title": "Can you fold a map back the way you found it?",
+      "concepts": ["map folding problem", "rectangular grids", "combinatorial explosion"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=AmX2EhKnPIE",
+        "https://demonstrations.wolfram.com/MapFolding/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Single-Vertex Flat-Foldability",
+      "title": "What happens when all creases meet at one point?",
+      "concepts": ["single-vertex patterns", "sector angles", "degree constraints"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://langorigami.com/article/mathematical-origami/",
+        "https://arxiv.org/abs/1106.1146"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Single-Vertex Flat-Foldability",
+      "title": "Why must mountains and valleys almost balance?",
+      "concepts": ["Maekawa's theorem", "M-V parity", "topological argument"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=TFaWkN8fIYc",
+        "https://erikdemaine.org/class/6849/fall2012/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Single-Vertex Flat-Foldability",
+      "title": "Review: Testing your vertex for flat-foldability",
+      "concepts": ["Maekawa verification", "pattern analysis", "common errors"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://origamisimulator.org/",
+        "https://www.geogebra.org/m/kawasaki"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Single-Vertex Flat-Foldability",
+      "title": "What do angles tell you about flat-foldability?",
+      "concepts": ["Kawasaki's theorem", "alternating angle sums", "geometric proof"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/math/0406417",
+        "https://www.youtube.com/watch?v=fU8qg7gzGCw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Single-Vertex Flat-Foldability",
+      "title": "How many ways can you assign mountains and valleys?",
+      "concepts": ["mountain-valley assignments", "2-colorings", "combinatorial counting"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.langorigami.com/article/counting-mountain-valley-assignments/",
+        "https://arxiv.org/abs/1410.5022"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Single-Vertex Flat-Foldability",
+      "title": "Can you design your own flat-foldable vertex?",
+      "concepts": ["inverse design", "constraint satisfaction", "constructive algorithms"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://origamisimulator.org/",
+        "https://erikdemaine.org/fonts/origami/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Global Flat-Foldability",
+      "title": "Why isn't every vertex-valid pattern globally foldable?",
+      "concepts": ["local vs global conditions", "interaction between vertices", "simple examples of conflict"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/cs/0112022",
+        "https://www.youtube.com/watch?v=qPeHB0BdGLo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Global Flat-Foldability",
+      "title": "Which layer goes on top?",
+      "concepts": ["layer ordering", "partial orders", "transitivity constraints"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://langorigami.com/article/layer-ordering/",
+        "https://arxiv.org/abs/1203.3602"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Global Flat-Foldability",
+      "title": "How do you prove a pattern can't fold flat?",
+      "concepts": ["obstruction arguments", "contradiction", "cycle detection"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://erikdemaine.org/papers/FoldingPaper_CGTA/",
+        "https://www.youtube.com/watch?v=Tl7qQcZdLAE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Global Flat-Foldability",
+      "title": "Review: From vertices to complete patterns",
+      "concepts": ["integration of Maekawa and Kawasaki", "layer ordering", "global constraints"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://origamisimulator.org/",
+        "https://www.geogebra.org/m/flat-foldability"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Global Flat-Foldability",
+      "title": "What if no point is covered more than twice?",
+      "concepts": ["one-layer simple folds", "restricted models", "polytime algorithms"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/cs/0107024",
+        "https://erikdemaine.org/class/6849/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Computational Origami",
+      "title": "Is flat-foldability easy or hard to decide?",
+      "concepts": ["computational complexity", "NP-completeness", "reduction proofs"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/cs/9603101",
+        "https://www.youtube.com/watch?v=lZ0gMCQyasc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Computational Origami",
+      "title": "How does TreeMaker design origami from stick figures?",
+      "concepts": ["circle packing", "optimization", "origami design algorithms"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://langorigami.com/article/treemaker/",
+        "https://www.youtube.com/watch?v=NYKcOFQCeno",
+        "https://github.com/langorigami/treemaker"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Computational Origami",
+      "title": "Can you solve a cubic equation by folding paper?",
+      "concepts": ["Huzita-Hatori axioms", "origami constructions", "algebraic degree"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Huzita–Hatori_axioms",
+        "https://www.youtube.com/watch?v=raINIIjFQ3c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Computational Origami",
+      "title": "What shapes can you fold from a square?",
+      "concepts": ["universality theorems", "any polygon theorem", "efficiency bounds"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/abs/cs/9907001",
+        "https://erikdemaine.org/papers/OrigamiUniversal/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Applications and Extensions",
+      "title": "How does rigid origami deploy solar panels in space?",
+      "concepts": ["rigid folding", "deployable structures", "engineering applications"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Yx-13rjfGzE",
+        "https://origami.c.u-tokyo.ac.jp/~tachi/software/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Applications and Extensions",
+      "title": "Review: How does origami mathematics solve real problems?",
+      "concepts": ["rigid origami applications", "computational complexity recap", "design principles synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://origamisimulator.org/",
+        "https://langorigami.com/articles/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Applications and Extensions",
+      "title": "What can you build with self-folding materials?",
+      "concepts": ["programmable matter", "self-assembly", "metamaterials"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://selfassemblylab.mit.edu/",
+        "https://www.youtube.com/watch?v=0r_8B8ov3y4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Applications and Extensions",
+      "title": "What's your favorite origami mathematics result?",
+      "concepts": ["synthesis", "reflection", "deep understanding"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://erikdemaine.org/papers/",
+        "https://langorigami.com/articles/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

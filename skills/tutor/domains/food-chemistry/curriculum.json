@@ -1,0 +1,372 @@
+{
+  "topic": "Food Chemistry — The Science of Cooking",
+  "slug": "food-chemistry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (atoms, molecules, chemical bonds)",
+    "acid-base concepts",
+    "states of matter",
+    "temperature and heat transfer"
+  ],
+  "exit_criteria": [
+    "explain how heat transforms proteins and why meat textures change during cooking",
+    "predict and control emulsification in sauces and dressings",
+    "understand the Maillard reaction and how to optimize browning",
+    "distinguish between caramelization and Maillard browning",
+    "explain how fermentation preserves and transforms food",
+    "predict how pH changes affect color, texture, and flavor",
+    "design experiments to test hypotheses about cooking processes",
+    "read food chemistry literature and extract practical insights"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Water and the Foundation",
+      "title": "Why does salt make pasta water boil hotter?",
+      "concepts": ["solutions", "boiling point elevation", "colligative properties"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/",
+        "https://chem.libretexts.org/Ancillary_Materials/Interactive_Applications"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Water and the Foundation",
+      "title": "What makes bread crust crispy and the inside soft?",
+      "concepts": ["water activity", "moisture migration", "evaporation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.moleculekitchen.com/",
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Water and the Foundation",
+      "title": "How does pH change everything you cook?",
+      "concepts": ["pH scale", "acids and bases", "anthocyanins", "color changes"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://chem.libretexts.org/Ancillary_Materials/Interactive_Applications"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Water and the Foundation",
+      "title": "Can you predict how water will behave in any recipe?",
+      "concepts": ["solutions", "water activity", "pH"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Proteins and Heat",
+      "title": "Why do eggs get solid when you cook them?",
+      "concepts": ["protein structure", "denaturation", "coagulation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/",
+        "https://www.moleculekitchen.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Proteins and Heat",
+      "title": "What makes meat tender or tough?",
+      "concepts": ["collagen", "muscle fibers", "connective tissue", "gelatin"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://en.wikipedia.org/wiki/Harold_McGee"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Proteins and Heat",
+      "title": "How does browning create flavor?",
+      "concepts": ["Maillard reaction", "amino acids", "reducing sugars", "melanoidins"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.moleculekitchen.com/",
+        "https://journals.helsinki.fi/lumat/article/download/1109/1102/3579"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Proteins and Heat",
+      "title": "Can you make meringue without eggs?",
+      "concepts": ["protein foams", "surface tension", "aquafaba", "foam stability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.moleculekitchen.com/",
+        "https://www.educationaldesigner.org/ed/volume3/issue12/article48/pdf/molecular-gastronomy-manual.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Proteins and Heat",
+      "title": "How do all these protein tricks connect?",
+      "concepts": ["denaturation", "coagulation", "Maillard reaction", "foams"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Carbohydrates and Sweetness",
+      "title": "Why does toast taste sweeter than bread?",
+      "concepts": ["starch", "amylase", "maltose", "enzymatic breakdown"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://chem.libretexts.org/Ancillary_Materials/Interactive_Applications"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Carbohydrates and Sweetness",
+      "title": "What's actually happening when you caramelize onions?",
+      "concepts": ["caramelization", "sugar pyrolysis", "temperature ranges"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.moleculekitchen.com/",
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Carbohydrates and Sweetness",
+      "title": "How do you prevent crystallization in candy?",
+      "concepts": ["supersaturation", "nucleation", "interfering agents", "sugar states"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.moleculekitchen.com/",
+        "https://www.educationaldesigner.org/ed/volume3/issue12/article48/pdf/molecular-gastronomy-manual.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Carbohydrates and Sweetness",
+      "title": "What makes rice sticky or fluffy?",
+      "concepts": ["starch gelatinization", "amylose", "amylopectin", "retrogradation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://openlearning.mit.edu/news/ten-free-mit-courses-and-lectures-food-lovers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Carbohydrates and Sweetness",
+      "title": "Why does fruit get sweeter as it ripens?",
+      "concepts": ["sugar conversion", "ethylene", "enzymatic activity", "ripening"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://chem.libretexts.org/Ancillary_Materials/Interactive_Applications",
+        "https://en.wikipedia.org/wiki/Harold_McGee"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Fats and Emulsions",
+      "title": "What happens when proteins and carbs team up?",
+      "concepts": ["protein-starch interactions", "Maillard reaction", "texture"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Fats and Emulsions",
+      "title": "Why doesn't oil mix with water?",
+      "concepts": ["polarity", "hydrophobic", "hydrophilic", "molecular interactions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://chem.libretexts.org/Ancillary_Materials/Interactive_Applications"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Fats and Emulsions",
+      "title": "How does mayonnaise stay together?",
+      "concepts": ["emulsification", "lecithin", "emulsifiers", "micelle formation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.moleculekitchen.com/",
+        "https://journals.helsinki.fi/lumat/article/download/1109/1102/3579"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Fats and Emulsions",
+      "title": "What determines a fat's smoke point?",
+      "concepts": ["free fatty acids", "triglycerides", "thermal decomposition", "oxidation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://en.wikipedia.org/wiki/Harold_McGee"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Fats and Emulsions",
+      "title": "Can you make ice cream without an ice cream maker?",
+      "concepts": ["fat crystallization", "ice crystal formation", "churning", "overrun"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.moleculekitchen.com/",
+        "https://www.educationaldesigner.org/ed/volume3/issue12/article48/pdf/molecular-gastronomy-manual.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Flavor and Aroma",
+      "title": "Why do we smell flavor?",
+      "concepts": ["volatile compounds", "olfactory receptors", "retronasal olfaction"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://en.wikipedia.org/wiki/Harold_McGee"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Flavor and Aroma",
+      "title": "What makes umami different from other tastes?",
+      "concepts": ["glutamate", "taste receptors", "synergy", "nucleotides"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.moleculekitchen.com/",
+        "https://journals.helsinki.fi/lumat/article/download/1109/1102/3579"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Flavor and Aroma",
+      "title": "How does cooking change the flavor of garlic?",
+      "concepts": ["allicin", "enzymatic reactions", "sulfur compounds", "thermal degradation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Flavor and Aroma",
+      "title": "How do you layer flavors like a chemist?",
+      "concepts": ["Maillard reaction", "caramelization", "volatile compounds", "taste and aroma"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Fermentation and Preservation",
+      "title": "What's really happening in sourdough?",
+      "concepts": ["lactic acid bacteria", "wild yeast", "fermentation", "pH and gluten"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://www.moleculekitchen.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Fermentation and Preservation",
+      "title": "How does fermentation preserve food?",
+      "concepts": ["pH reduction", "alcohol production", "microbial competition", "anaerobic conditions"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/",
+        "https://journals.helsinki.fi/lumat/article/download/1109/1102/3579"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Fermentation and Preservation",
+      "title": "Why do pickles stay crunchy?",
+      "concepts": ["pectin", "calcium ions", "enzymatic activity", "cell wall integrity"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
+        "https://en.wikipedia.org/wiki/Harold_McGee"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Fermentation and Preservation",
+      "title": "What makes cheese so diverse?",
+      "concepts": ["microbial cultures", "proteolysis", "lipolysis", "aging", "terroir"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.moleculekitchen.com/",
+        "https://openlearning.mit.edu/news/ten-free-mit-courses-and-lectures-food-lovers",
+        "https://journals.helsinki.fi/lumat/article/download/1109/1102/3579"
+      ],
+      "status": "pending"
+    }
+  ]
+}

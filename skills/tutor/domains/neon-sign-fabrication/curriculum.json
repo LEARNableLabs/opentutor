@@ -1,0 +1,227 @@
+{
+  "topic": "Neon sign fabrication — glass bending and gas physics",
+  "slug": "neon-sign-fabrication",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": ["basic chemistry", "electricity and circuits", "atomic structure"],
+  "exit_criteria": [
+    "student can explain thermal expansion and annealing requirements for glass bending",
+    "student can describe torch heating technique and bending radius constraints",
+    "student can explain noble gas ionization and emission spectra",
+    "student can calculate gas discharge parameters for different tube geometries",
+    "student can design color schemes using gas combinations and phosphors",
+    "student can identify safety requirements for high-voltage neon installations"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Glass Science",
+      "title": "Why doesn't glass tubing shatter when you heat it?",
+      "concepts": ["glass composition", "thermal expansion", "borosilicate properties"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.glassblower.info/resources/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Glass Science",
+      "title": "What happens inside glass when it transitions from solid to liquid?",
+      "concepts": ["glass transition temperature", "viscosity", "working range"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.youtube.com/results?search_query=scientific+glassblowing"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Glass Science",
+      "title": "How do you prevent invisible stress from destroying your work?",
+      "concepts": ["thermal stress", "annealing", "strain patterns"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.glassblower.info/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Glass Science",
+      "title": "Why do neon workers choose different glass types for different signs?",
+      "concepts": ["lead glass", "borosilicate", "coefficient of thermal expansion"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.lettherebeneonneon.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Bending Fundamentals",
+      "title": "How does torch flame type affect the quality of your bend?",
+      "concepts": ["crossfire burners", "ribbon burners", "flame chemistry", "heat distribution"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/results?search_query=glass+bending+torch+technique"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Bending Fundamentals",
+      "title": "What determines the tightest curve you can bend without collapsing the tube?",
+      "concepts": ["bend radius", "tube diameter", "wall thickness", "collapse prevention"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.glassblower.info/resources/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Bending Fundamentals",
+      "title": "How do glass properties and bending constraints work together?",
+      "concepts": ["thermal expansion", "annealing", "bend radius", "torch technique"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://www.neonmuseum.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Bending Fundamentals",
+      "title": "How do master benders create complex letter shapes from straight tubing?",
+      "concepts": ["pattern making", "heating zones", "rotation technique", "compound bends"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://www.youtube.com/results?search_query=neon+sign+bending"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Bending Fundamentals",
+      "title": "Why must tubes be sealed and processed before filling with gas?",
+      "concepts": ["tubulation", "bombarder processing", "electrode sealing", "vacuum evacuation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.lettherebeneonneon.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Gas Physics",
+      "title": "What makes neon glow red and argon glow blue?",
+      "concepts": ["atomic emission spectra", "energy levels", "electron transitions", "wavelength"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://hyperphysics.phy-astr.gsu.edu/hbase/quantum/atspec.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Gas Physics",
+      "title": "How does an electron gain enough energy to ionize a gas atom?",
+      "concepts": ["ionization energy", "collision processes", "mean free path", "electron avalanche"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://phet.colorado.edu/en/simulations/discharge-lamps"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Gas Physics",
+      "title": "Why do neon signs need high voltage to start but less to stay lit?",
+      "concepts": ["breakdown voltage", "sustaining voltage", "current-voltage characteristics", "glow discharge"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://hyperphysics.phy-astr.gsu.edu/hbase/electric/glodis.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Gas Physics",
+      "title": "What happens in the dark space near the electrodes?",
+      "concepts": ["cathode fall", "positive column", "Crookes dark space", "electrode processes"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://hyperphysics.phy-astr.gsu.edu/hbase/electric/glozone.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Gas Physics",
+      "title": "How does noble gas ionization create a stable discharge?",
+      "concepts": ["emission spectra", "ionization energy", "glow discharge", "voltage characteristics"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://phet.colorado.edu/en/simulations/neon-lights-and-discharge-lamps"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Color and Design",
+      "title": "How do you create colors that noble gases don't naturally produce?",
+      "concepts": ["phosphor coatings", "mercury vapor", "UV generation", "fluorescence"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.neonmuseum.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Color and Design",
+      "title": "Why can't you just mix gases like paint to get new colors?",
+      "concepts": ["spectral lines", "gas mixtures", "dominant wavelength", "color perception"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://hyperphysics.phy-astr.gsu.edu/hbase/quantum/atomstructcon.html"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Color and Design",
+      "title": "How do designers translate a logo sketch into bendable glass paths?",
+      "concepts": ["pattern making", "full-scale templates", "bend radius constraints", "electrode placement"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.lettherebeneonneon.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Color and Design",
+      "title": "What determines whether adjacent tubes will visually merge or stay distinct?",
+      "concepts": ["color mixing", "visual separation", "tube spacing", "background contrast"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www.neonmuseum.org/the-collection"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Installation and Safety",
+      "title": "Why are neon transformers designed so differently from power supplies?",
+      "concepts": ["transformer design", "current limiting", "high voltage", "leakage inductance"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.glassblower.info/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Installation and Safety",
+      "title": "What makes outdoor neon installations fail, and how do you prevent it?",
+      "concepts": ["weatherproofing", "thermal cycling", "electrical isolation", "UV degradation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.neonmuseum.org/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Installation and Safety",
+      "title": "How does the complete workflow connect design to a working installation?",
+      "concepts": ["pattern making", "bending", "gas filling", "transformer selection", "safety"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.lettherebeneonnyon.com/workshops"],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "topic": "Biomedical engineering — prosthetics and implants",
+  "slug": "biomedical-engineering",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "human anatomy and physiology",
+    "materials science fundamentals",
+    "basic circuit theory",
+    "mechanics and dynamics"
+  ],
+  "exit_criteria": [
+    "analyze biomechanical requirements for prosthetic limb design",
+    "evaluate biocompatibility and material selection for implantable devices",
+    "design myoelectric control systems for upper limb prosthetics",
+    "understand neural interface technologies and their applications",
+    "navigate regulatory pathways for medical device approval",
+    "critically assess clinical trial data for device performance"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why can't we just use steel and plastic inside the human body?",
+      "concepts": ["biocompatibility", "corrosion resistance", "tissue response", "ISO 10993"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/materials-science-and-engineering/3-051j-materials-for-biomedical-applications-spring-2014/",
+        "https://www.fda.gov/medical-devices/overview-device-regulation/classify-your-medical-device"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes titanium the gold standard for implants?",
+      "concepts": ["titanium alloys", "osseointegration", "mechanical properties", "surface treatments"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5793298/",
+        "https://www.jomi.com/principles-of-osseointegration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do forces flow through bones and joints during walking?",
+      "concepts": ["gait biomechanics", "ground reaction forces", "joint moments", "gait cycle phases"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://opensim.stanford.edu/",
+        "https://www.youtube.com/watch?v=gybW7JJGZe0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What happens when an implant fails?",
+      "concepts": ["fatigue failure", "stress shielding", "wear debris", "aseptic loosening"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4718498/",
+        "https://www.ajronline.org/doi/full/10.2214/AJR.07.2484"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Lower Limb Prosthetics",
+      "title": "How does a passive prosthetic foot store and return energy?",
+      "concepts": ["ESAR feet", "carbon fiber mechanics", "energy efficiency", "roll-over shape"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ossur.com/en-us/prosthetics/feet",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4459926/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Lower Limb Prosthetics",
+      "title": "What are the key biomechanical and material principles we've learned?",
+      "concepts": ["biocompatibility review", "gait analysis review", "material properties review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.khanacademy.org/science/health-and-medicine"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Lower Limb Prosthetics",
+      "title": "Why do microprocessor knees cost $50,000?",
+      "concepts": ["hydraulic damping", "stance phase control", "swing phase optimization", "sensor fusion"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.ottobock.com/en-us/prosthetics/lower-limb-prosthetics/solution-overview/microprocessor-controlled-knee-joints",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315991/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Lower Limb Prosthetics",
+      "title": "How do you design a socket that doesn't cause pain?",
+      "concepts": ["pressure distribution", "soft tissue mechanics", "volume fluctuation", "interface materials"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5706482/",
+        "https://www.oandplibrary.org/poi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Lower Limb Prosthetics",
+      "title": "Can we attach prosthetics directly to bone?",
+      "concepts": ["osseointegration", "percutaneous implants", "infection risk", "load transfer"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6067791/",
+        "https://integrum.se/technology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Upper Limb Prosthetics",
+      "title": "What can body-powered prosthetics teach us about design simplicity?",
+      "concepts": ["mechanical advantage", "cable systems", "terminal devices", "user training"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=XCCu4FxiRmg",
+        "https://www.oandp.org/publications/jop/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Upper Limb Prosthetics",
+      "title": "How do muscles create electrical signals we can measure?",
+      "concepts": ["electromyography", "motor unit recruitment", "surface EMG", "signal conditioning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://physionet.org/content/emgdb/1.0.0/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6017325/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Upper Limb Prosthetics",
+      "title": "How do the design principles we've covered work together?",
+      "concepts": ["socket design review", "control systems review", "material selection review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.oandp.org/education/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Upper Limb Prosthetics",
+      "title": "Why is controlling a prosthetic hand harder than controlling a knee?",
+      "concepts": ["degrees of freedom", "pattern recognition", "machine learning classification", "grip patterns"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5357254/",
+        "https://github.com/topics/prosthetic-hand"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Upper Limb Prosthetics",
+      "title": "What is targeted muscle reinnervation and why does it matter?",
+      "concepts": ["TMR surgery", "neural regeneration", "amplified control signals", "intuitive control"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5444528/",
+        "https://www.luriechildrens.org/en/specialties-conditions/targeted-muscle-reinnervation/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Neural Interfaces",
+      "title": "Can we read thoughts directly from the brain?",
+      "concepts": ["brain-computer interfaces", "cortical signals", "spike sorting", "decoder algorithms"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41586-021-03506-2",
+        "https://www.braingate.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Neural Interfaces",
+      "title": "Why don't prosthetic users have a sense of touch?",
+      "concepts": ["sensory feedback", "haptic actuators", "peripheral nerve stimulation", "sensory substitution"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6345497/",
+        "https://spectrum.ieee.org/prosthetic-arm-with-sense-of-touch"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Neural Interfaces",
+      "title": "What can we learn from reading neural implant research?",
+      "concepts": ["study design", "outcome measures", "signal processing methods", "clinical significance"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nejm.org/doi/full/10.1056/NEJMoa1608085",
+        "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32234-6/fulltext"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Neural Interfaces",
+      "title": "What neural control strategies have we explored?",
+      "concepts": ["EMG review", "BCI review", "sensory feedback review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=6Jd7fU7yzYM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Implantable Devices",
+      "title": "How does a total hip replacement actually work?",
+      "concepts": ["joint kinematics", "acetabular cup", "femoral stem", "bearing surfaces"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://orthoinfo.aaos.org/en/treatment/total-hip-replacement/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435629/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Implantable Devices",
+      "title": "Why do cardiac pacemakers need to last 10+ years?",
+      "concepts": ["battery technology", "hermetic sealing", "low-power electronics", "lead design"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.heart.org/en/health-topics/arrhythmia/prevention--treatment-of-arrhythmia/pacemakers",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5490905/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Implantable Devices",
+      "title": "How does a cochlear implant restore hearing?",
+      "concepts": ["auditory nerve stimulation", "tonotopic mapping", "speech processing algorithms", "electrode arrays"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.nidcd.nih.gov/health/cochlear-implants",
+        "https://www.youtube.com/watch?v=AqZKE7JgLJs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Regulatory and Clinical",
+      "title": "What makes a medical device Class I vs. Class III?",
+      "concepts": ["FDA classification", "risk-based regulation", "510(k) pathway", "PMA requirements"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.fda.gov/medical-devices/classify-your-medical-device",
+        "https://www.fda.gov/training-and-continuing-education/cdrh-learn/device-advice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Regulatory and Clinical",
+      "title": "How do you design a clinical trial for a prosthetic device?",
+      "concepts": ["study endpoints", "patient-reported outcomes", "functional assessments", "statistical power"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4768278/",
+        "https://clinicaltrials.gov/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Regulatory and Clinical",
+      "title": "What does it take to bring a device from concept to market?",
+      "concepts": ["design review", "clinical testing review", "regulatory review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.fda.gov/medical-devices/device-development-process"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Emerging Frontiers",
+      "title": "What ethical questions arise from brain-controlled devices?",
+      "concepts": ["neuroethics", "autonomy", "privacy of neural data", "equitable access"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.nature.com/articles/s41591-019-0432-x",
+        "https://neuroethicsblog.bioethics.ox.ac.uk/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Emerging Frontiers",
+      "title": "Where is the field heading in the next decade?",
+      "concepts": ["soft robotics", "bioelectronic medicine", "tissue engineering scaffolds", "AI-driven personalization"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.nature.com/articles/s41551-020-00688-x",
+        "https://www.sciencedirect.com/journal/biomaterials"
+      ],
+      "status": "pending"
+    }
+  ]
+}

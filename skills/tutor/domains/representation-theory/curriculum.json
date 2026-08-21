@@ -1,0 +1,539 @@
+{
+  "topic": "Representation theory",
+  "slug": "representation-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "linear algebra",
+    "abstract algebra",
+    "group theory basics",
+    "vector spaces and inner products"
+  ],
+  "exit_criteria": [
+    "construct and analyze representations of finite groups using character theory",
+    "compute character tables for small groups",
+    "understand the connection between Lie groups and Lie algebras",
+    "work with root systems and weight spaces",
+    "apply representation theory to problems in physics and geometry",
+    "use computational tools (SageMath, GAP) for representation-theoretic calculations"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do mathematicians study symmetries using matrices?",
+      "concepts": [
+        "group representations",
+        "homomorphisms",
+        "linear actions"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.mit.edu/~etingof/replect.pdf",
+        "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What happens when we represent the symmetric group S₃?",
+      "concepts": [
+        "permutation representations",
+        "matrix realizations",
+        "concrete examples"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How do representations split into simpler pieces?",
+      "concepts": [
+        "irreducible representations",
+        "subrepresentations",
+        "direct sums"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.columbia.edu/~woit/RepThy/",
+        "https://timseynnaeve.github.io/misc/Rep_Theory_Notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can you build new representations from old ones?",
+      "concepts": [
+        "tensor products",
+        "dual representations",
+        "hom spaces"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "When is a representation completely determined by its trace?",
+      "concepts": [
+        "characters",
+        "trace invariance",
+        "class functions"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "Review: What have we learned about representations so far?",
+      "concepts": [
+        "group representations review",
+        "irreducibility",
+        "characters",
+        "concrete examples"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Finite Groups",
+      "title": "Why do finite group representations always decompose nicely?",
+      "concepts": [
+        "Maschke's theorem",
+        "complete reducibility",
+        "averaging trick"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf",
+        "http://sporadic.stanford.edu/Math122/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Finite Groups",
+      "title": "How do characters of different representations interact?",
+      "concepts": [
+        "orthogonality relations",
+        "inner product on class functions",
+        "character tables"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://timseynnaeve.github.io/misc/Rep_Theory_Notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Finite Groups",
+      "title": "Can you construct the character table for the dihedral group D₄?",
+      "concepts": [
+        "character computation",
+        "conjugacy classes",
+        "dimension counting"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.math.columbia.edu/~woit/RepThy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Finite Groups",
+      "title": "How do we lift a representation from a subgroup to the whole group?",
+      "concepts": [
+        "induced representations",
+        "Frobenius reciprocity",
+        "restriction"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Finite Groups",
+      "title": "What makes the representation theory of the symmetric group special?",
+      "concepts": [
+        "Young tableaux",
+        "Specht modules",
+        "partitions"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/",
+        "https://www.math.columbia.edu/~khovanov/resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Finite Groups",
+      "title": "How does representation theory help us count combinatorial objects?",
+      "concepts": [
+        "Burnside's lemma",
+        "group actions",
+        "symmetry counting"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Finite Groups",
+      "title": "Can you synthesize what we've learned about characters and finite groups?",
+      "concepts": [
+        "character theory review",
+        "decomposition practice",
+        "computational techniques"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.math.columbia.edu/~khovanov/resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Lie Groups and Algebras",
+      "title": "What are Lie groups and why should we care about them?",
+      "concepts": [
+        "matrix Lie groups",
+        "continuous symmetry",
+        "GL(n), SL(n), SO(n), SU(n)"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.columbia.edu/~woit/RepThy/",
+        "http://www.liegroups.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Lie Groups and Algebras",
+      "title": "How do we differentiate a Lie group?",
+      "concepts": [
+        "Lie algebras",
+        "tangent space at identity",
+        "exponential map"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.columbia.edu/~woit/RepThy/",
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Lie Groups and Algebras",
+      "title": "Why does the Lie bracket measure non-commutativity?",
+      "concepts": [
+        "Lie bracket",
+        "commutator",
+        "Baker-Campbell-Hausdorff"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://timseynnaeve.github.io/misc/Rep_Theory_Notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Lie Groups and Algebras",
+      "title": "What does it mean to represent a Lie algebra?",
+      "concepts": [
+        "Lie algebra representations",
+        "preservation of bracket",
+        "universal enveloping algebra"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf",
+        "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Lie Groups and Algebras",
+      "title": "How do representations of sl(2,C) decompose?",
+      "concepts": [
+        "sl(2) representations",
+        "highest weight theory preview",
+        "weight spaces"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.columbia.edu/~woit/RepThy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Lie Groups and Algebras",
+      "title": "Can you find all irreducible representations of SU(2)?",
+      "concepts": [
+        "SU(2) representations",
+        "spin representations",
+        "angular momentum"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "http://www.liegroups.org/",
+        "https://www.math.columbia.edu/~woit/RepThy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Lie Groups and Algebras",
+      "title": "How do Lie groups and Lie algebras connect through the exponential map?",
+      "concepts": [
+        "Lie theory review",
+        "sl(2) practice",
+        "physics applications"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.math.columbia.edu/~khovanov/resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Structure and Classification",
+      "title": "What are root systems and why do they classify Lie algebras?",
+      "concepts": [
+        "root systems",
+        "Cartan subalgebras",
+        "simple roots"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.liegroups.org/",
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Structure and Classification",
+      "title": "How do Dynkin diagrams encode algebraic structure?",
+      "concepts": [
+        "Dynkin diagrams",
+        "Cartan matrix",
+        "classification of simple Lie algebras"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "http://www.liegroups.org/",
+        "https://www.math.columbia.edu/~woit/RepThy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Structure and Classification",
+      "title": "What are weights and how do they organize representations?",
+      "concepts": [
+        "weight spaces",
+        "dominant weights",
+        "weight lattice"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf",
+        "http://www.liegroups.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Structure and Classification",
+      "title": "Why is there always a highest weight in every representation?",
+      "concepts": [
+        "highest weight theory",
+        "Verma modules",
+        "uniqueness of irreducibles"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.math.columbia.edu/~woit/RepThy/",
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Structure and Classification",
+      "title": "Can you compute the character using the Weyl character formula?",
+      "concepts": [
+        "Weyl character formula",
+        "Weyl group",
+        "character computation"
+      ],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "http://www.liegroups.org/",
+        "https://timseynnaeve.github.io/misc/Rep_Theory_Notes.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Structure and Classification",
+      "title": "How do we use computational tools to explore representations?",
+      "concepts": [
+        "SageMath for representation theory",
+        "GAP software",
+        "algorithmic methods"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "http://www.liegroups.org/",
+        "https://www.math.columbia.edu/~khovanov/resources/",
+        "https://amathr.org/software/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Structure and Classification",
+      "title": "How do roots, weights, and Dynkin diagrams classify representations?",
+      "concepts": [
+        "root system review",
+        "Dynkin diagrams practice",
+        "highest weight theory"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "http://www.liegroups.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applications and Synthesis",
+      "title": "How does geometric representation theory connect geometry and algebra?",
+      "concepts": [
+        "flag varieties",
+        "Borel-Weil-Bott theorem",
+        "geometric realizations"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.math.columbia.edu/~woit/RepThy/",
+        "https://www.math.columbia.edu/~khovanov/resources/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Applications and Synthesis",
+      "title": "What role does representation theory play in modern number theory?",
+      "concepts": [
+        "modular forms",
+        "Langlands program",
+        "Galois representations"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.math.columbia.edu/~woit/RepThy/",
+        "https://math.mit.edu/~etingof/representationtheorybook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Applications and Synthesis",
+      "title": "Where do you go next in representation theory?",
+      "concepts": [
+        "quantum groups",
+        "quiver representations",
+        "categorical approaches",
+        "research directions"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.math.columbia.edu/~khovanov/resources/",
+        "https://amathr.org/software/",
+        "https://ncatlab.org/nlab/show/representation+theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Applications and Synthesis",
+      "title": "How would you explain representation theory to someone in your field?",
+      "concepts": [
+        "synthesis",
+        "cross-domain connections",
+        "pedagogical practice"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.math.columbia.edu/~woit/RepThy/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

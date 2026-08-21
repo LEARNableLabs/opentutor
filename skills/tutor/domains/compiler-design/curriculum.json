@@ -1,0 +1,405 @@
+{
+  "topic": "Compiler Design",
+  "slug": "compiler-design",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "data structures and algorithms",
+    "programming language fundamentals",
+    "discrete mathematics (automata, formal languages)",
+    "computer architecture basics",
+    "operating systems basics"
+  ],
+  "exit_criteria": [
+    "build a working compiler for a simple language from scratch",
+    "explain and implement each compiler phase (lexing, parsing, semantic analysis, code generation)",
+    "read and understand intermediate representations (AST, three-address code, SSA)",
+    "implement classic optimization passes (constant folding, dead code elimination, register allocation)",
+    "use LLVM to build a language frontend",
+    "debug compiled code and understand compiler error messages",
+    "reason about code transformations and their correctness"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do we need compilers when interpreters exist?",
+      "concepts": ["compilation vs interpretation", "ahead-of-time vs JIT", "compiler pipeline overview"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/",
+        "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What does a compiler actually do in 60 seconds?",
+      "concepts": ["lexical analysis", "parsing", "semantic analysis", "code generation", "optimization"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/lectures/lecture01.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Lexical Analysis",
+      "title": "How does a compiler recognize words in code?",
+      "concepts": ["tokens", "lexemes", "pattern matching", "regular expressions"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Lexical Analysis",
+      "title": "Why can't we just use regex to tokenize everything?",
+      "concepts": ["finite automata", "DFA vs NFA", "limitations of regular languages"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://suif.stanford.edu/dragonbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Lexical Analysis",
+      "title": "How do scanner generators like Flex work under the hood?",
+      "concepts": ["lexer generators", "regular expression to automaton", "maximal munch"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://github.com/PKUFlyingPig/CS143-compiler"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Lexical Analysis",
+      "title": "Review: Tokenization Fundamentals",
+      "concepts": ["lexical analysis review", "automata review", "scanner design"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/",
+        "https://suif.stanford.edu/dragonbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Syntax Analysis",
+      "title": "What makes a grammar context-free?",
+      "concepts": ["context-free grammars", "derivations", "parse trees", "ambiguity"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Syntax Analysis",
+      "title": "Why can't we parse with just a stack and some rules?",
+      "concepts": ["top-down parsing", "recursive descent", "LL(1) grammars", "predictive parsing"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://suif.stanford.edu/dragonbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Syntax Analysis",
+      "title": "How does bottom-up parsing reverse-engineer the parse tree?",
+      "concepts": ["shift-reduce parsing", "LR parsing", "handle identification"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Syntax Analysis",
+      "title": "What makes LR parsing more powerful than LL?",
+      "concepts": ["LR(0)", "SLR", "LR(1)", "LALR", "parser generators"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://suif.stanford.edu/dragonbook/",
+        "https://github.com/PKUFlyingPig/CS143-compiler"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Syntax Analysis",
+      "title": "Review: Building your first parser",
+      "concepts": ["CFG design", "parsing strategies", "error recovery"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Semantic Analysis",
+      "title": "Why can't syntax alone catch type errors?",
+      "concepts": ["semantic vs syntactic correctness", "type systems", "static vs dynamic typing"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Semantic Analysis",
+      "title": "How do compilers track what variables mean?",
+      "concepts": ["symbol tables", "scope", "name resolution", "environments"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://suif.stanford.edu/dragonbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Semantic Analysis",
+      "title": "What does type checking actually check?",
+      "concepts": ["type inference", "type checking rules", "polymorphism", "type safety"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Semantic Analysis",
+      "title": "How does TypeScript's compiler work differently from C's?",
+      "concepts": ["structural vs nominal typing", "gradual typing", "type erasure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://github.com/PKUFlyingPig/CS143-compiler"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Semantic Analysis",
+      "title": "Review: Semantic Correctness",
+      "concepts": ["type checking review", "symbol tables review", "scope resolution"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/",
+        "https://suif.stanford.edu/dragonbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Intermediate Representations",
+      "title": "Why don't compilers go straight from source to machine code?",
+      "concepts": ["intermediate representations", "abstraction levels", "IR benefits"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Intermediate Representations",
+      "title": "What makes three-address code so universal?",
+      "concepts": ["three-address code", "temporaries", "basic blocks", "control flow graphs"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://suif.stanford.edu/dragonbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Intermediate Representations",
+      "title": "Why does LLVM IR look like assembly but isn't?",
+      "concepts": ["LLVM IR", "virtual registers", "typed IR", "platform independence"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html",
+        "https://lowlevelbits.org/how-to-learn-compilers-llvm-edition/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Intermediate Representations",
+      "title": "How does SSA form make optimization easier?",
+      "concepts": ["static single assignment", "phi functions", "def-use chains", "dominance"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://suif.stanford.edu/~courses/cs243/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Intermediate Representations",
+      "title": "Review: Reading and writing IR",
+      "concepts": ["IR design tradeoffs", "AST vs TAC vs SSA"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Code Generation",
+      "title": "How do you pick the right instruction for an operation?",
+      "concepts": ["instruction selection", "tree covering", "pattern matching", "CISC vs RISC"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://suif.stanford.edu/dragonbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Code Generation",
+      "title": "Why is register allocation NP-complete but still fast?",
+      "concepts": ["register allocation", "graph coloring", "spilling", "live ranges"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/",
+        "https://suif.stanford.edu/~courses/cs243/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Code Generation",
+      "title": "What happens when you run out of registers?",
+      "concepts": ["register spilling", "reload", "allocation heuristics"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://suif.stanford.edu/dragonbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Code Generation",
+      "title": "How do you turn an LLVM backend into machine code?",
+      "concepts": ["backend pipeline", "instruction scheduling", "peephole optimization"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html",
+        "https://ep.jhu.edu/courses/605615-compiler-design-with-llvm/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Code Generation",
+      "title": "Review: Code Generation Essentials",
+      "concepts": ["instruction selection review", "register allocation review", "backend pipeline"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/",
+        "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Optimization",
+      "title": "Why don't compilers just optimize everything?",
+      "concepts": ["optimization tradeoffs", "compile time vs runtime", "optimization levels"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Optimization",
+      "title": "How does dataflow analysis know what's safe to change?",
+      "concepts": ["dataflow analysis", "reaching definitions", "liveness analysis", "available expressions"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://suif.stanford.edu/~courses/cs243/",
+        "https://suif.stanford.edu/dragonbook/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Optimization",
+      "title": "What can you optimize inside a single basic block?",
+      "concepts": ["local optimizations", "constant folding", "algebraic simplification", "strength reduction"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://web.stanford.edu/class/cs143/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Optimization",
+      "title": "Why are loops the most important optimization target?",
+      "concepts": ["loop optimizations", "loop-invariant code motion", "induction variables", "loop unrolling"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://suif.stanford.edu/~courses/cs243/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Optimization",
+      "title": "Review: Build a simple optimizer",
+      "concepts": ["optimization passes", "pass ordering", "transformation correctness"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html"
+      ],
+      "status": "pending"
+    }
+  ]
+}

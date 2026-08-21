@@ -1,0 +1,360 @@
+{
+  "topic": "Papermaking — fiber science and artistic techniques",
+  "slug": "papermaking",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (molecular structure, pH, polymers)",
+    "studio practice or craft experience",
+    "comfort with hands-on material experimentation"
+  ],
+  "exit_criteria": [
+    "prepare pulp from raw plant fibers using appropriate processing methods",
+    "form sheets using both Western and Japanese techniques",
+    "diagnose and correct common formation problems (uneven fiber distribution, weak spots, poor drainage)",
+    "apply artistic techniques (pulp painting, inclusions, layering) with control",
+    "select fibers and processing methods based on desired paper properties",
+    "integrate scientific understanding with creative exploration"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fiber Fundamentals",
+      "title": "What makes cellulose the perfect molecule for papermaking?",
+      "concepts": ["cellulose structure", "hydrogen bonding", "fiber-to-fiber adhesion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "https://www.tappi.org/content/sarg/t402.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fiber Fundamentals",
+      "title": "Why do some plants make better paper than others?",
+      "concepts": ["bast fibers", "leaf fibers", "fiber length and strength"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.sfcb.org/classes/papermaking-fundamentals",
+        "https://uiowa.edu/book-arts/papermaking"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fiber Fundamentals",
+      "title": "What are lignin and hemicellulose doing in your pulp?",
+      "concepts": ["lignin removal", "hemicellulose", "fiber purity vs. character"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.museumofpapermaking.org/fiber-chemistry",
+        "https://www.tappi.org/resources/fiber-properties"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fiber Fundamentals",
+      "title": "How does water chemistry secretly control your paper?",
+      "concepts": ["pH effects", "mineral content", "water hardness", "fiber swelling"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.carriagehouse paper.com/water-chemistry-guide",
+        "https://www.youtube.com/helenhiebert"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Fiber Fundamentals",
+      "title": "How do three fiber sources compare, and what properties would you predict for each?",
+      "concepts": ["fiber selection", "property prediction", "material sourcing"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.twinrocker.com/fiber-guide",
+        "https://www.lsmcd.com/fiber-comparison"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Fiber Fundamentals",
+      "title": "What are the foundations of fiber science and why do they matter?",
+      "concepts": ["cellulose bonding", "fiber types", "water chemistry", "material selection"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.carriagehouse paper.com/quick-reference",
+        "https://www.sfcb.org/papermaking-glossary"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "From Plant to Pulp",
+      "title": "What happens during retting, and why does it smell so bad?",
+      "concepts": ["retting methods", "microbial breakdown", "bast fiber separation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://uiowa.edu/book-arts/fiber-processing",
+        "https://www.youtube.com/watch?v=fiber-retting-demo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "From Plant to Pulp",
+      "title": "Should you cook your fibers with lye or with soda ash?",
+      "concepts": ["alkaline cooking", "fiber degradation vs. purification", "chemical safety"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.carriagehouse paper.com/cooking-guide",
+        "https://www.tappi.org/alkaline-pulping-methods"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "From Plant to Pulp",
+      "title": "Why does beating transform your pulp from straw to silk?",
+      "concepts": ["mechanical beating", "fibrillation", "hydration", "bonding surface area"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/helenhiebert/beating-demo",
+        "https://columbia.edu/bookarts/beating-fundamentals"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "From Plant to Pulp",
+      "title": "How much beating is too much?",
+      "concepts": ["over-beating", "fiber cutting", "strength optimization"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sfcb.org/beating-workshop",
+        "https://www.paperslurry.com/beating-tips"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "From Plant to Pulp",
+      "title": "How would you design a fiber processing workflow for a new plant material?",
+      "concepts": ["workflow design", "process integration", "troubleshooting"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.twinrocker.com/experimental-fibers",
+        "https://uiowa.edu/book-arts/alternative-fibers"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Sheet Formation Science",
+      "title": "What's actually happening when you dip that mould?",
+      "concepts": ["fiber suspension", "drainage physics", "fiber orientation", "sheet formation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/uiowa-papermaking/formation-fundamentals",
+        "https://www.tappi.org/sheet-formation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sheet Formation Science",
+      "title": "How do cellulose bonding, fiber processing, and pulp preparation work together?",
+      "concepts": ["cellulose bonding", "fiber processing", "pulp preparation", "integrated understanding"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.carriagehouse paper.com/quick-reference",
+        "https://www.sfcb.org/papermaking-glossary"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sheet Formation Science",
+      "title": "Why does pulp consistency feel like cooking with ratios?",
+      "concepts": ["pulp consistency", "water-to-fiber ratio", "formation quality"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/helenhiebert/consistency-matters",
+        "https://columbia.edu/bookarts/pulp-mixing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Sheet Formation Science",
+      "title": "How does nagashi-zuki create impossibly thin, strong sheets?",
+      "concepts": ["Japanese formation", "neri (formation aid)", "layered fiber orientation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/japanese-papermaking-demo",
+        "https://www.aimeelee.work/nagashi-zuki-workshop"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sheet Formation Science",
+      "title": "What goes wrong when your sheet looks like a cloud map?",
+      "concepts": ["formation defects", "fiber flocculation", "drainage problems", "troubleshooting"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.paperslurry.com/troubleshooting-formation",
+        "https://www.tappi.org/common-defects"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Sheet Formation Science",
+      "title": "Does restraint drying create different paper than loft drying?",
+      "concepts": ["drying methods", "shrinkage", "surface texture", "dimensional stability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://uiowa.edu/book-arts/drying-methods",
+        "https://www.youtube.com/helenhiebert/drying-comparison"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Artistic Techniques",
+      "title": "How do you paint with pulp instead of pigment?",
+      "concepts": ["pulp painting", "colored pulp preparation", "stenciling", "layering"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/helenhiebert/pulp-painting-intro",
+        "https://www.carriagehouse paper.com/pulp-painting-workshop"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Artistic Techniques",
+      "title": "What makes a good inclusion, and what makes a disaster?",
+      "concepts": ["embedments", "material compatibility", "wet strength", "visual integration"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.sfcb.org/inclusions-workshop",
+        "https://www.youtube.com/inclusions-experiments"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Artistic Techniques",
+      "title": "How do Western and Japanese formation methods compare, and when would you use each?",
+      "concepts": ["Western vs Japanese methods", "consistency control", "defect diagnosis", "technique selection"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.twinrocker.com/technique-reference",
+        "https://columbia.edu/bookarts/formation-review"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Artistic Techniques",
+      "title": "Can you laminate wet sheets without turning them to mush?",
+      "concepts": ["lamination", "multi-layer sheets", "translucency", "bonding wet layers"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/helenhiebert/lamination-techniques",
+        "https://www.aimeelee.work/advanced-layering"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Artistic Techniques",
+      "title": "How would you create a test matrix to understand how five variables interact?",
+      "concepts": ["experimental design", "variable isolation", "documentation", "material testing"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.paperslurry.com/experimental-method",
+        "https://uiowa.edu/book-arts/testing-protocols"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Advanced Integration",
+      "title": "What does archival really mean for handmade paper?",
+      "concepts": ["permanence", "pH neutral", "lignin-free", "conservation standards"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.tappi.org/archival-standards",
+        "https://www.museumofpapermaking.org/conservation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Advanced Integration",
+      "title": "How would you make paper from your local invasive plants?",
+      "concepts": ["sustainable sourcing", "fiber experimentation", "community resources", "environmental impact"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/helenhiebert/invasive-fiber-project",
+        "https://www.carriagehouse paper.com/sustainable-practices"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Integration",
+      "title": "How do artistic techniques build on your understanding of material properties?",
+      "concepts": ["pulp painting", "inclusions", "lamination", "property control"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.sfcb.org/technique-compendium",
+        "https://columbia.edu/bookarts/artistic-review"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Integration",
+      "title": "How would you design paper for a specific use: artist book, print substrate, or sculpture?",
+      "concepts": ["design criteria", "property engineering", "artistic intention", "technical execution"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://uiowa.edu/book-arts/design-for-use",
+        "https://www.aimeelee.work/paper-design-workshop",
+        "https://www.paperslurry.com/case-studies"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "topic": "Orchestration and Instrumentation",
+  "slug": "orchestration",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "music theory fundamentals",
+    "notation reading",
+    "basic harmony",
+    "familiarity with one or more instruments"
+  ],
+  "exit_criteria": [
+    "student can identify ranges and transpositions for all orchestral instruments",
+    "student can write idiomatically for strings, woodwinds, brass, and percussion",
+    "student can analyze orchestral scores for texture, balance, and color",
+    "student can arrange music for various ensemble configurations",
+    "student can recognize and notate extended techniques",
+    "student can make informed decisions about doublings and orchestral blend"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations and the String Family",
+      "title": "What makes orchestral instruments sound different from each other?",
+      "concepts": ["timbre", "acoustics", "instrument families", "overtones"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://timbreandorchestration.org/learn-about-orchestration",
+        "https://study.com/academy/lesson/video/orchestration-definition-techniques-tools.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations and the String Family",
+      "title": "Why is transposition so important for orchestral writing?",
+      "concepts": ["transposition", "concert pitch", "written pitch", "transposing instruments"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://music.arts.uci.edu/dobrian/orch.syllabus.htm",
+        "https://viva.pressbooks.pub/openmusictheory/part/orchestration/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations and the String Family",
+      "title": "How do violins create such expressive sounds?",
+      "concepts": ["violin range", "bowing techniques", "articulations", "vibrato"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://tristanartsonline.com/multimedia-orchestration/about-multimedia-orchestration-online/",
+        "https://orchestrationonline.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations and the String Family",
+      "title": "What happens when you ask a cellist to play too high?",
+      "concepts": ["comfortable ranges", "extreme registers", "viola and cello ranges", "register characteristics"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://online.berklee.edu/courses/orchestration-1",
+        "https://www.artofcomposing.com/orchestration-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations and the String Family",
+      "title": "Why do string sections sound fuller than individual players?",
+      "concepts": ["unison doubling", "divisi", "section balance", "acoustic reinforcement"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://cinematiccomposing.com/strings-instrumentation-orchestration?el=mainsite",
+        "https://orchestrationonline.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations and the String Family",
+      "title": "How can you spot unplayable string writing?",
+      "concepts": ["idiomatic writing", "practical limitations", "error detection", "performance feasibility"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://music.arts.uci.edu/dobrian/orch.syllabus.htm",
+        "https://www.educator.com/music-theory/music-history/hills/instrumentation-+-orchestration.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Woodwind Family",
+      "title": "What have we learned about strings and orchestral foundations?",
+      "concepts": ["string techniques review", "transposition review", "range review", "idiomatic writing review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://viva.pressbooks.pub/openmusictheory/part/orchestration/",
+        "https://orchestrationonline.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Woodwind Family",
+      "title": "How does breath control shape woodwind phrasing?",
+      "concepts": ["breath marks", "phrase length", "circular breathing", "wind limitations"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://online.berklee.edu/courses/orchestration-1",
+        "https://timbreandorchestration.org/learn-about-orchestration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Woodwind Family",
+      "title": "Why does the clarinet have such a wide range?",
+      "concepts": ["clarinet register", "chalumeau", "clarion", "altissimo", "register breaks"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://tristanartsonline.com/multimedia-orchestration/about-multimedia-orchestration-online/",
+        "https://www.artofcomposing.com/orchestration-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Woodwind Family",
+      "title": "What makes flute and oboe blend or contrast?",
+      "concepts": ["woodwind color", "timbral matching", "blend vs. contrast", "register overlap"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.berklee.edu/courses/orchestration-1",
+        "https://orchestrationonline.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Woodwind Family",
+      "title": "When should you double woodwinds with strings?",
+      "concepts": ["cross-family doubling", "reinforcement", "color mixing", "balance considerations"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://music.arts.uci.edu/dobrian/orch.syllabus.htm",
+        "https://cinematiccomposing.com/strings-instrumentation-orchestration?el=mainsite"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Woodwind Family",
+      "title": "What can orchestral scores teach us about woodwind color?",
+      "concepts": ["score analysis", "listening skills", "orchestration choices", "timbral effects"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.educator.com/music-theory/music-history/hills/instrumentation-+-orchestration.php",
+        "https://timbreandorchestration.org/learn-about-orchestration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Brass Family",
+      "title": "Why do brass players need to warm up their lips?",
+      "concepts": ["embouchure", "lip tension", "brass acoustics", "endurance"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://tristanartsonline.com/multimedia-orchestration/about-multimedia-orchestration-online/",
+        "https://online.berklee.edu/courses/orchestration-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Brass Family",
+      "title": "How do woodwinds blend with other instrument families?",
+      "concepts": ["woodwind techniques review", "doubling review", "blend review", "breath control review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://viva.pressbooks.pub/openmusictheory/part/orchestration/",
+        "https://orchestrationonline.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Brass Family",
+      "title": "How do mutes transform brass timbre?",
+      "concepts": ["mutes", "straight mute", "cup mute", "harmon mute", "timbral modification"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.artofcomposing.com/orchestration-resources",
+        "https://tristanartsonline.com/multimedia-orchestration/about-multimedia-orchestration-online/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Brass Family",
+      "title": "What's the difference between writing for horn and trumpet?",
+      "concepts": ["horn vs. trumpet", "transposition comparison", "register characteristics", "role in orchestra"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.berklee.edu/courses/orchestration-1",
+        "https://music.arts.uci.edu/dobrian/orch.syllabus.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Brass Family",
+      "title": "How do you balance brass against the rest of the orchestra?",
+      "concepts": ["brass volume", "balance", "dynamic control", "sectional proportions"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://orchestrationonline.com/",
+        "https://cinematiccomposing.com/strings-instrumentation-orchestration?el=mainsite"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Percussion and Other Instruments",
+      "title": "Why is percussion notation so varied?",
+      "concepts": ["percussion notation", "staff assignment", "indefinite pitch", "contemporary notation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://viva.pressbooks.pub/openmusictheory/part/orchestration/",
+        "https://www.artofcomposing.com/orchestration-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Percussion and Other Instruments",
+      "title": "When should you use timpani vs. bass drum?",
+      "concepts": ["pitched percussion", "unpitched percussion", "timpani tuning", "percussion role"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.berklee.edu/courses/orchestration-1",
+        "https://tristanartsonline.com/multimedia-orchestration/about-multimedia-orchestration-online/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Percussion and Other Instruments",
+      "title": "How does harp pedaling limit what you can write?",
+      "concepts": ["harp pedals", "enharmonic limitations", "glissandi", "harp notation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://music.arts.uci.edu/dobrian/orch.syllabus.htm",
+        "https://orchestrationonline.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Percussion and Other Instruments",
+      "title": "How do you balance brass power with orchestral blend?",
+      "concepts": ["brass techniques review", "mutes review", "balance review", "dynamic control review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://viva.pressbooks.pub/openmusictheory/part/orchestration/",
+        "https://orchestrationonline.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Orchestral Techniques and Integration",
+      "title": "What makes a good orchestral texture?",
+      "concepts": ["texture types", "melody-accompaniment", "counterpoint", "spacing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.berklee.edu/courses/orchestration-1",
+        "https://www.educator.com/music-theory/music-history/hills/instrumentation-+-orchestration.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Orchestral Techniques and Integration",
+      "title": "How do you orchestrate a piano piece for full orchestra?",
+      "concepts": ["orchestral reduction", "expansion", "voicing redistribution", "color choices"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://music.arts.uci.edu/dobrian/orch.syllabus.htm",
+        "https://cinematiccomposing.com/strings-instrumentation-orchestration?el=mainsite"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Orchestral Techniques and Integration",
+      "title": "Why do extended techniques work in contemporary music?",
+      "concepts": ["extended techniques", "col legno", "flutter-tongue", "multiphonics", "contemporary notation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.artofcomposing.com/orchestration-resources",
+        "https://timbreandorchestration.org/learn-about-orchestration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Orchestral Techniques and Integration",
+      "title": "How has film scoring changed orchestration practice?",
+      "concepts": ["film orchestration", "sample libraries", "MIDI orchestration", "hybrid techniques"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://cinematiccomposing.com/strings-instrumentation-orchestration?el=mainsite",
+        "https://online.berklee.edu/courses/orchestration-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Orchestral Techniques and Integration",
+      "title": "What does your ideal ensemble arrangement reveal about orchestration?",
+      "concepts": ["arrangement project", "orchestration synthesis", "practical application", "creative choices"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://orchestrationonline.com/",
+        "https://musescore.com/courses/orchestration--Wp77a"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Orchestral Techniques and Integration",
+      "title": "How do timbre choices shape a complete orchestral score?",
+      "concepts": ["comprehensive review", "integration", "orchestration workflow", "creative decision-making"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://viva.pressbooks.pub/openmusictheory/part/orchestration/",
+        "https://orchestrationonline.com/",
+        "https://www.artofcomposing.com/orchestration-resources"
+      ],
+      "status": "pending"
+    }
+  ]
+}

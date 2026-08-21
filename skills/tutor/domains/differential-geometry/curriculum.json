@@ -1,0 +1,380 @@
+{
+  "topic": "Differential geometry and general relativity",
+  "slug": "differential-geometry",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "linear algebra",
+    "ordinary differential equations",
+    "basic special relativity"
+  ],
+  "exit_criteria": [
+    "understand manifolds, tensors, and differential forms",
+    "compute curvature tensors for a given metric",
+    "derive geodesic equations from a metric",
+    "interpret the Einstein field equations physically",
+    "analyze simple spacetime solutions (Schwarzschild, FRW)",
+    "understand gravitational waves and black hole geometry"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Manifolds and Tangent Spaces",
+      "title": "Why isn't the universe just flat Euclidean space?",
+      "concepts": ["manifolds", "curved spaces", "local vs global geometry"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/video_galleries/video-lectures/",
+        "https://preposterousuniverse.com/grnotes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Manifolds and Tangent Spaces",
+      "title": "How do we do calculus on curved surfaces?",
+      "concepts": ["charts", "atlases", "smooth maps", "differentiability"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://link.springer.com/book/10.1007/978-981-99-0022-0",
+        "https://michaelmoroz.github.io/TracingGeodesics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Manifolds and Tangent Spaces",
+      "title": "What does it mean to have a tangent vector on a curved space?",
+      "concepts": ["tangent vectors", "tangent spaces", "directional derivatives"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iap.fr/useriap/werth/PDF/Differential_Geometry_Notes.pdf",
+        "https://arxiv.org/pdf/gr-qc/9712019"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Manifolds and Tangent Spaces",
+      "title": "Why do we need coordinate-independent descriptions?",
+      "concepts": ["coordinate transformations", "tensor transformation laws", "invariance"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/pages/lecture-summaries/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Manifolds and Tangent Spaces",
+      "title": "How do vector fields flow across curved spaces?",
+      "concepts": ["vector fields", "integral curves", "Lie brackets"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Tensors and Forms",
+      "title": "What have we learned about manifolds and curved spaces?",
+      "concepts": ["manifolds review", "tangent spaces review", "coordinate systems review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Tensors and Forms",
+      "title": "What exactly is a tensor and why does GR need them?",
+      "concepts": ["tensors", "multilinear maps", "tensor products"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://link.springer.com/book/10.1007/978-981-99-0022-0",
+        "https://openresearchsoftware.metajnl.com/articles/10.5334/jors.558"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Tensors and Forms",
+      "title": "Can we avoid all the index gymnastics?",
+      "concepts": ["differential forms", "exterior derivative", "wedge product"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.routledge.com/Differential-Forms-and-the-Geometry-of-General-Relativity/Dray/p/book/9781032922164",
+        "https://courses.profoundphysics.com/p/mathematics-of-general-relativity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Tensors and Forms",
+      "title": "How do we compare tensors at different points?",
+      "concepts": ["covariant derivative", "connection", "parallel transport"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iap.fr/useriap/werth/PDF/Differential_Geometry_Notes.pdf",
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Tensors and Forms",
+      "title": "How would you explain parallel transport to someone who only knows vectors in flat space?",
+      "concepts": ["parallel transport", "geodesics", "affine connection"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://michaelmoroz.github.io/TracingGeodesics/",
+        "https://github.com/topics/general-relativity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Riemannian Geometry",
+      "title": "What does the metric tensor actually measure?",
+      "concepts": ["metric tensor", "distances", "angles", "signature"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/",
+        "https://www.youtube.com/playlist?list=PLpGHT1n4-mAvcXwzOIz3dHnGZaQP1LEib"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Riemannian Geometry",
+      "title": "Why does general relativity use a Lorentzian metric?",
+      "concepts": ["Minkowski spacetime", "Lorentzian signature", "causal structure"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "http://gamelab.mit.edu/research/openrelativity/",
+        "https://arxiv.org/pdf/gr-qc/9712019"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Riemannian Geometry",
+      "title": "How do tensors, forms, and the metric fit together?",
+      "concepts": ["tensor review", "covariant derivative review", "metric tensor review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://link.springer.com/book/10.1007/978-981-99-0022-0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Riemannian Geometry",
+      "title": "What is the straightest possible path in curved spacetime?",
+      "concepts": ["geodesics", "geodesic equation", "Christoffel symbols"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S0010465509003233",
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Riemannian Geometry",
+      "title": "How do GPS satellites account for curved spacetime?",
+      "concepts": ["geodesics in practice", "time dilation", "gravitational effects"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Curvature",
+      "title": "How do we mathematically capture the idea of curvature?",
+      "concepts": ["Riemann curvature tensor", "tidal forces", "geodesic deviation"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iap.fr/useriap/werth/PDF/Differential_Geometry_Notes.pdf",
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Curvature",
+      "title": "Why do we contract the Riemann tensor to get Ricci curvature?",
+      "concepts": ["Ricci tensor", "Ricci scalar", "contractions"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://link.springer.com/book/10.1007/978-981-99-0022-0",
+        "https://openresearchsoftware.metajnl.com/articles/10.5334/jors.558"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Curvature",
+      "title": "Why do parallel lines converge on a sphere?",
+      "concepts": ["parallel transport and curvature", "geometric intuition", "intrinsic curvature"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://michaelmoroz.github.io/TracingGeodesics/",
+        "https://github.com/bytebat/gros"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Curvature",
+      "title": "How would you explain to a friend why tidal forces reveal curvature?",
+      "concepts": ["geodesic deviation equation", "tidal forces", "curvature detection"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/",
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/pages/lecture-summaries/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Einstein's Field Equations",
+      "title": "What do curvature tensors tell us about the geometry of spacetime?",
+      "concepts": ["Riemann tensor review", "Ricci tensor review", "geodesic deviation review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLpGHT1n4-mAvcXwzOIz3dHnGZaQP1LEib"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Einstein's Field Equations",
+      "title": "How does matter tell spacetime how to curve?",
+      "concepts": ["Einstein field equations", "stress-energy tensor", "Einstein tensor"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/pdf/gr-qc/9712019",
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Einstein's Field Equations",
+      "title": "Why did Einstein add the cosmological constant?",
+      "concepts": ["cosmological constant", "vacuum energy", "dark energy"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/",
+        "https://www.youtube.com/playlist?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Einstein's Field Equations",
+      "title": "How does Newtonian gravity emerge from general relativity?",
+      "concepts": ["weak field limit", "Newtonian approximation", "correspondence principle"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://link.springer.com/book/10.1007/978-981-99-0022-0",
+        "https://courses.profoundphysics.com/p/mathematics-of-general-relativity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Solutions and Applications",
+      "title": "What is the spacetime geometry around a non-rotating black hole?",
+      "concepts": ["Schwarzschild solution", "event horizon", "singularity"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://michaelmoroz.github.io/TracingGeodesics/",
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Solutions and Applications",
+      "title": "How does rotation change black hole geometry?",
+      "concepts": ["Kerr solution", "frame dragging", "ergosphere"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/",
+        "https://github.com/bytebat/gros"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Solutions and Applications",
+      "title": "Why is the universe expanding?",
+      "concepts": ["FRW cosmology", "Hubble expansion", "scale factor"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://arxiv.org/pdf/gr-qc/9712019",
+        "https://www.youtube.com/playlist?list=PLpGHT1n4-mAvcXwzOIz3dHnGZaQP1LEib"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Solutions and Applications",
+      "title": "How do Einstein's equations produce the spacetimes we observe?",
+      "concepts": ["field equations review", "Schwarzschild review", "Kerr review", "FRW cosmology review"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/video_galleries/video-lectures/",
+        "https://preposterousuniverse.com/grnotes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Solutions and Applications",
+      "title": "How would you teach someone how GR changed our understanding of the universe?",
+      "concepts": ["GR applications", "experimental tests", "modern cosmology", "gravitational waves"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://preposterousuniverse.com/grnotes/",
+        "https://link.springer.com/book/10.1007/978-981-99-0022-0"
+      ],
+      "status": "pending"
+    }
+  ]
+}

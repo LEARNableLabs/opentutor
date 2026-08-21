@@ -1,0 +1,512 @@
+{
+  "topic": "Game Theory",
+  "slug": "game-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic probability theory",
+    "mathematical reasoning and proof techniques",
+    "comfort with formal notation",
+    "basic optimization (finding maxima/minima)"
+  ],
+  "exit_criteria": [
+    "model strategic interactions as games in normal and extensive form",
+    "compute Nash equilibria in pure and mixed strategies for simple games",
+    "analyze sequential games using backward induction",
+    "understand when and why cooperation emerges in repeated games",
+    "apply Bayesian game theory to situations with incomplete information",
+    "recognize game-theoretic structures in real-world scenarios (auctions, voting, markets)",
+    "evaluate the strengths and limitations of different solution concepts"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Strategic Form Games",
+      "title": "What makes a situation a 'game'?",
+      "concepts": [
+        "strategic interaction",
+        "players",
+        "strategies",
+        "payoffs"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/",
+        "https://www.gametheory.net/applets/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Strategic Form Games",
+      "title": "How do we represent simultaneous choices?",
+      "concepts": [
+        "normal form",
+        "payoff matrix",
+        "strategic form"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sites.math.rutgers.edu/~zeilberg/EM20/OsborneRubinsteinMasterpiece.pdf",
+        "https://www.youtube.com/playlist?list=PLSQl0a2vh4HANxDr1_wKjoghC-NYJgu9y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Strategic Form Games",
+      "title": "Why don't both prisoners stay silent?",
+      "concepts": [
+        "prisoner's dilemma",
+        "collective action problem",
+        "defection"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ncase.me/trust/",
+        "https://perthirtysix.com/tool/prisoners-dilemma-simulator"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Strategic Form Games",
+      "title": "Can you model this competitive scenario?",
+      "concepts": [
+        "game formulation",
+        "identifying players and strategies",
+        "payoff construction"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://economicsnetwork.ac.uk/teaching/Interactive%20Tutorials/Game%20Theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Dominant Strategies & Rationalizability",
+      "title": "When is one strategy always better?",
+      "concepts": [
+        "dominant strategy",
+        "strict dominance",
+        "weak dominance"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/",
+        "https://online.stanford.edu/courses/soe-ycs0002-game-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Dominant Strategies & Rationalizability",
+      "title": "What can we eliminate when everyone thinks strategically?",
+      "concepts": [
+        "iterated elimination",
+        "rationalizability",
+        "common knowledge of rationality"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sites.math.rutgers.edu/~zeilberg/EM20/OsborneRubinsteinMasterpiece.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Dominant Strategies & Rationalizability",
+      "title": "Why do auction bidders bid their true value?",
+      "concepts": [
+        "second-price auction",
+        "incentive compatibility",
+        "dominant strategy equilibrium"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://timroughgarden.org/f13/f13.pdf",
+        "https://www.gametheory.net/applets/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Nash Equilibrium",
+      "title": "What happens when everyone's choice is a best response?",
+      "concepts": [
+        "Nash equilibrium",
+        "best response",
+        "mutual consistency"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLSQl0a2vh4HANxDr1_wKjoghC-NYJgu9y",
+        "https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Nash Equilibrium",
+      "title": "How do we find equilibria systematically?",
+      "concepts": [
+        "best response correspondences",
+        "equilibrium computation",
+        "uniqueness"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sites.math.rutgers.edu/~zeilberg/EM20/OsborneRubinsteinMasterpiece.pdf",
+        "https://gametheorysociety.org/game-theoretic-software/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Nash Equilibrium",
+      "title": "Can randomizing be rational?",
+      "concepts": [
+        "mixed strategies",
+        "randomization",
+        "expected payoffs"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://online.stanford.edu/courses/soe-ycs0002-game-theory",
+        "https://www.gametheory.net/applets/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Nash Equilibrium",
+      "title": "Why does rock-paper-scissors have no pure equilibrium?",
+      "concepts": [
+        "mixed strategy Nash equilibrium",
+        "indifference condition",
+        "support"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://economicsnetwork.ac.uk/teaching/Simulations/Game%20Theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Nash Equilibrium",
+      "title": "Review: Finding equilibria in strategic games",
+      "concepts": [
+        "dominant strategies",
+        "Nash equilibrium",
+        "mixed strategies",
+        "computation methods"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://github.com/liuhh02/game-theory-coursera"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Sequential Games",
+      "title": "How do we model decisions that unfold over time?",
+      "concepts": [
+        "extensive form",
+        "game tree",
+        "information sets"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/",
+        "https://sites.math.rutgers.edu/~zeilberg/EM20/OsborneRubinsteinMasterpiece.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Sequential Games",
+      "title": "Why should you reason backwards in time?",
+      "concepts": [
+        "backward induction",
+        "subgame perfection",
+        "credible threats"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.stanford.edu/courses/soe-ycs0002-game-theory",
+        "https://www.gametheory.net/applets/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Sequential Games",
+      "title": "Should the entrant enter the market?",
+      "concepts": [
+        "entry deterrence",
+        "sequential rationality",
+        "commitment"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://economicsnetwork.ac.uk/teaching/Interactive%20Tutorials/Game%20Theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sequential Games",
+      "title": "What makes a threat credible?",
+      "concepts": [
+        "subgame perfect equilibrium",
+        "non-credible threats",
+        "refinements"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://sites.math.rutgers.edu/~zeilberg/EM20/OsborneRubinsteinMasterpiece.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Sequential Games",
+      "title": "Review: Solving games with perfect information",
+      "concepts": [
+        "extensive form",
+        "backward induction",
+        "subgame perfection",
+        "credibility"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/playlist?list=PLSQl0a2vh4HANxDr1_wKjoghC-NYJgu9y"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Repeated Games",
+      "title": "Can cooperation emerge from repeated interaction?",
+      "concepts": [
+        "repeated games",
+        "trigger strategies",
+        "grim trigger"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ncase.me/trust/",
+        "https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Repeated Games",
+      "title": "Why does the future matter for cooperation today?",
+      "concepts": [
+        "discount factor",
+        "shadow of the future",
+        "sustainability"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://sites.math.rutgers.edu/~zeilberg/EM20/OsborneRubinsteinMasterpiece.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Repeated Games",
+      "title": "What outcomes are sustainable in long-run relationships?",
+      "concepts": [
+        "folk theorem",
+        "subgame perfect equilibria in repeated games",
+        "punishment"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://online.stanford.edu/courses/soe-ycs0002-game-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Repeated Games",
+      "title": "How do real cartels maintain cooperation?",
+      "concepts": [
+        "collusion",
+        "detection and punishment",
+        "finite vs infinite horizon"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-12-economic-applications-of-game-theory-fall-2025/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Repeated Games",
+      "title": "Review: Sustaining cooperation over time",
+      "concepts": [
+        "repeated games",
+        "trigger strategies",
+        "folk theorem",
+        "discount factor",
+        "cooperation sustainability"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ncase.me/trust/",
+        "https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Bayesian Games",
+      "title": "How do we model private information?",
+      "concepts": [
+        "incomplete information",
+        "types",
+        "beliefs"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/",
+        "https://online.stanford.edu/courses/soe-ycs0002-game-theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Bayesian Games",
+      "title": "What is a Bayesian Nash equilibrium?",
+      "concepts": [
+        "Bayesian Nash equilibrium",
+        "interim best response",
+        "ex-ante vs ex-post"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sites.math.rutgers.edu/~zeilberg/EM20/OsborneRubinsteinMasterpiece.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Bayesian Games",
+      "title": "Why do first-price auctions have strategic bidding?",
+      "concepts": [
+        "first-price auction",
+        "bid shading",
+        "information revelation"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://timroughgarden.org/f13/f13.pdf",
+        "https://www.gametheory.net/applets/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Bayesian Games",
+      "title": "Review: Strategic thinking under uncertainty",
+      "concepts": [
+        "incomplete information",
+        "types",
+        "Bayesian Nash equilibrium",
+        "information revelation",
+        "auctions"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://sites.math.rutgers.edu/~zeilberg/EM20/OsborneRubinsteinMasterpiece.pdf",
+        "https://timroughgarden.org/f13/f13.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Applications & Advanced Topics",
+      "title": "How does evolution play games?",
+      "concepts": [
+        "evolutionary game theory",
+        "evolutionarily stable strategy",
+        "replicator dynamics"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://ncase.me/trust/",
+        "https://ocw.mit.edu/courses/14-12-economic-applications-of-game-theory-fall-2025/video_galleries/video-lectures/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Applications & Advanced Topics",
+      "title": "Can you design a mechanism to achieve a goal?",
+      "concepts": [
+        "mechanism design",
+        "incentive compatibility",
+        "revelation principle"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://timroughgarden.org/f13/f13.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Applications & Advanced Topics",
+      "title": "Review: The strategic worldview",
+      "concepts": [
+        "equilibrium concepts",
+        "information structures",
+        "applications",
+        "limitations"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://github.com/liuhh02/game-theory-coursera",
+        "https://gametheorysociety.org/game-theoretic-software/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

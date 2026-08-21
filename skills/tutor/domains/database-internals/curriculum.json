@@ -1,0 +1,388 @@
+{
+  "topic": "Database internals — storage engines and query optimization",
+  "slug": "database-internals",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "data structures (trees, hash tables, heaps)",
+    "basic SQL (SELECT, JOIN, WHERE, indexes)",
+    "algorithm complexity (Big-O notation)",
+    "operating systems basics (files, buffers, I/O)"
+  ],
+  "exit_criteria": [
+    "explain how B-trees and LSM-trees differ in write/read tradeoffs",
+    "interpret a query execution plan and identify bottlenecks",
+    "design appropriate indexes for common query patterns",
+    "understand cost-based optimization and cardinality estimation",
+    "recognize when to use different join algorithms",
+    "explain buffer pool management and cache replacement policies"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Storage Fundamentals",
+      "title": "Why can't databases just use regular files?",
+      "concepts": ["storage abstraction", "pages", "slotted pages"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://sqlite.org/fileformat.html",
+        "https://www.databass.dev/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Storage Fundamentals",
+      "title": "What's the real cost of a disk seek in 2026?",
+      "concepts": ["I/O costs", "sequential vs random access", "SSD vs HDD"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://colin-scott.github.io/personal_website/research/interactive_latency.html",
+        "https://www.cs.cornell.edu/projects/ladis2009/papers/dean-keynote-ladis2009.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Storage Fundamentals",
+      "title": "How do you find data when it's scattered across pages?",
+      "concepts": ["index structures", "heap files", "clustered vs unclustered"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://use-the-index-luke.com/sql/anatomy",
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/03-storage1.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Storage Fundamentals",
+      "title": "Why do databases care about row vs column layout?",
+      "concepts": ["row-oriented storage", "column-oriented storage", "OLTP vs OLAP"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/04-storage2.pdf",
+        "https://www.youtube.com/watch?v=Vw1fCeD06YI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "B-Tree Storage Engines",
+      "title": "What makes B-trees perfect for databases?",
+      "concepts": ["B-tree structure", "node fanout", "tree height"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cs.usfca.edu/~galles/visualization/BTree.html",
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/07-trees.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Review: Storage Fundamentals",
+      "title": "Can you explain the key tradeoffs between different storage layouts and access patterns?",
+      "concepts": ["storage review", "I/O patterns", "index structures"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/03-storage1.pdf",
+        "https://use-the-index-luke.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "B-Tree Storage Engines",
+      "title": "Why do B+-trees beat regular B-trees for range queries?",
+      "concepts": ["B+ tree structure", "leaf node linking", "range scans"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.postgresql.org/docs/current/btree-implementation.html",
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/07-trees.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "B-Tree Storage Engines",
+      "title": "What happens when two transactions modify the same B-tree node?",
+      "concepts": ["tree locking", "latch crabbing", "optimistic locking"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/09-indexconcurrency.pdf",
+        "https://www.youtube.com/watch?v=Y8BrHwR58Gg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "B-Tree Storage Engines",
+      "title": "Teach back: Trace a B+ tree insertion from API to disk",
+      "concepts": ["insertion algorithm", "page writes", "WAL"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://sqlite.org/arch.html",
+        "https://github.com/sqlite/sqlite"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "LSM-Tree Storage Engines",
+      "title": "Why would you deliberately delay writes?",
+      "concepts": ["write amplification", "memtable", "write-ahead log"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://github.com/facebook/rocksdb/wiki/RocksDB-Basics",
+        "https://www.cs.umb.edu/~poneil/lsmtree.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "LSM-Tree Storage Engines",
+      "title": "How do you read from a structure designed for writes?",
+      "concepts": ["SSTable levels", "bloom filters", "read amplification"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://github.com/facebook/rocksdb/wiki/RocksDB-Basics",
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/08-trees2.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "LSM-Tree Storage Engines",
+      "title": "What's the hidden cost of infinite append-only writes?",
+      "concepts": ["compaction strategies", "leveled compaction", "space amplification"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://github.com/facebook/rocksdb/wiki/Compaction",
+        "https://www.youtube.com/watch?v=b6SI8VbcT4w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "LSM-Tree Storage Engines",
+      "title": "When should you choose LSM over B-tree?",
+      "concepts": ["workload characteristics", "write-heavy vs read-heavy", "tradeoff analysis"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://github.com/wiredtiger/wiredtiger/wiki/Btree-vs-LSM",
+        "https://www.databass.dev/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Review: Storage Engines",
+      "title": "Which storage engine would you choose for each of these five workload scenarios?",
+      "concepts": ["storage engine selection", "workload analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/",
+        "https://www.databass.dev/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Buffer Management & Caching",
+      "title": "Why doesn't the database trust the OS page cache?",
+      "concepts": ["buffer pool", "pin/unpin protocol", "page replacement"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/06-bufferpool.pdf",
+        "https://www.postgresql.org/docs/current/runtime-config-resource.html#GUC-SHARED-BUFFERS"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Buffer Management & Caching",
+      "title": "How do you evict pages without losing uncommitted data?",
+      "concepts": ["dirty pages", "write-back policy", "WAL protocol"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/06-bufferpool.pdf",
+        "https://www.postgresql.org/docs/current/wal-intro.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Buffer Management & Caching",
+      "title": "Can a smarter eviction policy make your database 10x faster?",
+      "concepts": ["LRU", "clock algorithm", "LRU-K", "adaptive replacement"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/06-bufferpool.pdf",
+        "https://www.vldb.org/conf/2003/papers/S19P03.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Query Execution Basics",
+      "title": "What actually happens when you press 'Execute'?",
+      "concepts": ["query pipeline", "parsing", "planning", "execution"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/11-queryexecution1.pdf",
+        "https://www.postgresql.org/docs/current/query-path.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Query Execution Basics",
+      "title": "How do databases pick between three ways to join?",
+      "concepts": ["nested loop join", "hash join", "sort-merge join"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/12-queryexecution2.pdf",
+        "https://www.youtube.com/watch?v=nUCo7Y_OJKs"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Query Execution Basics",
+      "title": "Teach back: Trace a two-table join through the executor",
+      "concepts": ["operator execution", "tuple flow", "materialization"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.postgresql.org/docs/current/using-explain.html",
+        "https://tatiyants.com/pev/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Review: Buffer Management & Query Execution",
+      "title": "How would you trace a query from SQL text to physical page reads?",
+      "concepts": ["buffer pool review", "query execution review", "end-to-end flow"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/11-queryexecution1.pdf",
+        "https://www.postgresql.org/docs/current/query-path.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Query Optimization",
+      "title": "How does the optimizer guess how many rows you'll get?",
+      "concepts": ["cardinality estimation", "histograms", "statistics"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.postgresql.org/docs/current/planner-stats.html",
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/14-costmodels.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Query Optimization",
+      "title": "What if the optimizer gets cardinality wildly wrong?",
+      "concepts": ["cost model errors", "query hints", "plan stability"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://use-the-index-luke.com/sql/explain-plan/postgresql/cardinality-estimation",
+        "https://www.postgresql.org/docs/current/runtime-config-query.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Query Optimization",
+      "title": "How many join orders do you have to consider for five tables?",
+      "concepts": ["join ordering", "dynamic programming", "left-deep vs bushy trees"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/13-optimization.pdf",
+        "https://dl.acm.org/doi/10.1145/582.582444"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Query Optimization",
+      "title": "Analyze a real EXPLAIN plan and fix the slow query",
+      "concepts": ["plan interpretation", "index selection", "performance tuning"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.pgmustard.com/docs/explain",
+        "https://explain.depesz.com/",
+        "https://tatiyants.com/pev/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Review: Optimization",
+      "title": "Can you walk through the full optimization pipeline from parse tree to execution plan?",
+      "concepts": ["full optimization pipeline", "tradeoff analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://15445.courses.cs.cmu.edu/fall2023/",
+        "https://use-the-index-luke.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Topics",
+      "title": "When should you denormalize for performance?",
+      "concepts": ["materialized views", "precomputation", "denormalization tradeoffs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.postgresql.org/docs/current/rules-materializedviews.html",
+        "https://use-the-index-luke.com/sql/clustering/index-only-scan-covering-index"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Advanced Topics",
+      "title": "How do modern databases use machine learning for optimization?",
+      "concepts": ["learned indexes", "learned cardinality", "adaptive optimization"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://arxiv.org/abs/1712.01208",
+        "https://www.youtube.com/watch?v=5K1JXvvqBnE",
+        "https://db.cs.cmu.edu/papers/2021/p2884-marcus.pdf"
+      ],
+      "status": "pending"
+    }
+  ]
+}

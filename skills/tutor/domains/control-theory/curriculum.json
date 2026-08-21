@@ -1,0 +1,414 @@
+{
+  "topic": "Control Theory",
+  "slug": "control-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "differential equations",
+    "linear algebra",
+    "Laplace transforms",
+    "basic physics (mechanics)",
+    "complex numbers"
+  ],
+  "exit_criteria": [
+    "model dynamic systems using transfer functions and state-space representations",
+    "analyze system stability using multiple methods (Routh-Hurwitz, root locus, Nyquist)",
+    "design and tune PID controllers for real systems",
+    "interpret Bode plots and determine gain/phase margins",
+    "apply state-space methods to design controllers and observers",
+    "explain the tradeoffs between classical and modern control approaches",
+    "implement controllers in MATLAB or Python"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations & System Modeling",
+      "title": "Why do engineers care about differential equations?",
+      "concepts": ["dynamic systems", "input-output behavior", "modeling philosophy"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/pages/lecture-notes/",
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations & System Modeling",
+      "title": "How does a transfer function capture system behavior?",
+      "concepts": ["transfer functions", "Laplace domain", "poles and zeros"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations & System Modeling",
+      "title": "What makes feedback so powerful?",
+      "concepts": ["feedback loops", "open-loop vs closed-loop", "disturbance rejection"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf",
+        "https://www.youtube.com/user/stevebruntonchannel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations & System Modeling",
+      "title": "Can you model this DC motor?",
+      "concepts": ["physical modeling", "linearization", "block diagrams"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://aleksandarhaber.com/control-systems-tutorials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Time Response Analysis",
+      "title": "Why do first-order systems behave like they do?",
+      "concepts": ["time constants", "exponential response", "settling time"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/16-06-principles-of-automatic-control-fall-2012/pages/lecture-notes/",
+        "https://www.mathworks.com/videos/tech-talks/controls.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Time Response Analysis",
+      "title": "Can you predict response from time constants and damping ratios?",
+      "concepts": ["time constants", "damping ratio", "overshoot", "settling time", "rise time"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://ocw.mit.edu/courses/16-06-principles-of-automatic-control-fall-2012/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Time Response Analysis",
+      "title": "What causes overshoot in second-order systems?",
+      "concepts": ["damping ratio", "natural frequency", "overshoot"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf",
+        "https://github.com/macs-lab/mcimp-book"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Time Response Analysis",
+      "title": "How fast should a cruise control respond?",
+      "concepts": ["performance specifications", "rise time", "steady-state error"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://ocw.mit.edu/courses/2-04a-systems-and-controls-spring-2013/resources/mit2_04as13_lecture1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Time Response Analysis",
+      "title": "What do poles tell us about system behavior?",
+      "concepts": ["pole locations", "s-plane", "system response characteristics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf",
+        "https://www.youtube.com/user/stevebruntonchannel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Time Response Analysis",
+      "title": "Design a system with target response time",
+      "concepts": ["design specifications", "pole placement preview", "tradeoffs"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Stability & Root Locus",
+      "title": "When does a system go unstable?",
+      "concepts": ["stability definition", "BIBO stability", "pole locations and stability"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf",
+        "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Stability & Root Locus",
+      "title": "Can you connect time constants, overshoot, poles, and stability?",
+      "concepts": ["time constants", "overshoot", "poles", "stability", "s-plane"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Stability & Root Locus",
+      "title": "How does Routh-Hurwitz work without computing poles?",
+      "concepts": ["Routh-Hurwitz criterion", "stability test", "characteristic equation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/16-06-principles-of-automatic-control-fall-2012/pages/lecture-notes/",
+        "https://aleksandarhaber.com/control-systems-tutorials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Stability & Root Locus",
+      "title": "Why does the root locus look like that?",
+      "concepts": ["root locus method", "gain variation", "pole migration"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf",
+        "https://www.youtube.com/user/stevebruntonchannel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Stability & Root Locus",
+      "title": "Can you find the gain that makes this system critically damped?",
+      "concepts": ["root locus design", "damping requirements", "gain selection"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://github.com/macs-lab/mcimp-book"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Frequency Response Methods",
+      "title": "What does frequency response tell us that time response doesn't?",
+      "concepts": ["frequency domain", "sinusoidal input", "steady-state gain"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf",
+        "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Frequency Response Methods",
+      "title": "How do you read a Bode plot?",
+      "concepts": ["Bode plots", "magnitude", "phase", "frequency response visualization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mathworks.com/videos/tech-talks/controls.html",
+        "https://ocw.mit.edu/courses/16-06-principles-of-automatic-control-fall-2012/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Frequency Response Methods",
+      "title": "How do Routh-Hurwitz, root locus, and Bode plots compare for stability?",
+      "concepts": ["Routh-Hurwitz", "root locus", "Bode plots", "stability analysis", "frequency domain"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Frequency Response Methods",
+      "title": "Why do we care about gain and phase margins?",
+      "concepts": ["gain margin", "phase margin", "stability margins", "robustness"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf",
+        "https://aleksandarhaber.com/control-systems-tutorials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Frequency Response Methods",
+      "title": "What does the Nyquist plot reveal about stability?",
+      "concepts": ["Nyquist criterion", "encirclements", "stability in frequency domain"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf",
+        "https://www.youtube.com/user/stevebruntonchannel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Frequency Response Methods",
+      "title": "Analyze this audio amplifier's frequency response",
+      "concepts": ["bandwidth", "resonance", "frequency-dependent behavior"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://github.com/macs-lab/mcimp-book"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Classical Controller Design",
+      "title": "How does each term in a PID controller work?",
+      "concepts": ["proportional", "integral", "derivative", "PID structure"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Classical Controller Design",
+      "title": "What stability insights do Nyquist and Bode reveal that root locus hides?",
+      "concepts": ["Routh-Hurwitz", "root locus", "Bode plots", "Nyquist", "frequency vs time domain"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/pages/lecture-notes/",
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Classical Controller Design",
+      "title": "What's the best way to tune a PID controller?",
+      "concepts": ["Ziegler-Nichols", "tuning methods", "performance tradeoffs"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://aleksandarhaber.com/control-systems-tutorials/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Classical Controller Design",
+      "title": "When do you need lead or lag compensation?",
+      "concepts": ["lead compensator", "lag compensator", "phase shaping"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/16-06-principles-of-automatic-control-fall-2012/pages/lecture-notes/",
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "State-Space Control",
+      "title": "Why represent systems as state-space models?",
+      "concepts": ["state variables", "state-space representation", "matrix form"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf",
+        "https://stanfordasl.github.io/aa203/sp2324/pdfs/AA203_Syllabus_2024.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "State-Space Control",
+      "title": "What makes a system controllable or observable?",
+      "concepts": ["controllability", "observability", "reachability", "rank conditions"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf",
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "State-Space Control",
+      "title": "How do you place poles in state space?",
+      "concepts": ["state feedback", "pole placement", "full-state feedback"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/pages/lecture-notes/",
+        "https://github.com/macs-lab/mcimp-book"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "State-Space Control",
+      "title": "Why do we need observers if we can't measure all states?",
+      "concepts": ["state estimation", "observers", "Luenberger observer", "separation principle"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf",
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "State-Space Control",
+      "title": "Design a controller for this inverted pendulum",
+      "concepts": ["controller synthesis", "classical vs modern", "implementation", "integration"],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "https://www.mathworks.com/campaigns/products/control-tutorials.html",
+        "https://stanfordasl.github.io/aa203/sp2324/pdfs/AA203_Syllabus_2024.pdf",
+        "https://github.com/macs-lab/mcimp-book"
+      ],
+      "status": "pending"
+    }
+  ]
+}

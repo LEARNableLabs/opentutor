@@ -1,0 +1,397 @@
+{
+  "topic": "Film theory — montage, mise-en-scene, and narrative",
+  "slug": "film-theory",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic film terminology (shot types, scene vs. sequence)",
+    "familiarity with diverse film genres",
+    "ability to watch critically and take notes"
+  ],
+  "exit_criteria": [
+    "analyze mise-en-scene choices (composition, lighting, color, staging) and articulate their narrative/emotional function",
+    "identify and explain montage patterns and their effects (continuity vs. collision, rhythmic editing)",
+    "map narrative structures (classical, non-linear, parallel) and recognize genre conventions",
+    "perform integrated formal analysis of a scene combining mise-en-scene, editing, and narrative principles",
+    "write a coherent film analysis essay using proper terminology"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why does film grammar matter if we already 'get' movies?",
+      "concepts": ["film grammar", "formal analysis", "denotation vs. connotation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.criterion.com/current/posts/59-introduction-to-film-analysis",
+        "https://www.bfi.org.uk/learn-film-guide/using-film-language"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes a shot mean something beyond what it shows?",
+      "concepts": ["denotation", "connotation", "shot construction", "viewer interpretation"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=3gK_2XdjOdY",
+        "https://ocw.mit.edu/courses/21l-011-the-film-experience-fall-2013/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How did directors discover the 'rules' we now take for granted?",
+      "concepts": ["film history", "D.W. Griffith", "continuity system", "Soviet montage"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.moma.org/learn/moma_learning/themes/early-film/",
+        "https://www.criterion.com/current/posts/7893-birth-of-a-nation-and-the-making-of-modern-america"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Watch and identify: Can you spot the formal choices in this classic scene?",
+      "concepts": ["active viewing", "pattern recognition", "formal elements"],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.criterion.com/current/posts/2507-the-lady-eve-meets-cute",
+        "https://www.youtube.com/watch?v=doaQC-S8de8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Review",
+      "title": "Can you explain how formal analysis differs from just watching?",
+      "concepts": ["film grammar", "formal analysis", "denotation vs. connotation", "active viewing"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.criterion.com/current/posts/59-introduction-to-film-analysis",
+        "https://www.bfi.org.uk/learn-film-guide/using-film-language"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Mise-en-scene",
+      "title": "What is mise-en-scene, and why do French words haunt film theory?",
+      "concepts": ["mise-en-scene", "frame composition", "theatrical vs. cinematic staging"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bfi.org.uk/film-industry/mise-en-scene",
+        "https://filmschoolrejects.com/mise-en-scene/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Mise-en-scene",
+      "title": "How does where you put the camera change what the scene means?",
+      "concepts": ["camera placement", "angle psychology", "eyeline match", "subjective perspective"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.studiobinder.com/blog/rules-of-shot-composition-in-film/",
+        "https://www.youtube.com/watch?v=mHXEHr2L8pE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Mise-en-scene",
+      "title": "Why does lighting feel like a character in film noir?",
+      "concepts": ["lighting schemes", "high-key vs. low-key", "chiaroscuro", "emotional tone"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.criterion.com/current/posts/4552-in-a-lonely-place-dark-passions",
+        "https://www.youtube.com/watch?v=pxLzwsqc5Lw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Mise-en-scene",
+      "title": "Can you explain why this shot feels claustrophobic while that one feels liberating?",
+      "concepts": ["spatial composition", "foreground/background tension", "depth staging"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=v4seDVHf4KM",
+        "https://www.indiewire.com/features/general/depth-of-field-cinematography-1201950294/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Mise-en-scene",
+      "title": "What can color tell us that dialogue can't?",
+      "concepts": ["color theory", "color grading", "palette as mood", "symbolic color"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=aXgFcNUWqX0",
+        "https://www.studiobinder.com/blog/how-to-use-color-in-film-50-examples-of-movie-color-palettes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Mise-en-scene",
+      "title": "How do production design and costume build invisible worlds?",
+      "concepts": ["production design", "costume as character", "period accuracy vs. stylization", "world-building"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.criterion.com/current/posts/3742-the-grand-budapest-hotel-wes-anderson-s-literary-vision",
+        "https://www.youtube.com/watch?v=ba3c9KEWpc8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Mise-en-scene",
+      "title": "Why does symmetry feel so unsettling in Kubrick's films?",
+      "concepts": ["symmetrical composition", "geometric framing", "formalism vs. naturalism", "auteur style"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=K1Mzll8rcvI",
+        "https://www.criterion.com/current/posts/1964-the-shining-kubrick-s-horror-show"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Review",
+      "title": "How do composition, lighting, and color work together in mise-en-scene?",
+      "concepts": ["composition", "lighting", "color", "staging", "camera placement"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.bfi.org.uk/film-industry/mise-en-scene",
+        "https://www.criterion.com/current/posts/59-introduction-to-film-analysis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Montage Theory",
+      "title": "What did Soviet filmmakers discover about editing that changed everything?",
+      "concepts": ["Soviet montage theory", "Kuleshov effect", "dialectical montage", "collision vs. linkage"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.criterion.com/current/posts/4395-montage-soviet-style",
+        "https://www.youtube.com/watch?v=_gGl3LJ7vHc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Montage Theory",
+      "title": "How can two unrelated shots create a meaning neither contains alone?",
+      "concepts": ["Kuleshov effect", "viewer interpretation", "associative editing", "juxtaposition"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=pVrh_32Xxcs",
+        "https://www.moma.org/collection/works/90398"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Montage Theory",
+      "title": "What are Eisenstein's five types of montage, and why do they still matter?",
+      "concepts": ["metric montage", "rhythmic montage", "tonal montage", "overtonal montage", "intellectual montage"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.criterion.com/current/posts/88-sergei-eisenstein-s-ivan-the-terrible",
+        "https://ocw.mit.edu/courses/21l-011-the-film-experience-fall-2013/pages/lecture-notes/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Montage Theory",
+      "title": "Watch the Odessa Steps: How does rhythmic editing build unbearable tension?",
+      "concepts": ["rhythmic montage", "tempo manipulation", "cross-cutting", "emotional acceleration"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.criterion.com/current/posts/237-the-odessa-steps",
+        "https://www.youtube.com/watch?v=Ps-v-kZzfec"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Montage Theory",
+      "title": "How does continuity editing make invisible cuts feel seamless?",
+      "concepts": ["continuity editing", "180-degree rule", "match on action", "eyeline match", "shot-reverse-shot"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.studiobinder.com/blog/continuity-editing-definition/",
+        "https://www.youtube.com/watch?v=8q4X2vDRfRk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Montage Theory",
+      "title": "What happens when directors deliberately break continuity rules?",
+      "concepts": ["jump cut", "French New Wave", "Godard", "aesthetic disruption", "viewer awareness"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.criterion.com/current/posts/127-breathless-making-it-new",
+        "https://www.youtube.com/watch?v=e2eVMCP3i_c"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Montage Theory",
+      "title": "Can you identify whether this scene uses collision or linkage montage?",
+      "concepts": ["montage analysis", "collision vs. linkage", "editorial intent", "pattern recognition"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=doaQC-S8de8",
+        "https://filmschoolrejects.com/editing-rules/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Review",
+      "title": "What distinguishes Soviet collision montage from Hollywood continuity editing?",
+      "concepts": ["Soviet montage", "continuity editing", "rhythmic editing", "Kuleshov effect"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.criterion.com/current/posts/4395-montage-soviet-style",
+        "https://www.studiobinder.com/blog/continuity-editing-definition/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Narrative Structure",
+      "title": "Why does the three-act structure dominate Hollywood storytelling?",
+      "concepts": ["three-act structure", "narrative arc", "classical Hollywood cinema", "hero's journey"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.studiobinder.com/blog/three-act-structure/",
+        "https://www.youtube.com/watch?v=vSX-DROZuzY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Narrative Structure",
+      "title": "How do flashbacks and non-linear narratives reshape time?",
+      "concepts": ["non-linear narrative", "flashback", "flash-forward", "story vs. plot", "syuzhet vs. fabula"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.criterion.com/current/posts/2103-pulp-fiction-what-s-in-the-briefcase",
+        "https://www.youtube.com/watch?v=cSZ9O7rApS4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Narrative Structure",
+      "title": "What makes an unreliable narrator work in film vs. literature?",
+      "concepts": ["unreliable narrator", "point-of-view", "subjective narration", "narrative trust"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.criterion.com/current/posts/3844-mulholland-dr-in-the-city-of-dreams",
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Narrative Structure",
+      "title": "How does parallel editing create suspense across multiple storylines?",
+      "concepts": ["parallel editing", "cross-cutting", "narrative convergence", "temporal manipulation"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Yh-f2BCVZ4c",
+        "https://www.indiewire.com/features/general/best-parallel-editing-examples-1234598745/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Narrative Structure",
+      "title": "Can you map the narrative structure of a film you love?",
+      "concepts": ["narrative mapping", "plot points", "character arcs", "thematic structure"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.studiobinder.com/blog/what-is-narrative-structure/",
+        "https://www.youtube.com/watch?v=AjgD3CvWzS0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Narrative Structure",
+      "title": "How do genre conventions shape narrative expectations and viewer satisfaction?",
+      "concepts": ["genre theory", "narrative conventions", "subversion vs. satisfaction", "intertextuality"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.bfi.org.uk/films-tv-people/4ce2b6b4c5ec6",
+        "https://www.youtube.com/watch?v=q0Ja6YFn3sI"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Review",
+      "title": "How do linear and non-linear narratives create different viewing experiences?",
+      "concepts": ["three-act structure", "non-linear narrative", "parallel editing", "genre conventions"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.studiobinder.com/blog/three-act-structure/",
+        "https://www.studiobinder.com/blog/what-is-narrative-structure/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Integration & Analysis",
+      "title": "How do mise-en-scene, montage, and narrative work together to create meaning?",
+      "concepts": ["integrated analysis", "formal coherence", "cinematic totality", "critical writing"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.criterion.com/current/posts/59-introduction-to-film-analysis",
+        "https://ocw.mit.edu/courses/21l-011-the-film-experience-fall-2013/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

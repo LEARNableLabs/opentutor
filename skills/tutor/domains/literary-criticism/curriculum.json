@@ -1,0 +1,330 @@
+{
+  "topic": "Literary criticism — theory and practice",
+  "slug": "literary-criticism",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic literary analysis",
+    "close reading skills",
+    "familiarity with major literary genres"
+  ],
+  "exit_criteria": [
+    "apply multiple theoretical frameworks to analyze literary texts",
+    "compare and contrast different critical approaches",
+    "identify assumptions and limitations of each theoretical school",
+    "write original critical analysis using theoretical concepts",
+    "recognize how historical context shapes critical movements"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What are we doing when we interpret a text?",
+      "concepts": ["interpretation", "literary criticism vs. theory", "critical thinking"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://oyc.yale.edu/english/engl-300"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do you read closely without overthinking?",
+      "concepts": ["close reading", "textual evidence", "analytical observation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://open.ocolearnok.org/stuckeyamericanliterature1/chapter/approaches-to-literary-criticism/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Why do different readers see different meanings in the same text?",
+      "concepts": ["interpretive communities", "subjectivity", "textual openness"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://oyc.yale.edu/english/engl-300"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "What does it mean to use theory as a lens?",
+      "concepts": ["theoretical frameworks", "methodology", "critical practice"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://broadviewpress.com/product/literary-theory-and-criticism-an-introduction-second-edition/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Formalism & New Criticism",
+      "title": "Should we care what the author intended?",
+      "concepts": ["intentional fallacy", "authorial intent", "New Criticism"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://oyc.yale.edu/english/engl-300"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Formalism & New Criticism",
+      "title": "How does form create meaning?",
+      "concepts": ["form", "organic unity", "paradox and ambiguity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.youtube.com/watch?v=4YY4CTSQ8nY"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Formalism & New Criticism",
+      "title": "Why focus only on what's on the page?",
+      "concepts": ["text-centered analysis", "close reading", "formalist methodology"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://open.ocolearnok.org/stuckeyamericanliterature1/chapter/approaches-to-literary-criticism/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Formalism & New Criticism",
+      "title": "Can a poem mean something the poet didn't know?",
+      "concepts": ["affective fallacy", "reader emotion", "textual autonomy"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.pearson.com/en-us/subject-catalog/p/literary-criticism-an-introduction-to-theory-and-practice/P200000002374/9780205212149"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Structuralism & Semiotics",
+      "title": "How is literature like a language system?",
+      "concepts": ["structuralism", "langue vs. parole", "binary oppositions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://oyc.yale.edu/english/engl-300"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Structuralism & Semiotics",
+      "title": "What makes a sign work?",
+      "concepts": ["semiotics", "signifier and signified", "arbitrary sign"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.classcentral.com/course/swayam-literary-theory-and-literary-criticism-7982"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Structuralism & Semiotics",
+      "title": "Are all stories built from the same deep structure?",
+      "concepts": ["narratology", "story vs. discourse", "narrative grammar"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.routledge.com/An-Introduction-to-Literature-Criticism-and-Theory/Bennett-Royle/p/book/9781032158846"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Structuralism & Semiotics",
+      "title": "How do you apply structural analysis to a real text?",
+      "concepts": ["binary oppositions", "codes", "structural reading"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://broadviewpress.com/product/literary-theory-and-criticism-an-introduction-second-edition/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Reader & Text",
+      "title": "Does the reader create the text or discover it?",
+      "concepts": ["reader-response criticism", "active reading", "transactional theory"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://oyc.yale.edu/english/engl-300"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Reader & Text",
+      "title": "Why do reading communities disagree about meaning?",
+      "concepts": ["interpretive communities", "reading conventions", "cultural context"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.classcentral.com/course/youtube-literary-theory-and-literary-criticism-47900"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Reader & Text",
+      "title": "How does historical context change what a text means?",
+      "concepts": ["reception theory", "horizon of expectations", "historicizing reading"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.pearson.com/en-us/subject-catalog/p/literary-criticism-an-introduction-to-theory-and-practice/P200000002374/9780205212149"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Deconstruction",
+      "title": "What if a text undermines its own argument?",
+      "concepts": ["deconstruction", "aporia", "self-contradiction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://oyc.yale.edu/english/engl-300"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Deconstruction",
+      "title": "Is the author really dead?",
+      "concepts": ["death of the author", "Barthes", "intertextuality"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://www.routledge.com/An-Introduction-to-Literature-Criticism-and-Theory/Bennett-Royle/p/book/9781032158846"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Deconstruction",
+      "title": "How does close reading compare to deconstruction?",
+      "concepts": ["formalism vs. poststructuralism", "stability vs. instability", "textual authority"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://broadviewpress.com/product/literary-theory-and-criticism-an-introduction-second-edition/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Political Criticism",
+      "title": "How does literature reflect class struggle?",
+      "concepts": ["Marxist criticism", "base and superstructure", "ideology"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.classcentral.com/course/swayam-literary-theory-and-literary-criticism-7982"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Political Criticism",
+      "title": "Can we separate art from its historical power relations?",
+      "concepts": ["New Historicism", "cultural poetics", "circulation of social energy"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://oyc.yale.edu/english/engl-300"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Political Criticism",
+      "title": "Who gets to write history, and who gets written out?",
+      "concepts": ["postcolonial criticism", "orientalism", "subaltern voice"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://broadviewpress.com/product/literary-theory-and-criticism-an-introduction-second-edition/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Political Criticism",
+      "title": "How do texts construct racial identity?",
+      "concepts": ["critical race theory", "whiteness", "racialized reading"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://broadviewpress.com/product/literary-theory-and-criticism-an-introduction-second-edition/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Psychoanalytic",
+      "title": "What does the text's unconscious reveal?",
+      "concepts": ["psychoanalytic criticism", "Freudian reading", "repression and return"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.classcentral.com/course/youtube-literary-theory-and-literary-criticism-47900"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Psychoanalytic",
+      "title": "How do political and psychological approaches differ?",
+      "concepts": ["ideology vs. unconscious", "social vs. individual", "critical synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.pearson.com/en-us/subject-catalog/p/literary-criticism-an-introduction-to-theory-and-practice/P200000002374/9780205212149"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Psychoanalytic",
+      "title": "How do we read trauma in literature?",
+      "concepts": ["trauma theory", "testimony", "representing the unrepresentable"],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": ["https://broadviewpress.com/product/literary-theory-and-criticism-an-introduction-second-edition/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Gender & Identity",
+      "title": "What does it mean to read as a woman?",
+      "concepts": ["feminist criticism", "gynocriticism", "patriarchal structures"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://oyc.yale.edu/english/engl-300"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Gender & Identity",
+      "title": "Is gender performed in texts the way it's performed in life?",
+      "concepts": ["gender studies", "performativity", "social construction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.classcentral.com/course/swayam-literary-theory-and-literary-criticism-7982"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Gender & Identity",
+      "title": "How does literature challenge heteronormativity?",
+      "concepts": ["queer theory", "heteronormativity", "queerness and textuality"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": ["https://oyc.yale.edu/english/engl-300"],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Gender & Identity",
+      "title": "How do you apply intersectional analysis to a text?",
+      "concepts": ["intersectionality", "identity criticism", "multiple lenses"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://broadviewpress.com/product/literary-theory-and-criticism-an-introduction-second-edition/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Contemporary",
+      "title": "What happens when we read for the environment?",
+      "concepts": ["ecocriticism", "nature writing", "Anthropocene"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.classcentral.com/course/youtube-literary-theory-and-literary-criticism-47900"],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Contemporary",
+      "title": "How do you build your own critical practice?",
+      "concepts": ["theoretical pluralism", "critical synthesis", "independent analysis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.pearson.com/en-us/subject-catalog/p/literary-criticism-an-introduction-to-theory-and-practice/P200000002374/9780205212149"],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "topic": "Sociology of Technology",
+  "slug": "sociology-of-technology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic sociology concepts",
+    "comfort with abstract theoretical frameworks"
+  ],
+  "exit_criteria": [
+    "student can apply SCOT and ANT frameworks to analyze technologies",
+    "student can critique technological determinism",
+    "student can identify power relations embedded in technological systems",
+    "student can conduct case study analysis of sociotechnical systems",
+    "student can engage with contemporary debates on technology and society"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Do technologies shape society, or does society shape technologies?",
+      "concepts": ["technological determinism", "social shaping", "mutual shaping"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://web.mit.edu/sts/",
+        "https://www.youtube.com/watch?v=eaqKyTFJbH8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why did Langdon Winner ask if artifacts have politics?",
+      "concepts": ["politics of technology", "values in design", "Winner's bridges"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/20024652",
+        "https://faculty.cc.gatech.edu/~beki/cs4001/Winner.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What makes a technology 'succeed' or 'fail'?",
+      "concepts": ["technological success", "closure", "relevant social groups"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/285956"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How do engineers and users see the same technology differently?",
+      "concepts": ["interpretive flexibility", "user appropriation", "design-use relations"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.sciencedirect.com/science/article/pii/S0048733399000557"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "What is a sociotechnical system?",
+      "concepts": ["sociotechnical systems", "system boundaries", "heterogeneous engineering"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/3106349"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Theoretical Frameworks",
+      "title": "How did the bicycle become what it is today?",
+      "concepts": ["SCOT methodology", "technological frame", "stabilization"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/285956",
+        "https://mitpress.mit.edu/9780262522274/of-bicycles-bakelites-and-bulbs/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Theoretical Frameworks",
+      "title": "Can non-humans be social actors?",
+      "concepts": ["Actor-Network Theory", "actants", "symmetry principle"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.bruno-latour.fr/",
+        "https://www.jstor.org/stable/3105444"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Theoretical Frameworks",
+      "title": "What holds a network together?",
+      "concepts": ["translation", "enrollment", "obligatory passage points"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/285349"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Theoretical Frameworks",
+      "title": "How do large technical systems evolve?",
+      "concepts": ["LTS theory", "momentum", "technological style"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mitpress.mit.edu/9780262681421/networks-of-power/",
+        "https://www.jstor.org/stable/3105173"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Theoretical Frameworks",
+      "title": "Why do some technologies become 'locked in'?",
+      "concepts": ["path dependence", "increasing returns", "QWERTY phenomenon"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.jstor.org/stable/1805621",
+        "https://www.youtube.com/watch?v=9ET1090RYf4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Theoretical Frameworks",
+      "title": "Can you map the frameworks we've learned onto a technology you use daily?",
+      "concepts": ["framework application", "analytical comparison"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.jstor.org/stable/285956"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Theoretical Frameworks",
+      "title": "How do technological determinism, SCOT, and ANT differ in explaining technological change?",
+      "concepts": ["theoretical integration", "framework comparison"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://web.mit.edu/sts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Historical Case Studies",
+      "title": "How did gender shape household technologies?",
+      "concepts": ["gender and technology", "domestic labor", "technofeminism"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/3827749",
+        "https://monoskop.org/images/f/f3/Wajcman_Judy_Technofeminism.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Historical Case Studies",
+      "title": "What makes a technology 'appropriate'?",
+      "concepts": ["appropriate technology", "technology transfer", "development"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.jstor.org/stable/3105950"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Historical Case Studies",
+      "title": "Did the telephone democratize or centralize power?",
+      "concepts": ["communication technology", "social effects", "contested outcomes"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://mitpress.mit.edu/9780262022651/america-calling/",
+        "https://www.jstor.org/stable/3106868"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Historical Case Studies",
+      "title": "Why did nuclear power become controversial?",
+      "concepts": ["risk", "expertise", "technological controversy"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/285419",
+        "https://ocw.mit.edu/courses/sts-005-technology-in-a-dangerous-world-fall-2016/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Historical Case Studies",
+      "title": "How do standards create order?",
+      "concepts": ["standardization", "classification", "infrastructure"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mitpress.mit.edu/9780262522953/sorting-things-out/",
+        "https://www.jstor.org/stable/3106349"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Historical Case Studies",
+      "title": "Can you reconstruct the relevant social groups in a historical case?",
+      "concepts": ["case study analysis", "group identification", "closure mechanisms"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.jstor.org/stable/285956"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Historical Case Studies",
+      "title": "How have power, gender, and controversy shaped technological development?",
+      "concepts": ["historical synthesis", "pattern recognition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://mitpress.mit.edu/9780262522274/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Contemporary Issues",
+      "title": "How do algorithms govern?",
+      "concepts": ["algorithmic governance", "black boxes", "automated decision-making"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.jstor.org/stable/24758720",
+        "https://www.youtube.com/watch?v=iRVZozEEWlE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Contemporary Issues",
+      "title": "Is surveillance capitalism a new sociotechnical regime?",
+      "concepts": ["surveillance capitalism", "behavioral surplus", "prediction products"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://shoshannazuboff.com/book/about/",
+        "https://www.jstor.org/stable/48588902"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Contemporary Issues",
+      "title": "How does technology reproduce inequality?",
+      "concepts": ["technological inequality", "digital divide", "algorithmic bias"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.ruhabenjamin.com/race-after-technology",
+        "https://www.jstor.org/stable/j.ctvjsf4hh"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Contemporary Issues",
+      "title": "What are platform workers really selling?",
+      "concepts": ["platform capitalism", "digital labor", "gig economy"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.wiley.com/en-us/Platform+Capitalism-p-9781509504862",
+        "https://www.jstor.org/stable/26392650"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Contemporary Issues",
+      "title": "Who gets to decide what AI is ethical?",
+      "concepts": ["AI ethics", "values in design", "democratic technology"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.ainowinstitute.org/",
+        "https://www.jstor.org/stable/24758720"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Synthesis",
+      "title": "Can you design a sociotechnical intervention?",
+      "concepts": ["participatory design", "technology assessment", "intervention design"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://mitpress.mit.edu/9780262528146/design-justice/",
+        "https://www.jstor.org/stable/3106868"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Synthesis",
+      "title": "How can you apply sociological frameworks to analyze contemporary technologies?",
+      "concepts": ["framework synthesis", "analytical integration", "contemporary application"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://web.mit.edu/sts/",
+        "https://journals.sagepub.com/home/sthv"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Synthesis",
+      "title": "What does it mean to do sociology of technology in 2026?",
+      "concepts": ["contemporary challenges", "methodological innovation", "future directions"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://journals.sagepub.com/home/sthv",
+        "https://www.jstor.org/journal/techcult"
+      ],
+      "status": "pending"
+    }
+  ]
+}

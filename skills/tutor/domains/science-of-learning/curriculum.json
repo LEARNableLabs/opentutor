@@ -1,0 +1,344 @@
+{
+  "topic": "Science of learning — metacognition and study strategies",
+  "slug": "science-of-learning",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic study experience",
+    "familiarity with note-taking",
+    "willingness to experiment with new strategies"
+  ],
+  "exit_criteria": [
+    "student can explain the science behind effective study strategies",
+    "student can identify and correct illusions of competence in their own learning",
+    "student can design evidence-based study plans for different material types",
+    "student can monitor and adjust their learning strategies metacognitively",
+    "student understands when and why to use retrieval practice, spacing, and interleaving"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do we forget things we studied last night?",
+      "concepts": ["memory systems", "forgetting curve", "encoding vs retrieval"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.learningscientists.org/blog/2016/6/23-1",
+        "https://www.coursera.org/learn/learning-how-to-learn"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What does it mean to think about your thinking?",
+      "concepts": ["metacognition", "metacognitive knowledge", "self-awareness"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.learningscientists.org/metacognition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How does working memory actually work?",
+      "concepts": ["working memory", "cognitive load", "chunking", "long-term memory"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/learning-how-to-learn"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Evidence-Based Strategies",
+      "title": "Why is testing yourself better than rereading?",
+      "concepts": ["retrieval practice", "testing effect", "active recall"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.retrievalpractice.org/",
+        "https://www.learningscientists.org/retrieval-practice"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Evidence-Based Strategies",
+      "title": "How do you space out your practice without forgetting everything?",
+      "concepts": ["spaced repetition", "distributed practice", "optimal intervals"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.learningscientists.org/spaced-practice",
+        "https://apps.ankiweb.net/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Evidence-Based Strategies",
+      "title": "What have we learned so far?",
+      "concepts": ["memory systems review", "metacognition review", "retrieval practice review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Evidence-Based Strategies",
+      "title": "What happens when you mix up your practice?",
+      "concepts": ["interleaving", "blocking vs mixing", "discrimination practice"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.learningscientists.org/interleaving"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Evidence-Based Strategies",
+      "title": "Can you explain this concept in your own words?",
+      "concepts": ["elaboration", "self-explanation", "deep processing"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://www.learningscientists.org/elaboration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Evidence-Based Strategies",
+      "title": "Why do pictures and words together work better?",
+      "concepts": ["dual coding", "visual learning", "verbal-visual integration"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.learningscientists.org/dual-coding"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Evidence-Based Strategies",
+      "title": "How do concrete examples make abstract ideas stick?",
+      "concepts": ["concrete examples", "grounding", "analogical reasoning"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.learningscientists.org/concrete-examples"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Evidence-Based Strategies",
+      "title": "What makes something a desirable difficulty?",
+      "concepts": ["desirable difficulties", "generation effect", "productive struggle"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/learning-how-to-learn"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Evidence-Based Strategies",
+      "title": "Can you teach back the six strategies?",
+      "concepts": ["strategy synthesis", "application planning"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.learningscientists.org/downloadable-materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Metacognitive Monitoring",
+      "title": "How confident are you that you'll remember this tomorrow?",
+      "concepts": ["judgments of learning", "metacognitive monitoring", "prediction accuracy"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.learningscientists.org/blog/2016/5/5-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Metacognitive Monitoring",
+      "title": "Why does familiarity feel like mastery?",
+      "concepts": ["illusions of competence", "fluency", "recognition vs recall"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/learning-how-to-learn"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Metacognitive Monitoring",
+      "title": "Are the least skilled the most confident?",
+      "concepts": ["Dunning-Kruger effect", "incompetence and awareness", "expertise calibration"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.learningscientists.org/blog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Metacognitive Monitoring",
+      "title": "How do you calibrate your confidence?",
+      "concepts": ["calibration", "feedback loops", "self-testing"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.retrievalpractice.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Metacognitive Monitoring",
+      "title": "What strategies help you avoid illusions of competence?",
+      "concepts": ["metacognitive awareness", "strategy evaluation", "self-testing"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.learningscientists.org/blog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Metacognitive Monitoring",
+      "title": "Can you catch yourself in an illusion?",
+      "concepts": ["metacognitive monitoring review", "calibration review"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Self-Regulated Learning",
+      "title": "What makes a learning goal actually achievable?",
+      "concepts": ["goal setting", "SMART goals", "process vs outcome goals"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.learningscientists.org/blog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Self-Regulated Learning",
+      "title": "How do you plan study time that actually works?",
+      "concepts": ["study planning", "time management", "prioritization", "task analysis"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.learningscientists.org/study-strategies"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Self-Regulated Learning",
+      "title": "When should you switch strategies?",
+      "concepts": ["strategy selection", "adaptive learning", "metacognitive control"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.coursera.org/learn/learning-how-to-learn"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Self-Regulated Learning",
+      "title": "How do you know if you're making progress?",
+      "concepts": ["self-monitoring", "progress tracking", "formative assessment"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.retrievalpractice.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Self-Regulated Learning",
+      "title": "What do you do when you're stuck?",
+      "concepts": ["help-seeking", "productive failure", "persistence vs pivoting"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.learningscientists.org/blog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Self-Regulated Learning",
+      "title": "Can you design your own learning plan?",
+      "concepts": ["self-regulated learning synthesis", "planning review", "implementation intentions"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.learningscientists.org/downloadable-materials"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Advanced Applications",
+      "title": "How do you learn something that transfers?",
+      "concepts": ["transfer", "near vs far transfer", "mental models", "abstraction"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.coursera.org/learn/learning-how-to-learn"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Advanced Applications",
+      "title": "What separates experts from advanced beginners?",
+      "concepts": ["expertise development", "deliberate practice", "10000 hour rule critique"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.learningscientists.org/blog"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Advanced Applications",
+      "title": "How will you become a learning scientist yourself?",
+      "concepts": ["lifelong learning", "continuous improvement", "evidence-based practice"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.learningscientists.org/",
+        "https://www.retrievalpractice.org/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

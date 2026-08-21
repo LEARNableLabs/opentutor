@@ -1,0 +1,363 @@
+{
+  "topic": "Aerospace Engineering — Flight and Propulsion",
+  "slug": "aerospace-engineering",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "multivariable calculus",
+    "differential equations",
+    "classical mechanics (Newton's laws)",
+    "thermodynamics (first and second laws)",
+    "basic fluid mechanics (continuity, Bernoulli)"
+  ],
+  "exit_criteria": [
+    "analyze airfoil lift and drag using potential flow theory and boundary layer concepts",
+    "design and evaluate propulsion systems using thermodynamic cycle analysis",
+    "predict compressible flow behavior through nozzles and over surfaces",
+    "calculate aircraft performance metrics (range, endurance, climb rate)",
+    "compare air-breathing and rocket engine performance using specific impulse and thrust equations",
+    "identify and explain common aerodynamic and propulsion design trade-offs"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Fundamentals of Fluid Flow",
+      "title": "Why can't we see air move?",
+      "concepts": ["continuum assumption", "fluid properties", "flow visualization"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Fundamentals of Fluid Flow",
+      "title": "What makes airflow around a wing predictable?",
+      "concepts": ["conservation laws", "continuity equation", "Euler equations"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Fundamentals of Fluid Flow",
+      "title": "How does friction shape the flow near surfaces?",
+      "concepts": ["viscosity", "no-slip condition", "Reynolds number"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/bga-simulations/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Fundamentals of Fluid Flow",
+      "title": "Why do some flows separate from the surface?",
+      "concepts": ["boundary layers", "flow separation", "adverse pressure gradient"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Aerodynamics and Lift",
+      "title": "How does circulation create lift?",
+      "concepts": ["circulation", "vorticity", "Kutta-Joukowski theorem"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Aerodynamics and Lift",
+      "title": "What shape should a wing have?",
+      "concepts": ["airfoil geometry", "camber", "thickness distribution"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://airshaper.com/", "https://www.youtube.com/watch?v=edLnZgF9mUg"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Aerodynamics and Lift",
+      "title": "Review: From flow fundamentals to lift generation",
+      "concepts": ["boundary layers", "circulation", "airfoil basics"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Aerodynamics and Lift",
+      "title": "Why does a finite wing lose efficiency at the tips?",
+      "concepts": ["induced drag", "wingtip vortices", "aspect ratio"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Aerodynamics and Lift",
+      "title": "Can you design a better wing?",
+      "concepts": ["wing planform", "taper ratio", "sweep angle"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://airshaper.com/", "https://altair.com/altair-flightstream"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Drag and Airfoil Design",
+      "title": "Why do different airfoils produce different amounts of drag?",
+      "concepts": ["pressure drag", "skin friction drag", "drag polar"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Drag and Airfoil Design",
+      "title": "How can we predict when flow will turn turbulent?",
+      "concepts": ["laminar-turbulent transition", "critical Reynolds number", "boundary layer growth"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Drag and Airfoil Design",
+      "title": "What happens to lift when you stall?",
+      "concepts": ["stall", "maximum lift coefficient", "flow separation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": ["https://www.youtube.com/watch?v=edLnZgF9mUg", "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/bga-simulations/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Drag and Airfoil Design",
+      "title": "How do high-lift devices work?",
+      "concepts": ["flaps", "slats", "boundary layer control"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Drag and Airfoil Design",
+      "title": "Review: Drag sources and airfoil performance",
+      "concepts": ["drag components", "Reynolds effects", "stall behavior"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Compressible Flow",
+      "title": "Why does air behave differently at high speeds?",
+      "concepts": ["Mach number", "speed of sound", "compressibility effects"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Compressible Flow",
+      "title": "What happens when airflow reaches the speed of sound?",
+      "concepts": ["shock waves", "normal shock", "oblique shock"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://ocw.mit.edu/courses/16-100-aerodynamics-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Compressible Flow",
+      "title": "How do nozzles accelerate flow to supersonic speeds?",
+      "concepts": ["converging-diverging nozzle", "area-Mach relation", "isentropic flow"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/", "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/bga-simulations/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Compressible Flow",
+      "title": "Why do supersonic aircraft have swept wings?",
+      "concepts": ["wave drag", "critical Mach number", "transonic flow"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/resources/lecture-7/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Propulsion Fundamentals",
+      "title": "How does a jet engine generate thrust?",
+      "concepts": ["momentum thrust", "pressure thrust", "thrust equation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/", "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/bga-simulations/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Propulsion Fundamentals",
+      "title": "Why is specific impulse the key metric for rocket performance?",
+      "concepts": ["specific impulse", "exhaust velocity", "propellant efficiency"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://online.stanford.edu/courses/aa283-aircraft-and-rocket-propulsion", "https://web.stanford.edu/~cantwell/AA103_Course_Material/AA103%20Course%20Reference%20Texts%20from%20AA210%20and%20AA283/AA283_Aircraft_and_Rocket_Propulsion_BOOK_Brian_J_Cantwell.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Propulsion Fundamentals",
+      "title": "Review: Compressible flow and thrust fundamentals",
+      "concepts": ["Mach effects", "nozzle flow", "thrust generation"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Propulsion Fundamentals",
+      "title": "What thermodynamic cycle powers a jet engine?",
+      "concepts": ["Brayton cycle", "compression", "combustion", "expansion"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Air-Breathing Engines",
+      "title": "How does a turbojet differ from a turbofan?",
+      "concepts": ["bypass ratio", "core flow", "fan efficiency"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/", "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/bga-simulations/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Air-Breathing Engines",
+      "title": "Why do compressors have multiple stages?",
+      "concepts": ["axial compressor", "pressure ratio", "stage loading"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Air-Breathing Engines",
+      "title": "Can you explain jet engine performance to a pilot?",
+      "concepts": ["thrust-specific fuel consumption", "engine operating line", "off-design performance"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Air-Breathing Engines",
+      "title": "Why can't turbojets fly at Mach 5?",
+      "concepts": ["ramjet", "scramjet", "high-speed propulsion limits"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://online.stanford.edu/courses/aa283-aircraft-and-rocket-propulsion", "https://web.stanford.edu/~cantwell/AA103_Course_Material/AA103%20Course%20Reference%20Texts%20from%20AA210%20and%20AA283/AA283_Aircraft_and_Rocket_Propulsion_BOOK_Brian_J_Cantwell.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Air-Breathing Engines",
+      "title": "Resource dive: Interactive jet engine simulators",
+      "concepts": ["parametric engine analysis", "cycle optimization", "component matching"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": ["https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/bga-simulations/", "https://airshaper.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Rocket Propulsion",
+      "title": "Review: Air-breathing propulsion systems",
+      "concepts": ["turbojets", "turbofans", "ramjets", "cycle analysis"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://ocw.mit.edu/courses/16-50-introduction-to-propulsion-systems-spring-2012/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Rocket Propulsion",
+      "title": "Why do rockets need oxidizer onboard?",
+      "concepts": ["rocket equation", "mass ratio", "chemical propulsion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://online.stanford.edu/courses/aa283-aircraft-and-rocket-propulsion", "https://web.stanford.edu/~cantwell/AA103_Course_Material/AA103%20Course%20Reference%20Texts%20from%20AA210%20and%20AA283/AA283_Aircraft_and_Rocket_Propulsion_BOOK_Brian_J_Cantwell.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Rocket Propulsion",
+      "title": "How do you optimize a rocket nozzle for altitude?",
+      "concepts": ["expansion ratio", "overexpanded flow", "underexpanded flow", "altitude compensation"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.hanleyinnovations.com/stallion3d.html", "https://online.stanford.edu/courses/aa283-aircraft-and-rocket-propulsion"],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Rocket Propulsion",
+      "title": "What are the limits of chemical rockets?",
+      "concepts": ["stoichiometry", "combustion temperature", "alternative propulsion"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://web.stanford.edu/~cantwell/AA103_Course_Material/AA103%20Course%20Reference%20Texts%20from%20AA210%20and%20AA283/AA283_Aircraft_and_Rocket_Propulsion_BOOK_Brian_J_Cantwell.pdf"],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Advanced Topics",
+      "title": "How does propulsion integration affect aircraft design?",
+      "concepts": ["propulsion-airframe coupling", "inlet design", "nacelle aerodynamics"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://ocw.mit.edu/courses/16-885j-aircraft-systems-engineering-fall-2005/", "https://airshaper.com/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Advanced Topics",
+      "title": "Why is jet noise so difficult to reduce?",
+      "concepts": ["aeroacoustics", "jet noise sources", "noise reduction techniques"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://altair.com/altair-flightstream"],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Advanced Topics",
+      "title": "Teach me about your favorite aerospace innovation",
+      "concepts": ["synthesis", "design thinking", "future propulsion"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://github.com/andyborrell/AeroToy", "https://airshaper.com/"],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "topic": "Ethics \u2014 utilitarianism, deontology, virtue ethics",
+  "slug": "ethics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic logical reasoning",
+    "critical thinking",
+    "argument analysis (premises, conclusions)"
+  ],
+  "exit_criteria": [
+    "student can identify and explain the core principles of utilitarianism, deontology, and virtue ethics",
+    "student can apply each framework to analyze real-world moral dilemmas",
+    "student can compare the strengths and weaknesses of each theory",
+    "student can read and understand primary texts from Mill, Kant, and Aristotle with guidance",
+    "student can construct and critique moral arguments using each framework"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "What makes stealing wrong \u2014 and how do we know?",
+      "concepts": [
+        "normative ethics",
+        "moral reasoning",
+        "justification"
+      ],
+      "difficulty": 1,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/ethics-deontological/",
+        "https://iep.utm.edu/ethics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "Why do smart people disagree about right and wrong?",
+      "concepts": [
+        "moral frameworks",
+        "ethical theories",
+        "pluralism"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.wi-phi.com/video/moral-disagreement",
+        "https://iep.utm.edu/moral-re/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "Should we judge actions by their results or their intentions?",
+      "concepts": [
+        "consequentialism",
+        "deontology",
+        "moral evaluation"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/consequentialism/",
+        "https://www.youtube.com/watch?v=hACdhD_kes8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How do moral theories connect to everyday decisions?",
+      "concepts": [
+        "applied ethics",
+        "moral deliberation",
+        "practical reasoning"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/applied-ethics/",
+        "https://iep.utm.edu/ap-ethic/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Utilitarianism",
+      "title": "What if the right action is whatever produces the most happiness?",
+      "concepts": [
+        "utility",
+        "greatest happiness principle",
+        "Bentham"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/utilitarianism-history/",
+        "https://www.youtube.com/watch?v=uvmz5E75ZIA"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "What have we learned about moral reasoning and ethical frameworks?",
+      "concepts": [
+        "normative ethics",
+        "moral reasoning",
+        "moral frameworks",
+        "consequentialism vs deontology"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/ethics-deontological/",
+        "https://iep.utm.edu/ethics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Utilitarianism",
+      "title": "Can we really measure happiness across different people?",
+      "concepts": [
+        "hedonic calculus",
+        "interpersonal comparison",
+        "utility measurement"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://iep.utm.edu/bentham/",
+        "https://plato.stanford.edu/entries/well-being/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Utilitarianism",
+      "title": "Why did Mill think some pleasures are better than others?",
+      "concepts": [
+        "higher and lower pleasures",
+        "qualitative hedonism",
+        "Mill's utilitarianism"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/mill/",
+        "https://www.gutenberg.org/ebooks/11224"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Utilitarianism",
+      "title": "Should we maximize total happiness or average happiness?",
+      "concepts": [
+        "total vs. average utility",
+        "population ethics",
+        "repugnant conclusion"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/repugnant-conclusion/",
+        "https://www.wi-phi.com/video/the-repugnant-conclusion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Utilitarianism",
+      "title": "Would a utilitarian sacrifice one person to save five?",
+      "concepts": [
+        "trolley problem",
+        "act utilitarianism",
+        "moral intuitions"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.moralmachine.net/",
+        "https://plato.stanford.edu/entries/doing-allowing/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Utilitarianism",
+      "title": "How well does utilitarianism match your moral intuitions?",
+      "concepts": [
+        "consequentialism",
+        "utility maximization",
+        "objections to utilitarianism"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://iep.utm.edu/util-a-r/",
+        "https://plato.stanford.edu/entries/consequentialism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Deontology",
+      "title": "What if some actions are just wrong, no matter the consequences?",
+      "concepts": [
+        "moral absolutes",
+        "deontology",
+        "duty-based ethics"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/ethics-deontological/",
+        "https://www.youtube.com/watch?v=8bIys6JoEDw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Deontology",
+      "title": "How can we tell which rules are truly universal?",
+      "concepts": [
+        "categorical imperative",
+        "universalizability",
+        "Kant"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/kant-moral/",
+        "https://www.wi-phi.com/video/kants-categorical-imperative"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Deontology",
+      "title": "Why does Kant say we should never treat people merely as means?",
+      "concepts": [
+        "humanity formula",
+        "dignity",
+        "respect for persons"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/kant-moral/",
+        "https://iep.utm.edu/kantmeta/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Deontology",
+      "title": "Is it ever okay to lie to save a life?",
+      "concepts": [
+        "moral dilemmas",
+        "conflicting duties",
+        "lying"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/lying-definition/",
+        "https://www.youtube.com/watch?v=kBdfcR-8hEY"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Deontology",
+      "title": "Can deontology handle cases where duties conflict?",
+      "concepts": [
+        "prima facie duties",
+        "W.D. Ross",
+        "moral particularism"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/ross-ethics/",
+        "https://iep.utm.edu/primduti/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Deontology",
+      "title": "Can you navigate the landscape of duty and rights?",
+      "concepts": [
+        "deontology",
+        "categorical imperative",
+        "rights theories"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/ethics-deontological/",
+        "https://iep.utm.edu/kantmeta/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Virtue Ethics",
+      "title": "What if ethics is about being a good person, not just doing right acts?",
+      "concepts": [
+        "virtue ethics",
+        "character",
+        "moral psychology"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/ethics-virtue/",
+        "https://www.youtube.com/watch?v=PrvtOWEXDIQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Virtue Ethics",
+      "title": "Why did Aristotle think happiness is the ultimate human goal?",
+      "concepts": [
+        "eudaimonia",
+        "flourishing",
+        "human function"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/aristotle-ethics/",
+        "https://iep.utm.edu/aris-eth/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Virtue Ethics",
+      "title": "How do we find the 'golden mean' between extremes?",
+      "concepts": [
+        "doctrine of the mean",
+        "virtues and vices",
+        "practical wisdom"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://iep.utm.edu/aris-eth/#SH3c",
+        "https://www.wi-phi.com/video/aristotles-virtue-ethics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Virtue Ethics",
+      "title": "Can virtue ethics give clear guidance on what to do?",
+      "concepts": [
+        "action guidance",
+        "phronesis",
+        "moral exemplars"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/ethics-virtue/",
+        "https://philpapers.org/rec/HURVE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Virtue Ethics",
+      "title": "How do we become virtuous \u2014 practice or teaching?",
+      "concepts": [
+        "moral education",
+        "habituation",
+        "character development"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://iep.utm.edu/aris-eth/#SSH3a",
+        "https://plato.stanford.edu/entries/moral-character/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Virtue Ethics",
+      "title": "What does it mean to live a flourishing life?",
+      "concepts": [
+        "virtue ethics",
+        "eudaimonia",
+        "practical wisdom"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/ethics-virtue/",
+        "https://iep.utm.edu/virtue/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Synthesis & Application",
+      "title": "Which theory best handles extreme poverty and global inequality?",
+      "concepts": [
+        "global justice",
+        "obligations to strangers",
+        "Singer's argument"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.utilitarian.net/singer/by/1972----.htm",
+        "https://www.youtube.com/watch?v=P9oia8i7iuE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Synthesis & Application",
+      "title": "Do we need all three frameworks, or can one theory do all the work?",
+      "concepts": [
+        "moral pluralism",
+        "theoretical integration",
+        "comparative ethics"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/value-pluralism/",
+        "https://philpapers.org/rec/ROSMP"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Synthesis & Application",
+      "title": "How would each framework approach climate ethics?",
+      "concepts": [
+        "environmental ethics",
+        "intergenerational justice",
+        "applied theory"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/ethics-environmental/",
+        "https://plato.stanford.edu/entries/justice-intergenerational/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Synthesis & Application",
+      "title": "How will you build your own ethical framework?",
+      "concepts": [
+        "reflective equilibrium",
+        "moral integration",
+        "practical ethics"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/reflective-equilibrium/",
+        "https://www.effectivealtruism.org/articles/introduction-to-effective-altruism",
+        "https://philpapers.org/browse/normative-ethics"
+      ],
+      "status": "pending"
+    }
+  ]
+}

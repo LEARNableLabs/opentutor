@@ -1,0 +1,356 @@
+{
+  "topic": "History of Mathematics",
+  "slug": "history-of-mathematics",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic algebra",
+    "geometry fundamentals",
+    "comfort with mathematical notation"
+  ],
+  "exit_criteria": [
+    "trace major mathematical developments from ancient to modern times",
+    "explain how cultural context shaped mathematical innovation",
+    "understand the evolution of key concepts: number, proof, infinity, abstraction",
+    "recognize connections between historical breakthroughs and modern practice",
+    "appreciate diverse mathematical traditions beyond European mathematics"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Ancient Mathematics",
+      "title": "Why did ancient civilizations even need mathematics?",
+      "concepts": ["practical mathematics", "surveying", "astronomy", "taxation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Babylonian_mathematics/",
+        "https://www.storyofmathematics.com/sumerian.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Ancient Mathematics",
+      "title": "How did the Babylonians solve quadratic equations without algebra?",
+      "concepts": ["geometric algebra", "cuneiform tablets", "sexagesimal system"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Babylonian_mathematics/",
+        "https://www.youtube.com/watch?v=aSF9tD5wC1s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Ancient Mathematics",
+      "title": "What made Greek mathematics revolutionary?",
+      "concepts": ["proof", "axiomatic method", "Euclidean geometry", "deductive reasoning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Euclid/",
+        "https://www.storyofmathematics.com/greek.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Ancient Mathematics",
+      "title": "Why were the Greeks terrified of irrational numbers?",
+      "concepts": ["Pythagorean crisis", "incommensurability", "philosophical implications"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Irrational_numbers/",
+        "https://www.youtube.com/user/numberphile"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Ancient Mathematics",
+      "title": "How did India and China develop mathematics differently from Greece?",
+      "concepts": ["decimal system", "zero", "negative numbers", "Chinese remainder theorem"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Indian_mathematics/",
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Chinese_mathematics/",
+        "https://www.storyofmathematics.com/indian.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Ancient Mathematics",
+      "title": "What did ancient civilizations contribute to modern mathematics?",
+      "concepts": ["synthesis", "comparative traditions", "foundational ideas"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.storyofmathematics.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Medieval & Islamic Golden Age",
+      "title": "Why is algebra named after an Arabic book?",
+      "concepts": ["al-Khwarizmi", "systematic algebra", "word problems", "algorithms"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/",
+        "https://www.storyofmathematics.com/islamic.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Medieval & Islamic Golden Age",
+      "title": "What mathematical treasures did Islamic scholars preserve and extend?",
+      "concepts": ["translation movement", "trigonometry", "optics", "geometric patterns"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Arabic_mathematics/",
+        "https://www.youtube.com/watch?v=Tn7GYGck7P8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Medieval & Islamic Golden Age",
+      "title": "How did Hindu-Arabic numerals conquer the world?",
+      "concepts": ["place value", "adoption in Europe", "Fibonacci", "computational advantages"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Arabic_numerals/",
+        "https://www.storyofmathematics.com/medieval.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Renaissance & Early Modern",
+      "title": "Why did Renaissance artists become mathematicians?",
+      "concepts": ["perspective", "projective geometry", "proportion", "golden ratio"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Art/",
+        "https://www.youtube.com/watch?v=skvnj67YGmw"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Renaissance & Early Modern",
+      "title": "How did the cubic formula spark mathematical duels?",
+      "concepts": ["cubic equations", "Cardano", "Tartaglia", "complex numbers"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Cardan/",
+        "https://www.storyofmathematics.com/16th.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Renaissance & Early Modern",
+      "title": "What did symbolic notation change about mathematics?",
+      "concepts": ["Viète", "Descartes", "algebraic symbolism", "notation evolution"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Mathematical_notation/",
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Viete/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Renaissance & Early Modern",
+      "title": "How did mathematics transform from medieval preservation to Renaissance innovation?",
+      "concepts": ["cultural transmission", "notation systems", "algebraic advances"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.storyofmathematics.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Scientific Revolution & Calculus",
+      "title": "Why did Newton and Leibniz invent calculus at the same time?",
+      "concepts": ["fluxions", "infinitesimals", "simultaneous discovery", "priority dispute"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/The_rise_of_calculus/",
+        "https://www.youtube.com/watch?v=WUvTyaaNkzM"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Scientific Revolution & Calculus",
+      "title": "How did Descartes merge algebra and geometry forever?",
+      "concepts": ["analytic geometry", "coordinate systems", "algebraic curves"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/",
+        "https://www.storyofmathematics.com/17th_descartes.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Scientific Revolution & Calculus",
+      "title": "What problems was early calculus trying to solve?",
+      "concepts": ["tangent problem", "area problem", "motion", "physics applications"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/The_rise_of_calculus/",
+        "https://ocw.mit.edu/courses/mathematics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Scientific Revolution & Calculus",
+      "title": "Why did the Bernoulli family dominate mathematics?",
+      "concepts": ["mathematical dynasties", "calculus applications", "collaboration and rivalry"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Jacob/",
+        "https://www.storyofmathematics.com/17th_bernoulli.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "19th Century Foundations",
+      "title": "How did mathematicians break Euclid's 2000-year monopoly on geometry?",
+      "concepts": ["non-Euclidean geometry", "parallel postulate", "hyperbolic geometry", "paradigm shift"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Non-Euclidean_geometry/",
+        "https://www.youtube.com/watch?v=zQo_S3yNa2w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "19th Century Foundations",
+      "title": "Why did Cantor's work on infinity drive him to despair?",
+      "concepts": ["set theory", "transfinite numbers", "different sizes of infinity", "mathematical resistance"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Cantor/",
+        "https://www.youtube.com/watch?v=elvOZm0d4H0"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "19th Century Foundations",
+      "title": "What fundamental shifts rebuilt mathematics in the 19th century?",
+      "concepts": ["rigor", "abstraction", "foundations", "paradigm shifts"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.storyofmathematics.com/19th.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Modern Mathematics",
+      "title": "What was Hilbert's dream for mathematics, and why did Gödel shatter it?",
+      "concepts": ["formalism", "Hilbert's program", "incompleteness theorems", "limits of proof"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Godel/",
+        "https://www.youtube.com/watch?v=O4ndIDcDSGc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Modern Mathematics",
+      "title": "How did women finally break into professional mathematics?",
+      "concepts": ["Emmy Noether", "systemic barriers", "20th century progress", "representation"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/",
+        "https://www.storyofmathematics.com/20th_noether.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Modern Mathematics",
+      "title": "Why did computers change what mathematics is about?",
+      "concepts": ["Turing machine", "computability", "algorithmic thinking", "proof by computer"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Turing/",
+        "https://www.youtube.com/watch?v=dNRDvLACg5Q"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Modern Mathematics",
+      "title": "What are the biggest unsolved problems inherited from history?",
+      "concepts": ["Riemann hypothesis", "P vs NP", "Fermat's Last Theorem (solved)", "mathematical frontiers"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.claymath.org/millennium-problems/",
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Fermat's_last_theorem/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Modern Mathematics",
+      "title": "How does mathematical history shape what we study today?",
+      "concepts": ["research priorities", "cultural influences", "pure vs applied", "future directions"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ams.org/",
+        "https://www.youtube.com/c/3blue1brown"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Modern Mathematics",
+      "title": "What patterns emerge across 5000 years of mathematical history?",
+      "concepts": ["synthesis", "major themes", "cultural diversity", "evolution of ideas"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.storyofmathematics.com/",
+        "https://mathshistory.st-andrews.ac.uk/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

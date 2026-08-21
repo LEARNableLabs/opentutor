@@ -1,0 +1,377 @@
+{
+  "topic": "Crystallography",
+  "slug": "crystallography",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic chemistry (atomic structure, bonding)",
+    "basic physics (waves, optics)",
+    "linear algebra (vectors, matrices)",
+    "basic materials science or mineralogy helpful but not required"
+  ],
+  "exit_criteria": [
+    "identify and classify crystal symmetry operations and point groups",
+    "determine crystal systems and Bravais lattices from unit cell parameters",
+    "read and interpret space group notation (Hermann-Mauguin)",
+    "apply Bragg's law and understand reciprocal space concepts",
+    "interpret powder and single crystal diffraction patterns",
+    "understand the workflow of structure determination and refinement",
+    "use crystallographic software (VESTA, Mercury) for visualization",
+    "connect crystallographic principles to real materials problems"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Symmetry Foundations",
+      "title": "What is symmetry and why does it matter for crystals?",
+      "concepts": ["symmetry operations", "periodicity", "translation"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/2",
+        "https://www.youtube.com/watch?v=Esc6kcReJIg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Symmetry Foundations",
+      "title": "How do mirrors and rotations transform crystal structures?",
+      "concepts": ["reflection", "rotation axes", "inversion"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/3",
+        "http://www.chemtube3d.com/symmetry/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Symmetry Foundations",
+      "title": "Why do snowflakes have six-fold symmetry?",
+      "concepts": ["crystallographic restriction", "rotation symmetry", "ice structure"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.its.caltech.edu/~atomic/snowcrystals/class/class.htm",
+        "https://www.youtube.com/watch?v=ao2Jfm35XeE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Symmetry Foundations",
+      "title": "Can you combine any symmetry operations you want?",
+      "concepts": ["symmetry multiplication", "group theory", "crystallographic point groups"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/4",
+        "http://xrayweb.chem.ou.edu/notes/symmetry.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Symmetry Foundations",
+      "title": "What makes a point group and how many exist?",
+      "concepts": ["32 crystallographic point groups", "Schönflies notation", "Hermann-Mauguin notation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/5",
+        "https://www.youtube.com/watch?v=nj8LD9b7j9w"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Lattices & Crystal Systems",
+      "title": "Review: symmetry operations and point groups",
+      "concepts": ["symmetry review", "spaced repetition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets",
+        "http://pd.chem.ucl.ac.uk/pdnn/symm1/index.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Lattices & Crystal Systems",
+      "title": "How do atoms arrange themselves in 3D periodic space?",
+      "concepts": ["lattice points", "unit cell", "primitive vs conventional cells"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://ocw.mit.edu/courses/3-60-symmetry-structure-and-tensor-properties-of-materials-fall-2005/",
+        "https://www.youtube.com/watch?v=oJCYI8wZPPQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Lattices & Crystal Systems",
+      "title": "Why are there exactly 14 Bravais lattices?",
+      "concepts": ["7 crystal systems", "14 Bravais lattices", "lattice centering"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/6",
+        "https://www.youtube.com/watch?v=TKjkGKV8sJg"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Lattices & Crystal Systems",
+      "title": "What do Miller indices tell us about crystal planes?",
+      "concepts": ["Miller indices", "crystallographic planes", "lattice directions"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.doitpoms.ac.uk/tlplib/miller_indices/index.php",
+        "https://www.youtube.com/watch?v=g5z5FiMBP4s"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Lattices & Crystal Systems",
+      "title": "How do geologists identify minerals from crystal habit?",
+      "concepts": ["crystal morphology", "crystal habit", "mineral classification"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.mindat.org/",
+        "http://www.minsocam.org/amcsd/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Lattices & Crystal Systems",
+      "title": "Can you determine the crystal system from unit cell parameters?",
+      "concepts": ["unit cell parameters", "metric tensor", "crystal system identification"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/7",
+        "http://www.tulane.edu/~sanelson/eens211/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Space Groups",
+      "title": "Review: lattices, crystal systems, and Miller indices",
+      "concepts": ["lattice review", "spaced repetition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets",
+        "https://www.doitpoms.ac.uk/tlplib/crystallography3/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Space Groups",
+      "title": "What happens when we combine translation with symmetry?",
+      "concepts": ["glide planes", "screw axes", "symmorphic vs non-symmorphic"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/9",
+        "https://www.youtube.com/watch?v=DjnDdmBdgFk"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Space Groups",
+      "title": "How do we read space group notation?",
+      "concepts": ["Hermann-Mauguin symbols", "International Tables", "asymmetric unit"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/10",
+        "http://www.cryst.ehu.es/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Space Groups",
+      "title": "Why are there exactly 230 space groups?",
+      "concepts": ["space group enumeration", "Fedorov groups", "Wyckoff positions"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "http://www.cryst.ehu.es/cryst/get_gen.html",
+        "https://www.youtube.com/watch?v=eEGNKt0OQgQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Space Groups",
+      "title": "How can you explore space groups interactively online?",
+      "concepts": ["software tools", "symmetry operations", "interactive visualization"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "http://www.cryst.ehu.es/",
+        "https://www.cryst.ehu.es/cgi-bin/cryst/programs/nph-getgen"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Diffraction & Reciprocal Space",
+      "title": "Why do crystals diffract X-rays in specific directions?",
+      "concepts": ["X-ray diffraction", "constructive interference", "path difference"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/11",
+        "https://www.youtube.com/watch?v=s9ZVIplw45M"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Diffraction & Reciprocal Space",
+      "title": "What is Bragg's law really telling us?",
+      "concepts": ["Bragg's law", "d-spacing", "diffraction geometry"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/12",
+        "https://www.doitpoms.ac.uk/tlplib/xray-diffraction/index.php"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Diffraction & Reciprocal Space",
+      "title": "How does reciprocal space relate to real space?",
+      "concepts": ["reciprocal lattice", "Ewald sphere", "Fourier transform"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/13",
+        "https://www.youtube.com/watch?v=6hOpGbAKpKQ"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Diffraction & Reciprocal Space",
+      "title": "Review: from symmetry to diffraction",
+      "concepts": ["comprehensive review", "spaced repetition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets",
+        "https://ocw.mit.edu/courses/3-60-symmetry-structure-and-tensor-properties-of-materials-fall-2005/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Diffraction & Reciprocal Space",
+      "title": "What determines the intensity of diffracted beams?",
+      "concepts": ["structure factor", "atomic scattering factor", "systematic absences"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/14",
+        "https://www.youtube.com/watch?v=RZqjfTSBHCo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Diffraction & Reciprocal Space",
+      "title": "How does protein crystallography reveal molecular machines?",
+      "concepts": ["macromolecular crystallography", "synchrotron radiation", "cryo-crystallography"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.rcsb.org/",
+        "https://www.youtube.com/watch?v=zHkWJQQSdro"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Structure Determination",
+      "title": "What is the phase problem and why does it matter?",
+      "concepts": ["phase problem", "Patterson methods", "direct methods"],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/15",
+        "https://www.youtube.com/watch?v=0oXcKT5HQDE"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Structure Determination",
+      "title": "Can you solve a crystal structure from powder diffraction data?",
+      "concepts": ["powder diffraction", "Rietveld refinement", "peak indexing"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/17",
+        "http://pd.chem.ucl.ac.uk/pdnn/powintro.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Structure Determination",
+      "title": "How do we refine crystal structures to atomic precision?",
+      "concepts": ["least squares refinement", "R-factors", "thermal parameters"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets/16",
+        "https://www.youtube.com/watch?v=z-Mq0lNjGpo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Structure Determination",
+      "title": "How do you analyze a real crystal structure from a database?",
+      "concepts": ["structure databases", "VESTA", "Mercury software"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.ccdc.cam.ac.uk/solutions/software/mercury/",
+        "https://jp-minerals.org/vesta/en/",
+        "https://www.rcsb.org/",
+        "https://www.crystallography.net/cod/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Structure Determination",
+      "title": "Review: structure determination workflow from diffraction to refinement",
+      "concepts": ["comprehensive review", "spaced repetition"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://www.iucr.org/education/pamphlets",
+        "https://www.doitpoms.ac.uk/tlplib/xray-diffraction/index.php"
+      ],
+      "status": "pending"
+    }
+  ]
+}

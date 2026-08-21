@@ -1,0 +1,276 @@
+{
+  "topic": "Behavioral ecology — animal decision-making",
+  "slug": "behavioral-ecology",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": ["basic evolutionary biology", "natural selection", "introductory ecology"],
+  "exit_criteria": [
+    "student can apply Tinbergen's four questions to analyze any behavior",
+    "student can predict optimal foraging strategies using marginal value theorem",
+    "student can explain when cooperation evolves using Hamilton's rule",
+    "student can design experiments to test behavioral hypotheses",
+    "student can evaluate tradeoffs in life history decisions"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do we need four different explanations for the same behavior?",
+      "concepts": ["Tinbergen's four questions", "proximate vs ultimate causation", "levels of analysis"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": ["https://www.nature.com/scitable/knowledge/library/tinbergen-s-four-questions-13682772/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do animals make decisions without thinking?",
+      "concepts": ["decision rules", "heuristics", "evolved mechanisms", "environmental cues"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": ["https://www.annualreviews.org/doi/10.1146/annurev-ecolsys-110512-135920"],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What does it mean for a behavior to be optimal?",
+      "concepts": ["optimization models", "fitness currency", "constraints", "tradeoffs"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.cambridge.org/core/books/behavioural-ecology/optimization-and-behavioral-ecology/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How do we know if animals are really optimizing?",
+      "concepts": ["testing optimality models", "comparative method", "experimental manipulation"],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": ["https://academic.oup.com/beheco/article/31/2/261/5697156"],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foraging Decisions",
+      "title": "Why don't predators just eat everything they encounter?",
+      "concepts": ["optimal diet model", "prey profitability", "handling time", "search time"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.nature.com/scitable/knowledge/library/foraging-theory-103491369/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foraging Decisions",
+      "title": "When should a bee leave a flower patch?",
+      "concepts": ["marginal value theorem", "patch residence time", "travel time", "diminishing returns"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.journals.uchicago.edu/doi/10.1086/283873"],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Foraging Decisions",
+      "title": "Why do some animals prefer risky food sources over safe ones?",
+      "concepts": ["risk sensitivity", "variance in payoff", "energy budget rule", "starvation threshold"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.sciencedirect.com/science/article/pii/S0003347298907669"],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Foraging Decisions",
+      "title": "Review: Foraging decisions in the wild",
+      "concepts": ["diet choice", "patch use", "risk-reward tradeoffs"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.youtube.com/watch?v=example-foraging-review"],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Mating & Reproduction",
+      "title": "Why are males and females so different in what they want?",
+      "concepts": ["sexual selection", "anisogamy", "parental investment", "Bateman's principle"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.nature.com/scitable/knowledge/library/sexual-selection-13255240/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Mating & Reproduction",
+      "title": "What's the point of a peacock's tail if it makes him easier to catch?",
+      "concepts": ["costly signals", "handicap principle", "honest signaling", "quality advertisement"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.journals.uchicago.edu/doi/10.1086/284351"],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Mating & Reproduction",
+      "title": "How do females choose when all males look the same?",
+      "concepts": ["cryptic female choice", "sperm competition", "good genes vs compatible genes"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://royalsocietypublishing.org/doi/10.1098/rspb.2015.0665"],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Mating & Reproduction",
+      "title": "Why do parents fight with their own offspring?",
+      "concepts": ["parent-offspring conflict", "weaning conflict", "sibling rivalry", "genetic asymmetry"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.jstor.org/stable/2459612"],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Mating & Reproduction",
+      "title": "Review: Sexual selection and mate choice",
+      "concepts": ["intrasexual competition", "intersexual choice", "signaling"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": ["https://evolution.berkeley.edu/sexual-selection/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Mating & Reproduction",
+      "title": "Should you have many small babies or few large ones?",
+      "concepts": ["clutch size", "offspring size-number tradeoff", "life history strategies", "r vs K selection"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": ["https://www.nature.com/scitable/knowledge/library/life-history-evolution-68245673/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Social Decisions",
+      "title": "Why would an animal help someone else at a cost to itself?",
+      "concepts": ["altruism", "kin selection", "Hamilton's rule", "inclusive fitness"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://www.nature.com/scitable/knowledge/library/altruism-cooperation-and-kin-selection-13260526/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Social Decisions",
+      "title": "Can unrelated animals cooperate without being suckers?",
+      "concepts": ["reciprocal altruism", "tit-for-tat", "cheater detection", "iterated games"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": ["https://www.pnas.org/doi/10.1073/pnas.1011498107"],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Social Decisions",
+      "title": "Why join a group if it means sharing food and attracting predators?",
+      "concepts": ["group living costs", "dilution effect", "collective vigilance", "resource competition"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": ["https://academic.oup.com/beheco/article/24/1/1/228336"],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Social Decisions",
+      "title": "Review: Cooperation and conflict",
+      "concepts": ["kin selection", "reciprocity", "group benefits", "social tradeoffs"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.cell.com/trends/ecology-evolution/fulltext/S0169-5347(17)30075-0"],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Social Decisions",
+      "title": "What happens when two competitors can't both win?",
+      "concepts": ["game theory", "hawk-dove game", "evolutionary stable strategy", "frequency dependence"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://plato.stanford.edu/entries/game-evolutionary/"],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Social Decisions",
+      "title": "How do animals decide whether to fight or flee?",
+      "concepts": ["contest behavior", "assessment", "resource value", "fighting ability"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://www.sciencedirect.com/science/article/pii/S0003347214003881"],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Communication & Signaling",
+      "title": "Why don't all signals lie?",
+      "concepts": ["signal honesty", "index signals", "conventional signals", "signal costs"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": ["https://royalsocietypublishing.org/doi/10.1098/rstb.2011.0367"],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Communication & Signaling",
+      "title": "Why do prey sometimes tell predators where they are?",
+      "concepts": ["alarm calls", "pursuit-deterrence signals", "aposematism", "signal receivers"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": ["https://www.journals.uchicago.edu/doi/10.1086/285103"],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Communication & Signaling",
+      "title": "Can animals manipulate each other's decisions?",
+      "concepts": ["sensory exploitation", "receiver bias", "signal evolution", "coevolution"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": ["https://academic.oup.com/icb/article/40/5/689/651584"],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Communication & Signaling",
+      "title": "Review: Signals, honesty, and manipulation",
+      "concepts": ["honest signaling", "costly signals", "receiver psychology"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": ["https://www.annualreviews.org/doi/10.1146/annurev.ecolsys.36.091704.175535"],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Integration & Applications",
+      "title": "How flexible are animal decisions across environments?",
+      "concepts": ["phenotypic plasticity", "reaction norms", "behavioral syndromes", "personality"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": ["https://www.science.org/doi/10.1126/science.1133755"],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Integration & Applications",
+      "title": "Can we use behavioral ecology to solve conservation problems?",
+      "concepts": ["applied behavioral ecology", "human-wildlife conflict", "conservation behavior", "behavior-based management"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": ["https://conbio.onlinelibrary.wiley.com/doi/10.1111/j.1523-1739.2007.00628.x"],
+      "status": "pending"
+    }
+  ]
+}

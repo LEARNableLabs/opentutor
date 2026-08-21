@@ -1,0 +1,329 @@
+{
+  "topic": "Olive oil — cultivars, chemistry, and sensory analysis",
+  "slug": "olive-oil",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic organic chemistry",
+    "familiarity with food science concepts",
+    "understanding of sensory evaluation basics"
+  ],
+  "exit_criteria": [
+    "identify major olive cultivars by flavor profile and geography",
+    "explain the chemical basis for quality indicators and defects",
+    "conduct basic sensory analysis using IOC methodology",
+    "predict sensory characteristics from cultivar, region, and processing",
+    "evaluate olive oil quality and detect common defects"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why does olive oil quality vary so dramatically?",
+      "concepts": ["quality spectrum", "production factors", "grading systems"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.internationaloliveoil.org/what-we-do/chemistry-standardisation-unit/",
+        "https://olivecenter.ucdavis.edu/research/olive-oil-quality"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What makes extra virgin different from virgin?",
+      "concepts": ["quality grades", "free fatty acids", "sensory defects", "chemical limits"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.internationaloliveoil.org/what-we-do/chemistry-standardisation-unit/standards-and-methods/",
+        "https://cooc.com/certification/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How did ancient civilizations produce olive oil?",
+      "concepts": ["traditional methods", "historical context", "modern comparison"],
+      "difficulty": 1,
+      "type": "real-world",
+      "resources": [
+        "https://www.oliveoiltimes.com/olive-oil-basics/history-of-olive-oil",
+        "https://www.ancientolivepress.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Cultivars and Geography",
+      "title": "Why do Spanish and Italian oils taste so different?",
+      "concepts": ["cultivar diversity", "regional characteristics", "terroir", "flavor profiles"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://olivecenter.ucdavis.edu/research/cultivar-profiles",
+        "https://www.oliveoilsource.com/page/olive-varietals"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Cultivars and Geography",
+      "title": "What makes Arbequina the 'gateway' cultivar?",
+      "concepts": ["Arbequina characteristics", "mild flavor profile", "commercial importance"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.oliveoilsource.com/definition/arbequina-olive",
+        "https://olivecenter.ucdavis.edu/media/files/arbequina-profile.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Cultivars and Geography",
+      "title": "How does terroir shape olive flavor?",
+      "concepts": ["soil influence", "climate effects", "elevation", "microclimate"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.oliveoiltimes.com/olive-oil-basics/terroir-and-olive-oil",
+        "https://olivecenter.ucdavis.edu/research/terroir-effects"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Foundations",
+      "title": "Review: From groves to grades",
+      "concepts": ["quality basics", "cultivar fundamentals", "production overview"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://olivecenter.ucdavis.edu/olive-oil-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Cultivars and Geography",
+      "title": "Can you match these oils to their cultivars?",
+      "concepts": ["cultivar identification", "flavor markers", "regional patterns"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.oliveoilsource.com/page/cultivar-flavor-wheel",
+        "https://olivecenter.ucdavis.edu/sensory-evaluation-resources"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Cultivars and Geography",
+      "title": "Why do some cultivars dominate global production?",
+      "concepts": ["commercial viability", "yield", "disease resistance", "market preferences"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.oliveoiltimes.com/world/global-olive-production-statistics",
+        "https://www.internationaloliveoil.org/olive-world/olive-tree/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Chemistry Fundamentals",
+      "title": "What makes olive oil 'mono-unsaturated'?",
+      "concepts": ["fatty acid structure", "oleic acid", "saturation", "lipid chemistry"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://olivecenter.ucdavis.edu/research/chemistry-fatty-acids",
+        "https://www.olivewellnessinstitute.org/nutrition/about-olive-oil-nutrition/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Chemistry Fundamentals",
+      "title": "Why do phenolic compounds make oil taste bitter?",
+      "concepts": ["phenolic compounds", "bitterness", "antioxidants", "health benefits"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://olivecenter.ucdavis.edu/research/phenolic-compounds",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/phenolics-olive-oil"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Chemistry Fundamentals",
+      "title": "How do you read a fatty acid profile?",
+      "concepts": ["fatty acid analysis", "composition limits", "quality markers", "interpretation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.internationaloliveoil.org/what-we-do/chemistry-standardisation-unit/standards-and-methods/",
+        "https://olivecenter.ucdavis.edu/media/files/fatty-acid-guide.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Chemistry Fundamentals",
+      "title": "Review: Chemical signatures of quality",
+      "concepts": ["fatty acids", "phenolics", "oxidation", "quality chemistry"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://olivecenter.ucdavis.edu/chemistry-overview"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Chemistry Fundamentals",
+      "title": "What happens when olive oil oxidizes?",
+      "concepts": ["oxidation mechanisms", "rancidity", "peroxide value", "shelf life"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://olivecenter.ucdavis.edu/research/oxidation-and-stability",
+        "https://www.oliveoiltimes.com/olive-oil-basics/oxidation-rancidity"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Chemistry Fundamentals",
+      "title": "Why does fresh oil burn your throat?",
+      "concepts": ["pungency", "oleocanthal", "anti-inflammatory properties", "sensory-chemistry link"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.olivewellnessinstitute.org/article/oleocanthal-anti-inflammatory/",
+        "https://olivecenter.ucdavis.edu/research/oleocanthal"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Sensory Analysis",
+      "title": "How do professional tasters eliminate bias?",
+      "concepts": ["panel testing", "blind evaluation", "controlled conditions", "standardization"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/",
+        "https://olivecenter.ucdavis.edu/sensory-panel-protocols"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Sensory Analysis",
+      "title": "What are the three positive attributes of olive oil?",
+      "concepts": ["fruitiness", "bitterness", "pungency", "positive attributes"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/sensory-attributes/",
+        "https://cooc.com/sensory-analysis-basics/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Sensory Analysis",
+      "title": "Can you identify these common defects?",
+      "concepts": ["sensory defects", "fusty", "rancid", "muddy sediment", "winey-vinegary"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/defects/",
+        "https://olivecenter.ucdavis.edu/media/files/sensory-defects-guide.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Sensory Analysis",
+      "title": "Why does the IOC ban clear tasting glasses?",
+      "concepts": ["tasting protocol", "visual bias", "color influence", "methodology"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/tasting-protocol/",
+        "https://www.oliveoiltimes.com/olive-oil-basics/sensory-evaluation-techniques"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Sensory Analysis",
+      "title": "Review: Tasting like a professional",
+      "concepts": ["sensory methodology", "attributes and defects", "scoring systems"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://olivecenter.ucdavis.edu/sensory-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Sensory Analysis",
+      "title": "How do you score an oil using the panel method?",
+      "concepts": ["IOC scoring system", "median calculation", "panel methodology", "certification"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/panel-method/",
+        "https://cooc.com/panel-testing-methodology/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Integration",
+      "title": "How does harvest timing affect chemistry and flavor?",
+      "concepts": ["harvest maturity", "ripeness index", "phenolic evolution", "flavor development"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://olivecenter.ucdavis.edu/research/harvest-timing",
+        "https://www.oliveoiltimes.com/olive-oil-basics/harvest-timing-quality"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration",
+      "title": "Can you predict sensory profile from cultivar and region?",
+      "concepts": ["cultivar-chemistry-sensory links", "prediction", "integration", "quality factors"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://olivecenter.ucdavis.edu/comprehensive-quality-guide",
+        "https://www.internationaloliveoil.org/olive-knowledge/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration",
+      "title": "What makes a truly great olive oil?",
+      "concepts": ["quality excellence", "balance", "complexity", "typicity"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.oliveoiltimes.com/olive-oil-awards",
+        "https://olivecenter.ucdavis.edu/what-is-quality"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "topic": "Memory techniques — method of loci and spaced repetition theory",
+  "slug": "memory-techniques",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic metacognition",
+    "willingness to practice regularly"
+  ],
+  "exit_criteria": [
+    "student can build and navigate a memory palace for 20+ items",
+    "student can explain the forgetting curve and design a review schedule",
+    "student can implement spaced repetition using Anki or similar tool",
+    "student can encode abstract concepts using vivid imagery and spatial anchors",
+    "student understands when to use method of loci vs. spaced repetition"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations of Memory",
+      "title": "Why do we forget most of what we learn?",
+      "concepts": ["forgetting curve", "memory consolidation", "interference"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.gwern.net/Spaced-repetition#ebbinghaus-1880s",
+        "https://en.wikipedia.org/wiki/Forgetting_curve"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations of Memory",
+      "title": "How is spatial memory different from other types of recall?",
+      "concepts": ["spatial memory", "hippocampus", "episodic encoding"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3782739/",
+        "https://artofmemory.com/wiki/How_to_Build_a_Memory_Palace"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations of Memory",
+      "title": "What makes something memorable?",
+      "concepts": ["encoding strength", "vividness", "emotion", "novelty"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://ncase.me/remember/",
+        "https://artofmemory.com/wiki/Peg_System"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations of Memory",
+      "title": "Can you design a simple experiment to test your own memory?",
+      "concepts": ["metacognition", "retrieval practice", "self-experimentation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.gwern.net/Spaced-repetition#how-to-use",
+        "https://www.youtube.com/watch?v=eVajQPuRmk8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations of Memory",
+      "title": "Why does testing yourself work better than re-reading?",
+      "concepts": ["active recall", "testing effect", "retrieval strength"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5126970/",
+        "https://ncase.me/remember/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Method of Loci",
+      "title": "How did ancient Greeks memorize entire speeches?",
+      "concepts": ["method of loci", "Simonides of Ceos", "memory palace origins"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Method_of_loci",
+        "https://artofmemory.com/wiki/Method_of_Loci"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Method of Loci",
+      "title": "What makes a good memory palace location?",
+      "concepts": ["spatial familiarity", "distinct loci", "navigation paths"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://artofmemory.com/wiki/How_to_Build_a_Memory_Palace",
+        "https://www.youtube.com/c/MemorySportTV"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Method of Loci",
+      "title": "How do you encode abstract concepts as vivid images?",
+      "concepts": ["visualization", "symbolic encoding", "dual coding"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://artofmemory.com/wiki/How_to_Memorize_Abstract_Information",
+        "https://www.gwern.net/Spaced-repetition#mnemonic-techniques"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Method of Loci",
+      "title": "Can you walk through your first memory palace?",
+      "concepts": ["palace navigation", "image placement", "retrieval practice"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://artofmemory.com/blog/how-to-memorize-a-speech/",
+        "https://www.youtube.com/watch?v=mh9B5UJnejc"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Method of Loci",
+      "title": "Why do memory champions use action and emotion in their images?",
+      "concepts": ["emotional encoding", "action-based imagery", "memory strength"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://artofmemory.com/wiki/Peg_System",
+        "https://www.memoryleague.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Method of Loci",
+      "title": "How would you build a palace for something you need to remember?",
+      "concepts": ["palace construction", "encoding practice", "retrieval testing"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://artofmemory.com/wiki/Memory_Techniques",
+        "https://www.youtube.com/c/MemorySportTV"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Method of Loci",
+      "title": "When should you use method of loci vs. other techniques?",
+      "concepts": ["technique selection", "use cases", "limitations"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.gwern.net/Spaced-repetition#mnemonic-techniques",
+        "https://artofmemory.com/wiki/Memory_Techniques"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Spaced Repetition",
+      "title": "What is the optimal time to review something you just learned?",
+      "concepts": ["spaced repetition", "optimal intervals", "forgetting curve shape"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://ncase.me/remember/",
+        "https://www.gwern.net/Spaced-repetition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Spaced Repetition",
+      "title": "How does the SuperMemo algorithm decide when to show you a card?",
+      "concepts": ["SM-2 algorithm", "ease factor", "interval calculation"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.supermemo.com/en/blog/application-of-a-computer-to-improve-the-results-obtained-in-working-with-the-supermemo-method",
+        "https://www.gwern.net/Spaced-repetition#algorithm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Spaced Repetition",
+      "title": "What makes a good flashcard?",
+      "concepts": ["minimum information principle", "cloze deletion", "atomic cards"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge",
+        "https://apps.ankiweb.net/docs/manual.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Spaced Repetition",
+      "title": "How would you build your first spaced repetition deck?",
+      "concepts": ["deck structure", "card creation", "review workflow"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://apps.ankiweb.net/",
+        "https://www.youtube.com/watch?v=5urUZUWoTLo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Spaced Repetition",
+      "title": "How well do you understand spaced repetition?",
+      "concepts": ["algorithm comprehension", "card design", "scheduling"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://ncase.me/remember/",
+        "https://www.gwern.net/Spaced-repetition#how-to-review"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Spaced Repetition",
+      "title": "Why do some people fail to stick with spaced repetition?",
+      "concepts": ["habit formation", "motivation", "deck maintenance"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.gwern.net/Spaced-repetition#when-to-use",
+        "https://www.reddit.com/r/Anki/wiki/index"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Spaced Repetition",
+      "title": "What are the limits of spaced repetition?",
+      "concepts": ["technique limitations", "appropriate content", "diminishing returns"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.gwern.net/Spaced-repetition#what-not-to-use",
+        "https://andymatuschak.org/prompts/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Integration & Mastery",
+      "title": "How can you combine memory palaces with spaced repetition?",
+      "concepts": ["technique integration", "dual encoding", "complementary approaches"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://artofmemory.com/wiki/Spaced_Repetition",
+        "https://www.gwern.net/Spaced-repetition#mnemonic-techniques"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Integration & Mastery",
+      "title": "What domain-specific adaptations work for your field?",
+      "concepts": ["domain adaptation", "medical mnemonics", "language learning", "mathematics"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.supermemo.com/en/blog/archive",
+        "https://refold.la/roadmap"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Integration & Mastery",
+      "title": "How do you track and optimize your own forgetting curves?",
+      "concepts": ["meta-learning", "personal analytics", "algorithm tuning"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://www.gwern.net/Spaced-repetition#personal-experimentation",
+        "https://apps.ankiweb.net/docs/manual.html#statistics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Integration & Mastery",
+      "title": "Can memory techniques help you learn how to learn?",
+      "concepts": ["meta-cognition", "learning transfer", "skill acquisition"],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.coursera.org/learn/learning-how-to-learn",
+        "https://www.gwern.net/Spaced-repetition#benefits"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Integration & Mastery",
+      "title": "What does your personal memory system look like?",
+      "concepts": ["system design", "habit integration", "long-term practice"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://andymatuschak.org/prompts/",
+        "https://artofmemory.com/wiki/Memory_Techniques"
+      ],
+      "status": "pending"
+    }
+  ]
+}

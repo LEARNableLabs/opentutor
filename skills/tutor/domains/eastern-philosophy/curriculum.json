@@ -1,0 +1,516 @@
+{
+  "topic": "Eastern philosophy \u2014 Zen, Taoism, Vedanta",
+  "slug": "eastern-philosophy",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic philosophical terminology (metaphysics, epistemology, ontology)",
+    "familiarity with Western philosophical methods",
+    "openness to paradox and non-linear reasoning",
+    "basic world religions overview (optional but helpful)"
+  ],
+  "exit_criteria": [
+    "explain core metaphysical claims of Vedanta, Taoism, and Zen",
+    "compare and contrast approaches to self, mind, and reality across traditions",
+    "engage critically with primary source excerpts",
+    "identify common misconceptions in popular presentations",
+    "understand relationship between philosophical claims and contemplative practices",
+    "articulate why certain concepts resist direct translation"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do three very different cultures arrive at similar insights about reality?",
+      "concepts": [
+        "comparative philosophy",
+        "non-dualism",
+        "contemplative epistemology"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/comparative-philosophy/",
+        "https://iep.utm.edu/east-phi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "What happens when ultimate reality cannot be spoken?",
+      "concepts": [
+        "ineffability",
+        "apophatic philosophy",
+        "language limitations"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/mysticism/",
+        "https://terebess.hu/english/tao/gia.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "How does contemplative practice relate to philosophical claims?",
+      "concepts": [
+        "meditation epistemology",
+        "first-person verification",
+        "practice-philosophy integration"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/consciousness-indian/",
+        "https://www.coursera.org/learn/science-of-meditation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "Can you map the family tree of these three traditions?",
+      "concepts": [
+        "historical development",
+        "cultural transmission",
+        "Buddhism's bridge role"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/buddhism/",
+        "https://iep.utm.edu/history-of-buddhism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "What gets lost when Sanskrit, Chinese, and Japanese concepts enter English?",
+      "concepts": [
+        "translation challenges",
+        "conceptual untranslatables",
+        "Brahman vs Tao vs Mu"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://plato.stanford.edu/entries/buddhism-philosophy/",
+        "http://www.sacred-texts.com/bud/taf/index.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Foundations",
+      "title": "How do ineffability, contemplation, and cultural context prepare us for Eastern philosophy?",
+      "concepts": [
+        "non-dualism synthesis",
+        "ineffability recap",
+        "practice-theory integration"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/comparative-philosophy/",
+        "https://iep.utm.edu/east-phi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Vedanta",
+      "title": "What did the Upanishads discover that shocked their own culture?",
+      "concepts": [
+        "Brahman-Atman identity",
+        "Upanishadic revelation",
+        "tat tvam asi"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/vedanta/",
+        "http://www.sacred-texts.com/hin/upan/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Vedanta",
+      "title": "If everything is Brahman, why does the world appear multiple and changing?",
+      "concepts": [
+        "Maya",
+        "appearance vs reality",
+        "levels of truth"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://iep.utm.edu/adv-veda/",
+        "https://plato.stanford.edu/entries/vedanta/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Vedanta",
+      "title": "How does Shankara's non-dualism differ from Western idealism?",
+      "concepts": [
+        "Advaita Vedanta",
+        "pure consciousness",
+        "comparison to Berkeley/Hegel"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://iep.utm.edu/adv-veda/",
+        "https://plato.stanford.edu/entries/consciousness-indian/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Vedanta",
+      "title": "Who am I if the self is not this body or mind?",
+      "concepts": [
+        "Atman",
+        "self-inquiry",
+        "witness consciousness"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/vedanta/",
+        "https://iep.utm.edu/ramana/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Vedanta",
+      "title": "Can you explain the difference between the three main Vedanta schools?",
+      "concepts": [
+        "Advaita vs Vishishtadvaita vs Dvaita",
+        "qualified non-dualism",
+        "dualism"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/vedanta/",
+        "https://iep.utm.edu/vedanta/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Vedanta",
+      "title": "What makes Vedanta's account of Brahman, Atman, and Maya distinctive?",
+      "concepts": [
+        "Brahman-Atman synthesis",
+        "Maya reconsidered",
+        "practice integration"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/vedanta/",
+        "https://iep.utm.edu/adv-veda/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Taoism",
+      "title": "What is the Tao that cannot be named?",
+      "concepts": [
+        "Tao",
+        "nameless origin",
+        "source vs manifestation"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/laozi/",
+        "https://terebess.hu/english/tao/gia.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Taoism",
+      "title": "How can 'doing nothing' accomplish everything?",
+      "concepts": [
+        "Wu wei",
+        "effortless action",
+        "natural spontaneity"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/laozi/",
+        "https://iep.utm.edu/taoism/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Taoism",
+      "title": "Why does Zhuangzi dream of being a butterfly?",
+      "concepts": [
+        "transformation",
+        "relativism",
+        "self-identity paradox"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://plato.stanford.edu/entries/zhuangzi/",
+        "https://terebess.hu/english/chuangtzu.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Taoism",
+      "title": "What do yin and yang reveal about the nature of opposites?",
+      "concepts": [
+        "yin-yang",
+        "complementarity",
+        "dynamic balance"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/chinese-metaphysics/",
+        "https://iep.utm.edu/yinyang/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Taoism",
+      "title": "Can you contrast philosophical Taoism with religious Taoism?",
+      "concepts": [
+        "Daojia vs Daojiao",
+        "immortality practices",
+        "textual traditions"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://iep.utm.edu/taoism/",
+        "https://plato.stanford.edu/entries/laozi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Taoism",
+      "title": "How does Taoist philosophy reshape your understanding of action and nature?",
+      "concepts": [
+        "Wu wei synthesis",
+        "Tao and nature",
+        "Zhuangzi's freedom"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/zhuangzi/",
+        "https://terebess.hu/english/tao/gia.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Zen Buddhism",
+      "title": "How did Buddhism transform when it met Chinese culture?",
+      "concepts": [
+        "Chan origins",
+        "Buddhism-Taoism synthesis",
+        "transmission to Japan"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/japanese-zen/",
+        "https://iep.utm.edu/zen/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Zen Buddhism",
+      "title": "What does 'direct pointing to mind' mean if not words?",
+      "concepts": [
+        "direct transmission",
+        "pointing instructions",
+        "beyond scripture"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/japanese-zen/",
+        "http://www.sacred-texts.com/bud/zen/mumonkan.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Zen Buddhism",
+      "title": "Why give a student an unsolvable riddle?",
+      "concepts": [
+        "koan practice",
+        "great doubt",
+        "sudden awakening"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://iep.utm.edu/zen/",
+        "http://www.sacred-texts.com/bud/zen/mumonkan.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Zen Buddhism",
+      "title": "What is Buddha-nature and does everyone have it?",
+      "concepts": [
+        "Buddha-nature",
+        "original enlightenment",
+        "Mu koan"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/japanese-zen/",
+        "https://plato.stanford.edu/entries/buddha/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Zen Buddhism",
+      "title": "Can you explain the difference between Rinzai and Soto Zen?",
+      "concepts": [
+        "koan Zen vs shikantaza",
+        "gradual vs sudden",
+        "practice styles"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/japanese-zen/",
+        "https://iep.utm.edu/zen/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Zen Buddhism",
+      "title": "What makes Zen's approach to awakening unique?",
+      "concepts": [
+        "zazen practice",
+        "koan work",
+        "everyday mind"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://plato.stanford.edu/entries/japanese-zen/",
+        "http://www.sacred-texts.com/bud/zen/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Comparative Insights",
+      "title": "Do all three traditions point to the same reality?",
+      "concepts": [
+        "perennial philosophy debate",
+        "convergence vs divergence",
+        "interpretive charity"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://plato.stanford.edu/entries/comparative-philosophy/",
+        "https://iep.utm.edu/east-phi/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Comparative Insights",
+      "title": "How does each tradition dissolve the self?",
+      "concepts": [
+        "Atman vs Anatman vs Wu",
+        "self-deconstruction methods",
+        "no-self paradox"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://plato.stanford.edu/entries/consciousness-indian/",
+        "https://plato.stanford.edu/entries/buddha/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Comparative Insights",
+      "title": "What would a Zen master say to a Vedanta sage?",
+      "concepts": [
+        "cross-tradition dialogue",
+        "method differences",
+        "ultimate vs conventional"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://iep.utm.edu/east-phi/",
+        "https://plato.stanford.edu/entries/comparative-philosophy/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Comparative Insights",
+      "title": "Where do these philosophies show up in contemporary life?",
+      "concepts": [
+        "modern adaptations",
+        "secular mindfulness",
+        "cultural appropriation concerns"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.coursera.org/learn/science-of-meditation",
+        "https://iep.utm.edu/zen/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Comparative Insights",
+      "title": "Final synthesis: What have you learned about reality, self, and wisdom?",
+      "concepts": [
+        "integration",
+        "personal philosophy",
+        "practice commitment"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://plato.stanford.edu/entries/vedanta/",
+        "https://plato.stanford.edu/entries/japanese-zen/",
+        "https://plato.stanford.edu/entries/laozi/"
+      ],
+      "status": "pending"
+    }
+  ]
+}

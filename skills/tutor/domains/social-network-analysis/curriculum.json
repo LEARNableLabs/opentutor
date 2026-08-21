@@ -1,0 +1,376 @@
+{
+  "topic": "Social Network Analysis",
+  "slug": "social-network-analysis",
+  "created": "2026-08-21",
+  "student_level": "intermediate",
+  "prerequisites": [
+    "basic graph theory (nodes, edges, paths)",
+    "probability and statistics fundamentals",
+    "Python programming basics",
+    "linear algebra (matrices, eigenvectors)"
+  ],
+  "exit_criteria": [
+    "compute and interpret centrality measures for real networks",
+    "identify community structure using multiple algorithms",
+    "build and analyze network models (random, small-world, scale-free)",
+    "apply network metrics to real-world problems",
+    "visualize and communicate network insights effectively",
+    "understand when different network measures and models are appropriate"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Foundations",
+      "title": "Why do relationships matter more than individuals?",
+      "concepts": ["network thinking", "relational data", "graph representation"],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networksciencebook.com/chapter/1",
+        "https://networkx.org/documentation/stable/tutorial.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Foundations",
+      "title": "How do we represent a network computationally?",
+      "concepts": ["adjacency matrix", "edge list", "adjacency list", "data structures"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/classes/index.html",
+        "https://snap.stanford.edu/data/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Foundations",
+      "title": "What can we learn from Twitter's retweet network?",
+      "concepts": ["directed graphs", "in-degree", "out-degree", "network visualization"],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://gephi.org/users/quick-start/",
+        "https://networkx.org/documentation/stable/reference/introduction.html#networkx-basics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Foundations",
+      "title": "How heavy should an edge be?",
+      "concepts": ["weighted networks", "edge attributes", "multigraphs"],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/classes/multigraph.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Foundations",
+      "title": "Can you build a network from scratch?",
+      "concepts": ["network construction", "data wrangling", "graph creation"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/generated/networkx.convert_matrix.from_pandas_adjacency.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Centrality",
+      "title": "Who are the most important people in a network?",
+      "concepts": ["centrality", "degree centrality", "importance measures"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/centrality.html",
+        "https://web.stanford.edu/class/cs224w/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Centrality",
+      "title": "Can you explain the foundations and key metrics we've covered?",
+      "concepts": ["graph representations", "degree centrality", "network construction"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Centrality",
+      "title": "Who controls the flow of information?",
+      "concepts": ["betweenness centrality", "shortest paths", "network flow"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.centrality.betweenness_centrality.html",
+        "https://www.cs.cornell.edu/home/kleinber/networks-book/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Centrality",
+      "title": "Why did Google win the search war?",
+      "concepts": ["eigenvector centrality", "PageRank", "random walks"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "http://www.stanford.edu/class/cs224w/slides/",
+        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.link_analysis.pagerank_alg.pagerank.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Centrality",
+      "title": "How do you choose the right centrality measure?",
+      "concepts": ["centrality comparison", "measure selection", "interpretation"],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/centrality.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Centrality",
+      "title": "Can you identify key players in a collaboration network?",
+      "concepts": ["centrality application", "network analysis workflow"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://snap.stanford.edu/data/ca-GrQc.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Network Structure",
+      "title": "Why are social networks so clustered?",
+      "concepts": ["clustering coefficient", "triadic closure", "transitivity"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.cluster.clustering.html",
+        "https://networksciencebook.com/chapter/2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Network Structure",
+      "title": "How can everyone be six handshakes away?",
+      "concepts": ["small-world property", "path length", "network diameter"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.generic.average_shortest_path_length.html",
+        "https://www.microsoft.com/en-us/research/publication/six-degrees/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Network Structure",
+      "title": "How do centrality and clustering relate to each other?",
+      "concepts": ["centrality measures", "clustering", "small-world"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/index.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Network Structure",
+      "title": "Why do the rich get richer in networks?",
+      "concepts": ["degree distribution", "power laws", "scale-free networks"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networksciencebook.com/chapter/4",
+        "https://barabasi.com/f/622.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Network Structure",
+      "title": "What makes a network robust or fragile?",
+      "concepts": ["connected components", "network resilience", "percolation"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/component.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Network Structure",
+      "title": "What can the internet's structure teach us about networks?",
+      "concepts": ["structural analysis", "large-scale networks"],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://snap.stanford.edu/data/as-733.html",
+        "https://gephi.org/users/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Network Structure",
+      "title": "Can you characterize a network's structure?",
+      "concepts": ["structural metrics", "network fingerprinting"],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/functions.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Communities",
+      "title": "How do we find groups in networks?",
+      "concepts": ["community detection", "modularity", "partitioning"],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/community.html",
+        "https://python-louvain.readthedocs.io/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Communities",
+      "title": "What makes a good community division?",
+      "concepts": ["modularity optimization", "quality metrics", "resolution limits"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.community.quality.modularity.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Communities",
+      "title": "What connects network structure to community patterns?",
+      "concepts": ["clustering", "degree distribution", "community detection"],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [
+        "https://networkx.org/documentation/stable/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Communities",
+      "title": "How do political echo chambers form on social media?",
+      "concepts": ["polarization", "homophily", "community structure"],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/community.html",
+        "https://snap.stanford.edu/data/soc-RedditHyperlinks.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Communities",
+      "title": "Can you detect communities in multiple ways?",
+      "concepts": ["algorithm comparison", "label propagation", "spectral methods"],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/community.html"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Models and Dynamics",
+      "title": "How do we build a random network?",
+      "concepts": ["random graphs", "Erdős-Rényi model", "null models"],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html",
+        "https://networksciencebook.com/chapter/3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Models and Dynamics",
+      "title": "Why don't random networks look like real ones?",
+      "concepts": ["preferential attachment", "Barabási-Albert model", "growth mechanisms"],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/generated/networkx.generators.random_graphs.barabasi_albert_graph.html",
+        "https://barabasi.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Models and Dynamics",
+      "title": "How does information spread through networks?",
+      "concepts": ["diffusion processes", "cascades", "epidemic models"],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.simple_paths.all_simple_paths.html",
+        "https://web.stanford.edu/~jugander/papers/icwsm2012-influence.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Models and Dynamics",
+      "title": "Can you predict future connections?",
+      "concepts": ["link prediction", "temporal networks", "network evolution"],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://networkx.org/documentation/stable/reference/algorithms/link_prediction.html",
+        "https://snap.stanford.edu/class/cs224w-2020/slides/09-network-evolution.pdf"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Models and Dynamics",
+      "title": "Where does your network analysis journey go from here?",
+      "concepts": ["network models", "diffusion", "link prediction", "synthesis"],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://networkx.org/documentation/stable/",
+        "https://networksciencebook.com/",
+        "https://web.stanford.edu/class/cs224w/"
+      ],
+      "status": "pending"
+    }
+  ]
+}
