@@ -13,12 +13,18 @@ vi.mock('../../scripts/bot/claude.js', () => ({
   generate: vi.fn(() => Promise.resolve({ text: 'hint text' })),
 }));
 
+vi.mock('../../scripts/bot/onboarding.js', () => ({
+  handleOnboardingCallback: vi.fn(),
+  isOnboarding: vi.fn(),
+}));
+
 vi.mock('../../scripts/bot/logger.js', () => ({
   log: { info: vi.fn(), warn: vi.fn(), error: vi.fn(), debug: vi.fn() },
 }));
 
 import { handleCallback } from '../../scripts/bot/callbacks.js';
 import { getCorrectAnswer } from '../../scripts/bot/lesson.js';
+import { handleOnboardingCallback, isOnboarding } from '../../scripts/bot/onboarding.js';
 
 describe('handleCallback', () => {
   const channel = {
@@ -85,5 +91,25 @@ describe('handleCallback', () => {
     await handleCallback(query, channel, skills);
     expect(channel.answerCallback).toHaveBeenCalledWith('cb7');
     expect(channel.sendMessage).not.toHaveBeenCalled();
+  });
+
+  it('turns a tapped number into an onboarding response', async () => {
+    isOnboarding.mockReturnValue(true);
+    const query = { id: 'cb8', data: 'ot_2', message: { chat: { id: 1 }, message_id: 10 } };
+
+    await handleCallback(query, channel, skills);
+
+    expect(channel.editMessageButtons).toHaveBeenCalledWith(1, 10, []);
+    expect(handleOnboardingCallback).toHaveBeenCalledWith('ot_2', 1, channel, skills);
+  });
+
+  it('rejects number buttons from an expired onboarding question', async () => {
+    isOnboarding.mockReturnValue(false);
+    const query = { id: 'cb9', data: 'ot_2', message: { chat: { id: 1 }, message_id: 10 } };
+
+    await handleCallback(query, channel, skills);
+
+    expect(handleOnboardingCallback).not.toHaveBeenCalled();
+    expect(channel.sendMessage).toHaveBeenCalledWith(1, expect.stringContaining('older question'));
   });
 });

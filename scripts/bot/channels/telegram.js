@@ -6,6 +6,7 @@
 import { BaseChannel } from './base.js';
 import { log } from '../logger.js';
 import { sleep, retry } from '../helpers.js';
+import { normalizeTelegramText, stripTelegramHtml } from '../message.js';
 
 export class TelegramChannel extends BaseChannel {
   constructor({ token, chatId, mode = 'polling', onUpdate }) {
@@ -66,9 +67,10 @@ export class TelegramChannel extends BaseChannel {
   // ── Send methods ──────────────────────────────────────────
 
   async sendMessage(chatId, text, options = {}) {
+    const normalizedText = normalizeTelegramText(text);
     const body = {
       chat_id: chatId,
-      text,
+      text: normalizedText,
       parse_mode: 'HTML',
       ...options,
     };
@@ -78,10 +80,18 @@ export class TelegramChannel extends BaseChannel {
     }
     if (options.disablePreview === false) {
       // keep preview (default for plain URLs)
-    } else if (text.includes('<a href=')) {
+    } else if (normalizedText.includes('<a href=')) {
       body.disable_web_page_preview = true;
     }
-    return this._call('sendMessage', body);
+    try {
+      return await this._call('sendMessage', body);
+    } catch (err) {
+      if (!String(err.message).includes("can't parse entities")) throw err;
+      log.warn({ err }, 'telegram: invalid HTML, retrying as plain text');
+      const fallback = { ...body, text: stripTelegramHtml(normalizedText) };
+      delete fallback.parse_mode;
+      return this._call('sendMessage', fallback);
+    }
   }
 
   async sendPoll(chatId, question, pollOptions, quiz = {}) {

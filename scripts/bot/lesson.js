@@ -4,7 +4,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { generateStream } from './claude.js';
+import { generate } from './claude.js';
 import { buildLessonPrompt } from './context.js';
 import { getNextLesson, markLessonComplete, readCurriculum, appendMemory } from './state.js';
 import { PATHS } from './config.js';
@@ -41,6 +41,13 @@ export function getLessonContext(topicSlug, day) {
   return exerciseState.contexts[topicSlug + ':' + day];
 }
 
+export function stripAnswerKey(text) {
+  return text
+    .replace(/^\s*(?:correct|answer)\s*(?:is)?\s*[:\s]\s*\(?[A-D]\)?\s*$/gim, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const start = Date.now();
   const lesson = getNextLesson(topicSlug);
@@ -57,10 +64,10 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   log.info({ topic: topicSlug, lesson_id: lesson.day, title: lesson.title }, 'delivering lesson');
 
   // Build prompt and generate
-  const { system, model } = buildLessonPrompt(skills, lesson, topicSlug);
+  const { system, model, outputMode } = buildLessonPrompt(skills, lesson, topicSlug);
   const messages = [{ role: 'user', content: `Deliver lesson Day ${lesson.day}: "${lesson.title}"` }];
 
-  const response = await generateStream(system, messages, { model });
+  const response = await generate(system, messages, { model, outputMode });
 
   // Parse response into chunks by emoji anchors
   const chunks = parseLessonChunks(response.text);
@@ -76,7 +83,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
       options.buttons = buildExerciseButtons(lesson.day, chunk.text, topicSlug);
     }
 
-    await channel.sendMessage(chatId, chunk.text, options);
+    await channel.sendMessage(chatId, stripAnswerKey(chunk.text), options);
 
     if (i < chunks.length - 1) {
       await sleep(2000);

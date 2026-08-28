@@ -14,6 +14,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.join(__dirname, '..');
 const SKILL_DIR = path.join(REPO_ROOT, 'skills', 'tutor');
+const ONBOARDING_SKILL_DIR = path.join(REPO_ROOT, 'skills', 'tutor-onboarding');
 const WORKSPACE_TEMPLATE = path.join(REPO_ROOT, 'workspace');
 
 const rl = createInterface({ input, output });
@@ -132,6 +133,9 @@ async function setupAgentSkills(platformId, isGlobal, student) {
   const skillDst = path.join(baseDir, 'skills', 'tutor');
   copyDir(SKILL_DIR, skillDst);
   tick(`skill → ${skillDst}`);
+  const onboardingSkillDst = path.join(baseDir, 'skills', 'tutor-onboarding');
+  copyDir(ONBOARDING_SKILL_DIR, onboardingSkillDst);
+  tick(`onboarding skill → ${onboardingSkillDst}`);
 
   const wsDir = isGlobal
     ? path.join(baseDir, 'tutor')
@@ -152,6 +156,9 @@ function setupOpenClawLike(platformId, student) {
   const skillDst = path.join(root, 'skills', 'tutor');
   copyDir(SKILL_DIR, skillDst);
   tick(`skill → ${skillDst}`);
+  const onboardingSkillDst = path.join(root, 'skills', 'tutor-onboarding');
+  copyDir(ONBOARDING_SKILL_DIR, onboardingSkillDst);
+  tick(`onboarding skill → ${onboardingSkillDst}`);
 
   const wsDst = path.join(root, 'workspaces', 'tutor');
   const ocSoul = path.join(REPO_ROOT, 'openclaw', 'SOUL.md');
@@ -172,11 +179,12 @@ function setupOpenClawLike(platformId, student) {
   config.agents ??= {};
   config.agents.list ??= [];
 
-  if (!config.agents.list.some((a) => a.id === 'tutor')) {
+  const existingTutor = config.agents.list.find((a) => a.id === 'tutor');
+  if (!existingTutor) {
     config.agents.list.push({
       id: 'tutor',
       name: 'OpenTutor',
-      skills: ['tutor'],
+      skills: ['tutor', 'tutor-onboarding'],
       workspace: wsDst,
       model: { primary: 'anthropic/claude-opus-4-6' },
     });
@@ -188,7 +196,14 @@ function setupOpenClawLike(platformId, student) {
     fs.writeFileSync(configFile, JSON.stringify(config, null, 2) + '\n');
     tick(`agent registered → ${configFile}`);
   } else {
-    warn(`tutor agent already in ${configFile}, skipped`);
+    existingTutor.skills ??= [];
+    if (!existingTutor.skills.includes('tutor-onboarding')) {
+      existingTutor.skills.push('tutor-onboarding');
+      fs.writeFileSync(configFile, JSON.stringify(config, null, 2) + '\n');
+      tick(`onboarding skill registered → ${configFile}`);
+    } else {
+      warn(`tutor agent already in ${configFile}, skipped`);
+    }
   }
 
 }
@@ -207,6 +222,9 @@ async function setupNanoClaw(student) {
   const skillDst = path.join(ncRoot, 'container', 'skills', 'tutor');
   copyDir(SKILL_DIR, skillDst);
   tick(`skill → ${skillDst}`);
+  const onboardingSkillDst = path.join(ncRoot, 'container', 'skills', 'tutor-onboarding');
+  copyDir(ONBOARDING_SKILL_DIR, onboardingSkillDst);
+  tick(`onboarding skill → ${onboardingSkillDst}`);
 
   const groupRaw = await ask('  Group folder to install workspace into? [main] ');
   const group = groupRaw.trim() || 'main';

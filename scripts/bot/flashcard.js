@@ -28,10 +28,10 @@ export async function deliverFlashcards(chatId, channel, skills, limit = 1) {
   for (const review of due) {
     await channel.sendTyping(chatId);
 
-    const { system } = buildFlashcardPrompt(skills, review);
+    const { system, model, outputMode } = buildFlashcardPrompt(skills, review);
     const response = await generate(system, [
       { role: 'user', content: `Generate a flashcard for: "${review.concept}" (rep ${review.reps + 1}, streak ${review.streak})` },
-    ], { model: 'cheap' });
+    ], { model, outputMode });
 
     const card = parseFlashcard(response.text, review);
 

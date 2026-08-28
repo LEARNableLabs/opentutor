@@ -35,7 +35,14 @@ export async function handleCallback(callbackQuery, channel, skills) {
   if (data.startsWith('topic_') || data.startsWith('intensity_') || data.startsWith('ot_')) {
     // Onboarding selections — handled by onboarding.js via router
     // Store selection and trigger onboarding handler
-    const { handleOnboardingCallback } = await import('./onboarding.js');
+    const { handleOnboardingCallback, isOnboarding } = await import('./onboarding.js');
+    if (!isOnboarding()) {
+      await channel.sendMessage(chatId, 'That choice belongs to an older question.');
+      return;
+    }
+    try {
+      await channel.editMessageButtons(chatId, messageId, []);
+    } catch { /* old message */ }
     return handleOnboardingCallback(data, chatId, channel, skills);
   }
 
@@ -48,9 +55,9 @@ export async function handleCallback(callbackQuery, channel, skills) {
         if (ctx) {
           await channel.sendTyping(chatId);
           const result = await generate(
-            `Give a brief, helpful hint for this exercise. Topic: ${ctx.title}, Concepts: ${(ctx.concepts || []).join(', ')}. Do not give away the answer.`,
-            [{ role: 'user', content: 'I need a hint for this exercise.' }],
-            { model: 'cheap' }
+            'Give a brief, student-facing hint using the exercise context in the user message. Do not give away the answer. Ask at most one guiding question.',
+            [{ role: 'user', content: JSON.stringify({ request: 'I need a hint.', exercise: ctx }) }],
+            { model: 'cheap', outputMode: 'student' }
           );
           await channel.sendMessage(chatId, `💡 <b>Hint:</b> ${result.text}`);
           return;

@@ -10,7 +10,6 @@ vi.mock('../../scripts/bot/config.js', () => ({
 }));
 
 vi.mock('../../scripts/bot/claude.js', () => ({
-  generateStream: vi.fn(),
   generate: vi.fn(),
 }));
 
@@ -46,7 +45,7 @@ fs.writeFileSync.mockImplementation(() => {});
 fs.renameSync.mockImplementation(() => {});
 fs.existsSync.mockReturnValue(false);
 
-const { getCorrectAnswer, getLessonContext, deliverNextLesson } = await import(
+const { getCorrectAnswer, getLessonContext, deliverNextLesson, stripAnswerKey } = await import(
   '../../scripts/bot/lesson.js'
 );
 
@@ -57,6 +56,11 @@ describe('answer parsing', () => {
 
   it('returns null when no lesson context stored', () => {
     expect(getLessonContext('test-topic', 1)).toBeUndefined();
+  });
+
+  it('removes the private answer key from student-facing exercise text', () => {
+    expect(stripAnswerKey('✏️ Pick one\nA. One\nB. Two\ncorrect: B'))
+      .toBe('✏️ Pick one\nA. One\nB. Two');
   });
 });
 

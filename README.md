@@ -205,7 +205,7 @@ workspace/
 npx opentutor setup
 ```
 
-Detects Claude Code, OpenClaw, and NanoClaw. Copies the skill, workspace templates, and boot instructions into the right place for each platform.
+Sets up Claude Code, Codex, OpenClaw, NemoClaw, and NanoClaw. It copies the skill, workspace templates, and platform-specific boot instructions where applicable.
 
 ### Skill-only install (Agent Skills standard)
 
@@ -280,6 +280,8 @@ opentutor/
 │           ├── concept-map.md
 │           ├── teaching-notes.md
 │           └── research.md
+├── skills/tutor-onboarding/           # Reusable student-needs discovery skill
+│   └── SKILL.md
 ├── workspace/                        # Workspace templates (platform-agnostic)
 │   ├── AGENTS.md                     # Session boot instructions
 │   ├── IDENTITY.md                   # Tutor persona

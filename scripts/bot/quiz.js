@@ -31,10 +31,10 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, specificC
     await channel.sendMessage(chatId, "🧠 <b>Pop quiz!</b> Don't panic — let's see what stuck.\n");
   }
 
-  const { system } = buildQuizPrompt(skills, topicSlug, recent);
+  const { system, model, outputMode } = buildQuizPrompt(skills, topicSlug, recent);
   const response = await generate(system, [
     { role: 'user', content: `Generate a review quiz for: ${quizTarget}` },
-  ], { model: 'strong' });
+  ], { model, outputMode });
 
   // Parse JSON from response
   try {
@@ -51,8 +51,7 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, specificC
       await sleep(1500);
     }
   } catch (err) {
-    log.warn({ err, topic: topicSlug }, 'quiz JSON parse failed, sending as text');
-    await channel.sendMessage(chatId, response.text);
+    log.warn({ err, topic: topicSlug }, 'quiz JSON parse failed');
+    await channel.sendMessage(chatId, 'I couldn\'t build that quiz cleanly. Please try /quiz again.');
   }
 }
-

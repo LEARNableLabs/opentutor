@@ -8,6 +8,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { createHash } from 'crypto';
 import { generate } from './claude.js';
 import { buildQuickStartPrompt, buildResearchSynthesisPrompt } from './context.js';
 import { PATHS } from './config.js';
@@ -26,7 +27,8 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
   const domainDir = path.join(PATHS.domains, slug);
 
   // Already exists — just register
-  if (fs.existsSync(path.join(domainDir, 'curriculum.json'))) {
+  const existingCurriculum = readExistingCurriculum(slug);
+  if (existingCurriculum?.lessons?.length) {
     registerTopic(slug);
     return { slug, intro: null };
   }
@@ -55,10 +57,10 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
   }
 
   // Claude generates taster + roadmap + quick 5-lesson curriculum (~10-20s)
-  const { system } = buildQuickStartPrompt(skills, topic, studentLevel, wikiSummary, researchContext || null);
+  const { system, model, outputMode } = buildQuickStartPrompt(skills, topic, studentLevel, wikiSummary, researchContext || null);
   const response = await generate(system, [
     { role: 'user', content: `Give me a quick start for "${topic}".` },
-  ], { model: 'strong' });
+  ], { model, outputMode });
 
   let taster = '';
   let roadmap = '';
@@ -73,7 +75,11 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
       quickLessons = data.quickCurriculum || [];
     }
   } catch {
-    taster = response.text;
+    taster = 'I found the topic, but the first learning plan came back scrambled. Try /add again and I’ll rebuild it.';
+  }
+
+  if (!quickLessons.length) {
+    throw new Error('Quick curriculum contained no lessons');
   }
 
   // Write quick curriculum so /next works immediately
@@ -140,10 +146,10 @@ async function enrichCurriculum(topic, slug, studentLevel, skills, chatId, chann
   }
 
   // Claude synthesizes research into full curriculum
-  const { system } = buildResearchSynthesisPrompt(skills, topic, studentLevel, researchContext || 'No external research available — generate from your knowledge.');
+  const { system, model, outputMode } = buildResearchSynthesisPrompt(skills, topic, studentLevel, researchContext || 'No external research available.');
   const response = await generate(system, [
     { role: 'user', content: `Using the research results, generate a complete 20-30 lesson curriculum for: "${topic}"` },
-  ], { model: 'strong', webSearch: true, webSearchMaxUses: 5 });
+  ], { model, outputMode, webSearch: true, webSearchMaxUses: 5 });
 
   const parsed = parseGeneratedDomain(response.text, topic, slug);
 
@@ -234,7 +240,7 @@ function readExistingCurriculum(slug) {
   }
 }
 
-function parseGeneratedDomain(text, topic, slug) {
+export function parseGeneratedDomain(text, topic, slug) {
   try {
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
@@ -251,6 +257,10 @@ function parseGeneratedDomain(text, topic, slug) {
         }
       }
 
+      if (!Array.isArray(curriculum.lessons) || curriculum.lessons.length === 0) {
+        throw new Error('Generated curriculum contained no lessons');
+      }
+
       return {
         curriculum,
         teachingNotes: data.teachingNotes || data.teaching_notes || null,
@@ -265,6 +275,9 @@ function parseGeneratedDomain(text, topic, slug) {
     const arrayMatch = text.match(/\[[\s\S]*\]/);
     if (arrayMatch) {
       const lessons = JSON.parse(arrayMatch[0]);
+      if (!Array.isArray(lessons) || lessons.length === 0) {
+        throw new Error('Generated curriculum contained no lessons');
+      }
       return {
         curriculum: {
           topic,
@@ -283,9 +296,14 @@ function parseGeneratedDomain(text, topic, slug) {
   throw new Error('Could not parse curriculum from Claude response');
 }
 
-function slugify(text) {
-  return text
+export function slugify(text) {
+  const slug = text
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
+    .replace(/^-|-$/g, '')
+    .slice(0, 80)
+    .replace(/-$/g, '');
+  if (slug) return slug;
+  const hash = createHash('sha256').update(String(text)).digest('hex').slice(0, 12);
+  return `topic-${hash}`;
 }

@@ -41,6 +41,7 @@ export const PATHS = {
   root: ROOT,
   skills: path.join(ROOT, 'skills', 'tutor'),
   skill: path.join(ROOT, 'skills', 'tutor', 'SKILL.md'),
+  onboardingSkill: path.join(ROOT, 'skills', 'tutor-onboarding', 'SKILL.md'),
   references: path.join(ROOT, 'skills', 'tutor', 'references'),
   domains: path.join(ROOT, 'skills', 'tutor', 'domains'),
   templates: path.join(ROOT, 'skills', 'tutor', 'templates'),
