@@ -13,7 +13,7 @@ import { generate } from './claude.js';
 import { buildQuickStartPrompt } from './context.js';
 import { PATHS } from './config.js';
 import { updateProgress, writeCurriculum, writeDomainFile, readDomainFile, appendMemory } from './state.js';
-import { researchTopic, formatResearchContext } from './research.js';
+import { researchTopic, formatResearchContext, verifyUrls } from './research.js';
 import { searchWikipediaSummary } from './research.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
 import { createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
@@ -135,10 +135,11 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
 async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId, channel) {
   log.info({ topic, slug }, 'pipeline: starting');
 
-  // Ensure research exists
+  // Run research (or re-read existing)
+  let research = null;
   let researchContext = readDomainFile(slug, 'research.md') || '';
   if (!researchContext.trim()) {
-    const research = await researchTopic(topic, { level: studentLevel });
+    research = await researchTopic(topic, { level: studentLevel });
     researchContext = formatResearchContext(research);
     if (researchContext.trim()) {
       writeDomainFile(slug, 'research.md', [
@@ -149,6 +150,19 @@ async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId
       ].join('\n'));
     }
   }
+
+  // If we didn't just run research, re-run for syllabi/wiki data
+  if (!research) {
+    research = await researchTopic(topic, { level: studentLevel }).catch(() => null);
+  }
+
+  // Build extra context for the Critic
+  const syllabiContext = research?.syllabi?.length
+    ? research.syllabi.map((s) => `- ${s.title} (${s.provider}): ${s.url}`).join('\n')
+    : null;
+  const wikiConcepts = research?.wikiLinks?.length
+    ? research.wikiLinks.join(', ')
+    : null;
 
   // Preserve existing completion status before pipeline overwrites
   const existing = readExistingCurriculum(slug);
@@ -162,7 +176,11 @@ async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId
     onProgress: (p) => log.info({ ...p }, 'pipeline: progress'),
   });
 
-  const result = await pipeline.run(topic, slug, studentLevel, researchContext);
+  const result = await pipeline.run(topic, slug, studentLevel, researchContext, {
+    syllabi: syllabiContext,
+    wikiConcepts,
+    verifyUrls,
+  });
 
   // Preserve completion status from quick curriculum
   if (existing?.lessons) {
