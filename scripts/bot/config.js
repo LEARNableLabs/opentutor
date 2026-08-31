@@ -36,6 +36,11 @@ if (missing.length) {
   process.exit(1);
 }
 
+// Data directory — override with OPENTUTOR_DATA_DIR for test isolation
+const DATA_DIR = process.env.OPENTUTOR_DATA_DIR || null;
+const WORKSPACE = DATA_DIR ? path.join(DATA_DIR, 'workspace') : path.join(ROOT, 'workspace');
+const DOMAINS = DATA_DIR ? path.join(DATA_DIR, 'domains') : path.join(ROOT, 'skills', 'tutor', 'domains');
+
 // Paths
 export const PATHS = {
   root: ROOT,
@@ -43,22 +48,22 @@ export const PATHS = {
   skill: path.join(ROOT, 'skills', 'tutor', 'SKILL.md'),
   onboardingSkill: path.join(ROOT, 'skills', 'tutor-onboarding', 'SKILL.md'),
   references: path.join(ROOT, 'skills', 'tutor', 'references'),
-  domains: path.join(ROOT, 'skills', 'tutor', 'domains'),
+  domains: DOMAINS,
   templates: path.join(ROOT, 'skills', 'tutor', 'templates'),
-  workspace: path.join(ROOT, 'workspace'),
+  workspace: WORKSPACE,
   openclaw: path.join(ROOT, 'openclaw'),
-  sessions: path.join(ROOT, 'workspace', 'sessions'),
-  memory: path.join(ROOT, 'workspace', 'memory'),
-  materials: path.join(ROOT, 'workspace', 'materials'),
-  progress: path.join(ROOT, 'workspace', 'tutor', 'progress.json'),
-  user: path.join(ROOT, 'workspace', 'USER.md'),
-  identity: path.join(ROOT, 'workspace', 'IDENTITY.md'),
-  soul: path.join(ROOT, 'workspace', 'SOUL.md'),
+  sessions: path.join(WORKSPACE, 'sessions'),
+  memory: path.join(WORKSPACE, 'memory'),
+  materials: path.join(WORKSPACE, 'materials'),
+  progress: path.join(WORKSPACE, 'tutor', 'progress.json'),
+  user: path.join(WORKSPACE, 'USER.md'),
+  identity: path.join(WORKSPACE, 'IDENTITY.md'),
+  soul: path.join(WORKSPACE, 'SOUL.md'),
   tgSoul: path.join(ROOT, 'openclaw', 'SOUL.md'),
 };
 
 // Ensure directories exist
-for (const dir of [PATHS.sessions, PATHS.memory, PATHS.materials]) {
+for (const dir of [PATHS.sessions, PATHS.memory, PATHS.materials, path.dirname(PATHS.progress)]) {
   fs.mkdirSync(dir, { recursive: true });
 }
 

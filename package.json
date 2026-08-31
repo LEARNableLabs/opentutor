@@ -22,8 +22,10 @@
   "scripts": {
     "bot": "node scripts/bot/index.js",
     "bot:dev": "node --watch scripts/bot/index.js",
+    "bot:test": "OPENTUTOR_DATA_DIR=.test-data node scripts/bot/index.js",
     "web": "node scripts/web/server.js",
     "web:dev": "node --watch scripts/web/server.js",
+    "web:test": "OPENTUTOR_DATA_DIR=.test-data node scripts/web/server.js",
     "lint": "eslint scripts",
     "test": "vitest run"
   },
