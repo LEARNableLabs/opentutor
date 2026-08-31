@@ -14,7 +14,10 @@
     "scripts/",
     "skills/",
     "workspace/",
-    "openclaw/"
+    "openclaw/",
+    "claude-code/",
+    "claude-web/",
+    "codex/"
   ],
   "scripts": {
     "bot": "node scripts/bot/index.js",

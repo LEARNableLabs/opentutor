@@ -265,13 +265,16 @@ npm run web:dev      # with --watch for development
 ```
 
 ### Claude Code
-```bash
-npx opentutor setup
-# or manually: copy skills/tutor/ to .claude/skills/tutor/
-```
+See [claude-code/README.md](claude-code/README.md) — install as a skill, use in CLI or IDE.
+
+### Codex (OpenAI)
+See [codex/README.md](codex/README.md) — runs with GPT models or Claude via OpenRouter.
+
+### Claude Web (Projects)
+See [claude-web/README.md](claude-web/README.md) — upload skill files as project knowledge.
 
 ### OpenClaw
-See [openclaw/README.md](openclaw/README.md) for gateway setup.
+See [openclaw/README.md](openclaw/README.md) — gateway-based setup for Telegram/Slack.
 
 ### NemoClaw / NanoClaw
 See [nemoclaw/README.md](nemoclaw/README.md) and [nanoclaw/README.md](nanoclaw/README.md).
