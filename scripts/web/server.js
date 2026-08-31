@@ -138,6 +138,52 @@ async function handleAPI(req, res, url) {
       });
     }
 
+    // GET /api/user — get student profile
+    if (req.method === 'GET' && url.pathname === '/api/user') {
+      const user = state.readUser();
+      const progress = state.readProgress();
+      const hasProfile = user.includes('**Name:**') && !user.match(/\*\*Name:\*\*\s*$/m);
+      return json(res, { profile: user, hasProfile, onboarded: progress.active_topics?.length > 0 });
+    }
+
+    // POST /api/user — save student profile
+    if (req.method === 'POST' && url.pathname === '/api/user') {
+      const body = await readBody(req);
+      const data = JSON.parse(body);
+      const profile = buildUserProfile(data);
+      state.writeUser(profile);
+      return json(res, { ok: true });
+    }
+
+    // POST /api/onboard — guided onboarding chat
+    if (req.method === 'POST' && url.pathname === '/api/onboard') {
+      const body = await readBody(req);
+      const { message, history } = JSON.parse(body);
+
+      const user = state.readUser();
+      const system = [
+        '## Study Buddy Onboarding',
+        'You are a warm, sharp study buddy meeting a new student. Keep it natural — not a form.',
+        'Ask one question at a time. Discover: their name, what they want to learn, their level, and how they prefer to learn (examples-first vs theory-first, visual vs verbal).',
+        'When you have enough info, suggest 2-3 specific topics and ask them to pick one.',
+        'When they pick a topic, respond with exactly this marker on its own line: <TOPIC>chosen topic</TOPIC>',
+        user ? `## Student profile so far\n\n${user}` : '',
+        '\n\nReturn only polished text. Keep each message to 2-3 short paragraphs max.',
+      ].filter(Boolean).join('\n\n');
+
+      const messages = [...(history || []), { role: 'user', content: message }];
+      const response = await chatAdapter.generate(system, messages, { model: 'cheap' });
+
+      const topicMatch = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/);
+      const cleanText = response.text.replace(/<TOPIC>.+?<\/TOPIC>/g, '').trim();
+
+      return json(res, {
+        reply: cleanText,
+        confirmedTopic: topicMatch ? topicMatch[1].trim() : null,
+        model: response.model,
+      });
+    }
+
     // POST /api/chat — free-form chat
     if (req.method === 'POST' && url.pathname === '/api/chat') {
       const body = await readBody(req);
@@ -220,6 +266,31 @@ function readBody(req) {
 
 function slugify(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
+}
+
+function buildUserProfile(data) {
+  return [
+    '# Student Profile',
+    '',
+    '## Identity',
+    `- **Name:** ${data.name || ''}`,
+    `- **What to call them:** ${data.nickname || data.name || ''}`,
+    `- **Timezone:** ${data.timezone || ''}`,
+    `- **Educational level:** ${data.level || ''}`,
+    '',
+    '## Learning Style',
+    `- **Prefers:** ${data.learningApproach || ''}`,
+    `- **Modality:** ${data.modality || ''}`,
+    `- **Pace:** ${data.pace || 'steady'}`,
+    `- **Depth:** ${data.depth || ''}`,
+    '',
+    '## Preferences',
+    `- **Tone:** ${data.tone || 'casual'}`,
+    `- **Session length:** ${data.sessionLength || 'medium'}`,
+    '',
+    '## Context',
+    data.context || '',
+  ].join('\n');
 }
 
 // ── Start ───────────────────────────────────────────────────

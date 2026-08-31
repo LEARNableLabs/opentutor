@@ -374,6 +374,90 @@ function formatSlug(slug) {
   return slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
+// ── Onboarding ─────────────────────────────────────────────
+
+let onboardingHistory = [];
+
+$('#btn-onboard-send').addEventListener('click', sendOnboard);
+$('#onboarding-input').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendOnboard();
+  }
+});
+
+async function checkOnboarding() {
+  try {
+    const res = await fetch('/api/user');
+    const data = await res.json();
+    if (!data.hasProfile) {
+      showOnboarding();
+    }
+  } catch { /* server might not support it yet */ }
+}
+
+function showOnboarding() {
+  const overlay = $('#onboarding-overlay');
+  overlay.classList.remove('hidden');
+  appendOnboardMsg('assistant', "Hey! I'm your study buddy. What's your name? And are you here for school, work, or the noble art of internet rabbit holes?");
+  $('#onboarding-input').focus();
+}
+
+async function sendOnboard() {
+  const input = $('#onboarding-input');
+  const message = input.value.trim();
+  if (!message) return;
+
+  appendOnboardMsg('user', message);
+  input.value = '';
+  $('#btn-onboard-send').disabled = true;
+
+  onboardingHistory.push({ role: 'user', content: message });
+  const typing = appendOnboardMsg('assistant typing', 'Thinking...');
+
+  try {
+    const res = await fetch('/api/onboard', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, history: onboardingHistory.slice(0, -1) }),
+    });
+    const data = await res.json();
+    typing.remove();
+    appendOnboardMsg('assistant', data.reply);
+    onboardingHistory.push({ role: 'assistant', content: data.reply });
+
+    if (data.confirmedTopic) {
+      await fetch('/api/add-topic', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topic: data.confirmedTopic, level: 'intermediate' }),
+      });
+
+      setTimeout(() => {
+        $('#onboarding-overlay').classList.add('hidden');
+        loadActiveTopics();
+        loadTopics();
+      }, 2000);
+    }
+  } catch (err) {
+    typing.remove();
+    appendOnboardMsg('assistant', `Error: ${err.message}`);
+  } finally {
+    $('#btn-onboard-send').disabled = false;
+    input.focus();
+  }
+}
+
+function appendOnboardMsg(classes, text) {
+  const div = document.createElement('div');
+  div.className = `chat-msg ${classes}`;
+  div.innerHTML = md(text);
+  $('#onboarding-chat').appendChild(div);
+  $('#onboarding-chat').scrollTop = $('#onboarding-chat').scrollHeight;
+  return div;
+}
+
 // ── Init ────────────────────────────────────────────────────
 
 loadActiveTopics();
+checkOnboarding();
