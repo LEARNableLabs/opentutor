@@ -10,7 +10,7 @@ import fs from 'fs';
 import path from 'path';
 import { createHash } from 'crypto';
 import { generate } from './claude.js';
-import { buildQuickStartPrompt, buildCurriculumBuilderPrompt, buildCriticPrompt } from './context.js';
+import { buildQuickStartPrompt, buildPlanPrompt, buildCurriculumBuilderPrompt, buildDomainFilesPrompt, buildCriticPrompt } from './context.js';
 import { PATHS } from './config.js';
 import { updateProgress, writeCurriculum, writeDomainFile, readDomainFile, appendMemory } from './state.js';
 import { researchTopic, formatResearchContext } from './research.js';
@@ -150,36 +150,68 @@ async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId
   }
 
   let critiqueText = null;
+  let planText = null;
   let lastParsed = null;
 
   for (let iteration = 1; iteration <= MAX_ITERATIONS; iteration++) {
-    log.info({ topic, iteration, max: MAX_ITERATIONS }, 'pipeline: builder pass');
+    log.info({ topic, iteration, max: MAX_ITERATIONS }, 'pipeline: iteration start');
 
-    // CurriculumBuilder: scoped context — research + critique only
-    const builderPrompt = buildCurriculumBuilderPrompt(
-      skills, topic, slug, studentLevel, researchContext, critiqueText,
-    );
-    const builderResponse = await generate(builderPrompt.system, [
+    // Step 1: Plan — fast, focused on structure
+    const planPrompt = buildPlanPrompt(skills, topic, studentLevel, researchContext, critiqueText);
+    const planResponse = await generate(planPrompt.system, [
       { role: 'user', content: critiqueText
-        ? `Revise the curriculum for "${topic}" based on the Critic feedback.`
-        : `Create a complete curriculum for "${topic}" at the ${studentLevel} level.` },
-    ], { model: builderPrompt.model, outputMode: builderPrompt.outputMode, maxTokens: 8192 });
+        ? `Revise the curriculum plan for "${topic}" based on the Critic feedback.`
+        : `Create a curriculum plan for "${topic}" at the ${studentLevel} level.` },
+    ], { model: planPrompt.model, outputMode: planPrompt.outputMode, pipeline: true });
 
+    try {
+      const planData = JSON.parse(planResponse.text.match(/\{[\s\S]*\}/)?.[0] || '{}');
+      planText = planData.plan || planResponse.text;
+    } catch {
+      planText = planResponse.text;
+    }
+    writeDomainFile(slug, 'plan.md', planText);
+    log.info({ topic, iteration }, 'pipeline: plan written');
+
+    // Step 2: Build curriculum + domain files in parallel
+    const builderPrompt = buildCurriculumBuilderPrompt(skills, topic, slug, studentLevel, researchContext, planText);
+    const domainPrompt = buildDomainFilesPrompt(skills, topic, studentLevel, researchContext, planText);
+
+    const [builderResponse, domainResponse] = await Promise.all([
+      generate(builderPrompt.system, [
+        { role: 'user', content: `Build the curriculum for "${topic}" following the plan.` },
+      ], { model: builderPrompt.model, outputMode: builderPrompt.outputMode, pipeline: true }),
+      generate(domainPrompt.system, [
+        { role: 'user', content: `Generate resources and teacher config for "${topic}" following the plan.` },
+      ], { model: domainPrompt.model, outputMode: domainPrompt.outputMode, pipeline: true }),
+    ]);
+
+    // Parse curriculum output
     lastParsed = parsePipelineOutput(builderResponse.text, topic, slug);
 
+    // Parse domain files output
+    try {
+      const domainData = JSON.parse(domainResponse.text.match(/\{[\s\S]*\}/)?.[0] || '{}');
+      lastParsed.resources = domainData.resources || lastParsed.resources;
+      lastParsed.teacher = domainData.teacher || lastParsed.teacher;
+    } catch {
+      log.warn({ topic, iteration }, 'pipeline: domain files parse failed, using builder fallback');
+    }
+
+    lastParsed.plan = planText;
+
     // Write all domain files
-    if (lastParsed.plan) writeDomainFile(slug, 'plan.md', lastParsed.plan);
     writeCurriculum(slug, lastParsed.curriculum);
     if (lastParsed.conceptMap) writeDomainFile(slug, 'concept-map.md', lastParsed.conceptMap);
     if (lastParsed.teachingNotes) writeDomainFile(slug, 'teaching-notes.md', lastParsed.teachingNotes);
     if (lastParsed.resources) writeDomainFile(slug, 'resources.md', lastParsed.resources);
     if (lastParsed.teacher) writeDomainFile(slug, 'teacher.md', lastParsed.teacher);
 
-    log.info({ topic, iteration, lessons: lastParsed.curriculum.lessons?.length }, 'pipeline: builder output written');
+    log.info({ topic, iteration, lessons: lastParsed.curriculum.lessons?.length }, 'pipeline: build complete');
 
-    // Critic: scoped context — builder output only, no research, no student data
+    // Step 3: Critic reviews (uses cheap model — reviewing, not generating)
     const criticPrompt = buildCriticPrompt(
-      lastParsed.plan || '',
+      planText,
       JSON.stringify(lastParsed.curriculum, null, 2),
       lastParsed.conceptMap || '',
       lastParsed.teachingNotes || '',
@@ -187,7 +219,7 @@ async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId
     );
     const criticResponse = await generate(criticPrompt.system, [
       { role: 'user', content: `Review this curriculum for "${topic}" (iteration ${iteration}/${MAX_ITERATIONS}).` },
-    ], { model: criticPrompt.model, outputMode: criticPrompt.outputMode });
+    ], { model: criticPrompt.model, outputMode: criticPrompt.outputMode, pipeline: true });
 
     const critique = parseCriticOutput(criticResponse.text);
     if (critique.critique) writeDomainFile(slug, 'critique.md', critique.critique);

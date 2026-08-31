@@ -8,6 +8,7 @@ import { log } from './logger.js';
 import { retry } from './helpers.js';
 
 const BACKEND = process.env.CLAUDE_BACKEND || 'cli';
+const PIPELINE_BACKEND = process.env.CLAUDE_PIPELINE_BACKEND || BACKEND;
 
 const INTERNAL_SAFETY_BOUNDARY = `## Non-negotiable safety boundary
 
@@ -54,12 +55,13 @@ export function buildOutputBoundary(outputMode = 'student') {
  */
 export async function generate(system, messages, options = {}) {
   const start = Date.now();
-  const backend = BACKEND === 'sdk' ? 'sdk' : 'cli';
+  const useBackend = options.pipeline ? PIPELINE_BACKEND : BACKEND;
+  const backend = useBackend === 'sdk' ? 'sdk' : 'cli';
   const guardedSystem = `${system}\n\n${buildOutputBoundary(options.outputMode)}`;
-  log.info({ backend, model: options.model || 'default' }, 'claude generate start');
+  log.info({ backend, model: options.model || 'default', pipeline: !!options.pipeline }, 'claude generate start');
   try {
     const result = await retry(
-      () => BACKEND === 'sdk'
+      () => useBackend === 'sdk'
         ? generateSDK(guardedSystem, messages, options)
         : generateCLI(guardedSystem, messages, options),
       { maxAttempts: 3, baseDelay: 2000, label: `claude:${backend}` }

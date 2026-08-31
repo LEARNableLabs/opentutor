@@ -249,12 +249,11 @@ Only include resource URLs that appear in the supplied research results.`,
 
 // ── Multi-agent prompt builders (scoped contexts) ──────────
 
-export function buildCurriculumBuilderPrompt(skills, topic, slug, studentLevel, researchContext, critiqueText) {
+export function buildPlanPrompt(skills, topic, studentLevel, researchContext, critiqueText) {
   const parts = [
     skills.get('domain-template'),
     skills.get('curriculum-format'),
     skills.get('teaching-method'),
-    skills.get('source-verification'),
     untrustedData('research-results', researchContext, 20_000),
   ];
 
@@ -262,37 +261,75 @@ export function buildCurriculumBuilderPrompt(skills, topic, slug, studentLevel, 
     parts.push(untrustedData('critic-feedback', critiqueText, 10_000));
     parts.push(`## Revision Pass
 
-The Critic has reviewed your previous output. Read the feedback above carefully and revise your plan and curriculum to address every actionable point. Keep what was approved, fix what was flagged.`);
+The Critic has reviewed your previous plan and curriculum. Revise the plan to address every actionable point. Keep what was approved, fix what was flagged.`);
   }
 
-  parts.push(`## CurriculumBuilder Instructions
+  parts.push(`## Planner Instructions
 
-You are a curriculum designer. Your job is to create a structured learning plan for "${topic}" at the ${studentLevel} level.
+You are a curriculum planner. Your job is to design a blueprint for "${topic}" at the ${studentLevel} level.
 
 ${critiqueText ? 'This is a REVISION pass. Address the Critic feedback above.' : 'This is the FIRST pass.'}
 
-Generate a JSON response with these keys:
+Output as JSON:
+{
+  "plan": "markdown string — your blueprint. Include: topic scope (in/out), module structure rationale, pedagogical decisions (proof-heavy vs intuition-first), resource strategy, exercise strategy, estimated lesson count and pacing",
+  "moduleOutline": [{ "name": "Module Name", "lessons": 5, "rationale": "why this module here" }, ...]
+}
 
-1. **plan** — A markdown string: your blueprint BEFORE building. Include:
-   - Topic scope and boundaries (what is in/out)
-   - Module structure rationale (why this sequence)
-   - Key pedagogical decisions (proof-heavy vs intuition-first, etc.)
-   - Resource strategy (what types fit this domain)
-   - Exercise strategy (what exercises fit this domain)
-   - Estimated lesson count and pacing rationale
+Do NOT output anything outside the JSON.`);
 
-2. **curriculum** — Full curriculum object:
+  const system = parts.filter(Boolean).join('\n\n---\n\n');
+  return { system, model: 'strong', outputMode: 'json' };
+}
+
+export function buildCurriculumBuilderPrompt(skills, topic, slug, studentLevel, researchContext, planText) {
+  const system = [
+    skills.get('domain-template'),
+    skills.get('curriculum-format'),
+    skills.get('teaching-method'),
+    skills.get('source-verification'),
+    untrustedData('research-results', researchContext, 12_000),
+    untrustedData('curriculum-plan', planText, 8_000),
+    `## CurriculumBuilder Instructions
+
+You are a curriculum builder. A plan has already been created — follow it as your blueprint.
+
+Build the curriculum for "${topic}" at the ${studentLevel} level.
+
+Output as JSON with these keys:
+
+1. **curriculum** — Full curriculum object:
    { topic: "${topic}", slug: "${slug}", created: "${new Date().toISOString().split('T')[0]}", student_level: "${studentLevel}",
      prerequisites: [...], exit_criteria: [...],
      lessons: [{ lesson: 1, module: "...", title: "Why...?", concepts: [...], difficulty: 1-5, type: "mini-lesson|question|resource-drop|teach-back|real-world|review", resources: [...], status: "pending" }, ...] }
-   - 20-30 lessons, review every 5-7 lessons
+   - Follow the module outline from the plan
    - Titles as questions/provocations
    - Only include resource URLs from the research data
 
-3. **conceptMap** — Markdown: concepts in learning order with dependency links
-4. **teachingNotes** — Markdown: approach, misconceptions, level adjustments, engagement strategies
-5. **resources** — Markdown: curated books, papers, videos, tools organized by type
-6. **teacher** — Markdown: domain-specific teaching config:
+2. **conceptMap** — Markdown: concepts in learning order with dependency links
+3. **teachingNotes** — Markdown: approach, misconceptions, level adjustments, engagement strategies
+
+Output as JSON: { curriculum, conceptMap, teachingNotes }
+Do NOT output anything outside the JSON.`,
+  ].filter(Boolean).join('\n\n---\n\n');
+
+  return { system, model: 'strong', outputMode: 'json' };
+}
+
+export function buildDomainFilesPrompt(skills, topic, studentLevel, researchContext, planText) {
+  const system = [
+    skills.get('domain-template'),
+    skills.get('source-verification'),
+    untrustedData('research-results', researchContext, 12_000),
+    untrustedData('curriculum-plan', planText, 6_000),
+    `## Domain Files Builder
+
+Generate the supporting domain files for "${topic}" at the ${studentLevel} level, following the plan.
+
+Output as JSON:
+
+1. **resources** — Markdown: curated books, papers, videos, tools organized by type. Only real URLs from the research data.
+2. **teacher** — Markdown: domain-specific teaching config:
    - Exercise style (multiple choice, open-ended, code, hands-on, debate, proofs)
    - Resource preferences (videos vs papers vs interactive tools)
    - Message format (examples-heavy, analogies, step-by-step, narrative)
@@ -301,11 +338,11 @@ Generate a JSON response with these keys:
    - What "stuck" looks like (common failure modes and how to unstick)
    - Domain vocabulary to use/avoid at this level
 
-Output as JSON: { plan, curriculum, conceptMap, teachingNotes, resources, teacher }
-Do NOT output anything outside the JSON.`);
+Output as JSON: { resources, teacher }
+Do NOT output anything outside the JSON.`,
+  ].filter(Boolean).join('\n\n---\n\n');
 
-  const system = parts.filter(Boolean).join('\n\n---\n\n');
-  return { system, model: 'strong', outputMode: 'json' };
+  return { system, model: 'cheap', outputMode: 'json' };
 }
 
 export function buildCriticPrompt(planText, curriculumJson, conceptMapText, teachingNotesText, resourcesText) {
@@ -345,7 +382,7 @@ Set status to APPROVED only if there are no major issues. Minor style nits alone
 Do NOT output anything outside the JSON.`,
   ].filter(Boolean).join('\n\n---\n\n');
 
-  return { system, model: 'strong', outputMode: 'json' };
+  return { system, model: 'cheap', outputMode: 'json' };
 }
 
 export function buildTeacherPrompt(skills, lesson, topicSlug) {
