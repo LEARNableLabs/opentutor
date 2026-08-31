@@ -270,10 +270,15 @@ export function buildTeacherPrompt(skills, lesson, topicSlug) {
 
   const system = [
     TELEGRAM_TUTOR_PERSONA,
+    `You have two context sources to combine:
+- **domain-teaching-config**: what exercises, resources, and approaches fit THIS DOMAIN (subject-intrinsic)
+- **student-profile**: how THIS STUDENT learns best (preferences, strengths, weak spots)
+
+Adapt your delivery to both.`,
     skills.get('teaching-method'),
     skills.get('lesson-delivery'),
     TEXT_ONLY_LIMITS,
-    untrustedData('teacher-config', teacherConfig, 6_000),
+    untrustedData('domain-teaching-config', teacherConfig, 6_000),
     untrustedData('teaching-notes', teachingNotes, 8_000),
     untrustedData('concept-map', conceptMap, 6_000),
     untrustedData('resources', resources, 4_000),
@@ -283,15 +288,17 @@ export function buildTeacherPrompt(skills, lesson, topicSlug) {
     untrustedData('current-lesson', lessonData, 4_000),
     `## Teacher Instructions
 
-Deliver the current lesson following the teacher-config style for this domain.
+Deliver the current lesson. Combine domain config with student profile.
 
 Rules:
 - Use at most four messages marked 📖, 🧠, 💡, and ✏️; keep each near 150 words or less
 - The exercise (✏️) must have exactly four choices labelled A–D, followed by a separate line "correct: X"
+- Match exercise FORMAT to the domain config (proofs, code, hands-on, debate)
+- Match exercise PRESENTATION to the student profile (visual, examples-first, formal)
+- If student has weak spots listed, connect to those when relevant
 - ONE question per message — never dump multiple questions at once
 - If prior-session data exists, open with a brief callback to what was covered last time
 - Reference real sources from the resources/research data when it strengthens the lesson
-- Match the exercise style to the teacher-config (if it says "hands-on", don't default to multiple choice)
 - End with engagement, never "that's it for today"`,
   ].filter(Boolean).join('\n\n---\n\n');
 

@@ -132,31 +132,30 @@ See `references/curriculum-format.md` for the full schema. Key points:
 <Estimated lesson count, difficulty curve shape, where to consolidate.>
 ```
 
-### teacher.md
+### teacher.md (domain-only — does NOT include student preferences)
+
+This file describes what's intrinsic to the *subject*, not the student. Student-adaptive preferences (visual vs verbal, examples-first vs theory-first, humor, pace) live in `USER.md`. The Teacher agent reads both at delivery time and combines them.
 
 ```markdown
-# <Topic> — Teaching Config
+# <Topic> — Domain Teaching Config
 
-## Exercise Style
-<Multiple choice, open-ended, code exercises, hands-on projects, debates, proofs — what fits this domain>
+## Exercise Types
+<What exercise formats fit this domain — proofs, code, hands-on, debate, multiple choice, open-ended. This is about the subject, not the student.>
 
-## Resource Preferences
-<Papers vs videos vs interactive tools vs textbooks — what the Teacher should prioritize>
-
-## Message Format
-<Examples-heavy, analogy-driven, step-by-step, narrative — how lessons should feel>
+## Resource Types
+<What resource formats are most valuable for this domain — papers, videos, interactive tools, textbooks, code repos.>
 
 ## Difficulty Curve
-<Gentle ramp vs steep start. Where the hard parts are. When to consolidate.>
+<Where the hard parts are. Which concepts gate others. When to consolidate. Shape of the learning curve for this domain.>
 
-## Engagement Hooks
-<Domain-specific hooks — what makes this topic fascinating, what keeps students coming back>
+## Domain Hooks
+<What makes this topic fascinating. Surprising connections. Real-world applications. What keeps people coming back to this field.>
 
-## When Students Get Stuck
-<Common failure modes in this domain. How to unstick — simplify, analogize, backtrack, try different angle?>
+## Common Failure Modes
+<Where students typically get stuck in this domain. Misconceptions that are hard to shake. Concepts that seem simple but aren't.>
 
 ## Vocabulary
-<Domain terms to use freely at this level vs terms to define first vs terms to avoid entirely>
+<Domain terms to use freely at this level vs terms to define carefully vs terms to avoid entirely.>
 ```
 
 ### learning.md (written at runtime by Teacher, not generated)
