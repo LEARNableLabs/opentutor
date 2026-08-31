@@ -4,7 +4,7 @@
  */
 
 import { appendMemory } from './state.js';
-import { getCorrectAnswer, getLessonContext } from './lesson.js';
+import { getCorrectAnswer, getLessonContext, setLastExerciseResult } from './lesson.js';
 import { generate } from './claude.js';
 import { log } from './logger.js';
 
@@ -91,9 +91,11 @@ export async function handleCallback(callbackQuery, channel, skills) {
         await channel.sendMessage(chatId, `You picked <b>${letter}</b> — I couldn't score this one automatically. Let's keep going!`);
         appendMemory(`Exercise unscored (no answer key): ${data}`);
       } else if (letter === correct) {
+        setLastExerciseResult(topicSlug, Number(day), 'correct');
         await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
         appendMemory(`Exercise correct: ${data}`);
       } else {
+        setLastExerciseResult(topicSlug, Number(day), 'incorrect');
         await channel.sendMessage(chatId, "❌ Not quite — think about it from a different angle. What did we say about this concept earlier?");
         appendMemory(`Exercise incorrect: ${data}`);
       }

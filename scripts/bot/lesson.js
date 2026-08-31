@@ -5,8 +5,8 @@
 import fs from 'fs';
 import path from 'path';
 import { generate } from './claude.js';
-import { buildLessonPrompt } from './context.js';
-import { getNextLesson, markLessonComplete, readCurriculum, appendMemory } from './state.js';
+import { buildTeacherPrompt } from './context.js';
+import { getNextLesson, markLessonComplete, readCurriculum, writeDomainFile, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts } from './spaced-repetition.js';
@@ -63,9 +63,10 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
   log.info({ topic: topicSlug, lesson_id: lesson.day, title: lesson.title }, 'delivering lesson');
 
-  // Build prompt and generate
-  const { system, model, outputMode } = buildLessonPrompt(skills, lesson, topicSlug);
-  const messages = [{ role: 'user', content: `Deliver lesson Day ${lesson.day}: "${lesson.title}"` }];
+  // Build prompt and generate (Teacher agent — scoped context)
+  const { system, model, outputMode } = buildTeacherPrompt(skills, lesson, topicSlug);
+  const lessonDay = lesson.day || lesson.lesson;
+  const messages = [{ role: 'user', content: `Deliver lesson Day ${lessonDay}: "${lesson.title}"` }];
 
   const response = await generate(system, messages, { model, outputMode });
 
@@ -98,15 +99,62 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   saveExerciseState(exerciseState);
 
   // Log and update progress
-  log.info({ topic: topicSlug, lesson_id: lesson.day, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson delivered');
+  log.info({ topic: topicSlug, lesson_id: lessonDay, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson delivered');
   appendMessage(chatId, 'assistant', response.text);
-  appendMemory(`Lesson delivered: Day ${lesson.day} — ${lesson.title} (${topicSlug})`);
-  markLessonComplete(topicSlug, lesson.day, { delivered: true });
+  appendMemory(`Lesson delivered: Day ${lessonDay} — ${lesson.title} (${topicSlug})`);
+  markLessonComplete(topicSlug, lessonDay, { delivered: true });
 
   // Register concepts for spaced repetition
   if (lesson.concepts?.length) {
     registerLessonConcepts(topicSlug, lesson.concepts);
   }
+
+  // Write learning.md for session continuity
+  writeLearningLog(topicSlug, lesson);
+}
+
+// ── Last exercise result (set by callbacks.js) ─────────────
+
+const lastExerciseResults = {};
+
+export function setLastExerciseResult(topicSlug, day, result) {
+  lastExerciseResults[topicSlug + ':' + day] = result;
+}
+
+// ── Learning log — written after each lesson ───────────────
+
+function writeLearningLog(topicSlug, lesson) {
+  const curriculum = readCurriculum(topicSlug);
+  if (!curriculum) return;
+
+  const completed = curriculum.lessons.filter((l) => l.status === 'completed');
+  const pending = curriculum.lessons.filter((l) => l.status === 'pending');
+  const nextLesson = pending[0];
+  const lessonDay = lesson.day || lesson.lesson;
+  const exerciseKey = topicSlug + ':' + lessonDay;
+  const exerciseResult = lastExerciseResults[exerciseKey] || 'pending';
+
+  const lines = [
+    `# Learning Log: ${curriculum.topic || topicSlug}`,
+    '',
+    `## Position`,
+    `- **Last lesson:** Day ${lessonDay} — ${lesson.title}`,
+    `- **Next lesson:** ${nextLesson ? `Day ${nextLesson.day || nextLesson.lesson} — ${nextLesson.title}` : 'Curriculum complete'}`,
+    `- **Progress:** ${completed.length}/${curriculum.lessons.length} lessons (${Math.round((completed.length / curriculum.lessons.length) * 100)}%)`,
+    '',
+    `## Performance`,
+    `- **Last exercise:** ${exerciseResult}`,
+    '',
+    `## Session`,
+    `- **Date:** ${new Date().toISOString().split('T')[0]}`,
+    `- **Time:** ${new Date().toLocaleTimeString('en-US', { hour12: false })}`,
+    '',
+    `## Notes for Next Session`,
+    `Last covered: ${lesson.title}. Concepts: ${(lesson.concepts || []).join(', ')}.`,
+  ];
+
+  writeDomainFile(topicSlug, 'learning.md', lines.join('\n'));
+  log.debug({ topic: topicSlug, lessonDay }, 'learning.md written');
 }
 
 // ── Parse lesson text into chunks by emoji anchors ──────────

@@ -2,7 +2,7 @@
  * Slash command handlers.
  */
 
-import { readProgress, updateProgress, getTopicProgress, listTopics } from './state.js';
+import { readProgress, updateProgress, getTopicProgress, listTopics, readDomainFile } from './state.js';
 import { deliverNextLesson } from './lesson.js';
 import { generateQuiz } from './quiz.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
@@ -51,6 +51,13 @@ async function cmdNext(chatId, channel, skills, args) {
     await channel.sendMessage(chatId, 'Topic not found — try /topics to see your list');
     return;
   }
+
+  // Session resume: check learning.md for continuity
+  const resumeNote = buildResumeNote(topic);
+  if (resumeNote) {
+    await channel.sendMessage(chatId, resumeNote);
+  }
+
   await deliverNextLesson(topic, chatId, channel, skills);
 }
 
@@ -217,6 +224,29 @@ async function cmdStart(chatId, channel, skills) {
     return startOnboarding(chatId, channel, skills);
   }
   await channel.sendMessage(chatId, 'Welcome back! Type /next for your next lesson or /help to see commands.');
+}
+
+// ── Session resume ─────────────────────────────────────────
+
+function buildResumeNote(topicSlug) {
+  const learningMd = readDomainFile(topicSlug, 'learning.md');
+  if (!learningMd) return null;
+
+  const dateMatch = learningMd.match(/\*\*Date:\*\*\s*(\d{4}-\d{2}-\d{2})/);
+  if (!dateMatch) return null;
+
+  const lastDate = dateMatch[1];
+  const today = new Date().toISOString().split('T')[0];
+  if (lastDate === today) return null;
+
+  const lastLessonMatch = learningMd.match(/\*\*Last lesson:\*\*\s*Day \d+ — (.+)/);
+  const nextLessonMatch = learningMd.match(/\*\*Next lesson:\*\*\s*Day \d+ — (.+)/);
+  const lastTitle = lastLessonMatch?.[1] || 'your last lesson';
+  const nextTitle = nextLessonMatch?.[1];
+
+  let note = `Welcome back! Last time we covered <b>${lastTitle}</b>.`;
+  if (nextTitle) note += ` Today we'll tackle <b>${nextTitle}</b>.`;
+  return note;
 }
 
 // ── Helpers ─────────────────────────────────────────────────
