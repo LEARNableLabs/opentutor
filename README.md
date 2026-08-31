@@ -273,6 +273,9 @@ See [codex/README.md](codex/README.md) — runs with GPT models or Claude via Op
 ### Claude Web (Projects)
 See [claude-web/README.md](claude-web/README.md) — upload skill files as project knowledge.
 
+### Hermes Agent
+See [hermes/README.md](hermes/README.md) — skill execution with self-improvement, multi-gateway.
+
 ### OpenClaw
 See [openclaw/README.md](openclaw/README.md) — gateway-based setup for Telegram/Slack.
 
