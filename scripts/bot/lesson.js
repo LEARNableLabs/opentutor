@@ -1,5 +1,13 @@
 /**
- * Lesson delivery — generate via Claude, parse by emoji anchors, send chunked.
+ * Lesson delivery — interactive, one chunk at a time.
+ *
+ * Flow:
+ *   1. Generate full lesson in one Claude call
+ *   2. Parse into emoji-anchored chunks
+ *   3. Send first chunk with "Continue ▶" button
+ *   4. On each "Continue" tap, send next chunk
+ *   5. On exercise chunk, show numbered answer buttons (1-4)
+ *   6. On answer, show feedback, mark complete, write learning.md
  */
 
 import fs from 'fs';
@@ -10,8 +18,45 @@ import { getNextLesson, markLessonComplete, readCurriculum, writeDomainFile, app
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts } from './spaced-repetition.js';
-import { sleep } from './helpers.js';
 import { log } from './logger.js';
+
+// ── Delivery state (in-flight lessons) ─────────────────────
+
+const DELIVERY_STATE_PATH = path.join(PATHS.workspace, 'tutor', 'delivery-state.json');
+
+function loadDeliveryState() {
+  try {
+    return JSON.parse(fs.readFileSync(DELIVERY_STATE_PATH, 'utf-8'));
+  } catch {
+    return {};
+  }
+}
+
+function saveDeliveryState(state) {
+  const dir = path.dirname(DELIVERY_STATE_PATH);
+  fs.mkdirSync(dir, { recursive: true });
+  const tmp = DELIVERY_STATE_PATH + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(state, null, 2));
+  fs.renameSync(tmp, DELIVERY_STATE_PATH);
+}
+
+const deliveryState = loadDeliveryState();
+
+export function getActiveDelivery(chatId) {
+  return deliveryState[chatId] || null;
+}
+
+function setActiveDelivery(chatId, data) {
+  deliveryState[chatId] = data;
+  saveDeliveryState(deliveryState);
+}
+
+function clearActiveDelivery(chatId) {
+  delete deliveryState[chatId];
+  saveDeliveryState(deliveryState);
+}
+
+// ── Exercise state ─────────────────────────────────────────
 
 const EXERCISE_STATE_PATH = path.join(PATHS.workspace, 'tutor', 'exercise-state.json');
 
@@ -48,6 +93,16 @@ export function stripAnswerKey(text) {
     .trim();
 }
 
+// ── Last exercise result (set by callbacks.js) ─────────────
+
+const lastExerciseResults = {};
+
+export function setLastExerciseResult(topicSlug, day, result) {
+  lastExerciseResults[topicSlug + ':' + day] = result;
+}
+
+// ── Main entry: generate lesson and send first chunk ───────
+
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const start = Date.now();
   const lesson = getNextLesson(topicSlug);
@@ -58,70 +113,123 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     return;
   }
 
-  // Show typing while generating
   await channel.sendTyping(chatId);
 
-  log.info({ topic: topicSlug, lesson_id: lesson.day, title: lesson.title }, 'delivering lesson');
-
-  // Build prompt and generate (Teacher agent — scoped context)
-  const { system, model, outputMode } = buildTeacherPrompt(skills, lesson, topicSlug);
   const lessonDay = lesson.day || lesson.lesson;
-  const messages = [{ role: 'user', content: `Deliver lesson Day ${lessonDay}: "${lesson.title}"` }];
+  log.info({ topic: topicSlug, lesson_id: lessonDay, title: lesson.title }, 'generating lesson');
 
+  const { system, model, outputMode } = buildTeacherPrompt(skills, lesson, topicSlug);
+  const messages = [{ role: 'user', content: `Deliver lesson Day ${lessonDay}: "${lesson.title}"` }];
   const response = await generate(system, messages, { model, outputMode });
 
-  // Parse response into chunks by emoji anchors
   const chunks = parseLessonChunks(response.text);
 
-  // Send each chunk
-  for (let i = 0; i < chunks.length; i++) {
-    const chunk = chunks[i];
-    const isLast = i === chunks.length - 1;
-    const options = {};
-
-    // Add exercise buttons to the last message (or any ✏️ message)
-    if (chunk.anchor === '✏️' || (isLast && !chunks.some((c) => c.anchor === '✏️'))) {
-      options.buttons = buildExerciseButtons(lesson.day, chunk.text, topicSlug);
-    }
-
-    await channel.sendMessage(chatId, stripAnswerKey(chunk.text), options);
-
-    if (i < chunks.length - 1) {
-      await sleep(2000);
-    }
-  }
-
-  exerciseState.contexts[topicSlug + ':' + lesson.day] = {
+  // Store exercise context
+  exerciseState.contexts[topicSlug + ':' + lessonDay] = {
     title: lesson.title,
     concepts: lesson.concepts,
     topicSlug,
   };
+
+  // Parse correct answer from full response
+  parseAndStoreAnswer(response.text, topicSlug, lessonDay);
   saveExerciseState(exerciseState);
 
-  // Log and update progress
-  log.info({ topic: topicSlug, lesson_id: lessonDay, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson delivered');
+  // Store full delivery state for interactive pacing
+  setActiveDelivery(chatId, {
+    topicSlug,
+    lessonDay,
+    lesson: { day: lessonDay, title: lesson.title, module: lesson.module, concepts: lesson.concepts },
+    chunks: chunks.map((c) => ({ anchor: c.anchor, text: c.text })),
+    currentChunk: 0,
+    fullText: response.text,
+    startedAt: Date.now(),
+  });
+
+  log.info({ topic: topicSlug, lesson_id: lessonDay, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson generated, sending first chunk');
   appendMessage(chatId, 'assistant', response.text);
+
+  // Send first chunk
+  await sendChunk(chatId, channel, 0);
+}
+
+// ── Send a single chunk by index ───────────────────────────
+
+async function sendChunk(chatId, channel, index) {
+  const delivery = getActiveDelivery(chatId);
+  if (!delivery) return;
+
+  const chunk = delivery.chunks[index];
+  if (!chunk) return;
+
+  const isLast = index === delivery.chunks.length - 1;
+  const isExercise = chunk.anchor === '✏️';
+  const options = {};
+
+  if (isExercise) {
+    options.buttons = buildNumberedExerciseButtons(delivery.topicSlug, delivery.lessonDay, chunk.text);
+  } else if (!isLast) {
+    options.buttons = [[
+      { text: 'Continue ▶', callback_data: `lc:${chatId}:${index + 1}` },
+    ]];
+  }
+
+  await channel.sendMessage(chatId, stripAnswerKey(chunk.text), options);
+
+  // Update current position
+  delivery.currentChunk = index;
+  setActiveDelivery(chatId, delivery);
+
+  // If last chunk and not exercise, complete the lesson
+  if (isLast && !isExercise) {
+    completeLesson(chatId, delivery);
+  }
+}
+
+/**
+ * Handle "Continue" button tap — send the next chunk.
+ */
+export async function handleContinue(chatId, channel, nextIndex) {
+  const delivery = getActiveDelivery(chatId);
+  if (!delivery) {
+    await channel.sendMessage(chatId, "That lesson has ended. Type /next for a new one.");
+    return;
+  }
+
+  try {
+    await channel.editMessageButtons(chatId, null, []);
+  } catch { /* old message */ }
+
+  await sendChunk(chatId, channel, nextIndex);
+}
+
+// ── Complete lesson ────────────────────────────────────────
+
+function completeLesson(chatId, delivery) {
+  const { topicSlug, lessonDay, lesson } = delivery;
+
   appendMemory(`Lesson delivered: Day ${lessonDay} — ${lesson.title} (${topicSlug})`);
   markLessonComplete(topicSlug, lessonDay, { delivered: true });
 
-  // Register concepts for spaced repetition
   if (lesson.concepts?.length) {
     registerLessonConcepts(topicSlug, lesson.concepts);
   }
 
-  // Write learning.md for session continuity
   writeLearningLog(topicSlug, lesson);
+  clearActiveDelivery(chatId);
 }
 
-// ── Last exercise result (set by callbacks.js) ─────────────
-
-const lastExerciseResults = {};
-
-export function setLastExerciseResult(topicSlug, day, result) {
-  lastExerciseResults[topicSlug + ':' + day] = result;
+/**
+ * Called by callbacks.js after exercise answer — completes the lesson.
+ */
+export function completeLessonAfterExercise(chatId) {
+  const delivery = getActiveDelivery(chatId);
+  if (delivery) {
+    completeLesson(chatId, delivery);
+  }
 }
 
-// ── Learning log — written after each lesson ───────────────
+// ── Learning log ───────────────────────────────────────────
 
 function writeLearningLog(topicSlug, lesson) {
   const curriculum = readCurriculum(topicSlug);
@@ -174,7 +282,6 @@ function parseLessonChunks(text) {
     } else if (current) {
       current.text += line + '\n';
     } else {
-      // Text before first anchor — include as intro
       if (!chunks.length) {
         current = { anchor: null, text: line + '\n' };
       }
@@ -182,42 +289,50 @@ function parseLessonChunks(text) {
   }
   if (current) chunks.push(current);
 
-  // Trim trailing whitespace from each chunk
   return chunks.map((c) => ({ ...c, text: c.text.trim() }));
 }
 
-// ── Build exercise buttons ──────────────────────────────────
+// ── Exercise buttons (numbered 1-4) ────────────────────────
 
-function buildExerciseButtons(day, exerciseText, topicSlug) {
+function parseAndStoreAnswer(fullText, topicSlug, day) {
   const patterns = [
     /(?:correct|answer)\s*(?:is)?[:\s]*\(?([A-D])\)?/i,
     /\b([A-D])\b\s*(?:is\s+)?(?:the\s+)?(?:correct|right)\b/i,
     /✅\s*\(?([A-D])\)?/i,
     /^[^a-z]*correct[^a-z]*([A-D])\b/im,
   ];
-  let matched = false;
   for (const pattern of patterns) {
-    const m = exerciseText?.match(pattern);
+    const m = fullText?.match(pattern);
     if (m) {
       exerciseState.answers[topicSlug + ':' + day] = m[1].toUpperCase();
-      saveExerciseState(exerciseState);
-      matched = true;
-      break;
+      return;
     }
   }
-  if (!matched) {
-    log.warn({ day }, 'could not parse correct answer from exercise text');
-  }
+  log.warn({ day }, 'could not parse correct answer from exercise text');
+}
 
-  const options = ['A', 'B', 'C', 'D'];
-  return [
-    options.map((letter) => ({
-      text: letter,
-      callback_data: `ex:${topicSlug}:${day}:${letter}`,
-    })),
-    [
-      { text: '💡 Hint', callback_data: `ex:${topicSlug}:${day}:hint` },
-      { text: '⏭ Skip', callback_data: `ex:${topicSlug}:${day}:skip` },
-    ],
+function buildNumberedExerciseButtons(topicSlug, day, exerciseText) {
+  const optionLabels = parseExerciseOptionLabels(exerciseText);
+
+  const row1 = optionLabels.map((label, i) => ({
+    text: `${i + 1}`,
+    callback_data: `ex:${topicSlug}:${day}:${String.fromCharCode(65 + i)}`,
+  }));
+
+  const row2 = [
+    { text: '💡 Hint', callback_data: `ex:${topicSlug}:${day}:hint` },
+    { text: '⏭ Skip', callback_data: `ex:${topicSlug}:${day}:skip` },
   ];
+
+  return [row1, row2];
+}
+
+function parseExerciseOptionLabels(text) {
+  const labels = [];
+  const pattern = /\b([A-D])[.):\s]+(.+?)(?:\n|$)/g;
+  let m;
+  while ((m = pattern.exec(text)) !== null) {
+    labels.push(m[2].trim().slice(0, 40));
+  }
+  return labels.length >= 2 ? labels : ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
 }

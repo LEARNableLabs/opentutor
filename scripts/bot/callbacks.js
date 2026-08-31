@@ -1,10 +1,11 @@
 /**
  * Inline button callback handler.
- * Parses callback_data, sends feedback, updates progress.
+ * Handles: lesson Continue, numbered exercise answers, hints, skips,
+ * flashcards, and onboarding selections.
  */
 
 import { appendMemory } from './state.js';
-import { getCorrectAnswer, getLessonContext, setLastExerciseResult } from './lesson.js';
+import { getCorrectAnswer, getLessonContext, setLastExerciseResult, handleContinue, completeLessonAfterExercise } from './lesson.js';
 import { generate } from './claude.js';
 import { log } from './logger.js';
 
@@ -20,21 +21,27 @@ export async function handleCallback(callbackQuery, channel, skills) {
   }
 
   log.info({ callback: data, user_id: chatId }, 'callback received');
-
-  // Acknowledge immediately (removes loading spinner)
   await channel.answerCallback(cbId);
 
-  // Parse callback data
-  // Format: "L{day}_{option}_{correct?}" or "hint_{id}" or "skip_{id}" or topic/intensity selectors
+  // Lesson Continue button: lc:{chatId}:{nextIndex}
+  if (data.startsWith('lc:')) {
+    const match = data.match(/^lc:(\d+):(\d+)$/);
+    if (match) {
+      try {
+        await channel.editMessageButtons(chatId, messageId, []);
+      } catch { /* old message */ }
+      return handleContinue(chatId, channel, Number(match[2]));
+    }
+  }
+
   // Flashcard callbacks
   if (data.startsWith('fc::')) {
     const { handleFlashcardCallback } = await import('./flashcard.js');
     return handleFlashcardCallback(data, chatId, channel, messageId);
   }
 
+  // Onboarding selections
   if (data.startsWith('topic_') || data.startsWith('intensity_') || data.startsWith('ot_')) {
-    // Onboarding selections — handled by onboarding.js via router
-    // Store selection and trigger onboarding handler
     const { handleOnboardingCallback, isOnboarding } = await import('./onboarding.js');
     if (!isOnboarding()) {
       await channel.sendMessage(chatId, 'That choice belongs to an older question.');
@@ -46,6 +53,7 @@ export async function handleCallback(callbackQuery, channel, skills) {
     return handleOnboardingCallback(data, chatId, channel, skills);
   }
 
+  // Hint
   if (data.endsWith(':hint')) {
     try {
       const match = data.match(/^ex:([^:]+):(\d+):hint$/);
@@ -64,19 +72,24 @@ export async function handleCallback(callbackQuery, channel, skills) {
         }
       }
     } catch (err) {
-      log.warn({ err, callback: data }, 'context-aware hint generation failed, using fallback');
+      log.warn({ err, callback: data }, 'hint generation failed');
     }
-    await channel.sendMessage(chatId, '💡 <b>Hint:</b> Think about what we covered earlier in this lesson. What concept connects to the question?', {});
+    await channel.sendMessage(chatId, '💡 <b>Hint:</b> Think about what we covered earlier in this lesson. What concept connects to the question?');
     return;
   }
 
+  // Skip
   if (data.endsWith(':skip')) {
+    try {
+      await channel.editMessageButtons(chatId, messageId, []);
+    } catch { /* old message */ }
     await channel.sendMessage(chatId, "⏭ No worries — skipped. We'll come back to this one later.");
     appendMemory(`Exercise skipped: ${data}`);
+    completeLessonAfterExercise(chatId);
     return;
   }
 
-  // Lesson exercise answer: ex:{topicSlug}:{day}:{letter}
+  // Exercise answer: ex:{topicSlug}:{day}:{letter}
   if (data.startsWith('ex:')) {
     const match = data.match(/^ex:([^:]+):(\d+):([A-D])$/);
     if (match) {
@@ -84,21 +97,23 @@ export async function handleCallback(callbackQuery, channel, skills) {
       const correct = getCorrectAnswer(topicSlug, Number(day));
       try {
         await channel.editMessageButtons(chatId, messageId, []);
-      } catch { /* may fail if message is old */ }
+      } catch { /* old message */ }
 
       if (!correct) {
         log.warn({ day, letter }, 'no correct answer stored');
         await channel.sendMessage(chatId, `You picked <b>${letter}</b> — I couldn't score this one automatically. Let's keep going!`);
-        appendMemory(`Exercise unscored (no answer key): ${data}`);
+        appendMemory(`Exercise unscored: ${data}`);
       } else if (letter === correct) {
         setLastExerciseResult(topicSlug, Number(day), 'correct');
-        await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one. That's exactly right.");
+        await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one.");
         appendMemory(`Exercise correct: ${data}`);
       } else {
         setLastExerciseResult(topicSlug, Number(day), 'incorrect');
-        await channel.sendMessage(chatId, "❌ Not quite — think about it from a different angle. What did we say about this concept earlier?");
+        await channel.sendMessage(chatId, `❌ Not quite — the answer was <b>${correct}</b>. Think about why.`);
         appendMemory(`Exercise incorrect: ${data}`);
       }
+
+      completeLessonAfterExercise(chatId);
       return;
     }
   }
