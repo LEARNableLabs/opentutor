@@ -5,7 +5,7 @@
  */
 
 import { appendMemory } from './state.js';
-import { getCorrectAnswer, getLessonContext, setLastExerciseResult, handleContinue, completeLessonAfterExercise } from './lesson.js';
+import { getCorrectAnswer, getLessonContext, setLastExerciseResult, completeLessonAfterExercise } from './lesson.js';
 import { generate } from './claude.js';
 import { log } from './logger.js';
 
@@ -22,17 +22,6 @@ export async function handleCallback(callbackQuery, channel, skills) {
 
   log.info({ callback: data, user_id: chatId }, 'callback received');
   await channel.answerCallback(cbId);
-
-  // Lesson Continue button: lc:{chatId}:{nextIndex}
-  if (data.startsWith('lc:')) {
-    const match = data.match(/^lc:(\d+):(\d+)$/);
-    if (match) {
-      try {
-        await channel.editMessageButtons(chatId, messageId, []);
-      } catch { /* old message */ }
-      return handleContinue(chatId, channel, Number(match[2]));
-    }
-  }
 
   // Flashcard callbacks
   if (data.startsWith('fc::')) {

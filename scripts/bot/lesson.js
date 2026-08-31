@@ -1,13 +1,12 @@
 /**
- * Lesson delivery — interactive, one chunk at a time.
+ * Lesson delivery — send teaching chunks naturally, pause only at exercises.
  *
  * Flow:
  *   1. Generate full lesson in one Claude call
  *   2. Parse into emoji-anchored chunks
- *   3. Send first chunk with "Continue ▶" button
- *   4. On each "Continue" tap, send next chunk
- *   5. On exercise chunk, show numbered answer buttons (1-4)
- *   6. On answer, show feedback, mark complete, write learning.md
+ *   3. Send content chunks with short delays (tutor "typing")
+ *   4. On exercise chunk, show numbered answer buttons (1-4) and wait
+ *   5. On answer, show feedback, mark complete, write learning.md
  */
 
 import fs from 'fs';
@@ -18,43 +17,8 @@ import { getNextLesson, markLessonComplete, readCurriculum, writeDomainFile, app
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts } from './spaced-repetition.js';
+import { sleep } from './helpers.js';
 import { log } from './logger.js';
-
-// ── Delivery state (in-flight lessons) ─────────────────────
-
-const DELIVERY_STATE_PATH = path.join(PATHS.workspace, 'tutor', 'delivery-state.json');
-
-function loadDeliveryState() {
-  try {
-    return JSON.parse(fs.readFileSync(DELIVERY_STATE_PATH, 'utf-8'));
-  } catch {
-    return {};
-  }
-}
-
-function saveDeliveryState(state) {
-  const dir = path.dirname(DELIVERY_STATE_PATH);
-  fs.mkdirSync(dir, { recursive: true });
-  const tmp = DELIVERY_STATE_PATH + '.tmp';
-  fs.writeFileSync(tmp, JSON.stringify(state, null, 2));
-  fs.renameSync(tmp, DELIVERY_STATE_PATH);
-}
-
-const deliveryState = loadDeliveryState();
-
-export function getActiveDelivery(chatId) {
-  return deliveryState[chatId] || null;
-}
-
-function setActiveDelivery(chatId, data) {
-  deliveryState[chatId] = data;
-  saveDeliveryState(deliveryState);
-}
-
-function clearActiveDelivery(chatId) {
-  delete deliveryState[chatId];
-  saveDeliveryState(deliveryState);
-}
 
 // ── Exercise state ─────────────────────────────────────────
 
@@ -101,7 +65,19 @@ export function setLastExerciseResult(topicSlug, day, result) {
   lastExerciseResults[topicSlug + ':' + day] = result;
 }
 
-// ── Main entry: generate lesson and send first chunk ───────
+// ── Pending lessons (waiting for exercise answer) ──────────
+
+const pendingLessons = {};
+
+export function getPendingLesson(chatId) {
+  return pendingLessons[chatId] || null;
+}
+
+function clearPendingLesson(chatId) {
+  delete pendingLessons[chatId];
+}
+
+// ── Main entry: generate and deliver lesson ────────────────
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const start = Date.now();
@@ -119,95 +95,58 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   log.info({ topic: topicSlug, lesson_id: lessonDay, title: lesson.title }, 'generating lesson');
 
   const { system, model, outputMode } = buildTeacherPrompt(skills, lesson, topicSlug);
-  const messages = [{ role: 'user', content: `Deliver lesson Day ${lessonDay}: "${lesson.title}"` }];
-  const response = await generate(system, messages, { model, outputMode });
+  const response = await generate(system, [
+    { role: 'user', content: `Deliver lesson Day ${lessonDay}: "${lesson.title}"` },
+  ], { model, outputMode });
 
   const chunks = parseLessonChunks(response.text);
 
-  // Store exercise context
+  // Store exercise context + correct answer
   exerciseState.contexts[topicSlug + ':' + lessonDay] = {
     title: lesson.title,
     concepts: lesson.concepts,
     topicSlug,
   };
-
-  // Parse correct answer from full response
   parseAndStoreAnswer(response.text, topicSlug, lessonDay);
   saveExerciseState(exerciseState);
 
-  // Store full delivery state for interactive pacing
-  setActiveDelivery(chatId, {
-    topicSlug,
-    lessonDay,
-    lesson: { day: lessonDay, title: lesson.title, module: lesson.module, concepts: lesson.concepts },
-    chunks: chunks.map((c) => ({ anchor: c.anchor, text: c.text })),
-    currentChunk: 0,
-    fullText: response.text,
-    startedAt: Date.now(),
-  });
-
-  log.info({ topic: topicSlug, lesson_id: lessonDay, chunks: chunks.length, latency_ms: Date.now() - start }, 'lesson generated, sending first chunk');
   appendMessage(chatId, 'assistant', response.text);
 
-  // Send first chunk
-  await sendChunk(chatId, channel, 0);
-}
+  // Send content chunks with natural delays, pause at exercise
+  let hasExercise = false;
 
-// ── Send a single chunk by index ───────────────────────────
+  for (let i = 0; i < chunks.length; i++) {
+    const chunk = chunks[i];
+    const isExercise = chunk.anchor === '✏️';
 
-async function sendChunk(chatId, channel, index) {
-  const delivery = getActiveDelivery(chatId);
-  if (!delivery) return;
+    if (isExercise) {
+      hasExercise = true;
+      const buttons = buildNumberedExerciseButtons(topicSlug, lessonDay, chunk.text);
+      await channel.sendMessage(chatId, stripAnswerKey(chunk.text), { buttons });
 
-  const chunk = delivery.chunks[index];
-  if (!chunk) return;
-
-  const isLast = index === delivery.chunks.length - 1;
-  const isExercise = chunk.anchor === '✏️';
-  const options = {};
-
-  if (isExercise) {
-    options.buttons = buildNumberedExerciseButtons(delivery.topicSlug, delivery.lessonDay, chunk.text);
-  } else if (!isLast) {
-    options.buttons = [[
-      { text: 'Continue ▶', callback_data: `lc:${chatId}:${index + 1}` },
-    ]];
+      // Store pending lesson — completes when student answers
+      pendingLessons[chatId] = {
+        topicSlug,
+        lessonDay,
+        lesson: { day: lessonDay, title: lesson.title, module: lesson.module, concepts: lesson.concepts },
+      };
+    } else {
+      await channel.sendMessage(chatId, stripAnswerKey(chunk.text));
+      if (i < chunks.length - 1) await sleep(2000);
+    }
   }
 
-  await channel.sendMessage(chatId, stripAnswerKey(chunk.text), options);
+  log.info({ topic: topicSlug, lesson_id: lessonDay, chunks: chunks.length, hasExercise, latency_ms: Date.now() - start }, 'lesson delivered');
 
-  // Update current position
-  delivery.currentChunk = index;
-  setActiveDelivery(chatId, delivery);
-
-  // If last chunk and not exercise, complete the lesson
-  if (isLast && !isExercise) {
-    completeLesson(chatId, delivery);
+  // If no exercise chunk, complete immediately
+  if (!hasExercise) {
+    finishLesson(topicSlug, lessonDay, lesson);
   }
 }
 
-/**
- * Handle "Continue" button tap — send the next chunk.
- */
-export async function handleContinue(chatId, channel, nextIndex) {
-  const delivery = getActiveDelivery(chatId);
-  if (!delivery) {
-    await channel.sendMessage(chatId, "That lesson has ended. Type /next for a new one.");
-    return;
-  }
+// ── Complete lesson (called after exercise or if no exercise) ──
 
-  try {
-    await channel.editMessageButtons(chatId, null, []);
-  } catch { /* old message */ }
-
-  await sendChunk(chatId, channel, nextIndex);
-}
-
-// ── Complete lesson ────────────────────────────────────────
-
-function completeLesson(chatId, delivery) {
-  const { topicSlug, lessonDay, lesson } = delivery;
-
+function finishLesson(topicSlug, lessonDay, lesson) {
   appendMemory(`Lesson delivered: Day ${lessonDay} — ${lesson.title} (${topicSlug})`);
   markLessonComplete(topicSlug, lessonDay, { delivered: true });
 
@@ -216,16 +155,16 @@ function completeLesson(chatId, delivery) {
   }
 
   writeLearningLog(topicSlug, lesson);
-  clearActiveDelivery(chatId);
 }
 
 /**
- * Called by callbacks.js after exercise answer — completes the lesson.
+ * Called by callbacks.js after exercise answer or skip.
  */
 export function completeLessonAfterExercise(chatId) {
-  const delivery = getActiveDelivery(chatId);
-  if (delivery) {
-    completeLesson(chatId, delivery);
+  const pending = pendingLessons[chatId];
+  if (pending) {
+    finishLesson(pending.topicSlug, pending.lessonDay, pending.lesson);
+    clearPendingLesson(chatId);
   }
 }
 
@@ -239,8 +178,7 @@ function writeLearningLog(topicSlug, lesson) {
   const pending = curriculum.lessons.filter((l) => l.status === 'pending');
   const nextLesson = pending[0];
   const lessonDay = lesson.day || lesson.lesson;
-  const exerciseKey = topicSlug + ':' + lessonDay;
-  const exerciseResult = lastExerciseResults[exerciseKey] || 'pending';
+  const exerciseResult = lastExerciseResults[topicSlug + ':' + lessonDay] || 'pending';
 
   const lines = [
     `# Learning Log: ${curriculum.topic || topicSlug}`,
@@ -312,9 +250,9 @@ function parseAndStoreAnswer(fullText, topicSlug, day) {
 }
 
 function buildNumberedExerciseButtons(topicSlug, day, exerciseText) {
-  const optionLabels = parseExerciseOptionLabels(exerciseText);
+  const labels = parseExerciseOptionLabels(exerciseText);
 
-  const row1 = optionLabels.map((label, i) => ({
+  const row1 = labels.map((label, i) => ({
     text: `${i + 1}`,
     callback_data: `ex:${topicSlug}:${day}:${String.fromCharCode(65 + i)}`,
   }));
