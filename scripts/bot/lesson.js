@@ -148,7 +148,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
 function finishLesson(topicSlug, lessonDay, lesson) {
   appendMemory(`Lesson delivered: Day ${lessonDay} — ${lesson.title} (${topicSlug})`);
-  markLessonComplete(topicSlug, lessonDay, { delivered: true });
+  markLessonComplete(topicSlug, lessonDay, 'delivered');
 
   if (lesson.concepts?.length) {
     registerLessonConcepts(topicSlug, lesson.concepts);

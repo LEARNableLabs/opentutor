@@ -85,13 +85,24 @@ export function markLessonComplete(topicSlug, day, engagement = {}) {
   log.info({ topic: topicSlug, lesson_id: day }, 'lesson marked complete');
   const curriculum = readCurriculum(topicSlug);
   if (!curriculum) return;
-  const lesson = curriculum.lessons.find((l) => l.day === day);
+  const lesson = curriculum.lessons.find((l) => (l.day || l.lesson) === day);
   if (lesson) {
     lesson.status = 'completed';
     lesson.delivered = new Date().toISOString().split('T')[0];
     if (engagement) lesson.engagement = engagement;
   }
   writeCurriculum(topicSlug, curriculum);
+
+  // Append to progress history
+  updateProgress((p) => {
+    if (!p.history) p.history = [];
+    p.history.push({
+      date: new Date().toISOString().split('T')[0],
+      topic: topicSlug,
+      lesson: day,
+      engagement: typeof engagement === 'string' ? engagement : 'delivered',
+    });
+  });
 }
 
 // ── Domain resources ────────────────────────────────────────

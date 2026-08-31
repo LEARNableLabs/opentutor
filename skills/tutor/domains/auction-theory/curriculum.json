@@ -22,20 +22,32 @@
       "lesson": 1,
       "module": "Introduction and Classical Auctions",
       "title": "Why do eBay and Christie's use completely different auction rules?",
-      "concepts": ["auction formats", "English auction", "Dutch auction", "sealed-bid"],
+      "concepts": [
+        "auction formats",
+        "English auction",
+        "Dutch auction",
+        "sealed-bid"
+      ],
       "difficulty": 1,
       "type": "real-world",
       "resources": [
         "https://timroughgarden.org/f13/l/l2.pdf",
         "https://www.coursera.org/learn/game-theory-2"
       ],
-      "status": "pending"
+      "status": "completed",
+      "delivered": "2026-08-31",
+      "engagement": "delivered"
     },
     {
       "lesson": 2,
       "module": "Introduction and Classical Auctions",
       "title": "What makes the Vickrey auction so special?",
-      "concepts": ["Vickrey auction", "second-price sealed-bid", "truthful bidding", "dominant strategy"],
+      "concepts": [
+        "Vickrey auction",
+        "second-price sealed-bid",
+        "truthful bidding",
+        "dominant strategy"
+      ],
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
@@ -48,7 +60,11 @@
       "lesson": 3,
       "module": "Introduction and Classical Auctions",
       "title": "Why do first-price and second-price auctions generate the same revenue?",
-      "concepts": ["revenue equivalence", "symmetric equilibrium", "expected revenue"],
+      "concepts": [
+        "revenue equivalence",
+        "symmetric equilibrium",
+        "expected revenue"
+      ],
       "difficulty": 3,
       "type": "question",
       "resources": [
@@ -61,7 +77,11 @@
       "lesson": 4,
       "module": "Introduction and Classical Auctions",
       "title": "How do bidders actually behave in first-price auctions?",
-      "concepts": ["bid shading", "Bayesian Nash equilibrium", "risk aversion"],
+      "concepts": [
+        "bid shading",
+        "Bayesian Nash equilibrium",
+        "risk aversion"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -74,7 +94,11 @@
       "lesson": 5,
       "module": "Introduction and Classical Auctions",
       "title": "Can you design an auction format we haven't discussed?",
-      "concepts": ["auction design", "strategic behavior", "implementation"],
+      "concepts": [
+        "auction design",
+        "strategic behavior",
+        "implementation"
+      ],
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
@@ -86,7 +110,11 @@
       "lesson": 6,
       "module": "Introduction and Classical Auctions",
       "title": "What do spectrum auctions and ad auctions have in common?",
-      "concepts": ["multi-unit auctions", "allocation problems", "market design"],
+      "concepts": [
+        "multi-unit auctions",
+        "allocation problems",
+        "market design"
+      ],
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
@@ -99,7 +127,12 @@
       "lesson": 7,
       "module": "Introduction and Classical Auctions",
       "title": "Can you explain why all these auction formats generate the same revenue?",
-      "concepts": ["auction formats", "Vickrey auction", "revenue equivalence", "equilibrium"],
+      "concepts": [
+        "auction formats",
+        "Vickrey auction",
+        "revenue equivalence",
+        "equilibrium"
+      ],
       "difficulty": 1,
       "type": "review",
       "resources": [
@@ -111,7 +144,11 @@
       "lesson": 8,
       "module": "Mechanism Design Fundamentals",
       "title": "What if we could design the rules of any game?",
-      "concepts": ["mechanism design", "social choice", "allocation and payment rules"],
+      "concepts": [
+        "mechanism design",
+        "social choice",
+        "allocation and payment rules"
+      ],
       "difficulty": 2,
       "type": "question",
       "resources": [
@@ -124,7 +161,11 @@
       "lesson": 9,
       "module": "Mechanism Design Fundamentals",
       "title": "Why is truth-telling such a powerful property?",
-      "concepts": ["incentive compatibility", "dominant strategy incentive compatibility", "truthfulness"],
+      "concepts": [
+        "incentive compatibility",
+        "dominant strategy incentive compatibility",
+        "truthfulness"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -137,7 +178,11 @@
       "lesson": 10,
       "module": "Mechanism Design Fundamentals",
       "title": "What does the revelation principle really tell us?",
-      "concepts": ["revelation principle", "direct mechanisms", "mechanism equivalence"],
+      "concepts": [
+        "revelation principle",
+        "direct mechanisms",
+        "mechanism equivalence"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -150,7 +195,11 @@
       "lesson": 11,
       "module": "Mechanism Design Fundamentals",
       "title": "How does Myerson's Lemma characterize all truthful mechanisms?",
-      "concepts": ["Myerson's Lemma", "monotonicity", "single-parameter settings"],
+      "concepts": [
+        "Myerson's Lemma",
+        "monotonicity",
+        "single-parameter settings"
+      ],
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
@@ -163,7 +212,11 @@
       "lesson": 12,
       "module": "Mechanism Design Fundamentals",
       "title": "Can you prove a mechanism is incentive-compatible?",
-      "concepts": ["IC verification", "payment formulas", "monotone allocation"],
+      "concepts": [
+        "IC verification",
+        "payment formulas",
+        "monotone allocation"
+      ],
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
@@ -175,7 +228,12 @@
       "lesson": 13,
       "module": "Mechanism Design Fundamentals",
       "title": "How does monotonicity guarantee truthful bidding?",
-      "concepts": ["revelation principle", "DSIC", "Myerson's Lemma", "monotonicity"],
+      "concepts": [
+        "revelation principle",
+        "DSIC",
+        "Myerson's Lemma",
+        "monotonicity"
+      ],
       "difficulty": 2,
       "type": "review",
       "resources": [
@@ -187,7 +245,11 @@
       "lesson": 14,
       "module": "Revenue Maximization",
       "title": "How should a monopolist design an auction to maximize profit?",
-      "concepts": ["revenue maximization", "seller objectives", "auction design trade-offs"],
+      "concepts": [
+        "revenue maximization",
+        "seller objectives",
+        "auction design trade-offs"
+      ],
       "difficulty": 2,
       "type": "real-world",
       "resources": [
@@ -200,7 +262,11 @@
       "lesson": 15,
       "module": "Revenue Maximization",
       "title": "Why do sellers set reserve prices?",
-      "concepts": ["reserve prices", "individual rationality", "participation constraints"],
+      "concepts": [
+        "reserve prices",
+        "individual rationality",
+        "participation constraints"
+      ],
       "difficulty": 3,
       "type": "question",
       "resources": [
@@ -213,7 +279,11 @@
       "lesson": 16,
       "module": "Revenue Maximization",
       "title": "What are virtual valuations and why do they matter?",
-      "concepts": ["virtual valuations", "Myerson's optimal auction", "information rent"],
+      "concepts": [
+        "virtual valuations",
+        "Myerson's optimal auction",
+        "information rent"
+      ],
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
@@ -226,7 +296,11 @@
       "lesson": 17,
       "module": "Revenue Maximization",
       "title": "How do Bayesian and dominant-strategy IC differ?",
-      "concepts": ["Bayesian incentive compatibility", "ex-post vs ex-interim", "prior distributions"],
+      "concepts": [
+        "Bayesian incentive compatibility",
+        "ex-post vs ex-interim",
+        "prior distributions"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -239,7 +313,11 @@
       "lesson": 18,
       "module": "Revenue Maximization",
       "title": "Can you design a revenue-optimal auction for a specific scenario?",
-      "concepts": ["optimal mechanism design", "implementation", "computational methods"],
+      "concepts": [
+        "optimal mechanism design",
+        "implementation",
+        "computational methods"
+      ],
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
@@ -251,7 +329,12 @@
       "lesson": 19,
       "module": "Revenue Maximization",
       "title": "Why would a seller deliberately exclude bidders with positive valuations?",
-      "concepts": ["revenue maximization", "virtual valuations", "Bayesian IC", "optimal design"],
+      "concepts": [
+        "revenue maximization",
+        "virtual valuations",
+        "Bayesian IC",
+        "optimal design"
+      ],
       "difficulty": 2,
       "type": "review",
       "resources": [
@@ -263,7 +346,11 @@
       "lesson": 20,
       "module": "Advanced Mechanisms",
       "title": "How do you allocate multiple different items efficiently?",
-      "concepts": ["VCG mechanism", "Vickrey-Clarke-Groves", "social welfare maximization"],
+      "concepts": [
+        "VCG mechanism",
+        "Vickrey-Clarke-Groves",
+        "social welfare maximization"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -276,7 +363,12 @@
       "lesson": 21,
       "module": "Advanced Mechanisms",
       "title": "What makes combinatorial auctions so hard?",
-      "concepts": ["combinatorial auctions", "package bidding", "computational complexity", "winner determination"],
+      "concepts": [
+        "combinatorial auctions",
+        "package bidding",
+        "computational complexity",
+        "winner determination"
+      ],
       "difficulty": 4,
       "type": "real-world",
       "resources": [
@@ -289,7 +381,11 @@
       "lesson": 22,
       "module": "Advanced Mechanisms",
       "title": "Why can't VCG mechanisms maximize revenue?",
-      "concepts": ["VCG limitations", "efficiency vs revenue", "impossibility results"],
+      "concepts": [
+        "VCG limitations",
+        "efficiency vs revenue",
+        "impossibility results"
+      ],
       "difficulty": 4,
       "type": "question",
       "resources": [
@@ -302,7 +398,11 @@
       "lesson": 23,
       "module": "Advanced Mechanisms",
       "title": "How do Google and Bing auction ad positions?",
-      "concepts": ["sponsored search auctions", "generalized second price", "position auctions"],
+      "concepts": [
+        "sponsored search auctions",
+        "generalized second price",
+        "position auctions"
+      ],
       "difficulty": 3,
       "type": "real-world",
       "resources": [
@@ -315,7 +415,12 @@
       "lesson": 24,
       "module": "Applications and Market Design",
       "title": "What went wrong in the FCC spectrum auctions?",
-      "concepts": ["spectrum auctions", "implementation challenges", "collusion", "market failures"],
+      "concepts": [
+        "spectrum auctions",
+        "implementation challenges",
+        "collusion",
+        "market failures"
+      ],
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
@@ -328,7 +433,12 @@
       "lesson": 25,
       "module": "Applications and Market Design",
       "title": "How do you design markets when money isn't allowed?",
-      "concepts": ["matching markets", "school choice", "two-sided matching", "strategyproofness without payments"],
+      "concepts": [
+        "matching markets",
+        "school choice",
+        "two-sided matching",
+        "strategyproofness without payments"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -341,7 +451,12 @@
       "lesson": 26,
       "module": "Applications and Market Design",
       "title": "What trade-offs do market designers face in practice?",
-      "concepts": ["market design principles", "simplicity vs optimality", "robustness", "fairness"],
+      "concepts": [
+        "market design principles",
+        "simplicity vs optimality",
+        "robustness",
+        "fairness"
+      ],
       "difficulty": 2,
       "type": "real-world",
       "resources": [
@@ -354,7 +469,12 @@
       "lesson": 27,
       "module": "Applications and Market Design",
       "title": "What did you learn from designing real auction systems?",
-      "concepts": ["VCG", "combinatorial auctions", "sponsored search", "implementation"],
+      "concepts": [
+        "VCG",
+        "combinatorial auctions",
+        "sponsored search",
+        "implementation"
+      ],
       "difficulty": 1,
       "type": "review",
       "resources": [

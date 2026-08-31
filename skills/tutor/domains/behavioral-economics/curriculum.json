@@ -1,0 +1,78 @@
+{
+  "topic": "Behavioral economics",
+  "slug": "behavioral-economics",
+  "created": "2026-08-31",
+  "student_level": "intermediate",
+  "preliminary": true,
+  "lessons": [
+    {
+      "day": 1,
+      "module": "Foundations",
+      "title": "Why aren't we rational? Bounded rationality & dual-process thinking",
+      "concepts": [
+        "Homo economicus vs. real humans",
+        "bounded rationality",
+        "System 1 and System 2",
+        "satisficing"
+      ],
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "day": 2,
+      "module": "Prospect Theory & Risk",
+      "title": "Why losses loom larger: Prospect Theory essentials",
+      "concepts": [
+        "loss aversion",
+        "reference dependence",
+        "diminishing sensitivity",
+        "certainty effect",
+        "framing effects"
+      ],
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "day": 3,
+      "module": "Heuristics & Biases",
+      "title": "Mental shortcuts that mislead: anchoring, availability & representativeness",
+      "concepts": [
+        "anchoring",
+        "availability heuristic",
+        "representativeness heuristic",
+        "base rate neglect",
+        "overconfidence"
+      ],
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "day": 4,
+      "module": "Time & Self-Control",
+      "title": "Why we choose now over later: temporal discounting & commitment",
+      "concepts": [
+        "hyperbolic discounting",
+        "present bias",
+        "commitment devices",
+        "self-control problems",
+        "marshmallow test"
+      ],
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "day": 5,
+      "module": "Social Preferences",
+      "title": "Fairness isn't irrational: trust, reciprocity & cooperation",
+      "concepts": [
+        "ultimatum game",
+        "dictator game",
+        "fairness norms",
+        "reciprocity",
+        "inequality aversion"
+      ],
+      "resources": [],
+      "status": "pending"
+    }
+  ]
+}
