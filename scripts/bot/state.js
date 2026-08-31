@@ -166,3 +166,120 @@ export function getTopicProgress(topicSlug) {
   const current = curriculum.lessons.find((l) => l.status === 'pending');
   return { topic: curriculum.topic, total, completed, percent: Math.round((completed / total) * 100), current };
 }
+
+// ── Group state ────────────────────────────────────────────
+
+const GROUPS_DIR = path.join(PATHS.workspace, 'groups');
+const STUDENTS_DIR = path.join(PATHS.workspace, 'students');
+
+export function isGroupChat(chatId, userId) {
+  return chatId !== userId && chatId < 0;
+}
+
+export function readGroupConfig(chatId) {
+  const p = path.join(GROUPS_DIR, `${chatId}`, 'config.json');
+  try {
+    return JSON.parse(fs.readFileSync(p, 'utf-8'));
+  } catch {
+    return null;
+  }
+}
+
+export function writeGroupConfig(chatId, config) {
+  const dir = path.join(GROUPS_DIR, `${chatId}`);
+  fs.mkdirSync(dir, { recursive: true });
+  const p = path.join(dir, 'config.json');
+  const tmp = p + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(config, null, 2) + '\n');
+  fs.renameSync(tmp, p);
+}
+
+export function initGroup(chatId, topic) {
+  const existing = readGroupConfig(chatId);
+  if (existing) return existing;
+
+  const config = {
+    chatId,
+    topic,
+    createdAt: new Date().toISOString(),
+    members: [],
+    schedule: { paused: false },
+  };
+  writeGroupConfig(chatId, config);
+  return config;
+}
+
+export function addGroupMember(chatId, userId, name) {
+  const config = readGroupConfig(chatId) || initGroup(chatId, null);
+  if (!config.members.find((m) => m.userId === userId)) {
+    config.members.push({
+      userId,
+      name: name || `User ${userId}`,
+      joinedAt: new Date().toISOString(),
+      dmEnabled: false,
+    });
+    writeGroupConfig(chatId, config);
+  }
+  return config;
+}
+
+export function markMemberDmEnabled(chatId, userId) {
+  const config = readGroupConfig(chatId);
+  if (!config) return;
+  const member = config.members.find((m) => m.userId === userId);
+  if (member) {
+    member.dmEnabled = true;
+    writeGroupConfig(chatId, config);
+  }
+}
+
+// ── Per-student state (for group context) ──────────────────
+
+export function readStudentProgress(userId) {
+  const p = path.join(STUDENTS_DIR, `${userId}`, 'progress.json');
+  try {
+    return JSON.parse(fs.readFileSync(p, 'utf-8'));
+  } catch {
+    return { userId, active_topics: [], history: [], exercises: {} };
+  }
+}
+
+export function writeStudentProgress(userId, data) {
+  const dir = path.join(STUDENTS_DIR, `${userId}`);
+  fs.mkdirSync(dir, { recursive: true });
+  const p = path.join(dir, 'progress.json');
+  const tmp = p + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(data, null, 2) + '\n');
+  fs.renameSync(tmp, p);
+}
+
+export function recordStudentExercise(userId, topicSlug, day, result) {
+  const progress = readStudentProgress(userId);
+  if (!progress.exercises) progress.exercises = {};
+  progress.exercises[`${topicSlug}:${day}`] = {
+    result,
+    date: new Date().toISOString(),
+  };
+  writeStudentProgress(userId, progress);
+}
+
+export function getGroupStats(chatId) {
+  const config = readGroupConfig(chatId);
+  if (!config || !config.members.length) return null;
+
+  const stats = {
+    memberCount: config.members.length,
+    exerciseResults: { correct: 0, incorrect: 0, total: 0 },
+  };
+
+  for (const member of config.members) {
+    const progress = readStudentProgress(member.userId);
+    for (const [, ex] of Object.entries(progress.exercises || {})) {
+      stats.exerciseResults.total++;
+      if (ex.result === 'correct') stats.exerciseResults.correct++;
+      else if (ex.result === 'incorrect') stats.exerciseResults.incorrect++;
+    }
+  }
+
+  return stats;
+}

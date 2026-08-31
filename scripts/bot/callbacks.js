@@ -4,7 +4,7 @@
  * flashcards, and onboarding selections.
  */
 
-import { appendMemory } from './state.js';
+import { appendMemory, isGroupChat, recordStudentExercise } from './state.js';
 import { getCorrectAnswer, getLessonContext, setLastExerciseResult, completeLessonAfterExercise } from './lesson.js';
 import { generate } from './claude.js';
 import { log } from './logger.js';
@@ -84,22 +84,33 @@ export async function handleCallback(callbackQuery, channel, skills) {
     if (match) {
       const [, topicSlug, day, letter] = match;
       const correct = getCorrectAnswer(topicSlug, Number(day));
+      const userId = callbackQuery.from?.id;
+      const inGroup = isGroupChat(chatId, userId);
+      const feedbackTarget = inGroup && userId ? userId : chatId;
+
       try {
         await channel.editMessageButtons(chatId, messageId, []);
       } catch { /* old message */ }
 
       if (!correct) {
         log.warn({ day, letter }, 'no correct answer stored');
-        await channel.sendMessage(chatId, `You picked <b>${letter}</b> — I couldn't score this one automatically. Let's keep going!`);
+        await channel.sendMessage(feedbackTarget, `You picked <b>${letter}</b> — I couldn't score this one automatically. Let's keep going!`);
         appendMemory(`Exercise unscored: ${data}`);
       } else if (letter === correct) {
         setLastExerciseResult(topicSlug, Number(day), 'correct');
-        await channel.sendMessage(chatId, "✅ <b>Correct!</b> Nice one.");
+        await channel.sendMessage(feedbackTarget, "✅ <b>Correct!</b> Nice one.");
         appendMemory(`Exercise correct: ${data}`);
+        if (inGroup) {
+          await channel.sendMessage(chatId, "Someone just nailed it! 🎉").catch(() => {});
+        }
       } else {
         setLastExerciseResult(topicSlug, Number(day), 'incorrect');
-        await channel.sendMessage(chatId, `❌ Not quite — the answer was <b>${correct}</b>. Think about why.`);
+        await channel.sendMessage(feedbackTarget, `❌ Not quite — the answer was <b>${correct}</b>. Think about why.`);
         appendMemory(`Exercise incorrect: ${data}`);
+      }
+
+      if (userId) {
+        recordStudentExercise(userId, topicSlug, Number(day), letter === correct ? 'correct' : 'incorrect');
       }
 
       completeLessonAfterExercise(chatId);

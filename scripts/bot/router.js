@@ -7,6 +7,7 @@ import { handleCommand, isCommand } from './commands.js';
 import { handleCallback } from './callbacks.js';
 import { handleOnboarding, isOnboarding } from './onboarding.js';
 import { handleChat } from './chat.js';
+import { isGroupChat, addGroupMember } from './state.js';
 import { runWithReqId, log } from './logger.js';
 
 export async function route(update, channel, skills) {
@@ -34,7 +35,14 @@ export async function route(update, channel, skills) {
     if (!message?.text) return;
 
     const chatId = message.chat.id;
+    const userId = message.from?.id;
     const text = message.text.trim();
+
+    // Track group members
+    if (isGroupChat(chatId, userId)) {
+      const name = [message.from?.first_name, message.from?.last_name].filter(Boolean).join(' ');
+      addGroupMember(chatId, userId, name);
+    }
 
     // Commands take priority
     if (isCommand(text)) {
