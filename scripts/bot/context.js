@@ -246,3 +246,184 @@ Only include resource URLs that appear in the supplied research results.`,
 
   return { system, model: 'strong', outputMode: 'json' };
 }
+
+// ── Multi-agent prompt builders (scoped contexts) ──────────
+
+export function buildCurriculumBuilderPrompt(skills, topic, slug, studentLevel, researchContext, critiqueText) {
+  const parts = [
+    skills.get('domain-template'),
+    skills.get('curriculum-format'),
+    skills.get('teaching-method'),
+    skills.get('source-verification'),
+    untrustedData('research-results', researchContext, 20_000),
+  ];
+
+  if (critiqueText) {
+    parts.push(untrustedData('critic-feedback', critiqueText, 10_000));
+    parts.push(`## Revision Pass
+
+The Critic has reviewed your previous output. Read the feedback above carefully and revise your plan and curriculum to address every actionable point. Keep what was approved, fix what was flagged.`);
+  }
+
+  parts.push(`## CurriculumBuilder Instructions
+
+You are a curriculum designer. Your job is to create a structured learning plan for "${topic}" at the ${studentLevel} level.
+
+${critiqueText ? 'This is a REVISION pass. Address the Critic feedback above.' : 'This is the FIRST pass.'}
+
+Generate a JSON response with these keys:
+
+1. **plan** — A markdown string: your blueprint BEFORE building. Include:
+   - Topic scope and boundaries (what is in/out)
+   - Module structure rationale (why this sequence)
+   - Key pedagogical decisions (proof-heavy vs intuition-first, etc.)
+   - Resource strategy (what types fit this domain)
+   - Exercise strategy (what exercises fit this domain)
+   - Estimated lesson count and pacing rationale
+
+2. **curriculum** — Full curriculum object:
+   { topic: "${topic}", slug: "${slug}", created: "${new Date().toISOString().split('T')[0]}", student_level: "${studentLevel}",
+     prerequisites: [...], exit_criteria: [...],
+     lessons: [{ lesson: 1, module: "...", title: "Why...?", concepts: [...], difficulty: 1-5, type: "mini-lesson|question|resource-drop|teach-back|real-world|review", resources: [...], status: "pending" }, ...] }
+   - 20-30 lessons, review every 5-7 lessons
+   - Titles as questions/provocations
+   - Only include resource URLs from the research data
+
+3. **conceptMap** — Markdown: concepts in learning order with dependency links
+4. **teachingNotes** — Markdown: approach, misconceptions, level adjustments, engagement strategies
+5. **resources** — Markdown: curated books, papers, videos, tools organized by type
+6. **teacher** — Markdown: domain-specific teaching config:
+   - Exercise style (multiple choice, open-ended, code, hands-on, debate, proofs)
+   - Resource preferences (videos vs papers vs interactive tools)
+   - Message format (examples-heavy, analogies, step-by-step, narrative)
+   - Difficulty curve (gentle ramp vs steep start)
+   - Engagement hooks specific to this domain
+   - What "stuck" looks like (common failure modes and how to unstick)
+   - Domain vocabulary to use/avoid at this level
+
+Output as JSON: { plan, curriculum, conceptMap, teachingNotes, resources, teacher }
+Do NOT output anything outside the JSON.`);
+
+  const system = parts.filter(Boolean).join('\n\n---\n\n');
+  return { system, model: 'strong', outputMode: 'json' };
+}
+
+export function buildCriticPrompt(planText, curriculumJson, conceptMapText, teachingNotesText, resourcesText) {
+  const system = [
+    `## Adversarial Curriculum Critic
+
+You are an expert curriculum reviewer. Your job is to find problems the builder missed. Be specific and actionable — vague praise is worthless. You have no loyalty to the builder's choices.`,
+
+    untrustedData('curriculum-plan', planText, 10_000),
+    untrustedData('curriculum-json', curriculumJson, 20_000),
+    untrustedData('concept-map', conceptMapText, 6_000),
+    untrustedData('teaching-notes', teachingNotesText, 8_000),
+    untrustedData('resources', resourcesText, 6_000),
+
+    `## Review Dimensions
+
+Evaluate across these dimensions and provide specific, numbered findings:
+
+1. **Coverage** — Missing subtopics? Over-covered areas? Gaps a student would notice?
+2. **Sequencing** — Prerequisites taught before they're needed? Difficulty spikes? Pacing issues?
+3. **Breadth vs Depth** — Topic too broad for the lesson count? Too narrow? Right depth for the level?
+4. **Resources** — Broken or suspicious URLs? Missing resource types (no videos? no textbooks?)? Quality concerns?
+5. **Exercises** — Right format for the domain? Too easy/hard? Enough variety?
+6. **Bias** — Overrepresentation of certain perspectives, schools, or geographic regions?
+7. **Pedagogy** — Does the plan match the teaching notes? Are misconceptions addressed in the right lessons?
+8. **teacher.md quality** — Does the teaching config actually fit this domain? Generic or specific?
+
+Output as JSON:
+{
+  "critique": "markdown string with numbered findings per dimension",
+  "status": "APPROVED" or "REVISE",
+  "severity": "minor" or "major" (if REVISE),
+  "revisionTargets": ["plan", "curriculum", "conceptMap", ...] (which files need changes, if REVISE)
+}
+
+Set status to APPROVED only if there are no major issues. Minor style nits alone are not grounds for REVISE.
+Do NOT output anything outside the JSON.`,
+  ].filter(Boolean).join('\n\n---\n\n');
+
+  return { system, model: 'strong', outputMode: 'json' };
+}
+
+export function buildTeacherPrompt(skills, lesson, topicSlug) {
+  const teacherConfig = readDomainFile(topicSlug, 'teacher.md') || '';
+  const teachingNotes = readDomainFile(topicSlug, 'teaching-notes.md') || '';
+  const conceptMap = readDomainFile(topicSlug, 'concept-map.md') || '';
+  const resources = readDomainFile(topicSlug, 'resources.md') || '';
+  const research = readDomainFile(topicSlug, 'research.md') || '';
+  const learning = readDomainFile(topicSlug, 'learning.md') || '';
+  const user = readUser();
+
+  const lessonData = JSON.stringify({
+    day: lesson.day || lesson.lesson,
+    title: lesson.title,
+    module: lesson.module,
+    concepts: lesson.concepts,
+    resources: lesson.resources,
+    type: lesson.type,
+    difficulty: lesson.difficulty,
+  });
+
+  const system = [
+    TELEGRAM_TUTOR_PERSONA,
+    skills.get('teaching-method'),
+    skills.get('lesson-delivery'),
+    TEXT_ONLY_LIMITS,
+    untrustedData('teacher-config', teacherConfig, 6_000),
+    untrustedData('teaching-notes', teachingNotes, 8_000),
+    untrustedData('concept-map', conceptMap, 6_000),
+    untrustedData('resources', resources, 4_000),
+    untrustedData('research-sources', research, 4_000),
+    untrustedData('prior-session', learning, 4_000),
+    untrustedData('student-profile', user, 4_000),
+    untrustedData('current-lesson', lessonData, 4_000),
+    `## Teacher Instructions
+
+Deliver the current lesson following the teacher-config style for this domain.
+
+Rules:
+- Use at most four messages marked 📖, 🧠, 💡, and ✏️; keep each near 150 words or less
+- The exercise (✏️) must have exactly four choices labelled A–D, followed by a separate line "correct: X"
+- ONE question per message — never dump multiple questions at once
+- If prior-session data exists, open with a brief callback to what was covered last time
+- Reference real sources from the resources/research data when it strengthens the lesson
+- Match the exercise style to the teacher-config (if it says "hands-on", don't default to multiple choice)
+- End with engagement, never "that's it for today"`,
+  ].filter(Boolean).join('\n\n---\n\n');
+
+  return { system, model: 'strong', outputMode: 'student' };
+}
+
+export function buildTutorResumePrompt(learningMd, progressData, userProfile) {
+  const system = [
+    `## Tutor Resume Check
+
+You are the orchestrator deciding how to resume a student's session. Analyze their learning state and decide the best next action.`,
+    untrustedData('learning-log', learningMd, 4_000),
+    untrustedData('progress', JSON.stringify(progressData), 4_000),
+    untrustedData('student-profile', userProfile, 4_000),
+    `## Instructions
+
+Based on the learning log and progress data, decide what to do next.
+
+Output as JSON:
+{
+  "action": "continue_lesson" | "review" | "check_in",
+  "topicSlug": "the-topic-to-focus-on",
+  "resumeNote": "A brief, warm welcome-back message (1-2 sentences). Reference what they covered last time. If they struggled with something, mention you'll revisit it.",
+  "reason": "internal reasoning for this decision (not shown to student)"
+}
+
+Decision rules:
+- If weak concepts were flagged: action = "review"
+- If engagement was low last session: action = "check_in"
+- Otherwise: action = "continue_lesson"
+
+Do NOT output anything outside the JSON.`,
+  ].filter(Boolean).join('\n\n---\n\n');
+
+  return { system, model: 'cheap', outputMode: 'json' };
+}

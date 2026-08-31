@@ -105,6 +105,16 @@ export function readDomainFile(topicSlug, filename) {
   }
 }
 
+export function writeDomainFile(topicSlug, filename, content) {
+  const dir = path.join(PATHS.domains, topicSlug);
+  fs.mkdirSync(dir, { recursive: true });
+  const p = path.join(dir, filename);
+  const tmp = p + '.tmp';
+  fs.writeFileSync(tmp, content);
+  fs.renameSync(tmp, p);
+  log.debug({ topic: topicSlug, file: filename }, 'domain file written');
+}
+
 // ── Memory ──────────────────────────────────────────────────
 
 export function appendMemory(entry) {
