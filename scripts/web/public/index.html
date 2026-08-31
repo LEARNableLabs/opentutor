@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenTutor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>OpenTutor</h1>
+      <nav id="nav">
+        <button class="nav-btn active" data-view="learn">Learn</button>
+        <button class="nav-btn" data-view="topics">Topics</button>
+        <button class="nav-btn" data-view="chat">Chat</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Learn view -->
+      <section id="view-learn" class="view active">
+        <div id="topic-select">
+          <select id="active-topic">
+            <option value="">Select a topic...</option>
+          </select>
+          <button id="btn-next" class="primary">Next Lesson</button>
+        </div>
+        <div id="lesson-area">
+          <div id="lesson-meta"></div>
+          <div id="lesson-content"></div>
+        </div>
+        <div id="lesson-loading" class="hidden">
+          <div class="spinner"></div>
+          <span>Generating lesson...</span>
+        </div>
+      </section>
+
+      <!-- Topics view -->
+      <section id="view-topics" class="view hidden">
+        <div id="topic-list"></div>
+        <div id="add-topic">
+          <input type="text" id="new-topic" placeholder="What do you want to learn?">
+          <select id="new-level">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate" selected>Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+          <button id="btn-add" class="primary">Add Topic</button>
+        </div>
+      </section>
+
+      <!-- Chat view -->
+      <section id="view-chat" class="view hidden">
+        <div id="chat-messages"></div>
+        <div id="chat-input-area">
+          <input type="text" id="chat-input" placeholder="Ask me anything...">
+          <button id="btn-send" class="primary">Send</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

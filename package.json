@@ -10,6 +10,7 @@
     "opentutor": "./scripts/setup.js"
   },
   "files": [
+    "lib/",
     "scripts/",
     "skills/",
     "workspace/",
@@ -18,6 +19,8 @@
   "scripts": {
     "bot": "node scripts/bot/index.js",
     "bot:dev": "node --watch scripts/bot/index.js",
+    "web": "node scripts/web/server.js",
+    "web:dev": "node --watch scripts/web/server.js",
     "lint": "eslint scripts",
     "test": "vitest run"
   },
