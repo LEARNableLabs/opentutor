@@ -4,6 +4,9 @@ dist/
 .env
 .DS_Store
 workspace/sessions/
+*.db
+*.db-wal
+*.db-shm
 .test-data/
 .planning/
 .claude/
