@@ -20,6 +20,8 @@ vi.mock('../../scripts/bot/chat.js', () => ({
 
 vi.mock('../../scripts/bot/state.js', () => ({
   appendMemory: vi.fn(),
+  isGroupChat: vi.fn(() => false),
+  addGroupMember: vi.fn(),
 }));
 
 vi.mock('../../scripts/bot/logger.js', () => ({

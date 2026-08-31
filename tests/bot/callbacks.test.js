@@ -2,11 +2,15 @@ import { vi, describe, it, expect, beforeEach } from 'vitest';
 
 vi.mock('../../scripts/bot/state.js', () => ({
   appendMemory: vi.fn(),
+  isGroupChat: vi.fn(() => false),
+  recordStudentExercise: vi.fn(),
 }));
 
 vi.mock('../../scripts/bot/lesson.js', () => ({
   getCorrectAnswer: vi.fn(),
   getLessonContext: vi.fn(),
+  setLastExerciseResult: vi.fn(),
+  completeLessonAfterExercise: vi.fn(),
 }));
 
 vi.mock('../../scripts/bot/claude.js', () => ({
@@ -82,7 +86,6 @@ describe('handleCallback', () => {
     expect(channel.sendMessage).toHaveBeenCalledWith(
       1,
       expect.stringContaining('Hint'),
-      expect.anything(),
     );
   });
 

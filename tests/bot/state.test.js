@@ -8,6 +8,7 @@ vi.mock('../../scripts/bot/config.js', () => ({
     domains: '/tmp/ot-vitest-state/domains',
     user: '/tmp/ot-vitest-state/USER.md',
     memory: '/tmp/ot-vitest-state/memory',
+    workspace: '/tmp/ot-vitest-state',
   },
 }));
 

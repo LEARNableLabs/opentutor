@@ -5,6 +5,7 @@ vi.mock('../../scripts/bot/state.js', () => ({
   updateProgress: vi.fn(),
   getTopicProgress: vi.fn(),
   listTopics: vi.fn(),
+  readDomainFile: vi.fn(() => null),
 }));
 
 vi.mock('../../scripts/bot/lesson.js', () => ({
