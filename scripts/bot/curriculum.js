@@ -10,12 +10,17 @@ import fs from 'fs';
 import path from 'path';
 import { createHash } from 'crypto';
 import { generate } from './claude.js';
-import { buildQuickStartPrompt, buildPlanPrompt, buildCurriculumBuilderPrompt, buildDomainFilesPrompt, buildCriticPrompt } from './context.js';
+import { buildQuickStartPrompt } from './context.js';
 import { PATHS } from './config.js';
 import { updateProgress, writeCurriculum, writeDomainFile, readDomainFile, appendMemory } from './state.js';
 import { researchTopic, formatResearchContext } from './research.js';
 import { searchWikipediaSummary } from './research.js';
+import { CurriculumPipeline } from '../../lib/core/pipeline.js';
+import { createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
+import { TutorState } from '../../lib/core/state.js';
 import { log } from './logger.js';
+
+const coreState = new TutorState(PATHS.root);
 
 /**
  * Phase A — quick start: research + taster + preliminary curriculum (~10-30s).
@@ -123,18 +128,14 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
 }
 
 /**
- * Phase B — Builder/Critic pipeline.
+ * Phase B — delegates to lib/core CurriculumPipeline.
  * Runs in the background after Phase A returns.
- * CurriculumBuilder generates plan + curriculum + domain files + teacher config.
- * Critic reviews and may request revisions (max 3 iterations).
- * Preserves completion status from the quick curriculum.
+ * Handles Telegram-specific concerns (notifications) around the core pipeline.
  */
 async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId, channel) {
   log.info({ topic, slug }, 'pipeline: starting');
-  const domainDir = path.join(PATHS.domains, slug);
-  const MAX_ITERATIONS = 3;
 
-  // Read research from Phase A
+  // Ensure research exists
   let researchContext = readDomainFile(slug, 'research.md') || '';
   if (!researchContext.trim()) {
     const research = await researchTopic(topic, { level: studentLevel });
@@ -149,121 +150,43 @@ async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId
     }
   }
 
-  let critiqueText = null;
-  let planText = null;
-  let lastParsed = null;
+  // Preserve existing completion status before pipeline overwrites
+  const existing = readExistingCurriculum(slug);
 
-  for (let iteration = 1; iteration <= MAX_ITERATIONS; iteration++) {
-    log.info({ topic, iteration, max: MAX_ITERATIONS }, 'pipeline: iteration start');
+  // Delegate to core pipeline
+  const adapter = createPipelineAdapterFromEnv();
+  const pipeline = new CurriculumPipeline({
+    adapter,
+    state: coreState,
+    skills,
+    onProgress: (p) => log.info({ ...p }, 'pipeline: progress'),
+  });
 
-    // Step 1: Plan — fast, focused on structure
-    const planPrompt = buildPlanPrompt(skills, topic, studentLevel, researchContext, critiqueText);
-    const planResponse = await generate(planPrompt.system, [
-      { role: 'user', content: critiqueText
-        ? `Revise the curriculum plan for "${topic}" based on the Critic feedback.`
-        : `Create a curriculum plan for "${topic}" at the ${studentLevel} level.` },
-    ], { model: planPrompt.model, outputMode: planPrompt.outputMode, pipeline: true });
-
-    try {
-      const planData = JSON.parse(planResponse.text.match(/\{[\s\S]*\}/)?.[0] || '{}');
-      planText = planData.plan || planResponse.text;
-    } catch {
-      planText = planResponse.text;
-    }
-    writeDomainFile(slug, 'plan.md', planText);
-    log.info({ topic, iteration }, 'pipeline: plan written');
-
-    // Step 2: Build curriculum + domain files in parallel
-    const builderPrompt = buildCurriculumBuilderPrompt(skills, topic, slug, studentLevel, researchContext, planText);
-    const domainPrompt = buildDomainFilesPrompt(skills, topic, studentLevel, researchContext, planText);
-
-    const [builderResponse, domainResponse] = await Promise.all([
-      generate(builderPrompt.system, [
-        { role: 'user', content: `Build the curriculum for "${topic}" following the plan.` },
-      ], { model: builderPrompt.model, outputMode: builderPrompt.outputMode, pipeline: true }),
-      generate(domainPrompt.system, [
-        { role: 'user', content: `Generate resources and teacher config for "${topic}" following the plan.` },
-      ], { model: domainPrompt.model, outputMode: domainPrompt.outputMode, pipeline: true }),
-    ]);
-
-    // Parse curriculum output
-    lastParsed = parsePipelineOutput(builderResponse.text, topic, slug);
-
-    // Parse domain files output
-    try {
-      const domainData = JSON.parse(domainResponse.text.match(/\{[\s\S]*\}/)?.[0] || '{}');
-      lastParsed.resources = domainData.resources || lastParsed.resources;
-      lastParsed.teacher = domainData.teacher || lastParsed.teacher;
-    } catch {
-      log.warn({ topic, iteration }, 'pipeline: domain files parse failed, using builder fallback');
-    }
-
-    lastParsed.plan = planText;
-
-    // Write all domain files
-    writeCurriculum(slug, lastParsed.curriculum);
-    if (lastParsed.conceptMap) writeDomainFile(slug, 'concept-map.md', lastParsed.conceptMap);
-    if (lastParsed.teachingNotes) writeDomainFile(slug, 'teaching-notes.md', lastParsed.teachingNotes);
-    if (lastParsed.resources) writeDomainFile(slug, 'resources.md', lastParsed.resources);
-    if (lastParsed.teacher) writeDomainFile(slug, 'teacher.md', lastParsed.teacher);
-
-    log.info({ topic, iteration, lessons: lastParsed.curriculum.lessons?.length }, 'pipeline: build complete');
-
-    // Step 3: Critic reviews (uses cheap model — reviewing, not generating)
-    const criticPrompt = buildCriticPrompt(
-      planText,
-      JSON.stringify(lastParsed.curriculum, null, 2),
-      lastParsed.conceptMap || '',
-      lastParsed.teachingNotes || '',
-      lastParsed.resources || '',
-    );
-    const criticResponse = await generate(criticPrompt.system, [
-      { role: 'user', content: `Review this curriculum for "${topic}" (iteration ${iteration}/${MAX_ITERATIONS}).` },
-    ], { model: criticPrompt.model, outputMode: criticPrompt.outputMode, pipeline: true });
-
-    const critique = parseCriticOutput(criticResponse.text);
-    if (critique.critique) writeDomainFile(slug, 'critique.md', critique.critique);
-
-    log.info({ topic, iteration, status: critique.status, severity: critique.severity }, 'pipeline: critic verdict');
-
-    if (critique.status === 'APPROVED') {
-      log.info({ topic, iteration }, 'pipeline: critic approved');
-      break;
-    }
-
-    if (iteration < MAX_ITERATIONS) {
-      critiqueText = critique.critique;
-    } else {
-      log.warn({ topic }, 'pipeline: max iterations reached, accepting current output');
-    }
-  }
-
-  if (!lastParsed) {
-    throw new Error(`Pipeline produced no output for ${topic}`);
-  }
+  const result = await pipeline.run(topic, slug, studentLevel, researchContext);
 
   // Preserve completion status from quick curriculum
-  const existing = readExistingCurriculum(slug);
   if (existing?.lessons) {
-    for (const lesson of lastParsed.curriculum.lessons) {
-      const dayKey = lesson.day || lesson.lesson;
-      const match = existing.lessons.find((l) => (l.day || l.lesson) === dayKey);
-      if (match?.status === 'completed') {
-        lesson.status = 'completed';
-        lesson.delivered = match.delivered;
-        lesson.engagement = match.engagement;
+    const curriculum = coreState.readCurriculum(slug);
+    if (curriculum?.lessons) {
+      for (const lesson of curriculum.lessons) {
+        const dayKey = lesson.day || lesson.lesson;
+        const match = existing.lessons.find((l) => (l.day || l.lesson) === dayKey);
+        if (match?.status === 'completed') {
+          lesson.status = 'completed';
+          lesson.delivered = match.delivered;
+          lesson.engagement = match.engagement;
+        }
       }
+      coreState.writeCurriculum(slug, curriculum);
     }
   }
 
-  lastParsed.curriculum.preliminary = false;
-  writeCurriculum(slug, lastParsed.curriculum);
+  const lessonCount = result.curriculum.lessons?.length || 0;
+  const moduleCount = new Set(result.curriculum.lessons?.map((l) => l.module)).size;
+  log.info({ topic, lesson_count: lessonCount, module_count: moduleCount, iterations: result.iterations, approved: result.approved }, 'pipeline: complete');
+  appendMemory(`Full curriculum ready: ${topic} — ${lessonCount} lessons, ${moduleCount} modules (${result.iterations} iterations, ${result.approved ? 'approved' : 'max iterations'})`);
 
-  const lessonCount = lastParsed.curriculum.lessons?.length || 0;
-  const moduleCount = new Set(lastParsed.curriculum.lessons?.map((l) => l.module)).size;
-  log.info({ topic, lesson_count: lessonCount, module_count: moduleCount }, 'pipeline: complete');
-  appendMemory(`Full curriculum ready: ${topic} — ${lessonCount} lessons, ${moduleCount} modules (Builder/Critic pipeline)`);
-
+  // Telegram-specific: notify student
   if (chatId && channel) {
     try {
       await channel.sendMessage(chatId, [
@@ -331,13 +254,13 @@ async function refreshResearchIfStale(slug, topic) {
 }
 
 /**
- * Manually trigger enrichment for an existing topic.
+ * Manually trigger pipeline for an existing topic.
  */
 export async function enrichExistingTopic(slug, skills) {
   const curriculum = readExistingCurriculum(slug);
   if (!curriculum) throw new Error(`No curriculum found for ${slug}`);
   const level = detectLevel() || 'intermediate';
-  await enrichCurriculum(curriculum.topic || slug, slug, level, skills);
+  await buildCurriculumPipeline(curriculum.topic || slug, slug, level, skills, null, null);
 }
 
 // ── Helpers ────────────────────────────────────────────────
@@ -368,54 +291,6 @@ function readExistingCurriculum(slug) {
   } catch {
     return null;
   }
-}
-
-function parsePipelineOutput(text, topic, slug) {
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) throw new Error('CurriculumBuilder returned no JSON');
-
-  const data = JSON.parse(jsonMatch[0]);
-  const curriculum = data.curriculum || {};
-  if (!curriculum.topic) curriculum.topic = topic;
-  if (!curriculum.slug) curriculum.slug = slug;
-  if (!curriculum.created) curriculum.created = new Date().toISOString().split('T')[0];
-
-  if (curriculum.lessons) {
-    for (const lesson of curriculum.lessons) {
-      if (!lesson.status) lesson.status = 'pending';
-    }
-  }
-
-  if (!Array.isArray(curriculum.lessons) || curriculum.lessons.length === 0) {
-    throw new Error('CurriculumBuilder produced no lessons');
-  }
-
-  return {
-    plan: data.plan || null,
-    curriculum,
-    conceptMap: data.conceptMap || data.concept_map || null,
-    teachingNotes: data.teachingNotes || data.teaching_notes || null,
-    resources: data.resources || null,
-    teacher: data.teacher || null,
-  };
-}
-
-function parseCriticOutput(text) {
-  try {
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      const data = JSON.parse(jsonMatch[0]);
-      return {
-        critique: data.critique || text,
-        status: data.status === 'APPROVED' ? 'APPROVED' : 'REVISE',
-        severity: data.severity || 'minor',
-        revisionTargets: data.revisionTargets || [],
-      };
-    }
-  } catch {
-    // JSON parse failed, treat as plain critique text
-  }
-  return { critique: text, status: 'REVISE', severity: 'minor', revisionTargets: [] };
 }
 
 export function parseGeneratedDomain(text, topic, slug) {
