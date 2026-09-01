@@ -2,12 +2,13 @@
  * Slash command handlers.
  */
 
-import { readProgress, updateProgress, getTopicProgress, listTopics, readDomainFile } from './state.js';
-import { deliverNextLesson } from './lesson.js';
+import { readProgress, updateProgress, getTopicProgress, listTopics, readDomainFile, readCurriculum } from './state.js';
+import { deliverNextLesson, computeStreak } from './lesson.js';
 import { generateQuiz } from './quiz.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
 import { generateAndRegisterTopic } from './curriculum.js';
 import { getDueReviews, getRepetitionSummary } from './spaced-repetition.js';
+import { buildStudentModel } from '../../lib/core/student-model.js';
 import { log } from './logger.js';
 
 export function isCommand(text) {
@@ -97,28 +98,69 @@ async function cmdReview(chatId, channel, skills, args) {
 }
 
 async function cmdProgress(chatId, channel) {
-  const topics = listTopics();
-  if (!topics.length) {
+  const progress = readProgress();
+  const activeTopics = progress.active_topics || [];
+  if (!activeTopics.length) {
     await channel.sendMessage(chatId, "No topics yet. Type /add to start learning!");
     return;
   }
 
-  let text = '📊 <b>Your Progress</b>\n';
-  for (const slug of topics) {
+  const streak = computeStreak(progress);
+  let text = `📊 <b>Your Progress</b>\n\n🔥 <b>Streak: ${streak} day${streak !== 1 ? 's' : ''}</b>\n`;
+
+  for (const slug of activeTopics) {
     const p = getTopicProgress(slug);
     if (!p) continue;
-    const bar = progressBar(p.percent);
-    text += `\n<b>${p.topic}</b> — Day ${p.completed + 1}/${p.total}\n${bar} ${p.percent}%\n`;
-    if (p.current) text += `Next: <i>${p.current.title}</i>\n`;
 
-    // Spaced repetition stats
+    const bar = progressBar(p.percent);
+    const learningMd = readDomainFile(slug, 'learning.md') || '';
+    const curriculum = readCurriculum(slug);
+    const model = buildStudentModel(learningMd, curriculum, '');
     const sr = getRepetitionSummary(slug);
+    const accuracy = Math.round(model.recentAccuracy * 100);
+
+    text += `\n<b>${p.topic}</b> — Day ${p.completed}/${p.total}\n`;
+    text += `${bar} ${p.percent}%\n`;
+    text += `📈 Accuracy: ${accuracy}% (last 5)\n`;
+
     if (sr.total > 0) {
-      text += `🔄 ${sr.due} due · ${sr.mastered} mastered · ${sr.struggling} need work\n`;
+      text += `🧠 ${sr.mastered} mastered`;
+      if (sr.due > 0) text += ` · ⚠️ ${sr.due} review due`;
+      text += '\n';
+    }
+
+    if (p.current) {
+      const nextTitle = p.current.title?.slice(0, 50) || 'next lesson';
+      text += `Next: <i>${nextTitle}</i>\n`;
     }
   }
 
   await channel.sendMessage(chatId, text);
+}
+
+function computeStreak(progress) {
+  const history = progress.history || [];
+  if (!history.length) return 0;
+
+  const uniqueDays = [...new Set(history.map((h) => h.date))].sort().reverse();
+  const today = new Date().toISOString().split('T')[0];
+  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+
+  // Streak must include today or yesterday
+  if (uniqueDays[0] !== today && uniqueDays[0] !== yesterday) return 0;
+
+  let streak = 0;
+  let expected = new Date(uniqueDays[0]);
+
+  for (const day of uniqueDays) {
+    const d = new Date(day);
+    const diff = Math.round((expected - d) / 86400000);
+    if (diff > 1) break;
+    streak++;
+    expected = d;
+  }
+
+  return streak;
 }
 
 async function cmdPause(chatId, channel, _skills) {

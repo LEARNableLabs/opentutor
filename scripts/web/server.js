@@ -13,6 +13,7 @@ import { fileURLToPath } from 'url';
 import { TutorStore } from '../../lib/core/store.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
 import { buildTeacherPrompt } from '../../lib/core/prompts.js';
+import { buildStudentModel } from '../../lib/core/student-model.js';
 import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -107,9 +108,46 @@ async function handleAPI(req, res, url) {
       return json(res, { curriculum, learning, progress });
     }
 
-    // GET /api/progress — active topics and schedule
+    // GET /api/progress — active topics with computed stats
     if (req.method === 'GET' && url.pathname === '/api/progress') {
-      return json(res, await state.readProgress());
+      const progress = await state.readProgress();
+      const activeTopics = progress.active_topics || [];
+
+      const history = progress.history || [];
+      const uniqueDays = [...new Set(history.map((h) => h.date))].sort().reverse();
+      const today = new Date().toISOString().split('T')[0];
+      const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+      let streak = 0;
+      if (uniqueDays[0] === today || uniqueDays[0] === yesterday) {
+        let expected = new Date(uniqueDays[0]);
+        for (const day of uniqueDays) {
+          const d = new Date(day);
+          if (Math.round((expected - d) / 86400000) > 1) break;
+          streak++;
+          expected = d;
+        }
+      }
+
+      const topics = activeTopics.map((slug) => {
+        const tp = state.getTopicProgress(slug);
+        if (!tp) return null;
+        const learningMd = state.readDomainFile(slug, 'learning.md') || '';
+        const curriculum = state.readCurriculum(slug);
+        const model = buildStudentModel(learningMd, curriculum, '');
+        return {
+          slug,
+          topic: tp.topic,
+          completed: tp.completed,
+          total: tp.total,
+          percent: tp.percent,
+          accuracy: Math.round(model.recentAccuracy * 100),
+          mastered: model.concepts.solid.length,
+          reviewDue: model.concepts.shaky.length,
+          nextLesson: tp.current?.title || null,
+        };
+      }).filter(Boolean);
+
+      return json(res, { ...progress, streak, topics });
     }
 
     // POST /api/lesson — deliver next lesson
