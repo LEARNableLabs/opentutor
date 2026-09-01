@@ -3,7 +3,7 @@
  */
 
 import { readProgress, updateProgress, getTopicProgress, listTopics, readDomainFile, readCurriculum } from './state.js';
-import { deliverNextLesson, computeStreak } from './lesson.js';
+import { deliverNextLesson } from './lesson.js';
 import { generateQuiz } from './quiz.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
 import { generateAndRegisterTopic } from './curriculum.js';
