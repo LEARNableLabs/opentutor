@@ -18,9 +18,18 @@ import { searchWikipediaSummary } from './research.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
 import { createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
 import { TutorState } from '../../lib/core/state.js';
+import { TutorStore } from '../../lib/core/store.js';
 import { log } from './logger.js';
 
 const coreState = new TutorState(PATHS.root);
+
+let _store;
+function getStore() {
+  if (!_store) {
+    try { _store = new TutorStore(PATHS.root); } catch { return null; }
+  }
+  return _store;
+}
 
 /**
  * Phase A — quick start: research + taster + preliminary curriculum (~10-30s).
@@ -135,6 +144,20 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
 async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId, channel) {
   log.info({ topic, slug }, 'pipeline: starting');
 
+  // Track job in SQLite for durable resume
+  const store = getStore();
+  let jobId = null;
+  if (store) {
+    try {
+      jobId = store.enqueueJob('pipeline', { topic, slug, level: studentLevel });
+      store.startJob(jobId);
+    } catch (err) {
+      log.warn({ err }, 'pipeline: job tracking failed, continuing without');
+    }
+  }
+
+  try {
+
   // Run research (or re-read existing)
   let research = null;
   let researchContext = readDomainFile(slug, 'research.md') || '';
@@ -218,6 +241,18 @@ async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId
     } catch (err) {
       log.error({ err, topic }, 'pipeline: notification failed');
     }
+  }
+
+  // Mark job complete
+  if (jobId && store) {
+    try { store.completeJob(jobId); } catch {}
+  }
+
+  } catch (err) {
+    if (jobId && store) {
+      try { store.failJob(jobId, err); } catch {}
+    }
+    throw err;
   }
 }
 
