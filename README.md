@@ -116,21 +116,33 @@ Tutor (orchestrator — sees everything, decides what each agent gets)
        Student notified when full curriculum is ready
 ```
 
-### Lesson Delivery (Telegram)
+### Lesson Delivery (Socratic)
 
-Content flows naturally — the student only interacts at questions:
+Every lesson is a multi-turn conversation with deliberate practice:
 
 ```
-Bot: 📖 [concept intro]          ← immediate
-Bot: 🧠 [key insight]            ← 2s delay
-Bot: 💡 [example]                ← 2s delay
-Bot: ✏️ [question]               ← waits for answer
-     [1] [2] [3] [4]
-     [💡 Hint] [⏭ Skip]
+Tutor: "Before we start — what's Nash equilibrium
+       and why does it matter?"                       ← RETRIEVAL (30s)
+Student: [recalls prior concept]
 
-Student: taps 3
-Bot: ✅ Correct!
+Tutor: "Solid. Today's goal: understand revenue
+       equivalence. Why would a sealed-bid auction
+       give the same revenue as an English auction?"  ← DIAGNOSTIC
+Student: [thinks and answers]
+
+Tutor: "Good instinct. Now connect this to game
+       theory — how does this relate to dominant
+       strategies we covered last week?"              ← FOLLOW-UP + INTERLEAVE
+Student: [connects concepts]
+
+Tutor: "Apply this: you're designing an auction for
+       5G spectrum. Which format and WHY?"            ← APPLICATION + SELF-EXPLANATION
+Student: [applies + explains in own words]
+
+Tutor: "Strong reasoning. How confident? 1-5"        ← SELF-ASSESSMENT
 ```
+
+Adapts length: quick (~1 min) when accuracy is high, standard (~3-5 min), deep (~8-10 min) when struggling. The DeliberatePractitioner enforces BLOCK/BUMP/DROP/VARY/REVISIT directives between lessons.
 
 ### LLM Backends
 

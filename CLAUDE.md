@@ -27,7 +27,7 @@ opentutor/
 │   │   ├── claude.js                 # LLM wrapper (delegates to adapters)
 │   │   ├── router.js                 # Message routing + group member tracking
 │   │   ├── commands.js               # Slash commands + session resume from learning.md
-│   │   ├── lesson.js                 # Interactive delivery: content with delays, pause at exercise
+│   │   ├── lesson.js                 # Socratic multi-turn delivery with deliberate practice enforcement
 │   │   ├── curriculum.js             # Phase A quick-start + Phase B pipeline delegation to lib/core
 │   │   ├── research.js               # 8-source research (arxiv, Semantic Scholar, OpenAlex, Wikipedia, MIT OCW, YouTube, GitHub, Wikipedia links)
 │   │   ├── context.js                # Telegram-specific prompt builders
