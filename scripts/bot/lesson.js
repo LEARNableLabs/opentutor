@@ -265,6 +265,9 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     log.warn({ topic: topicSlug, lessonDay }, 'generic diagnostic enhanced');
   }
 
+  // Select exercise format based on student behavior
+  const exerciseFormat = selectExerciseFormat(studentModel, lessonPlan);
+
   // Store active lesson state with dynamic steps
   activeLessons[chatId] = {
     topicSlug,
@@ -274,7 +277,9 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     steps,
     step: 0,
     mode,
+    exerciseFormat,
     history: [],
+    assessments: [],
     studentModel,
     startedAt: Date.now(),
     stepStartedAt: Date.now(),
@@ -364,7 +369,14 @@ export async function handleLessonAnswer(text, chatId, channel) {
     ...active.history,
   ], { model: responsePrompt.model, outputMode: responsePrompt.outputMode });
 
-  active.history.push({ role: 'assistant', content: response.text });
+  // Parse hidden assessment (stripped before sending to student)
+  const { assessment, visibleText } = parseAssessment(response.text);
+  if (assessment) {
+    active.assessments.push({ step: stepName, ...assessment });
+    log.info({ step: stepName, score: assessment.score, understanding: assessment.understanding }, 'step assessment');
+  }
+
+  active.history.push({ role: 'assistant', content: visibleText });
   active.step++;
   persistActiveLesson(chatId);
 
@@ -384,16 +396,19 @@ export async function handleLessonAnswer(text, chatId, channel) {
   const nextStep = active.steps[active.step];
   if (nextStep === 'diagnostic' && active.plan.goal) {
     const goalMsg = `<b>Today's goal:</b> ${active.plan.goal}`;
-    await channel.sendMessage(chatId, response.text + '\n\n' + goalMsg + '\n\n' + active.plan.diagnostic);
+
+    // MC format: show diagnostic as numbered options
+    const diagnosticMsg = formatDiagnosticMessage(active);
+    await channel.sendMessage(chatId, visibleText + '\n\n' + goalMsg + '\n\n' + diagnosticMsg);
     appendMessage(chatId, 'user', text);
-    appendMessage(chatId, 'assistant', response.text);
-    appendMessage(chatId, 'assistant', active.plan.diagnostic);
-    active.history.push({ role: 'assistant', content: active.plan.diagnostic });
+    appendMessage(chatId, 'assistant', visibleText);
+    appendMessage(chatId, 'assistant', diagnosticMsg);
+    active.history.push({ role: 'assistant', content: diagnosticMsg });
     active.step++;
   } else {
-    await channel.sendMessage(chatId, response.text);
+    await channel.sendMessage(chatId, visibleText);
     appendMessage(chatId, 'user', text);
-    appendMessage(chatId, 'assistant', response.text);
+    appendMessage(chatId, 'assistant', visibleText);
   }
 
   // Check if lesson is complete
@@ -438,10 +453,19 @@ function completeSocraticLesson(chatId, active, _lastAnswer) {
 
   const engagement = assessEngagement(active.history);
 
+  // Use assessment scores for accuracy if available, otherwise fall back to engagement
+  const assessments = active.assessments || [];
+  const avgScore = assessments.length
+    ? assessments.reduce((sum, a) => sum + (a.score || 0), 0) / assessments.length
+    : null;
+  const accuracyLabel = avgScore !== null
+    ? (avgScore >= 0.7 ? 'correct' : avgScore >= 0.4 ? 'partial' : 'incorrect')
+    : engagement;
+
   // Skip marking complete if this was a review (BLOCK directive)
   if (!active.isReview) {
-    appendMemory(`Socratic lesson completed: Day ${lessonDay} — ${lesson.title} (${topicSlug}). ${active.history.length} exchanges, engagement: ${engagement}`);
-    markLessonComplete(topicSlug, lessonDay, engagement);
+    appendMemory(`Socratic lesson completed: Day ${lessonDay} — ${lesson.title} (${topicSlug}). ${active.history.length} exchanges, accuracy: ${accuracyLabel}, engagement: ${engagement}`);
+    markLessonComplete(topicSlug, lessonDay, accuracyLabel);
 
     if (lesson.concepts?.length) {
       registerLessonConcepts(topicSlug, lesson.concepts);
@@ -532,6 +556,8 @@ function writeLearningLog(topicSlug, lesson, active) {
     '## Accuracy Trend',
     `- **Last 5:** ${exerciseHistory || 'no data yet'}`,
     `- **Engagement:** ${engagement}`,
+    `- **Step scores:** ${(active.assessments || []).map((a) => `${a.step}=${a.score}`).join(', ') || 'no assessments'}`,
+    `- **Exercise format:** ${active.exerciseFormat || 'socratic'}`,
     '',
     '## Session',
     `- **Date:** ${new Date().toISOString().split('T')[0]}`,
@@ -575,6 +601,57 @@ export function computeStreak(progressOverride) {
   }
 
   return streak;
+}
+
+// ── Assessment parsing ─────────────────────────────────────
+
+function parseAssessment(responseText) {
+  const assessmentMatch = responseText.match(/<assessment>([\s\S]*?)<\/assessment>/);
+  if (!assessmentMatch) return { assessment: null, visibleText: responseText.trim() };
+
+  let assessment = null;
+  try {
+    assessment = JSON.parse(assessmentMatch[1]);
+  } catch {
+    log.warn('assessment parse failed');
+  }
+
+  const visibleText = responseText.replace(/<assessment>[\s\S]*?<\/assessment>\s*/g, '').trim();
+  return { assessment, visibleText };
+}
+
+// ── Exercise format selection ──────────────────────────────
+
+function selectExerciseFormat(studentModel, lessonPlan) {
+  // Explicit format from lesson plan takes priority
+  if (lessonPlan?.exerciseFormat && lessonPlan.exerciseFormat !== 'socratic') {
+    return lessonPlan.exerciseFormat;
+  }
+
+  // Auto-detect from student behavior
+  if (studentModel.engagement === 'minimal' || studentModel.engagement === 'brief') {
+    return 'mc';
+  }
+  if (studentModel.recentAccuracy < 0.3 && studentModel.exerciseCount < 5) {
+    return 'mc';
+  }
+  if (studentModel.recentAccuracy > 0.5 && studentModel.engagement === 'engaged') {
+    return 'mixed';
+  }
+
+  return 'socratic';
+}
+
+function formatDiagnosticMessage(active) {
+  const plan = active.plan;
+
+  // MC format: show as numbered options
+  if (active.exerciseFormat === 'mc' && plan.mcOptions && Array.isArray(plan.mcOptions)) {
+    const options = plan.mcOptions.map((opt, i) => `${i + 1}. ${opt.text || opt}`).join('\n');
+    return `${plan.diagnostic}\n\n${options}\n\n<i>Reply with a number, or answer in your own words.</i>`;
+  }
+
+  return plan.diagnostic;
 }
 
 // ── Legacy exports (for callbacks.js compatibility) ────────
