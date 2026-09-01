@@ -164,13 +164,42 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     || dueReviews[0]?.concept
     || null;
 
-  // Pick an interleave concept (from a different module than the current lesson)
+  // Pick an interleave concept — prefer confusable pairs from concept map
   const completedLessons = curriculum?.lessons?.filter((l) => l.status === 'completed') || [];
-  const otherModuleLessons = completedLessons.filter((l) => l.module !== lesson.module);
-  const interleaveSource = otherModuleLessons.length > 0
-    ? otherModuleLessons[Math.floor(Math.random() * otherModuleLessons.length)]
-    : null;
-  const interleaveConcept = interleaveSource?.concepts?.[0] || null;
+  const conceptMap = readDomainFile(topicSlug, 'concept-map.md') || '';
+  const currentConcepts = lesson.concepts || [];
+  let interleaveConcept = null;
+
+  if (conceptMap && currentConcepts.length > 0) {
+    const mapLines = conceptMap.split('\n');
+    const confusable = [];
+    for (const concept of currentConcepts) {
+      for (const line of mapLines) {
+        if (line.toLowerCase().includes(concept.toLowerCase())) {
+          const mentionedConcepts = line.match(/\*\*([^*]+)\*\*/g)?.map((m) => m.replace(/\*\*/g, '')) || [];
+          for (const mentioned of mentionedConcepts) {
+            if (!currentConcepts.some((c) => c.toLowerCase() === mentioned.toLowerCase())) {
+              const coveredIn = completedLessons.find((l) =>
+                (l.concepts || []).some((c) => c.toLowerCase() === mentioned.toLowerCase())
+              );
+              if (coveredIn) confusable.push(mentioned);
+            }
+          }
+        }
+      }
+    }
+    if (confusable.length > 0) {
+      interleaveConcept = confusable[Math.floor(Math.random() * confusable.length)];
+    }
+  }
+
+  if (!interleaveConcept) {
+    const otherModuleLessons = completedLessons.filter((l) => l.module !== lesson.module);
+    const interleaveSource = otherModuleLessons.length > 0
+      ? otherModuleLessons[Math.floor(Math.random() * otherModuleLessons.length)]
+      : null;
+    interleaveConcept = interleaveSource?.concepts?.[0] || null;
+  }
 
   // Build student model and select mode
   const studentModel = buildStudentModel(learningMd, curriculum, userProfile);
