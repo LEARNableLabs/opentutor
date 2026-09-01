@@ -291,7 +291,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
   log.info({ topic: topicSlug, lessonDay, difficulty: lessonPlan.difficulty, retrieval: retrievalConcept, interleave: interleaveConcept }, 'lesson plan generated');
 
-  // Send retrieval check or diagnostic
+  // Send retrieval check or diagnostic (with suggested options)
   if (retrievalConcept && lessonPlan.retrieval) {
     await channel.sendMessage(chatId, lessonPlan.retrieval);
     appendMessage(chatId, 'assistant', lessonPlan.retrieval);
@@ -303,8 +303,10 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     // Skip retrieval, go straight to diagnostic
     activeLessons[chatId].step = 1;
     const goalPrefix = lessonPlan.goal ? `<b>Goal:</b> ${lessonPlan.goal}\n\n` : '';
-    await channel.sendMessage(chatId, goalPrefix + lessonPlan.diagnostic);
-    appendMessage(chatId, 'assistant', lessonPlan.diagnostic);
+    const diagnosticMsg = formatDiagnosticMessage(activeLessons[chatId]);
+    const { text: msgText, msgOptions } = appendOptionsHintAndButtons(goalPrefix + diagnosticMsg, activeLessons[chatId], 'diagnostic');
+    await channel.sendMessage(chatId, msgText, msgOptions);
+    appendMessage(chatId, 'assistant', diagnosticMsg);
   }
 }
 
@@ -394,20 +396,23 @@ export async function handleLessonAnswer(text, chatId, channel) {
   }
 
   // If transitioning from retrieval to diagnostic, prepend the goal
-  const nextStep = active.steps[active.step];
-  if (nextStep === 'diagnostic' && active.plan.goal) {
+  const nextStep2 = active.steps[active.step];
+  if (nextStep2 === 'diagnostic' && active.plan.goal) {
     const goalMsg = `<b>Today's goal:</b> ${active.plan.goal}`;
-
-    // MC format: show diagnostic as numbered options
     const diagnosticMsg = formatDiagnosticMessage(active);
-    await channel.sendMessage(chatId, visibleText + '\n\n' + goalMsg + '\n\n' + diagnosticMsg);
+    const fullMsg = visibleText + '\n\n' + goalMsg + '\n\n' + diagnosticMsg;
+    const { text: msgText, msgOptions } = appendOptionsHintAndButtons(fullMsg, active, 'diagnostic');
+    await channel.sendMessage(chatId, msgText, msgOptions);
     appendMessage(chatId, 'user', text);
     appendMessage(chatId, 'assistant', visibleText);
     appendMessage(chatId, 'assistant', diagnosticMsg);
     active.history.push({ role: 'assistant', content: diagnosticMsg });
     active.step++;
   } else {
-    await channel.sendMessage(chatId, visibleText);
+    // Attach suggested options for the CURRENT step (the one we just advanced to)
+    const currentStepForOptions = active.steps[active.step];
+    const { text: msgText, msgOptions } = appendOptionsHintAndButtons(visibleText, active, currentStepForOptions);
+    await channel.sendMessage(chatId, msgText, msgOptions);
     appendMessage(chatId, 'user', text);
     appendMessage(chatId, 'assistant', visibleText);
   }
@@ -682,6 +687,30 @@ function formatDiagnosticMessage(active) {
   }
 
   return plan.diagnostic;
+}
+
+// ── Suggested answer options ───────────────────────────────
+
+function buildSuggestedOptions(options, topicSlug, lessonDay, step) {
+  if (!options || !Array.isArray(options) || options.length < 2) return null;
+
+  return options.map((opt, i) => [{
+    text: `${i + 1}. ${String(opt).slice(0, 45)}`,
+    callback_data: `ans:${topicSlug}:${lessonDay}:${step}:${i}`,
+  }]);
+}
+
+function getOptionsForStep(active, stepName) {
+  if (!active?.plan || !stepName) return null;
+  const key = `${stepName}Options`;
+  return active.plan[key] || null;
+}
+
+function appendOptionsHintAndButtons(text, active, stepName) {
+  const options = getOptionsForStep(active, stepName);
+  const buttons = buildSuggestedOptions(options, active.topicSlug, active.lessonDay, stepName);
+  const hint = buttons ? '\n\n<i>Tap an option or type your own answer.</i>' : '';
+  return { text: text + hint, msgOptions: buttons ? { buttons } : {} };
 }
 
 // ── Legacy exports (for callbacks.js compatibility) ────────

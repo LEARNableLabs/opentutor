@@ -5,7 +5,7 @@
  */
 
 import { appendMemory, isGroupChat, recordStudentExercise } from './state.js';
-import { getCorrectAnswer, getLessonContext, setLastExerciseResult, completeLessonAfterExercise } from './lesson.js';
+import { getCorrectAnswer, getLessonContext, setLastExerciseResult, completeLessonAfterExercise, getActiveLesson, handleLessonAnswer } from './lesson.js';
 import { generate } from './claude.js';
 import { log } from './logger.js';
 
@@ -22,6 +22,24 @@ export async function handleCallback(callbackQuery, channel, skills) {
 
   log.info({ callback: data, user_id: chatId }, 'callback received');
   await channel.answerCallback(cbId);
+
+  // Suggested answer option tapped during Socratic lesson
+  if (data.startsWith('ans:')) {
+    const match = data.match(/^ans:([^:]+):(\d+):(\w+):(\d+)$/);
+    if (match) {
+      const [, , , step, index] = match;
+      const active = getActiveLesson(chatId);
+      if (!active) {
+        await channel.sendMessage(chatId, "That lesson has ended. Type /next for a new one.");
+        return;
+      }
+      const optionsKey = `${step}Options`;
+      const options = active.plan?.[optionsKey];
+      const answerText = options?.[Number(index)] || `Option ${Number(index) + 1}`;
+      try { await channel.editMessageButtons(chatId, messageId, []); } catch {}
+      return handleLessonAnswer(answerText, chatId, channel);
+    }
+  }
 
   // Flashcard callbacks
   if (data.startsWith('fc::')) {
