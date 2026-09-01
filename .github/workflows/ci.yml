@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Run tests
+        run: npx vitest run --reporter=verbose
+
+      - name: Run simulations
+        run: node tests/simulations/run.js --lessons=5
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Syntax check core
+        run: |
+          for f in lib/core/*.js lib/adapters/*.js; do
+            node -c "$f" || exit 1
+          done
+
+      - name: Syntax check bot
+        run: |
+          for f in scripts/bot/*.js; do
+            node -c "$f" || exit 1
+          done
+
+      - name: Syntax check API routes
+        run: |
+          for f in api/*.js api/_lib/*.js; do
+            node -c "$f" || exit 1
+          done

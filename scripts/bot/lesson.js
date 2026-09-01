@@ -9,8 +9,6 @@
  * Mid-lesson branching: steps expand or contract based on student answers.
  */
 
-import fs from 'fs';
-import path from 'path';
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../../lib/core/student-model.js';
@@ -435,8 +433,8 @@ async function assessRetrievalQuality(answer, concept) {
 
 // ── Complete a Socratic lesson ─────────────────────────────
 
-function completeSocraticLesson(chatId, active, lastAnswer) {
-  const { topicSlug, lessonDay, lesson, plan, studentModel, startedAt } = active;
+function completeSocraticLesson(chatId, active, _lastAnswer) {
+  const { topicSlug, lessonDay, lesson, startedAt } = active;
 
   const engagement = assessEngagement(active.history);
 
