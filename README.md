@@ -73,6 +73,12 @@ npx opentutor setup
 npx skills add LEARNableLabs/opentutor
 ```
 
+### One-Click Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLEARNableLabs%2Fopentutor&env=TELEGRAM_BOT_TOKEN,TELEGRAM_WEBHOOK_SECRET,SUPABASE_URL,SUPABASE_SERVICE_ROLE_KEY&envDescription=See%20docs%2Fdeployment.md%20for%20setup%20instructions&envLink=https%3A%2F%2Fgithub.com%2FLEARNableLabs%2Fopentutor%2Fblob%2Fmain%2Fdocs%2Fdeployment.md&project-name=my-opentutor)
+
+> Set at least one LLM key: `ANTHROPIC_API_KEY`, `OPENROUTER_API_KEY`, or `OPENAI_API_KEY`. See [self-deploy guide](docs/self-deploy.md) for the full walkthrough.
+
 ---
 
 ## Architecture
