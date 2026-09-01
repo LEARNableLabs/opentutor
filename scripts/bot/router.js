@@ -7,6 +7,7 @@ import { handleCommand, isCommand } from './commands.js';
 import { handleCallback } from './callbacks.js';
 import { handleOnboarding, isOnboarding } from './onboarding.js';
 import { handleChat } from './chat.js';
+import { getActiveLesson, handleLessonAnswer } from './lesson.js';
 import { isGroupChat, addGroupMember } from './state.js';
 import { runWithReqId, log } from './logger.js';
 
@@ -47,6 +48,11 @@ export async function route(update, channel, skills) {
     // Commands take priority
     if (isCommand(text)) {
       return handleCommand(text, chatId, channel, skills);
+    }
+
+    // Active Socratic lesson — route free-text answers to lesson handler
+    if (getActiveLesson(chatId)) {
+      return handleLessonAnswer(text, chatId, channel);
     }
 
     // Onboarding flow (if active)

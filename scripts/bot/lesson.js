@@ -1,89 +1,49 @@
 /**
- * Lesson delivery — send teaching chunks naturally, pause only at exercises.
+ * Socratic lesson delivery — multi-turn conversation, not content dump.
  *
  * Flow:
- *   1. Generate full lesson in one Claude call
- *   2. Parse into emoji-anchored chunks
- *   3. Send content chunks with short delays (tutor "typing")
- *   4. On exercise chunk, show numbered answer buttons (1-4) and wait
- *   5. On answer, show feedback, mark complete, write learning.md
+ *   1. Generate lesson plan (1 strong call): diagnostic, concept, follow-up, application
+ *   2. Send diagnostic question → wait for free-text answer
+ *   3. Claude reads answer → tailored response + follow-up → wait
+ *   4. Claude reads answer → feedback + application challenge → wait
+ *   5. Claude reads answer → specific feedback → lesson complete
+ *
+ * Each step is a short Claude call that reads the student's actual answer.
  */
 
 import fs from 'fs';
 import path from 'path';
 import { generate } from './claude.js';
-import { buildTeacherPrompt } from './context.js';
-import { getNextLesson, markLessonComplete, readCurriculum, writeDomainFile, appendMemory } from './state.js';
+import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
+import { buildStudentModel, formatStudentModel } from '../../lib/core/student-model.js';
+import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts } from './spaced-repetition.js';
-import { sleep } from './helpers.js';
+import { TutorState } from '../../lib/core/state.js';
 import { log } from './logger.js';
 
-// ── Exercise state ─────────────────────────────────────────
+const coreState = new TutorState(PATHS.root);
 
-const EXERCISE_STATE_PATH = path.join(PATHS.workspace, 'tutor', 'exercise-state.json');
+// ── Active lessons (in-flight Socratic conversations) ──────
 
-function loadExerciseState() {
-  try {
-    return JSON.parse(fs.readFileSync(EXERCISE_STATE_PATH, 'utf-8'));
-  } catch {
-    return { answers: {}, contexts: {} };
-  }
+const activeLessons = {};
+
+const STEPS = ['diagnostic', 'followUp', 'application'];
+
+export function getActiveLesson(chatId) {
+  return activeLessons[chatId] || null;
 }
 
-function saveExerciseState(state) {
-  const dir = path.dirname(EXERCISE_STATE_PATH);
-  fs.mkdirSync(dir, { recursive: true });
-  const tmp = EXERCISE_STATE_PATH + '.tmp';
-  fs.writeFileSync(tmp, JSON.stringify(state, null, 2));
-  fs.renameSync(tmp, EXERCISE_STATE_PATH);
+export function clearActiveLesson(chatId) {
+  delete activeLessons[chatId];
 }
 
-const exerciseState = loadExerciseState();
-
-export function getCorrectAnswer(topicSlug, day) {
-  return exerciseState.answers[topicSlug + ':' + day];
-}
-
-export function getLessonContext(topicSlug, day) {
-  return exerciseState.contexts[topicSlug + ':' + day];
-}
-
-export function stripAnswerKey(text) {
-  return text
-    .replace(/^\s*(?:correct|answer)\s*(?:is)?\s*[:\s]\s*\(?[A-D]\)?\s*$/gim, '')
-    .replace(/\n{3,}/g, '\n\n')
-    .trim();
-}
-
-// ── Last exercise result (set by callbacks.js) ─────────────
-
-const lastExerciseResults = {};
-
-export function setLastExerciseResult(topicSlug, day, result) {
-  lastExerciseResults[topicSlug + ':' + day] = result;
-}
-
-// ── Pending lessons (waiting for exercise answer) ──────────
-
-const pendingLessons = {};
-
-export function getPendingLesson(chatId) {
-  return pendingLessons[chatId] || null;
-}
-
-function clearPendingLesson(chatId) {
-  delete pendingLessons[chatId];
-}
-
-// ── Main entry: generate and deliver lesson ────────────────
+// ── Main entry: generate plan and send diagnostic ──────────
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
-  const start = Date.now();
   const lesson = getNextLesson(topicSlug);
   if (!lesson) {
-    log.info({ topic: topicSlug }, 'all lessons completed');
     const curriculum = readCurriculum(topicSlug);
     await channel.sendMessage(chatId, `🎉 <b>You've completed all ${curriculum?.lessons?.length || 0} lessons in ${curriculum?.topic || topicSlug}!</b>\n\nType /quiz for a final review, or /add to start something new.`);
     return;
@@ -92,85 +52,136 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   await channel.sendTyping(chatId);
 
   const lessonDay = lesson.day || lesson.lesson;
-  log.info({ topic: topicSlug, lesson_id: lessonDay, title: lesson.title }, 'generating lesson');
+  log.info({ topic: topicSlug, lesson_id: lessonDay, title: lesson.title }, 'generating lesson plan');
 
-  const { system, model, outputMode } = buildTeacherPrompt(skills, lesson, topicSlug);
-  const response = await generate(system, [
-    { role: 'user', content: `Deliver lesson Day ${lessonDay}: "${lesson.title}"` },
-  ], { model, outputMode });
+  // Build student model from learning history
+  const learningMd = readDomainFile(topicSlug, 'learning.md') || '';
+  const curriculum = readCurriculum(topicSlug);
+  const userProfile = readUser();
+  const studentModel = buildStudentModel(learningMd, curriculum, userProfile);
+  const modelText = formatStudentModel(studentModel);
 
-  const chunks = parseLessonChunks(response.text);
+  // Generate lesson plan (1 strong call)
+  const planPrompt = buildLessonPlanPrompt(coreState, skills, lesson, topicSlug, modelText);
+  const planResponse = await generate(planPrompt.system, [
+    { role: 'user', content: `Plan a Socratic lesson for Day ${lessonDay}: "${lesson.title}"` },
+  ], { model: planPrompt.model, outputMode: planPrompt.outputMode });
 
-  // Store exercise context + correct answer
-  exerciseState.contexts[topicSlug + ':' + lessonDay] = {
-    title: lesson.title,
-    concepts: lesson.concepts,
+  let lessonPlan;
+  try {
+    const jsonMatch = planResponse.text.match(/\{[\s\S]*\}/);
+    lessonPlan = JSON.parse(jsonMatch[0]);
+  } catch {
+    log.error({ topic: topicSlug, lessonDay }, 'lesson plan parse failed, falling back');
+    await channel.sendMessage(chatId, `Let's explore: <b>${lesson.title}</b>\n\nWhat do you already know about ${(lesson.concepts || []).join(' and ')}?`);
+    lessonPlan = {
+      diagnostic: `What do you already know about ${(lesson.concepts || []).join(' and ')}?`,
+      concept: lesson.title,
+      followUp: 'Can you think of a real-world example?',
+      application: 'How would you explain this to someone else?',
+      commonMisconceptions: [],
+      goal: lesson.title,
+    };
+  }
+
+  // Store active lesson state
+  activeLessons[chatId] = {
     topicSlug,
+    lessonDay,
+    lesson,
+    plan: lessonPlan,
+    step: 0,
+    history: [],
+    studentModel,
+    startedAt: Date.now(),
   };
-  parseAndStoreAnswer(response.text, topicSlug, lessonDay);
-  saveExerciseState(exerciseState);
 
-  appendMessage(chatId, 'assistant', response.text);
+  log.info({ topic: topicSlug, lessonDay, difficulty: lessonPlan.difficulty, adaptations: lessonPlan.adaptations }, 'lesson plan generated');
 
-  // Send content chunks with natural delays, pause at exercise
-  let hasExercise = false;
-
-  for (let i = 0; i < chunks.length; i++) {
-    const chunk = chunks[i];
-    const isExercise = chunk.anchor === '✏️';
-
-    if (isExercise) {
-      hasExercise = true;
-      const buttons = buildNumberedExerciseButtons(topicSlug, lessonDay, chunk.text);
-      await channel.sendMessage(chatId, stripAnswerKey(chunk.text), { buttons });
-
-      // Store pending lesson — completes when student answers
-      pendingLessons[chatId] = {
-        topicSlug,
-        lessonDay,
-        lesson: { day: lessonDay, title: lesson.title, module: lesson.module, concepts: lesson.concepts },
-      };
-    } else {
-      await channel.sendMessage(chatId, stripAnswerKey(chunk.text));
-      if (i < chunks.length - 1) await sleep(2000);
-    }
-  }
-
-  log.info({ topic: topicSlug, lesson_id: lessonDay, chunks: chunks.length, hasExercise, latency_ms: Date.now() - start }, 'lesson delivered');
-
-  // If no exercise chunk, complete immediately
-  if (!hasExercise) {
-    finishLesson(topicSlug, lessonDay, lesson);
-  }
+  // Send the diagnostic question
+  await channel.sendMessage(chatId, lessonPlan.diagnostic);
+  appendMessage(chatId, 'assistant', lessonPlan.diagnostic);
 }
 
-// ── Complete lesson (called after exercise or if no exercise) ──
+// ── Handle student's answer during a Socratic lesson ───────
 
-function finishLesson(topicSlug, lessonDay, lesson) {
-  appendMemory(`Lesson delivered: Day ${lessonDay} — ${lesson.title} (${topicSlug})`);
-  markLessonComplete(topicSlug, lessonDay, 'delivered');
+export async function handleLessonAnswer(text, chatId, channel) {
+  const active = activeLessons[chatId];
+  if (!active) return false;
+
+  await channel.sendTyping(chatId);
+
+  const stepName = STEPS[active.step];
+  active.history.push({ role: 'user', content: text });
+
+  log.info({ topic: active.topicSlug, lessonDay: active.lessonDay, step: stepName }, 'student answered');
+
+  // Generate Socratic response (cheap call)
+  const user = readUser();
+  const responsePrompt = buildSocraticResponsePrompt(active.plan, text, stepName, user);
+  const response = await generate(responsePrompt.system, [
+    ...active.history,
+  ], { model: responsePrompt.model, outputMode: responsePrompt.outputMode });
+
+  active.history.push({ role: 'assistant', content: response.text });
+  active.step++;
+
+  await channel.sendMessage(chatId, response.text);
+  appendMessage(chatId, 'user', text);
+  appendMessage(chatId, 'assistant', response.text);
+
+  // Check if lesson is complete (after application step)
+  if (active.step >= STEPS.length) {
+    completeSocraticLesson(chatId, active, text);
+  }
+
+  return true;
+}
+
+// ── Complete a Socratic lesson ─────────────────────────────
+
+function completeSocraticLesson(chatId, active, lastAnswer) {
+  const { topicSlug, lessonDay, lesson, plan, studentModel, startedAt } = active;
+
+  // Determine engagement from conversation quality
+  const engagement = assessEngagement(active.history);
+
+  appendMemory(`Socratic lesson completed: Day ${lessonDay} — ${lesson.title} (${topicSlug}). ${active.history.length} exchanges, engagement: ${engagement}`);
+  markLessonComplete(topicSlug, lessonDay, engagement);
 
   if (lesson.concepts?.length) {
     registerLessonConcepts(topicSlug, lesson.concepts);
   }
 
-  writeLearningLog(topicSlug, lesson);
+  writeLearningLog(topicSlug, lesson, active);
+  clearActiveLesson(chatId);
+
+  log.info({
+    topic: topicSlug,
+    lessonDay,
+    exchanges: active.history.length,
+    engagement,
+    duration_ms: Date.now() - startedAt,
+  }, 'socratic lesson complete');
 }
 
-/**
- * Called by callbacks.js after exercise answer or skip.
- */
-export function completeLessonAfterExercise(chatId) {
-  const pending = pendingLessons[chatId];
-  if (pending) {
-    finishLesson(pending.topicSlug, pending.lessonDay, pending.lesson);
-    clearPendingLesson(chatId);
-  }
+// ── Assess engagement from conversation ────────────────────
+
+function assessEngagement(history) {
+  const studentMessages = history.filter((m) => m.role === 'user');
+  if (!studentMessages.length) return 'minimal';
+
+  const avgLength = studentMessages.reduce((sum, m) => sum + m.content.length, 0) / studentMessages.length;
+
+  if (avgLength > 100) return 'high';
+  if (avgLength > 30) return 'engaged';
+  if (avgLength > 10) return 'brief';
+  return 'minimal';
 }
 
-// ── Learning log ───────────────────────────────────────────
+// ── Learning log (enriched with student model) ─────────────
 
-function writeLearningLog(topicSlug, lesson) {
+function writeLearningLog(topicSlug, lesson, active) {
   const curriculum = readCurriculum(topicSlug);
   if (!curriculum) return;
 
@@ -178,99 +189,50 @@ function writeLearningLog(topicSlug, lesson) {
   const pending = curriculum.lessons.filter((l) => l.status === 'pending');
   const nextLesson = pending[0];
   const lessonDay = lesson.day || lesson.lesson;
-  const exerciseResult = lastExerciseResults[topicSlug + ':' + lessonDay] || 'pending';
+  const engagement = assessEngagement(active.history);
+
+  const studentMessages = active.history.filter((m) => m.role === 'user');
+  const exerciseHistory = completed.slice(-5).map((l) => {
+    const e = l.engagement;
+    return e === 'high' || e === 'engaged' || e === 'correct' ? '✓' : '✗';
+  }).join(' ');
 
   const lines = [
     `# Learning Log: ${curriculum.topic || topicSlug}`,
     '',
-    `## Position`,
+    '## Position',
     `- **Last lesson:** Day ${lessonDay} — ${lesson.title}`,
     `- **Next lesson:** ${nextLesson ? `Day ${nextLesson.day || nextLesson.lesson} — ${nextLesson.title}` : 'Curriculum complete'}`,
     `- **Progress:** ${completed.length}/${curriculum.lessons.length} lessons (${Math.round((completed.length / curriculum.lessons.length) * 100)}%)`,
     '',
-    `## Performance`,
-    `- **Last exercise:** ${exerciseResult}`,
+    '## Accuracy Trend',
+    `- **Last 5:** ${exerciseHistory || 'no data yet'}`,
+    `- **Engagement:** ${engagement}`,
     '',
-    `## Session`,
+    '## Session',
     `- **Date:** ${new Date().toISOString().split('T')[0]}`,
     `- **Time:** ${new Date().toLocaleTimeString('en-US', { hour12: false })}`,
+    `- **Exchanges:** ${active.history.length}`,
+    `- **Avg answer length:** ${studentMessages.length ? Math.round(studentMessages.reduce((s, m) => s + m.content.length, 0) / studentMessages.length) : 0} chars`,
     '',
-    `## Notes for Next Session`,
+    '## Notes for Next Session',
     `Last covered: ${lesson.title}. Concepts: ${(lesson.concepts || []).join(', ')}.`,
-  ];
+    active.plan?.goal ? `Goal was: ${active.plan.goal}` : '',
+    engagement === 'minimal' || engagement === 'brief' ? 'Student gave short answers — try more engaging hooks next time.' : '',
+  ].filter(Boolean);
 
   writeDomainFile(topicSlug, 'learning.md', lines.join('\n'));
   log.debug({ topic: topicSlug, lessonDay }, 'learning.md written');
 }
 
-// ── Parse lesson text into chunks by emoji anchors ──────────
+// ── Legacy exports (for callbacks.js compatibility) ────────
 
-const ANCHORS = ['📖', '🧠', '💡', '✏️', '🔗'];
-
-function parseLessonChunks(text) {
-  const chunks = [];
-  const lines = text.split('\n');
-  let current = null;
-
-  for (const line of lines) {
-    const anchor = ANCHORS.find((a) => line.trimStart().startsWith(a));
-    if (anchor) {
-      if (current) chunks.push(current);
-      current = { anchor, text: line + '\n' };
-    } else if (current) {
-      current.text += line + '\n';
-    } else {
-      if (!chunks.length) {
-        current = { anchor: null, text: line + '\n' };
-      }
-    }
-  }
-  if (current) chunks.push(current);
-
-  return chunks.map((c) => ({ ...c, text: c.text.trim() }));
+export function getCorrectAnswer() { return null; }
+export function getLessonContext(topicSlug, day) {
+  return { title: `Lesson ${day}`, concepts: [], topicSlug };
 }
-
-// ── Exercise buttons (numbered 1-4) ────────────────────────
-
-function parseAndStoreAnswer(fullText, topicSlug, day) {
-  const patterns = [
-    /(?:correct|answer)\s*(?:is)?[:\s]*\(?([A-D])\)?/i,
-    /\b([A-D])\b\s*(?:is\s+)?(?:the\s+)?(?:correct|right)\b/i,
-    /✅\s*\(?([A-D])\)?/i,
-    /^[^a-z]*correct[^a-z]*([A-D])\b/im,
-  ];
-  for (const pattern of patterns) {
-    const m = fullText?.match(pattern);
-    if (m) {
-      exerciseState.answers[topicSlug + ':' + day] = m[1].toUpperCase();
-      return;
-    }
-  }
-  log.warn({ day }, 'could not parse correct answer from exercise text');
-}
-
-function buildNumberedExerciseButtons(topicSlug, day, exerciseText) {
-  const labels = parseExerciseOptionLabels(exerciseText);
-
-  const row1 = labels.map((label, i) => ({
-    text: `${i + 1}`,
-    callback_data: `ex:${topicSlug}:${day}:${String.fromCharCode(65 + i)}`,
-  }));
-
-  const row2 = [
-    { text: '💡 Hint', callback_data: `ex:${topicSlug}:${day}:hint` },
-    { text: '⏭ Skip', callback_data: `ex:${topicSlug}:${day}:skip` },
-  ];
-
-  return [row1, row2];
-}
-
-function parseExerciseOptionLabels(text) {
-  const labels = [];
-  const pattern = /\b([A-D])[.):\s]+(.+?)(?:\n|$)/g;
-  let m;
-  while ((m = pattern.exec(text)) !== null) {
-    labels.push(m[2].trim().slice(0, 40));
-  }
-  return labels.length >= 2 ? labels : ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+export function setLastExerciseResult() {}
+export function completeLessonAfterExercise() {}
+export function stripAnswerKey(text) {
+  return text.replace(/^\s*(?:correct|answer)\s*(?:is)?\s*[:\s]\s*\(?[A-D]\)?\s*$/gim, '').trim();
 }
