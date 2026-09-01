@@ -20,9 +20,19 @@ import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts, getDueReviews, recordReview } from './spaced-repetition.js';
 import { TutorState } from '../../lib/core/state.js';
+import { openDatabaseFromEnv } from '../../lib/core/db.js';
 import { log } from './logger.js';
 
 const coreState = new TutorState(PATHS.root);
+
+// Lazy SQLite connection for lesson state persistence
+let _db;
+function getDb() {
+  if (!_db) {
+    try { _db = openDatabaseFromEnv(PATHS.root); } catch { return null; }
+  }
+  return _db;
+}
 
 // ── Lesson modes ───────────────────────────────────────────
 
@@ -61,11 +71,38 @@ function selectMode(studentModel, constraints, options = {}) {
 const activeLessons = {};
 
 export function getActiveLesson(chatId) {
-  return activeLessons[chatId] || null;
+  if (activeLessons[chatId]) return activeLessons[chatId];
+  // Fall back to persisted state (survives restart)
+  const db = getDb();
+  if (db) {
+    try {
+      const row = db.prepare('SELECT value FROM kv WHERE key = ?').get(`active_lesson:${chatId}`);
+      if (row) {
+        activeLessons[chatId] = JSON.parse(row.value);
+        return activeLessons[chatId];
+      }
+    } catch {}
+  }
+  return null;
+}
+
+function persistActiveLesson(chatId) {
+  const db = getDb();
+  if (!db) return;
+  try {
+    const data = activeLessons[chatId];
+    if (data) {
+      db.prepare('INSERT OR REPLACE INTO kv (key, value) VALUES (?, ?)').run(`active_lesson:${chatId}`, JSON.stringify(data));
+    }
+  } catch {}
 }
 
 export function clearActiveLesson(chatId) {
   delete activeLessons[chatId];
+  const db = getDb();
+  if (db) {
+    try { db.prepare('DELETE FROM kv WHERE key = ?').run(`active_lesson:${chatId}`); } catch {}
+  }
 }
 
 // ── Main entry: generate plan and send diagnostic ──────────
@@ -114,6 +151,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
       isReview: true,
       reviewConcept: constraints.blockedConcept,
     };
+    persistActiveLesson(chatId);
     return;
   }
 
@@ -182,6 +220,23 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     };
   }
 
+  // Validate diagnostic question quality
+  if (lessonPlan.diagnostic && lessonPlan.diagnostic.length < 20) {
+    lessonPlan.diagnostic = `Think about this: what do you already know about ${(lesson.concepts || []).join(' and ')}? What comes to mind?`;
+    log.warn({ topic: topicSlug, lessonDay }, 'diagnostic too short, using fallback');
+  }
+  const genericPatterns = [
+    /^what do you know about/i,
+    /^what have you heard about/i,
+    /^tell me about/i,
+    /^do you know anything about/i,
+  ];
+  if (genericPatterns.some((p) => p.test(lessonPlan.diagnostic))) {
+    const concepts = (lesson.concepts || []).join(' and ');
+    lessonPlan.diagnostic = `Here's a puzzle: ${lessonPlan.diagnostic.replace(/\?$/, '')}. Specifically, if you had to explain ${concepts} to a friend, what would you say?`;
+    log.warn({ topic: topicSlug, lessonDay }, 'generic diagnostic enhanced');
+  }
+
   // Store active lesson state with dynamic steps
   activeLessons[chatId] = {
     topicSlug,
@@ -197,6 +252,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     retrievalConcept,
     interleaveConcept,
   };
+  persistActiveLesson(chatId);
 
   log.info({ topic: topicSlug, lessonDay, difficulty: lessonPlan.difficulty, retrieval: retrievalConcept, interleave: interleaveConcept }, 'lesson plan generated');
 
@@ -261,6 +317,7 @@ export async function handleLessonAnswer(text, chatId, channel) {
 
   active.history.push({ role: 'assistant', content: response.text });
   active.step++;
+  persistActiveLesson(chatId);
 
   // Mid-lesson branching: detect if student is breezing through
   if (active.mode === 'standard' && active.step < active.steps.length - 1) {
