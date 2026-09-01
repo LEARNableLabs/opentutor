@@ -143,6 +143,9 @@ This file describes what's intrinsic to the *subject*, not the student. Student-
 ## Exercise Types
 <What exercise formats fit this domain — proofs, code, hands-on, debate, multiple choice, open-ended. This is about the subject, not the student.>
 
+## Exercise Format Preference
+<Which delivery format fits this domain best — "socratic" (free text, show reasoning), "mc" (multiple choice, recognition/recall), or "mixed" (MC for basics, free text for application). The student model may override this for struggling students.>
+
 ## Resource Types
 <What resource formats are most valuable for this domain — papers, videos, interactive tools, textbooks, code repos.>
 

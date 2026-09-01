@@ -265,8 +265,9 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     log.warn({ topic: topicSlug, lessonDay }, 'generic diagnostic enhanced');
   }
 
-  // Select exercise format based on student behavior
-  const exerciseFormat = selectExerciseFormat(studentModel, lessonPlan);
+  // Select exercise format based on domain + student behavior
+  const teacherConfig = readDomainFile(topicSlug, 'teacher.md') || '';
+  const exerciseFormat = selectExerciseFormat(studentModel, lessonPlan, teacherConfig);
 
   // Store active lesson state with dynamic steps
   activeLessons[chatId] = {
@@ -622,24 +623,53 @@ function parseAssessment(responseText) {
 
 // ── Exercise format selection ──────────────────────────────
 
-function selectExerciseFormat(studentModel, lessonPlan) {
+function selectExerciseFormat(studentModel, lessonPlan, domainConfig) {
   // Explicit format from lesson plan takes priority
   if (lessonPlan?.exerciseFormat && lessonPlan.exerciseFormat !== 'socratic') {
     return lessonPlan.exerciseFormat;
   }
 
-  // Auto-detect from student behavior
+  // Domain preference from teacher.md
+  const domainPreference = parseDomainExercisePreference(domainConfig);
+
+  // Student behavior overrides (strongest signal)
   if (studentModel.engagement === 'minimal' || studentModel.engagement === 'brief') {
-    return 'mc';
+    return domainPreference === 'socratic' ? 'mixed' : 'mc';
   }
   if (studentModel.recentAccuracy < 0.3 && studentModel.exerciseCount < 5) {
     return 'mc';
   }
+
+  // Domain preference (if specified)
+  if (domainPreference) return domainPreference;
+
+  // Default based on student behavior
   if (studentModel.recentAccuracy > 0.5 && studentModel.engagement === 'engaged') {
     return 'mixed';
   }
 
   return 'socratic';
+}
+
+function parseDomainExercisePreference(domainConfig) {
+  if (!domainConfig) return null;
+
+  const lower = domainConfig.toLowerCase();
+
+  // Domains that strongly prefer free text
+  if (/proof|derivation|code|programming|implement|design|compose|write/i.test(lower)) {
+    return 'socratic';
+  }
+  // Domains that work well with MC
+  if (/identification|recognition|vocabulary|terminology|factual|recall|classify|categorize/i.test(lower)) {
+    return 'mc';
+  }
+  // Domains that benefit from mixed
+  if (/hands-on|practical|applied|mixed|both/i.test(lower)) {
+    return 'mixed';
+  }
+
+  return null;
 }
 
 function formatDiagnosticMessage(active) {
