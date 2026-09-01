@@ -10,7 +10,7 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { TutorState } from '../../lib/core/state.js';
+import { TutorStore } from '../../lib/core/store.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
 import { buildTeacherPrompt } from '../../lib/core/prompts.js';
 import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
@@ -25,7 +25,7 @@ const HOST = process.env.OPENTUTOR_HOST || 'localhost';
 
 // ── State & adapters ────────────────────────────────────────
 
-const state = new TutorState(ROOT);
+const state = new TutorStore(ROOT);
 const chatAdapter = createAdapterFromEnv();
 const pipelineAdapter = createPipelineAdapterFromEnv();
 
@@ -299,5 +299,17 @@ server.listen(PORT, HOST, () => {
   console.log(`OpenTutor Web running at http://${HOST}:${PORT}`);
   console.log(`LLM backend: ${chatAdapter.name}`);
   console.log(`Pipeline backend: ${pipelineAdapter.name}`);
+  console.log(`Store: sqlite`);
   console.log(`Topics loaded: ${state.listTopics().length}`);
 });
+
+// ── Graceful shutdown ───────────────────────────────────────
+
+function shutdown(signal) {
+  console.log(`${signal} received, shutting down`);
+  state.close();
+  process.exit(0);
+}
+
+process.on('SIGINT', () => shutdown('SIGINT'));
+process.on('SIGTERM', () => shutdown('SIGTERM'));
