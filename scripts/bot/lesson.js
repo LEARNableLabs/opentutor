@@ -15,7 +15,7 @@ import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../../lib/core/student-model.js';
 import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives } from '../../lib/core/deliberate-practice.js';
-import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, appendMemory } from './state.js';
+import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts, getDueReviews, recordReview } from './spaced-repetition.js';
@@ -527,6 +527,33 @@ function writeLearningLog(topicSlug, lesson, active) {
 
   writeDomainFile(topicSlug, 'learning.md', lines.join('\n'));
   log.debug({ topic: topicSlug, lessonDay }, 'learning.md written');
+}
+
+// ── Streak tracking ────────────────────────────────────────
+
+export function computeStreak(progressOverride) {
+  const progress = progressOverride || readProgress();
+  const history = progress.history || [];
+  if (!history.length) return 0;
+
+  const uniqueDays = [...new Set(history.map((h) => h.date))].sort().reverse();
+  const today = new Date().toISOString().split('T')[0];
+  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+
+  if (uniqueDays[0] !== today && uniqueDays[0] !== yesterday) return 0;
+
+  let streak = 0;
+  let expected = new Date(uniqueDays[0]);
+
+  for (const day of uniqueDays) {
+    const d = new Date(day);
+    const diff = Math.round((expected - d) / 86400000);
+    if (diff > 1) break;
+    streak++;
+    expected = d;
+  }
+
+  return streak;
 }
 
 // ── Legacy exports (for callbacks.js compatibility) ────────

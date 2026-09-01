@@ -138,31 +138,6 @@ async function cmdProgress(chatId, channel) {
   await channel.sendMessage(chatId, text);
 }
 
-function computeStreak(progress) {
-  const history = progress.history || [];
-  if (!history.length) return 0;
-
-  const uniqueDays = [...new Set(history.map((h) => h.date))].sort().reverse();
-  const today = new Date().toISOString().split('T')[0];
-  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
-
-  // Streak must include today or yesterday
-  if (uniqueDays[0] !== today && uniqueDays[0] !== yesterday) return 0;
-
-  let streak = 0;
-  let expected = new Date(uniqueDays[0]);
-
-  for (const day of uniqueDays) {
-    const d = new Date(day);
-    const diff = Math.round((expected - d) / 86400000);
-    if (diff > 1) break;
-    streak++;
-    expected = d;
-  }
-
-  return streak;
-}
-
 async function cmdPause(chatId, channel, _skills) {
   updateProgress((p) => {
     p.schedule = p.schedule || {};
