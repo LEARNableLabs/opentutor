@@ -10,11 +10,14 @@
   <div id="app">
     <header>
       <h1>OpenTutor</h1>
-      <nav id="nav">
-        <button class="nav-btn active" data-view="learn">Learn</button>
-        <button class="nav-btn" data-view="topics">Topics</button>
-        <button class="nav-btn" data-view="chat">Chat</button>
-      </nav>
+      <div class="header-right">
+        <nav id="nav">
+          <button class="nav-btn active" data-view="learn">Learn</button>
+          <button class="nav-btn" data-view="topics">Topics</button>
+          <button class="nav-btn" data-view="chat">Chat</button>
+        </nav>
+        <button id="theme-toggle" title="Toggle theme">🌙</button>
+      </div>
     </header>
 
     <main>
@@ -45,8 +48,9 @@
         </div>
 
         <div id="empty-state">
-          <p>Pick a topic and hit <strong>Next Lesson</strong> to start learning.</p>
-          <p class="dim">Or go to <strong>Topics</strong> to browse all 292 available curricula.</p>
+          <p style="font-size: 18px; color: var(--text); margin-bottom: 12px;">What are you curious about today?</p>
+          <p class="dim">I can teach you anything from quantum physics to breadmaking.</p>
+          <p class="dim">Pick a topic above, or go to <strong>Topics</strong> to browse all 292 available curricula.</p>
         </div>
       </section>
 

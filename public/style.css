@@ -1,4 +1,20 @@
 :root {
+  --bg: #FAFAF8;
+  --surface: #FFFFFF;
+  --surface-2: #F5F5F3;
+  --border: #E5E5E0;
+  --text: #1A1A1A;
+  --text-dim: #6B6B6B;
+  --accent: #4A90D9;
+  --accent-dim: #3A73B0;
+  --accent-soft: rgba(74, 144, 217, 0.08);
+  --success: #2E7D32;
+  --error: #D32F2F;
+  --radius: 10px;
+  --radius-sm: 6px;
+}
+
+[data-theme="dark"] {
   --bg: #0f0f0f;
   --surface: #1a1a1a;
   --surface-2: #222;
@@ -10,8 +26,6 @@
   --accent-soft: rgba(108, 158, 255, 0.1);
   --success: #4caf50;
   --error: #ef5350;
-  --radius: 10px;
-  --radius-sm: 6px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -48,6 +62,12 @@ header h1 {
   letter-spacing: -0.3px;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 nav { display: flex; gap: 4px; }
 
 .nav-btn {
@@ -64,6 +84,18 @@ nav { display: flex; gap: 4px; }
 
 .nav-btn:hover { color: var(--text); border-color: var(--text-dim); }
 .nav-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: border-color 0.15s;
+}
+
+#theme-toggle:hover { border-color: var(--text-dim); }
 
 /* ── Views ───────────────────────────────────────────────── */
 
@@ -119,7 +151,6 @@ input[type="text"]:focus, select:focus {
 #empty-state {
   text-align: center;
   padding: 60px 20px;
-  color: var(--text-dim);
   line-height: 1.8;
 }
 
@@ -182,6 +213,9 @@ input[type="text"]:focus, select:focus {
   background: var(--surface);
   border: 1px solid var(--border);
   border-bottom-left-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .lesson-msg.student {
@@ -225,6 +259,54 @@ input[type="text"]:focus, select:focus {
 
 #lesson-complete strong { color: var(--text); }
 
+/* ── Tutor avatar ────────────────────────────────────────── */
+
+.tutor-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* ── Celebration ─────────────────────────────────────────── */
+
+.lesson-celebration {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  margin-top: 16px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  animation: celebrateIn 0.5s ease;
+}
+
+.celebration-icon {
+  font-size: 28px;
+  animation: pulse 1s ease-in-out;
+}
+
+.celebration-text strong {
+  color: var(--accent);
+}
+
+@keyframes celebrateIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
 /* ── Legacy lesson chunks (kept for backward compat) ─────── */
 
 .lesson-chunk {
@@ -239,10 +321,9 @@ input[type="text"]:focus, select:focus {
 }
 
 .lesson-chunk strong { color: var(--accent); }
-.lesson-chunk em { color: #ccc; }
 
 .lesson-chunk.concept { border-left: 3px solid var(--accent); }
-.lesson-chunk.example { border-left: 3px solid #ffa726; }
+.lesson-chunk.example { border-left: 3px solid #E8A030; }
 .lesson-chunk.exercise { border-left: 3px solid var(--success); }
 
 @keyframes fadeIn {
@@ -282,19 +363,19 @@ input[type="text"]:focus, select:focus {
 
 .exercise-btn.correct {
   border-color: var(--success);
-  background: rgba(76, 175, 80, 0.15);
+  background: rgba(46, 125, 50, 0.1);
   color: var(--success);
 }
 
 .exercise-btn.incorrect {
   border-color: var(--error);
-  background: rgba(239, 83, 80, 0.1);
+  background: rgba(211, 47, 47, 0.06);
   color: var(--error);
 }
 
 .exercise-btn.reveal {
   border-color: var(--success);
-  background: rgba(76, 175, 80, 0.08);
+  background: rgba(46, 125, 50, 0.06);
 }
 
 #exercise-feedback {
@@ -304,8 +385,8 @@ input[type="text"]:focus, select:focus {
   line-height: 1.6;
 }
 
-#exercise-feedback.correct { background: rgba(76, 175, 80, 0.1); color: var(--success); }
-#exercise-feedback.incorrect { background: rgba(239, 83, 80, 0.08); color: var(--error); }
+#exercise-feedback.correct { background: rgba(46, 125, 50, 0.08); color: var(--success); }
+#exercise-feedback.incorrect { background: rgba(211, 47, 47, 0.06); color: var(--error); }
 
 /* ── Topics view ─────────────────────────────────────────── */
 
@@ -418,6 +499,9 @@ input[type="text"]:focus, select:focus {
   background: var(--surface);
   border: 1px solid var(--border);
   border-bottom-left-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .chat-msg.typing {
@@ -437,11 +521,15 @@ input[type="text"]:focus, select:focus {
 #onboarding-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
+}
+
+[data-theme="dark"] #onboarding-overlay {
+  background: rgba(0, 0, 0, 0.85);
 }
 
 #onboarding-modal {
@@ -502,4 +590,5 @@ input[type="text"]:focus, select:focus {
   #exercise-buttons { grid-template-columns: 1fr; }
   #add-topic-form { flex-direction: column; }
   .chat-msg { max-width: 90%; }
+  .lesson-msg { max-width: 90%; }
 }

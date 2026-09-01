@@ -1,6 +1,28 @@
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => document.querySelectorAll(s);
 
+// ── Theme toggle ───────────────────────────────────────────
+
+const themeToggle = $('#theme-toggle');
+const savedTheme = localStorage.getItem('theme') || 'light';
+if (savedTheme === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  themeToggle.textContent = '☀️';
+}
+
+themeToggle.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  if (current === 'dark') {
+    document.documentElement.removeAttribute('data-theme');
+    themeToggle.textContent = '🌙';
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeToggle.textContent = '☀️';
+    localStorage.setItem('theme', 'dark');
+  }
+});
+
 // ── Markdown rendering (minimal, no dependencies) ──────────
 
 function md(text) {
@@ -134,7 +156,7 @@ async function sendLessonAnswer() {
     if (data.done) {
       lessonActive = false;
       $('#lesson-input-area').classList.add('hidden');
-      $('#lesson-complete').classList.remove('hidden');
+      showCelebration();
     } else {
       const progress = `Step ${data.step + 1}/${data.totalSteps}`;
       $('#lesson-meta').textContent = $('#lesson-meta').textContent.replace(/ — Step.*/, '') + ` — ${progress}`;
@@ -157,7 +179,11 @@ function showLessonInput() {
 function appendLessonMsg(classes, text) {
   const div = document.createElement('div');
   div.className = `lesson-msg ${classes}`;
-  div.innerHTML = md(text);
+  if (classes.includes('tutor') && !classes.includes('typing')) {
+    div.innerHTML = '<span class="tutor-avatar">🎓</span><div>' + md(text) + '</div>';
+  } else {
+    div.innerHTML = md(text);
+  }
   $('#lesson-conversation').appendChild(div);
   $('#lesson-conversation').scrollTop = $('#lesson-conversation').scrollHeight;
   return div;
@@ -170,7 +196,22 @@ function showCompletion(msg) {
   $('#lesson-conversation').innerHTML = '';
   appendLessonMsg('tutor', msg);
   $('#lesson-input-area').classList.add('hidden');
-  $('#lesson-complete').classList.remove('hidden');
+  showCelebration();
+}
+
+function showCelebration() {
+  const container = $('#lesson-conversation') || $('#lesson-area');
+  const celebrationDiv = document.createElement('div');
+  celebrationDiv.className = 'lesson-celebration';
+  celebrationDiv.innerHTML = `
+    <div class="celebration-icon">🌟</div>
+    <div class="celebration-text">
+      <strong>Lesson complete!</strong><br>
+      <span class="dim">You're making progress. See you next time.</span>
+    </div>
+  `;
+  container.appendChild(celebrationDiv);
+  container.scrollTop = container.scrollHeight;
 }
 
 function showError(msg) {
@@ -315,7 +356,11 @@ async function sendChat() {
 function appendChat(classes, text) {
   const div = document.createElement('div');
   div.className = `chat-msg ${classes}`;
-  div.innerHTML = md(text);
+  if (classes.includes('assistant') && !classes.includes('typing')) {
+    div.innerHTML = '<span class="tutor-avatar">🎓</span><div>' + md(text) + '</div>';
+  } else {
+    div.innerHTML = md(text);
+  }
   $('#chat-messages').appendChild(div);
   $('#chat-messages').scrollTop = $('#chat-messages').scrollHeight;
   return div;
@@ -404,7 +449,11 @@ async function sendOnboard() {
 function appendOnboardMsg(classes, text) {
   const div = document.createElement('div');
   div.className = `chat-msg ${classes}`;
-  div.innerHTML = md(text);
+  if (classes.includes('assistant') && !classes.includes('typing')) {
+    div.innerHTML = '<span class="tutor-avatar">🎓</span><div>' + md(text) + '</div>';
+  } else {
+    div.innerHTML = md(text);
+  }
   $('#onboarding-chat').appendChild(div);
   $('#onboarding-chat').scrollTop = $('#onboarding-chat').scrollHeight;
   return div;
