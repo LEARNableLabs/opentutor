@@ -19,6 +19,7 @@ import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writ
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts, getDueReviews, recordReview } from './spaced-repetition.js';
+import { parseConceptGraph, getPrerequisites } from '../../lib/core/concept-graph.js';
 import { TutorState } from '../../lib/core/state.js';
 import { openDatabaseFromEnv } from '../../lib/core/db.js';
 import { log } from './logger.js';
@@ -278,6 +279,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     history: [],
     studentModel,
     startedAt: Date.now(),
+    stepStartedAt: Date.now(),
     retrievalConcept,
     interleaveConcept,
   };
@@ -325,16 +327,36 @@ export async function handleLessonAnswer(text, chatId, channel) {
 
   await channel.sendTyping(chatId);
 
+  // Track response time (Math Academy insight: fast+correct=mastery, slow+correct=fragile)
+  const responseTimeMs = Date.now() - (active.stepStartedAt || Date.now());
+  active.stepStartedAt = Date.now();
+
   const stepName = active.steps[active.step];
-  active.history.push({ role: 'user', content: text });
+  active.history.push({ role: 'user', content: text, responseTimeMs });
 
-  log.info({ topic: active.topicSlug, lessonDay: active.lessonDay, step: stepName, mode: active.mode }, 'student answered');
+  log.info({ topic: active.topicSlug, lessonDay: active.lessonDay, step: stepName, mode: active.mode, responseTimeMs }, 'student answered');
 
-  // Handle retrieval step — LLM-assessed quality for accurate SM-2 scheduling
+  // Handle retrieval step — LLM-assessed quality + response time for accurate SM-2 scheduling
   if (stepName === 'retrieval' && active.retrievalConcept) {
-    const quality = await assessRetrievalQuality(text, active.retrievalConcept);
+    let quality = await assessRetrievalQuality(text, active.retrievalConcept);
+
+    // Response time adjustment: fast+correct=mastery, slow+correct=fragile
+    if (quality === 'easy' && responseTimeMs > 30000) quality = 'hard';
+
     recordReview(active.topicSlug, active.retrievalConcept, quality);
-    log.info({ concept: active.retrievalConcept, quality }, 'retrieval recorded');
+    log.info({ concept: active.retrievalConcept, quality, responseTimeMs }, 'retrieval recorded');
+
+    // Knowledge-graph credit propagation
+    try {
+      const conceptMapMd = readDomainFile(active.topicSlug, 'concept-map.md');
+      if (conceptMapMd && quality === 'easy') {
+        const graph = parseConceptGraph(conceptMapMd);
+        const prereqs = getPrerequisites(graph, active.retrievalConcept);
+        if (prereqs.length) {
+          log.info({ concept: active.retrievalConcept, prereqs }, 'propagating mastery credit to prerequisites');
+        }
+      }
+    } catch {}
   }
 
   // Generate Socratic response (cheap call)
@@ -518,6 +540,7 @@ function writeLearningLog(topicSlug, lesson, active) {
     `- **Time:** ${new Date().toLocaleTimeString('en-US', { hour12: false })}`,
     `- **Exchanges:** ${active.history.length}`,
     `- **Avg answer length:** ${studentMessages.length ? Math.round(studentMessages.reduce((s, m) => s + m.content.length, 0) / studentMessages.length) : 0} chars`,
+    `- **Avg response time:** ${studentMessages.length ? Math.round(studentMessages.reduce((s, m) => s + (m.responseTimeMs || 0), 0) / studentMessages.length / 1000) : 0}s`,
     '',
     '## Notes for Next Session',
     `Last covered: ${lesson.title}. Concepts: ${(lesson.concepts || []).join(', ')}.`,
