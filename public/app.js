@@ -32,9 +32,23 @@ $$('.nav-btn').forEach((btn) => {
   });
 });
 
-// ── Learn view ──────────────────────────────────────────────
+// ── Learn view (Socratic multi-turn) ────────────────────────
 
-$('#btn-next').addEventListener('click', deliverLesson);
+let activeTopicSlug = null;
+let lessonActive = false;
+
+$('#btn-next').addEventListener('click', startLesson);
+$('#btn-lesson-answer').addEventListener('click', sendLessonAnswer);
+
+const lessonInput = $('#lesson-input');
+if (lessonInput) {
+  lessonInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendLessonAnswer();
+    }
+  });
+}
 
 async function loadActiveTopics() {
   const res = await fetch('/api/progress');
@@ -51,14 +65,16 @@ async function loadActiveTopics() {
   if (prev && data.active_topics?.includes(prev)) select.value = prev;
 }
 
-async function deliverLesson() {
+async function startLesson() {
   const slug = $('#active-topic').value;
   if (!slug) return;
 
+  activeTopicSlug = slug;
   $('#btn-next').disabled = true;
   $('#lesson-loading').classList.remove('hidden');
   $('#lesson-area').classList.add('hidden');
   $('#empty-state').classList.add('hidden');
+  $('#lesson-complete').classList.add('hidden');
 
   try {
     const res = await fetch('/api/lesson', {
@@ -71,7 +87,7 @@ async function deliverLesson() {
     if (data.done) {
       showCompletion(data.message);
     } else {
-      showLesson(data);
+      showLessonStart(data);
     }
   } catch (err) {
     showError(err.message);
@@ -81,151 +97,88 @@ async function deliverLesson() {
   }
 }
 
-function showLesson(data) {
+function showLessonStart(data) {
+  lessonActive = true;
   $('#lesson-area').classList.remove('hidden');
-  $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}`;
+  $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}: ${data.lesson.title}`;
+  $('#lesson-conversation').innerHTML = '';
+  $('#lesson-complete').classList.add('hidden');
 
-  const chunks = parseLessonChunks(data.content);
-  const container = $('#lesson-chunks');
-  container.innerHTML = '';
+  appendLessonMsg('tutor', data.reply);
+  showLessonInput();
+}
 
-  const ANCHOR_TYPES = { '📖': '', '🧠': 'concept', '💡': 'example', '✏️': 'exercise', '🔗': '' };
+async function sendLessonAnswer() {
+  const input = $('#lesson-input');
+  const answer = input.value.trim();
+  if (!answer || !activeTopicSlug || !lessonActive) return;
 
-  let exerciseChunk = null;
+  appendLessonMsg('student', answer);
+  input.value = '';
+  input.disabled = true;
+  $('#btn-lesson-answer').disabled = true;
 
-  chunks.forEach((chunk, i) => {
-    const div = document.createElement('div');
-    div.className = `lesson-chunk ${ANCHOR_TYPES[chunk.anchor] || ''}`;
-    div.innerHTML = md(stripAnswerKey(chunk.text));
-    div.style.animationDelay = `${i * 0.1}s`;
-    container.appendChild(div);
+  const typing = appendLessonMsg('tutor typing', 'Thinking...');
 
-    if (chunk.anchor === '✏️' || (!exerciseChunk && i === chunks.length - 1)) {
-      exerciseChunk = chunk;
+  try {
+    const res = await fetch('/api/lesson', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ topicSlug: activeTopicSlug, answer }),
+    });
+    const data = await res.json();
+    typing.remove();
+
+    appendLessonMsg('tutor', data.reply);
+
+    if (data.done) {
+      lessonActive = false;
+      $('#lesson-input-area').classList.add('hidden');
+      $('#lesson-complete').classList.remove('hidden');
+    } else {
+      const progress = `Step ${data.step + 1}/${data.totalSteps}`;
+      $('#lesson-meta').textContent = $('#lesson-meta').textContent.replace(/ — Step.*/, '') + ` — ${progress}`;
     }
-  });
-
-  // Parse exercise and show buttons
-  const correct = parseCorrectAnswer(data.content);
-  const options = parseExerciseOptions(exerciseChunk?.text || '');
-
-  if (options.length >= 2) {
-    showExercise(options, correct);
-  } else {
-    $('#exercise-area').classList.add('hidden');
+  } catch (err) {
+    typing.remove();
+    appendLessonMsg('tutor', `Error: ${err.message}`);
+  } finally {
+    input.disabled = false;
+    $('#btn-lesson-answer').disabled = false;
+    input.focus();
   }
 }
 
-function showExercise(options, correct) {
-  const area = $('#exercise-area');
-  const btns = $('#exercise-buttons');
-  const feedback = $('#exercise-feedback');
+function showLessonInput() {
+  $('#lesson-input-area').classList.remove('hidden');
+  $('#lesson-input').focus();
+}
 
-  area.classList.remove('hidden');
-  feedback.textContent = '';
-  feedback.className = '';
-  btns.innerHTML = '';
-
-  options.forEach((opt) => {
-    const btn = document.createElement('button');
-    btn.className = 'exercise-btn';
-    btn.textContent = opt;
-    btn.addEventListener('click', () => {
-      const letter = opt.charAt(0);
-      const allBtns = btns.querySelectorAll('.exercise-btn');
-      allBtns.forEach((b) => {
-        b.disabled = true;
-        const bLetter = b.textContent.charAt(0);
-        if (correct && bLetter === correct) b.classList.add('correct', 'reveal');
-        else if (bLetter === letter && letter !== correct) b.classList.add('incorrect');
-      });
-
-      if (correct && letter === correct) {
-        feedback.textContent = 'Correct! Nice one.';
-        feedback.className = 'correct';
-      } else if (correct) {
-        feedback.textContent = `Not quite — the answer is ${correct}. Think about why.`;
-        feedback.className = 'incorrect';
-      } else {
-        feedback.textContent = `You picked ${letter}. Let's keep going!`;
-      }
-    });
-    btns.appendChild(btn);
-  });
+function appendLessonMsg(classes, text) {
+  const div = document.createElement('div');
+  div.className = `lesson-msg ${classes}`;
+  div.innerHTML = md(text);
+  $('#lesson-conversation').appendChild(div);
+  $('#lesson-conversation').scrollTop = $('#lesson-conversation').scrollHeight;
+  return div;
 }
 
 function showCompletion(msg) {
+  lessonActive = false;
   $('#lesson-area').classList.remove('hidden');
   $('#lesson-meta').textContent = 'Complete';
-  $('#lesson-chunks').innerHTML = `<div class="lesson-chunk">${md(msg)}</div>`;
-  $('#exercise-area').classList.add('hidden');
+  $('#lesson-conversation').innerHTML = '';
+  appendLessonMsg('tutor', msg);
+  $('#lesson-input-area').classList.add('hidden');
+  $('#lesson-complete').classList.remove('hidden');
 }
 
 function showError(msg) {
   $('#lesson-area').classList.remove('hidden');
   $('#lesson-meta').textContent = 'Error';
-  $('#lesson-chunks').innerHTML = `<div class="lesson-chunk" style="color: var(--error)">${msg}</div>`;
-  $('#exercise-area').classList.add('hidden');
-}
-
-// ── Lesson parsing helpers ──────────────────────────────────
-
-const ANCHORS = ['📖', '🧠', '💡', '✏️', '🔗'];
-
-function parseLessonChunks(text) {
-  const chunks = [];
-  const lines = text.split('\n');
-  let current = null;
-
-  for (const line of lines) {
-    const anchor = ANCHORS.find((a) => line.trimStart().startsWith(a));
-    if (anchor) {
-      if (current) chunks.push(current);
-      current = { anchor, text: line + '\n' };
-    } else if (current) {
-      current.text += line + '\n';
-    } else if (line.trim()) {
-      current = { anchor: null, text: line + '\n' };
-    }
-  }
-  if (current) chunks.push(current);
-  return chunks.map((c) => ({ ...c, text: c.text.trim() }));
-}
-
-function stripAnswerKey(text) {
-  return text
-    .replace(/^\s*(?:correct|answer)\s*(?:is)?\s*[:\s]\s*\(?[A-D]\)?\s*$/gim, '')
-    .replace(/\n{3,}/g, '\n\n')
-    .trim();
-}
-
-function parseCorrectAnswer(text) {
-  const patterns = [
-    /(?:correct|answer)\s*(?:is)?[:\s]*\(?([A-D])\)?/i,
-    /\b([A-D])\b\s*(?:is\s+)?(?:the\s+)?(?:correct|right)\b/i,
-  ];
-  for (const p of patterns) {
-    const m = text.match(p);
-    if (m) return m[1].toUpperCase();
-  }
-  return null;
-}
-
-function parseExerciseOptions(text) {
-  const options = [];
-  const pattern = /^[*\-•]?\s*\**([A-D])[.):\s]+\**\s*(.+)$/gm;
-  let m;
-  while ((m = pattern.exec(text)) !== null) {
-    options.push(`${m[1]}. ${m[2].replace(/\*\*/g, '').trim()}`);
-  }
-  if (options.length < 2) {
-    const simple = /\b([A-D])[.)]\s+(.+)/gm;
-    while ((m = simple.exec(text)) !== null) {
-      const opt = `${m[1]}. ${m[2].trim()}`;
-      if (!options.includes(opt)) options.push(opt);
-    }
-  }
-  return options;
+  $('#lesson-conversation').innerHTML = '';
+  appendLessonMsg('tutor', msg);
+  $('#lesson-input-area').classList.add('hidden');
 }
 
 // ── Topics view ─────────────────────────────────────────────
