@@ -42,10 +42,17 @@ function selectMode(studentModel, constraints, options = {}) {
   // Student state
   if (constraints.blocked) return 'deep';
   if (studentModel.recentAccuracy < 0.3) return 'deep';
-  if (studentModel.recentAccuracy > 0.85 && studentModel.trend === 'improving') return 'quick';
-  if (studentModel.engagement === 'low' || studentModel.engagement === 'declining') return 'quick';
   if (studentModel.trend === 'declining') return 'deep';
 
+  // Quick mode ONLY for students who are both accurate AND engaged
+  if (studentModel.recentAccuracy > 0.85
+    && studentModel.trend === 'improving'
+    && studentModel.engagement !== 'low'
+    && studentModel.engagement !== 'declining') {
+    return 'quick';
+  }
+
+  // Disengaged students get standard (not quick) — they need engagement hooks, not less attention
   return 'standard';
 }
 
@@ -238,9 +245,9 @@ export async function handleLessonAnswer(text, chatId, channel) {
 
   log.info({ topic: active.topicSlug, lessonDay: active.lessonDay, step: stepName, mode: active.mode }, 'student answered');
 
-  // Handle retrieval step — update SM-2 before generating response
+  // Handle retrieval step — LLM-assessed quality for accurate SM-2 scheduling
   if (stepName === 'retrieval' && active.retrievalConcept) {
-    const quality = assessRetrievalQuality(text, active.retrievalConcept);
+    const quality = await assessRetrievalQuality(text, active.retrievalConcept);
     recordReview(active.topicSlug, active.retrievalConcept, quality);
     log.info({ concept: active.retrievalConcept, quality }, 'retrieval recorded');
   }
@@ -260,7 +267,7 @@ export async function handleLessonAnswer(text, chatId, channel) {
     if (text.length > 80 && active.history.length <= 4) {
       // Strong answer early — consider skipping follow-up
       const nextStep = active.steps[active.step];
-      if (nextStep === 'followUp' && assessRetrievalQuality(text, active.lesson.title) === 'easy') {
+      if (nextStep === 'followUp' && text.length > 80) {
         active.steps.splice(active.step, 1); // remove followUp
         log.info({ topic: active.topicSlug }, 'student nailed it — skipping follow-up');
       }
@@ -298,15 +305,24 @@ export async function handleLessonAnswer(text, chatId, channel) {
   return true;
 }
 
-function assessRetrievalQuality(answer, concept) {
-  const words = answer.toLowerCase().split(/\s+/);
-  const conceptWords = concept.toLowerCase().split(/\s+/);
-  const overlap = conceptWords.filter((w) => words.some((aw) => aw.includes(w) || w.includes(aw)));
+async function assessRetrievalQuality(answer, concept) {
+  if (answer.length < 5) return 'wrong';
 
-  if (answer.length < 10) return 'wrong';
-  if (overlap.length >= conceptWords.length * 0.5 && answer.length > 30) return 'easy';
-  if (overlap.length > 0) return 'hard';
-  return 'wrong';
+  try {
+    const response = await generate(
+      `You are assessing whether a student correctly recalled a concept. The concept is "${concept}". Rate the quality of their recall.\n\nOutput ONLY one word: "easy" (correct and confident), "hard" (partially correct or vague), or "wrong" (incorrect or irrelevant).`,
+      [{ role: 'user', content: answer }],
+      { model: 'cheap', outputMode: 'student' },
+    );
+    const rating = response.text.trim().toLowerCase();
+    if (['easy', 'hard', 'wrong'].includes(rating)) return rating;
+    if (rating.includes('easy')) return 'easy';
+    if (rating.includes('hard')) return 'hard';
+    return 'wrong';
+  } catch {
+    // Fallback: any substantial answer counts as "hard"
+    return answer.length > 20 ? 'hard' : 'wrong';
+  }
 }
 
 // ── Complete a Socratic lesson ─────────────────────────────
@@ -365,9 +381,17 @@ function assessEngagement(history) {
   const studentMessages = history.filter((m) => m.role === 'user');
   if (!studentMessages.length) return 'minimal';
 
+  // Multiple signals, not just length
   const avgLength = studentMessages.reduce((sum, m) => sum + m.content.length, 0) / studentMessages.length;
+  const messageCount = studentMessages.length;
+  const askedQuestions = studentMessages.some((m) => m.content.includes('?'));
+  const usedBecause = studentMessages.some((m) => /because|since|therefore|so that/i.test(m.content));
+  const saidSkip = studentMessages.some((m) => /^(skip|next|move on|idk|i don'?t know)$/i.test(m.content.trim()));
 
-  if (avgLength > 100) return 'high';
+  if (saidSkip) return 'minimal';
+  if (askedQuestions) return 'high';
+  if (usedBecause && avgLength > 20) return 'high';
+  if (messageCount >= 3 && avgLength > 15) return 'engaged';
   if (avgLength > 30) return 'engaged';
   if (avgLength > 10) return 'brief';
   return 'minimal';
