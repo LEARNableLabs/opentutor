@@ -9,8 +9,13 @@ opentutor/
 ├── lib/                              # Platform-agnostic core
 │   ├── core/
 │   │   ├── state.js                  # TutorState class — file-based state management
+│   │   ├── store.js                  # TutorStore — SQLite-backed state (local dev)
+│   │   ├── supabase-store.js         # SupabaseStore — Postgres-backed state (production)
+│   │   ├── db.js                     # SQLite schema and migrations
 │   │   ├── pipeline.js               # CurriculumPipeline — Builder/Critic loop (max 3 iterations)
 │   │   ├── prompts.js                # Agent prompt builders (no platform assumptions)
+│   │   ├── student-model.js          # Accuracy trends, difficulty adjustment, engagement signals
+│   │   ├── deliberate-practice.js    # DeliberatePractitioner — evaluates teaching, writes directives
 │   │   └── index.js
 │   └── adapters/
 │       ├── base.js                   # BaseLLMAdapter interface
@@ -27,7 +32,7 @@ opentutor/
 │   │   ├── claude.js                 # LLM wrapper (delegates to adapters)
 │   │   ├── router.js                 # Message routing + group member tracking
 │   │   ├── commands.js               # Slash commands + session resume from learning.md
-│   │   ├── lesson.js                 # Socratic multi-turn delivery with deliberate practice enforcement
+│   │   ├── lesson.js                 # Socratic multi-turn delivery with adaptive length and deliberate practice enforcement
 │   │   ├── curriculum.js             # Phase A quick-start + Phase B pipeline delegation to lib/core
 │   │   ├── research.js               # 8-source research (arxiv, Semantic Scholar, OpenAlex, Wikipedia, MIT OCW, YouTube, GitHub, Wikipedia links)
 │   │   ├── context.js                # Telegram-specific prompt builders
@@ -56,7 +61,8 @@ opentutor/
 │           ├── plan.md               # CurriculumBuilder blueprint
 │           ├── teacher.md            # Domain-specific teaching config
 │           ├── critique.md           # Critic feedback (build-time)
-│           └── learning.md           # Teacher session log (runtime)
+│           ├── learning.md           # Teacher session log (runtime)
+│           └── practice-feedback.md  # DeliberatePractitioner directives (runtime)
 ├── workspace/                        # Workspace templates
 │   ├── AGENTS.md, IDENTITY.md, SOUL.md, USER.md
 │   ├── tutor/progress.json           # Active topics, schedule, history
@@ -85,8 +91,23 @@ Five agents with scoped contexts communicating via files on disk:
 | **CurriculumBuilder** | research.md, critique.md | plan.md, curriculum.json, domain files, teacher.md |
 | **Critic** | plan.md, curriculum, domain files | critique.md |
 | **Teacher** | curriculum, teacher.md, concept-map, resources, research, learning.md, USER.md | learning.md |
+| **DeliberatePractitioner** | learning.md, curriculum, practice-feedback.md | practice-feedback.md (BLOCK/BUMP/DROP/VARY/REVISIT/GOAL directives) |
 
 Pipeline: Researcher → CurriculumBuilder (plan → build) → Critic → loop until APPROVED or 3 iterations. Builder and domain files agent run in parallel. Critic uses cheap model.
+
+## Lesson delivery
+
+Socratic multi-turn conversation with adaptive length. Three modes selected from student model:
+
+| Mode | Duration | Steps | Trigger |
+|---|---|---|---|
+| **Quick** | ~1 min | retrieval → application | Accuracy >85%, midday push |
+| **Standard** | ~3-5 min | retrieval → diagnostic → follow-up → application | Normal /next |
+| **Deep** | ~8-10 min | retrieval → diagnostic → scaffolding → follow-up → teach-back → application | Accuracy <30%, "go deeper", BLOCK directive |
+
+Mid-lesson branching: steps expand (student says "go deeper") or contract (student nails the diagnostic) dynamically. Student can type "skip" or "move on" at any time (autonomy).
+
+DeliberatePractitioner runs after each lesson (deterministic, no LLM call) and writes enforceable directives to `practice-feedback.md`. The Teacher reads these before the next lesson and follows them.
 
 ## LLM backends
 

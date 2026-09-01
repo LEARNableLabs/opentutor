@@ -14,7 +14,8 @@ domains/<topic-slug>/
 ├── plan.md                # CurriculumBuilder's blueprint (rationale for structure)
 ├── critique.md            # Critic's structured feedback (build-time artifact)
 ├── teacher.md             # Domain-specific teaching config (exercise style, tone, hooks)
-└── learning.md            # Teacher's session log (written at runtime, not generated)
+├── learning.md            # Teacher's session log (written at runtime, not generated)
+└── practice-feedback.md   # DeliberatePractitioner directives (written at runtime after each lesson)
 ```
 
 ## How to Generate (Builder/Critic Pipeline)
@@ -177,4 +178,31 @@ This file describes what's intrinsic to the *subject*, not the student. Student-
 
 ## Notes for Next Session
 <What was covered, concepts taught, anything to reinforce>
+```
+
+### practice-feedback.md (written at runtime by DeliberatePractitioner, not generated)
+
+The DeliberatePractitioner evaluates teaching after each lesson (deterministic, no LLM call) and writes enforceable directives. The Teacher reads these before the next lesson.
+
+```markdown
+# Practice Feedback: <Topic>
+Updated: <ISO timestamp>
+
+## Observations
+- <what the evaluator noticed about the student's learning trajectory>
+
+## Directives
+- **BLOCK** [critical]: <concept> — do not advance until this concept is retested
+- **BUMP** [high]: difficulty to <N> — student is coasting, increase challenge
+- **DROP** [high]: difficulty to <N> — student in frustration zone, add scaffolding
+- **VARY** [medium]: <format> — lesson format has been monotonous, use this format next
+- **REVISIT** [high]: <concept> — this concept was flagged as shaky N lessons ago, retest it
+- **GOAL** [standard]: required — every lesson must open with explicit goal, close with self-assessment
+
+## Student Snapshot
+- Accuracy: N% (last 5)
+- Trend: improving / plateaued / declining
+- Difficulty: N (label)
+- Engagement: high / steady / declining / low
+- Shaky: <list of concepts needing reinforcement>
 ```
