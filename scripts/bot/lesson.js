@@ -20,7 +20,7 @@ import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirecti
 import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
-import { registerLessonConcepts } from './spaced-repetition.js';
+import { registerLessonConcepts, getDueReviews, recordReview } from './spaced-repetition.js';
 import { TutorState } from '../../lib/core/state.js';
 import { log } from './logger.js';
 
@@ -30,7 +30,7 @@ const coreState = new TutorState(PATHS.root);
 
 const activeLessons = {};
 
-const STEPS = ['diagnostic', 'followUp', 'application'];
+const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 
 export function getActiveLesson(chatId) {
   return activeLessons[chatId] || null;
@@ -91,6 +91,21 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
   log.info({ topic: topicSlug, lesson_id: lessonDay, title: lesson.title, constraints }, 'generating lesson plan');
 
+  // Pick a concept for retrieval check (from SM-2 scheduler + REVISIT directives)
+  const dueReviews = getDueReviews(topicSlug, 3);
+  const revisitConcepts = constraints.revisitConcepts || [];
+  const retrievalConcept = revisitConcepts[0]
+    || dueReviews[0]?.concept
+    || null;
+
+  // Pick an interleave concept (from a different module than the current lesson)
+  const completedLessons = curriculum?.lessons?.filter((l) => l.status === 'completed') || [];
+  const otherModuleLessons = completedLessons.filter((l) => l.module !== lesson.module);
+  const interleaveSource = otherModuleLessons.length > 0
+    ? otherModuleLessons[Math.floor(Math.random() * otherModuleLessons.length)]
+    : null;
+  const interleaveConcept = interleaveSource?.concepts?.[0] || null;
+
   // Build student model + directives context
   const studentModel = buildStudentModel(learningMd, curriculum, userProfile);
   const modelText = formatStudentModel(studentModel);
@@ -99,8 +114,11 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const directiveContext = [];
   if (constraints.difficultyOverride) directiveContext.push(`DIFFICULTY OVERRIDE: set to ${constraints.difficultyOverride}`);
   if (constraints.formatOverride) directiveContext.push(`FORMAT OVERRIDE: use ${constraints.formatOverride} format`);
-  if (constraints.revisitConcepts.length) directiveContext.push(`REVISIT: weave in review of: ${constraints.revisitConcepts.join(', ')}`);
+  if (revisitConcepts.length) directiveContext.push(`REVISIT: weave in review of: ${revisitConcepts.join(', ')}`);
   if (constraints.requireGoal) directiveContext.push('GOAL REQUIRED: open with explicit testable goal, close with self-assessment');
+  if (retrievalConcept) directiveContext.push(`RETRIEVAL: open with a retrieval check on "${retrievalConcept}" before the diagnostic`);
+  if (interleaveConcept) directiveContext.push(`INTERLEAVE: connect the follow-up question to "${interleaveConcept}" from a different module`);
+  directiveContext.push('SELF-EXPLANATION: in the application step, ask the student to explain the concept in their own words');
   const directiveText = directiveContext.length ? `\n\n## Deliberate Practice Directives\n${directiveContext.join('\n')}` : '';
 
   // Generate lesson plan (1 strong call)
@@ -136,13 +154,27 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     history: [],
     studentModel,
     startedAt: Date.now(),
+    retrievalConcept,
+    interleaveConcept,
   };
 
-  log.info({ topic: topicSlug, lessonDay, difficulty: lessonPlan.difficulty, adaptations: lessonPlan.adaptations }, 'lesson plan generated');
+  log.info({ topic: topicSlug, lessonDay, difficulty: lessonPlan.difficulty, retrieval: retrievalConcept, interleave: interleaveConcept }, 'lesson plan generated');
 
-  // Send the diagnostic question
-  await channel.sendMessage(chatId, lessonPlan.diagnostic);
-  appendMessage(chatId, 'assistant', lessonPlan.diagnostic);
+  // Send retrieval check or diagnostic
+  if (retrievalConcept && lessonPlan.retrieval) {
+    await channel.sendMessage(chatId, lessonPlan.retrieval);
+    appendMessage(chatId, 'assistant', lessonPlan.retrieval);
+  } else if (retrievalConcept) {
+    const retrievalQ = `Before we start — quick check: what's <b>${retrievalConcept}</b> and why does it matter?`;
+    await channel.sendMessage(chatId, retrievalQ);
+    appendMessage(chatId, 'assistant', retrievalQ);
+  } else {
+    // Skip retrieval, go straight to diagnostic
+    activeLessons[chatId].step = 1;
+    const goalPrefix = lessonPlan.goal ? `<b>Goal:</b> ${lessonPlan.goal}\n\n` : '';
+    await channel.sendMessage(chatId, goalPrefix + lessonPlan.diagnostic);
+    appendMessage(chatId, 'assistant', lessonPlan.diagnostic);
+  }
 }
 
 // ── Handle student's answer during a Socratic lesson ───────
@@ -158,6 +190,13 @@ export async function handleLessonAnswer(text, chatId, channel) {
 
   log.info({ topic: active.topicSlug, lessonDay: active.lessonDay, step: stepName }, 'student answered');
 
+  // Handle retrieval step — update SM-2 before generating response
+  if (stepName === 'retrieval' && active.retrievalConcept) {
+    const quality = assessRetrievalQuality(text, active.retrievalConcept);
+    recordReview(active.topicSlug, active.retrievalConcept, quality);
+    log.info({ concept: active.retrievalConcept, quality }, 'retrieval recorded');
+  }
+
   // Generate Socratic response (cheap call)
   const user = readUser();
   const responsePrompt = buildSocraticResponsePrompt(active.plan, text, stepName, user);
@@ -168,16 +207,38 @@ export async function handleLessonAnswer(text, chatId, channel) {
   active.history.push({ role: 'assistant', content: response.text });
   active.step++;
 
-  await channel.sendMessage(chatId, response.text);
-  appendMessage(chatId, 'user', text);
-  appendMessage(chatId, 'assistant', response.text);
+  // If transitioning from retrieval to diagnostic, prepend the goal
+  if (STEPS[active.step] === 'diagnostic' && active.plan.goal) {
+    const goalMsg = `<b>Today's goal:</b> ${active.plan.goal}`;
+    await channel.sendMessage(chatId, response.text + '\n\n' + goalMsg + '\n\n' + active.plan.diagnostic);
+    appendMessage(chatId, 'user', text);
+    appendMessage(chatId, 'assistant', response.text);
+    appendMessage(chatId, 'assistant', active.plan.diagnostic);
+    active.history.push({ role: 'assistant', content: active.plan.diagnostic });
+    active.step++; // skip diagnostic step since we just sent it
+  } else {
+    await channel.sendMessage(chatId, response.text);
+    appendMessage(chatId, 'user', text);
+    appendMessage(chatId, 'assistant', response.text);
+  }
 
-  // Check if lesson is complete (after application step)
+  // Check if lesson is complete
   if (active.step >= STEPS.length) {
     completeSocraticLesson(chatId, active, text);
   }
 
   return true;
+}
+
+function assessRetrievalQuality(answer, concept) {
+  const words = answer.toLowerCase().split(/\s+/);
+  const conceptWords = concept.toLowerCase().split(/\s+/);
+  const overlap = conceptWords.filter((w) => words.some((aw) => aw.includes(w) || w.includes(aw)));
+
+  if (answer.length < 10) return 'wrong';
+  if (overlap.length >= conceptWords.length * 0.5 && answer.length > 30) return 'easy';
+  if (overlap.length > 0) return 'hard';
+  return 'wrong';
 }
 
 // ── Complete a Socratic lesson ─────────────────────────────
