@@ -32,9 +32,11 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
+    "@supabase/supabase-js": "^2.112.4",
     "better-sqlite3": "^13.0.3",
     "node-cron": "4.2.1",
-    "pino": "^10.3.1"
+    "pino": "^10.3.1",
+    "resend": "^6.25.0"
   },
   "devDependencies": {
     "eslint": "^10.9.1",
