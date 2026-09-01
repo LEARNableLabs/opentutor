@@ -1,14 +1,12 @@
 /**
- * Socratic lesson delivery — multi-turn conversation, not content dump.
+ * Socratic lesson delivery — adaptive multi-turn conversation.
  *
- * Flow:
- *   1. Generate lesson plan (1 strong call): diagnostic, concept, follow-up, application
- *   2. Send diagnostic question → wait for free-text answer
- *   3. Claude reads answer → tailored response + follow-up → wait
- *   4. Claude reads answer → feedback + application challenge → wait
- *   5. Claude reads answer → specific feedback → lesson complete
+ * Three modes based on student state + context:
+ *   Quick    (~1 min):  retrieval check + one question
+ *   Standard (~3-5 min): retrieval → diagnostic → follow-up → application
+ *   Deep     (~8-10 min): adds scaffolding, teach-back, extra examples
  *
- * Each step is a short Claude call that reads the student's actual answer.
+ * Mid-lesson branching: steps expand or contract based on student answers.
  */
 
 import fs from 'fs';
@@ -26,11 +24,34 @@ import { log } from './logger.js';
 
 const coreState = new TutorState(PATHS.root);
 
+// ── Lesson modes ───────────────────────────────────────────
+
+const MODE_STEPS = {
+  quick:    ['retrieval', 'application'],
+  standard: ['retrieval', 'diagnostic', 'followUp', 'application'],
+  deep:     ['retrieval', 'diagnostic', 'scaffolding', 'followUp', 'teachBack', 'application'],
+};
+
+function selectMode(studentModel, constraints, options = {}) {
+  if (options.mode) return options.mode;
+
+  // Scheduled push type
+  if (options.pushType === 'midday') return 'quick';
+  if (options.pushType === 'evening') return 'quick';
+
+  // Student state
+  if (constraints.blocked) return 'deep';
+  if (studentModel.recentAccuracy < 0.3) return 'deep';
+  if (studentModel.recentAccuracy > 0.85 && studentModel.trend === 'improving') return 'quick';
+  if (studentModel.engagement === 'low' || studentModel.engagement === 'declining') return 'quick';
+  if (studentModel.trend === 'declining') return 'deep';
+
+  return 'standard';
+}
+
 // ── Active lessons (in-flight Socratic conversations) ──────
 
 const activeLessons = {};
-
-const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 
 export function getActiveLesson(chatId) {
   return activeLessons[chatId] || null;
@@ -106,9 +127,16 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     : null;
   const interleaveConcept = interleaveSource?.concepts?.[0] || null;
 
-  // Build student model + directives context
+  // Build student model and select mode
   const studentModel = buildStudentModel(learningMd, curriculum, userProfile);
   const modelText = formatStudentModel(studentModel);
+  const mode = selectMode(studentModel, constraints);
+  const steps = [...MODE_STEPS[mode]];
+
+  // Skip retrieval if no concept is due
+  if (!retrievalConcept && steps[0] === 'retrieval') steps.shift();
+
+  log.info({ topic: topicSlug, mode, steps: steps.length }, 'lesson mode selected');
 
   // Build directive context for the lesson planner
   const directiveContext = [];
@@ -119,6 +147,9 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   if (retrievalConcept) directiveContext.push(`RETRIEVAL: open with a retrieval check on "${retrievalConcept}" before the diagnostic`);
   if (interleaveConcept) directiveContext.push(`INTERLEAVE: connect the follow-up question to "${interleaveConcept}" from a different module`);
   directiveContext.push('SELF-EXPLANATION: in the application step, ask the student to explain the concept in their own words');
+  directiveContext.push(`MODE: ${mode} (${steps.join(' → ')})`);
+  if (mode === 'quick') directiveContext.push('QUICK MODE: keep it brief — retrieval + one question/challenge, done in 60 seconds');
+  if (mode === 'deep') directiveContext.push('DEEP MODE: add extra scaffolding and a teach-back step where the student explains the concept to you');
   const directiveText = directiveContext.length ? `\n\n## Deliberate Practice Directives\n${directiveContext.join('\n')}` : '';
 
   // Generate lesson plan (1 strong call)
@@ -144,13 +175,15 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     };
   }
 
-  // Store active lesson state
+  // Store active lesson state with dynamic steps
   activeLessons[chatId] = {
     topicSlug,
     lessonDay,
     lesson,
     plan: lessonPlan,
+    steps,
     step: 0,
+    mode,
     history: [],
     studentModel,
     startedAt: Date.now(),
@@ -183,12 +216,27 @@ export async function handleLessonAnswer(text, chatId, channel) {
   const active = activeLessons[chatId];
   if (!active) return false;
 
+  // Student autonomy: allow explicit control
+  const lower = text.toLowerCase().trim();
+  if (lower === 'skip' || lower === 'move on' || lower === 'next') {
+    completeSocraticLesson(chatId, active, text);
+    await channel.sendMessage(chatId, "Got it — moving on. Type /next when you're ready.");
+    return true;
+  }
+  if (lower === 'go deeper' || lower === 'explain more') {
+    if (active.mode !== 'deep') {
+      active.steps.splice(active.step + 1, 0, 'scaffolding');
+      active.mode = 'deep';
+      log.info({ topic: active.topicSlug }, 'student requested deeper — adding scaffolding step');
+    }
+  }
+
   await channel.sendTyping(chatId);
 
-  const stepName = STEPS[active.step];
+  const stepName = active.steps[active.step];
   active.history.push({ role: 'user', content: text });
 
-  log.info({ topic: active.topicSlug, lessonDay: active.lessonDay, step: stepName }, 'student answered');
+  log.info({ topic: active.topicSlug, lessonDay: active.lessonDay, step: stepName, mode: active.mode }, 'student answered');
 
   // Handle retrieval step — update SM-2 before generating response
   if (stepName === 'retrieval' && active.retrievalConcept) {
@@ -207,15 +255,28 @@ export async function handleLessonAnswer(text, chatId, channel) {
   active.history.push({ role: 'assistant', content: response.text });
   active.step++;
 
+  // Mid-lesson branching: detect if student is breezing through
+  if (active.mode === 'standard' && active.step < active.steps.length - 1) {
+    if (text.length > 80 && active.history.length <= 4) {
+      // Strong answer early — consider skipping follow-up
+      const nextStep = active.steps[active.step];
+      if (nextStep === 'followUp' && assessRetrievalQuality(text, active.lesson.title) === 'easy') {
+        active.steps.splice(active.step, 1); // remove followUp
+        log.info({ topic: active.topicSlug }, 'student nailed it — skipping follow-up');
+      }
+    }
+  }
+
   // If transitioning from retrieval to diagnostic, prepend the goal
-  if (STEPS[active.step] === 'diagnostic' && active.plan.goal) {
+  const nextStep = active.steps[active.step];
+  if (nextStep === 'diagnostic' && active.plan.goal) {
     const goalMsg = `<b>Today's goal:</b> ${active.plan.goal}`;
     await channel.sendMessage(chatId, response.text + '\n\n' + goalMsg + '\n\n' + active.plan.diagnostic);
     appendMessage(chatId, 'user', text);
     appendMessage(chatId, 'assistant', response.text);
     appendMessage(chatId, 'assistant', active.plan.diagnostic);
     active.history.push({ role: 'assistant', content: active.plan.diagnostic });
-    active.step++; // skip diagnostic step since we just sent it
+    active.step++;
   } else {
     await channel.sendMessage(chatId, response.text);
     appendMessage(chatId, 'user', text);
@@ -223,7 +284,14 @@ export async function handleLessonAnswer(text, chatId, channel) {
   }
 
   // Check if lesson is complete
-  if (active.step >= STEPS.length) {
+  if (active.step >= active.steps.length) {
+    // Offer autonomy choice at the end
+    const autonomyMsg = active.mode !== 'quick'
+      ? '\n\nWant to <b>go deeper</b> on this, or <b>move on</b> to the next topic?'
+      : '';
+    if (autonomyMsg) {
+      await channel.sendMessage(chatId, autonomyMsg);
+    }
     completeSocraticLesson(chatId, active, text);
   }
 
