@@ -16,6 +16,7 @@ import path from 'path';
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../../lib/core/student-model.js';
+import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives } from '../../lib/core/deliberate-practice.js';
 import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
@@ -52,17 +53,58 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   await channel.sendTyping(chatId);
 
   const lessonDay = lesson.day || lesson.lesson;
-  log.info({ topic: topicSlug, lesson_id: lessonDay, title: lesson.title }, 'generating lesson plan');
-
-  // Build student model from learning history
   const learningMd = readDomainFile(topicSlug, 'learning.md') || '';
   const curriculum = readCurriculum(topicSlug);
   const userProfile = readUser();
+
+  // Read and enforce deliberate practice directives
+  const feedbackMd = readDomainFile(topicSlug, 'practice-feedback.md') || '';
+  const directives = parseDirectives(feedbackMd);
+  const constraints = applyDirectives(directives);
+
+  // BLOCK — if a concept must be retested before advancing
+  if (constraints.blocked) {
+    log.info({ topic: topicSlug, blocked: constraints.blockedConcept }, 'blocked by deliberate practice');
+    await channel.sendMessage(chatId, `Before we move on, let's make sure you've got <b>${constraints.blockedConcept}</b> down.\n\nExplain it to me in your own words — what is it and why does it matter?`);
+
+    activeLessons[chatId] = {
+      topicSlug,
+      lessonDay,
+      lesson,
+      plan: {
+        diagnostic: `Explain "${constraints.blockedConcept}" in your own words.`,
+        concept: `This concept is foundational for what comes next.`,
+        followUp: `Can you give a concrete example of ${constraints.blockedConcept}?`,
+        application: `How would you use this concept in a real situation?`,
+        commonMisconceptions: [],
+        goal: `Demonstrate solid understanding of ${constraints.blockedConcept}`,
+      },
+      step: 0,
+      history: [],
+      studentModel: buildStudentModel(learningMd, curriculum, userProfile),
+      startedAt: Date.now(),
+      isReview: true,
+      reviewConcept: constraints.blockedConcept,
+    };
+    return;
+  }
+
+  log.info({ topic: topicSlug, lesson_id: lessonDay, title: lesson.title, constraints }, 'generating lesson plan');
+
+  // Build student model + directives context
   const studentModel = buildStudentModel(learningMd, curriculum, userProfile);
   const modelText = formatStudentModel(studentModel);
 
+  // Build directive context for the lesson planner
+  const directiveContext = [];
+  if (constraints.difficultyOverride) directiveContext.push(`DIFFICULTY OVERRIDE: set to ${constraints.difficultyOverride}`);
+  if (constraints.formatOverride) directiveContext.push(`FORMAT OVERRIDE: use ${constraints.formatOverride} format`);
+  if (constraints.revisitConcepts.length) directiveContext.push(`REVISIT: weave in review of: ${constraints.revisitConcepts.join(', ')}`);
+  if (constraints.requireGoal) directiveContext.push('GOAL REQUIRED: open with explicit testable goal, close with self-assessment');
+  const directiveText = directiveContext.length ? `\n\n## Deliberate Practice Directives\n${directiveContext.join('\n')}` : '';
+
   // Generate lesson plan (1 strong call)
-  const planPrompt = buildLessonPlanPrompt(coreState, skills, lesson, topicSlug, modelText);
+  const planPrompt = buildLessonPlanPrompt(coreState, skills, lesson, topicSlug, modelText + directiveText);
   const planResponse = await generate(planPrompt.system, [
     { role: 'user', content: `Plan a Socratic lesson for Day ${lessonDay}: "${lesson.title}"` },
   ], { model: planPrompt.model, outputMode: planPrompt.outputMode });
@@ -143,22 +185,45 @@ export async function handleLessonAnswer(text, chatId, channel) {
 function completeSocraticLesson(chatId, active, lastAnswer) {
   const { topicSlug, lessonDay, lesson, plan, studentModel, startedAt } = active;
 
-  // Determine engagement from conversation quality
   const engagement = assessEngagement(active.history);
 
-  appendMemory(`Socratic lesson completed: Day ${lessonDay} — ${lesson.title} (${topicSlug}). ${active.history.length} exchanges, engagement: ${engagement}`);
-  markLessonComplete(topicSlug, lessonDay, engagement);
+  // Skip marking complete if this was a review (BLOCK directive)
+  if (!active.isReview) {
+    appendMemory(`Socratic lesson completed: Day ${lessonDay} — ${lesson.title} (${topicSlug}). ${active.history.length} exchanges, engagement: ${engagement}`);
+    markLessonComplete(topicSlug, lessonDay, engagement);
 
-  if (lesson.concepts?.length) {
-    registerLessonConcepts(topicSlug, lesson.concepts);
+    if (lesson.concepts?.length) {
+      registerLessonConcepts(topicSlug, lesson.concepts);
+    }
+  } else {
+    appendMemory(`Review completed: ${active.reviewConcept} (${topicSlug}). Engagement: ${engagement}`);
   }
 
   writeLearningLog(topicSlug, lesson, active);
+
+  // Run DeliberatePractitioner — evaluate and write directives
+  try {
+    const learningMd = readDomainFile(topicSlug, 'learning.md') || '';
+    const curriculum = readCurriculum(topicSlug);
+    const userProfile = readUser();
+    const evaluation = evaluatePractice(learningMd, curriculum, userProfile);
+    const feedback = formatPracticeFeedback(evaluation, curriculum?.topic || topicSlug);
+    writeDomainFile(topicSlug, 'practice-feedback.md', feedback);
+
+    const criticalDirectives = evaluation.directives.filter((d) => d.priority === 'critical' || d.priority === 'high');
+    if (criticalDirectives.length) {
+      log.info({ topic: topicSlug, directives: criticalDirectives.map((d) => `${d.type}:${d.target}`) }, 'deliberate practice directives issued');
+    }
+  } catch (err) {
+    log.warn({ err, topic: topicSlug }, 'deliberate practice evaluation failed');
+  }
+
   clearActiveLesson(chatId);
 
   log.info({
     topic: topicSlug,
     lessonDay,
+    isReview: !!active.isReview,
     exchanges: active.history.length,
     engagement,
     duration_ms: Date.now() - startedAt,
