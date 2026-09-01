@@ -5,7 +5,7 @@ export default async function handler(req, res) {
 
   try {
     const state = await getState();
-    res.status(200).json(state.readProgress());
+    res.status(200).json(await state.readProgress());
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

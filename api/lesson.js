@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     const skills = getSkills();
     const { topicSlug } = req.body;
 
-    const lesson = state.getNextLesson(topicSlug);
+    const lesson = await state.getNextLesson(topicSlug);
     if (!lesson) {
       return res.status(200).json({ done: true, message: 'All lessons completed!' });
     }
@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       { model: prompt.model },
     );
 
-    state.markLessonComplete(topicSlug, lessonDay, 'delivered');
+    await state.markLessonComplete(topicSlug, lessonDay, 'delivered');
 
     res.status(200).json({
       lesson: { day: lessonDay, title: lesson.title, module: lesson.module },

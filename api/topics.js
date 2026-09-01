@@ -5,11 +5,12 @@ export default async function handler(req, res) {
 
   try {
     const state = await getState();
-    const topics = state.listTopics();
-    const data = topics.map((slug) => ({
-      slug,
-      ...state.getTopicProgress(slug),
-    })).filter((t) => t.topic);
+    const topics = await state.listTopics();
+    const data = [];
+    for (const slug of topics) {
+      const progress = await state.getTopicProgress(slug);
+      if (progress?.topic) data.push({ slug, ...progress });
+    }
     res.status(200).json(data);
   } catch (err) {
     res.status(500).json({ error: err.message });

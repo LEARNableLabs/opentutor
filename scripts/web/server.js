@@ -89,26 +89,27 @@ async function handleAPI(req, res, url) {
   try {
     // GET /api/topics — list all topics with progress
     if (req.method === 'GET' && url.pathname === '/api/topics') {
-      const topics = state.listTopics();
-      const data = topics.map((slug) => ({
-        slug,
-        ...state.getTopicProgress(slug),
-      })).filter((t) => t.topic);
+      const topics = await state.listTopics();
+      const data = [];
+      for (const slug of topics) {
+        const progress = await state.getTopicProgress(slug);
+        if (progress?.topic) data.push({ slug, ...progress });
+      }
       return json(res, data);
     }
 
     // GET /api/topics/:slug — single topic detail
     if (req.method === 'GET' && url.pathname.match(/^\/api\/topics\/[^/]+$/)) {
       const slug = url.pathname.split('/').pop();
-      const curriculum = state.readCurriculum(slug);
-      const learning = state.readDomainFile(slug, 'learning.md');
-      const progress = state.getTopicProgress(slug);
+      const curriculum = await state.readCurriculum(slug);
+      const learning = await state.readDomainFile(slug, 'learning.md');
+      const progress = await state.getTopicProgress(slug);
       return json(res, { curriculum, learning, progress });
     }
 
     // GET /api/progress — active topics and schedule
     if (req.method === 'GET' && url.pathname === '/api/progress') {
-      return json(res, state.readProgress());
+      return json(res, await state.readProgress());
     }
 
     // POST /api/lesson — deliver next lesson
@@ -116,7 +117,7 @@ async function handleAPI(req, res, url) {
       const body = await readBody(req);
       const { topicSlug } = JSON.parse(body);
 
-      const lesson = state.getNextLesson(topicSlug);
+      const lesson = await state.getNextLesson(topicSlug);
       if (!lesson) {
         return json(res, { done: true, message: 'All lessons completed!' });
       }
@@ -129,7 +130,7 @@ async function handleAPI(req, res, url) {
         { model: prompt.model },
       );
 
-      state.markLessonComplete(topicSlug, lessonDay, { delivered: true });
+      await state.markLessonComplete(topicSlug, lessonDay, 'delivered');
 
       return json(res, {
         lesson: { day: lessonDay, title: lesson.title, module: lesson.module },
@@ -140,8 +141,8 @@ async function handleAPI(req, res, url) {
 
     // GET /api/user — get student profile
     if (req.method === 'GET' && url.pathname === '/api/user') {
-      const user = state.readUser();
-      const progress = state.readProgress();
+      const user = await state.readUser();
+      const progress = await state.readProgress();
       const hasProfile = user.includes('**Name:**') && !user.match(/\*\*Name:\*\*\s*$/m);
       return json(res, { profile: user, hasProfile, onboarded: progress.active_topics?.length > 0 });
     }
@@ -151,7 +152,7 @@ async function handleAPI(req, res, url) {
       const body = await readBody(req);
       const data = JSON.parse(body);
       const profile = buildUserProfile(data);
-      state.writeUser(profile);
+      await state.writeUser(profile);
       return json(res, { ok: true });
     }
 
@@ -160,7 +161,7 @@ async function handleAPI(req, res, url) {
       const body = await readBody(req);
       const { message, history } = JSON.parse(body);
 
-      const user = state.readUser();
+      const user = await state.readUser();
       const system = [
         '## Study Buddy Onboarding',
         'You are a warm, sharp study buddy meeting a new student. Keep it natural — not a form.',
@@ -189,7 +190,7 @@ async function handleAPI(req, res, url) {
       const body = await readBody(req);
       const { message, topicSlug } = JSON.parse(body);
 
-      const user = state.readUser();
+      const user = await state.readUser();
       const system = [
         '## Study Buddy\n\nYou are a warm, sharp study buddy. Be concise. 1-3 sentences for simple questions.',
         user ? `## Student\n\n${user}` : '',
@@ -210,9 +211,9 @@ async function handleAPI(req, res, url) {
       const { topic, level } = JSON.parse(body);
       const slug = slugify(topic);
 
-      const existing = state.readCurriculum(slug);
+      const existing = await state.readCurriculum(slug);
       if (existing?.lessons?.length) {
-        state.updateProgress((p) => {
+        await state.updateProgress((p) => {
           if (!p.active_topics) p.active_topics = [];
           if (!p.active_topics.includes(slug)) p.active_topics.push(slug);
         });
@@ -231,7 +232,7 @@ async function handleAPI(req, res, url) {
         console.error('[pipeline] failed:', err.message);
       });
 
-      state.updateProgress((p) => {
+      await state.updateProgress((p) => {
         if (!p.active_topics) p.active_topics = [];
         if (!p.active_topics.includes(slug)) p.active_topics.push(slug);
       });

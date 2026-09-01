@@ -5,8 +5,8 @@ export default async function handler(req, res) {
     const state = await getState();
 
     if (req.method === 'GET') {
-      const user = state.readUser();
-      const progress = state.readProgress();
+      const user = await state.readUser();
+      const progress = await state.readProgress();
       const hasProfile = user.includes('**Name:**') && !user.match(/\*\*Name:\*\*\s*$/m);
       return res.status(200).json({ profile: user, hasProfile, onboarded: progress.active_topics?.length > 0 });
     }
@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
       const data = req.body;
       const profile = buildUserProfile(data);
-      state.writeUser(profile);
+      await state.writeUser(profile);
       return res.status(200).json({ ok: true });
     }
 

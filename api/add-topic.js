@@ -9,9 +9,9 @@ export default async function handler(req, res) {
     const { topic, level } = req.body;
     const slug = slugify(topic);
 
-    const existing = state.readCurriculum(slug);
+    const existing = await state.readCurriculum(slug);
     if (existing?.lessons?.length) {
-      state.updateProgress((p) => {
+      await state.updateProgress((p) => {
         if (!p.active_topics) p.active_topics = [];
         if (!p.active_topics.includes(slug)) p.active_topics.push(slug);
       });
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     }
 
     // Register topic immediately
-    state.updateProgress((p) => {
+    await state.updateProgress((p) => {
       if (!p.active_topics) p.active_topics = [];
       if (!p.active_topics.includes(slug)) p.active_topics.push(slug);
     });

@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     const adapter = getAdapter();
     const { message } = req.body;
 
-    const user = state.readUser();
+    const user = await state.readUser();
     const system = [
       '## Study Buddy\n\nYou are a warm, sharp study buddy. Be concise. 1-3 sentences for simple questions.',
       user ? `## Student\n\n${user}` : '',
