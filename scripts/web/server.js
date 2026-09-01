@@ -67,8 +67,8 @@ const server = http.createServer(async (req, res) => {
     return handleAPI(req, res, url);
   }
 
-  // Static files
-  let filePath = path.join(__dirname, 'public', url.pathname === '/' ? 'index.html' : url.pathname);
+  // Static files (served from root public/)
+  let filePath = path.join(ROOT, 'public', url.pathname === '/' ? 'index.html' : url.pathname);
   const ext = path.extname(filePath);
 
   try {
