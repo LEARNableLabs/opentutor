@@ -226,7 +226,7 @@ async function handleAPI(req, res, url) {
     // POST /api/chat — free-form chat
     if (req.method === 'POST' && url.pathname === '/api/chat') {
       const body = await readBody(req);
-      const { message, topicSlug } = JSON.parse(body);
+      const { message } = JSON.parse(body);
 
       const user = await state.readUser();
       const system = [

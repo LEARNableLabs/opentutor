@@ -39,6 +39,9 @@ jobs:
 
       - run: npm ci
 
+      - name: ESLint
+        run: npm run lint
+
       - name: Syntax check core
         run: |
           for f in lib/core/*.js lib/adapters/*.js; do
