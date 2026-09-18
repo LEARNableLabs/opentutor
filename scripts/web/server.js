@@ -58,6 +58,8 @@ const MIME = {
   '.js': 'application/javascript',
   '.json': 'application/json',
   '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.ico': 'image/x-icon',
 };
 
 const server = http.createServer(async (req, res) => {
@@ -73,7 +75,7 @@ const server = http.createServer(async (req, res) => {
   const ext = path.extname(filePath);
 
   try {
-    const content = fs.readFileSync(filePath, 'utf-8');
+    const content = fs.readFileSync(filePath); // raw bytes — decoding as UTF-8 corrupts images
     res.writeHead(200, { 'Content-Type': MIME[ext] || 'text/plain' });
     res.end(content);
   } catch {
