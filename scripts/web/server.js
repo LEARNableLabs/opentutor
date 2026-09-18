@@ -12,8 +12,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { TutorStore } from '../../lib/core/store.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
-import { buildTeacherPrompt } from '../../lib/core/prompts.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
+import { lessonTurn } from '../../api/lesson.js';
 import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -150,31 +150,11 @@ async function handleAPI(req, res, url) {
       return json(res, { ...progress, streak, topics });
     }
 
-    // POST /api/lesson — deliver next lesson
+    // POST /api/lesson — one turn of the Socratic lesson (same implementation as the Vercel route)
     if (req.method === 'POST' && url.pathname === '/api/lesson') {
-      const body = await readBody(req);
-      const { topicSlug } = JSON.parse(body);
-
-      const lesson = await state.getNextLesson(topicSlug);
-      if (!lesson) {
-        return json(res, { done: true, message: 'All lessons completed!' });
-      }
-
-      const prompt = buildTeacherPrompt(state, skills, lesson, topicSlug);
-      const lessonDay = lesson.day || lesson.lesson;
-      const response = await chatAdapter.generate(
-        prompt.system + '\n\nReturn only polished text. No commentary.',
-        [{ role: 'user', content: `Deliver lesson Day ${lessonDay}: "${lesson.title}"` }],
-        { model: prompt.model },
-      );
-
-      await state.markLessonComplete(topicSlug, lessonDay, 'delivered');
-
-      return json(res, {
-        lesson: { day: lessonDay, title: lesson.title, module: lesson.module },
-        content: response.text,
-        model: response.model,
-      });
+      const { status, body } = await lessonTurn({ state, adapter: chatAdapter, skills }, JSON.parse(await readBody(req)));
+      res.writeHead(status);
+      return res.end(JSON.stringify(body, null, 2));
     }
 
     // GET /api/user — get student profile
