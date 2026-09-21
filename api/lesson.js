@@ -38,21 +38,21 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
 
   // ── Continue active lesson ────────────────────────────────
   if (answer !== undefined && answer !== null) {
-    const activeRaw = readKV(state, kvKey);
+    const activeRaw = await state.readKV(kvKey);
     if (!activeRaw) {
       return { status: 400, body: { error: 'No active lesson. Start one without an answer field.' } };
     }
 
-    const active = JSON.parse(activeRaw);
+    const active = typeof activeRaw === 'string' ? JSON.parse(activeRaw) : activeRaw;
     const stepName = STEPS[active.step];
     if (!stepName) {
-      deleteKV(state, kvKey);
+      await state.deleteKV(kvKey);
       return { status: 200, body: { done: true, message: 'Lesson already complete.' } };
     }
 
     active.history.push({ role: 'user', content: answer });
 
-    const user = readUserSafe(state);
+    const user = await safely(() => state.readUser(), '');
     const responsePrompt = buildSocraticResponsePrompt(active.plan, answer, stepName, user);
     const response = await adapter.generate(
       responsePrompt.system + '\n\nReturn only polished text.',
@@ -68,25 +68,25 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
 
     if (done) {
       const day = active.lessonDay;
-      markCompleteSafe(state, active.topicSlug, day);
-      deleteKV(state, kvKey);
+      await safely(() => state.markLessonComplete(active.topicSlug, day, 'delivered'));
+      await state.deleteKV(kvKey);
     } else {
-      writeKV(state, kvKey, JSON.stringify(active));
+      await state.writeKV(kvKey, JSON.stringify(active));
     }
 
     return { status: 200, body: { reply, step: active.step, totalSteps: STEPS.length, done, lesson: active.lesson } };
   }
 
   // ── Start new lesson ──────────────────────────────────────
-  const lesson = getNextLessonSafe(state, topicSlug);
+  const lesson = await safely(() => state.getNextLesson(topicSlug));
   if (!lesson) {
     return { status: 200, body: { done: true, message: 'All lessons completed!' } };
   }
 
   const lessonDay = lesson.day || lesson.lesson;
-  const learningMd = state.readDomainFile(topicSlug, 'learning.md') || '';
-  const curriculum = readCurriculumSafe(state, topicSlug);
-  const user = readUserSafe(state);
+  const learningMd = (await safely(() => state.readDomainFile(topicSlug, 'learning.md'), '')) || '';
+  const curriculum = await safely(() => state.readCurriculum(topicSlug));
+  const user = await safely(() => state.readUser(), '');
   const studentModel = buildStudentModel(learningMd, curriculum, user);
   const modelText = formatStudentModel(studentModel);
 
@@ -119,7 +119,7 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
     history: [],
   };
 
-  writeKV(state, kvKey, JSON.stringify(active));
+  await state.writeKV(kvKey, JSON.stringify(active));
 
   const firstMessage = plan.retrieval || plan.diagnostic;
   const goalPrefix = plan.goal ? `**Goal:** ${plan.goal}\n\n` : '';
@@ -127,40 +127,11 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
   return { status: 200, body: { reply: goalPrefix + firstMessage, step: 0, totalSteps: STEPS.length, done: false, lesson: active.lesson } };
 }
 
-// ── Helpers (handle both sync TutorStore and async SupabaseStore) ──
+// ── Helpers ────────────────────────────────────────────────
+//
+// Store methods are sync on TutorState/TutorStore and async on SupabaseStore,
+// so everything here is awaited — awaiting a plain value is a no-op.
 
-function readKV(state, key) {
-  if (state.db) {
-    const row = state.db.prepare('SELECT value FROM kv WHERE key = ?').get(key);
-    return row?.value || null;
-  }
-  return null;
-}
-
-function writeKV(state, key, value) {
-  if (state.db) {
-    state.db.prepare('INSERT OR REPLACE INTO kv (key, value) VALUES (?, ?)').run(key, value);
-  }
-}
-
-function deleteKV(state, key) {
-  if (state.db) {
-    state.db.prepare('DELETE FROM kv WHERE key = ?').run(key);
-  }
-}
-
-function readUserSafe(state) {
-  try { return state.readUser(); } catch { return ''; }
-}
-
-function readCurriculumSafe(state, slug) {
-  try { return state.readCurriculum(slug); } catch { return null; }
-}
-
-function getNextLessonSafe(state, slug) {
-  try { return state.getNextLesson(slug); } catch { return null; }
-}
-
-function markCompleteSafe(state, slug, day) {
-  try { state.markLessonComplete(slug, day, 'delivered'); } catch {}
+async function safely(fn, fallback = null) {
+  try { return await fn(); } catch { return fallback; }
 }
