@@ -43,7 +43,7 @@ export default async function handler(req, res) {
       await send(chatId, '<b>Commands</b>\n/next — Next lesson\n/start — Begin\n/help — This message\n\nOr just type naturally.');
     } else {
       const kvKey = `tg_lesson:${chatId}`;
-      const activeRaw = readKV(state, kvKey);
+      const activeRaw = await state.readKV(kvKey);
       if (activeRaw) {
         await continueLesson(chatId, text, state, adapter);
       } else {
@@ -61,21 +61,21 @@ export default async function handler(req, res) {
 }
 
 async function startLesson(chatId, state, adapter, skills) {
-  const progress = state.readProgress();
+  const progress = await state.readProgress();
   const topicSlug = progress.active_topics?.[0];
   if (!topicSlug) {
     return send(chatId, 'No active topics. Send a topic name to start learning.');
   }
 
-  const lesson = state.getNextLesson(topicSlug);
+  const lesson = await state.getNextLesson(topicSlug);
   if (!lesson) {
     return send(chatId, 'All lessons complete! Send a new topic to keep learning.');
   }
 
   const lessonDay = lesson.day || lesson.lesson;
-  const learningMd = state.readDomainFile(topicSlug, 'learning.md') || '';
-  const curriculum = state.readCurriculum(topicSlug);
-  const user = state.readUser();
+  const learningMd = (await state.readDomainFile(topicSlug, 'learning.md')) || '';
+  const curriculum = await state.readCurriculum(topicSlug);
+  const user = await state.readUser();
   const studentModel = buildStudentModel(learningMd, curriculum, user);
 
   const planPrompt = buildLessonPlanPrompt(state, skills, lesson, topicSlug, formatStudentModel(studentModel));
@@ -92,7 +92,7 @@ async function startLesson(chatId, state, adapter, skills) {
     plan = { diagnostic: `What do you know about ${(lesson.concepts || []).join(' and ')}?`, goal: lesson.title };
   }
 
-  writeKV(state, `tg_lesson:${chatId}`, JSON.stringify({
+  await state.writeKV(`tg_lesson:${chatId}`, JSON.stringify({
     topicSlug, lessonDay,
     lesson: { day: lessonDay, title: lesson.title, module: lesson.module, concepts: lesson.concepts },
     plan, step: 0, history: [],
@@ -105,12 +105,14 @@ async function startLesson(chatId, state, adapter, skills) {
 
 async function continueLesson(chatId, answer, state, adapter) {
   const kvKey = `tg_lesson:${chatId}`;
-  const active = JSON.parse(readKV(state, kvKey));
+  const raw = await state.readKV(kvKey);
+  if (!raw) return;
+  const active = typeof raw === 'string' ? JSON.parse(raw) : raw;
   const stepName = STEPS[active.step];
-  if (!stepName) { deleteKV(state, kvKey); return; }
+  if (!stepName) { await state.deleteKV(kvKey); return; }
 
   active.history.push({ role: 'user', content: answer });
-  const user = state.readUser();
+  const user = await state.readUser();
   const prompt = buildSocraticResponsePrompt(active.plan, answer, stepName, user);
   const response = await adapter.generate(
     prompt.system + '\n\nReturn only polished text. Telegram HTML.',
@@ -118,33 +120,18 @@ async function continueLesson(chatId, answer, state, adapter) {
     { model: prompt.model },
   );
 
-  active.history.push({ role: 'assistant', content: response.text });
+  const reply = response.text.replace(/<assessment>[\s\S]*?<\/assessment>\s*/g, '').trim();
+  active.history.push({ role: 'assistant', content: reply });
   active.step++;
 
   if (active.step >= STEPS.length) {
-    state.markLessonComplete(active.topicSlug, active.lessonDay, 'delivered');
-    deleteKV(state, kvKey);
-    await send(chatId, response.text + '\n\nType /next for the next lesson.');
+    await state.markLessonComplete(active.topicSlug, active.lessonDay, 'delivered');
+    await state.deleteKV(kvKey);
+    await send(chatId, reply + '\n\nType /next for the next lesson.');
   } else {
-    writeKV(state, kvKey, JSON.stringify(active));
-    await send(chatId, response.text);
+    await state.writeKV(kvKey, JSON.stringify(active));
+    await send(chatId, reply);
   }
-}
-
-function readKV(state, key) {
-  if (state.db) {
-    const row = state.db.prepare('SELECT value FROM kv WHERE key = ?').get(key);
-    return row?.value || null;
-  }
-  return null;
-}
-
-function writeKV(state, key, value) {
-  if (state.db) state.db.prepare('INSERT OR REPLACE INTO kv (key, value) VALUES (?, ?)').run(key, value);
-}
-
-function deleteKV(state, key) {
-  if (state.db) state.db.prepare('DELETE FROM kv WHERE key = ?').run(key);
 }
 
 async function send(chatId, text) {

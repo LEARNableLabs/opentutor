@@ -1,14 +1,18 @@
 /**
- * Claude wrapper — uses Claude Code CLI by default, Anthropic SDK as alternative.
- * Set CLAUDE_BACKEND=sdk in .env to use the SDK (requires ANTHROPIC_API_KEY).
+ * LLM wrapper for the bot.
+ *
+ * Backend selection is delegated to `lib/adapters`, so the bot honours the same
+ * `OPENTUTOR_LLM` (and `OPENTUTOR_PIPELINE_LLM`) as the web server, the Vercel
+ * routes and the curriculum pipeline. The bot's historical `CLAUDE_BACKEND`
+ * (`sdk` | `cli`) still works — the factory accepts both names.
+ *
+ * What stays here is what the adapters deliberately don't know about: the
+ * prompt-injection safety boundary, the output contract, and retry policy.
  */
 
-import { spawn } from 'child_process';
+import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
 import { log } from './logger.js';
 import { retry } from './helpers.js';
-
-const BACKEND = process.env.CLAUDE_BACKEND || 'cli';
-const PIPELINE_BACKEND = process.env.CLAUDE_PIPELINE_BACKEND || BACKEND;
 
 const INTERNAL_SAFETY_BOUNDARY = `## Non-negotiable safety boundary
 
@@ -25,20 +29,6 @@ Return only polished text that can be sent directly to the student. Do not prefa
 Return exactly one valid JSON value matching the requested schema. Do not use Markdown fences, explanatory prose, or a preamble.`,
 };
 
-function escapeXml(value) {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;');
-}
-
-export function buildCliConversation(messages) {
-  const turns = messages
-    .filter((message) => ['user', 'assistant'].includes(message.role))
-    .map(({ role, content }) => ({ role, content: String(content) }));
-  return `<conversation_json>\n${escapeXml(JSON.stringify(turns))}\n</conversation_json>`;
-}
-
 export function buildOutputBoundary(outputMode = 'student') {
   const outputContract = OUTPUT_BOUNDARIES[outputMode];
   if (!outputContract) throw new Error(`Unsupported output mode: ${outputMode}`);
@@ -46,121 +36,29 @@ export function buildOutputBoundary(outputMode = 'student') {
 }
 
 /**
- * Generate a response from Claude.
+ * Generate a response from the configured LLM.
  * @param {string} system - System prompt
  * @param {Array} messages - Conversation messages [{role, content}]
  * @param {object} options
- * @param {'cheap'|'strong'} options.model - Model tier hint (used by SDK backend)
+ * @param {'cheap'|'strong'} options.model - Model tier hint
  * @param {'student'|'json'} options.outputMode - Required output contract
+ * @param {boolean} options.pipeline - Use the pipeline backend instead of the chat one
  */
 export async function generate(system, messages, options = {}) {
   const start = Date.now();
-  const useBackend = options.pipeline ? PIPELINE_BACKEND : BACKEND;
-  const backend = useBackend === 'sdk' ? 'sdk' : 'cli';
+  const adapter = options.pipeline ? createPipelineAdapterFromEnv() : createAdapterFromEnv();
   const guardedSystem = `${system}\n\n${buildOutputBoundary(options.outputMode)}`;
-  log.info({ backend, model: options.model || 'default', pipeline: !!options.pipeline }, 'claude generate start');
+
+  log.info({ backend: adapter.name, model: options.model || 'default', pipeline: !!options.pipeline }, 'llm generate start');
   try {
     const result = await retry(
-      () => useBackend === 'sdk'
-        ? generateSDK(guardedSystem, messages, options)
-        : generateCLI(guardedSystem, messages, options),
-      { maxAttempts: 3, baseDelay: 2000, label: `claude:${backend}` }
+      () => adapter.generate(guardedSystem, messages, options),
+      { maxAttempts: 3, baseDelay: 2000, label: `llm:${adapter.name}` },
     );
-    log.info({ backend, latency_ms: Date.now() - start, model: result.model }, 'claude generate done');
+    log.info({ backend: adapter.name, latency_ms: Date.now() - start, model: result.model }, 'llm generate done');
     return result;
   } catch (err) {
-    log.error({ err, backend, latency_ms: Date.now() - start }, 'claude generate failed');
+    log.error({ err, backend: adapter.name, latency_ms: Date.now() - start }, 'llm generate failed');
     throw err;
   }
-}
-
-// ── Claude Code CLI backend ─────────────────────────────────
-
-async function generateCLI(system, messages, options = {}) {
-  const prompt = buildCliConversation(messages);
-  const systemPrompt = system;
-
-  return new Promise((resolve, reject) => {
-    let settled = false;
-    let timeout;
-    const settle = (handler, value) => {
-      if (settled) return;
-      settled = true;
-      clearTimeout(timeout);
-      handler(value);
-    };
-
-    // `-p` is Claude CLI's supported non-interactive mode. It reads the prompt
-    // from stdin and exits after printing the response.
-    // The prompt must precede `--tools`; this is the Claude CLI form that
-    // accepts an empty tool list and keeps the tutor out of agent/tool mode.
-    const args = ['-p', '--no-session-persistence', '--system-prompt', systemPrompt, prompt, '--tools', ''];
-    if (options.model === 'cheap') args.push('--effort', 'low');
-    const child = spawn('claude', args, {
-      stdio: ['ignore', 'pipe', 'pipe'],
-    });
-
-    let stdout = '';
-    let stderr = '';
-
-    child.stdout.on('data', (d) => { stdout += d.toString(); });
-    child.stderr.on('data', (d) => { stderr += d.toString(); });
-
-    child.on('close', (code) => {
-      if (code !== 0) {
-        log.error({ exit_code: code, stderr: stderr.slice(0, 200) }, 'claude-cli error');
-        settle(reject, new Error(`Claude CLI exited with code ${code}`));
-        return;
-      }
-      const text = stdout.trim();
-      if (!text) {
-        settle(reject, new Error('Claude CLI returned no student-facing text'));
-        return;
-      }
-      settle(resolve, { text, model: 'claude-code-cli', usage: null });
-    });
-
-    child.on('error', (err) => {
-      settle(reject, new Error(`Claude CLI failed: ${err.message}`));
-    });
-
-    // Timeout after 2 minutes
-    timeout = setTimeout(() => {
-      child.kill();
-      settle(reject, new Error('Claude CLI timed out after 120s'));
-    }, 120_000);
-  });
-}
-
-// ── Anthropic SDK backend (requires ANTHROPIC_API_KEY) ──────
-
-async function generateSDK(system, messages, options = {}) {
-  const { default: Anthropic } = await import('@anthropic-ai/sdk');
-  const { CLAUDE } = await import('./config.js');
-
-  const client = new Anthropic({ apiKey: CLAUDE.apiKey });
-  const tier = options.model || 'cheap';
-  const model = tier === 'strong' ? CLAUDE.strongModel : CLAUDE.cheapModel;
-  const maxTokens = options.maxTokens || (tier === 'strong' ? 4096 : 1024);
-
-  const params = {
-    model,
-    max_tokens: maxTokens,
-    system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
-    messages,
-  };
-
-  // Enable web search for research-heavy tasks
-  if (options.webSearch) {
-    params.tools = [{ type: 'web_search_20250305', name: 'web_search', max_uses: options.webSearchMaxUses || 5 }];
-  }
-
-  const response = await client.messages.create(params);
-
-  const text = response.content
-    .filter((b) => b.type === 'text')
-    .map((b) => b.text)
-    .join('');
-
-  return { text, model, usage: response.usage };
 }

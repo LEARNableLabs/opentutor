@@ -22,7 +22,11 @@
       "lesson": 1,
       "module": "Manifolds and Tangent Spaces",
       "title": "Why isn't the universe just flat Euclidean space?",
-      "concepts": ["manifolds", "curved spaces", "local vs global geometry"],
+      "concepts": [
+        "manifolds",
+        "curved spaces",
+        "local vs global geometry"
+      ],
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
@@ -35,7 +39,12 @@
       "lesson": 2,
       "module": "Manifolds and Tangent Spaces",
       "title": "How do we do calculus on curved surfaces?",
-      "concepts": ["charts", "atlases", "smooth maps", "differentiability"],
+      "concepts": [
+        "charts",
+        "atlases",
+        "smooth maps",
+        "differentiability"
+      ],
       "difficulty": 3,
       "type": "question",
       "resources": [
@@ -48,7 +57,11 @@
       "lesson": 3,
       "module": "Manifolds and Tangent Spaces",
       "title": "What does it mean to have a tangent vector on a curved space?",
-      "concepts": ["tangent vectors", "tangent spaces", "directional derivatives"],
+      "concepts": [
+        "tangent vectors",
+        "tangent spaces",
+        "directional derivatives"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -61,7 +74,11 @@
       "lesson": 4,
       "module": "Manifolds and Tangent Spaces",
       "title": "Why do we need coordinate-independent descriptions?",
-      "concepts": ["coordinate transformations", "tensor transformation laws", "invariance"],
+      "concepts": [
+        "coordinate transformations",
+        "tensor transformation laws",
+        "invariance"
+      ],
       "difficulty": 2,
       "type": "real-world",
       "resources": [
@@ -73,7 +90,11 @@
       "lesson": 5,
       "module": "Manifolds and Tangent Spaces",
       "title": "How do vector fields flow across curved spaces?",
-      "concepts": ["vector fields", "integral curves", "Lie brackets"],
+      "concepts": [
+        "vector fields",
+        "integral curves",
+        "Lie brackets"
+      ],
       "difficulty": 3,
       "type": "question",
       "resources": [
@@ -85,7 +106,11 @@
       "lesson": 6,
       "module": "Tensors and Forms",
       "title": "What have we learned about manifolds and curved spaces?",
-      "concepts": ["manifolds review", "tangent spaces review", "coordinate systems review"],
+      "concepts": [
+        "manifolds review",
+        "tangent spaces review",
+        "coordinate systems review"
+      ],
       "difficulty": 1,
       "type": "review",
       "resources": [
@@ -97,7 +122,11 @@
       "lesson": 7,
       "module": "Tensors and Forms",
       "title": "What exactly is a tensor and why does GR need them?",
-      "concepts": ["tensors", "multilinear maps", "tensor products"],
+      "concepts": [
+        "tensors",
+        "multilinear maps",
+        "tensor products"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -110,7 +139,11 @@
       "lesson": 8,
       "module": "Tensors and Forms",
       "title": "Can we avoid all the index gymnastics?",
-      "concepts": ["differential forms", "exterior derivative", "wedge product"],
+      "concepts": [
+        "differential forms",
+        "exterior derivative",
+        "wedge product"
+      ],
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
@@ -123,7 +156,11 @@
       "lesson": 9,
       "module": "Tensors and Forms",
       "title": "How do we compare tensors at different points?",
-      "concepts": ["covariant derivative", "connection", "parallel transport"],
+      "concepts": [
+        "covariant derivative",
+        "connection",
+        "parallel transport"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -136,7 +173,11 @@
       "lesson": 10,
       "module": "Tensors and Forms",
       "title": "How would you explain parallel transport to someone who only knows vectors in flat space?",
-      "concepts": ["parallel transport", "geodesics", "affine connection"],
+      "concepts": [
+        "parallel transport",
+        "geodesics",
+        "affine connection"
+      ],
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
@@ -149,7 +190,12 @@
       "lesson": 11,
       "module": "Riemannian Geometry",
       "title": "What does the metric tensor actually measure?",
-      "concepts": ["metric tensor", "distances", "angles", "signature"],
+      "concepts": [
+        "metric tensor",
+        "distances",
+        "angles",
+        "signature"
+      ],
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
@@ -162,7 +208,11 @@
       "lesson": 12,
       "module": "Riemannian Geometry",
       "title": "Why does general relativity use a Lorentzian metric?",
-      "concepts": ["Minkowski spacetime", "Lorentzian signature", "causal structure"],
+      "concepts": [
+        "Minkowski spacetime",
+        "Lorentzian signature",
+        "causal structure"
+      ],
       "difficulty": 3,
       "type": "question",
       "resources": [
@@ -175,7 +225,11 @@
       "lesson": 13,
       "module": "Riemannian Geometry",
       "title": "How do tensors, forms, and the metric fit together?",
-      "concepts": ["tensor review", "covariant derivative review", "metric tensor review"],
+      "concepts": [
+        "tensor review",
+        "covariant derivative review",
+        "metric tensor review"
+      ],
       "difficulty": 1,
       "type": "review",
       "resources": [
@@ -187,7 +241,11 @@
       "lesson": 14,
       "module": "Riemannian Geometry",
       "title": "What is the straightest possible path in curved spacetime?",
-      "concepts": ["geodesics", "geodesic equation", "Christoffel symbols"],
+      "concepts": [
+        "geodesics",
+        "geodesic equation",
+        "Christoffel symbols"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -200,7 +258,11 @@
       "lesson": 15,
       "module": "Riemannian Geometry",
       "title": "How do GPS satellites account for curved spacetime?",
-      "concepts": ["geodesics in practice", "time dilation", "gravitational effects"],
+      "concepts": [
+        "geodesics in practice",
+        "time dilation",
+        "gravitational effects"
+      ],
       "difficulty": 2,
       "type": "real-world",
       "resources": [
@@ -212,7 +274,11 @@
       "lesson": 16,
       "module": "Curvature",
       "title": "How do we mathematically capture the idea of curvature?",
-      "concepts": ["Riemann curvature tensor", "tidal forces", "geodesic deviation"],
+      "concepts": [
+        "Riemann curvature tensor",
+        "tidal forces",
+        "geodesic deviation"
+      ],
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
@@ -225,7 +291,11 @@
       "lesson": 17,
       "module": "Curvature",
       "title": "Why do we contract the Riemann tensor to get Ricci curvature?",
-      "concepts": ["Ricci tensor", "Ricci scalar", "contractions"],
+      "concepts": [
+        "Ricci tensor",
+        "Ricci scalar",
+        "contractions"
+      ],
       "difficulty": 4,
       "type": "question",
       "resources": [
@@ -238,7 +308,11 @@
       "lesson": 18,
       "module": "Curvature",
       "title": "Why do parallel lines converge on a sphere?",
-      "concepts": ["parallel transport and curvature", "geometric intuition", "intrinsic curvature"],
+      "concepts": [
+        "parallel transport and curvature",
+        "geometric intuition",
+        "intrinsic curvature"
+      ],
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
@@ -251,7 +325,11 @@
       "lesson": 19,
       "module": "Curvature",
       "title": "How would you explain to a friend why tidal forces reveal curvature?",
-      "concepts": ["geodesic deviation equation", "tidal forces", "curvature detection"],
+      "concepts": [
+        "geodesic deviation equation",
+        "tidal forces",
+        "curvature detection"
+      ],
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
@@ -264,7 +342,11 @@
       "lesson": 20,
       "module": "Einstein's Field Equations",
       "title": "What do curvature tensors tell us about the geometry of spacetime?",
-      "concepts": ["Riemann tensor review", "Ricci tensor review", "geodesic deviation review"],
+      "concepts": [
+        "Riemann tensor review",
+        "Ricci tensor review",
+        "geodesic deviation review"
+      ],
       "difficulty": 1,
       "type": "review",
       "resources": [
@@ -276,7 +358,11 @@
       "lesson": 21,
       "module": "Einstein's Field Equations",
       "title": "How does matter tell spacetime how to curve?",
-      "concepts": ["Einstein field equations", "stress-energy tensor", "Einstein tensor"],
+      "concepts": [
+        "Einstein field equations",
+        "stress-energy tensor",
+        "Einstein tensor"
+      ],
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
@@ -289,7 +375,11 @@
       "lesson": 22,
       "module": "Einstein's Field Equations",
       "title": "Why did Einstein add the cosmological constant?",
-      "concepts": ["cosmological constant", "vacuum energy", "dark energy"],
+      "concepts": [
+        "cosmological constant",
+        "vacuum energy",
+        "dark energy"
+      ],
       "difficulty": 3,
       "type": "question",
       "resources": [
@@ -302,7 +392,11 @@
       "lesson": 23,
       "module": "Einstein's Field Equations",
       "title": "How does Newtonian gravity emerge from general relativity?",
-      "concepts": ["weak field limit", "Newtonian approximation", "correspondence principle"],
+      "concepts": [
+        "weak field limit",
+        "Newtonian approximation",
+        "correspondence principle"
+      ],
       "difficulty": 3,
       "type": "real-world",
       "resources": [
@@ -315,7 +409,11 @@
       "lesson": 24,
       "module": "Solutions and Applications",
       "title": "What is the spacetime geometry around a non-rotating black hole?",
-      "concepts": ["Schwarzschild solution", "event horizon", "singularity"],
+      "concepts": [
+        "Schwarzschild solution",
+        "event horizon",
+        "singularity"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -328,7 +426,11 @@
       "lesson": 25,
       "module": "Solutions and Applications",
       "title": "How does rotation change black hole geometry?",
-      "concepts": ["Kerr solution", "frame dragging", "ergosphere"],
+      "concepts": [
+        "Kerr solution",
+        "frame dragging",
+        "ergosphere"
+      ],
       "difficulty": 4,
       "type": "question",
       "resources": [
@@ -341,7 +443,11 @@
       "lesson": 26,
       "module": "Solutions and Applications",
       "title": "Why is the universe expanding?",
-      "concepts": ["FRW cosmology", "Hubble expansion", "scale factor"],
+      "concepts": [
+        "FRW cosmology",
+        "Hubble expansion",
+        "scale factor"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -354,7 +460,12 @@
       "lesson": 27,
       "module": "Solutions and Applications",
       "title": "How do Einstein's equations produce the spacetimes we observe?",
-      "concepts": ["field equations review", "Schwarzschild review", "Kerr review", "FRW cosmology review"],
+      "concepts": [
+        "field equations review",
+        "Schwarzschild review",
+        "Kerr review",
+        "FRW cosmology review"
+      ],
       "difficulty": 2,
       "type": "review",
       "resources": [
@@ -367,7 +478,12 @@
       "lesson": 28,
       "module": "Solutions and Applications",
       "title": "How would you teach someone how GR changed our understanding of the universe?",
-      "concepts": ["GR applications", "experimental tests", "modern cosmology", "gravitational waves"],
+      "concepts": [
+        "GR applications",
+        "experimental tests",
+        "modern cosmology",
+        "gravitational waves"
+      ],
       "difficulty": 2,
       "type": "teach-back",
       "resources": [

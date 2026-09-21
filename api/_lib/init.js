@@ -15,10 +15,11 @@ export async function getState() {
     if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
       try {
         const { SupabaseStore } = await import('../../lib/core/supabase-store.js');
-        _state = new SupabaseStore();
-      } catch {
-        const { TutorStore } = await import('../../lib/core/store.js');
-        _state = new TutorStore(process.cwd());
+        _state = new SupabaseStore(process.cwd());
+      } catch (err) {
+        // Don't silently fall back: SQLite cannot persist on a serverless
+        // filesystem, so a fallback here looks healthy and loses every write.
+        throw new Error(`SupabaseStore unavailable: ${err.message}`);
       }
     } else {
       const { TutorStore } = await import('../../lib/core/store.js');
