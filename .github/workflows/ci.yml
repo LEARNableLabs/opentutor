@@ -3,8 +3,8 @@ name: CI
 on:
   push:
     branches: [main]
+  # every pull request, whatever it targets — a stacked PR gets checks too
   pull_request:
-    branches: [main]
 
 jobs:
   test:
@@ -38,6 +38,9 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
+
+      - name: ESLint
+        run: npm run lint
 
       - name: Syntax check core
         run: |

@@ -11,9 +11,9 @@
 
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
-import { buildStudentModel, formatStudentModel } from '../../lib/core/student-model.js';
+import { buildStudentModel, formatStudentModel, markConceptReviewed } from '../../lib/core/student-model.js';
 import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives } from '../../lib/core/deliberate-practice.js';
-import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
+import { getNextLesson, markLessonComplete, readCurriculum, writeCurriculum, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts, getDueReviews, recordReview } from './spaced-repetition.js';
@@ -143,10 +143,15 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
         commonMisconceptions: [],
         goal: `Demonstrate solid understanding of ${constraints.blockedConcept}`,
       },
+      // Same shape as a regular lesson — handleLessonAnswer walks `steps` and pushes to `assessments`
+      steps: ['diagnostic', 'followUp', 'application'],
       step: 0,
+      mode: 'standard',
       history: [],
+      assessments: [],
       studentModel: buildStudentModel(learningMd, curriculum, userProfile),
       startedAt: Date.now(),
+      stepStartedAt: Date.now(),
       isReview: true,
       reviewConcept: constraints.blockedConcept,
     };
@@ -300,8 +305,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     await channel.sendMessage(chatId, retrievalQ);
     appendMessage(chatId, 'assistant', retrievalQ);
   } else {
-    // Skip retrieval, go straight to diagnostic
-    activeLessons[chatId].step = 1;
+    // No retrieval due: it was already shifted out of `steps`, so step 0 is the diagnostic
     const goalPrefix = lessonPlan.goal ? `<b>Goal:</b> ${lessonPlan.goal}\n\n` : '';
     const diagnosticMsg = formatDiagnosticMessage(activeLessons[chatId]);
     const { text: msgText, msgOptions } = appendOptionsHintAndButtons(goalPrefix + diagnosticMsg, activeLessons[chatId], 'diagnostic');
@@ -407,7 +411,6 @@ export async function handleLessonAnswer(text, chatId, channel) {
     appendMessage(chatId, 'assistant', visibleText);
     appendMessage(chatId, 'assistant', diagnosticMsg);
     active.history.push({ role: 'assistant', content: diagnosticMsg });
-    active.step++;
   } else {
     // Attach suggested options for the CURRENT step (the one we just advanced to)
     const currentStepForOptions = active.steps[active.step];
@@ -478,6 +481,9 @@ function completeSocraticLesson(chatId, active, _lastAnswer) {
     }
   } else {
     appendMemory(`Review completed: ${active.reviewConcept} (${topicSlug}). Engagement: ${engagement}`);
+    // Release the BLOCK before the practitioner re-evaluates below
+    const reviewed = readCurriculum(topicSlug);
+    if (reviewed) writeCurriculum(topicSlug, markConceptReviewed(reviewed, active.reviewConcept));
   }
 
   writeLearningLog(topicSlug, lesson, active);
@@ -638,7 +644,7 @@ function selectExerciseFormat(studentModel, lessonPlan, domainConfig) {
   const domainPreference = parseDomainExercisePreference(domainConfig);
 
   // Student behavior overrides (strongest signal)
-  if (studentModel.engagement === 'minimal' || studentModel.engagement === 'brief') {
+  if (studentModel.engagement === 'low') {
     return domainPreference === 'socratic' ? 'mixed' : 'mc';
   }
   if (studentModel.recentAccuracy < 0.3 && studentModel.exerciseCount < 5) {

@@ -146,3 +146,51 @@ describe('Adapter defaults', () => {
     expect(adapter.baseURL).toBe('http://localhost:11434');
   });
 });
+
+describe('OpenAI-compatible generate()', () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  const apiReply = (body, status = 200) => vi.fn(async () => new Response(JSON.stringify(body), { status }));
+
+  it('OpenRouterAdapter posts the conversation to OpenRouter and maps the reply', async () => {
+    const fetchMock = apiReply({ choices: [{ message: { content: 'Hello' } }], usage: { prompt_tokens: 12, completion_tokens: 3 } });
+    vi.stubGlobal('fetch', fetchMock);
+    const adapter = new OpenRouterAdapter({ apiKey: 'secret', cheapModel: 'deepseek/deepseek-v4.1-flash' });
+
+    const result = await adapter.generate('SYSTEM', [{ role: 'user', content: 'hi' }], { model: 'cheap' });
+
+    expect(result).toEqual({ text: 'Hello', model: 'deepseek/deepseek-v4.1-flash', usage: { input_tokens: 12, output_tokens: 3 } });
+    const [url, request] = fetchMock.mock.calls[0];
+    expect(url).toBe('https://openrouter.ai/api/v1/chat/completions');
+    expect(request.headers.Authorization).toBe('Bearer secret');
+    expect(JSON.parse(request.body)).toMatchObject({
+      model: 'deepseek/deepseek-v4.1-flash',
+      messages: [{ role: 'system', content: 'SYSTEM' }, { role: 'user', content: 'hi' }],
+    });
+  });
+
+  it('OpenAIAdapter picks the strong model when asked', async () => {
+    const fetchMock = apiReply({ choices: [{ message: { content: 'ok' } }] });
+    vi.stubGlobal('fetch', fetchMock);
+
+    const result = await new OpenAIAdapter({ apiKey: 'k', strongModel: 'big', cheapModel: 'small' }).generate('s', [], { model: 'strong' });
+
+    expect(result).toEqual({ text: 'ok', model: 'big', usage: null });
+    expect(fetchMock.mock.calls[0][0]).toBe('https://api.openai.com/v1/chat/completions');
+  });
+
+  it('OpenRouterAdapter never falls back to the OpenAI key', () => {
+    vi.stubEnv('OPENAI_API_KEY', 'openai-secret');
+    vi.stubEnv('OPENROUTER_API_KEY', '');
+    try {
+      expect(new OpenRouterAdapter().apiKey).toBeFalsy();
+    } finally {
+      vi.unstubAllEnvs();
+    }
+  });
+
+  it('surfaces an API error instead of returning empty text', async () => {
+    vi.stubGlobal('fetch', apiReply({ error: { message: 'No auth credentials found' } }, 401));
+    await expect(new OpenRouterAdapter({ apiKey: 'bad' }).generate('s', [], {})).rejects.toThrow('openrouter: HTTP 401');
+  });
+});
