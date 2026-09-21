@@ -160,11 +160,37 @@ async function handleAPI(req, res, url) {
       return json(res, { ...progress, streak, topics });
     }
 
-    // POST /api/lesson — one turn of the Socratic lesson (same implementation as the Vercel route)
+    // POST /api/lesson — one turn of the Socratic lesson (same implementation as the Vercel route).
+    // Streams over SSE when the client asks for it; plain JSON otherwise.
     if (req.method === 'POST' && url.pathname === '/api/lesson') {
-      const { status, body } = await lessonTurn({ state, adapter: chatAdapter, skills }, JSON.parse(await readBody(req)));
-      res.writeHead(status);
-      return res.end(JSON.stringify(body, null, 2));
+      const payload = JSON.parse(await readBody(req));
+      const wantsStream = (req.headers.accept || '').includes('text/event-stream');
+
+      if (!wantsStream) {
+        const { status, body } = await lessonTurn({ state, adapter: chatAdapter, skills }, payload);
+        res.writeHead(status);
+        return res.end(JSON.stringify(body, null, 2));
+      }
+
+      res.writeHead(200, {
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache, no-transform',
+        Connection: 'keep-alive',
+        'X-Accel-Buffering': 'no',
+      });
+      const send = (event, data) => res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
+
+      try {
+        const { status, body } = await lessonTurn(
+          { state, adapter: chatAdapter, skills },
+          payload,
+          { onToken: (t) => send('token', t) },
+        );
+        send(status === 200 ? 'done' : 'error', body);
+      } catch (err) {
+        send('error', { error: err.message });
+      }
+      return res.end();
     }
 
     // GET /api/user — get student profile

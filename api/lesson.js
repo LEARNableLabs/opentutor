@@ -12,6 +12,7 @@ import { checkAuth, authFailure } from './_lib/auth.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
+import { parseAssessment, assessmentFilter } from '../lib/core/assessment.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 
@@ -25,11 +26,23 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { status, body } = await lessonTurn(
-      { state: await getState(), adapter: getAdapter(), skills: getSkills() },
-      req.body || {},
-    );
-    res.status(status).json(body);
+    const ctx = { state: await getState(), adapter: getAdapter(), skills: getSkills() };
+
+    if (!String(req.headers?.accept || '').includes('text/event-stream')) {
+      const { status, body } = await lessonTurn(ctx, req.body || {});
+      return res.status(status).json(body);
+    }
+
+    res.writeHead(200, {
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache, no-transform',
+      Connection: 'keep-alive',
+      'X-Accel-Buffering': 'no',
+    });
+    const send = (event, data) => res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
+    const { status, body } = await lessonTurn(ctx, req.body || {}, { onToken: (t) => send('token', t) });
+    send(status === 200 ? 'done' : 'error', body);
+    res.end();
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -39,7 +52,9 @@ export default async function handler(req, res) {
  * One turn of the web lesson. Shared by this route and the local server
  * (scripts/web/server.js) so the two cannot drift apart again.
  */
-export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer }) {
+export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer }, { onToken } = {}) {
+  // The grading block streams first, so it is filtered before the student sees anything.
+  const stream = onToken ? { onToken: assessmentFilter(onToken) } : {};
   if (!topicSlug) return { status: 400, body: { error: 'topicSlug required' } };
 
   const kvKey = `web_lesson:${topicSlug}`;
@@ -65,14 +80,11 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
     const response = await adapter.generate(
       responsePrompt.system + '\n\nReturn only polished text.',
       active.history,
-      { model: responsePrompt.model },
+      { model: responsePrompt.model, ...stream },
     );
 
-    const scored = response.text.match(/<assessment>([\s\S]*?)<\/assessment>/);
-    if (scored) {
-      try { (active.assessments ||= []).push({ step: stepName, ...JSON.parse(scored[1]) }); } catch { /* unparseable */ }
-    }
-    const reply = response.text.replace(/<assessment>[\s\S]*?<\/assessment>\s*/g, '').trim();
+    const { assessment, visible: reply } = parseAssessment(response.text);
+    if (assessment) (active.assessments ||= []).push({ step: stepName, ...assessment });
     active.history.push({ role: 'assistant', content: reply });
     active.step++;
 
