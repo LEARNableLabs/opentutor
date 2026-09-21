@@ -8,13 +8,21 @@
  */
 
 import { getState, getAdapter, getSkills } from './_lib/init.js';
+import { checkAuth, authFailure } from './_lib/auth.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
+import { completeLesson } from '../lib/core/lesson-completion.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
+
+  const auth = checkAuth(req);
+  if (!auth.ok) {
+    const { status, body } = authFailure(auth);
+    return res.status(status).json(body);
+  }
 
   try {
     const { status, body } = await lessonTurn(
@@ -60,6 +68,10 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
       { model: responsePrompt.model },
     );
 
+    const scored = response.text.match(/<assessment>([\s\S]*?)<\/assessment>/);
+    if (scored) {
+      try { (active.assessments ||= []).push({ step: stepName, ...JSON.parse(scored[1]) }); } catch { /* unparseable */ }
+    }
     const reply = response.text.replace(/<assessment>[\s\S]*?<\/assessment>\s*/g, '').trim();
     active.history.push({ role: 'assistant', content: reply });
     active.step++;
@@ -68,7 +80,14 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
 
     if (done) {
       const day = active.lessonDay;
-      await safely(() => state.markLessonComplete(active.topicSlug, day, 'delivered'));
+      // Grade the session, write the learning log, run the practitioner — the
+      // adaptive half the web path used to skip entirely (#106).
+      await safely(() => completeLesson({
+        state,
+        topicSlug: active.topicSlug,
+        lesson: { ...active.lesson, lesson: day },
+        session: active,
+      }));
       await state.deleteKV(kvKey);
     } else {
       await state.writeKV(kvKey, JSON.stringify(active));
@@ -117,6 +136,7 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
     plan,
     step: 0,
     history: [],
+    assessments: [],
   };
 
   await state.writeKV(kvKey, JSON.stringify(active));

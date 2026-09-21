@@ -1,6 +1,50 @@
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => document.querySelectorAll(s);
 
+// ── Auth ───────────────────────────────────────────────────
+// One shared password (OPENTUTOR_PASSWORD on the server), remembered per browser.
+// Wrapping fetch once covers every /api call rather than threading a header
+// through each of them.
+
+const PASSWORD_KEY = 'opentutor-password';
+const store = {
+  get() { try { return localStorage.getItem(PASSWORD_KEY); } catch { return null; } },
+  set(v) { try { localStorage.setItem(PASSWORD_KEY, v); } catch { /* private mode */ } },
+  clear() { try { localStorage.removeItem(PASSWORD_KEY); } catch { /* private mode */ } },
+};
+
+const nativeFetch = window.fetch.bind(window);
+
+function withPassword(init, password) {
+  const headers = new Headers(init.headers || {});
+  if (password) headers.set('Authorization', `Bearer ${password}`);
+  return { ...init, headers };
+}
+
+window.fetch = async (input, init = {}) => {
+  const url = typeof input === 'string' ? input : input?.url || '';
+  if (!url.startsWith('/api/')) return nativeFetch(input, init);
+
+  let res = await nativeFetch(input, withPassword(init, store.get()));
+
+  if (res.status === 401) {
+    store.clear();
+    const entered = window.prompt('Password for this OpenTutor instance:');
+    if (!entered) return res;
+    store.set(entered);
+    res = await nativeFetch(input, withPassword(init, entered));
+    if (res.status === 401) store.clear();
+  }
+
+  if (res.status === 503) {
+    // The server is deployed without a password configured, and refuses to serve.
+    const { error } = await res.clone().json().catch(() => ({}));
+    alert(error || 'This deployment is not configured yet.');
+  }
+
+  return res;
+};
+
 // ── Theme toggle ───────────────────────────────────────────
 
 const themeToggle = $('#theme-toggle');

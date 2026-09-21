@@ -14,6 +14,7 @@ import { TutorStore } from '../../lib/core/store.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
 import { lessonTurn } from '../../api/lesson.js';
+import { checkAuth, authFailure } from '../../api/_lib/auth.js';
 import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -88,6 +89,13 @@ const server = http.createServer(async (req, res) => {
 
 async function handleAPI(req, res, url) {
   res.setHeader('Content-Type', 'application/json');
+
+  const auth = checkAuth(req);
+  if (!auth.ok) {
+    const { status, body } = authFailure(auth);
+    res.writeHead(status);
+    return res.end(JSON.stringify(body));
+  }
 
   try {
     // GET /api/topics — list all topics with progress
