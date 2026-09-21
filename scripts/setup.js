@@ -9,7 +9,7 @@ import { stdin as input, stdout as output } from 'process';
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.join(__dirname, '..');
@@ -17,8 +17,10 @@ const SKILL_DIR = path.join(REPO_ROOT, 'skills', 'tutor');
 const ONBOARDING_SKILL_DIR = path.join(REPO_ROOT, 'skills', 'tutor-onboarding');
 const WORKSPACE_TEMPLATE = path.join(REPO_ROOT, 'workspace');
 
-const rl = createInterface({ input, output });
-const ask = (q) => rl.question(q);
+// Created on first prompt, not at import: an open readline holds the event loop
+// open, so importing this module would hang anything that isn't the CLI.
+let rl;
+const ask = (q) => (rl ??= createInterface({ input, output })).question(q);
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -122,12 +124,14 @@ _(Fill this in as you learn about the student — interests, background, learnin
 
 // ─── platform setups ─────────────────────────────────────────────────────────
 
-async function setupAgentSkills(platformId, isGlobal, student) {
+export function setupAgentSkills(platformId, isGlobal, student) {
+  // Each agent boots from its own file. Writing Codex's instructions into
+  // CLAUDE.md installed the skill correctly and then never booted it.
   const dirs = {
-    'claude-code': ['.claude',  path.join(os.homedir(), '.claude')],
-    'codex':       ['.codex',   path.join(os.homedir(), '.codex')],
+    'claude-code': ['.claude',  path.join(os.homedir(), '.claude'), 'CLAUDE.md'],
+    'codex':       ['.codex',   path.join(os.homedir(), '.codex'),  'AGENTS.md'],
   };
-  const [projectDir, globalDir] = dirs[platformId];
+  const [projectDir, globalDir, bootFile] = dirs[platformId];
   const baseDir = isGlobal ? globalDir : path.join(process.cwd(), projectDir);
 
   const skillDst = path.join(baseDir, 'skills', 'tutor');
@@ -142,12 +146,12 @@ async function setupAgentSkills(platformId, isGlobal, student) {
     : path.join(process.cwd(), '.tutor');
   installWorkspace(wsDir, { student });
 
-  const claudeMd = isGlobal
-    ? path.join(baseDir, 'CLAUDE.md')
-    : path.join(process.cwd(), 'CLAUDE.md');
-  const added = appendIfMissing(claudeMd, '## Tutor', TUTOR_BOOT_MD);
-  if (added) tick(`boot instructions → ${claudeMd}`);
-  else warn(`tutor section already in ${claudeMd}, skipped`);
+  const bootPath = isGlobal
+    ? path.join(baseDir, bootFile)
+    : path.join(process.cwd(), bootFile);
+  const added = appendIfMissing(bootPath, '## Tutor', TUTOR_BOOT_MD);
+  if (added) tick(`boot instructions → ${bootPath}`);
+  else warn(`tutor section already in ${bootPath}, skipped`);
 }
 
 function setupOpenClawLike(platformId, student) {
@@ -273,7 +277,7 @@ async function main() {
 
   if (!selected.length) {
     console.log('\nNothing selected. Exiting.');
-    rl.close();
+    rl?.close();
     return;
   }
 
@@ -302,11 +306,14 @@ async function main() {
   console.log('\n══════════════════════════════');
   console.log('OpenTutor setup complete.');
   console.log('══════════════════════════════\n');
-  rl.close();
+  rl?.close();
 }
 
-main().catch((err) => {
-  console.error('\nSetup failed:', err.message);
-  rl.close();
-  process.exit(1);
-});
+// Only prompt when run as a command — tests import setupAgentSkills directly.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((err) => {
+    console.error('\nSetup failed:', err.message);
+    rl?.close();
+    process.exit(1);
+  });
+}
