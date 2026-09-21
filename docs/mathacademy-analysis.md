@@ -1,5 +1,9 @@
 # Math Academy Analysis — Principles & Comparison with OpenTutor
 
+> **Snapshot, 2026-09-01.** Kept as a record of the review, not updated as the code changes.
+> Several findings here have since been fixed — see the issue tracker for current status.
+
+
 ## Math Academy's Core Principles
 
 Math Academy (mathacademy.com) is a mastery-based math learning platform built on a knowledge graph with thousands of interconnected topics. Their system was built by Justin Skycak and is described in detail on their [pedagogy page](https://www.mathacademy.com/pedagogy), [how their AI works](https://www.mathacademy.com/how-our-ai-works), and in [The Math Academy Way (PDF)](https://www.justinmath.com/files/the-math-academy-way.pdf).
@@ -99,7 +103,7 @@ Our "task selection" is simply the next pending lesson in the curriculum. The on
 
 2. **Deliberate practice enforcement**: The DeliberatePractitioner agent that critiques the teaching process is novel. Math Academy optimizes the learning path; OpenTutor also evaluates teaching quality.
 
-3. **Multi-domain flexibility**: Math Academy is math-only. OpenTutor works across 292 topics from any domain. The trade-off is precision — Math Academy's graph is hand-built by domain experts; OpenTutor's concept maps are LLM-generated.
+3. **Multi-domain flexibility**: Math Academy is math-only. OpenTutor works across 293 topics from any domain. The trade-off is precision — Math Academy's graph is hand-built by domain experts; OpenTutor's concept maps are LLM-generated.
 
 4. **Self-explanation and metacognitive probes**: OpenTutor asks students to explain concepts in their own words and probes metacognition. Math Academy focuses on problem-solving accuracy and speed.
 

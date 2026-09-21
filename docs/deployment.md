@@ -1,5 +1,12 @@
 # OpenTutor Deployment Guide
 
+> **⚠ This path does not work end to end yet (issue #94).**
+> `api/_lib/init.js` constructs `SupabaseStore` without a root directory, so it throws and
+> silently falls back to SQLite on a read-only filesystem. The lesson KV helpers are also
+> guarded on `state.db`, which only SQLite has — so with Supabase wired up, every answer
+> returns `400 No active lesson`. Use the Telegram bot or `npm run web` locally until #94 lands.
+
+
 Step-by-step guide for deploying OpenTutor on Vercel + Supabase. No CLI tools required — everything can be done through web dashboards.
 
 ## Prerequisites
@@ -92,7 +99,7 @@ Send `/add auction theory` — the bot should respond with a taster lesson and s
 ```
 Vercel
 ├── public/           → Static web UI (HTML/CSS/JS)
-├── api/lesson.js     → Socratic multi-turn lessons (stateful via Supabase KV)
+├── api/lesson.js     → Socratic multi-turn lessons (lesson state needs SQLite; see the warning below)
 ├── api/telegram.js   → Telegram webhook (receives bot updates)
 ├── api/chat.js       → Free-form chat
 ├── api/topics.js     → Topic listing
@@ -110,7 +117,7 @@ Supabase
 └── student_exercises → Exercise results
 
 Domain files (in repo)
-├── skills/tutor/domains/  → 292 pre-built curricula (read from Vercel filesystem)
+├── skills/tutor/domains/  → 293 pre-built curricula (read from Vercel filesystem)
 ├── skills/tutor/references/ → Teaching methodology
 └── workspace/USER.md      → Student profile template
 ```
@@ -161,7 +168,7 @@ Database migrations: if a new migration is added to `supabase/migrations/`, past
 - The pipeline needs a strong model — if using a weak model via OpenRouter, set `OPENTUTOR_PIPELINE_LLM=claude-sdk` with an Anthropic key
 
 **Web UI shows empty state:**
-- The 292 pre-built domains are read from the Vercel filesystem (included in the deploy)
+- The 293 pre-built domains are read from the Vercel filesystem (included in the deploy)
 - If `/api/topics` returns empty, check the deploy included the `skills/` directory
 
 ## Local development

@@ -61,9 +61,9 @@ When in doubt, start slightly below their level and ramp up quickly.
 You wake up fresh each session. These files are your continuity:
 
 - **`tutor/progress.json`** — active topics, schedule, lesson history
-- **`domains/<topic-slug>/curriculum.json`** — per-topic lesson plans
+- **`skills/tutor/domains/<topic-slug>/curriculum.json`** — per-topic lesson plans (read-only content; completion lives in `tutor/completions.json`)
 - **`memory/YYYY-MM-DD.md`** — raw notes from each session
-- **`MEMORY.md`** — curated long-term insights, distilled from daily notes
+- **`MEMORY.md`** — curated long-term insights, distilled from daily notes (created on demand; no template ships)
 - **`USER.md`** — student profile, learning style, level
 
 **Write it down — no mental notes.** If you want to remember something, write it to a file. Mental notes don't survive session restarts. Files do.
@@ -100,7 +100,7 @@ You wake up fresh each session. These files are your continuity:
 | File | Purpose | When to update |
 | --- | --- | --- |
 | `tutor/progress.json` | Active topics, schedule, lesson history | After every lesson/interaction |
-| `domains/<topic-slug>/curriculum.json` | Per-topic lesson plans | When creating/adapting curricula |
+| `skills/tutor/domains/<topic-slug>/curriculum.json` | Per-topic lesson plans (content only) | When creating/adapting curricula |
 | `memory/YYYY-MM-DD.md` | Daily session notes | During each session |
 | `MEMORY.md` | Curated long-term insights | Every few days (distill from daily notes) |
 | `USER.md` | Student profile, learning style | When you learn something new about them |

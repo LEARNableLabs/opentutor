@@ -1,5 +1,9 @@
 # EdTech CEO Review — OpenTutor
 
+> **Snapshot, 2026-09-01.** Kept as a record of the review, not updated as the code changes.
+> Several findings here have since been fixed — see the issue tracker for current status.
+
+
 *Perspective: CEO of a $50M edtech company, 500K students shipped, seen dozens of AI tutor prototypes die. I care about retention, unit economics, competitive moats, and what actually moves the needle on learning outcomes at scale.*
 
 ---
@@ -18,20 +22,20 @@ I've seen a dozen prototypes with brilliant pedagogy and no product. They all di
 
 ---
 
-## 2. The 292 Topics Claim
+## 2. The 293 Topics Claim
 
 **Red flag. Cut it to 10.**
 
-292 batch-generated, never-tested, never-student-validated topics is a liability, not an asset. Here's why:
+293 batch-generated, never-tested, never-student-validated topics is a liability, not an asset. Here's why:
 
 - It creates an illusion of breadth that masks the question: "Is any single topic actually good?"
 - The teacher.md files were machine-extracted from metadata, not written by domain experts or validated through teaching.
-- Zero of the 292 have been through the full pipeline (Builder → Critic → QA). They were generated before the Critic existed.
+- Zero of the 293 have been through the full pipeline (Builder → Critic → QA). They were generated before the Critic existed.
 - When a student picks "forensic entomology" and the curriculum is incoherent, that's a brand-damaging experience, not a feature.
 
 **What I'd do:** Pick 10 topics that represent different domains (one STEM, one humanities, one practical skill, one creative, etc.). Walk through each one personally as a student. Fix what's broken. Ship those 10. Add topics based on student requests, not batch generation.
 
-The 292 can stay in the repo for completeness, but the onboarding should feature only the curated 10 with a "request a topic" option.
+The 293 can stay in the repo for completeness, but the onboarding should feature only the curated 10 with a "request a topic" option.
 
 ---
 
@@ -70,7 +74,7 @@ The engineer review nailed the cost breakdown:
 
 That's roughly $0.80/student/month in LLM costs. Duolingo's COGS is about $0.15/user/month. You're 5x more expensive per user, but you're also delivering fundamentally deeper teaching. If you can show that Socratic delivery produces 2x better learning outcomes than multiple choice, the 5x cost is justified.
 
-**The risk is in the pipeline cost.** Generating a new curriculum is 6-12 LLM calls × $0.05-0.20 = $0.30-2.40 per topic. If every student requests a custom topic, that's a cost spike. The 292 pre-built topics amortize this, but custom generation should be rate-limited.
+**The risk is in the pipeline cost.** Generating a new curriculum is 6-12 LLM calls × $0.05-0.20 = $0.30-2.40 per topic. If every student requests a custom topic, that's a cost spike. The 293 pre-built topics amortize this, but custom generation should be rate-limited.
 
 **At 10K users, optimize:**
 - Cache lesson plans for students at the same lesson
@@ -110,7 +114,7 @@ What stops Khan Academy from adding Socratic delivery tomorrow? Nothing technica
 
 2. **Open-source community.** If OpenTutor becomes the Linux of AI tutoring — the standard that people build on, contribute to, and integrate with — the network effect creates a moat. The 7 platform integrations start making sense in this light. But "open-source moat" requires critical mass of contributors and users. Today it's a solo project.
 
-3. **Curriculum quality.** If the 292 topics were hand-curated, expert-reviewed, and battle-tested with real students, that'd be a content moat. But they're batch-generated and untested. Math Academy's hand-built knowledge graph took years — that's a real moat.
+3. **Curriculum quality.** If the 293 topics were hand-curated, expert-reviewed, and battle-tested with real students, that'd be a content moat. But they're batch-generated and untested. Math Academy's hand-built knowledge graph took years — that's a real moat.
 
 4. **Portability.** "Learn on any platform, any LLM, any topic" is a positioning moat. No competitor offers this. But it's a developer positioning, not a student positioning. Students don't care about portability — they care about "does it work."
 

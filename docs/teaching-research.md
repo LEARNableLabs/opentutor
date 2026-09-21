@@ -1,5 +1,9 @@
 # Teaching & Learning Methods Research — OpenTutor Gap Analysis
 
+> **Snapshot, 2026-09-01.** Kept as a record of the review, not updated as the code changes.
+> Several findings here have since been fixed — see the issue tracker for current status.
+
+
 Deep research into evidence-based teaching methods relevant to OpenTutor's setup: an AI tutor delivering daily bite-sized lessons via Telegram and web, using Socratic conversation with deliberate practice enforcement.
 
 ---

@@ -1,5 +1,9 @@
 # UX Designer Review — What the Student *Feels*
 
+> **Snapshot, 2026-09-01.** Kept as a record of the review, not updated as the code changes.
+> Several findings here have since been fixed — see the issue tracker for current status.
+
+
 *Perspective: Senior UX designer, ex-Duolingo and Headspace. I design for emotion, habit, and retention. I've watched 400+ user testing sessions of learning apps. I think most developer-built products are "backend with a face."*
 
 ---

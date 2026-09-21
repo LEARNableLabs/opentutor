@@ -42,9 +42,11 @@ Not every interaction is a full lesson. The mode adapts based on student state, 
 
 | Mode | Trigger | Steps | Duration |
 |---|---|---|---|
-| **Quick** | High accuracy, scheduled midday push, student says "just a quick one" | Retrieval + 1 question | ~1 min |
-| **Standard** | Normal /next, morning scheduled push | All 5 steps | ~3-5 min |
-| **Deep** | Student struggling, asks "go deeper", low confidence self-report | Extra scaffolding, more examples, teach-back | ~8-10 min |
+| **Quick** | Accuracy >85% **and** improving trend **and** engagement not low; or the student says "just a quick one" | retrieval → application | ~1 min |
+| **Standard** | Everything else, including disengaged students (they need hooks, not less attention) | retrieval → diagnostic → follow-up → application | ~3-5 min |
+| **Deep** | Accuracy <30%, a declining trend, "go deeper", or an active BLOCK directive | adds scaffolding and teach-back | ~8-10 min |
+
+The retrieval step is dropped when no concept is due for review, so a first lesson opens on the diagnostic.
 
 ### Mid-Lesson Branching
 
@@ -82,7 +84,10 @@ The separate `/review` command still exists for focused review sessions, but pri
 
 ## Scheduled Delivery (Differentiated Pushes)
 
-Three daily pushes, each with a different purpose:
+> **Not implemented yet.** `selectMode` accepts a `pushType` of `midday` / `evening`,
+> but `scripts/bot/scheduler.js` passes none, so every slot delivers a normal lesson
+> (the last slot of the day adds a spaced-repetition review when one is due).
+> The table below is the intended design.
 
 | Time | Type | Duration | Purpose |
 |---|---|---|---|
@@ -149,3 +154,25 @@ Lessons are delivered via messaging channels. Keep formatting readable:
 - **No tables** — use bullet lists (tables render poorly on mobile)
 - **No headers** — use **bold** as section markers
 - Each message focused on one exchange — ask, wait, respond, ask
+
+### Message Chunking
+
+Deliver a lesson as a short sequence of messages rather than one block:
+
+- **~150 words per message** (soft cap). Comfortably inside Telegram's 4,096-character hard limit.
+- **3-4 messages** for a standard lesson — one idea each.
+- Send, then wait. Never stack the concept, the example and the question in one message.
+
+### Emoji Anchors
+
+Exactly four structural anchors, one at the start of the message it labels. No decorative emoji.
+
+| Anchor | Marks |
+|---|---|
+| 📖 | Title + progress, e.g. `📖 Day 5/34 · Eigenvalues` |
+| 🧠 | The core concept |
+| 💡 | An example or analogy |
+| ✏️ | The exercise or engagement prompt |
+
+Not every message needs an anchor, and not every lesson uses all four — but when a
+message plays one of these roles, it carries that anchor and no other.

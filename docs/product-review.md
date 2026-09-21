@@ -1,5 +1,9 @@
 # OpenTutor — Honest Product & Research Review
 
+> **Snapshot, 2026-09-01.** Kept as a record of the review, not updated as the code changes.
+> Several findings here have since been fixed — see the issue tracker for current status.
+
+
 ---
 
 ## 1. Product Vision
@@ -8,7 +12,7 @@
 
 **"Universal agent skill" dilutes focus.** Supporting Claude Code, Codex, OpenClaw, NemoClaw, NanoClaw, Hermes, and Claude Web sounds impressive but means no platform gets a polished experience. The Telegram bot has Socratic delivery, retrieval practice, adaptive length, deliberate practice enforcement. Claude Web gets "upload some files and hope for the best." That's not parity — it's feature theater. Ship one platform well before claiming seven.
 
-**292 pre-built topics: vanity metric.** They were batch-generated in one run, never tested with a single student, and 291 of them lack any learning.md or practice-feedback.md. The teacher.md files were deterministically extracted (not LLM-generated) and contain lines like "This domain uses a mix of delivery formats: concept-focused mini-lessons — 9 lessons (33%)" — that's metadata, not teaching guidance. A domain expert would not recognize these as teaching configs. Quantity over quality hurts credibility. Better to have 10 domains that are genuinely excellent — tested, iterated, with real student data — than 292 untested ones.
+**293 pre-built topics: vanity metric.** They were batch-generated in one run, never tested with a single student, and none of them lack any learning.md or practice-feedback.md. The teacher.md files were deterministically extracted (not LLM-generated) and contain lines like "This domain uses a mix of delivery formats: concept-focused mini-lessons — 9 lessons (33%)" — that's metadata, not teaching guidance. A domain expert would not recognize these as teaching configs. Quantity over quality hurts credibility. Better to have 10 domains that are genuinely excellent — tested, iterated, with real student data — than 293 untested ones.
 
 ---
 
@@ -38,10 +42,10 @@ What's cargo-culted:
 
 **Active lessons are in-memory.** `activeLessons` at `lesson.js:54` is a plain JavaScript object. If the bot process restarts mid-lesson — which happens any time you deploy, crash, or run out of memory — every active lesson is lost. The student's next message goes to general chat instead of the lesson handler. The SQLite job queue was added for pipeline persistence, but lesson delivery state was forgotten.
 
-**292 domains have wildly varying quality.** Compare:
+**293 domains have wildly varying quality.** Compare:
 - `auction-theory`: 27 lessons, detailed concept map, 10 misconceptions in teaching-notes, rich resources
 - `behavioral-economics`: 5 preliminary lessons, no resources, concept-map hand-written as a stopgap
-- All 292 teacher.md files were machine-extracted from metadata, not reviewed
+- All 293 teacher.md files were machine-extracted from metadata, not reviewed
 
 Nobody has verified whether the concept maps contain circular dependencies, whether the difficulty progressions make sense, or whether the teaching notes are accurate. The Critic agent reviewed none of these — they were batch-generated before the Critic existed.
 
@@ -104,7 +108,7 @@ The real advantage: **open-source portability.** No competitor runs on your loca
 
 **What's overengineered:**
 - 7 platform integrations before a single platform works end-to-end with real students.
-- 292 batch-generated domains that create an illusion of breadth without depth.
+- 293 batch-generated domains that create an illusion of breadth without depth.
 - 5 LLM adapters (plus OpenRouter which already proxies to all of them). Ship with Claude SDK and add others when someone asks.
 - SQLite + Supabase + file-based state — three storage backends for a product with zero users. Pick one.
 - The group learning feature. It's premature. Get 1-on-1 tutoring right first.
@@ -117,6 +121,6 @@ The system has never taught a single real student. All the deliberate practice e
 2. Fix `assessRetrievalQuality()` — use the LLM to assess answers, not word overlap. One extra cheap call per retrieval is worth it
 3. Fix `assessEngagement()` — add response time, question relevance, not just message length
 4. Add lesson state persistence — active lessons lost on restart is a showstopper
-5. Delete 282 of the 292 domains. Keep 10 that you've personally walked through as a student. Quality beats quantity for launch.
+5. Delete 282 of the 293 domains. Keep 10 that you've personally walked through as a student. Quality beats quantity for launch.
 6. Focus on Telegram + Web only. Freeze all other integrations.
 7. Add a real analytics page — even just "lessons completed, accuracy trend, concepts mastered" per student

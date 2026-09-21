@@ -2,7 +2,9 @@
 
 Curated topics for OpenTutor curriculum generation. Each topic has enough depth for a multi-week curriculum and available learning resources. Grouped by domain, roughly ordered from accessible to advanced within each section.
 
-Topics already generated are marked with *.
+This is a **planning wish-list**, not an inventory: it holds 300 candidate topics, while
+`skills/tutor/domains/` ships 293 generated domains. The two overlap heavily but are not
+identical, and the `*` markers are stale — check the directory for what actually exists.
 
 ---
 
@@ -383,7 +385,7 @@ These are topics you won't find a structured university course on — but each h
 289. Memory techniques — method of loci and spaced repetition theory
 290. Optical illusions — the neuroscience of visual deception
 291. Meditation neuroscience — what contemplative practice does to the brain
-292. Handedness and laterality — brain asymmetry research
+293. Handedness and laterality — brain asymmetry research
 
 ### Esoteric Mathematics & Puzzles
 

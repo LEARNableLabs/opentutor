@@ -1,5 +1,9 @@
 # Learning Scientist Review — OpenTutor
 
+> **Snapshot, 2026-09-01.** Kept as a record of the review, not updated as the code changes.
+> Several findings here have since been fixed — see the issue tracker for current status.
+
+
 *Perspective: cognitive psychologist specializing in educational technology, retrieval practice, and deliberate practice.*
 
 ---

@@ -1,10 +1,16 @@
 {
   "name": "opentutor",
   "version": "1.0.0",
-  "description": "Portable AI tutor skill for any topic — works with Claude Code, Cursor, Gemini CLI, OpenCode, and any Agent Skills-compatible agent.",
+  "description": "Portable AI tutor skill for any topic \u2014 works with Claude Code, Cursor, Gemini CLI, OpenCode, and any Agent Skills-compatible agent.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LEARNableLabs/opentutor.git"
+  },
+  "homepage": "https://github.com/LEARNableLabs/opentutor#readme",
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "bin": {
     "opentutor": "./scripts/setup.js"
@@ -14,11 +20,18 @@
     "scripts/",
     "skills/",
     "workspace/",
+    "api/",
+    "public/",
+    "assets/",
+    "supabase/",
     "openclaw/",
     "hermes/",
     "claude-code/",
     "claude-web/",
-    "codex/"
+    "codex/",
+    "nanoclaw/",
+    "nemoclaw/",
+    "vercel.json"
   ],
   "scripts": {
     "bot": "node scripts/bot/index.js",
@@ -27,7 +40,7 @@
     "web": "node scripts/web/server.js",
     "web:dev": "node --watch scripts/web/server.js",
     "web:test": "OPENTUTOR_DATA_DIR=.test-data node scripts/web/server.js",
-    "lint": "eslint scripts",
+    "lint": "eslint lib scripts api",
     "test": "vitest run"
   },
   "dependencies": {
@@ -41,7 +54,6 @@
   "devDependencies": {
     "eslint": "^10.9.1",
     "pino-pretty": "^13.1.3",
-    "typescript": "^5.0.0",
     "vitest": "^4.1.11"
   }
 }

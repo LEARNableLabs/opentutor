@@ -115,9 +115,13 @@ node --check scripts/bot/index.js && node --check scripts/setup.js
 ## Dependencies
 
 - `@anthropic-ai/sdk` — Anthropic Claude SDK for AI interactions
+- `better-sqlite3` — local SQLite store (sessions, job queue, KV)
+- `@supabase/supabase-js` — Postgres store for hosted deploys
+- `pino` — structured logging
+- `resend` — email channel (not yet wired into a code path)
 - `node-cron` — scheduled lesson delivery
-- `typescript` (dev) — type checking
+- `vitest`, `eslint` (dev) — tests and linting
 
 ## Architecture Notes
 
-OpenTutor is a **meta-skill** system: it defines teaching methodology and generates domain-specific data (curricula, concept maps, resources) per topic. The bot process (`scripts/bot/`) orchestrates lesson delivery, quizzes, spaced repetition, and onboarding. The skill definition (`skills/tutor/SKILL.md`) is platform-agnostic; platform-specific overrides live in `openclaw/`, `nanoclaw/`, `nemoclaw/`.
+OpenTutor is a **meta-skill** system: it defines teaching methodology and generates domain-specific data (curricula, concept maps, resources) per topic. The bot process (`scripts/bot/`) orchestrates lesson delivery, quizzes, spaced repetition, and onboarding. The skill definition (`skills/tutor/SKILL.md`) is platform-agnostic; platform-specific overrides live in `openclaw/`, `nanoclaw/`, `nemoclaw/`, `hermes/`, `claude-code/`, `claude-web/` and `codex/`.
