@@ -142,8 +142,10 @@ describe('Topics', () => {
 });
 
 describe('User profile', () => {
-  it('readUser returns empty string when no file', () => {
-    expect(state.readUser()).toBe('');
+  it('readUser seeds the shipped template on a fresh workspace', () => {
+    // #105: the profile is runtime state seeded from workspace/templates/USER.md,
+    // so a fresh install starts from the blank template rather than nothing.
+    expect(state.readUser()).toContain('Student Profile');
   });
 
   it('writeUser / readUser round-trip', () => {

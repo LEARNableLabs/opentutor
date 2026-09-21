@@ -87,8 +87,9 @@ describe('updateProgress', () => {
 });
 
 describe('readUser / writeUser', () => {
-  it('returns empty string when no user file exists', () => {
-    expect(readUser()).toBe('');
+  it('seeds the shipped template when no user file exists', () => {
+    // #105: USER.md is seeded from workspace/templates/ on first read.
+    expect(readUser()).toContain('Student Profile');
   });
 
   it('writes and reads user content', () => {
