@@ -12,7 +12,7 @@ let _state, _adapter, _pipelineAdapter, _skills;
 
 export async function getState() {
   if (!_state) {
-    if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    if (process.env.SUPABASE_URL && (process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY)) {
       try {
         const { SupabaseStore } = await import('../../lib/core/supabase-store.js');
         _state = new SupabaseStore(process.cwd());
