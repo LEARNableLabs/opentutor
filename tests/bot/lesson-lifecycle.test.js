@@ -79,6 +79,7 @@ beforeEach(() => {
   vi.clearAllMocks();
   fs.rmSync(topicDir, { recursive: true, force: true });
   fs.rmSync(PATHS.progress, { force: true });
+  fs.rmSync(path.join(PATHS.workspace, 'tutor', 'completions.json'), { force: true });
   getDueReviews.mockReturnValue([]);
   generate.mockImplementation(async (system) => {
     if (system.includes('assessing whether a student correctly recalled')) return { text: 'easy' };

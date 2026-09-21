@@ -6,6 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PATHS } from './config.js';
+import { completionsFile, recordCompletion, saveCompletions, readCurriculumWithProgress, withoutRuntimeFields } from '../../lib/core/progress.js';
 import { log } from './logger.js';
 
 // ── Progress ────────────────────────────────────────────────
@@ -57,12 +58,7 @@ export function writeUser(content) {
 // ── Curriculum ──────────────────────────────────────────────
 
 export function readCurriculum(topicSlug) {
-  const p = path.join(PATHS.domains, topicSlug, 'curriculum.json');
-  try {
-    return JSON.parse(fs.readFileSync(p, 'utf-8'));
-  } catch {
-    return null;
-  }
+  return readCurriculumWithProgress(PATHS.domains, PATHS.workspace, topicSlug);
 }
 
 export function writeCurriculum(topicSlug, data) {
@@ -70,7 +66,7 @@ export function writeCurriculum(topicSlug, data) {
   fs.mkdirSync(dir, { recursive: true });
   const p = path.join(dir, 'curriculum.json');
   const tmp = p + '.tmp';
-  fs.writeFileSync(tmp, JSON.stringify(data, null, 2) + '\n');
+  fs.writeFileSync(tmp, JSON.stringify(withoutRuntimeFields(data), null, 2) + '\n');
   fs.renameSync(tmp, p);
   log.info({ topic: topicSlug, lesson_count: data.lessons?.length }, 'curriculum written');
 }
@@ -81,17 +77,14 @@ export function getNextLesson(topicSlug) {
   return curriculum.lessons.find((l) => l.status === 'pending') || null;
 }
 
+/** Persist grade changes made to an already-completed lesson (see markConceptReviewed). */
+export function saveCurriculumProgress(topicSlug, curriculum) {
+  saveCompletions(completionsFile(PATHS.workspace), topicSlug, curriculum);
+}
+
 export function markLessonComplete(topicSlug, day, engagement = {}) {
   log.info({ topic: topicSlug, lesson_id: day }, 'lesson marked complete');
-  const curriculum = readCurriculum(topicSlug);
-  if (!curriculum) return;
-  const lesson = curriculum.lessons.find((l) => (l.day || l.lesson) === day);
-  if (lesson) {
-    lesson.status = 'completed';
-    lesson.delivered = new Date().toISOString().split('T')[0];
-    if (engagement) lesson.engagement = engagement;
-  }
-  writeCurriculum(topicSlug, curriculum);
+  recordCompletion(completionsFile(PATHS.workspace), topicSlug, day, engagement);
 
   // Append to progress history
   updateProgress((p) => {

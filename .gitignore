@@ -11,3 +11,4 @@ workspace/sessions/
 .planning/
 .claude/
 brag-output*/
+workspace/tutor/completions.json
