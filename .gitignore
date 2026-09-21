@@ -14,3 +14,13 @@ brag-output*/
 workspace/tutor/completions.json
 workspace/tutor/domains/
 *.backup
+
+# Runtime copies, seeded from workspace/templates/ on first use (#105)
+workspace/USER.md
+workspace/tutor/progress.json
+
+# Everything else the running tutor writes into workspace/ (#105)
+workspace/memory/*
+!workspace/memory/.gitkeep
+workspace/students/
+workspace/groups/

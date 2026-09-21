@@ -6,7 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PATHS } from './config.js';
-import { completionsFile, recordCompletion, saveCompletions, readCurriculumWithProgress, withoutRuntimeFields, domainFilePath } from '../../lib/core/progress.js';
+import { completionsFile, recordCompletion, saveCompletions, readCurriculumWithProgress, withoutRuntimeFields, domainFilePath, seedFromTemplate } from '../../lib/core/progress.js';
 import { log } from './logger.js';
 
 // ── Progress ────────────────────────────────────────────────
@@ -19,6 +19,7 @@ const DEFAULT_PROGRESS = {
 };
 
 export function readProgress() {
+  seedFromTemplate(PATHS.workspace, path.join('tutor', 'progress.json'), 'progress.json');
   try {
     return JSON.parse(fs.readFileSync(PATHS.progress, 'utf-8'));
   } catch {
@@ -44,6 +45,7 @@ export function updateProgress(fn) {
 // ── User profile ────────────────────────────────────────────
 
 export function readUser() {
+  seedFromTemplate(PATHS.workspace, 'USER.md', 'USER.md');
   try {
     return fs.readFileSync(PATHS.user, 'utf-8');
   } catch {

@@ -114,7 +114,7 @@ _(Fill this in as you learn about the student — interests, background, learnin
   fs.mkdirSync(path.join(dir, 'memory'), { recursive: true });
 
   const copied = copyFileIfMissing(
-    path.join(WORKSPACE_TEMPLATE, 'tutor', 'progress.json'),
+    path.join(WORKSPACE_TEMPLATE, 'templates', 'progress.json'),
     path.join(dir, 'tutor', 'progress.json'),
   );
   if (copied) tick(`progress.json → ${path.join(dir, 'tutor', 'progress.json')}`);

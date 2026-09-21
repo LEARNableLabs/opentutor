@@ -53,7 +53,7 @@ describe('published package', () => {
 
   it('ships the workspace templates the installer copies', () => {
     // scripts/setup.js installWorkspace() reads exactly these.
-    for (const template of ['workspace/IDENTITY.md', 'workspace/SOUL.md', 'workspace/AGENTS.md', 'workspace/tutor/progress.json']) {
+    for (const template of ['workspace/IDENTITY.md', 'workspace/SOUL.md', 'workspace/AGENTS.md', 'workspace/templates/progress.json', 'workspace/templates/USER.md']) {
       expect(packed, `missing ${template}`).toContain(template);
     }
   });
