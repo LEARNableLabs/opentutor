@@ -3,7 +3,12 @@
   "slug": "category-theory",
   "created": "2026-08-21",
   "student_level": "intermediate",
-  "prerequisites": ["abstract algebra", "mathematical proofs", "set theory", "basic topology or programming experience"],
+  "prerequisites": [
+    "abstract algebra",
+    "mathematical proofs",
+    "set theory",
+    "basic topology or programming experience"
+  ],
   "exit_criteria": [
     "define and recognize categories, functors, and natural transformations",
     "construct universal properties (limits, colimits, products) and prove uniqueness",
@@ -17,7 +22,12 @@
       "lesson": 1,
       "module": "Foundations",
       "title": "What makes a category more than just a collection of things?",
-      "concepts": ["categories", "objects", "morphisms", "composition"],
+      "concepts": [
+        "categories",
+        "objects",
+        "morphisms",
+        "composition"
+      ],
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
@@ -30,7 +40,11 @@
       "lesson": 2,
       "module": "Foundations",
       "title": "Why do identity and associativity matter so much?",
-      "concepts": ["identity morphisms", "associativity", "category axioms"],
+      "concepts": [
+        "identity morphisms",
+        "associativity",
+        "category axioms"
+      ],
       "difficulty": 2,
       "type": "question",
       "resources": [
@@ -43,7 +57,12 @@
       "lesson": 3,
       "module": "Foundations",
       "title": "How are groups, sets, and topological spaces all the same?",
-      "concepts": ["concrete categories", "Set", "Grp", "Top"],
+      "concepts": [
+        "concrete categories",
+        "Set",
+        "Grp",
+        "Top"
+      ],
       "difficulty": 2,
       "type": "real-world",
       "resources": [
@@ -56,7 +75,11 @@
       "lesson": 4,
       "module": "Foundations",
       "title": "Can programs and types form a category?",
-      "concepts": ["types as objects", "functions as morphisms", "programming examples"],
+      "concepts": [
+        "types as objects",
+        "functions as morphisms",
+        "programming examples"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -69,7 +92,11 @@
       "lesson": 5,
       "module": "Foundations",
       "title": "What can you build from categories themselves?",
-      "concepts": ["opposite categories", "product categories", "slice categories"],
+      "concepts": [
+        "opposite categories",
+        "product categories",
+        "slice categories"
+      ],
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
@@ -82,7 +109,12 @@
       "lesson": 6,
       "module": "Foundations",
       "title": "Review: Categories and Basic Constructions",
-      "concepts": ["categories review", "morphisms review", "composition review", "category examples"],
+      "concepts": [
+        "categories review",
+        "morphisms review",
+        "composition review",
+        "category examples"
+      ],
       "difficulty": 1,
       "type": "review",
       "resources": [
@@ -95,7 +127,11 @@
       "lesson": 7,
       "module": "Functors",
       "title": "What's the right notion of a map between categories?",
-      "concepts": ["functors", "structure preservation", "functor axioms"],
+      "concepts": [
+        "functors",
+        "structure preservation",
+        "functor axioms"
+      ],
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
@@ -108,7 +144,11 @@
       "lesson": 8,
       "module": "Functors",
       "title": "Why does forgetting structure give you a functor?",
-      "concepts": ["forgetful functors", "free functors", "free-forgetful pairs"],
+      "concepts": [
+        "forgetful functors",
+        "free functors",
+        "free-forgetful pairs"
+      ],
       "difficulty": 3,
       "type": "question",
       "resources": [
@@ -121,7 +161,11 @@
       "lesson": 9,
       "module": "Functors",
       "title": "How do functors show up in everyday programming?",
-      "concepts": ["functor instances", "map operations", "container types"],
+      "concepts": [
+        "functor instances",
+        "map operations",
+        "container types"
+      ],
       "difficulty": 2,
       "type": "real-world",
       "resources": [
@@ -134,7 +178,11 @@
       "lesson": 10,
       "module": "Functors",
       "title": "What makes the hom-functor special?",
-      "concepts": ["hom-sets", "hom-functors", "covariance and contravariance"],
+      "concepts": [
+        "hom-sets",
+        "hom-functors",
+        "covariance and contravariance"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -147,7 +195,11 @@
       "lesson": 11,
       "module": "Functors",
       "title": "How do categories of functors work?",
-      "concepts": ["functor categories", "natural transformations preview", "composition of functors"],
+      "concepts": [
+        "functor categories",
+        "natural transformations preview",
+        "composition of functors"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -160,7 +212,11 @@
       "lesson": 12,
       "module": "Functors",
       "title": "Review: Functors and Their Properties",
-      "concepts": ["functors review", "forgetful functors review", "functor examples consolidation"],
+      "concepts": [
+        "functors review",
+        "forgetful functors review",
+        "functor examples consolidation"
+      ],
       "difficulty": 1,
       "type": "review",
       "resources": [
@@ -173,7 +229,11 @@
       "lesson": 13,
       "module": "Natural Transformations",
       "title": "How do you transform one functor into another?",
-      "concepts": ["natural transformations", "components", "naturality squares"],
+      "concepts": [
+        "natural transformations",
+        "components",
+        "naturality squares"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -186,7 +246,11 @@
       "lesson": 14,
       "module": "Natural Transformations",
       "title": "Why must every component commute?",
-      "concepts": ["naturality condition", "commutative diagrams", "naturality verification"],
+      "concepts": [
+        "naturality condition",
+        "commutative diagrams",
+        "naturality verification"
+      ],
       "difficulty": 3,
       "type": "question",
       "resources": [
@@ -199,7 +263,11 @@
       "lesson": 15,
       "module": "Natural Transformations",
       "title": "What does it mean for functors to form a category?",
-      "concepts": ["functor categories", "vertical composition", "horizontal composition"],
+      "concepts": [
+        "functor categories",
+        "vertical composition",
+        "horizontal composition"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -212,7 +280,11 @@
       "lesson": 16,
       "module": "Natural Transformations",
       "title": "Can you find natural transformations in real code?",
-      "concepts": ["polymorphic functions", "parametricity", "natural transformation examples"],
+      "concepts": [
+        "polymorphic functions",
+        "parametricity",
+        "natural transformation examples"
+      ],
       "difficulty": 2,
       "type": "real-world",
       "resources": [
@@ -225,7 +297,11 @@
       "lesson": 17,
       "module": "Natural Transformations",
       "title": "How do natural isomorphisms show equivalence?",
-      "concepts": ["natural isomorphisms", "equivalence of categories", "isomorphism vs equivalence"],
+      "concepts": [
+        "natural isomorphisms",
+        "equivalence of categories",
+        "isomorphism vs equivalence"
+      ],
       "difficulty": 4,
       "type": "question",
       "resources": [
@@ -238,7 +314,11 @@
       "lesson": 18,
       "module": "Natural Transformations",
       "title": "Review: Natural Transformations",
-      "concepts": ["natural transformations review", "naturality squares review", "functor categories review"],
+      "concepts": [
+        "natural transformations review",
+        "naturality squares review",
+        "functor categories review"
+      ],
       "difficulty": 2,
       "type": "review",
       "resources": [
@@ -251,7 +331,11 @@
       "lesson": 19,
       "module": "Universal Constructions",
       "title": "What's universal about universal properties?",
-      "concepts": ["universal properties", "initial objects", "terminal objects"],
+      "concepts": [
+        "universal properties",
+        "initial objects",
+        "terminal objects"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -264,7 +348,11 @@
       "lesson": 20,
       "module": "Universal Constructions",
       "title": "How do products capture 'simultaneous availability'?",
-      "concepts": ["products", "projections", "unique factorization"],
+      "concepts": [
+        "products",
+        "projections",
+        "unique factorization"
+      ],
       "difficulty": 3,
       "type": "question",
       "resources": [
@@ -277,7 +365,11 @@
       "lesson": 21,
       "module": "Universal Constructions",
       "title": "What's the dual of a product?",
-      "concepts": ["coproducts", "duality", "injections"],
+      "concepts": [
+        "coproducts",
+        "duality",
+        "injections"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
@@ -290,7 +382,11 @@
       "lesson": 22,
       "module": "Universal Constructions",
       "title": "Why are limits the ultimate generalization?",
-      "concepts": ["limits", "cones", "limit diagrams"],
+      "concepts": [
+        "limits",
+        "cones",
+        "limit diagrams"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -303,7 +399,11 @@
       "lesson": 23,
       "module": "Universal Constructions",
       "title": "How do colimits build things from parts?",
-      "concepts": ["colimits", "cocones", "colimit examples"],
+      "concepts": [
+        "colimits",
+        "cocones",
+        "colimit examples"
+      ],
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
@@ -316,7 +416,12 @@
       "lesson": 24,
       "module": "Universal Constructions",
       "title": "Review: Universal Properties and Constructions",
-      "concepts": ["limits review", "colimits review", "duality principle", "universal properties synthesis"],
+      "concepts": [
+        "limits review",
+        "colimits review",
+        "duality principle",
+        "universal properties synthesis"
+      ],
       "difficulty": 1,
       "type": "review",
       "resources": [
@@ -329,7 +434,11 @@
       "lesson": 25,
       "module": "Yoneda Lemma",
       "title": "What does it mean to be representable?",
-      "concepts": ["representable functors", "representing objects", "hom-functor representation"],
+      "concepts": [
+        "representable functors",
+        "representing objects",
+        "hom-functor representation"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -342,7 +451,11 @@
       "lesson": 26,
       "module": "Yoneda Lemma",
       "title": "Why is the Yoneda lemma 'trivial but deep'?",
-      "concepts": ["Yoneda lemma", "natural bijection", "Yoneda embedding"],
+      "concepts": [
+        "Yoneda lemma",
+        "natural bijection",
+        "Yoneda embedding"
+      ],
       "difficulty": 5,
       "type": "question",
       "resources": [
@@ -356,7 +469,11 @@
       "lesson": 27,
       "module": "Yoneda Lemma",
       "title": "How does Yoneda let objects 'see themselves'?",
-      "concepts": ["Yoneda embedding", "full and faithful functors", "abstraction power"],
+      "concepts": [
+        "Yoneda embedding",
+        "full and faithful functors",
+        "abstraction power"
+      ],
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
@@ -369,7 +486,12 @@
       "lesson": 28,
       "module": "Adjunctions",
       "title": "What makes two functors adjoint?",
-      "concepts": ["adjoint functors", "unit", "counit", "adjunction definition"],
+      "concepts": [
+        "adjoint functors",
+        "unit",
+        "counit",
+        "adjunction definition"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -382,7 +504,11 @@
       "lesson": 29,
       "module": "Adjunctions",
       "title": "Why are adjunctions 'everywhere in mathematics'?",
-      "concepts": ["free-forgetful adjunctions", "tensor-hom adjunction", "adjunction examples"],
+      "concepts": [
+        "free-forgetful adjunctions",
+        "tensor-hom adjunction",
+        "adjunction examples"
+      ],
       "difficulty": 3,
       "type": "real-world",
       "resources": [
@@ -395,7 +521,12 @@
       "lesson": 30,
       "module": "Adjunctions",
       "title": "Review: Yoneda and Adjunctions",
-      "concepts": ["Yoneda lemma review", "representability review", "adjunctions review", "unit and counit"],
+      "concepts": [
+        "Yoneda lemma review",
+        "representability review",
+        "adjunctions review",
+        "unit and counit"
+      ],
       "difficulty": 2,
       "type": "review",
       "resources": [
@@ -408,7 +539,11 @@
       "lesson": 31,
       "module": "Adjunctions",
       "title": "How do you verify an adjunction?",
-      "concepts": ["triangle identities", "adjunction verification", "hom-set bijection"],
+      "concepts": [
+        "triangle identities",
+        "adjunction verification",
+        "hom-set bijection"
+      ],
       "difficulty": 4,
       "type": "question",
       "resources": [
@@ -421,7 +556,11 @@
       "lesson": 32,
       "module": "Adjunctions",
       "title": "What's the connection between adjunctions and universal properties?",
-      "concepts": ["adjunctions as universal properties", "limits from adjoints", "representability"],
+      "concepts": [
+        "adjunctions as universal properties",
+        "limits from adjoints",
+        "representability"
+      ],
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
@@ -434,7 +573,11 @@
       "lesson": 33,
       "module": "Monads and Applications",
       "title": "How do monads emerge from adjunctions?",
-      "concepts": ["monads", "Kleisli categories", "monad laws"],
+      "concepts": [
+        "monads",
+        "Kleisli categories",
+        "monad laws"
+      ],
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
@@ -447,7 +590,12 @@
       "lesson": 34,
       "module": "Monads and Applications",
       "title": "Where do you see category theory in the wild?",
-      "concepts": ["programming applications", "physics applications", "database schema", "future directions"],
+      "concepts": [
+        "programming applications",
+        "physics applications",
+        "database schema",
+        "future directions"
+      ],
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
