@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { buildCliConversation, buildOutputBoundary } from '../../scripts/bot/claude.js';
+import { buildOutputBoundary } from '../../scripts/bot/claude.js';
+import { buildCliConversation } from '../../lib/adapters/claude-cli.js';
 
 describe('Claude prompt boundaries', () => {
   it('preserves chronological user and assistant turns', () => {

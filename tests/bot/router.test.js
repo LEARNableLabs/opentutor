@@ -39,6 +39,44 @@ import { handleCallback } from '../../scripts/bot/callbacks.js';
 import { handleChat } from '../../scripts/bot/chat.js';
 import { isOnboarding, handleOnboarding } from '../../scripts/bot/onboarding.js';
 
+describe('failure is visible to the student', () => {
+  const channel = { sendMessage: vi.fn() };
+
+  beforeEach(() => {
+    vi.clearAllMocks();
+    isCommand.mockReturnValue(false);
+    isOnboarding.mockReturnValue(false);
+  });
+
+  const message = { message: { text: 'hello', chat: { id: 7 }, from: { id: 7 } } };
+
+  it('tells the student when a handler throws, instead of going silent', async () => {
+    handleChat.mockRejectedValue(new Error('upstream 503'));
+
+    await expect(route(message, channel, new Map())).resolves.toBeUndefined();
+
+    expect(channel.sendMessage).toHaveBeenCalledTimes(1);
+    const [chatId, text] = channel.sendMessage.mock.calls[0];
+    expect(chatId).toBe(7);
+    expect(text).toMatch(/again|\/next/i);   // offers a way to recover, exact wording not pinned
+  });
+
+  it('never leaks the underlying error to the student', async () => {
+    handleChat.mockRejectedValue(new Error('ENOENT: spawn claude — /Users/someone/.env'));
+
+    await route(message, channel, new Map());
+
+    const [, text] = channel.sendMessage.mock.calls[0];
+    expect(text).not.toMatch(/ENOENT|spawn|\.env|Users/);
+  });
+
+  it('stays quiet when the handler succeeds', async () => {
+    handleChat.mockResolvedValue(undefined);
+    await route(message, channel, new Map());
+    expect(channel.sendMessage).not.toHaveBeenCalled();
+  });
+});
+
 describe('route', () => {
   const channel = {};
   const skills = new Map();
