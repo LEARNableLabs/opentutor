@@ -69,7 +69,8 @@ function writeCurriculum(lessons) {
   fs.writeFileSync(path.join(topicDir, 'curriculum.json'), JSON.stringify({ topic: 'Test Topic', slug: TOPIC, lessons }));
 }
 
-const readLearningLog = () => fs.readFileSync(path.join(topicDir, 'learning.md'), 'utf-8');
+const runtimeDir = path.join(PATHS.workspace, 'tutor', 'domains', TOPIC);
+const readLearningLog = () => fs.readFileSync(path.join(runtimeDir, 'learning.md'), 'utf-8');
 
 async function answer(chatId, ...texts) {
   for (const text of texts) await handleLessonAnswer(text, chatId, channel);
@@ -78,6 +79,7 @@ async function answer(chatId, ...texts) {
 beforeEach(() => {
   vi.clearAllMocks();
   fs.rmSync(topicDir, { recursive: true, force: true });
+  fs.rmSync(runtimeDir, { recursive: true, force: true });
   fs.rmSync(PATHS.progress, { force: true });
   fs.rmSync(path.join(PATHS.workspace, 'tutor', 'completions.json'), { force: true });
   getDueReviews.mockReturnValue([]);
@@ -121,7 +123,8 @@ describe('lesson step sequencing', () => {
 describe('exercise format', () => {
   it('switches a disengaged student to multiple choice', async () => {
     writeCurriculum([lesson(1, ['alpha'], { status: 'completed', engagement: 'correct' }), lesson(2, ['beta'])]);
-    fs.writeFileSync(path.join(topicDir, 'learning.md'), '## Accuracy Trend\n- **Engagement:** minimal\n');
+    fs.mkdirSync(runtimeDir, { recursive: true });
+    fs.writeFileSync(path.join(runtimeDir, 'learning.md'), '## Accuracy Trend\n- **Engagement:** minimal\n');
 
     await deliverNextLesson(TOPIC, 105, channel, new Map());
     expect(getActiveLesson(105).exerciseFormat).toBe('mc');
@@ -138,7 +141,8 @@ describe('BLOCK review', () => {
     ];
     writeCurriculum(lessons);
     const evaluation = evaluatePractice('', { topic: 'Test Topic', lessons }, '');
-    fs.writeFileSync(path.join(topicDir, 'practice-feedback.md'), formatPracticeFeedback(evaluation, 'Test Topic'));
+    fs.mkdirSync(runtimeDir, { recursive: true });
+    fs.writeFileSync(path.join(runtimeDir, 'practice-feedback.md'), formatPracticeFeedback(evaluation, 'Test Topic'));
   }
 
   it('lets the student answer the review through to completion', async () => {

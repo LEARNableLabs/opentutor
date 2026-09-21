@@ -12,4 +12,5 @@ workspace/sessions/
 .claude/
 brag-output*/
 workspace/tutor/completions.json
+workspace/tutor/domains/
 *.backup

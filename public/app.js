@@ -1,6 +1,103 @@
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => document.querySelectorAll(s);
 
+// ── Auth ───────────────────────────────────────────────────
+// One shared password (OPENTUTOR_PASSWORD on the server), remembered per browser.
+// Wrapping fetch once covers every /api call rather than threading a header
+// through each of them.
+
+const PASSWORD_KEY = 'opentutor-password';
+const store = {
+  get() { try { return localStorage.getItem(PASSWORD_KEY); } catch { return null; } },
+  set(v) { try { localStorage.setItem(PASSWORD_KEY, v); } catch { /* private mode */ } },
+  clear() { try { localStorage.removeItem(PASSWORD_KEY); } catch { /* private mode */ } },
+};
+
+const nativeFetch = window.fetch.bind(window);
+
+function withPassword(init, password) {
+  const headers = new Headers(init.headers || {});
+  if (password) headers.set('Authorization', `Bearer ${password}`);
+  return { ...init, headers };
+}
+
+window.fetch = async (input, init = {}) => {
+  const url = typeof input === 'string' ? input : input?.url || '';
+  if (!url.startsWith('/api/')) return nativeFetch(input, init);
+
+  let res = await nativeFetch(input, withPassword(init, store.get()));
+
+  if (res.status === 401) {
+    store.clear();
+    const entered = window.prompt('Password for this OpenTutor instance:');
+    if (!entered) return res;
+    store.set(entered);
+    res = await nativeFetch(input, withPassword(init, entered));
+    if (res.status === 401) store.clear();
+  }
+
+  if (res.status === 503) {
+    // The server is deployed without a password configured, and refuses to serve.
+    const { error } = await res.clone().json().catch(() => ({}));
+    alert(error || 'This deployment is not configured yet.');
+  }
+
+  return res;
+};
+
+// ── Streaming ──────────────────────────────────────────────
+// POST + SSE (EventSource cannot POST). `onToken` fires per chunk; the promise
+// resolves with the final payload, so callers keep the shape they already had.
+
+async function streamLesson(body, onToken) {
+  const res = await fetch('/api/lesson', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'text/event-stream' },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || `Request failed (${res.status})`);
+  if (!res.headers.get('content-type')?.includes('text/event-stream')) return res.json();
+
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '';
+  let result = null;
+
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+
+    let cut;
+    while ((cut = buffer.indexOf('\n\n')) !== -1) {
+      const frame = buffer.slice(0, cut);
+      buffer = buffer.slice(cut + 2);
+
+      const event = frame.match(/^event: (.+)$/m)?.[1];
+      const raw = frame.match(/^data: ([\s\S]*)$/m)?.[1];
+      if (!event || raw === undefined) continue;
+
+      const data = JSON.parse(raw);
+      if (event === 'token') onToken(data);
+      else if (event === 'done') result = data;
+      else if (event === 'error') throw new Error(data.error || 'Lesson failed');
+    }
+  }
+
+  if (!result) throw new Error('Connection ended before the reply finished');
+  return result;
+}
+
+// Append streamed text to a bubble, re-rendering markdown as it grows.
+function appendToBubble(bubble, chunk) {
+  const body = bubble.querySelector('div') || bubble;
+  body.dataset.raw = (body.dataset.raw || '') + chunk;
+  body.innerHTML = md(body.dataset.raw);
+  const conv = $('#lesson-conversation');
+  conv.scrollTop = conv.scrollHeight;
+}
+
 // ── Theme toggle ───────────────────────────────────────────
 
 const themeToggle = $('#theme-toggle');
@@ -99,15 +196,21 @@ async function startLesson() {
   $('#lesson-complete').classList.add('hidden');
 
   try {
-    const res = await fetch('/api/lesson', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ topicSlug: slug }),
+    let bubble = null;
+    const data = await streamLesson({ topicSlug: slug }, (chunk) => {
+      if (!bubble) {
+        $('#lesson-loading').classList.add('hidden');
+        $('#lesson-area').classList.remove('hidden');
+        $('#lesson-conversation').innerHTML = '';
+        bubble = appendLessonMsg('tutor', '');
+      }
+      appendToBubble(bubble, chunk);
     });
-    const data = await res.json();
 
     if (data.done) {
       showCompletion(data.message);
+    } else if (bubble) {
+      finishLessonStart(data, bubble);
     } else {
       showLessonStart(data);
     }
@@ -117,6 +220,15 @@ async function startLesson() {
     $('#btn-next').disabled = false;
     $('#lesson-loading').classList.add('hidden');
   }
+}
+
+// The stream already painted the reply; just set the surrounding chrome.
+function finishLessonStart(data, bubble) {
+  lessonActive = true;
+  $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}: ${data.lesson.title}`;
+  $('#lesson-complete').classList.add('hidden');
+  if (!bubble.textContent.trim()) bubble.remove();
+  showLessonInput();
 }
 
 function showLessonStart(data) {
@@ -143,15 +255,12 @@ async function sendLessonAnswer() {
   const typing = appendLessonMsg('tutor typing', 'Thinking...');
 
   try {
-    const res = await fetch('/api/lesson', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ topicSlug: activeTopicSlug, answer }),
+    let bubble = null;
+    const data = await streamLesson({ topicSlug: activeTopicSlug, answer }, (chunk) => {
+      if (!bubble) { typing.remove(); bubble = appendLessonMsg('tutor', ''); }
+      appendToBubble(bubble, chunk);
     });
-    const data = await res.json();
-    typing.remove();
-
-    appendLessonMsg('tutor', data.reply);
+    if (!bubble) { typing.remove(); appendLessonMsg('tutor', data.reply); }
 
     if (data.done) {
       lessonActive = false;

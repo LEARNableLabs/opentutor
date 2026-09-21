@@ -6,7 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PATHS } from './config.js';
-import { completionsFile, recordCompletion, saveCompletions, readCurriculumWithProgress, withoutRuntimeFields } from '../../lib/core/progress.js';
+import { completionsFile, recordCompletion, saveCompletions, readCurriculumWithProgress, withoutRuntimeFields, domainFilePath } from '../../lib/core/progress.js';
 import { log } from './logger.js';
 
 // ── Progress ────────────────────────────────────────────────
@@ -101,18 +101,16 @@ export function markLessonComplete(topicSlug, day, engagement = {}) {
 // ── Domain resources ────────────────────────────────────────
 
 export function readDomainFile(topicSlug, filename) {
-  const p = path.join(PATHS.domains, topicSlug, filename);
   try {
-    return fs.readFileSync(p, 'utf-8');
+    return fs.readFileSync(domainFilePath(PATHS.domains, PATHS.workspace, topicSlug, filename), 'utf-8');
   } catch {
     return null;
   }
 }
 
 export function writeDomainFile(topicSlug, filename, content) {
-  const dir = path.join(PATHS.domains, topicSlug);
-  fs.mkdirSync(dir, { recursive: true });
-  const p = path.join(dir, filename);
+  const p = domainFilePath(PATHS.domains, PATHS.workspace, topicSlug, filename);
+  fs.mkdirSync(path.dirname(p), { recursive: true });
   const tmp = p + '.tmp';
   fs.writeFileSync(tmp, content);
   fs.renameSync(tmp, p);

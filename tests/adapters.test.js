@@ -135,10 +135,13 @@ describe('Adapter defaults', () => {
     expect(adapter.strongModel).toContain('sonnet');
   });
 
-  it('OpenRouterAdapter has correct default models', () => {
+  it('OpenRouterAdapter defaults to ids OpenRouter actually accepts', () => {
     const adapter = createAdapter('openrouter');
-    expect(adapter.cheapModel).toContain('anthropic/');
-    expect(adapter.strongModel).toContain('anthropic/');
+    // OpenRouter ids carry no date suffix; the Anthropic API form 400s here.
+    for (const model of [adapter.cheapModel, adapter.strongModel]) {
+      expect(model).toMatch(/^anthropic\//);
+      expect(model).not.toMatch(/-\d{8}$/);
+    }
   });
 
   it('OllamaAdapter has default baseURL', () => {

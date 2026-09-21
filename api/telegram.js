@@ -9,6 +9,7 @@
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { buildSocraticResponsePrompt, buildLessonPlanPrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
+import { parseAssessment } from '../lib/core/assessment.js';
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const WEBHOOK_SECRET = process.env.TELEGRAM_WEBHOOK_SECRET;
@@ -120,7 +121,7 @@ async function continueLesson(chatId, answer, state, adapter) {
     { model: prompt.model },
   );
 
-  const reply = response.text.replace(/<assessment>[\s\S]*?<\/assessment>\s*/g, '').trim();
+  const { visible: reply } = parseAssessment(response.text);
   active.history.push({ role: 'assistant', content: reply });
   active.step++;
 
