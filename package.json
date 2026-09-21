@@ -44,7 +44,8 @@
     "web:dev": "node --watch scripts/web/server.js",
     "web:test": "OPENTUTOR_DATA_DIR=.test-data node scripts/web/server.js",
     "lint": "eslint lib scripts api",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build:claude-web-skill": "node scripts/build-claude-web-skill.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",

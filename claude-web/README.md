@@ -1,81 +1,67 @@
-# OpenTutor — Claude Web (Projects) Setup Guide
+# OpenTutor — Claude Web (Projects)
 
-Use OpenTutor as a Claude Project on claude.ai. Upload the skill and reference files as project knowledge — Claude becomes your tutor in the web interface.
+One file. Drag it into a Claude Project and you have a tutor.
 
-## Prerequisites
+## Setup
 
-- A Claude Pro, Team, or Enterprise account (Projects require paid plans)
+1. Download **[`opentutor.skill`](opentutor.skill)** from this folder.
+2. On [claude.ai](https://claude.ai), create a Project — name it after what you're learning.
+3. Upload `opentutor.skill` to the project's **knowledge**.
+4. Say: *"Let's start."*
 
-## Step 1 — Create a project
+That is the whole install. No custom instructions to paste — the skill carries its own
+pedagogy, tone and lesson structure.
 
-1. Go to [claude.ai](https://claude.ai)
-2. Click **Projects** in the sidebar → **New Project**
-3. Name it "OpenTutor" (or any name)
+## Add your topic
 
-## Step 2 — Upload skill files as project knowledge
+OpenTutor ships 293 pre-built curricula. Pick one from
+[`skills/tutor/domains/`](../skills/tutor/domains/) and upload its files to the same
+project:
 
-Upload these files to the project's knowledge base:
+| File | Needed? |
+|---|---|
+| `curriculum.json` | **Yes** — the lesson sequence |
+| `teaching-notes.md` | Recommended — how to teach *this* subject |
+| `concept-map.md` | Recommended — what depends on what |
+| `resources.md`, `research.md` | Optional — real books, papers and courses to cite |
 
-**Required:**
-- `skills/tutor/SKILL.md` — teaching methodology and routing
-- `skills/tutor/references/teaching-method.md` — deliberate practice principles
-- `skills/tutor/references/lesson-delivery.md` — delivery format rules
-- `skills/tutor/references/curriculum-format.md` — curriculum JSON schema
-- `workspace/IDENTITY.md` — tutor persona
-- `workspace/SOUL.md` — teaching style
+Not in the 293? Ask the tutor to build one. It follows the same schema and researches the
+topic before writing it.
 
-**For a specific topic** (pick one to start):
-- `skills/tutor/domains/<topic>/curriculum.json`
-- `skills/tutor/domains/<topic>/teaching-notes.md`
-- `skills/tutor/domains/<topic>/concept-map.md`
-- `skills/tutor/domains/<topic>/resources.md`
+## Continuity between sessions
 
-## Step 3 — Set the project instructions
+Claude Web starts every conversation fresh, so OpenTutor keeps its memory in a file.
 
-Paste this into the project's custom instructions:
+At the end of each session the tutor hands you an updated **`learning.md`** — who you
+are, what you've covered, what you keep getting wrong, and what to do about it next time.
+**Replace the old `learning.md` in the project knowledge with it.** The next session reads
+it and opens on a retrieval question instead of asking you where you left off.
 
+Skip that step and the next session repeats a lesson. It is the one piece of housekeeping
+this build cannot do for you.
+
+## What this build cannot do
+
+| | Claude Web | Telegram bot / self-hosted web |
+|---|---|---|
+| Scheduled daily lessons | ✗ — you open the project | ✓ cron |
+| Writes its own state | ✗ — you save `learning.md` back | ✓ SQLite / Postgres |
+| Builder/Critic review of new curricula | ✗ single-pass | ✓ up to 3 iterations |
+| Socratic delivery, deliberate practice, spaced review | ✓ | ✓ |
+
+For the full version, see the [Telegram bot](../README.md#telegram-bot) or
+[self-hosted web UI](../README.md#web-ui).
+
+## Rebuilding the bundle
+
+`opentutor.skill` is committed so it can be downloaded without cloning, which means it
+can go stale. It is built from [`SKILL.md`](SKILL.md) in this folder plus the shared
+references under `skills/tutor/`:
+
+```bash
+npm run build:claude-web-skill
 ```
-You are OpenTutor — a warm, sharp study buddy. Follow the teaching methodology in SKILL.md. Deliver lessons from the uploaded curriculum. Use the teaching-notes and concept-map to inform your approach.
 
-Session flow:
-1. Check where the student left off (ask if first session)
-2. Deliver one concept at a time — brief explanation, then a question
-3. Wait for the student to answer before continuing
-4. Give feedback, then move to the next concept
-5. End each session with a summary of what was covered
-
-Rules:
-- One question at a time
-- Keep explanations to 2-3 paragraphs max
-- Reference real sources from the resources file
-- Match exercise style to the domain (see teaching-notes)
-- Track which lessons are completed across conversations
-```
-
-## Step 4 — Start learning
-
-Open the project and chat:
-
-```
-Let's start! What's my first lesson?
-```
-
-## How it works
-
-- Claude reads the uploaded files as context for every conversation in the project
-- No code runs — Claude follows the methodology from SKILL.md and delivers lessons conversationally
-- The 293 pre-built curricula each have all the files needed; upload the set for the topic you want
-- For multiple topics, upload multiple curriculum.json files (Claude can distinguish by topic field)
-
-## Limitations
-
-- No automated pipeline — the Builder/Critic loop doesn't run in Claude Web (it requires code execution)
-- No persistent `learning.md` — Claude doesn't write files. Session continuity comes from conversation history within the project.
-- No spaced repetition scheduling — no cron or state persistence
-- Best for: single-topic deep dives using pre-built curricula
-
-## Tips
-
-- Upload the `research.md` file too for richer source citations
-- Upload `teacher.md` if it exists for the topic — it tells Claude how to teach that specific domain
-- For a new topic not in the 293 pre-built set, ask Claude to generate a curriculum following `curriculum-format.md`, then continue from there
+`tests/claude-web-skill.test.js` unzips the committed bundle and diffs it against those
+sources, so a stale bundle fails CI rather than reaching a student. Rebuild after editing
+any of them.
