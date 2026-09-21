@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS jobs (
 );
 CREATE INDEX IF NOT EXISTS idx_jobs_status ON jobs(status);
 
--- RLS policies (permissive for now — tighten per deployment needs)
+-- Row-level security: enabled on every table, with access granted only to service_role below.
 ALTER TABLE kv ENABLE ROW LEVEL SECURITY;
 ALTER TABLE curricula ENABLE ROW LEVEL SECURITY;
 ALTER TABLE lessons_completed ENABLE ROW LEVEL SECURITY;
@@ -106,17 +106,23 @@ ALTER TABLE sessions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE memory ENABLE ROW LEVEL SECURITY;
 ALTER TABLE jobs ENABLE ROW LEVEL SECURITY;
 
--- Allow service role full access (bot/server uses service role key)
-CREATE POLICY "service_role_all" ON kv FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "service_role_all" ON curricula FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "service_role_all" ON lessons_completed FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "service_role_all" ON students FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "service_role_all" ON student_exercises FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "service_role_all" ON groups FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "service_role_all" ON group_members FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "service_role_all" ON sessions FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "service_role_all" ON memory FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "service_role_all" ON jobs FOR ALL USING (true) WITH CHECK (true);
+-- Service role only.
+--
+-- `TO service_role` is load-bearing: without it a policy applies to EVERY role,
+-- including `anon` — the key that ships in a browser — which would leave every
+-- table below world-readable and world-writable, conversation history included.
+-- The service-role key bypasses RLS anyway; these policies exist so that adding
+-- any other role later is a deliberate act rather than an accident.
+CREATE POLICY "service_role_all" ON kv FOR ALL TO service_role USING (true) WITH CHECK (true);
+CREATE POLICY "service_role_all" ON curricula FOR ALL TO service_role USING (true) WITH CHECK (true);
+CREATE POLICY "service_role_all" ON lessons_completed FOR ALL TO service_role USING (true) WITH CHECK (true);
+CREATE POLICY "service_role_all" ON students FOR ALL TO service_role USING (true) WITH CHECK (true);
+CREATE POLICY "service_role_all" ON student_exercises FOR ALL TO service_role USING (true) WITH CHECK (true);
+CREATE POLICY "service_role_all" ON groups FOR ALL TO service_role USING (true) WITH CHECK (true);
+CREATE POLICY "service_role_all" ON group_members FOR ALL TO service_role USING (true) WITH CHECK (true);
+CREATE POLICY "service_role_all" ON sessions FOR ALL TO service_role USING (true) WITH CHECK (true);
+CREATE POLICY "service_role_all" ON memory FOR ALL TO service_role USING (true) WITH CHECK (true);
+CREATE POLICY "service_role_all" ON jobs FOR ALL TO service_role USING (true) WITH CHECK (true);
 
 -- Schema version
 INSERT INTO kv (key, value) VALUES ('schema_version', '"1"')

@@ -1,5 +1,8 @@
 # OpenTutor Deployment Guide
 
+> **⚠ Run both migrations.** `002_scope_rls_to_service_role.sql` fixes RLS policies that
+> 001 left applying to every role, including the public `anon` key (#96).
+>
 > **⚠ This path does not work end to end yet (issue #94).**
 > `api/_lib/init.js` constructs `SupabaseStore` without a root directory, so it throws and
 > silently falls back to SQLite on a read-only filesystem. The lesson KV helpers are also
@@ -28,7 +31,8 @@ Step-by-step guide for deploying OpenTutor on Vercel + Supabase. No CLI tools re
 6. Click **New Query**
 7. Paste the contents of `supabase/migrations/001_initial_schema.sql` from the repo
 8. Click **Run**
-9. Verify: go to **Table Editor** — you should see tables: `kv`, `curricula`, `sessions`, `memory`, `jobs`, `students`, `student_exercises`, `groups`, `group_members`
+9. Verify: go to **Table Editor** — you should see 10 tables: `kv`, `curricula`, `lessons_completed`, `sessions`, `memory`, `jobs`, `students`, `student_exercises`, `groups`, `group_members`
+10. Run `002_scope_rls_to_service_role.sql` as well, then check **Policies**: all 10 should list `service_role`, not `public`.
 
 ### Copy credentials
 
