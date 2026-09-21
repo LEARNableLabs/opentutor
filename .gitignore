@@ -10,3 +10,4 @@ workspace/sessions/
 .test-data/
 .planning/
 .claude/
+brag-output*/
