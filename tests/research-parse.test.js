@@ -10,7 +10,7 @@ vi.mock('../scripts/bot/logger.js', () => ({
   log: { info: vi.fn(), debug: vi.fn(), warn: vi.fn(), error: vi.fn() },
 }));
 
-const { formatResearchContext } = await import('../scripts/bot/research.js');
+const { formatResearchContext } = await import('../lib/core/research.js');
 
 // Helper to build a minimal results object
 function makeResults(overrides = {}) {

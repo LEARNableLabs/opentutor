@@ -16,6 +16,7 @@ opentutor/
 │   │   ├── progress.js               # Lesson completion: overlay on read, never written to content
 │   │   ├── db.js                     # SQLite schema and migrations
 │   │   ├── pipeline.js               # CurriculumPipeline — Builder/Critic loop (max 3 iterations)
+│   │   ├── research.js               # 8-source research; the pipeline falls back to it when a caller passes none
 │   │   ├── prompts.js                # Agent prompt builders (no platform assumptions)
 │   │   ├── student-model.js          # Accuracy trends, difficulty adjustment, engagement signals
 │   │   ├── deliberate-practice.js    # DeliberatePractitioner — evaluates teaching, writes directives

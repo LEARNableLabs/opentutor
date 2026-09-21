@@ -147,9 +147,6 @@ Database migrations: if a new migration is added to `supabase/migrations/`, past
 | `OPENTUTOR_PIPELINE_LLM` | Separate backend for curriculum pipeline | Same as OPENTUTOR_LLM |
 | `OPENTUTOR_PORT` | Web server port (local dev only) | 3000 |
 | `OPENTUTOR_DATA_DIR` | Redirect data to isolated dir (testing) | — |
-| `RESEND_API_KEY` | Resend email API key (optional) | — |
-| `RESEND_FROM` | Email sender address | — |
-| `RESEND_TO` | Student email for notifications | — |
 
 ## Troubleshooting
 

@@ -1,7 +1,7 @@
 {
   "name": "opentutor",
   "version": "1.0.0",
-  "description": "Portable AI tutor skill for any topic \u2014 works with Claude Code, Cursor, Gemini CLI, OpenCode, and any Agent Skills-compatible agent.",
+  "description": "Portable AI tutor skill for any topic — works with Claude Code, Cursor, Gemini CLI, OpenCode, and any Agent Skills-compatible agent.",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -51,8 +51,7 @@
     "@supabase/supabase-js": "^2.112.4",
     "better-sqlite3": "^13.0.3",
     "node-cron": "4.2.1",
-    "pino": "^10.3.1",
-    "resend": "^6.25.0"
+    "pino": "^10.3.1"
   },
   "devDependencies": {
     "eslint": "^10.9.1",

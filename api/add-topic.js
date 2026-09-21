@@ -41,7 +41,7 @@ export default async function handler(req, res) {
       onProgress: (p) => console.log(`[pipeline] ${p.phase} — ${p.topic} (${p.iteration})`),
     });
 
-    pipeline.run(topic, slug, level || 'intermediate', '').catch((err) => {
+    pipeline.run(topic, slug, level || 'intermediate').catch((err) => {
       console.error('[pipeline] failed:', err.message);
     });
 
