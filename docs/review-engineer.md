@@ -1,5 +1,9 @@
 # OpenTutor — Senior Backend Engineer Review
 
+> **Snapshot, 2026-09-01.** Kept as a record of the review, not updated as the code changes.
+> Several findings here have since been fixed — see the issue tracker for current status.
+
+
 Production readiness assessment. Focus on reliability, cost, observability, and what breaks under real load.
 
 ---
@@ -78,7 +82,7 @@ Using Anthropic API pricing (Sonnet: $3/$15 per MTok in/out, Haiku: $0.25/$1.25 
 
 **Hidden costs:**
 - Curriculum pipeline: 6-12 LLM calls per topic generation × $0.05-0.20 per call = $0.30-2.40 per new topic. One-time, amortized over all students using that topic.
-- Research refresh: 1 LLM call per stale topic check. With 292 topics checked monthly: minimal.
+- Research refresh: 1 LLM call per stale topic check. With 293 topics checked monthly: minimal.
 - The `assessRetrievalQuality` LLM call adds ~$0.0003 per lesson. Negligible.
 
 **Recommendation:** Costs are reasonable. Main optimization: cache lesson plans for students on the same topic at the same lesson. Two students on Day 5 of auction-theory don't need separate plan generations — the plan only varies by student model, and the variation is in the directives text, not the structure.

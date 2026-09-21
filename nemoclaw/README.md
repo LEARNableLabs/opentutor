@@ -12,7 +12,7 @@ OpenTutor as a skill for NemoClaw. The tutor runs inside NemoClaw's agent runtim
 ## Step 1 — Install skill + workspace
 
 ```bash
-npx opentutor setup
+npx opentutor
 ```
 
 Select **NemoClaw** when prompted. The script copies the skill and workspace templates into `~/.nemoclaw/` and registers the tutor agent in `~/.nemoclaw/nemoclaw.json`.
@@ -22,10 +22,10 @@ Or manually:
 ```bash
 mkdir -p ~/.nemoclaw/skills/tutor ~/.nemoclaw/workspaces/tutor/tutor/curricula ~/.nemoclaw/workspaces/tutor/memory \
   && cp -r skills/tutor/. ~/.nemoclaw/skills/tutor/ \
-  && cp skills/tutor/workspace/AGENTS.md skills/tutor/workspace/SOUL.md \
-     skills/tutor/workspace/IDENTITY.md skills/tutor/workspace/USER.md \
+  && cp workspace/AGENTS.md workspace/SOUL.md \
+     workspace/IDENTITY.md workspace/USER.md \
      ~/.nemoclaw/workspaces/tutor/ \
-  && cp skills/tutor/workspace/tutor/progress.json ~/.nemoclaw/workspaces/tutor/tutor/progress.json
+  && cp workspace/tutor/progress.json ~/.nemoclaw/workspaces/tutor/tutor/progress.json
 ```
 
 Edit `USER.md` with the student's name and timezone:
@@ -86,7 +86,7 @@ Add to `~/.nemoclaw/nemoclaw.json`:
 
 ## Step 4 — Schedule daily lessons
 
-A cron template is at `skills/tutor/cron/jobs.template.json`. Copy it into your NemoClaw cron config and adjust the channel name, timezone, and schedule.
+A cron template is at `openclaw/cron/jobs.template.json`. Copy it into your NemoClaw cron config and adjust the channel name, timezone, and schedule.
 
 ---
 

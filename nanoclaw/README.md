@@ -31,10 +31,10 @@ Copy the templates into the group you want to be the tutor (usually `main`):
 ```bash
 GROUP=main  # change to your group folder name
 
-cp skills/tutor/workspace/IDENTITY.md  ../nanoclaw/groups/$GROUP/IDENTITY.md
-cp skills/tutor/workspace/SOUL.md      ../nanoclaw/groups/$GROUP/SOUL.md
-cp skills/tutor/workspace/USER.md      ../nanoclaw/groups/$GROUP/USER.md
-cp skills/tutor/workspace/tutor/progress.json ../nanoclaw/groups/$GROUP/tutor/progress.json
+cp workspace/IDENTITY.md  ../nanoclaw/groups/$GROUP/IDENTITY.md
+cp workspace/SOUL.md      ../nanoclaw/groups/$GROUP/SOUL.md
+cp workspace/USER.md      ../nanoclaw/groups/$GROUP/USER.md
+cp workspace/tutor/progress.json ../nanoclaw/groups/$GROUP/tutor/progress.json
 mkdir -p ../nanoclaw/groups/$GROUP/tutor/curricula
 mkdir -p ../nanoclaw/groups/$GROUP/memory
 ```

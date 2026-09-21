@@ -82,11 +82,8 @@ describe('Curriculum', () => {
   });
 
   it('getNextLesson returns null when no pending lessons', () => {
-    const completed = {
-      ...curriculum,
-      lessons: curriculum.lessons.map((l) => ({ ...l, status: 'completed' })),
-    };
-    state.writeCurriculum('done-topic', completed);
+    state.writeCurriculum('done-topic', curriculum);
+    for (const lesson of curriculum.lessons) state.markLessonComplete('done-topic', lesson.day, 'correct');
     expect(state.getNextLesson('done-topic')).toBeNull();
   });
 
@@ -128,13 +125,10 @@ describe('Topics', () => {
     state.writeCurriculum('test-topic', {
       topic: 'Test',
       slug: 'test-topic',
-      lessons: [
-        { lesson: 1, status: 'completed' },
-        { lesson: 2, status: 'completed' },
-        { lesson: 3, status: 'pending' },
-        { lesson: 4, status: 'pending' },
-      ],
+      lessons: [{ lesson: 1 }, { lesson: 2 }, { lesson: 3 }, { lesson: 4 }],
     });
+    state.markLessonComplete('test-topic', 1, 'correct');
+    state.markLessonComplete('test-topic', 2, 'correct');
     const p = state.getTopicProgress('test-topic');
     expect(p.total).toBe(4);
     expect(p.completed).toBe(2);

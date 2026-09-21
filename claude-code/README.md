@@ -10,7 +10,7 @@ Use OpenTutor as a skill in Claude Code (CLI or IDE extensions). Claude Code rea
 
 ```bash
 # Automated setup
-npx opentutor setup --agent claude-code
+npx opentutor
 
 # Or manual: copy skill to project or global skills directory
 cp -r skills/tutor/ .claude/skills/tutor/
@@ -54,8 +54,8 @@ Or just ask naturally — Claude Code will discover the skill:
 ## How it works
 
 - Claude Code reads `SKILL.md` from `.claude/skills/tutor/` and follows its teaching methodology
-- The 292 pre-built curricula in `skills/tutor/domains/` are available immediately
-- For new topics, Claude Code runs the curriculum generation pipeline (using `.claude/workflows/new-topic.js` if available, or the inline pipeline from `lib/core/`)
+- The 293 pre-built curricula in `skills/tutor/domains/` are available immediately
+- For new topics, Claude Code runs the curriculum generation pipeline in `lib/core/pipeline.js` (Researcher → Builder → Critic, up to 3 iterations)
 - Progress is stored in `workspace/tutor/progress.json` and `learning.md` per domain
 - State is shared with the Telegram bot and web interface if they point to the same repo
 
@@ -80,4 +80,3 @@ The pipeline runs as parallel agents — faster than the bot's sequential pipeli
 - Claude Code has full file access — `learning.md`, `progress.json`, and memory files are read and written directly
 - The skill uses Claude Code's own model selection (no separate API key needed)
 - Works in both CLI (`claude`) and IDE extensions (VS Code, JetBrains)
-- The tutor skill workflows (`.claude/workflows/`) provide richer curriculum generation than the bot's pipeline, with QA and scheduling phases

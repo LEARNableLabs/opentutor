@@ -237,11 +237,8 @@ Environment variables in `.env`:
 
 | File | Purpose |
 |---|---|
-| `.claude/workflows/new-topic.js` | Tutor-controlled pipeline orchestrator |
-| `.claude/workflows/research.js` | Survey + targeted research modes |
-| `.claude/workflows/curriculum-build.js` | Full + patch curriculum build |
-| `.claude/workflows/curriculum-qa.js` | Adversarial 5-dimension QA |
-| `.claude/workflows/schedule.js` | Difficulty analysis and schedule design |
+| `lib/core/pipeline.js` | CurriculumPipeline — Researcher → Builder → Critic loop |
+| `lib/core/prompts.js` | Prompt builders for each pipeline agent |
 | `scripts/bot/curriculum.js` | Phase A (instant intro) + Phase B trigger |
 | `scripts/bot/research.js` | Bot-level research pipeline (API calls) |
 | `skills/tutor/templates/domain-template.md` | Template for domain file structure |

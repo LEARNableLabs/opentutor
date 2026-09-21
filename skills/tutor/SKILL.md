@@ -29,8 +29,14 @@ domains/<topic-slug>/
 ├── curriculum.json        # Lesson sequence
 ├── concept-map.md         # Concept dependencies
 ├── resources.md           # Curated books, videos, tools
-└── teaching-notes.md      # Domain-specific pedagogy
+├── research.md            # Academic sources from APIs
+├── teaching-notes.md      # Domain-specific pedagogy
+└── teacher.md             # Domain teaching config (exercise style, tone)
 ```
+
+The pipeline also writes `plan.md` and `critique.md` while building, and the Teacher
+writes `learning.md` / `practice-feedback.md` once a student starts. None of those four
+ship with the 293 pre-built domains.
 
 Follow `templates/domain-template.md` for the full generation process and file templates.
 
@@ -93,12 +99,12 @@ See [onboarding.md](references/onboarding.md) for the full flow.
 The curriculum is a living document, not a fixed plan. It should improve over time:
 
 - **Adapt to performance** — if a student breezes through lessons, compress. If they struggle, insert remedial lessons or revisit prerequisites.
-- **Incorporate new resources** — when better articles, videos, or tools are discovered (by the tutor or the student), update the curriculum and `resources/` directory.
+- **Incorporate new resources** — when better articles, videos, or tools are discovered (by the tutor or the student), update the curriculum and the domain's `resources.md`.
 - **Refine sequencing** — after teaching a topic once, note what ordering worked and what didn't in `teaching-notes.md`. Future students benefit.
 - **Student-contributed materials** — if the student provides PDFs, exercises, or links (via `workspace/materials/` or Telegram), weave them into upcoming lessons.
 - **Periodic review** — every 10 lessons, the tutor should check: is the concept map still accurate? Are there new papers or resources worth adding? Has the student's focus shifted?
 
-The curriculum is version-controlled — changes to `curriculum.json` and `resources/` are tracked, so nothing is lost.
+The curriculum is version-controlled — changes to `curriculum.json` and `resources.md` are tracked, so nothing is lost. (A student's *completion* is deliberately not: it lives in `workspace/tutor/completions.json`, so the shipped curricula stay pristine.)
 
 ## Data Files
 
@@ -122,6 +128,8 @@ Students can use slash commands (Telegram autocomplete) or natural language — 
 | `/resume` | "resume" | Resume daily lesson delivery |
 | `/topics` | "what am I learning?" | List active topics with status |
 | `/add` | "add topic: X" | Generate new domain + curriculum |
+| `/review` | "review" | Spaced-repetition review of past concepts |
+| `/switch` | "switch to X" | Change the default topic |
 | `/help` | "help" | Show available commands |
 | — | "skip" | Mark current lesson done, move on |
 | — | "I'm stuck on X" | Deep dive into that concept |

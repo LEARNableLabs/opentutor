@@ -1,5 +1,9 @@
 # Student Review — "I just want to learn auction theory"
 
+> **Snapshot, 2026-09-01.** Kept as a record of the review, not updated as the code changes.
+> Several findings here have since been fixed — see the issue tracker for current status.
+
+
 *Perspective: 25-year-old self-taught developer. Used Duolingo (loved streaks, hated shallowness), Khan Academy (great content, boring), Brilliant (too expensive). Evaluating OpenTutor.*
 
 ---
@@ -126,7 +130,7 @@ In order of likelihood:
 | **Engagement** | High when Socratic works | Very high (streaks, gems) | Low (videos) | Medium (puzzles) |
 | **Ease of start** | Hard (self-host or deploy) | 1 tap | 1 click | 1 click |
 | **Daily habit** | Maybe (3x push) | Yes (streaks) | No | Sometimes |
-| **Topic breadth** | 292 topics | ~40 courses | Thousands | ~60 courses |
+| **Topic breadth** | 293 topics | ~40 courses | Thousands | ~60 courses |
 | **Personalization** | Strong (student model, adaptive) | Basic (placement test) | None | Adaptive |
 | **Price** | Free (+ API costs) | Freemium ($84/yr) | Free | $150/yr |
 | **Social** | None | Leaderboards, friends | None | None |

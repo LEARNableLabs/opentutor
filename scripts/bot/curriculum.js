@@ -187,7 +187,8 @@ async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId
     ? research.wikiLinks.join(', ')
     : null;
 
-  // Preserve existing completion status before pipeline overwrites
+  // Only used to tell the student whether this is an upgrade from starter lessons;
+  // completion state lives outside the curriculum file and survives a rebuild.
   const existing = readExistingCurriculum(slug);
 
   // Delegate to core pipeline
@@ -204,23 +205,6 @@ async function buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId
     wikiConcepts,
     verifyUrls,
   });
-
-  // Preserve completion status from quick curriculum
-  if (existing?.lessons) {
-    const curriculum = coreState.readCurriculum(slug);
-    if (curriculum?.lessons) {
-      for (const lesson of curriculum.lessons) {
-        const dayKey = lesson.day || lesson.lesson;
-        const match = existing.lessons.find((l) => (l.day || l.lesson) === dayKey);
-        if (match?.status === 'completed') {
-          lesson.status = 'completed';
-          lesson.delivered = match.delivered;
-          lesson.engagement = match.engagement;
-        }
-      }
-      coreState.writeCurriculum(slug, curriculum);
-    }
-  }
 
   const lessonCount = result.curriculum.lessons?.length || 0;
   const moduleCount = new Set(result.curriculum.lessons?.map((l) => l.module)).size;

@@ -13,7 +13,7 @@ import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel, markConceptReviewed } from '../../lib/core/student-model.js';
 import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives } from '../../lib/core/deliberate-practice.js';
-import { getNextLesson, markLessonComplete, readCurriculum, writeCurriculum, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
+import { getNextLesson, markLessonComplete, readCurriculum, saveCurriculumProgress, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts, getDueReviews, recordReview } from './spaced-repetition.js';
@@ -483,7 +483,7 @@ function completeSocraticLesson(chatId, active, _lastAnswer) {
     appendMemory(`Review completed: ${active.reviewConcept} (${topicSlug}). Engagement: ${engagement}`);
     // Release the BLOCK before the practitioner re-evaluates below
     const reviewed = readCurriculum(topicSlug);
-    if (reviewed) writeCurriculum(topicSlug, markConceptReviewed(reviewed, active.reviewConcept));
+    if (reviewed) saveCurriculumProgress(topicSlug, markConceptReviewed(reviewed, active.reviewConcept));
   }
 
   writeLearningLog(topicSlug, lesson, active);

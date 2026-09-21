@@ -64,7 +64,7 @@ Let's start! What's my first lesson?
 
 - Claude reads the uploaded files as context for every conversation in the project
 - No code runs — Claude follows the methodology from SKILL.md and delivers lessons conversationally
-- The 292 pre-built curricula each have all the files needed; upload the set for the topic you want
+- The 293 pre-built curricula each have all the files needed; upload the set for the topic you want
 - For multiple topics, upload multiple curriculum.json files (Claude can distinguish by topic field)
 
 ## Limitations
@@ -78,4 +78,4 @@ Let's start! What's my first lesson?
 
 - Upload the `research.md` file too for richer source citations
 - Upload `teacher.md` if it exists for the topic — it tells Claude how to teach that specific domain
-- For a new topic not in the 292 pre-built set, ask Claude to generate a curriculum following `curriculum-format.md`, then continue from there
+- For a new topic not in the 293 pre-built set, ask Claude to generate a curriculum following `curriculum-format.md`, then continue from there

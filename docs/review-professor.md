@@ -1,5 +1,9 @@
 # Professor of Education Review — OpenTutor
 
+> **Snapshot, 2026-09-01.** Kept as a record of the review, not updated as the code changes.
+> Several findings here have since been fixed — see the issue tracker for current status.
+
+
 *Perspective: tenured professor of education, 20 years studying tutoring effectiveness. Designed the ITS curriculum at Carnegie Mellon. Published on Bloom's 2-sigma problem. Default skeptical of AI tutors.*
 
 ---
@@ -88,7 +92,7 @@ I read the auction-theory concept-map.md. It lists concepts in learning order wi
 
 **As a pedagogical tool: B-.** The dependency structure is useful for sequencing and prerequisite checking. The concept-graph.js module that parses it into a formal graph and computes mastery states is a genuine contribution. But the concept maps were LLM-generated and never reviewed by a domain expert. I would bet money that at least 20% of the dependency relationships are wrong or incomplete. Incorrect dependency information is worse than no dependency information — it produces false confidence in prerequisite mastery.
 
-**Recommendation:** Pick 10 domains. Have a domain expert spend 30 minutes reviewing each concept map. Fix the dependencies. Then use those 10 as reference-quality examples for the LLM to generate better concept maps for the remaining 282.
+**Recommendation:** Pick 10 domains. Have a domain expert spend 30 minutes reviewing each concept map. Fix the dependencies. Then use those 10 as reference-quality examples for the LLM to generate better concept maps for the remaining 283.
 
 ---
 
@@ -168,7 +172,7 @@ If I were consulting on this project for three months:
 
 **What would change my mind from "cautiously optimistic" to "recommended":** Evidence. Run 50 real students through it. Measure learning. If the pre/post effect size is > 0.3 sigma with 30-day retention, this is a contribution to the field. Until then, it's a promising prototype with strong theoretical foundations and zero empirical validation.
 
-The single most dangerous thing the team could do right now is scale to 292 topics before validating that the system works for 1 topic with real students. Breadth without depth is how edtech projects die.
+The single most dangerous thing the team could do right now is scale to 293 topics before validating that the system works for 1 topic with real students. Breadth without depth is how edtech projects die.
 
 ---
 

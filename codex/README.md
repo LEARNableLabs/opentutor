@@ -19,7 +19,7 @@ cp -r workspace/tutor/ .codex/tutor/
 Or use the setup script:
 
 ```bash
-npx opentutor setup --agent codex
+npx opentutor
 ```
 
 ## Step 2 — Configure the LLM backend
@@ -68,6 +68,6 @@ Or directly:
 ## Notes
 
 - Codex runs in a sandboxed environment — file writes go to the workspace directory
-- The 292 pre-built curricula are available immediately without any pipeline run
+- The 293 pre-built curricula are available immediately without any pipeline run
 - For new topics, the Builder/Critic pipeline will use the configured OpenAI model
 - `learning.md` and `progress.json` are written to the workspace, preserving state across sessions

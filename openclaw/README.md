@@ -37,7 +37,7 @@ A single command copies everything into place — the skill, workspace files, an
 
 ```bash
 mkdir -p ~/.openclaw/skills/tutor ~/.openclaw/workspaces/tutor/tutor/curricula ~/.openclaw/workspaces/tutor/memory \
-  && cp skills/tutor/SKILL.md ~/.openclaw/skills/tutor/SKILL.md \
+  && cp -r skills/tutor/ ~/.openclaw/skills/tutor/ \
   && cp workspace/AGENTS.md workspace/IDENTITY.md workspace/USER.md ~/.openclaw/workspaces/tutor/ \
   && cp openclaw/SOUL.md ~/.openclaw/workspaces/tutor/SOUL.md \
   && cp workspace/tutor/progress.json ~/.openclaw/workspaces/tutor/tutor/progress.json
@@ -246,7 +246,7 @@ The bot responds to natural language. Key phrases from the skill:
 
 **Bot introduces itself as a generic AI (not a tutor):**
 
-- The workspace files are missing or still have the generic defaults — copy the templates from `skills/tutor/workspace/`
+- The workspace files are missing or still have the generic defaults — copy the templates from `workspace/`
 - The session has a stale skill snapshot — delete `~/.openclaw/agents/tutor/sessions/sessions.json` and all `.jsonl` files in that directory, then send a new message
 - After any workspace file change, clear sessions to force a fresh system prompt
 
