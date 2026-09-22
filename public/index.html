@@ -61,8 +61,10 @@
           <input type="text" id="search-topics" placeholder="Search 292 topics...">
         </div>
         <div id="topic-list"></div>
+        <p id="topic-error" role="alert"></p>
         <div id="add-topic">
-          <h3>Add a new topic</h3>
+          <h3>Add a topic</h3>
+          <p class="dim">Choose an available topic above. Custom topic generation is available in local installations.</p>
           <div id="add-topic-form">
             <input type="text" id="new-topic" placeholder="What do you want to learn?">
             <select id="new-level">
@@ -95,6 +97,7 @@
         <input type="text" id="onboarding-input" placeholder="Type your answer...">
         <button id="btn-onboard-send" class="primary">Send</button>
       </div>
+      <button id="btn-onboard-browse" type="button">Browse available topics</button>
     </div>
   </div>
 

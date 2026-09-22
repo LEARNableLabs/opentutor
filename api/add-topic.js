@@ -1,6 +1,5 @@
-import { getState, getPipelineAdapter, getSkills } from './_lib/init.js';
+import { getState } from './_lib/init.js';
 import { checkAuth, authFailure } from './_lib/auth.js';
-import { CurriculumPipeline } from '../lib/core/pipeline.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -12,9 +11,15 @@ export default async function handler(req, res) {
   }
 
   try {
-    const state = await getState();
-    const { topic, level } = req.body;
+    const { topic } = req.body || {};
+    if (typeof topic !== 'string' || !topic.trim()) {
+      return res.status(400).json({ error: 'A topic name is required.' });
+    }
     const slug = slugify(topic);
+    if (!slug) {
+      return res.status(400).json({ error: 'Topic names must contain at least one letter (a-z) or number.' });
+    }
+    const state = await getState();
 
     const existing = await state.readCurriculum(slug);
     if (existing?.lessons?.length) {
@@ -25,27 +30,13 @@ export default async function handler(req, res) {
       return res.status(200).json({ slug, status: 'existing', lessonCount: existing.lessons.length });
     }
 
-    // Register topic immediately
-    await state.updateProgress((p) => {
-      if (!p.active_topics) p.active_topics = [];
-      if (!p.active_topics.includes(slug)) p.active_topics.push(slug);
+    // A serverless invocation cannot own a background build after responding.
+    // Until a durable worker exists, only activate curricula we can serve (#118).
+    return res.status(501).json({
+      slug,
+      status: 'unavailable',
+      error: 'Custom topic generation is not available on this hosted instance. Choose an available topic from the Topics list, or use a local OpenTutor installation to generate a new curriculum.',
     });
-
-    // Start pipeline in background (non-blocking in serverless — will timeout)
-    const pipelineAdapter = getPipelineAdapter();
-    const skills = getSkills();
-    const pipeline = new CurriculumPipeline({
-      adapter: pipelineAdapter,
-      state,
-      skills,
-      onProgress: (p) => console.log(`[pipeline] ${p.phase} — ${p.topic} (${p.iteration})`),
-    });
-
-    pipeline.run(topic, slug, level || 'intermediate').catch((err) => {
-      console.error('[pipeline] failed:', err.message);
-    });
-
-    res.status(200).json({ slug, status: 'building' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
