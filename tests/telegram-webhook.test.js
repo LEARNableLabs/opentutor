@@ -71,10 +71,39 @@ describe('webhook access', () => {
   });
 
   it('acknowledges Telegram immediately so it does not retry', async () => {
+    vi.stubEnv('TELEGRAM_WEBHOOK_SECRET', 's3cret');
+    const r = res();
+    await handler(post('/help', { 'x-telegram-bot-api-secret-token': 's3cret' }), r);
+    expect(r.statusCode).toBe(200);
+    expect(r.body).toEqual({ ok: true });
+  });
+
+  it('rejects a request carrying the wrong secret', async () => {
+    vi.stubEnv('TELEGRAM_WEBHOOK_SECRET', 's3cret');
+    const r = res();
+    await handler(post('/next', { 'x-telegram-bot-api-secret-token': 'wrong' }), r);
+    expect(r.statusCode).toBe(403);
+  });
+
+  // The guard used to be `if (WEBHOOK_SECRET) { ...check... }`, so forgetting to
+  // configure the secret did not weaken the webhook — it removed it. Anyone who
+  // found the URL could POST a fake update, spend LLM credits and write into the
+  // student's state. auth.js already refuses a deployment with no password; this
+  // route has to hold the same line.
+  it('refuses on a deployment when no secret is configured', async () => {
+    vi.stubEnv('VERCEL', '1');
+    const r = res();
+    await handler(post('/next'), r);
+
+    expect(r.statusCode).toBe(403);
+    await settle();
+    expect(sent, 'must not reach the model or the student').toEqual([]);
+  });
+
+  it('still runs locally with no secret, where there is no public URL', async () => {
     const r = res();
     await handler(post('/help'), r);
     expect(r.statusCode).toBe(200);
-    expect(r.body).toEqual({ ok: true });
   });
 });
 
