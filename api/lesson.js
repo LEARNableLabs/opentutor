@@ -89,28 +89,56 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
     active.step++;
 
     const done = active.step >= STEPS.length;
+    let saved;
 
     if (done) {
       const day = active.lessonDay;
       // Grade the session, write the learning log, run the practitioner — the
       // adaptive half the web path used to skip entirely (#106).
-      await safely(() => completeLesson({
+      saved = await safely(() => completeLesson({
         state,
         topicSlug: active.topicSlug,
         lesson: { ...active.lesson, lesson: day },
         session: active,
-      }));
+      }), FAILED, 'completeLesson');
       await state.deleteKV(kvKey);
     } else {
       await state.writeKV(kvKey, JSON.stringify(active));
     }
 
-    return { status: 200, body: { reply, step: active.step, totalSteps: STEPS.length, done, lesson: active.lesson } };
+    return {
+      status: 200,
+      body: {
+        reply,
+        step: active.step,
+        totalSteps: STEPS.length,
+        done,
+        lesson: active.lesson,
+        // Telling a student "done" for work that was not recorded is worse than
+        // telling them it did not save. They can at least decide what to do.
+        ...(saved === FAILED ? { warning: 'This lesson could not be saved — your progress may not be recorded.' } : {}),
+      },
+    };
   }
 
   // ── Start new lesson ──────────────────────────────────────
-  const lesson = await safely(() => state.getNextLesson(topicSlug));
+  const lesson = await safely(() => state.getNextLesson(topicSlug), null, 'getNextLesson');
   if (!lesson) {
+    // getNextLesson returns null for two very different situations, and saying
+    // "all lessons completed" for both congratulated students on topics whose
+    // curriculum was never built (#118). Ask the curriculum which one it is.
+    const curriculum = await safely(() => state.readCurriculum(topicSlug), null, 'readCurriculum');
+    if (!curriculum?.lessons?.length) {
+      return {
+        status: 404,
+        body: {
+          error: `No curriculum for "${topicSlug}" yet.`,
+          topicSlug,
+          status: 'missing',
+          hint: 'It may still be building, or the build may have failed. Try adding the topic again.',
+        },
+      };
+    }
     return { status: 200, body: { done: true, message: 'All lessons completed!' } };
   }
 
@@ -164,6 +192,17 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
 // Store methods are sync on TutorState/TutorStore and async on SupabaseStore,
 // so everything here is awaited — awaiting a plain value is a no-op.
 
-async function safely(fn, fallback = null) {
-  try { return await fn(); } catch { return fallback; }
+const FAILED = Symbol('failed');
+
+async function safely(fn, fallback = null, label = 'step') {
+  try {
+    return await fn();
+  } catch (err) {
+    // Swallowing is deliberate: a grading failure must not cost the student the
+    // lesson they just did. Swallowing *invisibly* is what made #117 possible —
+    // every completion on the serverless build was discarded by this line, with
+    // no signal anywhere, because the disk is read-only and nobody logged it.
+    console.error(`[lesson] ${label} failed: ${err.message}`);
+    return fallback;
+  }
 }
