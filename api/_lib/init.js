@@ -10,7 +10,7 @@ import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/ad
 
 let _state, _adapter, _pipelineAdapter, _skills;
 
-export async function getState() {
+export async function getState(userId = null) {
   if (!_state) {
     if (process.env.SUPABASE_URL && (process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY)) {
       try {
@@ -26,7 +26,7 @@ export async function getState() {
       _state = new TutorStore(process.cwd());
     }
   }
-  return _state;
+  return userId == null ? _state : _state.forStudent(userId);
 }
 
 export function getAdapter() {

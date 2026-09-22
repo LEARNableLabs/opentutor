@@ -187,3 +187,11 @@ npm run bot:test     # Isolated test data
 ```
 
 Set `OPENTUTOR_LLM=cli` (default) to use Claude Code CLI with no API key.
+
+## Student sign-in
+
+Set a separate `OPENTUTOR_ADMIN_PASSWORD` and open `/admin.html`. Adding a student shows a one-time access token. Give that token to the student, who enters it through **Switch student** in the web UI or sends it as `Authorization: Bearer <token>`. Never put the token in a URL.
+
+The admin’s **Reset access token** action replaces a forgotten token and immediately revokes the previous one. Existing students provisioned before this feature can use that action to obtain their first token. Removing a student revokes their token and clears their stored state.
+
+Tokens are stored as SHA-256 digests; raw tokens are returned only when created or reset. They do not grant access to admin routes. The existing shared `OPENTUTOR_PASSWORD` selects the unnamed single-user instance. Requests choose their store from the verified credential, never from a caller-supplied student id.

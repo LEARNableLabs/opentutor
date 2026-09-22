@@ -14,6 +14,7 @@
  */
 
 import { timingSafeEqual } from 'crypto';
+import { authenticateStudent } from '../../lib/core/student-auth.js';
 
 /** Constant-time compare that doesn't leak length through early return. */
 function sameSecret(a, b) {
@@ -24,7 +25,8 @@ function sameSecret(a, b) {
 }
 
 function presentedSecret(req) {
-  const header = req?.headers?.authorization || '';
+  const raw = req?.headers?.authorization;
+  const header = typeof raw === 'string' ? raw : '';
   const bearer = header.startsWith('Bearer ') ? header.slice(7) : null;
   return bearer || req?.headers?.['x-opentutor-password'] || null;
 }
@@ -52,4 +54,25 @@ export function authFailure(result) {
   return result.misconfigured
     ? { status: 503, body: { error: result.reason } }
     : { status: 401, body: { error: result.reason || 'Unauthorized.' } };
+}
+
+/** Resolve a credential before choosing the student's store. Never trust a body/header userId. */
+export async function authenticateRequest(req, getRootStore) {
+  const token = presentedSecret(req);
+  if (typeof token === 'string' && process.env.OPENTUTOR_PASSWORD && sameSecret(token, process.env.OPENTUTOR_PASSWORD)) {
+    return { ok: true, userId: null };
+  }
+  if (typeof token === 'string' && token.startsWith('otst_')) {
+    try {
+      const student = await authenticateStudent(await getRootStore(), token);
+      return student ? { ok: true, userId: student.id } : { ok: false, reason: 'Invalid or revoked student token.' };
+    } catch (err) {
+      console.error('[auth] Student credential lookup failed:', err.message);
+      return { ok: false, misconfigured: true, reason: 'Sign-in is temporarily unavailable.' };
+    }
+  }
+  // A supplied invalid credential must not silently fall back to anonymous local use.
+  if (token && !process.env.OPENTUTOR_PASSWORD) return { ok: false, reason: 'Invalid credential.' };
+  const result = checkAuth(req);
+  return result.ok ? { ...result, userId: null } : result;
 }

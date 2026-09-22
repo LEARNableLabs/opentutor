@@ -10,12 +10,13 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { issueStudentToken } from '../../lib/core/student-auth.js';
 import { TutorStore } from '../../lib/core/store.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
 import { buildOnboardingPrompt } from '../../lib/core/prompts.js';
 import { lessonTurn } from '../../api/lesson.js';
-import { checkAuth, authFailure } from '../../api/_lib/auth.js';
+import { authenticateRequest, authFailure } from '../../api/_lib/auth.js';
 import { checkAdmin, adminFailure } from '../../api/_lib/admin-auth.js';
 import { listStudents, findStudent, provisionStudent, decommissionStudent } from '../../lib/core/students.js';
 import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
@@ -123,8 +124,14 @@ async function handleAdmin(req, res, url) {
       // duplicate threw *after* the headers were out, and the catch below then
       // tried to send 409 — ERR_HTTP_HEADERS_SENT, uncaught, server gone.
       const student = await provisionStudent(state, userId, { name });
+      const token = await issueStudentToken(state, student.id);
       res.writeHead(201);
-      return res.end(JSON.stringify(student));
+      return res.end(JSON.stringify({ ...student, token }));
+    }
+
+    if (req.method === 'PATCH') {
+      if (!id) return fail(res, 400, 'id is required');
+      return json(res, { id, token: await issueStudentToken(state, id) });
     }
 
     if (req.method === 'DELETE') {
@@ -188,13 +195,22 @@ async function handleAPI(req, res, url) {
   // would put student credentials on the path to provisioning.
   if (url.pathname.startsWith('/api/admin/')) return handleAdmin(req, res, url);
 
-  const auth = checkAuth(req);
+  const auth = await authenticateRequest(req, () => state);
   if (!auth.ok) {
     const { status, body } = authFailure(auth);
     res.writeHead(status);
     return res.end(JSON.stringify(body));
   }
 
+  try {
+    const rootState = state;
+    return await handleStudentAPI(req, res, url, auth.userId == null ? rootState : rootState.forStudent(auth.userId));
+  } catch (err) {
+    return fail(res, 500, err.message);
+  }
+}
+
+async function handleStudentAPI(req, res, url, state) {
   try {
     // GET /api/topics — list all topics with progress
     if (req.method === 'GET' && url.pathname === '/api/topics') {
@@ -210,6 +226,7 @@ async function handleAPI(req, res, url) {
     // GET /api/topics/:slug — single topic detail
     if (req.method === 'GET' && url.pathname.match(/^\/api\/topics\/[^/]+$/)) {
       const slug = url.pathname.split('/').pop();
+      if (!/^[a-z0-9][a-z0-9-]{0,79}$/.test(slug)) return fail(res, 400, 'Invalid topic slug');
       const curriculum = await state.readCurriculum(slug);
       const learning = await state.readDomainFile(slug, 'learning.md');
       const progress = await state.getTopicProgress(slug);

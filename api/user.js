@@ -1,15 +1,15 @@
 import { getState } from './_lib/init.js';
-import { checkAuth, authFailure } from './_lib/auth.js';
+import { authenticateRequest, authFailure } from './_lib/auth.js';
 
 export default async function handler(req, res) {
 
-  const auth = checkAuth(req);
+  const auth = await authenticateRequest(req, getState);
   if (!auth.ok) {
     const { status, body } = authFailure(auth);
     return res.status(status).json(body);
   }
   try {
-    const state = await getState();
+    const state = await getState(auth.userId);
 
     if (req.method === 'GET') {
       const user = await state.readUser();
