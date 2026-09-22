@@ -173,3 +173,91 @@ describe('a database created before student partitioning', () => {
     } finally { after.close?.(); }
   });
 });
+
+// ── Findings from an adversarial review of this change ───────────────────────
+
+describe('an id is canonicalised, not merely checked', () => {
+  // assertUserId proved the id was safe and then threw away its canonical form,
+  // so each store re-derived a key from the raw input with its own coercion.
+  it('treats a numeric id the same as its string form', async () => {
+    // better-sqlite3 binds a number as REAL, so 42 was stored under '42.0' and
+    // a store scoped to '42' could not see it. Telegram ids are numbers.
+    const asNumber = new TutorStore(root, { userId: 42 });
+    await asNumber.writeUser('# Student Profile\n- **Name:** Forty-two');
+    asNumber.close?.();
+
+    const asString = new TutorStore(root, { userId: '42' });
+    try {
+      expect(await asString.readUser()).toContain('Forty-two');
+    } finally { asString.close?.(); }
+  });
+
+  it('does not split one student across two rows by letter case', async () => {
+    // Distinct kv rows but one directory on a case-insensitive filesystem, so
+    // the pair shared completions and memory while disagreeing on the profile.
+    const lower = new TutorState(root, { userId: 'alice' });
+    lower.writeUser('# Student Profile\n- **Name:** Alice');
+
+    const upper = new TutorState(root, { userId: 'Alice' });
+    expect(upper.readUser()).toContain('Alice');
+    expect(upper.paths.workspace).toBe(lower.paths.workspace);
+  });
+
+  it.each([false, true, '', '  '])('refuses %p instead of serving the shared install', (bad) => {
+    // Each of these landed on user_id '' — the migrated single-user rows —
+    // while still getting its own directory. String(false) is even 'false',
+    // which sails through a character class that only asks about letters.
+    expect(() => new TutorStore(root, { userId: bad })).toThrow(/Invalid student id/);
+  });
+
+  it('refuses an id that is not a string or a number', () => {
+    // String(['alice']) is 'alice', so an array passed the character class and
+    // only failed later, when the driver tried to bind it.
+    expect(() => new TutorState(root, { userId: ['alice'] })).toThrow(/Invalid student id/);
+    expect(() => new TutorState(root, { userId: {} })).toThrow(/Invalid student id/);
+  });
+
+  it('accepts 0 as an id and keeps it consistent', async () => {
+    // 0 is a legitimate id. The bug was `userId || ''` collapsing it onto the
+    // unnamed install, not the value itself.
+    const zero = new TutorStore(root, { userId: 0 });
+    await zero.writeUser('# Student Profile\n- **Name:** Zero');
+    zero.close?.();
+
+    const shared = new TutorStore(root);
+    try {
+      expect(await shared.readUser(), 'the unnamed install is untouched').not.toContain('Zero');
+    } finally { shared.close?.(); }
+
+    const again = new TutorStore(root, { userId: '0' });
+    try {
+      expect(await again.readUser()).toContain('Zero');
+    } finally { again.close?.(); }
+  });
+});
+
+describe('a migration interrupted halfway', () => {
+  it('recovers rather than treating the leftovers as a fresh database', async () => {
+    // The rebuild ran four statements with no transaction. Killed after the
+    // RENAME, the next open saw no `kv`, took the fresh-database path, and
+    // CREATE TABLE made an empty one — profile and progress stranded in kv_v1.
+    const before = new TutorStore(root);
+    await before.writeUser('# Student Profile\n- **Name:** Ada');
+    before.close?.();
+
+    const dbPath = path.join(root, 'workspace', 'tutor', 'opentutor.db');
+    const { default: Database } = await import('better-sqlite3');
+    const db = new Database(dbPath);
+    db.exec(`
+      CREATE TABLE kv_v1 (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+      INSERT INTO kv_v1 (key, value) SELECT key, value FROM kv;
+      DROP TABLE kv;
+    `);
+    db.close();
+
+    const after = new TutorStore(root);
+    try {
+      expect(await after.readUser(), 'the profile was recovered from kv_v1').toContain('Ada');
+    } finally { after.close?.(); }
+  });
+});
