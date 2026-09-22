@@ -15,309 +15,91 @@
 
 ---
 
-## Features
+OpenTutor teaches you one topic a day, Socratically — it asks before it explains,
+targets what you keep getting wrong, and brings concepts back days later in a new
+context. It ships with **293 curricula** built from real sources, and can research
+and build one for any topic you name.
 
-**:books: Research-Grounded Curricula** — Generates curricula from 8 sources — arxiv, Semantic Scholar, OpenAlex, Wikipedia, university syllabi, YouTube, GitHub and Wikipedia's concept graph. 293 pre-built topics (5–40 lessons, median 27) across 30+ domains.
-
-**:robot: Multi-Agent Pipeline** — Five scoped agents (Tutor, Researcher, CurriculumBuilder, Critic, Teacher) communicate through file artifacts. The Tutor orchestrates everything; each agent only sees what it needs.
-
-**:repeat: Builder/Critic Loop** — CurriculumBuilder writes a plan, builds the curriculum, then a Critic agent reviews it. Loop runs up to 3 iterations until the Critic approves.
-
-**:chart_with_upwards_trend: Adaptive Difficulty** — Adjusts lesson difficulty based on quiz performance and engagement patterns. `learning.md` tracks progress across sessions; completion is kept in `workspace/tutor/completions.json`, never in the shipped curricula.
-
-**:electric_plug: Multi-Platform** — Telegram bot, standalone web UI, Claude Code, Codex, OpenClaw, NemoClaw, and any Agent Skills-compatible client. All share the same curriculum state.
-
-**:zap: Multi-LLM** — Adapters for Claude SDK, Claude CLI, OpenAI, OpenRouter (200+ models) and Ollama (local models). Switch backends with one env var.
-
-**:pencil2: Interactive Exercises** — Numbered buttons (1-4), quiz polls, hints, skip options. Content flows naturally; the student only interacts at questions.
-
-**:alarm_clock: Daily Scheduled Lessons** — Configurable daily pushes via cron-based scheduler (Telegram; requires `TELEGRAM_CHAT_ID`).
-
-**:brain: Session Memory** — `learning.md` per topic tracks progress, weak spots, and performance. The Tutor reads it on session boot to resume where you left off.
-
----
+It runs locally by default. Your learning history stays on your machine.
 
 ## Quickstart
 
-### Telegram Bot
-
 ```bash
-# 1. Install
-npm install
+git clone https://github.com/LEARNableLabs/opentutor
+cd opentutor && npm install
 
-# 2. Configure .env
-TELEGRAM_BOT_TOKEN=your_token_from_botfather
-TELEGRAM_CHAT_ID=your_chat_id          # optional, restricts to one chat
-ANTHROPIC_API_KEY=your_key             # for SDK backend
-CLAUDE_BACKEND=sdk                      # or 'cli' for Claude Code CLI
-
-# 3. Run
-npm run bot
+echo "OPENROUTER_API_KEY=sk-or-..." > .env    # or ANTHROPIC_API_KEY / OPENAI_API_KEY
+npm run web
 ```
 
-### Web Interface
+Open http://localhost:3000 and say *"Let's start."*
 
-```bash
-# No Telegram needed — runs a local web UI
-OPENTUTOR_LLM=claude-sdk ANTHROPIC_API_KEY=your_key npm run web
+That's the whole install. Any one LLM key works — the backend is inferred from
+whichever you set.
 
-# Opens at http://localhost:3000
-```
+**Prefer Telegram?** Add `TELEGRAM_BOT_TOKEN` and run `npm run bot`.
+**Prefer your existing agent?** `npx skills add LEARNableLabs/opentutor`.
 
-### Claude Code Skill
+## What makes it different
 
-```bash
-npx opentutor
-# or
-npx skills add LEARNableLabs/opentutor
-```
+**It reads before it writes.** Every curriculum is built from eight sources —
+arxiv, Semantic Scholar, OpenAlex, Wikipedia, university syllabi, YouTube, GitHub
+and Wikipedia's concept graph — and cites them. Curricula are drafted, then
+reviewed by a separate Critic agent, and rewritten until it approves.
 
-### One-Click Deploy
+**It teaches rather than tells.** Each lesson opens on a question about last
+week's material, then works through a diagnostic, an interleaved follow-up, and
+an application you have to explain in your own words.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLEARNableLabs%2Fopentutor&env=TELEGRAM_BOT_TOKEN,TELEGRAM_WEBHOOK_SECRET,SUPABASE_URL,SUPABASE_SERVICE_ROLE_KEY&envDescription=See%20docs%2Fdeployment.md%20for%20setup%20instructions&envLink=https%3A%2F%2Fgithub.com%2FLEARNableLabs%2Fopentutor%2Fblob%2Fmain%2Fdocs%2Fdeployment.md&project-name=my-opentutor)
+**It notices when you are stuck.** After every lesson a deliberate-practice pass
+writes directives the next lesson has to follow — don't advance past this
+concept, drop the difficulty, stop using that question format, bring this back in
+a different context.
 
-> Set at least one LLM key: `ANTHROPIC_API_KEY`, `OPENROUTER_API_KEY`, or `OPENAI_API_KEY`. See [self-deploy guide](docs/self-deploy.md) for the full walkthrough.
+**It runs anywhere.** Telegram, a local web UI, Claude Code, Codex, Claude Web,
+Hermes, OpenClaw. Five LLM backends behind one env var. Same curriculum state
+underneath.
 
----
+## Where things are
 
-## Architecture
-
-### Multi-Agent Pipeline
-
-Five agents with scoped contexts, communicating through files on disk:
-
-```
-Tutor (orchestrator — sees everything, decides what each agent gets)
-  │
-  ├── Researcher        → research.md
-  │     (topic + level only)
-  │
-  ├── CurriculumBuilder → plan.md → curriculum.json + domain files + teacher.md
-  │     (sees research.md + critique.md)
-  │
-  ├── Critic            → critique.md
-  │     (sees plan.md + curriculum + domain files)
-  │
-  └── Teacher           → learning.md
-        (sees curriculum, teacher.md, concept-map, resources, USER.md)
-```
-
-**Information scoping:** Each agent only sees what the Tutor passes it. The Researcher never sees student data. The Critic never sees research.md. The Teacher never sees critique.md. This prevents context pollution and keeps each agent focused.
-
-### Pipeline Flow
-
-```
-/add quantum computing
-  │
-  ├─ Phase A (instant, ~10-30s)
-  │    Wikipedia + research APIs → taster lesson + 5-lesson quick curriculum
-  │    Student can start learning immediately
-  │
-  └─ Phase B (background)
-       Researcher → research.md
-       CurriculumBuilder → plan.md → curriculum + domain files
-       Critic → critique.md
-       ↺ loop until APPROVED or 3 iterations
-       Student notified when full curriculum is ready
-```
-
-### Lesson Delivery (Socratic)
-
-Every lesson is a multi-turn conversation with deliberate practice:
-
-```
-Tutor: "Before we start — what's Nash equilibrium
-       and why does it matter?"                       ← RETRIEVAL (30s)
-Student: [recalls prior concept]
-
-Tutor: "Solid. Today's goal: understand revenue
-       equivalence. Why would a sealed-bid auction
-       give the same revenue as an English auction?"  ← DIAGNOSTIC
-Student: [thinks and answers]
-
-Tutor: "Good instinct. Now connect this to game
-       theory — how does this relate to dominant
-       strategies we covered last week?"              ← FOLLOW-UP + INTERLEAVE
-Student: [connects concepts]
-
-Tutor: "Apply this: you're designing an auction for
-       5G spectrum. Which format and WHY?"            ← APPLICATION + SELF-EXPLANATION
-Student: [applies + explains in own words]
-
-Tutor: "Strong reasoning. How confident? 1-5"        ← SELF-ASSESSMENT
-```
-
-Adapts length: quick (~1 min) when accuracy is high, standard (~3-5 min), deep (~8-10 min) when struggling. The DeliberatePractitioner enforces BLOCK/BUMP/DROP/VARY/REVISIT directives between lessons.
-
-### LLM Backends
-
-Set `OPENTUTOR_LLM` (or `CLAUDE_BACKEND` for backward compat):
-
-| Backend | Env value | Requires | Best for |
-|---|---|---|---|
-| Claude SDK | `claude-sdk` | `ANTHROPIC_API_KEY` | Fastest for pipelines |
-| Claude CLI | `cli` | `claude` in PATH | No API key needed |
-| OpenAI | `openai` | `OPENAI_API_KEY` | GPT models, Codex |
-| OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | 200+ models behind one key |
-| Ollama | `ollama` | Ollama running | Local/private, free |
-
-With `OPENTUTOR_LLM` unset the backend is inferred from whichever API key is present
-(`ANTHROPIC_API_KEY` → Claude SDK, `OPENROUTER_API_KEY` → OpenRouter, `OPENAI_API_KEY` → OpenAI),
-falling back to the CLI. **The Telegram bot's own chat and lesson calls still read
-`CLAUDE_BACKEND` (`sdk` | `cli`) rather than `OPENTUTOR_LLM`** — see issue #98.
-
-The pipeline can use a different backend from interactive chat:
-
-```bash
-OPENTUTOR_LLM=cli                    # chat uses Claude CLI
-OPENTUTOR_PIPELINE_LLM=claude-sdk    # pipeline uses SDK (faster)
-```
-
----
-
-## Domain Files
-
-Each topic in `skills/tutor/domains/<slug>/` contains:
-
-| File | Writer | Purpose |
-|---|---|---|
-| File | Writer | Purpose | Ships? |
-|---|---|---|---|
-| `curriculum.json` | CurriculumBuilder | Lesson sequence with concepts, difficulty, type | ✅ |
-| `concept-map.md` | CurriculumBuilder | Concept dependency graph | ✅ |
-| `teaching-notes.md` | CurriculumBuilder | Misconceptions, level adjustments, pedagogy | ✅ |
-| `resources.md` | CurriculumBuilder | Curated books, videos, tools | ✅ |
-| `research.md` | Researcher | Academic sources from APIs | ✅ |
-| `teacher.md` | CurriculumBuilder | Domain-specific teaching config (exercise style, tone) | ✅ |
-| `plan.md` | CurriculumBuilder | Blueprint — scope, module rationale, pacing | build-time |
-| `critique.md` | Critic | Structured review feedback | build-time |
-| `learning.md` | Teacher | Session log — progress, performance, resume notes | runtime |
-| `practice-feedback.md` | DeliberatePractitioner | Enforceable directives for the next lesson | runtime |
-
-**293 pre-built topics** ship with full curricula (5–40 lessons, median 27). The six files marked ✅ are present for every one; the build-time and runtime files are produced when you generate a new topic or start learning. Background research refresh runs automatically when a student picks a topic (30-day staleness check).
-
-Lesson completion is **not** stored in `curriculum.json` — it lives in `workspace/tutor/completions.json` and is overlaid at read time, so the shipped curricula stay pristine.
-
----
-
-## Telegram Commands
-
-| Command | What it does |
+| | |
 |---|---|
-| `/start` | Begin onboarding |
-| `/next` | Get the next lesson |
-| `/quiz` | Quick review quiz (native Telegram polls) |
-| `/review` | Review recent material with spaced repetition |
-| `/progress` | See your learning progress |
-| `/topics` | List active topics |
-| `/add <topic>` | Start learning a new topic |
-| `/switch <topic>` | Switch your default topic |
-| `/pause` | Pause daily lessons |
-| `/resume` | Resume daily lessons |
-| `/help` | Show available commands |
+| How it works | [docs/architecture.md](docs/architecture.md) — the agent pipeline, lesson flow, domain files |
+| Every topic that ships | [docs/topic-catalog.md](docs/topic-catalog.md) |
+| Hosting it | [docs/self-deploy.md](docs/self-deploy.md) · [docs/deployment.md](docs/deployment.md) |
+| Working on the code | [CLAUDE.md](CLAUDE.md) · [AGENTS.md](AGENTS.md) |
 
-Or just chat naturally — "next lesson", "quiz me", "I'm stuck on X".
+**Platform guides:** [Telegram](docs/deployment.md) · [Web](docs/self-deploy.md) ·
+[Claude Code](claude-code/README.md) · [Codex](codex/README.md) ·
+[Claude Web](claude-web/README.md) · [Hermes](hermes/README.md) ·
+[OpenClaw](openclaw/README.md) · [NemoClaw](nemoclaw/README.md) ·
+[NanoClaw](nanoclaw/README.md)
 
----
+## LLM backends
 
-## Repo Structure
+Set `OPENTUTOR_LLM`, or leave it unset and the backend is inferred from whichever
+key is present.
 
-```
-opentutor/
-├── lib/                              # Platform-agnostic core
-│   ├── core/
-│   │   ├── state.js                  # TutorState — file-based state management
-│   │   ├── store.js                  # TutorStore — SQLite-backed state
-│   │   ├── supabase-store.js         # SupabaseStore — Postgres (see issue #94)
-│   │   ├── progress.js               # Lesson completion, kept out of tracked content
-│   │   ├── pipeline.js               # CurriculumPipeline — Builder/Critic loop
-│   │   ├── prompts.js                # Agent prompt builders (no platform assumptions)
-│   │   ├── student-model.js          # Accuracy, difficulty, engagement
-│   │   ├── deliberate-practice.js    # DeliberatePractitioner directives
-│   │   └── index.js                  # Core exports
-│   └── adapters/
-│       ├── base.js                   # BaseLLMAdapter — interface contract
-│       ├── claude-sdk.js             # Anthropic API adapter
-│       ├── claude-cli.js             # Claude Code CLI adapter
-│       ├── openai.js                 # OpenAI-compatible HTTP (native fetch)
-│       ├── openrouter.js             # OpenRouter — extends the OpenAI adapter
-│       ├── ollama.js                 # Local models adapter
-│       └── index.js                  # Factory + exports
-├── scripts/
-│   ├── setup.js                      # Interactive setup CLI
-│   ├── bot/                          # Telegram bot
-│   │   ├── index.js                  # Entry point (npm run bot)
-│   │   ├── claude.js                 # Claude wrapper (delegates to adapters)
-│   │   ├── router.js                 # Message routing
-│   │   ├── commands.js               # Slash commands + session resume
-│   │   ├── lesson.js                 # Interactive lesson delivery
-│   │   ├── curriculum.js             # Quick-start + pipeline delegation
-│   │   ├── research.js               # Academic APIs (arxiv, Semantic Scholar, etc.)
-│   │   ├── context.js                # Telegram-specific prompt builders
-│   │   ├── callbacks.js              # Button handler (exercises, hints, skips)
-│   │   ├── state.js                  # Bot state management
-│   │   └── channels/telegram.js      # Telegram Bot API
-│   └── web/server.js                 # HTTP server + REST API (serves ../../public)
-├── public/                           # Vanilla JS frontend
-│   ├── index.html
-│   ├── style.css
-│   ├── app.js
-│   └── favicon.png
-├── api/                              # Vercel serverless routes (lessonTurn is shared with the web server)
-├── skills/tutor/
-│   ├── SKILL.md                      # Meta-skill: pedagogy + routing
-│   ├── references/                   # Teaching methodology docs
-│   ├── templates/domain-template.md  # Domain generation template
-│   └── domains/                      # 293 pre-built topic domains
-│       └── <topic-slug>/             # The six files that ship with every domain
-│           ├── curriculum.json
-│           ├── concept-map.md
-│           ├── teaching-notes.md
-│           ├── resources.md
-│           ├── research.md
-│           └── teacher.md
-├── workspace/                        # Workspace templates + runtime state
-├── tests/                            # vitest — 208 tests
-├── docs/                             # Deployment, curriculum generation, reviews
-├── openclaw/                         # OpenClaw integration
-├── nanoclaw/                         # NanoClaw integration
-├── nemoclaw/                         # NemoClaw integration
-└── package.json
-```
+| Backend | `OPENTUTOR_LLM` | Requires |
+|---|---|---|
+| Claude SDK | `claude-sdk` | `ANTHROPIC_API_KEY` |
+| Claude CLI | `cli` | `claude` in PATH — no API key |
+| OpenAI | `openai` | `OPENAI_API_KEY` |
+| OpenRouter | `openrouter` | `OPENROUTER_API_KEY` — 200+ models |
+| Ollama | `ollama` | Ollama running — local, free |
 
----
+The curriculum pipeline can use a different one: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
-## Platform Setup
+## Hosting it for others
 
-### Telegram Bot
-See [Quickstart](#quickstart) above.
-
-### Web Interface
 ```bash
-npm run web          # http://localhost:3000
-npm run web:dev      # with --watch for development
+npm run web    # then open /admin.html
 ```
 
-### Claude Code
-See [claude-code/README.md](claude-code/README.md) — install as a skill, use in CLI or IDE.
-
-### Codex (OpenAI)
-See [codex/README.md](codex/README.md) — runs with GPT models or Claude via OpenRouter.
-
-### Claude Web (Projects)
-See [claude-web/README.md](claude-web/README.md) — upload skill files as project knowledge.
-
-### Hermes Agent
-See [hermes/README.md](hermes/README.md) — skill execution with self-improvement, multi-gateway.
-
-### OpenClaw
-See [openclaw/README.md](openclaw/README.md) — gateway-based setup for Telegram/Slack.
-
-### NemoClaw / NanoClaw
-See [nemoclaw/README.md](nemoclaw/README.md) and [nanoclaw/README.md](nanoclaw/README.md).
-
----
+Add students, see what each has done, remove them. Each gets isolated state —
+own profile, own progress, own session memory. Set `OPENTUTOR_ADMIN_PASSWORD`
+(separate from the student password) to enable it.
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
