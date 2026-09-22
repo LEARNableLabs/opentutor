@@ -38,9 +38,9 @@ A single command copies everything into place — the skill, workspace files, an
 ```bash
 mkdir -p ~/.openclaw/skills/tutor ~/.openclaw/workspaces/tutor/tutor/curricula ~/.openclaw/workspaces/tutor/memory \
   && cp -r skills/tutor/ ~/.openclaw/skills/tutor/ \
-  && cp workspace/AGENTS.md workspace/IDENTITY.md workspace/USER.md ~/.openclaw/workspaces/tutor/ \
+  && cp workspace/AGENTS.md workspace/IDENTITY.md workspace/templates/USER.md ~/.openclaw/workspaces/tutor/ \
   && cp openclaw/SOUL.md ~/.openclaw/workspaces/tutor/SOUL.md \
-  && cp workspace/tutor/progress.json ~/.openclaw/workspaces/tutor/tutor/progress.json
+  && cp workspace/templates/progress.json ~/.openclaw/workspaces/tutor/tutor/progress.json
 ```
 
 > **YAML gotcha:** The `description` field in `SKILL.md` frontmatter must be quoted if it contains `: ` (colon-space), otherwise the YAML parser silently drops the skill. The file in this repo is already fixed.

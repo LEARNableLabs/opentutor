@@ -12,7 +12,7 @@ OpenTutor as a skill for NemoClaw. The tutor runs inside NemoClaw's agent runtim
 ## Step 1 — Install skill + workspace
 
 ```bash
-npx opentutor
+node scripts/setup.js
 ```
 
 Select **NemoClaw** when prompted. The script copies the skill and workspace templates into `~/.nemoclaw/` and registers the tutor agent in `~/.nemoclaw/nemoclaw.json`.
@@ -23,9 +23,9 @@ Or manually:
 mkdir -p ~/.nemoclaw/skills/tutor ~/.nemoclaw/workspaces/tutor/tutor/curricula ~/.nemoclaw/workspaces/tutor/memory \
   && cp -r skills/tutor/. ~/.nemoclaw/skills/tutor/ \
   && cp workspace/AGENTS.md workspace/SOUL.md \
-     workspace/IDENTITY.md workspace/USER.md \
+     workspace/IDENTITY.md workspace/templates/USER.md \
      ~/.nemoclaw/workspaces/tutor/ \
-  && cp workspace/tutor/progress.json ~/.nemoclaw/workspaces/tutor/tutor/progress.json
+  && cp workspace/templates/progress.json ~/.nemoclaw/workspaces/tutor/tutor/progress.json
 ```
 
 Edit `USER.md` with the student's name and timezone:

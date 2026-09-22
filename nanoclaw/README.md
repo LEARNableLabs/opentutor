@@ -33,8 +33,8 @@ GROUP=main  # change to your group folder name
 
 cp workspace/IDENTITY.md  ../nanoclaw/groups/$GROUP/IDENTITY.md
 cp workspace/SOUL.md      ../nanoclaw/groups/$GROUP/SOUL.md
-cp workspace/USER.md      ../nanoclaw/groups/$GROUP/USER.md
-cp workspace/tutor/progress.json ../nanoclaw/groups/$GROUP/tutor/progress.json
+cp workspace/templates/USER.md      ../nanoclaw/groups/$GROUP/USER.md
+cp workspace/templates/progress.json ../nanoclaw/groups/$GROUP/tutor/progress.json
 mkdir -p ../nanoclaw/groups/$GROUP/tutor/curricula
 mkdir -p ../nanoclaw/groups/$GROUP/memory
 ```

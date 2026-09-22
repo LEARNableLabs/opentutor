@@ -13,6 +13,7 @@ import { fileURLToPath } from 'url';
 import { TutorStore } from '../../lib/core/store.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
+import { buildOnboardingPrompt } from '../../lib/core/prompts.js';
 import { lessonTurn } from '../../api/lesson.js';
 import { checkAuth, authFailure } from '../../api/_lib/auth.js';
 import { checkAdmin, adminFailure } from '../../api/_lib/admin-auth.js';
@@ -235,11 +236,14 @@ async function handleAPI(req, res, url) {
         }
       }
 
-      const topics = activeTopics.map((slug) => {
-        const tp = state.getTopicProgress(slug);
+      // Awaited even though TutorStore is synchronous: awaiting a plain value
+      // is a no-op, and `promise || ''` is truthy, so an unawaited read would
+      // hand buildStudentModel a Promise and silently model nothing.
+      const topics = (await Promise.all(activeTopics.map(async (slug) => {
+        const tp = await state.getTopicProgress(slug);
         if (!tp) return null;
-        const learningMd = state.readDomainFile(slug, 'learning.md') || '';
-        const curriculum = state.readCurriculum(slug);
+        const learningMd = (await state.readDomainFile(slug, 'learning.md')) || '';
+        const curriculum = await state.readCurriculum(slug);
         const model = buildStudentModel(learningMd, curriculum, '');
         return {
           slug,
@@ -252,7 +256,7 @@ async function handleAPI(req, res, url) {
           reviewDue: model.concepts.shaky.length,
           nextLesson: tp.current?.title || null,
         };
-      }).filter(Boolean);
+      }))).filter(Boolean);
 
       return json(res, { ...progress, streak, topics });
     }
@@ -313,18 +317,10 @@ async function handleAPI(req, res, url) {
       const { message, history } = JSON.parse(body);
 
       const user = await state.readUser();
-      const system = [
-        '## Study Buddy Onboarding',
-        'You are a warm, sharp study buddy meeting a new student. Keep it natural — not a form.',
-        'Ask one question at a time. Discover: their name, what they want to learn, their level, and how they prefer to learn (examples-first vs theory-first, visual vs verbal).',
-        'When you have enough info, suggest 2-3 specific topics and ask them to pick one.',
-        'When they pick a topic, respond with exactly this marker on its own line: <TOPIC>chosen topic</TOPIC>',
-        user ? `## Student profile so far\n\n${user}` : '',
-        '\n\nReturn only polished text. Keep each message to 2-3 short paragraphs max.',
-      ].filter(Boolean).join('\n\n');
+      const { system, model } = buildOnboardingPrompt(skills, user);
 
       const messages = [...(history || []), { role: 'user', content: message }];
-      const response = await chatAdapter.generate(system, messages, { model: 'cheap' });
+      const response = await chatAdapter.generate(system, messages, { model });
 
       const topicMatch = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/);
       const cleanText = response.text.replace(/<TOPIC>.+?<\/TOPIC>/g, '').trim();

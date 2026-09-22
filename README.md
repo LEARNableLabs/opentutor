@@ -60,10 +60,40 @@ a different context.
 Hermes, OpenClaw. Five LLM backends behind one env var. Same curriculum state
 underneath.
 
+## How it teaches
+
+Three ideas, all with a research base, all unusually ignored by software that
+claims to teach.
+
+**Socratic — ask before telling.** Every lesson is four steps and waits for your
+answer: a retrieval question on *previous* material, an open diagnostic *before*
+any explanation, a follow-up that connects to a different module, then a real
+scenario where you explain *why*. An explanation you get before you've tried to
+produce the answer lands on nothing.
+
+**Deliberate practice — target the weakness.** After each lesson the tutor writes
+directives the next one has to follow: `BLOCK` (don't advance past this),
+`BUMP`/`DROP` (move the difficulty), `REVISIT` (bring it back in a new context),
+`VARY` (stop using that question shape — they're pattern-matching), `GOAL`. This
+runs deterministically from the session record, not by asking a model to be strict
+with you.
+
+**Spaced review — return after you start to forget.** Concepts come back about 1
+session later, then 3, then 7, deliberately in a different shape each time, so
+you're recalling the idea rather than the wording. Telegram adds per-concept SM-2
+scheduling; the other surfaces use the directive-driven form, which is weaker.
+
+Sessions run 1–10 minutes depending on how you're doing, and you can say "skip" at
+any point. Autonomy outranks the plan.
+
+→ **[docs/methodology.md](docs/methodology.md)** — the full account, what the
+research actually says, and where this falls short.
+
 ## Where things are
 
 | | |
 |---|---|
+| How it teaches | [docs/methodology.md](docs/methodology.md) — Socratic delivery, deliberate practice, spaced review |
 | How it works | [docs/architecture.md](docs/architecture.md) — the agent pipeline, lesson flow, domain files |
 | Every topic that ships | [docs/topic-catalog.md](docs/topic-catalog.md) |
 | Hosting it | [docs/self-deploy.md](docs/self-deploy.md) · [docs/deployment.md](docs/deployment.md) |

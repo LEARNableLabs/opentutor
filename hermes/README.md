@@ -28,12 +28,12 @@ Hermes auto-discovers skills from `~/.hermes/skills/` — no registration needed
 ```bash
 # Copy workspace templates
 cp workspace/IDENTITY.md ~/.hermes/IDENTITY.md
-cp workspace/USER.md ~/.hermes/USER.md
+cp workspace/templates/USER.md ~/.hermes/USER.md
 cp hermes/SOUL.md ~/.hermes/SOUL.md
 
 # Create state directories
 mkdir -p ~/.hermes/tutor/curricula ~/.hermes/memory
-cp workspace/tutor/progress.json ~/.hermes/tutor/progress.json
+cp workspace/templates/progress.json ~/.hermes/tutor/progress.json
 ```
 
 Edit `~/.hermes/USER.md` with your name, timezone, and level.
@@ -76,7 +76,7 @@ Quiz me on what we covered
 | OpenTutor | Hermes | Notes |
 |---|---|---|
 | `workspace/SOUL.md` | `~/.hermes/SOUL.md` | Use `hermes/SOUL.md` override |
-| `workspace/USER.md` | `~/.hermes/USER.md` | Student profile |
+| `workspace/templates/USER.md` | `~/.hermes/USER.md` | Student profile |
 | `workspace/IDENTITY.md` | `~/.hermes/IDENTITY.md` | Tutor persona |
 | `workspace/memory/` | `~/.hermes/memory/` | Daily session logs |
 | `workspace/templates/progress.json` | `~/.hermes/tutor/progress.json` | Learning state (seeded from the template) |
