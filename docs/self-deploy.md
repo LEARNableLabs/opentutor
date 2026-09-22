@@ -27,7 +27,14 @@ Pick one — the system auto-detects which you have:
 1. Go to [supabase.com](https://supabase.com), sign in, click **New Project**
 2. Pick a name, set a database password, choose a region
 3. Once provisioned, go to **SQL Editor** → **New Query**
-4. Paste the contents of [`supabase/migrations/001_initial_schema.sql`](../supabase/migrations/001_initial_schema.sql) → click **Run**
+4. Run each migration in order, pasting the contents and clicking **Run**:
+   [`001_initial_schema.sql`](../supabase/migrations/001_initial_schema.sql) ·
+   [`002_scope_rls_to_service_role.sql`](../supabase/migrations/002_scope_rls_to_service_role.sql) ·
+   [`003_partition_kv_by_student.sql`](../supabase/migrations/003_partition_kv_by_student.sql) ·
+   [`004_runtime_state_off_disk.sql`](../supabase/migrations/004_runtime_state_off_disk.sql)
+
+   All four are required. 003 and 004 are what make the hosted tutor able to
+   remember anything — without them it will teach a lesson and forget it.
 5. Go to **Settings → API**, copy:
    - **Project URL** → `SUPABASE_URL`
    - **service_role key** → `SUPABASE_SERVICE_ROLE_KEY`

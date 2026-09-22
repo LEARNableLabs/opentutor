@@ -1,14 +1,8 @@
 # OpenTutor Deployment Guide
 
-> **⚠ Run both migrations.** `002_scope_rls_to_service_role.sql` fixes RLS policies that
-> 001 left applying to every role, including the public `anon` key (#96).
->
-> **⚠ This path does not work end to end yet (issue #94).**
-> `api/_lib/init.js` constructs `SupabaseStore` without a root directory, so it throws and
-> silently falls back to SQLite on a read-only filesystem. The lesson KV helpers are also
-> guarded on `state.db`, which only SQLite has — so with Supabase wired up, every answer
-> returns `400 No active lesson`. Use the Telegram bot or `npm run web` locally until #94 lands.
-
+> **Run all four migrations, in order.** 003 and 004 are not optional: without
+> them the deployed code queries columns that do not exist. See
+> [Step 2](#step-2--supabase).
 
 Step-by-step guide for deploying OpenTutor on Vercel + Supabase. No CLI tools required — everything can be done through web dashboards.
 
@@ -32,7 +26,11 @@ Step-by-step guide for deploying OpenTutor on Vercel + Supabase. No CLI tools re
 7. Paste the contents of `supabase/migrations/001_initial_schema.sql` from the repo
 8. Click **Run**
 9. Verify: go to **Table Editor** — you should see 10 tables: `kv`, `curricula`, `lessons_completed`, `sessions`, `memory`, `jobs`, `students`, `student_exercises`, `groups`, `group_members`
-10. Run `002_scope_rls_to_service_role.sql` as well, then check **Policies**: all 10 should list `service_role`, not `public`.
+10. Run the remaining migrations in order, each with **Run**:
+    - `002_scope_rls_to_service_role.sql` — scopes RLS to `service_role`; 001 left the policies applying to every role including the public `anon` key (#96)
+    - `003_partition_kv_by_student.sql` — gives `kv` and `memory` a `user_id`, so two students stop sharing one profile (#80)
+    - `004_runtime_state_off_disk.sql` — moves completion, `learning.md` and generated curricula into Postgres, because the deployment's filesystem is read-only (#117)
+11. Check **Policies**: every table should list `service_role`, not `public`.
 
 ### Copy credentials
 
