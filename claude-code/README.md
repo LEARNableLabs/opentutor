@@ -10,7 +10,7 @@ Use OpenTutor as a skill in Claude Code (CLI or IDE extensions). Claude Code rea
 
 ```bash
 # Automated setup
-npx opentutor
+node scripts/setup.js
 
 # Or manual: copy skill to project or global skills directory
 cp -r skills/tutor/ .claude/skills/tutor/
@@ -28,7 +28,7 @@ cp -r skills/tutor/ ~/.claude/skills/tutor/
 # Copy workspace templates
 cp workspace/AGENTS.md workspace/IDENTITY.md workspace/USER.md workspace/SOUL.md .claude/
 mkdir -p .claude/tutor
-cp workspace/tutor/progress.json .claude/tutor/progress.json
+cp workspace/templates/progress.json .claude/tutor/progress.json
 ```
 
 Edit `.claude/USER.md` with your name and level.
@@ -56,7 +56,7 @@ Or just ask naturally — Claude Code will discover the skill:
 - Claude Code reads `SKILL.md` from `.claude/skills/tutor/` and follows its teaching methodology
 - The 293 pre-built curricula in `skills/tutor/domains/` are available immediately
 - For new topics, Claude Code runs the curriculum generation pipeline in `lib/core/pipeline.js` (Researcher → Builder → Critic, up to 3 iterations)
-- Progress is stored in `workspace/tutor/progress.json` and `learning.md` per domain
+- Progress is stored in `<workspace>/tutor/progress.json`; `learning.md` and `practice-feedback.md` live in `<workspace>/tutor/domains/<topic>/`. All four are runtime state, seeded from `workspace/templates/` and gitignored.
 - State is shared with the Telegram bot and web interface if they point to the same repo
 
 ## Curriculum Generation

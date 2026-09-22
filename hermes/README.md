@@ -28,12 +28,12 @@ Hermes auto-discovers skills from `~/.hermes/skills/` — no registration needed
 ```bash
 # Copy workspace templates
 cp workspace/IDENTITY.md ~/.hermes/IDENTITY.md
-cp workspace/USER.md ~/.hermes/USER.md
+cp workspace/templates/USER.md ~/.hermes/USER.md
 cp hermes/SOUL.md ~/.hermes/SOUL.md
 
 # Create state directories
 mkdir -p ~/.hermes/tutor/curricula ~/.hermes/memory
-cp workspace/tutor/progress.json ~/.hermes/tutor/progress.json
+cp workspace/templates/progress.json ~/.hermes/tutor/progress.json
 ```
 
 Edit `~/.hermes/USER.md` with your name, timezone, and level.
