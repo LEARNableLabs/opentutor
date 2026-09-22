@@ -89,7 +89,7 @@ opentutor/
 │   ├── tutor/completions.json        # Lesson completion (gitignored, created at runtime)
 │   ├── memory/YYYY-MM-DD.md          # Daily session logs
 │   └── groups/, students/, sessions/ # Created at runtime; not in the repo
-├── tests/                            # vitest — 47 files, 447 tests
+├── tests/                            # vitest unit and integration tests
 │   └── integration/                  # Constraints unit tests cannot reach: a read-only
 │                                     # filesystem, a Postgres double, the platform guides
 ├── docs/                             # Deployment, curriculum generation, reviews
@@ -124,7 +124,7 @@ Pipeline: Researcher → CurriculumBuilder (plan → build) → Critic → loop 
 - **`agentic`** — `new CurriculumPipeline({ …, mode: 'agentic' })`. An orchestrator call
   chooses the next action from a closed set (`research`, `plan`, `build`, `build_module`,
   `critique`, `finish`) from the artifacts that exist and the last critique. A local
-  complaint can get a local fix; a narrow topic can finish in one pass.
+  critique can trigger another build; `build_module` currently rebuilds the full curriculum too.
 
 The bounds are enforced in code, never asked for in the prompt: a step cap, no repeating an
 action while nothing it reads has changed, always return a curriculum, and a fall back to
@@ -166,7 +166,7 @@ swallowed, and the hosted tutor forgot every lesson it taught:
 | The 293 shipped curricula | on disk | on disk — read-only is no obstacle |
 | Session memory | files / SQLite `memory` | Postgres `memory` |
 
-Every one of those is partitioned by student (#80). A store is scoped at construction —
+Runtime profiles, progress, completions, learning logs and memory are partitioned by student (#80). Shipped content is shared; generated curricula are shared on file backends and scoped in Supabase. A store is scoped at construction —
 `new TutorStore(root, { userId })` — rather than threading an id through all 31 methods;
 omitting it is the original single-user install, unchanged.
 
@@ -186,7 +186,7 @@ npm run bot          # Telegram bot
 npm run bot:test     # Bot with isolated test data (.test-data/)
 npm run web          # Web UI at http://localhost:3000
 npm run web:test     # Web with isolated test data
-npm test             # vitest — 447 tests
+npm test             # vitest unit and integration tests
 npm run lint         # eslint over lib/, scripts/, api/
 ```
 

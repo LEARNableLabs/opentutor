@@ -2,7 +2,7 @@
 
 > **Run all four migrations, in order.** 003 and 004 are not optional: without
 > them the deployed code queries columns that do not exist. See
-> [Step 2](#step-2--supabase).
+> [Step 1](#step-1--create-a-supabase-project).
 
 Step-by-step guide for deploying OpenTutor on Vercel + Supabase. No CLI tools required — everything can be done through web dashboards.
 
@@ -48,6 +48,8 @@ Step-by-step guide for deploying OpenTutor on Vercel + Supabase. No CLI tools re
 
 | Variable | Value | Required |
 |---|---|---|
+| `OPENTUTOR_PASSWORD` | A strong shared password for the web API | Yes |
+| `OPENTUTOR_ADMIN_PASSWORD` | A separate password for student administration | For admin UI |
 | `SUPABASE_URL` | From Step 1 | Yes |
 | `SUPABASE_SERVICE_ROLE_KEY` | From Step 1 | Yes |
 | `TELEGRAM_BOT_TOKEN` | From BotFather | Yes |
@@ -134,6 +136,8 @@ Database migrations: if a new migration is added to `supabase/migrations/`, past
 
 | Variable | Purpose | Default |
 |---|---|---|
+| `OPENTUTOR_PASSWORD` | Shared web API password (required on Vercel) | — |
+| `OPENTUTOR_ADMIN_PASSWORD` | Separate admin API password | — |
 | `SUPABASE_URL` | Supabase project URL | — |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase admin key | — |
 | `TELEGRAM_BOT_TOKEN` | Telegram bot token | — |

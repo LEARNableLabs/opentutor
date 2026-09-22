@@ -52,7 +52,8 @@ except by starting over, so one weak module rebuilds every lesson.
 **Agentic** mode (`mode: 'agentic'`) replaces the fixed loop with an orchestrator call that
 picks the next action from a closed set — `research`, `plan`, `build`, `build_module`,
 `critique`, `finish` — based on which artifacts exist and what the Critic said. It sees the
-shape of the work, not the curriculum text.
+shape of the work, not the curriculum text. `build_module` currently delegates to the same
+full-curriculum builder as `build`; selective module rebuilding is not implemented.
 
 Its bounds live in code rather than in the prompt, because a model told to be frugal is a
 suggestion and a loop counter is not: a hard step cap, no repeating an action while nothing

@@ -47,6 +47,8 @@ Pick one — the system auto-detects which you have:
 
 | Variable | Value |
 |---|---|
+| `OPENTUTOR_PASSWORD` | A strong shared password for the web API |
+| `OPENTUTOR_ADMIN_PASSWORD` | A separate admin password, if using `/admin.html` |
 | `SUPABASE_URL` | From step 4 |
 | `SUPABASE_SERVICE_ROLE_KEY` | From step 4 |
 | `TELEGRAM_BOT_TOKEN` | From step 2 |
