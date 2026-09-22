@@ -387,16 +387,27 @@ function topicCard(t) {
   </div>`;
 }
 
-async function selectTopic(slug) {
+async function requestTopic(topic, level = 'intermediate') {
   const res = await fetch('/api/add-topic', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ topic: slug, level: 'intermediate' }),
+    body: JSON.stringify({ topic, level }),
   });
-  await res.json();
-  await loadActiveTopics();
-  $('#active-topic').value = slug;
-  $$('.nav-btn')[0].click();
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || `Could not add topic (${res.status}).`);
+  return data;
+}
+
+async function selectTopic(slug) {
+  try {
+    $('#topic-error').textContent = '';
+    await requestTopic(slug);
+    await loadActiveTopics();
+    $('#active-topic').value = slug;
+    $$('.nav-btn')[0].click();
+  } catch (err) {
+    $('#topic-error').textContent = err.message;
+  }
 }
 
 async function addTopic() {
@@ -407,17 +418,13 @@ async function addTopic() {
   $('#btn-add').disabled = true;
 
   try {
-    const res = await fetch('/api/add-topic', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ topic, level }),
-    });
-    const data = await res.json();
+    $('#topic-error').textContent = '';
+    await requestTopic(topic, level);
     $('#new-topic').value = '';
     loadTopics();
     loadActiveTopics();
   } catch (err) {
-    console.error('Add topic failed:', err);
+    $('#topic-error').textContent = err.message;
   } finally {
     $('#btn-add').disabled = false;
   }
@@ -534,11 +541,7 @@ async function sendOnboard() {
     onboardingHistory.push({ role: 'assistant', content: data.reply });
 
     if (data.confirmedTopic) {
-      await fetch('/api/add-topic', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: data.confirmedTopic, level: 'intermediate' }),
-      });
+      await requestTopic(data.confirmedTopic);
 
       setTimeout(() => {
         $('#onboarding-overlay').classList.add('hidden');

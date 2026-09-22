@@ -109,7 +109,7 @@ Vercel
 ├── api/topics.js     → Topic listing
 ├── api/progress.js   → Student progress with computed stats
 ├── api/onboard.js    → Onboarding conversation
-├── api/add-topic.js  → Add new topic + start pipeline
+├── api/add-topic.js  → Activate an existing curriculum (custom generation unavailable)
 └── api/user.js       → Student profile
 
 Supabase
@@ -165,6 +165,7 @@ Database migrations: if a new migration is added to `supabase/migrations/`, past
 - Check the migration ran (tables should exist in Table Editor)
 
 **Lessons not generating:**
+- Hosted `/api/add-topic` can activate existing curricula only. A custom topic without a curriculum returns `501` without adding it to active topics; choose a topic from the Topics list or generate a curriculum in a local installation. Serverless generation needs a durable worker before it can be supported (#118).
 - Check Vercel function logs for LLM timeouts
 - The pipeline needs a strong model — if using a weak model via OpenRouter, set `OPENTUTOR_PIPELINE_LLM=claude-sdk` with an Anthropic key
 
