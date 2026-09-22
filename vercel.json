@@ -1,9 +1,6 @@
 {
   "framework": null,
   "functions": {
-    "api/**/*.js": {
-      "maxDuration": 60
-    },
     "api/build-topic.js": {
       "maxDuration": 300,
       "experimentalTriggers": [
@@ -12,6 +9,9 @@
           "topic": "opentutor-curriculum"
         }
       ]
+    },
+    "api/**/*.js": {
+      "maxDuration": 60
     }
   },
   "rewrites": [
