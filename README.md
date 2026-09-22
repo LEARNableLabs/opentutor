@@ -126,7 +126,7 @@ On a local installation, ask for anything. It researches the topic across eight 
 curriculum, has a separate Critic agent review it, and revises it for up to
 three rounds. It can return a curriculum that still needs review.
 
-Hosted deployments currently activate existing curricula only; custom generation needs a durable worker (#121).
+Hosted custom topics provide five starter lessons, then build the full curriculum through Vercel Queues. Builds resume after browser reloads; see [deployment setup](docs/deployment.md#durable-custom-topic-builds).
 
 That loop runs one of two ways:
 

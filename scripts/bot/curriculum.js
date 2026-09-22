@@ -10,11 +10,10 @@ import fs from 'fs';
 import path from 'path';
 import { createHash } from 'crypto';
 import { generate } from './claude.js';
-import { buildQuickStartPrompt } from './context.js';
+import { generateQuickStart } from '../../lib/core/quick-start.js';
 import { PATHS } from './config.js';
 import { updateProgress, writeCurriculum, writeDomainFile, readDomainFile, appendMemory } from './state.js';
 import { researchTopic, formatResearchContext, verifyUrls } from '../../lib/core/research.js';
-import { searchWikipediaSummary } from '../../lib/core/research.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
 import { createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
 import { TutorState } from '../../lib/core/state.js';
@@ -55,78 +54,14 @@ export async function generateAndRegisterTopic(topic, skills, chatId, channel, l
   const studentLevel = level || detectLevel() || 'intermediate';
   fs.mkdirSync(domainDir, { recursive: true });
 
-  // Run Wikipedia + research APIs in parallel (~5s)
-  const [wikiSummary, research] = await Promise.all([
-    searchWikipediaSummary(topic).catch(() => null),
-    researchTopic(topic, { level: studentLevel }).catch(() => ({
-      arxiv: [], semanticScholar: [], wikipedia: null, openAlex: [],
-    })),
-  ]);
-
-  const researchContext = formatResearchContext(research);
-
-  // Save research for Phase B
-  if (researchContext.trim()) {
-    fs.writeFileSync(path.join(domainDir, 'research.md'), [
-      `# Research: ${topic}`,
-      `Generated: ${new Date().toISOString().split('T')[0]}`,
-      '',
-      researchContext,
-    ].join('\n'));
-  }
-
-  // Claude generates taster + roadmap + quick 5-lesson curriculum (~10-20s)
-  const { system, model, outputMode } = buildQuickStartPrompt(skills, topic, studentLevel, wikiSummary, researchContext || null);
-  const response = await generate(system, [
-    { role: 'user', content: `Give me a quick start for "${topic}".` },
-  ], { model, outputMode });
-
-  let taster = '';
-  let roadmap = '';
-  let quickLessons = [];
-
-  try {
-    const jsonMatch = response.text.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      const data = JSON.parse(jsonMatch[0]);
-      taster = data.taster || '';
-      roadmap = data.roadmap || '';
-      quickLessons = data.quickCurriculum || [];
-    }
-  } catch {
-    taster = 'I found the topic, but the first learning plan came back scrambled. Try /add again and I’ll rebuild it.';
-  }
-
-  if (!quickLessons.length) {
-    throw new Error('Quick curriculum contained no lessons');
-  }
-
-  // Write quick curriculum so /next works immediately
-  if (quickLessons.length > 0) {
-    const quickCurriculum = {
-      topic,
-      slug,
-      created: new Date().toISOString().split('T')[0],
-      student_level: studentLevel,
-      preliminary: true,
-      lessons: quickLessons.map((l, i) => ({
-        day: l.day || i + 1,
-        module: l.module || 'Getting Started',
-        title: l.title || `Lesson ${i + 1}`,
-        concepts: l.concepts || [],
-        resources: l.resources || [],
-        status: l.status || 'pending',
-      })),
-    };
-    writeCurriculum(slug, quickCurriculum);
-    log.info({ topic, lessons: quickLessons.length }, 'quick curriculum written');
-  }
-
+  const quick = await generateQuickStart({
+    adapter: { generate }, skills, topic, slug, level: studentLevel, format: 'telegram',
+  });
+  writeCurriculum(slug, quick.curriculum);
+  if (quick.researchContext) writeDomainFile(slug, 'research.md', quick.researchContext);
   registerTopic(slug);
-  appendMemory(`Topic registered: ${topic} (${slug}) — taster sent, quick curriculum (${quickLessons.length} lessons) available, full curriculum building in background`);
-
-  // Build intro message: taster + roadmap
-  const intro = [taster, roadmap].filter(Boolean).join('\n\n');
+  appendMemory(`Topic registered: ${topic} (${slug}) — starter lessons available`);
+  const intro = quick.intro;
 
   // Kick off Phase B in the background (non-blocking)
   buildCurriculumPipeline(topic, slug, studentLevel, skills, chatId, channel).catch((err) => {

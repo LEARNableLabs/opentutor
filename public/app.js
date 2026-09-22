@@ -190,6 +190,7 @@ async function loadActiveTopics() {
     select.appendChild(opt);
   }
   if (prev && data.active_topics?.includes(prev)) select.value = prev;
+  return data.active_topics || [];
 }
 
 async function startLesson() {
@@ -409,7 +410,8 @@ async function requestTopic(topic, level = 'intermediate') {
 async function selectTopic(slug) {
   try {
     $('#topic-error').textContent = '';
-    await requestTopic(slug);
+    const data = await requestTopic(slug);
+    if (data.status !== 'existing') watchTopicBuild(slug);
     await loadActiveTopics();
     $('#active-topic').value = slug;
     $$('.nav-btn')[0].click();
@@ -427,8 +429,11 @@ async function addTopic() {
 
   try {
     $('#topic-error').textContent = '';
-    await requestTopic(topic, level);
+    $('#topic-error').textContent = 'Preparing your starter lessons…';
+    const data = await requestTopic(topic, level);
+    $('#topic-error').textContent = '';
     $('#new-topic').value = '';
+    await enterNewTopic(data);
     loadTopics();
     loadActiveTopics();
   } catch (err) {
@@ -436,6 +441,66 @@ async function addTopic() {
   } finally {
     $('#btn-add').disabled = false;
   }
+}
+
+// Build progress survives a page reload: changing the active topic reads its saved job.
+let buildTimer;
+let watchedBuild;
+$('#active-topic').addEventListener('change', () => watchTopicBuild($('#active-topic').value));
+$('#btn-retry-build').addEventListener('click', async () => {
+  if (!watchedBuild) return;
+  $('#btn-retry-build').disabled = true;
+  try { await enterNewTopic(await requestTopic(watchedBuild)); }
+  catch (err) { $('#topic-build-status').textContent = err.message; }
+  finally { $('#btn-retry-build').disabled = false; }
+});
+
+async function enterNewTopic(data) {
+  $$('.nav-btn')[0].click();
+  await loadActiveTopics();
+  if (data.lessonCount) {
+    $('#active-topic').value = data.slug;
+    if (!lessonActive) await startLesson();
+  }
+  if (data.status !== 'existing') watchTopicBuild(data.slug, !data.lessonCount);
+}
+
+function watchTopicBuild(slug, waitingForStarter = false) {
+  clearTimeout(buildTimer);
+  watchedBuild = slug;
+  $('#topic-build-status').textContent = '';
+  $('#btn-retry-build').classList.add('hidden');
+  if (!slug) return;
+  async function poll() {
+    try {
+      const res = await fetch(`/api/topic-build?slug=${encodeURIComponent(slug)}`);
+      if (watchedBuild !== slug) return;
+      if (res.status === 404) return;
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Could not read curriculum progress.');
+      const phases = { quick: 'Preparing starter lessons', plan: 'Planning the full course', build: 'Writing the full course', critique: 'Reviewing the full course' };
+      $('#topic-build-status').textContent = data.status === 'ready'
+        ? (data.approved ? 'Full curriculum ready.' : 'Full curriculum ready; some review feedback remains.')
+        : data.status === 'failed' ? (data.lessonCount ? 'The full curriculum could not finish. Your available lessons are saved.' : 'Starter lessons could not be prepared. Retry to try again.')
+        : `${phases[data.phase] || 'Preparing your course'}…${data.lessonCount ? ' You can keep learning.' : ''}`;
+      $('#btn-retry-build').classList.toggle('hidden', data.status !== 'failed');
+      if (waitingForStarter && data.lessonCount) {
+        waitingForStarter = false;
+        const ready = await requestTopic(slug);
+        if (watchedBuild !== slug) return;
+        await loadActiveTopics(); $('#active-topic').value = ready.slug;
+        if (!lessonActive) await startLesson();
+      }
+      if (['ready', 'failed'].includes(data.status)) return;
+    } catch (err) {
+      if (watchedBuild !== slug) return;
+      $('#topic-build-status').textContent = err.message;
+      $('#btn-retry-build').classList.remove('hidden');
+      return;
+    }
+    if (watchedBuild === slug) buildTimer = setTimeout(poll, 3000);
+  }
+  poll();
 }
 
 // ── Chat view ───────────────────────────────────────────────
@@ -554,7 +619,8 @@ async function sendOnboard() {
     onboardingHistory.push({ role: 'assistant', content: data.reply });
 
     if (data.confirmedTopic) {
-      await requestTopic(data.confirmedTopic);
+      const topic = await requestTopic(data.confirmedTopic);
+      await enterNewTopic(topic);
 
       setTimeout(() => {
         $('#onboarding-overlay').classList.add('hidden');
@@ -586,5 +652,15 @@ function appendOnboardMsg(classes, text) {
 
 // ── Init ────────────────────────────────────────────────────
 
-loadActiveTopics();
+async function restoreTopicBuild() {
+  const active = await loadActiveTopics();
+  try {
+    const res = await fetch('/api/topic-build');
+    if (!res.ok) return;
+    const builds = await res.json();
+    const pending = builds.find((b) => b.status !== 'ready' || !active.includes(b.slug));
+    if (pending && !watchedBuild) watchTopicBuild(pending.slug, !active.includes(pending.slug));
+  } catch { /* Topics remains available if status cannot be fetched. */ }
+}
+restoreTopicBuild();
 checkOnboarding();

@@ -1,6 +1,15 @@
 {
   "framework": null,
   "functions": {
+    "api/build-topic.js": {
+      "maxDuration": 300,
+      "experimentalTriggers": [
+        {
+          "type": "queue/v2beta",
+          "topic": "opentutor-curriculum"
+        }
+      ]
+    },
     "api/**/*.js": {
       "maxDuration": 60
     }
@@ -10,5 +19,8 @@
       "source": "/api/:path*",
       "destination": "/api/:path*"
     }
+  ],
+  "regions": [
+    "iad1"
   ]
 }

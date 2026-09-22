@@ -12,7 +12,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { issueStudentToken } from '../../lib/core/student-auth.js';
 import { TutorStore } from '../../lib/core/store.js';
-import { CurriculumPipeline } from '../../lib/core/pipeline.js';
+import { addTopic } from '../../lib/core/topic-service.js';
+import { readTopicBuild, buildSummary, listTopicBuilds } from '../../lib/core/topic-builds.js';
+import { startLocalBuildWorker } from '../../lib/core/local-build-worker.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
 import { buildOnboardingPrompt } from '../../lib/core/prompts.js';
 import { lessonTurn } from '../../api/lesson.js';
@@ -37,6 +39,7 @@ const pipelineAdapter = createPipelineAdapterFromEnv();
 
 // Load skill files
 const skills = loadSkillFiles();
+const buildWorker = startLocalBuildWorker({ state, adapter: pipelineAdapter, skills });
 
 function loadSkillFiles() {
   const files = new Map();
@@ -369,39 +372,25 @@ async function handleStudentAPI(req, res, url, state) {
       return json(res, { reply: response.text, model: response.model });
     }
 
-    // POST /api/add-topic — add a new topic
+    if (req.method === 'GET' && url.pathname === '/api/topic-build') {
+      try {
+        const slug = url.searchParams.get('slug');
+        if (slug == null) return json(res, await listTopicBuilds(state));
+        const doc = await readTopicBuild(state, slug);
+        return doc ? json(res, buildSummary(doc)) : fail(res, 404, 'No build found');
+      } catch (err) { return fail(res, /Invalid topic slug/.test(err.message) ? 400 : 500, 'Could not read build status'); }
+    }
+
+    // Both surfaces return usable starter lessons while durable enrichment runs.
     if (req.method === 'POST' && url.pathname === '/api/add-topic') {
-      const body = await readBody(req);
-      const { topic, level } = JSON.parse(body);
-      const slug = slugify(topic);
-
-      const existing = await state.readCurriculum(slug);
-      if (existing?.lessons?.length) {
-        await state.updateProgress((p) => {
-          if (!p.active_topics) p.active_topics = [];
-          if (!p.active_topics.includes(slug)) p.active_topics.push(slug);
-        });
-        return json(res, { slug, status: 'existing', lessonCount: existing.lessons.length });
+      try {
+        const payload = JSON.parse(await readBody(req));
+        const result = await addTopic({ state, adapter: pipelineAdapter, skills, enqueue: buildWorker.enqueue }, payload);
+        res.writeHead(result.lessonCount ? 200 : 202);
+        return res.end(JSON.stringify(result));
+      } catch (err) {
+        return fail(res, /topic name|Invalid topic slug|Invalid level/.test(err.message) ? 400 : 503, err.message);
       }
-
-      // Start pipeline in background
-      const pipeline = new CurriculumPipeline({
-        adapter: pipelineAdapter,
-        state,
-        skills,
-        onProgress: (p) => console.log(`[pipeline] ${p.phase} — ${p.topic} (${p.iteration})`),
-      });
-
-      pipeline.run(topic, slug, level || 'intermediate').catch((err) => {
-        console.error('[pipeline] failed:', err.message);
-      });
-
-      await state.updateProgress((p) => {
-        if (!p.active_topics) p.active_topics = [];
-        if (!p.active_topics.includes(slug)) p.active_topics.push(slug);
-      });
-
-      return json(res, { slug, status: 'building' });
     }
 
     res.writeHead(404);
@@ -429,9 +418,6 @@ function readBody(req) {
   });
 }
 
-function slugify(text) {
-  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
-}
 
 function buildUserProfile(data) {
   return [

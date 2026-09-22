@@ -33,12 +33,21 @@ Do not configure a Telegram token or webhook secret in this Vercel project. The 
 
 Set `OPENTUTOR_LLM` to `claude-sdk`, `openrouter`, `openai`, `ollama`, or `cli` to override detection. Without it, keys are checked in this order: Anthropic, OpenRouter, OpenAI. Use a remote API backend on Vercel; `cli` and a local Ollama server require a suitable local environment.
 
-`OPENTUTOR_PIPELINE_LLM` can select a separate generation backend. Hosted custom generation is currently unavailable pending a durable worker (#121): `/api/add-topic` activates existing curricula or returns `501` without adding a phantom topic.
+`OPENTUTOR_PIPELINE_LLM` can select a separate generation backend. Custom topics use a durable two-phase build: five starter lessons first, then a queued planner, builder and critic. Existing curricula activate immediately without a generation call.
+
+### Durable custom-topic builds
+
+The deployment uses [Vercel Queues](https://vercel.com/docs/queues/quickstart) with the pinned `@vercel/queue` SDK. `vercel.json` registers the private `api/build-topic.js` consumer on `opentutor-curriculum`, with a 300-second function limit. Producer and consumer both use `iad1`; change both the deployment region and `api/_lib/topic-queue.js` together if relocating. Queue authentication uses Vercel's deployment identity, so there is no extra queue secret to configure. Queues is currently a beta Vercel service; verify availability for your team.
+
+`POST /api/add-topic` awaits queue acceptance before preparing starter lessons. It returns `200` with usable lessons, or `202` with a saved build to poll at `GET /api/topic-build?slug=...`. `GET /api/topic-build` lists the authenticated student's builds so the browser can recover after reload. A queue or storage scheduling error returns `503` and leaves the topic out of active progress until lessons exist.
+
+Generated web curricula, domain assets and stage checkpoints are saved together under student-scoped `generated_topic:<slug>` KV rows. No new migration beyond 001–004 is needed. Conditional updates fence duplicate deliveries and expired workers; retries resume the last saved stage. Each stage gets three attempts before the UI offers Retry. Five starter lesson identities stay stable when the full curriculum arrives, preserving completed and in-flight lessons. After three critique rounds, a curriculum can finish with outstanding review feedback, which the UI displays.
 
 ## Step 3 — Verify the deployment
 
 - Open Topics and activate an existing curriculum.
 - Complete a lesson, refresh, and verify progress persists.
+- Add a new custom topic, start a starter lesson, then reload. Verify the full curriculum eventually appears and completed lessons remain completed. Inspect the private build function and queue logs if it stalls.
 - An unauthenticated API request should return `401`; a deployment missing its web password returns `503`.
 - A topic with no curriculum returns a missing-curriculum message, not a completion message.
 - The retired Telegram endpoint must not process updates.
@@ -77,7 +86,7 @@ Follow the platform guides in `openclaw/`, `nanoclaw/`, `nemoclaw/`, or `hermes/
 
 **No topics:** Check that `skills/tutor/domains/` is included in the deployed project.
 
-**Custom topic unavailable:** Choose an existing curriculum or generate one in a local installation until hosted generation is enabled.
+**Custom topic stalled:** Check the queue trigger, matching regions, Supabase access, and pipeline LLM configuration. A failed build offers Retry; starter lessons remain available. Queue messages are retained for seven days, so re-add a topic to resume it after a longer outage.
 
 **Telegram polling conflicts:** Stop any second bot process, set `TELEGRAM_MODE=polling`, and remove the old webhook registration before starting the standalone bot.
 
@@ -90,6 +99,8 @@ npm run web:test     # isolated runtime state
 ```
 
 `OPENTUTOR_PORT` and `OPENTUTOR_HOST` select the local listener. `OPENTUTOR_DATA_DIR` redirects local runtime state. Local use can omit the shared password; hosted use cannot.
+
+The standalone web server scans saved SQLite build rows and resumes after restart; it does not require Vercel Queues locally. An interrupted stage waits for its three-minute lease to expire before recovery. Keep the process running for builds to progress.
 
 Set `OPENTUTOR_LLM=cli` (default) to use Claude Code CLI with no API key.
 

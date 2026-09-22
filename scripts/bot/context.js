@@ -4,6 +4,7 @@
  */
 
 import fs from 'fs';
+import { buildQuickStartPrompt as buildCoreQuickStartPrompt } from '../../lib/core/quick-start.js';
 import path from 'path';
 import { PATHS } from './config.js';
 import { readUser, readProgress, readRecentMemory, readDomainFile } from './state.js';
@@ -179,39 +180,8 @@ Rules:
   return { system, model: 'cheap', outputMode: 'json' };
 }
 
-export function buildQuickStartPrompt(_skills, topic, studentLevel, wikiSummary, researchContext) {
-  const wikiContext = wikiSummary
-    ? untrustedData('wikipedia-summary', JSON.stringify(wikiSummary), 6_000)
-    : '';
-
-  const system = [
-    TELEGRAM_TUTOR_PERSONA,
-    wikiContext,
-    untrustedData('research-results', researchContext, 10_000),
-    untrustedData('quick-start-request', JSON.stringify({ topic, studentLevel }), 2_000),
-    `## Quick Start — Taster Lesson (Phase A)
-
-Generate a JSON response with these keys:
-
-1. **taster** — An HTML string for Telegram. This is a taster to see if the student is interested. Include:
-   - What this field is about (2-3 vivid sentences, grounded in Wikipedia/research if available)
-   - ONE fascinating "hook" — the most surprising or beautiful idea in this field, explained in 2 sentences
-   - A "try this" micro-exercise: one simple question or thought experiment they can try right now (with answer hidden behind a spoiler or revealed after a line break)
-   - ONE real resource to explore further (video, article, or interactive tool — real URL only)
-   - End with: "I'm building your full curriculum now — type /next when you're ready for lesson 1."
-   Keep under 250 words. Warm, curious tone. Telegram HTML tags (<b>, <i>, <a href>, <tg-spoiler>).
-
-2. **roadmap** — An HTML string showing a high-level preview of the journey. 4-6 bullet points, each a module name + one-sentence description. Give the student a sense of where this goes.
-
-3. **quickCurriculum** — A preliminary 5-lesson JSON array to start with while the full curriculum builds:
-   [{"day": 1, "module": "...", "title": "Why does X...?", "concepts": ["a", "b"], "resources": [], "status": "pending"}]
-   These should be the natural first 5 lessons any course on this topic would include — foundational enough to survive unchanged when the full curriculum arrives.
-
-Output as JSON: {"taster": "html string", "roadmap": "html string", "quickCurriculum": [...]}
-Do NOT output anything outside the JSON.`,
-  ].filter(Boolean).join('\n\n---\n\n');
-
-  return { system, model: 'strong', outputMode: 'json' };
+export function buildQuickStartPrompt(skills, topic, studentLevel, wikiSummary, researchContext) {
+  return buildCoreQuickStartPrompt(skills, topic, studentLevel, wikiSummary, researchContext, { format: 'telegram' });
 }
 
 export const buildIntroPrompt = buildQuickStartPrompt;
