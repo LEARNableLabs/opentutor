@@ -15,6 +15,8 @@ import { CurriculumPipeline } from '../../lib/core/pipeline.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
 import { lessonTurn } from '../../api/lesson.js';
 import { checkAuth, authFailure } from '../../api/_lib/auth.js';
+import { checkAdmin, adminFailure } from '../../api/_lib/admin-auth.js';
+import { listStudents, findStudent, provisionStudent, decommissionStudent } from '../../lib/core/students.js';
 import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -85,10 +87,105 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
+// ── Admin (#80) ─────────────────────────────────────────────
+// The Vercel build serves these from api/admin/students.js. Both call the same
+// functions in lib/core/students.js, the way the lesson route is shared.
+
+async function handleAdmin(req, res, url) {
+  const auth = checkAdmin(req);
+  if (!auth.ok) {
+    const { status, body } = adminFailure(auth);
+    res.writeHead(status);
+    return res.end(JSON.stringify(body));
+  }
+
+  if (url.pathname !== '/api/admin/students') {
+    res.writeHead(404);
+    return res.end(JSON.stringify({ error: 'Unknown admin endpoint' }));
+  }
+
+  const id = url.searchParams.get('id');
+
+  try {
+    if (req.method === 'GET' && !id) return json(res, { students: await listStudents(state) });
+
+    if (req.method === 'GET') {
+      const student = await findStudent(state, id);
+      if (!student) return fail(res, 404, `Student ${id} not found`);
+      return json(res, await studentStats(student));
+    }
+
+    if (req.method === 'POST') {
+      const { userId, name } = JSON.parse(await readBody(req) || '{}');
+      if (!userId) return fail(res, 400, 'userId is required');
+      // Do the work before writing the status. Writing 201 first meant a
+      // duplicate threw *after* the headers were out, and the catch below then
+      // tried to send 409 — ERR_HTTP_HEADERS_SENT, uncaught, server gone.
+      const student = await provisionStudent(state, userId, { name });
+      res.writeHead(201);
+      return res.end(JSON.stringify(student));
+    }
+
+    if (req.method === 'DELETE') {
+      if (!id) return fail(res, 400, 'id is required');
+      return json(res, await decommissionStudent(state, id));
+    }
+
+    return fail(res, 405, 'Method not allowed');
+  } catch (err) {
+    // A typo in an id should not look like an outage.
+    const message = err.message || 'Provisioning failed';
+    if (/Invalid student id/.test(message)) return fail(res, 400, message);
+    if (/already exists/i.test(message)) return fail(res, 409, message);
+    if (/not found/i.test(message)) return fail(res, 404, message);
+    console.error('[admin]', err);
+    return fail(res, 500, message);
+  }
+}
+
+function fail(res, status, error) {
+  // An error path is the worst place to take the process down. If something
+  // already replied, log and close rather than throwing ERR_HTTP_HEADERS_SENT
+  // out of an async handler, where nothing catches it.
+  if (res.headersSent) {
+    console.error(`[admin] ${status} after response already sent: ${error}`);
+    return res.end();
+  }
+  res.writeHead(status);
+  return res.end(JSON.stringify({ error }));
+}
+
+async function studentStats(student) {
+  const theirs = state.forStudent(student.id);
+  try {
+    const progress = await theirs.readProgress();
+    const active = progress?.active_topics || [];
+    const topics = [];
+    for (const slug of active) {
+      const p = await theirs.getTopicProgress(slug);
+      if (p) topics.push({ slug, ...p });
+    }
+    return {
+      ...student,
+      active_topics: active,
+      topics,
+      lessons_completed: topics.reduce((n, t) => n + t.completed, 0),
+      last_session: progress?.history?.at(-1)?.date ?? null,
+    };
+  } finally {
+    theirs.close?.();
+  }
+}
+
 // ── API handlers ────────────────────────────────────────────
 
 async function handleAPI(req, res, url) {
   res.setHeader('Content-Type', 'application/json');
+
+  // Admin routes are checked first and against their own secret. Falling
+  // through the student gate would mean an admin needed both passwords, and
+  // would put student credentials on the path to provisioning.
+  if (url.pathname.startsWith('/api/admin/')) return handleAdmin(req, res, url);
 
   const auth = checkAuth(req);
   if (!auth.ok) {

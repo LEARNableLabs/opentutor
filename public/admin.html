@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenTutor — Students</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1><img src="favicon.png" alt="" width="24" height="24">Students</h1>
+      <div class="header-right">
+        <a class="nav-btn" href="/">← Tutor</a>
+        <button id="theme-toggle" title="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="view active">
+        <form id="add-student" class="admin-add">
+          <input id="new-id" type="text" placeholder="student id (e.g. alice)" autocomplete="off" required>
+          <input id="new-name" type="text" placeholder="display name (optional)" autocomplete="off">
+          <button type="submit">Add student</button>
+        </form>
+        <p id="add-error" class="admin-error" hidden></p>
+
+        <div id="students" class="admin-list" aria-live="polite">
+          <p class="admin-empty">Loading…</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
