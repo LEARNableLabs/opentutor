@@ -5,6 +5,24 @@ How the pieces fit together. For the file-by-file layout see
 
 ## Multi-Agent Pipeline
 
+**None of these are processes.** Each "agent" is a prompt builder plus one model
+call, fired when needed and then gone — there is no daemon, no orchestrator
+running in the background, and no two agents active at the same time except the
+Builder and the domain-file pass, which run concurrently on purpose.
+
+"Multi-agent" here describes *context scoping*, not runtime topology. The value
+is that each call sees only what its role needs: the Researcher never sees
+student data, the Critic never sees `research.md`, the Teacher never sees
+`critique.md`. That is what keeps a long pipeline from degrading into one
+polluted context.
+
+| Agent | Runs | Cost |
+|---|---|---|
+| Tutor | never, as code — it is the routing in `SKILL.md`, or the code path on bot/web | — |
+| Researcher, CurriculumBuilder, Critic | inside `pipeline.run()`, i.e. when a topic is created | ~12 model calls across up to 3 iterations |
+| Teacher | per lesson | 1 plan call + 1 per student answer |
+| DeliberatePractitioner | after every lesson | **no model call** — a pure function over the session record |
+
 Five agents with scoped contexts, communicating through files on disk:
 
 ```
