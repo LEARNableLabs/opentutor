@@ -258,3 +258,9 @@ passed 378 tests with a bug that took the whole web server down on any duplicate
 request — the route tests' fake `res` recorded a status instead of enforcing
 that headers are written once. Start the server, curl the endpoints, include the
 error paths.
+
+## Public web accounts (#129)
+
+`public/index.html` and `api/catalog.js` expose only shipped curricula without a sign-in requirement. `public/learn.html` contains the tutor UI. `api/account.js` handles managed Supabase signup/login, PKCE email callbacks, refresh, logout and recovery. `lib/core/accounts.js` owns cookie/flow protection and maps verified Auth UUIDs to reserved `acct-` student ids. Auth clients are per-request and separate from SupabaseStore's service client.
+
+Accounts live in individual unnamed-store `account_student:<id>` KV rows, inserted only if absent; legacy admin-provisioned students retain their registry format. Account decommissioning writes a disabled tombstone before clearing state. Never fall back from an invalid account cookie to a legacy credential or unnamed store, and never publish runtime/generated topics through the public catalog. Production signup needs Supabase Email confirmation, allowed callback URLs and a working SMTP sender; see docs/deployment.md.

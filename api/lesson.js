@@ -17,6 +17,7 @@ import { parseAssessment, assessmentFilter } from '../lib/core/assessment.js';
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 
 export default async function handler(req, res) {
+  res.setHeader?.('Cache-Control','private, no-store');
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
 
   const auth = await authenticateRequest(req, getState);

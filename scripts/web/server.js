@@ -7,6 +7,8 @@
  */
 
 import http from 'http';
+import { accountHandler } from '../../api/account.js';
+import { publicCatalog } from '../../lib/core/catalog.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -192,7 +194,16 @@ async function studentStats(student) {
 
 async function handleAPI(req, res, url) {
   res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Cache-Control','private, no-store');
 
+  if(url.pathname==='/api/catalog' && req.method==='GET')return json(res,publicCatalog(ROOT));
+  if(url.pathname==='/api/account') {
+    try {req.body=req.method==='POST'?JSON.parse(await readBody(req)||'{}'):{};}
+    catch {return fail(res,400,'Invalid request body');}
+    res.status=(code)=>{res.statusCode=code;return res;};
+    res.json=(body)=>{res.end(JSON.stringify(body));return res;};
+    return accountHandler({getStore:async()=>state})(req,res);
+  }
   // Admin routes are checked first and against their own secret. Falling
   // through the student gate would mean an admin needed both passwords, and
   // would put student credentials on the path to provisioning.

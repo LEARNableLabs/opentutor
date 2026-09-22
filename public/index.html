@@ -1,109 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenTutor</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div id="app">
-    <header>
-      <h1><img src="favicon.png" alt="" width="24" height="24">OpenTutor</h1>
-      <div class="header-right">
-        <nav id="nav">
-          <button class="nav-btn active" data-view="learn">Learn</button>
-          <button class="nav-btn" data-view="topics">Topics</button>
-          <button class="nav-btn" data-view="chat">Chat</button>
-        </nav>
-        <button id="btn-signout" type="button">Switch student</button>
-        <button id="theme-toggle" title="Toggle theme">🌙</button>
-      </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Follow your curiosity with short, personal lessons. Explore OpenTutor's topic library, then create an account to start learning."
+    />
+    <title>OpenTutor — Follow your curiosity</title>
+    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="/welcome.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/"
+        ><img src="/favicon.png" width="30" height="30" alt="" />OpenTutor</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a><a href="#topics">Explore topics</a
+        ><a href="/login.html" id="login-link">Log in</a
+        ><a class="button small" href="/login.html?mode=signup" id="account-link"
+          >Create account <span aria-hidden="true">↗</span></a
+        >
+      </nav>
     </header>
-
     <main>
-      <!-- Learn view -->
-      <section id="view-learn" class="view active">
-        <div id="topic-select">
-          <select id="active-topic">
-            <option value="">Select a topic...</option>
-          </select>
-          <button id="btn-next" class="primary">Next Lesson</button>
-        </div>
-
-        <div id="topic-build-status" role="status"></div>
-        <button id="btn-retry-build" type="button" class="hidden">Retry curriculum build</button>
-        <div id="lesson-loading" class="hidden">
-          <div class="spinner"></div>
-          <span>Generating lesson...</span>
-        </div>
-
-        <div id="lesson-area" class="hidden">
-          <div id="lesson-meta"></div>
-          <div id="lesson-conversation"></div>
-          <div id="lesson-input-area" class="hidden">
-            <input type="text" id="lesson-input" placeholder="Your answer...">
-            <button id="btn-lesson-answer" class="primary">Send</button>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A little curiosity. A little every day.</p>
+          <h1>Make room for<br />your next <em>big idea.</em></h1>
+          <p class="hero-description">
+            From game theory to a better loaf of bread. Learn through short conversations that help
+            you think, practise, and understand—not just collect answers.
+          </p>
+          <div class="actions">
+            <a class="button" href="#topics"
+              >Find something to learn <span aria-hidden="true">↓</span></a
+            ><a class="text-link" href="/login.html?mode=signup">Start your learning journey ↗</a>
           </div>
-          <div id="lesson-complete" class="hidden">
-            <p>Lesson complete. Type <strong>/next</strong> or click <strong>Next Lesson</strong> to continue.</p>
+          <p class="quiet">Browse the whole topic library. No account needed.</p>
+        </div>
+        <div class="lesson-preview" aria-label="Example of an OpenTutor lesson">
+          <div class="preview-top">
+            <span class="pill">A taste of a lesson</span
+            ><span class="quiet">Game theory · 3–5 min</span>
           </div>
-        </div>
-
-        <div id="empty-state">
-          <p style="font-size: 18px; color: var(--text); margin-bottom: 12px;">What are you curious about today?</p>
-          <p class="dim">I can teach you anything from quantum physics to breadmaking.</p>
-          <p class="dim">Pick a topic above, or go to <strong>Topics</strong> to browse all 292 available curricula.</p>
-        </div>
-      </section>
-
-      <!-- Topics view -->
-      <section id="view-topics" class="view hidden">
-        <div id="topic-search">
-          <input type="text" id="search-topics" placeholder="Search 292 topics...">
-        </div>
-        <div id="topic-list"></div>
-        <p id="topic-error" role="alert"></p>
-        <div id="add-topic">
-          <h3>Add a topic</h3>
-          <p class="dim">Choose an available topic above, or add your own. Start with five lessons while the full curriculum is prepared.</p>
-          <div id="add-topic-form">
-            <input type="text" id="new-topic" placeholder="What do you want to learn?">
-            <select id="new-level">
-              <option value="beginner">Beginner</option>
-              <option value="intermediate" selected>Intermediate</option>
-              <option value="advanced">Advanced</option>
-            </select>
-            <button id="btn-add" class="primary">Add</button>
+          <p class="preview-subtitle">TODAY’S QUESTION</p>
+          <h2>Why is cooperation<br />sometimes so hard?</h2>
+          <div class="conversation">
+            <span class="tutor-dot" aria-hidden="true">✦</span>
+            <p>
+              Two neighbours share a garden. Both benefit when it’s cared for, but each would rather
+              let the other do the work. What would you try?
+            </p>
+          </div>
+          <div class="sample-answer">“What if they took turns?”</div>
+          <div class="conversation">
+            <span class="tutor-dot" aria-hidden="true">✦</span>
+            <p>
+              Good starting point. What makes you trust that your neighbour will take their turn?
+            </p>
+          </div>
+          <div class="preview-footer">
+            <span>Think it through. Make it yours.</span><span aria-hidden="true">↗</span>
           </div>
         </div>
       </section>
-
-      <!-- Chat view -->
-      <section id="view-chat" class="view hidden">
-        <div id="chat-messages"></div>
-        <div id="chat-input-area">
-          <input type="text" id="chat-input" placeholder="Ask me anything...">
-          <button id="btn-send" class="primary">Send</button>
+      <section id="how-it-works" class="how-section">
+        <div class="section-heading">
+          <p class="eyebrow">Built for understanding</p>
+          <h2>A conversation, with a direction.</h2>
+          <p>Bring the curiosity. We’ll help you turn it into a habit.</p>
         </div>
+        <div class="steps">
+          <article>
+            <span class="step-number">01</span>
+            <h3>Choose your next question</h3>
+            <p>
+              Explore a ready-made curriculum, or ask for something of your own once you’ve signed
+              in.
+            </p>
+          </article>
+          <article>
+            <span class="step-number">02</span>
+            <h3>Learn by thinking aloud</h3>
+            <p>
+              Your tutor asks questions, responds to your answers, and gives you something to try.
+              Go deeper or move on at your pace.
+            </p>
+          </article>
+          <article>
+            <span class="step-number">03</span>
+            <h3>Keep building on it</h3>
+            <p>
+              Your account saves your progress. Return for another short lesson and connect new
+              ideas to what you already know.
+            </p>
+          </article>
+        </div>
+        <p class="disclosure">
+          OpenTutor uses AI. It can make mistakes—check important facts and explore the sources
+          alongside your lessons.
+        </p>
+      </section>
+      <section id="topics" class="catalog-section">
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow">The curiosity shelf</p>
+            <h2>Where will you start?</h2>
+            <p>
+              Explore <span id="topic-count">our</span> predefined topics. Open a card to see the
+              first few lessons.
+            </p>
+          </div>
+          <label class="search-label" for="catalog-search"
+            ><span>Find your topic</span
+            ><input
+              id="catalog-search"
+              type="search"
+              placeholder="Try physics, bread, philosophy…"
+              autocomplete="off"
+          /></label>
+        </div>
+        <p id="catalog-status" role="status">Loading the library…</p>
+        <div id="catalog-list" class="catalog-grid"></div>
+        <button id="show-more" class="button secondary" hidden>Show more topics</button
+        ><noscript><p>Enable JavaScript to search the topic library.</p></noscript>
+      </section>
+      <section class="closing">
+        <span class="eyebrow">Stay curious</span>
+        <h2>You don’t need a grand plan.<br />Just a place to begin.</h2>
+        <a class="button" href="/login.html?mode=signup">Create your account ↗</a>
+        <p>Sign in to take lessons, save progress, and explore your own topics.</p>
       </section>
     </main>
-  </div>
-
-  <!-- Onboarding overlay -->
-  <div id="onboarding-overlay" class="hidden">
-    <div id="onboarding-modal">
-      <h2>Welcome to OpenTutor</h2>
-      <div id="onboarding-chat"></div>
-      <div id="onboarding-input-area">
-        <input type="text" id="onboarding-input" placeholder="Type your answer...">
-        <button id="btn-onboard-send" class="primary">Send</button>
-      </div>
-      <button id="btn-onboard-browse" type="button">Browse available topics</button>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
-</body>
+    <footer>
+      <a class="brand" href="/">OpenTutor</a><span>A practice of everyday curiosity.</span
+      ><a href="https://github.com/LEARNableLabs/opentutor">Open source ↗</a>
+    </footer>
+    <script src="/welcome.js" defer></script>
+  </body>
 </html>

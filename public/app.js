@@ -1,56 +1,24 @@
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => document.querySelectorAll(s);
 
-// ── Auth ───────────────────────────────────────────────────
-// One shared password (OPENTUTOR_PASSWORD on the server), remembered per browser.
-// Wrapping fetch once covers every /api call rather than threading a header
-// through each of them.
-
-const PASSWORD_KEY = 'opentutor-password';
-const store = {
-  get() { try { return localStorage.getItem(PASSWORD_KEY); } catch { return null; } },
-  set(v) { try { localStorage.setItem(PASSWORD_KEY, v); } catch { /* private mode */ } },
-  clear() { try { localStorage.removeItem(PASSWORD_KEY); } catch { /* private mode */ } },
-};
-
+// Sessions live in HttpOnly cookies. A single refresh request prevents rotating
+// the same refresh token concurrently when multiple API calls return 401.
 const nativeFetch = window.fetch.bind(window);
-
-function withPassword(init, password) {
-  const headers = new Headers(init.headers || {});
-  if (password) headers.set('Authorization', `Bearer ${password}`);
-  return { ...init, headers };
-}
-
+let refreshing;
 window.fetch = async (input, init = {}) => {
   const url = typeof input === 'string' ? input : input?.url || '';
-  if (!url.startsWith('/api/')) return nativeFetch(input, init);
-
-  let res = await nativeFetch(input, withPassword(init, store.get()));
-
-  if (res.status === 401) {
-    store.clear();
-    const entered = window.prompt('Student access token or shared instance password:');
-    if (!entered) return res;
-    store.set(entered);
-    res = await nativeFetch(input, withPassword(init, entered));
-    if (res.status === 401) store.clear();
+  let res = await nativeFetch(input, init);
+  if (url.startsWith('/api/') && url !== '/api/account' && res.status === 401) {
+    refreshing ||= nativeFetch('/api/account', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})}).finally(()=>{refreshing=null;});
+    const renewed = await refreshing;
+    if(renewed.ok)res=await nativeFetch(input,init);
+    if(res.status===401)window.location.assign('/login.html');
   }
-
-  if (res.status === 503) {
-    // The server is deployed without a password configured, and refuses to serve.
-    const { error } = await res.clone().json().catch(() => ({}));
-    alert(error || 'This deployment is not configured yet.');
-  }
-
   return res;
 };
-
-$('#btn-signout').addEventListener('click', () => {
-  const credential = window.prompt('Student access token or shared instance password (leave blank to sign out):');
-  if (credential === null) return;
-  if (credential.trim()) store.set(credential.trim());
-  else store.clear();
-  window.location.reload();
+$('#btn-signout').addEventListener('click', async () => {
+  const res=await nativeFetch('/api/account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'logout'})});
+  if(res.ok){localStorage.removeItem('opentutor-password');window.location.assign('/');}
 });
 
 // ── Streaming ──────────────────────────────────────────────
@@ -389,7 +357,7 @@ function renderTopics(topics) {
 function topicCard(t) {
   return `<div class="topic-card" data-slug="${t.slug}">
     <div>
-      <div class="topic-name">${t.topic || formatSlug(t.slug)}</div>
+      <div class="topic-name">${escapeHTML(t.topic || formatSlug(t.slug))}</div>
       <div class="progress-bar"><div class="progress-fill" style="width:${t.percent}%"></div></div>
     </div>
     <div class="topic-progress">${t.completed}/${t.total}<br>${t.percent}%</div>
@@ -662,5 +630,18 @@ async function restoreTopicBuild() {
     if (pending && !watchedBuild) watchTopicBuild(pending.slug, !active.includes(pending.slug));
   } catch { /* Topics remains available if status cannot be fetched. */ }
 }
-restoreTopicBuild();
-checkOnboarding();
+async function initializeLearning() {
+  const session = await nativeFetch('/api/account').then(r=>r.json());
+  if(!session.user&&!session.local) {
+    const refreshed=await nativeFetch('/api/account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})});
+    if(!refreshed.ok){window.location.replace('/login.html'+window.location.search);return;}
+  }
+  await restoreTopicBuild();
+  const topic = new URLSearchParams(window.location.search).get('topic');
+  if(topic&&/^[a-z0-9-]{1,80}$/.test(topic))await selectTopic(topic);
+  localStorage.removeItem('opentutor-pending-topic');
+  checkOnboarding();
+}
+initializeLearning().catch(()=>{ $('#empty-state').textContent='Could not load your workspace. Please refresh to try again.'; });
+
+function escapeHTML(value) { return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }

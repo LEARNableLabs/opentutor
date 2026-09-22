@@ -7,7 +7,7 @@ import { findStudent } from '../lib/core/students.js';
 // Private queue-triggered function: vercel.json removes its public HTTP URL.
 export default topicQueue.handleNodeCallback(async ({ userId, slug, id, seq }) => {
   const root = await getState();
-  if (userId != null && !await findStudent(root, userId)) return;
+  if (userId != null && (await findStudent(root, userId))?.status !== 'active') return;
   const state = await getState(userId);
   const doc = await runTopicBuildStep({ state, getAdapter: getPipelineAdapter, skills: getSkills(), slug, id, seq });
   if (doc && !['ready', 'failed'].includes(doc.status)) await enqueueTopicBuild(buildMessage(state, doc));

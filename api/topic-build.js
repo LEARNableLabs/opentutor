@@ -3,6 +3,7 @@ import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { readTopicBuild, buildSummary, listTopicBuilds } from '../lib/core/topic-builds.js';
 
 export default async function handler(req, res) {
+  res.setHeader?.('Cache-Control','private, no-store');
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
   const auth = await authenticateRequest(req, getState);
   if (!auth.ok) { const { status, body } = authFailure(auth); return res.status(status).json(body); }
