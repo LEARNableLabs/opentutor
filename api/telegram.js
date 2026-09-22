@@ -12,16 +12,24 @@ import { buildStudentModel, formatStudentModel } from '../lib/core/student-model
 import { parseAssessment } from '../lib/core/assessment.js';
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const WEBHOOK_SECRET = process.env.TELEGRAM_WEBHOOK_SECRET;
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
 
-  if (WEBHOOK_SECRET) {
-    const token = req.headers['x-telegram-bot-api-secret-token'];
-    if (token !== WEBHOOK_SECRET) return res.status(403).end();
+  // Read at call time, not module load: a serverless module is reused across
+  // invocations, and reading it here is also what makes this testable.
+  const secret = process.env.TELEGRAM_WEBHOOK_SECRET;
+
+  if (secret) {
+    if (req.headers['x-telegram-bot-api-secret-token'] !== secret) return res.status(403).end();
+  } else if (process.env.VERCEL) {
+    // No secret on a public URL means no guard at all — anyone who finds the
+    // route could post a fake update, spend LLM credits and write student
+    // state. Refuse rather than serve it wide open, same as api/_lib/auth.js.
+    console.error('[telegram] TELEGRAM_WEBHOOK_SECRET is not set on this deployment; refusing.');
+    return res.status(403).end();
   }
 
   res.status(200).json({ ok: true });
