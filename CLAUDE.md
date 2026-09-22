@@ -181,6 +181,10 @@ The web server, the Vercel routes and the curriculum pipeline all honour this. *
 
 Vercel hosts the web UI and web API only. Run Telegram separately with `npm run bot` on an always-on host. Claw and Hermes integrations run in their own agent environments using the portable skill; this repo does not deploy those runtimes to Vercel.
 
+## Student authentication
+
+Admin provisioning returns a one-time student bearer token; PATCH `/api/admin/students?id=...` rotates it. Token digests live in unnamed-store KV and are checked on each request. `authenticateRequest` resolves identity and `getState(userId)` returns a scoped store. SQLite views share one connection, and Supabase views share one client; closing a view never closes the root connection. The shared password still selects the unnamed instance.
+
 ## Running
 
 ```bash

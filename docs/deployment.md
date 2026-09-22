@@ -25,7 +25,7 @@ Import your GitHub fork into [Vercel](https://vercel.com), then configure:
 | `OPENTUTOR_ADMIN_PASSWORD` | Separate password for `/admin.html`, if provisioning students |
 | `ANTHROPIC_API_KEY`, `OPENROUTER_API_KEY`, or `OPENAI_API_KEY` | At least one LLM credential |
 
-Click Deploy. Open the deployment URL, enter the web password, and select a topic. `/admin.html` uses the separate admin password. Student provisioning exists; individual student sign-in is tracked in #116.
+Click Deploy. Open the deployment URL, enter the web password, and select a topic. `/admin.html` uses the separate admin password. Provisioned students sign in using their individual access tokens; see Student sign-in below.
 
 Do not configure a Telegram token or webhook secret in this Vercel project. The Telegram webhook endpoint and registration script have been removed (#120).
 
@@ -90,3 +90,13 @@ npm run web:test     # isolated runtime state
 ```
 
 `OPENTUTOR_PORT` and `OPENTUTOR_HOST` select the local listener. `OPENTUTOR_DATA_DIR` redirects local runtime state. Local use can omit the shared password; hosted use cannot.
+
+Set `OPENTUTOR_LLM=cli` (default) to use Claude Code CLI with no API key.
+
+## Student sign-in
+
+Set a separate `OPENTUTOR_ADMIN_PASSWORD` and open `/admin.html`. Adding a student shows a one-time access token. Give that token to the student, who enters it through **Switch student** in the web UI or sends it as `Authorization: Bearer <token>`. Never put the token in a URL.
+
+The admin’s **Reset access token** action replaces a forgotten token and immediately revokes the previous one. Existing students provisioned before this feature can use that action to obtain their first token. Removing a student revokes their token and clears their stored state.
+
+Tokens are stored as SHA-256 digests; raw tokens are returned only when created or reset. They do not grant access to admin routes. The existing shared `OPENTUTOR_PASSWORD` selects the unnamed single-user instance. Requests choose their store from the verified credential, never from a caller-supplied student id.

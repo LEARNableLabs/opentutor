@@ -29,7 +29,7 @@ window.fetch = async (input, init = {}) => {
 
   if (res.status === 401) {
     store.clear();
-    const entered = window.prompt('Password for this OpenTutor instance:');
+    const entered = window.prompt('Student access token or shared instance password:');
     if (!entered) return res;
     store.set(entered);
     res = await nativeFetch(input, withPassword(init, entered));
@@ -44,6 +44,14 @@ window.fetch = async (input, init = {}) => {
 
   return res;
 };
+
+$('#btn-signout').addEventListener('click', () => {
+  const credential = window.prompt('Student access token or shared instance password (leave blank to sign out):');
+  if (credential === null) return;
+  if (credential.trim()) store.set(credential.trim());
+  else store.clear();
+  window.location.reload();
+});
 
 // ── Streaming ──────────────────────────────────────────────
 // POST + SSE (EventSource cannot POST). `onToken` fires per chunk; the promise
