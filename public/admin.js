@@ -59,6 +59,7 @@ function studentRow(s) {
         <strong>${escape(s.name || s.id)}</strong>
         <code>${escape(s.id)}</code>
       </div>
+      <button class="admin-token" data-id="${escape(s.id)}">Reset access token</button>
       <button class="admin-remove" data-id="${escape(s.id)}" title="Remove this student">Remove</button>
     </header>
     <dl>
@@ -113,12 +114,22 @@ $('#add-student').addEventListener('submit', async (e) => {
     return;
   }
 
+  showToken((await res.json()).token);
   $('#new-id').value = '';
   $('#new-name').value = '';
   refresh();
 });
 
 $('#students').addEventListener('click', async (e) => {
+  const reset = e.target.closest('.admin-token');
+  if (reset) {
+    if (!window.confirm(`Reset ${reset.dataset.id}'s access token? Their previous token will stop working.`)) return;
+    const res = await api(`/api/admin/students?id=${encodeURIComponent(reset.dataset.id)}`, { method: 'PATCH' });
+    const data = await res.json();
+    if (res.ok) showToken(data.token);
+    else alert(data.error || 'Could not reset access token.');
+    return;
+  }
   const button = e.target.closest('.admin-remove');
   if (!button) return;
 
@@ -130,6 +141,13 @@ $('#students').addEventListener('click', async (e) => {
   if (!res.ok) alert((await res.json().catch(() => ({}))).error || `Failed (${res.status})`);
   refresh();
 });
+
+function showToken(token) {
+  $('#student-token-value').value = token;
+  $('#student-token').hidden = false;
+  $('#student-token-value').focus();
+  $('#student-token-value').select();
+}
 
 // ── Theme ──────────────────────────────────────────────────
 

@@ -179,6 +179,10 @@ The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
 The web server, the Vercel routes and the curriculum pipeline all honour this. **The Telegram bot's own chat and lesson calls do not** — `scripts/bot/claude.js` reads `CLAUDE_BACKEND` (`sdk` | `cli`) instead. See issue #98.
 
+## Student authentication
+
+Admin provisioning returns a one-time student bearer token; PATCH `/api/admin/students?id=...` rotates it. Token digests live in unnamed-store KV and are checked on each request. `authenticateRequest` resolves identity and `getState(userId)` returns a scoped store. SQLite views share one connection, and Supabase views share one client; closing a view never closes the root connection. The shared password still selects the unnamed instance.
+
 ## Running
 
 ```bash

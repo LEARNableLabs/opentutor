@@ -27,6 +27,11 @@
         </form>
         <p id="add-error" class="admin-error" hidden></p>
 
+        <div id="student-token" hidden role="status">
+          <p>Give this access token to the student. It is shown only once; resetting it revokes the previous token.</p>
+          <input id="student-token-value" type="text" readonly aria-label="Student access token">
+        </div>
+
         <div id="students" class="admin-list" aria-live="polite">
           <p class="admin-empty">Loading…</p>
         </div>

@@ -8,7 +8,7 @@
  */
 
 import { getState, getAdapter, getSkills } from './_lib/init.js';
-import { checkAuth, authFailure } from './_lib/auth.js';
+import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
@@ -19,14 +19,14 @@ const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
 
-  const auth = checkAuth(req);
+  const auth = await authenticateRequest(req, getState);
   if (!auth.ok) {
     const { status, body } = authFailure(auth);
     return res.status(status).json(body);
   }
 
   try {
-    const ctx = { state: await getState(), adapter: getAdapter(), skills: getSkills() };
+    const ctx = { state: await getState(auth.userId), adapter: getAdapter(), skills: getSkills() };
 
     if (!String(req.headers?.accept || '').includes('text/event-stream')) {
       const { status, body } = await lessonTurn(ctx, req.body || {});
@@ -55,7 +55,9 @@ export default async function handler(req, res) {
 export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer }, { onToken } = {}) {
   // The grading block streams first, so it is filtered before the student sees anything.
   const stream = onToken ? { onToken: assessmentFilter(onToken) } : {};
-  if (!topicSlug) return { status: 400, body: { error: 'topicSlug required' } };
+  if (typeof topicSlug !== 'string' || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(topicSlug)) {
+    return { status: 400, body: { error: 'A valid topicSlug is required' } };
+  }
 
   const kvKey = `web_lesson:${topicSlug}`;
 

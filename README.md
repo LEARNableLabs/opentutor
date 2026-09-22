@@ -151,7 +151,7 @@ state — own profile, progress, completions, session memory and learning log.
 Set `OPENTUTOR_ADMIN_PASSWORD`, which is deliberately not the password students
 use: these routes read across everyone and delete their data.
 
-Student sign-in and request routing are still pending (#116); the current web UI uses the shared instance. Provisioning prepares isolated stores but does not yet let students sign in to them.
+Provisioning returns a student access token once. Give it to that student to enter through **Switch student** in the web UI. Admins can reset tokens; the old token stops working immediately. Each authenticated request uses that student’s profile, progress and lesson state. The shared password still opens the original single-user instance.
 
 Deployed to Vercel + Supabase the storage works the same way — run all four migrations in
 `supabase/migrations/`, or the tutor will teach a lesson and forget it.

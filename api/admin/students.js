@@ -10,6 +10,7 @@
  * students use — see api/_lib/admin-auth.js.
  */
 
+import { issueStudentToken } from '../../lib/core/student-auth.js';
 import { getState } from '../_lib/init.js';
 import { checkAdmin, adminFailure } from '../_lib/admin-auth.js';
 import { listStudents, findStudent, provisionStudent, decommissionStudent } from '../../lib/core/students.js';
@@ -40,7 +41,12 @@ export default async function handler(req, res) {
       if (!userId) return res.status(400).json({ error: 'userId is required' });
 
       const student = await provisionStudent(store, userId, { name });
-      return res.status(201).json(student);
+      return res.status(201).json({ ...student, token: await issueStudentToken(store, student.id) });
+    }
+
+    if (req.method === 'PATCH') {
+      if (!id) return res.status(400).json({ error: 'id is required' });
+      return res.status(200).json({ id, token: await issueStudentToken(store, id) });
     }
 
     if (req.method === 'DELETE') {
