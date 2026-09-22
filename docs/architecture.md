@@ -43,6 +43,26 @@ Tutor (orchestrator — sees everything, decides what each agent gets)
 
 **Information scoping:** Each agent only sees what the Tutor passes it. The Researcher never sees student data. The Critic never sees research.md. The Teacher never sees critique.md. This prevents context pollution and keeps each agent focused.
 
+## Two ways to run the pipeline
+
+The sequence below is the **deterministic** mode, and the default. It is the same every
+time: predictable, bounded, cheap to reason about — and unable to respond to a critique
+except by starting over, so one weak module rebuilds every lesson.
+
+**Agentic** mode (`mode: 'agentic'`) replaces the fixed loop with an orchestrator call that
+picks the next action from a closed set — `research`, `plan`, `build`, `build_module`,
+`critique`, `finish` — based on which artifacts exist and what the Critic said. It sees the
+shape of the work, not the curriculum text. `build_module` currently delegates to the same
+full-curriculum builder as `build`; selective module rebuilding is not implemented.
+
+Its bounds live in code rather than in the prompt, because a model told to be frugal is a
+suggestion and a loop counter is not: a hard step cap, no repeating an action while nothing
+it reads has changed, always return a curriculum rather than spending the budget and
+returning nothing, and a fall back to the deterministic loop after two unparseable
+decisions.
+
+Deterministic remains the default until agentic has run on real topics and its cost is known.
+
 ## Pipeline Flow
 
 ```

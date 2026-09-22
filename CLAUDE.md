@@ -20,6 +20,7 @@ opentutor/
 │   │   ├── prompts.js                # Agent prompt builders (no platform assumptions)
 │   │   ├── student-model.js          # Accuracy trends, difficulty adjustment, engagement signals
 │   │   ├── deliberate-practice.js    # DeliberatePractitioner — evaluates teaching, writes directives
+│   │   ├── students.js               # Provisioning registry (#80) — kept in kv, the one store all backends share
 │   │   ├── concept-graph.js          # Parses concept-map.md into a prerequisite graph
 │   │   └── index.js
 │   ├── adapters/
@@ -30,14 +31,16 @@ opentutor/
 │   │   ├── openrouter.js             # OpenRouter (200+ models) — extends OpenAIAdapter
 │   │   ├── ollama.js                 # Local models
 │   │   └── index.js                  # createAdapter(), createAdapterFromEnv(), createPipelineAdapterFromEnv()
-│   └── channels/email.js             # Resend email channel (not wired into any code path yet)
 ├── api/                              # Vercel serverless routes
 │   ├── _lib/init.js                  # Shared store / adapter / skill-file resolution
+│   ├── _lib/admin-auth.js            # OPENTUTOR_ADMIN_PASSWORD — a second secret, never the student's
+│   ├── admin/students.js             # Provision / list / inspect / decommission students (#80)
 │   ├── lesson.js                     # lessonTurn() — the Socratic turn, shared with the web server
 │   ├── telegram.js                   # Telegram webhook
 │   └── chat.js, onboard.js, topics.js, progress.js, user.js, add-topic.js
 ├── public/                           # Vanilla JS frontend (served by scripts/web/server.js)
 │   ├── index.html, app.js, style.css, favicon.png
+│   ├── admin.html, admin.js, admin.css   # Students view (#80), behind the admin password
 ├── scripts/
 │   ├── setup.js                      # Interactive setup CLI (no flags — prompts for everything)
 │   ├── generate-teacher-md.js        # Backfills teacher.md across domains
@@ -86,7 +89,9 @@ opentutor/
 │   ├── tutor/completions.json        # Lesson completion (gitignored, created at runtime)
 │   ├── memory/YYYY-MM-DD.md          # Daily session logs
 │   └── groups/, students/, sessions/ # Created at runtime; not in the repo
-├── tests/                            # vitest — 25 files, 208 tests
+├── tests/                            # vitest unit and integration tests
+│   └── integration/                  # Constraints unit tests cannot reach: a read-only
+│                                     # filesystem, a Postgres double, the platform guides
 ├── docs/                             # Deployment, curriculum generation, reviews
 ├── supabase/migrations/              # Postgres schema
 ├── assets/, eval/, factory.md
@@ -110,6 +115,21 @@ Five agents with scoped contexts communicating via files on disk:
 
 Pipeline: Researcher → CurriculumBuilder (plan → build) → Critic → loop until APPROVED or 3 iterations. Builder and domain files agent run in parallel. Critic uses cheap model.
 
+## Orchestrator modes
+
+`CurriculumPipeline` runs one of two ways (#122):
+
+- **`deterministic`** (default) — research → plan → build → critique, up to 3 iterations.
+  Predictable and bounded. This is what CI exercises and what runs unless asked otherwise.
+- **`agentic`** — `new CurriculumPipeline({ …, mode: 'agentic' })`. An orchestrator call
+  chooses the next action from a closed set (`research`, `plan`, `build`, `build_module`,
+  `critique`, `finish`) from the artifacts that exist and the last critique. A local
+  critique can trigger another build; `build_module` currently rebuilds the full curriculum too.
+
+The bounds are enforced in code, never asked for in the prompt: a step cap, no repeating an
+action while nothing it reads has changed, always return a curriculum, and a fall back to
+the deterministic loop after two unparseable decisions.
+
 ## Lesson delivery
 
 Socratic multi-turn conversation with adaptive length. Three modes selected from the student model (`selectMode` in `scripts/bot/lesson.js`):
@@ -130,7 +150,25 @@ DeliberatePractitioner runs after each lesson (deterministic, no LLM call) and w
 
 ## Lesson state
 
-`skills/tutor/domains/` is **read-only content**. Which lessons a student has finished is runtime state, kept in `workspace/tutor/completions.json` (gitignored) and overlaid onto the curriculum at read time by `lib/core/progress.js`.
+`skills/tutor/domains/` is **read-only content**. Which lessons a student has finished is
+runtime state, overlaid onto the curriculum at read time by `lib/core/progress.js`.
+
+**Where each piece of state lives depends on the backend**, and getting this wrong is what
+#117 was — three writes went to a filesystem that is read-only on Vercel, the errors were
+swallowed, and the hosted tutor forgot every lesson it taught:
+
+| State | TutorState / TutorStore | SupabaseStore |
+|---|---|---|
+| Profile, progress, lesson-in-flight | `workspace/`, SQLite `kv` | Postgres `kv` |
+| Lesson completion | `workspace/tutor/completions.json` | `lessons_completed` |
+| `learning.md`, `practice-feedback.md` | `workspace/tutor/domains/<slug>/` | `domain_files` |
+| Generated curricula | `skills/tutor/domains/<slug>/` | `curricula` |
+| The 293 shipped curricula | on disk | on disk — read-only is no obstacle |
+| Session memory | files / SQLite `memory` | Postgres `memory` |
+
+Runtime profiles, progress, completions, learning logs and memory are partitioned by student (#80). Shipped content is shared; generated curricula are shared on file backends and scoped in Supabase. A store is scoped at construction —
+`new TutorStore(root, { userId })` — rather than threading an id through all 31 methods;
+omitting it is the original single-user install, unchanged.
 
 So `lesson.status` and `lesson.engagement` still exist on the object every reader sees, but they are derived — never stored in the tracked file. Anything writing a curriculum back to disk goes through `withoutRuntimeFields()`. Curricula that still carry completion in content are migrated on first read.
 
@@ -148,7 +186,7 @@ npm run bot          # Telegram bot
 npm run bot:test     # Bot with isolated test data (.test-data/)
 npm run web          # Web UI at http://localhost:3000
 npm run web:test     # Web with isolated test data
-npm test             # vitest — 208 tests
+npm test             # vitest unit and integration tests
 npm run lint         # eslint over lib/, scripts/, api/
 ```
 

@@ -120,15 +120,41 @@ key is present.
 
 The curriculum pipeline can use a different one: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
+## Building a topic it doesn't have
+
+On a local installation, ask for anything. It researches the topic across eight sources, drafts a
+curriculum, has a separate Critic agent review it, and revises it for up to
+three rounds. It can return a curriculum that still needs review.
+
+Hosted deployments currently activate existing curricula only; custom generation needs a durable worker (#121).
+
+That loop runs one of two ways:
+
+- **deterministic** (default) — the same fixed sequence every time. Predictable
+  and bounded.
+- **agentic** — an orchestrator decides what to do next from what the Critic
+  actually said, choosing when to build, critique, or finish. Both `build` and
+  `build_module` currently rebuild the full curriculum.
+
+```js
+new CurriculumPipeline({ adapter, state, skills, mode: 'agentic' })
+```
+
 ## Hosting it for others
 
 ```bash
 npm run web    # then open /admin.html
 ```
 
-Add students, see what each has done, remove them. Each gets isolated state —
-own profile, own progress, own session memory. Set `OPENTUTOR_ADMIN_PASSWORD`
-(separate from the student password) to enable it.
+Add students, see what each has done, remove them. Each gets isolated
+state — own profile, progress, completions, session memory and learning log.
+Set `OPENTUTOR_ADMIN_PASSWORD`, which is deliberately not the password students
+use: these routes read across everyone and delete their data.
+
+Student sign-in and request routing are still pending (#116); the current web UI uses the shared instance. Provisioning prepares isolated stores but does not yet let students sign in to them.
+
+Deployed to Vercel + Supabase the storage works the same way — run all four migrations in
+`supabase/migrations/`, or the tutor will teach a lesson and forget it.
 
 ## License
 
