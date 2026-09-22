@@ -17,17 +17,22 @@ export default async function handler(req, res) {
     const { message, history } = req.body;
 
     const user = await state.readUser();
-    const { system, model } = buildOnboardingPrompt(getSkills(), user);
+    const availableTopics = await state.listTopics();
+    const { system, model } = buildOnboardingPrompt(getSkills(), user, { availableTopics });
 
     const messages = [...(history || []), { role: 'user', content: message }];
     const response = await adapter.generate(system, messages, { model });
 
     const topicMatch = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/);
     const cleanText = response.text.replace(/<TOPIC>.+?<\/TOPIC>/g, '').trim();
+    const proposedTopic = topicMatch?.[1].trim();
+    const confirmedTopic = availableTopics.includes(proposedTopic) ? proposedTopic : null;
 
     res.status(200).json({
-      reply: cleanText,
-      confirmedTopic: topicMatch ? topicMatch[1].trim() : null,
+      reply: proposedTopic && !confirmedTopic
+        ? 'That topic is not available on this hosted instance. Use Browse available topics to choose a curriculum, or tell me about another subject you are interested in.'
+        : cleanText,
+      confirmedTopic,
       model: response.model,
     });
   } catch (err) {

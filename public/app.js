@@ -493,6 +493,11 @@ function formatSlug(slug) {
 let onboardingHistory = [];
 
 $('#btn-onboard-send').addEventListener('click', sendOnboard);
+$('#btn-onboard-browse').addEventListener('click', () => {
+  $('#onboarding-overlay').classList.add('hidden');
+  $('.nav-btn[data-view="topics"]').click();
+  $('#search-topics').focus();
+});
 $('#onboarding-input').addEventListener('keydown', (e) => {
   if (e.key === 'Enter' && !e.shiftKey) {
     e.preventDefault();
