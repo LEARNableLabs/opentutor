@@ -236,11 +236,14 @@ async function handleAPI(req, res, url) {
         }
       }
 
-      const topics = activeTopics.map((slug) => {
-        const tp = state.getTopicProgress(slug);
+      // Awaited even though TutorStore is synchronous: awaiting a plain value
+      // is a no-op, and `promise || ''` is truthy, so an unawaited read would
+      // hand buildStudentModel a Promise and silently model nothing.
+      const topics = (await Promise.all(activeTopics.map(async (slug) => {
+        const tp = await state.getTopicProgress(slug);
         if (!tp) return null;
-        const learningMd = state.readDomainFile(slug, 'learning.md') || '';
-        const curriculum = state.readCurriculum(slug);
+        const learningMd = (await state.readDomainFile(slug, 'learning.md')) || '';
+        const curriculum = await state.readCurriculum(slug);
         const model = buildStudentModel(learningMd, curriculum, '');
         return {
           slug,
@@ -253,7 +256,7 @@ async function handleAPI(req, res, url) {
           reviewDue: model.concepts.shaky.length,
           nextLesson: tp.current?.title || null,
         };
-      }).filter(Boolean);
+      }))).filter(Boolean);
 
       return json(res, { ...progress, streak, topics });
     }
