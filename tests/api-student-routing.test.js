@@ -8,10 +8,11 @@ import { issueStudentToken } from '../lib/core/student-auth.js';
 let root, store, alice, bob;
 vi.mock('../api/_lib/init.js', () => ({
   getState: async (id) => id == null ? store : store.forStudent(id),
+  getPipelineAdapter: () => { throw new Error("Existing topics must not need a build adapter"); },
   getAdapter: () => ({ generate: async () => ({ text: '{"diagnostic":"Why?","goal":"Learn"}' }) }),
   getSkills: () => new Map(),
 }));
-const routes = Object.fromEntries(await Promise.all(['user','progress','topics','chat','onboard','add-topic','lesson'].map(async (name) => [name, (await import(`../api/${name}.js`)).default])));
+const routes = Object.fromEntries(await Promise.all(['user','progress','topics','chat','onboard','add-topic','lesson','topic-build'].map(async (name) => [name, (await import(`../api/${name}.js`)).default])));
 async function call(route, token, body) {
   const res = { status(code) { this.statusCode = code; return this; }, json(value) { this.body = value; return this; } };
   await routes[route]({ method: body ? 'POST' : 'GET', headers: { authorization: `Bearer ${token}` }, body }, res);
@@ -42,7 +43,14 @@ it('keeps hosted same-topic lessons isolated and rejects revoked credentials on 
   expect(store.forStudent('bob').readKV('web_lesson:math')).not.toContain('Alice private answer');
   await issueStudentToken(store,'alice');
   for(const route of Object.keys(routes)) {
-    const body=['user','progress','topics'].includes(route)?undefined:{topic:'math',topicSlug:'math',message:'hi'};
+    const body=['user','progress','topics','topic-build'].includes(route)?undefined:{topic:'math',topicSlug:'math',message:'hi'};
     expect((await call(route,alice,body)).statusCode,route).toBe(401);
   }
+});
+
+it('lists only the authenticated student’s pending builds',async()=>{
+  const {prepareTopicBuild}=await import('../lib/core/topic-builds.js');
+  await prepareTopicBuild(store.forStudent('alice'),{topic:'Private knots'});
+  expect((await call('topic-build',alice)).body.map(b=>b.slug)).toEqual(['private-knots']);
+  expect((await call('topic-build',bob)).body).toEqual([]);
 });

@@ -32,6 +32,8 @@
           <button id="btn-next" class="primary">Next Lesson</button>
         </div>
 
+        <div id="topic-build-status" role="status"></div>
+        <button id="btn-retry-build" type="button" class="hidden">Retry curriculum build</button>
         <div id="lesson-loading" class="hidden">
           <div class="spinner"></div>
           <span>Generating lesson...</span>
@@ -65,7 +67,7 @@
         <p id="topic-error" role="alert"></p>
         <div id="add-topic">
           <h3>Add a topic</h3>
-          <p class="dim">Choose an available topic above. Custom topic generation is available in local installations.</p>
+          <p class="dim">Choose an available topic above, or add your own. Start with five lessons while the full curriculum is prepared.</p>
           <div id="add-topic-form">
             <input type="text" id="new-topic" placeholder="What do you want to learn?">
             <select id="new-level">

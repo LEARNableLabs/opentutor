@@ -27,26 +27,18 @@ async function call() {
   return res;
 }
 
-it('gives hosted onboarding the available catalog and confirms an exact available slug', async () => {
+it('uses the onboarding guide and confirms a topic for generation', async () => {
   const res = await call();
   expect(res.statusCode).toBe(200);
   expect(res.body).toMatchObject({ confirmedTopic: 'game-theory', reply: 'Let us start.' });
-  const prompt = adapter.generate.mock.calls[0][0];
-  expect(prompt).toContain('Custom topic generation is unavailable. Never promise to research or build a new curriculum.');
-  expect(prompt).toContain('Available topic slugs: ["game-theory","breadmaking"]');
+  expect(adapter.generate.mock.calls[0][0]).toContain(reference);
 });
-
-it('does not forward an unsupported model suggestion to topic activation', async () => {
+it('forwards a new topic to the durable generation flow', async () => {
   adapter.generate.mockResolvedValue({ text: 'I will build it now.\n<TOPIC>never-built</TOPIC>' });
   const res = await call();
-  expect(res.body.confirmedTopic).toBeNull();
-  expect(res.body.reply).toContain('Browse available topics');
-  expect(res.body.reply).not.toContain('I will build it');
+  expect(res.body).toMatchObject({confirmedTopic:'never-built',reply:'I will build it now.'});
 });
-
-it('does not confirm a topic when the catalog is empty', async () => {
-  state.listTopics.mockResolvedValue([]);
-  const res = await call();
-  expect(res.body.confirmedTopic).toBeNull();
-  expect(adapter.generate.mock.calls[0][0]).toContain('Available topic slugs: []');
+it('keeps conversation open until the model confirms a topic', async () => {
+  adapter.generate.mockResolvedValue({text:'What would you like to learn?'});
+  expect((await call()).body.confirmedTopic).toBeNull();
 });

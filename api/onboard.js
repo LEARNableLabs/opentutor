@@ -17,8 +17,7 @@ export default async function handler(req, res) {
     const { message, history } = req.body;
 
     const user = await state.readUser();
-    const availableTopics = await state.listTopics();
-    const { system, model } = buildOnboardingPrompt(getSkills(), user, { availableTopics });
+    const { system, model } = buildOnboardingPrompt(getSkills(), user);
 
     const messages = [...(history || []), { role: 'user', content: message }];
     const response = await adapter.generate(system, messages, { model });
@@ -26,12 +25,10 @@ export default async function handler(req, res) {
     const topicMatch = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/);
     const cleanText = response.text.replace(/<TOPIC>.+?<\/TOPIC>/g, '').trim();
     const proposedTopic = topicMatch?.[1].trim();
-    const confirmedTopic = availableTopics.includes(proposedTopic) ? proposedTopic : null;
+    const confirmedTopic = proposedTopic || null;
 
     res.status(200).json({
-      reply: proposedTopic && !confirmedTopic
-        ? 'That topic is not available on this hosted instance. Use Browse available topics to choose a curriculum, or tell me about another subject you are interested in.'
-        : cleanText,
+      reply: cleanText,
       confirmedTopic,
       model: response.model,
     });
