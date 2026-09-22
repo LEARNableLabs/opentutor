@@ -36,7 +36,6 @@ opentutor/
 │   ├── _lib/admin-auth.js            # OPENTUTOR_ADMIN_PASSWORD — a second secret, never the student's
 │   ├── admin/students.js             # Provision / list / inspect / decommission students (#80)
 │   ├── lesson.js                     # lessonTurn() — the Socratic turn, shared with the web server
-│   ├── telegram.js                   # Telegram webhook
 │   └── chat.js, onboard.js, topics.js, progress.js, user.js, add-topic.js
 ├── public/                           # Vanilla JS frontend (served by scripts/web/server.js)
 │   ├── index.html, app.js, style.css, favicon.png
@@ -44,7 +43,6 @@ opentutor/
 ├── scripts/
 │   ├── setup.js                      # Interactive setup CLI (no flags — prompts for everything)
 │   ├── generate-teacher-md.js        # Backfills teacher.md across domains
-│   ├── register-webhook.js           # Registers the Telegram webhook
 │   ├── bot/                          # Telegram bot adapter
 │   │   ├── index.js                  # Entry point (npm run bot)
 │   │   ├── claude.js                 # LLM wrapper — reads CLAUDE_BACKEND, not OPENTUTOR_LLM (issue #98)
@@ -178,6 +176,10 @@ Set `OPENTUTOR_LLM`: `claude-sdk`, `cli`, `openai`, `openrouter`, `ollama`. With
 The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
 The web server, the Vercel routes and the curriculum pipeline all honour this. **The Telegram bot's own chat and lesson calls do not** — `scripts/bot/claude.js` reads `CLAUDE_BACKEND` (`sdk` | `cli`) instead. See issue #98.
+
+## Deployment boundaries
+
+Vercel hosts the web UI and web API only. Run Telegram separately with `npm run bot` on an always-on host. Claw and Hermes integrations run in their own agent environments using the portable skill; this repo does not deploy those runtimes to Vercel.
 
 ## Student authentication
 

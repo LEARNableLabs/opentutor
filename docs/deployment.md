@@ -1,190 +1,95 @@
 # OpenTutor Deployment Guide
 
-> **Run all four migrations, in order.** 003 and 004 are not optional: without
-> them the deployed code queries columns that do not exist. See
-> [Step 1](#step-1--create-a-supabase-project).
-
-Step-by-step guide for deploying OpenTutor on Vercel + Supabase. No CLI tools required — everything can be done through web dashboards.
-
-## Prerequisites
-
-- A GitHub account (repo must be pushed)
-- One LLM API key (any of: Anthropic, OpenRouter, OpenAI)
-- A Telegram bot token from [@BotFather](https://t.me/BotFather)
+Vercel hosts the web UI and its API. Telegram runs separately on an always-on host; Claw and Hermes integrations run in their own agent environments using the portable skill.
 
 ## Step 1 — Create a Supabase project
 
-1. Go to [supabase.com](https://supabase.com) and sign in
-2. Click **New Project**
-3. Pick a name (e.g., `opentutor`), set a database password, choose a region
-4. Wait for the project to provision (~30 seconds)
+Create a project at [Supabase](https://supabase.com). In its SQL Editor, run every file in `supabase/migrations/` in numeric order. The current migrations are:
 
-### Run the migration
+1. `001_initial_schema.sql` — base tables.
+2. `002_scope_rls_to_service_role.sql` — restrict policies to the service role.
+3. `003_partition_kv_by_student.sql` — partition runtime KV and memory by student.
+4. `004_runtime_state_off_disk.sql` — persist completion, domain files and generated curricula in Postgres.
 
-5. Go to **SQL Editor** in the left sidebar
-6. Click **New Query**
-7. Paste the contents of `supabase/migrations/001_initial_schema.sql` from the repo
-8. Click **Run**
-9. Verify: go to **Table Editor** — you should see 10 tables: `kv`, `curricula`, `lessons_completed`, `sessions`, `memory`, `jobs`, `students`, `student_exercises`, `groups`, `group_members`
-10. Run the remaining migrations in order, each with **Run**:
-    - `002_scope_rls_to_service_role.sql` — scopes RLS to `service_role`; 001 left the policies applying to every role including the public `anon` key (#96)
-    - `003_partition_kv_by_student.sql` — gives `kv` and `memory` a `user_id`, so two students stop sharing one profile (#80)
-    - `004_runtime_state_off_disk.sql` — moves completion, `learning.md` and generated curricula into Postgres, because the deployment's filesystem is read-only (#117)
-11. Check **Policies**: every table should list `service_role`, not `public`.
+Check that table policies grant access to `service_role`, not `public`. Copy the project URL and server-side secret key from Settings → API. Both `SUPABASE_SERVICE_ROLE_KEY` and `SUPABASE_SECRET_KEY` are accepted. Never expose either key in browser code.
 
-### Copy credentials
+## Step 2 — Deploy the web app to Vercel
 
-10. Go to **Settings → API**
-11. Copy:
-    - **Project URL** → this is `SUPABASE_URL`
-    - **service_role key** (under "Project API keys") → this is `SUPABASE_SERVICE_ROLE_KEY`
+Import your GitHub fork into [Vercel](https://vercel.com), then configure:
 
-## Step 2 — Deploy to Vercel
+| Variable | Purpose |
+|---|---|
+| `SUPABASE_URL` | Supabase project URL |
+| `SUPABASE_SERVICE_ROLE_KEY` or `SUPABASE_SECRET_KEY` | Server-side database credential |
+| `OPENTUTOR_PASSWORD` | Shared web password; required on Vercel |
+| `OPENTUTOR_ADMIN_PASSWORD` | Separate password for `/admin.html`, if provisioning students |
+| `ANTHROPIC_API_KEY`, `OPENROUTER_API_KEY`, or `OPENAI_API_KEY` | At least one LLM credential |
 
-1. Go to [vercel.com](https://vercel.com) and sign in
-2. Click **Add New → Project**
-3. Import the `LEARNableLabs/opentutor` repository from GitHub
-4. In **Environment Variables**, add:
+Click Deploy. Open the deployment URL, enter the web password, and select a topic. `/admin.html` uses the separate admin password. Provisioned students sign in using their individual access tokens; see Student sign-in below.
 
-| Variable | Value | Required |
-|---|---|---|
-| `OPENTUTOR_PASSWORD` | A strong shared password for the web API | Yes |
-| `OPENTUTOR_ADMIN_PASSWORD` | A separate password for student administration | For admin UI |
-| `SUPABASE_URL` | From Step 1 | Yes |
-| `SUPABASE_SERVICE_ROLE_KEY` | From Step 1 | Yes |
-| `TELEGRAM_BOT_TOKEN` | From BotFather | Yes |
-| `TELEGRAM_WEBHOOK_SECRET` | Any random string (e.g., `openssl rand -hex 32`) | Yes |
-| `ANTHROPIC_API_KEY` | Your Anthropic key | One of these three |
-| `OPENROUTER_API_KEY` | Your OpenRouter key | One of these three |
-| `OPENAI_API_KEY` | Your OpenAI key | One of these three |
+Do not configure a Telegram token or webhook secret in this Vercel project. The Telegram webhook endpoint and registration script have been removed (#120).
 
-5. Click **Deploy**
-6. Wait for the build to complete
-7. Copy your deployment URL (e.g., `https://opentutor-abc.vercel.app`)
+### LLM selection
 
-### LLM backend auto-detection
+Set `OPENTUTOR_LLM` to `claude-sdk`, `openrouter`, `openai`, `ollama`, or `cli` to override detection. Without it, keys are checked in this order: Anthropic, OpenRouter, OpenAI. Use a remote API backend on Vercel; `cli` and a local Ollama server require a suitable local environment.
 
-You only need ONE API key. The system auto-detects:
-- `ANTHROPIC_API_KEY` set → uses Claude SDK (Sonnet for strong, Haiku for cheap)
-- `OPENROUTER_API_KEY` set → uses OpenRouter (200+ models, default: Claude)
-- `OPENAI_API_KEY` set → uses OpenAI (GPT-4o for strong, GPT-4o-mini for cheap)
+`OPENTUTOR_PIPELINE_LLM` can select a separate generation backend. Hosted custom generation is currently unavailable pending a durable worker (#121): `/api/add-topic` activates existing curricula or returns `501` without adding a phantom topic.
 
-To override: set `OPENTUTOR_LLM=openrouter` (or `claude-sdk`, `openai`).
+## Step 3 — Verify the deployment
 
-## Step 3 — Register Telegram webhook
+- Open Topics and activate an existing curriculum.
+- Complete a lesson, refresh, and verify progress persists.
+- An unauthenticated API request should return `401`; a deployment missing its web password returns `503`.
+- A topic with no curriculum returns a missing-curriculum message, not a completion message.
+- The retired Telegram endpoint must not process updates.
 
-Run this command (replace the values):
+The 293 shipped curricula are read-only content included in the deployment. Runtime state belongs in Supabase. Pushes to `main` trigger Vercel deployments; run newly added database migrations before deploying code that needs them.
+
+## Telegram on a separate host
+
+Use an always-on machine with Node 22 or newer:
 
 ```bash
-curl "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=https://<YOUR_VERCEL_URL>/api/telegram&secret_token=<YOUR_WEBHOOK_SECRET>"
+npm ci
+# Configure TELEGRAM_BOT_TOKEN and an LLM backend on this machine.
+TELEGRAM_MODE=polling npm run bot
 ```
 
-You should see: `{"ok":true,"result":true,"description":"Webhook was set"}`
+Set `TELEGRAM_CHAT_ID` for scheduled daily lessons. Keep this process running using your host's process manager. See `.env.example` for bot options.
 
-Or use the helper script locally:
+If this bot was previously registered with the retired webhook, unset `TELEGRAM_MODE` or set it to `polling` in the bot host environment, remove `TELEGRAM_WEBHOOK_URL`, and remove the registration before polling:
+
 ```bash
-TELEGRAM_BOT_TOKEN=... TELEGRAM_WEBHOOK_SECRET=... \
-  node scripts/register-webhook.js https://your-app.vercel.app/api/telegram
+curl -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/deleteWebhook"
 ```
 
-## Step 4 — Test
+This preserves pending updates; it does not request `drop_pending_updates`. Remove obsolete Telegram variables from the Vercel project's environment settings after migrating.
 
-### Web UI
-Open `https://your-vercel-url.vercel.app` in a browser. You should see the OpenTutor interface with onboarding.
+## Claw and Hermes
 
-### Telegram
-Send `/start` to your bot on Telegram. It should begin the onboarding flow.
-
-### Verify the pipeline
-Send `/add auction theory` — the bot should respond with a taster lesson and start building the full curriculum in the background.
-
-## Architecture (what's running)
-
-```
-Vercel
-├── public/           → Static web UI (HTML/CSS/JS)
-├── api/lesson.js     → Socratic multi-turn lessons (lesson state needs SQLite; see the warning below)
-├── api/telegram.js   → Telegram webhook (receives bot updates)
-├── api/chat.js       → Free-form chat
-├── api/topics.js     → Topic listing
-├── api/progress.js   → Student progress with computed stats
-├── api/onboard.js    → Onboarding conversation
-├── api/add-topic.js  → Activate an existing curriculum (custom generation unavailable)
-└── api/user.js       → Student profile
-
-Supabase
-├── kv                → Progress, active lessons, student profile
-├── sessions          → Conversation history
-├── memory            → Daily session logs
-├── jobs              → Pipeline job queue (durable)
-├── students          → Per-student state
-└── student_exercises → Exercise results
-
-Domain files (in repo)
-├── skills/tutor/domains/  → 293 pre-built curricula (read from Vercel filesystem)
-├── skills/tutor/references/ → Teaching methodology
-└── workspace/USER.md      → Student profile template
-```
-
-## Updating
-
-Push to main → Vercel auto-deploys. No manual steps.
-
-Database migrations: if a new migration is added to `supabase/migrations/`, paste and run it in the Supabase SQL Editor.
-
-## Environment variable reference
-
-| Variable | Purpose | Default |
-|---|---|---|
-| `OPENTUTOR_PASSWORD` | Shared web API password (required on Vercel) | — |
-| `OPENTUTOR_ADMIN_PASSWORD` | Separate admin API password | — |
-| `SUPABASE_URL` | Supabase project URL | — |
-| `SUPABASE_SERVICE_ROLE_KEY` | Supabase admin key | — |
-| `TELEGRAM_BOT_TOKEN` | Telegram bot token | — |
-| `TELEGRAM_WEBHOOK_SECRET` | Webhook signature verification | — |
-| `ANTHROPIC_API_KEY` | Claude API key | — |
-| `OPENROUTER_API_KEY` | OpenRouter API key | — |
-| `OPENAI_API_KEY` | OpenAI API key | — |
-| `OPENTUTOR_LLM` | Override LLM backend | Auto-detect from keys |
-| `OPENTUTOR_PIPELINE_LLM` | Separate backend for curriculum pipeline | Same as OPENTUTOR_LLM |
-| `OPENTUTOR_PORT` | Web server port (local dev only) | 3000 |
-| `OPENTUTOR_DATA_DIR` | Redirect data to isolated dir (testing) | — |
+Follow the platform guides in `openclaw/`, `nanoclaw/`, `nemoclaw/`, or `hermes/`. These are portable skill integrations hosted by the corresponding agent environment. No Claw or Hermes runtime is deployed by `vercel.json`.
 
 ## Troubleshooting
 
-**Bot doesn't respond:**
-- Check webhook is registered: `curl https://api.telegram.org/bot<TOKEN>/getWebhookInfo`
-- Check Vercel function logs for errors
-- Verify `TELEGRAM_WEBHOOK_SECRET` matches between Vercel env and webhook registration
+**Cannot sign in:** Verify `OPENTUTOR_PASSWORD` is set in the intended Vercel environment, then redeploy. Admin access requires its own password.
 
-**"No API key" error:**
-- At least one of `ANTHROPIC_API_KEY`, `OPENROUTER_API_KEY`, or `OPENAI_API_KEY` must be set
-- Check Vercel env vars are set (not just local .env)
+**Progress does not save:** Check Supabase credentials and confirm every migration ran. Inspect function logs for database errors.
 
-**Supabase connection fails:**
-- Verify `SUPABASE_URL` includes the protocol: `https://xxx.supabase.co`
-- Use the `service_role` key, not the `anon` key
-- Check the migration ran (tables should exist in Table Editor)
+**No topics:** Check that `skills/tutor/domains/` is included in the deployed project.
 
-**Lessons not generating:**
-- Hosted `/api/add-topic` can activate existing curricula only. A custom topic without a curriculum returns `501` without adding it to active topics; choose a topic from the Topics list or generate a curriculum in a local installation. Serverless generation needs a durable worker before it can be supported (#118).
-- Check Vercel function logs for LLM timeouts
-- The pipeline needs a strong model — if using a weak model via OpenRouter, set `OPENTUTOR_PIPELINE_LLM=claude-sdk` with an Anthropic key
+**Custom topic unavailable:** Choose an existing curriculum or generate one in a local installation until hosted generation is enabled.
 
-**Web UI shows empty state:**
-- The 293 pre-built domains are read from the Vercel filesystem (included in the deploy)
-- If `/api/topics` returns empty, check the deploy included the `skills/` directory
+**Telegram polling conflicts:** Stop any second bot process, set `TELEGRAM_MODE=polling`, and remove the old webhook registration before starting the standalone bot.
 
-## Local development
-
-No deployment needed for local dev:
+## Local web development
 
 ```bash
-npm install
-npm run bot          # Telegram bot (SQLite, claude -p)
-npm run web          # Web UI at localhost:3000
-npm run bot:test     # Isolated test data
+npm ci
+npm run web          # http://localhost:3000
+npm run web:test     # isolated runtime state
 ```
+
+`OPENTUTOR_PORT` and `OPENTUTOR_HOST` select the local listener. `OPENTUTOR_DATA_DIR` redirects local runtime state. Local use can omit the shared password; hosted use cannot.
 
 Set `OPENTUTOR_LLM=cli` (default) to use Claude Code CLI with no API key.
 
