@@ -140,6 +140,8 @@ That loop runs one of two ways:
 new CurriculumPipeline({ adapter, state, skills, mode: 'agentic' })
 ```
 
+Vercel hosts the web UI and API. Telegram requires a separate always-on process (`npm run bot`). Claw and Hermes run in their own agent environments; they are not Vercel services.
+
 ## Hosting it for others
 
 ```bash
