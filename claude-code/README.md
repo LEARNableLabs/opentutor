@@ -26,7 +26,7 @@ cp -r skills/tutor/ ~/.claude/skills/tutor/
 
 ```bash
 # Copy workspace templates
-cp workspace/AGENTS.md workspace/IDENTITY.md workspace/USER.md workspace/SOUL.md .claude/
+cp workspace/AGENTS.md workspace/IDENTITY.md workspace/templates/USER.md workspace/SOUL.md .claude/
 mkdir -p .claude/tutor
 cp workspace/templates/progress.json .claude/tutor/progress.json
 ```

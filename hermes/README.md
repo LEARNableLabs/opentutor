@@ -76,7 +76,7 @@ Quiz me on what we covered
 | OpenTutor | Hermes | Notes |
 |---|---|---|
 | `workspace/SOUL.md` | `~/.hermes/SOUL.md` | Use `hermes/SOUL.md` override |
-| `workspace/USER.md` | `~/.hermes/USER.md` | Student profile |
+| `workspace/templates/USER.md` | `~/.hermes/USER.md` | Student profile |
 | `workspace/IDENTITY.md` | `~/.hermes/IDENTITY.md` | Tutor persona |
 | `workspace/memory/` | `~/.hermes/memory/` | Daily session logs |
 | `workspace/templates/progress.json` | `~/.hermes/tutor/progress.json` | Learning state (seeded from the template) |

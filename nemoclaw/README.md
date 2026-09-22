@@ -23,7 +23,7 @@ Or manually:
 mkdir -p ~/.nemoclaw/skills/tutor ~/.nemoclaw/workspaces/tutor/tutor/curricula ~/.nemoclaw/workspaces/tutor/memory \
   && cp -r skills/tutor/. ~/.nemoclaw/skills/tutor/ \
   && cp workspace/AGENTS.md workspace/SOUL.md \
-     workspace/IDENTITY.md workspace/USER.md \
+     workspace/IDENTITY.md workspace/templates/USER.md \
      ~/.nemoclaw/workspaces/tutor/ \
   && cp workspace/templates/progress.json ~/.nemoclaw/workspaces/tutor/tutor/progress.json
 ```

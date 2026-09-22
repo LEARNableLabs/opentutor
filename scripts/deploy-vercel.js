@@ -47,27 +47,34 @@ const files = execFileSync('git', ['ls-files'], { cwd: REPO, encoding: 'utf-8' }
   });
 
 const total = (files.reduce((n, f) => n + f.size, 0) / 1024 / 1024).toFixed(1);
-console.log(`uploading ${files.length} files (${total} MB)…`);
+console.log(`${files.length} files (${total} MB) — asking Vercel which it already has…`);
 
-// Vercel dedupes by digest, so re-uploading an unchanged file is cheap; the
-// concurrency cap is only here to stay well clear of rate limits.
-let done = 0;
-const queue = [...files];
-await Promise.all(Array.from({ length: 16 }, async () => {
-  for (let f = queue.pop(); f; f = queue.pop()) {
-    const r = await api('https://api.vercel.com/v2/files', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/octet-stream', 'x-vercel-digest': f.sha },
-      body: f.body,
-    });
-    if (!r.ok) throw new Error(`upload ${f.file}: HTTP ${r.status} ${await r.text()}`);
-    if (++done % 250 === 0) console.log(`  ${done}/${files.length}`);
-  }
-}));
+/**
+ * Upload the given files, in parallel but capped.
+ *
+ * Uploading every file on every deploy burned this account's free-tier quota
+ * (5000 uploads per 24h) in three deploys. Vercel stores blobs by digest and
+ * keeps them across deployments, so the right flow is to create the deployment
+ * first and upload only what it reports missing.
+ */
+async function upload(pending) {
+  let done = 0;
+  const queue = [...pending];
+  await Promise.all(Array.from({ length: 16 }, async () => {
+    for (let f = queue.pop(); f; f = queue.pop()) {
+      const r = await api('https://api.vercel.com/v2/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/octet-stream', 'x-vercel-digest': f.sha },
+        body: f.body,
+      });
+      if (!r.ok) throw new Error(`upload ${f.file}: HTTP ${r.status} ${(await r.text()).slice(0, 200)}`);
+      if (++done % 250 === 0) console.log(`  ${done}/${pending.length}`);
+    }
+  }));
+  return done;
+}
 
-console.log(`uploaded ${done} files; creating ${PROD ? 'production' : 'preview'} deployment…`);
-
-const r = await api(`https://api.vercel.com/v13/deployments?teamId=${TEAM}&skipAutoDetectionConfirmation=1`, {
+const deploy = () => api(`https://api.vercel.com/v13/deployments?teamId=${TEAM}&skipAutoDetectionConfirmation=1`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -79,7 +86,22 @@ const r = await api(`https://api.vercel.com/v13/deployments?teamId=${TEAM}&skipA
   }),
 });
 
-const d = await r.json();
+let r = await deploy();
+let d = await r.json();
+
+// Vercel answers a deployment whose blobs it does not have with the list of
+// digests it is missing. Upload exactly those, then ask again.
+const missingShas = new Set(d?.error?.missing || []);
+if (missingShas.size) {
+  const pending = files.filter((f) => missingShas.has(f.sha));
+  console.log(`uploading ${pending.length} of ${files.length} — the rest Vercel already had`);
+  await upload(pending);
+  r = await deploy();
+  d = await r.json();
+} else {
+  console.log('nothing to upload; every file was already stored');
+}
+
 if (!r.ok || d.error) {
   console.error('deployment failed:', d.error?.message || JSON.stringify(d).slice(0, 400));
   process.exit(1);

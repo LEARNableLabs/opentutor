@@ -49,9 +49,16 @@ describe.each(PLATFORMS)('%s setup guide', (platform) => {
     expect(tracked.has(file), `${file} should ship`).toBe(true);
   });
 
-  it('only tells the reader to copy files that exist', () => {
-    const missing = referencedPaths(read(file)).filter((p) => !fs.existsSync(path.join(REPO, p)));
-    expect(missing, `${file} points at paths that do not exist`).toEqual([]);
+  it('only tells the reader to copy files that ship', () => {
+    // Tracked, not merely present. workspace/USER.md exists on a machine where
+    // the tutor has run — it is seeded at runtime and gitignored — so an
+    // existsSync check passed locally and failed in CI, which is precisely the
+    // "works on my machine" this suite exists to prevent.
+    // A guide may name a directory to copy (`cp -r skills/tutor/ …`), and
+    // ls-files lists files, so a directory counts when anything ships under it.
+    const ships = (p) => tracked.has(p) || [...tracked].some((f) => f.startsWith(`${p}/`));
+    const missing = referencedPaths(read(file)).filter((p) => !ships(p));
+    expect(missing, `${file} points at paths that are not in the repo`).toEqual([]);
   });
 
   it('does not advertise `npx opentutor`, which was never published', () => {
