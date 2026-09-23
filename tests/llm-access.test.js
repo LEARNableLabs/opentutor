@@ -4,7 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { TutorStore } from '../lib/core/store.js';
 import {
-  saveKey, readKey, deleteKey, adapterFor, countTrialLesson, trialLessonsLeft, trimHistory,
+  saveKey, readKey, deleteKey, adapterFor, trialLessonsLeft, trimHistory,
   KeyRequired, TRIAL_LESSONS, ONBOARDING_MESSAGES,
 } from '../lib/core/llm-access.js';
 
@@ -73,17 +73,18 @@ const outcome = async (promise) => {
   catch (err) { return err instanceof KeyRequired ? err.reason : `other: ${err.message}`; }
 };
 
-it('keeps the owner and admin-created students on the deployment key for everything', async () => {
-  for (const state of [store, store.forStudent('alice')])
+it('keeps the owner and admin-created students on the deployment key for everything, without touching the store', async () => {
+  for (const state of [store, store.forStudent('alice')]) {
+    const reads = [vi.spyOn(state, 'readKV'), vi.spyOn(state, 'listKV')];
     for (const use of USES) expect(await adapterFor({ state, use, host: () => host })).toBe(host);
+    for (const read of reads) expect(read).not.toHaveBeenCalled();
+  }
 });
 
 it('gives a self-signup account 3 lessons, then asks for its own key; a lesson in progress finishes', async () => {
   const state = account();
-  for (let i = 0; i < TRIAL_LESSONS; i++) {
-    expect(await adapterFor({ state, use: 'lesson-start', host: () => host })).toBe(host);
-    await countTrialLesson(state);
-  }
+  for (let i = 0; i < TRIAL_LESSONS; i++) await (await adapterFor({ state, use: 'lesson-start', host: () => host })).generate('plan', []);
+  expect(host.generate).toHaveBeenCalledTimes(TRIAL_LESSONS);
   expect(await trialLessonsLeft(state)).toBe(0);
   expect(await outcome(adapterFor({ state, use: 'lesson-start', host: () => host }))).toBe('trial_used');
   expect(await adapterFor({ state, use: 'lesson-continue', host: () => host })).toBe(host);
@@ -93,7 +94,7 @@ it('refuses custom topics and Study Buddy without a key, and stops onboarding af
   const state = account();
   expect(await outcome(adapterFor({ state, use: 'custom-topic', host: () => host }))).toBe('custom_topic');
   expect(await outcome(adapterFor({ state, use: 'chat', host: () => host }))).toBe('chat');
-  for (let i = 0; i < ONBOARDING_MESSAGES; i++) expect(await adapterFor({ state, use: 'onboarding', host: () => host })).toBe(host);
+  for (let i = 0; i < ONBOARDING_MESSAGES; i++) await (await adapterFor({ state, use: 'onboarding', host: () => host })).generate('hi', []);
   expect(await outcome(adapterFor({ state, use: 'onboarding', host: () => host }))).toBe('onboarding_limit');
 });
 
@@ -103,7 +104,6 @@ it('runs a connected account on its own key for everything and never asks for th
   const hostFn = vi.fn(() => host);
   for (const use of USES) expect((await adapterFor({ state, use, host: hostFn })).apiKey).toBe('sk-or-student');
   expect(hostFn).not.toHaveBeenCalled();
-  await countTrialLesson(state);
   expect(await trialLessonsLeft(state)).toBe(TRIAL_LESSONS);
 });
 
@@ -133,4 +133,34 @@ it('keeps only real, recent, bounded onboarding turns from the browser', () => {
   expect(kept[0].content).toBe('m8');
   expect(kept.at(-1).content).toHaveLength(4000);
   expect(trimHistory('not a list')).toEqual([]);
+});
+
+it('holds both trial caps when requests arrive at the same time', async () => {
+  const state = account();
+  const lessons = await Promise.allSettled(Array.from({ length: 10 }, async () =>
+    (await adapterFor({ state, use: 'lesson-start', host: () => host })).generate('plan', [])));
+  expect(lessons.filter((r) => r.status === 'fulfilled')).toHaveLength(TRIAL_LESSONS);
+  expect(lessons.filter((r) => r.status === 'rejected').every((r) => r.reason instanceof KeyRequired)).toBe(true);
+  const messages = await Promise.allSettled(Array.from({ length: 30 }, async () =>
+    (await adapterFor({ state, use: 'onboarding', host: () => host })).generate('hi', [])));
+  expect(messages.filter((r) => r.status === 'fulfilled')).toHaveLength(ONBOARDING_MESSAGES);
+  expect(host.generate).toHaveBeenCalledTimes(TRIAL_LESSONS + ONBOARDING_MESSAGES);
+});
+
+it('gives a free lesson back when the model call fails', async () => {
+  const state = account();
+  host.generate.mockRejectedValueOnce(new Error('model down'));
+  await expect((await adapterFor({ state, use: 'lesson-start', host: () => host })).generate('plan', [])).rejects.toThrow('model down');
+  expect(await trialLessonsLeft(state)).toBe(TRIAL_LESSONS);
+});
+
+it('asks a student whose stored key no longer opens to reconnect, instead of reopening the trial', async () => {
+  const state = account();
+  await saveKey(state, 'sk-or-student');
+  vi.stubEnv('SUPABASE_SECRET_KEY', 'rotated-secret');
+  expect(await outcome(adapterFor({ state, use: 'lesson-start', host: () => host }))).toBe('reconnect');
+});
+
+it('rejects an unknown use before looking at anything', async () => {
+  await expect(adapterFor({ state: store, use: 'lesson_start', host: () => host })).rejects.toThrow('Unknown model use: lesson_start');
 });
