@@ -205,6 +205,15 @@ describe('OpenAI-compatible generate()', () => {
     expect(err.message).toBe('openrouter: HTTP 402 Insufficient credits');
   });
 
+  it('redacts anything shaped like an API key from adapter error text', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response('bad key sk-or-v1-abcdef1234567890', { status: 401 })));
+    const err = await new OpenRouterAdapter({ apiKey: 'k' }).generate('s', [{ role: 'user', content: 'hi' }]).catch((e) => e);
+    vi.unstubAllGlobals();
+    expect(err.status).toBe(401);
+    expect(err.message).not.toContain('abcdef1234567890');
+    expect(err.message).toContain('sk-…');
+  });
+
   it('lets OPENROUTER_BASE_URL point OpenRouter calls at a stand-in', () => {
     vi.stubEnv('OPENROUTER_BASE_URL', 'http://localhost:3198/api/v1');
     expect(new OpenRouterAdapter({ apiKey: 'k' }).baseURL).toBe('http://localhost:3198/api/v1');

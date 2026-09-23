@@ -125,3 +125,11 @@ it('passes onboarding only real, recent, bounded turns from the browser', async 
   expect(sent.some((m) => m.role === 'system')).toBe(false);
   expect(sent.at(-1)).toEqual({ role: 'user', content: 'hello' });
 });
+
+it('never shows the browser raw error text from the model provider', async () => {
+  vi.spyOn(console, 'error').mockImplementation(() => {});
+  host.generate.mockRejectedValueOnce(new Error('upstream said sk-or-secret-123456789'));
+  const res = await call(lesson, { topicSlug: 'demo' });
+  expect(res.statusCode).toBe(500);
+  expect(res.body).toEqual({ error: 'The tutor is unavailable right now. Please try again.' });
+});

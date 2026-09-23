@@ -34,6 +34,7 @@ beforeEach(async () => {
   openrouter = vi.fn(async (url, init = {}) => {
     if (url.endsWith('/auth/keys')) {
       const body = JSON.parse(init.body);
+      if (body.code === 'weird-code') return Response.json({ key: 'sk-or-bad\nkey' });
       return body.code === 'good-code' && body.code_challenge_method === 'S256' ? Response.json({ key: 'sk-or-student' }) : new Response('bad code', { status: 400 });
     }
     if (url.endsWith('/key'))
@@ -91,4 +92,33 @@ it('reports the trial and the connection, and forgets the key on disconnect', as
 it('is only for self-signup accounts', async () => {
   const res = await call({ method: 'GET', headers: { host: 'localhost:3000', authorization: 'Bearer shared' } });
   expect(res.statusCode).toBe(403);
+});
+
+it('refuses a key that is not a plain token, and stores nothing', async () => {
+  const started = await call(request('POST', { action: 'start' }));
+  const res = await call(request('POST', { action: 'connect', code: 'weird-code' }, `ot_access=alice; ${flowCookie(started)}`));
+  expect(res.statusCode).toBe(502);
+  expect(await readKey(aliceStore())).toBeNull();
+  expect(openrouter.mock.calls.some(([u]) => u.endsWith('/key'))).toBe(false);
+});
+
+it('gives every OpenRouter call a deadline', async () => {
+  const started = await call(request('POST', { action: 'start' }));
+  await call(request('POST', { action: 'connect', code: 'good-code' }, `ot_access=alice; ${flowCookie(started)}`));
+  expect(openrouter.mock.calls.length).toBeGreaterThan(0);
+  expect(openrouter.mock.calls.every(([, init]) => init?.signal instanceof AbortSignal)).toBe(true);
+});
+
+it('still reports the connection when OpenRouter cannot be reached', async () => {
+  await saveKey(aliceStore(), 'sk-or-student');
+  openrouter.mockImplementation(async () => { throw new Error('network down'); });
+  const res = await call(request('GET'));
+  expect(res.statusCode).toBe(200);
+  expect(res.body).toMatchObject({ connected: true, limitRemaining: null });
+});
+
+it('says connected for a stored key that no longer opens, matching the reconnect prompt', async () => {
+  await saveKey(aliceStore(), 'sk-or-student');
+  vi.stubEnv('SUPABASE_SECRET_KEY', 'rotated-secret');
+  expect((await call(request('GET'))).body).toMatchObject({ connected: true, limitRemaining: null });
 });

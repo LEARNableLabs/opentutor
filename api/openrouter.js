@@ -4,13 +4,13 @@ import { createHash, randomBytes } from 'node:crypto';
 import { getState } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { cookies, originFor, setCookie, signFlow, readFlow } from '../lib/core/accounts.js';
-import { saveKey, readKey, deleteKey, trialLessonsLeft, TRIAL_LESSONS } from '../lib/core/llm-access.js';
+import { saveKey, readKey, deleteKey, hasStoredKey, trialLessonsLeft, TRIAL_LESSONS } from '../lib/core/llm-access.js';
 
 const FLOW = 'ot_openrouter';
 const api = () => process.env.OPENROUTER_BASE_URL || 'https://openrouter.ai/api/v1';
 
 async function keyInfo(apiKey, fetchImpl) {
-  const res = await fetchImpl(`${api()}/key`, { headers: { Authorization: `Bearer ${apiKey}` } });
+  const res = await fetchImpl(`${api()}/key`, { headers: { Authorization: `Bearer ${apiKey}` }, signal: AbortSignal.timeout(10_000) });
   return res.ok ? (await res.json()).data || null : null;
 }
 
@@ -29,8 +29,9 @@ export function openrouterHandler({ getStore = getState, fetchImpl = fetch } = {
       const state = await getStore(auth.userId);
       if (req.method === 'GET') {
         const apiKey = await readKey(state);
-        const info = apiKey ? await keyInfo(apiKey, fetchImpl) : null;
-        return res.status(200).json({ connected: !!apiKey, trialLessons: TRIAL_LESSONS, trialLessonsLeft: await trialLessonsLeft(state), limitRemaining: info?.limit_remaining ?? null });
+        // The credit lookup is a nicety: an OpenRouter hiccup must not hide the connection.
+        const info = apiKey ? await keyInfo(apiKey, fetchImpl).catch(() => null) : null;
+        return res.status(200).json({ connected: await hasStoredKey(state), trialLessons: TRIAL_LESSONS, trialLessonsLeft: await trialLessonsLeft(state), limitRemaining: info?.limit_remaining ?? null });
       }
       const { action, code } = req.body || {};
       if (action === 'start') {
@@ -52,9 +53,11 @@ export function openrouterHandler({ getStore = getState, fetchImpl = fetch } = {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ code, code_verifier: flow.verifier, code_challenge_method: 'S256' }),
+          signal: AbortSignal.timeout(10_000),
         });
         const apiKey = exchange.ok ? (await exchange.json()).key : null;
-        const info = typeof apiKey === 'string' && apiKey ? await keyInfo(apiKey, fetchImpl) : null;
+        // Only a plain printable token may reach a header: anything else would be echoed in the error.
+        const info = typeof apiKey === 'string' && /^[\x21-\x7e]{1,512}$/.test(apiKey) ? await keyInfo(apiKey, fetchImpl) : null;
         if (!info) return res.status(502).json({ error: 'OpenRouter did not accept the connection. Please try again.' });
         await saveKey(state, apiKey);
         return res.status(200).json({ connected: true, freeTier: !!info.is_free_tier, limitRemaining: info.limit_remaining ?? null });

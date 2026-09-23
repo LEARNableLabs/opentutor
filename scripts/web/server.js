@@ -217,7 +217,8 @@ async function handleAPI(req, res, url) {
     const rootState = state;
     return await handleStudentAPI(req, res, url, auth.userId == null ? rootState : rootState.forStudent(auth.userId));
   } catch (err) {
-    return fail(res, 500, err.message);
+    console.error('[api]', err.message);
+    return fail(res, 500, 'The tutor is unavailable right now. Please try again.');
   }
 }
 
@@ -322,7 +323,8 @@ async function handleStudentAPI(req, res, url, state) {
         );
         send(status === 200 ? 'done' : 'error', body);
       } catch (err) {
-        send('error', err instanceof KeyRequired ? err.body : { error: err.message });
+        if (!(err instanceof KeyRequired)) console.error('[lesson]', err.message);
+        send('error', err instanceof KeyRequired ? err.body : { error: 'The tutor is unavailable right now. Please try again.' });
       }
       return res.end();
     }
@@ -415,7 +417,7 @@ async function handleStudentAPI(req, res, url, state) {
     if (err instanceof KeyRequired) return keyRequired(res, err);
     console.error('[api] error:', err);
     res.writeHead(500);
-    res.end(JSON.stringify({ error: err.message }));
+    res.end(JSON.stringify({ error: 'The tutor is unavailable right now. Please try again.' }));
   }
 }
 

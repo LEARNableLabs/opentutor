@@ -147,11 +147,18 @@ it('holds both trial caps when requests arrive at the same time', async () => {
   expect(host.generate).toHaveBeenCalledTimes(TRIAL_LESSONS + ONBOARDING_MESSAGES);
 });
 
-it('gives a free lesson back when the model call fails', async () => {
+it('gives a free lesson back when the provider refuses the call', async () => {
   const state = account();
-  host.generate.mockRejectedValueOnce(new Error('model down'));
-  await expect((await adapterFor({ state, use: 'lesson-start', host: () => host })).generate('plan', [])).rejects.toThrow('model down');
+  host.generate.mockRejectedValueOnce(Object.assign(new Error('provider down'), { status: 503 }));
+  await expect((await adapterFor({ state, use: 'lesson-start', host: () => host })).generate('plan', [])).rejects.toThrow('provider down');
   expect(await trialLessonsLeft(state)).toBe(TRIAL_LESSONS);
+});
+
+it('keeps the free lesson when a call may already have been billed', async () => {
+  const state = account();
+  host.generate.mockRejectedValueOnce(new Error('The operation was aborted due to timeout'));
+  await expect((await adapterFor({ state, use: 'lesson-start', host: () => host })).generate('plan', [])).rejects.toThrow('timeout');
+  expect(await trialLessonsLeft(state)).toBe(TRIAL_LESSONS - 1);
 });
 
 it('asks a student whose stored key no longer opens to reconnect, instead of reopening the trial', async () => {

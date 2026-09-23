@@ -32,6 +32,7 @@ export default async function handler(req, res) {
     res.status(200).json({ reply: response.text, model: response.model });
   } catch (err) {
     if (err instanceof KeyRequired) return res.status(402).json(err.body);
-    res.status(500).json({ error: err.message });
+    console.error('[chat]', err.message);
+    res.status(500).json({ error: 'The tutor is unavailable right now. Please try again.' });
   }
 }

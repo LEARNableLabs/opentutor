@@ -51,12 +51,14 @@ export default async function handler(req, res) {
       const { status, body: out } = await lessonTurn(ctx, body, { onToken: (t) => send('token', t) });
       send(status === 200 ? 'done' : 'error', out);
     } catch (err) {
-      send('error', err instanceof KeyRequired ? err.body : { error: err.message });
+      if (!(err instanceof KeyRequired)) console.error('[lesson]', err.message);
+      send('error', err instanceof KeyRequired ? err.body : { error: 'The tutor is unavailable right now. Please try again.' });
     }
     res.end();
   } catch (err) {
     if (err instanceof KeyRequired) return res.status(402).json(err.body);
-    res.status(500).json({ error: err.message });
+    console.error('[lesson]', err.message);
+    res.status(500).json({ error: 'The tutor is unavailable right now. Please try again.' });
   }
 }
 

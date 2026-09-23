@@ -82,3 +82,15 @@ it('sends the student to OpenRouter, and finishes the connection when they come 
   expect($('#btn-connect').disabled).toBe(false);
   expect(context.location.assign).toHaveBeenCalledWith('https://openrouter.ai/auth?code_challenge=x');
 });
+
+it('tells the student when OpenRouter cannot be reached', async () => {
+  const { $ } = frontend((url, init) => {
+    if (url === '/api/openrouter' && init.method === 'POST') throw new Error('offline');
+    return null;
+  });
+  await settle();
+  await $('#btn-connect').click();
+  await settle();
+  expect($('#connect-message').textContent).toBe('Could not reach OpenRouter. Please try again.');
+  expect($('#btn-connect').disabled).toBe(false);
+});

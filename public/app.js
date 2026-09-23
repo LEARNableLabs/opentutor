@@ -643,6 +643,8 @@ $('#btn-connect').addEventListener('click', async () => {
     const data = await res.json().catch(() => ({}));
     if (res.ok && data.url) return window.location.assign(data.url);
     $('#connect-message').textContent = data.error || 'Could not reach OpenRouter. Please try again.';
+  } catch {
+    $('#connect-message').textContent = 'Could not reach OpenRouter. Please try again.';
   } finally {
     $('#btn-connect').disabled = false;
   }
