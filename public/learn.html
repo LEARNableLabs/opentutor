@@ -21,10 +21,18 @@
             <button class="nav-btn" data-view="topics">Topics</button>
             <button class="nav-btn" data-view="chat">Chat</button>
           </nav>
+          <span id="key-status" class="hidden"></span>
+          <button id="btn-disconnect" type="button" class="hidden">Disconnect OpenRouter</button>
           <button id="btn-signout" type="button">Log out</button>
           <button id="theme-toggle" title="Toggle theme">🌙</button>
         </div>
       </header>
+
+      <div id="connect-banner" class="hidden" role="status">
+        <p id="connect-message"></p>
+        <button id="btn-connect" type="button" class="primary">Connect OpenRouter</button>
+        <button id="btn-connect-browse" type="button">Browse ready-made topics</button>
+      </div>
 
       <main>
         <!-- Learn view -->

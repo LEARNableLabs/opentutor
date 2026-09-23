@@ -599,3 +599,9 @@ input[type="text"]:focus, select:focus {
   .chat-msg { max-width: 90%; }
   .lesson-msg { max-width: 90%; }
 }
+
+/* #132: trial status and the connect prompt */
+#key-status { font-size: 0.85rem; opacity: 0.8; }
+#connect-banner { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin: 0.75rem auto; padding: 0.75rem 1rem; max-width: 960px; border: 1px solid var(--border); border-radius: 8px; background: var(--accent-soft); }
+#connect-banner.hidden { display: none; }
+#connect-banner p { flex: 1 1 16rem; margin: 0; }

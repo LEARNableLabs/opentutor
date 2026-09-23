@@ -14,6 +14,11 @@ window.fetch = async (input, init = {}) => {
     if(renewed.ok)res=await nativeFetch(input,init);
     if(res.status===401)window.location.assign('/login.html');
   }
+  // #132: a 402 means this student needs their own OpenRouter key.
+  if (url.startsWith('/api/') && res.status === 402) {
+    const body = await res.clone().json().catch(() => null);
+    if (body?.connect) showConnect(body);
+  }
   return res;
 };
 $('#btn-signout').addEventListener('click', async () => {
@@ -57,7 +62,10 @@ async function streamLesson(body, onToken) {
       const data = JSON.parse(raw);
       if (event === 'token') onToken(data);
       else if (event === 'done') result = data;
-      else if (event === 'error') throw new Error(data.error || 'Lesson failed');
+      else if (event === 'error') {
+        if (data.connect) showConnect(data);
+        throw new Error(data.error || 'Lesson failed');
+      }
     }
   }
 
@@ -196,6 +204,7 @@ async function startLesson() {
   } finally {
     $('#btn-next').disabled = false;
     $('#lesson-loading').classList.add('hidden');
+    loadKeyStatus().catch(() => {});
   }
 }
 
@@ -499,6 +508,7 @@ async function sendChat() {
       body: JSON.stringify({ message }),
     });
     const data = await res.json();
+    if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
     typing.remove();
     appendChat('assistant', data.reply);
   } catch (err) {
@@ -582,6 +592,7 @@ async function sendOnboard() {
       body: JSON.stringify({ message, history: onboardingHistory.slice(0, -1) }),
     });
     const data = await res.json();
+    if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
     typing.remove();
     appendOnboardMsg('assistant', data.reply);
     onboardingHistory.push({ role: 'assistant', content: data.reply });
@@ -618,6 +629,62 @@ function appendOnboardMsg(classes, text) {
   return div;
 }
 
+// ── OpenRouter (#132): 3 free lessons, then the student's own key ──
+
+function showConnect({ error }) {
+  $('#connect-message').textContent = error;
+  $('#connect-banner').classList.remove('hidden');
+}
+
+$('#btn-connect').addEventListener('click', async () => {
+  $('#btn-connect').disabled = true;
+  try {
+    const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'start' }) });
+    const data = await res.json().catch(() => ({}));
+    if (res.ok && data.url) return window.location.assign(data.url);
+    $('#connect-message').textContent = data.error || 'Could not reach OpenRouter. Please try again.';
+  } finally {
+    $('#btn-connect').disabled = false;
+  }
+});
+$('#btn-connect-browse').addEventListener('click', () => {
+  $('#connect-banner').classList.add('hidden');
+  $('.nav-btn[data-view="topics"]').click();
+});
+$('#btn-disconnect').addEventListener('click', async () => {
+  await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'disconnect' }) });
+  showConnect({ error: 'Disconnected. To revoke the key itself, delete it in your OpenRouter settings (openrouter.ai/settings/keys).' });
+  loadKeyStatus().catch(() => {});
+});
+
+// Only self-signup accounts get an answer; anyone else sees nothing.
+async function loadKeyStatus() {
+  const res = await fetch('/api/openrouter');
+  if (!res.ok) return;
+  const s = await res.json();
+  $('#key-status').textContent = s.connected ? 'OpenRouter connected' : `${s.trialLessonsLeft} of ${s.trialLessons} free lessons left`;
+  $('#key-status').classList.remove('hidden');
+  $('#btn-disconnect').classList.toggle('hidden', !s.connected);
+}
+
+// OpenRouter sends the student back to learn.html?code=… once they approve.
+async function finishConnect() {
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  if (!code) return;
+  params.delete('code');
+  const rest = params.toString();
+  window.history.replaceState(null, '', window.location.pathname + (rest ? `?${rest}` : ''));
+  try {
+    const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'connect', code }) });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) showConnect({ error: data.error || 'Could not connect OpenRouter. Please try again.' });
+    else if (data.freeTier) showConnect({ error: 'Connected, but your OpenRouter account has no credits yet. Add some at openrouter.ai to keep learning.' });
+  } catch {
+    showConnect({ error: 'Could not connect OpenRouter. Please try again.' });
+  }
+}
+
 // ── Init ────────────────────────────────────────────────────
 
 async function restoreTopicBuild() {
@@ -636,11 +703,13 @@ async function initializeLearning() {
     const refreshed=await nativeFetch('/api/account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})});
     if(!refreshed.ok){window.location.replace('/login.html'+window.location.search);return;}
   }
+  await finishConnect();
   await restoreTopicBuild();
   const topic = new URLSearchParams(window.location.search).get('topic');
   if(topic&&/^[a-z0-9-]{1,80}$/.test(topic))await selectTopic(topic);
   localStorage.removeItem('opentutor-pending-topic');
   checkOnboarding();
+  loadKeyStatus().catch(() => {});
 }
 initializeLearning().catch(()=>{ $('#empty-state').textContent='Could not load your workspace. Please refresh to try again.'; });
 
