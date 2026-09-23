@@ -239,19 +239,17 @@ was done about it. A commit straight to `main` leaves neither.
 - Don't branch a new PR off an unmerged branch unless the stacking is
   deliberate — the second PR's diff will contain the first one's commits.
 
-**Review important changes with a second model before merging.**
+**CodeRabbit and Codex review every pull request automatically.** The
+configuration is `.coderabbit.yaml` plus the `## Code Review Rules` section
+of `AGENTS.md`. Address their findings before merging.
 
-```bash
-claude -p --model fable "$(cat review-prompt.md)" > review.md
-```
-
-Ask it to be adversarial and to name file:line plus the input that triggers each
-finding. It is worth it: the review of the per-student tenancy change (#80)
+It is worth it: the review of the per-student tenancy change (#80)
 found four real defects, including a migration that silently lost a student's
 profile, and a trust boundary that validated an id without canonicalising it.
 
-Prioritise reviews for anything touching a trust boundary, a migration, money,
-or state that more than one person can reach.
+For anything touching a trust boundary, a migration, money, or state more
+than one person can reach, also reproduce each finding against a running
+server before acting on it.
 
 **Verify against something running, not only the suite.** The same #80 change
 passed 378 tests with a bug that took the whole web server down on any duplicate

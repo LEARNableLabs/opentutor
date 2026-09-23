@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+reviews:
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!skills/tutor/domains/**"
+    - "!package-lock.json"
+  path_instructions:
+    - path: "api/**"
+      instructions: "Trust boundary. Every route authenticates with authenticateRequest before choosing a store and never trusts a user id from the request body. KeyRequired becomes HTTP 402. After an SSE stream starts, failures are events, never a second status. Raw error text never reaches the browser."
+    - path: "lib/core/llm-access.js"
+      instructions: "Money and secrets. Decides which key pays for each student-triggered model call and seals students' OpenRouter keys (AES-256-GCM, bound to the student id). Flag check-then-write races on the trial caps (units must be claimed atomically), any fallback from a student's key to the deployment's key, and secrets reaching logs or responses."
+    - path: "lib/core/accounts.js"
+      instructions: "Sessions and PKCE flows. An invalid account cookie must never fall back to root or legacy access, and responses must not reveal whether an email is registered, by status code or by body."
+    - path: "scripts/web/server.js"
+      instructions: "The local server must enforce exactly what the Vercel routes in api/ enforce."
