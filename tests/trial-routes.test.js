@@ -50,6 +50,20 @@ async function call(handler, body) {
   return res;
 }
 
+// A response that, like Node's, refuses a second set of headers, and records SSE events.
+function sseResponse() {
+  const once = (res) => { if (res.headersSent) throw new Error('ERR_HTTP_HEADERS_SENT'); res.headersSent = true; };
+  return {
+    headersSent: false, events: [], ended: 0,
+    setHeader() { if (this.headersSent) throw new Error('ERR_HTTP_HEADERS_SENT'); },
+    status(code) { this.statusCode = code; return this; },
+    json(body) { once(this); this.body = body; this.ended++; return this; },
+    writeHead(code) { once(this); this.statusCode = code; return this; },
+    write(chunk) { const m = /^event: (\w+)\ndata: (.*)\n\n$/s.exec(chunk); if (m) this.events.push({ event: m[1], data: JSON.parse(m[2]) }); return true; },
+    end() { this.ended++; },
+  };
+}
+
 it('gives a self-signup account 3 lessons on the deployment key, then asks for its own', async () => {
   for (let i = 0; i < 3; i++) expect((await call(lesson, { topicSlug: 'demo' })).statusCode).toBe(200);
   const fourth = await call(lesson, { topicSlug: 'demo' });
@@ -69,4 +83,14 @@ it('runs a connected account on its own key, never on the deployment key', async
   expect((await call(lesson, { topicSlug: 'demo' })).statusCode).toBe(200);
   expect(seen).toEqual(['Bearer sk-or-student']);
   expect(host.generate).not.toHaveBeenCalled();
+});
+
+it('streams a refusal as one error event, with headers written once, when the student key runs dry mid-lesson', async () => {
+  await saveKey(store.forStudent(ACCT), 'sk-or-student');
+  vi.stubGlobal('fetch', vi.fn(async () => new Response('Insufficient credits', { status: 402 })));
+  const res = sseResponse();
+  await lesson({ method: 'POST', headers: { accept: 'text/event-stream' }, body: { topicSlug: 'demo' } }, res);
+  expect(res.statusCode).toBe(200);
+  expect(res.events).toEqual([{ event: 'error', data: expect.objectContaining({ connect: true, reason: 'no_credits' }) }]);
+  expect(res.ended).toBe(1);
 });
