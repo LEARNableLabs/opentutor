@@ -21,6 +21,7 @@ opentutor/
 │   │   ├── student-model.js          # Accuracy trends, difficulty adjustment, engagement signals
 │   │   ├── deliberate-practice.js    # DeliberatePractitioner — evaluates teaching, writes directives
 │   │   ├── students.js               # Provisioning registry (#80) — kept in kv, the one store all backends share
+│   │   ├── llm-access.js             # Which key pays: 3-lesson trial, then the student's own OpenRouter key (#132)
 │   │   ├── concept-graph.js          # Parses concept-map.md into a prerequisite graph
 │   │   └── index.js
 │   ├── adapters/
@@ -35,6 +36,7 @@ opentutor/
 │   ├── _lib/init.js                  # Shared store / adapter / skill-file resolution
 │   ├── _lib/admin-auth.js            # OPENTUTOR_ADMIN_PASSWORD — a second secret, never the student's
 │   ├── admin/students.js             # Provision / list / inspect / decommission students (#80)
+│   ├── openrouter.js                 # Connect a student's OpenRouter account (OAuth PKCE, #132)
 │   ├── lesson.js                     # lessonTurn() — the Socratic turn, shared with the web server
 │   └── chat.js, onboard.js, topics.js, progress.js, user.js, add-topic.js
 ├── public/                           # Vanilla JS frontend (served by scripts/web/server.js)
@@ -177,6 +179,8 @@ Set `OPENTUTOR_LLM`: `claude-sdk`, `cli`, `openai`, `openrouter`, `ollama`. With
 The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
 The web server, the Vercel routes and the curriculum pipeline all honour this. **The Telegram bot's own chat and lesson calls do not** — `scripts/bot/claude.js` reads `CLAUDE_BACKEND` (`sdk` | `cli`) instead. See issue #98.
+
+Self-signup accounts (`acct-…`) are the exception: `lib/core/llm-access.js` decides each of their model calls, 3 free lessons on the deployment's key and then their own OpenRouter key (#132). Anything a student triggers asks `adapterFor()`, never `getAdapter()` directly.
 
 ## Deployment boundaries
 

@@ -129,6 +129,12 @@ Access and refresh tokens use HttpOnly cookies, Secure on Vercel, with SameSite=
 
 `OPENTUTOR_PUBLIC_URL` optionally pins the origin used for redirects and origin checks. Set it per environment; a production URL must not be applied to unrelated preview hosts. Outside Vercel, set it on any server with accounts enabled: without it, confirmation and reset links are built from the request's `Host` header, which the client controls. With no Supabase configuration, public browsing still works and local installations retain the existing local workspace/token options.
 
+### Free trial and students' own OpenRouter keys
+
+Students who sign themselves up get 3 lessons on the deployment's model key, on the ready-made topics only. After that, and from the start for custom topics and Study Buddy, they connect their own OpenRouter account from the learn page, and every model call they make runs on their key. Onboarding is free for 12 messages. The owner and students created in the admin screen always use the deployment's key, without limits (#132).
+
+The connection uses OpenRouter's OAuth PKCE flow and needs no setup on OpenRouter's side. Keys are stored encrypted (AES-256-GCM) under a key derived from `SUPABASE_SECRET_KEY` / `SUPABASE_SERVICE_ROLE_KEY`, so rotating that secret, or switching a deployment from `SUPABASE_SERVICE_ROLE_KEY` to `SUPABASE_SECRET_KEY`, disconnects every student until they reconnect. `OPENROUTER_BASE_URL` points both the connection and the OpenRouter adapter at a stand-in for testing; leave it unset in production.
+
 ### Protecting deployment secrets
 
 Mark `SUPABASE_SECRET_KEY` (or `SUPABASE_SERVICE_ROLE_KEY`), `OPENROUTER_API_KEY` (or another provider key), `OPENTUTOR_PASSWORD`, and `OPENTUTOR_ADMIN_PASSWORD` as Sensitive in Production and Preview. Sensitive values can be replaced but cannot be revealed or downloaded; keep originals in your password manager. Vercel now calls these values Secrets and supports them in Development too. Use separate local development credentials; saved Secrets cannot be downloaded for local use. See [Vercel’s current Secret documentation](https://vercel.com/docs/environment-variables/sensitive-environment-variables). Model names and the Supabase URL are configuration values, not secrets.
