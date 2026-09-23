@@ -9,6 +9,7 @@
 
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
+import { adapterFor, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
@@ -27,11 +28,15 @@ export default async function handler(req, res) {
   }
 
   try {
-    const ctx = { state: await getState(auth.userId), adapter: getAdapter(), skills: getSkills() };
+    const state = await getState(auth.userId);
+    const body = req.body || {};
+    // Resolved before any header is written, so a refusal can still be a plain 402.
+    const adapter = await adapterFor({ state, use: body.answer != null ? 'lesson-continue' : 'lesson-start', host: getAdapter });
+    const ctx = { state, adapter, skills: getSkills() };
 
     if (!String(req.headers?.accept || '').includes('text/event-stream')) {
-      const { status, body } = await lessonTurn(ctx, req.body || {});
-      return res.status(status).json(body);
+      const { status, body: out } = await lessonTurn(ctx, body);
+      return res.status(status).json(out);
     }
 
     res.writeHead(200, {
@@ -41,10 +46,16 @@ export default async function handler(req, res) {
       'X-Accel-Buffering': 'no',
     });
     const send = (event, data) => res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
-    const { status, body } = await lessonTurn(ctx, req.body || {}, { onToken: (t) => send('token', t) });
-    send(status === 200 ? 'done' : 'error', body);
+    // Headers are out: every failure from here on is an event, never a second status.
+    try {
+      const { status, body: out } = await lessonTurn(ctx, body, { onToken: (t) => send('token', t) });
+      send(status === 200 ? 'done' : 'error', out);
+    } catch (err) {
+      send('error', err instanceof KeyRequired ? err.body : { error: err.message });
+    }
     res.end();
   } catch (err) {
+    if (err instanceof KeyRequired) return res.status(402).json(err.body);
     res.status(500).json({ error: err.message });
   }
 }
