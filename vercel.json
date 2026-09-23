@@ -20,6 +20,10 @@
   },
   "rewrites": [
     {
+      "source": "/api/openrouter",
+      "destination": "/api/account?via=openrouter"
+    },
+    {
       "source": "/api/:path*",
       "destination": "/api/:path*"
     }

@@ -1,10 +1,10 @@
 // Connect a student's own OpenRouter account with OAuth PKCE (#132). The key is
 // claimed server-side, sealed into the student's store, and never sent back.
 import { createHash, randomBytes } from 'node:crypto';
-import { getState } from './_lib/init.js';
-import { authenticateRequest, authFailure } from './_lib/auth.js';
-import { cookies, originFor, setCookie, signFlow, readFlow } from '../lib/core/accounts.js';
-import { saveKey, readKey, deleteKey, hasStoredKey, trialLessonsLeft, TRIAL_LESSONS } from '../lib/core/llm-access.js';
+import { getState } from './init.js';
+import { authenticateRequest, authFailure } from './auth.js';
+import { cookies, originFor, setCookie, signFlow, readFlow } from '../../lib/core/accounts.js';
+import { saveKey, readKey, deleteKey, hasStoredKey, trialLessonsLeft, TRIAL_LESSONS } from '../../lib/core/llm-access.js';
 
 const FLOW = 'ot_openrouter';
 const api = () => process.env.OPENROUTER_BASE_URL || 'https://openrouter.ai/api/v1';
@@ -73,5 +73,3 @@ export function openrouterHandler({ getStore = getState, fetchImpl = fetch } = {
     }
   };
 }
-
-export default openrouterHandler();

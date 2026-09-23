@@ -8,7 +8,7 @@
 
 import http from 'http';
 import { accountHandler } from '../../api/account.js';
-import { openrouterHandler } from '../../api/openrouter.js';
+import { openrouterHandler } from '../../api/_lib/openrouter.js';
 import { adapterFor, isAccount, trimHistory, KeyRequired } from '../../lib/core/llm-access.js';
 import { publicCatalog } from '../../lib/core/catalog.js';
 import fs from 'fs';

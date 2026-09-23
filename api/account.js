@@ -1,5 +1,6 @@
 import { getState } from './_lib/init.js';
 import { authenticateRequest } from './_lib/auth.js';
+import { openrouterHandler } from './_lib/openrouter.js';
 import {
   accountsConfigured,
   createAccountClient,
@@ -228,4 +229,8 @@ export function accountHandler({ getStore = getState, clientFactory = createAcco
     }
   };
 }
-export default accountHandler();
+// One function serves /api/account and /api/openrouter: the Hobby plan allows 12 functions
+// per deployment, and vercel.json rewrites /api/openrouter here with ?via=openrouter.
+const account = accountHandler();
+const openrouter = openrouterHandler();
+export default (req, res) => (req.query?.via === 'openrouter' ? openrouter : account)(req, res);

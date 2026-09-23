@@ -6,7 +6,8 @@ import { createHash } from 'node:crypto';
 import { TutorStore } from '../lib/core/store.js';
 import { ensureAccount, accountId } from '../lib/core/accounts.js';
 import { readKey, saveKey } from '../lib/core/llm-access.js';
-import { openrouterHandler } from '../api/openrouter.js';
+import { openrouterHandler } from '../api/_lib/openrouter.js';
+import accountRoute from '../api/account.js';
 
 const alice = { id: '11111111-1111-4111-8111-111111111111', email: 'alice@example.test', email_confirmed_at: '2026-01-01', user_metadata: { name: 'Alice' } };
 const bob = { id: '22222222-2222-4222-8222-222222222222', email: 'bob@example.test', email_confirmed_at: '2026-01-01', user_metadata: { name: 'Bob' } };
@@ -121,4 +122,18 @@ it('says connected for a stored key that no longer opens, matching the reconnect
   await saveKey(aliceStore(), 'sk-or-student');
   vi.stubEnv('SUPABASE_SECRET_KEY', 'rotated-secret');
   expect((await call(request('GET'))).body).toMatchObject({ connected: true, limitRemaining: null });
+});
+
+// The Hobby plan's 12-function limit means /api/openrouter is served by the
+// account function (vercel.json rewrites it with ?via=openrouter).
+it('dispatches /api/account and /api/openrouter from one function', async () => {
+  const owner = { method: 'GET', headers: { host: 'localhost:3000', authorization: 'Bearer shared' } };
+  const denied = response();
+  await accountRoute({ ...owner, query: { via: 'openrouter' } }, denied);
+  expect(denied.statusCode).toBe(403); // the owner has no account to connect
+
+  const plain = response();
+  await accountRoute(owner, plain);
+  expect(plain.statusCode).toBe(200);
+  expect(plain.body).toEqual({ user: null, available: true, local: false });
 });
