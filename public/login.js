@@ -1,6 +1,6 @@
 const $ = (s) => document.querySelector(s),
   params = new URLSearchParams(location.search);
-const allowed = ['login', 'signup', 'forgot', 'reset', 'legacy'];
+const allowed = ['login', 'signup', 'reset', 'legacy'];
 let mode = allowed.includes(params.get('mode')) ? params.get('mode') : 'login';
 const topic = params.get('topic') || localStorage.getItem('opentutor-pending-topic');
 if (topic && /^[a-z0-9-]{1,80}$/.test(topic))
@@ -51,7 +51,7 @@ function configure() {
       : reset
         ? 'Save password ↗'
         : 'Log in ↗';
-  $('#forgot-link').hidden = mode !== 'login';
+  $('#forgot-link').hidden = true; // reset needs email, which comes with #133
   $('#legacy-link').hidden = legacy;
   $('#switch-copy').replaceChildren();
   const link = document.createElement('a');

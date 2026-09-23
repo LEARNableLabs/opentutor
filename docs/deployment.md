@@ -120,10 +120,10 @@ Email accounts use Supabase Auth through server-side `/api/account`. The server 
 
 Before enabling public signup in production, configure the existing Supabase project:
 
-1. In Authentication → Providers, enable Email and **Confirm email**. This flow uses PKCE; confirmation links must be opened in the same browser that requested them.
+1. In Authentication → Sign In / Providers, keep the Email provider enabled and turn **Confirm email off**. Accounts are email and password with no email step until #133; the app hides "Forgot password?" until then. To reset a student's password meanwhile, use Supabase's admin API (`auth.admin.updateUserById(id, { password })`).
 2. In Authentication → URL Configuration, set Site URL to `https://opentutor-mauve.vercel.app`. Add both `https://opentutor-mauve.vercel.app/login.html` and `https://opentutor-mauve.vercel.app/login.html?mode=reset` to allowed Redirect URLs. Add the equivalent URLs for each production alias you advertise, and your exact preview URL for testing. Local testing uses the corresponding `http://localhost:3000` URLs. List exact URLs only — never a wildcard such as `https://**`: this allowlist is what stops a forged reset request from sending a user's reset link to another site.
 3. Configure your email sender under Authentication → Email/SMTP. Supabase's default sender is restricted and is unsuitable for general public signup. Keep Supabase rate limits enabled.
-4. Verify signup, email confirmation, login, logout and password recovery using a real test mailbox. The app tests use a local Supabase protocol double, so they do not establish that your SMTP settings work.
+4. The email flows (confirmation, password reset, a real sender and a real-mailbox test) are tracked in #133.
 
 Access and refresh tokens use HttpOnly cookies, Secure on Vercel, with SameSite=Lax. Cookie-authenticated writes enforce same-origin requests. Password reset additionally requires a short-lived, signed recovery grant bound to the verified email-link flow, user and access token. Session responses and private API responses are not cacheable. Legacy token/shared-password access remains available through the explicit existing-access form; the default flow no longer stores credentials in localStorage or opens browser password prompts.
 
