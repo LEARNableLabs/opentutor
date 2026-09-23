@@ -8,6 +8,8 @@
 
 import http from 'http';
 import { accountHandler } from '../../api/account.js';
+import { openrouterHandler } from '../../api/openrouter.js';
+import { adapterFor, isAccount, trimHistory, KeyRequired } from '../../lib/core/llm-access.js';
 import { publicCatalog } from '../../lib/core/catalog.js';
 import fs from 'fs';
 import path from 'path';
@@ -197,13 +199,8 @@ async function handleAPI(req, res, url) {
   res.setHeader('Cache-Control','private, no-store');
 
   if(url.pathname==='/api/catalog' && req.method==='GET')return json(res,publicCatalog(ROOT));
-  if(url.pathname==='/api/account') {
-    try {req.body=req.method==='POST'?JSON.parse(await readBody(req)||'{}'):{};}
-    catch {return fail(res,400,'Invalid request body');}
-    res.status=(code)=>{res.statusCode=code;return res;};
-    res.json=(body)=>{res.end(JSON.stringify(body));return res;};
-    return accountHandler({getStore:async()=>state})(req,res);
-  }
+  if (url.pathname === '/api/account') return mountHandler(req, res, accountHandler({ getStore: async () => state }));
+  if (url.pathname === '/api/openrouter') return mountHandler(req, res, openrouterHandler({ getStore: async (id) => (id == null ? state : state.forStudent(id)) }));
   // Admin routes are checked first and against their own secret. Falling
   // through the student gate would mean an admin needed both passwords, and
   // would put student credentials on the path to provisioning.
@@ -297,9 +294,14 @@ async function handleStudentAPI(req, res, url, state) {
     if (req.method === 'POST' && url.pathname === '/api/lesson') {
       const payload = JSON.parse(await readBody(req));
       const wantsStream = (req.headers.accept || '').includes('text/event-stream');
+      const ctx = {
+        state,
+        adapter: await adapterFor({ state, use: payload.answer != null ? 'lesson-continue' : 'lesson-start', host: () => chatAdapter }),
+        skills,
+      };
 
       if (!wantsStream) {
-        const { status, body } = await lessonTurn({ state, adapter: chatAdapter, skills }, payload);
+        const { status, body } = await lessonTurn(ctx, payload);
         res.writeHead(status);
         return res.end(JSON.stringify(body, null, 2));
       }
@@ -314,13 +316,13 @@ async function handleStudentAPI(req, res, url, state) {
 
       try {
         const { status, body } = await lessonTurn(
-          { state, adapter: chatAdapter, skills },
+          ctx,
           payload,
           { onToken: (t) => send('token', t) },
         );
         send(status === 200 ? 'done' : 'error', body);
       } catch (err) {
-        send('error', { error: err.message });
+        send('error', err instanceof KeyRequired ? err.body : { error: err.message });
       }
       return res.end();
     }
@@ -350,8 +352,9 @@ async function handleStudentAPI(req, res, url, state) {
       const user = await state.readUser();
       const { system, model } = buildOnboardingPrompt(skills, user);
 
-      const messages = [...(history || []), { role: 'user', content: message }];
-      const response = await chatAdapter.generate(system, messages, { model });
+      const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: message }];
+      const adapter = await adapterFor({ state, use: 'onboarding', host: () => chatAdapter });
+      const response = await adapter.generate(system, messages, { model });
 
       const topicMatch = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/);
       const cleanText = response.text.replace(/<TOPIC>.+?<\/TOPIC>/g, '').trim();
@@ -374,7 +377,8 @@ async function handleStudentAPI(req, res, url, state) {
         user ? `## Student\n\n${user}` : '',
       ].filter(Boolean).join('\n\n---\n\n');
 
-      const response = await chatAdapter.generate(
+      const adapter = await adapterFor({ state, use: 'chat', host: () => chatAdapter });
+      const response = await adapter.generate(
         system + '\n\nReturn only polished text.',
         [{ role: 'user', content: message }],
         { model: 'cheap' },
@@ -396,10 +400,11 @@ async function handleStudentAPI(req, res, url, state) {
     if (req.method === 'POST' && url.pathname === '/api/add-topic') {
       try {
         const payload = JSON.parse(await readBody(req));
-        const result = await addTopic({ state, adapter: pipelineAdapter, skills, enqueue: buildWorker.enqueue }, payload);
+        const result = await addTopic({ state, getAdapter: () => adapterFor({ state, use: 'custom-topic', host: () => pipelineAdapter }), skills, enqueue: buildWorker.enqueue }, payload);
         res.writeHead(result.lessonCount ? 200 : 202);
         return res.end(JSON.stringify(result));
       } catch (err) {
+        if (err instanceof KeyRequired) return keyRequired(res, err);
         return fail(res, /topic name|Invalid topic slug|Invalid level/.test(err.message) ? 400 : 503, err.message);
       }
     }
@@ -407,6 +412,7 @@ async function handleStudentAPI(req, res, url, state) {
     res.writeHead(404);
     res.end(JSON.stringify({ error: 'Unknown API endpoint' }));
   } catch (err) {
+    if (err instanceof KeyRequired) return keyRequired(res, err);
     console.error('[api] error:', err);
     res.writeHead(500);
     res.end(JSON.stringify({ error: err.message }));
@@ -418,6 +424,20 @@ async function handleStudentAPI(req, res, url, state) {
 function json(res, data) {
   res.writeHead(200);
   res.end(JSON.stringify(data, null, 2));
+}
+
+// The Vercel-style handlers expect req.body and res.status().json().
+async function mountHandler(req, res, handler) {
+  try { req.body = req.method === 'POST' ? JSON.parse(await readBody(req) || '{}') : {}; }
+  catch { return fail(res, 400, 'Invalid request body'); }
+  res.status = (code) => { res.statusCode = code; return res; };
+  res.json = (body) => { res.end(JSON.stringify(body)); return res; };
+  return handler(req, res);
+}
+
+function keyRequired(res, err) {
+  res.writeHead(402);
+  return res.end(JSON.stringify(err.body));
 }
 
 function readBody(req) {
