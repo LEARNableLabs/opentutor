@@ -87,7 +87,7 @@ it('gives a self-signup account 3 lessons, then asks for its own key; a lesson i
   expect(host.generate).toHaveBeenCalledTimes(TRIAL_LESSONS);
   expect(await trialLessonsLeft(state)).toBe(0);
   expect(await outcome(adapterFor({ state, use: 'lesson-start', host: () => host }))).toBe('trial_used');
-  expect(await adapterFor({ state, use: 'lesson-continue', host: () => host })).toBe(host);
+  expect(await outcome((await adapterFor({ state, use: 'lesson-continue', host: () => host })).generate('answer', []))).toBe('allowed');
 });
 
 it('refuses custom topics and Study Buddy without a key, and stops onboarding after 12 messages', async () => {
@@ -163,4 +163,12 @@ it('asks a student whose stored key no longer opens to reconnect, instead of reo
 
 it('rejects an unknown use before looking at anything', async () => {
   await expect(adapterFor({ state: store, use: 'lesson_start', host: () => host })).rejects.toThrow('Unknown model use: lesson_start');
+});
+
+it('bounds the answers inside trial lessons, even when they arrive at the same time', async () => {
+  const state = account();
+  const answers = await Promise.allSettled(Array.from({ length: 30 }, async () =>
+    (await adapterFor({ state, use: 'lesson-continue', host: () => host })).generate('answer', [])));
+  expect(answers.filter((r) => r.status === 'fulfilled')).toHaveLength(TRIAL_LESSONS * 4);
+  expect(await outcome(adapterFor({ state, use: 'lesson-continue', host: () => host }))).toBe('trial_used');
 });
