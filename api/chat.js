@@ -1,5 +1,6 @@
 import { getState, getAdapter } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
+import { adapterFor, KeyRequired } from '../lib/core/llm-access.js';
 
 export default async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
@@ -13,7 +14,7 @@ export default async function handler(req, res) {
 
   try {
     const state = await getState(auth.userId);
-    const adapter = getAdapter();
+    const adapter = await adapterFor({ state, use: 'chat', host: getAdapter });
     const { message } = req.body;
 
     const user = await state.readUser();
@@ -30,6 +31,7 @@ export default async function handler(req, res) {
 
     res.status(200).json({ reply: response.text, model: response.model });
   } catch (err) {
+    if (err instanceof KeyRequired) return res.status(402).json(err.body);
     res.status(500).json({ error: err.message });
   }
 }
