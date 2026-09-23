@@ -39,6 +39,13 @@ it('seals a student key, binds it to that student, and forgets it on tampering, 
   state.writeKV('openrouter_key', [version, iv, tag, body.slice(0, -2) + (body.endsWith('AA') ? 'BB' : 'AA')].join('.'));
   expect(await readKey(state)).toBeNull();
 
+  const truncatedTag = Buffer.from(tag, 'base64url').subarray(0, 4).toString('base64url');
+  state.writeKV('openrouter_key', [version, iv, truncatedTag, body].join('.'));
+  expect(await readKey(state)).toBeNull();
+
+  state.writeKV('openrouter_key', sealed + '.junk');
+  expect(await readKey(state)).toBeNull();
+
   await saveKey(state, 'sk-or-student');
   vi.stubEnv('SUPABASE_SECRET_KEY', 'rotated-secret');
   expect(await readKey(state)).toBeNull();
