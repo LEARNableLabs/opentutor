@@ -196,4 +196,18 @@ describe('OpenAI-compatible generate()', () => {
     vi.stubGlobal('fetch', apiReply({ error: { message: 'No auth credentials found' } }, 401));
     await expect(new OpenRouterAdapter({ apiKey: 'bad' }).generate('s', [], {})).rejects.toThrow('openrouter: HTTP 401');
   });
+
+  it('keeps the HTTP status on adapter errors so a bad key can be told from an outage', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response('Insufficient credits', { status: 402 })));
+    const err = await new OpenRouterAdapter({ apiKey: 'k' }).generate('s', [{ role: 'user', content: 'hi' }]).catch((e) => e);
+    vi.unstubAllGlobals();
+    expect(err.status).toBe(402);
+    expect(err.message).toBe('openrouter: HTTP 402 Insufficient credits');
+  });
+
+  it('lets OPENROUTER_BASE_URL point OpenRouter calls at a stand-in', () => {
+    vi.stubEnv('OPENROUTER_BASE_URL', 'http://localhost:3198/api/v1');
+    expect(new OpenRouterAdapter({ apiKey: 'k' }).baseURL).toBe('http://localhost:3198/api/v1');
+    vi.unstubAllEnvs();
+  });
 });
