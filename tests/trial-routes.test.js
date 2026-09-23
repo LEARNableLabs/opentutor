@@ -21,6 +21,7 @@ vi.mock('../api/_lib/init.js', () => ({
 }));
 vi.mock('../api/_lib/topic-queue.js', () => ({ enqueueTopicBuild: (...a) => enqueue(...a) }));
 const lesson = (await import('../api/lesson.js')).default;
+const addTopicRoute = (await import('../api/add-topic.js')).default;
 
 const PLAN = { goal: 'Alpha', retrieval: 'Recall alpha?', diagnostic: 'Why alpha?', followUp: 'Example?', application: 'Apply it.', commonMisconceptions: [] };
 
@@ -93,4 +94,13 @@ it('streams a refusal as one error event, with headers written once, when the st
   expect(res.statusCode).toBe(200);
   expect(res.events).toEqual([{ event: 'error', data: expect.objectContaining({ connect: true, reason: 'no_credits' }) }]);
   expect(res.ended).toBe(1);
+});
+
+it('refuses a custom topic without recording or enqueueing a build, and activates a shipped one', async () => {
+  const custom = await call(addTopicRoute, { topic: 'Knot Theory' });
+  expect(custom.statusCode).toBe(402);
+  expect(custom.body).toMatchObject({ connect: true, reason: 'custom_topic' });
+  expect(enqueue).not.toHaveBeenCalled();
+  expect(store.forStudent(ACCT).readKV('generated_topic:knot-theory')).toBeNull();
+  expect((await call(addTopicRoute, { topic: 'Demo' })).body).toEqual({ slug: 'demo', status: 'existing', lessonCount: 1 });
 });
