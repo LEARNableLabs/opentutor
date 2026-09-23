@@ -1,5 +1,5 @@
 // Legacy credentials and verified account sessions share the same scoped-store boundary.
-import { accessToken, refreshToken, cookies, sameOrigin, createAccountClient, verifyAccountRequest } from '../../lib/core/accounts.js';
+import { accessToken, refreshToken, cookies, sameOrigin, createAccountClient, verifyAccountRequest, accountsConfigured } from '../../lib/core/accounts.js';
 import { timingSafeEqual } from 'crypto';
 import { authenticateStudent } from '../../lib/core/student-auth.js';
 
@@ -27,6 +27,8 @@ export function checkAuth(req) {
     if (process.env.VERCEL) {
       return { ok: false, misconfigured: true, reason: 'OPENTUTOR_PASSWORD is not set on this deployment. Set it in the project\'s environment variables and redeploy.' };
     }
+    // With accounts on, the install is public: only a verified session or credential gets in.
+    if (accountsConfigured()) return { ok: false, reason: 'Please sign in.' };
     return { ok: true };
   }
 

@@ -2,7 +2,9 @@ import { beforeEach, afterEach, it, expect, vi } from 'vitest';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { TutorStore } from '../lib/core/store.js';
+import { issueStudentToken } from '../lib/core/student-auth.js';
 import {
   accountId,
   ensureAccount,
@@ -166,10 +168,36 @@ it('stores PKCE verifier in a secure cookie and sends a challenge to Supabase', 
   });
   expect(payload.code_challenge).toBeTruthy();
   expect(payload.code_challenge_method).toBe('s256');
-  const header = res.headers['Set-Cookie'].find((s) => s.startsWith('ot_verifier='));
+  // auth-js writes three `-code-verifier` keys (slot, flow index, legacy) into this one
+  // cookie; the browser keeps the last, so that one must be the verifier behind the challenge.
+  const header = res.headers['Set-Cookie'].filter((s) => s.startsWith('ot_verifier=')).at(-1);
   expect(header).toContain('HttpOnly');
   expect(header).toContain('Secure');
-  expect(cookies({ headers: { cookie: header.split(';')[0] } }).ot_verifier).toBeTruthy();
+  const verifier = JSON.parse(cookies({ headers: { cookie: header.split(';')[0] } }).ot_verifier);
+  expect(createHash('sha256').update(verifier).digest('base64url')).toBe(payload.code_challenge);
+});
+it('refuses anonymous callers once accounts are configured, even with no shared password', async () => {
+  vi.stubEnv('OPENTUTOR_PASSWORD', '');
+  const anonymous = { method: 'GET', headers: { host: 'localhost:3000' } };
+  expect((await authenticateRequest(anonymous, async () => store)).ok).toBe(false);
+  // The original passwordless single-user install, with no accounts, stays open.
+  vi.stubEnv('SUPABASE_URL', '');
+  expect((await authenticateRequest(anonymous, async () => store)).ok).toBe(true);
+});
+it('answers a password reset for a rate-limited registered email exactly as for an unknown one', async () => {
+  // Supabase only rate-limits addresses it would email, so a distinct 429 names registered accounts.
+  client.auth.resetPasswordForEmail = vi.fn(async (email) =>
+    email === user.email ? { error: { status: 429, message: 'over_email_send_rate_limit' } } : { error: null },
+  );
+  const known = await call(req({ action: 'forgot', email: user.email }));
+  const unknown = await call(req({ action: 'forgot', email: 'nobody@example.test' }));
+  expect(unknown.statusCode).toBe(200);
+  expect(known.statusCode).toBe(200);
+  expect(known.body).toEqual(unknown.body);
+});
+it('never mints a legacy bearer token for an account, which only Supabase sessions may reach', async () => {
+  await ensureAccount(store, user);
+  await expect(issueStudentToken(store, accountId(user))).rejects.toThrow('reserved');
 });
 it('public catalog reads only shipped curricula without runtime progress', () => {
   const dir = path.join(root, 'skills/tutor/domains/math');

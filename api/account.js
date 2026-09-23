@@ -159,9 +159,11 @@ export function accountHandler({ getStore = getState, clientFactory = createAcco
         const { error } = await client.auth.resetPasswordForEmail(email, {
           redirectTo: `${originFor(req)}/login.html?mode=reset`,
         });
-        if (error)
+        // Supabase rate-limits only addresses it would email, so a distinct 429
+        // would tell anyone which emails are registered. Answer it like success.
+        if (error && error.status !== 429)
           return res
-            .status(error.status === 429 ? 429 : 503)
+            .status(503)
             .json({ error: 'Could not send a reset email right now. Please try again later.' });
         return res
           .status(200)

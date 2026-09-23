@@ -21,7 +21,7 @@ Import your GitHub fork into [Vercel](https://vercel.com), then configure:
 |---|---|
 | `SUPABASE_URL` | Supabase project URL |
 | `SUPABASE_SERVICE_ROLE_KEY` or `SUPABASE_SECRET_KEY` | Server-side database credential |
-| `OPENTUTOR_PASSWORD` | Shared web password; required on Vercel |
+| `OPENTUTOR_PASSWORD` | Shared web password; required on Vercel. Without it, a server with accounts enabled refuses anonymous requests |
 | `OPENTUTOR_ADMIN_PASSWORD` | Separate password for `/admin.html`, if provisioning students |
 | `ANTHROPIC_API_KEY`, `OPENROUTER_API_KEY`, or `OPENAI_API_KEY` | At least one LLM credential |
 
@@ -121,13 +121,13 @@ Email accounts use Supabase Auth through server-side `/api/account`. The server 
 Before enabling public signup in production, configure the existing Supabase project:
 
 1. In Authentication → Providers, enable Email and **Confirm email**. This flow uses PKCE; confirmation links must be opened in the same browser that requested them.
-2. In Authentication → URL Configuration, set Site URL to `https://opentutor-mauve.vercel.app`. Add both `https://opentutor-mauve.vercel.app/login.html` and `https://opentutor-mauve.vercel.app/login.html?mode=reset` to allowed Redirect URLs. Add the equivalent URLs for each production alias you advertise, and your exact preview URL for testing. Local testing uses the corresponding `http://localhost:3000` URLs.
+2. In Authentication → URL Configuration, set Site URL to `https://opentutor-mauve.vercel.app`. Add both `https://opentutor-mauve.vercel.app/login.html` and `https://opentutor-mauve.vercel.app/login.html?mode=reset` to allowed Redirect URLs. Add the equivalent URLs for each production alias you advertise, and your exact preview URL for testing. Local testing uses the corresponding `http://localhost:3000` URLs. List exact URLs only — never a wildcard such as `https://**`: this allowlist is what stops a forged reset request from sending a user's reset link to another site.
 3. Configure your email sender under Authentication → Email/SMTP. Supabase's default sender is restricted and is unsuitable for general public signup. Keep Supabase rate limits enabled.
 4. Verify signup, email confirmation, login, logout and password recovery using a real test mailbox. The app tests use a local Supabase protocol double, so they do not establish that your SMTP settings work.
 
 Access and refresh tokens use HttpOnly cookies, Secure on Vercel, with SameSite=Lax. Cookie-authenticated writes enforce same-origin requests. Password reset additionally requires a short-lived, signed recovery grant bound to the verified email-link flow, user and access token. Session responses and private API responses are not cacheable. Legacy token/shared-password access remains available through the explicit existing-access form; the default flow no longer stores credentials in localStorage or opens browser password prompts.
 
-`OPENTUTOR_PUBLIC_URL` optionally pins the origin used for redirects and origin checks. Set it per environment; a production URL must not be applied to unrelated preview hosts. With no Supabase configuration, public browsing still works and local installations retain the existing local workspace/token options.
+`OPENTUTOR_PUBLIC_URL` optionally pins the origin used for redirects and origin checks. Set it per environment; a production URL must not be applied to unrelated preview hosts. Outside Vercel, set it on any server with accounts enabled: without it, confirmation and reset links are built from the request's `Host` header, which the client controls. With no Supabase configuration, public browsing still works and local installations retain the existing local workspace/token options.
 
 ### Protecting deployment secrets
 
