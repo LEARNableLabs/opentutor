@@ -1,7 +1,7 @@
 import { buildOnboardingPrompt } from '../lib/core/prompts.js';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
-import { adapterFor, isAccount, trimHistory, KeyRequired } from '../lib/core/llm-access.js';
+import { adapterFor, isAccount, trimHistory, turnText, KeyRequired } from '../lib/core/llm-access.js';
 
 export default async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
@@ -14,14 +14,17 @@ export default async function handler(req, res) {
   }
 
   try {
+    const { message, history } = req.body;
+    const text = turnText(message);
+    if (text === null) return res.status(400).json({ error: 'A message is required.' });
+
     const state = await getState(auth.userId);
     const adapter = await adapterFor({ state, use: 'onboarding', host: getAdapter });
-    const { message, history } = req.body;
 
     const user = await state.readUser();
     const { system, model } = buildOnboardingPrompt(getSkills(), user);
 
-    const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: message }];
+    const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: text }];
     const response = await adapter.generate(system, messages, { model });
 
     const topicMatch = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/);

@@ -9,7 +9,7 @@
 import http from 'http';
 import { accountHandler } from '../../api/account.js';
 import { openrouterHandler } from '../../api/_lib/openrouter.js';
-import { adapterFor, isAccount, trimHistory, KeyRequired } from '../../lib/core/llm-access.js';
+import { adapterFor, isAccount, trimHistory, turnText, KeyRequired } from '../../lib/core/llm-access.js';
 import { publicCatalog } from '../../lib/core/catalog.js';
 import fs from 'fs';
 import path from 'path';
@@ -294,6 +294,11 @@ async function handleStudentAPI(req, res, url, state) {
     // Streams over SSE when the client asks for it; plain JSON otherwise.
     if (req.method === 'POST' && url.pathname === '/api/lesson') {
       const payload = JSON.parse(await readBody(req));
+      if (payload.answer !== null && payload.answer !== undefined) {
+        const text = turnText(payload.answer);
+        if (text === null) return fail(res, 400, 'An answer must be text.');
+        payload.answer = text;
+      }
       const wantsStream = (req.headers.accept || '').includes('text/event-stream');
       const ctx = {
         state,
@@ -350,11 +355,13 @@ async function handleStudentAPI(req, res, url, state) {
     if (req.method === 'POST' && url.pathname === '/api/onboard') {
       const body = await readBody(req);
       const { message, history } = JSON.parse(body);
+      const text = turnText(message);
+      if (text === null) return fail(res, 400, 'A message is required.');
 
       const user = await state.readUser();
       const { system, model } = buildOnboardingPrompt(skills, user);
 
-      const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: message }];
+      const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: text }];
       const adapter = await adapterFor({ state, use: 'onboarding', host: () => chatAdapter });
       const response = await adapter.generate(system, messages, { model });
 

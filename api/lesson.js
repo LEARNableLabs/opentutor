@@ -9,7 +9,7 @@
 
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
-import { adapterFor, KeyRequired } from '../lib/core/llm-access.js';
+import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
@@ -30,6 +30,11 @@ export default async function handler(req, res) {
   try {
     const state = await getState(auth.userId);
     const body = req.body || {};
+    if (body.answer !== null && body.answer !== undefined) {
+      const text = turnText(body.answer);
+      if (text === null) return res.status(400).json({ error: 'An answer must be text.' });
+      body.answer = text;
+    }
     // Resolved before any header is written, so a refusal can still be a plain 402.
     const adapter = await adapterFor({ state, use: body.answer != null ? 'lesson-continue' : 'lesson-start', host: getAdapter });
     const ctx = { state, adapter, skills: getSkills() };

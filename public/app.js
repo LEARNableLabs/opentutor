@@ -708,7 +708,11 @@ async function initializeLearning() {
   await finishConnect();
   await restoreTopicBuild();
   const topic = new URLSearchParams(window.location.search).get('topic');
-  if(topic&&/^[a-z0-9-]{1,80}$/.test(topic))await selectTopic(topic);
+  // A link may only pre-select a ready-made topic; building a custom one must be the student's own click.
+  if (topic && /^[a-z0-9-]{1,80}$/.test(topic)) {
+    const catalog = await fetch('/api/catalog').then((r) => (r.ok ? r.json() : [])).catch(() => []);
+    if (Array.isArray(catalog) && catalog.some((t) => t.slug === topic)) await selectTopic(topic);
+  }
   localStorage.removeItem('opentutor-pending-topic');
   checkOnboarding();
   loadKeyStatus().catch(() => {});

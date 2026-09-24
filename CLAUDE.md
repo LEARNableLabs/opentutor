@@ -36,7 +36,7 @@ opentutor/
 │   ├── _lib/init.js                  # Shared store / adapter / skill-file resolution
 │   ├── _lib/admin-auth.js            # OPENTUTOR_ADMIN_PASSWORD — a second secret, never the student's
 │   ├── admin/students.js             # Provision / list / inspect / decommission students (#80)
-│   ├── openrouter.js                 # Connect a student's OpenRouter account (OAuth PKCE, #132)
+│   ├── _lib/openrouter.js            # Connect a student's OpenRouter account (OAuth PKCE, #132); served by account.js via the /api/openrouter rewrite
 │   ├── lesson.js                     # lessonTurn() — the Socratic turn, shared with the web server
 │   └── chat.js, onboard.js, topics.js, progress.js, user.js, add-topic.js
 ├── public/                           # Vanilla JS frontend (served by scripts/web/server.js)
@@ -267,4 +267,4 @@ error paths.
 
 `public/index.html` and `api/catalog.js` expose only shipped curricula without a sign-in requirement. `public/learn.html` contains the tutor UI. `api/account.js` handles managed Supabase signup/login, PKCE email callbacks, refresh, logout and recovery. `lib/core/accounts.js` owns cookie/flow protection and maps verified Auth UUIDs to reserved `acct-` student ids. Auth clients are per-request and separate from SupabaseStore's service client.
 
-Accounts live in individual unnamed-store `account_student:<id>` KV rows, inserted only if absent; legacy admin-provisioned students retain their registry format. Account decommissioning writes a disabled tombstone before clearing state. Never fall back from an invalid account cookie to a legacy credential or unnamed store, and never publish runtime/generated topics through the public catalog. Production signup needs Supabase Email confirmation, allowed callback URLs and a working SMTP sender; see docs/deployment.md.
+Accounts live in individual unnamed-store `account_student:<id>` KV rows, inserted only if absent; legacy admin-provisioned students retain their registry format. Account decommissioning writes a disabled tombstone before clearing state. Never fall back from an invalid account cookie to a legacy credential or unnamed store, and never publish runtime/generated topics through the public catalog. Production signup needs allowed callback URLs; see docs/deployment.md. Supabase's Confirm email is off for now — email confirmation, password reset and a working SMTP sender are #133 work.

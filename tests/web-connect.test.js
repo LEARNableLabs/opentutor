@@ -94,3 +94,24 @@ it('tells the student when OpenRouter cannot be reached', async () => {
   expect($('#connect-message').textContent).toBe('Could not reach OpenRouter. Please try again.');
   expect($('#btn-connect').disabled).toBe(false);
 });
+
+it('does not start a custom-topic build for a topic missing from the catalog', async () => {
+  const catalog = [{ slug: 'game-theory', topic: 'Game theory', total: 29, level: 'All levels', preview: [] }];
+  const { calls } = frontend((url) => (url === '/api/catalog' ? [200, catalog] : null), '?topic=not-a-shipped-topic');
+  await settle();
+  expect(calls.some((c) => c.url === '/api/add-topic')).toBe(false);
+});
+
+it('pre-selects a topic that is in the public catalog, from a link', async () => {
+  const catalog = [{ slug: 'game-theory', topic: 'Game theory', total: 29, level: 'All levels', preview: [] }];
+  const { calls } = frontend((url) => {
+    if (url === '/api/catalog') return [200, catalog];
+    if (url === '/api/add-topic') return [200, { slug: 'game-theory', status: 'existing', lessonCount: 29 }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  }, '?topic=game-theory');
+  await settle();
+  const addTopic = calls.find((c) => c.url === '/api/add-topic');
+  expect(addTopic).toBeTruthy();
+  expect(JSON.parse(addTopic.init.body)).toEqual({ topic: 'game-theory', level: 'intermediate' });
+});

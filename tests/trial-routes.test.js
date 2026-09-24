@@ -126,6 +126,13 @@ it('passes onboarding only real, recent, bounded turns from the browser', async 
   expect(sent.at(-1)).toEqual({ role: 'user', content: 'hello' });
 });
 
+it('caps a long onboarding message before it reaches the model', async () => {
+  const res = await call(onboard, { message: 'x'.repeat(10000) });
+  expect(res.statusCode).toBe(200);
+  const sent = host.generate.mock.calls.at(-1)[1];
+  expect(sent.at(-1).content.length).toBeLessThanOrEqual(4000);
+});
+
 it('never shows the browser raw error text from the model provider', async () => {
   vi.spyOn(console, 'error').mockImplementation(() => {});
   host.generate.mockRejectedValueOnce(new Error('upstream said sk-or-secret-123456789'));

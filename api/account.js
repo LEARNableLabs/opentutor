@@ -108,8 +108,13 @@ export function accountHandler({ getStore = getState, clientFactory = createAcco
         if (!refresh) return res.status(401).json({ error: 'Please sign in.' });
         const { data, error } = await client.auth.refreshSession({ refresh_token: refresh });
         if (error) {
-          clearSession(req, res);
-          return res.status(401).json({ error: 'Your session expired. Please sign in again.' });
+          // Only a rejected token ends the session; an outage must not wipe everyone's cookies.
+          if (error.status >= 400 && error.status < 500) {
+            clearSession(req, res);
+            return res.status(401).json({ error: 'Your session expired. Please sign in again.' });
+          }
+          console.error('[account] refresh failed:', error.message);
+          return res.status(503).json({ error: 'Sign-in is temporarily unavailable. Please try again.' });
         }
         return await finish(data.session, data.user);
       }

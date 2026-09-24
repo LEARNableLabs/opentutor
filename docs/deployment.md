@@ -114,7 +114,7 @@ Tokens are stored as SHA-256 digests; raw tokens are returned only when created 
 
 ## Public browsing and email accounts
 
-The homepage (`/`) explains the learning flow and lists the shipped topic library through public `GET /api/catalog`. It never queries student progress or generated/private topics. `/learn.html` is the signed-in tutor workspace; `/login.html` offers email signup, login, forgot-password and existing-token access.
+The homepage (`/`) explains the learning flow and lists the shipped topic library through public `GET /api/catalog`. It never queries student progress or generated/private topics. `/learn.html` is the signed-in tutor workspace; `/login.html` offers email signup, login and existing-token access. Password reset returns 404 until #133.
 
 Email accounts use Supabase Auth through server-side `/api/account`. The server reuses `SUPABASE_URL` and the server-side Supabase key; neither the key nor session tokens are returned to browser JavaScript. Each request verifies the access token with Supabase before selecting an `acct-<auth UUID>` store. Signup does not create local student state until the email is confirmed. New account registry rows are inserted independently, so simultaneous signups cannot overwrite each other. Removing an account from the admin screen leaves a disabled registry record so old sessions and future sign-ins cannot restore access.
 

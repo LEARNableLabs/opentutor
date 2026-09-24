@@ -4,7 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { TutorStore } from '../lib/core/store.js';
 import {
-  saveKey, readKey, deleteKey, adapterFor, trialLessonsLeft, trimHistory,
+  saveKey, readKey, deleteKey, adapterFor, trialLessonsLeft, trimHistory, turnText,
   KeyRequired, TRIAL_LESSONS, ONBOARDING_MESSAGES,
 } from '../lib/core/llm-access.js';
 
@@ -133,6 +133,12 @@ it('keeps only real, recent, bounded onboarding turns from the browser', () => {
   expect(kept[0].content).toBe('m8');
   expect(kept.at(-1).content).toHaveLength(4000);
   expect(trimHistory('not a list')).toEqual([]);
+});
+
+it('bounds one conversational turn like history, and rejects non-text', () => {
+  expect(turnText('x'.repeat(5000))).toHaveLength(4000);
+  expect(turnText(42)).toBeNull();
+  expect(turnText('short')).toBe('short');
 });
 
 it('holds both trial caps when requests arrive at the same time', async () => {

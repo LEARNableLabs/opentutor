@@ -58,7 +58,7 @@ beforeEach(() => {
       getUser: vi.fn(async (token) =>
         token === 'valid'
           ? { data: { user }, error: null }
-          : { data: { user: null }, error: { message: 'bad' } },
+          : { data: { user: null }, error: { message: 'bad', status: 401 } },
       ),
       signInWithPassword: vi.fn(async () => ({ data: { session, user } })),
       signUp: vi.fn(async () => ({ data: { user, session: null } })),
@@ -130,6 +130,25 @@ it('rejects an invalid account cookie even when the shared password header is co
     async () => store,
   );
   expect(auth.ok).toBe(false);
+});
+it('answers 503 without clearing cookies when refresh fails from an outage, not a rejected token', async () => {
+  client.auth.refreshSession = vi.fn(async () => ({
+    data: {},
+    error: { message: 'fetch failed', status: 0 },
+  }));
+  const res = await call(req({ action: 'refresh' }, { cookie: 'ot_refresh=refresh' }));
+  expect(res.statusCode).toBe(503);
+  expect(res.headers['Set-Cookie']).toBeUndefined();
+});
+it('treats a Supabase outage on session verification as misconfigured, never as root access', async () => {
+  vi.stubGlobal(
+    'fetch',
+    vi.fn(async () => Response.json({ msg: 'db unavailable' }, { status: 503 })),
+  );
+  const auth = await authenticateRequest(req({}, { cookie: 'ot_access=valid' }), async () => store);
+  expect(auth.ok).toBe(false);
+  expect(auth.misconfigured).toBe(true);
+  expect(auth.userId).not.toBe(null);
 });
 it('enforces origin on cookie-auth mutations while preserving explicit bearer clients', async () => {
   expect(
