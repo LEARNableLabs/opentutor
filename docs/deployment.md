@@ -21,7 +21,7 @@ Import your GitHub fork into [Vercel](https://vercel.com), then configure:
 |---|---|
 | `SUPABASE_URL` | Supabase project URL |
 | `SUPABASE_SERVICE_ROLE_KEY` or `SUPABASE_SECRET_KEY` | Server-side database credential |
-| `OPENTUTOR_PASSWORD` | Shared web password; required on Vercel |
+| `OPENTUTOR_PASSWORD` | Shared web password; required on Vercel. Without it, a server with accounts enabled refuses anonymous requests |
 | `OPENTUTOR_ADMIN_PASSWORD` | Separate password for `/admin.html`, if provisioning students |
 | `ANTHROPIC_API_KEY`, `OPENROUTER_API_KEY`, or `OPENAI_API_KEY` | At least one LLM credential |
 
@@ -111,3 +111,30 @@ Set a separate `OPENTUTOR_ADMIN_PASSWORD` and open `/admin.html`. Adding a stude
 The admin’s **Reset access token** action replaces a forgotten token and immediately revokes the previous one. Existing students provisioned before this feature can use that action to obtain their first token. Removing a student revokes their token and clears their stored state.
 
 Tokens are stored as SHA-256 digests; raw tokens are returned only when created or reset. They do not grant access to admin routes. The existing shared `OPENTUTOR_PASSWORD` selects the unnamed single-user instance. Requests choose their store from the verified credential, never from a caller-supplied student id.
+
+## Public browsing and email accounts
+
+The homepage (`/`) explains the learning flow and lists the shipped topic library through public `GET /api/catalog`. It never queries student progress or generated/private topics. `/learn.html` is the signed-in tutor workspace; `/login.html` offers email signup, login and existing-token access. Password reset returns 404 until #133.
+
+Email accounts use Supabase Auth through server-side `/api/account`. The server reuses `SUPABASE_URL` and the server-side Supabase key; neither the key nor session tokens are returned to browser JavaScript. Each request verifies the access token with Supabase before selecting an `acct-<auth UUID>` store. Signup does not create local student state until the email is confirmed. New account registry rows are inserted independently, so simultaneous signups cannot overwrite each other. Removing an account from the admin screen leaves a disabled registry record so old sessions and future sign-ins cannot restore access.
+
+Before enabling public signup in production, configure the existing Supabase project:
+
+1. In Authentication → Sign In / Providers, keep the Email provider enabled and turn **Confirm email off**. Accounts are email and password with no email step until #133; the app hides "Forgot password?" until then. To reset a student's password meanwhile, use Supabase's admin API (`auth.admin.updateUserById(id, { password })`).
+2. In Authentication → URL Configuration, set Site URL to `https://opentutor-mauve.vercel.app`. Add both `https://opentutor-mauve.vercel.app/login.html` and `https://opentutor-mauve.vercel.app/login.html?mode=reset` to allowed Redirect URLs. Add the equivalent URLs for each production alias you advertise, and your exact preview URL for testing. Local testing uses the corresponding `http://localhost:3000` URLs. List exact URLs only — never a wildcard such as `https://**`: this allowlist is what stops a forged reset request from sending a user's reset link to another site.
+3. Configure your email sender under Authentication → Email/SMTP. Supabase's default sender is restricted and is unsuitable for general public signup. Keep Supabase rate limits enabled.
+4. The email flows (confirmation, password reset, a real sender and a real-mailbox test) are tracked in #133.
+
+Access and refresh tokens use HttpOnly cookies, Secure on Vercel, with SameSite=Lax. Cookie-authenticated writes enforce same-origin requests. Password reset additionally requires a short-lived, signed recovery grant bound to the verified email-link flow, user and access token. Session responses and private API responses are not cacheable. Legacy token/shared-password access remains available through the explicit existing-access form; the default flow no longer stores credentials in localStorage or opens browser password prompts.
+
+`OPENTUTOR_PUBLIC_URL` optionally pins the origin used for redirects and origin checks. Set it per environment; a production URL must not be applied to unrelated preview hosts. Outside Vercel, set it on any server with accounts enabled: without it, confirmation and reset links are built from the request's `Host` header, which the client controls. With no Supabase configuration, public browsing still works and local installations retain the existing local workspace/token options.
+
+### Free trial and students' own OpenRouter keys
+
+Students who sign themselves up get 3 lessons on the deployment's model key, on the ready-made topics only. After that, and from the start for custom topics and Study Buddy, they connect their own OpenRouter account from the learn page, and every model call they make runs on their key. Onboarding is free for 12 messages. The owner and students created in the admin screen always use the deployment's key, without limits (#132).
+
+The connection uses OpenRouter's OAuth PKCE flow and needs no setup on OpenRouter's side. Keys are stored encrypted (AES-256-GCM) under a key derived from `SUPABASE_SECRET_KEY` / `SUPABASE_SERVICE_ROLE_KEY`, so rotating that secret, or switching a deployment from `SUPABASE_SERVICE_ROLE_KEY` to `SUPABASE_SECRET_KEY`, disconnects every student until they reconnect. `OPENROUTER_BASE_URL` points both the connection and the OpenRouter adapter at a stand-in for testing; leave it unset in production.
+
+### Protecting deployment secrets
+
+Mark `SUPABASE_SECRET_KEY` (or `SUPABASE_SERVICE_ROLE_KEY`), `OPENROUTER_API_KEY` (or another provider key), `OPENTUTOR_PASSWORD`, and `OPENTUTOR_ADMIN_PASSWORD` as Sensitive in Production and Preview. Sensitive values can be replaced but cannot be revealed or downloaded; keep originals in your password manager. Vercel now calls these values Secrets and supports them in Development too. Use separate local development credentials; saved Secrets cannot be downloaded for local use. See [Vercel’s current Secret documentation](https://vercel.com/docs/environment-variables/sensitive-environment-variables). Model names and the Supabase URL are configuration values, not secrets.

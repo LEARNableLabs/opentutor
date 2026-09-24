@@ -1,8 +1,10 @@
 import { buildOnboardingPrompt } from '../lib/core/prompts.js';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
+import { adapterFor, isAccount, trimHistory, turnText, KeyRequired } from '../lib/core/llm-access.js';
 
 export default async function handler(req, res) {
+  res.setHeader?.('Cache-Control','private, no-store');
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const auth = await authenticateRequest(req, getState);
@@ -12,14 +14,17 @@ export default async function handler(req, res) {
   }
 
   try {
-    const state = await getState(auth.userId);
-    const adapter = getAdapter();
     const { message, history } = req.body;
+    const text = turnText(message);
+    if (text === null) return res.status(400).json({ error: 'A message of at most 4,000 characters is required.' });
+
+    const state = await getState(auth.userId);
+    const adapter = await adapterFor({ state, use: 'onboarding', host: getAdapter });
 
     const user = await state.readUser();
     const { system, model } = buildOnboardingPrompt(getSkills(), user);
 
-    const messages = [...(history || []), { role: 'user', content: message }];
+    const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: text }];
     const response = await adapter.generate(system, messages, { model });
 
     const topicMatch = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/);
@@ -33,6 +38,8 @@ export default async function handler(req, res) {
       model: response.model,
     });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    if (err instanceof KeyRequired) return res.status(402).json(err.body);
+    console.error('[onboard]', err.message);
+    res.status(500).json({ error: 'The tutor is unavailable right now. Please try again.' });
   }
 }

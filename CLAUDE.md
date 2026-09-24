@@ -21,6 +21,7 @@ opentutor/
 │   │   ├── student-model.js          # Accuracy trends, difficulty adjustment, engagement signals
 │   │   ├── deliberate-practice.js    # DeliberatePractitioner — evaluates teaching, writes directives
 │   │   ├── students.js               # Provisioning registry (#80) — kept in kv, the one store all backends share
+│   │   ├── llm-access.js             # Which key pays: 3-lesson trial, then the student's own OpenRouter key (#132)
 │   │   ├── concept-graph.js          # Parses concept-map.md into a prerequisite graph
 │   │   └── index.js
 │   ├── adapters/
@@ -35,6 +36,7 @@ opentutor/
 │   ├── _lib/init.js                  # Shared store / adapter / skill-file resolution
 │   ├── _lib/admin-auth.js            # OPENTUTOR_ADMIN_PASSWORD — a second secret, never the student's
 │   ├── admin/students.js             # Provision / list / inspect / decommission students (#80)
+│   ├── _lib/openrouter.js            # Connect a student's OpenRouter account (OAuth PKCE, #132); served by account.js via the /api/openrouter rewrite
 │   ├── lesson.js                     # lessonTurn() — the Socratic turn, shared with the web server
 │   └── chat.js, onboard.js, topics.js, progress.js, user.js, add-topic.js
 ├── public/                           # Vanilla JS frontend (served by scripts/web/server.js)
@@ -178,6 +180,8 @@ The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
 The web server, the Vercel routes and the curriculum pipeline all honour this. **The Telegram bot's own chat and lesson calls do not** — `scripts/bot/claude.js` reads `CLAUDE_BACKEND` (`sdk` | `cli`) instead. See issue #98.
 
+Self-signup accounts (`acct-…`) are the exception: `lib/core/llm-access.js` decides each of their model calls, 3 free lessons on the deployment's key and then their own OpenRouter key (#132). Anything a student triggers asks `adapterFor()`, never `getAdapter()` directly.
+
 ## Deployment boundaries
 
 Vercel hosts the web UI and web API only. Run Telegram separately with `npm run bot` on an always-on host. Claw and Hermes integrations run in their own agent environments using the portable skill; this repo does not deploy those runtimes to Vercel.
@@ -258,3 +262,9 @@ passed 378 tests with a bug that took the whole web server down on any duplicate
 request — the route tests' fake `res` recorded a status instead of enforcing
 that headers are written once. Start the server, curl the endpoints, include the
 error paths.
+
+## Public web accounts (#129)
+
+`public/index.html` and `api/catalog.js` expose only shipped curricula without a sign-in requirement. `public/learn.html` contains the tutor UI. `api/account.js` handles managed Supabase signup/login, PKCE email callbacks, refresh, logout and recovery. `lib/core/accounts.js` owns cookie/flow protection and maps verified Auth UUIDs to reserved `acct-` student ids. Auth clients are per-request and separate from SupabaseStore's service client.
+
+Accounts live in individual unnamed-store `account_student:<id>` KV rows, inserted only if absent; legacy admin-provisioned students retain their registry format. Account decommissioning writes a disabled tombstone before clearing state. Never fall back from an invalid account cookie to a legacy credential or unnamed store, and never publish runtime/generated topics through the public catalog. Production signup needs allowed callback URLs; see docs/deployment.md. Supabase's Confirm email is off for now — email confirmation, password reset and a working SMTP sender are #133 work.

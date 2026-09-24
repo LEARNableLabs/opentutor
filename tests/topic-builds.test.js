@@ -97,3 +97,26 @@ it('records adapter construction errors as bounded worker failures',async()=>{
   await expect(step(doc,{adapter:null,getAdapter:()=>{throw new Error('invalid backend');}})).rejects.toThrow('invalid backend');
   expect(await readTopicBuild(state,'knots')).toMatchObject({attempts:1,status:'queued',lease:null});
 });
+
+it('refuses a new custom topic before recording any build, but still activates a shipped one', async () => {
+  const { KeyRequired } = await import('../lib/core/llm-access.js');
+  const refuse = async () => { throw new KeyRequired('custom_topic'); };
+  const enqueue = vi.fn();
+  await expect(addTopic({ state, getAdapter: refuse, skills: new Map(), enqueue, quickStart }, { topic: 'Knots' })).rejects.toThrow(KeyRequired);
+  expect(await readTopicBuild(state, 'knots')).toBeNull();
+  expect(enqueue).not.toHaveBeenCalled();
+  state.writeCurriculum('math', { lessons: [{ lesson: 1, title: 'Numbers' }] });
+  expect(await addTopic({ state, getAdapter: refuse, skills: new Map(), enqueue, quickStart }, { topic: 'Math' }))
+    .toEqual({ slug: 'math', status: 'existing', lessonCount: 1 });
+});
+
+it('fails a build at once, with the reason, when its student may no longer build', async () => {
+  const { KeyRequired } = await import('../lib/core/llm-access.js');
+  const { doc } = await prepareTopicBuild(state, { topic: 'Knots' });
+  const after = await runTopicBuildStep({
+    state, getAdapter: async () => { throw new KeyRequired('reconnect'); },
+    skills: new Map(), slug: doc.slug, id: doc.id, seq: doc.seq, quickStart,
+  });
+  expect(after.status).toBe('failed');
+  expect(after.error).toMatch(/connect your account again/i);
+});

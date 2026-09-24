@@ -5,7 +5,7 @@ import vm from 'node:vm';
 // Execute the actual frontend with a DOM double. This exercises the recovery
 // path from a refused onboarding topic through browsing to a valid activation.
 function frontend({ builds = [], buildStatus = null } = {}) {
-  const html = fs.readFileSync(new URL('../public/index.html', import.meta.url), 'utf8');
+  const html = fs.readFileSync(new URL('../public/learn.html', import.meta.url), 'utf8');
   const source = fs.readFileSync(new URL('../public/app.js', import.meta.url), 'utf8');
   const element = (classes = '') => {
     const names = new Set(classes.split(' '));
@@ -38,6 +38,7 @@ function frontend({ builds = [], buildStatus = null } = {}) {
     let body, status = 200;
     if (url.startsWith('/api/topic-build?')) body = buildStatus;
     else if (url === '/api/lesson') body = { done: false, step: 0, response: 'First lesson', lesson: { title: 'Starter 1' } };
+    else if (url === '/api/account') body = {user:{id:'alice'}};
     else if (url === '/api/user') body = { hasProfile: false };
     else if (url === '/api/topic-build') body = builds;
     else if (url === '/api/progress') body = { active_topics: activeTopics };
@@ -61,7 +62,7 @@ function frontend({ builds = [], buildStatus = null } = {}) {
       querySelector: $, createElement: () => element(),
       querySelectorAll: (s) => s === '.nav-btn' ? nav : ['learn', 'topics', 'chat'].map((v) => $(`#view-${v}`)),
     },
-    localStorage: { getItem: () => null }, window: { fetch }, fetch, Headers, console,
+    localStorage: { getItem: () => null, removeItem(){} }, sessionStorage: {removeItem(){}}, window: { fetch, location: {search:''} }, fetch, Headers, URLSearchParams, console,
     setTimeout: (fn) => timers.push(fn), clearTimeout() {},
   });
   vm.runInContext(source, context);

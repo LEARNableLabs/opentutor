@@ -9,6 +9,7 @@
 
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
+import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
@@ -17,6 +18,7 @@ import { parseAssessment, assessmentFilter } from '../lib/core/assessment.js';
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 
 export default async function handler(req, res) {
+  res.setHeader?.('Cache-Control','private, no-store');
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
 
   const auth = await authenticateRequest(req, getState);
@@ -26,11 +28,20 @@ export default async function handler(req, res) {
   }
 
   try {
-    const ctx = { state: await getState(auth.userId), adapter: getAdapter(), skills: getSkills() };
+    const state = await getState(auth.userId);
+    const body = req.body || {};
+    if (body.answer !== null && body.answer !== undefined) {
+      const text = turnText(body.answer);
+      if (text === null) return res.status(400).json({ error: 'An answer must be text of at most 4,000 characters.' });
+      body.answer = text;
+    }
+    // Resolved before any header is written, so a refusal can still be a plain 402.
+    const adapter = await adapterFor({ state, use: body.answer != null ? 'lesson-continue' : 'lesson-start', host: getAdapter });
+    const ctx = { state, adapter, skills: getSkills() };
 
     if (!String(req.headers?.accept || '').includes('text/event-stream')) {
-      const { status, body } = await lessonTurn(ctx, req.body || {});
-      return res.status(status).json(body);
+      const { status, body: out } = await lessonTurn(ctx, body);
+      return res.status(status).json(out);
     }
 
     res.writeHead(200, {
@@ -40,11 +51,19 @@ export default async function handler(req, res) {
       'X-Accel-Buffering': 'no',
     });
     const send = (event, data) => res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
-    const { status, body } = await lessonTurn(ctx, req.body || {}, { onToken: (t) => send('token', t) });
-    send(status === 200 ? 'done' : 'error', body);
+    // Headers are out: every failure from here on is an event, never a second status.
+    try {
+      const { status, body: out } = await lessonTurn(ctx, body, { onToken: (t) => send('token', t) });
+      send(status === 200 ? 'done' : 'error', out);
+    } catch (err) {
+      if (!(err instanceof KeyRequired)) console.error('[lesson]', err.message);
+      send('error', err instanceof KeyRequired ? err.body : { error: 'The tutor is unavailable right now. Please try again.' });
+    }
     res.end();
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    if (err instanceof KeyRequired) return res.status(402).json(err.body);
+    console.error('[lesson]', err.message);
+    res.status(500).json({ error: 'The tutor is unavailable right now. Please try again.' });
   }
 }
 

@@ -10,11 +10,19 @@
         }
       ]
     },
+    "api/catalog.js": {
+      "maxDuration": 60,
+      "includeFiles": "skills/tutor/domains/*/curriculum.json"
+    },
     "api/**/*.js": {
       "maxDuration": 60
     }
   },
   "rewrites": [
+    {
+      "source": "/api/openrouter",
+      "destination": "/api/account?via=openrouter"
+    },
     {
       "source": "/api/:path*",
       "destination": "/api/:path*"
