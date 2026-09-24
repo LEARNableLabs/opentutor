@@ -136,6 +136,8 @@ describe('deliverNextLesson', () => {
       vi.spyOn(TutorState.prototype, 'readDomainFile').mockImplementation((slug, file) => `${file} of ${slug}`),
       vi.spyOn(TutorState.prototype, 'readUser').mockReturnValue('PROFILE'),
     ];
+    const { formatStudentModel } = await import('../../lib/core/student-model.js');
+    formatStudentModel.mockReturnValueOnce('MODEL-TEXT');
     getNextLesson.mockReturnValue({ lesson: 1, title: 'Sets', concepts: ['sets'] });
     readCurriculum.mockReturnValue({ topic: 'Math', lessons: [] });
     generate.mockResolvedValue({ text: JSON.stringify({ diagnostic: 'How would you describe a set to a friend?' }) });
@@ -147,6 +149,8 @@ describe('deliverNextLesson', () => {
       teachingNotes: 'teaching-notes.md of math',
       conceptMap: 'concept-map.md of math',
       user: 'PROFILE',
+      // The computed model, then the bot's own directives, as one text.
+      studentModel: expect.stringMatching(/^MODEL-TEXT\n\n## Deliberate Practice Directives\n[\s\S]*MODE: /),
     }));
     for (const spy of reads) spy.mockRestore();
   });
