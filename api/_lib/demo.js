@@ -29,14 +29,13 @@ function visitor(req, day) {
   return createHmac('sha256', secret).update(`opentutor-demo-ip:${day}:${ip}`).digest('hex').slice(0, 16);
 }
 
-// A day's first reply clears earlier days' rows: normally only yesterday's, and a
-// sweep that failed is caught up by the next one.
+// A day's first reply clears earlier days' rows. ISO dates sort in order, so every earlier
+// day's keys sort before today's: two bounded deletes, however many rows or days there
+// are, and no listing that a capped response could cut short. A sweep that fails is
+// caught up by the next one.
 async function sweep(store, day) {
-  const days = new Set((await store.listKV('demo:')).map(({ key }) => key.split(':')[2]).filter((d) => d < day));
-  for (const d of days) {
-    await store.deleteKVPrefix(`demo:day:${d}:`);
-    await store.deleteKVPrefix(`demo:ip:${d}:`);
-  }
+  await store.deleteKVBefore('demo:day:', day);
+  await store.deleteKVBefore('demo:ip:', day);
 }
 
 export function demoHandler({ getStore = getState, host = getAdapter, perIp = DEMO_PER_IP, perDay = DEMO_PER_DAY } = {}) {

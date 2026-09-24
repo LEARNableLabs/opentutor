@@ -156,17 +156,35 @@ it('is served by the catalog function, which vercel.json points /api/demo at', a
   expect(list.body.some((t) => t.slug === 'game-theory')).toBe(true);
 });
 
-// The sweep deletes by prefix in the root store, beside the owner's progress and the
-// account registry. An empty, short or wildcard prefix would reach every row there.
+// The sweep deletes in the root store, beside the owner's progress and the account
+// registry. An empty, short or wildcard prefix would reach every row there.
 it('refuses a bulk kv delete that could reach more than the rows it names, on both stores', async () => {
   for (const bad of ['', 'demo:', 'demo:%', 'demo:day_2026', 'demo:day\\2026', null]) {
-    expect(() => store.deleteKVPrefix(bad)).toThrow(/broad kv delete/);
+    expect(() => store.deleteKVBefore(bad, '2026-09-24')).toThrow(/broad kv delete/);
   }
-  await expect(new SupabaseStore(root, { client: {} }).deleteKVPrefix('')).rejects.toThrow(/broad kv delete/);
+  await expect(new SupabaseStore(root, { client: {} }).deleteKVBefore('', '2026-09-24')).rejects.toThrow(/broad kv delete/);
 
-  store.writeKV('demo:day:2026-01-01:1', 'x');
+  for (const key of ['demo:day:2026-01-01:1', 'demo:day:2026-09-23:7', 'demo:day:2026-09-24:1']) store.writeKV(key, 'x');
   store.writeKV('progress', '{"active_topics":[]}');
-  store.deleteKVPrefix('demo:day:2026-01-01:');
-  expect(store.readKV('demo:day:2026-01-01:1')).toBeNull();
+  store.deleteKVBefore('demo:day:', '2026-09-24');
+  expect(store.listKV('demo:day:').map((r) => r.key)).toEqual(['demo:day:2026-09-24:1']);
   expect(store.readKV('progress')).toBe('{"active_topics":[]}');
+});
+
+// On Supabase a listing stops at the project's max rows, so a sweep that first lists
+// the dates to delete can miss the oldest ones. The sweep must not depend on a listing.
+it('clears every earlier day, even when a listing of demo rows would come back truncated', async () => {
+  for (const day of ['2026-08-01', '2026-09-01', '2026-09-22', '2026-09-23']) {
+    store.insertKV(`demo:day:${day}:1`, 'x');
+    store.insertKV(`demo:ip:${day}:abcdef0123456789:1`, 'x');
+  }
+  const list = store.listKV.bind(store);
+  // A first page that only reaches the newest earlier day, as a capped response might.
+  vi.spyOn(store, 'listKV').mockImplementation((prefix) =>
+    prefix === 'demo:' ? list(prefix).filter((r) => r.key.includes(':2026-09-23:')) : list(prefix));
+  vi.useFakeTimers({ toFake: ['Date'] });
+  vi.setSystemTime(new Date('2026-09-24T00:01:00Z'));
+
+  expect((await call()).statusCode).toBe(200);
+  expect(list('demo:').map((r) => r.key).every((k) => k.includes(':2026-09-24:'))).toBe(true);
 });
