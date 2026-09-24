@@ -153,6 +153,9 @@ export function accountHandler({ getStore = getState, clientFactory = createAcco
       }
       if (!['signup', 'login', 'forgot'].includes(action))
         return res.status(400).json({ error: 'Unknown account action.' });
+      // No email until #133: a reset link would never arrive (and must not be sent).
+      if (action === 'forgot')
+        return res.status(404).json({ error: 'Password reset by email is not available yet.' });
       const email = typeof body.email === 'string' ? body.email.trim() : '';
       if (email.length > 254 || !/^\S+@\S+\.\S+$/.test(email))
         return res.status(400).json({ error: 'Enter a valid email address.' });

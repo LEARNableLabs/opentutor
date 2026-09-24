@@ -184,16 +184,15 @@ it('refuses anonymous callers once accounts are configured, even with no shared 
   vi.stubEnv('SUPABASE_URL', '');
   expect((await authenticateRequest(anonymous, async () => store)).ok).toBe(true);
 });
-it('answers a password reset for a rate-limited registered email exactly as for an unknown one', async () => {
-  // Supabase only rate-limits addresses it would email, so a distinct 429 names registered accounts.
-  client.auth.resetPasswordForEmail = vi.fn(async (email) =>
-    email === user.email ? { error: { status: 429, message: 'over_email_send_rate_limit' } } : { error: null },
-  );
+it('refuses password reset by email until email is set up, the same way for every address (#133)', async () => {
+  client.auth.resetPasswordForEmail = vi.fn();
   const known = await call(req({ action: 'forgot', email: user.email }));
   const unknown = await call(req({ action: 'forgot', email: 'nobody@example.test' }));
-  expect(unknown.statusCode).toBe(200);
-  expect(known.statusCode).toBe(200);
+  expect(known.statusCode).toBe(404);
+  expect(unknown.statusCode).toBe(404);
+  expect(known.body).toEqual({ error: 'Password reset by email is not available yet.' });
   expect(known.body).toEqual(unknown.body);
+  expect(client.auth.resetPasswordForEmail).not.toHaveBeenCalled();
 });
 it('never mints a legacy bearer token for an account, which only Supabase sessions may reach', async () => {
   await ensureAccount(store, user);
