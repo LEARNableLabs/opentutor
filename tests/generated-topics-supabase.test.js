@@ -16,7 +16,7 @@ it('serializes scoped atomic updates and reads generated lessons without disk wr
     const u=new URL(url);const headers=new Headers(options.headers);const method=options.method;
     if(!u.pathname.endsWith('/kv'))return Response.json([]);
     const matches=(row)=>[...u.searchParams].every(([key,value])=>{
-      if(['select','on_conflict'].includes(key))return true;
+      if(['select','on_conflict','order','offset','limit'].includes(key))return true;
       const actual=key.startsWith('value->>')?row.value[key.slice(8)]:row[key];
       if(value.startsWith('eq.'))return String(actual)===value.slice(3);
       if(value.startsWith('like.'))return String(actual).startsWith(value.slice(5).replace(/%$/,''));
@@ -29,7 +29,7 @@ it('serializes scoped atomic updates and reads generated lessons without disk wr
       if(!exists)rows.push(row);result=exists?[]:[row];
     }else if(method==='PATCH'){
       patches.push(u);result=rows.filter(matches);const updates=JSON.parse(options.body);for(const row of result)Object.assign(row,updates);
-    }else result=rows.filter(matches);
+    }else{const offset=Number(u.searchParams.get('offset')??0);result=rows.filter(matches).slice(offset,offset+Number(u.searchParams.get('limit')??Infinity));}
     return Response.json(headers.get('Accept')?.includes('vnd.pgrst.object')?(result[0]??null):result);
   }}});
   try{
@@ -37,7 +37,7 @@ it('serializes scoped atomic updates and reads generated lessons without disk wr
     const alice=new SupabaseStore(root,{client,userId:'alice'}),bob=new SupabaseStore(root,{client,userId:'bob'});
     const {doc}=await prepareTopicBuild(alice,{topic:'Knots'});
     const duplicate=await prepareTopicBuild(alice,{topic:'Knots'});expect(duplicate.doc.id).toBe(doc.id);
-    const result=await runTopicBuildStep({state:alice,adapter:{},skills:new Map(),slug:doc.slug,id:doc.id,seq:0,quickStart:async()=>({curriculum:{lessons:[{lesson:1,title:'Loops'}]},intro:'Hi',researchContext:'Source'})});
+    const result=await runTopicBuildStep({state:alice,adapter:{},skills:new Map(),slug:doc.slug,id:doc.id,seq:0,quickStart:async()=>({curriculum:{topic:'Knots',lessons:[{lesson:1,title:'Loops',status:'pending'}]},intro:'Hi',researchContext:'Source'})});
     expect(result.phase).toBe('plan');
     for(const url of patches){expect(url.searchParams.get('user_id')).toBe('eq.alice');expect(url.searchParams.get('value->>id')).toBe(`eq.${doc.id}`);expect(url.searchParams.has('value->>revision')).toBe(true);}
     expect(await alice.compareAndSetTopic('knots',doc,{...doc,revision:99})).toBe(false);
@@ -45,7 +45,8 @@ it('serializes scoped atomic updates and reads generated lessons without disk wr
     expect((await restarted.readCurriculum('knots')).lessons[0].title).toBe('Loops');
     expect(await restarted.readDomainFile('knots','research.md')).toBe('Source');
     expect(await restarted.listTopics()).toEqual(['knots']);
-    expect(await readTopicBuild(bob,'knots')).toBeNull();expect(await bob.listTopics()).toEqual([]);
+    expect(await restarted.listTopicProgress()).toEqual([{slug:'knots',topic:'Knots',total:1,completed:0,percent:0,current:{lesson:1,title:'Loops',status:'pending'}}]);
+    expect(await readTopicBuild(bob,'knots')).toBeNull();expect(await bob.listTopics()).toEqual([]);expect(await bob.listTopicProgress()).toEqual([]);
     expect(fs.readdirSync(root)).toEqual([]);
   }finally{fs.chmodSync(root,0o755);fs.rmSync(root,{recursive:true,force:true});}
 });

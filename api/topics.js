@@ -13,6 +13,8 @@ export default async function handler(req, res) {
 
   try {
     const state = await getState(auth.userId);
+    // On Supabase the loop below costs two round trips per topic (#137).
+    if (state.listTopicProgress) return res.status(200).json(await state.listTopicProgress());
     const topics = await state.listTopics();
     const data = [];
     for (const slug of topics) {
