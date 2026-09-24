@@ -13,6 +13,7 @@ import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
+import { parseDirectives } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter } from '../lib/core/assessment.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
@@ -170,7 +171,15 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
   const studentModel = buildStudentModel(learningMd, curriculum, user);
   const modelText = formatStudentModel(studentModel);
 
-  const planPrompt = buildLessonPlanPrompt(state, skills, lesson, topicSlug, modelText);
+  // Awaited here, never read by the planner from the store: on SupabaseStore an
+  // unawaited read is a Promise, and the planner got "[object Promise]" (#146).
+  const [teacherConfig, teachingNotes, conceptMap, feedback] = await Promise.all(
+    ['teacher.md', 'teaching-notes.md', 'concept-map.md', 'practice-feedback.md']
+      .map((file) => safely(() => state.readDomainFile(topicSlug, file), null, `read ${file}`)),
+  );
+  const planPrompt = buildLessonPlanPrompt(skills, lesson, {
+    teacherConfig, teachingNotes, conceptMap, user, studentModel: modelText, directives: parseDirectives(feedback),
+  });
   const planResponse = await adapter.generate(
     planPrompt.system + '\n\nReturn exactly one valid JSON value.',
     [{ role: 'user', content: `Plan a Socratic lesson for Day ${lessonDay}: "${lesson.title}"` }],
