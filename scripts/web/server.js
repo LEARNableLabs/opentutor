@@ -95,6 +95,11 @@ const server = http.createServer(async (req, res) => {
     res.end('Not found');
   }
 });
+// #138: a whole request (headers and body) must arrive within a minute, not
+// Node's default five, so an unfinished upload cannot hold its socket for long.
+// This times receiving the request only; responses, streamed lessons included,
+// are not affected.
+server.requestTimeout = 60_000;
 
 // ── Admin (#80) ─────────────────────────────────────────────
 // The Vercel build serves these from api/admin/students.js. Both call the same
@@ -468,7 +473,7 @@ function readBody(req, res) {
       // about) and not string length (wrong once multi-byte UTF-8 is split
       // across a chunk boundary).
       if (tooLarge) return; // already over: keep draining, just don't store
-      if (size + chunk.length > BODY_LIMIT) { tooLarge = true; return; } // never buffer the chunk that crosses the limit
+      if (size + chunk.length > BODY_LIMIT) { tooLarge = true; chunks.length = 0; return; } // drop what was kept; never buffer past the limit
       size += chunk.length;
       chunks.push(chunk);
     });
@@ -481,10 +486,8 @@ function readBody(req, res) {
       // it. Draining to `end` first (bytes are discarded, never buffered)
       // means there is nothing left unread when `Connection: close` tears
       // the socket down, so the 413 reliably reaches the client.
-      // ponytail: a peer that never ends its upload can still hold the
-      // socket open this way — bounded by time/FDs, not memory, since
-      // nothing past the limit is ever stored. Add a request idle timeout
-      // if that shows up as a real issue.
+      // A peer that never ends its upload holds only a socket (nothing past
+      // the limit is stored), and server.requestTimeout below closes it.
       if (res && !res.headersSent) {
         res.writeHead(413, { 'Content-Type': 'application/json', Connection: 'close' });
         res.end(JSON.stringify({ error: 'Request body too large.' }));
