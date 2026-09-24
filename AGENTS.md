@@ -14,7 +14,7 @@ Treat these as blocking. Each one shipped, or nearly shipped, here:
 - **No oracles.** Sign-in, sign-up and password reset answer the same whether or not an email is registered, in status code as well as body (#130).
 - **Secrets stay on the server.** No key, token or password in a response body, cookie, URL or log line. Upstream error text is not echoed to the browser.
 - **Runtime state stays out of `skills/tutor/domains/`.** That directory is shipped content (see CLAUDE.md).
-- **At most 12 Vercel functions.** The Hobby plan refuses more per deployment. A new `api/` route folds into an existing function; `tests/web-deployment.test.js` guards this once #134 lands.
+- **At most 12 Vercel functions.** The Hobby plan refuses more per deployment. A new `api/` route folds into an existing function; `tests/web-deployment.test.js` guards this.
 
 ## Working in this repo
 
@@ -30,9 +30,11 @@ was done about it. A commit straight to `main` leaves neither.
 - Don't branch a new PR off an unmerged branch unless the stacking is
   deliberate — the second PR's diff will contain the first one's commits.
 
-**CodeRabbit and Codex review every pull request automatically.** The
-configuration is `.coderabbit.yaml` plus the `## Code Review Rules` section
-of `AGENTS.md`. Address their findings before merging.
+**CodeRabbit reviews every non-draft pull request automatically.** It is
+configured in `.coderabbit.yaml`, which leaves out `skills/tutor/domains/**` and
+`package-lock.json`, and it applies the `## Code Review Rules` section above as
+review criteria. Address its findings before merging. Codex joins later as an
+adversarial critic (#139).
 
 It is worth it: the review of the per-student tenancy change (#80)
 found four real defects, including a migration that silently lost a student's
