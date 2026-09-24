@@ -125,7 +125,7 @@ async function handleAdmin(req, res, url) {
     }
 
     if (req.method === 'POST') {
-      const { userId, name } = JSON.parse(await readBody(req) || '{}');
+      const { userId, name } = JSON.parse(await readBody(req, res) || '{}');
       if (!userId) return fail(res, 400, 'userId is required');
       // Do the work before writing the status. Writing 201 first meant a
       // duplicate threw *after* the headers were out, and the catch below then
@@ -293,7 +293,7 @@ async function handleStudentAPI(req, res, url, state) {
     // POST /api/lesson — one turn of the Socratic lesson (same implementation as the Vercel route).
     // Streams over SSE when the client asks for it; plain JSON otherwise.
     if (req.method === 'POST' && url.pathname === '/api/lesson') {
-      const payload = JSON.parse(await readBody(req));
+      const payload = JSON.parse(await readBody(req, res));
       if (payload.answer !== null && payload.answer !== undefined) {
         const text = turnText(payload.answer);
         if (text === null) return fail(res, 400, 'An answer must be text of at most 4,000 characters.');
@@ -344,7 +344,7 @@ async function handleStudentAPI(req, res, url, state) {
 
     // POST /api/user — save student profile
     if (req.method === 'POST' && url.pathname === '/api/user') {
-      const body = await readBody(req);
+      const body = await readBody(req, res);
       const data = JSON.parse(body);
       const profile = buildUserProfile(data);
       await state.writeUser(profile);
@@ -353,7 +353,7 @@ async function handleStudentAPI(req, res, url, state) {
 
     // POST /api/onboard — guided onboarding chat
     if (req.method === 'POST' && url.pathname === '/api/onboard') {
-      const body = await readBody(req);
+      const body = await readBody(req, res);
       const { message, history } = JSON.parse(body);
       const text = turnText(message);
       if (text === null) return fail(res, 400, 'A message of at most 4,000 characters is required.');
@@ -377,7 +377,7 @@ async function handleStudentAPI(req, res, url, state) {
 
     // POST /api/chat — free-form chat
     if (req.method === 'POST' && url.pathname === '/api/chat') {
-      const body = await readBody(req);
+      const body = await readBody(req, res);
       const { message } = JSON.parse(body);
 
       const user = await state.readUser();
@@ -408,7 +408,7 @@ async function handleStudentAPI(req, res, url, state) {
     // Both surfaces return usable starter lessons while durable enrichment runs.
     if (req.method === 'POST' && url.pathname === '/api/add-topic') {
       try {
-        const payload = JSON.parse(await readBody(req));
+        const payload = JSON.parse(await readBody(req, res));
         const result = await addTopic({ state, getAdapter: () => adapterFor({ state, use: 'custom-topic', host: () => pipelineAdapter }), skills, enqueue: buildWorker.enqueue }, payload);
         res.writeHead(result.lessonCount ? 200 : 202);
         return res.end(JSON.stringify(result));
@@ -423,8 +423,9 @@ async function handleStudentAPI(req, res, url, state) {
   } catch (err) {
     if (err instanceof KeyRequired) return keyRequired(res, err);
     console.error('[api] error:', err);
-    res.writeHead(500);
-    res.end(JSON.stringify({ error: 'The tutor is unavailable right now. Please try again.' }));
+    // fail() is the headersSent-safe path (#138): a readBody() rejection
+    // (413 already answered) must not retry res.writeHead() and crash.
+    return fail(res, 500, 'The tutor is unavailable right now. Please try again.');
   }
 }
 
@@ -437,7 +438,7 @@ function json(res, data) {
 
 // The Vercel-style handlers expect req.body and res.status().json().
 async function mountHandler(req, res, handler) {
-  try { req.body = req.method === 'POST' ? JSON.parse(await readBody(req) || '{}') : {}; }
+  try { req.body = req.method === 'POST' ? JSON.parse(await readBody(req, res) || '{}') : {}; }
   catch { return fail(res, 400, 'Invalid request body'); }
   res.status = (code) => { res.statusCode = code; return res; };
   res.json = (body) => { res.end(JSON.stringify(body)); return res; };
@@ -449,11 +450,48 @@ function keyRequired(res, err) {
   return res.end(JSON.stringify(err.body));
 }
 
-function readBody(req) {
+// #138 — every route reads its body through here, so this is the one place
+// that needs to bound it. A default local install has no password, and
+// mountHandler (below) reads /api/account and /api/openrouter before any
+// authentication, so an unlimited buffer here is an unauthenticated way to
+// grow the process's memory until it dies.
+const BODY_LIMIT = 1_048_576; // 1 MiB — far above any real request here
+
+function readBody(req, res) {
   return new Promise((resolve, reject) => {
-    let body = '';
-    req.on('data', (chunk) => { body += chunk; });
-    req.on('end', () => resolve(body));
+    const chunks = [];
+    let size = 0;
+    let tooLarge = false;
+
+    req.on('data', (chunk) => {
+      // Count bytes on the raw Buffer, not Content-Length (never sent, or lied
+      // about) and not string length (wrong once multi-byte UTF-8 is split
+      // across a chunk boundary).
+      if (tooLarge) return; // already over: keep draining, just don't store
+      if (size + chunk.length > BODY_LIMIT) { tooLarge = true; return; } // never buffer the chunk that crosses the limit
+      size += chunk.length;
+      chunks.push(chunk);
+    });
+
+    req.on('end', () => {
+      if (!tooLarge) return resolve(Buffer.concat(chunks).toString('utf-8'));
+      // Answer before closing, and only close once the peer has finished
+      // uploading: an HTTP/1.1 client that is still mid-upload when the
+      // socket closes gets a TCP reset instead of the response, which loses
+      // it. Draining to `end` first (bytes are discarded, never buffered)
+      // means there is nothing left unread when `Connection: close` tears
+      // the socket down, so the 413 reliably reaches the client.
+      // ponytail: a peer that never ends its upload can still hold the
+      // socket open this way — bounded by time/FDs, not memory, since
+      // nothing past the limit is ever stored. Add a request idle timeout
+      // if that shows up as a real issue.
+      if (res && !res.headersSent) {
+        res.writeHead(413, { 'Content-Type': 'application/json', Connection: 'close' });
+        res.end(JSON.stringify({ error: 'Request body too large.' }));
+      }
+      reject(new Error('Request body too large.'));
+    });
+
     req.on('error', reject);
   });
 }
