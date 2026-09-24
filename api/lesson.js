@@ -13,6 +13,7 @@ import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
+import { parseDirectives } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter } from '../lib/core/assessment.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
@@ -170,7 +171,16 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
   const studentModel = buildStudentModel(learningMd, curriculum, user);
   const modelText = formatStudentModel(studentModel);
 
-  const planPrompt = buildLessonPlanPrompt(state, skills, lesson, topicSlug, modelText);
+  // Awaited here, never read by the planner from the store: on SupabaseStore an
+  // unawaited read is a Promise, and the planner got "[object Promise]" (#146).
+  const [teacherConfig, teachingNotes, conceptMap, feedback] = await Promise.all(
+    ['teacher.md', 'teaching-notes.md', 'concept-map.md', 'practice-feedback.md']
+      .map((file) => safely(() => state.readDomainFile(topicSlug, file), null, `read ${file}`)),
+  );
+  const directives = parseDirectives(feedback);
+  const planPrompt = buildLessonPlanPrompt(skills, lesson, {
+    teacherConfig, teachingNotes, conceptMap, user, studentModel: modelText, directives,
+  });
   const planResponse = await adapter.generate(
     planPrompt.system + '\n\nReturn exactly one valid JSON value.',
     [{ role: 'user', content: `Plan a Socratic lesson for Day ${lessonDay}: "${lesson.title}"` }],
@@ -189,6 +199,12 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
       commonMisconceptions: [],
     };
   }
+
+  // The planner is asked to open on this retest, but its plan can leave it out,
+  // and the fallback above has none. Same order as the planner's instruction.
+  const retest = directives.find((d) => d.type === 'REVISIT') || directives.find((d) => d.type === 'BLOCK');
+  const hasRetrieval = typeof plan.retrieval === 'string' && plan.retrieval.trim();
+  if (retest && !hasRetrieval) plan.retrieval = `Before we start — what is ${retest.target} and why does it matter?`;
 
   const active = {
     topicSlug,

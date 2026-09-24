@@ -126,4 +126,32 @@ describe('deliverNextLesson', () => {
       expect.stringContaining('completed all 3 lessons'),
     );
   });
+
+  it('hands the lesson planner values read from the store, not the store (#146)', async () => {
+    const { getNextLesson, readCurriculum } = await import('../../scripts/bot/state.js');
+    const { generate } = await import('../../scripts/bot/claude.js');
+    const { buildLessonPlanPrompt } = await import('../../lib/core/prompts.js');
+    const { TutorState } = await import('../../lib/core/state.js');
+    const reads = [
+      vi.spyOn(TutorState.prototype, 'readDomainFile').mockImplementation((slug, file) => `${file} of ${slug}`),
+      vi.spyOn(TutorState.prototype, 'readUser').mockReturnValue('PROFILE'),
+    ];
+    const { formatStudentModel } = await import('../../lib/core/student-model.js');
+    formatStudentModel.mockReturnValueOnce('MODEL-TEXT');
+    getNextLesson.mockReturnValue({ lesson: 1, title: 'Sets', concepts: ['sets'] });
+    readCurriculum.mockReturnValue({ topic: 'Math', lessons: [] });
+    generate.mockResolvedValue({ text: JSON.stringify({ diagnostic: 'How would you describe a set to a friend?' }) });
+
+    await deliverNextLesson('math', 123, channel, skills);
+
+    expect(buildLessonPlanPrompt).toHaveBeenCalledWith(skills, expect.objectContaining({ title: 'Sets' }), expect.objectContaining({
+      teacherConfig: 'teacher.md of math',
+      teachingNotes: 'teaching-notes.md of math',
+      conceptMap: 'concept-map.md of math',
+      user: 'PROFILE',
+      // The computed model, then the bot's own directives, as one text.
+      studentModel: expect.stringMatching(/^MODEL-TEXT\n\n## Deliberate Practice Directives\n[\s\S]*MODE: /),
+    }));
+    for (const spy of reads) spy.mockRestore();
+  });
 });

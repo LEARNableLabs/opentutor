@@ -231,7 +231,14 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const directiveText = directiveContext.length ? `\n\n## Deliberate Practice Directives\n${directiveContext.join('\n')}` : '';
 
   // Generate lesson plan (1 strong call)
-  const planPrompt = buildLessonPlanPrompt(coreState, skills, lesson, topicSlug, modelText + directiveText);
+  // The bot applies its directives itself (above), so they travel in the student-model text.
+  const planPrompt = buildLessonPlanPrompt(skills, lesson, {
+    teacherConfig: coreState.readDomainFile(topicSlug, 'teacher.md'),
+    teachingNotes: coreState.readDomainFile(topicSlug, 'teaching-notes.md'),
+    conceptMap: coreState.readDomainFile(topicSlug, 'concept-map.md'),
+    user: coreState.readUser(),
+    studentModel: modelText + directiveText,
+  });
   const planResponse = await generate(planPrompt.system, [
     { role: 'user', content: `Plan a Socratic lesson for Day ${lessonDay}: "${lesson.title}"` },
   ], { model: planPrompt.model, outputMode: planPrompt.outputMode });
