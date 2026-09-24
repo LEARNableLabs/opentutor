@@ -234,6 +234,27 @@ h1 em {
   border-radius: 10px 10px 0 10px;
   font-size: 13px;
 }
+#demo-thread .sample-answer,
+#demo-thread p {
+  overflow-wrap: anywhere;
+}
+.demo-form {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0 0 39px;
+}
+.demo-form input {
+  min-width: 0;
+  padding: 10px 13px;
+  font-size: 13px;
+}
+.demo-next {
+  margin: 20px 0 0 39px;
+  font-size: 13px;
+}
+.demo-next .text-link {
+  font-size: 13px;
+}
 .preview-footer {
   border-top: 1px solid #d4dacb;
   display: flex;

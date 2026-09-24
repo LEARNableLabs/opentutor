@@ -68,3 +68,71 @@ fetch('/api/account')
     }
   })
   .catch(() => {});
+
+// The example lesson (#153): one real reply per browser, then signup to continue it.
+// Without JavaScript the card keeps its static sample exchange.
+const demoForm = document.querySelector('#demo-form'),
+  demoAnswer = document.querySelector('#demo-answer'),
+  demoThread = document.querySelector('#demo-thread'),
+  demoNext = document.querySelector('#demo-next'),
+  DEMO_USED = 'opentutor-demo-used';
+function demoUsed() {
+  try {
+    return !!localStorage.getItem(DEMO_USED);
+  } catch {
+    return false;
+  }
+}
+// Text only, never HTML: the reply is model output (#150).
+function tutorSays(text) {
+  const row = document.createElement('div'),
+    dot = document.createElement('span'),
+    line = document.createElement('p');
+  row.className = 'conversation';
+  dot.className = 'tutor-dot';
+  dot.setAttribute('aria-hidden', 'true');
+  dot.textContent = '✦';
+  line.textContent = text;
+  row.append(dot, line);
+  demoThread.append(row);
+  return line;
+}
+document.querySelector('#demo-sample').hidden = true;
+if (demoUsed()) demoNext.hidden = false;
+else demoForm.hidden = false;
+demoForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const answer = demoAnswer.value.trim();
+  if (!answer) return;
+  demoForm.hidden = true;
+  const mine = document.createElement('div');
+  mine.className = 'sample-answer';
+  mine.textContent = answer;
+  demoThread.append(mine);
+  const reply = tutorSays('…');
+  let text = 'The tutor could not reply just now.';
+  try {
+    const res = await fetch('/api/demo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ answer }),
+    });
+    if (res.status === 429)
+      text = 'The demo is busy right now. Create a free account to try a full lesson.';
+    else {
+      const data = await res.json();
+      if (res.ok && typeof data.reply === 'string') {
+        text = data.reply;
+        try {
+          localStorage.setItem(DEMO_USED, '1');
+        } catch {
+          /* storage refused: the server's per-address cap still applies */
+        }
+      }
+    }
+  } catch {
+    /* unreachable or not JSON: keep the generic message */
+  }
+  reply.textContent = text;
+  demoNext.hidden = false;
+});
