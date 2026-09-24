@@ -140,6 +140,24 @@ it('answers 503 without clearing cookies when refresh fails from an outage, not 
   expect(res.statusCode).toBe(503);
   expect(res.headers['Set-Cookie']).toBeUndefined();
 });
+it('keeps a rotated session when checking it hits an outage, instead of losing it to a 401', async () => {
+  client.auth.refreshSession = vi.fn(async () => ({
+    data: { session: { access_token: 'valid', refresh_token: 'rotated', expires_in: 3600 }, user },
+  }));
+  client.auth.getUser = vi.fn(async () => ({ data: { user: null }, error: { message: 'fetch failed', status: 0 } }));
+  const res = await call(req({ action: 'refresh' }, { cookie: 'ot_refresh=refresh' }));
+  expect(res.statusCode).toBe(503);
+  expect(res.headers['Set-Cookie'].join(';')).toContain('ot_refresh=rotated');
+});
+it('tells a signed-in browser sign-in is unavailable during an outage, not that it is signed out', async () => {
+  vi.stubGlobal(
+    'fetch',
+    vi.fn(async () => Response.json({ msg: 'db unavailable' }, { status: 503 })),
+  );
+  const res = await call({ method: 'GET', headers: { host: 'localhost:3000', cookie: 'ot_access=valid' } });
+  expect(res.statusCode).toBe(503);
+  expect(res.body.user).toBeUndefined();
+});
 it('treats a Supabase outage on session verification as misconfigured, never as root access', async () => {
   vi.stubGlobal(
     'fetch',

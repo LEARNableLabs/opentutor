@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     const body = req.body || {};
     if (body.answer !== null && body.answer !== undefined) {
       const text = turnText(body.answer);
-      if (text === null) return res.status(400).json({ error: 'An answer must be text.' });
+      if (text === null) return res.status(400).json({ error: 'An answer must be text of at most 4,000 characters.' });
       body.answer = text;
     }
     // Resolved before any header is written, so a refusal can still be a plain 402.

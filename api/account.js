@@ -41,6 +41,8 @@ export function accountHandler({ getStore = getState, clientFactory = createAcco
                 !process.env.VERCEL && !process.env.OPENTUTOR_PASSWORD && !accountsConfigured(),
             });
         const auth = await authenticateRequest(req, getStore);
+        // An outage is not a sign-out: the browser must not send a valid session to the login page.
+        if (auth.misconfigured) return res.status(503).json({ error: auth.reason });
         return res
           .status(200)
           .json({
@@ -92,6 +94,12 @@ export function accountHandler({ getStore = getState, clientFactory = createAcco
           return res.status(400).json({ error: 'Confirm your email before signing in.' });
         // Validate provider identity before provisioning; never accept body userId.
         const { data, error } = await client.auth.getUser(session.access_token);
+        if (error && !(error.status >= 400 && error.status < 500)) {
+          // Supabase just issued this session and a refresh token works once: keep it.
+          // Every later request verifies it again before it reaches any student data.
+          setSession(req, res, session);
+          return res.status(503).json({ error: 'Sign-in is temporarily unavailable. Please try again.' });
+        }
         if (error || data.user?.id !== user.id)
           return res.status(401).json({ error: 'Could not verify the account.' });
         const student = await ensureAccount(await getStore(), data.user);

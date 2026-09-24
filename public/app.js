@@ -700,9 +700,13 @@ async function restoreTopicBuild() {
   } catch { /* Topics remains available if status cannot be fetched. */ }
 }
 async function initializeLearning() {
-  const session = await nativeFetch('/api/account').then(r=>r.json());
+  // A 5xx is an outage, not a sign-out: stay here and say so (the catch below) instead of going to login.
+  const current = await nativeFetch('/api/account');
+  if (current.status >= 500) throw new Error('Sign-in is unavailable');
+  const session = await current.json();
   if(!session.user&&!session.local) {
     const refreshed=await nativeFetch('/api/account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})});
+    if (refreshed.status >= 500) throw new Error('Sign-in is unavailable');
     if(!refreshed.ok){window.location.replace('/login.html'+window.location.search);return;}
   }
   await finishConnect();

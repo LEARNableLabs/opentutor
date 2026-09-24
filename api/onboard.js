@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   try {
     const { message, history } = req.body;
     const text = turnText(message);
-    if (text === null) return res.status(400).json({ error: 'A message is required.' });
+    if (text === null) return res.status(400).json({ error: 'A message of at most 4,000 characters is required.' });
 
     const state = await getState(auth.userId);
     const adapter = await adapterFor({ state, use: 'onboarding', host: getAdapter });

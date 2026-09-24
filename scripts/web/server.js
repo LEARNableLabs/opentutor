@@ -296,7 +296,7 @@ async function handleStudentAPI(req, res, url, state) {
       const payload = JSON.parse(await readBody(req));
       if (payload.answer !== null && payload.answer !== undefined) {
         const text = turnText(payload.answer);
-        if (text === null) return fail(res, 400, 'An answer must be text.');
+        if (text === null) return fail(res, 400, 'An answer must be text of at most 4,000 characters.');
         payload.answer = text;
       }
       const wantsStream = (req.headers.accept || '').includes('text/event-stream');
@@ -356,7 +356,7 @@ async function handleStudentAPI(req, res, url, state) {
       const body = await readBody(req);
       const { message, history } = JSON.parse(body);
       const text = turnText(message);
-      if (text === null) return fail(res, 400, 'A message is required.');
+      if (text === null) return fail(res, 400, 'A message of at most 4,000 characters is required.');
 
       const user = await state.readUser();
       const { system, model } = buildOnboardingPrompt(skills, user);

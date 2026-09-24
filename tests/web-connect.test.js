@@ -115,3 +115,22 @@ it('pre-selects a topic that is in the public catalog, from a link', async () =>
   expect(addTopic).toBeTruthy();
   expect(JSON.parse(addTopic.init.body)).toEqual({ topic: 'game-theory', level: 'intermediate' });
 });
+
+it('keeps a signed-in student on the page during a sign-in outage, and sends only an ended session to login', async () => {
+  const unavailable = [503, { error: 'Sign-in is temporarily unavailable.' }];
+  for (const account of [
+    () => unavailable,
+    (init) => (init.method === 'POST' ? unavailable : [200, { user: null }]),
+  ]) {
+    const { $, context } = frontend((url, init) => (url === '/api/account' ? account(init) : null));
+    await settle();
+    expect(context.location.replace).not.toHaveBeenCalled();
+    expect($('#empty-state').textContent).toMatch(/refresh/i);
+  }
+  const { context } = frontend((url, init) => {
+    if (url !== '/api/account') return null;
+    return init.method === 'POST' ? [401, { error: 'Your session expired.' }] : [200, { user: null }];
+  });
+  await settle();
+  expect(context.location.replace).toHaveBeenCalledWith('/login.html');
+});

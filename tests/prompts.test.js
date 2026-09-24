@@ -5,6 +5,7 @@ import {
   buildDomainFilesPrompt,
   buildCriticPrompt,
   buildTeacherPrompt,
+  buildOnboardingPrompt,
   untrustedData,
   clip,
   escapeXml,
@@ -227,5 +228,14 @@ describe('buildTeacherPrompt', () => {
     const result = buildTeacherPrompt(emptyState, skills, lesson, 'no-topic');
     expect(result.system).toBeTruthy();
     expect(result.model).toBe('strong');
+  });
+});
+
+describe('buildOnboardingPrompt', () => {
+  // The profile is whatever the student saved; onboarding can run on the deployment's key.
+  it('sends at most 4,000 characters of the stored profile, like the lesson prompts', () => {
+    const { system } = buildOnboardingPrompt(new Map(), 'p'.repeat(50_000));
+    expect(system).toMatch(/p{4000}/);
+    expect(system).not.toMatch(/p{4001}/);
   });
 });

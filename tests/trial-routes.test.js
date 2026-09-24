@@ -126,11 +126,13 @@ it('passes onboarding only real, recent, bounded turns from the browser', async 
   expect(sent.at(-1)).toEqual({ role: 'user', content: 'hello' });
 });
 
-it('caps a long onboarding message before it reaches the model', async () => {
-  const res = await call(onboard, { message: 'x'.repeat(10000) });
-  expect(res.statusCode).toBe(200);
-  const sent = host.generate.mock.calls.at(-1)[1];
-  expect(sent.at(-1).content.length).toBeLessThanOrEqual(4000);
+it('refuses an over-long message or answer rather than grading a cut-off one', async () => {
+  for (const [handler, body] of [[onboard, { message: 'x'.repeat(4001) }], [lesson, { topicSlug: 'demo', answer: 'x'.repeat(4001) }]]) {
+    const res = await call(handler, body);
+    expect(res.statusCode).toBe(400);
+    expect(res.body.error).toMatch(/4,000 characters/);
+  }
+  expect(host.generate).not.toHaveBeenCalled();
 });
 
 it('never shows the browser raw error text from the model provider', async () => {
