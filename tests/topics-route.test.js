@@ -6,7 +6,7 @@ vi.mock('../api/_lib/init.js', () => ({ getState: async () => state }));
 const handler = (await import('../api/topics.js')).default;
 
 beforeEach(() => vi.stubEnv('OPENTUTOR_PASSWORD', 'test-password'));
-afterEach(() => vi.unstubAllEnvs());
+afterEach(() => { vi.unstubAllEnvs(); vi.restoreAllMocks(); });
 
 async function get() {
   const res = {
@@ -25,6 +25,15 @@ it('asks a store that can for every topic at once', async () => {
   expect(await get()).toMatchObject({ statusCode: 200, body: topics });
   expect(state.listTopics).not.toHaveBeenCalled();
   expect(state.getTopicProgress).not.toHaveBeenCalled();
+});
+
+it('keeps upstream error text out of the response', async () => {
+  vi.spyOn(console, 'error').mockImplementation(() => {});
+  state = { listTopicProgress: async () => { throw new Error('relation "lessons_completed" does not exist'); } };
+
+  const res = await get();
+  expect(res.statusCode).toBe(500);
+  expect(JSON.stringify(res.body)).not.toContain('lessons_completed');
 });
 
 it('walks the topics one at a time on a store that cannot', async () => {
