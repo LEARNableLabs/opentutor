@@ -267,8 +267,8 @@ h1 em {
   max-width: 1120px;
   margin: 42px auto 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 55px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
 }
 .step-number {
   font-size: 13px;
@@ -515,6 +515,7 @@ footer .brand {
     gap: 20px;
   }
   .steps {
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
   .auth-layout {
