@@ -159,10 +159,14 @@ it('is served by the catalog function, which vercel.json points /api/demo at', a
 // The sweep deletes in the root store, beside the owner's progress and the account
 // registry. An empty, short or wildcard prefix would reach every row there.
 it('refuses a bulk kv delete that could reach more than the rows it names, on both stores', async () => {
-  for (const bad of ['', 'demo:', 'demo:%', 'demo:day_2026', 'demo:day\\2026', null]) {
+  // `*` too: PostgREST reads it as `%` in a like filter, so 'progress*' would match 'progress'.
+  for (const bad of ['', 'demo:', 'demo:%', 'demo:day_2026', 'demo:day\\2026', 'progress*', null]) {
     expect(() => store.deleteKVBefore(bad, '2026-09-24')).toThrow(/broad kv delete/);
   }
-  await expect(new SupabaseStore(root, { client: {} }).deleteKVBefore('', '2026-09-24')).rejects.toThrow(/broad kv delete/);
+  const supabase = new SupabaseStore(root, { client: {} });
+  for (const bad of ['', 'progress*']) {
+    await expect(supabase.deleteKVBefore(bad, '2026-09-24')).rejects.toThrow(/broad kv delete/);
+  }
 
   for (const key of ['demo:day:2026-01-01:1', 'demo:day:2026-09-23:7', 'demo:day:2026-09-24:1']) store.writeKV(key, 'x');
   store.writeKV('progress', '{"active_topics":[]}');
