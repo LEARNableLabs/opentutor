@@ -11,6 +11,8 @@ window.fetch = async (input, init = {}) => {
   if (url.startsWith('/api/') && url !== '/api/account' && res.status === 401) {
     refreshing ||= nativeFetch('/api/account', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})}).finally(()=>{refreshing=null;});
     const renewed = await refreshing;
+    // An outage is not a sign-out. A fresh response each time: concurrent callers share `renewed`.
+    if (renewed.status >= 500) return new Response(JSON.stringify({ error: 'Sign-in is temporarily unavailable. Please try again.' }), { status: 503, headers: { 'Content-Type': 'application/json' } });
     if(renewed.ok)res=await nativeFetch(input,init);
     if(res.status===401)window.location.assign('/login.html');
   }
@@ -228,10 +230,15 @@ function showLessonStart(data) {
   showLessonInput();
 }
 
+// The server refuses a longer turn (lib/core/llm-access.js). Say so here, and keep the text in its box.
+const TURN_LIMIT = 4000;
+const tooLong = (text) => `Please shorten this to 4,000 characters or fewer (it has ${text.length.toLocaleString('en-US')}). Your text is still in the box.`;
+
 async function sendLessonAnswer() {
   const input = $('#lesson-input');
   const answer = input.value.trim();
   if (!answer || !activeTopicSlug || !lessonActive) return;
+  if (answer.length > TURN_LIMIT) return appendLessonMsg('tutor', tooLong(answer));
 
   appendLessonMsg('student', answer);
   input.value = '';
@@ -577,6 +584,7 @@ async function sendOnboard() {
   const input = $('#onboarding-input');
   const message = input.value.trim();
   if (!message) return;
+  if (message.length > TURN_LIMIT) return appendOnboardMsg('assistant', tooLong(message));
 
   appendOnboardMsg('user', message);
   input.value = '';

@@ -134,3 +134,37 @@ it('keeps a signed-in student on the page during a sign-in outage, and sends onl
   await settle();
   expect(context.location.replace).toHaveBeenCalledWith('/login.html');
 });
+
+it('reports an outage when a mid-session refresh fails, instead of sending the student to login', async () => {
+  const { $, context } = frontend((url, init) => {
+    if (url === '/api/chat') return [401, { error: 'Please sign in again.' }];
+    if (url === '/api/account' && init.method === 'POST') return [503, { error: 'Sign-in is temporarily unavailable. Please try again.' }];
+    return null;
+  });
+  await settle();
+  $('#chat-input').value = 'hi';
+  await $('#btn-send').click();
+  await settle();
+  expect(context.location.assign).not.toHaveBeenCalled();
+  expect($('#chat-messages').children.some((n) => String(n.innerHTML + n.textContent).includes('temporarily unavailable'))).toBe(true);
+});
+
+it('keeps an over-long answer or message in its box and says why, instead of sending it', async () => {
+  const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 4 };
+  const { $, calls } = frontend((url) => (url === '/api/lesson' ? [200, start] : null));
+  await settle();
+  $('#active-topic').value = 'demo';
+  await $('#btn-next').click();
+  await settle();
+  const long = 'x'.repeat(4001);
+  $('#lesson-input').value = long;
+  await $('#btn-lesson-answer').click();
+  $('#onboarding-input').value = long;
+  await $('#btn-onboard-send').click();
+  await settle();
+  expect(calls.filter((c) => c.url === '/api/lesson')).toHaveLength(1); // the start, not the answer
+  expect(calls.some((c) => c.url === '/api/onboard')).toBe(false);
+  expect([$('#lesson-input').value, $('#onboarding-input').value]).toEqual([long, long]);
+  for (const box of ['#lesson-conversation', '#onboarding-chat'])
+    expect($(box).children.some((n) => String(n.innerHTML + n.textContent).includes('4,000 characters'))).toBe(true);
+});
