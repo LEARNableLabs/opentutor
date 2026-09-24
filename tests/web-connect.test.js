@@ -149,6 +149,20 @@ it('reports an outage when a mid-session refresh fails, instead of sending the s
   expect($('#chat-messages').children.some((n) => String(n.innerHTML + n.textContent).includes('temporarily unavailable'))).toBe(true);
 });
 
+it('never mistakes an error response for data: no onboarding for a returning student, no empty topic list', async () => {
+  const outage = [503, { error: 'Sign-in is temporarily unavailable. Please try again.' }];
+  const user = frontend((url, init) => {
+    if (url === '/api/user') return [401, { error: 'Please sign in again.' }];
+    return url === '/api/account' && init.method === 'POST' ? outage : null;
+  });
+  await settle();
+  expect(user.$('#onboarding-overlay').classList.contains('hidden')).toBe(true);
+  const progress = frontend((url) => (url === '/api/progress' ? outage : null));
+  await settle();
+  expect(progress.$('#empty-state').textContent).toMatch(/refresh/i);
+  expect(progress.calls.some((c) => c.url === '/api/user')).toBe(false);
+});
+
 it('keeps an over-long answer or message in its box and says why, instead of sending it', async () => {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 4 };
   const { $, calls } = frontend((url) => (url === '/api/lesson' ? [200, start] : null));

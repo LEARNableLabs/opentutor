@@ -157,6 +157,7 @@ if (lessonInput) {
 
 async function loadActiveTopics() {
   const res = await fetch('/api/progress');
+  if (!res.ok) throw new Error('Could not load your topics.'); // keep the list it has
   const data = await res.json();
   const select = $('#active-topic');
   const prev = select.value;
@@ -331,6 +332,7 @@ $('#search-topics').addEventListener('input', filterTopics);
 
 async function loadTopics() {
   const res = await fetch('/api/topics');
+  if (!res.ok) throw new Error('Could not load topics.');
   allTopics = await res.json();
   renderTopics(allTopics);
 }
@@ -566,6 +568,7 @@ $('#onboarding-input').addEventListener('keydown', (e) => {
 async function checkOnboarding() {
   try {
     const res = await fetch('/api/user');
+    if (!res.ok) return; // unknown is not "no profile": never onboard a returning student by mistake
     const data = await res.json();
     if (!data.hasProfile) {
       showOnboarding();
