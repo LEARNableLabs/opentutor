@@ -56,9 +56,9 @@ button:disabled {
 }
 .brand {
   font-family: Manrope, system-ui, sans-serif;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: -1.3px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -391,6 +391,11 @@ input:focus {
 }
 .closing .eyebrow {
   color: var(--lime);
+}
+.closing-logo {
+  display: block;
+  margin: 0 auto 26px;
+  filter: drop-shadow(0 10px 24px rgb(0 0 0 / 25%));
 }
 .closing h2 {
   font-size: 38px;
