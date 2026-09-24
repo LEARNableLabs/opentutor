@@ -30,8 +30,9 @@ was done about it. A commit straight to `main` leaves neither.
 - Don't branch a new PR off an unmerged branch unless the stacking is
   deliberate — the second PR's diff will contain the first one's commits.
 
-**CodeRabbit reviews every pull request automatically.** It is configured in
-`.coderabbit.yaml` and applies the `## Code Review Rules` section above as
+**CodeRabbit reviews every non-draft pull request automatically.** It is
+configured in `.coderabbit.yaml`, which leaves out `skills/tutor/domains/**` and
+`package-lock.json`, and it applies the `## Code Review Rules` section above as
 review criteria. Address its findings before merging. Codex joins later as an
 adversarial critic (#139).
 
