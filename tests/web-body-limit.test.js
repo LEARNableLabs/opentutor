@@ -100,6 +100,7 @@ describe('local server request body limit (#138)', () => {
       body: bodyOfSize(LIMIT + 10_000),
     });
     expect(res.status).toBe(413);
+    expect(res.headers.get('connection')).toBe('close');
     expect(await res.json()).toEqual({ error: 'Request body too large.' });
 
     // The process must still be alive and serving other requests.
