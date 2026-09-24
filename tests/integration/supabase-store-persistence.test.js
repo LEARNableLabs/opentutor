@@ -39,7 +39,7 @@ function fakePostgrest() {
     };
 
     const builder = {
-      _rows: () => db[table].filter(match).sort(compare).slice(span[0], Math.min(span[1], span[0] + MAX_ROWS)),
+      _rows: () => db[table].filter(match).sort(compare).slice(span[0], Math.min(span[1], span[0] + fake.maxRows)),
       eq(col, val) { filters.push(['eq', col, val]); return builder; },
       gte(col, val) { filters.push(['gte', col, val]); return builder; },
       like(col, val) { filters.push(['like', col, val]); return builder; },
@@ -67,7 +67,7 @@ function fakePostgrest() {
     return builder;
   };
 
-  const fake = { db, requests: 0, from: (t) => { fake.requests += 1; return query(t); } };
+  const fake = { db, requests: 0, maxRows: MAX_ROWS, from: (t) => { fake.requests += 1; return query(t); } };
   return fake;
 }
 
@@ -269,25 +269,29 @@ describe('listTopicProgress reads every topic in a fixed number of queries', () 
     expect(await alice.listTopicProgress()).toStrictEqual(expected);
   });
 
-  it('makes the same three queries for one topic or sixty-one', async () => {
+  it('makes a fixed number of queries, however many topics there are', async () => {
     const alice = store({ userId: 'alice' });
     const requests = async () => {
       client.requests = 0;
       await alice.listTopicProgress();
       return client.requests;
     };
-    expect(await requests()).toBe(3);
-
-    for (let i = 0; i < 20; i++) {
+    const add = async (i) => {
       ship(`shipped-${i}`, { topic: `Shipped ${i}`, lessons: lessons(3) });
       await generated(alice, `generated-${i}`, { topic: `Generated ${i}`, lessons: lessons(3) });
       await alice.writeCurriculum(`legacy-${i}`, { topic: `Legacy ${i}`, lessons: lessons(3) });
       await alice.markLessonComplete(`shipped-${i}`, 1);
       await alice.markLessonComplete(`generated-${i}`, 2);
       await alice.markLessonComplete(`legacy-${i}`, 3);
-    }
+    };
+
+    // One read per table, and each read ends on an empty page.
+    expect(await requests()).toBe(3); // nothing saved: every first page is already empty
+    await add(0);
+    expect(await requests()).toBe(6); // a page of rows, then an empty page
+    for (let i = 1; i < 20; i++) await add(i);
     expect(await alice.listTopicProgress()).toHaveLength(61);
-    expect(await requests()).toBe(3);
+    expect(await requests()).toBe(6);
   });
 
   it('keeps every completion past the 1000 rows PostgREST returns per response', async () => {
@@ -302,5 +306,17 @@ describe('listTopicProgress reads every topic in a fixed number of queries', () 
     const topics = await store({ userId: 'alice' }).listTopicProgress();
     const completed = Object.fromEntries(topics.map((t) => [t.slug, t.completed]));
     expect(completed).toMatchObject({ 'cap-a': 700, 'cap-b': 700, 'cap-c': 700 });
+  });
+
+  it('keeps every completion when the project caps responses below the page size', async () => {
+    // Supabase lets a project lower max_rows; a short page is then not the last one.
+    client.maxRows = 300;
+    ship('capped', { topic: 'Capped', lessons: lessons(700) });
+    for (let day = 1; day <= 700; day++) {
+      client.db.lessons_completed.push({ user_id: 'alice', slug: 'capped', day, date: '2026-09-24', engagement: 'delivered' });
+    }
+
+    const topics = await store({ userId: 'alice' }).listTopicProgress();
+    expect(topics.find((t) => t.slug === 'capped')).toMatchObject({ completed: 700 });
   });
 });
