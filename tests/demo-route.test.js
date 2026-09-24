@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { TutorStore } from '../lib/core/store.js';
+import { SupabaseStore } from '../lib/core/supabase-store.js';
 import { demoHandler, DEMO_PER_IP, DEMO_MAX_CHARS } from '../api/_lib/demo.js';
 
 // The landing page's example lesson (#153): a public route that spends the
@@ -153,4 +154,19 @@ it('is served by the catalog function, which vercel.json points /api/demo at', a
   await catalog({ method: 'GET', query: {}, headers: {} }, list);
   expect(list.statusCode).toBe(200);
   expect(list.body.some((t) => t.slug === 'game-theory')).toBe(true);
+});
+
+// The sweep deletes by prefix in the root store, beside the owner's progress and the
+// account registry. An empty, short or wildcard prefix would reach every row there.
+it('refuses a bulk kv delete that could reach more than the rows it names, on both stores', async () => {
+  for (const bad of ['', 'demo:', 'demo:%', 'demo:day_2026', 'demo:day\\2026', null]) {
+    expect(() => store.deleteKVPrefix(bad)).toThrow(/broad kv delete/);
+  }
+  await expect(new SupabaseStore(root, { client: {} }).deleteKVPrefix('')).rejects.toThrow(/broad kv delete/);
+
+  store.writeKV('demo:day:2026-01-01:1', 'x');
+  store.writeKV('progress', '{"active_topics":[]}');
+  store.deleteKVPrefix('demo:day:2026-01-01:');
+  expect(store.readKV('demo:day:2026-01-01:1')).toBeNull();
+  expect(store.readKV('progress')).toBe('{"active_topics":[]}');
 });
