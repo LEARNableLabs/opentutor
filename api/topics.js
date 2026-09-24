@@ -13,6 +13,8 @@ export default async function handler(req, res) {
 
   try {
     const state = await getState(auth.userId);
+    // On Supabase the loop below costs two round trips per topic (#137).
+    if (state.listTopicProgress) return res.status(200).json(await state.listTopicProgress());
     const topics = await state.listTopics();
     const data = [];
     for (const slug of topics) {
@@ -21,6 +23,8 @@ export default async function handler(req, res) {
     }
     res.status(200).json(data);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    // Database error text stays in the log, not the browser.
+    console.error('[topics]', err.message);
+    res.status(500).json({ error: 'Could not load topics.' });
   }
 }
