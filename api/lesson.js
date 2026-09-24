@@ -177,8 +177,9 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
     ['teacher.md', 'teaching-notes.md', 'concept-map.md', 'practice-feedback.md']
       .map((file) => safely(() => state.readDomainFile(topicSlug, file), null, `read ${file}`)),
   );
+  const directives = parseDirectives(feedback);
   const planPrompt = buildLessonPlanPrompt(skills, lesson, {
-    teacherConfig, teachingNotes, conceptMap, user, studentModel: modelText, directives: parseDirectives(feedback),
+    teacherConfig, teachingNotes, conceptMap, user, studentModel: modelText, directives,
   });
   const planResponse = await adapter.generate(
     planPrompt.system + '\n\nReturn exactly one valid JSON value.',
@@ -198,6 +199,12 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
       commonMisconceptions: [],
     };
   }
+
+  // The planner is asked to open on this retest, but its plan can leave it out,
+  // and the fallback above has none. Same order as the planner's instruction.
+  const retest = directives.find((d) => d.type === 'REVISIT') || directives.find((d) => d.type === 'BLOCK');
+  const hasRetrieval = typeof plan.retrieval === 'string' && plan.retrieval.trim();
+  if (retest && !hasRetrieval) plan.retrieval = `Before we start — what is ${retest.target} and why does it matter?`;
 
   const active = {
     topicSlug,
