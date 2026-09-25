@@ -40,7 +40,7 @@ A single command copies everything into place — the skill, workspace files, an
 
 ```bash
 mkdir -p ~/.openclaw/skills/tutor ~/.openclaw/workspaces/tutor/tutor ~/.openclaw/workspaces/tutor/memory \
-  && cp -r skills/tutor/ ~/.openclaw/skills/tutor/ \
+  && cp -r skills/tutor/. ~/.openclaw/skills/tutor/ \
   && cp workspace/AGENTS.md workspace/IDENTITY.md workspace/templates/USER.md ~/.openclaw/workspaces/tutor/ \
   && cp openclaw/SOUL.md ~/.openclaw/workspaces/tutor/SOUL.md \
   && cp workspace/templates/progress.json ~/.openclaw/workspaces/tutor/tutor/progress.json
