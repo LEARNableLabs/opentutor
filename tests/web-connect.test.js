@@ -182,3 +182,18 @@ it('keeps an over-long answer or message in its box and says why, instead of sen
   for (const box of ['#lesson-conversation', '#onboarding-chat'])
     expect($(box).children.some((n) => String(n.innerHTML + n.textContent).includes('4,000 characters'))).toBe(true);
 });
+
+// #150: a reply is model output, and model output can carry text from the research
+// sources. Markdown is rendered; HTML in the reply is shown as text, never parsed.
+it('shows HTML in a tutor reply as text, while still rendering its markdown', async () => {
+  const reply = 'Try **this**: <img src=x onerror="alert(1)"> and <script>steal()</script>';
+  const { $ } = frontend((url) => (url === '/api/chat' ? [200, { reply }] : null));
+  await settle();
+  $('#chat-input').value = 'hi <b>there</b>';
+  await $('#btn-send').click();
+  await settle();
+  const html = $('#chat-messages').children.map((n) => n.innerHTML).join('\n');
+  expect(html).toContain('<strong>this</strong>');
+  expect(html).toContain('&lt;img src=x onerror=&quot;alert(1)&quot;&gt;');
+  expect(html).not.toMatch(/<img|<script|<b>/);
+});

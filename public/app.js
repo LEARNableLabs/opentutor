@@ -108,8 +108,10 @@ themeToggle.addEventListener('click', () => {
 
 // ── Markdown rendering (minimal, no dependencies) ──────────
 
+// Escape first, then add the few tags markdown needs: replies are model output and
+// the student's own text, and neither is ever parsed as HTML (#150).
 function md(text) {
-  return text
+  return escapeHTML(text ?? '')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code>$1</code>')
@@ -373,7 +375,7 @@ function renderTopics(topics) {
 }
 
 function topicCard(t) {
-  return `<div class="topic-card" data-slug="${t.slug}">
+  return `<div class="topic-card" data-slug="${escapeHTML(t.slug)}">
     <div>
       <div class="topic-name">${escapeHTML(t.topic || formatSlug(t.slug))}</div>
       <div class="progress-bar"><div class="progress-fill" style="width:${t.percent}%"></div></div>
