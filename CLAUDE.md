@@ -37,6 +37,7 @@ opentutor/
 │   ├── _lib/admin-auth.js            # OPENTUTOR_ADMIN_PASSWORD — a second secret, never the student's
 │   ├── admin/students.js             # Provision / list / inspect / decommission students (#80)
 │   ├── _lib/openrouter.js            # Connect a student's OpenRouter account (OAuth PKCE, #132); served by account.js via the /api/openrouter rewrite
+│   ├── _lib/demo.js                  # The landing page's one-reply demo on the deployment's key (#153): 3 per IP and 300 a day, claimed before the call; served by catalog.js via the /api/demo rewrite
 │   ├── lesson.js                     # lessonTurn() — the Socratic turn, shared with the web server
 │   └── chat.js, onboard.js, topics.js, progress.js, user.js, add-topic.js
 ├── public/                           # Vanilla JS frontend (served by scripts/web/server.js)

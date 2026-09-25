@@ -24,6 +24,10 @@
       "destination": "/api/account?via=openrouter"
     },
     {
+      "source": "/api/demo",
+      "destination": "/api/catalog?via=demo"
+    },
+    {
       "source": "/api/:path*",
       "destination": "/api/:path*"
     }

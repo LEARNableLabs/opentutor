@@ -53,13 +53,32 @@
               let the other do the work. What would you try?
             </p>
           </div>
-          <div class="sample-answer">“What if they took turns?”</div>
-          <div class="conversation">
-            <span class="tutor-dot" aria-hidden="true">✦</span>
-            <p>
-              Good starting point. What makes you trust that your neighbour will take their turn?
-            </p>
+          <div id="demo-sample">
+            <div class="sample-answer">“What if they took turns?”</div>
+            <div class="conversation">
+              <span class="tutor-dot" aria-hidden="true">✦</span>
+              <p>
+                Good starting point. What makes you trust that your neighbour will take their turn?
+              </p>
+            </div>
           </div>
+          <div id="demo-thread" aria-live="polite"></div>
+          <form id="demo-form" class="demo-form" hidden>
+            <input
+              id="demo-answer"
+              maxlength="300"
+              placeholder="What would you try?"
+              aria-label="Your answer"
+              autocomplete="off"
+              required
+            /><button class="button small" type="submit">Send</button>
+          </form>
+          <p id="demo-next" class="demo-next" hidden>
+            Want to keep going?
+            <a id="demo-signup" class="text-link" href="/login.html?mode=signup&amp;topic=game-theory"
+              >Create a free account and continue this lesson ↗</a
+            >
+          </p>
           <div class="preview-footer">
             <span>Think it through. Make it yours.</span><span aria-hidden="true">↗</span>
           </div>

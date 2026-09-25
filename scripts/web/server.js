@@ -9,6 +9,7 @@
 import http from 'http';
 import { accountHandler } from '../../api/account.js';
 import { openrouterHandler } from '../../api/_lib/openrouter.js';
+import { demoHandler } from '../../api/_lib/demo.js';
 import { adapterFor, isAccount, trimHistory, turnText, KeyRequired } from '../../lib/core/llm-access.js';
 import { publicCatalog } from '../../lib/core/catalog.js';
 import fs from 'fs';
@@ -206,6 +207,7 @@ async function handleAPI(req, res, url) {
   if(url.pathname==='/api/catalog' && req.method==='GET')return json(res,publicCatalog(ROOT));
   if (url.pathname === '/api/account') return mountHandler(req, res, accountHandler({ getStore: async () => state }));
   if (url.pathname === '/api/openrouter') return mountHandler(req, res, openrouterHandler({ getStore: async (id) => (id == null ? state : state.forStudent(id)) }));
+  if (url.pathname === '/api/demo') return mountHandler(req, res, demoHandler({ getStore: async () => state, host: () => chatAdapter }));
   // Admin routes are checked first and against their own secret. Falling
   // through the student gate would mean an admin needed both passwords, and
   // would put student credentials on the path to provisioning.
@@ -457,8 +459,8 @@ function keyRequired(res, err) {
 
 // #138 — every route reads its body through here, so this is the one place
 // that needs to bound it. A default local install has no password, and
-// mountHandler (below) reads /api/account and /api/openrouter before any
-// authentication, so an unlimited buffer here is an unauthenticated way to
+// mountHandler (below) reads /api/account, /api/openrouter and /api/demo before
+// any authentication, so an unlimited buffer here is an unauthenticated way to
 // grow the process's memory until it dies.
 const BODY_LIMIT = 1_048_576; // 1 MiB — far above any real request here
 

@@ -23,3 +23,10 @@ function countFunctionFiles(dir) {
 it('stays within the Hobby plan\'s 12-function limit', () => {
   expect(countFunctionFiles('api')).toBeLessThanOrEqual(12);
 });
+
+it('serves /api/demo from the catalog function, with the rewrite ahead of the generic one', () => {
+  const { rewrites } = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
+  const demo = rewrites.findIndex((r) => r.source === '/api/demo');
+  expect(rewrites[demo]?.destination).toBe('/api/catalog?via=demo');
+  expect(demo).toBeLessThan(rewrites.findIndex((r) => r.source === '/api/:path*'));
+});
