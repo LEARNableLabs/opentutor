@@ -67,8 +67,17 @@ describe('buildOnboardingPrompt', () => {
 describe('every surface uses it', () => {
   const reads = (f) => fs.readFileSync(path.join(REPO, f), 'utf-8');
 
-  it.each(['api/onboard.js', 'scripts/web/server.js'])('%s builds the prompt from core', (f) => {
-    expect(reads(f)).toMatch(/buildOnboardingPrompt/);
+  it('api/onboard.js builds the prompt from core', () => {
+    expect(reads('api/onboard.js')).toMatch(/buildOnboardingPrompt/);
+  });
+
+  // #155: the two copies of the route drifted — neither saved the profile.
+  // Now there is one turn, shared the way lessonTurn is.
+  it('the local server runs the same onboarding turn as the Vercel route', () => {
+    const server = reads('scripts/web/server.js');
+    expect(server).toMatch(/import \{ onboardTurn \} from '\.\.\/\.\.\/api\/onboard\.js'/);
+    expect(server).toMatch(/await onboardTurn\(/);
+    expect(server).not.toMatch(/buildOnboardingPrompt|<TOPIC>/);
   });
 
   it('no surface still hardcodes its own copy', () => {

@@ -10,7 +10,7 @@ import http from 'http';
 import { accountHandler } from '../../api/account.js';
 import { openrouterHandler } from '../../api/_lib/openrouter.js';
 import { demoHandler } from '../../api/_lib/demo.js';
-import { adapterFor, isAccount, trimHistory, turnText, KeyRequired } from '../../lib/core/llm-access.js';
+import { adapterFor, turnText, KeyRequired } from '../../lib/core/llm-access.js';
 import { publicCatalog } from '../../lib/core/catalog.js';
 import fs from 'fs';
 import path from 'path';
@@ -21,8 +21,8 @@ import { addTopic } from '../../lib/core/topic-service.js';
 import { readTopicBuild, buildSummary, listTopicBuilds } from '../../lib/core/topic-builds.js';
 import { startLocalBuildWorker } from '../../lib/core/local-build-worker.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
-import { buildOnboardingPrompt } from '../../lib/core/prompts.js';
 import { lessonTurn } from '../../api/lesson.js';
+import { onboardTurn } from '../../api/onboard.js';
 import { authenticateRequest, authFailure } from '../../api/_lib/auth.js';
 import { checkAdmin, adminFailure } from '../../api/_lib/admin-auth.js';
 import { listStudents, findStudent, provisionStudent, decommissionStudent } from '../../lib/core/students.js';
@@ -358,28 +358,13 @@ async function handleStudentAPI(req, res, url, state) {
       return json(res, { ok: true });
     }
 
-    // POST /api/onboard — guided onboarding chat
+    // POST /api/onboard — guided onboarding chat (same implementation as the Vercel route).
     if (req.method === 'POST' && url.pathname === '/api/onboard') {
-      const body = await readBody(req, res);
-      const { message, history } = JSON.parse(body);
-      const text = turnText(message);
-      if (text === null) return fail(res, 400, 'A message of at most 4,000 characters is required.');
-
-      const user = await state.readUser();
-      const { system, model } = buildOnboardingPrompt(skills, user);
-
-      const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: text }];
-      const adapter = await adapterFor({ state, use: 'onboarding', host: () => chatAdapter });
-      const response = await adapter.generate(system, messages, { model });
-
-      const topicMatch = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/);
-      const cleanText = response.text.replace(/<TOPIC>.+?<\/TOPIC>/g, '').trim();
-
-      return json(res, {
-        reply: cleanText,
-        confirmedTopic: topicMatch ? topicMatch[1].trim() : null,
-        model: response.model,
-      });
+      const payload = JSON.parse(await readBody(req, res));
+      const ctx = { state, skills, getAdapter: () => adapterFor({ state, use: 'onboarding', host: () => chatAdapter }) };
+      const { status, body } = await onboardTurn(ctx, payload);
+      res.writeHead(status);
+      return res.end(JSON.stringify(body, null, 2));
     }
 
     // POST /api/chat — free-form chat
