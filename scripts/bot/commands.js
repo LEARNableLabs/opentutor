@@ -10,6 +10,7 @@ import { generateAndRegisterTopic } from './curriculum.js';
 import { getDueReviews, getRepetitionSummary } from './spaced-repetition.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
 import { log } from './logger.js';
+import { sendStructuredMessage } from './message.js';
 
 export function isCommand(text) {
   return text.startsWith('/');
@@ -171,7 +172,8 @@ async function cmdTopics(chatId, channel) {
     if (!p) continue;
     text += `\n• <b>${p.topic}</b> — ${p.percent}% (${p.completed}/${p.total} lessons)`;
   }
-  await channel.sendMessage(chatId, text);
+  // Telegram refuses a message over 4,096 characters; a long list goes in several.
+  await sendStructuredMessage(channel, chatId, text);
 }
 
 async function cmdAdd(chatId, channel, skills, topic) {

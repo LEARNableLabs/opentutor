@@ -141,4 +141,15 @@ describe('handleCommand', () => {
     expect(text).not.toContain('shipped-');
     expect(text.length).toBeLessThan(4096);
   });
+
+  it('/topics splits a long list under Telegram\'s 4,096-character limit', async () => {
+    const slugs = Array.from({ length: 100 }, (_, i) => `a-rather-long-topic-name-${i}`);
+    readProgress.mockReturnValue({ active_topics: slugs });
+    getTopicProgress.mockImplementation((slug) => ({ topic: slug, percent: 0, completed: 0, total: 30 }));
+    await handleCommand('/topics', 123, channel, new Map());
+    const sent = channel.sendMessage.mock.calls.map((call) => call[1]);
+    expect(sent.length).toBeGreaterThan(1);
+    for (const text of sent) expect(text.length).toBeLessThan(4096);
+    expect(sent.join('\n')).toContain('a-rather-long-topic-name-99');
+  });
 });
