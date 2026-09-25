@@ -15,6 +15,8 @@ export default async function handler(req, res) {
     const state = await getState(auth.userId);
     res.status(200).json(await state.readProgress());
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    // Database error text stays in the log, not the browser (#144).
+    console.error('[progress]', err.message);
+    res.status(500).json({ error: 'Could not load your progress.' });
   }
 }

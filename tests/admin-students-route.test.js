@@ -37,6 +37,7 @@ beforeEach(() => {
 afterEach(() => {
   fs.rmSync(root, { recursive: true, force: true });
   vi.unstubAllEnvs();
+  vi.restoreAllMocks();
 });
 
 describe('who may provision', () => {
@@ -142,6 +143,16 @@ describe('per-student stats', () => {
 
   it('404s for a student who was never provisioned', async () => {
     expect((await call({ method: 'GET', headers: ADMIN, query: { id: 'ghost' } })).statusCode).toBe(404);
+  });
+
+  it('keeps upstream error text out of a failed read (#144)', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    await call({ method: 'POST', headers: ADMIN, body: { userId: 'alice' } });
+    store.forStudent = () => ({ readProgress: async () => { throw new Error('relation "kv" does not exist'); } });
+
+    const r = await call({ method: 'GET', headers: ADMIN, query: { id: 'alice' } });
+    expect(r.statusCode).toBe(500);
+    expect(JSON.stringify(r.body)).not.toMatch(/relation|kv/);
   });
 });
 

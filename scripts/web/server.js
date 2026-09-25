@@ -159,8 +159,9 @@ async function handleAdmin(req, res, url) {
     if (/Invalid student id/.test(message)) return fail(res, 400, message);
     if (/already exists/i.test(message)) return fail(res, 409, message);
     if (/not found/i.test(message)) return fail(res, 404, message);
+    // Database error text stays in the log, not the browser (#144).
     console.error('[admin]', err);
-    return fail(res, 500, message);
+    return fail(res, 500, 'Provisioning failed. See the server log.');
   }
 }
 
@@ -406,7 +407,10 @@ async function handleStudentAPI(req, res, url, state) {
         return res.end(JSON.stringify(result));
       } catch (err) {
         if (err instanceof KeyRequired) return keyRequired(res, err);
-        return fail(res, /topic name|Invalid topic slug|Invalid level/.test(err.message) ? 400 : 503, err.message);
+        // As api/add-topic.js: validation text is the student's to see, anything else is logged (#144).
+        const invalid = /topic name|Invalid topic slug|Invalid level/.test(err.message);
+        console.error('[add-topic]', err.message);
+        return fail(res, invalid ? 400 : 503, invalid ? err.message : 'Could not schedule the curriculum. Please try adding the topic again.');
       }
     }
 

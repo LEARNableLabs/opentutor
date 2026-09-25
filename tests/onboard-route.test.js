@@ -47,6 +47,16 @@ it('keeps conversation open until the model confirms a topic', async () => {
   adapter.generate.mockResolvedValue({text:'What would you like to learn?'});
   expect((await call()).body.confirmedTopic).toBeNull();
 });
+// #157 — a failed read looked like "no profile yet", so the save below could overwrite a real one.
+it('saves nothing when the profile cannot be read, and says so in the log', async () => {
+  const log = vi.spyOn(console, 'error').mockImplementation(() => {});
+  state.readUser = vi.fn().mockResolvedValueOnce('').mockRejectedValue(new Error('relation "kv" does not exist'));
+  const res = await call();
+  expect(res.body).toMatchObject({ confirmedTopic: 'game-theory' });
+  expect(state.writeUser).not.toHaveBeenCalled();
+  expect(log).toHaveBeenCalledWith('[onboard] profile not saved:', 'relation "kv" does not exist');
+  log.mockRestore();
+});
 
 // #155 — onboarding dropped everything the student said, so the overlay came
 // back on every visit and the tutor never learned who they were.
