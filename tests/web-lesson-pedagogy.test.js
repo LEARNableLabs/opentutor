@@ -32,20 +32,18 @@ beforeEach(() => {
     ],
   }));
   state = new TutorStore(root);
-  ctx = {
-    state,
-    adapter: {
-      generate: vi.fn(async (system) => (system.includes('## Current Step:')
-        ? { text: '<assessment>{"understanding":"full","score":0.9}</assessment>\nGood — why?' }
-        : { text: JSON.stringify(PLAN) })),
-    },
-    skills: new Map(),
+  const adapter = {
+    generate: vi.fn(async (system) => (system.includes('## Current Step:')
+      ? { text: '<assessment>{"understanding":"full","score":0.9}</assessment>\nGood — why?' }
+      : { text: JSON.stringify(PLAN) })),
   };
+  ctx = { state, getAdapter: async () => adapter, skills: new Map() };
 });
 
 afterEach(() => { state.close(); fs.rmSync(root, { recursive: true, force: true }); });
 
-async function runLesson(answers = ['a1', 'a2', 'a3', 'a4']) {
+// PLAN has no retrieval question, so the lesson has three steps (#148).
+async function runLesson(answers = ['a1', 'a2', 'a3']) {
   await lessonTurn(ctx, { topicSlug: 'demo' });
   let last;
   for (const a of answers) last = await lessonTurn(ctx, { topicSlug: 'demo', answer: a });

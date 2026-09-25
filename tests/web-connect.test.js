@@ -194,6 +194,42 @@ it('keeps an over-long answer or message in its box and says why, instead of sen
     expect($(box).children.some((n) => String(n.innerHTML + n.textContent).includes('4,000 characters'))).toBe(true);
 });
 
+// #159: a reload resumes the lesson in progress; the page says so and shows where it was.
+it('shows a resumed lesson\'s last tutor message, with a note that it picked up where it left off', async () => {
+  const resumed = { reply: 'So what would change if the payoffs did?', lesson: { module: 'M', day: 1, title: 'T' }, step: 1, totalSteps: 3, done: false, resumed: true };
+  const { $ } = frontend((url) => (url === '/api/lesson' ? [200, resumed] : null));
+  await settle();
+  $('#active-topic').value = 'demo';
+  await $('#btn-next').click();
+  await settle();
+  const shown = $('#lesson-conversation').children.map((n) => n.innerHTML);
+  expect(shown.filter((h) => h.includes('Picking up where you left off.'))).toHaveLength(1);
+  expect(shown.filter((h) => h.includes(resumed.reply))).toHaveLength(1);
+  expect($('#lesson-input-area').classList.contains('hidden')).toBe(false);
+});
+
+// #159: the route said a finished lesson was not saved, and the page never showed it.
+it('never sends a blank answer, and shows the warning when a finished lesson could not be saved', async () => {
+  const warning = 'This lesson could not be saved — your progress may not be recorded.';
+  const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3, done: false };
+  const { $, calls } = frontend((url, init) => {
+    if (url !== '/api/lesson') return null;
+    return JSON.parse(init.body).answer ? [200, { reply: 'Well reasoned.', step: 3, totalSteps: 3, done: true, lesson: start.lesson, warning }] : [200, start];
+  });
+  await settle();
+  $('#active-topic').value = 'demo';
+  await $('#btn-next').click();
+  await settle();
+  $('#lesson-input').value = '   ';
+  await $('#btn-lesson-answer').click();
+  await settle();
+  expect(calls.filter((c) => c.url === '/api/lesson')).toHaveLength(1); // the start, not the blank answer
+  $('#lesson-input').value = 'because the payoffs change';
+  await $('#btn-lesson-answer').click();
+  await settle();
+  expect($('#lesson-conversation').children.some((n) => n.innerHTML.includes(warning))).toBe(true);
+});
+
 // #150: a reply is model output, and model output can carry text from the research
 // sources. Markdown is rendered; HTML in the reply is shown as text, never parsed.
 it('shows HTML in a tutor reply as text, while still rendering its markdown', async () => {

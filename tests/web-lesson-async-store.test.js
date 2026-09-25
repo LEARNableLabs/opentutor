@@ -58,15 +58,12 @@ beforeEach(() => {
       { lesson: 2, module: 'Basics', title: 'Lesson 2', concepts: ['beta'], status: 'pending' },
     ],
   }));
-  ctx = {
-    state: asyncStore(root),
-    adapter: {
-      generate: vi.fn(async (system) => (system.includes('## Current Step:')
-        ? { text: '<assessment>{"score":0.9}</assessment>\nGood — and why?' }
-        : { text: JSON.stringify(PLAN) })),
-    },
-    skills: new Map(),
+  const adapter = {
+    generate: vi.fn(async (system) => (system.includes('## Current Step:')
+      ? { text: '<assessment>{"score":0.9}</assessment>\nGood — and why?' }
+      : { text: JSON.stringify(PLAN) })),
   };
+  ctx = { state: asyncStore(root), getAdapter: async () => adapter, skills: new Map() };
 });
 
 describe('lesson route on an async, db-less store', () => {

@@ -229,6 +229,8 @@ function showLessonStart(data) {
   $('#lesson-conversation').innerHTML = '';
   $('#lesson-complete').classList.add('hidden');
 
+  // #159: a reload resumes the lesson in progress, at its last tutor message.
+  if (data.resumed) appendLessonMsg('dim', 'Picking up where you left off.');
   appendLessonMsg('tutor', data.reply);
   showLessonInput();
 }
@@ -261,6 +263,7 @@ async function sendLessonAnswer() {
     if (data.done) {
       lessonActive = false;
       $('#lesson-input-area').classList.add('hidden');
+      if (data.warning) appendLessonMsg('tutor', data.warning); // the lesson was not recorded (#159)
       showCelebration();
     } else {
       const progress = `Step ${data.step + 1}/${data.totalSteps}`;
