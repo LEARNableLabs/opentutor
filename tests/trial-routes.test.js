@@ -67,13 +67,51 @@ function sseResponse() {
   };
 }
 
+// A start with a lesson in progress resumes it (#159), so each new lesson here clears the last one.
+async function startNewLessons(n) {
+  for (let i = 0; i < n; i++) {
+    store.forStudent(ACCT).deleteKV('web_lesson:demo');
+    expect((await call(lesson, { topicSlug: 'demo' })).statusCode).toBe(200);
+  }
+}
+
 it('gives a self-signup account 3 lessons on the deployment key, then asks for its own', async () => {
-  for (let i = 0; i < 3; i++) expect((await call(lesson, { topicSlug: 'demo' })).statusCode).toBe(200);
+  await startNewLessons(3);
+  // The lesson in progress still finishes on the trial's budget of answers.
+  expect((await call(lesson, { topicSlug: 'demo', answer: 'alpha comes first' })).statusCode).toBe(200);
+  store.forStudent(ACCT).deleteKV('web_lesson:demo');
   const fourth = await call(lesson, { topicSlug: 'demo' });
   expect(fourth.statusCode).toBe(402);
   expect(fourth.body).toMatchObject({ connect: true, reason: 'trial_used' });
-  expect((await call(lesson, { topicSlug: 'demo', answer: 'alpha comes first' })).statusCode).toBe(200);
   expect(host.generate).toHaveBeenCalledTimes(4); // the refused start made no model call
+});
+
+// #159: reloading in the middle of the third free lesson answered 402, because the
+// route checked the trial before it knew the student only wanted the lesson they were in.
+it('resumes the lesson in progress after the free lessons are used, without a model call', async () => {
+  await startNewLessons(3);
+  host.generate.mockClear();
+  const resumed = await call(lesson, { topicSlug: 'demo' });
+  expect(resumed.statusCode).toBe(200);
+  expect(resumed.body).toMatchObject({ reply: '**Goal:** Alpha\n\nRecall alpha?', step: 0, totalSteps: 4, done: false, resumed: true });
+
+  const res = sseResponse(); // streamed, it is one `done` event, with headers written once
+  await lesson({ method: 'POST', headers: { accept: 'text/event-stream' }, body: { topicSlug: 'demo' } }, res);
+  expect(res.statusCode).toBe(200);
+  expect(res.events).toEqual([{ event: 'done', data: resumed.body }]);
+  expect(res.ended).toBe(1);
+  expect(host.generate).not.toHaveBeenCalled();
+});
+
+it('streams the trial refusal for a new lesson as one error event, with headers written once', async () => {
+  await startNewLessons(3);
+  store.forStudent(ACCT).deleteKV('web_lesson:demo');
+  const res = sseResponse();
+  await lesson({ method: 'POST', headers: { accept: 'text/event-stream' }, body: { topicSlug: 'demo' } }, res);
+  expect(res.statusCode).toBe(200);
+  expect(res.events).toEqual([{ event: 'error', data: expect.objectContaining({ connect: true, reason: 'trial_used' }) }]);
+  expect(res.ended).toBe(1);
+  expect(host.generate).toHaveBeenCalledTimes(3);
 });
 
 it('runs a connected account on its own key, never on the deployment key', async () => {
@@ -126,13 +164,20 @@ it('passes onboarding only real, recent, bounded turns from the browser', async 
   expect(sent.at(-1)).toEqual({ role: 'user', content: 'hello' });
 });
 
-it('refuses an over-long message or answer rather than grading a cut-off one', async () => {
-  for (const [handler, body] of [[onboard, { message: 'x'.repeat(4001) }], [lesson, { topicSlug: 'demo', answer: 'x'.repeat(4001) }]]) {
+// Over-long: refused rather than graded on a cut-off answer. Blank (#159): refused rather than billed.
+it('refuses a blank or over-long message or answer, without a model call', async () => {
+  await call(lesson, { topicSlug: 'demo' }); // a lesson in progress, so an answer would reach the model
+  host.generate.mockClear();
+  for (const [handler, body] of [
+    [onboard, { message: 'x'.repeat(4001) }], [lesson, { topicSlug: 'demo', answer: 'x'.repeat(4001) }],
+    [onboard, { message: '' }], [lesson, { topicSlug: 'demo', answer: '  ' }],
+  ]) {
     const res = await call(handler, body);
     expect(res.statusCode).toBe(400);
-    expect(res.body.error).toMatch(/4,000 characters/);
+    expect(res.body.error).toMatch(/1 to 4,000 characters/);
   }
   expect(host.generate).not.toHaveBeenCalled();
+  expect(store.forStudent(ACCT).listKV('openrouter-trial:turn:')).toEqual([]);
 });
 
 it('never shows the browser raw error text from the model provider', async () => {

@@ -303,15 +303,13 @@ async function handleStudentAPI(req, res, url, state) {
       const payload = JSON.parse(await readBody(req, res));
       if (payload.answer !== null && payload.answer !== undefined) {
         const text = turnText(payload.answer);
-        if (text === null) return fail(res, 400, 'An answer must be text of at most 4,000 characters.');
+        if (text === null) return fail(res, 400, 'An answer must be text of 1 to 4,000 characters.');
         payload.answer = text;
       }
       const wantsStream = (req.headers.accept || '').includes('text/event-stream');
-      const ctx = {
-        state,
-        adapter: await adapterFor({ state, use: payload.answer != null ? 'lesson-continue' : 'lesson-start', host: () => chatAdapter }),
-        skills,
-      };
+      // Resolved only when the turn needs the model: resuming a lesson never meets the trial check (#159).
+      const use = payload.answer != null ? 'lesson-continue' : 'lesson-start';
+      const ctx = { state, skills, getAdapter: () => adapterFor({ state, use, host: () => chatAdapter }) };
 
       if (!wantsStream) {
         const { status, body } = await lessonTurn(ctx, payload);

@@ -1,7 +1,8 @@
 /**
  * Socratic lesson endpoint — stateful multi-turn conversation.
  *
- * POST { topicSlug }          → starts lesson, returns first question
+ * POST { topicSlug }          → starts lesson, returns first question; with one in
+ *                                progress, returns where it stands (`resumed: true`)
  * POST { topicSlug, answer }  → continues lesson, returns next step
  *
  * Active lesson state stored in KV (SQLite or Supabase).
@@ -33,12 +34,13 @@ export default async function handler(req, res) {
     const body = req.body || {};
     if (body.answer !== null && body.answer !== undefined) {
       const text = turnText(body.answer);
-      if (text === null) return res.status(400).json({ error: 'An answer must be text of at most 4,000 characters.' });
+      if (text === null) return res.status(400).json({ error: 'An answer must be text of 1 to 4,000 characters.' });
       body.answer = text;
     }
-    // Resolved before any header is written, so a refusal can still be a plain 402.
-    const adapter = await adapterFor({ state, use: body.answer != null ? 'lesson-continue' : 'lesson-start', host: getAdapter });
-    const ctx = { state, adapter, skills: getSkills() };
+    // Resolved only when the turn needs the model, so resuming a lesson never meets the
+    // trial check (#159). A refusal is a 402 here, and an error event once streaming.
+    const use = body.answer != null ? 'lesson-continue' : 'lesson-start';
+    const ctx = { state, skills: getSkills(), getAdapter: () => adapterFor({ state, use, host: getAdapter }) };
 
     if (!String(req.headers?.accept || '').includes('text/event-stream')) {
       const { status, body: out } = await lessonTurn(ctx, body);
@@ -71,8 +73,9 @@ export default async function handler(req, res) {
 /**
  * One turn of the web lesson. Shared by this route and the local server
  * (scripts/web/server.js) so the two cannot drift apart again.
+ * `getAdapter` is called only for a model call, the way onboardTurn does it.
  */
-export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer }, { onToken } = {}) {
+export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, answer }, { onToken } = {}) {
   // The grading block streams first, so it is filtered before the student sees anything.
   const stream = onToken ? { onToken: assessmentFilter(onToken) } : {};
   if (typeof topicSlug !== 'string' || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(topicSlug)) {
@@ -80,16 +83,18 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
   }
 
   const kvKey = `web_lesson:${topicSlug}`;
+  const activeRaw = await state.readKV(kvKey);
+  const active = typeof activeRaw === 'string' ? JSON.parse(activeRaw) : activeRaw;
+  // A lesson saved before #148 has no step list of its own.
+  const steps = active?.steps || STEPS;
 
   // ── Continue active lesson ────────────────────────────────
   if (answer !== undefined && answer !== null) {
-    const activeRaw = await state.readKV(kvKey);
-    if (!activeRaw) {
+    if (!active) {
       return { status: 400, body: { error: 'No active lesson. Start one without an answer field.' } };
     }
 
-    const active = typeof activeRaw === 'string' ? JSON.parse(activeRaw) : activeRaw;
-    const stepName = STEPS[active.step];
+    const stepName = steps[active.step];
     if (!stepName) {
       await state.deleteKV(kvKey);
       return { status: 200, body: { done: true, message: 'Lesson already complete.' } };
@@ -98,7 +103,8 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
     active.history.push({ role: 'user', content: answer });
 
     const user = await safely(() => state.readUser(), '');
-    const responsePrompt = buildSocraticResponsePrompt(active.plan, answer, stepName, user);
+    const responsePrompt = buildSocraticResponsePrompt(active.plan, answer, stepName, user, { final: active.step === steps.length - 1 });
+    const adapter = await getAdapter();
     const response = await adapter.generate(
       responsePrompt.system + '\n\nReturn only polished text.',
       active.history,
@@ -108,9 +114,10 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
     const { assessment, visible: reply } = parseAssessment(response.text);
     if (assessment) (active.assessments ||= []).push({ step: stepName, ...assessment });
     active.history.push({ role: 'assistant', content: reply });
+    active.reply = reply;
     active.step++;
 
-    const done = active.step >= STEPS.length;
+    const done = active.step >= steps.length;
     let saved;
 
     if (done) {
@@ -133,7 +140,7 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
       body: {
         reply,
         step: active.step,
-        totalSteps: STEPS.length,
+        totalSteps: steps.length,
         done,
         lesson: active.lesson,
         // Telling a student "done" for work that was not recorded is worse than
@@ -141,6 +148,13 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
         ...(saved === FAILED ? { warning: 'This lesson could not be saved — your progress may not be recorded.' } : {}),
       },
     };
+  }
+
+  // ── Resume the lesson in progress (#159) ──────────────────
+  // A reload used to plan a new lesson over it: a model call, and a trial student's
+  // free lesson. A lesson saved before #159 has no reply to show, so it is planned anew.
+  if (active?.reply != null) {
+    return { status: 200, body: { reply: active.reply, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, resumed: true } };
   }
 
   // ── Start new lesson ──────────────────────────────────────
@@ -181,6 +195,7 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
   const planPrompt = buildLessonPlanPrompt(skills, lesson, {
     teacherConfig, teachingNotes, conceptMap, user, studentModel: modelText, directives,
   });
+  const adapter = await getAdapter();
   const planResponse = await adapter.generate(
     planPrompt.system + '\n\nReturn exactly one valid JSON value.',
     [{ role: 'user', content: `Plan a Socratic lesson for Day ${lessonDay}: "${lesson.title}"` }],
@@ -205,23 +220,26 @@ export async function lessonTurn({ state, adapter, skills }, { topicSlug, answer
   const retest = directives.find((d) => d.type === 'REVISIT') || directives.find((d) => d.type === 'BLOCK');
   const hasRetrieval = typeof plan.retrieval === 'string' && plan.retrieval.trim();
   if (retest && !hasRetrieval) plan.retrieval = `Before we start — what is ${retest.target} and why does it matter?`;
+  // #148: no retrieval question, no retrieval step. The lesson opens on the diagnostic,
+  // and the first answer is graded as the diagnostic, not as a retrieval check.
+  const lessonSteps = hasRetrieval || retest ? STEPS : STEPS.filter((s) => s !== 'retrieval');
+  const goalPrefix = plan.goal ? `**Goal:** ${plan.goal}\n\n` : '';
 
-  const active = {
+  const started = {
     topicSlug,
     lessonDay,
     lesson: { day: lessonDay, title: lesson.title, module: lesson.module, concepts: lesson.concepts },
     plan,
+    steps: lessonSteps,
     step: 0,
+    reply: goalPrefix + plan[lessonSteps[0]],
     history: [],
     assessments: [],
   };
 
-  await state.writeKV(kvKey, JSON.stringify(active));
+  await state.writeKV(kvKey, JSON.stringify(started));
 
-  const firstMessage = plan.retrieval || plan.diagnostic;
-  const goalPrefix = plan.goal ? `**Goal:** ${plan.goal}\n\n` : '';
-
-  return { status: 200, body: { reply: goalPrefix + firstMessage, step: 0, totalSteps: STEPS.length, done: false, lesson: active.lesson } };
+  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson } };
 }
 
 // ── Helpers ────────────────────────────────────────────────

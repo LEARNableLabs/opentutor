@@ -52,7 +52,7 @@ const adapter = {
   }),
 };
 
-const ctx = (state) => ({ state, adapter, skills: new Map() });
+const ctx = (state) => ({ state, getAdapter: async () => adapter, skills: new Map() });
 
 let warned;
 beforeEach(() => { warned = vi.spyOn(console, 'error').mockImplementation(() => {}); });

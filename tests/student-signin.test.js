@@ -94,7 +94,7 @@ describe('two students on the same lesson', () => {
     const bob = store.forStudent((await auth(b)).userId);
     alice.writeUser('Alice profile'); bob.writeUser('Bob profile');
     const adapter = { generate: async () => ({ text: JSON.stringify({ diagnostic: 'How many?', goal: 'Count' }) }) };
-    const ctx = (state) => ({ state, adapter, skills: new Map() });
+    const ctx = (state) => ({ state, getAdapter: async () => adapter, skills: new Map() });
     await lessonTurn(ctx(alice), { topicSlug: 'math' });
     await lessonTurn(ctx(bob), { topicSlug: 'math' });
     await lessonTurn(ctx(alice), { topicSlug: 'math', answer: 'Alice answer' });
