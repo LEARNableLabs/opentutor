@@ -418,6 +418,37 @@ input:focus {
   margin: 0 auto 26px;
   filter: drop-shadow(0 10px 24px rgb(0 0 0 / 25%));
 }
+/* Privacy and other plain-text pages */
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 50px 24px 90px;
+}
+.legal h1 {
+  font-size: clamp(32px, 5vw, 44px);
+  margin-bottom: 18px;
+}
+.legal h2 {
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  margin: 38px 0 10px;
+}
+.legal p,
+.legal li {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 16px;
+}
+.legal ul {
+  padding-left: 20px;
+}
+.legal li {
+  margin-bottom: 10px;
+}
+.legal a {
+  color: var(--green);
+  text-decoration: underline;
+}
 .closing h2 {
   font-size: 38px;
   line-height: 1.25;
