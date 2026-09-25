@@ -88,6 +88,20 @@ describe.each([
     expect(profile).not.toContain('Nice to meet you'); // the tutor's turns are not the student's words
   });
 
+  it('keeps an account\'s first answers even though the model only sees the recent turns', async () => {
+    state = wrap(store.forStudent('acct-11111111-1111-4111-8111-111111111111'));
+    adapter.generate.mockResolvedValue(confirm);
+    const long = [
+      { role: 'user', content: 'My name is Ada.' },
+      ...Array.from({ length: 19 }, (_, i) => ({ role: i % 2 ? 'user' : 'assistant', content: `turn ${i}` })),
+    ];
+    await call({ message: 'Game theory, please.', history: long });
+    // The model still gets the trimmed history…
+    expect(adapter.generate.mock.calls.at(-1)[1]).not.toContainEqual({ role: 'user', content: 'My name is Ada.' });
+    // …but the profile keeps what the student said first.
+    expect(await state.readUser()).toContain('- My name is Ada.\n');
+  });
+
   it('writes nothing while the conversation is still open', async () => {
     adapter.generate.mockResolvedValue({ text: 'What would you like to learn?' });
     const before = await state.readUser();

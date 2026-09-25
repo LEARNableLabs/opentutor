@@ -41,7 +41,9 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   const response = await adapter.generate(system, messages, { model });
 
   const confirmedTopic = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/)?.[1].trim() || null;
-  if (confirmedTopic) await keepOwnWords(state, messages);
+  // The model gets the trimmed history; the profile gets what the student said from the
+  // start, so a name given in the first answer survives a long conversation.
+  if (confirmedTopic) await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
   return {
     status: 200,
     body: { reply: response.text.replace(/<TOPIC>.+?<\/TOPIC>/g, '').trim(), confirmedTopic, model: response.model },
@@ -56,6 +58,7 @@ async function keepOwnWords(state, messages) {
     if (hasContent(await state.readUser())) return; // never overwrite a profile with content
     const said = messages
       .filter((m) => m?.role === 'user' && typeof m.content === 'string')
+      .slice(0, 20) // earliest first; the 3,000-character cap below keeps the first few anyway
       .map((m) => `- ${m.content.replace(/\s+/g, ' ').trim().slice(0, 500)}`);
     const profile = ['# Student Profile', '', '## In their own words (from onboarding)', ...said].join('\n');
     // A cut can split an emoji; Postgres JSONB refuses the lone half.
