@@ -572,9 +572,8 @@ async function checkOnboarding() {
     const res = await fetch('/api/user');
     if (!res.ok) return; // unknown is not "no profile": never onboard a returning student by mistake
     const data = await res.json();
-    if (!data.hasProfile) {
-      showOnboarding();
-    }
+    // A student with topics was onboarded, whatever the profile says (#155).
+    if (!data.hasProfile && !data.onboarded) showOnboarding();
   } catch { /* server might not support it yet */ }
 }
 

@@ -163,6 +163,17 @@ it('never mistakes an error response for data: no onboarding for a returning stu
   expect(progress.calls.some((c) => c.url === '/api/user')).toBe(false);
 });
 
+// #155: a student with topics has been onboarded, whatever their profile says.
+// The overlay used to come back on every visit and spend their free messages.
+it.each([
+  [{ hasProfile: false, onboarded: true }, 'stays hidden for a student who already has topics', true],
+  [{ hasProfile: false, onboarded: false }, 'opens for a new student', false],
+])('onboarding with %j %s', async (user, _case, hidden) => {
+  const { $ } = frontend((url) => (url === '/api/user' ? [200, user] : null));
+  await settle();
+  expect($('#onboarding-overlay').classList.contains('hidden')).toBe(hidden);
+});
+
 it('keeps an over-long answer or message in its box and says why, instead of sending it', async () => {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 4 };
   const { $, calls } = frontend((url) => (url === '/api/lesson' ? [200, start] : null));
