@@ -17,7 +17,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Read tutor/progress.json. If active_topics is empty, send a short friendly message (2-3 sentences) asking what topic the student wants to learn — suggest 2-3 interesting options. Do NOT read curriculum files or do extended research when there are no active topics. If active_topics has entries, read the matching curriculum file in tutor/curricula/ and deliver a concise daily lesson with a small exercise. Keep total response under 200 words.",
+        "message": "Read tutor/progress.json. If schedule.paused is true, the student paused their lessons: do nothing and send nothing. If active_topics is empty, send a short friendly message (2-3 sentences) asking what topic the student wants to learn — suggest 2-3 interesting options. Do NOT read curriculum files or do extended research when there are no active topics. If active_topics has entries, take the first topic, read its curriculum at skills/tutor/domains/<topic-slug>/curriculum.json and tutor/completions.json to find the next lesson not yet completed, and deliver a concise daily lesson with a small exercise, following skills/tutor/SKILL.md. Keep total response under 200 words.",
         "thinking": "low",
         "model": "anthropic/claude-opus-4-6"
       },

@@ -4,23 +4,26 @@ A personalized daily tutor delivered via Telegram and/or Slack, powered by OpenC
 
 ## What's in the box
 
-OpenTutor is a full agent setup, not just a skill plugin. The `skills/tutor/` directory contains everything needed:
+OpenTutor is a full agent setup, not just a skill plugin. From the root of this repo:
 
 ```
-skills/tutor/
+skills/tutor/                     # the skill
   SKILL.md                        # teaching methodology and skill instructions
-  workspace/                      # workspace templates
-    AGENTS.md                     # agent config (session flow, memory, guardrails)
-    SOUL.md                       # tutor personality
-    IDENTITY.md                   # name, role, vibe
-    USER.md                       # student profile (blank template)
-    tutor/
-      progress.json               # initial learning state
-      curricula/.gitkeep          # per-topic lesson plans (created as you learn)
-    memory/.gitkeep               # daily session notes (created automatically)
-  cron/
-    jobs.template.json            # scheduled lesson delivery template
+  references/                     # how to teach: method, delivery, formats, onboarding
+  templates/                      # how a new topic's files are generated
+  domains/<topic-slug>/           # 293 ready-made topics; new ones are built here too
+    curriculum.json               # the lesson sequence
+workspace/                        # workspace files
+  AGENTS.md                       # agent config (session flow, memory, guardrails)
+  IDENTITY.md                     # name, role, vibe
+  templates/USER.md               # student profile (blank template)
+  templates/progress.json         # initial learning state
+openclaw/
+  SOUL.md                         # tutor personality for OpenClaw
+  cron/jobs.template.json         # scheduled lesson delivery template
 ```
+
+At runtime the agent keeps its state in the workspace: `tutor/progress.json` (active topics, schedule, history), `tutor/completions.json` (finished lessons) and `memory/` (daily session notes).
 
 ## Prerequisites
 
@@ -33,10 +36,10 @@ skills/tutor/
 
 ## Step 1 — Install skill + workspace
 
-A single command copies everything into place — the skill, workspace files, and empty directories for curricula and memory:
+A single command copies everything into place — the skill, workspace files, and an empty directory for memory:
 
 ```bash
-mkdir -p ~/.openclaw/skills/tutor ~/.openclaw/workspaces/tutor/tutor/curricula ~/.openclaw/workspaces/tutor/memory \
+mkdir -p ~/.openclaw/skills/tutor ~/.openclaw/workspaces/tutor/tutor ~/.openclaw/workspaces/tutor/memory \
   && cp -r skills/tutor/ ~/.openclaw/skills/tutor/ \
   && cp workspace/AGENTS.md workspace/IDENTITY.md workspace/templates/USER.md ~/.openclaw/workspaces/tutor/ \
   && cp openclaw/SOUL.md ~/.openclaw/workspaces/tutor/SOUL.md \
@@ -207,7 +210,8 @@ The gateway watches `jobs.json` for changes — no restart needed after editing.
 | `~/.openclaw/workspaces/tutor/IDENTITY.md`                  | Name, role, vibe                                 |
 | `~/.openclaw/workspaces/tutor/USER.md`                      | Student profile (updated by the tutor over time) |
 | `~/.openclaw/workspaces/tutor/tutor/progress.json`          | Active topics, schedule, lesson history          |
-| `~/.openclaw/workspaces/tutor/tutor/curricula/<topic>.json` | Per-topic lesson plan                            |
+| `~/.openclaw/skills/tutor/domains/<topic>/curriculum.json`  | Per-topic lesson plan (ready-made or built)      |
+| `~/.openclaw/workspaces/tutor/tutor/completions.json`       | Which lessons are finished                       |
 | `~/.openclaw/workspaces/tutor/memory/YYYY-MM-DD.md`         | Daily session notes                              |
 | `~/.openclaw/workspaces/tutor/MEMORY.md`                    | Curated long-term memory (created over time)     |
 | `~/.openclaw/agents/tutor/sessions/`                        | Conversation history per channel session         |
