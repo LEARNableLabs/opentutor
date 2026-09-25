@@ -63,8 +63,9 @@ export default async function handler(req, res) {
     if (/already exists/i.test(message)) return res.status(409).json({ error: message });
     if (/not found/i.test(message)) return res.status(404).json({ error: message });
 
+    // Database error text stays in the log, not the browser (#144).
     console.error('[admin/students]', err);
-    return res.status(500).json({ error: message });
+    return res.status(500).json({ error: 'Provisioning failed. See the server log.' });
   }
 }
 
