@@ -236,6 +236,13 @@ describe('the daily budget of trial calls', () => {
     }
   });
 
+  it('keeps the default when the limit is a whole number too large to hold, rather than lifting the cap', async () => {
+    vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '9'.repeat(400)); // Number() of this is Infinity
+    const day = new Date().toISOString().slice(0, 10);
+    for (let i = 1; i <= TRIAL_CALLS_PER_DAY; i++) store.insertKV(`openrouter-trial-day:${day}:${i}`, 'earlier');
+    expect(await call(account())).toBe('daily_limit');
+  });
+
   it('leaves students with their own key, the owner and admin-created students alone', async () => {
     vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '0');
     const connected = account();
