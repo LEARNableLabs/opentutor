@@ -1,5 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { lessonTurn } from '../../api/lesson.js';
+import handler, { lessonTurn } from '../../api/lesson.js';
+
+let routeState;
+vi.mock('../../api/_lib/init.js', () => ({ getState: async () => routeState, getAdapter: () => adapter, getSkills: () => new Map() }));
 
 // #117 — the store does the right thing: a write to a read-only disk throws.
 // The loss happens one layer up, where api/lesson.js wraps the whole
@@ -156,5 +159,23 @@ describe('a topic with no curriculum', () => {
 
     expect(body.done).toBe(true);
     expect(body.message).toMatch(/completed/i);
+  });
+});
+
+describe('a database error when a lesson starts', () => {
+  // #170 — safely() turned a failed read into "no lesson", so the student was told
+  // to add the topic again (404), or that every lesson was done.
+  beforeEach(() => vi.stubEnv('OPENTUTOR_PASSWORD', 'test-password'));
+  afterEach(() => vi.unstubAllEnvs());
+
+  it.each([
+    ['getNextLesson', {}],
+    ['readCurriculum', { async getNextLesson() { return null; } }],
+  ])('%s failing gets the route\'s generic 500, not a missing curriculum', async (method, overrides) => {
+    routeState = { ...readOnlyStore(), ...overrides, async [method]() { throw new Error('relation "lessons_completed" does not exist'); } };
+    const res = { setHeader() {}, status(code) { this.statusCode = code; return this; }, json(body) { this.body = body; return this; } };
+
+    await handler({ method: 'POST', headers: { authorization: 'Bearer test-password' }, body: { topicSlug: 'game-theory' } }, res);
+    expect(res).toMatchObject({ statusCode: 500, body: { error: 'The tutor is unavailable right now. Please try again.' } });
   });
 });
