@@ -126,6 +126,18 @@ describe('web lesson turn', () => {
     expect(adapter.generate).not.toHaveBeenCalled();
   });
 
+  // #177: the web renders markdown and shows HTML as text, so every reply is asked for markdown.
+  it('asks every step for markdown emphasis, never Telegram HTML', async () => {
+    await lessonTurn(ctx, { topicSlug: 'demo' });
+    for (const answer of ['a1', 'a2', 'a3', 'a4']) await lessonTurn(ctx, { topicSlug: 'demo', answer });
+    const prompts = adapter.generate.mock.calls.map(([system]) => system).filter((s) => s.includes('## Current Step:'));
+    expect(prompts).toHaveLength(4);
+    for (const system of prompts) {
+      expect(system).toContain('Markdown format: use **bold** and *italic* for emphasis.');
+      expect(system).not.toContain('Telegram format');
+    }
+  });
+
   // #159: the web hides the answer box after the last reply, so it must not ask anything.
   it('closes on the last step only, without a question', async () => {
     await lessonTurn(ctx, { topicSlug: 'demo' });
