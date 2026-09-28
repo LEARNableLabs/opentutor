@@ -159,12 +159,15 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   }
 
   // ── Start new lesson ──────────────────────────────────────
-  const lesson = await safely(() => state.getNextLesson(topicSlug), null, 'getNextLesson');
+  // Not wrapped in safely(): a failed read here is not "no lesson", and answering
+  // "no curriculum yet" or "all lessons completed" for it would be false (#170).
+  // The error reaches the route, which answers its generic 500.
+  const lesson = await state.getNextLesson(topicSlug);
   if (!lesson) {
     // getNextLesson returns null for two very different situations, and saying
     // "all lessons completed" for both congratulated students on topics whose
     // curriculum was never built (#118). Ask the curriculum which one it is.
-    const curriculum = await safely(() => state.readCurriculum(topicSlug), null, 'readCurriculum');
+    const curriculum = await state.readCurriculum(topicSlug);
     if (!curriculum?.lessons?.length) {
       return {
         status: 404,
