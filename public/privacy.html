@@ -63,9 +63,10 @@
       <p>
         If you ask for a topic that isn’t in the catalogue, OpenTutor builds a course for it. The
         topic’s name is searched on public sources (arXiv, Semantic Scholar, OpenAlex, Wikipedia,
-        MIT OpenCourseWare, DuckDuckGo, YouTube through Invidious, and GitHub). Then the name, the
-        level you chose and what those searches found go to an AI model, the same way, to write
-        the course.
+        MIT OpenCourseWare, DuckDuckGo, YouTube through Invidious, and GitHub). The name and the
+        level you chose go to an AI model, the same way, to write the course. Available source
+        material, such as a Wikipedia summary, may also be included; a failed or timed-out search
+        may contribute no results.
       </p>
 
       <h2>The example on the home page</h2>
@@ -99,11 +100,18 @@
         Sign in, open the learning app, choose <strong>Delete account</strong> next to Log out, and
         type DELETE to confirm. That deletes your sign-in (your email address and password), your
         profile, progress and learning notes, any topics built for you, and our copy of your
-        OpenRouter key. It can’t be undone. All we keep is a marker that the account was closed,
+        OpenRouter key. It can’t be undone. In the account database we keep a marker that the account was closed,
         with no name or email, so it can’t be reopened; you can sign up again as a new account. To
         cancel the OpenRouter key itself, delete it in your OpenRouter settings. If the team set up
         your account for you, ask them to remove it. If any step of a deletion fails, the team
         finishes it by hand.
+      </p>
+      <p>
+        If you requested a custom topic, a pending build request at Vercel can remain after account
+        deletion, for up to seven days after it was queued. It contains your account identifier,
+        a topic identifier derived from its name, and build identifiers. Deleting your account
+        stops the pending request from starting a new build, but does not immediately remove it
+        from that queue.
       </p>
 
       <h2>Questions</h2>
