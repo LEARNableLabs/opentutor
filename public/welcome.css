@@ -431,6 +431,9 @@ input:focus {
   line-height: 1.6;
   font-size: 18px;
 }
+.legal p.quiet {
+  font-size: 14px;
+}
 .legal ul {
   padding-left: 20px;
 }
