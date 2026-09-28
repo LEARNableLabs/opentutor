@@ -1,17 +1,10 @@
 /* Self-hosted EB Garamond (SIL OFL, public/fonts/OFL.txt): the LEARNable Labs face, with no
-   request to a font service. One variable file per style covers weights 400-700. */
+   request to a font service. One variable file covers weights 400-700; the pages use no italics. */
 @font-face {
   font-family: 'EB Garamond';
   src: url('/fonts/eb-garamond-latin.woff2') format('woff2');
   font-weight: 400 700;
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'EB Garamond';
-  src: url('/fonts/eb-garamond-latin-italic.woff2') format('woff2');
-  font-weight: 400 700;
-  font-style: italic;
   font-display: swap;
 }
 :root {
@@ -71,6 +64,10 @@ h3 {
   line-height: 1.12;
   margin: 0;
 }
+em,
+i {
+  font-style: normal; /* upright throughout; emphasis in a heading is green */
+}
 h1 em,
 h2 em {
   color: var(--green);
@@ -96,14 +93,23 @@ h2 em {
   margin: auto;
   padding: 26px 40px;
   display: flex;
+  flex-wrap: wrap; /* on the narrowest screens the links drop to a second row, never off-screen */
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 10px 30px;
 }
 .brand {
   font-size: 30px;
   letter-spacing: -0.3px;
+  white-space: nowrap;
   flex-shrink: 0;
+}
+.brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  vertical-align: middle;
+  margin: -5px 12px 0 0;
 }
 .brand span {
   font-weight: 600;
@@ -158,8 +164,12 @@ footer a:hover {
 .button.secondary:hover {
   background: #e6efe9;
 }
-.text-link {
+.text-link,
+.quiet a {
   color: var(--green);
+  text-decoration: underline; /* a link is not told apart by colour alone (green on ink is 2.1:1) */
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 /* ── Hero: the logo and the promise on the left, a lesson to try on the right ── */
@@ -171,12 +181,6 @@ footer a:hover {
   grid-template-columns: 1.1fr 1fr;
   gap: 64px;
   align-items: center;
-}
-.hero-logo {
-  display: block;
-  width: 180px;
-  height: 180px;
-  margin-bottom: 26px;
 }
 h1 {
   font-size: clamp(46px, 5.6vw, 78px);
@@ -290,7 +294,6 @@ h1 {
   margin-top: 28px;
   padding: 16px 0;
   font-size: 16px;
-  font-style: italic;
   color: var(--muted);
 }
 
@@ -344,7 +347,6 @@ h1 {
   margin: 44px 0 0;
   color: var(--muted);
   font-size: 16px;
-  font-style: italic;
 }
 
 /* ── The topic library ──────────────────────────────── */
@@ -495,7 +497,6 @@ footer .brand {
   padding-top: 22px;
   margin-top: 44px;
   font-size: 17px;
-  font-style: italic;
   color: var(--muted);
 }
 .auth-card {
@@ -592,6 +593,12 @@ footer .brand {
   .brand {
     font-size: 25px;
   }
+  .brand img {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
   .site-header nav {
     gap: 16px;
     font-size: 16px;
@@ -602,11 +609,6 @@ footer .brand {
   }
   .hero {
     padding: 18px 22px 60px;
-  }
-  .hero-logo {
-    width: 132px;
-    height: 132px;
-    margin-bottom: 20px;
   }
   .hero-description {
     font-size: 19px;
@@ -690,8 +692,39 @@ footer .brand {
   .site-header nav .button {
     padding: 8px 12px;
   }
+  .site-header nav .button span {
+    display: none; /* the decorative arrow */
+  }
   .site-header .brand {
     font-size: 23px;
+  }
+}
+/* 320px (small phones, or 400% zoom): the header still fits on one line. */
+@media (max-width: 380px) {
+  .site-header {
+    padding: 18px 16px;
+    gap: 8px;
+  }
+  .site-header .brand {
+    font-size: 20px;
+  }
+  .brand img {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    margin-right: 8px;
+  }
+  .catalog-grid {
+    grid-template-columns: 1fr; /* long titles don't fit two columns at 320px */
+  }
+  .site-header nav {
+    gap: 8px;
+    font-size: 15px;
+  }
+  .site-header nav .button {
+    padding: 7px 9px;
+    font-size: 13px;
+    gap: 6px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
