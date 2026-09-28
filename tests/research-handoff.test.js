@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
+import { execFileSync } from 'node:child_process';
 import { researchTopic } from '../lib/core/research.js';
 import { generateQuickStart } from '../lib/core/quick-start.js';
 
@@ -36,6 +37,24 @@ function sourceResponse(input) {
 afterEach(() => vi.unstubAllGlobals());
 
 describe('real research handoff to quick-start generation (#184)', () => {
+  it('redacts user-supplied topics in both completion and rate-limit logs', () => {
+    // Capture the real logger in a fresh process rather than mocking away its output.
+    const output = execFileSync(process.execPath, ['--input-type=module', '-e', `
+      globalThis.fetch = async (url) => {
+        if (new URL(url).hostname === 'api.semanticscholar.org')
+          return new Response('', { status: 429 });
+        throw new Error('Source unavailable');
+      };
+      const { researchTopic } = await import(${JSON.stringify(new URL('../lib/core/research.js', import.meta.url).href)});
+      await researchTopic('sk-or-v1-FAKE-REDACTION-PROBE');
+    `], { encoding: 'utf8' });
+
+    expect(output).not.toContain('sk-or-v1-FAKE-REDACTION-PROBE');
+    const logs = output.trim().split('\n').map(line => JSON.parse(line));
+    expect(logs.map(log => log.level)).toEqual(expect.arrayContaining([30, 40]));
+    expect(logs.every(log => log.topic === '[Redacted]')).toBe(true);
+  });
+
   it('passes all eight source results to the model and returns them for persistence', async () => {
     vi.stubGlobal('fetch', vi.fn(sourceResponse));
     const adapter = { generate: vi.fn(async () => ({ text: JSON.stringify({
