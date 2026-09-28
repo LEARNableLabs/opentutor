@@ -75,7 +75,17 @@ const MIME = {
   '.ico': 'image/x-icon',
 };
 
+// #172: the same headers vercel.json sends. No other site may frame a page, a
+// response is never sniffed into another type, and a referrer carries no path.
+const SECURITY_HEADERS = {
+  'Content-Security-Policy': "frame-ancestors 'none'",
+  'X-Frame-Options': 'DENY',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+};
+
 const server = http.createServer(async (req, res) => {
+  for (const [name, value] of Object.entries(SECURITY_HEADERS)) res.setHeader(name, value);
   const url = new URL(req.url, `http://${HOST}:${PORT}`);
 
   // API routes
