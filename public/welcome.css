@@ -492,18 +492,14 @@ footer .brand {
 .auth-layout aside h1 {
   font-size: 54px;
 }
+.auth-layout aside h1 em {
+  color: var(--green);
+}
 .auth-layout aside > p:not(.eyebrow) {
   font-size: 19px;
   color: var(--muted);
   margin: 24px 0;
   line-height: 1.6;
-}
-.auth-note {
-  border-top: 1px solid var(--line);
-  padding-top: 22px;
-  margin-top: 44px;
-  font-size: 17px;
-  color: var(--muted);
 }
 .auth-card {
   background: var(--card);
