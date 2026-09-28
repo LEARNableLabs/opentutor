@@ -11,6 +11,7 @@ import { accountHandler } from '../../api/account.js';
 import { openrouterHandler } from '../../api/_lib/openrouter.js';
 import { demoHandler } from '../../api/_lib/demo.js';
 import { adapterFor, turnText, KeyRequired } from '../../lib/core/llm-access.js';
+import { RequestError } from '../../lib/core/errors.js';
 import { publicCatalog } from '../../lib/core/catalog.js';
 import fs from 'fs';
 import path from 'path';
@@ -73,9 +74,21 @@ const MIME = {
   '.svg': 'image/svg+xml',
   '.png': 'image/png',
   '.ico': 'image/x-icon',
+  '.webp': 'image/webp',
+  '.woff2': 'font/woff2',
+};
+
+// #172: the same headers vercel.json sends. No other site may frame a page, a
+// response is never sniffed into another type, and a referrer carries no path.
+const SECURITY_HEADERS = {
+  'Content-Security-Policy': "frame-ancestors 'none'",
+  'X-Frame-Options': 'DENY',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
 };
 
 const server = http.createServer(async (req, res) => {
+  for (const [name, value] of Object.entries(SECURITY_HEADERS)) res.setHeader(name, value);
   const url = new URL(req.url, `http://${HOST}:${PORT}`);
 
   // API routes
@@ -155,12 +168,10 @@ async function handleAdmin(req, res, url) {
     return fail(res, 405, 'Method not allowed');
   } catch (err) {
     // A typo in an id should not look like an outage.
-    const message = err.message || 'Provisioning failed';
-    if (/Invalid student id/.test(message)) return fail(res, 400, message);
-    if (/already exists/i.test(message)) return fail(res, 409, message);
-    if (/not found/i.test(message)) return fail(res, 404, message);
+    if (err instanceof RequestError) return fail(res, err.status, err.message);
+    // Anything else stays in the log, however its text reads (#144).
     console.error('[admin]', err);
-    return fail(res, 500, message);
+    return fail(res, 500, 'Provisioning failed. See the server log.');
   }
 }
 
@@ -303,15 +314,13 @@ async function handleStudentAPI(req, res, url, state) {
       const payload = JSON.parse(await readBody(req, res));
       if (payload.answer !== null && payload.answer !== undefined) {
         const text = turnText(payload.answer);
-        if (text === null) return fail(res, 400, 'An answer must be text of at most 4,000 characters.');
+        if (text === null) return fail(res, 400, 'An answer must be text of 1 to 4,000 characters.');
         payload.answer = text;
       }
       const wantsStream = (req.headers.accept || '').includes('text/event-stream');
-      const ctx = {
-        state,
-        adapter: await adapterFor({ state, use: payload.answer != null ? 'lesson-continue' : 'lesson-start', host: () => chatAdapter }),
-        skills,
-      };
+      // Resolved only when the turn needs the model: resuming a lesson never meets the trial check (#159).
+      const use = payload.answer != null ? 'lesson-continue' : 'lesson-start';
+      const ctx = { state, skills, getAdapter: () => adapterFor({ state, use, host: () => chatAdapter }) };
 
       if (!wantsStream) {
         const { status, body } = await lessonTurn(ctx, payload);
@@ -406,7 +415,10 @@ async function handleStudentAPI(req, res, url, state) {
         return res.end(JSON.stringify(result));
       } catch (err) {
         if (err instanceof KeyRequired) return keyRequired(res, err);
-        return fail(res, /topic name|Invalid topic slug|Invalid level/.test(err.message) ? 400 : 503, err.message);
+        // As api/add-topic.js: validation text is the student's to see, anything else is logged (#144).
+        if (err instanceof RequestError) return fail(res, err.status, err.message);
+        console.error('[add-topic]', err.message);
+        return fail(res, 503, 'Could not schedule the curriculum. Please try adding the topic again.');
       }
     }
 

@@ -19,7 +19,7 @@ beforeEach(() => {
   vi.stubEnv('VERCEL','1'); vi.stubEnv('OPENTUTOR_PASSWORD','test-password'); vi.clearAllMocks();
   root=fs.mkdtempSync(path.join(os.tmpdir(),'ot-add-')); state=new TutorStore(root);
 });
-afterEach(()=>{state.close();fs.rmSync(root,{recursive:true,force:true});vi.unstubAllEnvs();});
+afterEach(()=>{state.close();fs.rmSync(root,{recursive:true,force:true});vi.unstubAllEnvs();vi.restoreAllMocks();});
 it('publishes five durable starter lessons and schedules the continuation',async()=>{
   const res=await call({topic:'Knot Theory'});
   expect(res.statusCode).toBe(200);expect(res.body).toMatchObject({slug:'knot-theory',status:'queued',phase:'plan',lessonCount:5});
@@ -43,6 +43,15 @@ it('activates existing topics without a build adapter, preserving progress and a
 });
 it.each([undefined,null,{}, {topic:42},{topic:''},{topic:'   '},{topic:'!!!'},{topic:'Math',level:'nope'}])('rejects invalid input before storage: %j',async(body)=>{
   expect((await call(body)).statusCode).toBe(400);expect(getState).not.toHaveBeenCalled();
+});
+// #144 — a validation error is shown by where it was thrown, never by what its text says.
+it.each([[{topic:''},'A topic name of 1–300 characters is required.'],[{topic:'!!!'},'Invalid topic slug'],[{topic:'Math',level:'nope'},'Invalid level']])('answers a validation error with its own text: %j',async(body,error)=>{
+  expect(await call(body)).toMatchObject({statusCode:400,body:{error}});
+});
+it.each(['Invalid level of service','column "topic name" does not exist','Invalid topic slug index'])('answers any other error with the generic 503, however it reads: %s',async(text)=>{
+  vi.spyOn(console,'error').mockImplementation(()=>{});
+  enqueue.mockRejectedValueOnce(new Error(text));
+  expect(await call({topic:'Knot Theory'})).toMatchObject({statusCode:503,body:{error:'Could not schedule the curriculum. Please try adding the topic again.'}});
 });
 it('rejects unauthenticated and unsupported requests',async()=>{
   expect((await call({topic:'Math'},{headers:{}})).statusCode).toBe(401);

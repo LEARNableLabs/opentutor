@@ -7,6 +7,8 @@ import vm from 'node:vm';
 function frontend(route, search = '') {
   const html = fs.readFileSync(new URL('../public/learn.html', import.meta.url), 'utf8');
   const source = fs.readFileSync(new URL('../public/app.js', import.meta.url), 'utf8');
+  let focused = null;
+  const timers = [];
   const element = (classes = '') => {
     const names = new Set(classes.split(' '));
     const listeners = new Map();
@@ -15,7 +17,7 @@ function frontend(route, search = '') {
       classList: { add: (v) => names.add(v), remove: (v) => names.delete(v), contains: (v) => names.has(v), toggle: (v, force) => (force ? names.add(v) : names.delete(v)) },
       addEventListener: (name, fn) => listeners.set(name, fn),
       click() { return listeners.get('click')?.(); },
-      focus() {}, appendChild(child) { this.children.push(child); }, remove() {}, querySelectorAll() { return []; },
+      focus() { focused = this; }, appendChild(child) { this.children.push(child); }, remove() {}, querySelectorAll() { return []; },
     };
   };
   const nodes = new Map([...html.matchAll(/<[^>]*\bid="([^"]+)"[^>]*>/g)].map(([tag, id]) => [`#${id}`, element(tag.match(/class="([^"]+)"/)?.[1])]));
@@ -34,16 +36,19 @@ function frontend(route, search = '') {
     localStorage: { getItem: () => null, removeItem() {} }, sessionStorage: { removeItem() {} },
     location: { search, pathname: '/learn.html', assign: vi.fn(), replace: vi.fn() },
     history: { replaceState: vi.fn() },
-    Response, Headers, URLSearchParams, console, setTimeout: () => 0, clearTimeout() {},
+    Response, Headers, URLSearchParams, TextDecoder, console, setTimeout: (fn) => (timers.push(fn), 0), clearTimeout() {},
     fetch: async (url, init = {}) => {
       calls.push({ url, init });
-      const [status, body] = route(url, init) || base[url] || [200, {}];
+      const answer = route(url, init) || base[url] || [200, {}];
+      if (answer instanceof Response) return answer; // e.g. a stream
+      const [status, body] = answer;
       return new Response(JSON.stringify(body), { status });
     },
   });
   context.window = context;
   vm.runInContext(source, context);
-  return { $, calls, context };
+  // Timers wait until a test runs them, as a browser runs them after the current task.
+  return { $, calls, context, focused: () => focused, runTimers: () => timers.splice(0).forEach((fn) => fn()) };
 }
 const settle = async () => { for (let i = 0; i < 6; i++) await new Promise(setImmediate); };
 
@@ -64,6 +69,21 @@ it('turns any 402 into the connect banner, in the server\'s words, and shows the
   expect($('#connect-banner').classList.contains('hidden')).toBe(false);
   expect($('#connect-message').textContent).toBe(refusal.error);
   expect($('#chat-messages').children.some((n) => String(n.innerHTML + n.textContent).includes('undefined'))).toBe(false);
+});
+
+// #180: a spent daily trial budget reaches the page as the connect prompt, from either lesson path.
+const DAILY = { error: 'Free lessons are used up for today. Connect your OpenRouter account to keep going, or come back tomorrow.', connect: true, reason: 'daily_limit' };
+it.each([
+  ['a 402', () => new Response(JSON.stringify(DAILY), { status: 402 })],
+  ['one SSE error event', () => new Response(`event: error\ndata: ${JSON.stringify(DAILY)}\n\n`, { headers: { 'Content-Type': 'text/event-stream' } })],
+])('shows the daily trial limit in the connect banner when a lesson gets %s', async (_case, reply) => {
+  const { $ } = frontend((url) => (url === '/api/lesson' ? reply() : null));
+  await settle();
+  $('#active-topic').value = 'demo';
+  await $('#btn-next').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(false);
+  expect($('#connect-message').textContent).toBe(DAILY.error);
 });
 
 it('sends the student to OpenRouter, and finishes the connection when they come back', async () => {
@@ -174,6 +194,38 @@ it.each([
   expect($('#onboarding-overlay').classList.contains('hidden')).toBe(hidden);
 });
 
+// #167: the onboarding dialog is modal, so the page behind it is inert while it is open.
+it('makes the page behind the onboarding dialog inert until the dialog closes', async () => {
+  const { $ } = frontend((url) => (url === '/api/user' ? [200, { hasProfile: false, onboarded: false }] : url === '/api/topics' ? [200, []] : null));
+  await settle();
+  expect($('#onboarding-overlay').classList.contains('hidden')).toBe(false);
+  expect($('#app').inert).toBe(true);
+  await $('#btn-onboard-browse').click();
+  expect($('#onboarding-overlay').classList.contains('hidden')).toBe(true);
+  expect($('#app').inert).toBe(false);
+});
+
+it('returns focus to the topic picker when onboarding closes on a chosen topic', async () => {
+  const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3 };
+  const { $, focused, runTimers } = frontend((url) => ({
+    '/api/user': [200, { hasProfile: false, onboarded: false }],
+    '/api/onboard': [200, { reply: 'Game theory it is.', confirmedTopic: 'game-theory' }],
+    '/api/add-topic': [200, { slug: 'game-theory', status: 'existing', lessonCount: 29 }],
+    '/api/topics': [200, []],
+    '/api/lesson': [200, start],
+  })[url] || null);
+  await settle();
+  $('#onboarding-input').value = 'Game theory, please';
+  await $('#btn-onboard-send').click();
+  await settle();
+  expect(focused()).toBe($('#onboarding-input'));
+  runTimers();
+  await settle();
+  expect($('#onboarding-overlay').classList.contains('hidden')).toBe(true);
+  expect($('#app').inert).toBe(false);
+  expect(focused()).toBe($('#active-topic'));
+});
+
 it('keeps an over-long answer or message in its box and says why, instead of sending it', async () => {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 4 };
   const { $, calls } = frontend((url) => (url === '/api/lesson' ? [200, start] : null));
@@ -194,6 +246,63 @@ it('keeps an over-long answer or message in its box and says why, instead of sen
     expect($(box).children.some((n) => String(n.innerHTML + n.textContent).includes('4,000 characters'))).toBe(true);
 });
 
+// #159: a reload resumes the lesson in progress; the page says so and shows where it was.
+it('shows a resumed lesson\'s last tutor message, with a note that it picked up where it left off', async () => {
+  const resumed = { reply: 'So what would change if the payoffs did?', lesson: { module: 'M', day: 1, title: 'T' }, step: 1, totalSteps: 3, done: false, resumed: true };
+  const { $ } = frontend((url) => (url === '/api/lesson' ? [200, resumed] : null));
+  await settle();
+  $('#active-topic').value = 'demo';
+  await $('#btn-next').click();
+  await settle();
+  const shown = $('#lesson-conversation').children.map((n) => n.innerHTML);
+  expect(shown.filter((h) => h.includes('Picking up where you left off.'))).toHaveLength(1);
+  expect(shown.filter((h) => h.includes(resumed.reply))).toHaveLength(1);
+  expect($('#lesson-input-area').classList.contains('hidden')).toBe(false);
+});
+
+// A lesson on its last step: `last` answers the student's answer.
+async function lastStep(last) {
+  const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3, done: false };
+  const page = frontend((url, init) => {
+    if (url !== '/api/lesson') return null;
+    return JSON.parse(init.body).answer ? [200, { reply: 'Well reasoned.', step: 3, totalSteps: 3, lesson: start.lesson, ...last }] : [200, start];
+  });
+  await settle();
+  page.$('#active-topic').value = 'demo';
+  await page.$('#btn-next').click();
+  await settle();
+  return page;
+}
+const starts = (calls) => calls.filter((c) => c.url === '/api/lesson' && !JSON.parse(c.init.body).answer).length;
+
+it('never sends a blank answer', async () => {
+  const { $, calls } = await lastStep({ done: false });
+  $('#lesson-input').value = '   ';
+  await $('#btn-lesson-answer').click();
+  await settle();
+  expect(calls.filter((c) => c.url === '/api/lesson')).toHaveLength(1); // the start, not the blank answer
+});
+
+// #159: the route said a finished lesson was not saved, and the page never showed it,
+// then celebrated the progress. It says so instead, and Next Lesson still continues.
+it.each([
+  ['celebrates a finished lesson that was saved', {}, true],
+  ['warns, and does not celebrate, when a finished lesson could not be saved', { warning: 'This lesson could not be saved — your progress may not be recorded.' }, false],
+])('%s', async (_case, extra, celebrates) => {
+  const { $, calls } = await lastStep({ done: true, ...extra });
+  $('#lesson-input').value = 'because the payoffs change';
+  await $('#btn-lesson-answer').click();
+  await settle();
+  const shown = $('#lesson-conversation').children.map((n) => n.innerHTML).join('\n');
+  expect(shown.includes('making progress')).toBe(celebrates);
+  if (extra.warning) expect(shown).toContain(extra.warning);
+  expect($('#lesson-input-area').classList.contains('hidden')).toBe(true);
+  expect($('#btn-next').disabled).toBe(false);
+  await $('#btn-next').click();
+  await settle();
+  expect(starts(calls)).toBe(2);
+});
+
 // #150: a reply is model output, and model output can carry text from the research
 // sources. Markdown is rendered; HTML in the reply is shown as text, never parsed.
 it('shows HTML in a tutor reply as text, while still rendering its markdown', async () => {
@@ -207,4 +316,102 @@ it('shows HTML in a tutor reply as text, while still rendering its markdown', as
   expect(html).toContain('<strong>this</strong>');
   expect(html).toContain('&lt;img src=x onerror=&quot;alert(1)&quot;&gt;');
   expect(html).not.toMatch(/<img|<script|<b>/);
+});
+
+// #160: a self-signup account deletes itself, behind a typed confirmation.
+const CONFIRM = 'This permanently deletes your account and all your learning data. Type DELETE to confirm.';
+const deletions = (calls) =>
+  calls.filter((c) => c.url === '/api/account' && JSON.parse(c.init.body || '{}').action === 'delete');
+
+it.each([
+  ['a self-signup account', true, { user: { id: 'acct-1' } }],
+  ['a self-signup account whose session was just refreshed', true, { user: null }, { user: { id: 'acct-1' } }],
+  ['a student the operator created', false, { user: { id: 'carol' } }],
+  ['the owner', false, { user: { id: null, name: 'Your workspace' } }],
+  ['a local install', false, { user: null, local: true }],
+])('%s sees Delete account: %s', async (_who, visible, session, refreshed) => {
+  const { $ } = frontend((url, init) => (url === '/api/account' ? [200, init.method === 'POST' ? refreshed : session] : null));
+  await settle();
+  expect($('#btn-delete-account').classList.contains('hidden')).toBe(!visible);
+});
+
+it.each([[null], [''], ['delete'], ['DELETE ']])('sends nothing when the confirmation is %j', async (answer) => {
+  const { $, calls, context } = frontend(() => null);
+  await settle();
+  context.prompt = vi.fn(() => answer);
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(context.prompt).toHaveBeenCalledWith(CONFIRM);
+  expect(deletions(calls)).toEqual([]);
+  expect(context.location.assign).not.toHaveBeenCalled();
+});
+
+it('deletes the account once the student types DELETE, then leaves for the home page', async () => {
+  const { $, calls, context } = frontend((url, init) => (url === '/api/account' && init.method === 'POST' ? [200, { ok: true }] : null));
+  await settle();
+  context.prompt = vi.fn(() => 'DELETE');
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(deletions(calls).map((c) => [c.init.method, JSON.parse(c.init.body)])).toEqual([['POST', { action: 'delete', confirm: 'DELETE' }]]);
+  expect(context.location.assign).toHaveBeenCalledWith('/?deleted=1');
+});
+
+it.each([
+  ['refuses', () => [500, { error: 'Your account could not be deleted. Please try again.' }], 'Your account could not be deleted. Please try again.'],
+  ['cannot be reached', () => { throw new Error('offline'); }, 'Your account could not be deleted. Please try again.'],
+])('stays and says why when the server %s', async (_how, answer, message) => {
+  const { $, context } = frontend((url, init) => (url === '/api/account' && init.method === 'POST' ? answer() : null));
+  await settle();
+  context.prompt = vi.fn(() => 'DELETE');
+  context.alert = vi.fn();
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(context.alert).toHaveBeenCalledWith(message);
+  expect(context.location.assign).not.toHaveBeenCalled();
+  expect(context.location.replace).not.toHaveBeenCalled();
+});
+
+// The fetch wrapper leaves /api/account alone, so the delete refreshes an expired session itself.
+const accountPosts = (calls) =>
+  calls.filter((c) => c.url === '/api/account' && c.init.method === 'POST').map((c) => JSON.parse(c.init.body).action);
+
+it('refreshes an expired session once and retries the delete without asking again', async () => {
+  let deletes = 0;
+  const { $, calls, context } = frontend((url, init) => {
+    if (url !== '/api/account' || init.method !== 'POST') return null;
+    if (JSON.parse(init.body).action === 'refresh') return [200, { user: { id: 'acct-1' } }];
+    return ++deletes === 1 ? [401, { error: 'Please sign in again to delete your account.' }] : [200, { ok: true }];
+  });
+  await settle();
+  context.prompt = vi.fn(() => 'DELETE');
+  context.alert = vi.fn();
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(accountPosts(calls)).toEqual(['delete', 'refresh', 'delete']);
+  expect(context.prompt).toHaveBeenCalledTimes(1);
+  expect(context.alert).not.toHaveBeenCalled();
+  expect(context.location.assign).toHaveBeenCalledWith('/?deleted=1');
+});
+
+it.each([
+  ['has ended, to the login page', [401, { error: 'Your session expired. Please sign in again.' }], null],
+  ['cannot be checked, with a message and no sign-out', [503, { error: 'Sign-in is temporarily unavailable. Please try again.' }], 'Sign-in is temporarily unavailable. Please try again.'],
+])('when the refreshed session %s', async (_what, refreshed, message) => {
+  const { $, calls, context } = frontend((url, init) => {
+    if (url !== '/api/account' || init.method !== 'POST') return null;
+    return JSON.parse(init.body).action === 'refresh' ? refreshed : [401, { error: 'Please sign in again to delete your account.' }];
+  });
+  await settle();
+  context.prompt = vi.fn(() => 'DELETE');
+  context.alert = vi.fn();
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(accountPosts(calls)).toEqual(['delete', 'refresh']);
+  if (message) {
+    expect(context.alert).toHaveBeenCalledWith(message);
+    expect(context.location.assign).not.toHaveBeenCalled();
+  } else {
+    expect(context.alert).not.toHaveBeenCalled();
+    expect(context.location.assign).toHaveBeenCalledWith('/login.html');
+  }
 });

@@ -30,11 +30,14 @@ was done about it. A commit straight to `main` leaves neither.
 - Don't branch a new PR off an unmerged branch unless the stacking is
   deliberate — the second PR's diff will contain the first one's commits.
 
-**CodeRabbit reviews every non-draft pull request automatically.** It is
-configured in `.coderabbit.yaml`, which leaves out `skills/tutor/domains/**` and
-`package-lock.json`, and it applies the `## Code Review Rules` section above as
-review criteria. Address its findings before merging. Codex joins later as an
-adversarial critic (#139).
+**Two reviewers see every pull request.** CodeRabbit reviews each non-draft PR
+automatically. It is configured in `.coderabbit.yaml`, which leaves out
+`skills/tutor/domains/**` and `package-lock.json`, and it applies the `## Code
+Review Rules` section above as review criteria. Codex (the ChatGPT Codex GitHub
+app) reviews a PR when a comment says `@codex review`; its automatic reviews are
+off, so request one on every PR. Verify each finding against the code, then fix
+it or answer it in its thread. Merge only after both have reviewed and neither
+has an open finding (#139).
 
 It is worth it: the review of the per-student tenancy change (#80)
 found four real defects, including a migration that silently lost a student's

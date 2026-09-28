@@ -5,12 +5,12 @@ const $$ = (s) => document.querySelectorAll(s);
 // the same refresh token concurrently when multiple API calls return 401.
 const nativeFetch = window.fetch.bind(window);
 let refreshing;
+const refreshSession = () => (refreshing ||= nativeFetch('/api/account', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})}).finally(()=>{refreshing=null;}));
 window.fetch = async (input, init = {}) => {
   const url = typeof input === 'string' ? input : input?.url || '';
   let res = await nativeFetch(input, init);
   if (url.startsWith('/api/') && url !== '/api/account' && res.status === 401) {
-    refreshing ||= nativeFetch('/api/account', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})}).finally(()=>{refreshing=null;});
-    const renewed = await refreshing;
+    const renewed = await refreshSession();
     // An outage is not a sign-out. A fresh response each time: concurrent callers share `renewed`.
     if (renewed.status >= 500) return new Response(JSON.stringify({ error: 'Sign-in is temporarily unavailable. Please try again.' }), { status: 503, headers: { 'Content-Type': 'application/json' } });
     if(renewed.ok)res=await nativeFetch(input,init);
@@ -26,6 +26,22 @@ window.fetch = async (input, init = {}) => {
 $('#btn-signout').addEventListener('click', async () => {
   const res=await nativeFetch('/api/account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'logout'})});
   if(res.ok){localStorage.removeItem('opentutor-password');window.location.assign('/');}
+});
+// #160: shown only to self-signup accounts; the operator removes everyone else.
+$('#btn-delete-account').addEventListener('click', async () => {
+  if (prompt('This permanently deletes your account and all your learning data. Type DELETE to confirm.') !== 'DELETE') return;
+  const remove = () => nativeFetch('/api/account', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'delete', confirm: 'DELETE' }) }).catch(() => null);
+  let res = await remove();
+  // The wrapper above skips /api/account, so an expired session is refreshed here, once,
+  // and the confirmed delete retried without asking again.
+  if (res?.status === 401) {
+    const renewed = await refreshSession().catch(() => null);
+    if (!renewed || renewed.status >= 500) return alert('Sign-in is temporarily unavailable. Please try again.');
+    if (!renewed.ok) return window.location.assign('/login.html');
+    res = await remove();
+  }
+  if (res?.ok) return window.location.assign('/?deleted=1');
+  alert((await res?.json().catch(() => null))?.error || 'Your account could not be deleted. Please try again.');
 });
 
 // ── Streaming ──────────────────────────────────────────────
@@ -229,6 +245,8 @@ function showLessonStart(data) {
   $('#lesson-conversation').innerHTML = '';
   $('#lesson-complete').classList.add('hidden');
 
+  // #159: a reload resumes the lesson in progress, at its last tutor message.
+  if (data.resumed) appendLessonMsg('dim', 'Picking up where you left off.');
   appendLessonMsg('tutor', data.reply);
   showLessonInput();
 }
@@ -261,7 +279,9 @@ async function sendLessonAnswer() {
     if (data.done) {
       lessonActive = false;
       $('#lesson-input-area').classList.add('hidden');
-      showCelebration();
+      // #159: a lesson that was not recorded is finished, not celebrated as progress.
+      if (data.warning) appendLessonMsg('tutor', `**Lesson finished.** ${data.warning} Choose **Next Lesson** to continue.`);
+      else showCelebration();
     } else {
       const progress = `Step ${data.step + 1}/${data.totalSteps}`;
       $('#lesson-meta').textContent = $('#lesson-meta').textContent.replace(/ — Step.*/, '') + ` — ${progress}`;
@@ -556,7 +576,7 @@ let onboardingHistory = [];
 
 $('#btn-onboard-send').addEventListener('click', sendOnboard);
 $('#btn-onboard-browse').addEventListener('click', () => {
-  $('#onboarding-overlay').classList.add('hidden');
+  setOnboarding(false);
   $('.nav-btn[data-view="topics"]').click();
   $('#search-topics').focus();
 });
@@ -577,9 +597,15 @@ async function checkOnboarding() {
   } catch { /* server might not support it yet */ }
 }
 
+// #167: the dialog is modal, so the page behind it can't be focused or clicked while it is open.
+function setOnboarding(open) {
+  $('#onboarding-overlay').classList.toggle('hidden', !open);
+  $('#app').inert = open;
+  if (!open) $('#active-topic').focus(); // focus leaves the closed dialog; "browse" then moves it to search
+}
+
 function showOnboarding() {
-  const overlay = $('#onboarding-overlay');
-  overlay.classList.remove('hidden');
+  setOnboarding(true);
   appendOnboardMsg('assistant', "Hey! I'm your study buddy. What's your name? And are you here for school, work, or the noble art of internet rabbit holes?");
   $('#onboarding-input').focus();
 }
@@ -614,7 +640,7 @@ async function sendOnboard() {
       await enterNewTopic(topic);
 
       setTimeout(() => {
-        $('#onboarding-overlay').classList.add('hidden');
+        setOnboarding(false);
         loadActiveTopics();
         loadTopics();
       }, 2000);
@@ -716,11 +742,14 @@ async function initializeLearning() {
   const current = await nativeFetch('/api/account');
   if (current.status >= 500) throw new Error('Sign-in is unavailable');
   const session = await current.json();
-  if(!session.user&&!session.local) {
+  let user = session.user;
+  if(!user&&!session.local) {
     const refreshed=await nativeFetch('/api/account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})});
     if (refreshed.status >= 500) throw new Error('Sign-in is unavailable');
     if(!refreshed.ok){window.location.replace('/login.html'+window.location.search);return;}
+    user = (await refreshed.json().catch(() => ({}))).user; // a returning student arrives here
   }
+  if (user?.id?.startsWith('acct-')) $('#btn-delete-account').classList.remove('hidden');
   await finishConnect();
   await restoreTopicBuild();
   const topic = new URLSearchParams(window.location.search).get('topic');

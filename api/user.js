@@ -28,7 +28,9 @@ export default async function handler(req, res) {
 
     res.status(405).json({ error: 'Method not allowed' });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    // Database error text stays in the log, not the browser (#144).
+    console.error('[user]', err.message);
+    res.status(500).json({ error: req.method === 'POST' ? 'Could not save your profile.' : 'Could not load your profile.' });
   }
 }
 

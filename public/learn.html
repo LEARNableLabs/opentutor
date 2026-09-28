@@ -24,6 +24,7 @@
           <span id="key-status" class="hidden"></span>
           <button id="btn-disconnect" type="button" class="hidden">Disconnect OpenRouter</button>
           <button id="btn-signout" type="button">Log out</button>
+          <button id="btn-delete-account" type="button" class="hidden">Delete account</button>
           <button id="theme-toggle" title="Toggle theme">🌙</button>
         </div>
       </header>
@@ -38,7 +39,7 @@
         <!-- Learn view -->
         <section id="view-learn" class="view active">
           <div id="topic-select">
-            <select id="active-topic">
+            <select id="active-topic" aria-label="Topic">
               <option value="">Select a topic...</option>
             </select>
             <button id="btn-next" class="primary">Next Lesson</button>
@@ -115,7 +116,7 @@
     </div>
 
     <!-- Onboarding overlay -->
-    <div id="onboarding-overlay" class="hidden">
+    <div id="onboarding-overlay" class="hidden" role="dialog" aria-modal="true" aria-label="Getting started">
       <div id="onboarding-modal">
         <h2>Welcome to OpenTutor</h2>
         <div id="onboarding-chat"></div>

@@ -181,7 +181,7 @@ The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
 The web server, the Vercel routes and the curriculum pipeline all honour this. **The Telegram bot's own chat and lesson calls do not** — `scripts/bot/claude.js` reads `CLAUDE_BACKEND` (`sdk` | `cli`) instead. See issue #98.
 
-Self-signup accounts (`acct-…`) are the exception: `lib/core/llm-access.js` decides each of their model calls, 3 free lessons on the deployment's key and then their own OpenRouter key (#132). Anything a student triggers asks `adapterFor()`, never `getAdapter()` directly.
+Self-signup accounts (`acct-…`) are the exception: `lib/core/llm-access.js` decides each of their model calls, 3 free lessons on the deployment's key and then their own OpenRouter key (#132). Every trial call also claims one of the day's shared trial calls (`OPENTUTOR_TRIAL_CALLS_PER_DAY`, default 300, #180). Anything a student triggers asks `adapterFor()`, never `getAdapter()` directly.
 
 ## Deployment boundaries
 
@@ -244,11 +244,15 @@ was done about it. A commit straight to `main` leaves neither.
 - Don't branch a new PR off an unmerged branch unless the stacking is
   deliberate — the second PR's diff will contain the first one's commits.
 
-**CodeRabbit reviews every non-draft pull request automatically.** It is
-configured in `.coderabbit.yaml`, which leaves out `skills/tutor/domains/**` and
-`package-lock.json`, and it applies the `## Code Review Rules` section of
-`AGENTS.md` as review criteria. Address its findings before merging. Codex joins
-later as an adversarial critic (#139).
+**Two reviewers see every pull request.** CodeRabbit reviews each non-draft PR
+automatically. It is configured in `.coderabbit.yaml`, which leaves out
+`skills/tutor/domains/**` and `package-lock.json`, and it applies the `## Code
+Review Rules` section of `AGENTS.md` as review criteria. Codex (the ChatGPT
+Codex GitHub app) reviews a PR when a comment says `@codex review`; its
+automatic reviews are off, so request one on every PR. Ask it to be adversarial,
+naming file:line and the triggering input. It reacts 👍 when it finds nothing.
+Verify each finding against the code, then fix it or answer it in its thread.
+Merge only after both have reviewed and neither has an open finding (#139).
 
 It is worth it: the review of the per-student tenancy change (#80)
 found four real defects, including a migration that silently lost a student's
@@ -269,3 +273,5 @@ error paths.
 `public/index.html` and `api/catalog.js` expose only shipped curricula without a sign-in requirement. `public/learn.html` contains the tutor UI. `api/account.js` handles managed Supabase signup/login, PKCE email callbacks, refresh, logout and recovery. `lib/core/accounts.js` owns cookie/flow protection and maps verified Auth UUIDs to reserved `acct-` student ids. Auth clients are per-request and separate from SupabaseStore's service client.
 
 Accounts live in individual unnamed-store `account_student:<id>` KV rows, inserted only if absent; legacy admin-provisioned students retain their registry format. Account decommissioning writes a disabled tombstone before clearing state. Never fall back from an invalid account cookie to a legacy credential or unnamed store, and never publish runtime/generated topics through the public catalog. Production signup needs allowed callback URLs; see docs/deployment.md. Supabase's Confirm email is off for now — email confirmation, password reset and a working SMTP sender are #133 work.
+
+An `acct-` student deletes their own account from the learn page with `POST /api/account { action: 'delete', confirm: 'DELETE' }` (#160). The order is fixed: `decommissionStudent` (tombstone, then wipe), then the Supabase Auth user, then the cookies. A failed wipe answers 500 and keeps the Auth user. A failed Auth deletion still answers 200 with `authDeleted: false` and logs `[account] auth user not deleted:` with the Auth id for the operator. Owner, legacy and `otst_` callers get 403, because the operator removes those students.

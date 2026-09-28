@@ -1,10 +1,11 @@
-import { it, expect } from 'vitest';
+import { it, expect, vi } from 'vitest';
 import fs from 'node:fs';
 import vm from 'node:vm';
 
 // Runs the landing page's real script against a DOM double built from index.html's
 // ids (#153). `stored` seeds localStorage; null makes the browser refuse storage.
-function landing(respond, stored = {}) {
+// `search` is the page's query string.
+function landing(respond, stored = {}, search = '', { user = null, catalog = [] } = {}) {
   const html = fs.readFileSync(new URL('../public/index.html', import.meta.url), 'utf8');
   const source = fs.readFileSync(new URL('../public/welcome.js', import.meta.url), 'utf8');
   const created = [], htmlWrites = [], calls = [];
@@ -35,15 +36,17 @@ function landing(respond, stored = {}) {
     fetch: async (url, init = {}) => {
       calls.push({ url, init });
       if (url === '/api/demo') return respond(init);
-      return Response.json(url === '/api/catalog' ? [] : { user: null });
+      return Response.json(url === '/api/catalog' ? catalog : { user });
     },
-    Response, console,
+    location: { search, pathname: '/', hash: '' },
+    history: { replaceState: vi.fn() },
+    Response, URLSearchParams, console,
   });
   if (storage) context.localStorage = { getItem: (k) => storage.get(k) ?? null, setItem: (k, v) => storage.set(k, String(v)) };
   else Object.defineProperty(context, 'localStorage', { get() { throw new Error('SecurityError: storage is disabled'); } });
   context.window = context;
   vm.runInContext(source, context);
-  return { $: (s) => nodes.get(s), calls, created, htmlWrites, storage };
+  return { $: (s) => nodes.get(s), calls, created, htmlWrites, storage, context, html };
 }
 const settle = async () => { for (let i = 0; i < 6; i++) await new Promise(setImmediate); };
 async function answer(page, text) {
@@ -109,4 +112,36 @@ it('still runs when the browser refuses storage', async () => {
   await answer(page, 'Take turns');
   expect(bubbles(page)).toEqual(['Take turns', 'Why turns?']);
   expect(page.$('#demo-next').hidden).toBe(false);
+});
+
+// #160: where a student lands after deleting their account. Checked before any request
+// settles and with storage refused: the notice needs nothing but the address.
+it.each([
+  ['?deleted=1', '/'],
+  ['?deleted=1&ref=mail', '/?ref=mail'],
+])('confirms the deletion for %s, then drops the flag so a reload does not repeat it', (search, left) => {
+  const page = landing(() => Response.json({}), null, search);
+  expect(page.$('#deleted-notice').textContent).toBe('Your account and learning data have been deleted.');
+  expect(page.html).toMatch(/<p id="deleted-notice"[^>]*\brole="status"/);
+  expect(page.context.history.replaceState).toHaveBeenCalledWith(null, '', left);
+});
+
+it.each([[''], ['?deleted=0'], ['?deleted=yes']])('says nothing about a deletion for %j', (search) => {
+  const page = landing(() => Response.json({}), {}, search);
+  expect(page.$('#deleted-notice').textContent).toBe('');
+  expect(page.context.history.replaceState).not.toHaveBeenCalled();
+});
+
+// Codex on #176: a signed-in visitor is sent to their lessons, never to a signup form.
+it('points every account call to action at the learning app once the visitor is signed in', async () => {
+  const catalog = [{ slug: 'game-theory', topic: 'Game theory', total: 29, preview: ['What is a game?'] }];
+  const page = landing(() => Response.json({}), {}, '', { user: { id: 'acct-1' }, catalog });
+  await settle();
+  for (const id of ['#account-link', '#hero-signup', '#closing-signup']) {
+    expect(page.$(id).href, id).toBe('/learn.html');
+    expect(page.$(id).textContent, id).toBe('Continue learning');
+  }
+  expect(page.$('#demo-signup').href).toBe('/learn.html?topic=game-theory');
+  const start = page.created.filter((n) => n.textContent === 'Start this topic').at(-1);
+  expect(start.href).toBe('/learn.html?topic=game-theory');
 });

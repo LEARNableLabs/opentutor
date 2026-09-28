@@ -45,12 +45,12 @@ function configure() {
   $('#credential-field').hidden = !legacy;
   $('#credential').required = legacy;
   $('#auth-submit').textContent = signup
-    ? 'Create account ↗'
+    ? 'Create account'
     : forgot
-      ? 'Send reset link ↗'
+      ? 'Send reset link'
       : reset
-        ? 'Save password ↗'
-        : 'Log in ↗';
+        ? 'Save password'
+        : 'Log in';
   $('#forgot-link').hidden = true; // reset needs email, which comes with #133
   $('#legacy-link').hidden = legacy;
   $('#switch-copy').replaceChildren();
@@ -120,7 +120,8 @@ configure();
   const response = await fetch('/api/account');
   if (!response.ok) return;
   const data = await response.json();
-  if (data.user && mode === 'login') location.replace(next);
+  // Signed in already: no form to show, whichever one a link asked for (Codex on #176).
+  if (data.user && (mode === 'login' || mode === 'signup')) return location.replace(next);
   if (!data.available && mode !== 'legacy') {
     $('#auth-status').textContent =
       'Email accounts are not configured on this installation. Browse topics or use existing access.';
@@ -128,7 +129,7 @@ configure();
     if (data.local) {
       const link = document.createElement('a');
       link.href = next;
-      link.textContent = 'Open local workspace ↗';
+      link.textContent = 'Open local workspace';
       $('#auth-status').append(document.createElement('br'), link);
     }
   }

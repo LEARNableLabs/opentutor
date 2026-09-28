@@ -1,9 +1,21 @@
+// #160: where the learn page sends a student who deleted their account. First, so it needs
+// nothing else on the page; the flag leaves the address so a reload doesn't repeat it.
+const query = new URLSearchParams(location.search);
+if (query.get('deleted') === '1') {
+  document.querySelector('#deleted-notice').textContent =
+    'Your account and learning data have been deleted.';
+  query.delete('deleted');
+  const rest = query.toString();
+  history.replaceState(null, '', location.pathname + (rest ? `?${rest}` : '') + location.hash);
+}
 const search = document.querySelector('#catalog-search'),
   list = document.querySelector('#catalog-list'),
   status = document.querySelector('#catalog-status'),
   more = document.querySelector('#show-more');
 let topics = [],
-  limit = 24;
+  limit = 24,
+  signedIn = false; // a signed-in visitor goes to their lessons, not to signup
+const learnLink = (topic) => '/learn.html' + (topic ? `?topic=${encodeURIComponent(topic)}` : '');
 function render() {
   const term = search.value.trim().toLowerCase(),
     matches = topics.filter((t) => `${t.topic} ${t.slug}`.toLowerCase().includes(term));
@@ -15,7 +27,7 @@ function render() {
       title = document.createElement('h3'),
       meta = document.createElement('span');
     title.textContent = topic.topic;
-    meta.textContent = `${topic.total} lessons · Preview +`;
+    meta.textContent = `${topic.total} lessons`;
     summary.append(title, meta);
     card.append(summary);
     const lessons = document.createElement('ol');
@@ -26,8 +38,8 @@ function render() {
     }
     const link = document.createElement('a');
     link.className = 'text-link';
-    link.href = `/login.html?mode=signup&topic=${encodeURIComponent(topic.slug)}`;
-    link.textContent = 'Learn this topic ↗';
+    link.href = signedIn ? learnLink(topic.slug) : `/login.html?mode=signup&topic=${encodeURIComponent(topic.slug)}`;
+    link.textContent = 'Start this topic';
     card.append(lessons, link);
     list.append(card);
   }
@@ -61,10 +73,17 @@ fetch('/api/account')
   .then((r) => (r.ok ? r.json() : null))
   .then((data) => {
     if (data?.user) {
-      const link = document.querySelector('#account-link');
-      link.href = '/learn.html';
-      link.textContent = 'Continue learning ↗';
+      signedIn = true;
+      for (const id of ['#account-link', '#hero-signup', '#closing-signup']) {
+        const link = document.querySelector(id);
+        link.href = learnLink();
+        link.textContent = 'Continue learning';
+      }
+      const demo = document.querySelector('#demo-signup'); // continues the example's topic
+      demo.href = learnLink(new URLSearchParams(demo.href.split('?')[1]).get('topic'));
+      demo.textContent = 'Continue this lesson';
       document.querySelector('#login-link').hidden = true;
+      if (topics.length) render();
     }
   })
   .catch(() => {});
