@@ -9,16 +9,17 @@
     />
     <title>OpenTutor — A personal tutor for whatever you’re curious about</title>
     <link rel="icon" href="/favicon.png" />
+    <link rel="preload" href="/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/welcome.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/">OpenTutor</a>
+      <a class="brand" href="/"><img src="/favicon.png" width="44" height="44" alt="" />Open<span>Tutor</span></a>
       <nav aria-label="Main navigation">
         <a href="#how-it-works">The method</a><a href="#topics">Explore topics</a
         ><a href="/login.html" id="login-link">Log in</a
         ><a class="button small" href="/login.html?mode=signup" id="account-link"
-          >Create account <span aria-hidden="true">↗</span></a
+          >Create account</a
         >
       </nav>
     </header>
@@ -35,17 +36,13 @@
           </p>
           <div class="actions">
             <a class="button" href="#topics"
-              >Find something to learn <span aria-hidden="true">↓</span></a
-            ><a class="text-link" href="/login.html?mode=signup">Start your learning journey ↗</a>
+              >Find something to learn</a
+            ><a class="text-link" id="hero-signup" href="/login.html?mode=signup">Create a free account</a>
           </div>
           <p class="quiet">Browse the whole topic library. No account needed.</p>
         </div>
         <div class="lesson-preview" aria-label="Example of an OpenTutor lesson">
-          <div class="preview-top">
-            <span class="pill">A taste of a lesson</span
-            ><span class="quiet">Game theory · 3–5 min</span>
-          </div>
-          <p class="preview-subtitle">TODAY’S QUESTION</p>
+          <p class="preview-top">Try a question from Game theory</p>
           <h2>Why is cooperation<br />sometimes so hard?</h2>
           <div class="conversation">
             <span class="tutor-dot" aria-hidden="true">✦</span>
@@ -77,17 +74,13 @@
           <p id="demo-next" class="demo-next" hidden>
             Want to keep going?
             <a id="demo-signup" class="text-link" href="/login.html?mode=signup&amp;topic=game-theory"
-              >Create a free account and continue this lesson ↗</a
+              >Create a free account and continue this lesson</a
             >
           </p>
-          <div class="preview-footer">
-            <span>Think it through. Make it yours.</span><span aria-hidden="true">↗</span>
-          </div>
         </div>
       </section>
       <section id="how-it-works" class="how-section">
         <div class="section-heading">
-          <p class="eyebrow">The method</p>
           <h2>Personal tutoring is the most effective form of education ever measured.</h2>
           <p>
             It’s also the least scalable. OpenTutor is the tutor that changes that: it adapts to
@@ -96,7 +89,6 @@
         </div>
         <div class="steps">
           <article>
-            <span class="step-number">01</span>
             <h3>Deliberate Practice</h3>
             <p>
               Daily adaptive challenges that target your learning edge. Each lesson is a short
@@ -104,7 +96,6 @@
             </p>
           </article>
           <article>
-            <span class="step-number">02</span>
             <h3>Spaced Repetition</h3>
             <p>
               Data-driven recall scheduling — never forget what matters. Concepts that tripped you
@@ -112,12 +103,10 @@
             </p>
           </article>
           <article>
-            <span class="step-number">03</span>
             <h3>Learning Anywhere</h3>
             <p>Learn in your browser, in Telegram, or inside the AI agent you already use.</p>
           </article>
           <article>
-            <span class="step-number">04</span>
             <h3>Effortless Consistency</h3>
             <p>
               Lessons take a few minutes, and your progress is saved after each one. On Telegram,
@@ -133,11 +122,9 @@
       <section id="topics" class="catalog-section">
         <div class="catalog-heading">
           <div>
-            <p class="eyebrow">The curiosity shelf</p>
             <h2>Where will you start?</h2>
             <p>
-              Explore <span id="topic-count">our</span> predefined topics. Open a card to see the
-              first few lessons.
+              <span id="topic-count">Our</span> topics, each a short daily course. Open one to see its first lessons.
             </p>
           </div>
           <label class="search-label" for="catalog-search"
@@ -155,16 +142,14 @@
         ><noscript><p>Enable JavaScript to search the topic library.</p></noscript>
       </section>
       <section class="closing">
-        <img class="closing-logo" src="/logo-256.png" width="128" height="128" alt="" loading="lazy" />
-        <span class="eyebrow">Stay curious</span>
         <h2>You don’t need a grand plan.<br />Just a place to begin.</h2>
-        <a class="button" href="/login.html?mode=signup">Create your account ↗</a>
+        <a class="button" id="closing-signup" href="/login.html?mode=signup">Create your account</a>
         <p>Sign in to take lessons, save progress, and explore your own topics.</p>
       </section>
     </main>
     <footer>
-      <a class="brand" href="/">OpenTutor</a><span>by <a href="https://learnablelabs.github.io/learnable-labs/">LEARNable Labs</a> · Compounding Deliberate Curiosity</span
-      ><a href="https://github.com/LEARNableLabs/opentutor">Open source ↗</a>
+      <a class="brand" href="/">Open<span>Tutor</span></a><span>Made by <a href="https://learnablelabs.github.io/learnable-labs/">LEARNable Labs</a></span
+      ><a href="https://github.com/LEARNableLabs/opentutor">Source on GitHub</a>
     </footer>
     <script src="/welcome.js" defer></script>
   </body>
