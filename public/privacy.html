@@ -45,6 +45,8 @@
         </li>
       </ul>
 
+      <!-- Describes this deployment's provider (OpenRouter, via OPENTUTOR_LLM / OPENROUTER_API_KEY).
+           If the hosted instance switches to another AI provider, update this section and the list below. -->
       <h2>What goes to AI models</h2>
       <p>
         To write the tutor’s replies, your answers and messages are sent, together with the lesson’s
@@ -66,8 +68,8 @@
       <p>
         If you try the example lesson, your answer is sent to an AI model for one reply and is not
         stored. To limit abuse we count replies per visitor per day, using a scrambled (hashed)
-        form of your IP address, never the address itself, and we delete those counts the next
-        day.
+        form of your IP address, never the address itself. Old counts are deleted as soon as the
+        example is used on a later day.
       </p>
 
       <h2>Cookies and your browser</h2>
@@ -95,7 +97,8 @@
         OpenRouter key. It can’t be undone. All we keep is a marker that the account was closed,
         with no name or email, so it can’t be reopened; you can sign up again as a new account. To
         cancel the OpenRouter key itself, delete it in your OpenRouter settings. If the team set up
-        your account for you, ask them to remove it.
+        your account for you, ask them to remove it. If any step of a deletion fails, the team
+        finishes it by hand.
       </p>
 
       <h2>Questions</h2>
