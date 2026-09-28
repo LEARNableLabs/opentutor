@@ -5,6 +5,8 @@
   --border: #E5E5E0;
   --text: #1A1A1A;
   --text-dim: #6B6B6B;
+  --brand-ink: #2a2a2a;
+  --brand-green: #00693e;
   --accent: #2f6db5;
   --accent-dim: #255a96;
   --accent-soft: rgba(47, 109, 181, 0.08);
@@ -22,6 +24,8 @@
   --border: #2a2a2a;
   --text: #e0e0e0;
   --text-dim: #8a8a8a;
+  --brand-ink: #e0e0e0;
+  --brand-green: #6fcf97;
   --accent: #6c9eff;
   --accent-dim: #8ab4ff;
   --on-accent: #0b1a33;
@@ -68,6 +72,17 @@ header h1 {
   color: var(--accent);
   letter-spacing: -0.3px;
 }
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--brand-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand-accent { color: var(--brand-green); }
 
 .header-right {
   display: flex;
