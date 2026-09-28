@@ -728,6 +728,7 @@ footer .brand {
   }
   .site-header nav .button {
     padding: 7px 9px;
+    font-size: 14px;
     gap: 6px;
   }
 }
