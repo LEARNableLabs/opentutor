@@ -25,7 +25,7 @@ function render() {
       title = document.createElement('h3'),
       meta = document.createElement('span');
     title.textContent = topic.topic;
-    meta.textContent = `${topic.total} lessons · Preview +`;
+    meta.textContent = `${topic.total} lessons`;
     summary.append(title, meta);
     card.append(summary);
     const lessons = document.createElement('ol');
@@ -37,7 +37,7 @@ function render() {
     const link = document.createElement('a');
     link.className = 'text-link';
     link.href = `/login.html?mode=signup&topic=${encodeURIComponent(topic.slug)}`;
-    link.textContent = 'Learn this topic ↗';
+    link.textContent = 'Start this topic';
     card.append(lessons, link);
     list.append(card);
   }
@@ -73,7 +73,7 @@ fetch('/api/account')
     if (data?.user) {
       const link = document.querySelector('#account-link');
       link.href = '/learn.html';
-      link.textContent = 'Continue learning ↗';
+      link.textContent = 'Continue learning';
       document.querySelector('#login-link').hidden = true;
     }
   })

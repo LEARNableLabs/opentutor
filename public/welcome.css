@@ -18,6 +18,8 @@
   --field: #8a8174; /* input borders: 3.8:1 on white */
   --serif: 'EB Garamond', Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --gutter: 40px;
+  --content: min(1120px, 100% - 2 * var(--gutter)); /* one left edge for every section */
 }
 * {
   box-sizing: border-box;
@@ -66,20 +68,13 @@ h3 {
 }
 em,
 i {
-  font-style: normal; /* upright throughout; emphasis in a heading is green */
+  font-style: normal; /* upright throughout */
 }
-h1 em,
-h2 em {
-  color: var(--green);
-}
+/* A quiet sentence above a heading, never a tracked capital label. */
 .eyebrow {
-  font-family: var(--sans);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 600;
-  font-size: 12px;
+  font-size: 19px;
   color: var(--muted);
-  margin: 0 0 18px;
+  margin: 0 0 12px;
 }
 .quiet {
   font-family: var(--sans);
@@ -89,9 +84,9 @@ h2 em {
 
 /* ── Header ─────────────────────────────────────────── */
 .site-header {
-  max-width: 1200px;
+  width: var(--content);
   margin: auto;
-  padding: 26px 40px;
+  padding: 26px 0;
   display: flex;
   flex-wrap: wrap; /* on the narrowest screens the links drop to a second row, never off-screen */
   align-items: center;
@@ -159,7 +154,7 @@ footer a:hover {
 .button.secondary {
   background: transparent;
   color: var(--green);
-  margin: 32px auto 0;
+  margin: 32px 0 0;
 }
 .button.secondary:hover {
   background: #e6efe9;
@@ -174,9 +169,9 @@ footer a:hover {
 
 /* ── Hero: the logo and the promise on the left, a lesson to try on the right ── */
 .hero {
-  max-width: 1200px;
+  width: var(--content);
   margin: auto;
-  padding: 32px 40px 96px;
+  padding: 32px 0 96px;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 64px;
@@ -209,35 +204,17 @@ h1 {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 28px 32px 0;
+  padding: 30px 32px 32px;
 }
 .preview-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: baseline;
-  margin-bottom: 26px;
-}
-.pill {
-  font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--green);
-}
-.preview-subtitle {
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  font-weight: 600;
+  font-size: 16px;
   color: var(--muted);
-  margin: 0 0 8px;
+  margin: 0 0 10px;
 }
 .lesson-preview h2 {
-  font-size: 32px;
-  line-height: 1.2;
-  letter-spacing: -0.4px;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
 }
 .conversation {
   display: flex;
@@ -287,22 +264,13 @@ h1 {
 .demo-next {
   margin: 22px 0 0 40px;
 }
-.preview-footer {
-  border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  margin-top: 28px;
-  padding: 16px 0;
-  font-size: 16px;
-  color: var(--muted);
-}
 
 /* ── The method ─────────────────────────────────────── */
 .how-section,
 .catalog-section {
-  max-width: 1120px;
+  width: var(--content);
   margin: auto;
-  padding: 84px 40px;
+  padding: 84px 0;
   border-top: 1px solid var(--line);
 }
 .section-heading {
@@ -327,16 +295,8 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   gap: 44px;
 }
-.step-number {
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--green);
-  display: block;
-}
 .steps h3 {
   font-size: 25px;
-  margin-top: 10px;
 }
 .steps p {
   font-size: 17px;
@@ -392,41 +352,44 @@ input:focus {
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  column-gap: 44px;
 }
+/* The library reads as an index: a title and its length on one line, the first lessons on demand. */
 .catalog-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 20px 22px;
+  border-top: 1px solid var(--line);
+  padding: 14px 0 16px;
   align-self: start;
-}
-.catalog-card:hover {
-  border-color: var(--green);
 }
 .catalog-card summary {
   cursor: pointer;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+.catalog-card summary:hover h3,
+.catalog-card[open] h3 {
+  color: var(--green);
 }
 .catalog-card summary::-webkit-details-marker {
   display: none;
 }
 .catalog-card h3 {
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1.25;
-  margin-bottom: 8px;
 }
 .catalog-card summary span {
-  font-family: var(--sans);
+  flex-shrink: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 16px;
 }
 .catalog-card ol {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.5;
-  padding: 14px 0 0 20px;
+  padding: 6px 0 0 20px;
+  margin: 0 0 8px;
   color: var(--muted);
-  border-top: 1px solid var(--line);
 }
 .catalog-card li {
   margin: 6px 0;
@@ -440,10 +403,9 @@ input:focus {
 
 /* ── Closing and footer ─────────────────────────────── */
 .closing {
-  max-width: 880px;
+  width: var(--content);
   margin: auto;
-  padding: 90px 24px 100px;
-  text-align: center;
+  padding: 90px 0 100px;
   border-top: 1px solid var(--line);
 }
 .closing h2 {
@@ -457,9 +419,9 @@ input:focus {
   margin: 22px 0 0;
 }
 footer {
-  max-width: 1120px;
+  width: var(--content);
   margin: auto;
-  padding: 28px 40px 44px;
+  padding: 28px 0 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -549,7 +511,7 @@ footer .brand {
 /* #160: after an account is deleted. Rendered but empty until filled, so a screen reader
    hears it arrive; lined up with the hero's gutters. */
 .notice:not(:empty) {
-  width: min(1200px, 100% - 80px);
+  width: var(--content);
   margin: 24px auto 0;
   padding: 14px 18px;
   border: 1px solid var(--line);
@@ -560,7 +522,7 @@ footer .brand {
 }
 @media (max-width: 720px) {
   .notice:not(:empty) {
-    width: calc(100% - 44px);
+    width: var(--content);
   }
 }
 [hidden] {
@@ -586,8 +548,11 @@ footer .brand {
   }
 }
 @media (max-width: 720px) {
+  :root {
+    --gutter: 22px;
+  }
   .site-header {
-    padding: 20px 22px;
+    padding: 20px 0;
     gap: 14px;
   }
   .brand {
@@ -608,7 +573,7 @@ footer .brand {
     display: none;
   }
   .hero {
-    padding: 18px 22px 60px;
+    padding: 18px 0 60px;
   }
   .hero-description {
     font-size: 19px;
@@ -617,18 +582,14 @@ footer .brand {
     gap: 16px;
   }
   .lesson-preview {
-    padding: 22px 20px 0;
-  }
-  .preview-top {
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    padding: 22px 20px 24px;
   }
   .lesson-preview h2 {
-    font-size: 27px;
+    font-size: 32px;
   }
   .how-section,
   .catalog-section {
-    padding: 56px 22px;
+    padding: 56px 0;
   }
   .steps {
     grid-template-columns: 1fr;
@@ -644,19 +605,16 @@ footer .brand {
     margin-top: 24px;
   }
   .catalog-grid {
-    gap: 10px;
-  }
-  .catalog-card {
-    padding: 16px;
+    grid-template-columns: 1fr;
   }
   .catalog-card h3 {
-    font-size: 19px;
+    font-size: 20px;
   }
   .closing {
-    padding: 64px 22px 72px;
+    padding: 64px 0 72px;
   }
   footer {
-    padding: 24px 22px 32px;
+    padding: 24px 0 32px;
     flex-wrap: wrap;
   }
   footer > span {
@@ -701,8 +659,11 @@ footer .brand {
 }
 /* 320px (small phones, or 400% zoom): the header still fits on one line. */
 @media (max-width: 380px) {
+  :root {
+    --gutter: 16px;
+  }
   .site-header {
-    padding: 18px 16px;
+    padding: 18px 0;
     gap: 8px;
   }
   .site-header .brand {

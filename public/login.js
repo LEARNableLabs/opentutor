@@ -45,12 +45,12 @@ function configure() {
   $('#credential-field').hidden = !legacy;
   $('#credential').required = legacy;
   $('#auth-submit').textContent = signup
-    ? 'Create account ↗'
+    ? 'Create account'
     : forgot
-      ? 'Send reset link ↗'
+      ? 'Send reset link'
       : reset
-        ? 'Save password ↗'
-        : 'Log in ↗';
+        ? 'Save password'
+        : 'Log in';
   $('#forgot-link').hidden = true; // reset needs email, which comes with #133
   $('#legacy-link').hidden = legacy;
   $('#switch-copy').replaceChildren();
@@ -128,7 +128,7 @@ configure();
     if (data.local) {
       const link = document.createElement('a');
       link.href = next;
-      link.textContent = 'Open local workspace ↗';
+      link.textContent = 'Open local workspace';
       $('#auth-status').append(document.createElement('br'), link);
     }
   }
