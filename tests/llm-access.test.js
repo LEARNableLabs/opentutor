@@ -190,14 +190,14 @@ describe('the daily budget of trial calls', () => {
   const dayRows = () => store.listKV('openrouter-trial-day:').map((r) => r.key);
   afterEach(() => vi.useRealTimers());
 
-  it('allows 600 calls a day across all accounts by default, then refuses with a 402 to connect', async () => {
+  it('allows 300 calls a day across all accounts by default, then refuses with a 402 to connect', async () => {
     const outcomes = [];
-    for (const state of accounts(50)) for (let i = 0; i < ONBOARDING_MESSAGES; i++) outcomes.push(await call(state, 'onboarding'));
+    for (const state of accounts(25)) for (let i = 0; i < ONBOARDING_MESSAGES; i++) outcomes.push(await call(state, 'onboarding'));
     expect(outcomes.filter((o) => o === 'allowed')).toHaveLength(TRIAL_CALLS_PER_DAY);
-    expect(TRIAL_CALLS_PER_DAY).toBe(600);
-    const [late] = accounts(51).slice(-1);
+    expect(TRIAL_CALLS_PER_DAY).toBe(300);
+    const [late] = accounts(26).slice(-1);
     for (const use of ['lesson-start', 'onboarding']) expect(await call(late, use)).toBe('daily_limit');
-    expect(host.generate).toHaveBeenCalledTimes(600);
+    expect(host.generate).toHaveBeenCalledTimes(300);
     // The refused request gave its own free lesson back: the student did not get the call.
     expect(await trialLessonsLeft(late)).toBe(TRIAL_LESSONS);
     expect(new KeyRequired('daily_limit').body).toEqual({

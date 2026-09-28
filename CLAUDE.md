@@ -181,7 +181,7 @@ The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
 The web server, the Vercel routes and the curriculum pipeline all honour this. **The Telegram bot's own chat and lesson calls do not** — `scripts/bot/claude.js` reads `CLAUDE_BACKEND` (`sdk` | `cli`) instead. See issue #98.
 
-Self-signup accounts (`acct-…`) are the exception: `lib/core/llm-access.js` decides each of their model calls, 3 free lessons on the deployment's key and then their own OpenRouter key (#132). Every trial call also claims one of the day's shared trial calls (`OPENTUTOR_TRIAL_CALLS_PER_DAY`, default 600, #180). Anything a student triggers asks `adapterFor()`, never `getAdapter()` directly.
+Self-signup accounts (`acct-…`) are the exception: `lib/core/llm-access.js` decides each of their model calls, 3 free lessons on the deployment's key and then their own OpenRouter key (#132). Every trial call also claims one of the day's shared trial calls (`OPENTUTOR_TRIAL_CALLS_PER_DAY`, default 300, #180). Anything a student triggers asks `adapterFor()`, never `getAdapter()` directly.
 
 ## Deployment boundaries
 
