@@ -32,7 +32,8 @@ function fakePostgrest() {
     const match = (row) => filters.every(([op, col, val]) =>
       op === 'eq' ? String(row[col]) === String(val)
         : op === 'like' ? String(row[col]).startsWith(val.replace(/%$/, ''))
-          : String(row[col]) >= String(val));
+          : op === 'lt' ? String(row[col]) < String(val)
+            : String(row[col]) >= String(val));
     const compare = (a, b) => {
       for (const [col, dir] of sorts) if (a[col] !== b[col]) return (a[col] < b[col] ? -1 : 1) * dir;
       return 0;
@@ -42,6 +43,7 @@ function fakePostgrest() {
       _rows: () => db[table].filter(match).sort(compare).slice(span[0], Math.min(span[1], span[0] + fake.maxRows)),
       eq(col, val) { filters.push(['eq', col, val]); return builder; },
       gte(col, val) { filters.push(['gte', col, val]); return builder; },
+      lt(col, val) { filters.push(['lt', col, val]); return builder; },
       like(col, val) { filters.push(['like', col, val]); return builder; },
       order(col, { ascending = true } = {}) { sorts.push([col, ascending ? 1 : -1]); return builder; },
       range(from, to) {
@@ -318,5 +320,22 @@ describe('listTopicProgress reads every topic in a fixed number of queries', () 
 
     const topics = await store({ userId: 'alice' }).listTopicProgress();
     expect(topics.find((t) => t.slug === 'capped')).toMatchObject({ completed: 700 });
+  });
+});
+
+// #180: a student's view reaches the unnamed store through forStudent(null), on the same
+// client, so every account's trial calls are counted in one place, the day's shared budget.
+describe('the daily budget of trial calls', () => {
+  it('counts every account\'s calls in the unnamed store and refuses past the limit', async () => {
+    vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '2');
+    const { adapterFor } = await import('../../lib/core/llm-access.js');
+    const host = { generate: vi.fn(async () => ({ text: 'ok' })) };
+    const call = async (n) => (await adapterFor({ state: store({ userId: `acct-${String(n).repeat(4)}` }), use: 'onboarding', host: () => host })).generate('x', []);
+    await call(1);
+    await call(2);
+    await expect(call(3)).rejects.toMatchObject({ reason: 'daily_limit', body: { connect: true } });
+    expect(host.generate).toHaveBeenCalledTimes(2);
+    const day = client.db.kv.filter((row) => row.key.startsWith('openrouter-trial-day:'));
+    expect(day.map((row) => row.user_id)).toEqual(['', '']);
   });
 });

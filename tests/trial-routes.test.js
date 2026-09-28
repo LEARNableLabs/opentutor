@@ -136,6 +136,28 @@ it('streams a refusal as one error event, with headers written once, when the st
   expect(res.ended).toBe(1);
 });
 
+// #180: once the day's trial calls are spent, a trial student gets the connect prompt.
+it('answers a spent daily budget with the 402 connect prompt, as JSON and as one SSE error event', async () => {
+  vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '1');
+  expect((await call(onboard, { message: 'hi' })).statusCode).toBe(200);
+  const refusal = {
+    error: 'Free lessons are used up for today. Connect your OpenRouter account to keep going, or come back tomorrow.',
+    connect: true,
+    reason: 'daily_limit',
+  };
+  for (const [handler, body] of [[onboard, { message: 'again' }], [lesson, { topicSlug: 'demo' }]]) {
+    const res = await call(handler, body);
+    expect(res.statusCode).toBe(402);
+    expect(res.body).toEqual(refusal);
+  }
+  const res = sseResponse();
+  await lesson({ method: 'POST', headers: { accept: 'text/event-stream' }, body: { topicSlug: 'demo' } }, res);
+  expect(res.statusCode).toBe(200);
+  expect(res.events).toEqual([{ event: 'error', data: refusal }]);
+  expect(res.ended).toBe(1);
+  expect(host.generate).toHaveBeenCalledTimes(1);
+});
+
 it('refuses a custom topic without recording or enqueueing a build, and activates a shipped one', async () => {
   const custom = await call(addTopicRoute, { topic: 'Knot Theory' });
   expect(custom.statusCode).toBe(402);
