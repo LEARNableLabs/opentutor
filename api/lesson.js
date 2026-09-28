@@ -14,10 +14,12 @@ import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
-import { parseDirectives } from '../lib/core/deliberate-practice.js';
+import { parseDirectives, reviewLesson } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter } from '../lib/core/assessment.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
+// Review lessons in a row for one blocked concept before the next lesson goes ahead (#149).
+const MAX_REVIEWS = 2;
 
 export default async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
@@ -196,6 +198,45 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       .map((file) => safely(() => state.readDomainFile(topicSlug, file), null, `read ${file}`)),
   );
   const directives = parseDirectives(feedback);
+
+  // #149: an open BLOCK holds the student back, as the bot does: a review lesson on the
+  // blocked concept instead of the next lesson. It plans nothing (no model call), it is not
+  // a completion, and completeLesson releases the BLOCK when its retest passes. The bot
+  // releases it after any review; here a student who keeps missing the concept gets
+  // MAX_REVIEWS in a row, then the next lesson, which still opens on the retest.
+  const block = directives.find((d) => d.type === 'BLOCK');
+  const reviewKey = `web_review:${topicSlug}`;
+  let note;
+  if (block) {
+    const raw = await state.readKV(reviewKey);
+    const held = typeof raw === 'string' ? JSON.parse(raw) : raw;
+    const reviews = held?.concept === block.target ? held.count : 0;
+    if (reviews < MAX_REVIEWS) {
+      const { plan, steps } = reviewLesson(block.target);
+      const review = {
+        topicSlug,
+        lessonDay,
+        lesson: { day: lessonDay, title: `Review: ${block.target}`, module: lesson.module, concepts: [block.target], review: true },
+        plan,
+        steps,
+        step: 0,
+        reply: withGoal(plan, `Explain **${block.target}** in your own words: what is it, and why does it matter?`),
+        history: [],
+        assessments: [],
+        isReview: true,
+        reviewConcept: block.target,
+      };
+      await state.writeKV(kvKey, JSON.stringify(review));
+      await state.writeKV(reviewKey, JSON.stringify({ concept: block.target, count: reviews + 1 }));
+      return {
+        status: 200,
+        body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, note: `Let's revisit ${block.target} before moving on.` },
+      };
+    }
+    note = `Let's move on for now. We'll keep coming back to ${block.target}.`;
+  }
+  await state.deleteKV(reviewKey); // a new lesson ends a run of reviews
+
   const planPrompt = buildLessonPlanPrompt(skills, lesson, {
     teacherConfig, teachingNotes, conceptMap, user, studentModel: modelText, directives,
   });
@@ -242,7 +283,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   await state.writeKV(kvKey, JSON.stringify(started));
 
-  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson } };
+  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, ...(note ? { note } : {}) } };
 }
 
 // ── Helpers ────────────────────────────────────────────────

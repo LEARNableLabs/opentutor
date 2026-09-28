@@ -69,6 +69,15 @@ describe.each([
     return { system: adapter.generate.mock.calls[0][0], reply: body.reply };
   }
   const directivesSection = (system) => system.match(/<untrusted_data type="practice-directives">([\s\S]*?)<\/untrusted_data>/)?.[1];
+  // An open BLOCK first holds the student in two review lessons, which plan nothing (#149).
+  // The lesson after them is planned with the directives, and opens on the retest.
+  async function pastTheReviews() {
+    for (let i = 0; i < 2; i++) {
+      const { body } = await lessonTurn({ state: wrap(store), getAdapter: async () => { throw new Error('a review plans nothing'); }, skills: new Map() }, { topicSlug: 'demo' });
+      expect(body.lesson.review).toBe(true);
+      store.deleteKV('web_lesson:demo');
+    }
+  }
 
   it('gets the domain files and the profile as text, never a Promise', async () => {
     const { system } = await start();
@@ -78,6 +87,7 @@ describe.each([
 
   it('gets the REVISIT and BLOCK concepts from practice-feedback.md', async () => {
     store.writeDomainFile('demo', 'practice-feedback.md', feedback('BLOCK', 'REVISIT', 'GOAL'));
+    await pastTheReviews();
     const section = directivesSection((await start()).system);
     expect(section).toContain('nash-equilibrium');
     expect(section).toContain('dominant-strategy');
@@ -95,11 +105,13 @@ describe.each([
     ['no plan it can parse', 'Sorry, I cannot help with that.'],
   ])('asks the REVISIT retest when the model gives %s', async (_case, text) => {
     store.writeDomainFile('demo', 'practice-feedback.md', feedback('BLOCK', 'REVISIT', 'GOAL'));
+    await pastTheReviews();
     expect((await start(text)).reply).toContain(retest('nash-equilibrium'));
   });
 
   it('asks the BLOCK retest when there is no REVISIT', async () => {
     store.writeDomainFile('demo', 'practice-feedback.md', feedback('BLOCK', 'GOAL'));
+    await pastTheReviews();
     expect((await start()).reply).toContain(retest('dominant-strategy'));
   });
 

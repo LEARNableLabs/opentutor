@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { TutorStore } from '../lib/core/store.js';
 import { ensureAccount, accountId } from '../lib/core/accounts.js';
 import { saveKey } from '../lib/core/llm-access.js';
+import { formatPracticeFeedback } from '../lib/core/deliberate-practice.js';
 
 // #148 and #159 on the local server, which has its own /api/lesson route. The real
 // scripts/web/server.js runs as a child process; its model is a fake OpenRouter here
@@ -21,6 +22,13 @@ const PLAN = { goal: 'Spot a game', retrieval: null, diagnostic: 'What makes a s
 const USERS = Object.fromEntries(['a', 'b', 'own'].map((name, i) => [`tok-${name}`, {
   id: `${String(i + 1).repeat(8)}-1111-4111-8111-111111111111`, email: `${name}@example.test`, email_confirmed_at: '2026-01-01T00:00:00Z',
 }]));
+const BLOCKED = ['acoustic-engineering', 'additive-manufacturing'];
+const blockFeedback = (concept) => formatPracticeFeedback({
+  timestamp: '2026-09-28T00:00:00.000Z',
+  observations: [],
+  directives: [{ type: 'BLOCK', target: concept, reason: 'BLOCK advancement until retested', priority: 'critical' }],
+  model: { recentAccuracy: 0.5, trend: 'steady', difficulty: { level: 3, label: 'standard' }, engagement: 'steady', concepts: { shaky: [concept] } },
+}, 'Demo');
 const prompts = [];
 const keys = []; // the Authorization each model call was made with
 let fake, child, base, dataDir;
@@ -55,6 +63,8 @@ beforeAll(async () => {
   const seed = new TutorStore(ROOT);
   for (const user of Object.values(USERS)) await ensureAccount(seed, user);
   await saveKey(seed.forStudent(accountId(USERS['tok-own'])), 'sk-or-own-student');
+  // #149: the owner has an open BLOCK on two topics, one started as JSON, one over SSE.
+  for (const slug of BLOCKED) seed.writeDomainFile(slug, 'practice-feedback.md', blockFeedback('payoff matrix'));
   seed.close();
   vi.unstubAllEnvs();
   child = spawn(process.execPath, ['scripts/web/server.js'], {
@@ -145,4 +155,17 @@ it('refuses a trial call past the day\'s budget with the 402 connect prompt, as 
 
   expect((await asAccount('tok-own', '/api/lesson', { topicSlug: 'game-theory' })).status).toBe(200);
   expect(keys.slice(before)).toEqual(['Bearer fake', 'Bearer fake', 'Bearer sk-or-own-student']);
+});
+
+// #149: an open BLOCK starts a review of the blocked concept, not the next lesson.
+it('starts a review lesson for an open BLOCK, as JSON and over SSE, without a model call', async () => {
+  const before = prompts.length;
+  const review = { review: true, title: 'Review: payoff matrix', concepts: ['payoff matrix'] };
+  const json = await post('/api/lesson', { topicSlug: BLOCKED[0] });
+  expect(json.status).toBe(200);
+  expect(await json.json()).toMatchObject({ step: 0, totalSteps: 3, done: false, lesson: review, note: "Let's revisit payoff matrix before moving on." });
+  const streamed = await post('/api/lesson', { topicSlug: BLOCKED[1] }, { Accept: 'text/event-stream' });
+  const [, data] = /^event: done\ndata: (.*)\n\n$/.exec(await streamed.text()); // one event, nothing else
+  expect(JSON.parse(data)).toMatchObject({ lesson: review, note: "Let's revisit payoff matrix before moving on." });
+  expect(prompts).toHaveLength(before);
 });

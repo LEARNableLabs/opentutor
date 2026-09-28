@@ -12,7 +12,7 @@
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel, markConceptReviewed } from '../../lib/core/student-model.js';
-import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives } from '../../lib/core/deliberate-practice.js';
+import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives, reviewLesson } from '../../lib/core/deliberate-practice.js';
 import { getNextLesson, markLessonComplete, readCurriculum, saveCurriculumProgress, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
@@ -131,20 +131,14 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     log.info({ topic: topicSlug, blocked: constraints.blockedConcept }, 'blocked by deliberate practice');
     await channel.sendMessage(chatId, `Before we move on, let's make sure you've got <b>${constraints.blockedConcept}</b> down.\n\nExplain it to me in your own words — what is it and why does it matter?`);
 
+    const review = reviewLesson(constraints.blockedConcept); // shared with the web lesson (#149)
     activeLessons[chatId] = {
       topicSlug,
       lessonDay,
       lesson,
-      plan: {
-        diagnostic: `Explain "${constraints.blockedConcept}" in your own words.`,
-        concept: `This concept is foundational for what comes next.`,
-        followUp: `Can you give a concrete example of ${constraints.blockedConcept}?`,
-        application: `How would you use this concept in a real situation?`,
-        commonMisconceptions: [],
-        goal: `Demonstrate solid understanding of ${constraints.blockedConcept}`,
-      },
+      plan: review.plan,
       // Same shape as a regular lesson — handleLessonAnswer walks `steps` and pushes to `assessments`
-      steps: ['diagnostic', 'followUp', 'application'],
+      steps: review.steps,
       step: 0,
       mode: 'standard',
       history: [],

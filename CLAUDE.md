@@ -145,7 +145,7 @@ The retrieval step is dropped when no concept is due for review, so a first less
 
 Mid-lesson branching: steps expand (student says "go deeper") or contract (student nails the diagnostic) dynamically. Student can type "skip" or "move on" at any time (autonomy).
 
-DeliberatePractitioner runs after each lesson (deterministic, no LLM call) and writes enforceable directives to `practice-feedback.md`. The bot's Teacher reads these before the next lesson and follows them; the web planner gets the REVISIT and BLOCK concepts (#146).
+DeliberatePractitioner runs after each lesson (deterministic, no LLM call) and writes enforceable directives to `practice-feedback.md`. The bot's Teacher reads these before the next lesson and follows them; the web planner gets the REVISIT and BLOCK concepts (#146). On both, an open BLOCK starts a review lesson on the blocked concept instead of the next lesson (`reviewLesson` in `lib/core/deliberate-practice.js`); a review is not a completion. The bot releases the BLOCK after any review; the web releases it when the retest is not graded shaky, and after two reviews in a row the next lesson goes ahead (#149).
 
 `selectMode` also accepts a `pushType` for differentiated scheduled pushes, but no caller passes one today — `scheduler.js` delivers a normal lesson at every slot.
 

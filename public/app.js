@@ -247,6 +247,7 @@ function showLessonStart(data) {
 
   // #159: a reload resumes the lesson in progress, at its last tutor message.
   if (data.resumed) appendLessonMsg('dim', 'Picking up where you left off.');
+  if (data.note) appendLessonMsg('dim', data.note); // e.g. a review before moving on (#149)
   appendLessonMsg('tutor', data.reply);
   showLessonInput();
 }
