@@ -560,7 +560,7 @@ let onboardingHistory = [];
 
 $('#btn-onboard-send').addEventListener('click', sendOnboard);
 $('#btn-onboard-browse').addEventListener('click', () => {
-  $('#onboarding-overlay').classList.add('hidden');
+  setOnboarding(false);
   $('.nav-btn[data-view="topics"]').click();
   $('#search-topics').focus();
 });
@@ -581,9 +581,15 @@ async function checkOnboarding() {
   } catch { /* server might not support it yet */ }
 }
 
+// #167: the dialog is modal, so the page behind it can't be focused or clicked while it is open.
+function setOnboarding(open) {
+  $('#onboarding-overlay').classList.toggle('hidden', !open);
+  $('#app').inert = open;
+  if (!open) $('#active-topic').focus(); // focus leaves the closed dialog; "browse" then moves it to search
+}
+
 function showOnboarding() {
-  const overlay = $('#onboarding-overlay');
-  overlay.classList.remove('hidden');
+  setOnboarding(true);
   appendOnboardMsg('assistant', "Hey! I'm your study buddy. What's your name? And are you here for school, work, or the noble art of internet rabbit holes?");
   $('#onboarding-input').focus();
 }
@@ -618,7 +624,7 @@ async function sendOnboard() {
       await enterNewTopic(topic);
 
       setTimeout(() => {
-        $('#onboarding-overlay').classList.add('hidden');
+        setOnboarding(false);
         loadActiveTopics();
         loadTopics();
       }, 2000);

@@ -7,6 +7,8 @@ import vm from 'node:vm';
 function frontend(route, search = '') {
   const html = fs.readFileSync(new URL('../public/learn.html', import.meta.url), 'utf8');
   const source = fs.readFileSync(new URL('../public/app.js', import.meta.url), 'utf8');
+  let focused = null;
+  const timers = [];
   const element = (classes = '') => {
     const names = new Set(classes.split(' '));
     const listeners = new Map();
@@ -15,7 +17,7 @@ function frontend(route, search = '') {
       classList: { add: (v) => names.add(v), remove: (v) => names.delete(v), contains: (v) => names.has(v), toggle: (v, force) => (force ? names.add(v) : names.delete(v)) },
       addEventListener: (name, fn) => listeners.set(name, fn),
       click() { return listeners.get('click')?.(); },
-      focus() {}, appendChild(child) { this.children.push(child); }, remove() {}, querySelectorAll() { return []; },
+      focus() { focused = this; }, appendChild(child) { this.children.push(child); }, remove() {}, querySelectorAll() { return []; },
     };
   };
   const nodes = new Map([...html.matchAll(/<[^>]*\bid="([^"]+)"[^>]*>/g)].map(([tag, id]) => [`#${id}`, element(tag.match(/class="([^"]+)"/)?.[1])]));
@@ -34,7 +36,7 @@ function frontend(route, search = '') {
     localStorage: { getItem: () => null, removeItem() {} }, sessionStorage: { removeItem() {} },
     location: { search, pathname: '/learn.html', assign: vi.fn(), replace: vi.fn() },
     history: { replaceState: vi.fn() },
-    Response, Headers, URLSearchParams, console, setTimeout: () => 0, clearTimeout() {},
+    Response, Headers, URLSearchParams, console, setTimeout: (fn) => (timers.push(fn), 0), clearTimeout() {},
     fetch: async (url, init = {}) => {
       calls.push({ url, init });
       const [status, body] = route(url, init) || base[url] || [200, {}];
@@ -43,7 +45,8 @@ function frontend(route, search = '') {
   });
   context.window = context;
   vm.runInContext(source, context);
-  return { $, calls, context };
+  // Timers wait until a test runs them, as a browser runs them after the current task.
+  return { $, calls, context, focused: () => focused, runTimers: () => timers.splice(0).forEach((fn) => fn()) };
 }
 const settle = async () => { for (let i = 0; i < 6; i++) await new Promise(setImmediate); };
 
@@ -172,6 +175,38 @@ it.each([
   const { $ } = frontend((url) => (url === '/api/user' ? [200, user] : null));
   await settle();
   expect($('#onboarding-overlay').classList.contains('hidden')).toBe(hidden);
+});
+
+// #167: the onboarding dialog is modal, so the page behind it is inert while it is open.
+it('makes the page behind the onboarding dialog inert until the dialog closes', async () => {
+  const { $ } = frontend((url) => (url === '/api/user' ? [200, { hasProfile: false, onboarded: false }] : url === '/api/topics' ? [200, []] : null));
+  await settle();
+  expect($('#onboarding-overlay').classList.contains('hidden')).toBe(false);
+  expect($('#app').inert).toBe(true);
+  await $('#btn-onboard-browse').click();
+  expect($('#onboarding-overlay').classList.contains('hidden')).toBe(true);
+  expect($('#app').inert).toBe(false);
+});
+
+it('returns focus to the topic picker when onboarding closes on a chosen topic', async () => {
+  const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3 };
+  const { $, focused, runTimers } = frontend((url) => ({
+    '/api/user': [200, { hasProfile: false, onboarded: false }],
+    '/api/onboard': [200, { reply: 'Game theory it is.', confirmedTopic: 'game-theory' }],
+    '/api/add-topic': [200, { slug: 'game-theory', status: 'existing', lessonCount: 29 }],
+    '/api/topics': [200, []],
+    '/api/lesson': [200, start],
+  })[url] || null);
+  await settle();
+  $('#onboarding-input').value = 'Game theory, please';
+  await $('#btn-onboard-send').click();
+  await settle();
+  expect(focused()).toBe($('#onboarding-input'));
+  runTimers();
+  await settle();
+  expect($('#onboarding-overlay').classList.contains('hidden')).toBe(true);
+  expect($('#app').inert).toBe(false);
+  expect(focused()).toBe($('#active-topic'));
 });
 
 it('keeps an over-long answer or message in its box and says why, instead of sending it', async () => {
