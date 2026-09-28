@@ -38,10 +38,14 @@
           <strong>Your learning.</strong> The topics you choose, the lessons you finish, the notes
           the tutor writes after each lesson (what went well, what to revisit), what you told the
           tutor when you started (saved as your profile), and any topics you ask it to build.
+          While a lesson is unfinished, we also save your answers and the tutor’s replies so you
+          can resume it. That conversation is removed when you finish the lesson or delete your
+          account; an unfinished lesson has no automatic expiry.
         </li>
         <li>
           <strong>Your OpenRouter key,</strong> only if you connect your OpenRouter account. It is
-          stored encrypted and can only be used for your own lessons. Disconnecting deletes it.
+          stored encrypted and is used only for your OpenTutor requests, including lessons and
+          topics you ask it to build. Disconnecting deletes our stored copy.
         </li>
       </ul>
 
@@ -68,8 +72,9 @@
       <p>
         If you try the example lesson, your answer is sent to an AI model for one reply and is not
         stored. To limit abuse we count replies per visitor per day, using a scrambled (hashed)
-        form of your IP address, never the address itself. Old counts are deleted as soon as the
-        example is used on a later day.
+        form of your IP address, never the address itself. We attempt to delete old counts when the
+        example is first used on a later day. If cleanup fails, old counts may
+        remain until a later cleanup succeeds.
       </p>
 
       <h2>Cookies and your browser</h2>
