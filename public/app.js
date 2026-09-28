@@ -263,8 +263,9 @@ async function sendLessonAnswer() {
     if (data.done) {
       lessonActive = false;
       $('#lesson-input-area').classList.add('hidden');
-      if (data.warning) appendLessonMsg('tutor', data.warning); // the lesson was not recorded (#159)
-      showCelebration();
+      // #159: a lesson that was not recorded is finished, not celebrated as progress.
+      if (data.warning) appendLessonMsg('tutor', `**Lesson finished.** ${data.warning} Choose **Next Lesson** to continue.`);
+      else showCelebration();
     } else {
       const progress = `Step ${data.step + 1}/${data.totalSteps}`;
       $('#lesson-meta').textContent = $('#lesson-meta').textContent.replace(/ — Step.*/, '') + ` — ${progress}`;

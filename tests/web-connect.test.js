@@ -208,26 +208,47 @@ it('shows a resumed lesson\'s last tutor message, with a note that it picked up 
   expect($('#lesson-input-area').classList.contains('hidden')).toBe(false);
 });
 
-// #159: the route said a finished lesson was not saved, and the page never showed it.
-it('never sends a blank answer, and shows the warning when a finished lesson could not be saved', async () => {
-  const warning = 'This lesson could not be saved — your progress may not be recorded.';
+// A lesson on its last step: `last` answers the student's answer.
+async function lastStep(last) {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3, done: false };
-  const { $, calls } = frontend((url, init) => {
+  const page = frontend((url, init) => {
     if (url !== '/api/lesson') return null;
-    return JSON.parse(init.body).answer ? [200, { reply: 'Well reasoned.', step: 3, totalSteps: 3, done: true, lesson: start.lesson, warning }] : [200, start];
+    return JSON.parse(init.body).answer ? [200, { reply: 'Well reasoned.', step: 3, totalSteps: 3, lesson: start.lesson, ...last }] : [200, start];
   });
   await settle();
-  $('#active-topic').value = 'demo';
-  await $('#btn-next').click();
+  page.$('#active-topic').value = 'demo';
+  await page.$('#btn-next').click();
   await settle();
+  return page;
+}
+const starts = (calls) => calls.filter((c) => c.url === '/api/lesson' && !JSON.parse(c.init.body).answer).length;
+
+it('never sends a blank answer', async () => {
+  const { $, calls } = await lastStep({ done: false });
   $('#lesson-input').value = '   ';
   await $('#btn-lesson-answer').click();
   await settle();
   expect(calls.filter((c) => c.url === '/api/lesson')).toHaveLength(1); // the start, not the blank answer
+});
+
+// #159: the route said a finished lesson was not saved, and the page never showed it,
+// then celebrated the progress. It says so instead, and Next Lesson still continues.
+it.each([
+  ['celebrates a finished lesson that was saved', {}, true],
+  ['warns, and does not celebrate, when a finished lesson could not be saved', { warning: 'This lesson could not be saved — your progress may not be recorded.' }, false],
+])('%s', async (_case, extra, celebrates) => {
+  const { $, calls } = await lastStep({ done: true, ...extra });
   $('#lesson-input').value = 'because the payoffs change';
   await $('#btn-lesson-answer').click();
   await settle();
-  expect($('#lesson-conversation').children.some((n) => n.innerHTML.includes(warning))).toBe(true);
+  const shown = $('#lesson-conversation').children.map((n) => n.innerHTML).join('\n');
+  expect(shown.includes('making progress')).toBe(celebrates);
+  if (extra.warning) expect(shown).toContain(extra.warning);
+  expect($('#lesson-input-area').classList.contains('hidden')).toBe(true);
+  expect($('#btn-next').disabled).toBe(false);
+  await $('#btn-next').click();
+  await settle();
+  expect(starts(calls)).toBe(2);
 });
 
 // #150: a reply is model output, and model output can carry text from the research

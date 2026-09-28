@@ -152,9 +152,10 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   // ── Resume the lesson in progress (#159) ──────────────────
   // A reload used to plan a new lesson over it: a model call, and a trial student's
-  // free lesson. A lesson saved before #159 has no reply to show, so it is planned anew.
-  if (active?.reply != null) {
-    return { status: 200, body: { reply: active.reply, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, resumed: true } };
+  // free lesson. A new one is planned only when there is nothing to show.
+  const shown = active && lastShown(active);
+  if (shown != null) {
+    return { status: 200, body: { reply: shown, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, resumed: true } };
   }
 
   // ── Start new lesson ──────────────────────────────────────
@@ -223,7 +224,6 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // #148: no retrieval question, no retrieval step. The lesson opens on the diagnostic,
   // and the first answer is graded as the diagnostic, not as a retrieval check.
   const lessonSteps = hasRetrieval || retest ? STEPS : STEPS.filter((s) => s !== 'retrieval');
-  const goalPrefix = plan.goal ? `**Goal:** ${plan.goal}\n\n` : '';
 
   const started = {
     topicSlug,
@@ -232,7 +232,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     plan,
     steps: lessonSteps,
     step: 0,
-    reply: goalPrefix + plan[lessonSteps[0]],
+    reply: withGoal(plan, plan[lessonSteps[0]]),
     history: [],
     assessments: [],
   };
@@ -248,6 +248,18 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 // so everything here is awaited — awaiting a plain value is a no-op.
 
 const FAILED = Symbol('failed');
+
+const withGoal = (plan, question) => (plan.goal ? `**Goal:** ${plan.goal}\n\n` : '') + question;
+
+// What the student last saw of a lesson in progress, or null. One saved before #159 has
+// no `reply`: its last tutor message, or at step 0 the opening question the old code sent.
+function lastShown({ reply, history, step, plan }) {
+  if (reply != null) return reply;
+  const last = history?.findLast((m) => m.role === 'assistant');
+  if (last) return last.content;
+  const opening = step === 0 && (plan?.retrieval || plan?.diagnostic);
+  return opening ? withGoal(plan, opening) : null;
+}
 
 async function safely(fn, fallback = null, label = 'step') {
   try {

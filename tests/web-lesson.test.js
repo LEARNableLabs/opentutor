@@ -42,6 +42,12 @@ beforeEach(() => {
   ctx = { state, getAdapter: vi.fn(async () => adapter), skills: new Map() };
 });
 
+// A lesson in progress as the code before #148 and #159 saved it: no `steps`, no `reply`.
+const LESSON = { day: 1, title: 'Lesson 1', module: 'Basics', concepts: ['alpha'] };
+const saveLegacy = (fields) => state.writeKV('web_lesson:demo', JSON.stringify({
+  topicSlug: 'demo', lessonDay: 1, lesson: LESSON, plan: PLAN, step: 0, history: [], assessments: [], ...fields,
+}));
+
 // The step each answer was graded as, and whether its prompt was the closing one, from what the model saw.
 const graded = () => adapter.generate.mock.calls
   .map(([system]) => system.match(/## Current Step: (\w+)/)?.[1])
@@ -102,11 +108,22 @@ describe('web lesson turn', () => {
   });
 
   it('still advances a lesson saved before lessons kept their own steps', async () => {
-    const lesson = { day: 1, title: 'Lesson 1', module: 'Basics', concepts: ['alpha'] };
-    state.writeKV('web_lesson:demo', JSON.stringify({ topicSlug: 'demo', lessonDay: 1, lesson, plan: PLAN, step: 1, history: [], assessments: [] }));
+    saveLegacy({ step: 1 });
     const { body } = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'a2' });
     expect(body).toMatchObject({ step: 2, totalSteps: 4, done: false });
     expect(graded()).toEqual(['diagnostic']);
+  });
+
+  // A lesson saved before #159 kept no `reply`. A reload must resume it too, not plan over it.
+  it.each([
+    ['at step 0', {}, '**Goal:** Explain alpha\n\nWhat do you remember about alpha?'],
+    ['at step 0, opened on the diagnostic', { plan: { ...PLAN, retrieval: null } }, '**Goal:** Explain alpha\n\nWhy does alpha matter?'],
+    ['mid-lesson', { step: 2, history: ['a1', 'r1', 'a2', 'r2'].map((content, i) => ({ role: i % 2 ? 'assistant' : 'user', content })) }, 'r2'],
+  ])('resumes a lesson saved before replies were kept, %s, without a model call', async (_case, fields, reply) => {
+    saveLegacy(fields);
+    expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body).toEqual({ reply, step: fields.step || 0, totalSteps: 4, done: false, lesson: LESSON, resumed: true });
+    expect(ctx.getAdapter).not.toHaveBeenCalled();
+    expect(adapter.generate).not.toHaveBeenCalled();
   });
 
   // #159: the web hides the answer box after the last reply, so it must not ask anything.
