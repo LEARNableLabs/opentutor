@@ -174,6 +174,17 @@ it.each([
   expect($('#onboarding-overlay').classList.contains('hidden')).toBe(hidden);
 });
 
+// #167: the onboarding dialog is modal, so the page behind it is inert while it is open.
+it('makes the page behind the onboarding dialog inert until the dialog closes', async () => {
+  const { $ } = frontend((url) => (url === '/api/user' ? [200, { hasProfile: false, onboarded: false }] : null));
+  await settle();
+  expect($('#onboarding-overlay').classList.contains('hidden')).toBe(false);
+  expect($('#app').inert).toBe(true);
+  await $('#btn-onboard-browse').click();
+  expect($('#onboarding-overlay').classList.contains('hidden')).toBe(true);
+  expect($('#app').inert).toBe(false);
+});
+
 it('keeps an over-long answer or message in its box and says why, instead of sending it', async () => {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 4 };
   const { $, calls } = frontend((url) => (url === '/api/lesson' ? [200, start] : null));
