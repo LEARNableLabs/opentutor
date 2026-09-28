@@ -2,14 +2,15 @@
  * Slash command handlers.
  */
 
-import { readProgress, updateProgress, getTopicProgress, listTopics, readDomainFile, readCurriculum } from './state.js';
-import { deliverNextLesson } from './lesson.js';
+import { readProgress, updateProgress, getTopicProgress, readDomainFile, readCurriculum } from './state.js';
+import { deliverNextLesson, computeStreak } from './lesson.js';
 import { generateQuiz } from './quiz.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
 import { generateAndRegisterTopic } from './curriculum.js';
 import { getDueReviews, getRepetitionSummary } from './spaced-repetition.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
 import { log } from './logger.js';
+import { sendStructuredMessage } from './message.js';
 
 export function isCommand(text) {
   return text.startsWith('/');
@@ -147,7 +148,7 @@ async function cmdPause(chatId, channel, _skills) {
   await channel.sendMessage(chatId, '⏸ Lessons paused. Type /resume when you\'re ready.');
 }
 
-async function cmdResume(chatId, channel, _skills) {
+async function cmdResume(chatId, channel, skills) {
   const progress = updateProgress((p) => {
     p.schedule = p.schedule || {};
     p.schedule.paused = false;
@@ -157,7 +158,9 @@ async function cmdResume(chatId, channel, _skills) {
 }
 
 async function cmdTopics(chatId, channel) {
-  const topics = listTopics();
+  // The student's own topics, as /help says; every curriculum on disk is all 293 shipped ones,
+  // far past Telegram's 4,096-character message limit.
+  const topics = readProgress().active_topics || [];
   if (!topics.length) {
     await channel.sendMessage(chatId, "No topics yet. Type /add to start learning!");
     return;
@@ -169,7 +172,8 @@ async function cmdTopics(chatId, channel) {
     if (!p) continue;
     text += `\n• <b>${p.topic}</b> — ${p.percent}% (${p.completed}/${p.total} lessons)`;
   }
-  await channel.sendMessage(chatId, text);
+  // Telegram refuses a message over 4,096 characters; a long list goes in several.
+  await sendStructuredMessage(channel, chatId, text);
 }
 
 async function cmdAdd(chatId, channel, skills, topic) {
