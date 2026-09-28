@@ -100,13 +100,14 @@ i {
   flex-shrink: 0;
 }
 .brand img {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 10px;
   vertical-align: middle;
   margin: -5px 12px 0 0;
 }
 .brand span {
+  color: var(--green);
   font-weight: 600;
 }
 .site-header nav {
@@ -599,8 +600,8 @@ footer .brand {
     font-size: 25px;
   }
   .brand img {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
     margin-right: 10px;
   }
@@ -662,12 +663,12 @@ footer .brand {
   }
   .auth-layout {
     grid-template-columns: 1fr;
-    margin: 20px auto 60px;
+    margin: 12px auto 60px;
     padding: 0 20px;
-    gap: 26px;
+    gap: 22px;
   }
   .auth-layout aside h1 {
-    font-size: 42px;
+    font-size: clamp(34px, 9.5vw, 42px);
   }
   .auth-layout aside > p:not(.eyebrow) {
     display: none;
@@ -678,6 +679,9 @@ footer .brand {
   .auth-page .site-header .text-link {
     font-size: 16px;
     max-width: 160px;
+  }
+  .auth-explore-detail {
+    display: none;
   }
 }
 @media (max-width: 420px) {
@@ -710,10 +714,10 @@ footer .brand {
     font-size: 20px;
   }
   .brand img {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 7px;
-    margin-right: 8px;
+    margin-right: 6px;
   }
   .catalog-grid {
     grid-template-columns: 1fr; /* long titles don't fit two columns at 320px */
