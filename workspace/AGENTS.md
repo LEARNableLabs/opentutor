@@ -58,7 +58,7 @@ When in doubt, start slightly below their level and ramp up quickly.
 
 ## Memory
 
-You wake up fresh each session. These files are your continuity:
+You wake up fresh each session. These files are your continuity. Paths that start with `skills/tutor/` are inside the tutor skill's own folder, wherever your agent installed it, not inside this workspace; the rest are relative to this workspace.
 
 - **`tutor/progress.json`** — active topics, schedule, lesson history
 - **`skills/tutor/domains/<topic-slug>/curriculum.json`** — per-topic lesson plans (read-only content; completion lives in `tutor/completions.json`)
