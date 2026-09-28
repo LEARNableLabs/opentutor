@@ -511,6 +511,9 @@ footer .brand {
 .auth-card h2 {
   font-size: 32px;
 }
+#auth-title .brand-accent {
+  color: var(--green);
+}
 .auth-card > p:not(.eyebrow):not(.quiet) {
   color: var(--muted);
   font-size: 17px;

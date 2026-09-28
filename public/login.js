@@ -23,7 +23,13 @@ function configure() {
         ? 'Choose a new password'
         : legacy
           ? 'Use existing access'
-          : 'Log in to OpenTutor';
+          : 'Log in to Open';
+  if (mode === 'login') {
+    const accent = document.createElement('span');
+    accent.className = 'brand-accent';
+    accent.textContent = 'Tutor';
+    $('#auth-title').append(accent);
+  }
   $('#auth-eyebrow').textContent = signup ? 'Make space for curiosity' : 'Your learning, continued';
   $('#auth-description').textContent = signup
     ? 'Start with a question. Keep growing from there.'
