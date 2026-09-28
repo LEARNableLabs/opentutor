@@ -408,6 +408,42 @@ input:focus {
   padding: 90px 0 100px;
   border-top: 1px solid var(--line);
 }
+/* Privacy and other plain-text pages: the page's left edge, a reading measure. */
+.legal {
+  width: var(--content);
+  margin: auto;
+  padding: 44px 0 90px;
+}
+.legal > * {
+  max-width: 680px;
+}
+.legal h1 {
+  font-size: clamp(36px, 5vw, 52px);
+  margin-bottom: 18px;
+}
+.legal h2 {
+  font-size: 26px;
+  margin: 40px 0 10px;
+}
+.legal p,
+.legal li {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 18px;
+}
+.legal p.quiet {
+  font-size: 14px;
+}
+.legal ul {
+  padding-left: 20px;
+}
+.legal li {
+  margin-bottom: 10px;
+}
+.legal a {
+  color: var(--green);
+  text-decoration: underline;
+}
 .closing h2 {
   font-size: clamp(32px, 4vw, 44px);
   line-height: 1.2;
@@ -433,6 +469,10 @@ footer {
 footer .brand {
   font-size: 22px;
   color: var(--ink);
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
 }
 
 /* ── Sign in ────────────────────────────────────────── */
@@ -617,7 +657,7 @@ footer .brand {
     padding: 24px 0 32px;
     flex-wrap: wrap;
   }
-  footer > span {
+  footer > span:not(.footer-links) {
     display: none;
   }
   .auth-layout {
