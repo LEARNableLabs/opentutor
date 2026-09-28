@@ -37,6 +37,7 @@ beforeEach(() => {
 afterEach(() => {
   fs.rmSync(root, { recursive: true, force: true });
   vi.unstubAllEnvs();
+  vi.restoreAllMocks();
 });
 
 describe('who may provision', () => {
@@ -143,6 +144,38 @@ describe('per-student stats', () => {
   it('404s for a student who was never provisioned', async () => {
     expect((await call({ method: 'GET', headers: ADMIN, query: { id: 'ghost' } })).statusCode).toBe(404);
   });
+
+  it('keeps upstream error text out of a failed read (#144)', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    await call({ method: 'POST', headers: ADMIN, body: { userId: 'alice' } });
+    store.forStudent = () => ({ readProgress: async () => { throw new Error('relation "kv" does not exist'); } });
+
+    const r = await call({ method: 'GET', headers: ADMIN, query: { id: 'alice' } });
+    expect(r.statusCode).toBe(500);
+    expect(JSON.stringify(r.body)).not.toMatch(/relation|kv/);
+  });
+});
+
+// #144 — which failures the caller sees is decided by where the error was thrown,
+// never by what its text happens to say.
+describe('what a failure tells the admin', () => {
+  it.each([
+    [{ method: 'POST', body: { userId: '../etc/passwd' } }, 400, 'Invalid student id: "../etc/passwd" (letters, digits, - and _, max 64)'],
+    [{ method: 'POST', body: { userId: 'acct-1' } }, 400, 'Invalid student id: acct- is reserved for accounts'],
+    [{ method: 'POST', body: { userId: 'alice' } }, 409, 'Student alice already exists'],
+    [{ method: 'DELETE', query: { id: 'nobody' } }, 404, 'Student nobody not found'],
+    [{ method: 'PATCH', query: { id: 'nobody' } }, 404, 'Student nobody not found'],
+  ])('a validation error keeps its status and its text: %j', async (req, statusCode, error) => {
+    await call({ method: 'POST', headers: ADMIN, body: { userId: 'alice' } });
+    expect(await call({ headers: ADMIN, ...req })).toMatchObject({ statusCode, body: { error } });
+  });
+
+  it.each(['relation "students" not found', 'kv row already exists', 'Invalid student id column'])(
+    'a database error gets the generic 500, however it reads: %s', async (text) => {
+      vi.spyOn(console, 'error').mockImplementation(() => {});
+      store.readKV = async () => { throw new Error(text); };
+      expect(await call({ method: 'GET', headers: ADMIN })).toMatchObject({ statusCode: 500, body: { error: 'Provisioning failed. See the server log.' } });
+    });
 });
 
 describe('unsupported methods', () => {

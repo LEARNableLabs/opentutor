@@ -4,6 +4,7 @@ import { normalizeTopicRequest } from '../lib/core/topic-builds.js';
 import { addTopic } from '../lib/core/topic-service.js';
 import { enqueueTopicBuild } from './_lib/topic-queue.js';
 import { adapterFor, KeyRequired } from '../lib/core/llm-access.js';
+import { RequestError } from '../lib/core/errors.js';
 
 export default async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
@@ -20,8 +21,9 @@ export default async function handler(req, res) {
     return res.status(result.lessonCount ? 200 : 202).json(result);
   } catch (err) {
     if (err instanceof KeyRequired) return res.status(402).json(err.body);
-    const invalid = /topic name|Invalid topic slug|Invalid level/.test(err.message);
+    if (err instanceof RequestError) return res.status(err.status).json({ error: err.message });
+    // Anything else stays in the log, however its text reads (#144).
     console.error('[add-topic]', err.message);
-    return res.status(invalid ? 400 : 503).json({ error: invalid ? err.message : 'Could not schedule the curriculum. Please try adding the topic again.' });
+    return res.status(503).json({ error: 'Could not schedule the curriculum. Please try adding the topic again.' });
   }
 }

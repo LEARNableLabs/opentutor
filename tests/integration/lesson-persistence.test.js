@@ -100,6 +100,24 @@ describe('a lesson that saves normally', () => {
     expect(turn.body.done).toBe(true);
     expect(turn.body.error).toBeUndefined();
   });
+
+  // #157 — SupabaseStore.readUser() now throws on a database error instead of returning ''.
+  it('finishes without the profile when it cannot be read, and logs every read that failed', async () => {
+    const state = readOnlyStore();
+    state.markLessonComplete = async () => {};
+    state.writeDomainFile = async () => {};
+    state.readUser = async () => { throw new Error('relation "kv" does not exist'); };
+
+    let turn = await lessonTurn(ctx(state), { topicSlug: 'game-theory' });
+    for (let i = 0; i < turn.body.totalSteps; i++) {
+      turn = await lessonTurn(ctx(state), { topicSlug: 'game-theory', answer: 'an answer' });
+    }
+
+    expect(turn.body).toMatchObject({ done: true });
+    expect(turn.body.warning).toBeUndefined();
+    expect(warned).toHaveBeenCalledWith('[lesson] step failed: relation "kv" does not exist');
+    expect(warned).toHaveBeenCalledWith('[lesson] practice evaluation failed:', 'relation "kv" does not exist');
+  });
 });
 
 describe('a topic with no curriculum', () => {

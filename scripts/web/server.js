@@ -11,6 +11,7 @@ import { accountHandler } from '../../api/account.js';
 import { openrouterHandler } from '../../api/_lib/openrouter.js';
 import { demoHandler } from '../../api/_lib/demo.js';
 import { adapterFor, turnText, KeyRequired } from '../../lib/core/llm-access.js';
+import { RequestError } from '../../lib/core/errors.js';
 import { publicCatalog } from '../../lib/core/catalog.js';
 import fs from 'fs';
 import path from 'path';
@@ -155,12 +156,10 @@ async function handleAdmin(req, res, url) {
     return fail(res, 405, 'Method not allowed');
   } catch (err) {
     // A typo in an id should not look like an outage.
-    const message = err.message || 'Provisioning failed';
-    if (/Invalid student id/.test(message)) return fail(res, 400, message);
-    if (/already exists/i.test(message)) return fail(res, 409, message);
-    if (/not found/i.test(message)) return fail(res, 404, message);
+    if (err instanceof RequestError) return fail(res, err.status, err.message);
+    // Anything else stays in the log, however its text reads (#144).
     console.error('[admin]', err);
-    return fail(res, 500, message);
+    return fail(res, 500, 'Provisioning failed. See the server log.');
   }
 }
 
@@ -404,7 +403,10 @@ async function handleStudentAPI(req, res, url, state) {
         return res.end(JSON.stringify(result));
       } catch (err) {
         if (err instanceof KeyRequired) return keyRequired(res, err);
-        return fail(res, /topic name|Invalid topic slug|Invalid level/.test(err.message) ? 400 : 503, err.message);
+        // As api/add-topic.js: validation text is the student's to see, anything else is logged (#144).
+        if (err instanceof RequestError) return fail(res, err.status, err.message);
+        console.error('[add-topic]', err.message);
+        return fail(res, 503, 'Could not schedule the curriculum. Please try adding the topic again.');
       }
     }
 
