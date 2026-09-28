@@ -120,7 +120,8 @@ configure();
   const response = await fetch('/api/account');
   if (!response.ok) return;
   const data = await response.json();
-  if (data.user && mode === 'login') location.replace(next);
+  // Signed in already: no form to show, whichever one a link asked for (Codex on #176).
+  if (data.user && (mode === 'login' || mode === 'signup')) return location.replace(next);
   if (!data.available && mode !== 'legacy') {
     $('#auth-status').textContent =
       'Email accounts are not configured on this installation. Browse topics or use existing access.';
