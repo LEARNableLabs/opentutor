@@ -27,6 +27,13 @@ $('#btn-signout').addEventListener('click', async () => {
   const res=await nativeFetch('/api/account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'logout'})});
   if(res.ok){localStorage.removeItem('opentutor-password');window.location.assign('/');}
 });
+// #160: shown only to self-signup accounts; the operator removes everyone else.
+$('#btn-delete-account').addEventListener('click', async () => {
+  if (prompt('This permanently deletes your account and all your learning data. Type DELETE to confirm.') !== 'DELETE') return;
+  const res = await nativeFetch('/api/account', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'delete', confirm: 'DELETE' }) }).catch(() => null);
+  if (res?.ok) return window.location.assign('/?deleted=1');
+  alert((await res?.json().catch(() => null))?.error || 'Your account could not be deleted. Please try again.');
+});
 
 // ── Streaming ──────────────────────────────────────────────
 // POST + SSE (EventSource cannot POST). `onToken` fires per chunk; the promise
@@ -716,11 +723,14 @@ async function initializeLearning() {
   const current = await nativeFetch('/api/account');
   if (current.status >= 500) throw new Error('Sign-in is unavailable');
   const session = await current.json();
-  if(!session.user&&!session.local) {
+  let user = session.user;
+  if(!user&&!session.local) {
     const refreshed=await nativeFetch('/api/account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})});
     if (refreshed.status >= 500) throw new Error('Sign-in is unavailable');
     if(!refreshed.ok){window.location.replace('/login.html'+window.location.search);return;}
+    user = (await refreshed.json().catch(() => ({}))).user; // a returning student arrives here
   }
+  if (user?.id?.startsWith('acct-')) $('#btn-delete-account').classList.remove('hidden');
   await finishConnect();
   await restoreTopicBuild();
   const topic = new URLSearchParams(window.location.search).get('topic');
