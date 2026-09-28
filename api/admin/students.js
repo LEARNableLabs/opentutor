@@ -14,6 +14,7 @@ import { issueStudentToken } from '../../lib/core/student-auth.js';
 import { getState } from '../_lib/init.js';
 import { checkAdmin, adminFailure } from '../_lib/admin-auth.js';
 import { listStudents, findStudent, provisionStudent, decommissionStudent } from '../../lib/core/students.js';
+import { RequestError } from '../../lib/core/errors.js';
 
 const idFrom = (req) => req.query?.id ?? new URL(req.url || '/', 'http://x').searchParams.get('id');
 
@@ -58,12 +59,9 @@ export default async function handler(req, res) {
   } catch (err) {
     // An invalid id and a duplicate are the caller's problem, not the server's;
     // returning 500 for either would make a typo look like an outage.
-    const message = err.message || 'Provisioning failed';
-    if (/Invalid student id/.test(message)) return res.status(400).json({ error: message });
-    if (/already exists/i.test(message)) return res.status(409).json({ error: message });
-    if (/not found/i.test(message)) return res.status(404).json({ error: message });
+    if (err instanceof RequestError) return res.status(err.status).json({ error: err.message });
 
-    // Database error text stays in the log, not the browser (#144).
+    // Anything else stays in the log, however its text reads (#144).
     console.error('[admin/students]', err);
     return res.status(500).json({ error: 'Provisioning failed. See the server log.' });
   }
