@@ -300,3 +300,101 @@ it('shows HTML in a tutor reply as text, while still rendering its markdown', as
   expect(html).toContain('&lt;img src=x onerror=&quot;alert(1)&quot;&gt;');
   expect(html).not.toMatch(/<img|<script|<b>/);
 });
+
+// #160: a self-signup account deletes itself, behind a typed confirmation.
+const CONFIRM = 'This permanently deletes your account and all your learning data. Type DELETE to confirm.';
+const deletions = (calls) =>
+  calls.filter((c) => c.url === '/api/account' && JSON.parse(c.init.body || '{}').action === 'delete');
+
+it.each([
+  ['a self-signup account', true, { user: { id: 'acct-1' } }],
+  ['a self-signup account whose session was just refreshed', true, { user: null }, { user: { id: 'acct-1' } }],
+  ['a student the operator created', false, { user: { id: 'carol' } }],
+  ['the owner', false, { user: { id: null, name: 'Your workspace' } }],
+  ['a local install', false, { user: null, local: true }],
+])('%s sees Delete account: %s', async (_who, visible, session, refreshed) => {
+  const { $ } = frontend((url, init) => (url === '/api/account' ? [200, init.method === 'POST' ? refreshed : session] : null));
+  await settle();
+  expect($('#btn-delete-account').classList.contains('hidden')).toBe(!visible);
+});
+
+it.each([[null], [''], ['delete'], ['DELETE ']])('sends nothing when the confirmation is %j', async (answer) => {
+  const { $, calls, context } = frontend(() => null);
+  await settle();
+  context.prompt = vi.fn(() => answer);
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(context.prompt).toHaveBeenCalledWith(CONFIRM);
+  expect(deletions(calls)).toEqual([]);
+  expect(context.location.assign).not.toHaveBeenCalled();
+});
+
+it('deletes the account once the student types DELETE, then leaves for the home page', async () => {
+  const { $, calls, context } = frontend((url, init) => (url === '/api/account' && init.method === 'POST' ? [200, { ok: true }] : null));
+  await settle();
+  context.prompt = vi.fn(() => 'DELETE');
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(deletions(calls).map((c) => [c.init.method, JSON.parse(c.init.body)])).toEqual([['POST', { action: 'delete', confirm: 'DELETE' }]]);
+  expect(context.location.assign).toHaveBeenCalledWith('/?deleted=1');
+});
+
+it.each([
+  ['refuses', () => [500, { error: 'Your account could not be deleted. Please try again.' }], 'Your account could not be deleted. Please try again.'],
+  ['cannot be reached', () => { throw new Error('offline'); }, 'Your account could not be deleted. Please try again.'],
+])('stays and says why when the server %s', async (_how, answer, message) => {
+  const { $, context } = frontend((url, init) => (url === '/api/account' && init.method === 'POST' ? answer() : null));
+  await settle();
+  context.prompt = vi.fn(() => 'DELETE');
+  context.alert = vi.fn();
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(context.alert).toHaveBeenCalledWith(message);
+  expect(context.location.assign).not.toHaveBeenCalled();
+  expect(context.location.replace).not.toHaveBeenCalled();
+});
+
+// The fetch wrapper leaves /api/account alone, so the delete refreshes an expired session itself.
+const accountPosts = (calls) =>
+  calls.filter((c) => c.url === '/api/account' && c.init.method === 'POST').map((c) => JSON.parse(c.init.body).action);
+
+it('refreshes an expired session once and retries the delete without asking again', async () => {
+  let deletes = 0;
+  const { $, calls, context } = frontend((url, init) => {
+    if (url !== '/api/account' || init.method !== 'POST') return null;
+    if (JSON.parse(init.body).action === 'refresh') return [200, { user: { id: 'acct-1' } }];
+    return ++deletes === 1 ? [401, { error: 'Please sign in again to delete your account.' }] : [200, { ok: true }];
+  });
+  await settle();
+  context.prompt = vi.fn(() => 'DELETE');
+  context.alert = vi.fn();
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(accountPosts(calls)).toEqual(['delete', 'refresh', 'delete']);
+  expect(context.prompt).toHaveBeenCalledTimes(1);
+  expect(context.alert).not.toHaveBeenCalled();
+  expect(context.location.assign).toHaveBeenCalledWith('/?deleted=1');
+});
+
+it.each([
+  ['has ended, to the login page', [401, { error: 'Your session expired. Please sign in again.' }], null],
+  ['cannot be checked, with a message and no sign-out', [503, { error: 'Sign-in is temporarily unavailable. Please try again.' }], 'Sign-in is temporarily unavailable. Please try again.'],
+])('when the refreshed session %s', async (_what, refreshed, message) => {
+  const { $, calls, context } = frontend((url, init) => {
+    if (url !== '/api/account' || init.method !== 'POST') return null;
+    return JSON.parse(init.body).action === 'refresh' ? refreshed : [401, { error: 'Please sign in again to delete your account.' }];
+  });
+  await settle();
+  context.prompt = vi.fn(() => 'DELETE');
+  context.alert = vi.fn();
+  await $('#btn-delete-account').click();
+  await settle();
+  expect(accountPosts(calls)).toEqual(['delete', 'refresh']);
+  if (message) {
+    expect(context.alert).toHaveBeenCalledWith(message);
+    expect(context.location.assign).not.toHaveBeenCalled();
+  } else {
+    expect(context.alert).not.toHaveBeenCalled();
+    expect(context.location.assign).toHaveBeenCalledWith('/login.html');
+  }
+});
