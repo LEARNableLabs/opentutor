@@ -36,10 +36,12 @@ function frontend(route, search = '') {
     localStorage: { getItem: () => null, removeItem() {} }, sessionStorage: { removeItem() {} },
     location: { search, pathname: '/learn.html', assign: vi.fn(), replace: vi.fn() },
     history: { replaceState: vi.fn() },
-    Response, Headers, URLSearchParams, console, setTimeout: (fn) => (timers.push(fn), 0), clearTimeout() {},
+    Response, Headers, URLSearchParams, TextDecoder, console, setTimeout: (fn) => (timers.push(fn), 0), clearTimeout() {},
     fetch: async (url, init = {}) => {
       calls.push({ url, init });
-      const [status, body] = route(url, init) || base[url] || [200, {}];
+      const answer = route(url, init) || base[url] || [200, {}];
+      if (answer instanceof Response) return answer; // e.g. a stream
+      const [status, body] = answer;
       return new Response(JSON.stringify(body), { status });
     },
   });
@@ -67,6 +69,21 @@ it('turns any 402 into the connect banner, in the server\'s words, and shows the
   expect($('#connect-banner').classList.contains('hidden')).toBe(false);
   expect($('#connect-message').textContent).toBe(refusal.error);
   expect($('#chat-messages').children.some((n) => String(n.innerHTML + n.textContent).includes('undefined'))).toBe(false);
+});
+
+// #180: a spent daily trial budget reaches the page as the connect prompt, from either lesson path.
+const DAILY = { error: 'Free lessons are used up for today. Connect your OpenRouter account to keep going, or come back tomorrow.', connect: true, reason: 'daily_limit' };
+it.each([
+  ['a 402', () => new Response(JSON.stringify(DAILY), { status: 402 })],
+  ['one SSE error event', () => new Response(`event: error\ndata: ${JSON.stringify(DAILY)}\n\n`, { headers: { 'Content-Type': 'text/event-stream' } })],
+])('shows the daily trial limit in the connect banner when a lesson gets %s', async (_case, reply) => {
+  const { $ } = frontend((url) => (url === '/api/lesson' ? reply() : null));
+  await settle();
+  $('#active-topic').value = 'demo';
+  await $('#btn-next').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(false);
+  expect($('#connect-message').textContent).toBe(DAILY.error);
 });
 
 it('sends the student to OpenRouter, and finishes the connection when they come back', async () => {

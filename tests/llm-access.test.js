@@ -1,11 +1,11 @@
-import { it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { TutorStore } from '../lib/core/store.js';
 import {
   saveKey, readKey, deleteKey, adapterFor, trialLessonsLeft, trimHistory, turnText,
-  KeyRequired, TRIAL_LESSONS, ONBOARDING_MESSAGES,
+  KeyRequired, TRIAL_LESSONS, ONBOARDING_MESSAGES, TRIAL_CALLS_PER_DAY,
 } from '../lib/core/llm-access.js';
 
 let root, store, host;
@@ -180,6 +180,80 @@ it('asks a student whose stored key no longer opens to reconnect, instead of reo
 
 it('rejects an unknown use before looking at anything', async () => {
   await expect(adapterFor({ state: store, use: 'lesson_start', host: () => host })).rejects.toThrow('Unknown model use: lesson_start');
+});
+
+// #180: the per-account caps did not bound the total. Every trial call on the deployment's
+// key, from any account, now takes one of the day's calls, counted in the unnamed store.
+describe('the daily budget of trial calls', () => {
+  const accounts = (n) => Array.from({ length: n }, (_, i) => store.forStudent(`acct-${String(i).padStart(8, '0')}-1111-4111-8111-111111111111`));
+  const call = async (state, use = 'lesson-start') => outcome((await adapterFor({ state, use, host: () => host })).generate('x', []));
+  const dayRows = () => store.listKV('openrouter-trial-day:').map((r) => r.key);
+  afterEach(() => vi.useRealTimers());
+
+  it('allows 300 calls a day across all accounts by default, then refuses with a 402 to connect', async () => {
+    const outcomes = [];
+    for (const state of accounts(25)) for (let i = 0; i < ONBOARDING_MESSAGES; i++) outcomes.push(await call(state, 'onboarding'));
+    expect(outcomes.filter((o) => o === 'allowed')).toHaveLength(TRIAL_CALLS_PER_DAY);
+    expect(TRIAL_CALLS_PER_DAY).toBe(300);
+    const [late] = accounts(26).slice(-1);
+    for (const use of ['lesson-start', 'onboarding']) expect(await call(late, use)).toBe('daily_limit');
+    expect(host.generate).toHaveBeenCalledTimes(300);
+    // The refused request gave its own free lesson back: the student did not get the call.
+    expect(await trialLessonsLeft(late)).toBe(TRIAL_LESSONS);
+    expect(new KeyRequired('daily_limit').body).toEqual({
+      error: 'Free lessons are used up for today. Connect your OpenRouter account to keep going, or come back tomorrow.',
+      connect: true,
+      reason: 'daily_limit',
+    });
+  });
+
+  it('counts lesson answers too, and starts fresh the next day, sweeping the day before', async () => {
+    vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '2');
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(new Date('2026-09-28T23:59:00Z'));
+    const [a, b] = accounts(2);
+    expect([await call(a), await call(a, 'lesson-continue'), await call(b, 'onboarding')]).toEqual(['allowed', 'allowed', 'daily_limit']);
+    vi.setSystemTime(new Date('2026-09-29T00:01:00Z'));
+    expect([await call(b, 'onboarding'), await call(b), await call(a, 'lesson-continue')]).toEqual(['allowed', 'allowed', 'daily_limit']);
+    expect(dayRows().sort()).toEqual(['openrouter-trial-day:2026-09-29:1', 'openrouter-trial-day:2026-09-29:2']);
+  });
+
+  it('never goes over the limit when calls arrive at the same time', async () => {
+    vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '5');
+    const results = await Promise.all(accounts(20).map((state) => call(state)));
+    expect(results.filter((r) => r === 'allowed')).toHaveLength(5);
+    expect(results.filter((r) => r === 'daily_limit')).toHaveLength(15);
+    expect(host.generate).toHaveBeenCalledTimes(5);
+    expect(dayRows()).toHaveLength(5);
+  });
+
+  it('reads the limit from OPENTUTOR_TRIAL_CALLS_PER_DAY, and ignores a value that is not a whole number', async () => {
+    vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '0');
+    expect(await call(account())).toBe('daily_limit');
+    for (const value of ['', 'abc', '-3', '2.5']) {
+      vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', value);
+      expect(await call(accounts(1)[0], 'onboarding'), `OPENTUTOR_TRIAL_CALLS_PER_DAY=${JSON.stringify(value)}`).toBe('allowed');
+    }
+  });
+
+  it('keeps the default when the limit is a whole number too large to hold, rather than lifting the cap', async () => {
+    vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '9'.repeat(400)); // Number() of this is Infinity
+    const day = new Date().toISOString().slice(0, 10);
+    for (let i = 1; i <= TRIAL_CALLS_PER_DAY; i++) store.insertKV(`openrouter-trial-day:${day}:${i}`, 'earlier');
+    expect(await call(account())).toBe('daily_limit');
+  });
+
+  it('leaves students with their own key, the owner and admin-created students alone', async () => {
+    vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '0');
+    const connected = account();
+    await saveKey(connected, 'sk-or-student');
+    const fetch = vi.fn(async () => Response.json({ choices: [{ message: { content: 'hi' } }] }));
+    vi.stubGlobal('fetch', fetch);
+    for (const use of USES) expect(await call(connected, use)).toBe('allowed');
+    expect(fetch).toHaveBeenCalledTimes(USES.length);
+    for (const state of [store, store.forStudent('alice')]) for (const use of USES) expect(await call(state, use)).toBe('allowed');
+    expect(dayRows()).toEqual([]);
+  });
 });
 
 it('bounds the answers inside trial lessons, even when they arrive at the same time', async () => {
