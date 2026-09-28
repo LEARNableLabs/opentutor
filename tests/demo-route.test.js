@@ -58,7 +58,7 @@ it('refuses anything but a same-origin POST with 1 to 300 characters, before spe
 
 it('replies with one capped follow-up on the cheap model: the card in the prompt, the visitor as the user message', async () => {
   const card = fs.readFileSync('public/index.html', 'utf8')
-    .match(/<div class="conversation">\s*<span[^>]*>✦<\/span>\s*<p>([\s\S]*?)<\/p>/)[1].replace(/\s+/g, ' ').trim();
+    .match(/<div class="conversation" id="demo-question">\s*<span[^>]*>✦<\/span>\s*<p>([\s\S]*?)<\/p>/)[1].replace(/\s+/g, ' ').trim();
   expect(card).toMatch(/^Two neighbours share a garden\..*What would you try\?$/);
 
   const res = await call({ answer: `  ${'x'.repeat(DEMO_MAX_CHARS - 2)} a` });
