@@ -249,10 +249,10 @@ automatically. It is configured in `.coderabbit.yaml`, which leaves out
 `skills/tutor/domains/**` and `package-lock.json`, and it applies the `## Code
 Review Rules` section of `AGENTS.md` as review criteria. Codex (the ChatGPT
 Codex GitHub app) reviews a PR when a comment says `@codex review`; its
-automatic reviews are off, and can be switched on in the Codex settings. Ask it
-to be adversarial, naming file:line and the triggering input. It reacts 👍 when
-it finds nothing. Verify each finding against the code, then fix it or answer it
-in its thread. Merge once neither reviewer has an open finding (#139).
+automatic reviews are off, so request one on every PR. Ask it to be adversarial,
+naming file:line and the triggering input. It reacts 👍 when it finds nothing.
+Verify each finding against the code, then fix it or answer it in its thread.
+Merge only after both have reviewed and neither has an open finding (#139).
 
 It is worth it: the review of the per-student tenancy change (#80)
 found four real defects, including a migration that silently lost a student's
