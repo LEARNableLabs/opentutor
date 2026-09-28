@@ -171,6 +171,7 @@ h1 em {
   margin-top: 20px;
 }
 .lesson-preview {
+  --muted: #59655f; /* 5.3:1 on the card; the page grey is 4.4 here (#167) */
   background: #edf0e6;
   border: 1px solid #dce1d2;
   border-radius: 18px;
@@ -293,7 +294,7 @@ h1 em {
 }
 .step-number {
   font-size: 13px;
-  color: #6d8455;
+  color: #5a7045;
   display: block;
   padding-bottom: 22px;
   border-bottom: 1px solid var(--line);
