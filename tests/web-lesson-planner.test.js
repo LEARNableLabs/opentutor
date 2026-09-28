@@ -64,7 +64,7 @@ describe.each([
   // Starts a lesson with the model answering `text`; returns the plan prompt it saw and the first message.
   async function start(text = JSON.stringify(PLAN)) {
     const adapter = { generate: vi.fn(async () => ({ text })) };
-    const { status, body } = await lessonTurn({ state: wrap(store), adapter, skills: new Map() }, { topicSlug: 'demo' });
+    const { status, body } = await lessonTurn({ state: wrap(store), getAdapter: async () => adapter, skills: new Map() }, { topicSlug: 'demo' });
     expect(status).toBe(200);
     return { system: adapter.generate.mock.calls[0][0], reply: body.reply };
   }

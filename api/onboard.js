@@ -32,7 +32,7 @@ export default async function handler(req, res) {
  */
 export async function onboardTurn({ state, skills, getAdapter }, { message, history }) {
   const text = turnText(message);
-  if (text === null) return { status: 400, body: { error: 'A message of at most 4,000 characters is required.' } };
+  if (text === null) return { status: 400, body: { error: 'A message of 1 to 4,000 characters is required.' } };
   const adapter = await getAdapter();
 
   const user = await state.readUser();

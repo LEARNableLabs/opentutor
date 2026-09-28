@@ -135,11 +135,14 @@ it('keeps only real, recent, bounded onboarding turns from the browser', () => {
   expect(trimHistory('not a list')).toEqual([]);
 });
 
-it('accepts one conversational turn of up to 4,000 characters, and rejects longer or non-text', () => {
+it('accepts one conversational turn of 1 to 4,000 characters, and rejects longer, blank or non-text', () => {
   expect(turnText('x'.repeat(4000))).toHaveLength(4000);
   expect(turnText('x'.repeat(4001))).toBeNull();
   expect(turnText(42)).toBeNull();
   expect(turnText('short')).toBe('short');
+  // #159: a blank turn is still a billed model call, and a trial unit spent.
+  expect(turnText('')).toBeNull();
+  expect(turnText('   ')).toBeNull();
 });
 
 it('holds both trial caps when requests arrive at the same time', async () => {
