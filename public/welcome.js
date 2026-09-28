@@ -1,3 +1,13 @@
+// #160: where the learn page sends a student who deleted their account. First, so it needs
+// nothing else on the page; the flag leaves the address so a reload doesn't repeat it.
+const query = new URLSearchParams(location.search);
+if (query.get('deleted') === '1') {
+  document.querySelector('#deleted-notice').textContent =
+    'Your account and learning data have been deleted.';
+  query.delete('deleted');
+  const rest = query.toString();
+  history.replaceState(null, '', location.pathname + (rest ? `?${rest}` : '') + location.hash);
+}
 const search = document.querySelector('#catalog-search'),
   list = document.querySelector('#catalog-list'),
   status = document.querySelector('#catalog-status'),

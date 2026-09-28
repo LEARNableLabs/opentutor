@@ -5,12 +5,12 @@ const $$ = (s) => document.querySelectorAll(s);
 // the same refresh token concurrently when multiple API calls return 401.
 const nativeFetch = window.fetch.bind(window);
 let refreshing;
+const refreshSession = () => (refreshing ||= nativeFetch('/api/account', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})}).finally(()=>{refreshing=null;}));
 window.fetch = async (input, init = {}) => {
   const url = typeof input === 'string' ? input : input?.url || '';
   let res = await nativeFetch(input, init);
   if (url.startsWith('/api/') && url !== '/api/account' && res.status === 401) {
-    refreshing ||= nativeFetch('/api/account', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'refresh'})}).finally(()=>{refreshing=null;});
-    const renewed = await refreshing;
+    const renewed = await refreshSession();
     // An outage is not a sign-out. A fresh response each time: concurrent callers share `renewed`.
     if (renewed.status >= 500) return new Response(JSON.stringify({ error: 'Sign-in is temporarily unavailable. Please try again.' }), { status: 503, headers: { 'Content-Type': 'application/json' } });
     if(renewed.ok)res=await nativeFetch(input,init);
@@ -30,7 +30,16 @@ $('#btn-signout').addEventListener('click', async () => {
 // #160: shown only to self-signup accounts; the operator removes everyone else.
 $('#btn-delete-account').addEventListener('click', async () => {
   if (prompt('This permanently deletes your account and all your learning data. Type DELETE to confirm.') !== 'DELETE') return;
-  const res = await nativeFetch('/api/account', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'delete', confirm: 'DELETE' }) }).catch(() => null);
+  const remove = () => nativeFetch('/api/account', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'delete', confirm: 'DELETE' }) }).catch(() => null);
+  let res = await remove();
+  // The wrapper above skips /api/account, so an expired session is refreshed here, once,
+  // and the confirmed delete retried without asking again.
+  if (res?.status === 401) {
+    const renewed = await refreshSession().catch(() => null);
+    if (!renewed || renewed.status >= 500) return alert('Sign-in is temporarily unavailable. Please try again.');
+    if (!renewed.ok) return window.location.assign('/login.html');
+    res = await remove();
+  }
   if (res?.ok) return window.location.assign('/?deleted=1');
   alert((await res?.json().catch(() => null))?.error || 'Your account could not be deleted. Please try again.');
 });
