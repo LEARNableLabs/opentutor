@@ -162,38 +162,38 @@ footer a:hover {
   color: var(--green);
 }
 
-/* ── Hero: the logo, the promise, one way in ────────── */
+/* ── Hero: the logo and the promise on the left, a lesson to try on the right ── */
 .hero {
-  max-width: 880px;
+  max-width: 1200px;
   margin: auto;
-  padding: 36px 24px 72px;
-  display: flex;
-  flex-direction: column;
+  padding: 32px 40px 96px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
   align-items: center;
-  text-align: center;
 }
 .hero-logo {
-  width: 220px;
-  height: 220px;
-  margin-bottom: 30px;
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 26px;
 }
 h1 {
-  font-size: clamp(46px, 7.2vw, 80px);
+  font-size: clamp(46px, 5.6vw, 78px);
   letter-spacing: -1px;
   line-height: 1.04;
 }
 .hero-description {
   font-size: 21px;
-  max-width: 620px;
+  max-width: 540px;
   color: var(--muted);
   line-height: 1.6;
-  margin: 28px auto 34px;
+  margin: 26px 0 32px;
 }
 .actions {
   display: flex;
   gap: 26px;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
 }
 .hero .quiet {
@@ -201,12 +201,7 @@ h1 {
 }
 
 /* ── The example lesson ─────────────────────────────── */
-.demo-section {
-  padding: 0 24px 96px;
-}
 .lesson-preview {
-  max-width: 640px;
-  margin: auto;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -571,6 +566,12 @@ footer .brand {
   display: none !important;
 }
 
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}
 @media (max-width: 960px) {
   .steps {
     grid-template-columns: repeat(2, 1fr);
@@ -600,21 +601,18 @@ footer .brand {
     display: none;
   }
   .hero {
-    padding: 18px 22px 52px;
+    padding: 18px 22px 60px;
   }
   .hero-logo {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 22px;
+    width: 132px;
+    height: 132px;
+    margin-bottom: 20px;
   }
   .hero-description {
     font-size: 19px;
   }
   .actions {
     gap: 16px;
-  }
-  .demo-section {
-    padding: 0 16px 64px;
   }
   .lesson-preview {
     padding: 22px 20px 0;
