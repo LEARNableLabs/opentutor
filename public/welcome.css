@@ -264,7 +264,9 @@ h1 {
   font-size: 13px;
 }
 .sample-answer {
-  margin: 18px 0 18px 40px;
+  width: fit-content;
+  max-width: calc(100% - 40px); /* the visitor's reply sits right, as a chat bubble, not a field */
+  margin: 18px 0 18px auto;
   padding: 10px 16px;
   background: #fff;
   border: 1px solid var(--line);
