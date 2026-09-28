@@ -581,6 +581,7 @@ async function checkOnboarding() {
 function setOnboarding(open) {
   $('#onboarding-overlay').classList.toggle('hidden', !open);
   $('#app').inert = open;
+  if (!open) $('#active-topic').focus(); // focus leaves the closed dialog; "browse" then moves it to search
 }
 
 function showOnboarding() {
