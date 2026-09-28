@@ -103,7 +103,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     active.history.push({ role: 'user', content: answer });
 
     const user = await safely(() => state.readUser(), '');
-    const responsePrompt = buildSocraticResponsePrompt(active.plan, answer, stepName, user, { final: active.step === steps.length - 1 });
+    const responsePrompt = buildSocraticResponsePrompt(active.plan, answer, stepName, user, { final: active.step === steps.length - 1, markdown: true });
     const adapter = await getAdapter();
     const response = await adapter.generate(
       responsePrompt.system + '\n\nReturn only polished text.',
