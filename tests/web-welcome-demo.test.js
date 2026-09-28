@@ -5,7 +5,7 @@ import vm from 'node:vm';
 // Runs the landing page's real script against a DOM double built from index.html's
 // ids (#153). `stored` seeds localStorage; null makes the browser refuse storage.
 // `search` is the page's query string.
-function landing(respond, stored = {}, search = '') {
+function landing(respond, stored = {}, search = '', { user = null, catalog = [] } = {}) {
   const html = fs.readFileSync(new URL('../public/index.html', import.meta.url), 'utf8');
   const source = fs.readFileSync(new URL('../public/welcome.js', import.meta.url), 'utf8');
   const created = [], htmlWrites = [], calls = [];
@@ -36,7 +36,7 @@ function landing(respond, stored = {}, search = '') {
     fetch: async (url, init = {}) => {
       calls.push({ url, init });
       if (url === '/api/demo') return respond(init);
-      return Response.json(url === '/api/catalog' ? [] : { user: null });
+      return Response.json(url === '/api/catalog' ? catalog : { user });
     },
     location: { search, pathname: '/', hash: '' },
     history: { replaceState: vi.fn() },
@@ -130,4 +130,18 @@ it.each([[''], ['?deleted=0'], ['?deleted=yes']])('says nothing about a deletion
   const page = landing(() => Response.json({}), {}, search);
   expect(page.$('#deleted-notice').textContent).toBe('');
   expect(page.context.history.replaceState).not.toHaveBeenCalled();
+});
+
+// Codex on #176: a signed-in visitor is sent to their lessons, never to a signup form.
+it('points every account call to action at the learning app once the visitor is signed in', async () => {
+  const catalog = [{ slug: 'game-theory', topic: 'Game theory', total: 29, preview: ['What is a game?'] }];
+  const page = landing(() => Response.json({}), {}, '', { user: { id: 'acct-1' }, catalog });
+  await settle();
+  for (const id of ['#account-link', '#hero-signup', '#closing-signup']) {
+    expect(page.$(id).href, id).toBe('/learn.html');
+    expect(page.$(id).textContent, id).toBe('Continue learning');
+  }
+  expect(page.$('#demo-signup').href).toBe('/learn.html?topic=game-theory');
+  const start = page.created.filter((n) => n.textContent === 'Start this topic').at(-1);
+  expect(start.href).toBe('/learn.html?topic=game-theory');
 });
