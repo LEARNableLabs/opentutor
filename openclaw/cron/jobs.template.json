@@ -5,6 +5,7 @@
       "id": "GENERATE_A_UUID",
       "name": "tutor-lessons",
       "description": "Daily tutor lesson delivery",
+      "agentId": "tutor",
       "enabled": true,
       "createdAtMs": 0,
       "updatedAtMs": 0,

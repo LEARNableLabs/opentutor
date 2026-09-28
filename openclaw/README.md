@@ -191,6 +191,7 @@ cp openclaw/cron/jobs.template.json ~/.openclaw/cron/jobs.json
 3. Edit `~/.openclaw/cron/jobs.json`:
    - Replace `GENERATE_A_UUID` with the UUID you generated
    - Replace `CHANNEL_NAME` with `telegram` or `slack`
+   - Keep `agentId` as the tutor agent's `id` from Step 3 (`tutor`). The job runs in that agent's workspace, where `tutor/progress.json` lives; OpenClaw refuses to run a cron job with no resolvable agent
    - Adjust the cron expression (`0 9,13,19 * * *` = 9am, 1pm, 7pm daily)
    - Adjust the timezone
 
