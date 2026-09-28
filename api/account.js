@@ -18,6 +18,7 @@ import {
   grantRecovery,
   canReset,
 } from '../lib/core/accounts.js';
+import { decommissionStudent } from '../lib/core/students.js';
 
 export function accountHandler({ getStore = getState, clientFactory = createAccountClient } = {}) {
   return async (req, res) => {
@@ -163,6 +164,41 @@ export function accountHandler({ getStore = getState, clientFactory = createAcco
         setSession(req, res, session.data.session);
         setCookie(req, res, 'ot_recovery', '', 0);
         return res.status(200).json({ ok: true });
+      }
+      if (action === 'delete') {
+        if (body.confirm !== 'DELETE')
+          return res.status(400).json({ error: 'Type DELETE to confirm.' });
+        // Only a self-signup account deletes itself; the operator manages everyone else.
+        const other =
+          cookies(req).ot_legacy || req.headers?.authorization || req.headers?.['x-opentutor-password'];
+        if (!accessToken(req) && !refreshToken(req) && other)
+          return res
+            .status(403)
+            .json({ error: 'Only a signed-up account can be deleted here. Ask the operator.' });
+        const root = await getStore();
+        const account = await verifyAccountRequest(req, root, client);
+        if (!account)
+          return res.status(401).json({ error: 'Please sign in again to delete your account.' });
+        // Data first: it disables the account, then wipes it. If that fails the Auth user
+        // stays, so nothing points at data we could not remove.
+        try {
+          await decommissionStudent(root, account.id);
+        } catch (err) {
+          console.error('[account] delete failed:', account.id, err?.message);
+          return res.status(500).json({ error: 'Your account could not be deleted. Please try again.' });
+        }
+        // Past this point the account is unusable, so a failure is the operator's to finish.
+        let authDeleted = true;
+        try {
+          const { error } = await client.auth.admin.deleteUser(account.authId);
+          if (error) throw error;
+        } catch (err) {
+          authDeleted = false;
+          console.error('[account] auth user not deleted:', account.authId, err?.message);
+        }
+        clearSession(req, res);
+        setCookie(req, res, 'ot_legacy', '', 0);
+        return res.status(200).json(authDeleted ? { ok: true } : { ok: true, authDeleted: false });
       }
       if (!['signup', 'login', 'forgot'].includes(action))
         return res.status(400).json({ error: 'Unknown account action.' });

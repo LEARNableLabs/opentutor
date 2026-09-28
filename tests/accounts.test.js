@@ -4,9 +4,11 @@ import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { TutorStore } from '../lib/core/store.js';
-import { issueStudentToken } from '../lib/core/student-auth.js';
+import { issueStudentToken, authenticateStudent } from '../lib/core/student-auth.js';
+import { workspaceDir, completionsFile } from '../lib/core/progress.js';
 import {
   accountId,
+  accountKey,
   ensureAccount,
   verifyAccountRequest,
   createAccountClient,
@@ -64,6 +66,7 @@ beforeEach(() => {
       signUp: vi.fn(async () => ({ data: { user, session: null } })),
       refreshSession: vi.fn(async () => ({ data: { session, user } })),
       exchangeCodeForSession: vi.fn(async () => ({ data: { session, user } })),
+      admin: { deleteUser: vi.fn(async () => ({ data: { user: null }, error: null })) },
     },
   };
 });
@@ -72,6 +75,7 @@ afterEach(() => {
   fs.rmSync(root, { recursive: true, force: true });
   vi.unstubAllEnvs();
   vi.unstubAllGlobals();
+  vi.restoreAllMocks();
 });
 const call = async (request) => {
   const res = response();
@@ -281,4 +285,142 @@ it('binds recovery grants to their user, token and expiry and rejects tampering'
   expect(canReset(req({}, { cookie }), { id: 'someone-else' })).toBe(false);
   expect(readFlow(signFlow({ intent: 'recovery' }, -1))).toBeNull();
   expect(readFlow(signFlow({ intent: 'signup' }) + 'tampered')).toBeNull();
+});
+
+// ── #160: a self-signup account deletes itself ────────────────────────────────
+const DELETE_ME = { action: 'delete', confirm: 'DELETE' };
+const SESSION = 'ot_access=valid; ot_refresh=refresh';
+const cleared = (res, name) =>
+  (res.headers['Set-Cookie'] || []).some((c) => c.startsWith(`${name}=;`) && c.includes('Max-Age=0'));
+// Alice (the caller), Bob (another account) and the owner (the unnamed store), each
+// with a profile, progress, a completed lesson and a sealed OpenRouter key.
+async function seed() {
+  const alice = (await ensureAccount(store, user)).id;
+  const bob = (
+    await ensureAccount(store, { ...user, id: '22222222-2222-4222-8222-222222222222', user_metadata: { name: 'Bob' } })
+  ).id;
+  for (const [state, who] of [[store.forStudent(alice), 'Alice'], [store.forStudent(bob), 'Bob'], [store, 'Owner']]) {
+    state.writeUser(`${who} private`);
+    state.markLessonComplete('math', 1);
+    state.writeKV('openrouter_key', `${who} sealed`);
+  }
+  return { alice, bob };
+}
+const kept = (id) => {
+  const state = id ? store.forStudent(id) : store;
+  return {
+    profile: state.readUser(),
+    key: state.readKV('openrouter_key'),
+    history: state.readProgress().history?.length,
+    completions: fs.existsSync(completionsFile(workspaceDir(store.dataDir, id))),
+  };
+};
+// Checks the directory before building a scoped store: building one recreates it.
+const wiped = (id) =>
+  !fs.existsSync(workspaceDir(store.dataDir, id)) && store.forStudent(id).listKV('').length === 0;
+
+it('deletes a self-signup account, its data and then its Auth user, and nobody else\'s (#160)', async () => {
+  const { alice, bob } = await seed();
+  const before = { bob: kept(bob), owner: kept(null) };
+  const atDelete = [];
+  client.auth.admin.deleteUser = vi.fn(async () => {
+    atDelete.push({
+      status: JSON.parse(store.readKV(accountKey(alice))).status,
+      workspace: fs.existsSync(workspaceDir(store.dataDir, alice)),
+    });
+    return { data: { user: null }, error: null };
+  });
+  const res = await call(req(DELETE_ME, { cookie: SESSION }));
+  expect(res.statusCode).toBe(200);
+  expect(res.body).toEqual({ ok: true });
+  // The Auth id is the one Supabase verified, and it goes last: disabled and wiped first.
+  expect(client.auth.admin.deleteUser).toHaveBeenCalledWith(user.id);
+  expect(atDelete).toEqual([{ status: 'disabled', workspace: false }]);
+  expect(wiped(alice)).toBe(true);
+  // The tombstone keeps the account out without keeping who it was.
+  expect(JSON.parse(store.readKV(accountKey(alice)))).toEqual({ id: alice, status: 'disabled' });
+  for (const name of ['ot_access', 'ot_refresh', 'ot_legacy']) expect(cleared(res, name), name).toBe(true);
+  expect({ bob: kept(bob), owner: kept(null) }).toEqual(before);
+  expect(before.bob.profile).toBe('Bob private');
+  expect((await listStudents(store)).map((s) => s.id)).toEqual([bob]);
+});
+
+it('keeps a deleted account out: its old session and a fresh login both fail (#160)', async () => {
+  await seed();
+  expect((await call(req(DELETE_ME, { cookie: SESSION }))).statusCode).toBe(200);
+  // The fake still accepts the old token, as Supabase would if the Auth user were
+  // left behind. The disabled registry row is what keeps the account out.
+  expect(await verifyAccountRequest(req({}, { cookie: SESSION }), store, client)).toBeNull();
+  expect((await call(req(DELETE_ME, { cookie: SESSION }))).statusCode).toBe(401);
+  expect(
+    (await call(req({ action: 'login', email: user.email, password: 'long-password' }))).statusCode,
+  ).toBe(403);
+  expect(client.auth.admin.deleteUser).toHaveBeenCalledTimes(1);
+});
+
+it('refuses deletion without the typed confirmation, a session, the same origin or an account, and changes nothing (#160)', async () => {
+  const { alice, bob } = await seed();
+  await provisionStudent(store, 'carol');
+  const token = await issueStudentToken(store, 'carol');
+  const before = kept(alice);
+  for (const [status, body, headers] of [
+    [400, { action: 'delete' }, { cookie: SESSION }],
+    [400, { action: 'delete', confirm: 'delete' }, { cookie: SESSION }],
+    [401, DELETE_ME, {}],
+    [401, DELETE_ME, { cookie: 'ot_access=expired; ot_refresh=refresh' }],
+    [401, DELETE_ME, { cookie: 'ot_refresh=refresh' }],
+    [403, DELETE_ME, { cookie: SESSION, origin: 'https://evil.test' }],
+    [403, DELETE_ME, { authorization: 'Bearer shared' }],
+    [403, DELETE_ME, { 'x-opentutor-password': 'shared' }],
+    [403, DELETE_ME, { cookie: 'ot_legacy=shared' }],
+    [403, DELETE_ME, { authorization: `Bearer ${token}` }],
+    [403, DELETE_ME, { cookie: `ot_legacy=${token}` }],
+  ]) {
+    const res = await call(req(body, headers));
+    expect([res.statusCode, res.headers['Set-Cookie']], JSON.stringify({ body, headers })).toEqual([
+      status,
+      undefined,
+    ]);
+  }
+  expect(client.auth.admin.deleteUser).not.toHaveBeenCalled();
+  expect(kept(alice)).toEqual(before);
+  expect((await listStudents(store)).map((s) => s.id).sort()).toEqual([alice, bob, 'carol'].sort());
+  expect((await authenticateStudent(store, token))?.id).toBe('carol');
+});
+
+it.each([
+  ['throws', async () => { throw new Error('fetch failed'); }],
+  ['returns an error', async () => ({ data: { user: null }, error: { message: 'Database error deleting user', status: 500 } })],
+])('still wipes the data and signs out when deleting the Auth user %s (#160)', async (_how, deleteUser) => {
+  const { alice } = await seed();
+  client.auth.admin.deleteUser = vi.fn(deleteUser);
+  const log = vi.spyOn(console, 'error').mockImplementation(() => {});
+  const res = await call(req(DELETE_ME, { cookie: SESSION }));
+  expect(res.statusCode).toBe(200);
+  expect(res.body).toEqual({ ok: true, authDeleted: false });
+  expect(wiped(alice)).toBe(true);
+  expect(JSON.parse(store.readKV(accountKey(alice))).status).toBe('disabled');
+  for (const name of ['ot_access', 'ot_refresh']) expect(cleared(res, name), name).toBe(true);
+  // The operator is told which Auth user is left to remove.
+  const logged = log.mock.calls.map((args) => args.join(' ')).join('\n');
+  expect(logged).toContain('[account] auth user not deleted:');
+  expect(logged).toContain(user.id);
+});
+
+it('answers a generic 500 and keeps the Auth user when wiping the data fails (#160)', async () => {
+  const { alice } = await seed();
+  vi.spyOn(TutorStore.prototype, 'deleteAllStudentState').mockImplementation(() => {
+    throw new Error('SQLITE_IOERR: disk I/O error at /srv/opentutor/data.db');
+  });
+  const log = vi.spyOn(console, 'error').mockImplementation(() => {});
+  const res = await call(req(DELETE_ME, { cookie: SESSION }));
+  expect(res.statusCode).toBe(500);
+  expect(res.body).toEqual({ error: 'Your account could not be deleted. Please try again.' });
+  expect(client.auth.admin.deleteUser).not.toHaveBeenCalled();
+  expect(res.headers['Set-Cookie']).toBeUndefined();
+  expect(log.mock.calls.flat().join(' ')).toContain('SQLITE_IOERR');
+  // What docs/deployment.md tells the operator to do: decommission again, which finishes it.
+  vi.restoreAllMocks();
+  await decommissionStudent(store, alice);
+  expect(wiped(alice)).toBe(true);
 });
