@@ -66,6 +66,7 @@ it('retains starter lessons on repeated Phase B failure and resumes the saved ph
   const broken={generate:async()=>{throw new Error('offline');}};
   for(let i=0;i<3;i++){await expect(step(doc,{adapter:broken})).rejects.toThrow('offline');doc=await readTopicBuild(state,'knots');}
   expect(doc.status).toBe('failed');expect(state.readCurriculum('knots').lessons).toHaveLength(5);
+  expect(doc.error).not.toMatch(/will retry/);expect(doc.error).toMatch(/Retry to try again/); // #226: it waits for the student
   const retried=await prepareTopicBuild(state,{topic:'Knots'});
   expect(retried.doc).toMatchObject({phase:'plan',attempts:0,status:'queued',seq:doc.seq+1});
   expect((await step(retried.doc)).phase).toBe('build');
