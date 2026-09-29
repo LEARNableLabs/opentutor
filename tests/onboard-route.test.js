@@ -78,6 +78,10 @@ describe.each([
   beforeEach(() => {
     vi.stubEnv('OPENTUTOR_DATA_DIR', '');
     root = fs.mkdtempSync(path.join(os.tmpdir(), 'ot-onboard-'));
+    // A ready-made course to confirm (#223): an account without its own key may only pick one.
+    const course = path.join(root, 'skills', 'tutor', 'domains', 'game-theory');
+    fs.mkdirSync(course, { recursive: true });
+    fs.writeFileSync(path.join(course, 'curriculum.json'), JSON.stringify({ topic: 'Game Theory', lessons: [] }));
     store = new TutorStore(root);
     state = wrap(store);
   });
@@ -91,7 +95,7 @@ describe.each([
     adapter.generate.mockResolvedValue(confirm);
     const res = await call({ message: 'Game theory, please.', history });
     expect(res.statusCode).toBe(200);
-    expect(res.body).toMatchObject({ reply: 'Good choice.', confirmedTopic: 'Game theory' });
+    expect(res.body).toMatchObject({ reply: 'Good choice.', confirmedTopic: 'game-theory' });
     const profile = await state.readUser();
     expect(profile).toContain('## In their own words (from onboarding)');
     expect(profile).toContain("- Hi! I'm Ada, a nurse who wants to think more strategically.\n- Game theory, please.");
@@ -143,7 +147,44 @@ describe.each([
     adapter.generate.mockResolvedValue(confirm);
     const res = await call({ message: 'Game theory, please.', history });
     expect(res.statusCode).toBe(200);
-    expect(res.body).toMatchObject({ reply: 'Good choice.', confirmedTopic: 'Game theory' });
+    expect(res.body).toMatchObject({ reply: 'Good choice.', confirmedTopic: 'game-theory' });
     expect(String(log.mock.calls)).toMatch(/EROFS/);
   });
+});
+
+// #223: onboarding offers the ready-made courses, and never sends a trial account to a custom build.
+const { onboardTurn } = await import('../api/onboard.js');
+describe('the ready-made courses', () => {
+  const trial = () => ({ ...state, userId: 'acct-1', readKV: async () => null }); // no key of its own
+  const turn = (s) => onboardTurn({ state: s, skills: new Map(), getAdapter: async () => adapter }, { message: 'I like strategy games' });
+
+  it('are in the prompt, preferred over building a new one', async () => {
+    await call();
+    const system = adapter.generate.mock.calls[0][0];
+    expect(system).toContain('"game-theory"');
+    expect(system).toMatch(/ready-made course is better/i);
+  });
+
+  it('are the only choice for an account that cannot build a topic', async () => {
+    adapter.generate.mockResolvedValue({ text: 'I will build it now.\n<TOPIC>never-built</TOPIC>' });
+    const { body } = await turn(trial());
+    expect(adapter.generate.mock.calls[0][0]).toMatch(/Custom topic generation is unavailable/);
+    expect(body.confirmedTopic).toBeNull();
+    expect(body.reply).toMatch(/ready-made/);
+  });
+
+  it('turn a readable name into its course', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Good pick.\n<TOPIC>Game Theory</TOPIC>' });
+    expect((await turn(trial())).body.confirmedTopic).toBe('game-theory');
+  });
+});
+
+it('reads the marker in any case, and never shows it', async () => {
+  adapter.generate.mockResolvedValue({ text: 'Great.\n<Topic>game-theory</Topic>' });
+  expect((await call()).body).toMatchObject({ confirmedTopic: 'game-theory', reply: 'Great.' });
+});
+
+it('says something when the reply was only the marker', async () => {
+  adapter.generate.mockResolvedValue({ text: '<TOPIC>game-theory</TOPIC>' });
+  expect((await call()).body.reply).toMatch(/game theory/i);
 });

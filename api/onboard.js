@@ -1,7 +1,7 @@
 import { buildOnboardingPrompt } from '../lib/core/prompts.js';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
-import { adapterFor, isAccount, trimHistory, turnText, KeyRequired } from '../lib/core/llm-access.js';
+import { adapterFor, canCreateTopics, isAccount, trimHistory, turnText, KeyRequired } from '../lib/core/llm-access.js';
 
 export default async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
@@ -36,18 +36,30 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   const adapter = await getAdapter();
 
   const user = await state.readUser();
-  const { system, model } = buildOnboardingPrompt(skills, user);
+  // #223: the ready-made courses come first, and only a student who can have a topic built may
+  // leave the list. Onboarding once confirmed any phrase, so a trial account's first step after
+  // it was "connect OpenRouter".
+  const availableTopics = await state.listTopics();
+  const customTopics = await canCreateTopics(state);
+  const { system, model } = buildOnboardingPrompt(skills, user, { availableTopics, customTopics });
   const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: text }];
   const response = await adapter.generate(system, messages, { model });
 
-  const confirmedTopic = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/)?.[1].trim() || null;
+  const named = response.text.match(/<TOPIC>([\s\S]+?)<\/TOPIC>/i)?.[1].trim() || null;
+  const confirmedTopic = named && (courseFor(named, availableTopics) || (customTopics ? named : null));
+  let reply = response.text.replace(/<TOPIC>[\s\S]*?<\/TOPIC>/gi, '').trim();
+  if (named && !confirmedTopic) reply = `${reply}\n\nThat one isn't a ready-made course yet. Pick one of the ready-made topics, or connect your OpenRouter account to have your own built.`.trim();
+  else if (!reply && confirmedTopic) reply = `Good choice: ${confirmedTopic.replace(/-/g, ' ')}. Your first lesson is ready.`;
   // The model gets the trimmed history; the profile gets what the student said from the
   // start, so a name given in the first answer survives a long conversation.
   if (confirmedTopic) await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
-  return {
-    status: 200,
-    body: { reply: response.text.replace(/<TOPIC>.+?<\/TOPIC>/g, '').trim(), confirmedTopic, model: response.model },
-  };
+  return { status: 200, body: { reply, confirmedTopic, model: response.model } };
+}
+
+// A course the model named loosely ("Game Theory") is still that course ("game-theory").
+function courseFor(name, topics) {
+  const slug = name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  return topics.find((topic) => topic === name || topic === slug) || null;
 }
 
 // #155: onboarding used to drop everything the student said. A student without a
