@@ -13,7 +13,7 @@ import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { parseFirstJson } from '../../lib/core/json.js';
 import { buildStudentModel, formatStudentModel } from '../../lib/core/student-model.js';
-import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives, reviewLesson, parseRetested, withRetest, settledConcept, namesConcept } from '../../lib/core/deliberate-practice.js';
+import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives, reviewLesson, parseRetested, withRetest, retestOutcome, namesConcept } from '../../lib/core/deliberate-practice.js';
 import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
@@ -279,6 +279,12 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const teacherConfig = readDomainFile(topicSlug, 'teacher.md') || '';
   const exerciseFormat = selectExerciseFormat(studentModel, lessonPlan, teacherConfig);
 
+  // The planner's question is the retest only if it names the concept as a whole (#227); otherwise
+  // the lesson asks its own, and keeps it in the plan, so the answer is graded against it.
+  if (retrievalConcept && !(lessonPlan.retrieval && namesConcept(lessonPlan.retrieval, retrievalConcept))) {
+    lessonPlan.retrieval = `Before we start — quick check: what's <b>${retrievalConcept}</b> and why does it matter?`;
+  }
+
   // Store active lesson state with dynamic steps
   activeLessons[chatId] = {
     topicSlug,
@@ -302,14 +308,9 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   log.info({ topic: topicSlug, lessonDay, difficulty: lessonPlan.difficulty, retrieval: retrievalConcept, interleave: interleaveConcept }, 'lesson plan generated');
 
   // Send retrieval check or diagnostic (with suggested options)
-  // The planner's question is the retest only if it names the concept as a whole (#227).
-  if (retrievalConcept && lessonPlan.retrieval && namesConcept(lessonPlan.retrieval, retrievalConcept)) {
+  if (retrievalConcept) {
     await channel.sendMessage(chatId, lessonPlan.retrieval);
     appendMessage(chatId, 'assistant', lessonPlan.retrieval);
-  } else if (retrievalConcept) {
-    const retrievalQ = `Before we start — quick check: what's <b>${retrievalConcept}</b> and why does it matter?`;
-    await channel.sendMessage(chatId, retrievalQ);
-    appendMessage(chatId, 'assistant', retrievalQ);
   } else {
     // No retrieval due: it was already shifted out of `steps`, so step 0 is the diagnostic
     const goalPrefix = lessonPlan.goal ? `<b>Goal:</b> ${lessonPlan.goal}\n\n` : '';
@@ -499,8 +500,8 @@ function completeSocraticLesson(chatId, active, _lastAnswer) {
     // The bot releases a BLOCK after any review, and a lesson's right opening retrieval settles its
     // concept, as on the web: either counts as a passed retest (#227).
     const before = parseRetested(readDomainFile(topicSlug, 'practice-feedback.md'));
-    const settled = settledConcept(active, { passedReview: true });
-    const retested = withRetest(before, settled, curriculum, { openedThisLesson: !active.isReview });
+    const outcome = retestOutcome(active, { passedReview: true });
+    const retested = withRetest(before, outcome, curriculum, { openedThisLesson: !active.isReview });
     const evaluation = evaluatePractice(learningMd, curriculum, userProfile, retested);
     const feedback = formatPracticeFeedback(evaluation, curriculum?.topic || topicSlug);
     writeDomainFile(topicSlug, 'practice-feedback.md', feedback);
