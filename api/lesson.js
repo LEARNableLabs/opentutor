@@ -23,6 +23,7 @@ import { parseFirstJson } from '../lib/core/json.js';
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 // Review lessons in a row for one blocked concept before the next lesson goes ahead (#149).
 const MAX_REVIEWS = 2;
+const CLAIM_MS = 120_000; // outlasts any turn: Vercel stops a lesson function at 60 s
 const STALE = { error: 'This lesson has moved on, in another tab or an earlier try. Reload the page to continue where it is.', stale: true };
 
 export default readsJson(handler);
@@ -127,13 +128,21 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     // before either saves. The first to claim the step answers it; the other is refused as stale.
     // A failed turn releases its claim, so the student can try the step again.
     const claim = active.id ? `lesson_turn:${active.id}:${active.step}` : null;
-    const token = randomUUID();
+    const token = `${randomUUID()}:${Date.now()}`;
     let ours = false;
     let answered = false;
     try {
       if (claim) {
         await state.insertKV(claim, token);
-        if (String(await state.readKV(claim)) !== token) return { status: 409, body: STALE }; // another request's
+        let held = String(await state.readKV(claim));
+        // A request stopped before it could let go (a function killed at its time limit) would hold
+        // the step for good: past its lease, its claim is taken over.
+        if (held !== token && Date.now() - Number(held.split(':')[1]) > CLAIM_MS) {
+          await state.deleteKV(claim);
+          await state.insertKV(claim, token);
+          held = String(await state.readKV(claim));
+        }
+        if (held !== token) return { status: 409, body: STALE }; // another request's
         ours = true;
         // A request that read the lesson before another finished it can claim after that one let
         // its claim go: the lesson is read again, and must still be at this step.

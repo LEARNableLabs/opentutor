@@ -282,14 +282,17 @@ async function sendLessonAnswer() {
 
   try {
     let bubble = null;
+    // A reply belongs to the lesson it answers: the student may have moved to another topic, or to
+    // the next lesson of this one, while it was on its way (#228).
     const topic = activeTopicSlug;
+    const sentFor = lessonAt.lessonId;
+    const current = () => topic === activeTopicSlug && sentFor === lessonAt.lessonId;
     const data = await streamLesson({ topicSlug: topic, answer, ...lessonAt }, (chunk) => {
-      if (topic !== activeTopicSlug) return; // streaming for a topic the student has left
+      if (!current()) return;
       if (!bubble) { typing.remove(); bubble = appendLessonMsg('tutor', ''); }
       appendToBubble(bubble, chunk);
     });
-    // The student moved to another topic while this was on its way (#228): it's not that lesson's.
-    if (topic !== activeTopicSlug) return;
+    if (!current()) return;
     if (!bubble) { typing.remove(); appendLessonMsg('tutor', data.reply); }
     else if (typeof data.reply === 'string') {
       // The server's reply is the one to keep: it is cleaned of anything the stream let through (#224).

@@ -297,6 +297,18 @@ describe('what the tutor is sent', () => {
       expect((await b).status).toBe(409);
     });
 
+    it('takes over a claim whose request never let go, once its lease has run out', async () => {
+      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      state.writeKV(`lesson_turn:${lessonId}:0`, `stopped-request:${Date.now() - 200_000}`);
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).status).toBe(200);
+    });
+
+    it('leaves a live claim to the request that holds it', async () => {
+      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      state.writeKV(`lesson_turn:${lessonId}:0`, `other-request:${Date.now()}`);
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).status).toBe(409);
+    });
+
     it('lets the student retry a step whose model call failed', async () => {
       const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
       adapter.generate.mockRejectedValueOnce(new Error('model down'));
