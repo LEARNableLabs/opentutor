@@ -145,3 +145,21 @@ describe('a grade that cannot be read', () => {
     expect(parseAssessment(text)).toEqual({ assessment: null, visible });
   });
 });
+
+// Sixth review of #231: an attribute in the opening tag hid nothing.
+describe('a grading tag with an attribute', () => {
+  const text = '<assessment type="grade">{"score":0.4}</assessment>Try again.';
+
+  it('is read as the grade and kept out of the reply', () => {
+    expect(parseAssessment(text)).toEqual({ assessment: { score: 0.4 }, visible: 'Try again.' });
+  });
+
+  it('streams none of it, in any chunking', () => {
+    for (const size of [1, 4, 9, text.length]) {
+      const out = [];
+      const feed = assessmentFilter((t) => out.push(t));
+      for (let i = 0; i < text.length; i += size) feed(text.slice(i, i + size));
+      expect(out.join('')).toBe('Try again.');
+    }
+  });
+});
