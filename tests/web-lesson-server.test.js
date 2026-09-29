@@ -1,4 +1,4 @@
-import { it, expect, beforeAll, afterAll, vi } from 'vitest';
+import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest';
 import { spawn } from 'node:child_process';
 import http from 'node:http';
 import net from 'node:net';
@@ -168,4 +168,28 @@ it('starts a review lesson for an open BLOCK, as JSON and over SSE, without a mo
   const [, data] = /^event: done\ndata: (.*)\n\n$/.exec(await streamed.text()); // one event, nothing else
   expect(JSON.parse(data)).toMatchObject({ lesson: review, note: "Let's revisit payoff matrix before moving on." });
   expect(prompts).toHaveLength(before);
+});
+
+// #228: a bad request is the client's error, a 400, never a 500, and never a billed model call.
+describe('bad requests', () => {
+  const raw = (route, body) => fetch(`${base}${route}`, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${PASSWORD}` }, body });
+
+  it.each(['/api/lesson', '/api/chat', '/api/onboard', '/api/user'])('answers malformed JSON on %s with 400', async (route) => {
+    expect((await raw(route, '{not json')).status).toBe(400);
+  });
+
+  it.each([
+    ['no message', {}],
+    ['an empty message', { message: '' }],
+    ['a message over 4,000 characters', { message: 'x'.repeat(4001) }],
+  ])('refuses chat with %s before any model call', async (_case, body) => {
+    const before = prompts.length;
+    expect((await post('/api/chat', body)).status).toBe(400);
+    expect(prompts.length).toBe(before);
+  });
+
+  it('answers an unknown topic with 404', async () => {
+    const res = await fetch(`${base}/api/topics/nope-not-here`, { headers: { Authorization: `Bearer ${PASSWORD}` } });
+    expect(res.status).toBe(404);
+  });
 });
