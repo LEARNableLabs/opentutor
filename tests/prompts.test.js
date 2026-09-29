@@ -275,12 +275,19 @@ describe('buildSocraticResponsePrompt', () => {
   const MARKDOWN = '- Markdown format: use **bold** and *italic* for emphasis. No HTML tags in the student-facing text.';
   const STEPS = ['retrieval', 'diagnostic', 'followUp', 'scaffolding', 'teachBack', 'application'];
 
-  it('asks the web for markdown emphasis and no HTML, and changes nothing else', () => {
+  // The web also gets two lines of its own (#225, #224): the bot's prompt is pinned below.
+  const WEB_ONLY = [
+    "\nTeach this lesson's subject. The student profile below may mention other things they study: it tells you who they are, never what this lesson is about.",
+    '- Don\'t say when earlier lessons happened ("yesterday", "last week"): you don\'t know\n',
+  ];
+
+  it('asks the web for markdown emphasis and no HTML, and adds only its own guidance', () => {
     for (const step of STEPS) {
       const web = system(step, { markdown: true });
       expect(web).toContain(MARKDOWN);
       expect(web).not.toContain('<b>');
-      expect(web.replace(MARKDOWN, TELEGRAM)).toBe(system(step));
+      for (const line of WEB_ONLY) expect(web).toContain(line);
+      expect(WEB_ONLY.reduce((text, line) => text.replace(line, ''), web).replace(MARKDOWN, TELEGRAM)).toBe(system(step));
     }
     expect(system('application', { final: true, markdown: true })).toContain(MARKDOWN);
   });
