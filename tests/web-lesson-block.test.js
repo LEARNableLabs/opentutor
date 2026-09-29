@@ -68,6 +68,7 @@ describe.each([
       totalSteps: 3,
       done: false,
       lesson: { day: 7, title: 'Review: alpha', module: 'Basics', concepts: ['alpha'], review: true },
+      lessonId: expect.any(String),
       note: REVISIT,
     });
     expect(ctx.getAdapter).not.toHaveBeenCalled();

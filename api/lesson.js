@@ -8,6 +8,7 @@
  * Active lesson state stored in KV (SQLite or Supabase).
  */
 
+import { randomUUID } from 'crypto';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
@@ -81,7 +82,7 @@ async function handler(req, res) {
  * (scripts/web/server.js) so the two cannot drift apart again.
  * `getAdapter` is called only for a model call, the way onboardTurn does it.
  */
-export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, answer }, { onToken } = {}) {
+export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, answer, lessonId, step: at }, { onToken } = {}) {
   // The grading block streams first, so it is filtered before the student sees anything.
   const stream = onToken ? { onToken: assessmentFilter(onToken) } : {};
   if (typeof topicSlug !== 'string' || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(topicSlug)) {
@@ -101,6 +102,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   if (answer !== undefined && answer !== null) {
     if (!active) {
       return { status: 400, body: { error: 'No active lesson. Start one without an answer field.' } };
+    }
+    // #228: an answer is for one lesson and one step. From a stale tab, or sent twice, it is for
+    // another: grading it here would grade the wrong question, or record the lesson twice. A
+    // client that sends neither, or a lesson saved without an id, is taken as before.
+    if ((lessonId != null && active.id && lessonId !== active.id) || (at != null && at !== active.step)) {
+      return { status: 409, body: { error: 'This lesson has moved on, in another tab or an earlier try. Reload the page to continue where it is.', stale: true } };
     }
 
     const stepName = steps[active.step];
@@ -163,6 +170,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         totalSteps: steps.length,
         done,
         lesson: active.lesson,
+        lessonId: active.id,
         // Telling a student "done" for work that was not recorded is worse than
         // telling them it did not save. They can at least decide what to do.
         ...(saved === FAILED ? { warning: 'This lesson could not be saved — your progress may not be recorded.' } : {}),
@@ -175,7 +183,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // free lesson. A new one is planned only when there is nothing to show.
   const shown = active && lastShown(active);
   if (shown != null) {
-    return { status: 200, body: { reply: shown, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, resumed: true } };
+    return { status: 200, body: { reply: shown, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true } };
   }
 
   // ── Start new lesson ──────────────────────────────────────
@@ -229,6 +237,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     if (reviews < MAX_REVIEWS) {
       const { plan, steps } = reviewLesson(block.target);
       const review = {
+        id: randomUUID(),
         topicSlug,
         lessonDay,
         lesson: { day: lessonDay, title: `Review: ${block.target}`, module: lesson.module, concepts: [block.target], review: true },
@@ -246,7 +255,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       await state.writeKV(kvKey, JSON.stringify(review));
       return {
         status: 200,
-        body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, note: `Let's revisit ${block.target} before moving on.` },
+        body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, lessonId: review.id, note: `Let's revisit ${block.target} before moving on.` },
       };
     }
     note = `Let's move on for now. We'll keep coming back to ${block.target}.`;
@@ -299,6 +308,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   const lessonSteps = hasRetrieval || retest ? STEPS : STEPS.filter((s) => s !== 'retrieval');
 
   const started = {
+    id: randomUUID(),
     topicSlug,
     lessonDay,
     lesson: { day: lessonDay, title: lesson.title, module: lesson.module, concepts: lesson.concepts },
@@ -313,7 +323,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   await state.writeKV(kvKey, JSON.stringify(started));
 
-  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, ...(note ? { note } : {}) } };
+  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, lessonId: started.id, ...(note ? { note } : {}) } };
 }
 
 // ── Helpers ────────────────────────────────────────────────

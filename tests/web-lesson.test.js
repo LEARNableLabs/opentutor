@@ -72,6 +72,7 @@ describe('web lesson turn', () => {
         totalSteps: 4,
         done: false,
         lesson: { day: 1, title: 'Lesson 1', module: 'Basics', concepts: ['alpha'] },
+        lessonId: expect.any(String),
       },
     });
   });
@@ -157,7 +158,7 @@ describe('web lesson turn', () => {
     adapter.generate.mockClear();
     expect(await lessonTurn(ctx, { topicSlug: 'demo' })).toEqual({
       status: 200,
-      body: { reply: 'Nice — and what follows from that?', step: 1, totalSteps: 4, done: false, lesson: answered.body.lesson, resumed: true },
+      body: { reply: 'Nice — and what follows from that?', step: 1, totalSteps: 4, done: false, lesson: answered.body.lesson, lessonId: start.body.lessonId, resumed: true },
     });
     expect(ctx.getAdapter).not.toHaveBeenCalled();
     expect(adapter.generate).not.toHaveBeenCalled();
@@ -249,6 +250,30 @@ describe('what the tutor is sent', () => {
   it('resumes an old lesson whose last reply was only a broken grade with something to read', async () => {
     saveLegacy({ step: 1, history: [{ role: 'assistant', content: '<assessment>{"score":0.8' }] });
     expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe("Thanks, noted. Let's keep going.");
+  });
+
+  // #228: an answer is for one lesson and one step.
+  describe('an answer for another lesson or step', () => {
+    it('is refused when it names another lesson, without a model call', async () => {
+      await lessonTurn(ctx, { topicSlug: 'demo' });
+      const calls = adapter.generate.mock.calls.length;
+      const { status, body } = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'hi', lessonId: 'an-old-tab', step: 0 });
+      expect([status, body.stale]).toEqual([409, true]);
+      expect(adapter.generate.mock.calls.length).toBe(calls);
+    });
+
+    it('is refused when sent again for a step already answered', async () => {
+      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).status).toBe(200);
+      const again = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 });
+      expect(again.status).toBe(409);
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'second', lessonId, step: 1 })).status).toBe(200);
+    });
+
+    it('is taken as before from a client that names neither', async () => {
+      await lessonTurn(ctx, { topicSlug: 'demo' });
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'hello' })).status).toBe(200);
+    });
   });
 
   it('shows an old lesson\'s last reply without its grade when resuming', async () => {
