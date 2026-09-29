@@ -17,6 +17,7 @@ import { buildStudentModel, formatStudentModel } from '../lib/core/student-model
 import { completeLesson } from '../lib/core/lesson-completion.js';
 import { parseDirectives, reviewLesson } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter } from '../lib/core/assessment.js';
+import { parseFirstJson } from '../lib/core/json.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 // Review lessons in a row for one blocked concept before the next lesson goes ahead (#149).
@@ -264,7 +265,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   let plan;
   try {
-    plan = JSON.parse(planResponse.text.match(/\{[\s\S]*\}/)[0]);
+    plan = parseFirstJson(planResponse.text);
+    if (!plan) throw new SyntaxError('No lesson plan in the reply');
   } catch {
     plan = {
       diagnostic: `What do you already know about ${(lesson.concepts || []).join(' and ')}?`,
