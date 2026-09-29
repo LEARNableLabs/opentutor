@@ -35,8 +35,12 @@ describe.each([
     store = new TutorStore(root);
     for (let day = 1; day <= 6; day++) store.markLessonComplete('demo', day, day === 1 ? 'incorrect' : 'correct');
     store.writeDomainFile('demo', 'practice-feedback.md', formatPracticeFeedback(evaluatePractice('', store.readCurriculum('demo'), ''), 'Demo'));
-    score = 0.9;
-    adapter = { generate: vi.fn(async (system) => ({ text: system.includes('## Current Step:') ? `<assessment>{"score":${score}}</assessment>\nNoted.` : JSON.stringify(PLAN) })) };
+    score = 0.9; // one score for every step, a list consumed step by step, or null for no assessment
+    adapter = { generate: vi.fn(async (system) => {
+      if (!system.includes('## Current Step:')) return { text: JSON.stringify(PLAN) };
+      const s = Array.isArray(score) ? score.shift() : score;
+      return { text: s == null ? 'Noted.' : `<assessment>{"score":${s}}</assessment>\nNoted.` };
+    }) };
     ctx = { state: wrap(store), getAdapter: vi.fn(async () => adapter), skills: new Map() };
   });
 
@@ -47,9 +51,9 @@ describe.each([
   });
 
   const start = () => lessonTurn(ctx, { topicSlug: 'demo' });
-  async function finish() {
+  async function finish(answer = (i) => `answer ${i}`) {
     for (let i = 0; i < 6; i++) {
-      const turn = await lessonTurn(ctx, { topicSlug: 'demo', answer: `answer ${i}` });
+      const turn = await lessonTurn(ctx, { topicSlug: 'demo', answer: answer(i) });
       if (turn.body.done) return turn;
     }
     throw new Error('the lesson never finished');
@@ -109,5 +113,48 @@ describe.each([
     ]);
     expect(blocks()).toEqual(['alpha']);
     expect(store.getNextLesson('demo').lesson).toBe(8);
+  });
+
+  // Review of #202: engagement is no evidence of understanding, and a failed explanation is
+  // not outweighed by a right example. Long, confident answers would grade 'engaged'.
+  it.each([
+    ['no assessment could be read', null],
+    ['the explanation failed, even with the example and the application right', [0, 1, 1]],
+  ])('keeps the BLOCK when %s', async (_case, scores) => {
+    score = scores;
+    await start();
+    await finish((i) => `I am quite sure it works like this, number ${i}`);
+    expect(blocks()).toEqual(['alpha']);
+  });
+
+  it('reviews an open BLOCK after the last lesson too, before saying all lessons are done', async () => {
+    for (const day of [7, 8]) store.markLessonComplete('demo', day, 'correct');
+    store.writeDomainFile('demo', 'practice-feedback.md', formatPracticeFeedback(evaluatePractice('', store.readCurriculum('demo'), ''), 'Demo'));
+    expect(blocks()).toEqual(['alpha']);
+    score = 0.1;
+    const starts = [];
+    for (let i = 0; i < 3; i++) {
+      const { body } = await start();
+      starts.push(body.done ? body.message : `${body.lesson.title}, day ${body.lesson.day}`);
+      if (!body.done) await finish();
+    }
+    expect(starts).toEqual(['Review: alpha, day 8', 'Review: alpha, day 8', 'All lessons completed!']);
+  });
+
+  it('keeps the count of reviews when the lesson after them fails to start', async () => {
+    score = 0.1;
+    for (let i = 0; i < 2; i++) { await start(); await finish(); }
+    adapter.generate.mockImplementationOnce(async () => { throw new Error('provider down'); });
+    await expect(start()).rejects.toThrow('provider down');
+    expect((await start()).body.lesson).toMatchObject({ day: 7, title: 'L7' }); // not a third review
+  });
+
+  it('fails the start rather than skip the BLOCK when the feedback cannot be read', async () => {
+    const state = ctx.state;
+    ctx.state = new Proxy(state, { get: (target, key) => (key === 'readDomainFile'
+      ? (slug, file) => { if (file === 'practice-feedback.md') throw new Error('database unavailable'); return target.readDomainFile(slug, file); }
+      : target[key]) });
+    await expect(start()).rejects.toThrow('database unavailable');
+    expect(store.readKV('web_lesson:demo')).toBeFalsy();
   });
 });

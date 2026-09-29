@@ -164,7 +164,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // Not wrapped in safely(): a failed read here is not "no lesson", and answering
   // "no curriculum yet" or "all lessons completed" for it would be false (#170).
   // The error reaches the route, which answers its generic 500.
-  const lesson = await state.getNextLesson(topicSlug);
+  let lesson = await state.getNextLesson(topicSlug);
+  let allDone = false;
   if (!lesson) {
     // getNextLesson returns null for two very different situations, and saying
     // "all lessons completed" for both congratulated students on topics whose
@@ -181,28 +182,20 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         },
       };
     }
-    return { status: 200, body: { done: true, message: 'All lessons completed!' } };
+    // Every lesson is done, but an open BLOCK still gets its reviews first, placed at the last lesson.
+    lesson = curriculum.lessons.at(-1);
+    allDone = true;
   }
 
   const lessonDay = lesson.day || lesson.lesson;
-  const learningMd = (await safely(() => state.readDomainFile(topicSlug, 'learning.md'), '')) || '';
-  const curriculum = await safely(() => state.readCurriculum(topicSlug));
-  const user = await safely(() => state.readUser(), '');
-  const studentModel = buildStudentModel(learningMd, curriculum, user);
-  const modelText = formatStudentModel(studentModel);
-
-  // Awaited here, never read by the planner from the store: on SupabaseStore an
-  // unawaited read is a Promise, and the planner got "[object Promise]" (#146).
-  const [teacherConfig, teachingNotes, conceptMap, feedback] = await Promise.all(
-    ['teacher.md', 'teaching-notes.md', 'concept-map.md', 'practice-feedback.md']
-      .map((file) => safely(() => state.readDomainFile(topicSlug, file), null, `read ${file}`)),
-  );
-  const directives = parseDirectives(feedback);
+  // Not safely(): an unreadable feedback file is not "no BLOCK", and reading it as one
+  // would let the student past the BLOCK. The error reaches the route's generic 500.
+  const directives = parseDirectives(await state.readDomainFile(topicSlug, 'practice-feedback.md'));
 
   // #149: an open BLOCK holds the student back, as the bot does: a review lesson on the
   // blocked concept instead of the next lesson. It plans nothing (no model call), it is not
-  // a completion, and completeLesson releases the BLOCK when its retest passes. The bot
-  // releases it after any review; here a student who keeps missing the concept gets
+  // a completion, and completeLesson releases the BLOCK when its retest is graded correct.
+  // The bot releases it after any review; here a student who keeps missing the concept gets
   // MAX_REVIEWS in a row, then the next lesson, which still opens on the retest.
   const block = directives.find((d) => d.type === 'BLOCK');
   const reviewKey = `web_review:${topicSlug}`;
@@ -235,7 +228,20 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     }
     note = `Let's move on for now. We'll keep coming back to ${block.target}.`;
   }
-  await state.deleteKV(reviewKey); // a new lesson ends a run of reviews
+  if (allDone) return { status: 200, body: { done: true, message: 'All lessons completed!' } };
+
+  const learningMd = (await safely(() => state.readDomainFile(topicSlug, 'learning.md'), '')) || '';
+  const curriculum = await safely(() => state.readCurriculum(topicSlug));
+  const user = await safely(() => state.readUser(), '');
+  const studentModel = buildStudentModel(learningMd, curriculum, user);
+  const modelText = formatStudentModel(studentModel);
+
+  // Awaited here, never read by the planner from the store: on SupabaseStore an
+  // unawaited read is a Promise, and the planner got "[object Promise]" (#146).
+  const [teacherConfig, teachingNotes, conceptMap] = await Promise.all(
+    ['teacher.md', 'teaching-notes.md', 'concept-map.md']
+      .map((file) => safely(() => state.readDomainFile(topicSlug, file), null, `read ${file}`)),
+  );
 
   const planPrompt = buildLessonPlanPrompt(skills, lesson, {
     teacherConfig, teachingNotes, conceptMap, user, studentModel: modelText, directives,
@@ -282,6 +288,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   };
 
   await state.writeKV(kvKey, JSON.stringify(started));
+  // A saved new lesson ends a run of reviews. Not before: a failed start must not reset the count.
+  await state.deleteKV(reviewKey);
 
   return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, ...(note ? { note } : {}) } };
 }
