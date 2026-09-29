@@ -31,4 +31,6 @@ it('tells the critic which lessons are already the student\'s', async () => {
   });
   await pipeline._critique({ topic: 'Knots', plan: '', parsed: { curriculum: { lessons: [] } }, fixedLessons: 5 });
   expect(seen[0]).toMatch(/first 5 lessons are already published/);
+  // Fixed is not exempt: an error in them is still named, and put right in a later lesson.
+  expect(seen[0]).toMatch(/Still name any error in them, but ask for a later lesson to correct it/);
 });
