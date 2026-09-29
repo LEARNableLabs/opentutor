@@ -1,10 +1,13 @@
 import { buildOnboardingPrompt } from '../lib/core/prompts.js';
 import { publicCatalog } from '../lib/core/catalog.js';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
+import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { adapterFor, canCreateTopics, isAccount, trimHistory, turnText, KeyRequired } from '../lib/core/llm-access.js';
 
-export default async function handler(req, res) {
+export default readsJson(handler);
+
+async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 

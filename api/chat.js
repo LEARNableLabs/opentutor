@@ -1,8 +1,35 @@
 import { getState, getAdapter } from './_lib/init.js';
+import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
-import { adapterFor, KeyRequired } from '../lib/core/llm-access.js';
+import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 
-export default async function handler(req, res) {
+/**
+ * One chat turn, shared by this route and the local server (scripts/web/server.js), as
+ * lessonTurn and onboardTurn are. The message is checked before `getAdapter` chooses a key,
+ * so an empty or oversized message is a 400, never a billed model call (#228).
+ */
+export async function chatTurn({ state, getAdapter }, { message } = {}) {
+  const text = turnText(message);
+  if (text === null) return { status: 400, body: { error: 'A message of 1 to 4,000 characters is required.' } };
+  const adapter = await getAdapter();
+
+  const user = await state.readUser();
+  const system = [
+    '## Study Buddy\n\nYou are a warm, sharp study buddy. Be concise. 1-3 sentences for simple questions.',
+    user ? `## Student\n\n${user}` : '',
+  ].filter(Boolean).join('\n\n---\n\n');
+
+  const response = await adapter.generate(
+    system + '\n\nReturn only polished text.',
+    [{ role: 'user', content: text }],
+    { model: 'cheap' },
+  );
+  return { status: 200, body: { reply: response.text, model: response.model } };
+}
+
+export default readsJson(handler);
+
+async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
@@ -14,22 +41,8 @@ export default async function handler(req, res) {
 
   try {
     const state = await getState(auth.userId);
-    const adapter = await adapterFor({ state, use: 'chat', host: getAdapter });
-    const { message } = req.body;
-
-    const user = await state.readUser();
-    const system = [
-      '## Study Buddy\n\nYou are a warm, sharp study buddy. Be concise. 1-3 sentences for simple questions.',
-      user ? `## Student\n\n${user}` : '',
-    ].filter(Boolean).join('\n\n---\n\n');
-
-    const response = await adapter.generate(
-      system + '\n\nReturn only polished text.',
-      [{ role: 'user', content: message }],
-      { model: 'cheap' },
-    );
-
-    res.status(200).json({ reply: response.text, model: response.model });
+    const { status, body } = await chatTurn({ state, getAdapter: () => adapterFor({ state, use: 'chat', host: getAdapter }) }, req.body || {});
+    res.status(status).json(body);
   } catch (err) {
     if (err instanceof KeyRequired) return res.status(402).json(err.body);
     console.error('[chat]', err.message);

@@ -23,6 +23,7 @@ import { readTopicBuild, buildSummary, listTopicBuilds } from '../../lib/core/to
 import { startLocalBuildWorker } from '../../lib/core/local-build-worker.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
 import { lessonTurn } from '../../api/lesson.js';
+import { chatTurn } from '../../api/chat.js';
 import { onboardTurn } from '../../api/onboard.js';
 import { authenticateRequest, authFailure } from '../../api/_lib/auth.js';
 import { checkAdmin, adminFailure } from '../../api/_lib/admin-auth.js';
@@ -145,7 +146,7 @@ async function handleAdmin(req, res, url) {
     }
 
     if (req.method === 'POST') {
-      const { userId, name } = JSON.parse(await readBody(req, res) || '{}');
+      const { userId, name } = await readJson(req, res);
       if (!userId) return fail(res, 400, 'userId is required');
       // Do the work before writing the status. Writing 201 first meant a
       // duplicate threw *after* the headers were out, and the catch below then
@@ -259,6 +260,7 @@ async function handleStudentAPI(req, res, url, state) {
       const slug = url.pathname.split('/').pop();
       if (!/^[a-z0-9][a-z0-9-]{0,79}$/.test(slug)) return fail(res, 400, 'Invalid topic slug');
       const curriculum = await state.readCurriculum(slug);
+      if (!curriculum) return fail(res, 404, 'No such topic'); // #228: it was a 200 of nulls
       const learning = await state.readDomainFile(slug, 'learning.md');
       const progress = await state.getTopicProgress(slug);
       return json(res, { curriculum, learning, progress });
@@ -312,7 +314,7 @@ async function handleStudentAPI(req, res, url, state) {
     // POST /api/lesson — one turn of the Socratic lesson (same implementation as the Vercel route).
     // Streams over SSE when the client asks for it; plain JSON otherwise.
     if (req.method === 'POST' && url.pathname === '/api/lesson') {
-      const payload = JSON.parse(await readBody(req, res));
+      const payload = await readJson(req, res);
       if (payload.answer !== null && payload.answer !== undefined) {
         const text = turnText(payload.answer);
         if (text === null) return fail(res, 400, 'An answer must be text of 1 to 4,000 characters.');
@@ -361,41 +363,26 @@ async function handleStudentAPI(req, res, url, state) {
 
     // POST /api/user — save student profile
     if (req.method === 'POST' && url.pathname === '/api/user') {
-      const body = await readBody(req, res);
-      const data = JSON.parse(body);
-      const profile = buildUserProfile(data);
+      const profile = buildUserProfile(await readJson(req, res));
       await state.writeUser(profile);
       return json(res, { ok: true });
     }
 
     // POST /api/onboard — guided onboarding chat (same implementation as the Vercel route).
     if (req.method === 'POST' && url.pathname === '/api/onboard') {
-      const payload = JSON.parse(await readBody(req, res));
+      const payload = await readJson(req, res);
       const ctx = { state, skills, getAdapter: () => adapterFor({ state, use: 'onboarding', host: () => chatAdapter }) };
       const { status, body } = await onboardTurn(ctx, payload);
       res.writeHead(status);
       return res.end(JSON.stringify(body, null, 2));
     }
 
-    // POST /api/chat — free-form chat
+    // POST /api/chat — free-form chat (same implementation as the Vercel route).
     if (req.method === 'POST' && url.pathname === '/api/chat') {
-      const body = await readBody(req, res);
-      const { message } = JSON.parse(body);
-
-      const user = await state.readUser();
-      const system = [
-        '## Study Buddy\n\nYou are a warm, sharp study buddy. Be concise. 1-3 sentences for simple questions.',
-        user ? `## Student\n\n${user}` : '',
-      ].filter(Boolean).join('\n\n---\n\n');
-
-      const adapter = await adapterFor({ state, use: 'chat', host: () => chatAdapter });
-      const response = await adapter.generate(
-        system + '\n\nReturn only polished text.',
-        [{ role: 'user', content: message }],
-        { model: 'cheap' },
-      );
-
-      return json(res, { reply: response.text, model: response.model });
+      const payload = await readJson(req, res);
+      const { status, body } = await chatTurn({ state, getAdapter: () => adapterFor({ state, use: 'chat', host: () => chatAdapter }) }, payload);
+      res.writeHead(status);
+      return res.end(JSON.stringify(body, null, 2));
     }
 
     if (req.method === 'GET' && url.pathname === '/api/topic-build') {
@@ -410,7 +397,7 @@ async function handleStudentAPI(req, res, url, state) {
     // Both surfaces return usable starter lessons while durable enrichment runs.
     if (req.method === 'POST' && url.pathname === '/api/add-topic') {
       try {
-        const payload = JSON.parse(await readBody(req, res));
+        const payload = await readJson(req, res);
         const result = await addTopic({ state, getAdapter: () => adapterFor({ state, use: 'custom-topic', host: () => pipelineAdapter }), skills, enqueue: buildWorker.enqueue }, payload);
         res.writeHead(result.lessonCount ? 200 : 202);
         return res.end(JSON.stringify(result));
@@ -427,6 +414,7 @@ async function handleStudentAPI(req, res, url, state) {
     res.end(JSON.stringify({ error: 'Unknown API endpoint' }));
   } catch (err) {
     if (err instanceof KeyRequired) return keyRequired(res, err);
+    if (err instanceof RequestError) return fail(res, err.status, err.message);
     console.error('[api] error:', err);
     // fail() is the headersSent-safe path (#138): a readBody() rejection
     // (413 already answered) must not retry res.writeHead() and crash.
@@ -443,11 +431,21 @@ function json(res, data) {
 
 // The Vercel-style handlers expect req.body and res.status().json().
 async function mountHandler(req, res, handler) {
-  try { req.body = req.method === 'POST' ? JSON.parse(await readBody(req, res) || '{}') : {}; }
-  catch { return fail(res, 400, 'Invalid request body'); }
+  try { req.body = req.method === 'POST' ? await readJson(req, res) : {}; }
+  catch (err) { return fail(res, 400, err instanceof RequestError ? err.message : 'Invalid request body'); }
   res.status = (code) => { res.statusCode = code; return res; };
   res.json = (body) => { res.end(JSON.stringify(body)); return res; };
   return handler(req, res);
+}
+
+// #228: a body that isn't a JSON object is the client's mistake, a 400; an uncaught parse made it a
+// 500. An empty body is no object either: read as {}, it saved a blank profile over the student's.
+async function readJson(req, res) {
+  const text = await readBody(req, res); // a read that fails (413, already answered) stays that failure
+  let data = null;
+  try { data = JSON.parse(text); } catch { /* not JSON, or empty: answered below */ }
+  if (!data || typeof data !== 'object' || Array.isArray(data)) throw new RequestError('The request body must be a JSON object.');
+  return data;
 }
 
 function keyRequired(res, err) {
