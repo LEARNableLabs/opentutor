@@ -96,6 +96,35 @@ describe.each([
     expect(next.note).toBeUndefined();
   });
 
+  // #227: a lesson that opens on the blocked concept's retest settles it when the answer is right.
+  it('settles the concept when a lesson opens on its retest and the student gets it right', async () => {
+    score = 0.1;
+    for (let i = 0; i < 2; i++) { await start(); await finish(); } // two reviews, both missed
+    score = 0.9;
+    const { body } = await start();
+    expect(body.lesson).toMatchObject({ day: 7, title: 'L7' }); // goes ahead, opening on the retest
+    await finish();
+    expect(blocks()).toEqual([]);
+    expect(Object.keys(parseRetested(store.readDomainFile('demo', 'practice-feedback.md')))).toEqual(['alpha']);
+    expect((await start()).body.lesson).toMatchObject({ day: 8 });
+  });
+
+  // #227: two reviews in a row at most, whichever concepts they review.
+  it('goes ahead after two reviews in a row, even when they review different concepts', async () => {
+    const file = path.join(root, 'skills', 'tutor', 'domains', 'demo', 'curriculum.json');
+    const curriculum = JSON.parse(fs.readFileSync(file, 'utf8'));
+    curriculum.lessons[0].concepts = ['alpha', 'beta'];
+    fs.writeFileSync(file, JSON.stringify(curriculum));
+    store.writeDomainFile('demo', 'practice-feedback.md', formatPracticeFeedback(evaluatePractice('', store.readCurriculum('demo'), ''), 'Demo'));
+    score = 0.9;
+    expect((await start()).body.lesson.title).toBe('Review: alpha');
+    await finish(); // alpha passes; beta is blocked next
+    score = 0.1;
+    expect((await start()).body.lesson.title).toBe('Review: beta');
+    await finish();
+    expect((await start()).body.lesson).toMatchObject({ day: 7, title: 'L7' });
+  });
+
   // #227: passing a retest settles its own concept, never the rest of the lesson that flagged it.
   it('keeps the BLOCK on a lesson\'s other concept after one of them passes its retest', async () => {
     const file = path.join(root, 'skills', 'tutor', 'domains', 'demo', 'curriculum.json');

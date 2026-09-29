@@ -20,7 +20,8 @@ import { parseAssessment, assessmentFilter, stripGrades } from '../lib/core/asse
 import { parseFirstJson } from '../lib/core/json.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
-// Review lessons in a row for one blocked concept before the next lesson goes ahead (#149).
+// Review lessons in a row before the next lesson goes ahead (#149), whichever concepts they
+// review: counted per concept, two blocked concepts in turn gave four (#227).
 const MAX_REVIEWS = 2;
 
 export default readsJson(handler);
@@ -225,7 +226,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   let note;
   if (block) {
     const held = record?.reviews;
-    const reviews = held?.concept === block.target && held.day === lessonDay ? held.count : 0;
+    const reviews = held?.day === lessonDay ? held.count : 0;
     if (reviews < MAX_REVIEWS) {
       const { plan, steps } = reviewLesson(block.target);
       const review = {
@@ -309,6 +310,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     history: [],
     assessments: [],
     course,
+    // The concept the retrieval step retests, when it is sure to be that one (#227): a right answer
+    // settles it, as a passed review does. A planner's own retrieval question counts only if it names it.
+    ...(retest && (!hasRetrieval || plan.retrieval.toLowerCase().includes(retest.target.toLowerCase())) ? { retestConcept: retest.target } : {}),
   };
 
   await state.writeKV(kvKey, JSON.stringify(started));
