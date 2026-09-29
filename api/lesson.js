@@ -105,8 +105,10 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       return { status: 200, body: { done: true, message: 'Lesson already complete.' } };
     }
 
-    // An answer's own <assessment> tags could have it grade itself (#224).
-    const said = answer.replace(/<\/?\s*assessment\b[^>]*>/gi, '');
+    // A grading block in an answer could have it grade itself (#224). Only a block holding JSON is
+    // one: other markup, an XML lesson's own <assessment> element included, is the student's answer.
+    const said = answer.replace(/<\s*assessment\b[^>]*>\s*\{[\s\S]*?\}\s*<\s*\/\s*assessment\s*>/gi, '').trim();
+    if (!said) return { status: 400, body: { error: 'An answer must be text of 1 to 4,000 characters.' } };
     active.history.push({ role: 'user', content: said });
 
     const user = await safely(() => state.readUser(), '');

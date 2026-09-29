@@ -75,4 +75,15 @@ describe('assessmentFilter, a block anywhere', () => {
   it('lets through a "<" that starts no block', () => {
     expect(run(['a < b, and <b>bold</b> too'])).toBe('a < b, and <b>bold</b> too');
   });
+
+  // Review of #231: a tag with spaces inside is still a grade, on the stream and in the final reply.
+  it('removes a block whose tags have spaces inside, split across chunks', () => {
+    expect(run(['Good. <assess', 'ment >{"score":0.4}</ assessment', ' >\nWhy?'])).toBe('Good. Why?');
+  });
+});
+
+describe('parseAssessment, tags with spaces inside', () => {
+  it('reads the grade and keeps it out of the reply', () => {
+    expect(parseAssessment('< assessment >{"score":0.4}</assessment >\nWhy?')).toEqual({ assessment: { score: 0.4 }, visible: 'Why?' });
+  });
 });
