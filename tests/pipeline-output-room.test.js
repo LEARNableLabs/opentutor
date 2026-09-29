@@ -9,11 +9,19 @@ const make = (calls) => new CurriculumPipeline({
   skills: { get: () => '' },
 });
 
-it('gives every pipeline call room for a full course', async () => {
+it('gives every pipeline call room for a full course, and the time to write it', async () => {
   const calls = [];
   await make(calls).generate('system', [{ role: 'user', content: 'build' }], { model: 'strong', outputMode: 'json' });
   expect(calls[0].maxTokens).toBeGreaterThanOrEqual(16384);
-  expect(calls[0]).toMatchObject({ model: 'strong', outputMode: 'json' });
+  expect(calls[0]).toMatchObject({ model: 'strong', outputMode: 'json', timeout: 240_000 });
+});
+
+// Review of #230: a cheap model whose output tops out below 16,384 would refuse the call.
+it('keeps the cheap model to a limit every current cheap model accepts', async () => {
+  const calls = [];
+  await make(calls).generate('system', [], { model: 'cheap' });
+  await make(calls).generate('system', []); // the adapters' default tier is cheap
+  expect(calls.map((c) => c.maxTokens)).toEqual([8192, 8192]);
 });
 
 it('keeps a limit a caller asks for', async () => {

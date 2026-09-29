@@ -48,7 +48,7 @@ it('fences a late result when an expired lease was recovered',async()=>{
   const gate=new Promise(r=>{release=r;});
   const old=step(doc,{now:()=>0,quickStart:async()=>{await gate;return {curriculum:starter('STALE'),intro:'',researchContext:''};}});
   await vi.waitFor(async()=>expect((await readTopicBuild(state,'knots')).lease).toBeTruthy());
-  await step(doc,{now:()=>200000});release();await old;
+  await step(doc,{now:()=>400000});release();await old; // past the 300 s lease
   expect(state.readCurriculum('knots').topic).toBe('Knots');
 });
 it('cannot resurrect content after deletion and recreation',async()=>{
