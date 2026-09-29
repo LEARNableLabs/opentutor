@@ -246,6 +246,11 @@ describe('what the tutor is sent', () => {
     expect(body).toMatchObject({ done: true, reply: "Thanks, noted. That's the end of this lesson." });
   });
 
+  it('resumes an old lesson whose last reply was only a broken grade with something to read', async () => {
+    saveLegacy({ step: 1, history: [{ role: 'assistant', content: '<assessment>{"score":0.8' }] });
+    expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe("Thanks, noted. Let's keep going.");
+  });
+
   it('shows an old lesson\'s last reply without its grade when resuming', async () => {
     saveLegacy({ step: 1, history: [{ role: 'assistant', content: '<assessment>{"score":1}</assessment>\nOld question?' }] });
     expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe('Old question?');

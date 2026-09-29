@@ -330,7 +330,8 @@ const withGoal = (plan, question) => (plan.goal ? `**Goal:** ${plan.goal}\n\n` :
 function lastShown({ reply, history, step, plan }) {
   if (reply != null) return reply;
   const last = history?.findLast((m) => m.role === 'assistant');
-  if (last) return parseAssessment(last.content).visible; // the history keeps the tutor's grades (#224)
+  // The history keeps the tutor's grades (#224); one that was only a broken grade still says something.
+  if (last) return parseAssessment(last.content).visible || "Thanks, noted. Let's keep going.";
   const opening = step === 0 && (plan?.retrieval || plan?.diagnostic);
   return opening ? withGoal(plan, opening) : null;
 }

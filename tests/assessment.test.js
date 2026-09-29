@@ -126,11 +126,15 @@ describe('a grade that quotes the tag', () => {
     }
   });
 
-  it('streams a reply whose block was never closed, once it can tell', () => {
+  // A closing tag may still come, so an unclosed block holds the stream; the browser then shows
+  // the final reply, which parseAssessment cleans (eleventh review of #231).
+  it('holds the stream after a block that was never closed, and the final reply is clean', () => {
+    const text = '<assessment>{"score":0.8}\n\nGood — why?';
     const out = [];
     const feed = assessmentFilter((t) => out.push(t));
-    ['<assessment>{"score":0.8}', '\n\n', 'Good — ', 'why?'].forEach(feed);
-    expect(out.join('')).toBe('Good — why?');
+    [text.slice(0, 26), text.slice(26)].forEach(feed);
+    expect(out.join('')).not.toMatch(/score/);
+    expect(parseAssessment(text).visible).toBe('Good — why?');
   });
 });
 
@@ -213,6 +217,24 @@ describe('a block whose JSON breaks early', () => {
 
   it('streams none of it', () => {
     for (const size of [1, 6, text.length]) {
+      const out = [];
+      const feed = assessmentFilter((t) => out.push(t));
+      for (let i = 0; i < text.length; i += size) feed(text.slice(i, i + size));
+      expect(out.join('')).toBe('Try again.');
+    }
+  });
+});
+
+// Eleventh review of #231: a valid grade, then more fields before the closing tag.
+describe('a grade with more text before its closing tag', () => {
+  const text = '<assessment>{"score":0.8},"missing":["fractions"]}</assessment>Try again.';
+
+  it('is read, and hidden to its closing tag', () => {
+    expect(parseAssessment(text)).toEqual({ assessment: { score: 0.8 }, visible: 'Try again.' });
+  });
+
+  it('streams none of it', () => {
+    for (const size of [1, 7, text.length]) {
       const out = [];
       const feed = assessmentFilter((t) => out.push(t));
       for (let i = 0; i < text.length; i += size) feed(text.slice(i, i + size));
