@@ -109,7 +109,7 @@ built. On the hosted site, new topics need your own OpenRouter account.
   p=$(openssl rand -hex 24) && a=$(openssl rand -hex 24) &&
     touch .env && chmod 600 .env &&   # private before any secret is written
     printf '\nOPENTUTOR_PASSWORD=%s\nOPENTUTOR_ADMIN_PASSWORD=%s\n' "$p" "$a" >> .env &&
-    node --env-file=.env scripts/web/server.js
+    OPENTUTOR_PASSWORD="$p" OPENTUTOR_ADMIN_PASSWORD="$a" node --env-file=.env scripts/web/server.js
   ```
 
   Each student gets a one-time access token to enter at `/login.html` ("Have an
