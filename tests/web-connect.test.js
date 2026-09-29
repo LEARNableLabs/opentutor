@@ -308,7 +308,7 @@ it.each([
   await $('#btn-lesson-answer').click();
   await settle();
   const shown = $('#lesson-conversation').children.map((n) => n.innerHTML).join('\n');
-  expect(shown.includes('making progress')).toBe(celebrates);
+  expect($('#lesson-conversation').children.some((n) => n.className === 'lesson-celebration')).toBe(celebrates);
   if (extra.warning) expect(shown).toContain(extra.warning);
   expect($('#lesson-input-area').classList.contains('hidden')).toBe(true);
   expect($('#btn-next').disabled).toBe(false);
@@ -463,6 +463,18 @@ it('picks once per page view: a deliberate "Select a topic" stays, a chosen topi
   progress.active_topics = ['game-theory'];
   await backToLearn();
   expect($('#active-topic').value).toBe('game-theory');
+});
+
+// Review of #218: choosing a topic hides the list the student was in, so focus must go somewhere visible.
+it('moves focus to Next lesson after a topic is chosen from the list', async () => {
+  const { $, context, focused } = frontend((url) => (
+    url === '/api/add-topic' ? [200, { status: 'existing', slug: 'game-theory', lessonCount: 27 }]
+      : url === '/api/progress' ? [200, { active_topics: ['game-theory'] }]
+        : null));
+  await settle();
+  await context.selectTopic('game-theory');
+  await settle();
+  expect(focused()).toBe($('#btn-next'));
 });
 
 // #215: `.hidden` is !important, so a view that starts hidden never shows, whatever the tab handler does.

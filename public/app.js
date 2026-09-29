@@ -106,18 +106,18 @@ const themeToggle = $('#theme-toggle');
 const savedTheme = localStorage.getItem('theme') || 'light';
 if (savedTheme === 'dark') {
   document.documentElement.setAttribute('data-theme', 'dark');
-  themeToggle.textContent = '☀️';
+  themeToggle.textContent = 'Light theme';
 }
 
 themeToggle.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme');
   if (current === 'dark') {
     document.documentElement.removeAttribute('data-theme');
-    themeToggle.textContent = '🌙';
+    themeToggle.textContent = 'Dark theme';
     localStorage.setItem('theme', 'light');
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
-    themeToggle.textContent = '☀️';
+    themeToggle.textContent = 'Light theme';
     localStorage.setItem('theme', 'dark');
   }
 });
@@ -209,7 +209,6 @@ async function startLesson() {
   $('#lesson-loading').classList.remove('hidden');
   $('#lesson-area').classList.add('hidden');
   $('#empty-state').classList.add('hidden');
-  $('#lesson-complete').classList.add('hidden');
 
   try {
     let bubble = null;
@@ -243,7 +242,6 @@ async function startLesson() {
 function finishLessonStart(data, bubble) {
   lessonActive = true;
   $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}: ${data.lesson.title}`;
-  $('#lesson-complete').classList.add('hidden');
   if (!bubble.textContent.trim()) bubble.remove();
   showLessonInput();
 }
@@ -253,7 +251,6 @@ function showLessonStart(data) {
   $('#lesson-area').classList.remove('hidden');
   $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}: ${data.lesson.title}`;
   $('#lesson-conversation').innerHTML = '';
-  $('#lesson-complete').classList.add('hidden');
 
   // #159: a reload resumes the lesson in progress, at its last tutor message.
   if (data.resumed) appendLessonMsg('dim', 'Picking up where you left off.');
@@ -291,7 +288,7 @@ async function sendLessonAnswer() {
       lessonActive = false;
       $('#lesson-input-area').classList.add('hidden');
       // #159: a lesson that was not recorded is finished, not celebrated as progress.
-      if (data.warning) appendLessonMsg('tutor', `**Lesson finished.** ${data.warning} Choose **Next Lesson** to continue.`);
+      if (data.warning) appendLessonMsg('tutor', `**Lesson finished.** ${data.warning} Choose **Next lesson** to continue.`);
       else showCelebration();
     } else {
       const progress = `Step ${data.step + 1}/${data.totalSteps}`;
@@ -316,7 +313,7 @@ function appendLessonMsg(classes, text) {
   const div = document.createElement('div');
   div.className = `lesson-msg ${classes}`;
   if (classes.includes('tutor') && !classes.includes('typing')) {
-    div.innerHTML = '<span class="tutor-avatar">🎓</span><div>' + md(text) + '</div>';
+    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text) + '</div>';
   } else {
     div.innerHTML = md(text);
   }
@@ -339,13 +336,7 @@ function showCelebration() {
   const container = $('#lesson-conversation') || $('#lesson-area');
   const celebrationDiv = document.createElement('div');
   celebrationDiv.className = 'lesson-celebration';
-  celebrationDiv.innerHTML = `
-    <div class="celebration-icon">🌟</div>
-    <div class="celebration-text">
-      <strong>Lesson complete!</strong><br>
-      <span class="dim">You're making progress. See you next time.</span>
-    </div>
-  `;
+  celebrationDiv.innerHTML = '<strong>Lesson complete.</strong> <span class="dim">Choose <strong>Next lesson</strong> when you are ready for the next one.</span>';
   container.appendChild(celebrationDiv);
   container.scrollTop = container.scrollHeight;
 }
@@ -386,19 +377,18 @@ function renderTopics(topics) {
   let html = '';
 
   if (progress.length) {
-    html += `<div class="dim" style="font-size:12px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;font-weight:600">In Progress (${progress.length})</div>`;
+    html += `<p class="topic-group">In progress (${progress.length})</p>`;
     html += progress.map(topicCard).join('');
-    html += '<div style="height:16px"></div>';
   }
 
-  html += `<div class="dim" style="font-size:12px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;font-weight:600">Available (${available.length})</div>`;
+  if (available.length) html += `<p class="topic-group">Not started (${available.length})</p>`;
   html += available.slice(0, 50).map(topicCard).join('');
 
   if (available.length > 50) {
-    html += `<div class="dim" style="text-align:center;padding:12px;font-size:13px">Showing 50 of ${available.length} — use search to find more</div>`;
+    html += `<p class="topic-group">Showing 50 of ${available.length}. Search to find the rest.</p>`;
   }
 
-  list.innerHTML = html || '<div class="dim" style="padding:20px;text-align:center">No topics found</div>';
+  list.innerHTML = html || '<p class="topic-group">No topics found.</p>';
 
   list.querySelectorAll('.topic-card').forEach((card) => {
     card.addEventListener('click', () => selectTopic(card.dataset.slug));
@@ -406,13 +396,16 @@ function renderTopics(topics) {
 }
 
 function topicCard(t) {
-  return `<div class="topic-card" data-slug="${escapeHTML(t.slug)}">
-    <div>
-      <div class="topic-name">${escapeHTML(t.topic || formatSlug(t.slug))}</div>
-      <div class="progress-bar"><div class="progress-fill" style="width:${t.percent}%"></div></div>
-    </div>
-    <div class="topic-progress">${t.completed}/${t.total}<br>${t.percent}%</div>
-  </div>`;
+  // A button, so a keyboard reaches every topic; spans, because a button holds only phrasing content.
+  // A course's length until it is started, then how far along it is.
+  const started = t.completed > 0;
+  return `<button type="button" class="topic-card" data-slug="${escapeHTML(t.slug)}">
+    <span class="topic-main">
+      <span class="topic-name">${escapeHTML(t.topic || formatSlug(t.slug))}</span>
+      ${started ? `<span class="progress-bar"><span class="progress-fill" style="width:${Number(t.percent) || 0}%"></span></span>` : ''}
+    </span>
+    <span class="topic-progress">${started ? `${Number(t.completed)} of ${Number(t.total)} lessons` : `${Number(t.total)} lessons`}</span>
+  </button>`;
 }
 
 async function requestTopic(topic, level = 'intermediate') {
@@ -434,6 +427,7 @@ async function selectTopic(slug) {
     await loadActiveTopics();
     $('#active-topic').value = slug;
     $$('.nav-btn')[0].click();
+    $('#btn-next').focus(); // the list the student chose from is now hidden: land on the next step
   } catch (err) {
     $('#topic-error').textContent = err.message;
   }
@@ -566,7 +560,7 @@ function appendChat(classes, text) {
   const div = document.createElement('div');
   div.className = `chat-msg ${classes}`;
   if (classes.includes('assistant') && !classes.includes('typing')) {
-    div.innerHTML = '<span class="tutor-avatar">🎓</span><div>' + md(text) + '</div>';
+    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text) + '</div>';
   } else {
     div.innerHTML = md(text);
   }
@@ -669,7 +663,7 @@ function appendOnboardMsg(classes, text) {
   const div = document.createElement('div');
   div.className = `chat-msg ${classes}`;
   if (classes.includes('assistant') && !classes.includes('typing')) {
-    div.innerHTML = '<span class="tutor-avatar">🎓</span><div>' + md(text) + '</div>';
+    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text) + '</div>';
   } else {
     div.innerHTML = md(text);
   }
