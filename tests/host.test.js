@@ -119,11 +119,9 @@ it('gives runs that start together the one pair that ends up in .env', async () 
   for (const pair of pairs) expect(pair).toEqual({ OPENTUTOR_PASSWORD, OPENTUTOR_ADMIN_PASSWORD });
 }, 20000);
 
-it('takes over a lock a crash left behind', () => {
-  const lock = `${file}.lock`;
-  fs.writeFileSync(lock, '');
-  const old = new Date(Date.now() - 60_000);
-  fs.utimesSync(lock, old, old);
-  expect(ensurePasswords(file).OPENTUTOR_PASSWORD).toMatch(/^[0-9a-f]{48}$/);
-  expect(fs.existsSync(lock)).toBe(false);
-});
+// Review of #222: taking over a crashed run's lock could race another run doing the same.
+it('stops and says what to do about a lock a crash left behind, and changes nothing', () => {
+  fs.writeFileSync(`${file}.lock`, '');
+  expect(() => ensurePasswords(file)).toThrow(/left over from a run that stopped.*delete it and run again/);
+  expect(fs.readFileSync(file, 'utf8')).toBe('');
+}, 10000);

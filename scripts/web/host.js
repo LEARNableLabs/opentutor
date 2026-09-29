@@ -40,14 +40,15 @@ function passwordsIn(text, file) {
 
 // First runs that start together (a process manager starting several) must not each write a pair
 // of their own, or one could serve passwords that are no longer in .env. Whoever doesn't hold this
-// lock waits, then finds the passwords written. Holding it takes a millisecond, so a lock older
-// than a few seconds was left by a crash, and is taken over.
+// lock waits, then finds the passwords written. Holding it takes a millisecond, so a lock still
+// there after a few seconds was left by a crash. Removing it here could race another run doing
+// the same, so this stops and says how instead.
 function whileLocked(file, work) {
   const lock = `${file}.lock`;
-  for (;;) {
+  for (const since = Date.now(); ;) {
     try { fs.closeSync(fs.openSync(lock, 'wx', 0o600)); break; } catch (err) {
       if (err.code !== 'EEXIST') throw err;
-      try { if (Date.now() - fs.statSync(lock).mtimeMs > 5000) fs.rmSync(lock, { force: true }); } catch { /* just released */ }
+      if (Date.now() - since > 5000) throw new Error(`${lock} is left over from a run that stopped. If no other npm run host is starting, delete it and run again.`);
       Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 20); // wait 20 ms
     }
   }
