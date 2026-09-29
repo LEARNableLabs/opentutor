@@ -14,10 +14,12 @@ import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
-import { parseDirectives } from '../lib/core/deliberate-practice.js';
+import { parseDirectives, reviewLesson } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter } from '../lib/core/assessment.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
+// Review lessons in a row for one blocked concept before the next lesson goes ahead (#149).
+const MAX_REVIEWS = 2;
 
 export default async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
@@ -82,9 +84,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     return { status: 400, body: { error: 'A valid topicSlug is required' } };
   }
 
+  // One record per topic: the lesson in flight, if any, and the reviews an open BLOCK has had
+  // on the current lesson (#149). One record, so starting a review is a single write.
   const kvKey = `web_lesson:${topicSlug}`;
-  const activeRaw = await state.readKV(kvKey);
-  const active = typeof activeRaw === 'string' ? JSON.parse(activeRaw) : activeRaw;
+  const raw = await state.readKV(kvKey);
+  const record = typeof raw === 'string' ? JSON.parse(raw) : raw;
+  const active = record?.plan ? record : null; // a record without a plan only counts reviews
   // A lesson saved before #148 has no step list of its own.
   const steps = active?.steps || STEPS;
 
@@ -130,7 +135,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         lesson: { ...active.lesson, lesson: day },
         session: active,
       }), FAILED, 'completeLesson');
-      await state.deleteKV(kvKey);
+      // A finished review leaves its count behind for the next start; a lesson leaves nothing.
+      if (active.isReview) await state.writeKV(kvKey, JSON.stringify({ reviews: active.reviews }));
+      else await state.deleteKV(kvKey);
     } else {
       await state.writeKV(kvKey, JSON.stringify(active));
     }
@@ -162,7 +169,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // Not wrapped in safely(): a failed read here is not "no lesson", and answering
   // "no curriculum yet" or "all lessons completed" for it would be false (#170).
   // The error reaches the route, which answers its generic 500.
-  const lesson = await state.getNextLesson(topicSlug);
+  let lesson = await state.getNextLesson(topicSlug);
+  let allDone = false;
   if (!lesson) {
     // getNextLesson returns null for two very different situations, and saying
     // "all lessons completed" for both congratulated students on topics whose
@@ -179,10 +187,55 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         },
       };
     }
-    return { status: 200, body: { done: true, message: 'All lessons completed!' } };
+    // Every lesson is done, but an open BLOCK still gets its reviews first, placed at the last lesson.
+    lesson = curriculum.lessons.at(-1);
+    allDone = true;
   }
 
   const lessonDay = lesson.day || lesson.lesson;
+  // Not safely(): an unreadable feedback file is not "no BLOCK", and reading it as one
+  // would let the student past the BLOCK. The error reaches the route's generic 500.
+  const directives = parseDirectives(await state.readDomainFile(topicSlug, 'practice-feedback.md'));
+
+  // #149: an open BLOCK holds the student back, as the bot does: a review lesson on the
+  // blocked concept instead of the next lesson. It plans nothing (no model call), it is not
+  // a completion, and completeLesson releases the BLOCK when its retest passes (passedReview).
+  // The bot releases it after any review; here a student who keeps missing the concept gets
+  // MAX_REVIEWS in a row, then the next lesson, which still opens on the retest. The count
+  // belongs to the lesson it holds back, so finishing that lesson starts a new one, and it is
+  // saved with its review in one write: a failed write leaves neither, and two overlapping
+  // starts write the same review and count (a review is deterministic and plans nothing).
+  const block = directives.find((d) => d.type === 'BLOCK');
+  let note;
+  if (block) {
+    const held = record?.reviews;
+    const reviews = held?.concept === block.target && held.day === lessonDay ? held.count : 0;
+    if (reviews < MAX_REVIEWS) {
+      const { plan, steps } = reviewLesson(block.target);
+      const review = {
+        topicSlug,
+        lessonDay,
+        lesson: { day: lessonDay, title: `Review: ${block.target}`, module: lesson.module, concepts: [block.target], review: true },
+        plan,
+        steps,
+        step: 0,
+        reply: withGoal(plan, `Explain **${block.target}** in your own words: what is it, and why does it matter?`),
+        history: [],
+        assessments: [],
+        isReview: true,
+        reviewConcept: block.target,
+        reviews: { concept: block.target, day: lessonDay, count: reviews + 1 },
+      };
+      await state.writeKV(kvKey, JSON.stringify(review));
+      return {
+        status: 200,
+        body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, note: `Let's revisit ${block.target} before moving on.` },
+      };
+    }
+    note = `Let's move on for now. We'll keep coming back to ${block.target}.`;
+  }
+  if (allDone) return { status: 200, body: { done: true, message: 'All lessons completed!' } };
+
   const learningMd = (await safely(() => state.readDomainFile(topicSlug, 'learning.md'), '')) || '';
   const curriculum = await safely(() => state.readCurriculum(topicSlug));
   const user = await safely(() => state.readUser(), '');
@@ -191,11 +244,11 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   // Awaited here, never read by the planner from the store: on SupabaseStore an
   // unawaited read is a Promise, and the planner got "[object Promise]" (#146).
-  const [teacherConfig, teachingNotes, conceptMap, feedback] = await Promise.all(
-    ['teacher.md', 'teaching-notes.md', 'concept-map.md', 'practice-feedback.md']
+  const [teacherConfig, teachingNotes, conceptMap] = await Promise.all(
+    ['teacher.md', 'teaching-notes.md', 'concept-map.md']
       .map((file) => safely(() => state.readDomainFile(topicSlug, file), null, `read ${file}`)),
   );
-  const directives = parseDirectives(feedback);
+
   const planPrompt = buildLessonPlanPrompt(skills, lesson, {
     teacherConfig, teachingNotes, conceptMap, user, studentModel: modelText, directives,
   });
@@ -242,7 +295,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   await state.writeKV(kvKey, JSON.stringify(started));
 
-  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson } };
+  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, ...(note ? { note } : {}) } };
 }
 
 // ── Helpers ────────────────────────────────────────────────
