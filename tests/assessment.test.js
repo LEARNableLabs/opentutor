@@ -87,3 +87,23 @@ describe('parseAssessment, tags with spaces inside', () => {
     expect(parseAssessment('< assessment >{"score":0.4}</assessment >\nWhy?')).toEqual({ assessment: { score: 0.4 }, visible: 'Why?' });
   });
 });
+
+// Second review of #231.
+describe('only the first block is the grade', () => {
+  const example = 'For this schema, <assessment>{"score":1}</assessment> is the element to validate.';
+
+  it('keeps a later block, the tutor\'s own example, in the reply and out of the grade', () => {
+    expect(parseAssessment(`<assessment>{"score":0.6}</assessment>\n${example}`)).toEqual({ assessment: { score: 0.6 }, visible: example });
+  });
+
+  it('streams a later block as the tutor wrote it', () => {
+    const out = [];
+    const feed = assessmentFilter((t) => out.push(t));
+    ['<assessment>{"score":0.6}</assessment>\nFor this schema, <assess', 'ment>{"score":1}</assessment> is the element to validate.'].forEach(feed);
+    expect(out.join('')).toBe(example);
+  });
+
+  it('reads a block the model never closed, and keeps it out of the reply', () => {
+    expect(parseAssessment('<assessment>{"understanding":"partial","score":0.8}\n\nGood — why?')).toEqual({ assessment: { understanding: 'partial', score: 0.8 }, visible: 'Good — why?' });
+  });
+});
