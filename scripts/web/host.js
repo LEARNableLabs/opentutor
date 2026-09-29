@@ -38,13 +38,30 @@ function passwordsIn(text, file) {
   return values;
 }
 
+// First runs that start together (a process manager starting several) must not each write a pair
+// of their own, or one could serve passwords that are no longer in .env. Whoever doesn't hold this
+// lock waits, then finds the passwords written. Holding it takes a millisecond, so a lock older
+// than a few seconds was left by a crash, and is taken over.
+function whileLocked(file, work) {
+  const lock = `${file}.lock`;
+  for (;;) {
+    try { fs.closeSync(fs.openSync(lock, 'wx', 0o600)); break; } catch (err) {
+      if (err.code !== 'EEXIST') throw err;
+      try { if (Date.now() - fs.statSync(lock).mtimeMs > 5000) fs.rmSync(lock, { force: true }); } catch { /* just released */ }
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 20); // wait 20 ms
+    }
+  }
+  try { return work(); } finally { fs.rmSync(lock, { force: true }); }
+}
+
 /** Make sure `file` holds a password for each role, readable only by its owner. Returns them. */
 export function ensurePasswords(file) {
   fs.closeSync(fs.openSync(file, 'a', 0o600)); // created private, before any secret is in it
   fs.chmodSync(file, 0o600); // and made private if it already existed
-  const text = fs.readFileSync(file, 'utf8');
-  const missing = KEYS.filter((key) => !passwordsIn(text, file)[key]);
-  if (missing.length) {
+  whileLocked(file, () => {
+    const text = fs.readFileSync(file, 'utf8');
+    const missing = KEYS.filter((key) => !passwordsIn(text, file)[key]);
+    if (!missing.length) return;
     // An empty password's lines are removed, not shadowed; the new file replaces the old one
     // whole, so a crash mid-write can't leave .env without the settings it already held.
     const kept = text.split('\n').filter((line) => !missing.includes(line.match(LINE)?.[1])).join('\n').replace(/\n*$/, '');
@@ -52,7 +69,7 @@ export function ensurePasswords(file) {
     const temp = `${file}.${process.pid}.tmp`;
     fs.writeFileSync(temp, `${kept ? `${kept}\n` : ''}${lines.join('\n')}\n`, { mode: 0o600 });
     fs.renameSync(temp, file);
-  }
+  });
   const values = passwordsIn(fs.readFileSync(file, 'utf8'), file);
   for (const key of KEYS) {
     if ((values[key] || '').length < MIN_LENGTH) {

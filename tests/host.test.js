@@ -2,6 +2,8 @@ import { it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
+import { execFile } from 'child_process';
+import { pathToFileURL } from 'url';
 import { parseEnv } from 'util';
 import { ensurePasswords } from '../scripts/web/host.js';
 
@@ -101,4 +103,27 @@ it('refuses a password with a control character', () => {
 it('refuses a password a browser cannot send', () => {
   fs.writeFileSync(file, `OPENTUTOR_PASSWORD=0123456789abcdef0123\nOPENTUTOR_ADMIN_PASSWORD=${'Ā'.repeat(16)}\n`);
   expect(() => ensurePasswords(file)).toThrow(/outside ASCII/);
+});
+
+// Review of #222: first runs that start together (a process manager starting several) each wrote
+// their own pair, and the one left serving could hold passwords that were no longer in .env.
+it('gives runs that start together the one pair that ends up in .env', async () => {
+  const host = pathToFileURL(path.resolve('scripts/web/host.js')).href;
+  const start = Date.now() + 1500; // every run waits for the same moment, so they really do overlap
+  const code = `import { ensurePasswords } from ${JSON.stringify(host)}; while (Date.now() < ${start}); console.log(JSON.stringify(ensurePasswords(${JSON.stringify(file)})));`;
+  const run = () => new Promise((resolve, reject) => {
+    execFile(process.execPath, ['--input-type=module', '-e', code], (err, stdout) => (err ? reject(err) : resolve(JSON.parse(stdout))));
+  });
+  const pairs = await Promise.all(Array.from({ length: 12 }, run));
+  const { OPENTUTOR_PASSWORD, OPENTUTOR_ADMIN_PASSWORD } = read();
+  for (const pair of pairs) expect(pair).toEqual({ OPENTUTOR_PASSWORD, OPENTUTOR_ADMIN_PASSWORD });
+}, 20000);
+
+it('takes over a lock a crash left behind', () => {
+  const lock = `${file}.lock`;
+  fs.writeFileSync(lock, '');
+  const old = new Date(Date.now() - 60_000);
+  fs.utimesSync(lock, old, old);
+  expect(ensurePasswords(file).OPENTUTOR_PASSWORD).toMatch(/^[0-9a-f]{48}$/);
+  expect(fs.existsSync(lock)).toBe(false);
 });
