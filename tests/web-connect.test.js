@@ -435,7 +435,7 @@ it('falls back to the first topic when the history names none of them', async ()
   expect($('#active-topic').value).toBe('astrophysics');
 });
 
-it('picks once per page view: a deliberate "Select a topic" stays, a topic no longer active is replaced', async () => {
+it('picks once per page view: a deliberate "Select a topic" stays, a chosen topic stays while active', async () => {
   const progress = { active_topics: ['astrophysics', 'game-theory'], history: [] };
   const { $ } = frontend((url) => (url === '/api/progress' ? [200, progress] : null));
   await settle();
@@ -444,6 +444,8 @@ it('picks once per page view: a deliberate "Select a topic" stays, a topic no lo
   await backToLearn();
   expect($('#active-topic').value).toBe('');
   $('#active-topic').value = 'astrophysics';
+  await backToLearn();
+  expect($('#active-topic').value).toBe('astrophysics');
   progress.active_topics = ['game-theory'];
   await backToLearn();
   expect($('#active-topic').value).toBe('game-theory');
