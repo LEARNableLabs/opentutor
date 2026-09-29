@@ -24,13 +24,13 @@ one for any topic you name.
 
 ## Try it
 
-**[opentutor-mauve.vercel.app](https://opentutor-mauve.vercel.app)**: browse every
+**[opentutor-gg.vercel.app](https://opentutor-gg.vercel.app)**: browse every
 course and answer an example question, no account needed.
 
 Create an account for 3 free lessons. After that, connect your own
 [OpenRouter](https://openrouter.ai) account to keep going; you pay OpenRouter
 directly for what you use. You can delete your account and data at any time
-([privacy](https://opentutor-mauve.vercel.app/privacy.html)).
+([privacy](https://opentutor-gg.vercel.app/privacy.html)).
 
 ## Run it on your computer
 
