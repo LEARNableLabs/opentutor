@@ -6,6 +6,7 @@
 
 import { generate } from './claude.js';
 import { buildFlashcardPrompt } from './context.js';
+import { parseFirstJson } from '../../lib/core/json.js';
 import { getDueReviews, recordReview } from './spaced-repetition.js';
 import { appendMemory } from './state.js';
 import { log } from './logger.js';
@@ -84,9 +85,8 @@ export async function handleFlashcardCallback(data, chatId, channel, messageId) 
 function parseFlashcard(text, review) {
   // Try to detect poll format (JSON with question/options/correct)
   try {
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      const data = JSON.parse(jsonMatch[0]);
+    const data = parseFirstJson(text);
+    if (data) {
       if (data.question && data.options) {
         return {
           type: 'poll',

@@ -11,6 +11,7 @@
 
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
+import { parseFirstJson } from '../../lib/core/json.js';
 import { buildStudentModel, formatStudentModel, markConceptReviewed } from '../../lib/core/student-model.js';
 import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives, reviewLesson } from '../../lib/core/deliberate-practice.js';
 import { getNextLesson, markLessonComplete, readCurriculum, saveCurriculumProgress, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
@@ -239,8 +240,8 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
   let lessonPlan;
   try {
-    const jsonMatch = planResponse.text.match(/\{[\s\S]*\}/);
-    lessonPlan = JSON.parse(jsonMatch[0]);
+    lessonPlan = parseFirstJson(planResponse.text);
+    if (!lessonPlan) throw new SyntaxError('No lesson plan in the reply');
   } catch {
     log.error({ topic: topicSlug, lessonDay }, 'lesson plan parse failed, falling back');
     await channel.sendMessage(chatId, `Let's explore: <b>${lesson.title}</b>\n\nWhat do you already know about ${(lesson.concepts || []).join(' and ')}?`);
