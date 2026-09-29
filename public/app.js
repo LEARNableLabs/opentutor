@@ -426,6 +426,7 @@ async function selectTopic(slug) {
     await loadActiveTopics();
     $('#active-topic').value = slug;
     $$('.nav-btn')[0].click();
+    $('#btn-next').focus(); // the list the student chose from is now hidden: land on the next step
   } catch (err) {
     $('#topic-error').textContent = err.message;
   }

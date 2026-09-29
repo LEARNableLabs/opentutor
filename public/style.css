@@ -26,6 +26,7 @@
   --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --radius: 8px;
   --radius-sm: 6px;
+  color-scheme: light; /* native controls (select menus, scrollbars, plain buttons) follow the theme */
 }
 
 /* A warm dark from the logo's leather, and a lighter green that still reads on it. */
@@ -42,6 +43,7 @@
   --accent-soft: rgba(108, 199, 154, 0.12);
   --on-accent: #0f2419;
   --error: #f08a7e;
+  color-scheme: dark;
 }
 
 * {

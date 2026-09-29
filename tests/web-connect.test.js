@@ -450,3 +450,15 @@ it('picks once per page view: a deliberate "Select a topic" stays, a chosen topi
   await backToLearn();
   expect($('#active-topic').value).toBe('game-theory');
 });
+
+// Review of #218: choosing a topic hides the list the student was in, so focus must go somewhere visible.
+it('moves focus to Next lesson after a topic is chosen from the list', async () => {
+  const { $, context, focused } = frontend((url) => (
+    url === '/api/add-topic' ? [200, { status: 'existing', slug: 'game-theory', lessonCount: 27 }]
+      : url === '/api/progress' ? [200, { active_topics: ['game-theory'] }]
+        : null));
+  await settle();
+  await context.selectTopic('game-theory');
+  await settle();
+  expect(focused()).toBe($('#btn-next'));
+});

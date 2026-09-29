@@ -29,7 +29,7 @@
   border: none;
   border-radius: var(--radius-sm);
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent); /* dark on the dark theme's light green */
   font: inherit;
   font-weight: 600;
   cursor: pointer;
@@ -77,6 +77,7 @@
   font-size: 0.85rem;
 }
 
+.admin-token,
 .admin-remove {
   padding: 6px 12px;
   border: 1px solid var(--border);
@@ -86,6 +87,15 @@
   font: inherit;
   font-size: 0.85rem;
   cursor: pointer;
+}
+
+.admin-token {
+  margin-left: auto; /* with Remove, at the right of the card, not floating mid-row */
+}
+
+.admin-token:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* Irreversible, so it only looks dangerous once the pointer is on it. */
@@ -103,9 +113,8 @@
 
 .admin-card dt {
   color: var(--text-dim);
+  font-family: var(--sans);
   font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .admin-card dd { margin: 2px 0 0; font-variant-numeric: tabular-nums; }
