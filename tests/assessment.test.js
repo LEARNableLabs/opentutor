@@ -242,3 +242,24 @@ describe('a grade with more text before its closing tag', () => {
     }
   });
 });
+
+// Twelfth review of #231.
+describe('quotes in tags and in grades cut short', () => {
+  it('hides a grade cut short after quoting the closing tag', () => {
+    expect(parseAssessment('<assessment>{"correct":["tag </assessment>"],"score":0.8')).toEqual({ assessment: null, visible: '' });
+  });
+
+  it('reads a grade whose opening tag quotes a ">"', () => {
+    expect(parseAssessment('<assessment note="x>y">{"score":0.8}</assessment>Try again.')).toEqual({ assessment: { score: 0.8 }, visible: 'Try again.' });
+  });
+
+  it('streams none of a grade whose opening tag quotes a ">"', () => {
+    const text = '<assessment note="x>y">{"score":0.8}</assessment>Try again.';
+    for (const size of [1, 5, text.length]) {
+      const out = [];
+      const feed = assessmentFilter((t) => out.push(t));
+      for (let i = 0; i < text.length; i += size) feed(text.slice(i, i + size));
+      expect(out.join('')).toBe('Try again.');
+    }
+  });
+});
