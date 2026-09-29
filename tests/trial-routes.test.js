@@ -3,7 +3,8 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { TutorStore } from '../lib/core/store.js';
-import { saveKey } from '../lib/core/llm-access.js';
+import { saveKey, trialLessonsLeft } from '../lib/core/llm-access.js';
+import { formatPracticeFeedback } from '../lib/core/deliberate-practice.js';
 
 // Route wiring for #132 on the Vercel routes: a self-signup account, with the
 // session check stubbed (it has its own tests) and a real store on a temp root.
@@ -156,6 +157,28 @@ it('answers a spent daily budget with the 402 connect prompt, as JSON and as one
   expect(res.events).toEqual([{ event: 'error', data: refusal }]);
   expect(res.ended).toBe(1);
   expect(host.generate).toHaveBeenCalledTimes(1);
+});
+
+// #149: an open BLOCK starts a review lesson. It plans nothing, so it spends no free lesson.
+it('starts a review lesson for an open BLOCK, as JSON and as one SSE event, without a model call', async () => {
+  const student = store.forStudent(ACCT);
+  student.writeDomainFile('demo', 'practice-feedback.md', formatPracticeFeedback({
+    timestamp: '2026-09-28T00:00:00.000Z',
+    observations: [],
+    directives: [{ type: 'BLOCK', target: 'alpha', reason: 'BLOCK advancement until retested', priority: 'critical' }],
+    model: { recentAccuracy: 0.5, trend: 'steady', difficulty: { level: 3, label: 'standard' }, engagement: 'steady', concepts: { shaky: ['alpha'] } },
+  }, 'Demo'));
+  const json = await call(lesson, { topicSlug: 'demo' });
+  expect(json.statusCode).toBe(200);
+  expect(json.body).toMatchObject({ lesson: { review: true, title: 'Review: alpha' }, note: "Let's revisit alpha before moving on." });
+  student.deleteKV('web_lesson:demo');
+  const res = sseResponse();
+  await lesson({ method: 'POST', headers: { accept: 'text/event-stream' }, body: { topicSlug: 'demo' } }, res);
+  expect(res.statusCode).toBe(200);
+  expect(res.events).toEqual([{ event: 'done', data: json.body }]);
+  expect(res.ended).toBe(1);
+  expect(host.generate).not.toHaveBeenCalled();
+  expect(await trialLessonsLeft(student)).toBe(3);
 });
 
 it('refuses a custom topic without recording or enqueueing a build, and activates a shipped one', async () => {

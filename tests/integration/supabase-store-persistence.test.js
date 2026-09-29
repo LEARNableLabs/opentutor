@@ -58,10 +58,12 @@ function fakePostgrest() {
       single: async () => ({ data: builder._rows()[0] ?? null, error: null }),
       then: (resolve) => resolve({ data: builder._rows(), error: null }),
       insert: async (row) => { db[table].push({ ...row }); return { error: null }; },
-      upsert: async (row) => {
-        const keys = Object.keys(row).filter((k) => ['user_id', 'key', 'slug', 'day', 'filename'].includes(k));
-        const i = db[table].findIndex((r) => keys.every((k) => String(r[k]) === String(row[k])));
-        if (i >= 0) db[table][i] = { ...db[table][i], ...row }; else db[table].push({ ...row });
+      upsert: async (rows) => {
+        for (const row of [rows].flat()) { // one row, or an array of them, as PostgREST takes
+          const keys = Object.keys(row).filter((k) => ['user_id', 'key', 'slug', 'day', 'filename'].includes(k));
+          const i = db[table].findIndex((r) => keys.every((k) => String(r[k]) === String(row[k])));
+          if (i >= 0) db[table][i] = { ...db[table][i], ...row }; else db[table].push({ ...row });
+        }
         return { error: null };
       },
       delete: () => builder,
@@ -337,5 +339,20 @@ describe('the daily budget of trial calls', () => {
     expect(host.generate).toHaveBeenCalledTimes(2);
     const day = client.db.kv.filter((row) => row.key.startsWith('openrouter-trial-day:'));
     expect(day.map((row) => row.user_id)).toEqual(['', '']);
+  });
+});
+
+// #149: a passed BLOCK retest re-grades the concept's lessons. That is not a new completion:
+// the lessons keep their dates, and the student's history gains nothing.
+describe('saving re-graded lessons', () => {
+  it('changes the grade only: the date stays, and no history is added', async () => {
+    const s = store({ userId: 'alice' });
+    await s.markLessonComplete('game-theory', 1, 'incorrect');
+    client.db.lessons_completed[0].date = '2026-09-01';
+    const curriculum = await s.readCurriculum('game-theory');
+    curriculum.lessons[0].engagement = 'reviewed';
+    await s.saveCurriculumProgress('game-theory', curriculum);
+    expect(client.db.lessons_completed).toEqual([{ user_id: 'alice', slug: 'game-theory', day: 1, date: '2026-09-01', engagement: 'reviewed' }]);
+    expect((await s.readProgress()).history).toHaveLength(1);
   });
 });

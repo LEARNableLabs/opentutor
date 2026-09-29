@@ -260,6 +260,20 @@ it('shows a resumed lesson\'s last tutor message, with a note that it picked up 
   expect($('#lesson-input-area').classList.contains('hidden')).toBe(false);
 });
 
+// #149: an open BLOCK starts a review lesson; the page says why before the question.
+it('shows a review lesson\'s note before its question, and names it in the lesson header', async () => {
+  const review = { reply: 'Explain **alpha** in your own words.', lesson: { module: 'M', day: 7, title: 'Review: alpha', review: true }, step: 0, totalSteps: 3, done: false, note: "Let's revisit alpha before moving on." };
+  const { $ } = frontend((url) => (url === '/api/lesson' ? [200, review] : null));
+  await settle();
+  $('#active-topic').value = 'demo';
+  await $('#btn-next').click();
+  await settle();
+  const shown = $('#lesson-conversation').children.map((n) => n.innerHTML);
+  expect(shown.findIndex((h) => h.includes('revisit alpha before moving on.'))).toBe(0); // md() escapes the apostrophe
+  expect(shown[1]).toContain('Explain <strong>alpha</strong> in your own words.');
+  expect($('#lesson-meta').textContent).toBe('M — Day 7: Review: alpha');
+});
+
 // A lesson on its last step: `last` answers the student's answer.
 async function lastStep(last) {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3, done: false };
