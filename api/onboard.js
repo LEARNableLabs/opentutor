@@ -1,4 +1,5 @@
 import { buildOnboardingPrompt } from '../lib/core/prompts.js';
+import { publicCatalog } from '../lib/core/catalog.js';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { adapterFor, canCreateTopics, isAccount, trimHistory, turnText, KeyRequired } from '../lib/core/llm-access.js';
@@ -45,11 +46,13 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: text }];
   const response = await adapter.generate(system, messages, { model });
 
-  // A marker's value holds no '<' or '>', so a doubled or broken marker can't smuggle one through.
-  const named = response.text.match(/<TOPIC>([^<>]*)<\/TOPIC>/i)?.[1].trim() || null;
+  // A marker's value holds no '<' or '>', so a doubled or broken marker can't smuggle one through;
+  // spaces inside the tags are the model's slip, not a reason to show them.
+  const named = response.text.match(/<\s*TOPIC\s*>([^<>]*)<\s*\/\s*TOPIC\s*>/i)?.[1].trim() || null;
   const confirmedTopic = named && (courseFor(named, availableTopics) || (customTopics ? named : null));
-  let reply = response.text.replace(/<TOPIC>[^<>]*<\/TOPIC>/gi, '').replace(/<\/?TOPIC>/gi, '').trim();
-  if (named && !confirmedTopic) reply = `${reply}\n\nThat one isn't a ready-made course yet. Pick one of the ready-made topics, or connect your OpenRouter account to have your own built.`.trim();
+  let reply = response.text.replace(/<\s*TOPIC\s*>[^<>]*<\s*\/\s*TOPIC\s*>/gi, '').replace(/<\s*\/?\s*TOPIC\s*>/gi, '').trim();
+  // Refused, the model's own words may promise the build, so they are replaced, not added to.
+  if (named && !confirmedTopic) reply = "That one isn't a ready-made course yet. Pick one of the ready-made topics, or connect your OpenRouter account to have your own built.";
   else if (!reply) {
     reply = confirmedTopic
       ? `Good choice: ${confirmedTopic.replace(/-/g, ' ')}. Your first lesson is ready.`
@@ -61,13 +64,20 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   return { status: 200, body: { reply, confirmedTopic, model: response.model } };
 }
 
-// A course the model named loosely ("Game Theory") or by its full title ("3D Printer Firmware —
-// Motion Planning and Kinematics") is still that course: its slug is the name's, or starts it.
+const norm = (text) => text.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+let titles; // shipped course titles by slug; they don't change while the process runs
+
+// A course named by its slug, its title ("Night sky photography — astrophotography techniques"),
+// or the part of its title before a dash ("Night sky photography") is that course. Nothing that
+// only starts like one is: "Game Theory Advanced" is not "Game Theory".
 function courseFor(name, topics) {
-  const slug = name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-  const exact = topics.find((topic) => topic === name || topic === slug);
-  if (exact) return exact;
-  return topics.filter((topic) => slug.startsWith(`${topic}-`)).sort((a, b) => b.length - a.length)[0] || null;
+  titles ||= new Map(publicCatalog().map((course) => [course.slug, course.topic]));
+  const wanted = norm(name);
+  return topics.find((slug) => {
+    if (slug === name || slug === wanted) return true;
+    const title = titles.get(slug);
+    return Boolean(title) && (norm(title) === wanted || norm(title.split(/\s+[—–-]\s+/)[0]) === wanted);
+  }) || null;
 }
 
 // #155: onboarding used to drop everything the student said. A student without a

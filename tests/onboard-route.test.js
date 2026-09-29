@@ -214,3 +214,34 @@ describe('names and markers', () => {
     expect(body.confirmedTopic).toBe('knots');
   });
 });
+
+// Second review of #229: real course titles, not slug prefixes; tags with spaces; a clean refusal.
+describe('course titles and tags', () => {
+  const catalog = () => ({ ...state, listTopics: async () => ['astrophotography', 'logic', 'game-theory'] });
+  const trialOf = (s) => ({ ...s, userId: 'acct-1', readKV: async () => null });
+  const turn = (s) => onboardTurn({ state: s, skills: new Map(), getAdapter: async () => adapter }, { message: 'photos of stars' });
+  const confirm = async (text) => { adapter.generate.mockResolvedValue({ text }); return (await turn(trialOf(catalog()))).body; };
+
+  it.each([
+    ['its full title', 'Night sky photography — astrophotography techniques', 'astrophotography'],
+    ['the main part of its title', 'Night sky photography', 'astrophotography'],
+    ['a title with a subtitle after a dash', 'Logic — from Aristotle to Gödel', 'logic'],
+  ])('confirms a course named by %s', async (_how, name, slug) => {
+    expect((await confirm(`Good.\n<TOPIC>${name}</TOPIC>`)).confirmedTopic).toBe(slug);
+  });
+
+  it.each(['Logic Gates and Digital Circuits', 'Game Theory Advanced'])('does not take "%s" for a course it only starts like', async (name) => {
+    expect((await confirm(`Good.\n<TOPIC>${name}</TOPIC>`)).confirmedTopic).toBeNull();
+  });
+
+  it('reads a marker with spaces in its tags, and never shows it', async () => {
+    const body = await confirm('Good.\n< TOPIC >game-theory</ TOPIC >');
+    expect(body).toMatchObject({ confirmedTopic: 'game-theory', reply: 'Good.' });
+  });
+
+  it('refuses a topic it cannot build without keeping a promise to build it', async () => {
+    const { reply } = await confirm('I will build it now.\n<TOPIC>never-built</TOPIC>');
+    expect(reply).not.toMatch(/build it now/);
+    expect(reply).toMatch(/ready-made/);
+  });
+});
