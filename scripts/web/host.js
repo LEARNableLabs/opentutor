@@ -16,9 +16,11 @@ const KEYS = ['OPENTUTOR_PASSWORD', 'OPENTUTOR_ADMIN_PASSWORD'];
 const MIN_LENGTH = 16;
 const LINE = /^\s*(?:export\s+)?(OPENTUTOR_PASSWORD|OPENTUTOR_ADMIN_PASSWORD)\s*=(.*)$/;
 
-// A value every .env parser reads the same way, and the environment keeps whole: no quotes,
-// spaces, comment, escape or control character (a NUL would cut it short).
-const PLAIN = /^[^\s'"`#\\\x00-\x1f\x7f]+$/;
+// A value every .env parser reads the same way, the environment keeps whole, and a browser can send
+// in a header: printable ASCII (fetch refuses a header outside Latin-1; a NUL would cut it short)
+// with no quote, comment or escape.
+const PLAIN = /^[\x21-\x7e]+$/;
+const SPECIAL = /['"`#\\]/;
 
 // Our two keys, read line by line. Node's own .env parser can't be trusted with them: it takes the
 // line after "KEY= " as that key's value, and doesn't always let the later of two duplicates win.
@@ -30,8 +32,8 @@ function passwordsIn(text, file) {
     if (!match) continue;
     const raw = match[2].trim();
     if (raw === '' || raw === '""' || raw === "''") values[match[1]] = '';
-    else if (PLAIN.test(raw)) values[match[1]] = raw;
-    else throw new Error(`${match[1]} in ${file} uses quotes, spaces, a comment or a control character, which npm run host won't guess at. Write it as ${match[1]}=value, or delete the line to have one generated.`);
+    else if (PLAIN.test(raw) && !SPECIAL.test(raw)) values[match[1]] = raw;
+    else throw new Error(`${match[1]} in ${file} uses quotes, spaces, a comment, a control character or a character outside ASCII, which npm run host won't accept. Write it as ${match[1]}=value, or delete the line to have one generated.`);
   }
   return values;
 }

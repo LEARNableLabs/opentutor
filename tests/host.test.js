@@ -96,3 +96,9 @@ it('refuses a password with a control character', () => {
   fs.writeFileSync(file, `OPENTUTOR_PASSWORD=a${'\0'}xxxxxxxxxxxxxxxxx\nOPENTUTOR_ADMIN_PASSWORD=0123456789abcdef0123\n`);
   expect(() => ensurePasswords(file)).toThrow(/control character/);
 });
+
+// Review of #222: a browser can't put "Ā" (U+0100) in a header, so the admin page could never sign in.
+it('refuses a password a browser cannot send', () => {
+  fs.writeFileSync(file, `OPENTUTOR_PASSWORD=0123456789abcdef0123\nOPENTUTOR_ADMIN_PASSWORD=${'Ā'.repeat(16)}\n`);
+  expect(() => ensurePasswords(file)).toThrow(/outside ASCII/);
+});
