@@ -263,3 +263,14 @@ describe('quotes in tags and in grades cut short', () => {
     }
   });
 });
+
+// Thirteenth review of #231: a valid grade, then broken JSON with an unmatched quote.
+describe('a grade followed by broken JSON', () => {
+  it('is hidden to its closing tag', () => {
+    expect(parseAssessment('<assessment>{"score":0.8},"score":0.2,"missing":"fractions</assessment>Try again.')).toEqual({ assessment: { score: 0.8 }, visible: 'Try again.' });
+  });
+
+  it('with no closing tag, hides the rest', () => {
+    expect(parseAssessment('<assessment>{"score":0.8},"score":0.2,"missing":"fractions')).toEqual({ assessment: { score: 0.8 }, visible: '' });
+  });
+});
