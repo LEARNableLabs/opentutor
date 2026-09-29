@@ -10,26 +10,44 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { parseEnv } from 'node:util';
 import { fileURLToPath } from 'node:url';
 
 const KEYS = ['OPENTUTOR_PASSWORD', 'OPENTUTOR_ADMIN_PASSWORD'];
+const MIN_LENGTH = 16;
+const LINE = /^\s*(?:export\s+)?(OPENTUTOR_PASSWORD|OPENTUTOR_ADMIN_PASSWORD)\s*=(.*)$/;
+
+// Our two keys, read line by line. Node's own .env parser can't be trusted with them: it takes the
+// line after "KEY= " as that key's value, and doesn't always let the later of two duplicates win.
+function passwordsIn(text) {
+  const values = {};
+  for (const line of text.split('\n')) {
+    const match = line.match(LINE);
+    if (match) values[match[1]] = match[2].trim().replace(/^(['"])(.*)\1$/, '$2');
+  }
+  return values;
+}
 
 /** Make sure `file` holds a password for each role, readable only by its owner. Returns them. */
 export function ensurePasswords(file) {
   fs.closeSync(fs.openSync(file, 'a', 0o600)); // created private, before any secret is in it
   fs.chmodSync(file, 0o600); // and made private if it already existed
   const text = fs.readFileSync(file, 'utf8');
-  const missing = KEYS.filter((key) => !parseEnv(text)[key]?.trim());
+  const missing = KEYS.filter((key) => !passwordsIn(text)[key]);
   if (missing.length) {
-    // One line per key: an empty password is removed, not shadowed, because Node's own .env
-    // parser does not consistently let the later of two duplicate lines win.
-    const stale = new RegExp(`^\\s*(export\\s+)?(${missing.join('|')})\\s*=`);
-    const kept = text.split('\n').filter((line) => !stale.test(line)).join('\n').replace(/\n*$/, '');
+    // An empty password's lines are removed, not shadowed; the new file replaces the old one
+    // whole, so a crash mid-write can't leave .env without the settings it already held.
+    const kept = text.split('\n').filter((line) => !missing.includes(line.match(LINE)?.[1])).join('\n').replace(/\n*$/, '');
     const lines = missing.map((key) => `${key}=${crypto.randomBytes(24).toString('hex')}`);
-    fs.writeFileSync(file, `${kept ? `${kept}\n` : ''}${lines.join('\n')}\n`);
+    const temp = `${file}.${process.pid}.tmp`;
+    fs.writeFileSync(temp, `${kept ? `${kept}\n` : ''}${lines.join('\n')}\n`, { mode: 0o600 });
+    fs.renameSync(temp, file);
   }
-  const values = parseEnv(fs.readFileSync(file, 'utf8'));
+  const values = passwordsIn(fs.readFileSync(file, 'utf8'));
+  for (const key of KEYS) {
+    if ((values[key] || '').length < MIN_LENGTH) {
+      throw new Error(`${key} in ${file} must be at least ${MIN_LENGTH} characters. Delete its line and run again to have one generated.`);
+    }
+  }
   if (values.OPENTUTOR_PASSWORD === values.OPENTUTOR_ADMIN_PASSWORD) {
     throw new Error('OPENTUTOR_PASSWORD and OPENTUTOR_ADMIN_PASSWORD must differ: the admin one can remove every student.');
   }
@@ -38,10 +56,19 @@ export function ensurePasswords(file) {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const file = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../.env');
-  const passwords = ensurePasswords(file);
+  let passwords;
+  try {
+    passwords = ensurePasswords(file);
+  } catch (err) {
+    console.error(err.message);
+    process.exit(1);
+  }
   process.loadEnvFile(file); // the provider key and the rest; the shell's own exports still win
   Object.assign(process.env, passwords); // except these: a stale or empty export must not replace them
+  if (process.platform === 'win32') console.warn(`Windows ignores chmod: make sure only you can read ${file}.`);
   console.log(`The learner and admin passwords are in ${file}.`);
-  console.log('Add students at /admin.html. Serve it over HTTPS, through a web server such as Caddy or nginx.');
+  console.log(process.env.OPENTUTOR_HOST
+    ? `Listening on ${process.env.OPENTUTOR_HOST}: plain HTTP unless something in front adds HTTPS.`
+    : 'Listening on this computer only. Others reach it through a web server in front, such as Caddy or nginx, which also adds HTTPS. OPENTUTOR_HOST=0.0.0.0 serves plain HTTP to your network instead.');
   await import('./server.js');
 }

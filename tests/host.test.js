@@ -54,3 +54,22 @@ it('refuses one password for both roles', () => {
   fs.writeFileSync(file, 'OPENTUTOR_PASSWORD=same-long-secret\nOPENTUTOR_ADMIN_PASSWORD=same-long-secret\n');
   expect(() => ensurePasswords(file)).toThrow(/must differ/);
 });
+
+// Review of #222: Node's parser takes the line after "KEY= " as that key's value.
+it('reads its own two lines itself, where Node\'s parser would swallow the next line', () => {
+  fs.writeFileSync(file, 'OPENTUTOR_PASSWORD= \nOPENTUTOR_ADMIN_PASSWORD=0123456789abcdef0123\n');
+  const values = ensurePasswords(file);
+  expect(values.OPENTUTOR_PASSWORD).toMatch(/^[0-9a-f]{48}$/);
+  expect(values.OPENTUTOR_ADMIN_PASSWORD).toBe('0123456789abcdef0123');
+});
+
+it('refuses a password too short to protect anything, and never starts with "undefined"', () => {
+  fs.writeFileSync(file, 'OPENTUTOR_PASSWORD= \nOPENTUTOR_ADMIN_PASSWORD=y\n');
+  expect(() => ensurePasswords(file)).toThrow(/at least 16/);
+});
+
+it('leaves no temporary file behind', () => {
+  fs.writeFileSync(file, 'OPENROUTER_API_KEY=sk-or-test\n');
+  ensurePasswords(file);
+  expect(fs.readdirSync(dir)).toEqual(['.env']);
+});

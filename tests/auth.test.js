@@ -98,3 +98,25 @@ describe('without a password, from anywhere but this computer', () => {
     expect(checkAuth(proxied).ok).toBe(true);
   });
 });
+
+// Review of #222: other spellings of this computer, and a browser page served from elsewhere.
+describe('without a password, how this computer is recognised', () => {
+  const from = (remoteAddress, headers = {}) => ({ headers: { host: 'localhost:3000', ...headers }, socket: { remoteAddress } });
+
+  it.each([
+    ['a long-form IPv6 loopback Host', from('::1', { host: '[0:0:0:0:0:0:0:1]:3000' })],
+    ['a fully qualified localhost', from('127.0.0.1', { host: 'localhost.:3000' })],
+    ['a page on this computer', from('127.0.0.1', { origin: 'http://localhost:3000', referer: 'http://localhost:3000/learn.html' })],
+  ])('lets in %s', (_name, r) => {
+    expect(checkAuth(r).ok).toBe(true);
+  });
+
+  // A proxy on this computer can forward with Host: localhost and no X-Forwarded-*, as nginx does
+  // by default, but the browser still names the public page it is on.
+  it.each([
+    ['a page served from a public site (Referer)', from('127.0.0.1', { referer: 'https://tutor.example.org/learn.html' })],
+    ['a page served from a public site (Origin)', from('127.0.0.1', { origin: 'https://tutor.example.org' })],
+  ])('refuses %s', (_name, r) => {
+    expect(authFailure(checkAuth(r)).status).toBe(403);
+  });
+});
