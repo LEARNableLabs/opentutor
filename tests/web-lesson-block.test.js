@@ -128,6 +128,21 @@ describe.each([
     expect(planPrompt).not.toMatch(/Shaky \(needs reinforcement\):[^\n]*alpha/);
   });
 
+  // Review of #238: a retest that opened a lesson ranks before that lesson. When the concept is one
+  // of the lesson's own and the rest of the lesson goes badly, the lesson's grade is the newer word.
+  it('lets the rest of a lesson outrank the retest that opened it', async () => {
+    const file = path.join(root, 'skills', 'tutor', 'domains', 'demo', 'curriculum.json');
+    const curriculum = JSON.parse(fs.readFileSync(file, 'utf8'));
+    curriculum.lessons[6].concepts = ['alpha'];
+    fs.writeFileSync(file, JSON.stringify(curriculum));
+    score = 0.1;
+    for (let i = 0; i < 2; i++) { await start(); await finish(); } // two reviews, both missed
+    score = [0.9, 0.1, 0.1, 0.1]; // the retest right, the rest of lesson 7 wrong
+    expect((await start()).body.lesson.day).toBe(7);
+    await finish();
+    expect(store.readDomainFile('demo', 'practice-feedback.md')).toMatch(/- Shaky: [^\n]*alpha/);
+  });
+
   // #227: two reviews in a row at most, whichever concepts they review.
   it('goes ahead after two reviews in a row, even when they review different concepts', async () => {
     const file = path.join(root, 'skills', 'tutor', 'domains', 'demo', 'curriculum.json');

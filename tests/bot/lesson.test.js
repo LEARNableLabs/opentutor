@@ -71,6 +71,8 @@ vi.mock('../../lib/core/deliberate-practice.js', () => ({
   reviewLesson: vi.fn((concept) => ({ plan: { diagnostic: `Explain ${concept}.` }, steps: ['diagnostic', 'followUp', 'application'] })),
   parseRetested: vi.fn(() => ({})),
   withRetest: vi.fn((retested) => retested),
+  settledConcept: vi.fn(() => null),
+  namesConcept: vi.fn(() => true),
 }));
 
 vi.mock('../../scripts/bot/logger.js', () => ({

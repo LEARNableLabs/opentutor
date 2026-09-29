@@ -15,7 +15,7 @@ import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
-import { parseDirectives, parseRetested, reviewLesson } from '../lib/core/deliberate-practice.js';
+import { parseDirectives, parseRetested, reviewLesson, namesConcept } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter, stripGrades } from '../lib/core/assessment.js';
 import { parseFirstJson } from '../lib/core/json.js';
 
@@ -331,12 +331,6 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 // so everything here is awaited — awaiting a plain value is a no-op.
 
 const FAILED = Symbol('failed');
-
-// Does this question name the concept as a whole word or phrase, not as part of another word?
-const namesConcept = (question, concept) => {
-  const escaped = concept.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}(?=$|[^\\p{L}\\p{N}])`, 'iu').test(question);
-};
 
 const withGoal = (plan, question) => (plan.goal ? `**Goal:** ${plan.goal}\n\n` : '') + question;
 
