@@ -283,6 +283,12 @@ async function sendLessonAnswer() {
       appendToBubble(bubble, chunk);
     });
     if (!bubble) { typing.remove(); appendLessonMsg('tutor', data.reply); }
+    else if (typeof data.reply === 'string') {
+      // The server's reply is the one to keep: it is cleaned of anything the stream let through (#224).
+      const body = bubble.querySelector?.('div') || bubble;
+      body.dataset.raw = data.reply;
+      body.innerHTML = md(data.reply);
+    }
 
     if (data.done) {
       lessonActive = false;

@@ -105,10 +105,13 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       return { status: 200, body: { done: true, message: 'Lesson already complete.' } };
     }
 
-    active.history.push({ role: 'user', content: answer });
+    // An answer's own <assessment> tags could have it grade itself (#224).
+    const said = answer.replace(/<\/?\s*assessment\b[^>]*>/gi, '');
+    active.history.push({ role: 'user', content: said });
 
     const user = await safely(() => state.readUser(), '');
-    const responsePrompt = buildSocraticResponsePrompt(active.plan, answer, stepName, user, { final: active.step === steps.length - 1, markdown: true });
+    const course = active.course || String(active.topicSlug || '').replace(/-/g, ' '); // saved before #225: the slug
+    const responsePrompt = buildSocraticResponsePrompt(active.plan, said, stepName, user, { final: active.step === steps.length - 1, markdown: true, course });
     const adapter = await getAdapter();
     const response = await adapter.generate(
       responsePrompt.system + '\n\nReturn only polished text.',
@@ -118,7 +121,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
     const { assessment, visible: reply } = parseAssessment(response.text);
     if (assessment) (active.assessments ||= []).push({ step: stepName, ...assessment });
-    active.history.push({ role: 'assistant', content: reply });
+    // The tutor's turns keep their grade in the history it is sent: turns shown to it without one
+    // taught it to stop grading, about 1 step in 6 (#224). The student only ever sees `reply`.
+    active.history.push({ role: 'assistant', content: response.text });
     active.reply = reply;
     active.step++;
 
@@ -193,6 +198,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   }
 
   const lessonDay = lesson.day || lesson.lesson;
+  const curriculum = await safely(() => state.readCurriculum(topicSlug));
+  // The tutor is told the course, so a profile about another subject can't take the lesson over (#225).
+  const course = curriculum?.topic || topicSlug.replace(/-/g, ' ');
   // Not safely(): an unreadable feedback file is not "no BLOCK", and reading it as one
   // would let the student past the BLOCK. The error reaches the route's generic 500.
   const directives = parseDirectives(await state.readDomainFile(topicSlug, 'practice-feedback.md'));
@@ -224,6 +232,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         assessments: [],
         isReview: true,
         reviewConcept: block.target,
+        course,
         reviews: { concept: block.target, day: lessonDay, count: reviews + 1 },
       };
       await state.writeKV(kvKey, JSON.stringify(review));
@@ -237,7 +246,6 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   if (allDone) return { status: 200, body: { done: true, message: 'All lessons completed!' } };
 
   const learningMd = (await safely(() => state.readDomainFile(topicSlug, 'learning.md'), '')) || '';
-  const curriculum = await safely(() => state.readCurriculum(topicSlug));
   const user = await safely(() => state.readUser(), '');
   const studentModel = buildStudentModel(learningMd, curriculum, user);
   const modelText = formatStudentModel(studentModel);
@@ -291,6 +299,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     reply: withGoal(plan, plan[lessonSteps[0]]),
     history: [],
     assessments: [],
+    course,
   };
 
   await state.writeKV(kvKey, JSON.stringify(started));
@@ -312,7 +321,7 @@ const withGoal = (plan, question) => (plan.goal ? `**Goal:** ${plan.goal}\n\n` :
 function lastShown({ reply, history, step, plan }) {
   if (reply != null) return reply;
   const last = history?.findLast((m) => m.role === 'assistant');
-  if (last) return last.content;
+  if (last) return parseAssessment(last.content).visible; // the history keeps the tutor's grades (#224)
   const opening = step === 0 && (plan?.retrieval || plan?.diagnostic);
   return opening ? withGoal(plan, opening) : null;
 }

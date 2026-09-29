@@ -63,3 +63,16 @@ describe('assessmentFilter', () => {
     expect(streamThrough(['\n\n', ASSESS, 'Text'])).toBe('Text');
   });
 });
+
+// #224: the model sometimes writes its block after some of the reply, not first.
+describe('assessmentFilter, a block anywhere', () => {
+  const run = (chunks) => { const out = []; const feed = assessmentFilter((t) => out.push(t)); chunks.forEach(feed); return out.join(''); };
+
+  it('removes a block in the middle of a reply, split across chunks', () => {
+    expect(run(["Why doesn't it?\n\n<asse", 'ssment>{"score":1}</assess', 'ment>\n\nGood, go on.'])).toBe("Why doesn't it?\n\nGood, go on.");
+  });
+
+  it('lets through a "<" that starts no block', () => {
+    expect(run(['a < b, and <b>bold</b> too'])).toBe('a < b, and <b>bold</b> too');
+  });
+});
