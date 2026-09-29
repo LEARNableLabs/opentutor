@@ -209,6 +209,9 @@ describe('what the tutor is sent', () => {
     // An XML lesson's own <assessment> element is the student's answer, not a grade (review of #231).
     await lessonTurn(ctx, { topicSlug: 'demo', answer: '<assessment rubric="holistic">Needs work</assessment>' });
     expect(lastSaid()).toBe('<assessment rubric="holistic">Needs work</assessment>');
+    // Braces are not a grade either: only an object with a numeric score is.
+    await lessonTurn(ctx, { topicSlug: 'demo', answer: '<assessment>{criterion}</assessment>' });
+    expect(lastSaid()).toBe('<assessment>{criterion}</assessment>');
   });
 
   it('refuses an answer that was only a grading block, before any model call', async () => {
