@@ -69,7 +69,7 @@ guide for [Claude Code](claude-code/README.md), [Codex](codex/README.md),
   what you already think, a follow-up, then a real situation where you explain why.
 - **It comes back to what you missed.** On the website and Telegram, a rules-based
   check (no AI) runs after each lesson and notes the concepts you're still unsure
-  of. One that goes three lessons without review comes back as a retest at the
+  of. One that is still shaky three lessons after it was flagged comes back as a retest at the
   start of a lesson; after five, the next lesson is a review of it.
 - **On Telegram it adapts further.** The same check also raises or lowers the
   difficulty and changes the kind of question, and each idea gets its own review
