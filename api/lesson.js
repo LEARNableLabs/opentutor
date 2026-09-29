@@ -84,9 +84,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     return { status: 400, body: { error: 'A valid topicSlug is required' } };
   }
 
+  // One record per topic: the lesson in flight, if any, and the reviews an open BLOCK has had
+  // on the current lesson (#149). One record, so starting a review is a single write.
   const kvKey = `web_lesson:${topicSlug}`;
-  const activeRaw = await state.readKV(kvKey);
-  const active = typeof activeRaw === 'string' ? JSON.parse(activeRaw) : activeRaw;
+  const raw = await state.readKV(kvKey);
+  const record = typeof raw === 'string' ? JSON.parse(raw) : raw;
+  const active = record?.plan ? record : null; // a record without a plan only counts reviews
   // A lesson saved before #148 has no step list of its own.
   const steps = active?.steps || STEPS;
 
@@ -132,7 +135,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         lesson: { ...active.lesson, lesson: day },
         session: active,
       }), FAILED, 'completeLesson');
-      await state.deleteKV(kvKey);
+      // A finished review leaves its count behind for the next start; a lesson leaves nothing.
+      if (active.isReview) await state.writeKV(kvKey, JSON.stringify({ reviews: active.reviews }));
+      else await state.deleteKV(kvKey);
     } else {
       await state.writeKV(kvKey, JSON.stringify(active));
     }
@@ -197,14 +202,13 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // a completion, and completeLesson releases the BLOCK when its retest passes (passedReview).
   // The bot releases it after any review; here a student who keeps missing the concept gets
   // MAX_REVIEWS in a row, then the next lesson, which still opens on the retest. The count
-  // belongs to the lesson it holds back, so finishing that lesson starts a new one: there is
-  // nothing to clear, and no failed write between two stores can leave a stale count.
+  // belongs to the lesson it holds back, so finishing that lesson starts a new one, and it is
+  // saved with its review in one write: a failed write leaves neither, and two overlapping
+  // starts write the same review and count (a review is deterministic and plans nothing).
   const block = directives.find((d) => d.type === 'BLOCK');
-  const reviewKey = `web_review:${topicSlug}`;
   let note;
   if (block) {
-    const raw = await state.readKV(reviewKey);
-    const held = typeof raw === 'string' ? JSON.parse(raw) : raw;
+    const held = record?.reviews;
     const reviews = held?.concept === block.target && held.day === lessonDay ? held.count : 0;
     if (reviews < MAX_REVIEWS) {
       const { plan, steps } = reviewLesson(block.target);
@@ -220,17 +224,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         assessments: [],
         isReview: true,
         reviewConcept: block.target,
+        reviews: { concept: block.target, day: lessonDay, count: reviews + 1 },
       };
-      // Counted before it is saved, so a review is never saved uncounted, which could hold the
-      // student past MAX_REVIEWS. If the save fails, the attempt is given back before the error.
-      const counted = (count) => state.writeKV(reviewKey, JSON.stringify({ concept: block.target, day: lessonDay, count }));
-      await counted(reviews + 1);
-      try {
-        await state.writeKV(kvKey, JSON.stringify(review));
-      } catch (err) {
-        try { await counted(reviews); } catch { /* the save's error is the one to report */ }
-        throw err;
-      }
+      await state.writeKV(kvKey, JSON.stringify(review));
       return {
         status: 200,
         body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, note: `Let's revisit ${block.target} before moving on.` },

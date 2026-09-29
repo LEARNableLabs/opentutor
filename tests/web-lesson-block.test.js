@@ -158,7 +158,7 @@ describe.each([
     expect(store.readKV('web_lesson:demo')).toBeFalsy();
   });
 
-  it.each(['web_review:demo', 'web_lesson:demo'])('gives exactly two reviews when the first write of %s fails', async (key) => {
+  it.each(['web_lesson:demo'])('gives exactly two reviews when the write of %s that starts one fails', async (key) => {
     score = 0.1;
     let failing = key;
     const state = ctx.state;
@@ -182,13 +182,23 @@ describe.each([
     await finish();
     const [a, b] = await Promise.all([start(), start()]);
     expect(b.body.reply).toBe(a.body.reply);
-    expect(JSON.parse(store.readKV('web_review:demo')).count).toBe(2);
+    expect(JSON.parse(store.readKV('web_lesson:demo')).reviews.count).toBe(2);
     await finish();
     expect((await start()).body.lesson).toMatchObject({ day: 7, title: 'L7' });
   });
 
+  it('refuses an answer when only a count is saved, and keeps the count', async () => {
+    score = 0.1;
+    await start();
+    await finish();
+    expect(JSON.parse(store.readKV('web_lesson:demo'))).toEqual({ reviews: { concept: 'alpha', day: 7, count: 1 } });
+    expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'stray' })).status).toBe(400);
+    expect(JSON.parse(store.readKV('web_lesson:demo')).reviews.count).toBe(1);
+    expect((await start()).body.lesson).toMatchObject({ review: true });
+  });
+
   it('does not count reviews left from an earlier lesson', async () => {
-    store.writeKV('web_review:demo', JSON.stringify({ concept: 'alpha', day: 6, count: 2 }));
+    store.writeKV('web_lesson:demo', JSON.stringify({ reviews: { concept: 'alpha', day: 6, count: 2 } }));
     expect((await start()).body.lesson).toMatchObject({ title: 'Review: alpha', review: true });
   });
 });

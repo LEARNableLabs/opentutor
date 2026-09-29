@@ -75,7 +75,8 @@ describe.each([
     for (let i = 0; i < 2; i++) {
       const { body } = await lessonTurn({ state: wrap(store), getAdapter: async () => { throw new Error('a review plans nothing'); }, skills: new Map() }, { topicSlug: 'demo' });
       expect(body.lesson.review).toBe(true);
-      store.deleteKV('web_lesson:demo');
+      // As a finished review does: the lesson goes, its count stays.
+      store.writeKV('web_lesson:demo', JSON.stringify({ reviews: JSON.parse(store.readKV('web_lesson:demo')).reviews }));
     }
   }
 
