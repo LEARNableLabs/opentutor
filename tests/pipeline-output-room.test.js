@@ -34,3 +34,18 @@ it('tells the critic which lessons are already the student\'s', async () => {
   // Fixed is not exempt: an error in them is still named, and put right in a later lesson.
   expect(seen[0]).toMatch(/Still name any error in them, but ask for a later lesson to correct it/);
 });
+
+// Review of #230: the critic's copy of the course was cut at 20,000 characters, so a long course's
+// last lessons were approved unseen. 60 lessons of 1,000 characters is about what 16,384 tokens hold.
+it('shows the critic every lesson of a long course', async () => {
+  const seen = [];
+  const pipeline = new CurriculumPipeline({
+    adapter: { generate: async (system) => { seen.push(system); return { text: 'APPROVED', model: 'fake' }; } },
+    state: { writeDomainFile: () => {} },
+    skills: { get: () => '' },
+  });
+  const lessons = Array.from({ length: 60 }, (_, i) => ({ day: i + 1, title: `Lesson ${i + 1}`, objectives: ['x'.repeat(950)] }));
+  await pipeline._critique({ topic: 'Knots', plan: '', parsed: { curriculum: { lessons } } });
+  expect(seen[0]).toContain('Lesson 60');
+  expect(seen[0]).not.toContain('[reference data truncated]');
+});
