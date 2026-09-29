@@ -104,9 +104,9 @@ built. On the hosted site, new topics need your own OpenRouter account.
   and says where they are without printing them; later runs reuse them. The
   learner password opens the shared workspace; the admin one opens `/admin.html`,
   where you add students. Each student gets a one-time access token to enter at
-  `/login.html` ("Have an existing access token?"), and their own progress. Every
-  request carries a password or a token, so serve it over HTTPS: put a web server
-  such as Caddy or nginx in front. Without a password, OpenTutor only answers the
+  `/login.html` ("Have an existing access token?"), and their own progress. Signing
+  in and every lesson send a password or a token, so serve it over HTTPS: put a web
+  server such as Caddy or nginx in front. Without a password, OpenTutor only answers the
   computer it runs on.
 
 ## Documentation
