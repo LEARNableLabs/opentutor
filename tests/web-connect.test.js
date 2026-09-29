@@ -425,12 +425,26 @@ it('selects the topic of the most recent lesson for a returning student, and say
   const { $ } = frontend((url) => (url === '/api/progress' ? [200, progress] : null));
   await settle();
   expect($('#active-topic').value).toBe('game-theory');
-  expect($('#empty-title').textContent).toBe('Ready for your next lesson in Game Theory?');
+  expect($('#empty-title').textContent).toBe('Ready for your next lesson?');
 });
 
-it('falls back to the first topic when the history names none of them, and keeps a choice already made', async () => {
+it('falls back to the first topic when the history names none of them', async () => {
   const progress = { active_topics: ['astrophysics', 'game-theory'], history: [{ topic: 'removed-topic', lesson: 3 }] };
   const { $ } = frontend((url) => (url === '/api/progress' ? [200, progress] : null));
   await settle();
   expect($('#active-topic').value).toBe('astrophysics');
+});
+
+it('picks once per page view: a deliberate "Select a topic" stays, a topic no longer active is replaced', async () => {
+  const progress = { active_topics: ['astrophysics', 'game-theory'], history: [] };
+  const { $ } = frontend((url) => (url === '/api/progress' ? [200, progress] : null));
+  await settle();
+  const backToLearn = async () => { await $('.nav-btn[data-view="learn"]').click(); await settle(); };
+  $('#active-topic').value = '';
+  await backToLearn();
+  expect($('#active-topic').value).toBe('');
+  $('#active-topic').value = 'astrophysics';
+  progress.active_topics = ['game-theory'];
+  await backToLearn();
+  expect($('#active-topic').value).toBe('game-theory');
 });
