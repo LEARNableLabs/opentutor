@@ -67,15 +67,16 @@ guide for [Claude Code](claude-code/README.md), [Codex](codex/README.md),
 
 - **It asks before it explains.** A lesson is a short conversation: a question about
   what you already think, a follow-up, then a real situation where you explain why.
-- **It comes back to what you missed.** After each lesson, a rules-based check (no
-  AI) notes the concepts you're still unsure of. One that goes three lessons without
-  review comes back as a retest at the start of a lesson; after five, the next
-  lesson is a review of it.
+- **It comes back to what you missed.** On the website and Telegram, a rules-based
+  check (no AI) runs after each lesson and notes the concepts you're still unsure
+  of. One that goes three lessons without review comes back as a retest at the
+  start of a lesson; after five, the next lesson is a review of it.
 - **On Telegram it adapts further.** The same check also raises or lowers the
   difficulty and changes the kind of question, and each idea gets its own review
   schedule that stretches as you remember it.
 
-Lessons take a few minutes. On Telegram you can say "skip" at any point.
+Lessons take a few minutes. On Telegram you can say "skip" at any point. In an AI
+agent, the agent itself follows the method in the skill's instructions.
 [docs/methodology.md](docs/methodology.md) explains the method, the research behind
 it, and where it falls short.
 
@@ -85,10 +86,10 @@ The 293 shipped courses live in [`skills/tutor/domains/`](skills/tutor/domains/)
 5 to 40 lessons each; the website lists them all.
 
 For a new topic, OpenTutor searches public sources (arXiv, Semantic Scholar,
-OpenAlex, Wikipedia, course syllabi, YouTube and GitHub) and gives you five starter
-lessons straight away. It then plans the full course and has a second AI pass
-review it, revising for up to three rounds. On the hosted site, new topics need
-your own OpenRouter account.
+OpenAlex, Wikipedia, course syllabi, YouTube and GitHub), plans a course, and has a
+second AI pass review it, revising for up to three rounds. On the website and
+Telegram, five starter lessons are ready straight away while the full course is
+built. On the hosted site, new topics need your own OpenRouter account.
 
 ## Host it for others
 
@@ -101,12 +102,13 @@ your own OpenRouter account.
 - **A small group on one server:** set two different long passwords. Anyone with
   `OPENTUTOR_PASSWORD` uses the shared workspace (without it, anyone who can reach
   the server does), and `OPENTUTOR_ADMIN_PASSWORD` opens `/admin.html`, where you
-  add students:
+  add students. This writes them to `.env`, readable only by you, without printing
+  them:
 
   ```bash
-  export OPENTUTOR_PASSWORD="$(openssl rand -base64 24)" OPENTUTOR_ADMIN_PASSWORD="$(openssl rand -base64 24)"
-  echo "shared: $OPENTUTOR_PASSWORD  admin: $OPENTUTOR_ADMIN_PASSWORD"
-  npm run web
+  printf 'OPENTUTOR_PASSWORD=%s\nOPENTUTOR_ADMIN_PASSWORD=%s\n' "$(openssl rand -hex 24)" "$(openssl rand -hex 24)" >> .env
+  chmod 600 .env
+  node --env-file=.env scripts/web/server.js
   ```
 
   Each student gets a one-time access token to enter at `/login.html` ("Have an

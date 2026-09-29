@@ -179,7 +179,7 @@ So `lesson.status` and `lesson.engagement` still exist on the object every reade
 Set `OPENTUTOR_LLM`: `claude-sdk`, `cli`, `openai`, `openrouter`, `ollama`. With none set, the factory resolves from whichever API key is present (`ANTHROPIC_API_KEY` → claude-sdk, `OPENROUTER_API_KEY` → openrouter, `OPENAI_API_KEY` → openai), falling back to `cli`.
 The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
-The web server, the Vercel routes, the curriculum pipeline and the Telegram bot all honour this. `CLAUDE_BACKEND` (`sdk` | `cli`) is an older name, read only when `OPENTUTOR_LLM` is unset (#98).
+The web server, the Vercel routes, the curriculum pipeline and the Telegram bot all honour this. `CLAUDE_BACKEND` (`sdk` | `cli`) is an older name: model calls read it only when `OPENTUTOR_LLM` is unset, but the bot's startup check (`scripts/bot/config.js`) reads it on its own and exits without `ANTHROPIC_API_KEY` when it is `sdk` (#98).
 
 Self-signup accounts (`acct-…`) are the exception: `lib/core/llm-access.js` decides each of their model calls, 3 free lessons on the deployment's key and then their own OpenRouter key (#132). Every trial call also claims one of the day's shared trial calls (`OPENTUTOR_TRIAL_CALLS_PER_DAY`, default 300, #180). Anything a student triggers asks `adapterFor()`, never `getAdapter()` directly.
 
