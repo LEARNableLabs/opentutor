@@ -228,6 +228,13 @@ describe('what the tutor is sent', () => {
     expect(system).toMatch(/never what this lesson is about/);
   });
 
+  it('answers with something neutral when the reply was only a broken grade', async () => {
+    await lessonTurn(ctx, { topicSlug: 'demo' });
+    adapter.generate.mockResolvedValueOnce({ text: '<assessment>{\n  "understanding": "partial",\n  "score": 0.8' });
+    const { body } = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first answer' });
+    expect(body.reply).toBe("Thanks, noted. Let's keep going.");
+  });
+
   it('shows an old lesson\'s last reply without its grade when resuming', async () => {
     saveLegacy({ step: 1, history: [{ role: 'assistant', content: '<assessment>{"score":1}</assessment>\nOld question?' }] });
     expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe('Old question?');

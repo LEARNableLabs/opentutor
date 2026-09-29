@@ -138,8 +138,9 @@ describe('a grade that quotes the tag', () => {
 describe('a grade that cannot be read', () => {
   it.each([
     ['cut short', '<assessment>{"score":0.8', ''],
-    ['broken, before the reply', '<assessment>{broken\n\nGood — why?', 'Good — why?'],
+    ['broken, before the reply', '<assessment>{broken\n\nGood — why?', ''],
     ['cut short, after part of the reply', 'Good.\n<assessment>{"score":0.8', 'Good.'],
+    ['cut short over several lines', 'Good.\n<assessment>{\n  "understanding": "partial",\n  "score": 0.8', 'Good.'],
   ])('is hidden when %s', (_case, text, visible) => {
     expect(parseAssessment(text)).toEqual({ assessment: null, visible });
   });

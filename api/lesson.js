@@ -121,7 +121,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       { model: responsePrompt.model, ...stream },
     );
 
-    const { assessment, visible: reply } = parseAssessment(response.text);
+    const { assessment, visible } = parseAssessment(response.text);
+    // A reply that was nothing but a broken grade still says something, never an empty bubble.
+    const reply = visible || "Thanks, noted. Let's keep going.";
     if (assessment) (active.assessments ||= []).push({ step: stepName, ...assessment });
     // The tutor's turns keep their grade in the history it is sent: turns shown to it without one
     // taught it to stop grading, about 1 step in 6 (#224). The student only ever sees `reply`.
