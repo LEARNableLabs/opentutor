@@ -16,13 +16,21 @@ const KEYS = ['OPENTUTOR_PASSWORD', 'OPENTUTOR_ADMIN_PASSWORD'];
 const MIN_LENGTH = 16;
 const LINE = /^\s*(?:export\s+)?(OPENTUTOR_PASSWORD|OPENTUTOR_ADMIN_PASSWORD)\s*=(.*)$/;
 
+// A value every .env parser reads the same way: no quotes, spaces, comment or escape.
+const PLAIN = /^[^\s'"`#\\]+$/;
+
 // Our two keys, read line by line. Node's own .env parser can't be trusted with them: it takes the
 // line after "KEY= " as that key's value, and doesn't always let the later of two duplicates win.
-function passwordsIn(text) {
+// Quoting and comments are refused rather than guessed at: a guess once made a comment the password.
+function passwordsIn(text, file) {
   const values = {};
   for (const line of text.split('\n')) {
     const match = line.match(LINE);
-    if (match) values[match[1]] = match[2].trim().replace(/^(['"])(.*)\1$/, '$2');
+    if (!match) continue;
+    const raw = match[2].trim();
+    if (raw === '' || raw === '""' || raw === "''") values[match[1]] = '';
+    else if (PLAIN.test(raw)) values[match[1]] = raw;
+    else throw new Error(`${match[1]} in ${file} uses quotes, spaces or a comment, which npm run host won't guess at. Write it as ${match[1]}=value, or delete the line to have one generated.`);
   }
   return values;
 }
@@ -32,7 +40,7 @@ export function ensurePasswords(file) {
   fs.closeSync(fs.openSync(file, 'a', 0o600)); // created private, before any secret is in it
   fs.chmodSync(file, 0o600); // and made private if it already existed
   const text = fs.readFileSync(file, 'utf8');
-  const missing = KEYS.filter((key) => !passwordsIn(text)[key]);
+  const missing = KEYS.filter((key) => !passwordsIn(text, file)[key]);
   if (missing.length) {
     // An empty password's lines are removed, not shadowed; the new file replaces the old one
     // whole, so a crash mid-write can't leave .env without the settings it already held.
@@ -42,7 +50,7 @@ export function ensurePasswords(file) {
     fs.writeFileSync(temp, `${kept ? `${kept}\n` : ''}${lines.join('\n')}\n`, { mode: 0o600 });
     fs.renameSync(temp, file);
   }
-  const values = passwordsIn(fs.readFileSync(file, 'utf8'));
+  const values = passwordsIn(fs.readFileSync(file, 'utf8'), file);
   for (const key of KEYS) {
     if ((values[key] || '').length < MIN_LENGTH) {
       throw new Error(`${key} in ${file} must be at least ${MIN_LENGTH} characters. Delete its line and run again to have one generated.`);

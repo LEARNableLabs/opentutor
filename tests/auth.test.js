@@ -120,3 +120,9 @@ describe('without a password, how this computer is recognised', () => {
     expect(authFailure(checkAuth(r)).status).toBe(403);
   });
 });
+
+it('refuses an opaque Origin ("null"), as a sandboxed page sends (review of #222)', () => {
+  vi.stubEnv('OPENTUTOR_PASSWORD', '');
+  const r = { headers: { host: 'localhost:3000', origin: 'null' }, socket: { remoteAddress: '127.0.0.1' } };
+  expect(authFailure(checkAuth(r)).status).toBe(403);
+});

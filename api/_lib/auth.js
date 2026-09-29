@@ -49,7 +49,7 @@ function fromThisComputer(req) {
   if (FORWARDING_HEADERS.some((name) => headers[name])) return false;
   for (const name of ['origin', 'referer']) {
     const value = headers[name];
-    if (value && value !== 'null' && !isLoopbackName(hostnameOf(value))) return false;
+    if (value && !isLoopbackName(hostnameOf(value))) return false; // 'null' (a sandboxed page) too
   }
   if (headers.host && !isLoopbackName(hostnameOf(headers.host))) return false;
   const address = req?.socket?.remoteAddress;

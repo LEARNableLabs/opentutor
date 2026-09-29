@@ -73,3 +73,20 @@ it('leaves no temporary file behind', () => {
   ensurePasswords(file);
   expect(fs.readdirSync(dir)).toEqual(['.env']);
 });
+
+// Review of #222: a comment or quotes around a password must never become the password.
+it.each([
+  ['a comment after empty quotes', 'OPENTUTOR_PASSWORD="" # generate a learner password\nOPENTUTOR_ADMIN_PASSWORD="" # and an admin one\n'],
+  ['a quoted password with a comment', 'OPENTUTOR_PASSWORD="abcdefghijklmnop" # note\nOPENTUTOR_ADMIN_PASSWORD=0123456789abcdef0123\n'],
+  ['a password with a space', 'OPENTUTOR_PASSWORD=correct horse battery staple\nOPENTUTOR_ADMIN_PASSWORD=0123456789abcdef0123\n'],
+])('refuses %s, and says how to write it', (_case, text) => {
+  fs.writeFileSync(file, text);
+  expect(() => ensurePasswords(file)).toThrow(/quotes, spaces or a comment/);
+});
+
+it('generates a password for empty quotes', () => {
+  fs.writeFileSync(file, "OPENTUTOR_PASSWORD=\"\"\nOPENTUTOR_ADMIN_PASSWORD=''\n");
+  const values = ensurePasswords(file);
+  expect(values.OPENTUTOR_PASSWORD).toMatch(/^[0-9a-f]{48}$/);
+  expect(values.OPENTUTOR_ADMIN_PASSWORD).toMatch(/^[0-9a-f]{48}$/);
+});
