@@ -107,9 +107,17 @@ export function clearActiveLesson(chatId) {
 // ── Main entry: generate plan and send diagnostic ──────────
 
 export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
-  const lesson = getNextLesson(topicSlug);
+  const curriculum = readCurriculum(topicSlug);
+
+  // Read and enforce deliberate practice directives
+  const feedbackMd = readDomainFile(topicSlug, 'practice-feedback.md') || '';
+  const directives = parseDirectives(feedbackMd);
+  const constraints = applyDirectives(directives);
+
+  // A BLOCK the last lesson raised is still reviewed, at that lesson, before "all done" (#235),
+  // as the web does (#149).
+  const lesson = getNextLesson(topicSlug) || (constraints.blocked ? curriculum?.lessons?.at(-1) : null);
   if (!lesson) {
-    const curriculum = readCurriculum(topicSlug);
     await channel.sendMessage(chatId, `🎉 <b>You've completed all ${curriculum?.lessons?.length || 0} lessons in ${curriculum?.topic || topicSlug}!</b>\n\nType /quiz for a final review, or /add to start something new.`);
     return;
   }
@@ -118,13 +126,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
   const lessonDay = lesson.day || lesson.lesson;
   const learningMd = readDomainFile(topicSlug, 'learning.md') || '';
-  const curriculum = readCurriculum(topicSlug);
   const userProfile = readUser();
-
-  // Read and enforce deliberate practice directives
-  const feedbackMd = readDomainFile(topicSlug, 'practice-feedback.md') || '';
-  const directives = parseDirectives(feedbackMd);
-  const constraints = applyDirectives(directives);
 
   // BLOCK — if a concept must be retested before advancing
   if (constraints.blocked) {
