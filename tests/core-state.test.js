@@ -102,6 +102,14 @@ describe('Domain files', () => {
     expect(state.readDomainFile('nope', 'missing.md')).toBeNull();
   });
 
+  it('readDomainFile throws for a file it cannot read, rather than report it missing', () => {
+    state.writeDomainFile('test-topic', 'practice-feedback.md', 'x');
+    const file = path.join(state.paths.workspace, 'tutor', 'domains', 'test-topic', 'practice-feedback.md');
+    fs.rmSync(file);
+    fs.mkdirSync(file);
+    expect(() => state.readDomainFile('test-topic', 'practice-feedback.md')).toThrow(/EISDIR/);
+  });
+
   it('writeDomainFile / readDomainFile round-trip', () => {
     state.writeDomainFile('test-topic', 'teacher.md', '# Teacher Config\nExercise style: proofs');
     const content = state.readDomainFile('test-topic', 'teacher.md');

@@ -119,7 +119,8 @@ describe.each([
   // not outweighed by a right example. Long, confident answers would grade 'engaged'.
   it.each([
     ['no assessment could be read', null],
-    ['the explanation failed, even with the example and the application right', [0, 1, 1]],
+    ['every score is out of range', 2],
+    ['one answer failed, even if the average reaches correct', [0.1, 1, 1]],
   ])('keeps the BLOCK when %s', async (_case, scores) => {
     score = scores;
     await start();
@@ -150,11 +151,15 @@ describe.each([
   });
 
   it('fails the start rather than skip the BLOCK when the feedback cannot be read', async () => {
-    const state = ctx.state;
-    ctx.state = new Proxy(state, { get: (target, key) => (key === 'readDomainFile'
-      ? (slug, file) => { if (file === 'practice-feedback.md') throw new Error('database unavailable'); return target.readDomainFile(slug, file); }
-      : target[key]) });
-    await expect(start()).rejects.toThrow('database unavailable');
+    const feedback = path.join(root, 'workspace', 'tutor', 'domains', 'demo', 'practice-feedback.md');
+    fs.rmSync(feedback);
+    fs.mkdirSync(feedback); // unreadable, not missing
+    await expect(start()).rejects.toThrow(/EISDIR/);
     expect(store.readKV('web_lesson:demo')).toBeFalsy();
+  });
+
+  it('does not count reviews left from an earlier lesson', async () => {
+    store.writeKV('web_review:demo', JSON.stringify({ concept: 'alpha', day: 6, count: 2 }));
+    expect((await start()).body.lesson).toMatchObject({ title: 'Review: alpha', review: true });
   });
 });

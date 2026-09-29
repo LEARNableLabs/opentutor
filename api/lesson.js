@@ -194,16 +194,18 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   // #149: an open BLOCK holds the student back, as the bot does: a review lesson on the
   // blocked concept instead of the next lesson. It plans nothing (no model call), it is not
-  // a completion, and completeLesson releases the BLOCK when its retest is graded correct.
+  // a completion, and completeLesson releases the BLOCK when its retest passes (passedReview).
   // The bot releases it after any review; here a student who keeps missing the concept gets
-  // MAX_REVIEWS in a row, then the next lesson, which still opens on the retest.
+  // MAX_REVIEWS in a row, then the next lesson, which still opens on the retest. The count
+  // belongs to the lesson it holds back, so finishing that lesson starts a new one: there is
+  // nothing to clear, and no failed write between two stores can leave a stale count.
   const block = directives.find((d) => d.type === 'BLOCK');
   const reviewKey = `web_review:${topicSlug}`;
   let note;
   if (block) {
     const raw = await state.readKV(reviewKey);
     const held = typeof raw === 'string' ? JSON.parse(raw) : raw;
-    const reviews = held?.concept === block.target ? held.count : 0;
+    const reviews = held?.concept === block.target && held.day === lessonDay ? held.count : 0;
     if (reviews < MAX_REVIEWS) {
       const { plan, steps } = reviewLesson(block.target);
       const review = {
@@ -220,7 +222,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         reviewConcept: block.target,
       };
       await state.writeKV(kvKey, JSON.stringify(review));
-      await state.writeKV(reviewKey, JSON.stringify({ concept: block.target, count: reviews + 1 }));
+      await state.writeKV(reviewKey, JSON.stringify({ concept: block.target, day: lessonDay, count: reviews + 1 }));
       return {
         status: 200,
         body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, note: `Let's revisit ${block.target} before moving on.` },
@@ -288,8 +290,6 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   };
 
   await state.writeKV(kvKey, JSON.stringify(started));
-  // A saved new lesson ends a run of reviews. Not before: a failed start must not reset the count.
-  await state.deleteKV(reviewKey);
 
   return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, ...(note ? { note } : {}) } };
 }
