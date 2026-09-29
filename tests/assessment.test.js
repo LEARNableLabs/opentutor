@@ -133,3 +133,14 @@ describe('a grade that quotes the tag', () => {
     expect(out.join('')).toBe('Good — why?');
   });
 });
+
+// Fourth review of #231: a grade cut short or broken, with no closing tag, was shown whole.
+describe('a grade that cannot be read', () => {
+  it.each([
+    ['cut short', '<assessment>{"score":0.8', ''],
+    ['broken, before the reply', '<assessment>{broken\n\nGood — why?', 'Good — why?'],
+    ['cut short, after part of the reply', 'Good.\n<assessment>{"score":0.8', 'Good.'],
+  ])('is hidden when %s', (_case, text, visible) => {
+    expect(parseAssessment(text)).toEqual({ assessment: null, visible });
+  });
+});
