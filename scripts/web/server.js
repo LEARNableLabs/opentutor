@@ -22,6 +22,7 @@ import { addTopic } from '../../lib/core/topic-service.js';
 import { readTopicBuild, buildSummary, listTopicBuilds } from '../../lib/core/topic-builds.js';
 import { startLocalBuildWorker } from '../../lib/core/local-build-worker.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
+import { parseRetested } from '../../lib/core/deliberate-practice.js';
 import { lessonTurn } from '../../api/lesson.js';
 import { chatTurn } from '../../api/chat.js';
 import { onboardTurn } from '../../api/onboard.js';
@@ -294,7 +295,8 @@ async function handleStudentAPI(req, res, url, state) {
         if (!tp) return null;
         const learningMd = (await state.readDomainFile(slug, 'learning.md')) || '';
         const curriculum = await state.readCurriculum(slug);
-        const model = buildStudentModel(learningMd, curriculum, '');
+        const retested = parseRetested(await state.readDomainFile(slug, 'practice-feedback.md')); // #227
+        const model = buildStudentModel(learningMd, curriculum, '', retested);
         return {
           slug,
           topic: tp.topic,
