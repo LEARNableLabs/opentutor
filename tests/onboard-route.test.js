@@ -188,3 +188,29 @@ it('says something when the reply was only the marker', async () => {
   adapter.generate.mockResolvedValue({ text: '<TOPIC>game-theory</TOPIC>' });
   expect((await call()).body.reply).toMatch(/game theory/i);
 });
+
+// Review of #229: a course's full title, and markers a model gets wrong.
+describe('names and markers', () => {
+  const owner = () => ({ ...state, listTopics: async () => ['3d-printer-firmware', 'game-theory'] });
+  const trialOf = (s) => ({ ...s, userId: 'acct-1', readKV: async () => null });
+  const turn = (s) => onboardTurn({ state: s, skills: new Map(), getAdapter: async () => adapter }, { message: 'firmware' });
+
+  it('confirms a course named by its full title, subtitle and all', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Good.\n<TOPIC>3D Printer Firmware — Motion Planning and Kinematics</TOPIC>' });
+    expect((await turn(trialOf(owner()))).body.confirmedTopic).toBe('3d-printer-firmware');
+  });
+
+  it('never leaves the reply empty, even for an empty marker', async () => {
+    adapter.generate.mockResolvedValue({ text: '<TOPIC> </TOPIC>' });
+    const { body } = await turn(owner());
+    expect(body.confirmedTopic).toBeNull();
+    expect(body.reply.trim()).not.toBe('');
+  });
+
+  it('never shows a stray marker, or confirms what a doubled one wraps', async () => {
+    adapter.generate.mockResolvedValue({ text: '<TOPIC><TOPIC>knots</TOPIC>' });
+    const { body } = await turn(owner());
+    expect(body.reply).not.toMatch(/<\/?topic>/i);
+    expect(body.confirmedTopic).toBe('knots');
+  });
+});

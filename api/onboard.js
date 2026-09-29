@@ -45,21 +45,29 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: text }];
   const response = await adapter.generate(system, messages, { model });
 
-  const named = response.text.match(/<TOPIC>([\s\S]+?)<\/TOPIC>/i)?.[1].trim() || null;
+  // A marker's value holds no '<' or '>', so a doubled or broken marker can't smuggle one through.
+  const named = response.text.match(/<TOPIC>([^<>]*)<\/TOPIC>/i)?.[1].trim() || null;
   const confirmedTopic = named && (courseFor(named, availableTopics) || (customTopics ? named : null));
-  let reply = response.text.replace(/<TOPIC>[\s\S]*?<\/TOPIC>/gi, '').trim();
+  let reply = response.text.replace(/<TOPIC>[^<>]*<\/TOPIC>/gi, '').replace(/<\/?TOPIC>/gi, '').trim();
   if (named && !confirmedTopic) reply = `${reply}\n\nThat one isn't a ready-made course yet. Pick one of the ready-made topics, or connect your OpenRouter account to have your own built.`.trim();
-  else if (!reply && confirmedTopic) reply = `Good choice: ${confirmedTopic.replace(/-/g, ' ')}. Your first lesson is ready.`;
+  else if (!reply) {
+    reply = confirmedTopic
+      ? `Good choice: ${confirmedTopic.replace(/-/g, ' ')}. Your first lesson is ready.`
+      : 'What would you like to learn? Tell me in a few words, or browse the ready-made topics.';
+  }
   // The model gets the trimmed history; the profile gets what the student said from the
   // start, so a name given in the first answer survives a long conversation.
   if (confirmedTopic) await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
   return { status: 200, body: { reply, confirmedTopic, model: response.model } };
 }
 
-// A course the model named loosely ("Game Theory") is still that course ("game-theory").
+// A course the model named loosely ("Game Theory") or by its full title ("3D Printer Firmware —
+// Motion Planning and Kinematics") is still that course: its slug is the name's, or starts it.
 function courseFor(name, topics) {
   const slug = name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-  return topics.find((topic) => topic === name || topic === slug) || null;
+  const exact = topics.find((topic) => topic === name || topic === slug);
+  if (exact) return exact;
+  return topics.filter((topic) => slug.startsWith(`${topic}-`)).sort((a, b) => b.length - a.length)[0] || null;
 }
 
 // #155: onboarding used to drop everything the student said. A student without a
