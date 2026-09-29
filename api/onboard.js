@@ -1,7 +1,8 @@
 import { buildOnboardingPrompt } from '../lib/core/prompts.js';
+import { publicCatalog } from '../lib/core/catalog.js';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
-import { adapterFor, isAccount, trimHistory, turnText, KeyRequired } from '../lib/core/llm-access.js';
+import { adapterFor, canCreateTopics, isAccount, trimHistory, turnText, KeyRequired } from '../lib/core/llm-access.js';
 
 export default async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
@@ -36,18 +37,46 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   const adapter = await getAdapter();
 
   const user = await state.readUser();
-  const { system, model } = buildOnboardingPrompt(skills, user);
+  // #223: the ready-made courses come first, and only a student who can have a topic built may
+  // leave the list. Onboarding once confirmed any phrase, so a trial account's first step after
+  // it was "connect OpenRouter".
+  const availableTopics = await state.listTopics();
+  const customTopics = await canCreateTopics(state);
+  const { system, model } = buildOnboardingPrompt(skills, user, { availableTopics, customTopics });
   const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: text }];
   const response = await adapter.generate(system, messages, { model });
 
-  const confirmedTopic = response.text.match(/<TOPIC>(.+?)<\/TOPIC>/)?.[1].trim() || null;
+  // A marker's value holds no '<' or '>', so a doubled or broken marker can't smuggle one through;
+  // spaces inside the tags are the model's slip, not a reason to show them.
+  const named = response.text.match(/<\s*TOPIC\s*>([^<>]*)<\s*\/\s*TOPIC\s*>/i)?.[1].trim() || null;
+  const confirmedTopic = named && (courseFor(named, availableTopics) || (customTopics ? named : null));
+  let reply = response.text.replace(/<\s*TOPIC\s*>[^<>]*<\s*\/\s*TOPIC\s*>/gi, '').replace(/<\s*\/?\s*TOPIC\s*>/gi, '').trim();
+  const ask = 'What would you like to learn? Tell me in a few words, or browse the ready-made topics.';
+  // A marker that confirmed nothing (refused, empty or broken) leaves words that may promise a
+  // course that isn't coming, so they are replaced, not added to.
+  if (!confirmedTopic && /<\s*\/?\s*TOPIC\s*>/i.test(response.text)) {
+    reply = named ? "That one isn't a ready-made course yet. Pick one of the ready-made topics, or connect your OpenRouter account to have your own built." : ask;
+  } else if (!reply) reply = confirmedTopic ? `Good choice: ${confirmedTopic.replace(/-/g, ' ')}. Your first lesson is ready.` : ask;
   // The model gets the trimmed history; the profile gets what the student said from the
   // start, so a name given in the first answer survives a long conversation.
   if (confirmedTopic) await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
-  return {
-    status: 200,
-    body: { reply: response.text.replace(/<TOPIC>.+?<\/TOPIC>/g, '').trim(), confirmedTopic, model: response.model },
-  };
+  return { status: 200, body: { reply, confirmedTopic, model: response.model } };
+}
+
+const norm = (text) => text.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+let titles; // shipped course titles by slug; they don't change while the process runs
+
+// A course named by its slug, its title ("Night sky photography — astrophotography techniques"),
+// or the part of its title before a dash ("Night sky photography") is that course. Nothing that
+// only starts like one is: "Game Theory Advanced" is not "Game Theory". A slug is looked for first,
+// so a student's own "night-sky-photography" is never taken for another course's title.
+function courseFor(name, topics) {
+  titles ||= new Map(publicCatalog().map((course) => [course.slug, course.topic]));
+  const wanted = norm(name);
+  return topics.find((slug) => slug === name || slug === wanted) || topics.find((slug) => {
+    const title = titles.get(slug);
+    return Boolean(title) && (norm(title) === wanted || norm(title.split(/\s+[—–-]\s+/)[0]) === wanted);
+  }) || null;
 }
 
 // #155: onboarding used to drop everything the student said. A student without a

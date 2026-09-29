@@ -61,6 +61,7 @@ function loadSkillFiles() {
   load('teaching-method', path.join(refs, 'teaching-method.md'));
   load('lesson-delivery', path.join(refs, 'lesson-delivery.md'));
   load('source-verification', path.join(refs, 'source-verification.md'));
+  load('onboarding', path.join(refs, 'onboarding.md')); // as the Vercel route does (#223)
   return files;
 }
 
