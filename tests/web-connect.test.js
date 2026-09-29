@@ -450,3 +450,15 @@ it('picks once per page view: a deliberate "Select a topic" stays, a chosen topi
   await backToLearn();
   expect($('#active-topic').value).toBe('game-theory');
 });
+
+// #215: `.hidden` is !important, so a view that starts hidden never shows, whatever the tab handler does.
+it('shows the view of whichever tab is clicked', async () => {
+  const { $ } = frontend((url) => (url === '/api/topics' ? [200, []] : null));
+  await settle();
+  for (const view of ['topics', 'chat', 'learn']) {
+    await $(`.nav-btn[data-view="${view}"]`).click();
+    await settle();
+    const section = $(`#view-${view}`);
+    expect([view, section.classList.contains('active'), section.classList.contains('hidden')]).toEqual([view, true, false]);
+  }
+});
