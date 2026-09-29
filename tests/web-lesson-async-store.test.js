@@ -29,6 +29,7 @@ function asyncStore(root) {
     // No `.db` — exactly like SupabaseStore.
     async readKV(k) { return kv.get(k) ?? null; },
     async writeKV(k, v) { kv.set(k, v); },
+    async insertKV(k, v) { if (!kv.has(k)) kv.set(k, v); },
     async deleteKV(k) { kv.delete(k); },
     async readUser() { return ''; },
     async readProgress() { return { active_topics: [], history: [] }; },

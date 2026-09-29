@@ -34,6 +34,7 @@ function readOnlyStore() {
     writes: [],
     async readKV(k) { return kv.get(k) ?? null; },
     async writeKV(k, v) { kv.set(k, v); },          // kv is Postgres, still fine
+    async insertKV(k, v) { if (!kv.has(k)) kv.set(k, v); },
     async deleteKV(k) { kv.delete(k); },
     async readUser() { return '# Student'; },
     async readProgress() { return { active_topics: ['game-theory'], history: [] }; },

@@ -270,6 +270,19 @@ describe('what the tutor is sent', () => {
       expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'second', lessonId, step: 1 })).status).toBe(200);
     });
 
+    it('answers one of two requests racing for the same step, and refuses the other', async () => {
+      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      const results = await Promise.all([1, 2].map(() => lessonTurn(ctx, { topicSlug: 'demo', answer: 'same', lessonId, step: 0 })));
+      expect(results.map((r) => r.status).sort()).toEqual([200, 409]);
+    });
+
+    it('lets the student retry a step whose model call failed', async () => {
+      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      adapter.generate.mockRejectedValueOnce(new Error('model down'));
+      await expect(lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).rejects.toThrow('model down');
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).status).toBe(200);
+    });
+
     it('is taken as before from a client that names neither', async () => {
       await lessonTurn(ctx, { topicSlug: 'demo' });
       expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'hello' })).status).toBe(200);
