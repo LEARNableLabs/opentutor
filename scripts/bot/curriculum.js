@@ -15,6 +15,7 @@ import { PATHS } from './config.js';
 import { updateProgress, writeCurriculum, writeDomainFile, readDomainFile, appendMemory } from './state.js';
 import { researchTopic, formatResearchContext, verifyUrls } from '../../lib/core/research.js';
 import { CurriculumPipeline } from '../../lib/core/pipeline.js';
+import { parseFirstJson } from '../../lib/core/json.js';
 import { createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
 import { TutorState } from '../../lib/core/state.js';
 import { TutorStore } from '../../lib/core/store.js';
@@ -267,9 +268,8 @@ function readExistingCurriculum(slug) {
 
 export function parseGeneratedDomain(text, topic, slug) {
   try {
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      const data = JSON.parse(jsonMatch[0]);
+    const data = parseFirstJson(text);
+    if (data) {
 
       const curriculum = data.curriculum || data;
       if (!curriculum.topic) curriculum.topic = topic;

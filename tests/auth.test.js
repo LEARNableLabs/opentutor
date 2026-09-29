@@ -64,3 +64,65 @@ describe('the failure response', () => {
     expect(authFailure(checkAuth(req())).status).toBe(503);
   });
 });
+
+// #221: without a password, only a direct connection from this computer gets in.
+describe('without a password, from anywhere but this computer', () => {
+  const from = (remoteAddress, headers = {}) => ({ headers: { host: 'localhost:3000', ...headers }, socket: { remoteAddress } });
+
+  it.each([
+    ['IPv4 loopback', from('127.0.0.1')],
+    ['IPv6 loopback', from('::1', { host: '[::1]:3000' })],
+    ['IPv4-mapped loopback', from('::ffff:127.0.0.1', { host: '127.0.0.1:3000' })],
+  ])('lets in a direct connection over %s', (_name, r) => {
+    expect(checkAuth(r).ok).toBe(true);
+  });
+
+  it.each([
+    ['another computer', from('192.168.1.20', { host: '192.168.1.5:3000' })],
+    ['another computer that says localhost', from('192.168.1.20')],
+    ['a proxy on this computer (X-Forwarded-For)', from('127.0.0.1', { 'x-forwarded-for': '203.0.113.7' })],
+    ['a proxy that sets Forwarded', from('127.0.0.1', { forwarded: 'for=203.0.113.7' })],
+    ['a proxy that sets X-Real-IP', from('127.0.0.1', { 'x-real-ip': '203.0.113.7' })],
+    ['a public host name', from('127.0.0.1', { host: 'tutor.example.org' })],
+  ])('refuses %s with a 403 that says what to set', (_name, r) => {
+    const result = checkAuth(r);
+    expect(result.ok).toBe(false);
+    const { status, body } = authFailure(result);
+    expect(status).toBe(403);
+    expect(body.error).toMatch(/OPENTUTOR_PASSWORD/);
+  });
+
+  it('checks the password as usual once one is set', () => {
+    vi.stubEnv('OPENTUTOR_PASSWORD', 'hunter2');
+    const proxied = { headers: { authorization: 'Bearer hunter2', host: 'tutor.example.org', 'x-forwarded-for': '203.0.113.7' }, socket: { remoteAddress: '127.0.0.1' } };
+    expect(checkAuth(proxied).ok).toBe(true);
+  });
+});
+
+// Review of #222: other spellings of this computer, and a browser page served from elsewhere.
+describe('without a password, how this computer is recognised', () => {
+  const from = (remoteAddress, headers = {}) => ({ headers: { host: 'localhost:3000', ...headers }, socket: { remoteAddress } });
+
+  it.each([
+    ['a long-form IPv6 loopback Host', from('::1', { host: '[0:0:0:0:0:0:0:1]:3000' })],
+    ['a fully qualified localhost', from('127.0.0.1', { host: 'localhost.:3000' })],
+    ['a page on this computer', from('127.0.0.1', { origin: 'http://localhost:3000', referer: 'http://localhost:3000/learn.html' })],
+  ])('lets in %s', (_name, r) => {
+    expect(checkAuth(r).ok).toBe(true);
+  });
+
+  // A proxy on this computer can forward with Host: localhost and no X-Forwarded-*, as nginx does
+  // by default, but the browser still names the public page it is on.
+  it.each([
+    ['a page served from a public site (Referer)', from('127.0.0.1', { referer: 'https://tutor.example.org/learn.html' })],
+    ['a page served from a public site (Origin)', from('127.0.0.1', { origin: 'https://tutor.example.org' })],
+  ])('refuses %s', (_name, r) => {
+    expect(authFailure(checkAuth(r)).status).toBe(403);
+  });
+});
+
+it('refuses an opaque Origin ("null"), as a sandboxed page sends (review of #222)', () => {
+  vi.stubEnv('OPENTUTOR_PASSWORD', '');
+  const r = { headers: { host: 'localhost:3000', origin: 'null' }, socket: { remoteAddress: '127.0.0.1' } };
+  expect(authFailure(checkAuth(r)).status).toBe(403);
+});

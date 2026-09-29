@@ -68,6 +68,7 @@ vi.mock('../../lib/core/deliberate-practice.js', () => ({
   formatPracticeFeedback: vi.fn(() => ''),
   parseDirectives: vi.fn(() => []),
   applyDirectives: vi.fn(() => ({ blocked: false, blockedConcept: null, difficultyOverride: null, formatOverride: null, revisitConcepts: [], requireGoal: false })),
+  reviewLesson: vi.fn((concept) => ({ plan: { diagnostic: `Explain ${concept}.` }, steps: ['diagnostic', 'followUp', 'application'] })),
 }));
 
 vi.mock('../../scripts/bot/logger.js', () => ({
@@ -125,6 +126,20 @@ describe('deliverNextLesson', () => {
       123,
       expect.stringContaining('completed all 3 lessons'),
     );
+  });
+
+  // #235: a BLOCK raised by the last lesson was never reviewed: "all done" came first.
+  it('reviews a BLOCK the last lesson raised before saying all lessons are done', async () => {
+    const { getNextLesson, readCurriculum } = await import('../../scripts/bot/state.js');
+    const { applyDirectives } = await import('../../lib/core/deliberate-practice.js');
+    getNextLesson.mockReturnValue(null);
+    readCurriculum.mockReturnValue({ topic: 'Math', lessons: [{ lesson: 1, title: 'Sets' }, { lesson: 2, title: 'Maps' }] });
+    applyDirectives.mockReturnValueOnce({ blocked: true, blockedConcept: 'sets', difficultyOverride: null, formatOverride: null, revisitConcepts: [], requireGoal: false });
+
+    await deliverNextLesson('math', 123, channel, skills);
+
+    expect(channel.sendMessage).toHaveBeenCalledWith(123, expect.stringContaining('<b>sets</b>'));
+    expect(channel.sendMessage).not.toHaveBeenCalledWith(123, expect.stringContaining('completed all'));
   });
 
   it('hands the lesson planner values read from the store, not the store (#146)', async () => {

@@ -12,13 +12,16 @@
 
 import { issueStudentToken } from '../../lib/core/student-auth.js';
 import { getState } from '../_lib/init.js';
+import { readsJson } from '../_lib/body.js';
 import { checkAdmin, adminFailure } from '../_lib/admin-auth.js';
 import { listStudents, findStudent, provisionStudent, decommissionStudent } from '../../lib/core/students.js';
 import { RequestError } from '../../lib/core/errors.js';
 
 const idFrom = (req) => req.query?.id ?? new URL(req.url || '/', 'http://x').searchParams.get('id');
 
-export default async function handler(req, res) {
+export default readsJson(handler);
+
+async function handler(req, res) {
   const auth = checkAdmin(req);
   if (!auth.ok) {
     const { status, body } = adminFailure(auth);

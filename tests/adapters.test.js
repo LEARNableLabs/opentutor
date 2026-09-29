@@ -1,4 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { EventEmitter } from 'events';
+import { spawn } from 'child_process';
 import {
   createAdapter,
   createAdapterFromEnv,
@@ -10,6 +12,9 @@ import {
   OllamaAdapter,
   BaseLLMAdapter,
 } from '../lib/adapters/index.js';
+
+// The CLI adapter's `claude` process, faked; only the timeout test below starts one.
+vi.mock('child_process', async (importOriginal) => ({ ...(await importOriginal()), spawn: vi.fn() }));
 
 describe('createAdapter', () => {
   it('creates ClaudeCLIAdapter for "cli"', () => {
@@ -225,5 +230,25 @@ describe('OpenAI-compatible generate()', () => {
     vi.stubEnv('OPENROUTER_BASE_URL', 'http://localhost:3198/api/v1');
     expect(new OpenRouterAdapter({ apiKey: 'k' }).baseURL).toBe('http://localhost:3198/api/v1');
     vi.unstubAllEnvs();
+  });
+});
+
+// Review of #230: the CLI adapter took its timeout only from the constructor, so a pipeline call's
+// longer one never reached it.
+describe('ClaudeCLIAdapter timeout', () => {
+  it('honours a timeout given with the call', async () => {
+    vi.useFakeTimers();
+    const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
+    spawn.mockReturnValue(child);
+    try {
+      const reply = new ClaudeCLIAdapter().generate('system', [{ role: 'user', content: 'hi' }], { timeout: 200_000 });
+      const settled = expect(reply).rejects.toThrow('timed out after 200000ms');
+      await vi.advanceTimersByTimeAsync(120_000);
+      expect(child.kill).not.toHaveBeenCalled();
+      await vi.advanceTimersByTimeAsync(80_000);
+      await settled;
+    } finally {
+      vi.useRealTimers();
+    }
   });
 });

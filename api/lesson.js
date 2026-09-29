@@ -9,6 +9,7 @@
  */
 
 import { getState, getAdapter, getSkills } from './_lib/init.js';
+import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
@@ -16,12 +17,15 @@ import { buildStudentModel, formatStudentModel } from '../lib/core/student-model
 import { completeLesson } from '../lib/core/lesson-completion.js';
 import { parseDirectives, reviewLesson } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter, stripGrades } from '../lib/core/assessment.js';
+import { parseFirstJson } from '../lib/core/json.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 // Review lessons in a row for one blocked concept before the next lesson goes ahead (#149).
 const MAX_REVIEWS = 2;
 
-export default async function handler(req, res) {
+export default readsJson(handler);
+
+async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
 
@@ -273,7 +277,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   let plan;
   try {
-    plan = JSON.parse(planResponse.text.match(/\{[\s\S]*\}/)[0]);
+    plan = parseFirstJson(planResponse.text);
+    if (!plan) throw new SyntaxError('No lesson plan in the reply');
   } catch {
     plan = {
       diagnostic: `What do you already know about ${(lesson.concepts || []).join(' and ')}?`,
