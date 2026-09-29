@@ -51,13 +51,12 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   const named = response.text.match(/<\s*TOPIC\s*>([^<>]*)<\s*\/\s*TOPIC\s*>/i)?.[1].trim() || null;
   const confirmedTopic = named && (courseFor(named, availableTopics) || (customTopics ? named : null));
   let reply = response.text.replace(/<\s*TOPIC\s*>[^<>]*<\s*\/\s*TOPIC\s*>/gi, '').replace(/<\s*\/?\s*TOPIC\s*>/gi, '').trim();
-  // Refused, the model's own words may promise the build, so they are replaced, not added to.
-  if (named && !confirmedTopic) reply = "That one isn't a ready-made course yet. Pick one of the ready-made topics, or connect your OpenRouter account to have your own built.";
-  else if (!reply) {
-    reply = confirmedTopic
-      ? `Good choice: ${confirmedTopic.replace(/-/g, ' ')}. Your first lesson is ready.`
-      : 'What would you like to learn? Tell me in a few words, or browse the ready-made topics.';
-  }
+  const ask = 'What would you like to learn? Tell me in a few words, or browse the ready-made topics.';
+  // A marker that confirmed nothing (refused, empty or broken) leaves words that may promise a
+  // course that isn't coming, so they are replaced, not added to.
+  if (!confirmedTopic && /<\s*\/?\s*TOPIC\s*>/i.test(response.text)) {
+    reply = named ? "That one isn't a ready-made course yet. Pick one of the ready-made topics, or connect your OpenRouter account to have your own built." : ask;
+  } else if (!reply) reply = confirmedTopic ? `Good choice: ${confirmedTopic.replace(/-/g, ' ')}. Your first lesson is ready.` : ask;
   // The model gets the trimmed history; the profile gets what the student said from the
   // start, so a name given in the first answer survives a long conversation.
   if (confirmedTopic) await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
@@ -69,12 +68,12 @@ let titles; // shipped course titles by slug; they don't change while the proces
 
 // A course named by its slug, its title ("Night sky photography — astrophotography techniques"),
 // or the part of its title before a dash ("Night sky photography") is that course. Nothing that
-// only starts like one is: "Game Theory Advanced" is not "Game Theory".
+// only starts like one is: "Game Theory Advanced" is not "Game Theory". A slug is looked for first,
+// so a student's own "night-sky-photography" is never taken for another course's title.
 function courseFor(name, topics) {
   titles ||= new Map(publicCatalog().map((course) => [course.slug, course.topic]));
   const wanted = norm(name);
-  return topics.find((slug) => {
-    if (slug === name || slug === wanted) return true;
+  return topics.find((slug) => slug === name || slug === wanted) || topics.find((slug) => {
     const title = titles.get(slug);
     return Boolean(title) && (norm(title) === wanted || norm(title.split(/\s+[—–-]\s+/)[0]) === wanted);
   }) || null;

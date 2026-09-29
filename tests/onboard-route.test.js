@@ -244,4 +244,23 @@ describe('course titles and tags', () => {
     expect(reply).not.toMatch(/build it now/);
     expect(reply).toMatch(/ready-made/);
   });
+
+  // Third review of #229.
+  it('takes a student\'s own course by its slug before another course\'s title', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Good.\n<TOPIC>night-sky-photography</TOPIC>' });
+    const own = { ...catalog(), listTopics: async () => ['astrophotography', 'night-sky-photography'] };
+    expect((await turn(own)).body.confirmedTopic).toBe('night-sky-photography');
+  });
+
+  it.each([
+    ['an empty marker', "I'll build it now.\n<TOPIC> </TOPIC>"],
+    ['a marker that never closes', "I'll build it now.\n<TOPIC>game theory"],
+  ])('keeps no promise around %s', async (_case, text) => {
+    for (const s of [trialOf(catalog()), catalog()]) {
+      adapter.generate.mockResolvedValue({ text });
+      const { body } = await turn(s);
+      expect(body.confirmedTopic).toBeNull();
+      expect(body.reply).toMatch(/^What would you like to learn\?/);
+    }
+  });
 });
