@@ -158,6 +158,24 @@ describe.each([
     expect(store.readKV('web_lesson:demo')).toBeFalsy();
   });
 
+  it.each(['web_review:demo', 'web_lesson:demo'])('never gives more than two reviews when the first write of %s fails', async (key) => {
+    score = 0.1;
+    let failing = key;
+    const state = ctx.state;
+    ctx.state = new Proxy(state, { get: (target, name) => (name === 'writeKV'
+      ? (k, value) => { if (k === failing) { failing = null; throw new Error('write failed'); } return target.writeKV(k, value); }
+      : target[name]) });
+    const seen = [];
+    for (let i = 0; i < 6 && seen.at(-1) !== 'day 7'; i++) {
+      const turn = await start().catch(() => null);
+      if (!turn) { seen.push('failed'); continue; }
+      seen.push(turn.body.lesson.review ? 'review' : `day ${turn.body.lesson.day}`);
+      await finish();
+    }
+    expect(seen.at(-1)).toBe('day 7');
+    expect(seen.filter((s) => s === 'review').length).toBeLessThanOrEqual(2);
+  });
+
   it('does not count reviews left from an earlier lesson', async () => {
     store.writeKV('web_review:demo', JSON.stringify({ concept: 'alpha', day: 6, count: 2 }));
     expect((await start()).body.lesson).toMatchObject({ title: 'Review: alpha', review: true });
