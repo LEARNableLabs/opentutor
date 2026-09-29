@@ -202,3 +202,21 @@ describe('a broken block before the grade', () => {
     }
   });
 });
+
+// Tenth review of #231: broken JSON that ends early is not the block's end.
+describe('a block whose JSON breaks early', () => {
+  const text = '<assessment>{"understanding":} "score":0.8,"missing":["x"]}</assessment>Try again.';
+
+  it('is hidden to its closing tag', () => {
+    expect(parseAssessment(text)).toEqual({ assessment: null, visible: 'Try again.' });
+  });
+
+  it('streams none of it', () => {
+    for (const size of [1, 6, text.length]) {
+      const out = [];
+      const feed = assessmentFilter((t) => out.push(t));
+      for (let i = 0; i < text.length; i += size) feed(text.slice(i, i + size));
+      expect(out.join('')).toBe('Try again.');
+    }
+  });
+});
