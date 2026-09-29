@@ -145,7 +145,7 @@ The retrieval step is dropped when no concept is due for review, so a first less
 
 Mid-lesson branching: steps expand (student says "go deeper") or contract (student nails the diagnostic) dynamically. Student can type "skip" or "move on" at any time (autonomy).
 
-DeliberatePractitioner runs after each lesson (deterministic, no LLM call) and writes enforceable directives to `practice-feedback.md`. The bot's Teacher reads these before the next lesson and follows them; the web planner gets the REVISIT and BLOCK concepts (#146).
+DeliberatePractitioner runs after each lesson (deterministic, no LLM call) and writes enforceable directives to `practice-feedback.md`. The bot's Teacher reads these before the next lesson and follows them; the web planner gets the REVISIT and BLOCK concepts (#146). On both, an open BLOCK starts a review lesson on the blocked concept instead of the next lesson (`reviewLesson` in `lib/core/deliberate-practice.js`); a review is not a completion. The bot releases the BLOCK after any review; the web releases it only on a passed retest (every step graded, none incorrect, correct on average), and after two reviews in a row the next lesson goes ahead. A BLOCK open after the last lesson still gets its reviews before "All lessons completed" (#149).
 
 `selectMode` also accepts a `pushType` for differentiated scheduled pushes, but no caller passes one today — `scheduler.js` delivers a normal lesson at every slot.
 
@@ -177,7 +177,7 @@ So `lesson.status` and `lesson.engagement` still exist on the object every reade
 ## LLM backends
 
 Set `OPENTUTOR_LLM`: `claude-sdk`, `cli`, `openai`, `openrouter`, `ollama`. With none set, the factory resolves from whichever API key is present (`ANTHROPIC_API_KEY` → claude-sdk, `OPENROUTER_API_KEY` → openrouter, `OPENAI_API_KEY` → openai), falling back to `cli`.
-The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
+The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`. Without one it resolves exactly as lessons do, key included (#207).
 
 The web server, the Vercel routes, the curriculum pipeline and the Telegram bot all honour this. `CLAUDE_BACKEND` (`sdk` | `cli`) is an older name: model calls read it only when `OPENTUTOR_LLM` is unset, but the bot's startup check (`scripts/bot/config.js`) reads it on its own and exits without `ANTHROPIC_API_KEY` when it is `sdk` (#98).
 

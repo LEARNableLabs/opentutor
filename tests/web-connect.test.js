@@ -260,6 +260,20 @@ it('shows a resumed lesson\'s last tutor message, with a note that it picked up 
   expect($('#lesson-input-area').classList.contains('hidden')).toBe(false);
 });
 
+// #149: an open BLOCK starts a review lesson; the page says why before the question.
+it('shows a review lesson\'s note before its question, and names it in the lesson header', async () => {
+  const review = { reply: 'Explain **alpha** in your own words.', lesson: { module: 'M', day: 7, title: 'Review: alpha', review: true }, step: 0, totalSteps: 3, done: false, note: "Let's revisit alpha before moving on." };
+  const { $ } = frontend((url) => (url === '/api/lesson' ? [200, review] : null));
+  await settle();
+  $('#active-topic').value = 'demo';
+  await $('#btn-next').click();
+  await settle();
+  const shown = $('#lesson-conversation').children.map((n) => n.innerHTML);
+  expect(shown.findIndex((h) => h.includes('revisit alpha before moving on.'))).toBe(0); // md() escapes the apostrophe
+  expect(shown[1]).toContain('Explain <strong>alpha</strong> in your own words.');
+  expect($('#lesson-meta').textContent).toBe('M — Day 7: Review: alpha');
+});
+
 // A lesson on its last step: `last` answers the student's answer.
 async function lastStep(last) {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3, done: false };
@@ -413,5 +427,52 @@ it.each([
   } else {
     expect(context.alert).not.toHaveBeenCalled();
     expect(context.location.assign).toHaveBeenCalledWith('/login.html');
+  }
+});
+
+// #203: a returning student lands on their topic, not on an empty "Select a topic".
+it('selects the topic of the most recent lesson for a returning student, and says so', async () => {
+  const progress = {
+    active_topics: ['astrophysics', 'game-theory'],
+    history: [{ topic: 'astrophysics', lesson: 1 }, { topic: 'game-theory', lesson: 1 }],
+  };
+  const { $ } = frontend((url) => (url === '/api/progress' ? [200, progress] : null));
+  await settle();
+  expect($('#active-topic').value).toBe('game-theory');
+  expect($('#empty-title').textContent).toBe('Ready for your next lesson?');
+});
+
+it('falls back to the first topic when the history names none of them', async () => {
+  const progress = { active_topics: ['astrophysics', 'game-theory'], history: [{ topic: 'removed-topic', lesson: 3 }] };
+  const { $ } = frontend((url) => (url === '/api/progress' ? [200, progress] : null));
+  await settle();
+  expect($('#active-topic').value).toBe('astrophysics');
+});
+
+it('picks once per page view: a deliberate "Select a topic" stays, a chosen topic stays while active', async () => {
+  const progress = { active_topics: ['astrophysics', 'game-theory'], history: [] };
+  const { $ } = frontend((url) => (url === '/api/progress' ? [200, progress] : null));
+  await settle();
+  const backToLearn = async () => { await $('.nav-btn[data-view="learn"]').click(); await settle(); };
+  $('#active-topic').value = '';
+  await backToLearn();
+  expect($('#active-topic').value).toBe('');
+  $('#active-topic').value = 'astrophysics';
+  await backToLearn();
+  expect($('#active-topic').value).toBe('astrophysics');
+  progress.active_topics = ['game-theory'];
+  await backToLearn();
+  expect($('#active-topic').value).toBe('game-theory');
+});
+
+// #215: `.hidden` is !important, so a view that starts hidden never shows, whatever the tab handler does.
+it('shows the view of whichever tab is clicked', async () => {
+  const { $ } = frontend((url) => (url === '/api/topics' ? [200, []] : null));
+  await settle();
+  for (const view of ['topics', 'chat', 'learn']) {
+    await $(`.nav-btn[data-view="${view}"]`).click();
+    await settle();
+    const section = $(`#view-${view}`);
+    expect([view, section.classList.contains('active'), section.classList.contains('hidden')]).toEqual([view, true, false]);
   }
 });
