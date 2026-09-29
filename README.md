@@ -99,24 +99,15 @@ built. On the hosted site, new topics need your own OpenRouter account.
   is configured. The free trial runs on your key, capped at 300 model calls a day
   (`OPENTUTOR_TRIAL_CALLS_PER_DAY`); see
   [free trial and students' own keys](docs/deployment.md#free-trial-and-students-own-openrouter-keys).
-- **A small group on one server:** set two different long passwords. Anyone with
-  `OPENTUTOR_PASSWORD` uses the shared workspace (without it, anyone who can reach
-  the server does), and `OPENTUTOR_ADMIN_PASSWORD` opens `/admin.html`, where you
-  add students. This writes them to `.env`, readable only by you, without printing
-  them, and stops before starting the server if a step fails:
-
-  ```bash
-  p=$(openssl rand -hex 24) && a=$(openssl rand -hex 24) &&
-    touch .env && chmod 600 .env &&   # private before any secret is written
-    printf '\nOPENTUTOR_PASSWORD=%s\nOPENTUTOR_ADMIN_PASSWORD=%s\n' "$p" "$a" >> .env &&
-    OPENTUTOR_PASSWORD="$p" OPENTUTOR_ADMIN_PASSWORD="$a" node --env-file=.env scripts/web/server.js
-  ```
-
-  Each student gets a one-time access token to enter at `/login.html` ("Have an
-  existing access token?"), and their own progress. Every request carries a password
-  or a token, so serve it over HTTPS: put a web server such as Caddy or nginx in
-  front. `OPENTUTOR_HOST=0.0.0.0` serves plain HTTP to the whole network; use it
-  only on a network you trust.
+- **A small group on one server:** run `npm run host`. The first run writes a
+  learner password and a different admin password to `.env`, readable only by you,
+  and says where they are without printing them; later runs reuse them. The
+  learner password opens the shared workspace; the admin one opens `/admin.html`,
+  where you add students. Each student gets a one-time access token to enter at
+  `/login.html` ("Have an existing access token?"), and their own progress. Every
+  request carries a password or a token, so serve it over HTTPS: put a web server
+  such as Caddy or nginx in front. Without a password, OpenTutor only answers the
+  computer it runs on.
 
 ## Documentation
 
