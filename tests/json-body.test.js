@@ -14,6 +14,25 @@ const ROUTES = {
   'admin/students': () => import('../api/admin/students.js'),
 };
 
+const call = async (handler, req) => {
+  let status, sent;
+  const res = { setHeader() {}, status(code) { status = code; return this; }, json(body) { sent = body; return this; }, end() { return this; } };
+  await handler({ headers: {}, query: {}, ...req }, res);
+  return { status, sent };
+};
+
+// Review of #232: a body that parses but isn't an object reached the route: `null` was a 500,
+// and `[]` or `"x"` saved a blank profile.
+it.each([['null', null], ['an array', []], ['a string', 'x'], ['no body', undefined]])('refuses a POST whose body is %s', async (_case, body) => {
+  const { default: handler } = await ROUTES.user();
+  expect((await call(handler, { method: 'POST', body })).status).toBe(400);
+});
+
+it('leaves a GET, which has no body, to the route', async () => {
+  const { default: handler } = await ROUTES.catalog();
+  expect((await call(handler, { method: 'GET' })).status).toBe(200);
+});
+
 it.each(Object.keys(ROUTES))('answers a body Vercel cannot parse with 400 on api/%s', async (route) => {
   const { default: handler } = await ROUTES[route]();
   let status, sent;

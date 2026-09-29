@@ -431,18 +431,19 @@ function json(res, data) {
 
 // The Vercel-style handlers expect req.body and res.status().json().
 async function mountHandler(req, res, handler) {
-  try { req.body = req.method === 'POST' ? JSON.parse(await readBody(req, res) || '{}') : {}; }
-  catch { return fail(res, 400, 'Invalid request body'); }
+  try { req.body = req.method === 'POST' ? await readJson(req, res) : {}; }
+  catch (err) { return fail(res, 400, err instanceof RequestError ? err.message : 'Invalid request body'); }
   res.status = (code) => { res.statusCode = code; return res; };
   res.json = (body) => { res.end(JSON.stringify(body)); return res; };
   return handler(req, res);
 }
 
-// #228: a body that isn't a JSON object is the client's mistake, a 400; an uncaught parse made it a 500.
+// #228: a body that isn't a JSON object is the client's mistake, a 400; an uncaught parse made it a
+// 500. An empty body is no object either: read as {}, it saved a blank profile over the student's.
 async function readJson(req, res) {
   const text = await readBody(req, res); // a read that fails (413, already answered) stays that failure
   let data = null;
-  try { data = JSON.parse(text || '{}'); } catch { /* not JSON: answered below */ }
+  try { data = JSON.parse(text); } catch { /* not JSON, or empty: answered below */ }
   if (!data || typeof data !== 'object' || Array.isArray(data)) throw new RequestError('The request body must be a JSON object.');
   return data;
 }

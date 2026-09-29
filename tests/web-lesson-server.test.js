@@ -188,6 +188,13 @@ describe('bad requests', () => {
     expect(prompts.length).toBe(before);
   });
 
+  // Review of #232: read as {}, an empty body saved a blank profile over the student's.
+  it.each([['empty', ''], ['null', 'null'], ['an array', '[]'], ['a string', '"x"']])('answers a body that is %s with 400, and saves nothing', async (_case, body) => {
+    const before = await (await fetch(`${base}/api/user`, { headers: { Authorization: `Bearer ${PASSWORD}` } })).json();
+    expect((await raw('/api/user', body)).status).toBe(400);
+    expect(await (await fetch(`${base}/api/user`, { headers: { Authorization: `Bearer ${PASSWORD}` } })).json()).toEqual(before);
+  });
+
   it('answers an unknown topic with 404', async () => {
     const res = await fetch(`${base}/api/topics/nope-not-here`, { headers: { Authorization: `Bearer ${PASSWORD}` } });
     expect(res.status).toBe(404);
