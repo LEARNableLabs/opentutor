@@ -34,7 +34,8 @@ directly for what you use. You can delete your account and data at any time
 
 ## Run it on your computer
 
-You need Node 22 or later and a key for one AI provider.
+You need Node 22 or later and a model to teach with: an API key for an AI provider,
+a local model through Ollama, or Claude Code.
 
 ```bash
 git clone https://github.com/LEARNableLabs/opentutor
@@ -49,15 +50,12 @@ Open http://localhost:3000/learn.html. Your progress is saved on your computer, 
 
 - **Set the variables in your shell.** `npm run web` does not read `.env`. To use a
   file, run `node --env-file=.env scripts/web/server.js` instead.
-- **Set `OPENTUTOR_LLM`, not only the key.** Lessons can infer the provider from the
-  key, but the course builder can't. Without `OPENTUTOR_LLM` it falls back to the
-  Claude Code CLI.
 - **Other providers:** use `claude-sdk` with `ANTHROPIC_API_KEY`, `openai` with
   `OPENAI_API_KEY`, `ollama` for local models, or `cli` for Claude Code with no key.
 
-**On Telegram:** put `TELEGRAM_BOT_TOKEN` in `.env` (the bot does read it) and run
-`npm run bot`. See [Telegram on a separate host](docs/deployment.md#telegram-on-a-separate-host).
-The bot's own lessons choose their model with `CLAUDE_BACKEND` (`sdk` or `cli`).
+**On Telegram:** put `TELEGRAM_BOT_TOKEN` and the same provider settings in `.env`
+(the bot reads it), then run `npm run bot`. See
+[Telegram on a separate host](docs/deployment.md#telegram-on-a-separate-host).
 
 **In your AI agent:** run `npx skills add LEARNableLabs/opentutor`, then follow the
 guide for [Claude Code](claude-code/README.md), [Codex](codex/README.md),
@@ -71,8 +69,8 @@ guide for [Claude Code](claude-code/README.md), [Codex](codex/README.md),
   what you already think, a follow-up, then a real situation where you explain why.
 - **It comes back to what you missed.** After each lesson, a rules-based check (no
   AI) notes the concepts you're still unsure of. One that goes three lessons without
-  review opens a later lesson as a retest, in a new context; after five, the next
-  lesson is built around it.
+  review comes back as a retest at the start of a lesson; after five, the next
+  lesson is a review of it.
 - **On Telegram it adapts further.** The same check also raises or lowers the
   difficulty and changes the kind of question, and each idea gets its own review
   schedule that stretches as you remember it.
@@ -100,12 +98,22 @@ your own OpenRouter account.
   is configured. The free trial runs on your key, capped at 300 model calls a day
   (`OPENTUTOR_TRIAL_CALLS_PER_DAY`); see
   [free trial and students' own keys](docs/deployment.md#free-trial-and-students-own-openrouter-keys).
-- **A small group on one server:** run
-  `OPENTUTOR_HOST=0.0.0.0 OPENTUTOR_PASSWORD=… OPENTUTOR_ADMIN_PASSWORD=… npm run web`,
-  then add students at `/admin.html`. Each student gets a one-time access token to
-  enter at `/login.html` ("Have an existing access token?"), and their own separate
-  progress. Without `OPENTUTOR_PASSWORD`, anyone who can reach the port uses your
-  workspace.
+- **A small group on one server:** set two different long passwords. Anyone with
+  `OPENTUTOR_PASSWORD` uses the shared workspace (without it, anyone who can reach
+  the server does), and `OPENTUTOR_ADMIN_PASSWORD` opens `/admin.html`, where you
+  add students:
+
+  ```bash
+  export OPENTUTOR_PASSWORD="$(openssl rand -base64 24)" OPENTUTOR_ADMIN_PASSWORD="$(openssl rand -base64 24)"
+  echo "shared: $OPENTUTOR_PASSWORD  admin: $OPENTUTOR_ADMIN_PASSWORD"
+  npm run web
+  ```
+
+  Each student gets a one-time access token to enter at `/login.html` ("Have an
+  existing access token?"), and their own progress. Every request carries a password
+  or a token, so serve it over HTTPS: put a web server such as Caddy or nginx in
+  front. `OPENTUTOR_HOST=0.0.0.0` serves plain HTTP to the whole network; use it
+  only on a network you trust.
 
 ## Documentation
 

@@ -48,7 +48,7 @@ opentutor/
 │   ├── generate-teacher-md.js        # Backfills teacher.md across domains
 │   ├── bot/                          # Telegram bot adapter
 │   │   ├── index.js                  # Entry point (npm run bot)
-│   │   ├── claude.js                 # LLM wrapper — reads CLAUDE_BACKEND, not OPENTUTOR_LLM (issue #98)
+│   │   ├── claude.js                 # LLM wrapper — the same backend factories as the web (#98)
 │   │   ├── router.js                 # Message routing + group member tracking
 │   │   ├── commands.js               # Slash commands + session resume from learning.md
 │   │   ├── lesson.js                 # Socratic multi-turn delivery, adaptive length, practice enforcement
@@ -179,7 +179,7 @@ So `lesson.status` and `lesson.engagement` still exist on the object every reade
 Set `OPENTUTOR_LLM`: `claude-sdk`, `cli`, `openai`, `openrouter`, `ollama`. With none set, the factory resolves from whichever API key is present (`ANTHROPIC_API_KEY` → claude-sdk, `OPENROUTER_API_KEY` → openrouter, `OPENAI_API_KEY` → openai), falling back to `cli`.
 The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
 
-The web server, the Vercel routes and the curriculum pipeline all honour this. **The Telegram bot's own chat and lesson calls do not** — `scripts/bot/claude.js` reads `CLAUDE_BACKEND` (`sdk` | `cli`) instead. See issue #98.
+The web server, the Vercel routes, the curriculum pipeline and the Telegram bot all honour this. `CLAUDE_BACKEND` (`sdk` | `cli`) is an older name, read only when `OPENTUTOR_LLM` is unset (#98).
 
 Self-signup accounts (`acct-…`) are the exception: `lib/core/llm-access.js` decides each of their model calls, 3 free lessons on the deployment's key and then their own OpenRouter key (#132). Every trial call also claims one of the day's shared trial calls (`OPENTUTOR_TRIAL_CALLS_PER_DAY`, default 300, #180). Anything a student triggers asks `adapterFor()`, never `getAdapter()` directly.
 

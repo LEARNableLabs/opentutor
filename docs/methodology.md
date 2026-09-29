@@ -84,9 +84,8 @@ the most good. Returning too early is comfortable and nearly useless.
 Two mechanisms, and they don't run everywhere:
 
 - **The `REVISIT` directive and the retrieval step** — every surface. A shaky
-  concept that goes three lessons without review comes back as a retest (a
-  `BLOCK` after five), deliberately in a different context each time, so you're
-  recalling the idea rather than the wording of the question.
+  concept that goes three lessons without review comes back as a retest at the
+  start of a lesson; after five, a `BLOCK` turns the next lesson into a review of it.
 - **SM-2 scheduling** — **Telegram only** (`scripts/bot/spaced-repetition.js`).
   Per-concept intervals that stretch or collapse based on how you answered,
   driving `/review` and the daily push. The web and hosted paths don't have this
