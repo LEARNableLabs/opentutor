@@ -1,5 +1,6 @@
 import { it, expect } from 'vitest';
 import { CurriculumPipeline } from '../lib/core/pipeline.js';
+import { buildPlanPrompt } from '../lib/core/prompts.js';
 
 // #226: the builder's JSON for a full course is longer than 4,096 tokens, the adapters' default
 // for the strong tier, so every build was cut off mid-JSON and failed to parse.
@@ -57,3 +58,12 @@ it('shows the critic every lesson of a long course', async () => {
   expect(seen[0]).toContain('Lesson 60');
   expect(seen[0]).not.toContain('[reference data truncated]');
 });
+
+// Review of #230: the planner read only the first 10,000 characters of the critique it revises from.
+it('gives the planner the whole of a long critique', () => {
+  const critique = `${'- A finding about a lesson.\n'.repeat(1200)}- The last finding.`;
+  const { system } = buildPlanPrompt({ get: () => '' }, 'Knots', 'beginner', '', critique);
+  expect(system).toContain('- The last finding.');
+  expect(system).not.toContain('[reference data truncated]');
+});
+
