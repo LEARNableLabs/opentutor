@@ -10,11 +10,12 @@
 .admin-add input {
   flex: 1 1 180px;
   padding: 10px 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--field); /* 3:1 for a field's edge, as on the learn page */
   border-radius: var(--radius-sm);
-  background: var(--surface);
+  background: var(--surface-2);
   color: var(--text);
-  font: inherit;
+  font-family: var(--sans);
+  font-size: 16px;
 }
 
 .admin-add input:focus {

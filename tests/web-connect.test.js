@@ -294,7 +294,7 @@ it.each([
   await $('#btn-lesson-answer').click();
   await settle();
   const shown = $('#lesson-conversation').children.map((n) => n.innerHTML).join('\n');
-  expect(shown.includes('making progress')).toBe(celebrates);
+  expect($('#lesson-conversation').children.some((n) => n.className === 'lesson-celebration')).toBe(celebrates);
   if (extra.warning) expect(shown).toContain(extra.warning);
   expect($('#lesson-input-area').classList.contains('hidden')).toBe(true);
   expect($('#btn-next').disabled).toBe(false);
