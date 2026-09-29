@@ -184,3 +184,21 @@ describe('tag names, attributes and answers', () => {
     expect(stripGrades('<assessment-rubric>{"score":1}</assessment-rubric>')).toBe('<assessment-rubric>{"score":1}</assessment-rubric>');
   });
 });
+
+// Ninth review of #231: a broken first block, then the real grade.
+describe('a broken block before the grade', () => {
+  const text = '<assessment>{broken}</assessment>\n<assessment>{"score":0.4}</assessment>\nTry again.';
+
+  it('is hidden, and the grade after it is read and hidden too', () => {
+    expect(parseAssessment(text)).toEqual({ assessment: { score: 0.4 }, visible: 'Try again.' });
+  });
+
+  it('streams neither', () => {
+    for (const size of [1, 5, text.length]) {
+      const out = [];
+      const feed = assessmentFilter((t) => out.push(t));
+      for (let i = 0; i < text.length; i += size) feed(text.slice(i, i + size));
+      expect(out.join('')).toBe('Try again.');
+    }
+  });
+});

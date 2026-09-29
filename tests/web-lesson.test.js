@@ -238,6 +238,14 @@ describe('what the tutor is sent', () => {
     expect(body.reply).toBe("Thanks, noted. Let's keep going.");
   });
 
+  it('closes rather than invites more when the last reply was only a broken grade', async () => {
+    const { totalSteps } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+    for (let i = 1; i < totalSteps; i++) await lessonTurn(ctx, { topicSlug: 'demo', answer: `answer ${i}` });
+    adapter.generate.mockResolvedValueOnce({ text: '<assessment>{"score":0.8' });
+    const { body } = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'last answer' });
+    expect(body).toMatchObject({ done: true, reply: "Thanks, noted. That's the end of this lesson." });
+  });
+
   it('shows an old lesson\'s last reply without its grade when resuming', async () => {
     saveLegacy({ step: 1, history: [{ role: 'assistant', content: '<assessment>{"score":1}</assessment>\nOld question?' }] });
     expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe('Old question?');
