@@ -107,3 +107,29 @@ describe('only the first block is the grade', () => {
     expect(parseAssessment('<assessment>{"understanding":"partial","score":0.8}\n\nGood — why?')).toEqual({ assessment: { understanding: 'partial', score: 0.8 }, visible: 'Good — why?' });
   });
 });
+
+// Third review of #231: a grade can quote the tag itself, as an XML lesson's can.
+describe('a grade that quotes the tag', () => {
+  const graded = (quoted) => `<assessment>{"score":1,"correct":["You named ${quoted} as the closing tag"]}</assessment>\nExactly right.`;
+
+  it.each(['</assessment>', '<assessment>'])('reads a grade quoting %s, and shows none of it', (quoted) => {
+    expect(parseAssessment(graded(quoted))).toEqual({ assessment: { score: 1, correct: [`You named ${quoted} as the closing tag`] }, visible: 'Exactly right.' });
+  });
+
+  it.each(['</assessment>', '<assessment>'])('streams none of a grade quoting %s, in any chunking', (quoted) => {
+    const text = graded(quoted);
+    for (const size of [1, 3, 7, 16, text.length]) {
+      const out = [];
+      const feed = assessmentFilter((t) => out.push(t));
+      for (let i = 0; i < text.length; i += size) feed(text.slice(i, i + size));
+      expect(out.join('')).toBe('Exactly right.');
+    }
+  });
+
+  it('streams a reply whose block was never closed, once it can tell', () => {
+    const out = [];
+    const feed = assessmentFilter((t) => out.push(t));
+    ['<assessment>{"score":0.8}', '\n\n', 'Good — ', 'why?'].forEach(feed);
+    expect(out.join('')).toBe('Good — why?');
+  });
+});
