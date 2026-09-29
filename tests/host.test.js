@@ -81,7 +81,7 @@ it.each([
   ['a password with a space', 'OPENTUTOR_PASSWORD=correct horse battery staple\nOPENTUTOR_ADMIN_PASSWORD=0123456789abcdef0123\n'],
 ])('refuses %s, and says how to write it', (_case, text) => {
   fs.writeFileSync(file, text);
-  expect(() => ensurePasswords(file)).toThrow(/quotes, spaces or a comment/);
+  expect(() => ensurePasswords(file)).toThrow(/quotes, spaces, a comment/);
 });
 
 it('generates a password for empty quotes', () => {
@@ -89,4 +89,10 @@ it('generates a password for empty quotes', () => {
   const values = ensurePasswords(file);
   expect(values.OPENTUTOR_PASSWORD).toMatch(/^[0-9a-f]{48}$/);
   expect(values.OPENTUTOR_ADMIN_PASSWORD).toMatch(/^[0-9a-f]{48}$/);
+});
+
+// Review of #222: the environment cuts a value at a NUL, so "a\0…" would really be the password "a".
+it('refuses a password with a control character', () => {
+  fs.writeFileSync(file, `OPENTUTOR_PASSWORD=a${'\0'}xxxxxxxxxxxxxxxxx\nOPENTUTOR_ADMIN_PASSWORD=0123456789abcdef0123\n`);
+  expect(() => ensurePasswords(file)).toThrow(/control character/);
 });
