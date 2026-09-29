@@ -196,7 +196,8 @@ Admin provisioning returns a one-time student bearer token; PATCH `/api/admin/st
 ```bash
 npm run bot          # Telegram bot
 npm run bot:test     # Bot with isolated test data (.test-data/)
-npm run web          # Web UI at http://localhost:3000
+npm run web          # Web UI at http://localhost:3000, for this computer only unless OPENTUTOR_PASSWORD is set (#221)
+npm run host         # The same, for a group: generates the passwords into a private .env, then starts
 npm run web:test     # Web with isolated test data
 npm test             # vitest unit and integration tests
 npm run lint         # eslint over lib/, scripts/, api/

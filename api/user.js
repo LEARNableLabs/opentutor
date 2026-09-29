@@ -1,7 +1,10 @@
 import { getState } from './_lib/init.js';
+import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 
-export default async function handler(req, res) {
+export default readsJson(handler);
+
+async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
 
   const auth = await authenticateRequest(req, getState);

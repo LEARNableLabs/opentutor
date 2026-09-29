@@ -1,4 +1,5 @@
 import { getState } from './_lib/init.js';
+import { readsJson } from './_lib/body.js';
 import { authenticateRequest } from './_lib/auth.js';
 import { openrouterHandler } from './_lib/openrouter.js';
 import {
@@ -285,4 +286,4 @@ export function accountHandler({ getStore = getState, clientFactory = createAcco
 // per deployment, and vercel.json rewrites /api/openrouter here with ?via=openrouter.
 const account = accountHandler();
 const openrouter = openrouterHandler();
-export default (req, res) => (req.query?.via === 'openrouter' ? openrouter : account)(req, res);
+export default readsJson((req, res) => (req.query?.via === 'openrouter' ? openrouter : account)(req, res));

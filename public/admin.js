@@ -154,7 +154,7 @@ function showToken(token) {
 const theme = {
   apply(t) {
     document.documentElement.dataset.theme = t;
-    $('#theme-toggle').textContent = t === 'dark' ? '☀️' : '🌙';
+    $('#theme-toggle').textContent = t === 'dark' ? 'Light theme' : 'Dark theme';
     try { localStorage.setItem('opentutor-theme', t); } catch { /* private mode */ }
   },
 };

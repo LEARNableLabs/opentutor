@@ -78,6 +78,10 @@ describe.each([
   beforeEach(() => {
     vi.stubEnv('OPENTUTOR_DATA_DIR', '');
     root = fs.mkdtempSync(path.join(os.tmpdir(), 'ot-onboard-'));
+    // A ready-made course to confirm (#223): an account without its own key may only pick one.
+    const course = path.join(root, 'skills', 'tutor', 'domains', 'game-theory');
+    fs.mkdirSync(course, { recursive: true });
+    fs.writeFileSync(path.join(course, 'curriculum.json'), JSON.stringify({ topic: 'Game Theory', lessons: [] }));
     store = new TutorStore(root);
     state = wrap(store);
   });
@@ -91,7 +95,7 @@ describe.each([
     adapter.generate.mockResolvedValue(confirm);
     const res = await call({ message: 'Game theory, please.', history });
     expect(res.statusCode).toBe(200);
-    expect(res.body).toMatchObject({ reply: 'Good choice.', confirmedTopic: 'Game theory' });
+    expect(res.body).toMatchObject({ reply: 'Good choice.', confirmedTopic: 'game-theory' });
     const profile = await state.readUser();
     expect(profile).toContain('## In their own words (from onboarding)');
     expect(profile).toContain("- Hi! I'm Ada, a nurse who wants to think more strategically.\n- Game theory, please.");
@@ -143,7 +147,120 @@ describe.each([
     adapter.generate.mockResolvedValue(confirm);
     const res = await call({ message: 'Game theory, please.', history });
     expect(res.statusCode).toBe(200);
-    expect(res.body).toMatchObject({ reply: 'Good choice.', confirmedTopic: 'Game theory' });
+    expect(res.body).toMatchObject({ reply: 'Good choice.', confirmedTopic: 'game-theory' });
     expect(String(log.mock.calls)).toMatch(/EROFS/);
+  });
+});
+
+// #223: onboarding offers the ready-made courses, and never sends a trial account to a custom build.
+const { onboardTurn } = await import('../api/onboard.js');
+describe('the ready-made courses', () => {
+  const trial = () => ({ ...state, userId: 'acct-1', readKV: async () => null }); // no key of its own
+  const turn = (s) => onboardTurn({ state: s, skills: new Map(), getAdapter: async () => adapter }, { message: 'I like strategy games' });
+
+  it('are in the prompt, preferred over building a new one', async () => {
+    await call();
+    const system = adapter.generate.mock.calls[0][0];
+    expect(system).toContain('"game-theory"');
+    expect(system).toMatch(/ready-made course is better/i);
+  });
+
+  it('are the only choice for an account that cannot build a topic', async () => {
+    adapter.generate.mockResolvedValue({ text: 'I will build it now.\n<TOPIC>never-built</TOPIC>' });
+    const { body } = await turn(trial());
+    expect(adapter.generate.mock.calls[0][0]).toMatch(/Custom topic generation is unavailable/);
+    expect(body.confirmedTopic).toBeNull();
+    expect(body.reply).toMatch(/ready-made/);
+  });
+
+  it('turn a readable name into its course', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Good pick.\n<TOPIC>Game Theory</TOPIC>' });
+    expect((await turn(trial())).body.confirmedTopic).toBe('game-theory');
+  });
+});
+
+it('reads the marker in any case, and never shows it', async () => {
+  adapter.generate.mockResolvedValue({ text: 'Great.\n<Topic>game-theory</Topic>' });
+  expect((await call()).body).toMatchObject({ confirmedTopic: 'game-theory', reply: 'Great.' });
+});
+
+it('says something when the reply was only the marker', async () => {
+  adapter.generate.mockResolvedValue({ text: '<TOPIC>game-theory</TOPIC>' });
+  expect((await call()).body.reply).toMatch(/game theory/i);
+});
+
+// Review of #229: a course's full title, and markers a model gets wrong.
+describe('names and markers', () => {
+  const owner = () => ({ ...state, listTopics: async () => ['3d-printer-firmware', 'game-theory'] });
+  const trialOf = (s) => ({ ...s, userId: 'acct-1', readKV: async () => null });
+  const turn = (s) => onboardTurn({ state: s, skills: new Map(), getAdapter: async () => adapter }, { message: 'firmware' });
+
+  it('confirms a course named by its full title, subtitle and all', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Good.\n<TOPIC>3D Printer Firmware — Motion Planning and Kinematics</TOPIC>' });
+    expect((await turn(trialOf(owner()))).body.confirmedTopic).toBe('3d-printer-firmware');
+  });
+
+  it('never leaves the reply empty, even for an empty marker', async () => {
+    adapter.generate.mockResolvedValue({ text: '<TOPIC> </TOPIC>' });
+    const { body } = await turn(owner());
+    expect(body.confirmedTopic).toBeNull();
+    expect(body.reply.trim()).not.toBe('');
+  });
+
+  it('never shows a stray marker, or confirms what a doubled one wraps', async () => {
+    adapter.generate.mockResolvedValue({ text: '<TOPIC><TOPIC>knots</TOPIC>' });
+    const { body } = await turn(owner());
+    expect(body.reply).not.toMatch(/<\/?topic>/i);
+    expect(body.confirmedTopic).toBe('knots');
+  });
+});
+
+// Second review of #229: real course titles, not slug prefixes; tags with spaces; a clean refusal.
+describe('course titles and tags', () => {
+  const catalog = () => ({ ...state, listTopics: async () => ['astrophotography', 'logic', 'game-theory'] });
+  const trialOf = (s) => ({ ...s, userId: 'acct-1', readKV: async () => null });
+  const turn = (s) => onboardTurn({ state: s, skills: new Map(), getAdapter: async () => adapter }, { message: 'photos of stars' });
+  const confirm = async (text) => { adapter.generate.mockResolvedValue({ text }); return (await turn(trialOf(catalog()))).body; };
+
+  it.each([
+    ['its full title', 'Night sky photography — astrophotography techniques', 'astrophotography'],
+    ['the main part of its title', 'Night sky photography', 'astrophotography'],
+    ['a title with a subtitle after a dash', 'Logic — from Aristotle to Gödel', 'logic'],
+  ])('confirms a course named by %s', async (_how, name, slug) => {
+    expect((await confirm(`Good.\n<TOPIC>${name}</TOPIC>`)).confirmedTopic).toBe(slug);
+  });
+
+  it.each(['Logic Gates and Digital Circuits', 'Game Theory Advanced'])('does not take "%s" for a course it only starts like', async (name) => {
+    expect((await confirm(`Good.\n<TOPIC>${name}</TOPIC>`)).confirmedTopic).toBeNull();
+  });
+
+  it('reads a marker with spaces in its tags, and never shows it', async () => {
+    const body = await confirm('Good.\n< TOPIC >game-theory</ TOPIC >');
+    expect(body).toMatchObject({ confirmedTopic: 'game-theory', reply: 'Good.' });
+  });
+
+  it('refuses a topic it cannot build without keeping a promise to build it', async () => {
+    const { reply } = await confirm('I will build it now.\n<TOPIC>never-built</TOPIC>');
+    expect(reply).not.toMatch(/build it now/);
+    expect(reply).toMatch(/ready-made/);
+  });
+
+  // Third review of #229.
+  it('takes a student\'s own course by its slug before another course\'s title', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Good.\n<TOPIC>night-sky-photography</TOPIC>' });
+    const own = { ...catalog(), listTopics: async () => ['astrophotography', 'night-sky-photography'] };
+    expect((await turn(own)).body.confirmedTopic).toBe('night-sky-photography');
+  });
+
+  it.each([
+    ['an empty marker', "I'll build it now.\n<TOPIC> </TOPIC>"],
+    ['a marker that never closes', "I'll build it now.\n<TOPIC>game theory"],
+  ])('keeps no promise around %s', async (_case, text) => {
+    for (const s of [trialOf(catalog()), catalog()]) {
+      adapter.generate.mockResolvedValue({ text });
+      const { body } = await turn(s);
+      expect(body.confirmedTopic).toBeNull();
+      expect(body.reply).toMatch(/^What would you like to learn\?/);
+    }
   });
 });

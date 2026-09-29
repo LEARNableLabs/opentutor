@@ -1,4 +1,5 @@
 import { getState, getPipelineAdapter, getSkills } from './_lib/init.js';
+import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { normalizeTopicRequest } from '../lib/core/topic-builds.js';
 import { addTopic } from '../lib/core/topic-service.js';
@@ -6,7 +7,9 @@ import { enqueueTopicBuild } from './_lib/topic-queue.js';
 import { adapterFor, KeyRequired } from '../lib/core/llm-access.js';
 import { RequestError } from '../lib/core/errors.js';
 
-export default async function handler(req, res) {
+export default readsJson(handler);
+
+async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const auth = await authenticateRequest(req, getState);
