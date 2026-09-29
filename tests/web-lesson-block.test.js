@@ -158,7 +158,7 @@ describe.each([
     expect(store.readKV('web_lesson:demo')).toBeFalsy();
   });
 
-  it.each(['web_review:demo', 'web_lesson:demo'])('never gives more than two reviews when the first write of %s fails', async (key) => {
+  it.each(['web_review:demo', 'web_lesson:demo'])('gives exactly two reviews when the first write of %s fails', async (key) => {
     score = 0.1;
     let failing = key;
     const state = ctx.state;
@@ -173,7 +173,18 @@ describe.each([
       await finish();
     }
     expect(seen.at(-1)).toBe('day 7');
-    expect(seen.filter((s) => s === 'review').length).toBeLessThanOrEqual(2);
+    expect(seen.filter((s) => s === 'review').length).toBe(2); // a failed start neither adds nor costs one
+  });
+
+  it('shares one review between two overlapping starts', async () => {
+    score = 0.1;
+    await start();
+    await finish();
+    const [a, b] = await Promise.all([start(), start()]);
+    expect(b.body.reply).toBe(a.body.reply);
+    expect(JSON.parse(store.readKV('web_review:demo')).count).toBe(2);
+    await finish();
+    expect((await start()).body.lesson).toMatchObject({ day: 7, title: 'L7' });
   });
 
   it('does not count reviews left from an earlier lesson', async () => {

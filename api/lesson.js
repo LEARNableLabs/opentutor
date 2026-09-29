@@ -221,10 +221,16 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         isReview: true,
         reviewConcept: block.target,
       };
-      // Counted before it is saved: a failed second write then costs the student a review,
-      // and never saves one uncounted, which could hold them past MAX_REVIEWS.
-      await state.writeKV(reviewKey, JSON.stringify({ concept: block.target, day: lessonDay, count: reviews + 1 }));
-      await state.writeKV(kvKey, JSON.stringify(review));
+      // Counted before it is saved, so a review is never saved uncounted, which could hold the
+      // student past MAX_REVIEWS. If the save fails, the attempt is given back before the error.
+      const counted = (count) => state.writeKV(reviewKey, JSON.stringify({ concept: block.target, day: lessonDay, count }));
+      await counted(reviews + 1);
+      try {
+        await state.writeKV(kvKey, JSON.stringify(review));
+      } catch (err) {
+        try { await counted(reviews); } catch { /* the save's error is the one to report */ }
+        throw err;
+      }
       return {
         status: 200,
         body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, note: `Let's revisit ${block.target} before moving on.` },
