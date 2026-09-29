@@ -187,6 +187,13 @@ async function loadActiveTopics() {
     select.appendChild(opt);
   }
   if (prev && data.active_topics?.includes(prev)) select.value = prev;
+  else if (!prev && data.active_topics?.length) {
+    // #203: a returning student lands on the topic of their latest lesson, not on "Select a topic".
+    const latest = [...(data.history || [])].reverse().find((h) => data.active_topics.includes(h.topic))?.topic;
+    select.value = latest || data.active_topics[0];
+    const title = $('#empty-title'); // absent once an error message has replaced the empty state
+    if (title) title.textContent = `Ready for your next lesson in ${formatSlug(select.value)}?`;
+  }
   return data.active_topics || [];
 }
 
