@@ -177,7 +177,7 @@ So `lesson.status` and `lesson.engagement` still exist on the object every reade
 ## LLM backends
 
 Set `OPENTUTOR_LLM`: `claude-sdk`, `cli`, `openai`, `openrouter`, `ollama`. With none set, the factory resolves from whichever API key is present (`ANTHROPIC_API_KEY` → claude-sdk, `OPENROUTER_API_KEY` → openrouter, `OPENAI_API_KEY` → openai), falling back to `cli`.
-The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
+The pipeline can use a separate backend: `OPENTUTOR_PIPELINE_LLM=claude-sdk`. Without one it resolves exactly as lessons do, key included (#207).
 
 The web server, the Vercel routes and the curriculum pipeline all honour this. **The Telegram bot's own chat and lesson calls do not** — `scripts/bot/claude.js` reads `CLAUDE_BACKEND` (`sdk` | `cli`) instead. See issue #98.
 

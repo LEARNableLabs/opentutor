@@ -119,6 +119,13 @@ describe('createPipelineAdapterFromEnv', () => {
     const adapter = createPipelineAdapterFromEnv();
     expect(adapter).toBeInstanceOf(OpenAIAdapter);
   });
+
+  // #207: with only a key set, courses were built through the Claude CLI while lessons used the key.
+  it('infers the backend from the key, as lessons do, when none is named', () => {
+    for (const name of ['OPENTUTOR_PIPELINE_LLM', 'CLAUDE_PIPELINE_BACKEND', 'OPENTUTOR_LLM', 'CLAUDE_BACKEND', 'ANTHROPIC_API_KEY', 'OPENAI_API_KEY']) delete process.env[name];
+    process.env.OPENROUTER_API_KEY = 'sk-or-test';
+    expect(createPipelineAdapterFromEnv()).toBeInstanceOf(OpenRouterAdapter);
+  });
 });
 
 describe('BaseLLMAdapter', () => {
