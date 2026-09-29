@@ -1,11 +1,12 @@
 <p align="center">
-  <img src="assets/logo/opentutor-hero-512.png" alt="OpenTutor" width="200">
+  <img src="assets/logo/opentutor-hero-512.png" alt="OpenTutor" width="180">
 </p>
 
 <h1 align="center">OpenTutor</h1>
 
 <p align="center">
-  <em>A portable Agent Skill that turns any AI agent into a personalized daily tutor</em>
+  <strong>Compounding deliberate curiosity.</strong><br>
+  A personal tutor for whatever you're curious about: on the web, on Telegram, or inside your AI agent.
 </p>
 
 <p align="center">
@@ -15,149 +16,109 @@
 
 ---
 
-OpenTutor teaches you one topic a day, Socratically — it asks before it explains,
-targets what you keep getting wrong, and brings concepts back days later in a new
-context. It ships with **293 curricula** built from real sources, and can research
-and build one for any topic you name.
+OpenTutor teaches one short lesson at a time. It asks before it explains, works on
+what you keep getting wrong, and brings ideas back days later in a new form.
 
-It runs locally by default. Your learning history stays on your machine.
+It ships with 293 courses, from game theory to bread chemistry, and can build a new
+one for any topic you name.
 
-## Quickstart
+## Try it
+
+**[opentutor-gg.vercel.app](https://opentutor-gg.vercel.app)**: browse every
+course and answer an example question, no account needed.
+
+Create an account for 3 free lessons. After that, connect your own
+[OpenRouter](https://openrouter.ai) account to keep going; you pay OpenRouter
+directly for what you use. You can delete your account and data at any time
+([privacy](https://opentutor-gg.vercel.app/privacy.html)).
+
+## Run it on your computer
+
+You need Node 22 or later and a model to teach with: an API key for an AI provider,
+a local model through Ollama, or Claude Code.
 
 ```bash
 git clone https://github.com/LEARNableLabs/opentutor
 cd opentutor && npm install
 
-echo "OPENROUTER_API_KEY=sk-or-..." > .env    # or ANTHROPIC_API_KEY / OPENAI_API_KEY
+export OPENTUTOR_LLM=openrouter OPENROUTER_API_KEY=sk-or-...
 npm run web
 ```
 
-Open http://localhost:3000 and say *"Let's start."*
+Open http://localhost:3000/learn.html. Your progress is saved on your computer, in
+`workspace/`. Lesson text goes to the AI provider you chose.
 
-That's the whole install. Any one LLM key works — the backend is inferred from
-whichever you set.
+- **Set the variables in your shell.** `npm run web` does not read `.env`. To use a
+  file, run `node --env-file=.env scripts/web/server.js` instead.
+- **Other providers:** use `claude-sdk` with `ANTHROPIC_API_KEY`, `openai` with
+  `OPENAI_API_KEY`, `ollama` for local models, or `cli` for Claude Code with no key.
 
-**Prefer Telegram?** Add `TELEGRAM_BOT_TOKEN` and run `npm run bot`.
-**Prefer your existing agent?** `npx skills add LEARNableLabs/opentutor`.
+**On Telegram:** put `TELEGRAM_BOT_TOKEN` and the same provider settings in `.env`
+(the bot reads it), then run `npm run bot`. See
+[Telegram on a separate host](docs/deployment.md#telegram-on-a-separate-host).
 
-## What makes it different
-
-**It reads before it writes.** Every curriculum is built from eight sources —
-arxiv, Semantic Scholar, OpenAlex, Wikipedia, university syllabi, YouTube, GitHub
-and Wikipedia's concept graph — and cites them. Curricula are drafted, then
-reviewed by a separate Critic agent, and rewritten until it approves.
-
-**It teaches rather than tells.** Each lesson opens on a question about last
-week's material, then works through a diagnostic, an interleaved follow-up, and
-an application you have to explain in your own words.
-
-**It notices when you are stuck.** After every lesson a deliberate-practice pass
-writes directives the next lesson has to follow — don't advance past this
-concept, drop the difficulty, stop using that question format, bring this back in
-a different context.
-
-**It runs anywhere.** Telegram, a local web UI, Claude Code, Codex, Claude Web,
-Hermes, OpenClaw. Five LLM backends behind one env var. Same curriculum state
-underneath.
+**In your AI agent:** run `npx skills add LEARNableLabs/opentutor`, then follow the
+guide for [Claude Code](claude-code/README.md), [Codex](codex/README.md),
+[Claude Web](claude-web/README.md), [Hermes](hermes/README.md),
+[OpenClaw](openclaw/README.md), [NemoClaw](nemoclaw/README.md) or
+[NanoClaw](nanoclaw/README.md).
 
 ## How it teaches
 
-Three ideas, all with a research base, all unusually ignored by software that
-claims to teach.
+- **It asks before it explains.** A lesson is a short conversation: a question about
+  what you already think, a follow-up, then a real situation where you explain why.
+- **It comes back to what you missed.** On the website and Telegram, a rules-based
+  check (no AI) runs after each lesson and notes the concepts you're still unsure
+  of. One that is still shaky three lessons after it was flagged comes back as a retest at the
+  start of a lesson; after five, the next lesson is a review of it.
+- **On Telegram it adapts further.** The same check also raises or lowers the
+  difficulty and changes the kind of question, and each idea gets its own review
+  schedule that stretches as you remember it.
 
-**Socratic — ask before telling.** Every lesson is four steps and waits for your
-answer: a retrieval question on *previous* material, an open diagnostic *before*
-any explanation, a follow-up that connects to a different module, then a real
-scenario where you explain *why*. An explanation you get before you've tried to
-produce the answer lands on nothing.
+Lessons take a few minutes. On Telegram you can say "skip" at any point. In an AI
+agent, the agent itself follows the method in the skill's instructions.
+[docs/methodology.md](docs/methodology.md) explains the method, the research behind
+it, and where it falls short.
 
-**Deliberate practice — target the weakness.** After each lesson the tutor writes
-directives the next one has to follow: `BLOCK` (don't advance past this),
-`BUMP`/`DROP` (move the difficulty), `REVISIT` (bring it back in a new context),
-`VARY` (stop using that question shape — they're pattern-matching), `GOAL`. This
-runs deterministically from the session record, not by asking a model to be strict
-with you.
+## Where the courses come from
 
-**Spaced review — return after you start to forget.** Concepts come back about 1
-session later, then 3, then 7, deliberately in a different shape each time, so
-you're recalling the idea rather than the wording. Telegram adds per-concept SM-2
-scheduling; the other surfaces use the directive-driven form, which is weaker.
+The 293 shipped courses live in [`skills/tutor/domains/`](skills/tutor/domains/),
+5 to 40 lessons each; the website lists them all.
 
-Sessions run 1–10 minutes depending on how you're doing, and you can say "skip" at
-any point. Autonomy outranks the plan.
+For a new topic, OpenTutor searches public sources (arXiv, Semantic Scholar,
+OpenAlex, Wikipedia, course syllabi, YouTube and GitHub), plans a course, and has a
+second AI pass review it, revising for up to three rounds. On the website and
+Telegram, five starter lessons are ready straight away while the full course is
+built. On the hosted site, new topics need your own OpenRouter account.
 
-→ **[docs/methodology.md](docs/methodology.md)** — the full account, what the
-research actually says, and where this falls short.
+## Host it for others
 
-## Where things are
+- **A website anyone can sign up to** (Vercel and Supabase): follow
+  [docs/self-deploy.md](docs/self-deploy.md), and run the four migrations in
+  `supabase/migrations/` before deploying. Sign-up opens automatically once Supabase
+  is configured. The free trial runs on your key, capped at 300 model calls a day
+  (`OPENTUTOR_TRIAL_CALLS_PER_DAY`); see
+  [free trial and students' own keys](docs/deployment.md#free-trial-and-students-own-openrouter-keys).
+- **A small group on one server:** run `npm run host`. The first run writes a
+  learner password and a different admin password to `.env`, readable only by you
+  (on Windows, which ignores that, restrict the file yourself), and says where they
+  are without printing them; later runs reuse them. The
+  learner password opens the shared workspace; the admin one opens `/admin.html`,
+  where you add students. Each student gets a one-time access token to enter at
+  `/login.html` ("Have an existing access token?"), and their own progress. Signing
+  in and every lesson send a password or a token, so serve it over HTTPS: put a web
+  server such as Caddy or nginx in front. Without a password, OpenTutor only answers the
+  computer it runs on.
 
-| | |
+## Documentation
+
+| Read this | For |
 |---|---|
-| How it teaches | [docs/methodology.md](docs/methodology.md) — Socratic delivery, deliberate practice, spaced review |
-| How it works | [docs/architecture.md](docs/architecture.md) — the agent pipeline, lesson flow, domain files |
-| Every topic that ships | [docs/topic-catalog.md](docs/topic-catalog.md) |
-| Hosting it | [docs/self-deploy.md](docs/self-deploy.md) · [docs/deployment.md](docs/deployment.md) |
-| Working on the code | [CLAUDE.md](CLAUDE.md) · [AGENTS.md](AGENTS.md) |
-
-**Platform guides:** [Telegram](docs/deployment.md) · [Web](docs/self-deploy.md) ·
-[Claude Code](claude-code/README.md) · [Codex](codex/README.md) ·
-[Claude Web](claude-web/README.md) · [Hermes](hermes/README.md) ·
-[OpenClaw](openclaw/README.md) · [NemoClaw](nemoclaw/README.md) ·
-[NanoClaw](nanoclaw/README.md)
-
-## LLM backends
-
-Set `OPENTUTOR_LLM`, or leave it unset and the backend is inferred from whichever
-key is present.
-
-| Backend | `OPENTUTOR_LLM` | Requires |
-|---|---|---|
-| Claude SDK | `claude-sdk` | `ANTHROPIC_API_KEY` |
-| Claude CLI | `cli` | `claude` in PATH — no API key |
-| OpenAI | `openai` | `OPENAI_API_KEY` |
-| OpenRouter | `openrouter` | `OPENROUTER_API_KEY` — 200+ models |
-| Ollama | `ollama` | Ollama running — local, free |
-
-The curriculum pipeline can use a different one: `OPENTUTOR_PIPELINE_LLM=claude-sdk`.
-
-## Building a topic it doesn't have
-
-On a local installation, ask for anything. It researches the topic across eight sources, drafts a
-curriculum, has a separate Critic agent review it, and revises it for up to
-three rounds. It can return a curriculum that still needs review.
-
-Hosted custom topics provide five starter lessons, then build the full curriculum through Vercel Queues. Builds resume after browser reloads; see [deployment setup](docs/deployment.md#durable-custom-topic-builds).
-
-That loop runs one of two ways:
-
-- **deterministic** (default) — the same fixed sequence every time. Predictable
-  and bounded.
-- **agentic** — an orchestrator decides what to do next from what the Critic
-  actually said, choosing when to build, critique, or finish. Both `build` and
-  `build_module` currently rebuild the full curriculum.
-
-```js
-new CurriculumPipeline({ adapter, state, skills, mode: 'agentic' })
-```
-
-Vercel hosts the web UI and API. Telegram requires a separate always-on process (`npm run bot`). Claw and Hermes run in their own agent environments; they are not Vercel services.
-
-## Hosting it for others
-
-```bash
-npm run web    # then open /admin.html
-```
-
-Add students, see what each has done, remove them. Each gets isolated
-state — own profile, progress, completions, session memory and learning log.
-Set `OPENTUTOR_ADMIN_PASSWORD`, which is deliberately not the password students
-use: these routes read across everyone and delete their data.
-
-Provisioning returns a student access token once. Give it to that student to enter through **Switch student** in the web UI. Admins can reset tokens; the old token stops working immediately. Each authenticated request uses that student’s profile, progress and lesson state. The shared password still opens the original single-user instance.
-
-Deployed to Vercel + Supabase the storage works the same way — run all four migrations in
-`supabase/migrations/`, or the tutor will teach a lesson and forget it.
+| [docs/methodology.md](docs/methodology.md) | How it teaches, and the research behind it |
+| [docs/architecture.md](docs/architecture.md) | How it works: the agents, the lesson flow, the course files |
+| [docs/self-deploy.md](docs/self-deploy.md), [docs/deployment.md](docs/deployment.md) | Hosting on Vercel and Supabase, Telegram, local development |
+| [CLAUDE.md](CLAUDE.md), [AGENTS.md](AGENTS.md) | Working on the code: every change gets an issue and a PR, reviewed by CodeRabbit and Codex |
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
