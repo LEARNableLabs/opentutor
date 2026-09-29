@@ -69,6 +69,8 @@ vi.mock('../../lib/core/deliberate-practice.js', () => ({
   parseDirectives: vi.fn(() => []),
   applyDirectives: vi.fn(() => ({ blocked: false, blockedConcept: null, difficultyOverride: null, formatOverride: null, revisitConcepts: [], requireGoal: false })),
   reviewLesson: vi.fn((concept) => ({ plan: { diagnostic: `Explain ${concept}.` }, steps: ['diagnostic', 'followUp', 'application'] })),
+  parseRetested: vi.fn(() => ({})),
+  withRetest: vi.fn((retested) => retested),
 }));
 
 vi.mock('../../scripts/bot/logger.js', () => ({

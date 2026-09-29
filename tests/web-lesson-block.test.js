@@ -3,7 +3,7 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { TutorStore } from '../lib/core/store.js';
-import { evaluatePractice, formatPracticeFeedback, parseDirectives } from '../lib/core/deliberate-practice.js';
+import { evaluatePractice, formatPracticeFeedback, parseDirectives, parseRetested } from '../lib/core/deliberate-practice.js';
 import { lessonTurn } from '../api/lesson.js';
 
 // #149 — the bot holds a student back while a BLOCK is open; the web only steered the next
@@ -87,12 +87,26 @@ describe.each([
     await start();
     await finish();
     expect(blocks()).toEqual([]);
-    const after = store.readCurriculum('demo').lessons[0];
-    expect([after.engagement, after.delivered]).toEqual(['reviewed', before.delivered]); // re-graded, same date
+    // #227: the retest settles its concept alone; the lesson's own grade and date stay as they were.
+    expect(store.readCurriculum('demo').lessons[0]).toEqual(before);
+    expect(parseRetested(store.readDomainFile('demo', 'practice-feedback.md'))).toEqual({ alpha: 6 });
     expect(store.readProgress().history).toHaveLength(6);
     const next = (await start()).body;
     expect(next.lesson).toEqual({ day: 7, title: 'L7', module: 'Basics', concepts: ['c7'] });
     expect(next.note).toBeUndefined();
+  });
+
+  // #227: passing a retest settles its own concept, never the rest of the lesson that flagged it.
+  it('keeps the BLOCK on a lesson\'s other concept after one of them passes its retest', async () => {
+    const file = path.join(root, 'skills', 'tutor', 'domains', 'demo', 'curriculum.json');
+    const curriculum = JSON.parse(fs.readFileSync(file, 'utf8'));
+    curriculum.lessons[0].concepts = ['alpha', 'beta'];
+    fs.writeFileSync(file, JSON.stringify(curriculum));
+    store.writeDomainFile('demo', 'practice-feedback.md', formatPracticeFeedback(evaluatePractice('', store.readCurriculum('demo'), ''), 'Demo'));
+    expect(blocks()).toEqual(['alpha']);
+    await start();
+    await finish();
+    expect(blocks()).toEqual(['beta']);
   });
 
   // The bot releases the BLOCK after any review. Here it clears only on a passed retest,

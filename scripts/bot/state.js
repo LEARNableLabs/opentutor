@@ -6,7 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PATHS } from './config.js';
-import { completionsFile, recordCompletion, saveCompletions, readCurriculumWithProgress, withoutRuntimeFields, domainFilePath, seedFromTemplate } from '../../lib/core/progress.js';
+import { completionsFile, recordCompletion, readCurriculumWithProgress, withoutRuntimeFields, domainFilePath, seedFromTemplate } from '../../lib/core/progress.js';
 import { log } from './logger.js';
 
 // ── Progress ────────────────────────────────────────────────
@@ -77,11 +77,6 @@ export function getNextLesson(topicSlug) {
   const curriculum = readCurriculum(topicSlug);
   if (!curriculum) return null;
   return curriculum.lessons.find((l) => l.status === 'pending') || null;
-}
-
-/** Persist grade changes made to an already-completed lesson (see markConceptReviewed). */
-export function saveCurriculumProgress(topicSlug, curriculum) {
-  saveCompletions(completionsFile(PATHS.workspace), topicSlug, curriculum);
 }
 
 export function markLessonComplete(topicSlug, day, engagement = {}) {

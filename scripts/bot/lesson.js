@@ -12,9 +12,9 @@
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { parseFirstJson } from '../../lib/core/json.js';
-import { buildStudentModel, formatStudentModel, markConceptReviewed } from '../../lib/core/student-model.js';
-import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives, reviewLesson } from '../../lib/core/deliberate-practice.js';
-import { getNextLesson, markLessonComplete, readCurriculum, saveCurriculumProgress, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
+import { buildStudentModel, formatStudentModel } from '../../lib/core/student-model.js';
+import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives, reviewLesson, parseRetested, withRetest } from '../../lib/core/deliberate-practice.js';
+import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts, getDueReviews, recordReview } from './spaced-repetition.js';
@@ -113,6 +113,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   // Read and enforce deliberate practice directives
   const feedbackMd = readDomainFile(topicSlug, 'practice-feedback.md') || '';
   const directives = parseDirectives(feedbackMd);
+  const retested = parseRetested(feedbackMd);
   const constraints = applyDirectives(directives);
 
   // A BLOCK the last lesson raised is still reviewed, at that lesson, before "all done" (#235),
@@ -146,7 +147,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
       mode: 'standard',
       history: [],
       assessments: [],
-      studentModel: buildStudentModel(learningMd, curriculum, userProfile),
+      studentModel: buildStudentModel(learningMd, curriculum, userProfile, retested),
       startedAt: Date.now(),
       stepStartedAt: Date.now(),
       isReview: true,
@@ -203,7 +204,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   }
 
   // Build student model and select mode
-  const studentModel = buildStudentModel(learningMd, curriculum, userProfile);
+  const studentModel = buildStudentModel(learningMd, curriculum, userProfile, retested);
   const modelText = formatStudentModel(studentModel);
   const mode = selectMode(studentModel, constraints);
   const steps = [...MODE_STEPS[mode]];
@@ -485,9 +486,6 @@ function completeSocraticLesson(chatId, active, _lastAnswer) {
     }
   } else {
     appendMemory(`Review completed: ${active.reviewConcept} (${topicSlug}). Engagement: ${engagement}`);
-    // Release the BLOCK before the practitioner re-evaluates below
-    const reviewed = readCurriculum(topicSlug);
-    if (reviewed) saveCurriculumProgress(topicSlug, markConceptReviewed(reviewed, active.reviewConcept));
   }
 
   writeLearningLog(topicSlug, lesson, active);
@@ -497,7 +495,10 @@ function completeSocraticLesson(chatId, active, _lastAnswer) {
     const learningMd = readDomainFile(topicSlug, 'learning.md') || '';
     const curriculum = readCurriculum(topicSlug);
     const userProfile = readUser();
-    const evaluation = evaluatePractice(learningMd, curriculum, userProfile);
+    // The bot releases a BLOCK after any review: the reviewed concept counts as retested (#227).
+    const before = parseRetested(readDomainFile(topicSlug, 'practice-feedback.md'));
+    const retested = withRetest(before, active.isReview ? active.reviewConcept : null, curriculum);
+    const evaluation = evaluatePractice(learningMd, curriculum, userProfile, retested);
     const feedback = formatPracticeFeedback(evaluation, curriculum?.topic || topicSlug);
     writeDomainFile(topicSlug, 'practice-feedback.md', feedback);
 
