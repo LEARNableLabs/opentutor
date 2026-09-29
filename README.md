@@ -106,8 +106,8 @@ built. On the hosted site, new topics need your own OpenRouter account.
   them:
 
   ```bash
+  touch .env && chmod 600 .env   # private before any secret is written
   printf 'OPENTUTOR_PASSWORD=%s\nOPENTUTOR_ADMIN_PASSWORD=%s\n' "$(openssl rand -hex 24)" "$(openssl rand -hex 24)" >> .env
-  chmod 600 .env
   node --env-file=.env scripts/web/server.js
   ```
 
