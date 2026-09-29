@@ -217,7 +217,7 @@ Set `OPENTUTOR_DATA_DIR=.test-data` to redirect runtime state to an isolated dir
 
 ## Durable web generation (#121)
 
-`topic-service.js` persists a build and awaits queue acceptance before shared `quick-start.js` creates five starter lessons. `topic-builds.js` performs one quick/plan/build/critique stage per delivery, staging model writes in memory and atomically publishing content with an id/revision compare-and-set. The 180-second lease outlasts each bounded stage; stale workers cannot overwrite a recovered or recreated job. Generated content is read before shipped content, with student completions overlaid on stable starter lesson ids.
+`topic-service.js` persists a build and awaits queue acceptance before shared `quick-start.js` creates five starter lessons. `topic-builds.js` performs one quick/plan/build/critique stage per delivery, staging model writes in memory and atomically publishing content with an id/revision compare-and-set. The 300-second lease outlasts each bounded stage (270 seconds of model calls); stale workers cannot overwrite a recovered or recreated job. Generated content is read before shipped content, with student completions overlaid on stable starter lesson ids.
 
 Vercel uses the private `api/build-topic.js` queue consumer in `iad1`. The standalone server scans the same build records through `local-build-worker.js`. `GET /api/topic-build` lists scoped builds for browser recovery; adding a failed topic again resumes the saved stage. Three stage failures require an explicit retry. Three critique rounds can publish with `approved: false`, surfaced in the UI. The Telegram bot reuses quick-start generation but retains its own existing Phase B lifecycle.
 

@@ -48,7 +48,7 @@ it('fences a late result when an expired lease was recovered',async()=>{
   const gate=new Promise(r=>{release=r;});
   const old=step(doc,{now:()=>0,quickStart:async()=>{await gate;return {curriculum:starter('STALE'),intro:'',researchContext:''};}});
   await vi.waitFor(async()=>expect((await readTopicBuild(state,'knots')).lease).toBeTruthy());
-  await step(doc,{now:()=>200000});release();await old;
+  await step(doc,{now:()=>400000});release();await old; // past the 300 s lease
   expect(state.readCurriculum('knots').topic).toBe('Knots');
 });
 it('cannot resurrect content after deletion and recreation',async()=>{
@@ -66,6 +66,7 @@ it('retains starter lessons on repeated Phase B failure and resumes the saved ph
   const broken={generate:async()=>{throw new Error('offline');}};
   for(let i=0;i<3;i++){await expect(step(doc,{adapter:broken})).rejects.toThrow('offline');doc=await readTopicBuild(state,'knots');}
   expect(doc.status).toBe('failed');expect(state.readCurriculum('knots').lessons).toHaveLength(5);
+  expect(doc.error).not.toMatch(/will retry/);expect(doc.error).toMatch(/Retry to try again/); // #226: it waits for the student
   const retried=await prepareTopicBuild(state,{topic:'Knots'});
   expect(retried.doc).toMatchObject({phase:'plan',attempts:0,status:'queued',seq:doc.seq+1});
   expect((await step(retried.doc)).phase).toBe('build');
