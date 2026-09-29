@@ -109,6 +109,25 @@ describe.each([
     expect((await start()).body.lesson).toMatchObject({ day: 8 });
   });
 
+  // Review of #238: the retest question must name the concept as a whole, or the lesson asks its own.
+  it.each([
+    ['replaces a planner question that only contains the concept', 'What is alphabetical order?', /what is alpha and why/],
+    ['keeps a planner question that names the concept', 'Quick check: what is alpha, again?', /Quick check: what is alpha, again\?/],
+  ])('%s', async (_case, retrieval, expected) => {
+    score = 0.1;
+    for (let i = 0; i < 2; i++) { await start(); await finish(); }
+    adapter.generate.mockImplementationOnce(async () => ({ text: JSON.stringify({ ...PLAN, retrieval }) }));
+    expect((await start()).body.reply).toMatch(expected);
+  });
+
+  it('shows the planner a concept the student passed as no longer shaky', async () => {
+    await start();
+    await finish(); // the review of alpha passes
+    await start(); // day 7 is planned
+    const planPrompt = adapter.generate.mock.calls.map(([system]) => system).findLast((system) => !system.includes('## Current Step:'));
+    expect(planPrompt).not.toMatch(/Shaky \(needs reinforcement\):[^\n]*alpha/);
+  });
+
   // #227: two reviews in a row at most, whichever concepts they review.
   it('goes ahead after two reviews in a row, even when they review different concepts', async () => {
     const file = path.join(root, 'skills', 'tutor', 'domains', 'demo', 'curriculum.json');
