@@ -98,7 +98,7 @@ npm run web          # http://localhost:3000
 npm run web:test     # isolated runtime state
 ```
 
-`OPENTUTOR_PORT` and `OPENTUTOR_HOST` select the local listener. `OPENTUTOR_DATA_DIR` redirects local runtime state. Local use can omit the shared password; hosted use cannot.
+`OPENTUTOR_PORT` and `OPENTUTOR_HOST` select the local listener. `OPENTUTOR_DATA_DIR` redirects local runtime state. Without `OPENTUTOR_PASSWORD`, the standalone server answers only direct connections from its own computer: a loopback address and `Host`, with no proxy forwarding headers. Anything else gets a 403 (#221). To serve a group, run `npm run host`: the first run writes a learner password and a different admin password to a private `.env`, later runs reuse them, and it starts the server with them. Put it behind a web server that adds HTTPS, such as Caddy or nginx.
 
 The standalone web server scans saved SQLite build rows and resumes after restart; it does not require Vercel Queues locally. An interrupted stage waits for its three-minute lease to expire before recovery. Keep the process running for builds to progress.
 

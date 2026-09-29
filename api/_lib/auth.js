@@ -18,6 +18,23 @@ function presentedSecret(req) {
   return bearer || req?.headers?.['x-opentutor-password'] || null;
 }
 
+const LOOPBACK_HOSTS = new Set(['localhost', '127.0.0.1', '[::1]']);
+const FORWARDING_HEADERS = ['x-forwarded-for', 'x-forwarded-host', 'x-forwarded-proto', 'forwarded', 'x-real-ip'];
+
+/**
+ * Did this request come straight from this computer (#221)? Only then may a server without a
+ * password answer it: a loopback address, a loopback Host, and no proxy in between. A request
+ * with no socket is an in-process call, not a network request, so it counts as local.
+ */
+function fromThisComputer(req) {
+  const headers = req?.headers || {};
+  if (FORWARDING_HEADERS.some((name) => headers[name])) return false;
+  const host = String(headers.host || '').toLowerCase().replace(/:\d+$/, '');
+  if (host && !LOOPBACK_HOSTS.has(host)) return false;
+  const address = req?.socket?.remoteAddress;
+  return address === undefined || address === '::1' || /^(::ffff:)?127\./.test(address);
+}
+
 /** Is this request allowed? Returns { ok, reason }. */
 export function checkAuth(req) {
   const password = process.env.OPENTUTOR_PASSWORD;
@@ -29,6 +46,10 @@ export function checkAuth(req) {
     }
     // With accounts on, the install is public: only a verified session or credential gets in.
     if (accountsConfigured()) return { ok: false, reason: 'Please sign in.' };
+    // Without a password the server is one person's, on their own computer (#221).
+    if (!fromThisComputer(req)) {
+      return { ok: false, forbidden: true, reason: 'This OpenTutor has no password, so it only answers the computer it runs on. Set OPENTUTOR_PASSWORD (or start it with `npm run host`) to use it from anywhere else.' };
+    }
     return { ok: true };
   }
 
