@@ -128,13 +128,20 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     // A failed turn releases its claim, so the student can try the step again.
     const claim = active.id ? `lesson_turn:${active.id}:${active.step}` : null;
     const token = randomUUID();
-    if (claim) {
-      await state.insertKV(claim, token);
-      if (String(await state.readKV(claim)) !== token) return { status: 409, body: STALE };
-      if (active.step > 0) await safely(() => state.deleteKV(`lesson_turn:${active.id}:${active.step - 1}`), null, 'claim');
-    }
+    let ours = false;
     let answered = false;
     try {
+      if (claim) {
+        await state.insertKV(claim, token);
+        if (String(await state.readKV(claim)) !== token) return { status: 409, body: STALE }; // another request's
+        ours = true;
+        // A request that read the lesson before another finished it can claim after that one let
+        // its claim go: the lesson is read again, and must still be at this step.
+        const now = await state.readKV(kvKey);
+        const current = typeof now === 'string' ? JSON.parse(now) : now;
+        if (current?.id !== active.id || current?.step !== active.step) return { status: 409, body: STALE };
+        if (active.step > 0) await safely(() => state.deleteKV(`lesson_turn:${active.id}:${active.step - 1}`), null, 'claim');
+      }
       const user = await safely(() => state.readUser(), '');
       const course = active.course || String(active.topicSlug || '').replace(/-/g, ' '); // saved before #225: the slug
       const responsePrompt = buildSocraticResponsePrompt(active.plan, said, stepName, user, { final: active.step === steps.length - 1, markdown: true, course });
@@ -192,7 +199,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       };
     } finally {
       // Answered, the claim stays until the next step's claim replaces it, or the lesson ends.
-      if (claim && (!answered || active.step >= steps.length)) await safely(() => state.deleteKV(claim), null, 'claim');
+      if (ours && (!answered || active.step >= steps.length)) await safely(() => state.deleteKV(claim), null, 'claim');
     }
   }
 

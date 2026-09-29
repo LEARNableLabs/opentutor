@@ -276,6 +276,27 @@ describe('what the tutor is sent', () => {
       expect(results.map((r) => r.status).sort()).toEqual([200, 409]);
     });
 
+    it('refuses a request that claims a step only after another finished the lesson', async () => {
+      const { lessonId, totalSteps } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      for (let i = 0; i < totalSteps - 1; i++) await lessonTurn(ctx, { topicSlug: 'demo', answer: `a${i}`, lessonId, step: i });
+      // B reads the lesson at its last step, then pauses until A has finished it.
+      const readKV = state.readKV.bind(state);
+      let release;
+      const paused = new Promise((resolve) => { release = resolve; });
+      let first = true;
+      state.readKV = (key) => {
+        const value = readKV(key);
+        if (first && key === 'web_lesson:demo') { first = false; return paused.then(() => value); }
+        return value;
+      };
+      const b = lessonTurn(ctx, { topicSlug: 'demo', answer: 'last', lessonId, step: totalSteps - 1 });
+      state.readKV = readKV;
+      const a = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'last', lessonId, step: totalSteps - 1 });
+      expect(a.body.done).toBe(true);
+      release();
+      expect((await b).status).toBe(409);
+    });
+
     it('lets the student retry a step whose model call failed', async () => {
       const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
       adapter.generate.mockRejectedValueOnce(new Error('model down'));

@@ -284,6 +284,7 @@ async function sendLessonAnswer() {
     let bubble = null;
     const topic = activeTopicSlug;
     const data = await streamLesson({ topicSlug: topic, answer, ...lessonAt }, (chunk) => {
+      if (topic !== activeTopicSlug) return; // streaming for a topic the student has left
       if (!bubble) { typing.remove(); bubble = appendLessonMsg('tutor', ''); }
       appendToBubble(bubble, chunk);
     });
