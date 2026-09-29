@@ -7,6 +7,7 @@ it.each([
   ['text after it', '{"a":1}\n\nHope this helps! {x}', { a: 1 }],
   ['a second object after it', '{"a":1}\n{"b":2}', { a: 1 }],
   ['prose braces before it', 'Use {braces} with care: {"a":1}', { a: 1 }],
+  ['a prose brace that never closes before it', 'Use { to mark a block.\n{"a":1}', { a: 1 }],
   ['braces and quotes inside its strings', '{"a":"} { \\" }"}', { a: '} { " }' }],
   ['a fence around it', '```json\n{"a":{"b":[1,2]}}\n```', { a: { b: [1, 2] } }],
 ])('reads the first object with %s', (_case, text, expected) => {
