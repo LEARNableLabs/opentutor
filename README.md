@@ -103,12 +103,13 @@ built. On the hosted site, new topics need your own OpenRouter account.
   `OPENTUTOR_PASSWORD` uses the shared workspace (without it, anyone who can reach
   the server does), and `OPENTUTOR_ADMIN_PASSWORD` opens `/admin.html`, where you
   add students. This writes them to `.env`, readable only by you, without printing
-  them:
+  them, and stops before starting the server if a step fails:
 
   ```bash
-  touch .env && chmod 600 .env   # private before any secret is written
-  printf '\nOPENTUTOR_PASSWORD=%s\nOPENTUTOR_ADMIN_PASSWORD=%s\n' "$(openssl rand -hex 24)" "$(openssl rand -hex 24)" >> .env
-  node --env-file=.env scripts/web/server.js
+  p=$(openssl rand -hex 24) && a=$(openssl rand -hex 24) &&
+    touch .env && chmod 600 .env &&   # private before any secret is written
+    printf '\nOPENTUTOR_PASSWORD=%s\nOPENTUTOR_ADMIN_PASSWORD=%s\n' "$p" "$a" >> .env &&
+    node --env-file=.env scripts/web/server.js
   ```
 
   Each student gets a one-time access token to enter at `/login.html` ("Have an
