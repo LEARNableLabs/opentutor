@@ -940,3 +940,21 @@ it('keeps the companion out of the way of a draft, after a round trip', async ()
   await settle();
   expect(seen(f)).toBe(null);
 });
+
+it('sends one chat message at a time, so the companion thinks until the reply arrives', async () => {
+  const { f, pend } = twoTabs();
+  await settle();
+  await tab(f, 'chat');
+  const enter = { key: 'Enter', shiftKey: false, preventDefault() {} };
+  f.$('#chat-input').value = 'first';
+  const first = f.$('#chat-input').dispatch('keydown', enter);
+  await settle();
+  f.$('#chat-input').value = 'second, while the first is pending';
+  await f.$('#chat-input').dispatch('keydown', enter); // Enter, like the disabled Send button, waits
+  await settle();
+  expect(f.calls.filter((c) => c.url === '/api/chat')).toHaveLength(1);
+  expect(f.$('#chat-input').value).toBe('second, while the first is pending'); // kept for later
+  pend.chat([200, { reply: 'One.', model: 'm' }]);
+  await first; await settle();
+  expect(seen(f)).toBe(null);
+});

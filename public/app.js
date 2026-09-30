@@ -633,7 +633,8 @@ $('#chat-input').addEventListener('keydown', (e) => {
 async function sendChat() {
   const input = $('#chat-input');
   const message = input.value.trim();
-  if (!message) return;
+  // One message at a time: Enter waits for the reply, as the disabled Send button does (#269).
+  if (!message || $('#btn-send').disabled) return;
 
   appendChat('user', message);
   companion('chat-thinking', 'chat');
