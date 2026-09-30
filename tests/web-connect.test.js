@@ -640,3 +640,21 @@ it('lets the chat layout shrink to the visible window on phones', () => {
   expect(rule).toMatch(/height: 100dvh/);
   expect(rule).toMatch(/min-height: 0/);
 });
+
+it('knows a saved key at once, without waiting for the status to reload', async () => {
+  const never = deferred();
+  let gets = 0;
+  const { $ } = frontend((url, init) => {
+    if (url !== '/api/openrouter') return null;
+    if (init.method === 'POST') return [200, { connected: true, freeTier: false, limitRemaining: 5 }];
+    return ++gets === 1 ? NO_KEY : never.promise; // the reload after saving hangs
+  });
+  await settle();
+  $('#key-input').value = 'sk-or-mine';
+  await $('#key-form').dispatch('submit');
+  await settle();
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+});
+

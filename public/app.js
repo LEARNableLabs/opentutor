@@ -727,6 +727,7 @@ $('#key-form').addEventListener('submit', async (event) => {
     const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'save', key }) });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) return void ($('#connect-message').textContent = data.error || 'Could not save the key. Please try again.');
+    knowKey(true);
     if (data.freeTier) showConnect({ error: 'Saved, but your OpenRouter account has no credits yet. Add some at openrouter.ai to keep learning.' });
     else $('#connect-banner').classList.add('hidden');
     loadKeyStatus().catch(() => {});
@@ -741,7 +742,8 @@ $('#btn-connect-browse').addEventListener('click', () => {
   $('.nav-btn[data-view="topics"]').click();
 });
 $('#btn-disconnect').addEventListener('click', async () => {
-  await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'disconnect' }) });
+  const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'disconnect' }) });
+  if (res.ok) knowKey(false);
   showConnect({ error: 'Disconnected. To revoke the key itself, delete it in your OpenRouter settings (openrouter.ai/settings/keys).' });
   loadKeyStatus().catch(() => {});
 });
@@ -757,6 +759,12 @@ async function offerKeyForChat() {
   if (!$('#connect-banner').classList.contains('hidden')) return;
   showConnect({ error: 'Chatting with OpenTutor uses your own OpenRouter key. Connect your account or paste a key to start.' });
   chatOffer = true;
+}
+
+// A save, connect or disconnect the server confirmed is the newest status: nothing older may undo it.
+function knowKey(connected) {
+  keyStatusSeq++;
+  chatNeedsKey = !connected;
 }
 
 // Only self-signup accounts get an answer; anyone else sees nothing.
@@ -788,7 +796,8 @@ async function finishConnect() {
     const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'connect', code }) });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) showConnect({ error: data.error || 'Could not connect OpenRouter. Please try again.' });
-    else if (data.freeTier) showConnect({ error: 'Connected, but your OpenRouter account has no credits yet. Add some at openrouter.ai to keep learning.' });
+    else knowKey(true);
+    if (res.ok && data.freeTier) showConnect({ error: 'Connected, but your OpenRouter account has no credits yet. Add some at openrouter.ai to keep learning.' });
   } catch {
     showConnect({ error: 'Could not connect OpenRouter. Please try again.' });
   }
