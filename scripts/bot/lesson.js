@@ -12,9 +12,10 @@
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { parseFirstJson } from '../../lib/core/json.js';
-import { buildStudentModel, formatStudentModel, markConceptReviewed } from '../../lib/core/student-model.js';
-import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives, reviewLesson } from '../../lib/core/deliberate-practice.js';
-import { getNextLesson, markLessonComplete, readCurriculum, saveCurriculumProgress, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
+import { parseAssessment } from '../../lib/core/assessment.js';
+import { buildStudentModel, formatStudentModel } from '../../lib/core/student-model.js';
+import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives, reviewLesson, parseRetested, withRetest, retestOutcome, namesConcept } from '../../lib/core/deliberate-practice.js';
+import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
 import { PATHS } from './config.js';
 import { appendMessage } from './session.js';
 import { registerLessonConcepts, getDueReviews, recordReview } from './spaced-repetition.js';
@@ -113,6 +114,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   // Read and enforce deliberate practice directives
   const feedbackMd = readDomainFile(topicSlug, 'practice-feedback.md') || '';
   const directives = parseDirectives(feedbackMd);
+  const retested = parseRetested(feedbackMd);
   const constraints = applyDirectives(directives);
 
   // A BLOCK the last lesson raised is still reviewed, at that lesson, before "all done" (#235),
@@ -146,7 +148,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
       mode: 'standard',
       history: [],
       assessments: [],
-      studentModel: buildStudentModel(learningMd, curriculum, userProfile),
+      studentModel: buildStudentModel(learningMd, curriculum, userProfile, retested),
       startedAt: Date.now(),
       stepStartedAt: Date.now(),
       isReview: true,
@@ -203,7 +205,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   }
 
   // Build student model and select mode
-  const studentModel = buildStudentModel(learningMd, curriculum, userProfile);
+  const studentModel = buildStudentModel(learningMd, curriculum, userProfile, retested);
   const modelText = formatStudentModel(studentModel);
   const mode = selectMode(studentModel, constraints);
   const steps = [...MODE_STEPS[mode]];
@@ -278,6 +280,12 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   const teacherConfig = readDomainFile(topicSlug, 'teacher.md') || '';
   const exerciseFormat = selectExerciseFormat(studentModel, lessonPlan, teacherConfig);
 
+  // The planner's question is the retest only if it names the concept as a whole (#227); otherwise
+  // the lesson asks its own, and keeps it in the plan, so the answer is graded against it.
+  if (retrievalConcept && !(lessonPlan.retrieval && namesConcept(lessonPlan.retrieval, retrievalConcept))) {
+    lessonPlan.retrieval = `Before we start — quick check: what's <b>${retrievalConcept}</b> and why does it matter?`;
+  }
+
   // Store active lesson state with dynamic steps
   activeLessons[chatId] = {
     topicSlug,
@@ -301,13 +309,9 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   log.info({ topic: topicSlug, lessonDay, difficulty: lessonPlan.difficulty, retrieval: retrievalConcept, interleave: interleaveConcept }, 'lesson plan generated');
 
   // Send retrieval check or diagnostic (with suggested options)
-  if (retrievalConcept && lessonPlan.retrieval) {
+  if (retrievalConcept) {
     await channel.sendMessage(chatId, lessonPlan.retrieval);
     appendMessage(chatId, 'assistant', lessonPlan.retrieval);
-  } else if (retrievalConcept) {
-    const retrievalQ = `Before we start — quick check: what's <b>${retrievalConcept}</b> and why does it matter?`;
-    await channel.sendMessage(chatId, retrievalQ);
-    appendMessage(chatId, 'assistant', retrievalQ);
   } else {
     // No retrieval due: it was already shifted out of `steps`, so step 0 is the diagnostic
     const goalPrefix = lessonPlan.goal ? `<b>Goal:</b> ${lessonPlan.goal}\n\n` : '';
@@ -381,7 +385,8 @@ export async function handleLessonAnswer(text, chatId, channel) {
   ], { model: responsePrompt.model, outputMode: responsePrompt.outputMode });
 
   // Parse hidden assessment (stripped before sending to student)
-  const { assessment, visibleText } = parseAssessment(response.text);
+  // The shared parser (#224): a grade only with a score from 0 to 1, and never shown, however it's written.
+  const { assessment, visible: visibleText } = parseAssessment(response.text);
   if (assessment) {
     active.assessments.push({ step: stepName, ...assessment });
     log.info({ step: stepName, score: assessment.score, understanding: assessment.understanding }, 'step assessment');
@@ -485,9 +490,6 @@ function completeSocraticLesson(chatId, active, _lastAnswer) {
     }
   } else {
     appendMemory(`Review completed: ${active.reviewConcept} (${topicSlug}). Engagement: ${engagement}`);
-    // Release the BLOCK before the practitioner re-evaluates below
-    const reviewed = readCurriculum(topicSlug);
-    if (reviewed) saveCurriculumProgress(topicSlug, markConceptReviewed(reviewed, active.reviewConcept));
   }
 
   writeLearningLog(topicSlug, lesson, active);
@@ -497,7 +499,12 @@ function completeSocraticLesson(chatId, active, _lastAnswer) {
     const learningMd = readDomainFile(topicSlug, 'learning.md') || '';
     const curriculum = readCurriculum(topicSlug);
     const userProfile = readUser();
-    const evaluation = evaluatePractice(learningMd, curriculum, userProfile);
+    // The bot releases a BLOCK after any review, and a lesson's right opening retrieval settles its
+    // concept, as on the web: either counts as a passed retest (#227).
+    const before = parseRetested(readDomainFile(topicSlug, 'practice-feedback.md'));
+    const outcome = retestOutcome(active, { passedReview: true });
+    const retested = withRetest(before, outcome, curriculum, { openedThisLesson: !active.isReview });
+    const evaluation = evaluatePractice(learningMd, curriculum, userProfile, retested);
     const feedback = formatPracticeFeedback(evaluation, curriculum?.topic || topicSlug);
     writeDomainFile(topicSlug, 'practice-feedback.md', feedback);
 
@@ -620,21 +627,6 @@ export function computeStreak(progressOverride) {
 }
 
 // ── Assessment parsing ─────────────────────────────────────
-
-function parseAssessment(responseText) {
-  const assessmentMatch = responseText.match(/<assessment>([\s\S]*?)<\/assessment>/);
-  if (!assessmentMatch) return { assessment: null, visibleText: responseText.trim() };
-
-  let assessment = null;
-  try {
-    assessment = JSON.parse(assessmentMatch[1]);
-  } catch {
-    log.warn('assessment parse failed');
-  }
-
-  const visibleText = responseText.replace(/<assessment>[\s\S]*?<\/assessment>\s*/g, '').trim();
-  return { assessment, visibleText };
-}
 
 // ── Exercise format selection ──────────────────────────────
 
