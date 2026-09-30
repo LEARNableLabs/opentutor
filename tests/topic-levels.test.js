@@ -172,3 +172,18 @@ it('holds generated levels to the same rule', async () => {
   expect(topicMeta({ level: 'advanced', prerequisites: ['basic algebra'] }).level).toBe('intermediate');
   expect(topicMeta({ level: 'beginner', prerequisites: ['curiosity'] }).level).toBe('beginner');
 });
+
+it('lets "helpful" exclude only what it qualifies', async () => {
+  const { isUniversity } = await import('../lib/core/quick-start.js');
+  expect(isUniversity('linear algebra (tensor basics helpful)')).toBe(true);
+  expect(isUniversity('organic chemistry helpful but not required')).toBe(false);
+});
+
+it('takes level and prerequisites from one source, never a mix', async () => {
+  const { withTopicMeta } = await import('../lib/core/quick-start.js');
+  const quick = { level: 'beginner', prerequisites: ['curiosity'] };
+  expect(withTopicMeta({ level: 'nope', prerequisites: ['calculus'] }, quick)).toMatchObject(quick);
+  expect(withTopicMeta({ level: 'advanced', prerequisites: 'calculus' }, quick)).toMatchObject(quick);
+  expect(withTopicMeta({ level: 'advanced', prerequisites: ['calculus'] }, quick)).toMatchObject({ level: 'advanced', prerequisites: ['calculus'] });
+  expect(withTopicMeta({ prerequisites: ['calculus'] }, {})).toEqual({ prerequisites: ['calculus'] }); // nothing complete: whatever is valid
+});
