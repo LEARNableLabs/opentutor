@@ -71,7 +71,7 @@ export async function handleCallback(callbackQuery, channel, skills) {
         if (ctx) {
           await channel.sendTyping(chatId);
           const result = await generate(
-            `${VOICE}\n\nGive a brief, student-facing hint using the exercise context in the user message. Do not give away the answer. Ask at most one guiding question.`,
+            `${VOICE}\n\nThe student asked for a hint, so they are stuck: no humor in this reply, whatever the voice allows elsewhere. Give a brief, student-facing hint using the exercise context in the user message. Do not give away the answer. Ask at most one guiding question.`,
             [{ role: 'user', content: JSON.stringify({ request: 'I need a hint.', exercise: ctx }) }],
             { model: 'cheap', outputMode: 'student' }
           );

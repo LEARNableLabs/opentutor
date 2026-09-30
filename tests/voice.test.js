@@ -67,5 +67,8 @@ it('the Telegram exercise hint speaks in the voice', () => {
   const source = fs.readFileSync('scripts/bot/callbacks.js', 'utf8');
   expect(source).toMatch(/import \{ VOICE \} from '..\/..\/lib\/core\/prompts\.js'/);
   const hint = source.slice(source.indexOf("data.endsWith(':hint')"));
-  expect(hint.slice(0, hint.indexOf('sendMessage'))).toMatch(/generate\(\s*`\$\{VOICE\}/);
+  const prompt = hint.slice(0, hint.indexOf('sendMessage'));
+  expect(prompt).toMatch(/generate\(\s*`\$\{VOICE\}/);
+  // A student asking for a hint is stuck, and this path has no record of their misses: no wit.
+  expect(prompt).toMatch(/asked for a hint, so they are stuck: no humor/);
 });
