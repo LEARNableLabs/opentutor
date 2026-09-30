@@ -16,6 +16,7 @@ import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
+import { suggestedAnswers, settleOptions } from '../lib/core/answer-options.js';
 import { parseDirectives, parseRetested, reviewLesson, namesConcept } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter, stripGrades } from '../lib/core/assessment.js';
 import { parseFirstJson } from '../lib/core/json.js';
@@ -140,7 +141,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
     const user = await safely(() => state.readUser(), '');
     const course = active.course || String(active.topicSlug || '').replace(/-/g, ' '); // saved before #225: the slug
-    const responsePrompt = buildSocraticResponsePrompt(active.plan, said, stepName, user, { final: active.step === steps.length - 1, markdown: true, course });
+    // A next question with suggested answers must be asked as planned: they were written for it (#255).
+    const askAsPlanned = !!suggestedAnswers(active.plan, steps[active.step + 1]);
+    const responsePrompt = buildSocraticResponsePrompt(active.plan, said, stepName, user, { final: active.step === steps.length - 1, markdown: true, course, askAsPlanned });
     const adapter = await getAdapter();
     const response = await adapter.generate(
       responsePrompt.system + '\n\nReturn only polished text.',
@@ -201,6 +204,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         done,
         lesson: active.lesson,
         lessonId: active.id,
+        ...(!done && suggested(active.plan, steps[active.step])),
         ...(mood && { mood }),
         // Telling a student "done" for work that was not recorded is worse than
         // telling them it did not save. They can at least decide what to do.
@@ -214,7 +218,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // free lesson. A new one is planned only when there is nothing to show.
   const shown = active && lastShown(active);
   if (shown != null) {
-    return { status: 200, body: { reply: shown, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true } };
+    return { status: 200, body: { reply: shown, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true, ...suggested(active.plan, steps[active.step]) } };
   }
 
   // ── Start new lesson ──────────────────────────────────────
@@ -339,10 +343,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // answer always settles the concept it was asked about.
   if (retest && !(hasRetrieval && namesConcept(plan.retrieval, retest.target))) {
     plan.retrieval = `Before we start — what is ${retest.target} and why does it matter?`;
+    plan.retrievalOptions = null; // the planner's options answered a different question
   }
   // #148: no retrieval question, no retrieval step. The lesson opens on the diagnostic,
   // and the first answer is graded as the diagnostic, not as a retrieval check.
   const lessonSteps = hasRetrieval || retest ? STEPS : STEPS.filter((s) => s !== 'retrieval');
+  settleOptions(plan);
 
   const started = {
     id: randomUUID(),
@@ -362,7 +368,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   await state.writeKV(kvKey, JSON.stringify(started));
 
-  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, lessonId: started.id, ...(note ? { note } : {}) } };
+  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, lessonId: started.id, ...(note ? { note } : {}), ...suggested(plan, lessonSteps[0]) } };
 }
 
 // ── Helpers ────────────────────────────────────────────────
@@ -371,6 +377,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 // so everything here is awaited — awaiting a plain value is a no-op.
 
 const FAILED = Symbol('failed');
+
+// #255: the suggested answers for the question the student is about to answer, if it has any.
+function suggested(plan, step) {
+  const options = suggestedAnswers(plan, step);
+  return options ? { options } : {};
+}
 
 const withGoal = (plan, question) => (plan.goal ? `**Goal:** ${plan.goal}\n\n` : '') + question;
 

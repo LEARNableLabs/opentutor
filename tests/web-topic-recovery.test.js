@@ -18,7 +18,7 @@ function frontend({ builds = [], buildStatus = null } = {}) {
       click() { return listeners.get('click')?.(); },
       focus() { this.focused = true; },
       appendChild(child) { this.children.push(child); },
-      remove() {}, querySelectorAll() { return []; },
+      remove() {}, querySelectorAll() { return []; }, replaceChildren(...nodes) { this.children = nodes; },
     };
   };
   const nodes = new Map([...html.matchAll(/<[^>]*\bid="([^"]+)"[^>]*>/g)].map(([tag, id]) =>

@@ -252,6 +252,19 @@ input::placeholder {
 
 #topic-select,
 #lesson-input-area,
+/* #255: suggested answers sit above the answer box, one tap each. */
+#answer-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.answer-option {
+  text-align: left;
+  font-weight: 400;
+}
+
 #chat-input-area,
 #onboarding-input-area,
 #add-topic-form {

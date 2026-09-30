@@ -166,3 +166,68 @@ describe('BLOCK review', () => {
     expect(getActiveLesson(104).isReview).toBeFalsy();
   });
 });
+
+describe('suggested answers (#255)', () => {
+  const OPTIONS = {
+    retrievalOptions: ['alpha is a base', 'alpha is a bug', 'alpha is a font', "I don't remember"],
+    diagnosticOptions: ['d1', 'd2', 'd3', "I'm not sure"],
+    followUpOptions: ['f1', 'f2', 'f3', "I'm not sure"],
+  };
+  const buttonsOf = (call) => (call?.[2]?.buttons || []).flat().map((b) => b.text.replace(/^\d+\. /, ''));
+  beforeEach(() => {
+    generate.mockImplementation(async (system) => {
+      if (system.includes('assessing whether a student correctly recalled')) return { text: 'easy' };
+      if (system.includes('## Current Step:')) return { text: REPLY };
+      return { text: JSON.stringify({ ...PLAN, ...OPTIONS }) };
+    });
+  });
+
+  it('puts the buttons on the opening retrieval question too', async () => {
+    writeCurriculum([lesson(1, ['alpha'], { status: 'completed', engagement: 'correct' }), lesson(2, ['beta'])]);
+    getDueReviews.mockReturnValue([{ concept: 'alpha' }]);
+    await deliverNextLesson(TOPIC, 201, channel, new Map());
+    expect(buttonsOf(channel.sendMessage.mock.calls.at(-1)).sort()).toEqual([...OPTIONS.retrievalOptions].sort());
+  });
+
+  it('decides to skip the follow-up before replying, so the reply asks what really comes next', async () => {
+    writeCurriculum([lesson(1, ['alpha']), lesson(2, ['beta'])]);
+    await deliverNextLesson(TOPIC, 202, channel, new Map());
+    expect(getActiveLesson(202).mode).toBe('standard');
+    await answer(202, 'A long, confident diagnostic answer that clearly shows the student already understands alpha well.');
+    const prompt = generate.mock.calls.map(([system]) => system).findLast((s) => s.includes('## Current Step:'));
+    expect(prompt).not.toMatch(/Ask the next question as the lesson plan words it/); // the follow-up is skipped
+    expect(prompt).toMatch(/strong enough to skip the follow-up question/);
+    expect(prompt).toMatch(/present the application challenge from the lesson plan\. Ask nothing else/);
+    expect(prompt).not.toMatch(/What made you think that\?/); // the diagnostic's probe would be a second question
+    const active = getActiveLesson(202);
+    expect(active.steps[active.step]).toBe('application');
+    expect(buttonsOf(channel.sendMessage.mock.calls.at(-1))).toEqual([]); // application: none
+  });
+  it('lists long answers in full in the message, with numbered buttons, so a tap sends what the student read', async () => {
+    const long = 'Neither weeds, because each expects the other to do it <eventually>';
+    generate.mockImplementation(async (system) => {
+      if (system.includes('## Current Step:')) return { text: REPLY };
+      return { text: JSON.stringify({ ...PLAN, diagnosticOptions: ['Both weed the garden', long, "I'm not sure"] }) };
+    });
+    writeCurriculum([lesson(1, ['alpha']), lesson(2, ['beta'])]);
+    await deliverNextLesson(TOPIC, 203, channel, new Map());
+    const [, text, options] = channel.sendMessage.mock.calls.at(-1);
+    expect(text).toContain('Neither weeds, because each expects the other to do it &lt;eventually&gt;');
+    const labels = options.buttons.flat().map((b) => b.text);
+    expect(labels).toEqual(['1', '2', '3']);
+    const shown = getActiveLesson(203).plan.diagnosticOptions;
+    expect(text).toContain(`${shown.indexOf(long) + 1}. Neither weeds`); // the number on the button is the number in the list
+  });
+
+  it('shows one set of answers when the diagnostic is numbered multiple choice', async () => {
+    generate.mockImplementation(async (system) => {
+      if (system.includes('## Current Step:')) return { text: REPLY };
+      return { text: JSON.stringify({ ...PLAN, ...OPTIONS, exerciseFormat: 'mc', mcOptions: [{ label: 'A', text: 'mc one' }, { label: 'B', text: 'mc two' }] }) };
+    });
+    writeCurriculum([lesson(1, ['alpha']), lesson(2, ['beta'])]);
+    await deliverNextLesson(TOPIC, 204, channel, new Map());
+    const [, text, options] = channel.sendMessage.mock.calls.at(-1);
+    expect(text).toContain('1. mc one');
+    expect(buttonsOf([null, text, options])).toEqual([]); // no suggested-answer buttons on top of the numbered choices
+  });
+});

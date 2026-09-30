@@ -11,6 +11,8 @@ vi.mock('../../scripts/bot/lesson.js', () => ({
   getLessonContext: vi.fn(),
   setLastExerciseResult: vi.fn(),
   completeLessonAfterExercise: vi.fn(),
+  getActiveLesson: vi.fn(),
+  handleLessonAnswer: vi.fn(),
 }));
 
 vi.mock('../../scripts/bot/claude.js', () => ({
@@ -27,7 +29,7 @@ vi.mock('../../scripts/bot/logger.js', () => ({
 }));
 
 import { handleCallback } from '../../scripts/bot/callbacks.js';
-import { getCorrectAnswer } from '../../scripts/bot/lesson.js';
+import { getCorrectAnswer, getActiveLesson, handleLessonAnswer } from '../../scripts/bot/lesson.js';
 import { handleOnboardingCallback, isOnboarding } from '../../scripts/bot/onboarding.js';
 
 describe('handleCallback', () => {
@@ -114,5 +116,40 @@ describe('handleCallback', () => {
 
     expect(handleOnboardingCallback).not.toHaveBeenCalled();
     expect(channel.sendMessage).toHaveBeenCalledWith(1, expect.stringContaining('older question'));
+  });
+});
+
+// #259 review: a suggested-answer button answers only the question it came with.
+describe('suggested-answer buttons', () => {
+  const channel = { answerCallback: vi.fn(), sendMessage: vi.fn(), editMessageButtons: vi.fn(), sendTyping: vi.fn() };
+  const lesson = (step) => ({
+    id: 'a1b2c3d4', topicSlug: 'game-theory', lessonDay: 3, steps: ['retrieval', 'diagnostic', 'followUp', 'application'], step,
+    plan: { retrievalOptions: ['r0', 'r1', "I don't remember"], diagnosticOptions: ['d0', 'd1', "I'm not sure"] },
+  });
+  const tap = (data) => handleCallback({ id: 'cb', data, message: { chat: { id: 7 }, message_id: 70 } }, channel, new Map());
+  beforeEach(() => vi.clearAllMocks());
+
+  it('sends the tapped answer for the question being asked', async () => {
+    getActiveLesson.mockReturnValue(lesson(1));
+    await tap('ans:a1b2c3d4:diagnostic:1');
+    expect(handleLessonAnswer).toHaveBeenCalledWith('d1', 7, channel);
+  });
+
+  it('reads the cleaned list the buttons were built from, so a tap sends what it showed', async () => {
+    getActiveLesson.mockReturnValue({ ...lesson(1), plan: { diagnosticOptions: ['d0', '  ', 'd1', "I'm not sure"] } });
+    await tap('ans:a1b2c3d4:diagnostic:1'); // the second button shown is d1: the blank one was never shown
+    expect(handleLessonAnswer).toHaveBeenCalledWith('d1', 7, channel);
+  });
+
+  it.each([
+    ['a question the lesson has moved past', 'ans:a1b2c3d4:retrieval:0'],
+    ['a replanned lesson with the same topic, day and step', 'ans:99887766:diagnostic:0'],
+    ['before lessons had ids', 'ans:game-theory:3:diagnostic:0'],
+  ])('ignores a button from %s', async (_case, data) => {
+    getActiveLesson.mockReturnValue(lesson(1));
+    await tap(data);
+    expect(handleLessonAnswer).not.toHaveBeenCalled();
+    expect(channel.editMessageButtons).toHaveBeenCalledWith(7, 70, []);
+    expect(channel.sendMessage).toHaveBeenCalledWith(7, expect.stringContaining('That question has passed'));
   });
 });

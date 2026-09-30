@@ -9,6 +9,8 @@
  * Mid-lesson branching: steps expand or contract based on student answers.
  */
 
+import { randomBytes } from 'node:crypto';
+import { suggestedAnswers, settleOptions } from '../../lib/core/answer-options.js';
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { parseFirstJson } from '../../lib/core/json.js';
@@ -138,6 +140,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
     const review = reviewLesson(constraints.blockedConcept); // shared with the web lesson (#149)
     activeLessons[chatId] = {
+    id: newLessonId(),
       topicSlug,
       lessonDay,
       lesson,
@@ -284,10 +287,13 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   // the lesson asks its own, and keeps it in the plan, so the answer is graded against it.
   if (retrievalConcept && !(lessonPlan.retrieval && namesConcept(lessonPlan.retrieval, retrievalConcept))) {
     lessonPlan.retrieval = `Before we start — quick check: what's <b>${retrievalConcept}</b> and why does it matter?`;
+    lessonPlan.retrievalOptions = null; // the planner's answers were for a different question
   }
+  settleOptions(lessonPlan);
 
   // Store active lesson state with dynamic steps
   activeLessons[chatId] = {
+    id: newLessonId(),
     topicSlug,
     lessonDay,
     lesson,
@@ -310,15 +316,18 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
   // Send retrieval check or diagnostic (with suggested options)
   if (retrievalConcept) {
-    await channel.sendMessage(chatId, lessonPlan.retrieval);
+    const { text: msgText, msgOptions } = appendOptionsHintAndButtons(lessonPlan.retrieval, activeLessons[chatId], 'retrieval');
+    await channel.sendMessage(chatId, msgText, msgOptions);
     appendMessage(chatId, 'assistant', lessonPlan.retrieval);
   } else {
-    // No retrieval due: it was already shifted out of `steps`, so step 0 is the diagnostic
+    // No retrieval due: it was already shifted out of `steps`. Step 0 is the diagnostic, except in a
+    // quick lesson, which goes straight to the application: ask that, with its own (lack of) buttons.
+    const first = activeLessons[chatId].steps[0];
     const goalPrefix = lessonPlan.goal ? `<b>Goal:</b> ${lessonPlan.goal}\n\n` : '';
-    const diagnosticMsg = formatDiagnosticMessage(activeLessons[chatId]);
-    const { text: msgText, msgOptions } = appendOptionsHintAndButtons(goalPrefix + diagnosticMsg, activeLessons[chatId], 'diagnostic');
+    const question = first === 'diagnostic' || !lessonPlan[first] ? formatDiagnosticMessage(activeLessons[chatId]) : lessonPlan[first];
+    const { text: msgText, msgOptions } = appendOptionsHintAndButtons(goalPrefix + question, activeLessons[chatId], first);
     await channel.sendMessage(chatId, msgText, msgOptions);
-    appendMessage(chatId, 'assistant', diagnosticMsg);
+    appendMessage(chatId, 'assistant', question);
   }
 }
 
@@ -379,7 +388,17 @@ export async function handleLessonAnswer(text, chatId, channel) {
 
   // Generate Socratic response (cheap call)
   const user = readUser();
-  const responsePrompt = buildSocraticResponsePrompt(active.plan, text, stepName, user);
+  // Mid-lesson branching, decided before the reply so it asks what really comes next (#255): a strong
+  // early answer skips the follow-up. (The history check counts the reply about to be added.)
+  if (active.mode === 'standard' && active.step + 1 < active.steps.length - 1
+    && text.length > 80 && active.history.length + 1 <= 4 && active.steps[active.step + 1] === 'followUp') {
+    active.steps.splice(active.step + 1, 1);
+    log.info({ topic: active.topicSlug }, 'student nailed it — skipping follow-up');
+  }
+  const nextStep = active.steps[active.step + 1];
+  // A next question with suggested answers must be asked as planned: they were written for it (#255).
+  const askAsPlanned = !!suggestedAnswers(active.plan, nextStep);
+  const responsePrompt = buildSocraticResponsePrompt(active.plan, text, stepName, user, { askAsPlanned, nextStep });
   const response = await generate(responsePrompt.system, [
     ...active.history,
   ], { model: responsePrompt.model, outputMode: responsePrompt.outputMode });
@@ -395,18 +414,6 @@ export async function handleLessonAnswer(text, chatId, channel) {
   active.history.push({ role: 'assistant', content: visibleText });
   active.step++;
   persistActiveLesson(chatId);
-
-  // Mid-lesson branching: detect if student is breezing through
-  if (active.mode === 'standard' && active.step < active.steps.length - 1) {
-    if (text.length > 80 && active.history.length <= 4) {
-      // Strong answer early — consider skipping follow-up
-      const nextStep = active.steps[active.step];
-      if (nextStep === 'followUp' && text.length > 80) {
-        active.steps.splice(active.step, 1); // remove followUp
-        log.info({ topic: active.topicSlug }, 'student nailed it — skipping follow-up');
-      }
-    }
-  }
 
   // If transitioning from retrieval to diagnostic, prepend the goal
   const nextStep2 = active.steps[active.step];
@@ -693,24 +700,38 @@ function formatDiagnosticMessage(active) {
 
 // ── Suggested answer options ───────────────────────────────
 
-function buildSuggestedOptions(options, topicSlug, lessonDay, step) {
-  if (!options || !Array.isArray(options) || options.length < 2) return null;
+// A button names the lesson it belongs to by a per-lesson id (#259): /next can replan the same
+// topic, day and step, and an old button must not answer the new plan. It also keeps
+// callback_data short (Telegram allows 64 bytes; a long topic slug did not fit with everything else).
+export function newLessonId() {
+  return randomBytes(4).toString('hex');
+}
 
-  return options.map((opt, i) => [{
-    text: `${i + 1}. ${String(opt).slice(0, 45)}`,
-    callback_data: `ans:${topicSlug}:${lessonDay}:${step}:${i}`,
-  }]);
+// A button shows what a tap sends (#259). Answers that fit on a button go on it whole; when any is
+// too long, the message lists them in full and the buttons carry only their numbers.
+const BUTTON_TEXT = 45;
+const escapeHtml = (text) => String(text).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+
+function buildSuggestedOptions(options, lessonId, step, numbersOnly) {
+  if (!options || !Array.isArray(options) || options.length < 2) return null;
+  const data = (i) => `ans:${lessonId}:${step}:${i}`;
+  if (numbersOnly) return [options.map((_, i) => ({ text: String(i + 1), callback_data: data(i) }))];
+  return options.map((opt, i) => [{ text: `${i + 1}. ${opt}`, callback_data: data(i) }]);
 }
 
 function getOptionsForStep(active, stepName) {
   if (!active?.plan || !stepName) return null;
-  const key = `${stepName}Options`;
-  return active.plan[key] || null;
+  // A numbered multiple-choice diagnostic already shows its own answers: one set, not two.
+  if (stepName === 'diagnostic' && active.exerciseFormat === 'mc' && Array.isArray(active.plan.mcOptions)) return null;
+  return suggestedAnswers(active.plan, stepName);
 }
 
 function appendOptionsHintAndButtons(text, active, stepName) {
   const options = getOptionsForStep(active, stepName);
-  const buttons = buildSuggestedOptions(options, active.topicSlug, active.lessonDay, stepName);
+  active.id ||= newLessonId(); // a lesson saved before ids existed gets one now
+  const numbersOnly = !!options?.some((o) => o.length > BUTTON_TEXT);
+  const buttons = buildSuggestedOptions(options, active.id, stepName, numbersOnly);
+  if (buttons && numbersOnly) text += '\n\n' + options.map((o, i) => `${i + 1}. ${escapeHtml(o)}`).join('\n');
   const hint = buttons ? '\n\n<i>Tap an option or type your own answer.</i>' : '';
   return { text: text + hint, msgOptions: buttons ? { buttons } : {} };
 }
