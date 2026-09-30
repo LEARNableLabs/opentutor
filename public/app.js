@@ -159,6 +159,8 @@ $$('.nav-btn').forEach((btn) => {
 
 let activeTopicSlug = null;
 let lessonActive = false;
+// Which lesson and step the student is answering (#228): the server refuses an answer for another.
+let lessonAt = {};
 let topicPicked = false;
 
 $('#btn-next').addEventListener('click', startLesson);
@@ -241,6 +243,7 @@ async function startLesson() {
 // The stream already painted the reply; just set the surrounding chrome.
 function finishLessonStart(data, bubble) {
   lessonActive = true;
+  lessonAt = { lessonId: data.lessonId, step: data.step };
   $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}: ${data.lesson.title}`;
   if (!bubble.textContent.trim()) bubble.remove();
   showLessonInput();
@@ -248,6 +251,7 @@ function finishLessonStart(data, bubble) {
 
 function showLessonStart(data) {
   lessonActive = true;
+  lessonAt = { lessonId: data.lessonId, step: data.step };
   $('#lesson-area').classList.remove('hidden');
   $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}: ${data.lesson.title}`;
   $('#lesson-conversation').innerHTML = '';
@@ -278,10 +282,17 @@ async function sendLessonAnswer() {
 
   try {
     let bubble = null;
-    const data = await streamLesson({ topicSlug: activeTopicSlug, answer }, (chunk) => {
+    // A reply belongs to the lesson it answers: the student may have moved to another topic, or to
+    // the next lesson of this one, while it was on its way (#228).
+    const topic = activeTopicSlug;
+    const sentFor = lessonAt.lessonId;
+    const current = () => topic === activeTopicSlug && sentFor === lessonAt.lessonId;
+    const data = await streamLesson({ topicSlug: topic, answer, ...lessonAt }, (chunk) => {
+      if (!current()) return;
       if (!bubble) { typing.remove(); bubble = appendLessonMsg('tutor', ''); }
       appendToBubble(bubble, chunk);
     });
+    if (!current()) return;
     if (!bubble) { typing.remove(); appendLessonMsg('tutor', data.reply); }
     else if (typeof data.reply === 'string') {
       // The server's reply is the one to keep: it is cleaned of anything the stream let through (#224).
@@ -297,6 +308,7 @@ async function sendLessonAnswer() {
       if (data.warning) appendLessonMsg('tutor', `**Lesson finished.** ${data.warning} Choose **Next lesson** to continue.`);
       else showCelebration();
     } else {
+      lessonAt = { lessonId: data.lessonId, step: data.step };
       const progress = `Step ${data.step + 1}/${data.totalSteps}`;
       $('#lesson-meta').textContent = $('#lesson-meta').textContent.replace(/ — Step.*/, '') + ` — ${progress}`;
     }

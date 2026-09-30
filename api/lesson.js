@@ -8,6 +8,7 @@
  * Active lesson state stored in KV (SQLite or Supabase).
  */
 
+import { randomUUID } from 'crypto';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
@@ -23,6 +24,7 @@ const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 // Review lessons in a row before the next lesson goes ahead (#149), whichever concepts they
 // review: counted per concept, two blocked concepts in turn gave four (#227).
 const MAX_REVIEWS = 2;
+const STALE = { error: 'This lesson has moved on, in another tab or an earlier try. Reload the page to continue where it is.', stale: true };
 
 export default readsJson(handler);
 
@@ -82,7 +84,7 @@ async function handler(req, res) {
  * (scripts/web/server.js) so the two cannot drift apart again.
  * `getAdapter` is called only for a model call, the way onboardTurn does it.
  */
-export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, answer }, { onToken } = {}) {
+export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, answer, lessonId, step: at }, { onToken } = {}) {
   // The grading block streams first, so it is filtered before the student sees anything.
   const stream = onToken ? { onToken: assessmentFilter(onToken) } : {};
   if (typeof topicSlug !== 'string' || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(topicSlug)) {
@@ -103,10 +105,30 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     if (!active) {
       return { status: 400, body: { error: 'No active lesson. Start one without an answer field.' } };
     }
+    // #228: an answer is for one lesson and one step. From a stale tab, or sent twice, it is for
+    // another: grading it here would grade the wrong question, or record the lesson twice. A
+    // client that sends neither, or a lesson saved without an id, is taken as before.
+    if ((lessonId != null && active.id && lessonId !== active.id) || (at != null && at !== active.step)) {
+      return { status: 409, body: STALE };
+    }
 
     const stepName = steps[active.step];
     if (!stepName) {
       await state.deleteKV(kvKey);
+      return { status: 200, body: { done: true, message: 'Lesson already complete.' } };
+    }
+
+    // A lesson whose completion is already claimed is finished, or being finished, by another
+    // request. What is left of it (a save that failed after the claim, a request stopped there, or
+    // a late turn that wrote the record back) is cleared, so the student is never held on it (#228).
+    const completion = `lesson_done:${active.id || `${topicSlug}:${active.lessonDay}:${active.isReview ? 'review' : 'lesson'}`}`;
+    if ((await state.readKV(completion)) != null) {
+      const now = await state.readKV(kvKey);
+      const current = typeof now === 'string' ? JSON.parse(now) : now;
+      if (current?.id === active.id && current?.plan) {
+        if (active.isReview) await state.writeKV(kvKey, JSON.stringify({ reviews: active.reviews }));
+        else await state.deleteKV(kvKey);
+      }
       return { status: 200, body: { done: true, message: 'Lesson already complete.' } };
     }
 
@@ -140,6 +162,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     let saved;
 
     if (done) {
+      // A lesson completes once (#228). Of two answers to its last step at the same moment, from two
+      // tabs or a retry, only the first to claim its completion records it; the other is refused as
+      // stale. The claim is permanent, as a completion is: nothing expires or needs taking over.
+      const token = randomUUID();
+      await state.insertKV(completion, token);
+      if (String(await state.readKV(completion)) !== token) return { status: 409, body: STALE };
       const day = active.lessonDay;
       // Grade the session, write the learning log, run the practitioner — the
       // adaptive half the web path used to skip entirely (#106).
@@ -164,6 +192,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         totalSteps: steps.length,
         done,
         lesson: active.lesson,
+        lessonId: active.id,
         // Telling a student "done" for work that was not recorded is worse than
         // telling them it did not save. They can at least decide what to do.
         ...(saved === FAILED ? { warning: 'This lesson could not be saved — your progress may not be recorded.' } : {}),
@@ -176,7 +205,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // free lesson. A new one is planned only when there is nothing to show.
   const shown = active && lastShown(active);
   if (shown != null) {
-    return { status: 200, body: { reply: shown, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, resumed: true } };
+    return { status: 200, body: { reply: shown, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true } };
   }
 
   // ── Start new lesson ──────────────────────────────────────
@@ -231,6 +260,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     if (reviews < MAX_REVIEWS) {
       const { plan, steps } = reviewLesson(block.target);
       const review = {
+        id: randomUUID(),
         topicSlug,
         lessonDay,
         lesson: { day: lessonDay, title: `Review: ${block.target}`, module: lesson.module, concepts: [block.target], review: true },
@@ -248,7 +278,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       await state.writeKV(kvKey, JSON.stringify(review));
       return {
         status: 200,
-        body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, note: `Let's revisit ${block.target} before moving on.` },
+        body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, lessonId: review.id, note: `Let's revisit ${block.target} before moving on.` },
       };
     }
     note = `Let's move on for now. We'll keep coming back to ${block.target}.`;
@@ -306,6 +336,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   const lessonSteps = hasRetrieval || retest ? STEPS : STEPS.filter((s) => s !== 'retrieval');
 
   const started = {
+    id: randomUUID(),
     topicSlug,
     lessonDay,
     lesson: { day: lessonDay, title: lesson.title, module: lesson.module, concepts: lesson.concepts },
@@ -322,7 +353,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   await state.writeKV(kvKey, JSON.stringify(started));
 
-  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, ...(note ? { note } : {}) } };
+  return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, lessonId: started.id, ...(note ? { note } : {}) } };
 }
 
 // ── Helpers ────────────────────────────────────────────────

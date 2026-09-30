@@ -175,7 +175,7 @@ it('starts a review lesson for an open BLOCK, as JSON and as one SSE event, with
   const res = sseResponse();
   await lesson({ method: 'POST', headers: { accept: 'text/event-stream' }, body: { topicSlug: 'demo' } }, res);
   expect(res.statusCode).toBe(200);
-  expect(res.events).toEqual([{ event: 'done', data: json.body }]);
+  expect(res.events).toEqual([{ event: 'done', data: { ...json.body, lessonId: expect.any(String) } }]); // a new review, a new id
   expect(res.ended).toBe(1);
   expect(host.generate).not.toHaveBeenCalled();
   expect(await trialLessonsLeft(student)).toBe(3);

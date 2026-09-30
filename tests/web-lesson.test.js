@@ -72,6 +72,7 @@ describe('web lesson turn', () => {
         totalSteps: 4,
         done: false,
         lesson: { day: 1, title: 'Lesson 1', module: 'Basics', concepts: ['alpha'] },
+        lessonId: expect.any(String),
       },
     });
   });
@@ -157,7 +158,7 @@ describe('web lesson turn', () => {
     adapter.generate.mockClear();
     expect(await lessonTurn(ctx, { topicSlug: 'demo' })).toEqual({
       status: 200,
-      body: { reply: 'Nice — and what follows from that?', step: 1, totalSteps: 4, done: false, lesson: answered.body.lesson, resumed: true },
+      body: { reply: 'Nice — and what follows from that?', step: 1, totalSteps: 4, done: false, lesson: answered.body.lesson, lessonId: start.body.lessonId, resumed: true },
     });
     expect(ctx.getAdapter).not.toHaveBeenCalled();
     expect(adapter.generate).not.toHaveBeenCalled();
@@ -249,6 +250,96 @@ describe('what the tutor is sent', () => {
   it('resumes an old lesson whose last reply was only a broken grade with something to read', async () => {
     saveLegacy({ step: 1, history: [{ role: 'assistant', content: '<assessment>{"score":0.8' }] });
     expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe("Thanks, noted. Let's keep going.");
+  });
+
+  // #228: an answer is for one lesson and one step.
+  describe('an answer for another lesson or step', () => {
+    it('is refused when it names another lesson, without a model call', async () => {
+      await lessonTurn(ctx, { topicSlug: 'demo' });
+      const calls = adapter.generate.mock.calls.length;
+      const { status, body } = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'hi', lessonId: 'an-old-tab', step: 0 });
+      expect([status, body.stale]).toEqual([409, true]);
+      expect(adapter.generate.mock.calls.length).toBe(calls);
+    });
+
+    it('is refused when sent again for a step already answered', async () => {
+      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).status).toBe(200);
+      const again = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 });
+      expect(again.status).toBe(409);
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'second', lessonId, step: 1 })).status).toBe(200);
+    });
+
+    it('records a lesson once when its last answer is sent twice at once', async () => {
+      const { lessonId, totalSteps } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      for (let i = 0; i < totalSteps - 1; i++) await lessonTurn(ctx, { topicSlug: 'demo', answer: `a${i}`, lessonId, step: i });
+      const before = state.readProgress().history.length;
+      const last = { topicSlug: 'demo', answer: 'last', lessonId, step: totalSteps - 1 };
+      const results = await Promise.all([lessonTurn(ctx, last), lessonTurn(ctx, last)]);
+      expect(results.map((r) => r.status).sort()).toEqual([200, 409]);
+      expect(state.readProgress().history.length).toBe(before + 1);
+    });
+
+    // Review of #237: a completion claim must never outlive its lesson and hold the student there.
+    it('clears a lesson whose completion is claimed but was never cleared, without a model call', async () => {
+      const { lessonId, totalSteps } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      for (let i = 0; i < totalSteps - 1; i++) await lessonTurn(ctx, { topicSlug: 'demo', answer: `a${i}`, lessonId, step: i });
+      state.writeKV(`lesson_done:${lessonId}`, 'a-request-that-stopped'); // claimed, then stopped before saving
+      const calls = adapter.generate.mock.calls.length;
+      const { status, body } = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'last', lessonId, step: totalSteps - 1 });
+      expect([status, body.done]).toEqual([200, true]);
+      expect(adapter.generate.mock.calls.length).toBe(calls);
+      expect(state.readKV('web_lesson:demo')).toBeNull();
+      expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.lessonId).not.toBe(lessonId); // the next lesson starts
+    });
+
+    it('clears a finished lesson that a late turn wrote back', async () => {
+      const { lessonId, totalSteps } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      for (let i = 0; i < totalSteps - 1; i++) await lessonTurn(ctx, { topicSlug: 'demo', answer: `a${i}`, lessonId, step: i });
+      const late = state.readKV('web_lesson:demo'); // what a late turn for the second-to-last step saves
+      await lessonTurn(ctx, { topicSlug: 'demo', answer: 'last', lessonId, step: totalSteps - 1 }); // the lesson completes
+      state.writeKV('web_lesson:demo', late); // …and then the late turn writes it back
+      const { body } = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'again', lessonId, step: totalSteps - 1 });
+      expect(body.done).toBe(true);
+      expect(state.readKV('web_lesson:demo')).toBeNull();
+    });
+
+    it('tells a request that arrives after another finished the lesson that it is done, and records it once', async () => {
+      const { lessonId, totalSteps } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      for (let i = 0; i < totalSteps - 1; i++) await lessonTurn(ctx, { topicSlug: 'demo', answer: `a${i}`, lessonId, step: i });
+      // B reads the lesson at its last step, then pauses until A has finished it.
+      const readKV = state.readKV.bind(state);
+      let release;
+      const paused = new Promise((resolve) => { release = resolve; });
+      let first = true;
+      state.readKV = (key) => {
+        const value = readKV(key);
+        if (first && key === 'web_lesson:demo') { first = false; return paused.then(() => value); }
+        return value;
+      };
+      const b = lessonTurn(ctx, { topicSlug: 'demo', answer: 'last', lessonId, step: totalSteps - 1 });
+      state.readKV = readKV;
+      const before = state.readProgress().history.length;
+      const a = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'last', lessonId, step: totalSteps - 1 });
+      expect(a.body.done).toBe(true);
+      const calls = adapter.generate.mock.calls.length;
+      release();
+      expect((await b).body).toMatchObject({ done: true, message: 'Lesson already complete.' });
+      expect(adapter.generate.mock.calls.length).toBe(calls); // no model call for it
+      expect(state.readProgress().history.length).toBe(before + 1);
+    });
+
+    it('lets the student retry a step whose model call failed', async () => {
+      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      adapter.generate.mockRejectedValueOnce(new Error('model down'));
+      await expect(lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).rejects.toThrow('model down');
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).status).toBe(200);
+    });
+
+    it('is taken as before from a client that names neither', async () => {
+      await lessonTurn(ctx, { topicSlug: 'demo' });
+      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'hello' })).status).toBe(200);
+    });
   });
 
   it('shows an old lesson\'s last reply without its grade when resuming', async () => {
