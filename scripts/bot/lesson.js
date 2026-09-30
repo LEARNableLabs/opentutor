@@ -9,6 +9,7 @@
  * Mid-lesson branching: steps expand or contract based on student answers.
  */
 
+import { randomBytes } from 'node:crypto';
 import { suggestedAnswers, settleOptions } from '../../lib/core/answer-options.js';
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
@@ -139,6 +140,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
     const review = reviewLesson(constraints.blockedConcept); // shared with the web lesson (#149)
     activeLessons[chatId] = {
+    id: newLessonId(),
       topicSlug,
       lessonDay,
       lesson,
@@ -291,6 +293,7 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
   // Store active lesson state with dynamic steps
   activeLessons[chatId] = {
+    id: newLessonId(),
     topicSlug,
     lessonDay,
     lesson,
@@ -317,12 +320,14 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
     await channel.sendMessage(chatId, msgText, msgOptions);
     appendMessage(chatId, 'assistant', lessonPlan.retrieval);
   } else {
-    // No retrieval due: it was already shifted out of `steps`, so step 0 is the diagnostic
+    // No retrieval due: it was already shifted out of `steps`. Step 0 is the diagnostic, except in a
+    // quick lesson, which goes straight to the application: ask that, with its own (lack of) buttons.
+    const first = activeLessons[chatId].steps[0];
     const goalPrefix = lessonPlan.goal ? `<b>Goal:</b> ${lessonPlan.goal}\n\n` : '';
-    const diagnosticMsg = formatDiagnosticMessage(activeLessons[chatId]);
-    const { text: msgText, msgOptions } = appendOptionsHintAndButtons(goalPrefix + diagnosticMsg, activeLessons[chatId], 'diagnostic');
+    const question = first === 'diagnostic' || !lessonPlan[first] ? formatDiagnosticMessage(activeLessons[chatId]) : lessonPlan[first];
+    const { text: msgText, msgOptions } = appendOptionsHintAndButtons(goalPrefix + question, activeLessons[chatId], first);
     await channel.sendMessage(chatId, msgText, msgOptions);
-    appendMessage(chatId, 'assistant', diagnosticMsg);
+    appendMessage(chatId, 'assistant', question);
   }
 }
 
@@ -695,12 +700,19 @@ function formatDiagnosticMessage(active) {
 
 // ── Suggested answer options ───────────────────────────────
 
-function buildSuggestedOptions(options, topicSlug, lessonDay, step) {
+// A button names the lesson it belongs to by a per-lesson id (#259): /next can replan the same
+// topic, day and step, and an old button must not answer the new plan. It also keeps
+// callback_data short (Telegram allows 64 bytes; a long topic slug did not fit with everything else).
+export function newLessonId() {
+  return randomBytes(4).toString('hex');
+}
+
+function buildSuggestedOptions(options, lessonId, step) {
   if (!options || !Array.isArray(options) || options.length < 2) return null;
 
   return options.map((opt, i) => [{
     text: `${i + 1}. ${String(opt).slice(0, 45)}`,
-    callback_data: `ans:${topicSlug}:${lessonDay}:${step}:${i}`,
+    callback_data: `ans:${lessonId}:${step}:${i}`,
   }]);
 }
 
@@ -711,7 +723,8 @@ function getOptionsForStep(active, stepName) {
 
 function appendOptionsHintAndButtons(text, active, stepName) {
   const options = getOptionsForStep(active, stepName);
-  const buttons = buildSuggestedOptions(options, active.topicSlug, active.lessonDay, stepName);
+  active.id ||= newLessonId(); // a lesson saved before ids existed gets one now
+  const buttons = buildSuggestedOptions(options, active.id, stepName);
   const hint = buttons ? '\n\n<i>Tap an option or type your own answer.</i>' : '';
   return { text: text + hint, msgOptions: buttons ? { buttons } : {} };
 }

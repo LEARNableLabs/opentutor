@@ -27,27 +27,27 @@ export async function handleCallback(callbackQuery, channel, skills) {
 
   // Suggested answer option tapped during Socratic lesson
   if (data.startsWith('ans:')) {
-    const match = data.match(/^ans:([^:]+):(\d+):(\w+):(\d+)$/);
-    if (match) {
-      const [, topicSlug, day, step, index] = match;
-      const active = getActiveLesson(chatId);
-      if (!active) {
-        await channel.sendMessage(chatId, "That lesson has ended. Type /next for a new one.");
-        return;
-      }
-      // A button answers only the question it came with: after a typed answer the old buttons stay on
-      // screen, and a tap there must not answer whatever the lesson asks now (#259).
-      if (active.topicSlug !== topicSlug || String(active.lessonDay) !== day || active.steps?.[active.step] !== step) {
-        try { await channel.editMessageButtons(chatId, messageId, []); } catch {}
-        await channel.sendMessage(chatId, 'That question has passed. Answer the latest one, by tapping or in your own words.');
-        return;
-      }
-      // The same cleaned list the buttons were built from (#255), so a tap sends what it showed.
-      const options = suggestedAnswers(active.plan, step);
-      const answerText = options?.[Number(index)] || `Option ${Number(index) + 1}`;
+    const match = data.match(/^ans:([a-f0-9]{8}):(\w+):(\d+)$/);
+    const passed = async () => {
       try { await channel.editMessageButtons(chatId, messageId, []); } catch {}
-      return handleLessonAnswer(answerText, chatId, channel);
+      await channel.sendMessage(chatId, 'That question has passed. Answer the latest one, by tapping or in your own words.');
+    };
+    // Buttons from before lesson ids carry topic and day instead: they belong to a lesson that has moved on.
+    if (!match) return passed();
+    const [, lessonId, step, index] = match;
+    const active = getActiveLesson(chatId);
+    if (!active) {
+      await channel.sendMessage(chatId, "That lesson has ended. Type /next for a new one.");
+      return;
     }
+    // A button answers only the question it came with: after a typed answer the old buttons stay on
+    // screen, and a tap there must not answer whatever the lesson asks now (#259).
+    if (active.id !== lessonId || active.steps?.[active.step] !== step) return passed();
+    // The same cleaned list the buttons were built from (#255), so a tap sends what it showed.
+    const options = suggestedAnswers(active.plan, step);
+    const answerText = options?.[Number(index)] || `Option ${Number(index) + 1}`;
+    try { await channel.editMessageButtons(chatId, messageId, []); } catch {}
+    return handleLessonAnswer(answerText, chatId, channel);
   }
 
   // Flashcard callbacks
