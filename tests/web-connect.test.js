@@ -40,7 +40,7 @@ function frontend(route, search = '') {
     Response, Headers, URLSearchParams, TextDecoder, console, setTimeout: (fn) => (timers.push(fn), 0), clearTimeout() {},
     fetch: async (url, init = {}) => {
       calls.push({ url, init });
-      const answer = route(url, init) || base[url] || [200, {}];
+      const answer = await (route(url, init) || base[url] || [200, {}]); // a route may answer later
       if (answer instanceof Response) return answer; // e.g. a stream
       const [status, body] = answer;
       return new Response(JSON.stringify(body), { status });
@@ -538,3 +538,123 @@ it('does not send an empty key', async () => {
   await settle();
   expect(calls.some((c) => c.url === '/api/openrouter' && c.init.method === 'POST')).toBe(false);
 });
+
+// #250: the chat always runs on the student's own key, so offer it before they type.
+const CHAT_OFFER = 'Chatting with OpenTutor uses your own OpenRouter key. Connect your account or paste a key to start.';
+it('offers OpenRouter setup as soon as a student without a key opens the chat', async () => {
+  const { $ } = frontend(() => null); // base: connected false
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(false);
+  expect($('#connect-message').textContent).toBe(CHAT_OFFER);
+});
+
+it.each([
+  ['a connected student', [200, { connected: true, trialLessons: 3, trialLessonsLeft: 0, limitRemaining: 5 }]],
+  ['the owner, who has no account', [403, { error: 'Only self-signup accounts connect their own OpenRouter key.' }]],
+])('does not offer setup to %s', async (_who, status) => {
+  const { $ } = frontend((url, init) => (url === '/api/openrouter' && !init.method ? status : null));
+  await settle();
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+});
+
+it('takes the chat offer away when the student leaves the chat', async () => {
+  const { $ } = frontend(() => null);
+  await settle();
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  await $('.nav-btn[data-view="learn"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+});
+
+// #254 review: the chat offer's state under slow, failed and out-of-order status loads.
+const deferred = () => { let resolve; const promise = new Promise((r) => (resolve = r)); return { promise, resolve }; };
+const NO_KEY = [200, { connected: false, trialLessons: 3, trialLessonsLeft: 0, limitRemaining: null }];
+
+it('does not put the chat offer on another tab when the student leaves Chat before the status loads', async () => {
+  let first = true;
+  const slow = deferred();
+  const { $ } = frontend((url, init) => {
+    if (url !== '/api/openrouter' || init.method) return null;
+    if (first) { first = false; return [503, {}]; } // the page's own load fails, so Chat has to ask again
+    return slow.promise;
+  });
+  await settle();
+  await $('.nav-btn[data-view="chat"]').click();
+  await $('.nav-btn[data-view="learn"]').click();
+  slow.resolve(NO_KEY);
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+});
+
+it('asks again after a failed status load, instead of treating the student as the owner', async () => {
+  let calls = 0;
+  const { $ } = frontend((url, init) => (url === '/api/openrouter' && !init.method ? (++calls === 1 ? [503, { error: 'unavailable' }] : NO_KEY) : null));
+  await settle();
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(false);
+  expect($('#connect-message').textContent).toBe(CHAT_OFFER);
+});
+
+it('lets the newest status win when an older one arrives late', async () => {
+  const stale = deferred();
+  let gets = 0;
+  const { $ } = frontend((url, init) => {
+    if (url !== '/api/openrouter') return null;
+    if (init.method === 'POST') return [200, { connected: false }];
+    return ++gets === 1 ? stale.promise : NO_KEY; // the page's first load is slow; the one after disconnect is not
+  });
+  await $('#btn-disconnect').click();
+  await settle();
+  stale.resolve([200, { connected: true, trialLessons: 3, trialLessonsLeft: 0, limitRemaining: 5 }]);
+  await settle();
+  $('#connect-banner').classList.add('hidden'); // the student dismisses the disconnect notice
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect($('#connect-message').textContent).toBe(CHAT_OFFER);
+});
+
+it('leaves another connect message alone, and it survives a visit to Chat', async () => {
+  const { $ } = frontend(() => null);
+  await settle();
+  $('#connect-message').textContent = DAILY.error;
+  $('#connect-banner').classList.remove('hidden');
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect($('#connect-message').textContent).toBe(DAILY.error);
+  await $('.nav-btn[data-view="learn"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(false);
+  expect($('#connect-message').textContent).toBe(DAILY.error);
+});
+
+it('lets the chat layout shrink to the visible window on phones', () => {
+  const css = fs.readFileSync(new URL('../public/style.css', import.meta.url), 'utf8');
+  const rule = css.match(/#app:has\(#view-chat\.active\) \{([^}]*)\}/)[1];
+  expect(rule).toMatch(/height: 100dvh/);
+  expect(rule).toMatch(/min-height: 0/);
+});
+
+it('knows a saved key at once, without waiting for the status to reload', async () => {
+  const never = deferred();
+  let gets = 0;
+  const { $ } = frontend((url, init) => {
+    if (url !== '/api/openrouter') return null;
+    if (init.method === 'POST') return [200, { connected: true, freeTier: false, limitRemaining: 5 }];
+    return ++gets === 1 ? NO_KEY : never.promise; // the reload after saving hangs
+  });
+  await settle();
+  $('#key-input').value = 'sk-or-mine';
+  await $('#key-form').dispatch('submit');
+  await settle();
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+});
+
