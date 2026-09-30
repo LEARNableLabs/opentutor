@@ -46,7 +46,7 @@ export async function startOnboarding(chatId, channel, _skills) {
   const contextQuestion = WELCOME_CONTEXT_QUESTIONS[
     Math.floor(Math.random() * WELCOME_CONTEXT_QUESTIONS.length)
   ];
-  const welcome = `Hey! 👋 I’m your tutor — a study buddy who’s weirdly good at explaining things.\n\nWhat’s your name? ${contextQuestion}`;
+  const welcome = `Hey! 👋 I’m OpenTutor, your tutor, and weirdly good at explaining things.\n\nWhat’s your name? ${contextQuestion}`;
   await channel.sendMessage(chatId, welcome);
   appendMessage(chatId, 'assistant', welcome);
 }

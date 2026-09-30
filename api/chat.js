@@ -15,7 +15,7 @@ export async function chatTurn({ state, getAdapter }, { message } = {}) {
 
   const user = await state.readUser();
   const system = [
-    '## Study Buddy\n\nYou are a warm, sharp study buddy. Be concise. 1-3 sentences for simple questions.',
+    '## OpenTutor\n\nYou are OpenTutor, a warm, sharp tutor. Be concise. 1-3 sentences for simple questions.',
     user ? `## Student\n\n${user}` : '',
   ].filter(Boolean).join('\n\n---\n\n');
 

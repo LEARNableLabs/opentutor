@@ -90,7 +90,7 @@ it('gives a self-signup account 3 lessons, then asks for its own key; a lesson i
   expect(await outcome((await adapterFor({ state, use: 'lesson-continue', host: () => host })).generate('answer', []))).toBe('allowed');
 });
 
-it('refuses custom topics and Study Buddy without a key, and stops onboarding after 12 messages', async () => {
+it('refuses custom topics and free chat without a key, and stops onboarding after 12 messages', async () => {
   const state = account();
   expect(await outcome(adapterFor({ state, use: 'custom-topic', host: () => host }))).toBe('custom_topic');
   expect(await outcome(adapterFor({ state, use: 'chat', host: () => host }))).toBe('chat');
