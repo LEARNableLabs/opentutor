@@ -23,5 +23,9 @@ it('the favicon has a dark version, and every source is the same spark', () => {
   for (const file of ['public/favicon.svg', 'public/logo.svg', 'assets/logo/opentutor-spark.svg']) {
     expect(fs.readFileSync(file, 'utf8')).toContain(SPARK);
   }
-  expect(fs.readFileSync('README.md', 'utf8')).toContain('assets/logo/opentutor-spark.svg');
+});
+
+// #266: the owner keeps the original logo on the GitHub README for now; the site uses the spark.
+it('the README keeps the original logo for now', () => {
+  expect(fs.readFileSync('README.md', 'utf8')).toContain('assets/logo/opentutor-hero-512.png');
 });
