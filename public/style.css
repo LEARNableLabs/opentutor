@@ -122,10 +122,12 @@ header h1 {
   letter-spacing: -0.3px;
 }
 
-header h1 img {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
+/* The spark (#262), from the theme's accent, so it follows light and dark. */
+header h1 .brand-mark {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  fill: var(--accent);
 }
 
 .brand {
@@ -734,10 +736,9 @@ input::placeholder {
     font-size: 23px;
   }
 
-  header h1 img {
-    width: 34px;
-    height: 34px;
-    border-radius: 7px;
+  header h1 .brand-mark {
+    width: 28px;
+    height: 28px;
   }
 
   nav,

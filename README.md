@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo/opentutor-hero-512.png" alt="OpenTutor" width="180">
+  <img src="assets/logo/opentutor-spark.svg" alt="OpenTutor" width="96">
 </p>
 
 <h1 align="center">OpenTutor</h1>
