@@ -16,6 +16,10 @@
 
 ---
 
+https://github.com/user-attachments/assets/721a646c-04e7-4618-a527-b43dde64d088
+
+<sub>Music: "Equatorial Complex" Kevin MacLeod ([incompetech.com](https://incompetech.com)), licensed under [Creative Commons: By Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).</sub>
+
 OpenTutor teaches one short lesson at a time. It asks before it explains, works on
 what you keep getting wrong, and brings ideas back days later in a new form.
 
