@@ -148,3 +148,27 @@ it('counts a prerequisite as university-level only when it names a listed univer
   expect(kindOf('reading comprehension', 'general')).toBe('general');
   expect(kindOf('basic programming (loops, functions, data structures)', 'school')).toBe('school'); // examples don't decide
 });
+
+// One rule everywhere (#251 review): advanced exactly when a prerequisite names a listed university subject.
+it('rates every shipped topic advanced exactly when a prerequisite is university-level', async () => {
+  const { isUniversity } = await import('../lib/core/quick-start.js');
+  const wrong = shipped.filter((slug) => {
+    const c = read(slug);
+    return (c.level === 'advanced') !== c.prerequisites.some(isUniversity);
+  });
+  expect(wrong).toEqual([]);
+});
+
+it('keeps a parenthesis that names the course, and drops examples after an introductory phrase', async () => {
+  const { isUniversity } = await import('../lib/core/quick-start.js');
+  expect(isUniversity('derivatives and optimization (calculus I)')).toBe(true);
+  expect(isUniversity('basic programming (loops, functions, data structures)')).toBe(false);
+  expect(isUniversity('basic chemistry (organic chemistry helpful)')).toBe(false);
+});
+
+it('holds generated levels to the same rule', async () => {
+  const { topicMeta } = await import('../lib/core/quick-start.js');
+  expect(topicMeta({ level: 'intermediate', prerequisites: ['calculus'] }).level).toBe('advanced');
+  expect(topicMeta({ level: 'advanced', prerequisites: ['basic algebra'] }).level).toBe('intermediate');
+  expect(topicMeta({ level: 'beginner', prerequisites: ['curiosity'] }).level).toBe('beginner');
+});

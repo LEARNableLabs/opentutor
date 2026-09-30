@@ -12,6 +12,7 @@ import path from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { createAdapterFromEnv } from '../lib/adapters/index.js';
 import { parseFirstJson } from '../lib/core/json.js';
+import { isUniversity } from '../lib/core/quick-start.js';
 
 const DOMAINS_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'skills', 'tutor', 'domains');
 export const LEVELS = ['beginner', 'intermediate', 'advanced'];
@@ -20,16 +21,9 @@ const KINDS = `Judge each prerequisite on its own, as one of two kinds:
 - general: knowledge a curious adult already has, or picks up in the first lessons: reading and writing well, everyday arithmetic, general-culture familiarity ("basic geography", "basic literary terminology", "interest in the night sky"), patience, simple household tools.
 - school: anything more specific: what secondary school, a first introductory course, or a university teaches, or a practical skill specific to the subject that a newcomer would not have ("basic forging techniques", "using planes and chisels", "a cube-solving method").`;
 
-// A prerequisite normally first taught at university makes a course advanced. That call is
-// this list, reviewable in one place, rather than the model's: its judgment drifted with how
-// hard a subject sounds, one way and then the other (#251 review). "Helpful" never counts.
-const UNIVERSITY = /\b(calculus|linear algebra|differential equations|real analysis|complex analysis|measure theory|topology|abstract algebra|group theory|category theory|proofs?|discrete math(ematics)?|organic chemistry|biochemistry|molecular biology|quantum|statistical mechanics|electromagnet(ism|ics)|data structures|algorithms|operating systems|compilers?|signal processing|econometrics|machine learning|supervised learning)\b/i;
-const OPTIONAL = /helpful|optional|not required|or equivalent/i;
-
-/** One prerequisite's kind: university by the list, otherwise the model's general-or-school. */
+/** One prerequisite's kind: university by the shared list (lib/core/quick-start.js), otherwise the model's general-or-school. */
 export function kindOf(text, judged) {
-  // The main phrase decides: "basic programming (loops, data structures)" is not a data structures course.
-  if (UNIVERSITY.test(text.replace(/\([^)]*\)/g, '')) && !OPTIONAL.test(text)) return 'university';
+  if (isUniversity(text)) return 'university';
   return judged === 'general' ? 'general' : 'school';
 }
 
