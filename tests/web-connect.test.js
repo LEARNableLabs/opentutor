@@ -551,7 +551,7 @@ it('shows each topic\'s level and prerequisites on the Topics tab', async () => 
   await settle();
   const html = $('#topic-list').innerHTML;
   expect(html).toContain('Advanced');
-  expect(html).toContain('Before you start: &lt;img src=x&gt;, string theory.');
+  expect(html).toContain('Before you start: &lt;img src=x&gt;, string theory. Rusty on any of these? Ask the tutor as you go.');
   expect(html).not.toContain('<img src=x>');
   expect(html.match(/Before you start/g)).toHaveLength(1);
 });

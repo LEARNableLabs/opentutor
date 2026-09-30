@@ -153,7 +153,7 @@ it('shows a catalog card\'s level and prerequisites, as text', async () => {
   await settle();
   const texts = page.created.map((n) => n.textContent);
   expect(texts).toContain('Beginner');
-  expect(texts).toContain('Before you start: <b>curiosity</b>, string.');
+  expect(texts).toContain('Before you start: <b>curiosity</b>, string. Rusty on any of these? Ask the tutor as you go.');
   expect(page.htmlWrites.join('')).not.toContain('curiosity'); // textContent, never HTML
 });
 
