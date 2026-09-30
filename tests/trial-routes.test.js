@@ -190,7 +190,7 @@ it('refuses a custom topic without recording or enqueueing a build, and activate
   expect((await call(addTopicRoute, { topic: 'Demo' })).body).toEqual({ slug: 'demo', status: 'existing', lessonCount: 1 });
 });
 
-it('refuses Study Buddy without a key and stops onboarding after 12 messages', async () => {
+it('refuses free chat without a key and stops onboarding after 12 messages', async () => {
   const buddy = await call(chat, { message: 'hi' });
   expect(buddy.statusCode).toBe(402);
   expect(buddy.body).toMatchObject({ connect: true, reason: 'chat' });

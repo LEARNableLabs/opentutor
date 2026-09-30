@@ -82,7 +82,7 @@ describe('every surface uses it', () => {
 
   it('no surface still hardcodes its own copy', () => {
     for (const f of ['api/onboard.js', 'scripts/web/server.js']) {
-      expect(reads(f), `${f} should not inline the onboarding prompt`).not.toMatch(/study buddy meeting a new student/i);
+      expect(reads(f), `${f} should not inline the onboarding prompt`).not.toMatch(/tutor meeting a new student/i);
     }
   });
 

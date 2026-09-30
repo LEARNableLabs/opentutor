@@ -629,7 +629,7 @@ function setOnboarding(open) {
 
 function showOnboarding() {
   setOnboarding(true);
-  appendOnboardMsg('assistant', "Hey! I'm your study buddy. What's your name? And are you here for school, work, or the noble art of internet rabbit holes?");
+  appendOnboardMsg('assistant', "Hey! I'm OpenTutor. What's your name? And are you here for school, work, or the noble art of internet rabbit holes?");
   $('#onboarding-input').focus();
 }
 

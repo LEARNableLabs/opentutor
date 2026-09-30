@@ -60,7 +60,7 @@ it('shows a self-signup account how many free lessons it has left', async () => 
 });
 
 it('turns any 402 into the connect banner, in the server\'s words, and shows the error instead of "undefined"', async () => {
-  const refusal = { error: 'Study Buddy needs your OpenRouter account.', connect: true, reason: 'chat' };
+  const refusal = { error: 'Chatting with OpenTutor needs your OpenRouter account.', connect: true, reason: 'chat' };
   const { $ } = frontend((url) => (url === '/api/chat' ? [402, refusal] : null));
   await settle();
   $('#chat-input').value = 'hi';
