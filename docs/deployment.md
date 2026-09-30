@@ -33,6 +33,10 @@ Do not configure a Telegram token or webhook secret in this Vercel project. The 
 
 Set `OPENTUTOR_LLM` to `claude-sdk`, `openrouter`, `openai`, `ollama`, or `cli` to override detection. Without it, keys are checked in this order: Anthropic, OpenRouter, OpenAI. Use a remote API backend on Vercel; `cli` and a local Ollama server require a suitable local environment.
 
+On OpenRouter, both roles default to `deepseek/deepseek-v4.1-flash` (#239). A lesson is four or five model calls (a plan, then three or four answers: the fourth is the retrieval check, asked only when a concept is due for review) at about $0.0009 each, measured on production, so about $0.0036 to $0.0045 a lesson. Set `OPENROUTER_STRONG_MODEL` / `OPENROUTER_CHEAP_MODEL` to change them, for example to `anthropic/claude-sonnet-5` / `anthropic/claude-haiku-4.5`, at roughly an order of magnitude more per lesson. `npm run web` prints the models it runs on.
+
+Production (checked 2026-09-30) runs on OpenRouter: `OPENTUTOR_LLM` and `OPENTUTOR_PIPELINE_LLM` are `openrouter`, and both model variables are set to `deepseek/deepseek-v4.1-flash` in Production, Preview and Development. Students' own keys use the same models.
+
 `OPENTUTOR_PIPELINE_LLM` can select a separate generation backend. Custom topics use a durable two-phase build: five starter lessons first, then a queued planner, builder and critic. Existing curricula activate immediately without a generation call.
 
 ### Durable custom-topic builds

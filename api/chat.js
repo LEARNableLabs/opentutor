@@ -2,6 +2,7 @@ import { getState, getAdapter } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
+import { VOICE } from '../lib/core/prompts.js';
 
 /**
  * One chat turn, shared by this route and the local server (scripts/web/server.js), as
@@ -16,6 +17,7 @@ export async function chatTurn({ state, getAdapter }, { message } = {}) {
   const user = await state.readUser();
   const system = [
     '## OpenTutor\n\nYou are OpenTutor, a warm, sharp tutor. Be concise. 1-3 sentences for simple questions.',
+    VOICE,
     user ? `## Student\n\n${user}` : '',
   ].filter(Boolean).join('\n\n---\n\n');
 

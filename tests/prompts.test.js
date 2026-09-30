@@ -11,6 +11,7 @@ import {
   untrustedData,
   clip,
   escapeXml,
+  VOICE,
 } from '../lib/core/prompts.js';
 
 // Mock skills map
@@ -293,10 +294,13 @@ describe('buildSocraticResponsePrompt', () => {
   });
 
   // The Telegram bot passes no options. Its prompt is pinned byte for byte to the text
-  // before #177: sha256 of the system prompt for each step, same inputs as above.
-  it('keeps the Telegram bot\'s prompt byte-identical', () => {
+  // before #177: sha256 of the system prompt for each step, same inputs as above. The one
+  // deliberate change since is the shared voice (#256), which every surface gets.
+  it('keeps the Telegram bot\'s prompt byte-identical, apart from the shared voice', () => {
     const sha = (text) => createHash('sha256').update(text).digest('hex');
-    expect(Object.fromEntries(STEPS.map((step) => [step, sha(system(step))]))).toEqual({
+    for (const step of STEPS) expect(system(step)).toContain(`${VOICE}\n\n---\n\n`);
+    const withoutVoice = (step) => system(step).replace(`${VOICE}\n\n---\n\n`, '');
+    expect(Object.fromEntries(STEPS.map((step) => [step, sha(withoutVoice(step))]))).toEqual({
       retrieval: '917e7f4f15ec5d74c9b9f8ac2b120dab79dd853dec9e33a8ff9b50c72c7e689f',
       diagnostic: 'c391a6d6d234c56ecd118cdb2f560d63b77b01e8358b0718f22d44cbf1577827',
       followUp: 'cfd8c034392b651d020cab602160e0b5d39c45a7f96ade95c4d0928ecc242c22',

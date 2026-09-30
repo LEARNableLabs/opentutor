@@ -358,6 +358,31 @@ input::placeholder {
   max-height: 60vh;
 }
 
+/* The chat fills the window: messages scroll, the input stays at the bottom. */
+#app:has(#view-chat.active) {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0; /* the usual 100vh minimum would keep it taller than a phone's visible window */
+}
+
+#app:has(#view-chat.active) main {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+#view-chat {
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+#view-chat #chat-messages {
+  flex: 1;
+  min-height: 0;
+  max-height: none;
+}
+
 .lesson-msg,
 .chat-msg {
   margin-bottom: 20px;

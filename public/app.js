@@ -148,10 +148,15 @@ $$('.nav-btn').forEach((btn) => {
     btn.classList.add('active');
     const view = $(`#view-${btn.dataset.view}`);
     view.classList.add('active');
-    view.style.display = 'block';
+    view.style.display = btn.dataset.view === 'chat' ? 'flex' : 'block'; // the chat is a column: messages, then input
 
     if (btn.dataset.view === 'topics') loadTopics();
     if (btn.dataset.view === 'learn') loadActiveTopics();
+    if (btn.dataset.view === 'chat') offerKeyForChat();
+    else if (chatOffer) {
+      chatOffer = false;
+      $('#connect-banner').classList.add('hidden');
+    }
   });
 });
 
@@ -697,6 +702,7 @@ function appendOnboardMsg(classes, text) {
 // ── OpenRouter (#132): 3 free lessons, then the student's own key ──
 
 function showConnect({ error }) {
+  chatOffer = false; // whatever shows the banner now owns it
   $('#connect-message').textContent = error;
   $('#connect-banner').classList.remove('hidden');
 }
@@ -725,6 +731,7 @@ $('#key-form').addEventListener('submit', async (event) => {
     const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'save', key }) });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) return void ($('#connect-message').textContent = data.error || 'Could not save the key. Please try again.');
+    knowKey(true);
     if (data.freeTier) showConnect({ error: 'Saved, but your OpenRouter account has no credits yet. Add some at openrouter.ai to keep learning.' });
     else $('#connect-banner').classList.add('hidden');
     loadKeyStatus().catch(() => {});
@@ -739,16 +746,43 @@ $('#btn-connect-browse').addEventListener('click', () => {
   $('.nav-btn[data-view="topics"]').click();
 });
 $('#btn-disconnect').addEventListener('click', async () => {
-  await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'disconnect' }) });
+  const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'disconnect' }) });
+  if (res.ok) knowKey(false);
   showConnect({ error: 'Disconnected. To revoke the key itself, delete it in your OpenRouter settings (openrouter.ai/settings/keys).' });
   loadKeyStatus().catch(() => {});
 });
 
+// #250: the chat always runs on the student's own key, so say so before they type.
+let chatNeedsKey = null; // unknown until a key status loads
+let chatOffer = false; // the banner is up because the chat put it there
+let keyStatusSeq = 0; // only the newest status request may update the page
+async function offerKeyForChat() {
+  if (chatNeedsKey === null) await loadKeyStatus().catch(() => {});
+  // The student may have left Chat while it loaded, and another message may already hold the banner.
+  if (!chatNeedsKey || !$('#view-chat').classList.contains('active')) return;
+  if (!$('#connect-banner').classList.contains('hidden')) return;
+  showConnect({ error: 'Chatting with OpenTutor uses your own OpenRouter key. Connect your account or paste a key to start.' });
+  chatOffer = true;
+}
+
+// A save, connect or disconnect the server confirmed is the newest status: nothing older may undo it.
+function knowKey(connected) {
+  keyStatusSeq++;
+  chatNeedsKey = !connected;
+}
+
 // Only self-signup accounts get an answer; anyone else sees nothing.
 async function loadKeyStatus() {
+  const seq = ++keyStatusSeq;
   const res = await fetch('/api/openrouter');
+  if (seq !== keyStatusSeq) return;
+  // 403: the owner and admin-created students chat on the deployment's key. Any other failure
+  // leaves the status unknown, so opening Chat asks again.
+  if (res.status === 403) chatNeedsKey = false;
   if (!res.ok) return;
   const s = await res.json();
+  if (seq !== keyStatusSeq) return;
+  chatNeedsKey = !s.connected;
   $('#key-status').textContent = s.connected ? 'OpenRouter connected' : `${s.trialLessonsLeft} of ${s.trialLessons} free lessons left`;
   $('#key-status').classList.remove('hidden');
   $('#btn-disconnect').classList.toggle('hidden', !s.connected);
@@ -766,7 +800,8 @@ async function finishConnect() {
     const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'connect', code }) });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) showConnect({ error: data.error || 'Could not connect OpenRouter. Please try again.' });
-    else if (data.freeTier) showConnect({ error: 'Connected, but your OpenRouter account has no credits yet. Add some at openrouter.ai to keep learning.' });
+    else knowKey(true);
+    if (res.ok && data.freeTier) showConnect({ error: 'Connected, but your OpenRouter account has no credits yet. Add some at openrouter.ai to keep learning.' });
   } catch {
     showConnect({ error: 'Could not connect OpenRouter. Please try again.' });
   }
