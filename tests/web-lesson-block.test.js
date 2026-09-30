@@ -3,7 +3,7 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { TutorStore } from '../lib/core/store.js';
-import { evaluatePractice, formatPracticeFeedback, parseDirectives } from '../lib/core/deliberate-practice.js';
+import { evaluatePractice, formatPracticeFeedback, parseDirectives, parseRetested } from '../lib/core/deliberate-practice.js';
 import { lessonTurn } from '../api/lesson.js';
 
 // #149 — the bot holds a student back while a BLOCK is open; the web only steered the next
@@ -88,12 +88,89 @@ describe.each([
     await start();
     await finish();
     expect(blocks()).toEqual([]);
-    const after = store.readCurriculum('demo').lessons[0];
-    expect([after.engagement, after.delivered]).toEqual(['reviewed', before.delivered]); // re-graded, same date
+    // #227: the retest settles its concept alone; the lesson's own grade and date stay as they were.
+    expect(store.readCurriculum('demo').lessons[0]).toEqual(before);
+    expect(parseRetested(store.readDomainFile('demo', 'practice-feedback.md'))).toEqual({ alpha: { at: 6, passed: true } });
     expect(store.readProgress().history).toHaveLength(6);
     const next = (await start()).body;
     expect(next.lesson).toEqual({ day: 7, title: 'L7', module: 'Basics', concepts: ['c7'] });
     expect(next.note).toBeUndefined();
+  });
+
+  // #227: a lesson that opens on the blocked concept's retest settles it when the answer is right.
+  it('settles the concept when a lesson opens on its retest and the student gets it right', async () => {
+    score = 0.1;
+    for (let i = 0; i < 2; i++) { await start(); await finish(); } // two reviews, both missed
+    score = 0.9;
+    const { body } = await start();
+    expect(body.lesson).toMatchObject({ day: 7, title: 'L7' }); // goes ahead, opening on the retest
+    await finish();
+    expect(blocks()).toEqual([]);
+    expect(Object.keys(parseRetested(store.readDomainFile('demo', 'practice-feedback.md')))).toEqual(['alpha']);
+    expect((await start()).body.lesson).toMatchObject({ day: 8 });
+  });
+
+  // Review of #238: the retest question must name the concept as a whole, or the lesson asks its own.
+  it.each([
+    ['replaces a planner question that only contains the concept', 'What is alphabetical order?', /what is alpha and why/],
+    ['keeps a planner question that names the concept', 'Quick check: what is alpha, again?', /Quick check: what is alpha, again\?/],
+  ])('%s', async (_case, retrieval, expected) => {
+    score = 0.1;
+    for (let i = 0; i < 2; i++) { await start(); await finish(); }
+    adapter.generate.mockImplementationOnce(async () => ({ text: JSON.stringify({ ...PLAN, retrieval }) }));
+    expect((await start()).body.reply).toMatch(expected);
+  });
+
+  it('shows the planner a concept the student passed as no longer shaky', async () => {
+    await start();
+    await finish(); // the review of alpha passes
+    await start(); // day 7 is planned
+    const planPrompt = adapter.generate.mock.calls.map(([system]) => system).findLast((system) => !system.includes('## Current Step:'));
+    expect(planPrompt).not.toMatch(/Shaky \(needs reinforcement\):[^\n]*alpha/);
+  });
+
+  // Review of #238: a retest that opened a lesson ranks before that lesson. When the concept is one
+  // of the lesson's own and the rest of the lesson goes badly, the lesson's grade is the newer word.
+  it('lets the rest of a lesson outrank the retest that opened it', async () => {
+    const file = path.join(root, 'skills', 'tutor', 'domains', 'demo', 'curriculum.json');
+    const curriculum = JSON.parse(fs.readFileSync(file, 'utf8'));
+    curriculum.lessons[6].concepts = ['alpha'];
+    fs.writeFileSync(file, JSON.stringify(curriculum));
+    score = 0.1;
+    for (let i = 0; i < 2; i++) { await start(); await finish(); } // two reviews, both missed
+    score = [0.9, 0.1, 0.1, 0.1]; // the retest right, the rest of lesson 7 wrong
+    expect((await start()).body.lesson.day).toBe(7);
+    await finish();
+    expect(store.readDomainFile('demo', 'practice-feedback.md')).toMatch(/- Shaky: [^\n]*alpha/);
+  });
+
+  // #227: two reviews in a row at most, whichever concepts they review.
+  it('goes ahead after two reviews in a row, even when they review different concepts', async () => {
+    const file = path.join(root, 'skills', 'tutor', 'domains', 'demo', 'curriculum.json');
+    const curriculum = JSON.parse(fs.readFileSync(file, 'utf8'));
+    curriculum.lessons[0].concepts = ['alpha', 'beta'];
+    fs.writeFileSync(file, JSON.stringify(curriculum));
+    store.writeDomainFile('demo', 'practice-feedback.md', formatPracticeFeedback(evaluatePractice('', store.readCurriculum('demo'), ''), 'Demo'));
+    score = 0.9;
+    expect((await start()).body.lesson.title).toBe('Review: alpha');
+    await finish(); // alpha passes; beta is blocked next
+    score = 0.1;
+    expect((await start()).body.lesson.title).toBe('Review: beta');
+    await finish();
+    expect((await start()).body.lesson).toMatchObject({ day: 7, title: 'L7' });
+  });
+
+  // #227: passing a retest settles its own concept, never the rest of the lesson that flagged it.
+  it('keeps the BLOCK on a lesson\'s other concept after one of them passes its retest', async () => {
+    const file = path.join(root, 'skills', 'tutor', 'domains', 'demo', 'curriculum.json');
+    const curriculum = JSON.parse(fs.readFileSync(file, 'utf8'));
+    curriculum.lessons[0].concepts = ['alpha', 'beta'];
+    fs.writeFileSync(file, JSON.stringify(curriculum));
+    store.writeDomainFile('demo', 'practice-feedback.md', formatPracticeFeedback(evaluatePractice('', store.readCurriculum('demo'), ''), 'Demo'));
+    expect(blocks()).toEqual(['alpha']);
+    await start();
+    await finish();
+    expect(blocks()).toEqual(['beta']);
   });
 
   // The bot releases the BLOCK after any review. Here it clears only on a passed retest,

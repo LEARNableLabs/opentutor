@@ -16,12 +16,13 @@ import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../lib/core/prompts.js';
 import { buildStudentModel, formatStudentModel } from '../lib/core/student-model.js';
 import { completeLesson } from '../lib/core/lesson-completion.js';
-import { parseDirectives, reviewLesson } from '../lib/core/deliberate-practice.js';
+import { parseDirectives, parseRetested, reviewLesson, namesConcept } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter, stripGrades } from '../lib/core/assessment.js';
 import { parseFirstJson } from '../lib/core/json.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
-// Review lessons in a row for one blocked concept before the next lesson goes ahead (#149).
+// Review lessons in a row before the next lesson goes ahead (#149), whichever concepts they
+// review: counted per concept, two blocked concepts in turn gave four (#227).
 const MAX_REVIEWS = 2;
 const STALE = { error: 'This lesson has moved on, in another tab or an earlier try. Reload the page to continue where it is.', stale: true };
 
@@ -227,7 +228,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   const course = curriculum?.topic || topicSlug.replace(/-/g, ' ');
   // Not safely(): an unreadable feedback file is not "no BLOCK", and reading it as one
   // would let the student past the BLOCK. The error reaches the route's generic 500.
-  const directives = parseDirectives(await state.readDomainFile(topicSlug, 'practice-feedback.md'));
+  const feedback = await state.readDomainFile(topicSlug, 'practice-feedback.md');
+  const directives = parseDirectives(feedback);
 
   // #149: an open BLOCK holds the student back, as the bot does: a review lesson on the
   // blocked concept instead of the next lesson. It plans nothing (no model call), it is not
@@ -241,7 +243,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   let note;
   if (block) {
     const held = record?.reviews;
-    const reviews = held?.concept === block.target && held.day === lessonDay ? held.count : 0;
+    const reviews = held?.day === lessonDay ? held.count : 0;
     if (reviews < MAX_REVIEWS) {
       const { plan, steps } = reviewLesson(block.target);
       const review = {
@@ -272,7 +274,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   const learningMd = (await safely(() => state.readDomainFile(topicSlug, 'learning.md'), '')) || '';
   const user = await safely(() => state.readUser(), '');
-  const studentModel = buildStudentModel(learningMd, curriculum, user);
+  const studentModel = buildStudentModel(learningMd, curriculum, user, parseRetested(feedback)); // #227
   const modelText = formatStudentModel(studentModel);
 
   // Awaited here, never read by the planner from the store: on SupabaseStore an
@@ -310,7 +312,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // and the fallback above has none. Same order as the planner's instruction.
   const retest = directives.find((d) => d.type === 'REVISIT') || directives.find((d) => d.type === 'BLOCK');
   const hasRetrieval = typeof plan.retrieval === 'string' && plan.retrieval.trim();
-  if (retest && !hasRetrieval) plan.retrieval = `Before we start — what is ${retest.target} and why does it matter?`;
+  // The planner's own question counts as the retest only when it names the concept as a whole
+  // ("asset" is not "set", "NoSQL" is not "SQL"); otherwise the lesson asks ours (#227), so a right
+  // answer always settles the concept it was asked about.
+  if (retest && !(hasRetrieval && namesConcept(plan.retrieval, retest.target))) {
+    plan.retrieval = `Before we start — what is ${retest.target} and why does it matter?`;
+  }
   // #148: no retrieval question, no retrieval step. The lesson opens on the diagnostic,
   // and the first answer is graded as the diagnostic, not as a retrieval check.
   const lessonSteps = hasRetrieval || retest ? STEPS : STEPS.filter((s) => s !== 'retrieval');
@@ -327,6 +334,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     history: [],
     assessments: [],
     course,
+    // The concept the retrieval step retests (#227): a right answer settles it, as a passed review does.
+    ...(retest ? { retestConcept: retest.target } : {}),
   };
 
   await state.writeKV(kvKey, JSON.stringify(started));

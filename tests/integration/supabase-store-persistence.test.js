@@ -341,18 +341,3 @@ describe('the daily budget of trial calls', () => {
     expect(day.map((row) => row.user_id)).toEqual(['', '']);
   });
 });
-
-// #149: a passed BLOCK retest re-grades the concept's lessons. That is not a new completion:
-// the lessons keep their dates, and the student's history gains nothing.
-describe('saving re-graded lessons', () => {
-  it('changes the grade only: the date stays, and no history is added', async () => {
-    const s = store({ userId: 'alice' });
-    await s.markLessonComplete('game-theory', 1, 'incorrect');
-    client.db.lessons_completed[0].date = '2026-09-01';
-    const curriculum = await s.readCurriculum('game-theory');
-    curriculum.lessons[0].engagement = 'reviewed';
-    await s.saveCurriculumProgress('game-theory', curriculum);
-    expect(client.db.lessons_completed).toEqual([{ user_id: 'alice', slug: 'game-theory', day: 1, date: '2026-09-01', engagement: 'reviewed' }]);
-    expect((await s.readProgress()).history).toHaveLength(1);
-  });
-});
