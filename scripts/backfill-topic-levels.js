@@ -23,8 +23,10 @@ const KINDS = `Judge each prerequisite on its own, as one of two kinds:
 
 /** One prerequisite's kind: university or school by the shared lists (lib/core/quick-start.js), otherwise the model's general-or-school. */
 export function kindOf(text, judged) {
+  const said = String(judged).trim().toLowerCase();
+  if (!['general', 'school'].includes(said)) throw new Error(`unknown kind "${judged}"`); // skip the topic, never guess
   if (isUniversity(text)) return 'university';
-  return judged === 'general' && !isSchool(text) ? 'general' : 'school';
+  return said === 'general' && !isSchool(text) ? 'general' : 'school';
 }
 
 /** The course level from its prerequisites' kinds: the hardest one decides (#251). */

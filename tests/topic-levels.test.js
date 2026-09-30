@@ -142,8 +142,8 @@ it('counts a prerequisite as university-level only when it names a listed univer
   expect(kindOf('real analysis (sequences, continuity)', 'school')).toBe('university');
   expect(kindOf('basic linear algebra (eigenvalues)', 'general')).toBe('university');
   expect(kindOf('proof techniques (induction, contradiction)', 'school')).toBe('university');
-  expect(kindOf('basic neuroscience (neurons, brain regions)', 'university')).toBe('school');
-  expect(kindOf('art history fundamentals', 'university')).toBe('school');
+  expect(kindOf('basic neuroscience (neurons, brain regions)', 'school')).toBe('school');
+  expect(kindOf('art history fundamentals', 'general')).toBe('general'); // not listed: the model's call stands
   expect(kindOf('basic chemistry (organic chemistry helpful)', 'school')).toBe('school'); // optional never counts
   expect(kindOf('reading comprehension', 'general')).toBe('general');
   expect(kindOf('basic programming (loops, functions, data structures)', 'school')).toBe('school'); // examples don't decide
@@ -213,4 +213,44 @@ it('declares level and prerequisites in the quick-start response shape', async (
   const { buildQuickStartPrompt } = await import('../lib/core/quick-start.js');
   const { system } = buildQuickStartPrompt(new Map(), 'Knots', 'intermediate', null, '');
   expect(system).toMatch(/Return only JSON with taster, roadmap, quickCurriculum, level and prerequisites/);
+});
+
+it('never downgrades a generated advanced topic just because its subject is not listed', async () => {
+  const { topicMeta } = await import('../lib/core/quick-start.js');
+  expect(topicMeta({ level: 'advanced', prerequisites: ['functional analysis', 'commutative algebra'] }).level).toBe('advanced');
+  expect(topicMeta({ level: 'advanced', prerequisites: ['basic neuroscience', 'cognitive psychology fundamentals'] }).level).toBe('intermediate');
+});
+
+it('reads a parenthesis of qualifiers alone as making the subject optional', async () => {
+  const { isUniversity } = await import('../lib/core/quick-start.js');
+  expect(isUniversity('calculus (recommended but not required)')).toBe(false);
+  expect(isUniversity('calculus (strongly recommended)')).toBe(false);
+  expect(isUniversity('linear algebra (tensor basics helpful)')).toBe(true);
+});
+
+it('refuses a backfill answer with a kind it does not know, rather than guessing', async () => {
+  const { kindOf } = await import('../scripts/backfill-topic-levels.js');
+  expect(kindOf('basic geography', 'General')).toBe('general');
+  expect(() => kindOf('basic geography', 'unknown')).toThrow();
+  expect(() => kindOf('basic geography', 'university')).toThrow();
+});
+
+it('carries the latest valid level and prerequisites across builder revisions', async () => {
+  const { CurriculumPipeline } = await import('../lib/core/pipeline.js');
+  const builds = [
+    { topic: 'Knots', level: 'advanced', prerequisites: ['calculus'], lessons: [{ title: 'Loops' }] },
+    { topic: 'Knots', lessons: [{ title: 'Loops' }] }, // the revision drops both
+  ];
+  let critiques = 0;
+  const adapter = {
+    generate: async (system) => {
+      if (/CurriculumBuilder Instructions/.test(system)) return { text: JSON.stringify({ curriculum: builds.shift() }) };
+      if (/Critic/.test(system)) return { text: JSON.stringify({ status: critiques++ ? 'APPROVED' : 'REVISE', critique: 'again' }) };
+      return { text: '{}' };
+    },
+  };
+  const written = [];
+  const state = { readCurriculum: () => ({ level: 'beginner', prerequisites: ['curiosity'], lessons: [] }), writeCurriculum: (_s, c) => written.push(structuredClone(c)), writeDomainFile() {} };
+  await new CurriculumPipeline({ adapter, state, skills: { get: () => '' } }).run('Knots', 'knots', 'intermediate', 'sources');
+  expect(written.at(-1)).toMatchObject({ level: 'advanced', prerequisites: ['calculus'] });
 });
