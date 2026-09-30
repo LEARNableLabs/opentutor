@@ -63,3 +63,7 @@ it('says nothing for a partly right answer, and a partly right answer breaks a r
 it('says nothing when a reply carried no grade, and keeps the run of misses', async () => {
   expect(await play(0.1, null, 0.2)).toEqual([undefined, undefined, 'stuck']);
 });
+
+it('says "stuck" once, at the second miss, not at every miss after it', async () => {
+  expect(await play(0.2, 0.3, 0.1)).toEqual([undefined, 'stuck', undefined]);
+});

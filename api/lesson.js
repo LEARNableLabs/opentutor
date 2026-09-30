@@ -158,7 +158,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     if (assessment) {
       active.misses = assessment.score < 0.5 ? (active.misses || 0) + 1 : 0;
       if (assessment.score >= 0.7) mood = 'right';
-      else if (active.misses >= 2) mood = 'stuck';
+      else if (active.misses === 2) mood = 'stuck'; // once, at the second miss in a row
     }
     // The tutor's turns keep their grade in the history it is sent: turns shown to it without one
     // taught it to stop grading, about 1 step in 6 (#224). The student only ever sees `reply`.

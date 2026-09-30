@@ -317,13 +317,13 @@ async function sendLessonAnswer() {
 
   const typing = appendLessonMsg('tutor typing', 'Thinking...');
 
+  // A reply belongs to the lesson it answers: the student may have moved to another topic, or to
+  // the next lesson of this one, while it was on its way (#228). So does a failure (#265).
+  const topic = activeTopicSlug;
+  const sentFor = lessonAt.lessonId;
+  const current = () => topic === activeTopicSlug && sentFor === lessonAt.lessonId;
   try {
     let bubble = null;
-    // A reply belongs to the lesson it answers: the student may have moved to another topic, or to
-    // the next lesson of this one, while it was on its way (#228).
-    const topic = activeTopicSlug;
-    const sentFor = lessonAt.lessonId;
-    const current = () => topic === activeTopicSlug && sentFor === lessonAt.lessonId;
     const data = await streamLesson({ topicSlug: topic, answer, ...lessonAt }, (chunk) => {
       if (!current()) return;
       if (!bubble) { typing.remove(); bubble = appendLessonMsg('tutor', ''); }
@@ -352,7 +352,7 @@ async function sendLessonAnswer() {
     }
   } catch (err) {
     typing.remove();
-    companion(null);
+    if (current()) companion(null);
     appendLessonMsg('tutor', `Error: ${err.message}`);
   } finally {
     input.disabled = false;

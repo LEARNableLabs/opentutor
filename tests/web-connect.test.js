@@ -739,3 +739,29 @@ it('stays hidden for the session once the student taps it away', async () => {
   await answer(f);
   expect(shown(f)).toBe(false); // even for a right answer
 });
+
+it('keeps a new lesson\'s companion when an old lesson\'s answer fails late', async () => {
+  let fail;
+  const late = new Promise((r) => (fail = r));
+  let starts = 0;
+  const f = frontend((url, init) => {
+    if (url !== '/api/lesson') return null;
+    if (JSON.parse(init.body).answer) return late;
+    return [200, { ...LESSON_START, lessonId: `L${++starts}` }];
+  });
+  await settle();
+  f.$('#active-topic').value = 'demo';
+  await f.$('#btn-next').click();
+  await settle();
+  f.$('#lesson-input').value = 'an answer for lesson one';
+  const sent = f.$('#btn-lesson-answer').click();
+  await settle();
+  f.$('#active-topic').value = 'other';
+  await f.$('#btn-next').click(); // lesson two starts while lesson one's answer is out
+  await settle();
+  expect(f.$('#companion').dataset.state).toBe('idle');
+  fail([409, { error: 'That answer was for an earlier question.' }]);
+  await sent; await settle();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(false); // lesson two keeps its companion
+  expect(f.$('#companion').dataset.state).toBe('idle');
+});
