@@ -715,12 +715,12 @@ $('#key-form').addEventListener('submit', async (event) => {
   event.preventDefault();
   const key = $('#key-input').value.trim();
   if (!key) return;
+  $('#key-input').value = ''; // read once: a secret must not stay in the page, whatever the answer
   $('#btn-save-key').disabled = true;
   try {
     const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'save', key }) });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) return void ($('#connect-message').textContent = data.error || 'Could not save the key. Please try again.');
-    $('#key-input').value = '';
     if (data.freeTier) showConnect({ error: 'Saved, but your OpenRouter account has no credits yet. Add some at openrouter.ai to keep learning.' });
     else $('#connect-banner').classList.add('hidden');
     loadKeyStatus().catch(() => {});

@@ -514,6 +514,20 @@ it('shows why a pasted key was refused, and keeps the banner open', async () => 
   await settle();
   expect($('#connect-message').textContent).toBe('OpenRouter did not accept that key. Check it and try again.');
   expect($('#connect-banner').classList.contains('hidden')).toBe(false);
+  expect($('#key-input').value).toBe(''); // a refused secret does not stay in the page
+});
+
+it('clears the key from the field even when the request fails', async () => {
+  const { $ } = frontend((url, init) => {
+    if (url === '/api/openrouter' && init.method === 'POST') throw new Error('offline');
+    return null;
+  });
+  await settle();
+  $('#key-input').value = 'sk-or-mine';
+  await $('#key-form').dispatch('submit');
+  await settle();
+  expect($('#key-input').value).toBe('');
+  expect($('#connect-message').textContent).toBe('Could not save the key. Please try again.');
 });
 
 it('does not send an empty key', async () => {
