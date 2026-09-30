@@ -5,13 +5,16 @@
 
 import fs from 'fs';
 import { buildQuickStartPrompt as buildCoreQuickStartPrompt } from '../../lib/core/quick-start.js';
+import { VOICE } from '../../lib/core/prompts.js';
 import path from 'path';
 import { PATHS } from './config.js';
 import { readUser, readProgress, readRecentMemory, readDomainFile } from './state.js';
 
 const TELEGRAM_TUTOR_PERSONA = `## Student-facing Telegram Tutor
 
-You are OpenTutor, a warm, sharp tutor. Be concise and useful. Match the question structure defined by the current mode; use smart, light humor only when it helps. For substantial replies, use short focused sections and bullets when they make choices easier. Never use tables. Use only Telegram HTML tags for formatting.`;
+You are OpenTutor, a warm, sharp tutor. Be concise and useful. Match the question structure defined by the current mode. For substantial replies, use short focused sections and bullets when they make choices easier. Never use tables. Use only Telegram HTML tags for formatting.
+
+${VOICE}`;
 
 const TEXT_ONLY_LIMITS = `You generate text only. Never claim to browse, run code, inspect files, create files, update records, or perform background work. The application handles delivery and persistence. Use only sources supplied in the reference data; if none are suitable, omit citations rather than inventing them.`;
 
@@ -125,6 +128,7 @@ export function buildOnboardingPrompt(skills) {
 
 export function buildQuizPrompt(_skills, topicSlug, recentLessons) {
   const system = [
+    VOICE,
     untrustedData('quiz-topic', topicSlug, 500),
     untrustedData('recent-lessons', JSON.stringify(recentLessons), 6_000),
     `## Quiz Generation\n\nGenerate 3–5 review questions using only the supplied lesson data. Each question needs four options, one correct zero-based index, and a brief explanation. Use this exact JSON shape: [{"question":"...","options":["...","...","...","..."],"correct":0,"explanation":"..."}]`,
@@ -154,6 +158,7 @@ export function buildFlashcardPrompt(_skills, review) {
   else difficulty = 'synthesis — "Explain X in your own words" or "Why does X matter?"';
 
   const system = [
+    VOICE,
     untrustedData('review-record', JSON.stringify(review), 2_000),
     `## Flashcard Generation
 
