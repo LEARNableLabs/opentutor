@@ -3,7 +3,7 @@
   "slug": "measure-theory",
   "created": "2026-08-21",
   "student_level": "intermediate",
-  "level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "real analysis (sequences, series, continuity, epsilon-delta)",
     "point-set topology (metric spaces, open/closed sets)",

@@ -16,11 +16,22 @@ import { parseFirstJson } from '../lib/core/json.js';
 const DOMAINS_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'skills', 'tutor', 'domains');
 export const LEVELS = ['beginner', 'intermediate', 'advanced'];
 
-const KINDS = `Judge each prerequisite on its own, as one of three kinds:
+const KINDS = `Judge each prerequisite on its own, as one of two kinds:
 - general: knowledge a curious adult already has, or picks up in the first lessons: reading and writing well, everyday arithmetic, general-culture familiarity ("basic geography", "basic literary terminology", "interest in the night sky"), patience, simple household tools.
-- school: subject-specific background from secondary school or an introductory course, which many adults would have to refresh first ("basic algebra", "introductory biology", "cognitive psychology fundamentals", "basic programming", "general chemistry"), or a practical skill specific to the subject that a newcomer would not have ("basic forging techniques", "using planes and chisels", "a cube-solving method", "hand-sewing").
-- university: university-level background in a related field ("calculus", "linear algebra", "proof techniques", "organic chemistry", "quantum mechanics", "constitutional law", "a prior university course in the discipline").
-A prerequisite described as "basic", "introductory" or "fundamentals" of a school subject is school, never university.`;
+- school: anything more specific: what secondary school, a first introductory course, or a university teaches, or a practical skill specific to the subject that a newcomer would not have ("basic forging techniques", "using planes and chisels", "a cube-solving method").`;
+
+// A prerequisite normally first taught at university makes a course advanced. That call is
+// this list, reviewable in one place, rather than the model's: its judgment drifted with how
+// hard a subject sounds, one way and then the other (#251 review). "Helpful" never counts.
+const UNIVERSITY = /\b(calculus|linear algebra|differential equations|real analysis|complex analysis|measure theory|topology|abstract algebra|group theory|category theory|proofs?|discrete math(ematics)?|organic chemistry|biochemistry|molecular biology|quantum|statistical mechanics|electromagnet(ism|ics)|data structures|algorithms|operating systems|compilers?|signal processing|econometrics|machine learning|supervised learning)\b/i;
+const OPTIONAL = /helpful|optional|not required|or equivalent/i;
+
+/** One prerequisite's kind: university by the list, otherwise the model's general-or-school. */
+export function kindOf(text, judged) {
+  // The main phrase decides: "basic programming (loops, data structures)" is not a data structures course.
+  if (UNIVERSITY.test(text.replace(/\([^)]*\)/g, '')) && !OPTIONAL.test(text)) return 'university';
+  return judged === 'general' ? 'general' : 'school';
+}
 
 /** The course level from its prerequisites' kinds: the hardest one decides (#251). */
 export function levelFrom(kinds) {
@@ -50,8 +61,8 @@ async function classify(adapter, c) {
     'You judge what a self-study course needs a learner to know first.',
     KINDS,
     listed.length
-      ? 'Answer with JSON only: {"kinds": ["general" | "school" | "university", one per prerequisite, in the order given]}'
-      : 'The course lists no prerequisites. Write 3 to 5 short ones a learner should know before starting, and judge each. Answer with JSON only: {"prerequisites": ["..."], "kinds": ["general" | "school" | "university", one per prerequisite]}',
+      ? 'Answer with JSON only: {"kinds": ["general" | "school", one per prerequisite, in the order given]}'
+      : 'The course lists no prerequisites. Write 3 to 5 short ones a learner should know before starting, and judge each. Answer with JSON only: {"prerequisites": ["..."], "kinds": ["general" | "school", one per prerequisite]}',
   ].join('\n\n');
   const lessons = (c.lessons || []).slice(0, 40).map((l) => `- ${l.title}`).join('\n');
   const user = `Course: ${c.topic}\nPrerequisites:\n${listed.length ? listed.map((p, i) => `${i + 1}. ${p}`).join('\n') : '(none listed)'}\nLessons:\n${lessons}`;
@@ -60,8 +71,9 @@ async function classify(adapter, c) {
   const prerequisites = listed.length
     ? listed
     : Array.isArray(out?.prerequisites) ? out.prerequisites.filter((p) => typeof p === 'string' && p.trim()).map((p) => p.trim()) : [];
-  const kinds = Array.isArray(out?.kinds) ? out.kinds : [];
-  if (!prerequisites.length || kinds.length !== prerequisites.length) throw new Error(`kinds do not match the prerequisites: ${String(text).slice(0, 120)}`);
+  const judged = Array.isArray(out?.kinds) ? out.kinds : [];
+  if (!prerequisites.length || judged.length !== prerequisites.length) throw new Error(`kinds do not match the prerequisites: ${String(text).slice(0, 120)}`);
+  const kinds = prerequisites.map((p, i) => kindOf(p, judged[i]));
   const level = levelFrom(kinds);
   if (!level) throw new Error(`no valid kinds in: ${String(text).slice(0, 120)}`);
   return listed.length ? { level, kinds } : { level, kinds, prerequisites };

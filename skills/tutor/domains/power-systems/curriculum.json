@@ -3,7 +3,7 @@
   "slug": "power-systems",
   "created": "2026-08-21",
   "student_level": "intermediate",
-  "level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "AC circuits (phasors, impedance, basic circuit analysis)",
     "complex numbers",

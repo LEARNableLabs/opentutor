@@ -135,3 +135,16 @@ it('derives the level from the hardest prerequisite', async () => {
   expect(levelFrom([])).toBeNull();
   expect(levelFrom(['general', 'expert'])).toBeNull(); // an unknown kind is a failed answer, never a guess
 });
+
+// Whether a prerequisite is university-level is a listed rule, not the model's call.
+it('counts a prerequisite as university-level only when it names a listed university subject', async () => {
+  const { kindOf } = await import('../scripts/backfill-topic-levels.js');
+  expect(kindOf('real analysis (sequences, continuity)', 'school')).toBe('university');
+  expect(kindOf('basic linear algebra (eigenvalues)', 'general')).toBe('university');
+  expect(kindOf('proof techniques (induction, contradiction)', 'school')).toBe('university');
+  expect(kindOf('basic neuroscience (neurons, brain regions)', 'university')).toBe('school');
+  expect(kindOf('art history fundamentals', 'university')).toBe('school');
+  expect(kindOf('basic chemistry (organic chemistry helpful)', 'school')).toBe('school'); // optional never counts
+  expect(kindOf('reading comprehension', 'general')).toBe('general');
+  expect(kindOf('basic programming (loops, functions, data structures)', 'school')).toBe('school'); // examples don't decide
+});
