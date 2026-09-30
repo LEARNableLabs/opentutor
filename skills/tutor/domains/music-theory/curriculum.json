@@ -3,6 +3,7 @@
   "slug": "music-theory",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "music reading (treble and bass clefs)",
     "intervals (major, minor, perfect)",

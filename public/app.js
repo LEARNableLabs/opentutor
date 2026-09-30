@@ -171,8 +171,36 @@ let topicPicked = false;
 $('#btn-next').addEventListener('click', startLesson);
 $('#btn-lesson-answer').addEventListener('click', sendLessonAnswer);
 
+// ── Companion (#263) ─────────────────────────────────────────
+// The book with a face, at four moments: a lesson starting, an answer being read, a right answer,
+// and a second miss in a row. It steps back while the student types; a tap hides it for the session.
+const COMPANION_SAYS = {
+  idle: 'Ready when you are.',
+  thinking: 'Reading your answer.',
+  right: "That's it. Now it's yours.",
+  stuck: 'Try the smallest version of the problem first.',
+};
+let companionAway = false;
+try { companionAway = sessionStorage.getItem('ot_companion') === 'hidden'; } catch { /* storage may be off */ }
+function companion(moment) {
+  const el = $('#companion');
+  if (!el) return;
+  if (companionAway || !COMPANION_SAYS[moment]) return void el.classList.add('hidden');
+  el.dataset.state = '';
+  void el.offsetWidth; // replay a one-shot reaction
+  el.dataset.state = moment;
+  $('#companion-says').textContent = COMPANION_SAYS[moment];
+  el.classList.remove('hidden');
+}
+$('#companion-hide').addEventListener('click', () => {
+  companionAway = true;
+  try { sessionStorage.setItem('ot_companion', 'hidden'); } catch { /* the choice lasts this page anyway */ }
+  companion(null);
+});
+
 const lessonInput = $('#lesson-input');
 if (lessonInput) {
+  lessonInput.addEventListener('input', () => { if (lessonInput.value.trim()) companion(null); });
   lessonInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -213,6 +241,7 @@ async function startLesson() {
 
   activeTopicSlug = slug;
   showOptions(null); // the last lesson's suggested answers belong to it, however this start goes
+  companion(null);
   $('#btn-next').disabled = true;
   $('#lesson-loading').classList.remove('hidden');
   $('#lesson-area').classList.add('hidden');
@@ -253,6 +282,7 @@ function finishLessonStart(data, bubble) {
   $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}: ${data.lesson.title}`;
   if (!bubble.textContent.trim()) bubble.remove();
   showOptions(data.options);
+  companion('idle');
   showLessonInput();
 }
 
@@ -268,6 +298,7 @@ function showLessonStart(data) {
   if (data.note) appendLessonMsg('dim', data.note); // e.g. a review before moving on (#149)
   appendLessonMsg('tutor', data.reply);
   showOptions(data.options);
+  companion('idle');
   showLessonInput();
 }
 
@@ -283,19 +314,20 @@ async function sendLessonAnswer() {
 
   appendLessonMsg('student', answer);
   showOptions(null);
+  companion('thinking');
   input.value = '';
   input.disabled = true;
   $('#btn-lesson-answer').disabled = true;
 
   const typing = appendLessonMsg('tutor typing', 'Thinking...');
 
+  // A reply belongs to the lesson it answers: the student may have moved to another topic, or to
+  // the next lesson of this one, while it was on its way (#228). So does a failure (#265).
+  const topic = activeTopicSlug;
+  const sentFor = lessonAt.lessonId;
+  const current = () => topic === activeTopicSlug && sentFor === lessonAt.lessonId;
   try {
     let bubble = null;
-    // A reply belongs to the lesson it answers: the student may have moved to another topic, or to
-    // the next lesson of this one, while it was on its way (#228).
-    const topic = activeTopicSlug;
-    const sentFor = lessonAt.lessonId;
-    const current = () => topic === activeTopicSlug && sentFor === lessonAt.lessonId;
     const data = await streamLesson({ topicSlug: topic, answer, ...lessonAt }, (chunk) => {
       if (!current()) return;
       if (!bubble) { typing.remove(); bubble = appendLessonMsg('tutor', ''); }
@@ -310,6 +342,7 @@ async function sendLessonAnswer() {
       body.innerHTML = md(data.reply);
     }
 
+    companion(data.done ? null : data.mood); // a finished lesson has its own celebration
     if (data.done) {
       lessonActive = false;
       $('#lesson-input-area').classList.add('hidden');
@@ -324,6 +357,7 @@ async function sendLessonAnswer() {
     }
   } catch (err) {
     typing.remove();
+    if (current()) companion(null);
     appendLessonMsg('tutor', `Error: ${err.message}`);
   } finally {
     input.disabled = false;
@@ -443,13 +477,17 @@ function renderTopics(topics) {
 function topicCard(t) {
   // A button, so a keyboard reaches every topic; spans, because a button holds only phrasing content.
   // A course's length until it is started, then how far along it is.
+  // #251: how hard it is, and before starting, what to know first.
   const started = t.completed > 0;
+  const level = typeof t.level === 'string' && t.level ? t.level[0].toUpperCase() + t.level.slice(1) : '';
+  const before = !started && Array.isArray(t.prerequisites) && t.prerequisites.length ? `Before you start: ${t.prerequisites.join(', ')}. Rusty on any of these? Ask the tutor as you go.` : ''; // it prepares, never gates (#260)
   return `<button type="button" class="topic-card" data-slug="${escapeHTML(t.slug)}">
     <span class="topic-main">
       <span class="topic-name">${escapeHTML(t.topic || formatSlug(t.slug))}</span>
+      ${before ? `<span class="topic-before">${escapeHTML(before)}</span>` : ''}
       ${started ? `<span class="progress-bar"><span class="progress-fill" style="width:${Number(t.percent) || 0}%"></span></span>` : ''}
     </span>
-    <span class="topic-progress">${started ? `${Number(t.completed)} of ${Number(t.total)} lessons` : `${Number(t.total)} lessons`}</span>
+    <span class="topic-progress">${started ? `${Number(t.completed)} of ${Number(t.total)} lessons` : `${Number(t.total)} lessons`}${level ? `<span class="topic-level">${escapeHTML(level)}</span>` : ''}</span>
   </button>`;
 }
 

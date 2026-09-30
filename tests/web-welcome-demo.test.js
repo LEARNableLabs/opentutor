@@ -145,3 +145,22 @@ it('points every account call to action at the learning app once the visitor is 
   const start = page.created.filter((n) => n.textContent === 'Start this topic').at(-1);
   expect(start.href).toBe('/learn.html?topic=game-theory');
 });
+
+// #251: each catalog card says how hard the topic is and what to know first.
+it('shows a catalog card\'s level and prerequisites, as text', async () => {
+  const catalog = [{ slug: 'knots', topic: 'Knots', total: 5, level: 'beginner', prerequisites: ['<b>curiosity</b>', 'string'], preview: ['Loops'] }];
+  const page = landing(() => Response.json({}), {}, '', { catalog });
+  await settle();
+  const texts = page.created.map((n) => n.textContent);
+  expect(texts).toContain('Beginner');
+  expect(texts).toContain('Before you start: <b>curiosity</b>, string. Rusty on any of these? Ask the tutor as you go.');
+  expect(page.htmlWrites.join('')).not.toContain('curiosity'); // textContent, never HTML
+});
+
+it('leaves out the level and prerequisites a card does not have', async () => {
+  const catalog = [{ slug: 'knots', topic: 'Knots', total: 5, level: null, prerequisites: [], preview: ['Loops'] }];
+  const page = landing(() => Response.json({}), {}, '', { catalog });
+  await settle();
+  const texts = page.created.map((n) => n.textContent);
+  expect(texts.some((t) => /Before you start|null/.test(t))).toBe(false);
+});

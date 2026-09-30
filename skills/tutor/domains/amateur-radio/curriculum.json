@@ -3,6 +3,7 @@
   "slug": "amateur-radio",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic electronics (Ohm's law, AC/DC circuits)",
     "electromagnetic wave concepts (frequency, wavelength)",

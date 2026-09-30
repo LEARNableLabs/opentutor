@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your learning · OpenTutor</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="preload" href="/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -13,7 +15,7 @@
       <header>
         <h1>
           <a class="brand" href="/"
-            ><img src="favicon.png" alt="" width="40" height="40" /><span>Open<span class="brand-accent">Tutor</span></span></a
+            ><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z" /></svg><span>Open<span class="brand-accent">Tutor</span></span></a
           >
         </h1>
         <nav id="nav" aria-label="Sections">
@@ -54,6 +56,26 @@
           <div id="lesson-area" class="hidden">
             <div id="lesson-meta"></div>
             <div id="lesson-conversation"></div>
+            <!-- #263: the companion, at four moments only. A tap hides it for the session. -->
+            <div id="companion" class="companion hidden" data-state="idle" role="status" aria-live="polite">
+              <p id="companion-says" class="companion-says"></p>
+              <button type="button" id="companion-hide" class="companion-figure" aria-label="Hide the companion for this session">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                  <g class="c-all">
+                    <g transform="translate(48 6)"><g class="c-star"><path class="c-fill" d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z"/></g></g>
+                    <path class="c-page-l c-fill" d="M60 50 Q38 40 16 50 V98 Q38 88 60 98 Z"/>
+                    <path class="c-page-r c-fill" d="M60 50 Q82 40 104 50 V98 Q82 88 60 98 Z"/>
+                    <path class="c-gutter" d="M60 50 V98"/>
+                    <circle class="c-blink c-eye" cx="40" cy="66" r="5.5"/>
+                    <circle class="c-blink c-eye" cx="80" cy="66" r="5.5"/>
+                    <path class="c-smile normal" d="M46 80 Q60 90 74 80"/>
+                    <path class="c-smile wide" d="M42 78 Q60 96 78 78"/>
+                    <path class="c-smile flat" d="M48 84 Q60 86 72 84"/>
+                    <path class="c-smile soft" d="M49 83 Q60 88 71 83"/>
+                  </g>
+                </svg>
+              </button>
+            </div>
             <div id="answer-options" class="hidden" role="group" aria-label="Suggested answers"></div>
             <div id="lesson-input-area" class="hidden">
               <input type="text" id="lesson-input" placeholder="Your answer" aria-label="Your answer" />

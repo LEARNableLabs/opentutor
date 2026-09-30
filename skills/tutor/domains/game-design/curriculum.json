@@ -3,6 +3,7 @@
   "slug": "game-design",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic programming or scripting experience",
     "familiarity with playing diverse games (board, card, video)",

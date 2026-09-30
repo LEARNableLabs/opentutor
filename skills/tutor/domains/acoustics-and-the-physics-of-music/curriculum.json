@@ -3,6 +3,7 @@
   "slug": "acoustics-and-the-physics-of-music",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "algebra and basic trigonometry",
     "introductory physics (forces, energy, waves)",

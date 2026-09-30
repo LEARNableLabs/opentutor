@@ -3,6 +3,7 @@
   "slug": "electromagnetism",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "vector calculus (div, grad, curl, Stokes' theorem, divergence theorem)",
     "differential equations (wave equation, boundary value problems)",

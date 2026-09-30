@@ -3,6 +3,7 @@
   "slug": "algorithmic-music",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic music theory (rhythm, pitch, scales)",
     "programming fundamentals (variables, loops, functions)",

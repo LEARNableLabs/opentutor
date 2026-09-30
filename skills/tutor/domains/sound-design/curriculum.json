@@ -3,6 +3,7 @@
   "slug": "sound-design",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic audio editing",
     "DAW fundamentals",

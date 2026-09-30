@@ -3,6 +3,7 @@
   "slug": "mems-and-microsystems",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "basic physics (mechanics, E&M)",
     "circuits fundamentals",

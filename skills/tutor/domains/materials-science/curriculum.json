@@ -3,6 +3,7 @@
   "slug": "materials-science",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "introductory physics (waves, optics, mechanics)",
     "basic materials science or chemistry",

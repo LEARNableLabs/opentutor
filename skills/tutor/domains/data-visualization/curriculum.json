@@ -3,6 +3,7 @@
   "slug": "data-visualization",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic statistics (mean, median, distribution)",
     "familiarity with spreadsheets or basic data manipulation",

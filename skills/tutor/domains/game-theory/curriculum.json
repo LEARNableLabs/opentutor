@@ -3,6 +3,7 @@
   "slug": "game-theory",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "basic probability theory",
     "mathematical reasoning and proof techniques",

@@ -3,6 +3,7 @@
   "slug": "history-of-the-internet",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic computer literacy",
     "understanding of client-server model",

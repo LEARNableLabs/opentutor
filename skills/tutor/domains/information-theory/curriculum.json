@@ -3,6 +3,7 @@
   "slug": "information-theory",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "probability theory (random variables, distributions, expectation)",
     "calculus (derivatives, integrals, logarithms)",

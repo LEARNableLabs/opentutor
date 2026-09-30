@@ -99,12 +99,13 @@ i {
   white-space: nowrap;
   flex-shrink: 0;
 }
-.brand img {
-  width: 52px;
-  height: 52px;
-  border-radius: 10px;
+/* The spark (#262), from the page's green. */
+.brand .brand-mark {
+  width: 44px;
+  height: 44px;
+  fill: var(--green);
   vertical-align: middle;
-  margin: -5px 12px 0 0;
+  margin: -6px 12px 0 0;
 }
 .brand span {
   color: var(--green);
@@ -389,6 +390,16 @@ input:focus {
   color: var(--muted);
   font-size: 16px;
 }
+.catalog-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.catalog-before {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 10px 0 0;
+}
 .catalog-card ol {
   font-size: 17px;
   line-height: 1.5;
@@ -602,10 +613,9 @@ footer .brand {
   .brand {
     font-size: 25px;
   }
-  .brand img {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+  .brand .brand-mark {
+    width: 34px;
+    height: 34px;
     margin-right: 10px;
   }
   .site-header nav {
@@ -716,10 +726,9 @@ footer .brand {
   .site-header .brand {
     font-size: 20px;
   }
-  .brand img {
-    width: 32px;
-    height: 32px;
-    border-radius: 7px;
+  .brand .brand-mark {
+    width: 28px;
+    height: 28px;
     margin-right: 6px;
   }
   .catalog-grid {

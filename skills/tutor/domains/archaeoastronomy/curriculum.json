@@ -3,6 +3,7 @@
   "slug": "archaeoastronomy",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic astronomy (celestial coordinates, solar system)",
     "familiarity with ancient civilizations",

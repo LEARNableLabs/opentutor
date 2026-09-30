@@ -3,6 +3,7 @@
   "slug": "optical-fiber-communications",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "electromagnetics fundamentals",
     "basic optics (refraction, reflection)",

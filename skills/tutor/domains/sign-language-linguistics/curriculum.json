@@ -3,6 +3,7 @@
   "slug": "sign-language-linguistics",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic linguistics (phonology, morphology, syntax)",
     "familiarity with at least one sign language (ASL, BSL, etc.)",

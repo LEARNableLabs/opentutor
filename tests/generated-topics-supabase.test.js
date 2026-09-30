@@ -45,7 +45,7 @@ it('serializes scoped atomic updates and reads generated lessons without disk wr
     expect((await restarted.readCurriculum('knots')).lessons[0].title).toBe('Loops');
     expect(await restarted.readDomainFile('knots','research.md')).toBe('Source');
     expect(await restarted.listTopics()).toEqual(['knots']);
-    expect(await restarted.listTopicProgress()).toEqual([{slug:'knots',topic:'Knots',total:1,completed:0,percent:0,current:{lesson:1,title:'Loops',status:'pending'}}]);
+    expect(await restarted.listTopicProgress()).toEqual([{slug:'knots',topic:'Knots',total:1,completed:0,percent:0,current:{lesson:1,title:'Loops',status:'pending'},level:null,prerequisites:[]}]);
     expect(await readTopicBuild(bob,'knots')).toBeNull();expect(await bob.listTopics()).toEqual([]);expect(await bob.listTopicProgress()).toEqual([]);
     expect(fs.readdirSync(root)).toEqual([]);
   }finally{fs.chmodSync(root,0o755);fs.rmSync(root,{recursive:true,force:true});}

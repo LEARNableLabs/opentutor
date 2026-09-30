@@ -3,6 +3,7 @@
   "slug": "arachnology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": ["basic biology", "chemistry fundamentals", "evolution and natural selection"],
   "exit_criteria": [
     "student can identify major spider body systems and explain their function",

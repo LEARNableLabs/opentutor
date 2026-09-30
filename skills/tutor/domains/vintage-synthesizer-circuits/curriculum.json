@@ -3,6 +3,7 @@
   "slug": "vintage-synthesizer-circuits",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic circuit analysis (Ohm's law, Kirchhoff's laws)",
     "op-amp fundamentals (inverting/non-inverting configurations)",

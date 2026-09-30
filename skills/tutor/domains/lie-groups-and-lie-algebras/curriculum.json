@@ -3,6 +3,7 @@
   "slug": "lie-groups-and-lie-algebras",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "linear algebra (eigenvalues, eigenvectors, matrix operations)",
     "abstract algebra (groups, vector spaces, homomorphisms)",

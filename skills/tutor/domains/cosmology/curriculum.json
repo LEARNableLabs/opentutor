@@ -3,6 +3,7 @@
   "slug": "cosmology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "calculus (derivatives, integrals, basic differential equations)",
     "basic physics (mechanics, electromagnetism, thermodynamics)",

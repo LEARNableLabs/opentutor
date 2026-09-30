@@ -3,6 +3,7 @@
   "slug": "algebraic-geometry",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "abstract algebra (rings, fields, ideals)",
     "commutative algebra (localization, Noetherian rings)",

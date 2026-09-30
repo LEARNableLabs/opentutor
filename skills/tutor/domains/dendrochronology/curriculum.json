@@ -3,6 +3,7 @@
   "slug": "dendrochronology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic statistics (mean, variance, correlation)",
     "fundamental ecology or environmental science",

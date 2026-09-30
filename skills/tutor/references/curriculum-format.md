@@ -10,6 +10,7 @@ Curricula live in `domains/<topic-slug>/curriculum.json` — one file per topic,
   "slug": "differential-geometry",
   "created": "2026-03-01",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": ["multivariable calculus", "linear algebra"],
   "exit_criteria": ["parametrize curves and compute Frenet frames", "..."],
   "lessons": [
@@ -58,6 +59,7 @@ Let the material dictate the curriculum size — don't force every topic into th
 
 - **Lesson count** — as many as needed, typically 15-35. A narrow topic (origami mathematics) might need 22; a broad one (category theory) might need 35. Don't pad to fill a target or cut to meet one.
 - **Modules** — group by coherent subtopic. 3-7 is typical but not a rule.
+- **Level** — how hard the topic is, which is not the same as `student_level` (who it is written for). `beginner`: no background beyond general schooling. `intermediate`: some background, such as high-school maths, basic programming or an intro course. `advanced`: university-level background in a related field.
 - **Prerequisites** — list what's genuinely needed. Could be 3, could be 10.
 - **Exit criteria** — list what the student can actually do after finishing. Match the ambition to the material, not to a count.
 

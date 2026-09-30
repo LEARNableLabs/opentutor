@@ -3,6 +3,7 @@
   "slug": "sourdough-science",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic biology (cells, metabolism)",
     "introductory chemistry (pH, acids/bases, organic molecules)",

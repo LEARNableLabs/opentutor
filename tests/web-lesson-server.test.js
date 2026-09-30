@@ -110,12 +110,15 @@ it('opens on the diagnostic, grades the first answer as one, and resumes on a re
   expect(prompts.at(-1)).toContain('## Current Step: diagnostic');
 
   const before = prompts.length;
+  // The companion's reaction to that answer (#263) belongs to the answer: a reload doesn't replay it.
+  const { mood, ...shown } = answered;
+  expect(mood).toBe('right');
   const resumed = await post('/api/lesson', { topicSlug: 'game-theory' });
   expect(resumed.status).toBe(200);
-  expect(await resumed.json()).toEqual({ ...answered, resumed: true });
+  expect(await resumed.json()).toEqual({ ...shown, resumed: true });
   const streamed = await post('/api/lesson', { topicSlug: 'game-theory' }, { Accept: 'text/event-stream' });
   const [, data] = /^event: done\ndata: (.*)\n\n$/.exec(await streamed.text()); // one event, nothing else
-  expect(JSON.parse(data)).toEqual({ ...answered, resumed: true });
+  expect(JSON.parse(data)).toEqual({ ...shown, resumed: true });
   expect(prompts).toHaveLength(before);
 });
 

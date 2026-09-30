@@ -3,6 +3,7 @@
   "slug": "oceanography",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic chemistry (especially water chemistry and chemical bonds)",
     "basic physics (fluid dynamics, pressure, waves)",
