@@ -1,7 +1,8 @@
-import { it, expect } from 'vitest';
+import { it, expect, vi } from 'vitest';
 import fs from 'node:fs';
 import { buildSocraticResponsePrompt, buildLessonPlanPrompt, buildOnboardingPrompt, buildDemoPrompt, VOICE } from '../lib/core/prompts.js';
 import { chatTurn } from '../api/chat.js';
+import { buildQuickStartPrompt } from '../lib/core/quick-start.js';
 
 // #256: one voice for everything a student reads, so the wit and the engagement rules
 // can't drift apart between the web, Telegram and the chat.
@@ -26,6 +27,7 @@ it.each(['skills/tutor/SKILL.md', 'claude-web/SKILL.md', 'workspace/SOUL.md', 'h
     expect(text).toMatch(/frustrated/);
     expect(text).toMatch(/missed twice/);
     expect(text).not.toMatch(/memorable quote or aphorism/);
+    expect(text).not.toMatch(/End each lesson\/session with a short aphorism of your own related to the topic \(a quote only when you are certain who said it\)\. It counts/); // must yield to the humor limits
   },
 );
 
@@ -50,4 +52,13 @@ it('the Telegram persona uses the shared voice, not its own', () => {
   const source = fs.readFileSync('scripts/bot/context.js', 'utf8');
   expect(source).toMatch(/import \{[^}]*\bVOICE\b[^}]*\} from '..\/..\/lib\/core\/prompts\.js'/);
   expect(source).not.toMatch(/use smart, light humor only when it helps/);
+});
+
+it('the course taster, the Telegram quiz and flashcards speak in the voice', async () => {
+  expect(buildQuickStartPrompt(null, 'Topic', 'beginner', {}, '').system).toContain(VOICE);
+  vi.stubEnv('TELEGRAM_BOT_TOKEN', 'test-token'); // the bot's config checks it on import
+  const bot = await import('../scripts/bot/context.js');
+  vi.unstubAllEnvs();
+  expect(bot.buildQuizPrompt(null, 'demo', []).system).toContain(VOICE);
+  expect(bot.buildFlashcardPrompt(null, { streak: 1, reps: 0 }).system).toContain(VOICE);
 });

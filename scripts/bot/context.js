@@ -128,6 +128,7 @@ export function buildOnboardingPrompt(skills) {
 
 export function buildQuizPrompt(_skills, topicSlug, recentLessons) {
   const system = [
+    VOICE,
     untrustedData('quiz-topic', topicSlug, 500),
     untrustedData('recent-lessons', JSON.stringify(recentLessons), 6_000),
     `## Quiz Generation\n\nGenerate 3–5 review questions using only the supplied lesson data. Each question needs four options, one correct zero-based index, and a brief explanation. Use this exact JSON shape: [{"question":"...","options":["...","...","...","..."],"correct":0,"explanation":"..."}]`,
@@ -157,6 +158,7 @@ export function buildFlashcardPrompt(_skills, review) {
   else difficulty = 'synthesis — "Explain X in your own words" or "Why does X matter?"';
 
   const system = [
+    VOICE,
     untrustedData('review-record', JSON.stringify(review), 2_000),
     `## Flashcard Generation
 
