@@ -424,7 +424,7 @@ function topicCard(t) {
   // #251: how hard it is, and before starting, what to know first.
   const started = t.completed > 0;
   const level = typeof t.level === 'string' && t.level ? t.level[0].toUpperCase() + t.level.slice(1) : '';
-  const before = !started && Array.isArray(t.prerequisites) && t.prerequisites.length ? `Before you start: ${t.prerequisites.join(', ')}.` : '';
+  const before = !started && Array.isArray(t.prerequisites) && t.prerequisites.length ? `Before you start: ${t.prerequisites.join(', ')}. Rusty on any of these? Ask the tutor as you go.` : ''; // it prepares, never gates (#260)
   return `<button type="button" class="topic-card" data-slug="${escapeHTML(t.slug)}">
     <span class="topic-main">
       <span class="topic-name">${escapeHTML(t.topic || formatSlug(t.slug))}</span>

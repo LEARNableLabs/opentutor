@@ -42,7 +42,7 @@ function render() {
     if (topic.prerequisites?.length) {
       const before = document.createElement('p');
       before.className = 'catalog-before';
-      before.textContent = `Before you start: ${topic.prerequisites.join(', ')}.`;
+      before.textContent = `Before you start: ${topic.prerequisites.join(', ')}. Rusty on any of these? Ask the tutor as you go.`; // it prepares, never gates (#260)
       card.append(before);
     }
     const lessons = document.createElement('ol');
