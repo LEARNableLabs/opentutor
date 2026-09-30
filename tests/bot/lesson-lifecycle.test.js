@@ -196,7 +196,9 @@ describe('suggested answers (#255)', () => {
     await answer(202, 'A long, confident diagnostic answer that clearly shows the student already understands alpha well.');
     const prompt = generate.mock.calls.map(([system]) => system).findLast((s) => s.includes('## Current Step:'));
     expect(prompt).not.toMatch(/Ask the next question as the lesson plan words it/); // the follow-up is skipped
-    expect(prompt).toMatch(/instead of the follow-up question, ask the application challenge/);
+    expect(prompt).toMatch(/strong enough to skip the follow-up question/);
+    expect(prompt).toMatch(/present the application challenge from the lesson plan\. Ask nothing else/);
+    expect(prompt).not.toMatch(/What made you think that\?/); // the diagnostic's probe would be a second question
     const active = getActiveLesson(202);
     expect(active.steps[active.step]).toBe('application');
     expect(buttonsOf(channel.sendMessage.mock.calls.at(-1))).toEqual([]); // application: none
