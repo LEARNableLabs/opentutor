@@ -424,3 +424,27 @@ it('answers a generic 500 and keeps the Auth user when wiping the data fails (#1
   await decommissionStudent(store, alice);
   expect(wiped(alice)).toBe(true);
 });
+
+// #244: a refused signup or login used to leave no trace, and a rate limit read like a typo.
+it.each(['signup', 'login'])('logs why Supabase refused a %s, without the email', async (action) => {
+  const refusal = { data: { user: null, session: null }, error: { status: 422, code: 'weak_password', message: `Password for ${user.email} is weak` } };
+  client.auth.signUp.mockResolvedValueOnce(refusal);
+  client.auth.signInWithPassword.mockResolvedValueOnce(refusal);
+  const log = vi.spyOn(console, 'error').mockImplementation(() => {});
+  const res = await call(req({ action, email: user.email, password: 'long-password' }));
+  expect(res.statusCode).toBe(400);
+  expect(res.body.error).toMatch(action === 'signup' ? /Could not create the account/ : /Could not sign in/);
+  const logged = log.mock.calls.map((args) => args.join(' ')).join('\n');
+  expect(logged).toContain(`[account] ${action} refused: 422 weak_password`);
+  expect(logged).not.toContain(user.email);
+});
+
+it.each(['signup', 'login'])('tells a rate-limited %s to wait, instead of blaming the details', async (action) => {
+  const limited = { data: { user: null, session: null }, error: { status: 429, code: 'over_request_rate_limit', message: 'Request rate limit reached' } };
+  client.auth.signUp.mockResolvedValueOnce(limited);
+  client.auth.signInWithPassword.mockResolvedValueOnce(limited);
+  vi.spyOn(console, 'error').mockImplementation(() => {});
+  const res = await call(req({ action, email: user.email, password: 'long-password' }));
+  expect(res.statusCode).toBe(429);
+  expect(res.body.error).toBe('Too many sign-in attempts right now. Please wait a few minutes and try again.');
+});
