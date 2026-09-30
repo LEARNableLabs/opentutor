@@ -253,15 +253,21 @@ export function accountHandler({ getStore = getState, clientFactory = createAcco
               },
             })
           : await client.auth.signInWithPassword({ email, password: body.password });
-      if (result.error)
-        return res
-          .status(result.error.status === 429 ? 429 : 400)
-          .json({
-            error:
-              action === 'login'
-                ? 'Could not sign in. Check your email and password, and confirm your email first.'
-                : 'Could not create the account. Try signing in, or try again later.',
+      if (result.error) {
+        // Status and code only: Supabase's message can carry the email (#244).
+        console.error(`[account] ${action} refused:`, result.error.status, result.error.code);
+        if (result.error.status === 429)
+          return res.status(429).json({
+            error: 'Too many sign-in attempts right now. Please wait a few minutes and try again.',
           });
+        // One answer for every other refusal, so it never tells whether an email is registered.
+        return res.status(400).json({
+          error:
+            action === 'login'
+              ? 'Could not sign in. Check your email and password, and confirm your email first.'
+              : 'Could not create the account. Try signing in, or try again later.',
+        });
+      }
       if (action === 'signup' && !result.data.session)
         return res
           .status(200)
