@@ -223,6 +223,7 @@ nav,
 }
 
 input[type='text'],
+input[type='password'],
 select {
   min-width: 0;
   background: var(--surface-2);
@@ -235,6 +236,7 @@ select {
 }
 
 input[type='text']:focus,
+input[type='password']:focus,
 select:focus {
   outline: none;
   border-color: var(--accent);
@@ -603,6 +605,23 @@ input::placeholder {
 
 #connect-banner p {
   flex: 1 1 18rem;
+}
+
+/* #246: the second way in, on its own row under the two buttons. */
+#key-form {
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+#key-form label {
+  color: var(--text-dim);
+}
+
+#key-input {
+  flex: 1 1 14rem;
 }
 
 /* ── Onboarding ─────────────────────────────────────── */

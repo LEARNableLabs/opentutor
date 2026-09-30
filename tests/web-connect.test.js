@@ -17,6 +17,7 @@ function frontend(route, search = '') {
       classList: { add: (v) => names.add(v), remove: (v) => names.delete(v), contains: (v) => names.has(v), toggle: (v, force) => (force ? names.add(v) : names.delete(v)) },
       addEventListener: (name, fn) => listeners.set(name, fn),
       click() { return listeners.get('click')?.(); },
+      dispatch(name, event = { preventDefault() {} }) { return listeners.get(name)?.(event); },
       focus() { focused = this; }, appendChild(child) { this.children.push(child); }, remove() {}, querySelectorAll() { return []; },
     };
   };
@@ -487,4 +488,53 @@ it('shows the view of whichever tab is clicked', async () => {
     const section = $(`#view-${view}`);
     expect([view, section.classList.contains('active'), section.classList.contains('hidden')]).toEqual([view, true, false]);
   }
+});
+
+// #246: pasting a key is the other way to connect.
+it('saves a pasted key, clears the field and closes the banner', async () => {
+  const { $, calls } = frontend((url, init) => (url === '/api/openrouter' && init.method === 'POST' ? [200, { connected: true, freeTier: false, limitRemaining: 5 }] : null));
+  await settle();
+  $('#connect-banner').classList.remove('hidden');
+  $('#key-input').value = '  sk-or-mine  ';
+  await $('#key-form').dispatch('submit');
+  await settle();
+  const save = calls.find((c) => c.url === '/api/openrouter' && c.init.method === 'POST');
+  expect(JSON.parse(save.init.body)).toEqual({ action: 'save', key: 'sk-or-mine' });
+  expect($('#key-input').value).toBe('');
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+  expect($('#btn-save-key').disabled).toBe(false);
+});
+
+it('shows why a pasted key was refused, and keeps the banner open', async () => {
+  const { $ } = frontend((url, init) => (url === '/api/openrouter' && init.method === 'POST' ? [400, { error: 'OpenRouter did not accept that key. Check it and try again.' }] : null));
+  await settle();
+  $('#connect-banner').classList.remove('hidden');
+  $('#key-input').value = 'sk-or-typo';
+  await $('#key-form').dispatch('submit');
+  await settle();
+  expect($('#connect-message').textContent).toBe('OpenRouter did not accept that key. Check it and try again.');
+  expect($('#connect-banner').classList.contains('hidden')).toBe(false);
+  expect($('#key-input').value).toBe(''); // a refused secret does not stay in the page
+});
+
+it('clears the key from the field even when the request fails', async () => {
+  const { $ } = frontend((url, init) => {
+    if (url === '/api/openrouter' && init.method === 'POST') throw new Error('offline');
+    return null;
+  });
+  await settle();
+  $('#key-input').value = 'sk-or-mine';
+  await $('#key-form').dispatch('submit');
+  await settle();
+  expect($('#key-input').value).toBe('');
+  expect($('#connect-message').textContent).toBe('Could not save the key. Please try again.');
+});
+
+it('does not send an empty key', async () => {
+  const { $, calls } = frontend(() => null);
+  await settle();
+  $('#key-input').value = '   ';
+  await $('#key-form').dispatch('submit');
+  await settle();
+  expect(calls.some((c) => c.url === '/api/openrouter' && c.init.method === 'POST')).toBe(false);
 });
