@@ -152,6 +152,7 @@ $$('.nav-btn').forEach((btn) => {
 
     if (btn.dataset.view === 'topics') loadTopics();
     if (btn.dataset.view === 'learn') loadActiveTopics();
+    companion(btn.dataset.view === 'chat' ? 'chat-idle' : btn.dataset.view === 'learn' && lessonActive ? 'idle' : null);
     if (btn.dataset.view === 'chat') offerKeyForChat();
     else if (chatOffer) {
       chatOffer = false;
@@ -171,25 +172,32 @@ let topicPicked = false;
 $('#btn-next').addEventListener('click', startLesson);
 $('#btn-lesson-answer').addEventListener('click', sendLessonAnswer);
 
-// ── Companion (#263) ─────────────────────────────────────────
-// The book with a face, at four moments: a lesson starting, an answer being read, a right answer,
-// and a second miss in a row. It steps back while the student types; a tap hides it for the session.
-const COMPANION_SAYS = {
-  idle: 'Ready when you are.',
-  thinking: 'Reading your answer.',
-  right: "That's it. Now it's yours.",
-  stuck: 'Try the smallest version of the problem first.',
+// ── Companion (#263, #268) ────────────────────────────────────
+// The book with a face, at a few moments: in a lesson, when it starts, while an answer is read, at a right
+// answer and at a second miss in a row; in the chat, when it opens and while a reply is written. It steps
+// back while the student types, and a tap hides it everywhere for the session. One companion, moved above
+// the input of whichever tab it speaks in.
+const COMPANION_MOMENTS = {
+  idle: ['idle', 'Ready when you are.'],
+  thinking: ['thinking', 'Reading your answer.'],
+  right: ['right', "That's it. Now it's yours."],
+  stuck: ['stuck', 'Try the smallest version of the problem first.'],
+  'chat-idle': ['idle', "What's on your mind?"],
+  'chat-thinking': ['thinking', 'Thinking it over.'],
 };
 let companionAway = false;
 try { companionAway = sessionStorage.getItem('ot_companion') === 'hidden'; } catch { /* storage may be off */ }
 function companion(moment) {
   const el = $('#companion');
   if (!el) return;
-  if (companionAway || !COMPANION_SAYS[moment]) return void el.classList.add('hidden');
+  const known = COMPANION_MOMENTS[moment];
+  if (companionAway || !known) return void el.classList.add('hidden');
+  const home = moment.startsWith('chat') ? $('#chat-input-area') : $('#answer-options');
+  if (home && el.nextElementSibling !== home) home.parentNode?.insertBefore?.(el, home);
   el.dataset.state = '';
   void el.offsetWidth; // replay a one-shot reaction
-  el.dataset.state = moment;
-  $('#companion-says').textContent = COMPANION_SAYS[moment];
+  el.dataset.state = known[0];
+  $('#companion-says').textContent = known[1];
   el.classList.remove('hidden');
 }
 $('#companion-hide').addEventListener('click', () => {
@@ -602,6 +610,7 @@ function watchTopicBuild(slug, waitingForStarter = false) {
 // ── Chat view ───────────────────────────────────────────────
 
 $('#btn-send').addEventListener('click', sendChat);
+$('#chat-input').addEventListener('input', () => { if ($('#chat-input').value.trim()) companion(null); });
 $('#chat-input').addEventListener('keydown', (e) => {
   if (e.key === 'Enter' && !e.shiftKey) {
     e.preventDefault();
@@ -615,6 +624,7 @@ async function sendChat() {
   if (!message) return;
 
   appendChat('user', message);
+  companion('chat-thinking');
   input.value = '';
   $('#btn-send').disabled = true;
 
@@ -629,9 +639,11 @@ async function sendChat() {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
     typing.remove();
+    companion(null);
     appendChat('assistant', data.reply);
   } catch (err) {
     typing.remove();
+    companion(null);
     appendChat('assistant', `Error: ${err.message}`);
   } finally {
     $('#btn-send').disabled = false;

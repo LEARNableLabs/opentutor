@@ -825,3 +825,51 @@ it('clears the suggested answers when another lesson starts, even if that start 
   expect(f.$('#answer-options').children).toEqual([]);
   expect(f.$('#answer-options').classList.contains('hidden')).toBe(true);
 });
+
+// #268: the companion is beside the chat too.
+it('greets the chat, thinks while a reply is written, then steps aside', async () => {
+  let reply;
+  const pending = new Promise((r) => (reply = r));
+  const f = frontend((url) => (url === '/api/chat' ? pending : null));
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(false);
+  expect(f.$('#companion').dataset.state).toBe('idle');
+  expect(f.$('#companion-says').textContent).toBe("What's on your mind?");
+  f.$('#chat-input').value = 'Why is the sky blue?';
+  const sent = f.$('#btn-send').click();
+  await settle();
+  expect(f.$('#companion').dataset.state).toBe('thinking');
+  expect(f.$('#companion-says').textContent).toBe('Thinking it over.');
+  reply([200, { reply: 'Scattering.', model: 'm' }]);
+  await sent; await settle();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(true);
+});
+
+it('steps back while the student types a chat message', async () => {
+  const f = frontend(() => null);
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  f.$('#chat-input').value = 'Why';
+  f.$('#chat-input').dispatch('input');
+  expect(f.$('#companion').classList.contains('hidden')).toBe(true);
+});
+
+it('stays hidden in the chat once tapped away, and leaves with the chat', async () => {
+  const f = frontend(() => null);
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  await f.$('.nav-btn[data-view="learn"]').click(); // no lesson running: nothing to say there
+  await settle();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(true);
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  await f.$('#companion-hide').click();
+  await f.$('.nav-btn[data-view="learn"]').click();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(true);
+});
