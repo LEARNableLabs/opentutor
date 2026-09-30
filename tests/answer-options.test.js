@@ -46,3 +46,10 @@ it('shows retrieval options in the plan schema as a list, like the others', () =
   const { system } = buildLessonPlanPromptFor();
   expect(system).toMatch(/"retrievalOptions": \["answer 1", "answer 2", "answer 3", "I don't remember"\]/);
 });
+
+it('keeps a retrieval reply honest when a quick lesson goes straight to the application', () => {
+  const { system } = buildSocraticResponsePrompt(plan(), "I don't remember", 'retrieval', '', { nextStep: 'application' });
+  expect(system).toMatch(/If they couldn't recall: give a 1-sentence reminder/); // the retrieval step's own instructions stay
+  expect(system).not.toMatch(/strong enough to skip/); // nothing claims the answer was strong
+  expect(system).toMatch(/instead of the diagnostic question, ask the application challenge from the lesson plan/);
+});
