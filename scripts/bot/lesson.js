@@ -9,6 +9,7 @@
  * Mid-lesson branching: steps expand or contract based on student answers.
  */
 
+import { suggestedAnswers, settleOptions } from '../../lib/core/answer-options.js';
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { parseFirstJson } from '../../lib/core/json.js';
@@ -284,7 +285,9 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
   // the lesson asks its own, and keeps it in the plan, so the answer is graded against it.
   if (retrievalConcept && !(lessonPlan.retrieval && namesConcept(lessonPlan.retrieval, retrievalConcept))) {
     lessonPlan.retrieval = `Before we start — quick check: what's <b>${retrievalConcept}</b> and why does it matter?`;
+    lessonPlan.retrievalOptions = null; // the planner's answers were for a different question
   }
+  settleOptions(lessonPlan);
 
   // Store active lesson state with dynamic steps
   activeLessons[chatId] = {
@@ -379,7 +382,9 @@ export async function handleLessonAnswer(text, chatId, channel) {
 
   // Generate Socratic response (cheap call)
   const user = readUser();
-  const responsePrompt = buildSocraticResponsePrompt(active.plan, text, stepName, user);
+  // A next question with suggested answers must be asked as planned: they were written for it (#255).
+  const askAsPlanned = !!suggestedAnswers(active.plan, active.steps[active.step + 1]);
+  const responsePrompt = buildSocraticResponsePrompt(active.plan, text, stepName, user, { askAsPlanned });
   const response = await generate(responsePrompt.system, [
     ...active.history,
   ], { model: responsePrompt.model, outputMode: responsePrompt.outputMode });
@@ -704,8 +709,7 @@ function buildSuggestedOptions(options, topicSlug, lessonDay, step) {
 
 function getOptionsForStep(active, stepName) {
   if (!active?.plan || !stepName) return null;
-  const key = `${stepName}Options`;
-  return active.plan[key] || null;
+  return suggestedAnswers(active.plan, stepName);
 }
 
 function appendOptionsHintAndButtons(text, active, stepName) {

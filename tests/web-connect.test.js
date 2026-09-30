@@ -18,7 +18,7 @@ function frontend(route, search = '') {
       addEventListener: (name, fn) => listeners.set(name, fn),
       click() { return listeners.get('click')?.(); },
       dispatch(name, event = { preventDefault() {} }) { return listeners.get(name)?.(event); },
-      focus() { focused = this; }, appendChild(child) { this.children.push(child); }, remove() {}, querySelectorAll() { return []; },
+      focus() { focused = this; }, appendChild(child) { this.children.push(child); }, replaceChildren(...nodes) { this.children = nodes; }, remove() {}, querySelectorAll() { return []; },
     };
   };
   const nodes = new Map([...html.matchAll(/<[^>]*\bid="([^"]+)"[^>]*>/g)].map(([tag, id]) => [`#${id}`, element(tag.match(/class="([^"]+)"/)?.[1])]));
@@ -658,3 +658,45 @@ it('knows a saved key at once, without waiting for the status to reload', async 
   expect($('#connect-banner').classList.contains('hidden')).toBe(true);
 });
 
+
+// #255: suggested answers under a checking question, tappable, with typing still open.
+const LESSON = { reply: 'Why does alpha matter?', step: 0, totalSteps: 3, done: false, lesson: { module: 'Basics', day: 1, title: 'Alpha' }, lessonId: 'L1' };
+async function startedLesson(first, next) {
+  const f = frontend((url, init) => {
+    if (url !== '/api/lesson') return null;
+    return JSON.parse(init.body).answer ? next : first;
+  });
+  await settle();
+  f.$('#active-topic').value = 'demo';
+  await f.$('#btn-next').click();
+  await settle();
+  return f;
+}
+
+it('shows a checking question\'s suggested answers, and sends the one the student taps', async () => {
+  const options = ['Because it compounds', 'Because it is fast', "I'm not sure — explain it to me"];
+  const { $, calls } = await startedLesson([200, { ...LESSON, options }], [200, { ...LESSON, reply: 'Right. Now apply it: ___', step: 1 }]);
+  const box = $('#answer-options');
+  expect(box.classList.contains('hidden')).toBe(false);
+  expect(box.children.map((b) => b.textContent)).toEqual(options);
+  await box.children[0].click();
+  await settle();
+  const sent = calls.filter((c) => c.url === '/api/lesson').at(-1);
+  expect(JSON.parse(sent.init.body)).toMatchObject({ topicSlug: 'demo', answer: 'Because it compounds', lessonId: 'L1', step: 0 });
+  expect(box.classList.contains('hidden')).toBe(true); // the application question comes with none
+  expect(box.children).toEqual([]);
+});
+
+it('keeps typing open: a typed answer goes as usual, and clears the suggestions', async () => {
+  const { $, calls } = await startedLesson([200, { ...LESSON, options: ['A', 'B'] }], [200, { ...LESSON, reply: 'Next?', step: 1, options: ['C', 'D'] }]);
+  $('#lesson-input').value = 'My own words';
+  await $('#btn-lesson-answer').click();
+  await settle();
+  expect(JSON.parse(calls.filter((c) => c.url === '/api/lesson').at(-1).init.body).answer).toBe('My own words');
+  expect($('#answer-options').children.map((b) => b.textContent)).toEqual(['C', 'D']);
+});
+
+it('shows no suggestions for a question that has none', async () => {
+  const { $ } = await startedLesson([200, LESSON], null);
+  expect($('#answer-options').classList.contains('hidden')).toBe(true);
+});

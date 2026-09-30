@@ -251,6 +251,7 @@ function finishLessonStart(data, bubble) {
   lessonAt = { lessonId: data.lessonId, step: data.step };
   $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}: ${data.lesson.title}`;
   if (!bubble.textContent.trim()) bubble.remove();
+  showOptions(data.options);
   showLessonInput();
 }
 
@@ -265,6 +266,7 @@ function showLessonStart(data) {
   if (data.resumed) appendLessonMsg('dim', 'Picking up where you left off.');
   if (data.note) appendLessonMsg('dim', data.note); // e.g. a review before moving on (#149)
   appendLessonMsg('tutor', data.reply);
+  showOptions(data.options);
   showLessonInput();
 }
 
@@ -279,6 +281,7 @@ async function sendLessonAnswer() {
   if (answer.length > TURN_LIMIT) return appendLessonMsg('tutor', tooLong(answer));
 
   appendLessonMsg('student', answer);
+  showOptions(null);
   input.value = '';
   input.disabled = true;
   $('#btn-lesson-answer').disabled = true;
@@ -314,6 +317,7 @@ async function sendLessonAnswer() {
       else showCelebration();
     } else {
       lessonAt = { lessonId: data.lessonId, step: data.step };
+      showOptions(data.options);
       const progress = `Step ${data.step + 1}/${data.totalSteps}`;
       $('#lesson-meta').textContent = $('#lesson-meta').textContent.replace(/ — Step.*/, '') + ` — ${progress}`;
     }
@@ -325,6 +329,23 @@ async function sendLessonAnswer() {
     $('#btn-lesson-answer').disabled = false;
     input.focus();
   }
+}
+
+// #255: suggested answers for a checking question. A tap sends one as the answer; typing still works.
+function showOptions(options) {
+  const box = $('#answer-options');
+  box.replaceChildren(...(options || []).map((text) => {
+    const option = document.createElement('button');
+    option.type = 'button';
+    option.className = 'secondary answer-option';
+    option.textContent = text;
+    option.addEventListener('click', () => {
+      $('#lesson-input').value = text;
+      sendLessonAnswer();
+    });
+    return option;
+  }));
+  box.classList.toggle('hidden', !options?.length);
 }
 
 function showLessonInput() {
