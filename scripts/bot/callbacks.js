@@ -7,6 +7,7 @@
 import { appendMemory, isGroupChat, recordStudentExercise } from './state.js';
 import { getCorrectAnswer, getLessonContext, setLastExerciseResult, completeLessonAfterExercise, getActiveLesson, handleLessonAnswer } from './lesson.js';
 import { generate } from './claude.js';
+import { VOICE } from '../../lib/core/prompts.js';
 import { log } from './logger.js';
 
 export async function handleCallback(callbackQuery, channel, skills) {
@@ -70,7 +71,7 @@ export async function handleCallback(callbackQuery, channel, skills) {
         if (ctx) {
           await channel.sendTyping(chatId);
           const result = await generate(
-            'Give a brief, student-facing hint using the exercise context in the user message. Do not give away the answer. Ask at most one guiding question.',
+            `${VOICE}\n\nGive a brief, student-facing hint using the exercise context in the user message. Do not give away the answer. Ask at most one guiding question.`,
             [{ role: 'user', content: JSON.stringify({ request: 'I need a hint.', exercise: ctx }) }],
             { model: 'cheap', outputMode: 'student' }
           );

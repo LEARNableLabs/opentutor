@@ -62,3 +62,10 @@ it('the course taster, the Telegram quiz and flashcards speak in the voice', asy
   expect(bot.buildQuizPrompt(null, 'demo', []).system).toContain(VOICE);
   expect(bot.buildFlashcardPrompt(null, { streak: 1, reps: 0 }).system).toContain(VOICE);
 });
+
+it('the Telegram exercise hint speaks in the voice', () => {
+  const source = fs.readFileSync('scripts/bot/callbacks.js', 'utf8');
+  expect(source).toMatch(/import \{ VOICE \} from '..\/..\/lib\/core\/prompts\.js'/);
+  const hint = source.slice(source.indexOf("data.endsWith(':hint')"));
+  expect(hint.slice(0, hint.indexOf('sendMessage'))).toMatch(/generate\(\s*`\$\{VOICE\}/);
+});
