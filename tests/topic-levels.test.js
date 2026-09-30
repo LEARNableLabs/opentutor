@@ -92,3 +92,17 @@ it('leaves out a level or prerequisites the model got wrong', async () => {
   expect(curriculum).not.toHaveProperty('level');
   expect(curriculum).not.toHaveProperty('prerequisites');
 });
+
+// Codex on #258: publishing the full build must not lose the quick build's valid level and prerequisites.
+it('keeps the quick build\'s level and prerequisites when the full build has no valid ones', async () => {
+  const { preserveStarterLessons } = await import('../lib/core/topic-builds.js');
+  const starter = { level: 'beginner', prerequisites: ['curiosity'], lessons: [{ title: 'Loops' }] };
+  const kept = preserveStarterLessons(starter, { topic: 'Knots', level: 'expert', prerequisites: 'algebra', lessons: [{ title: 'Braids' }] });
+  expect(kept).toMatchObject({ topic: 'Knots', level: 'beginner', prerequisites: ['curiosity'] });
+  expect(kept.lessons.map((l) => l.title)).toEqual(['Loops', 'Braids']);
+  const replaced = preserveStarterLessons(starter, { topic: 'Knots', level: 'advanced', prerequisites: ['topology'], lessons: [] });
+  expect(replaced).toMatchObject({ level: 'advanced', prerequisites: ['topology'] });
+  const neither = preserveStarterLessons({ lessons: [] }, { topic: 'Knots', level: 7, prerequisites: [''], lessons: [] });
+  expect(neither).not.toHaveProperty('level');
+  expect(neither).not.toHaveProperty('prerequisites');
+});
