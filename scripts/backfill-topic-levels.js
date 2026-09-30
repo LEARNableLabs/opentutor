@@ -12,7 +12,7 @@ import path from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { createAdapterFromEnv } from '../lib/adapters/index.js';
 import { parseFirstJson } from '../lib/core/json.js';
-import { isUniversity } from '../lib/core/quick-start.js';
+import { isUniversity, isSchool } from '../lib/core/quick-start.js';
 
 const DOMAINS_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'skills', 'tutor', 'domains');
 export const LEVELS = ['beginner', 'intermediate', 'advanced'];
@@ -21,10 +21,10 @@ const KINDS = `Judge each prerequisite on its own, as one of two kinds:
 - general: knowledge a curious adult already has, or picks up in the first lessons: reading and writing well, everyday arithmetic, general-culture familiarity ("basic geography", "basic literary terminology", "interest in the night sky"), patience, simple household tools.
 - school: anything more specific: what secondary school, a first introductory course, or a university teaches, or a practical skill specific to the subject that a newcomer would not have ("basic forging techniques", "using planes and chisels", "a cube-solving method").`;
 
-/** One prerequisite's kind: university by the shared list (lib/core/quick-start.js), otherwise the model's general-or-school. */
+/** One prerequisite's kind: university or school by the shared lists (lib/core/quick-start.js), otherwise the model's general-or-school. */
 export function kindOf(text, judged) {
   if (isUniversity(text)) return 'university';
-  return judged === 'general' ? 'general' : 'school';
+  return judged === 'general' && !isSchool(text) ? 'general' : 'school';
 }
 
 /** The course level from its prerequisites' kinds: the hardest one decides (#251). */

@@ -187,3 +187,30 @@ it('takes level and prerequisites from one source, never a mix', async () => {
   expect(withTopicMeta({ level: 'advanced', prerequisites: ['calculus'] }, quick)).toMatchObject({ level: 'advanced', prerequisites: ['calculus'] });
   expect(withTopicMeta({ prerequisites: ['calculus'] }, {})).toEqual({ prerequisites: ['calculus'] }); // nothing complete: whatever is valid
 });
+
+it('reads "(optional but helpful)" as making the subject itself optional', async () => {
+  const { isUniversity } = await import('../lib/core/quick-start.js');
+  expect(isUniversity('differential equations (optional but helpful)')).toBe(false);
+  expect(isUniversity('linear algebra (tensor basics helpful)')).toBe(true);
+});
+
+it('holds a generated beginner topic that names a school subject to intermediate', async () => {
+  const { topicMeta } = await import('../lib/core/quick-start.js');
+  expect(topicMeta({ level: 'beginner', prerequisites: ['basic algebra'] }).level).toBe('intermediate');
+  expect(topicMeta({ level: 'beginner', prerequisites: ['reading comprehension', 'curiosity'] }).level).toBe('beginner');
+});
+
+it('rates no shipped topic beginner that names a school subject', async () => {
+  const { isSchool } = await import('../lib/core/quick-start.js');
+  const wrong = shipped.filter((slug) => {
+    const c = read(slug);
+    return c.level === 'beginner' && c.prerequisites.some(isSchool);
+  });
+  expect(wrong).toEqual([]);
+});
+
+it('declares level and prerequisites in the quick-start response shape', async () => {
+  const { buildQuickStartPrompt } = await import('../lib/core/quick-start.js');
+  const { system } = buildQuickStartPrompt(new Map(), 'Knots', 'intermediate', null, '');
+  expect(system).toMatch(/Return only JSON with taster, roadmap, quickCurriculum, level and prerequisites/);
+});
