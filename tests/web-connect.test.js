@@ -879,6 +879,7 @@ function twoTabs() {
   const pend = {};
   const f = frontend((url, init) => {
     if (url === '/api/chat') return new Promise((r) => (pend.chat = r));
+    if (url === '/api/topics') return [200, []]; // the Topics tab lists topics, an array
     if (url !== '/api/lesson') return null;
     return JSON.parse(init.body).answer ? new Promise((r) => (pend.lesson = r)) : [200, LESSON_START];
   });
