@@ -1,6 +1,7 @@
 import { it, expect } from 'vitest';
 import { suggestedAnswers, settleOptions } from '../lib/core/answer-options.js';
-import { buildSocraticResponsePrompt } from '../lib/core/prompts.js';
+import { buildSocraticResponsePrompt, buildLessonPlanPrompt } from '../lib/core/prompts.js';
+const buildLessonPlanPromptFor = () => buildLessonPlanPrompt(new Map(), { lesson: 1, title: 't', concepts: ['c'] });
 
 // #255: one set of rules for suggested answers, on the web and in Telegram.
 const plan = () => ({
@@ -39,4 +40,15 @@ it('has the tutor ask a question with suggested answers as planned, and only the
   const RULE = /Ask the next question as the lesson plan words it/;
   expect(buildSocraticResponsePrompt(plan(), 'x', 'diagnostic', '', { markdown: true, askAsPlanned: true }).system).toMatch(RULE);
   expect(buildSocraticResponsePrompt(plan(), 'x', 'diagnostic', '', { markdown: true }).system).not.toMatch(RULE);
+});
+
+it('the Telegram button handler reads the same cleaned list the buttons were built from', async () => {
+  const source = (await import('node:fs')).readFileSync('scripts/bot/callbacks.js', 'utf8');
+  const handler = source.slice(source.indexOf("data.startsWith('ans:')"));
+  expect(handler.slice(0, 900)).toMatch(/suggestedAnswers\(active\.plan, step\)/);
+});
+
+it('shows retrieval options in the plan schema as a list, like the others', () => {
+  const { system } = buildLessonPlanPromptFor();
+  expect(system).toMatch(/"retrievalOptions": \["answer 1", "answer 2", "answer 3", "I don't remember"\]/);
 });

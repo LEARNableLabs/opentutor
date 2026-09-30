@@ -313,7 +313,8 @@ export async function deliverNextLesson(topicSlug, chatId, channel, skills) {
 
   // Send retrieval check or diagnostic (with suggested options)
   if (retrievalConcept) {
-    await channel.sendMessage(chatId, lessonPlan.retrieval);
+    const { text: msgText, msgOptions } = appendOptionsHintAndButtons(lessonPlan.retrieval, activeLessons[chatId], 'retrieval');
+    await channel.sendMessage(chatId, msgText, msgOptions);
     appendMessage(chatId, 'assistant', lessonPlan.retrieval);
   } else {
     // No retrieval due: it was already shifted out of `steps`, so step 0 is the diagnostic
@@ -382,9 +383,17 @@ export async function handleLessonAnswer(text, chatId, channel) {
 
   // Generate Socratic response (cheap call)
   const user = readUser();
+  // Mid-lesson branching, decided before the reply so it asks what really comes next (#255): a strong
+  // early answer skips the follow-up. (The history check counts the reply about to be added.)
+  if (active.mode === 'standard' && active.step + 1 < active.steps.length - 1
+    && text.length > 80 && active.history.length + 1 <= 4 && active.steps[active.step + 1] === 'followUp') {
+    active.steps.splice(active.step + 1, 1);
+    log.info({ topic: active.topicSlug }, 'student nailed it — skipping follow-up');
+  }
+  const nextStep = active.steps[active.step + 1];
   // A next question with suggested answers must be asked as planned: they were written for it (#255).
-  const askAsPlanned = !!suggestedAnswers(active.plan, active.steps[active.step + 1]);
-  const responsePrompt = buildSocraticResponsePrompt(active.plan, text, stepName, user, { askAsPlanned });
+  const askAsPlanned = !!suggestedAnswers(active.plan, nextStep);
+  const responsePrompt = buildSocraticResponsePrompt(active.plan, text, stepName, user, { askAsPlanned, nextStep });
   const response = await generate(responsePrompt.system, [
     ...active.history,
   ], { model: responsePrompt.model, outputMode: responsePrompt.outputMode });
@@ -400,18 +409,6 @@ export async function handleLessonAnswer(text, chatId, channel) {
   active.history.push({ role: 'assistant', content: visibleText });
   active.step++;
   persistActiveLesson(chatId);
-
-  // Mid-lesson branching: detect if student is breezing through
-  if (active.mode === 'standard' && active.step < active.steps.length - 1) {
-    if (text.length > 80 && active.history.length <= 4) {
-      // Strong answer early — consider skipping follow-up
-      const nextStep = active.steps[active.step];
-      if (nextStep === 'followUp' && text.length > 80) {
-        active.steps.splice(active.step, 1); // remove followUp
-        log.info({ topic: active.topicSlug }, 'student nailed it — skipping follow-up');
-      }
-    }
-  }
 
   // If transitioning from retrieval to diagnostic, prepend the goal
   const nextStep2 = active.steps[active.step];

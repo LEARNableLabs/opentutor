@@ -8,6 +8,7 @@ import { appendMemory, isGroupChat, recordStudentExercise } from './state.js';
 import { getCorrectAnswer, getLessonContext, setLastExerciseResult, completeLessonAfterExercise, getActiveLesson, handleLessonAnswer } from './lesson.js';
 import { generate } from './claude.js';
 import { VOICE } from '../../lib/core/prompts.js';
+import { suggestedAnswers } from '../../lib/core/answer-options.js';
 import { log } from './logger.js';
 
 export async function handleCallback(callbackQuery, channel, skills) {
@@ -34,8 +35,8 @@ export async function handleCallback(callbackQuery, channel, skills) {
         await channel.sendMessage(chatId, "That lesson has ended. Type /next for a new one.");
         return;
       }
-      const optionsKey = `${step}Options`;
-      const options = active.plan?.[optionsKey];
+      // The same cleaned list the buttons were built from (#255), so a tap sends what it showed.
+      const options = suggestedAnswers(active.plan, step);
       const answerText = options?.[Number(index)] || `Option ${Number(index) + 1}`;
       try { await channel.editMessageButtons(chatId, messageId, []); } catch {}
       return handleLessonAnswer(answerText, chatId, channel);

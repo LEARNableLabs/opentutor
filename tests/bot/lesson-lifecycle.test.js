@@ -166,3 +166,39 @@ describe('BLOCK review', () => {
     expect(getActiveLesson(104).isReview).toBeFalsy();
   });
 });
+
+describe('suggested answers (#255)', () => {
+  const OPTIONS = {
+    retrievalOptions: ['alpha is a base', 'alpha is a bug', 'alpha is a font', "I don't remember"],
+    diagnosticOptions: ['d1', 'd2', 'd3', "I'm not sure"],
+    followUpOptions: ['f1', 'f2', 'f3', "I'm not sure"],
+  };
+  const buttonsOf = (call) => (call?.[2]?.buttons || []).flat().map((b) => b.text.replace(/^\d+\. /, ''));
+  beforeEach(() => {
+    generate.mockImplementation(async (system) => {
+      if (system.includes('assessing whether a student correctly recalled')) return { text: 'easy' };
+      if (system.includes('## Current Step:')) return { text: REPLY };
+      return { text: JSON.stringify({ ...PLAN, ...OPTIONS }) };
+    });
+  });
+
+  it('puts the buttons on the opening retrieval question too', async () => {
+    writeCurriculum([lesson(1, ['alpha'], { status: 'completed', engagement: 'correct' }), lesson(2, ['beta'])]);
+    getDueReviews.mockReturnValue([{ concept: 'alpha' }]);
+    await deliverNextLesson(TOPIC, 201, channel, new Map());
+    expect(buttonsOf(channel.sendMessage.mock.calls.at(-1)).sort()).toEqual([...OPTIONS.retrievalOptions].sort());
+  });
+
+  it('decides to skip the follow-up before replying, so the reply asks what really comes next', async () => {
+    writeCurriculum([lesson(1, ['alpha']), lesson(2, ['beta'])]);
+    await deliverNextLesson(TOPIC, 202, channel, new Map());
+    expect(getActiveLesson(202).mode).toBe('standard');
+    await answer(202, 'A long, confident diagnostic answer that clearly shows the student already understands alpha well.');
+    const prompt = generate.mock.calls.map(([system]) => system).findLast((s) => s.includes('## Current Step:'));
+    expect(prompt).not.toMatch(/Ask the next question as the lesson plan words it/); // the follow-up is skipped
+    expect(prompt).toMatch(/instead of the follow-up question, ask the application challenge/);
+    const active = getActiveLesson(202);
+    expect(active.steps[active.step]).toBe('application');
+    expect(buttonsOf(channel.sendMessage.mock.calls.at(-1))).toEqual([]); // application: none
+  });
+});

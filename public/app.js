@@ -212,6 +212,7 @@ async function startLesson() {
   if (!slug) return;
 
   activeTopicSlug = slug;
+  showOptions(null); // the last lesson's suggested answers belong to it, however this start goes
   $('#btn-next').disabled = true;
   $('#lesson-loading').classList.remove('hidden');
   $('#lesson-area').classList.add('hidden');

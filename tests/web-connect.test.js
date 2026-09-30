@@ -700,3 +700,21 @@ it('shows no suggestions for a question that has none', async () => {
   const { $ } = await startedLesson([200, LESSON], null);
   expect($('#answer-options').classList.contains('hidden')).toBe(true);
 });
+
+it('clears the suggested answers when another lesson starts, even if that start fails', async () => {
+  let starts = 0;
+  const f = frontend((url, init) => {
+    if (url !== '/api/lesson') return null;
+    return ++starts === 1 ? [200, { ...LESSON, options: ['A', 'B'] }] : [500, { error: 'The tutor is unavailable right now.' }];
+  });
+  await settle();
+  f.$('#active-topic').value = 'demo';
+  await f.$('#btn-next').click();
+  await settle();
+  expect(f.$('#answer-options').children).toHaveLength(2);
+  f.$('#active-topic').value = 'other';
+  await f.$('#btn-next').click();
+  await settle();
+  expect(f.$('#answer-options').children).toEqual([]);
+  expect(f.$('#answer-options').classList.contains('hidden')).toBe(true);
+});
