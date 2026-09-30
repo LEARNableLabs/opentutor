@@ -106,3 +106,22 @@ it('keeps the quick build\'s level and prerequisites when the full build has no 
   expect(neither).not.toHaveProperty('level');
   expect(neither).not.toHaveProperty('prerequisites');
 });
+
+// Codex on #258: Telegram publishes through CurriculumPipeline.run(), never preserveStarterLessons.
+it.each(['deterministic', 'agentic'])('a %s pipeline run keeps the quick build\'s valid level and prerequisites', async (mode) => {
+  const { CurriculumPipeline } = await import('../lib/core/pipeline.js');
+  const reply = JSON.stringify({
+    plan: 'PLAN', action: 'build', status: 'APPROVED', critique: '',
+    curriculum: { topic: 'Knots', level: 'expert', prerequisites: '', lessons: [{ title: 'Loops' }] },
+  });
+  const written = [];
+  const state = {
+    readCurriculum: () => ({ level: 'beginner', prerequisites: ['curiosity'], lessons: [{ title: 'Loops' }] }),
+    writeCurriculum: (_slug, c) => written.push(structuredClone(c)),
+    writeDomainFile() {},
+  };
+  const adapter = { generate: async () => ({ text: reply, model: 'fake' }) };
+  await new CurriculumPipeline({ adapter, state, skills: { get: () => '' }, mode }).run('Knots', 'knots', 'intermediate', 'sources').catch(() => {});
+  expect(written.length).toBeGreaterThan(0);
+  for (const c of written) expect(c).toMatchObject({ level: 'beginner', prerequisites: ['curiosity'] });
+});

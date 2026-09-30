@@ -4,7 +4,7 @@
  * has none. One cheap model call per topic. Only those lines change, so each file keeps
  * its formatting, and a file that already has a valid level is skipped.
  *
- * Usage: node --env-file=<env> scripts/backfill-topic-levels.js [--force] [--slug topic-slug]
+ * Usage: node --env-file=<env> scripts/backfill-topic-levels.js [--force] [--slug topic-slug] [--only level]
  */
 
 import fs from 'fs';
@@ -17,7 +17,7 @@ const DOMAINS_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 export const LEVELS = ['beginner', 'intermediate', 'advanced'];
 
 const RUBRIC = `Levels, for an adult studying on their own:
-- beginner: anyone can start. The prerequisites are general knowledge a curious adult already has or picks up in the first lessons: reading and writing well, everyday arithmetic, general-culture familiarity (such as "basic geography", "basic literary terminology", "interest in the night sky"), or practical patience and simple tools. General knowledge like this is still beginner even when the list calls it "basic".
+- beginner: anyone can start. The prerequisites are general knowledge a curious adult already has or picks up in the first lessons: reading and writing well, everyday arithmetic, general-culture familiarity (such as "basic geography", "basic literary terminology", "interest in the night sky"), or practical patience and simple tools. General knowledge like this is still beginner even when the list calls it "basic". But if any prerequisite is a skill or body of knowledge specific to the subject itself (prior forging technique, using planes and chisels, knowing a cube-solving method, hand-sewing technique, philatelic terminology, algebra, atmospheric science), the course is not beginner.
 - intermediate: needs subject-specific background from secondary school or an introductory course, which many adults would have to refresh first: algebra, probability, trigonometry, introductory physics, chemistry or biology, basic programming, basic music theory, or an introductory course in a related field.
 - advanced: needs university-level background in a related field before the first lesson, such as calculus, linear algebra, discrete mathematics with proofs, quantum or statistical mechanics, or a prior university course in the discipline. Choose it only when at least one prerequisite is at that level.
 Judge by the prerequisites and what the lessons actually require, not by how serious the subject sounds.`;
@@ -61,12 +61,15 @@ async function classify(adapter, c) {
 async function main() {
   const force = process.argv.includes('--force');
   const slugFilter = process.argv.find((a, i) => process.argv[i - 1] === '--slug');
+  const only = process.argv.find((a, i) => process.argv[i - 1] === '--only'); // re-rate just one level's topics
   const adapter = createAdapterFromEnv();
   const todo = fs.readdirSync(DOMAINS_DIR).filter((slug) => {
     if (slugFilter && slug !== slugFilter) return false;
     const file = path.join(DOMAINS_DIR, slug, 'curriculum.json');
     if (!fs.existsSync(file)) return false;
-    return force || !LEVELS.includes(JSON.parse(fs.readFileSync(file, 'utf8')).level);
+    const { level } = JSON.parse(fs.readFileSync(file, 'utf8'));
+    if (only && level !== only) return false;
+    return force || !LEVELS.includes(level);
   });
   console.log(`Rating ${todo.length} topics...`);
   let done = 0;
