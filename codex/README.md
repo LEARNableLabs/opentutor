@@ -46,8 +46,8 @@ Or reach other models through OpenRouter:
 ```bash
 OPENTUTOR_LLM=openrouter
 OPENROUTER_API_KEY=sk-or-...
-OPENROUTER_STRONG_MODEL=anthropic/claude-sonnet-5
-OPENROUTER_CHEAP_MODEL=anthropic/claude-haiku-4.5
+OPENROUTER_STRONG_MODEL=deepseek/deepseek-v4.1-flash   # the default; anthropic/claude-sonnet-5 for Claude
+OPENROUTER_CHEAP_MODEL=deepseek/deepseek-v4.1-flash     # the default; anthropic/claude-haiku-4.5 for Claude
 ```
 
 > OpenRouter model ids carry no date suffix. `anthropic/claude-sonnet-5`, not
