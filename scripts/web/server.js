@@ -529,8 +529,10 @@ function buildUserProfile(data) {
 
 server.listen(PORT, HOST, () => {
   console.log(`OpenTutor Web running at http://${HOST}:${PORT}`);
-  console.log(`LLM backend: ${chatAdapter.name}`);
-  console.log(`Pipeline backend: ${pipelineAdapter.name}`);
+  // Which models answer, so a missing env var can't silently change them (#239).
+  const models = (a) => (a.strongModel ? ` (${[...new Set([a.strongModel, a.cheapModel])].join(', ')})` : '');
+  console.log(`LLM backend: ${chatAdapter.name}${models(chatAdapter)}`);
+  console.log(`Pipeline backend: ${pipelineAdapter.name}${models(pipelineAdapter)}`);
   console.log(`Store: sqlite`);
   console.log(`Topics loaded: ${state.listTopics().length}`);
 });

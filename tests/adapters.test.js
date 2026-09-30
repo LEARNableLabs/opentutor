@@ -151,7 +151,7 @@ describe('Adapter defaults', () => {
     const adapter = createAdapter('openrouter');
     // OpenRouter ids carry no date suffix; the Anthropic API form 400s here.
     for (const model of [adapter.cheapModel, adapter.strongModel]) {
-      expect(model).toMatch(/^anthropic\//);
+      expect(model).toMatch(/^[a-z0-9-]+\/[a-z0-9.-]+$/); // provider/model
       expect(model).not.toMatch(/-\d{8}$/);
     }
   });
@@ -182,6 +182,17 @@ describe('OpenAI-compatible generate()', () => {
       model: 'deepseek/deepseek-v4.1-flash',
       messages: [{ role: 'system', content: 'SYSTEM' }, { role: 'user', content: 'hi' }],
     });
+  });
+
+  // #239: the model OpenTutor runs on. A deployment missing the two env vars must not
+  // quietly fall back to a far more expensive one.
+  it('OpenRouterAdapter defaults both roles to DeepSeek V4.1 Flash', () => {
+    vi.stubEnv('OPENROUTER_CHEAP_MODEL', '');
+    vi.stubEnv('OPENROUTER_STRONG_MODEL', '');
+    const adapter = new OpenRouterAdapter({ apiKey: 'secret' });
+    vi.unstubAllEnvs();
+    expect(adapter.cheapModel).toBe('deepseek/deepseek-v4.1-flash');
+    expect(adapter.strongModel).toBe('deepseek/deepseek-v4.1-flash');
   });
 
   it('OpenAIAdapter picks the strong model when asked', async () => {
