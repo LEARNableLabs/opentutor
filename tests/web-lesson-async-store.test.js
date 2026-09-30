@@ -91,7 +91,8 @@ describe('lesson route on an async, db-less store', () => {
   it('clears the stored lesson when it finishes', async () => {
     await lessonTurn(ctx, { topicSlug: 'demo' });
     for (const a of ['a1', 'a2', 'a3', 'a4']) await lessonTurn(ctx, { topicSlug: 'demo', answer: a });
-    expect([...ctx.state._kv.keys()]).toEqual([]);
+    // The lesson in flight is gone; what stays is the mark that it completed once (#228).
+    expect([...ctx.state._kv.keys()]).toEqual([expect.stringMatching(/^lesson_done:/)]);
   });
 
   it('still rejects an answer when no lesson is in progress', async () => {

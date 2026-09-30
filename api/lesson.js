@@ -23,7 +23,6 @@ import { parseFirstJson } from '../lib/core/json.js';
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 // Review lessons in a row for one blocked concept before the next lesson goes ahead (#149).
 const MAX_REVIEWS = 2;
-const CLAIM_MS = 120_000; // outlasts any turn: Vercel stops a lesson function at 60 s
 const STALE = { error: 'This lesson has moved on, in another tab or an earlier try. Reload the page to continue where it is.', stale: true };
 
 export default readsJson(handler);
@@ -124,104 +123,67 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     if (!said) return { status: 400, body: { error: 'An answer must be text of 1 to 4,000 characters.' } };
     active.history.push({ role: 'user', content: said });
 
-    // Two requests for the same step, from two tabs or a retry, can both pass the check above
-    // before either saves. The first to claim the step answers it; the other is refused as stale.
-    // A failed turn releases its claim, so the student can try the step again.
-    const claim = active.id ? `lesson_turn:${active.id}:${active.step}` : null;
-    const token = `${randomUUID()}:${Date.now()}`;
-    let ours = false;
-    const stillOurs = async () => String(await state.readKV(claim)) === token;
-    let answered = false;
-    try {
-      if (claim) {
-        await state.insertKV(claim, token);
-        let held = String(await state.readKV(claim));
-        // A request stopped before it could let go (a function killed at its time limit) would hold
-        // the step for good: past its lease, its claim is taken over. The right to take over that one
-        // expired claim is itself claimed first, so of two retries after it, only one deletes it.
-        if (held !== token && Date.now() - Number(held.split(':')[1]) > CLAIM_MS) {
-          const takeover = `${claim}:after:${held.split(':')[0]}`;
-          await state.insertKV(takeover, token);
-          if (String(await state.readKV(takeover)) === token) {
-            await state.deleteKV(claim);
-            await state.insertKV(claim, token);
-            held = String(await state.readKV(claim));
-          }
-        }
-        if (held !== token) return { status: 409, body: STALE }; // another request's
-        ours = true;
-        // A request that read the lesson before another finished it can claim after that one let
-        // its claim go: the lesson is read again, and must still be at this step.
-        const now = await state.readKV(kvKey);
-        const current = typeof now === 'string' ? JSON.parse(now) : now;
-        if (current?.id !== active.id || current?.step !== active.step) return { status: 409, body: STALE };
-        if (active.step > 0) await safely(() => state.deleteKV(`lesson_turn:${active.id}:${active.step - 1}`), null, 'claim');
-      }
-      const user = await safely(() => state.readUser(), '');
-      const course = active.course || String(active.topicSlug || '').replace(/-/g, ' '); // saved before #225: the slug
-      const responsePrompt = buildSocraticResponsePrompt(active.plan, said, stepName, user, { final: active.step === steps.length - 1, markdown: true, course });
-      const adapter = await getAdapter();
-      const response = await adapter.generate(
-        responsePrompt.system + '\n\nReturn only polished text.',
-        active.history,
-        { model: responsePrompt.model, ...stream },
-      );
+    const user = await safely(() => state.readUser(), '');
+    const course = active.course || String(active.topicSlug || '').replace(/-/g, ' '); // saved before #225: the slug
+    const responsePrompt = buildSocraticResponsePrompt(active.plan, said, stepName, user, { final: active.step === steps.length - 1, markdown: true, course });
+    const adapter = await getAdapter();
+    const response = await adapter.generate(
+      responsePrompt.system + '\n\nReturn only polished text.',
+      active.history,
+      { model: responsePrompt.model, ...stream },
+    );
 
-      const { assessment, visible } = parseAssessment(response.text);
-      // A reply that was nothing but a broken grade still says something, never an empty bubble.
-      const reply = visible || (active.step === steps.length - 1 ? "Thanks, noted. That's the end of this lesson." : "Thanks, noted. Let's keep going.");
-      if (assessment) (active.assessments ||= []).push({ step: stepName, ...assessment });
-      // The tutor's turns keep their grade in the history it is sent: turns shown to it without one
-      // taught it to stop grading, about 1 step in 6 (#224). The student only ever sees `reply`.
-      active.history.push({ role: 'assistant', content: response.text });
-      active.reply = reply;
-      active.step++;
+    const { assessment, visible } = parseAssessment(response.text);
+    // A reply that was nothing but a broken grade still says something, never an empty bubble.
+    const reply = visible || (active.step === steps.length - 1 ? "Thanks, noted. That's the end of this lesson." : "Thanks, noted. Let's keep going.");
+    if (assessment) (active.assessments ||= []).push({ step: stepName, ...assessment });
+    // The tutor's turns keep their grade in the history it is sent: turns shown to it without one
+    // taught it to stop grading, about 1 step in 6 (#224). The student only ever sees `reply`.
+    active.history.push({ role: 'assistant', content: response.text });
+    active.reply = reply;
+    active.step++;
 
-      const done = active.step >= steps.length;
-      // Fenced: a turn that lost its claim (one that outlived the lease, which a Vercel function,
-      // stopped at half of it, cannot) must not save over the request that took the step.
-      if (claim && !(await stillOurs())) return { status: 409, body: STALE };
-      let saved;
+    const done = active.step >= steps.length;
+    let saved;
 
-      if (done) {
-        const day = active.lessonDay;
-        // Grade the session, write the learning log, run the practitioner — the
-        // adaptive half the web path used to skip entirely (#106).
-        saved = await safely(() => completeLesson({
-          state,
-          topicSlug: active.topicSlug,
-          lesson: { ...active.lesson, lesson: day },
-          session: active,
-        }), FAILED, 'completeLesson');
-        // A finished review leaves its count behind for the next start; a lesson leaves nothing.
-        if (active.isReview) await state.writeKV(kvKey, JSON.stringify({ reviews: active.reviews }));
-        else await state.deleteKV(kvKey);
-      } else {
-        await state.writeKV(kvKey, JSON.stringify(active));
-      }
-
-      answered = true;
-      return {
-        status: 200,
-        body: {
-          reply,
-          step: active.step,
-          totalSteps: steps.length,
-          done,
-          lesson: active.lesson,
-          lessonId: active.id,
-          // Telling a student "done" for work that was not recorded is worse than
-          // telling them it did not save. They can at least decide what to do.
-          ...(saved === FAILED ? { warning: 'This lesson could not be saved — your progress may not be recorded.' } : {}),
-        },
-      };
-    } finally {
-      // Answered, the claim stays until the next step's claim replaces it, or the lesson ends.
-      // Released only while still ours: never the claim of a request that took it over.
-      if (ours && (!answered || active.step >= steps.length) && (await safely(stillOurs, false, 'claim'))) {
-        await safely(() => state.deleteKV(claim), null, 'claim');
-      }
+    if (done) {
+      // A lesson completes once (#228). Of two answers to its last step at the same moment, from two
+      // tabs or a retry, only the first to claim its completion records it; the other is refused as
+      // stale. The claim is permanent, as a completion is: nothing expires or needs taking over.
+      const completion = `lesson_done:${active.id || `${topicSlug}:${active.lessonDay}:${active.isReview ? 'review' : 'lesson'}`}`;
+      const token = randomUUID();
+      await state.insertKV(completion, token);
+      if (String(await state.readKV(completion)) !== token) return { status: 409, body: STALE };
+      const day = active.lessonDay;
+      // Grade the session, write the learning log, run the practitioner — the
+      // adaptive half the web path used to skip entirely (#106).
+      saved = await safely(() => completeLesson({
+        state,
+        topicSlug: active.topicSlug,
+        lesson: { ...active.lesson, lesson: day },
+        session: active,
+      }), FAILED, 'completeLesson');
+      // A finished review leaves its count behind for the next start; a lesson leaves nothing.
+      if (active.isReview) await state.writeKV(kvKey, JSON.stringify({ reviews: active.reviews }));
+      else await state.deleteKV(kvKey);
+    } else {
+      await state.writeKV(kvKey, JSON.stringify(active));
     }
+
+    return {
+      status: 200,
+      body: {
+        reply,
+        step: active.step,
+        totalSteps: steps.length,
+        done,
+        lesson: active.lesson,
+        lessonId: active.id,
+        // Telling a student "done" for work that was not recorded is worse than
+        // telling them it did not save. They can at least decide what to do.
+        ...(saved === FAILED ? { warning: 'This lesson could not be saved — your progress may not be recorded.' } : {}),
+      },
+    };
   }
 
   // ── Resume the lesson in progress (#159) ──────────────────

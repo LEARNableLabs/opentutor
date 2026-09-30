@@ -270,10 +270,14 @@ describe('what the tutor is sent', () => {
       expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'second', lessonId, step: 1 })).status).toBe(200);
     });
 
-    it('answers one of two requests racing for the same step, and refuses the other', async () => {
-      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
-      const results = await Promise.all([1, 2].map(() => lessonTurn(ctx, { topicSlug: 'demo', answer: 'same', lessonId, step: 0 })));
+    it('records a lesson once when its last answer is sent twice at once', async () => {
+      const { lessonId, totalSteps } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+      for (let i = 0; i < totalSteps - 1; i++) await lessonTurn(ctx, { topicSlug: 'demo', answer: `a${i}`, lessonId, step: i });
+      const before = state.readProgress().history.length;
+      const last = { topicSlug: 'demo', answer: 'last', lessonId, step: totalSteps - 1 };
+      const results = await Promise.all([lessonTurn(ctx, last), lessonTurn(ctx, last)]);
       expect(results.map((r) => r.status).sort()).toEqual([200, 409]);
+      expect(state.readProgress().history.length).toBe(before + 1);
     });
 
     it('refuses a request that claims a step only after another finished the lesson', async () => {
@@ -295,53 +299,6 @@ describe('what the tutor is sent', () => {
       expect(a.body.done).toBe(true);
       release();
       expect((await b).status).toBe(409);
-    });
-
-    it('takes over a claim whose request never let go, once its lease has run out', async () => {
-      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
-      state.writeKV(`lesson_turn:${lessonId}:0`, `stopped-request:${Date.now() - 200_000}`);
-      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).status).toBe(200);
-    });
-
-    // Review of #237: the reviewers' sequence. One retry takes over the expired claim and starts its
-    // model call; only then does the other, which read the same expired claim, get to its delete.
-    it('lets only one of two retries take over the same expired claim', async () => {
-      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
-      const claimKey = `lesson_turn:${lessonId}:0`;
-      state.writeKV(claimKey, `stopped-request:${Date.now() - 200_000}`);
-      const del = state.deleteKV.bind(state);
-      let resume;
-      const held = new Promise((r) => { resume = r; });
-      let first = true;
-      state.deleteKV = async (key) => {
-        if (key === claimKey && first) { first = false; await Promise.race([held, new Promise((r) => setTimeout(r, 100))]); }
-        return del(key);
-      };
-      adapter.generate.mockImplementationOnce(async () => {
-        resume(); // the other retry now reaches its delete, while this one grades
-        await new Promise((r) => setTimeout(r, 20));
-        return { text: '<assessment>{"score":0.9}</assessment>\nGood.' };
-      });
-      const results = await Promise.all([1, 2].map(() => lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })));
-      state.deleteKV = del;
-      expect(results.map((r) => r.status).sort()).toEqual([200, 409]);
-    });
-
-    it('saves nothing from a turn whose claim was taken over while it ran', async () => {
-      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
-      adapter.generate.mockImplementationOnce(async () => {
-        state.writeKV(`lesson_turn:${lessonId}:0`, `newer-request:${Date.now()}`); // taken over mid-turn
-        return { text: '<assessment>{"score":0.9}</assessment>\nGood.' };
-      });
-      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).status).toBe(409);
-      expect(JSON.parse(state.readKV('web_lesson:demo')).step).toBe(0); // nothing saved
-      expect(state.readKV(`lesson_turn:${lessonId}:0`)).toMatch(/^newer-request:/); // and its claim kept
-    });
-
-    it('leaves a live claim to the request that holds it', async () => {
-      const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
-      state.writeKV(`lesson_turn:${lessonId}:0`, `other-request:${Date.now()}`);
-      expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'first', lessonId, step: 0 })).status).toBe(409);
     });
 
     it('lets the student retry a step whose model call failed', async () => {
