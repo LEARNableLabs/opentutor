@@ -148,10 +148,15 @@ $$('.nav-btn').forEach((btn) => {
     btn.classList.add('active');
     const view = $(`#view-${btn.dataset.view}`);
     view.classList.add('active');
-    view.style.display = 'block';
+    view.style.display = btn.dataset.view === 'chat' ? 'flex' : 'block'; // the chat is a column: messages, then input
 
     if (btn.dataset.view === 'topics') loadTopics();
     if (btn.dataset.view === 'learn') loadActiveTopics();
+    if (btn.dataset.view === 'chat') offerKeyForChat();
+    else if (chatOffer) {
+      chatOffer = false;
+      $('#connect-banner').classList.add('hidden');
+    }
   });
 });
 
@@ -740,11 +745,23 @@ $('#btn-disconnect').addEventListener('click', async () => {
   loadKeyStatus().catch(() => {});
 });
 
+// #250: the chat always runs on the student's own key, so say so before they type.
+let chatNeedsKey = null; // unknown until the key status loads
+let chatOffer = false; // the banner is up because the chat put it there
+async function offerKeyForChat() {
+  if (chatNeedsKey === null) await loadKeyStatus().catch(() => {});
+  if (!chatNeedsKey) return;
+  chatOffer = true;
+  showConnect({ error: 'Chatting with OpenTutor uses your own OpenRouter key. Connect your account or paste a key to start.' });
+}
+
 // Only self-signup accounts get an answer; anyone else sees nothing.
 async function loadKeyStatus() {
   const res = await fetch('/api/openrouter');
+  chatNeedsKey = false; // the owner and admin-created students chat on the deployment's key
   if (!res.ok) return;
   const s = await res.json();
+  chatNeedsKey = !s.connected;
   $('#key-status').textContent = s.connected ? 'OpenRouter connected' : `${s.trialLessonsLeft} of ${s.trialLessons} free lessons left`;
   $('#key-status').classList.remove('hidden');
   $('#btn-disconnect').classList.toggle('hidden', !s.connected);

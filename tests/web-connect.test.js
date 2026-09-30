@@ -538,3 +538,36 @@ it('does not send an empty key', async () => {
   await settle();
   expect(calls.some((c) => c.url === '/api/openrouter' && c.init.method === 'POST')).toBe(false);
 });
+
+// #250: the chat always runs on the student's own key, so offer it before they type.
+const CHAT_OFFER = 'Chatting with OpenTutor uses your own OpenRouter key. Connect your account or paste a key to start.';
+it('offers OpenRouter setup as soon as a student without a key opens the chat', async () => {
+  const { $ } = frontend(() => null); // base: connected false
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(false);
+  expect($('#connect-message').textContent).toBe(CHAT_OFFER);
+});
+
+it.each([
+  ['a connected student', [200, { connected: true, trialLessons: 3, trialLessonsLeft: 0, limitRemaining: 5 }]],
+  ['the owner, who has no account', [403, { error: 'Only self-signup accounts connect their own OpenRouter key.' }]],
+])('does not offer setup to %s', async (_who, status) => {
+  const { $ } = frontend((url, init) => (url === '/api/openrouter' && !init.method ? status : null));
+  await settle();
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+});
+
+it('takes the chat offer away when the student leaves the chat', async () => {
+  const { $ } = frontend(() => null);
+  await settle();
+  await $('.nav-btn[data-view="chat"]').click();
+  await settle();
+  await $('.nav-btn[data-view="learn"]').click();
+  await settle();
+  expect($('#connect-banner').classList.contains('hidden')).toBe(true);
+});
