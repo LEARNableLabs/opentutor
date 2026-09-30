@@ -698,6 +698,7 @@ function appendOnboardMsg(classes, text) {
 // ── OpenRouter (#132): 3 free lessons, then the student's own key ──
 
 function showConnect({ error }) {
+  chatOffer = false; // whatever shows the banner now owns it
   $('#connect-message').textContent = error;
   $('#connect-banner').classList.remove('hidden');
 }
@@ -746,21 +747,29 @@ $('#btn-disconnect').addEventListener('click', async () => {
 });
 
 // #250: the chat always runs on the student's own key, so say so before they type.
-let chatNeedsKey = null; // unknown until the key status loads
+let chatNeedsKey = null; // unknown until a key status loads
 let chatOffer = false; // the banner is up because the chat put it there
+let keyStatusSeq = 0; // only the newest status request may update the page
 async function offerKeyForChat() {
   if (chatNeedsKey === null) await loadKeyStatus().catch(() => {});
-  if (!chatNeedsKey) return;
-  chatOffer = true;
+  // The student may have left Chat while it loaded, and another message may already hold the banner.
+  if (!chatNeedsKey || !$('#view-chat').classList.contains('active')) return;
+  if (!$('#connect-banner').classList.contains('hidden')) return;
   showConnect({ error: 'Chatting with OpenTutor uses your own OpenRouter key. Connect your account or paste a key to start.' });
+  chatOffer = true;
 }
 
 // Only self-signup accounts get an answer; anyone else sees nothing.
 async function loadKeyStatus() {
+  const seq = ++keyStatusSeq;
   const res = await fetch('/api/openrouter');
-  chatNeedsKey = false; // the owner and admin-created students chat on the deployment's key
+  if (seq !== keyStatusSeq) return;
+  // 403: the owner and admin-created students chat on the deployment's key. Any other failure
+  // leaves the status unknown, so opening Chat asks again.
+  if (res.status === 403) chatNeedsKey = false;
   if (!res.ok) return;
   const s = await res.json();
+  if (seq !== keyStatusSeq) return;
   chatNeedsKey = !s.connected;
   $('#key-status').textContent = s.connected ? 'OpenRouter connected' : `${s.trialLessonsLeft} of ${s.trialLessons} free lessons left`;
   $('#key-status').classList.remove('hidden');

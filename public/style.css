@@ -362,6 +362,7 @@ input::placeholder {
 #app:has(#view-chat.active) {
   height: 100vh;
   height: 100dvh;
+  min-height: 0; /* the usual 100vh minimum would keep it taller than a phone's visible window */
 }
 
 #app:has(#view-chat.active) main {
