@@ -130,17 +130,23 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     const claim = active.id ? `lesson_turn:${active.id}:${active.step}` : null;
     const token = `${randomUUID()}:${Date.now()}`;
     let ours = false;
+    const stillOurs = async () => String(await state.readKV(claim)) === token;
     let answered = false;
     try {
       if (claim) {
         await state.insertKV(claim, token);
         let held = String(await state.readKV(claim));
         // A request stopped before it could let go (a function killed at its time limit) would hold
-        // the step for good: past its lease, its claim is taken over.
+        // the step for good: past its lease, its claim is taken over. The right to take over that one
+        // expired claim is itself claimed first, so of two retries after it, only one deletes it.
         if (held !== token && Date.now() - Number(held.split(':')[1]) > CLAIM_MS) {
-          await state.deleteKV(claim);
-          await state.insertKV(claim, token);
-          held = String(await state.readKV(claim));
+          const takeover = `${claim}:after:${held.split(':')[0]}`;
+          await state.insertKV(takeover, token);
+          if (String(await state.readKV(takeover)) === token) {
+            await state.deleteKV(claim);
+            await state.insertKV(claim, token);
+            held = String(await state.readKV(claim));
+          }
         }
         if (held !== token) return { status: 409, body: STALE }; // another request's
         ours = true;
@@ -172,6 +178,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       active.step++;
 
       const done = active.step >= steps.length;
+      // Fenced: a turn that lost its claim (one that outlived the lease, which a Vercel function,
+      // stopped at half of it, cannot) must not save over the request that took the step.
+      if (claim && !(await stillOurs())) return { status: 409, body: STALE };
       let saved;
 
       if (done) {
@@ -208,7 +217,10 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       };
     } finally {
       // Answered, the claim stays until the next step's claim replaces it, or the lesson ends.
-      if (ours && (!answered || active.step >= steps.length)) await safely(() => state.deleteKV(claim), null, 'claim');
+      // Released only while still ours: never the claim of a request that took it over.
+      if (ours && (!answered || active.step >= steps.length) && (await safely(stillOurs, false, 'claim'))) {
+        await safely(() => state.deleteKV(claim), null, 'claim');
+      }
     }
   }
 
