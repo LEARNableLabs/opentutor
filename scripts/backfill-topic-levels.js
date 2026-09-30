@@ -29,6 +29,8 @@ export function withLevel(text, level, prerequisites) {
   const ind = anchor[1];
   // Only a top-level "level" (the anchor's indent) is ours to replace; a lesson may have its own.
   text = text.replace(new RegExp(`^${ind}"level": "[^"]*",\\n`, 'm'), '');
+  // New prerequisites replace an empty or blank field, on one line or several; never a second key.
+  if (prerequisites) text = text.replace(new RegExp(`^${ind}"prerequisites": (?:\\[\\n[\\s\\S]*?\\n${ind}\\]|[^\\n]*?),?\\n`, 'm'), '');
   let insert = `${ind}"level": ${JSON.stringify(level)},\n`;
   if (prerequisites)
     insert += `${ind}"prerequisites": [\n${prerequisites.map((p) => ind + ind + JSON.stringify(p)).join(',\n')}\n${ind}],\n`;
@@ -37,7 +39,7 @@ export function withLevel(text, level, prerequisites) {
 }
 
 async function classify(adapter, c) {
-  const needsPrereqs = !Array.isArray(c.prerequisites) || !c.prerequisites.length;
+  const needsPrereqs = !(Array.isArray(c.prerequisites) && c.prerequisites.some((p) => typeof p === 'string' && p.trim()));
   const system = [
     'You rate how hard a self-study course is.',
     RUBRIC,

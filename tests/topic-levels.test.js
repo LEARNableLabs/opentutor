@@ -64,3 +64,31 @@ it('backfills the level after student_level, changing no other line', async () =
   const both = JSON.parse(withLevel(text, 'beginner', ['curiosity', 'string']));
   expect(both).toMatchObject({ level: 'beginner', prerequisites: ['curiosity', 'string'], lessons: [{ lesson: 1 }] });
 });
+
+it('replaces an empty prerequisites field instead of adding a second one', async () => {
+  const { withLevel } = await import('../scripts/backfill-topic-levels.js');
+  const empty = '{\n  "topic": "Knots",\n  "student_level": "intermediate",\n  "prerequisites": [],\n  "lessons": []\n}\n';
+  const out = withLevel(empty, 'beginner', ['curiosity']);
+  expect(out.match(/"prerequisites"/g)).toHaveLength(1);
+  expect(JSON.parse(out).prerequisites).toEqual(['curiosity']);
+  const blank = '{\n  "topic": "Knots",\n  "student_level": "intermediate",\n  "prerequisites": [\n    ""\n  ],\n  "lessons": []\n}\n';
+  expect(JSON.parse(withLevel(blank, 'beginner', ['string'])).prerequisites).toEqual(['string']);
+});
+
+// Codex on #258: a new topic's first, quick build is what the Topics tab shows until the full one lands.
+import { generateQuickStart } from '../lib/core/quick-start.js';
+const quick = (extra) => {
+  const adapter = { generate: async () => ({ text: JSON.stringify({ taster: 't', roadmap: 'r', quickCurriculum: Array.from({ length: 5 }, (_, i) => ({ title: `L${i + 1}` })), ...extra }) }) };
+  return generateQuickStart({ adapter, skills: new Map(), topic: 'Knots', slug: 'knots', research: async () => ({}), wikipedia: async () => null });
+};
+
+it('gives a new topic its level and prerequisites from the quick build', async () => {
+  const { curriculum } = await quick({ level: 'beginner', prerequisites: ['curiosity', ' ', 7, 'string'] });
+  expect(curriculum).toMatchObject({ level: 'beginner', prerequisites: ['curiosity', 'string'] });
+});
+
+it('leaves out a level or prerequisites the model got wrong', async () => {
+  const { curriculum } = await quick({ level: 'expert', prerequisites: 'algebra' });
+  expect(curriculum).not.toHaveProperty('level');
+  expect(curriculum).not.toHaveProperty('prerequisites');
+});
