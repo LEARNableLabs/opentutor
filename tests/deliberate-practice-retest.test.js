@@ -12,6 +12,8 @@ it.each([
   ['a lesson whose opening retest was wrong', { retestConcept: 'alpha', assessments: retrieval(0.6) }, { passedReview: true }, { concept: 'alpha', passed: false }],
   ['a lesson whose retest went ungraded', { retestConcept: 'alpha', assessments: [] }, { passedReview: true }, null],
   ['a lesson with no retest', { assessments: retrieval(1) }, { passedReview: true }, null],
+  ['a lesson whose retest score is out of range, high', { retrievalConcept: 'alpha', assessments: retrieval(2) }, { passedReview: true }, null],
+  ['a lesson whose retest score is out of range, low', { retrievalConcept: 'alpha', assessments: retrieval(-1) }, { passedReview: true }, null],
 ])('reads %s', (_case, session, options, expected) => {
   expect(retestOutcome(session, options)).toEqual(expected);
 });

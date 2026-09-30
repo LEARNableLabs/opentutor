@@ -12,6 +12,7 @@
 import { generate } from './claude.js';
 import { buildLessonPlanPrompt, buildSocraticResponsePrompt } from '../../lib/core/prompts.js';
 import { parseFirstJson } from '../../lib/core/json.js';
+import { parseAssessment } from '../../lib/core/assessment.js';
 import { buildStudentModel, formatStudentModel } from '../../lib/core/student-model.js';
 import { evaluatePractice, formatPracticeFeedback, parseDirectives, applyDirectives, reviewLesson, parseRetested, withRetest, retestOutcome, namesConcept } from '../../lib/core/deliberate-practice.js';
 import { getNextLesson, markLessonComplete, readCurriculum, readDomainFile, writeDomainFile, readUser, readProgress, appendMemory } from './state.js';
@@ -384,7 +385,8 @@ export async function handleLessonAnswer(text, chatId, channel) {
   ], { model: responsePrompt.model, outputMode: responsePrompt.outputMode });
 
   // Parse hidden assessment (stripped before sending to student)
-  const { assessment, visibleText } = parseAssessment(response.text);
+  // The shared parser (#224): a grade only with a score from 0 to 1, and never shown, however it's written.
+  const { assessment, visible: visibleText } = parseAssessment(response.text);
   if (assessment) {
     active.assessments.push({ step: stepName, ...assessment });
     log.info({ step: stepName, score: assessment.score, understanding: assessment.understanding }, 'step assessment');
@@ -625,21 +627,6 @@ export function computeStreak(progressOverride) {
 }
 
 // ── Assessment parsing ─────────────────────────────────────
-
-function parseAssessment(responseText) {
-  const assessmentMatch = responseText.match(/<assessment>([\s\S]*?)<\/assessment>/);
-  if (!assessmentMatch) return { assessment: null, visibleText: responseText.trim() };
-
-  let assessment = null;
-  try {
-    assessment = JSON.parse(assessmentMatch[1]);
-  } catch {
-    log.warn('assessment parse failed');
-  }
-
-  const visibleText = responseText.replace(/<assessment>[\s\S]*?<\/assessment>\s*/g, '').trim();
-  return { assessment, visibleText };
-}
 
 // ── Exercise format selection ──────────────────────────────
 
