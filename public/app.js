@@ -171,8 +171,36 @@ let topicPicked = false;
 $('#btn-next').addEventListener('click', startLesson);
 $('#btn-lesson-answer').addEventListener('click', sendLessonAnswer);
 
+// ── Companion (#263) ─────────────────────────────────────────
+// The book with a face, at four moments: a lesson starting, an answer being read, a right answer,
+// and a second miss in a row. It steps back while the student types; a tap hides it for the session.
+const COMPANION_SAYS = {
+  idle: 'Ready when you are.',
+  thinking: 'Reading your answer.',
+  right: "That's it. Now it's yours.",
+  stuck: 'Try the smallest version of the problem first.',
+};
+let companionAway = false;
+try { companionAway = sessionStorage.getItem('ot_companion') === 'hidden'; } catch { /* storage may be off */ }
+function companion(moment) {
+  const el = $('#companion');
+  if (!el) return;
+  if (companionAway || !COMPANION_SAYS[moment]) return void el.classList.add('hidden');
+  el.dataset.state = '';
+  void el.offsetWidth; // replay a one-shot reaction
+  el.dataset.state = moment;
+  $('#companion-says').textContent = COMPANION_SAYS[moment];
+  el.classList.remove('hidden');
+}
+$('#companion-hide').addEventListener('click', () => {
+  companionAway = true;
+  try { sessionStorage.setItem('ot_companion', 'hidden'); } catch { /* the choice lasts this page anyway */ }
+  companion(null);
+});
+
 const lessonInput = $('#lesson-input');
 if (lessonInput) {
+  lessonInput.addEventListener('input', () => { if (lessonInput.value.trim()) companion(null); });
   lessonInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -212,6 +240,7 @@ async function startLesson() {
   if (!slug) return;
 
   activeTopicSlug = slug;
+  companion(null);
   $('#btn-next').disabled = true;
   $('#lesson-loading').classList.remove('hidden');
   $('#lesson-area').classList.add('hidden');
@@ -251,6 +280,7 @@ function finishLessonStart(data, bubble) {
   lessonAt = { lessonId: data.lessonId, step: data.step };
   $('#lesson-meta').textContent = `${data.lesson.module} — Day ${data.lesson.day}: ${data.lesson.title}`;
   if (!bubble.textContent.trim()) bubble.remove();
+  companion('idle');
   showLessonInput();
 }
 
@@ -265,6 +295,7 @@ function showLessonStart(data) {
   if (data.resumed) appendLessonMsg('dim', 'Picking up where you left off.');
   if (data.note) appendLessonMsg('dim', data.note); // e.g. a review before moving on (#149)
   appendLessonMsg('tutor', data.reply);
+  companion('idle');
   showLessonInput();
 }
 
@@ -279,6 +310,7 @@ async function sendLessonAnswer() {
   if (answer.length > TURN_LIMIT) return appendLessonMsg('tutor', tooLong(answer));
 
   appendLessonMsg('student', answer);
+  companion('thinking');
   input.value = '';
   input.disabled = true;
   $('#btn-lesson-answer').disabled = true;
@@ -306,6 +338,7 @@ async function sendLessonAnswer() {
       body.innerHTML = md(data.reply);
     }
 
+    companion(data.done ? null : data.mood); // a finished lesson has its own celebration
     if (data.done) {
       lessonActive = false;
       $('#lesson-input-area').classList.add('hidden');
@@ -319,6 +352,7 @@ async function sendLessonAnswer() {
     }
   } catch (err) {
     typing.remove();
+    companion(null);
     appendLessonMsg('tutor', `Error: ${err.message}`);
   } finally {
     input.disabled = false;
