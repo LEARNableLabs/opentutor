@@ -873,3 +873,70 @@ it('stays hidden in the chat once tapped away, and leaves with the chat', async 
   await settle();
   expect(f.$('#companion').classList.contains('hidden')).toBe(true);
 });
+
+// #269 review: each tab keeps its own companion; a reply in one never changes the other.
+function twoTabs() {
+  const pend = {};
+  const f = frontend((url, init) => {
+    if (url === '/api/chat') return new Promise((r) => (pend.chat = r));
+    if (url !== '/api/lesson') return null;
+    return JSON.parse(init.body).answer ? new Promise((r) => (pend.lesson = r)) : [200, LESSON_START];
+  });
+  return { f, pend };
+}
+const tab = (f, view) => f.$(`.nav-btn[data-view="${view}"]`).click();
+const seen = (f) => (f.$('#companion').classList.contains('hidden') ? null : [f.$('#companion').dataset.state, f.$('#companion-says').textContent]);
+
+it('shows each tab its own companion, and a background reply only updates its own tab', async () => {
+  const { f, pend } = twoTabs();
+  await settle();
+  f.$('#active-topic').value = 'demo';
+  await f.$('#btn-next').click();
+  await settle();
+  f.$('#lesson-input').value = 'a lesson answer';
+  const lessonSent = f.$('#btn-lesson-answer').click(); // the lesson is reading an answer
+  await settle();
+  await tab(f, 'chat');
+  await settle();
+  expect(seen(f)).toEqual(['idle', "What's on your mind?"]);
+  f.$('#chat-input').value = 'a chat question';
+  const chatSent = f.$('#btn-send').click();
+  await settle();
+  pend.lesson([200, { ...LESSON_START, reply: 'Yes.', step: 1, mood: 'right' }]); // the lesson answer lands while Chat is open
+  await lessonSent; await settle();
+  expect(seen(f)).toEqual(['thinking', 'Thinking it over.']); // the chat keeps its own moment
+  await tab(f, 'learn');
+  await settle();
+  expect(seen(f)).toEqual(['right', "That's it. Now it's yours."]); // the lesson's reaction was kept for its tab
+  pend.chat([200, { reply: 'Answer.', model: 'm' }]); // the chat reply lands while Learn is open
+  await chatSent; await settle();
+  expect(seen(f)).toEqual(['right', "That's it. Now it's yours."]);
+});
+
+it('keeps the chat thinking across a round trip to another tab', async () => {
+  const { f, pend } = twoTabs();
+  await settle();
+  await tab(f, 'chat');
+  f.$('#chat-input').value = 'a question';
+  const sent = f.$('#btn-send').click();
+  await settle();
+  await tab(f, 'topics');
+  await tab(f, 'chat');
+  await settle();
+  expect(seen(f)).toEqual(['thinking', 'Thinking it over.']);
+  pend.chat([200, { reply: 'Answer.', model: 'm' }]);
+  await sent; await settle();
+  expect(seen(f)).toBe(null);
+});
+
+it('keeps the companion out of the way of a draft, after a round trip', async () => {
+  const { f } = twoTabs();
+  await settle();
+  await tab(f, 'chat');
+  f.$('#chat-input').value = 'half a thought';
+  f.$('#chat-input').dispatch('input');
+  await tab(f, 'topics');
+  await tab(f, 'chat');
+  await settle();
+  expect(seen(f)).toBe(null);
+});

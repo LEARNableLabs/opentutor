@@ -152,7 +152,10 @@ $$('.nav-btn').forEach((btn) => {
 
     if (btn.dataset.view === 'topics') loadTopics();
     if (btn.dataset.view === 'learn') loadActiveTopics();
-    companion(btn.dataset.view === 'chat' ? 'chat-idle' : btn.dataset.view === 'learn' && lessonActive ? 'idle' : null);
+    openView = btn.dataset.view;
+    // The chat greets when it opens, unless a reply is on its way or the student left a draft there.
+    if (openView === 'chat' && !companionFor.chat && !$('#chat-input').value.trim()) companionFor.chat = 'chat-idle';
+    showCompanion();
     if (btn.dataset.view === 'chat') offerKeyForChat();
     else if (chatOffer) {
       chatOffer = false;
@@ -187,12 +190,21 @@ const COMPANION_MOMENTS = {
 };
 let companionAway = false;
 try { companionAway = sessionStorage.getItem('ot_companion') === 'hidden'; } catch { /* storage may be off */ }
-function companion(moment) {
+// Each tab keeps its own moment, and only the open tab's is shown (#269): a reply landing in one tab
+// never changes what the other shows, and switching back finds the tab as it was left.
+const companionFor = { learn: null, chat: null };
+let openView = 'learn';
+function companion(moment, view = 'learn') {
+  companionFor[view] = COMPANION_MOMENTS[moment] ? moment : null;
+  if (view === openView) showCompanion();
+}
+function showCompanion() {
   const el = $('#companion');
   if (!el) return;
+  const moment = companionFor[openView];
   const known = COMPANION_MOMENTS[moment];
   if (companionAway || !known) return void el.classList.add('hidden');
-  const home = moment.startsWith('chat') ? $('#chat-input-area') : $('#answer-options');
+  const home = openView === 'chat' ? $('#chat-input-area') : $('#answer-options');
   if (home && el.nextElementSibling !== home) home.parentNode?.insertBefore?.(el, home);
   el.dataset.state = '';
   void el.offsetWidth; // replay a one-shot reaction
@@ -203,7 +215,7 @@ function companion(moment) {
 $('#companion-hide').addEventListener('click', () => {
   companionAway = true;
   try { sessionStorage.setItem('ot_companion', 'hidden'); } catch { /* the choice lasts this page anyway */ }
-  companion(null);
+  showCompanion();
 });
 
 const lessonInput = $('#lesson-input');
@@ -610,7 +622,7 @@ function watchTopicBuild(slug, waitingForStarter = false) {
 // ── Chat view ───────────────────────────────────────────────
 
 $('#btn-send').addEventListener('click', sendChat);
-$('#chat-input').addEventListener('input', () => { if ($('#chat-input').value.trim()) companion(null); });
+$('#chat-input').addEventListener('input', () => { if ($('#chat-input').value.trim()) companion(null, 'chat'); });
 $('#chat-input').addEventListener('keydown', (e) => {
   if (e.key === 'Enter' && !e.shiftKey) {
     e.preventDefault();
@@ -624,7 +636,7 @@ async function sendChat() {
   if (!message) return;
 
   appendChat('user', message);
-  companion('chat-thinking');
+  companion('chat-thinking', 'chat');
   input.value = '';
   $('#btn-send').disabled = true;
 
@@ -639,11 +651,11 @@ async function sendChat() {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
     typing.remove();
-    companion(null);
+    companion(null, 'chat');
     appendChat('assistant', data.reply);
   } catch (err) {
     typing.remove();
-    companion(null);
+    companion(null, 'chat');
     appendChat('assistant', `Error: ${err.message}`);
   } finally {
     $('#btn-send').disabled = false;
