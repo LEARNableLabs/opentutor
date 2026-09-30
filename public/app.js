@@ -416,13 +416,17 @@ function renderTopics(topics) {
 function topicCard(t) {
   // A button, so a keyboard reaches every topic; spans, because a button holds only phrasing content.
   // A course's length until it is started, then how far along it is.
+  // #251: how hard it is, and before starting, what to know first.
   const started = t.completed > 0;
+  const level = typeof t.level === 'string' && t.level ? t.level[0].toUpperCase() + t.level.slice(1) : '';
+  const before = !started && Array.isArray(t.prerequisites) && t.prerequisites.length ? `Before you start: ${t.prerequisites.join(', ')}.` : '';
   return `<button type="button" class="topic-card" data-slug="${escapeHTML(t.slug)}">
     <span class="topic-main">
       <span class="topic-name">${escapeHTML(t.topic || formatSlug(t.slug))}</span>
+      ${before ? `<span class="topic-before">${escapeHTML(before)}</span>` : ''}
       ${started ? `<span class="progress-bar"><span class="progress-fill" style="width:${Number(t.percent) || 0}%"></span></span>` : ''}
     </span>
-    <span class="topic-progress">${started ? `${Number(t.completed)} of ${Number(t.total)} lessons` : `${Number(t.total)} lessons`}</span>
+    <span class="topic-progress">${started ? `${Number(t.completed)} of ${Number(t.total)} lessons` : `${Number(t.total)} lessons`}${level ? `<span class="topic-level">${escapeHTML(level)}</span>` : ''}</span>
   </button>`;
 }
 

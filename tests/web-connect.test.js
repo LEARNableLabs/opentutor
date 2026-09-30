@@ -538,3 +538,20 @@ it('does not send an empty key', async () => {
   await settle();
   expect(calls.some((c) => c.url === '/api/openrouter' && c.init.method === 'POST')).toBe(false);
 });
+
+// #251: the Topics tab says how hard a topic is and what to know first, escaped.
+it('shows each topic\'s level and prerequisites on the Topics tab', async () => {
+  const topics = [
+    { slug: 'knots', topic: 'Knots', total: 5, completed: 0, percent: 0, level: 'advanced', prerequisites: ['<img src=x>', 'string theory'] },
+    { slug: 'mine', topic: 'Mine', total: 3, completed: 0, percent: 0, level: null, prerequisites: [] },
+  ];
+  const { $ } = frontend((url) => (url === '/api/topics' ? [200, topics] : null));
+  await settle();
+  await $('.nav-btn[data-view="topics"]').click();
+  await settle();
+  const html = $('#topic-list').innerHTML;
+  expect(html).toContain('Advanced');
+  expect(html).toContain('Before you start: &lt;img src=x&gt;, string theory.');
+  expect(html).not.toContain('<img src=x>');
+  expect(html.match(/Before you start/g)).toHaveLength(1);
+});

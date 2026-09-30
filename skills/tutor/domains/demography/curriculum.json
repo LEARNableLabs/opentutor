@@ -3,6 +3,7 @@
   "slug": "demography",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic statistics (mean, median, rates)",
     "algebra (exponents, logarithms)",

@@ -3,6 +3,7 @@
   "slug": "circus-arts",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic physics (force, torque, vectors)",
     "fundamental anatomy and kinesiology",

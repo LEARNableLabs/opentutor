@@ -3,6 +3,7 @@
   "slug": "astrobiology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic chemistry (organic compounds, pH, redox)",
     "introductory biology (cell structure, DNA, evolution)",

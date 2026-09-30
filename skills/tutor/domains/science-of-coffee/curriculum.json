@@ -3,6 +3,7 @@
   "slug": "science-of-coffee",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic chemistry (acids, bases, pH)",
     "organic molecules (alcohols, aldehydes, esters)",

@@ -3,6 +3,7 @@
   "slug": "financial-derivatives",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "probability and statistics fundamentals",
     "basic finance (present value, risk/return)",

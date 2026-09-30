@@ -3,6 +3,7 @@
   "slug": "fountain-pen-engineering",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "basic chemistry (pH, solutions, molecular interactions)",
     "materials science fundamentals (metals, alloys, stress/strain)",

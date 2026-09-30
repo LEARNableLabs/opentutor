@@ -3,6 +3,7 @@
   "slug": "neuroscience",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic biology (cell structure, proteins, genetics)",
     "chemistry fundamentals (ions, electrochemical gradients)",

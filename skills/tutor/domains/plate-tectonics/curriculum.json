@@ -3,6 +3,7 @@
   "slug": "plate-tectonics",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "basic geology",
     "vector calculus",

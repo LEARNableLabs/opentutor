@@ -3,6 +3,7 @@
   "slug": "particle-physics",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "quantum mechanics (wave functions, operators, Hilbert spaces)",
     "special relativity (Lorentz transformations, 4-vectors)",

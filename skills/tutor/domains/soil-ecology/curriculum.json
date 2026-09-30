@@ -3,6 +3,7 @@
   "slug": "soil-ecology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic biology (cells, ecosystems, nutrient cycles)",
     "basic chemistry (pH, chemical compounds, reactions)",

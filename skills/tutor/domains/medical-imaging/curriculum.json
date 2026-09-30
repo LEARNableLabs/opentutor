@@ -3,6 +3,7 @@
   "slug": "medical-imaging",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic physics (mechanics, electricity & magnetism, waves)",
     "basic anatomy and physiology",

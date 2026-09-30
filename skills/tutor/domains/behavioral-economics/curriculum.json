@@ -3,6 +3,13 @@
   "slug": "behavioral-economics",
   "created": "2026-08-31",
   "student_level": "intermediate",
+  "level": "beginner",
+  "prerequisites": [
+    "Basic familiarity with the idea of utility or cost-benefit reasoning",
+    "Some exposure to psychology or social science concepts (e.g., from school or popular reading)",
+    "Comfort interpreting simple graphs or examples involving probabilities and payoffs",
+    "Basic understanding of incentives and decision-making in everyday contexts"
+  ],
   "preliminary": true,
   "lessons": [
     {

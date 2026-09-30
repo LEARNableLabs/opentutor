@@ -3,6 +3,7 @@
   "slug": "representation-theory",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "linear algebra",
     "abstract algebra",

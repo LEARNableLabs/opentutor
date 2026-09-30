@@ -3,6 +3,7 @@
   "slug": "number-theory-and-cryptography",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "proof-based mathematics",
     "modular arithmetic basics",

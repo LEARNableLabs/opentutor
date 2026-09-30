@@ -3,6 +3,7 @@
   "slug": "urban-planning",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "beginner",
   "prerequisites": [
     "basic understanding of cities and urban environments",
     "comfort with data and visualizations",

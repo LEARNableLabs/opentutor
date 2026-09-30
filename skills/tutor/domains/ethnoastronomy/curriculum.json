@@ -3,6 +3,7 @@
   "slug": "ethnoastronomy",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": ["basic astronomy concepts", "cultural anthropology basics", "spherical coordinates"],
   "exit_criteria": [
     "student can explain how at least 3 cultures used the sky for navigation or timekeeping",

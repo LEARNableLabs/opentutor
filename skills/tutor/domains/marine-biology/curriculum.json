@@ -3,6 +3,7 @@
   "slug": "marine-biology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic biology (cellular structure, metabolism)",
     "ecology fundamentals (food webs, energy flow)",

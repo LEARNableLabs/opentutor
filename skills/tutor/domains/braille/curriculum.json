@@ -3,6 +3,7 @@
   "slug": "braille",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "beginner",
   "prerequisites": [
     "basic understanding of disability and accessibility",
     "familiarity with reading and writing systems"

@@ -3,6 +3,7 @@
   "slug": "database-internals",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "data structures (trees, hash tables, heaps)",
     "basic SQL (SELECT, JOIN, WHERE, indexes)",

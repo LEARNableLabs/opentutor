@@ -3,6 +3,7 @@
   "slug": "psycholinguistics",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic cognitive psychology (memory, attention)",
     "introductory linguistics (phonetics, syntax fundamentals)",

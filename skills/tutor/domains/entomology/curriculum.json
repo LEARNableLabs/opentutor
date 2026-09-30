@@ -3,6 +3,7 @@
   "slug": "entomology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": ["basic biology", "ecology fundamentals", "evolutionary concepts"],
   "exit_criteria": [
     "identify major insect orders and explain their evolutionary innovations",
