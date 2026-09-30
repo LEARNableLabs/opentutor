@@ -1,5 +1,6 @@
 import { it, expect } from 'vitest';
-import { retestOutcome, withRetest, namesConcept } from '../lib/core/deliberate-practice.js';
+import { retestOutcome, withRetest, namesConcept, parseRetested, formatPracticeFeedback } from '../lib/core/deliberate-practice.js';
+import { buildStudentModel } from '../lib/core/student-model.js';
 
 // #227: which concept a finished session settled, shared by the web and the bot.
 const retrieval = (score) => [{ step: 'retrieval', score }, { step: 'diagnostic', score: 0.2 }];
@@ -18,15 +19,32 @@ it.each([
   expect(retestOutcome(session, options)).toEqual(expected);
 });
 
-// Review of #238: newer evidence wins both ways.
-it('withdraws an earlier pass when a later retest fails', () => {
-  expect(withRetest({ alpha: 3, beta: 2 }, { concept: 'alpha', passed: false }, { lessons: [] })).toEqual({ beta: 2 });
+// Review of #238: newer evidence wins both ways, over a saved pass or an older lesson's grade.
+it('records a missed retest over an earlier pass', () => {
+  expect(withRetest({ alpha: { at: 3, passed: true } }, { concept: 'alpha', passed: false }, { lessons: [{ status: 'completed' }] }))
+    .toEqual({ alpha: { at: 1, passed: false } });
+});
+
+it('makes a concept shaky when a retest after its good lesson is missed', () => {
+  const curriculum = { lessons: [
+    { status: 'completed', engagement: 'correct', concepts: ['alpha'] },
+    { status: 'completed', engagement: 'correct', concepts: ['beta'] },
+  ] };
+  expect(buildStudentModel('', curriculum, '', {}).concepts.solid).toContain('alpha');
+  const missed = withRetest({}, { concept: 'alpha', passed: false }, curriculum);
+  expect(buildStudentModel('', curriculum, '', missed).concepts.shaky).toContain('alpha');
+});
+
+it('keeps passes and misses in the feedback file', () => {
+  const retested = { alpha: { at: 4, passed: true }, beta: { at: 5, passed: false } };
+  const md = formatPracticeFeedback({ timestamp: 't', observations: [], directives: [], retested, model: { recentAccuracy: 0.5, trend: 'steady', difficulty: { level: 3, label: 'standard' }, engagement: 'steady', concepts: { shaky: [] } } }, 'Demo');
+  expect(parseRetested(md)).toEqual(retested);
 });
 
 it('ranks a lesson\'s opening retest before that lesson, and a review after every lesson', () => {
   const curriculum = { lessons: [{ status: 'completed' }, { status: 'completed' }, { status: 'pending' }] };
-  expect(withRetest({}, { concept: 'alpha', passed: true }, curriculum, { openedThisLesson: true })).toEqual({ alpha: 1 });
-  expect(withRetest({}, { concept: 'alpha', passed: true }, curriculum)).toEqual({ alpha: 2 });
+  expect(withRetest({}, { concept: 'alpha', passed: true }, curriculum, { openedThisLesson: true })).toEqual({ alpha: { at: 1, passed: true } });
+  expect(withRetest({}, { concept: 'alpha', passed: true }, curriculum)).toEqual({ alpha: { at: 2, passed: true } });
 });
 
 it.each([

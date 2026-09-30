@@ -89,7 +89,7 @@ describe.each([
     expect(blocks()).toEqual([]);
     // #227: the retest settles its concept alone; the lesson's own grade and date stay as they were.
     expect(store.readCurriculum('demo').lessons[0]).toEqual(before);
-    expect(parseRetested(store.readDomainFile('demo', 'practice-feedback.md'))).toEqual({ alpha: 6 });
+    expect(parseRetested(store.readDomainFile('demo', 'practice-feedback.md'))).toEqual({ alpha: { at: 6, passed: true } });
     expect(store.readProgress().history).toHaveLength(6);
     const next = (await start()).body;
     expect(next.lesson).toEqual({ day: 7, title: 'L7', module: 'Basics', concepts: ['c7'] });
