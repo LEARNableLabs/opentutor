@@ -152,6 +152,14 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     // A reply that was nothing but a broken grade still says something, never an empty bubble.
     const reply = visible || (active.step === steps.length - 1 ? "Thanks, noted. That's the end of this lesson." : "Thanks, noted. Let's keep going.");
     if (assessment) (active.assessments ||= []).push({ step: stepName, ...assessment });
+    // The companion's moment (#263): a clearly right answer, or a second miss in a row. The grade itself
+    // stays hidden; a reply without one says nothing and leaves the run of misses as it was.
+    let mood;
+    if (assessment) {
+      active.misses = assessment.score < 0.5 ? (active.misses || 0) + 1 : 0;
+      if (assessment.score >= 0.7) mood = 'right';
+      else if (active.misses === 2) mood = 'stuck'; // once, at the second miss in a row
+    }
     // The tutor's turns keep their grade in the history it is sent: turns shown to it without one
     // taught it to stop grading, about 1 step in 6 (#224). The student only ever sees `reply`.
     active.history.push({ role: 'assistant', content: response.text });
@@ -193,6 +201,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         done,
         lesson: active.lesson,
         lessonId: active.id,
+        ...(mood && { mood }),
         // Telling a student "done" for work that was not recorded is worse than
         // telling them it did not save. They can at least decide what to do.
         ...(saved === FAILED ? { warning: 'This lesson could not be saved — your progress may not be recorded.' } : {}),

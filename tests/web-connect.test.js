@@ -18,6 +18,7 @@ function frontend(route, search = '') {
       addEventListener: (name, fn) => listeners.set(name, fn),
       click() { return listeners.get('click')?.(); },
       dispatch(name, event = { preventDefault() {} }) { return listeners.get(name)?.(event); },
+      dispatch(name, event = { preventDefault() {} }) { return listeners.get(name)?.(event); },
       focus() { focused = this; }, appendChild(child) { this.children.push(child); }, remove() {}, querySelectorAll() { return []; },
     };
   };
@@ -675,3 +676,92 @@ it('knows a saved key at once, without waiting for the status to reload', async 
   expect($('#connect-banner').classList.contains('hidden')).toBe(true);
 });
 
+
+// #263: the companion shows up at four moments only.
+const LESSON_START = { reply: 'Why does alpha matter?', step: 0, totalSteps: 3, done: false, lesson: { module: 'Basics', day: 1, title: 'Alpha' }, lessonId: 'L1' };
+async function lessonWith(replies) {
+  const f = frontend((url, init) => {
+    if (url !== '/api/lesson') return null;
+    return JSON.parse(init.body).answer ? replies.shift() : [200, LESSON_START];
+  });
+  await settle();
+  f.$('#active-topic').value = 'demo';
+  await f.$('#btn-next').click();
+  await settle();
+  return f;
+}
+const answer = async (f, text = 'my answer') => { f.$('#lesson-input').value = text; await f.$('#btn-lesson-answer').click(); await settle(); };
+const shown = (f) => !f.$('#companion').classList.contains('hidden');
+
+it('greets a new lesson, then reacts to a right answer', async () => {
+  const f = await lessonWith([[200, { ...LESSON_START, reply: 'Yes. Next?', step: 1, mood: 'right' }]]);
+  expect(shown(f)).toBe(true);
+  expect(f.$('#companion').dataset.state).toBe('idle');
+  expect(f.$('#companion-says').textContent).toBe('Ready when you are.');
+  await answer(f);
+  expect(f.$('#companion').dataset.state).toBe('right');
+  expect(f.$('#companion-says').textContent).toBe("That's it. Now it's yours.");
+});
+
+it('offers a way in after a second miss, and stays out of the way otherwise', async () => {
+  const f = await lessonWith([[200, { ...LESSON_START, reply: 'Hmm. Next?', step: 1 }], [200, { ...LESSON_START, reply: 'Not quite.', step: 2, mood: 'stuck' }]]);
+  await answer(f);
+  expect(shown(f)).toBe(false); // an ordinary reply: nothing to react to
+  await answer(f);
+  expect(f.$('#companion').dataset.state).toBe('stuck');
+  expect(f.$('#companion-says').textContent).toBe('Try the smallest version of the problem first.');
+});
+
+it('reads along while an answer is graded', async () => {
+  let release;
+  const pending = new Promise((r) => (release = r));
+  const f = await lessonWith([pending]);
+  f.$('#lesson-input').value = 'thinking out loud';
+  const sent = f.$('#btn-lesson-answer').click();
+  await settle();
+  expect(f.$('#companion').dataset.state).toBe('thinking');
+  expect(f.$('#companion-says').textContent).toBe('Reading your answer.');
+  release([200, { ...LESSON_START, reply: 'Ok.', step: 1 }]);
+  await sent; await settle();
+});
+
+it('steps back while the student types', async () => {
+  const f = await lessonWith([]);
+  f.$('#lesson-input').value = 'I think';
+  f.$('#lesson-input').dispatch('input');
+  expect(shown(f)).toBe(false);
+});
+
+it('stays hidden for the session once the student taps it away', async () => {
+  const f = await lessonWith([[200, { ...LESSON_START, reply: 'Yes.', step: 1, mood: 'right' }]]);
+  await f.$('#companion-hide').click();
+  expect(shown(f)).toBe(false);
+  await answer(f);
+  expect(shown(f)).toBe(false); // even for a right answer
+});
+
+it('keeps a new lesson\'s companion when an old lesson\'s answer fails late', async () => {
+  let fail;
+  const late = new Promise((r) => (fail = r));
+  let starts = 0;
+  const f = frontend((url, init) => {
+    if (url !== '/api/lesson') return null;
+    if (JSON.parse(init.body).answer) return late;
+    return [200, { ...LESSON_START, lessonId: `L${++starts}` }];
+  });
+  await settle();
+  f.$('#active-topic').value = 'demo';
+  await f.$('#btn-next').click();
+  await settle();
+  f.$('#lesson-input').value = 'an answer for lesson one';
+  const sent = f.$('#btn-lesson-answer').click();
+  await settle();
+  f.$('#active-topic').value = 'other';
+  await f.$('#btn-next').click(); // lesson two starts while lesson one's answer is out
+  await settle();
+  expect(f.$('#companion').dataset.state).toBe('idle');
+  fail([409, { error: 'That answer was for an earlier question.' }]);
+  await sent; await settle();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(false); // lesson two keeps its companion
+  expect(f.$('#companion').dataset.state).toBe('idle');
+});
