@@ -3,7 +3,7 @@
   "slug": "neuroplasticity",
   "created": "2026-08-21",
   "student_level": "intermediate",
-  "level": "advanced",
+  "level": "intermediate",
   "prerequisites": ["basic neuroscience", "neuron structure", "synaptic transmission"],
   "exit_criteria": [
     "explain the cellular and molecular mechanisms of neuroplasticity",

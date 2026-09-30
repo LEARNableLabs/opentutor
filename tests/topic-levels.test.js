@@ -125,3 +125,13 @@ it.each(['deterministic', 'agentic'])('a %s pipeline run keeps the quick build\'
   expect(written.length).toBeGreaterThan(0);
   for (const c of written) expect(c).toMatchObject({ level: 'beginner', prerequisites: ['curiosity'] });
 });
+
+// The level is derived in code from each prerequisite's judged kind, so the rubric is a rule, not a mood.
+it('derives the level from the hardest prerequisite', async () => {
+  const { levelFrom } = await import('../scripts/backfill-topic-levels.js');
+  expect(levelFrom(['general', 'general'])).toBe('beginner');
+  expect(levelFrom(['general', 'school'])).toBe('intermediate');
+  expect(levelFrom(['school', 'university', 'general'])).toBe('advanced');
+  expect(levelFrom([])).toBeNull();
+  expect(levelFrom(['general', 'expert'])).toBeNull(); // an unknown kind is a failed answer, never a guess
+});
