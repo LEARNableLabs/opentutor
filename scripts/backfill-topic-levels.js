@@ -19,7 +19,7 @@ export const LEVELS = ['beginner', 'intermediate', 'advanced'];
 const RUBRIC = `Levels, for an adult studying on their own:
 - beginner: anyone can start. The prerequisites are general knowledge a curious adult already has or picks up in the first lessons: reading and writing well, everyday arithmetic, general-culture familiarity (such as "basic geography", "basic literary terminology", "interest in the night sky"), or practical patience and simple tools. General knowledge like this is still beginner even when the list calls it "basic". But if any prerequisite is a skill or body of knowledge specific to the subject itself (prior forging technique, using planes and chisels, knowing a cube-solving method, hand-sewing technique, philatelic terminology, algebra, atmospheric science), the course is not beginner.
 - intermediate: needs subject-specific background from secondary school or an introductory course, which many adults would have to refresh first: algebra, probability, trigonometry, introductory physics, chemistry or biology, basic programming, basic music theory, or an introductory course in a related field.
-- advanced: needs university-level background in a related field before the first lesson, such as calculus, linear algebra, discrete mathematics with proofs, quantum or statistical mechanics, or a prior university course in the discipline. Choose it only when at least one prerequisite is at that level.
+- advanced: needs university-level background in a related field before the first lesson, such as calculus, linear algebra, discrete mathematics with proofs, quantum or statistical mechanics, or a prior university course in the discipline. Choose it only when at least one prerequisite is at that level. Prerequisites that are introductory ("basic", "introductory", "general", "fundamentals" of a school subject) make a course intermediate, however specialised the subject sounds.
 Judge by the prerequisites and what the lessons actually require, not by how serious the subject sounds.`;
 
 /** The curriculum text with `level` (and `prerequisites`, if given) set right after `student_level`. */
@@ -69,7 +69,7 @@ async function main() {
     if (!fs.existsSync(file)) return false;
     const { level } = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (only && level !== only) return false;
-    return force || !LEVELS.includes(level);
+    return force || only || !LEVELS.includes(level); // --only re-rates that level's topics
   });
   console.log(`Rating ${todo.length} topics...`);
   let done = 0;
