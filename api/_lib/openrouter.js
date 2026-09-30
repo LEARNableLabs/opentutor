@@ -1,4 +1,4 @@
-// Connect a student's own OpenRouter account with OAuth PKCE (#132). The key is
+// Connect a student's own OpenRouter account with OAuth PKCE (#132), or save a key they paste (#246). The key is
 // claimed server-side, sealed into the student's store, and never sent back.
 import { createHash, randomBytes } from 'node:crypto';
 import { getState } from './init.js';
@@ -59,6 +59,15 @@ export function openrouterHandler({ getStore = getState, fetchImpl = fetch } = {
         // Only a plain printable token may reach a header: anything else would be echoed in the error.
         const info = typeof apiKey === 'string' && /^[\x21-\x7e]{1,512}$/.test(apiKey) ? await keyInfo(apiKey, fetchImpl) : null;
         if (!info) return res.status(502).json({ error: 'OpenRouter did not accept the connection. Please try again.' });
+        await saveKey(state, apiKey);
+        return res.status(200).json({ connected: true, freeTier: !!info.is_free_tier, limitRemaining: info.limit_remaining ?? null });
+      }
+      // A key the student pastes (#246): stored only once OpenRouter accepts it.
+      if (action === 'save') {
+        const apiKey = typeof req.body.key === 'string' ? req.body.key.trim() : '';
+        if (!/^[\x21-\x7e]{1,512}$/.test(apiKey)) return res.status(400).json({ error: 'Paste your OpenRouter key.' });
+        const info = await keyInfo(apiKey, fetchImpl);
+        if (!info) return res.status(400).json({ error: 'OpenRouter did not accept that key. Check it and try again.' });
         await saveKey(state, apiKey);
         return res.status(200).json({ connected: true, freeTier: !!info.is_free_tier, limitRemaining: info.limit_remaining ?? null });
       }

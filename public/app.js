@@ -710,6 +710,26 @@ $('#btn-connect').addEventListener('click', async () => {
     $('#btn-connect').disabled = false;
   }
 });
+// #246: or paste a key. The server checks it with OpenRouter before keeping it.
+$('#key-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const key = $('#key-input').value.trim();
+  if (!key) return;
+  $('#btn-save-key').disabled = true;
+  try {
+    const res = await fetch('/api/openrouter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'save', key }) });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) return void ($('#connect-message').textContent = data.error || 'Could not save the key. Please try again.');
+    $('#key-input').value = '';
+    if (data.freeTier) showConnect({ error: 'Saved, but your OpenRouter account has no credits yet. Add some at openrouter.ai to keep learning.' });
+    else $('#connect-banner').classList.add('hidden');
+    loadKeyStatus().catch(() => {});
+  } catch {
+    $('#connect-message').textContent = 'Could not save the key. Please try again.';
+  } finally {
+    $('#btn-save-key').disabled = false;
+  }
+});
 $('#btn-connect-browse').addEventListener('click', () => {
   $('#connect-banner').classList.add('hidden');
   $('.nav-btn[data-view="topics"]').click();

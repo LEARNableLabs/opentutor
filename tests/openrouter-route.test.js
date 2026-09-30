@@ -137,3 +137,43 @@ it('dispatches /api/account and /api/openrouter from one function', async () => 
   expect(plain.statusCode).toBe(200);
   expect(plain.body).toEqual({ user: null, available: true, local: false });
 });
+
+// #246: a student may paste a key instead of connecting through OpenRouter.
+it('saves a pasted key only after OpenRouter accepts it, and never sends it back', async () => {
+  const saved = await call(request('POST', { action: 'save', key: '  sk-or-student  ' }));
+  expect(saved.statusCode).toBe(200);
+  expect(saved.body).toEqual({ connected: true, freeTier: false, limitRemaining: 5 });
+  expect(openrouter).toHaveBeenCalledWith(expect.stringMatching(/\/key$/), expect.objectContaining({ headers: { Authorization: 'Bearer sk-or-student' } }));
+  expect(await readKey(aliceStore())).toBe('sk-or-student');
+  expect(JSON.stringify(saved.body) + JSON.stringify(saved.headers)).not.toContain('sk-or-student');
+});
+
+it('does not store a pasted key OpenRouter rejects', async () => {
+  const res = await call(request('POST', { action: 'save', key: 'sk-or-revoked' }));
+  expect(res.statusCode).toBe(400);
+  expect(res.body.error).toMatch(/OpenRouter did not accept that key/);
+  expect(JSON.stringify(res.body)).not.toContain('sk-or-revoked');
+  expect(await readKey(aliceStore())).toBeNull();
+});
+
+it.each([
+  ['empty', ''],
+  ['blank', '   '],
+  ['not a string', 42],
+  ['a line break', 'sk-or-a\nb'],
+  ['too long', 'x'.repeat(513)],
+])('refuses a pasted key that is %s without asking OpenRouter', async (_case, key) => {
+  const res = await call(request('POST', { action: 'save', key }));
+  expect(res.statusCode).toBe(400);
+  expect(openrouter).not.toHaveBeenCalled();
+  expect(await readKey(aliceStore())).toBeNull();
+});
+
+it('lets only a self-signup account save a key, from the same origin', async () => {
+  const owner = await call({ method: 'POST', body: { action: 'save', key: 'sk-or-student' }, headers: { host: 'localhost:3000', authorization: 'Bearer shared' } });
+  expect(owner.statusCode).toBe(403);
+  const crossSite = await call({ ...request('POST', { action: 'save', key: 'sk-or-student' }), headers: { host: 'localhost:3000', origin: 'https://evil.test', cookie: 'ot_access=alice' } });
+  expect(crossSite.statusCode).toBe(403);
+  expect(openrouter).not.toHaveBeenCalled();
+  expect(await readKey(aliceStore())).toBeNull();
+});
