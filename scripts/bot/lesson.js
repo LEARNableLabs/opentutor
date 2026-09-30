@@ -707,24 +707,31 @@ export function newLessonId() {
   return randomBytes(4).toString('hex');
 }
 
-function buildSuggestedOptions(options, lessonId, step) {
-  if (!options || !Array.isArray(options) || options.length < 2) return null;
+// A button shows what a tap sends (#259). Answers that fit on a button go on it whole; when any is
+// too long, the message lists them in full and the buttons carry only their numbers.
+const BUTTON_TEXT = 45;
+const escapeHtml = (text) => String(text).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 
-  return options.map((opt, i) => [{
-    text: `${i + 1}. ${String(opt).slice(0, 45)}`,
-    callback_data: `ans:${lessonId}:${step}:${i}`,
-  }]);
+function buildSuggestedOptions(options, lessonId, step, numbersOnly) {
+  if (!options || !Array.isArray(options) || options.length < 2) return null;
+  const data = (i) => `ans:${lessonId}:${step}:${i}`;
+  if (numbersOnly) return [options.map((_, i) => ({ text: String(i + 1), callback_data: data(i) }))];
+  return options.map((opt, i) => [{ text: `${i + 1}. ${opt}`, callback_data: data(i) }]);
 }
 
 function getOptionsForStep(active, stepName) {
   if (!active?.plan || !stepName) return null;
+  // A numbered multiple-choice diagnostic already shows its own answers: one set, not two.
+  if (stepName === 'diagnostic' && active.exerciseFormat === 'mc' && Array.isArray(active.plan.mcOptions)) return null;
   return suggestedAnswers(active.plan, stepName);
 }
 
 function appendOptionsHintAndButtons(text, active, stepName) {
   const options = getOptionsForStep(active, stepName);
   active.id ||= newLessonId(); // a lesson saved before ids existed gets one now
-  const buttons = buildSuggestedOptions(options, active.id, stepName);
+  const numbersOnly = !!options?.some((o) => o.length > BUTTON_TEXT);
+  const buttons = buildSuggestedOptions(options, active.id, stepName, numbersOnly);
+  if (buttons && numbersOnly) text += '\n\n' + options.map((o, i) => `${i + 1}. ${escapeHtml(o)}`).join('\n');
   const hint = buttons ? '\n\n<i>Tap an option or type your own answer.</i>' : '';
   return { text: text + hint, msgOptions: buttons ? { buttons } : {} };
 }

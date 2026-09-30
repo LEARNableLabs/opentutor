@@ -203,4 +203,31 @@ describe('suggested answers (#255)', () => {
     expect(active.steps[active.step]).toBe('application');
     expect(buttonsOf(channel.sendMessage.mock.calls.at(-1))).toEqual([]); // application: none
   });
+  it('lists long answers in full in the message, with numbered buttons, so a tap sends what the student read', async () => {
+    const long = 'Neither weeds, because each expects the other to do it <eventually>';
+    generate.mockImplementation(async (system) => {
+      if (system.includes('## Current Step:')) return { text: REPLY };
+      return { text: JSON.stringify({ ...PLAN, diagnosticOptions: ['Both weed the garden', long, "I'm not sure"] }) };
+    });
+    writeCurriculum([lesson(1, ['alpha']), lesson(2, ['beta'])]);
+    await deliverNextLesson(TOPIC, 203, channel, new Map());
+    const [, text, options] = channel.sendMessage.mock.calls.at(-1);
+    expect(text).toContain('Neither weeds, because each expects the other to do it &lt;eventually&gt;');
+    const labels = options.buttons.flat().map((b) => b.text);
+    expect(labels).toEqual(['1', '2', '3']);
+    const shown = getActiveLesson(203).plan.diagnosticOptions;
+    expect(text).toContain(`${shown.indexOf(long) + 1}. Neither weeds`); // the number on the button is the number in the list
+  });
+
+  it('shows one set of answers when the diagnostic is numbered multiple choice', async () => {
+    generate.mockImplementation(async (system) => {
+      if (system.includes('## Current Step:')) return { text: REPLY };
+      return { text: JSON.stringify({ ...PLAN, ...OPTIONS, exerciseFormat: 'mc', mcOptions: [{ label: 'A', text: 'mc one' }, { label: 'B', text: 'mc two' }] }) };
+    });
+    writeCurriculum([lesson(1, ['alpha']), lesson(2, ['beta'])]);
+    await deliverNextLesson(TOPIC, 204, channel, new Map());
+    const [, text, options] = channel.sendMessage.mock.calls.at(-1);
+    expect(text).toContain('1. mc one');
+    expect(buttonsOf([null, text, options])).toEqual([]); // no suggested-answer buttons on top of the numbered choices
+  });
 });
