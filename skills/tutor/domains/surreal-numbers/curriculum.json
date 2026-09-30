@@ -3,6 +3,7 @@
   "slug": "surreal-numbers",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "set theory basics",
     "proof by induction",

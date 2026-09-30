@@ -3,6 +3,7 @@
   "slug": "electronic-music-synthesis",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic audio concepts (frequency, amplitude, timbre)",
     "simple subtractive synthesis (OSC → filter → envelope)",

@@ -3,6 +3,7 @@
   "slug": "structural-engineering",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic physics (forces, moments, equilibrium)",
     "algebra and trigonometry",

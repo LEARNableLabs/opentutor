@@ -529,6 +529,19 @@ input::placeholder {
   text-align: right;
 }
 
+.topic-before {
+  display: block;
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--text-dim);
+}
+
+.topic-level {
+  display: block;
+  margin-top: 2px;
+}
+
 .progress-bar {
   display: block;
   width: 96px;

@@ -3,6 +3,7 @@
   "slug": "operations-research",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "linear algebra (vectors, matrices, linear systems)",
     "basic calculus (derivatives, gradients)",

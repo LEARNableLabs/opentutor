@@ -3,6 +3,7 @@
   "slug": "condensed-matter-physics",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "quantum mechanics",
     "statistical mechanics",

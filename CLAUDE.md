@@ -46,6 +46,7 @@ opentutor/
 ├── scripts/
 │   ├── setup.js                      # Interactive setup CLI (no flags — prompts for everything)
 │   ├── generate-teacher-md.js        # Backfills teacher.md across domains
+│   ├── backfill-topic-levels.js      # Rates each shipped topic beginner/intermediate/advanced (#251); one cheap model call per topic
 │   ├── bot/                          # Telegram bot adapter
 │   │   ├── index.js                  # Entry point (npm run bot)
 │   │   ├── claude.js                 # LLM wrapper — the same backend factories as the web (#98)

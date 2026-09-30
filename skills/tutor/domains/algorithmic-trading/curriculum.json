@@ -3,6 +3,7 @@
   "slug": "algorithmic-trading",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic probability and statistics",
     "programming (Python or similar)",

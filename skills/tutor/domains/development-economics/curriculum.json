@@ -3,6 +3,7 @@
   "slug": "development-economics",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": ["microeconomics", "basic statistics", "macroeconomics fundamentals"],
   "exit_criteria": [
     "analyze poverty measurement strategies and their limitations",

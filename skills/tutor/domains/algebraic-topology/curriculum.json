@@ -3,6 +3,7 @@
   "slug": "algebraic-topology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "point-set topology",
     "group theory",

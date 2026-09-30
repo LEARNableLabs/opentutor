@@ -27,9 +27,24 @@ function render() {
       title = document.createElement('h3'),
       meta = document.createElement('span');
     title.textContent = topic.topic;
-    meta.textContent = `${topic.total} lessons`;
+    meta.className = 'catalog-meta';
+    const count = document.createElement('span');
+    count.textContent = `${topic.total} lessons`;
+    meta.append(count);
+    // #251: how hard it is, and what to know first.
+    if (topic.level) {
+      const level = document.createElement('span');
+      level.textContent = topic.level[0].toUpperCase() + topic.level.slice(1);
+      meta.append(level);
+    }
     summary.append(title, meta);
     card.append(summary);
+    if (topic.prerequisites?.length) {
+      const before = document.createElement('p');
+      before.className = 'catalog-before';
+      before.textContent = `Before you start: ${topic.prerequisites.join(', ')}.`;
+      card.append(before);
+    }
     const lessons = document.createElement('ol');
     for (const name of topic.preview) {
       const li = document.createElement('li');

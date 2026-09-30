@@ -3,6 +3,7 @@
   "slug": "neon-sign-fabrication",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": ["basic chemistry", "electricity and circuits", "atomic structure"],
   "exit_criteria": [
     "student can explain thermal expansion and annealing requirements for glass bending",

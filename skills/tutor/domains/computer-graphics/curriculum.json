@@ -3,6 +3,7 @@
   "slug": "computer-graphics",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic programming (loops, functions, data structures)",
     "algebra and basic trigonometry",

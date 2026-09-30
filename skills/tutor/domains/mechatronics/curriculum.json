@@ -3,6 +3,7 @@
   "slug": "mechatronics",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic electronics (Ohm's law, circuits)",
     "programming fundamentals (variables, loops, functions)",

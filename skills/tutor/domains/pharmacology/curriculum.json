@@ -3,6 +3,7 @@
   "slug": "pharmacology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic chemistry (functional groups, acid-base chemistry)",
     "cell biology (cell structure, membranes, proteins)",

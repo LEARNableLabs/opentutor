@@ -3,6 +3,7 @@
   "slug": "behavioral-ecology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": ["basic evolutionary biology", "natural selection", "introductory ecology"],
   "exit_criteria": [
     "student can apply Tinbergen's four questions to analyze any behavior",

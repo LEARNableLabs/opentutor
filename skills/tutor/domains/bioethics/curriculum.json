@@ -3,6 +3,7 @@
   "slug": "bioethics",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic philosophical reasoning",
     "familiarity with ethical frameworks (consequentialism, deontology)",

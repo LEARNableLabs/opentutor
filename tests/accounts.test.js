@@ -251,7 +251,7 @@ it('public catalog reads only shipped curricula without runtime progress', () =>
     JSON.stringify({ curriculum: { topic: 'Private', lessons: [{}] } }),
   );
   expect(publicCatalog(root)).toEqual([
-    { slug: 'math', topic: 'Math', total: 1, level: 'All levels', preview: ['Numbers'] },
+    { slug: 'math', topic: 'Math', total: 1, level: null, prerequisites: [], preview: ['Numbers'] },
   ]);
 });
 it('requires a verified recovery grant rather than an ordinary login for password reset', async () => {

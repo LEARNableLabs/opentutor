@@ -3,6 +3,7 @@
   "slug": "epidemiology",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "basic statistics (mean, variance, probability)",
     "hypothesis testing and p-values",

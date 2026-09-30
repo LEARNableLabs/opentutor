@@ -3,6 +3,7 @@
   "slug": "combinatorics-and-counting",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "advanced",
   "prerequisites": [
     "basic discrete mathematics",
     "proof techniques (induction, contradiction)",

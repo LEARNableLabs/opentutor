@@ -3,6 +3,7 @@
   "slug": "chess-strategy",
   "created": "2026-08-21",
   "student_level": "intermediate",
+  "level": "intermediate",
   "prerequisites": [
     "chess rules and piece movement",
     "basic tactical patterns (forks, pins, skewers)",
