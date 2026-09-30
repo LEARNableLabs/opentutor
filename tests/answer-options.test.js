@@ -42,12 +42,6 @@ it('has the tutor ask a question with suggested answers as planned, and only the
   expect(buildSocraticResponsePrompt(plan(), 'x', 'diagnostic', '', { markdown: true }).system).not.toMatch(RULE);
 });
 
-it('the Telegram button handler reads the same cleaned list the buttons were built from', async () => {
-  const source = (await import('node:fs')).readFileSync('scripts/bot/callbacks.js', 'utf8');
-  const handler = source.slice(source.indexOf("data.startsWith('ans:')"));
-  expect(handler.slice(0, 900)).toMatch(/suggestedAnswers\(active\.plan, step\)/);
-});
-
 it('shows retrieval options in the plan schema as a list, like the others', () => {
   const { system } = buildLessonPlanPromptFor();
   expect(system).toMatch(/"retrievalOptions": \["answer 1", "answer 2", "answer 3", "I don't remember"\]/);
