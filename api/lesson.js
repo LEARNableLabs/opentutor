@@ -118,6 +118,20 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       return { status: 200, body: { done: true, message: 'Lesson already complete.' } };
     }
 
+    // A lesson whose completion is already claimed is finished, or being finished, by another
+    // request. What is left of it (a save that failed after the claim, a request stopped there, or
+    // a late turn that wrote the record back) is cleared, so the student is never held on it (#228).
+    const completion = `lesson_done:${active.id || `${topicSlug}:${active.lessonDay}:${active.isReview ? 'review' : 'lesson'}`}`;
+    if ((await state.readKV(completion)) != null) {
+      const now = await state.readKV(kvKey);
+      const current = typeof now === 'string' ? JSON.parse(now) : now;
+      if (current?.id === active.id && current?.plan) {
+        if (active.isReview) await state.writeKV(kvKey, JSON.stringify({ reviews: active.reviews }));
+        else await state.deleteKV(kvKey);
+      }
+      return { status: 200, body: { done: true, message: 'Lesson already complete.' } };
+    }
+
     // A grading block in an answer could have it grade itself (#224). Only a block holding JSON is
     // one: other markup, an XML lesson's own <assessment> element included, is the student's answer.
     const said = stripGrades(answer).trim();
@@ -151,7 +165,6 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
       // A lesson completes once (#228). Of two answers to its last step at the same moment, from two
       // tabs or a retry, only the first to claim its completion records it; the other is refused as
       // stale. The claim is permanent, as a completion is: nothing expires or needs taking over.
-      const completion = `lesson_done:${active.id || `${topicSlug}:${active.lessonDay}:${active.isReview ? 'review' : 'lesson'}`}`;
       const token = randomUUID();
       await state.insertKV(completion, token);
       if (String(await state.readKV(completion)) !== token) return { status: 409, body: STALE };
