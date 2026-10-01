@@ -46,15 +46,23 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, dueReview
     // A question whose right answer is not one of its options can't be a quiz: Telegram refuses it,
     // which ended the whole quiz here, and there would be nothing to grade (#294).
     const questions = JSON.parse(jsonMatch[0]).filter((q) => Number.isInteger(q?.correct) && q.options?.[q.correct] !== undefined);
-    if (!questions.length) throw new Error('No question with a right answer');
 
     log.info({ topic: topicSlug, question_count: questions.length }, 'quiz generated');
     const graded = new Set();
+    let sentCount = 0;
     for (const q of questions) {
-      const sent = await channel.sendPoll(chatId, q.question, q.options, {
-        correctOptionId: q.correct,
-        explanation: q.explanation,
-      });
+      let sent;
+      try {
+        sent = await channel.sendPoll(chatId, q.question, q.options, {
+          correctOptionId: q.correct,
+          explanation: q.explanation,
+        });
+      } catch (err) {
+        // Telegram refuses a poll it can't show (one option, an overlong question): skip it, not the quiz.
+        log.warn({ err, topic: topicSlug }, 'quiz poll refused');
+        continue;
+      }
+      sentCount += 1;
       // The answer reaches spaced review through the topic and concept the question names (#294): two
       // topics can share a concept name. Once per quiz: three questions on one concept are one
       // review, not three steps out in its schedule.
@@ -66,6 +74,7 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, dueReview
       }
       await sleep(1500);
     }
+    if (!sentCount) throw new Error('No question could be sent');
   } catch (err) {
     log.warn({ err, topic: topicSlug }, 'quiz JSON parse failed');
     await channel.sendMessage(chatId, 'I couldn\'t build that quiz cleanly. Please try /quiz again.');

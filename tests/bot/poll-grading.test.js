@@ -37,7 +37,9 @@ const channel = {
   sendMessage: vi.fn(async () => ({ message_id: 1 })),
   sendTyping: vi.fn(),
   sendPoll: vi.fn(async (chatId, question, options, quiz = {}) => {
-    // Like Telegram: a quiz whose right answer is not one of its options is refused.
+    // Like Telegram: a poll with fewer than two options, or a quiz whose right answer is not one of
+    // its options, is refused.
+    if (options.length < 2) throw new Error('Telegram sendPoll: Bad Request: poll must have at least 2 option');
     if (quiz.correctOptionId !== undefined && options[quiz.correctOptionId] === undefined) throw new Error('Telegram sendPoll: Bad Request: wrong correct option id');
     return { message_id: 2, poll: { id: `poll-${channel.sendPoll.mock.calls.length}` } };
   }),
@@ -145,12 +147,29 @@ describe('quiz poll answers reach spaced review', () => {
     expect(record(CONCEPT)).toMatchObject({ reps: 1, streak: 1 });
   });
 
-  it('says so when no question has a right answer', async () => {
+  it('skips a poll Telegram refuses, and sends the rest', async () => {
     due(TOPIC, CONCEPT);
-    quizReply([CONCEPT, null], [CONCEPT, 7]);
+    generate.mockResolvedValue({ text: JSON.stringify([
+      { question: 'One option?', topic: TOPIC, concept: CONCEPT, options: ['only'], correct: 0 },
+      { question: 'Two options?', topic: TOPIC, concept: CONCEPT, options: ['a', 'b'], correct: 1 },
+    ]) });
     await send('/review');
 
-    expect(channel.sendPoll).not.toHaveBeenCalled();
+    await answerPoll('poll-2', [1]);
+
+    expect(record(CONCEPT)).toMatchObject({ reps: 1, streak: 1 });
+    expect(sentText()).not.toMatch(/couldn't build that quiz/);
+  });
+
+  it.each([
+    ['no question has a right answer', [{ options: ['a', 'b'], correct: null }, { options: ['a', 'b'], correct: 7 }]],
+    ['Telegram refuses every question', [{ options: ['only'], correct: 0 }]],
+  ])('says so when %s', async (_case, questions) => {
+    due(TOPIC, CONCEPT);
+    generate.mockResolvedValue({ text: JSON.stringify(questions.map((q) => ({ question: 'Q?', topic: TOPIC, concept: CONCEPT, ...q }))) });
+
+    await send('/review');
+
     expect(sentText()).toMatch(/couldn't build that quiz/);
   });
 
