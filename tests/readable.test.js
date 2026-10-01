@@ -156,6 +156,8 @@ it.each([
   ['https://www.youtube.com/embed/videoseries/', 'invalid YouTube playlist id'],
   ['https://www.youtube-nocookie.com/embed/videoseries?list=PLintro-to-chemistry', 'invalid YouTube playlist id'],
   ['https://www.youtube-nocookie.com/embed/pantheon-construction', 'invalid YouTube video id'],
+  ['https://www.youtube.com/live/pantheon-construction', 'invalid YouTube video id'],
+  ['https://youtu.be/%ZZ', 'invalid YouTube video id'], // a malformed escape is no id
   ['https://example.com/video', 'placeholder'],
   ['https://www.example.org/article', 'placeholder'],
   ['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-control', 'placeholder'],
@@ -169,6 +171,11 @@ it.each([
   'https://youtu.be/JpdRchyVtvk?t=30',
   'https://www.youtube.com/embed/JpdRchyVtvk',
   'https://www.youtube.com/shorts/JpdRchyVtvk',
+  'https://www.youtube.com/live/JpdRchyVtvk',
+  'https://www.youtube.com/live', // the live page, and no stream to judge
+  'https://www.youtube.com/live/',
+  'https://youtu.be/JpdRchyVtv%6B', // the same id with its last character percent-encoded
+  'https://www.youtube.com/embed/JpdRchyVtv%6B',
   'https://www.youtube.com/playlist?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/playlist?list=PL41FDABC6AA085E78', // the older 16-digit kind
   'https://www.youtube.com/playlist?list=UUYO_jab_esuFRV4b17AJtAw', // a channel's uploads
