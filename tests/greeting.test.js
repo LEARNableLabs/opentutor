@@ -50,6 +50,22 @@ it('makes one call when two requests race, and the loser shows nothing rather th
   expect(both.filter(Boolean)).toHaveLength(1);
 });
 
+it('keeps yesterday\'s active claim across midnight while sweeping finalized rows', async () => {
+  state.writeKV('greeting:2026-09-30', JSON.stringify({ line: 'An older line.' }));
+  let release;
+  const pending = dailyGreeting({ state, today: '2026-10-01', getAdapter: async () => ({ generate: () => new Promise((resolve) => { release = () => resolve({ text: 'Yesterday.' }); }) }) });
+  while (!release) await new Promise((resolve) => setTimeout(resolve, 0));
+  expect(await dailyGreeting({ state, getAdapter, today: '2026-10-02' })).toBeTruthy();
+  expect(state.readKV('greeting:2026-09-30')).toBe(null);
+  const claim = state.readKV('greeting:2026-10-01');
+  expect(claim).toBeTruthy();
+  expect(await dailyGreeting({ state, getAdapter, today: '2026-10-01' })).toBe(null);
+  expect(state.readKV('greeting:2026-10-01')).toBe(claim);
+  expect(calls).toHaveLength(1); // today's call; the second old-day request made none
+  release();
+  expect(await pending).toBe('Yesterday.');
+});
+
 it('caches a failed model call, but propagates an unpaid trial and releases its unused claim', async () => {
   const log = vi.spyOn(console, 'error').mockImplementation(() => {});
   reply = () => { throw new Error('provider rejected secret sk-or-private-test-key'); };
