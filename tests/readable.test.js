@@ -149,6 +149,7 @@ it.each([
   ['https://www.youtube.com/playlist?list=', 'invalid YouTube playlist id'],
   ['https://www.youtube.com/watch?list=PLintro-to-chemistry', 'invalid YouTube playlist id'], // plays the list: no video of its own
   ['https://www.youtube.com/embed/videoseries?list=PLintro-to-chemistry', 'invalid YouTube playlist id'],
+  ['https://www.youtube.com/embed?listType=playlist&list=PLintro-to-chemistry', 'invalid YouTube playlist id'],
   ['https://example.com/video', 'placeholder'],
   ['https://www.example.org/article', 'placeholder'],
   ['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-control', 'placeholder'],
@@ -166,6 +167,7 @@ it.each([
   'https://www.youtube.com/playlist?list=PL41FDABC6AA085E78', // the older 16-digit kind
   'https://www.youtube.com/playlist?list=UUYO_jab_esuFRV4b17AJtAw', // a channel's uploads
   'https://www.youtube.com/embed/videoseries?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
+  'https://www.youtube.com/embed?listType=playlist&list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/watch?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/watch?v=JpdRchyVtvk&list=PLintro-to-chemistry', // the video still plays
   'https://www.youtube.com/@3blue1brown',
