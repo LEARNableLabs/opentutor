@@ -102,7 +102,7 @@ let titles; // shipped course titles by slug; they don't change while the proces
 // or the part of its title before a dash ("Night sky photography") is that course. Nothing that
 // only starts like one is: "Game Theory Advanced" is not "Game Theory". A slug is looked for first,
 // so a student's own "night-sky-photography" is never taken for another course's title.
-function courseFor(name, topics) {
+export function courseFor(name, topics) {
   titles ||= new Map(publicCatalog().map((course) => [course.slug, course.topic]));
   const wanted = norm(name);
   return topics.find((slug) => slug === name || slug === wanted) || topics.find((slug) => {
