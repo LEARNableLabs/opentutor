@@ -19,6 +19,7 @@ function frontend({ builds = [], buildStatus = null } = {}) {
       focus() { this.focused = true; },
       appendChild(child) { this.children.push(child); },
       remove() {}, querySelectorAll() { return []; }, replaceChildren(...nodes) { this.children = nodes; },
+      matches: () => false, // no layout in a double, so no chat bubble to fit (#305)
     };
   };
   const nodes = new Map([...html.matchAll(/<[^>]*\bid="([^"]+)"[^>]*>/g)].map(([tag, id]) =>
@@ -64,6 +65,7 @@ function frontend({ builds = [], buildStatus = null } = {}) {
     },
     localStorage: { getItem: () => null, removeItem(){} }, sessionStorage: {removeItem(){}}, window: { fetch, location: {search:''} }, fetch, Headers, URLSearchParams, console,
     setTimeout: (fn) => timers.push(fn), clearTimeout() {},
+    ResizeObserver: class { observe() {} },
   });
   vm.runInContext(source, context);
   return { $, context, calls, timers };

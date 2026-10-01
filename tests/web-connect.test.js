@@ -20,6 +20,7 @@ function frontend(route, search = '') {
       dispatch(name, event = { preventDefault() {} }) { return listeners.get(name)?.(event); },
       dispatch(name, event = { preventDefault() {} }) { return listeners.get(name)?.(event); },
       focus() { focused = this; }, appendChild(child) { this.children.push(child); }, replaceChildren(...nodes) { this.children = nodes; }, remove() {}, querySelectorAll() { return []; },
+      matches: () => false, // no layout in a double, so no chat bubble to fit (#305)
     };
   };
   const nodes = new Map([...html.matchAll(/<[^>]*\bid="([^"]+)"[^>]*>/g)].map(([tag, id]) => [`#${id}`, element(tag.match(/class="([^"]+)"/)?.[1])]));
@@ -39,6 +40,7 @@ function frontend(route, search = '') {
     location: { search, pathname: '/learn.html', assign: vi.fn(), replace: vi.fn() },
     history: { replaceState: vi.fn() },
     Response, Headers, URLSearchParams, TextDecoder, console, setTimeout: (fn) => (timers.push(fn), 0), clearTimeout() {},
+    ResizeObserver: class { observe() {} },
     fetch: async (url, init = {}) => {
       calls.push({ url, init });
       const answer = await (route(url, init) || base[url] || [200, {}]); // a route may answer later
