@@ -156,6 +156,14 @@ it('refuses a trial call past the day\'s budget with the 402 connect prompt, as 
   expect(sse.status).toBe(200);
   expect(await sse.text()).toBe(`event: error\ndata: ${JSON.stringify(refusal)}\n\n`);
 
+  // The optional greeting preserves the payment contract, without caching a
+  // refusal as today's greeting or spending a provider call on a retry.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const greeting = await fetch(`${base}/api/user?greeting=1`, { headers: { Cookie: 'ot_access=tok-a' } });
+    expect(greeting.status).toBe(402);
+    expect(await greeting.json()).toEqual(refusal);
+  }
+
   expect((await asAccount('tok-own', '/api/lesson', { topicSlug: 'game-theory' })).status).toBe(200);
   expect(keys.slice(before)).toEqual(['Bearer fake', 'Bearer fake', 'Bearer sk-or-own-student']);
 });

@@ -321,6 +321,15 @@ input::placeholder {
   font-weight: 600;
 }
 
+/* #279: the day's personal line, under "Welcome back, <name>." */
+#welcome-touch {
+  max-width: 36em;
+  margin: -4px 0 16px;
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--text-dim);
+}
+
 /* #278: the courses a returning student has, each with its next step. */
 #welcome-courses {
   list-style: none;

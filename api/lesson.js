@@ -88,7 +88,8 @@ async function handler(req, res) {
  */
 export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, answer, lessonId, step: at }, { onToken } = {}) {
   // The grading block streams first, so it is filtered before the student sees anything.
-  const stream = onToken ? { onToken: assessmentFilter(sourceFilter(onToken)) } : {};
+  const sources = onToken ? sourceFilter(onToken) : null;
+  const stream = sources ? { onToken: assessmentFilter(sources) } : {};
   if (typeof topicSlug !== 'string' || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(topicSlug)) {
     return { status: 400, body: { error: 'A valid topicSlug is required' } };
   }
@@ -146,11 +147,14 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     const askAsPlanned = !!suggestedAnswers(active.plan, steps[active.step + 1]);
     const responsePrompt = buildSocraticResponsePrompt(active.plan, said, stepName, user, { final: active.step === steps.length - 1, markdown: true, course, askAsPlanned, resources: active.resources || [] });
     const adapter = await getAdapter();
-    const response = await adapter.generate(
-      responsePrompt.system + '\n\nReturn only polished text.',
-      active.history,
-      { model: responsePrompt.model, ...stream },
-    );
+    let response;
+    try {
+      response = await adapter.generate(
+        responsePrompt.system + '\n\nReturn only polished text.',
+        active.history,
+        { model: responsePrompt.model, ...stream },
+      );
+    } finally { sources?.flush(); } // ordinary source-like prefixes survive completion and errors
 
     const { assessment, visible } = parseAssessment(response.text);
     // A reply that was nothing but a broken grade still says something, never an empty bubble.

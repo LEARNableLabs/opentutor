@@ -263,3 +263,17 @@ it('bounds the answers inside trial lessons, even when they arrive at the same t
   expect(answers.filter((r) => r.status === 'fulfilled')).toHaveLength(TRIAL_LESSONS * 4);
   expect(await outcome(adapterFor({ state, use: 'lesson-continue', host: () => host }))).toBe('trial_used');
 });
+
+// #279: the day's greeting spends one of the day's shared trial calls, never a lesson or a message.
+it('pays for a trial account\'s greeting from the day\'s shared calls, and from its own key once connected', async () => {
+  vi.stubEnv('OPENTUTOR_TRIAL_CALLS_PER_DAY', '1');
+  const state = account();
+  expect(await outcome((await adapterFor({ state, use: 'greeting', host: () => host })).generate('x', []))).toBe('allowed');
+  expect(await trialLessonsLeft(state)).toBe(TRIAL_LESSONS); // not a lesson
+  expect(state.listKV('openrouter-trial:')).toEqual([]); // nor a message
+  expect(await outcome((await adapterFor({ state: other(), use: 'greeting', host: () => host })).generate('x', []))).toBe('daily_limit');
+  expect(host.generate).toHaveBeenCalledTimes(1);
+
+  await saveKey(state, 'sk-or-own');
+  expect((await adapterFor({ state, use: 'greeting', host: () => host })).constructor.name).toBe('StudentOpenRouterAdapter');
+});

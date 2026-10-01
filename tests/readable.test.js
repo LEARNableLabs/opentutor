@@ -229,6 +229,32 @@ it('resumes streaming prose after a nonterminal source line', () => {
   }
 });
 
+it.each(['Intro\n> 📚 Sources', 'Intro\n> ', 'Intro\n   '])('flushes an unfinished ordinary prefix: %s', (text) => {
+  const tokens = [];
+  const filter = sourceFilter((t) => tokens.push(t));
+  for (const ch of text) filter(ch);
+  filter.flush();
+  filter.flush();
+  expect(tokens.join('')).toBe(text);
+});
+
+it.each([false, true])('flushes an ordinary prefix when generation completes or fails (failure: %s)', async (fail) => {
+  const { ctx } = demoLesson();
+  const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+  const adapter = await ctx.getAdapter();
+  const text = '<assessment>{"score":0.8}</assessment>\nIntro\n> 📚 Sources';
+  adapter.generate.mockImplementation(async (_system, _history, options) => {
+    for (const ch of text) options.onToken(ch);
+    if (fail) throw new Error('broken stream');
+    return { text };
+  });
+  const tokens = [];
+  const next = lessonTurn(ctx, { topicSlug: 'demo', answer: 'because' }, { onToken: (t) => tokens.push(t) });
+  if (fail) await expect(next).rejects.toThrow('broken stream');
+  else await next;
+  expect(tokens.join('')).toBe('Intro\n> 📚 Sources');
+});
+
 it('resumes an already-verified footer without fetching, and drops legacy footers without rewriting the lesson', async () => {
   const check = vi.fn(async () => new Response(null, { status: 200 }));
   vi.stubGlobal('fetch', check);

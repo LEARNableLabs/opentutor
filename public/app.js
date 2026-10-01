@@ -211,6 +211,7 @@ try { companionAway = sessionStorage.getItem('ot_companion') === 'hidden'; } cat
 // Each tab keeps its own moment, and only the open tab's is shown (#269): a reply landing in one tab
 // never changes what the other shows, and switching back finds the tab as it was left.
 const companionFor = { learn: null, chat: null };
+let studentName = null; // what the welcome calls them (#278)
 let openView = 'learn';
 function companion(moment, view = 'learn') {
   companionFor[view] = COMPANION_MOMENTS[moment] ? moment : null;
@@ -227,7 +228,8 @@ function showCompanion(tip) {
   el.dataset.state = '';
   void el.offsetWidth; // replay a one-shot reaction
   el.dataset.state = known[0];
-  $('#companion-says').textContent = known[1];
+  // #279: the chat greets a student we know by name.
+  $('#companion-says').textContent = !tip && companionFor[openView] === 'chat-idle' && studentName ? `What's on your mind, ${studentName}?` : known[1];
   el.classList.remove('hidden');
 }
 $('#companion-tip').addEventListener('click', () => {
@@ -854,12 +856,25 @@ async function checkOnboarding() {
 // #278: where each course stands, and a button for each thing the student can do next.
 // Only over the empty state: a lesson already open (a link, a quick click) keeps the page.
 function showWelcome({ name, courses }) {
+  studentName = name;
   const title = $('#empty-title');
   if (lessonActive || !title || $('#empty-state').classList.contains('hidden')) return;
   title.textContent = name ? `Welcome back, ${name}.` : 'Welcome back.';
   $('#empty-hint').classList.add('hidden');
   $('#welcome-courses').replaceChildren(...courses.map((course, i) => welcomeCourse(course, i === 0)));
   $('#welcome').classList.remove('hidden');
+  showGreeting();
+}
+
+// #279: one personal line under the greeting, made once a day. The welcome never waits for it.
+async function showGreeting() {
+  try {
+    const res = await nativeFetch('/api/user?greeting=1'); // optional: a 402 never opens the global connect banner
+    const { greeting } = res.ok ? await res.json() : {};
+    if (!greeting) return;
+    $('#welcome-touch').textContent = greeting;
+    $('#welcome-touch').classList.remove('hidden');
+  } catch { /* the welcome stands without it */ }
 }
 
 function welcomeCourse({ slug, topic, completed, total, next, inFlight }, lead) {
