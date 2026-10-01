@@ -832,10 +832,17 @@ function fitBubbles(elements) {
   const widths = bubbles.map((el) => {
     let right = 0;
     const range = document.createRange();
-    const text = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-    while (text.nextNode()) {
-      range.selectNodeContents(text.currentNode);
-      for (const line of range.getClientRects()) right = Math.max(right, line.right);
+    const nodes = document.createTreeWalker(el, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT);
+    while (nodes.nextNode()) {
+      const node = nodes.currentNode;
+      let lines = [];
+      if (node.nodeType === Node.TEXT_NODE) {
+        range.selectNodeContents(node);
+        lines = range.getClientRects();
+      } else if (getComputedStyle(node).display === 'inline') {
+        lines = node.getClientRects(); // an inline box such as code: its padding and border reach past its text
+      }
+      for (const line of lines) right = Math.max(right, line.right);
     }
     const box = el.getBoundingClientRect();
     const style = getComputedStyle(el);
