@@ -78,12 +78,37 @@ it('shows no lesson in flight from a record whose step it cannot trust', async (
     { step: 0, steps: ['diagnostic'], lesson: { day: -1, title: 'Sets' } }, // "lesson -1"
     { step: 0, steps: ['diagnostic'], lesson: { day: 2 ** 60, title: 'Sets' } },
     { step: 0, steps: ['diagnostic'], reply: undefined }, // nothing to resume: Continue would plan a new lesson
+    { step: 0, steps: [null] }, // the current step cannot take an answer
+    { step: 0, steps: ['made-up-step'] },
+    { step: 0, steps: ['diagnostic'], reply: '' },
+    { step: 0, steps: ['diagnostic'], reply: 42 },
+    { step: 0, steps: ['diagnostic'], reply: undefined, history: { some: true } },
+    { step: 0, steps: ['diagnostic'], reply: undefined, history: [null] },
+    { step: 0, steps: ['diagnostic'], reply: undefined, history: [{ role: 'assistant', content: null }] },
+    { step: 0, steps: ['diagnostic'], reply: undefined, history: [{ role: 'assistant', content: '   ' }] },
+    { step: 0, steps: ['diagnostic'], reply: undefined, plan: { diagnostic: {} } },
   ];
   student.updateProgress((p) => { p.active_topics = ['game-theory']; });
   for (const record of records) {
     student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 2, title: 'Sets' }, reply: 'Q?', ...record }));
     expect((await whereYouAre(student, student.readProgress()))[0].inFlight).toBe(null);
   }
+});
+
+it('uses the hosted batch readers once for all active courses and keeps inactive rows private', async () => {
+  const active = Array.from({ length: 50 }, (_, i) => `course-${i}`);
+  const hosted = {
+    listTopicProgress: vi.fn(async () => [...active, 'inactive'].map((slug) => ({ slug, topic: slug, completed: 0, total: 3, current: { day: 1, title: 'First' } }))),
+    listKV: vi.fn(async () => [{ key: 'web_lesson:course-49', value: flight(1, 'First', 0) }]),
+    getTopicProgress: vi.fn(), readKV: vi.fn(),
+  };
+  const courses = await whereYouAre(hosted, { active_topics: active });
+  expect(courses).toHaveLength(50);
+  expect(courses[0].slug).toBe('course-49');
+  expect(hosted.listTopicProgress).toHaveBeenCalledTimes(1);
+  expect(hosted.listKV).toHaveBeenCalledExactlyOnceWith('web_lesson:');
+  expect(hosted.getTopicProgress).not.toHaveBeenCalled();
+  expect(hosted.readKV).not.toHaveBeenCalled();
 });
 
 // Review of #278: an unfinished lesson leads, even when another course has newer history.
