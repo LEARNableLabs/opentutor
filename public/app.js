@@ -319,14 +319,18 @@ function showProgress(data, asked) {
   if (openView === 'topics' && allTopics.length) refreshTopics();
 }
 
-// An open Topics tab takes the newer numbers: a lesson finished since the list loaded moves its card on,
-// count and bar included, beside its new accuracy. Counts only grow, so an answer that saw fewer lessons
-// moves nothing back.
-function refreshTopics() {
+// A topic list takes the newer numbers: a lesson finished since it was read moves its card on, count and
+// bar included, beside its new accuracy. Counts only grow, so a list or an answer that saw fewer lessons
+// moves nothing back. Both orders happen: the numbers arrive after the list, or a slow list after them.
+function takeProgress() {
   for (const stat of Array.isArray(progressStats.topics) ? progressStats.topics : []) {
     const topic = allTopics.find((t) => t.slug === stat?.slug);
     if (topic && Number.isInteger(stat.completed) && stat.completed > topic.completed) Object.assign(topic, { completed: stat.completed, total: stat.total, percent: stat.percent });
   }
+}
+
+function refreshTopics() {
+  takeProgress();
   filterTopics();
 }
 
@@ -582,6 +586,7 @@ async function loadTopics() {
   const res = await fetch('/api/topics');
   if (!res.ok) throw new Error('Could not load topics.');
   allTopics = await res.json();
+  takeProgress();
   renderTopics(allTopics);
 }
 

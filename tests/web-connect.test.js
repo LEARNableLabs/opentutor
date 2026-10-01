@@ -401,6 +401,23 @@ it('moves an open Topics card\'s lesson count forward when newer numbers arrive,
   expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons');
 });
 
+// Review of #308, round 3: a slow /api/topics answers after /api/progress, with the list as it was before the lesson.
+it('keeps a newer lesson count when an older topic list arrives after it', async () => {
+  const lists = [];
+  const f = frontend((url) => {
+    if (url === '/api/topics') return new Promise((resolve) => lists.push(() => resolve([200, [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }]])));
+    if (url === '/api/progress') return [200, { active_topics: ['knots'], topics: [{ slug: 'knots', completed: 3, total: 5, percent: 60, accuracy: 67 }] }];
+    return null;
+  });
+  await settle();
+  await f.$('.nav-btn[data-view="topics"]').click();
+  await settle();
+  lists.forEach((release) => release());
+  await settle();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons<span class="topic-accuracy">67% accuracy</span>');
+  expect(f.$('#topic-list').innerHTML).toContain('width:60%');
+});
+
 it('keeps keyboard focus on the same topic card when new numbers redraw the list', async () => {
   const topics = [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }, { slug: 'bread', topic: 'Bread', total: 3, completed: 1, percent: 33 }];
   const f = frontend((url) => (url === '/api/topics' ? [200, topics] : null));
