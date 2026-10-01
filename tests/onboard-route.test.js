@@ -333,6 +333,19 @@ describe('choosing a ready-made course', () => {
     expect(res.body).toMatchObject({ confirmedTopic: null, options: ['School', 'Work'] });
   });
 
+  // Review of #277: only a course the last question offered, which is what a tap sends. Anywhere
+  // else the model decides, as it did before the shortcut.
+  it.each([
+    ['a question that offered other choices', [{ role: 'assistant', content: 'What brings you here?\n<OPTIONS>School | Work</OPTIONS>' }]],
+    ['a tutor turn with no choices', [{ role: 'assistant', content: 'hello' }]],
+    ['choices quoted mid-text', [{ role: 'assistant', content: 'Say <OPTIONS>Game theory | Logic</OPTIONS> to me' }]],
+  ])('asks the model about a course named after %s', async (_case, history) => {
+    adapter.generate.mockResolvedValue({ text: 'Tell me more.' });
+    const res = await call({ message: 'Game theory', history });
+    expect(adapter.generate).toHaveBeenCalled();
+    expect(res.body.confirmedTopic).toBeNull();
+  });
+
   // Review of #277: the page keeps a failed turn, so a retried first answer arrives with history.
   it('treats a retried first answer as the first answer', async () => {
     adapter.generate.mockResolvedValue({ text: 'Nice to meet you. What brings you here?\n<OPTIONS>School | Work</OPTIONS>' });
@@ -342,10 +355,13 @@ describe('choosing a ready-made course', () => {
   });
 });
 
-// Review of #277: choices come only from the marker where the protocol puts it, at the end.
+// Review of #277: choices come only from the marker where the protocol puts it, on the last line.
 // Anywhere else it may be the model quoting the student.
-it('turns no quoted marker into choices', async () => {
-  adapter.generate.mockResolvedValue({ text: 'You asked me to quote <OPTIONS>Drop out | Quit work</OPTIONS> but I would rather ask: what brings you here?' });
+it.each([
+  ['mid-sentence', 'You asked me to quote <OPTIONS>Drop out | Quit work</OPTIONS> but I would rather ask: what brings you here?'],
+  ['ending a sentence', 'You asked me to quote <OPTIONS>Drop out | Quit work</OPTIONS>'],
+])('turns no quoted marker into choices, %s', async (_case, text) => {
+  adapter.generate.mockResolvedValue({ text });
   const res = await call({ message: 'Sam' });
   expect(res.body.options).toBeUndefined();
   expect(res.body.reply).not.toMatch(/OPTIONS|Drop out/);

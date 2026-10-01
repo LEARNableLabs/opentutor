@@ -1035,8 +1035,11 @@ it('sends one onboarding answer at a time, however fast the taps', async () => {
   work.click(); // a second tap while the first answer is on its way
   await settle();
   expect(onboardCalls(f)).toEqual(['Sam', 'School']);
+  // Review of #277: Browse would close the card under a reply that then opens the tour.
+  expect(f.$('#btn-onboard-browse').disabled).toBe(true);
   release([200, { reply: 'Got it.' }]);
   await settle();
+  expect(f.$('#btn-onboard-browse').disabled).toBe(false);
 });
 
 it('shows a short tour of the tabs once a course is chosen, and Start learning closes it', async () => {

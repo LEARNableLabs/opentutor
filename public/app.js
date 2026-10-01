@@ -734,6 +734,7 @@ async function sendOnboard() {
   showOnboardOptions(null);
   input.value = '';
   $('#btn-onboard-send').disabled = true;
+  $('#btn-onboard-browse').disabled = true; // closing the card now would leave the reply nowhere to land
 
   onboardingHistory.push({ role: 'user', content: message });
   const typing = appendOnboardMsg('assistant typing', 'Thinking...');
@@ -764,6 +765,7 @@ async function sendOnboard() {
     appendOnboardMsg('assistant', `Error: ${err.message}`);
   } finally {
     $('#btn-onboard-send').disabled = false;
+    $('#btn-onboard-browse').disabled = false;
     if ($('#onboarding-tour').classList.contains('hidden')) input.focus(); // the tour keeps its own focus
   }
 }

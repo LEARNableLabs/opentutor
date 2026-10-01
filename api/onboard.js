@@ -41,11 +41,12 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   // leave the list. Onboarding once confirmed any phrase, so a trial account's first step after
   // it was "connect OpenRouter".
   const availableTopics = await state.listTopics();
-  // #272: a course named exactly, which is what tapping a suggested course sends, is chosen as it
-  // stands. The model, asked again, sometimes kept asking instead of confirming. Not before the tutor
-  // has answered once: the first answer is the student's name, and a retried one comes with history.
-  const asked = Array.isArray(history) && history.some((turn) => turn?.role === 'assistant');
-  const picked = asked ? courseFor(text, availableTopics) : null;
+  // #272: a course the last question offered, which is what tapping it sends, is chosen as it stands.
+  // The model, asked again, sometimes kept asking instead of confirming. The history is the client's,
+  // but all it can claim this way is a course Browse offers anyway, with no model call to meter.
+  const lastAsked = Array.isArray(history) ? history.findLast((turn) => turn?.role === 'assistant') : null;
+  const offered = choicesFrom(String(lastAsked?.content ?? '').match(OPTIONS_LINE)?.[1]) || [];
+  const picked = offered.some((o) => o.toLowerCase() === text.toLowerCase()) ? courseFor(text, availableTopics) : null;
   if (picked) {
     await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
     const name = titles.get(picked) || picked.replace(/-/g, ' ');
@@ -76,12 +77,13 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   // start, so a name given in the first answer survives a long conversation.
   if (confirmedTopic) await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
   // Choices belong to a question; a turn that confirmed, refused or broke a topic marker asks none.
-  // Only the marker that ends the reply, where the prompt puts it: one anywhere else may be the
-  // model quoting the student.
-  const options = /<\s*\/?\s*TOPIC\s*>/i.test(response.text) ? null
-    : choicesFrom(response.text.match(/<\s*OPTIONS\s*>([^<>]*)<\s*\/\s*OPTIONS\s*>\s*$/i)?.[1]);
+  const options = /<\s*\/?\s*TOPIC\s*>/i.test(response.text) ? null : choicesFrom(response.text.match(OPTIONS_LINE)?.[1]);
   return { status: 200, body: { reply, confirmedTopic, ...(options && { options }), model: response.model } };
 }
+
+// Choices are the marker on the reply's last line, where the prompt puts it. One anywhere else may
+// be the model quoting the student.
+const OPTIONS_LINE = /(?:^|\n)[ \t]*<\s*OPTIONS\s*>([^<>\n]*)<\s*\/\s*OPTIONS\s*>\s*$/i;
 
 // 2 to 5 short, distinct choices from a "a | b | c" list, or none.
 function choicesFrom(offered) {
