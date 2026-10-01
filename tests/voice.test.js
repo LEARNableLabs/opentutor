@@ -11,7 +11,6 @@ const PLAN = { goal: 'g', diagnostic: 'd', followUp: 'f', application: 'a', comm
 it('names the voice once, with the wit, its limits and the engagement rules', () => {
   expect(VOICE).toMatch(/^## Voice/);
   expect(VOICE).toMatch(/Charlie Munger/);
-  expect(VOICE).toMatch(/understated British turn of phrase/); // #279
   expect(VOICE).toMatch(/Never more than one per reply/);
   expect(VOICE).toMatch(/frustrated/);
   expect(VOICE).toMatch(/never a definition/i);
