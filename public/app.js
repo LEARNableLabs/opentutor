@@ -489,6 +489,7 @@ function appendLessonMsg(classes, text) {
     div.innerHTML = md(text);
   }
   $('#lesson-conversation').appendChild(div);
+  fitBubbles([div]);
   $('#lesson-conversation').scrollTop = $('#lesson-conversation').scrollHeight;
   return div;
 }
@@ -815,11 +816,53 @@ function appendChat(classes, text) {
     div.innerHTML = md(text);
   }
   $('#chat-messages').appendChild(div);
+  fitBubbles([div]);
   $('#chat-messages').scrollTop = $('#chat-messages').scrollHeight;
   return div;
 }
 
 // ── Helpers ─────────────────────────────────────────────────
+
+// #305: a wrapped bubble keeps the whole width it was offered, so it runs on past its longest line.
+// Narrowed to that line, a student's bubble is only ever its padding wider than the text. Widths
+// are cleared, then all measured, then all set: one layout however many bubbles there are.
+function fitBubbles(elements) {
+  const bubbles = [...elements].filter((el) => el.matches('.chat-msg.user, .lesson-msg.student'));
+  for (const el of bubbles) el.style.width = '';
+  const widths = bubbles.map((el) => {
+    let right = 0;
+    const range = document.createRange();
+    const nodes = document.createTreeWalker(el, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT);
+    while (nodes.nextNode()) {
+      const node = nodes.currentNode;
+      let lines = [];
+      if (node.nodeType === Node.TEXT_NODE) {
+        range.selectNodeContents(node);
+        lines = range.getClientRects();
+      } else if (getComputedStyle(node).display === 'inline') {
+        lines = node.getClientRects(); // an inline box such as code: its padding and border reach past its text
+      }
+      for (const line of lines) right = Math.max(right, line.right);
+    }
+    const box = el.getBoundingClientRect();
+    const style = getComputedStyle(el);
+    const gap = box.right - parseFloat(style.paddingRight) - parseFloat(style.borderRightWidth) - right;
+    return right && gap >= 1 ? `${Math.ceil(box.width - gap)}px` : '';
+  });
+  bubbles.forEach((el, i) => { el.style.width = widths[i]; });
+}
+
+// Text re-wraps when its column changes width (a resized window, a turned phone, a view shown
+// again), so the bubbles in it are fitted again. A column growing taller as messages arrive isn't.
+const columnWidths = new WeakMap();
+const bubbleColumns = new ResizeObserver((entries) => {
+  for (const { target, contentRect } of entries) {
+    if (columnWidths.get(target) === contentRect.width) continue;
+    columnWidths.set(target, contentRect.width);
+    fitBubbles(target.children);
+  }
+});
+['#lesson-conversation', '#chat-messages', '#onboarding-chat'].forEach((s) => bubbleColumns.observe($(s)));
 
 function formatSlug(slug) {
   return slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
@@ -1010,6 +1053,7 @@ function appendOnboardMsg(classes, text) {
     div.innerHTML = md(text);
   }
   $('#onboarding-chat').appendChild(div);
+  fitBubbles([div]);
   $('#onboarding-chat').scrollTop = $('#onboarding-chat').scrollHeight;
   return div;
 }
