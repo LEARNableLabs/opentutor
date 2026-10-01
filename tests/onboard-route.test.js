@@ -332,6 +332,23 @@ describe('choosing a ready-made course', () => {
     expect(adapter.generate).toHaveBeenCalled();
     expect(res.body).toMatchObject({ confirmedTopic: null, options: ['School', 'Work'] });
   });
+
+  // Review of #277: the page keeps a failed turn, so a retried first answer arrives with history.
+  it('treats a retried first answer as the first answer', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Nice to meet you. What brings you here?\n<OPTIONS>School | Work</OPTIONS>' });
+    const res = await call({ message: 'Game theory', history: [{ role: 'user', content: 'Game theory' }] });
+    expect(adapter.generate).toHaveBeenCalled();
+    expect(res.body.confirmedTopic).toBeNull();
+  });
+});
+
+// Review of #277: choices come only from the marker where the protocol puts it, at the end.
+// Anywhere else it may be the model quoting the student.
+it('turns no quoted marker into choices', async () => {
+  adapter.generate.mockResolvedValue({ text: 'You asked me to quote <OPTIONS>Drop out | Quit work</OPTIONS> but I would rather ask: what brings you here?' });
+  const res = await call({ message: 'Sam' });
+  expect(res.body.options).toBeUndefined();
+  expect(res.body.reply).not.toMatch(/OPTIONS|Drop out/);
 });
 
 it('never shows a singular <OPTION> marker either', async () => {
@@ -340,11 +357,13 @@ it('never shows a singular <OPTION> marker either', async () => {
   expect(res.body.reply).not.toMatch(/OPTION|[<>]/);
 });
 
-it('reads choices the model wrote inline, without their marker, and takes them out of the text', async () => {
-  adapter.generate.mockResolvedValue({ text: 'Science covers a lot. Where would you place yourself? New to it | Know the basics | Pretty advanced' });
-  const res = await call({ message: 'Science' });
-  expect(res.body.options).toEqual(['New to it', 'Know the basics', 'Pretty advanced']);
-  expect(res.body.reply).toBe('Science covers a lot. Where would you place yourself?');
+// Review of #277: only the marker makes choices. Bars after a question can be ordinary prose.
+it('reads no choices from bars after a question, and keeps the text', async () => {
+  const text = 'Which notation did you mean? A | B means alternatives in this grammar.';
+  adapter.generate.mockResolvedValue({ text });
+  const res = await call({ message: 'Grammar' });
+  expect(res.body.options).toBeUndefined();
+  expect(res.body.reply).toBe(text);
 });
 
 it('leaves a sentence that merely contains a bar alone', async () => {

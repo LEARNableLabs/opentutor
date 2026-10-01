@@ -701,7 +701,8 @@ input::placeholder {
   max-height: calc(100vh - 32px);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto; /* on a short screen the tour scrolls into reach, not out of it */
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 14px;

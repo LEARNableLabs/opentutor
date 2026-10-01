@@ -42,9 +42,10 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   // it was "connect OpenRouter".
   const availableTopics = await state.listTopics();
   // #272: a course named exactly, which is what tapping a suggested course sends, is chosen as it
-  // stands. The model, asked again, sometimes kept asking instead of confirming. Not as the first
-  // answer, which is the student's name.
-  const picked = Array.isArray(history) && history.length ? courseFor(text, availableTopics) : null;
+  // stands. The model, asked again, sometimes kept asking instead of confirming. Not before the tutor
+  // has answered once: the first answer is the student's name, and a retried one comes with history.
+  const asked = Array.isArray(history) && history.some((turn) => turn?.role === 'assistant');
+  const picked = asked ? courseFor(text, availableTopics) : null;
   if (picked) {
     await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
     const name = titles.get(picked) || picked.replace(/-/g, ' ');
@@ -75,13 +76,10 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   // start, so a name given in the first answer survives a long conversation.
   if (confirmedTopic) await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
   // Choices belong to a question; a turn that confirmed, refused or broke a topic marker asks none.
-  let options = null;
-  if (!/<\s*\/?\s*TOPIC\s*>/i.test(response.text)) {
-    options = choicesFrom(response.text.match(/<\s*OPTIONS\s*>([^<>]*)<\s*\/\s*OPTIONS\s*>/i)?.[1]);
-    // The model sometimes writes them inline after its question, with no marker.
-    const inline = !options && reply.match(/\?\s*([^?\n|]{1,60}(?:\s\|\s[^?\n|]{1,60}){1,4})\s*$/);
-    if (inline && (options = choicesFrom(inline[1]))) reply = reply.slice(0, inline.index + 1).trim();
-  }
+  // Only the marker that ends the reply, where the prompt puts it: one anywhere else may be the
+  // model quoting the student.
+  const options = /<\s*\/?\s*TOPIC\s*>/i.test(response.text) ? null
+    : choicesFrom(response.text.match(/<\s*OPTIONS\s*>([^<>]*)<\s*\/\s*OPTIONS\s*>\s*$/i)?.[1]);
   return { status: 200, body: { reply, confirmedTopic, ...(options && { options }), model: response.model } };
 }
 
