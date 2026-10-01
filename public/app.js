@@ -748,7 +748,7 @@ function showWelcome({ name, courses }) {
 // #279: one personal line under the greeting, made once a day. The welcome never waits for it.
 async function showGreeting() {
   try {
-    const res = await fetch('/api/user?greeting=1');
+    const res = await nativeFetch('/api/user?greeting=1'); // optional: a 402 never opens the global connect banner
     const { greeting } = res.ok ? await res.json() : {};
     if (!greeting) return;
     $('#welcome-touch').textContent = greeting;

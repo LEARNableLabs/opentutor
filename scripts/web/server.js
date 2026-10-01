@@ -366,6 +366,10 @@ async function handleStudentAPI(req, res, url, state, account) {
         }
         return json(res, await userView(state, account));
       } catch (err) {
+        if (err instanceof KeyRequired) {
+          res.writeHead(402);
+          return res.end(JSON.stringify(err.body));
+        }
         console.error('[user]', err.message);
         res.writeHead(500);
         return res.end(JSON.stringify({ error: 'Could not load your profile.' }));

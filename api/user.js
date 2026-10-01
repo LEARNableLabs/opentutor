@@ -1,5 +1,5 @@
 import { getState, getAdapter as getHostAdapter } from './_lib/init.js';
-import { adapterFor } from '../lib/core/llm-access.js';
+import { adapterFor, KeyRequired } from '../lib/core/llm-access.js';
 import { dailyGreeting } from '../lib/core/greeting.js';
 import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
@@ -37,6 +37,7 @@ async function handler(req, res) {
 
     res.status(405).json({ error: 'Method not allowed' });
   } catch (err) {
+    if (err instanceof KeyRequired) return res.status(402).json(err.body);
     // Database error text stays in the log, not the browser (#144).
     console.error('[user]', err.message);
     res.status(500).json({ error: req.method === 'POST' ? 'Could not save your profile.' : 'Could not load your profile.' });

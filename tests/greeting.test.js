@@ -50,7 +50,7 @@ it('makes one call when two requests race, and the loser shows nothing rather th
   expect(both.filter(Boolean)).toHaveLength(1);
 });
 
-it('shows nothing, and tries no more that day, when the call fails or the trial cannot pay', async () => {
+it('caches a failed model call, but propagates an unpaid trial and releases its unused claim', async () => {
   const log = vi.spyOn(console, 'error').mockImplementation(() => {});
   reply = () => { throw new Error('provider rejected secret sk-or-private-test-key'); };
   expect(await dailyGreeting({ state, getAdapter, today: '2026-10-01' })).toBe(null);
@@ -60,8 +60,11 @@ it('shows nothing, and tries no more that day, when the call fails or the trial 
 
   log.mockClear();
   const unpaid = async () => { throw new KeyRequired('daily_limit'); };
-  expect(await dailyGreeting({ state, getAdapter: unpaid, today: '2026-10-02' })).toBe(null);
+  await expect(dailyGreeting({ state, getAdapter: unpaid, today: '2026-10-02' })).rejects.toBeInstanceOf(KeyRequired);
+  expect(state.readKV('greeting:2026-10-02')).toBe(null);
   expect(log).not.toHaveBeenCalled(); // an empty trial budget is not an error
+  reply = () => ({ text: 'Connected now.' });
+  expect(await dailyGreeting({ state, getAdapter, today: '2026-10-02' })).toBe('Connected now.');
   log.mockRestore();
 });
 
