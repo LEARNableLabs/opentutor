@@ -363,7 +363,8 @@ describe('progressView reads every active topic in a fixed number of queries', (
     const alice = store({ userId: 'alice' });
     await generated(alice, 'knots', { topic: 'Knots', lessons: lessons(4) });
     await alice.writeCurriculum('old-topic', { topic: 'Old topic', lessons: lessons(2) });
-    await alice.writeProgress({ active_topics: ['algebra', 'game-theory', 'knots', 'old-topic', 'gone'], history: [] });
+    // 'Bad Slug' is no topic slug: generatedTopicKey() throws on it, which must not cost the other topics.
+    await alice.writeProgress({ active_topics: ['algebra', 'game-theory', 'Bad Slug', 'knots', 'old-topic', 'gone'], history: [] });
     await alice.markLessonComplete('algebra', 1, 'correct');
     await alice.markLessonComplete('knots', 2, 'incorrect');
     await alice.markLessonComplete('old-topic', 1);

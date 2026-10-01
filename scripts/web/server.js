@@ -268,8 +268,15 @@ async function handleStudentAPI(req, res, url, state, account) {
       return json(res, { curriculum, learning, progress });
     }
 
-    // GET /api/progress — the streak and each active topic's numbers, as the Vercel route answers (#292)
-    if (req.method === 'GET' && url.pathname === '/api/progress') return json(res, await progressView(state));
+    // GET /api/progress — the streak and each active topic's numbers, as the Vercel route answers them,
+    // failures included (#292).
+    if (req.method === 'GET' && url.pathname === '/api/progress') {
+      try { return json(res, await progressView(state)); }
+      catch (err) {
+        console.error('[progress]', err.message); // database error text stays in the log (#144)
+        return fail(res, 500, 'Could not load your progress.');
+      }
+    }
 
     // POST /api/lesson — one turn of the Socratic lesson (same implementation as the Vercel route).
     // Streams over SSE when the client asks for it; plain JSON otherwise.

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, vi, beforeAll, beforeEach, afterAll, afterEach } from 'vitest';
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import net from 'node:net';
@@ -41,6 +41,7 @@ async function twoLessons(state, earlier = []) {
 afterEach(() => {
   vi.useRealTimers();
   vi.unstubAllEnvs();
+  vi.restoreAllMocks();
 });
 
 describe('streakDays', () => {
@@ -111,6 +112,20 @@ describe('progressView', () => {
     expect(view.topics).toEqual([expect.objectContaining({ slug: 'game-theory', completed: 0, accuracy: null, mastered: 0, reviewDue: 0 })]);
   });
 
+  // Review of #308: what the stores never write, but older or hand-edited state could hold.
+  it('counts only this week\'s real dates, never a future or malformed one', async () => {
+    const history = lessonsOn(daysAgo(0), daysAgo(6), daysAgo(7), '2099-01-01', '2026-10', 'n/a', '');
+    await store.writeProgress({ active_topics: [], schedule: {}, history: [...history, null, {}] });
+    expect(await progressView(store)).toMatchObject({ streak: 1, lessonsThisWeek: 2 });
+  });
+
+  it('skips an active topic that is not a topic slug, instead of failing every other topic', async () => {
+    await store.writeProgress({ active_topics: ['Not A Slug', '../game-theory', 42, null, 'game-theory'], schedule: {}, history: [] });
+    const view = await progressView(store);
+    expect(view.topics.map((t) => t.slug)).toEqual(['game-theory']);
+    expect(view.active_topics).toHaveLength(5); // the record itself is the student's, as it was
+  });
+
   // The bot keeps its own files and still shows its own mastered and due (SM-2) until #214. The streak,
   // completion and accuracy are the same numbers, computed the same way.
   it('gives the numbers the bot\'s /progress shows for the same state', async () => {
@@ -140,24 +155,18 @@ describe('progressView', () => {
 // The local server and the Vercel route, over the same data: one answer, field for field.
 describe('GET /api/progress', () => {
   const PASSWORD = 'test-progress-stats-password';
-  let child, dataDir;
-  afterEach(() => {
-    child?.kill();
-    if (dataDir) fs.rmSync(dataDir, { recursive: true, force: true });
-  });
-
-  it('answers the same on the local server as on Vercel', async () => {
+  let child, dataDir, base, handler;
+  beforeAll(async () => {
     dataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ot-progress-route-'));
     vi.stubEnv('OPENTUTOR_DATA_DIR', dataDir);
-    vi.stubEnv('OPENTUTOR_PASSWORD', PASSWORD);
     const seed = new TutorStore(ROOT);
-    const now = Date.now();
-    await twoLessons(seed, lessonsOn(daysAgo(1, now)));
+    await twoLessons(seed, lessonsOn(daysAgo(1, Date.now())));
     seed.close();
 
     const port = await new Promise((resolve) => {
       const probe = net.createServer().listen(0, '127.0.0.1', () => { const { port } = probe.address(); probe.close(() => resolve(port)); });
     });
+    base = `http://127.0.0.1:${port}`;
     // Explicit env only: a checkout's .env holds production keys.
     child = spawn(process.execPath, ['scripts/web/server.js'], {
       cwd: ROOT,
@@ -168,15 +177,44 @@ describe('GET /api/progress', () => {
       child.stdout.on('data', (d) => { if (String(d).includes('running at')) resolve(); });
       child.on('exit', (code) => reject(new Error(`server exited ${code}`)));
     });
-    const local = await fetch(`http://127.0.0.1:${port}/api/progress`, { headers: { Authorization: `Bearer ${PASSWORD}` } });
+    handler = (await import('../api/progress.js')).default;
+  }, 20_000);
+  beforeEach(() => {
+    vi.stubEnv('OPENTUTOR_DATA_DIR', dataDir);
+    vi.stubEnv('OPENTUTOR_PASSWORD', PASSWORD);
+  });
+  afterAll(() => {
+    child?.kill();
+    fs.rmSync(dataDir, { recursive: true, force: true });
+  });
 
-    const handler = (await import('../api/progress.js')).default;
+  const local = async () => {
+    const res = await fetch(`${base}/api/progress`, { headers: { Authorization: `Bearer ${PASSWORD}` } });
+    return [res.status, await res.json()];
+  };
+  const vercel = async () => {
     const res = { setHeader() {}, status(code) { this.statusCode = code; return this; }, json(body) { this.body = body; return this; } };
     await handler({ method: 'GET', headers: { authorization: `Bearer ${PASSWORD}` } }, res);
+    return [res.statusCode, res.body];
+  };
 
-    expect(local.status).toBe(200);
-    expect(res.statusCode).toBe(200);
-    expect(res.body).toMatchObject({ streak: 2, lessonsThisWeek: 3, topics: [{ slug: 'game-theory', completed: 2, accuracy: 67 }] });
-    expect(await local.json()).toEqual(res.body);
-  }, 20_000);
+  it('answers the same on the local server as on Vercel', async () => {
+    const [status, body] = await vercel();
+    expect(status).toBe(200);
+    expect(body).toMatchObject({ streak: 2, lessonsThisWeek: 3, topics: [{ slug: 'game-theory', completed: 2, accuracy: 67 }] });
+    expect(await local()).toEqual([200, body]);
+  });
+
+  it('answers a failure the same way too, with its cause only in the log', async () => {
+    const log = vi.spyOn(console, 'error').mockImplementation(() => {});
+    // A learning log the store cannot read, a directory where the file should be: an error, not "missing".
+    const learning = path.join(dataDir, 'workspace', 'tutor', 'domains', 'game-theory', 'learning.md');
+    fs.rmSync(learning);
+    fs.mkdirSync(learning);
+
+    const failure = [500, { error: 'Could not load your progress.' }];
+    expect(await vercel()).toEqual(failure);
+    expect(await local()).toEqual(failure);
+    expect(log).toHaveBeenCalledWith('[progress]', expect.stringContaining('EISDIR'));
+  });
 });
