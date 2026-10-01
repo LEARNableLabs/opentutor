@@ -267,10 +267,11 @@ function loadActiveTopics({ choice = latestChoice } = {}) {
 }
 
 async function readActiveTopics(choice) {
+  const asked = ++progressAsked;
   const res = await fetch('/api/progress');
   if (!res.ok) throw new Error('Could not load your topics.'); // keep the list it has
   const data = await res.json();
-  showProgress(data); // the numbers are as fresh as this answer, whichever choice asked for it
+  showProgress(data, asked); // the numbers go by when they were asked for, not by which choice asked
   // A stale snapshot must not rewrite the picker after a newer course was chosen.
   if (choice !== latestChoice) return null;
   const select = $('#active-topic');
@@ -299,24 +300,32 @@ async function readActiveTopics(choice) {
 // The streak and this week's lessons, in the header. No lesson yet, or a broken streak, leaves its
 // part out: nothing is shown as lost, and never as 0.
 let progressStats = {}; // the latest GET /api/progress: the Topics tab reads each topic's accuracy here
+// Each request is numbered. An answer to an older request than the one on screen, say one asked
+// before a lesson was counted and answered after, changes nothing.
+let progressAsked = 0;
+let progressShown = 0;
 const counted = (n) => Number.isInteger(n) && n > 0;
 const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 const streakText = (days) => (counted(days) ? `🔥 ${plural(days, 'day')}` : '');
 
-function showProgress(data) {
+function showProgress(data, asked) {
+  if (asked < progressShown) return;
+  progressShown = asked;
   progressStats = data || {};
   const week = counted(data?.lessonsThisWeek) ? `${plural(data.lessonsThisWeek, 'lesson')} this week` : '';
   const line = [streakText(data?.streak), week].filter(Boolean).join(' · ');
   $('#stats-line').textContent = line;
   $('#stats-line').classList.toggle('hidden', !line);
+  if (openView === 'topics' && allTopics.length) filterTopics(); // the cards on screen take the new accuracy
 }
 
+/** The numbers now: this answer, or a newer one already on screen. Null if this request failed. */
 async function loadProgress() {
+  const asked = ++progressAsked;
   const res = await fetch('/api/progress');
   if (!res.ok) return null;
-  const data = await res.json();
-  showProgress(data);
-  return data;
+  showProgress(await res.json(), asked);
+  return progressStats;
 }
 
 // Review of #273: two starts can overlap (two course offers, a welcome button and Next lesson).

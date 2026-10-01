@@ -337,6 +337,50 @@ it('adds the streak the finished lesson kept going to the end-of-lesson message,
   expect($('#stats-line').textContent).toBe('🔥 4 days · 5 lessons this week');
 });
 
+// Review of #308: an older answer arriving last must not take the numbers back.
+it('keeps the newest progress on screen when an older answer arrives late', async () => {
+  const held = [];
+  let hold = false, streak = 3;
+  const f = frontend((url) => {
+    if (url !== '/api/progress') return null;
+    const answer = [200, { active_topics: ['demo'], streak, lessonsThisWeek: streak, topics: [] }];
+    return hold ? new Promise((resolve) => held.push(() => resolve(answer))) : answer;
+  });
+  await settle();
+  hold = true;
+  const older = f.context.loadActiveTopics(); // asked before the lesson was counted, answers last
+  await settle();
+  hold = false;
+  streak = 4;
+  await f.context.loadProgress();
+  expect(f.$('#stats-line').textContent).toBe('🔥 4 days · 4 lessons this week');
+  streak = 3;
+  held.forEach((release) => release());
+  await older;
+  await settle();
+  expect(f.$('#stats-line').textContent).toBe('🔥 4 days · 4 lessons this week');
+});
+
+it('updates the Topics tab\'s accuracy when the numbers arrive after the list', async () => {
+  let release;
+  const topics = [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }];
+  const { $ } = await lastStep({ done: true }, (url) => {
+    if (url === '/api/topics') return [200, topics];
+    if (url === '/api/progress') return release === undefined ? [200, { active_topics: ['knots'], topics: [] }]
+      : new Promise((resolve) => { release = () => resolve([200, { active_topics: ['knots'], streak: 1, lessonsThisWeek: 1, topics: [{ slug: 'knots', accuracy: 67 }] }]); });
+    return null;
+  });
+  release = null; // from now on /api/progress waits: the lesson's end asks, then Topics opens first
+  $('#lesson-input').value = 'because the payoffs change';
+  await $('#btn-lesson-answer').click();
+  await $('.nav-btn[data-view="topics"]').click();
+  await settle();
+  expect($('#topic-list').innerHTML).not.toContain('% accuracy');
+  release();
+  await settle();
+  expect($('#topic-list').innerHTML).toContain('67% accuracy');
+});
+
 it('still celebrates a finished lesson when its streak cannot be loaded', async () => {
   const { $ } = await lastStep({ done: true }, (url) => (url === '/api/progress' ? [500, { error: 'down' }] : null));
   $('#lesson-input').value = 'because the payoffs change';
