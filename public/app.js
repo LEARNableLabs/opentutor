@@ -130,7 +130,7 @@ themeToggle.addEventListener('click', () => {
 // replies carry them, after the server kept only trusted ones. Anything else shows a link's text.
 function md(text, { links = false } = {}) {
   return escapeHTML(text ?? '')
-    .replace(/\[([^\]\n]+)\]\((https?:\/\/[^\s)]+)\)/g, (_, label, url) => (links ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>` : label))
+    .replace(/\[([^\]\n]+)\]\((https?:\/\/(?:[^\s()]|\([^\s()]*\))+)\)/g, (_, label, url) => (links ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>` : label))
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code>$1</code>')

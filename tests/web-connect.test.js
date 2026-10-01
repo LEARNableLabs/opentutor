@@ -969,6 +969,7 @@ it('renders a safe link only where links are allowed, and never an unsafe one', 
   expect(context.md('[click](javascript:alert(1))', { links: true })).not.toContain('<a');
   expect(context.md('[x](https://a.example/"onmouseover="alert(1))', { links: true })).not.toMatch(/"onmouseover/);
   expect(context.md('[<img src=x onerror=alert(1)>](https://a.example/)', { links: true })).not.toContain('<img');
+  expect(context.md('[Mercury](https://en.wikipedia.org/wiki/Mercury_(planet)).', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank" rel="noopener noreferrer">Mercury</a>.');
 });
 
 it('renders numbered steps, bullets and a small heading', () => {

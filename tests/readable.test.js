@@ -20,8 +20,13 @@ it('keeps a lesson resource, a Wikipedia article and a YouTube search, and unlin
     '[At-sign trick](https://en.wikipedia.org@evil.example/wiki/Nash)',
     '[A real video, not a search](https://www.youtube.com/watch?v=abc123)',
     '[Clip](https://www.youtube.com/watch?v=x&amp;t=30)',
+    '[Mercury](https://en.wikipedia.org/wiki/Mercury_(planet))',
+    '[Plain http](http://en.wikipedia.org/wiki/Nash_equilibrium)',
+    '[Edit page](https://en.wikipedia.org/wiki/Nash_equilibrium?action=edit)',
+    '[Script](javascript:alert(1))',
+    '[Slides](https://ocw.mit.edu/slides_(week_1).pdf)',
   ].join('\n');
-  expect(keepTrustedLinks(text, [RESOURCE, 'https://www.youtube.com/watch?v=x&t=30']).split('\n')).toEqual([
+  expect(keepTrustedLinks(text, [RESOURCE, 'https://www.youtube.com/watch?v=x&t=30', 'https://ocw.mit.edu/slides_(week_1).pdf']).split('\n')).toEqual([
     `[MIT notes](${RESOURCE})`,
     '[Nash equilibrium](https://en.wikipedia.org/wiki/Nash_equilibrium)',
     '[Videos](https://www.youtube.com/results?search_query=nash+equilibrium)',
@@ -30,6 +35,11 @@ it('keeps a lesson resource, a Wikipedia article and a YouTube search, and unlin
     'At-sign trick',
     'A real video, not a search',
     '[Clip](https://www.youtube.com/watch?v=x&t=30)', // a resource copied XML-escaped from the prompt
+    '[Mercury](https://en.wikipedia.org/wiki/Mercury_(planet))', // the whole title, closing parenthesis included
+    'Plain http',
+    'Edit page',
+    'Script',
+    '[Slides](https://ocw.mit.edu/slides_(week_1).pdf)',
   ]);
 });
 
