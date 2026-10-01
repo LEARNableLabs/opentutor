@@ -92,3 +92,28 @@ describe('every surface uses it', () => {
     expect(reads('api/_lib/init.js')).toMatch(/load\('onboarding'/);
   });
 });
+
+// #272: on the web, one question at a time, each with choices the page shows as buttons.
+describe('the guided web onboarding', () => {
+  const { system } = buildOnboardingPrompt(skills, '', { availableTopics: ['game-theory', 'breadmaking'], customTopics: false });
+
+  it('asks one question at a time, in order: what brings them, the area, their level, then courses', () => {
+    const flow = system.slice(system.indexOf('## On this page'));
+    const at = (phrase) => flow.indexOf(phrase);
+    for (const phrase of ['What brings them', 'area they are curious about', 'Their level', 'ready-made courses']) expect(at(phrase)).toBeGreaterThan(-1);
+    expect(at('What brings them')).toBeLessThan(at('area they are curious about'));
+    expect(at('area they are curious about')).toBeLessThan(at('Their level'));
+    expect(at('Their level')).toBeLessThan(at('ready-made courses'));
+  });
+
+  it('gives every question its choices in the marker the route parses, and overrides numbered lists', () => {
+    expect(system).toContain('<OPTIONS>');
+    expect(system).toMatch(/Don't also list the choices/);
+    expect(system).toMatch(/override the guidance above/);
+  });
+
+  it('offers "Something else" with the courses, and still keeps catalog-only accounts to the catalog', () => {
+    expect(system).toContain('Something else');
+    expect(system).toContain('Custom topic generation is unavailable');
+  });
+});
