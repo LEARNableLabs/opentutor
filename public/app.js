@@ -160,7 +160,7 @@ $$('.nav-btn').forEach((btn) => {
     view.style.display = btn.dataset.view === 'chat' ? 'flex' : 'block'; // the chat is a column: messages, then input
 
     if (btn.dataset.view === 'topics') loadTopics();
-    if (btn.dataset.view === 'learn') loadActiveTopics();
+    if (btn.dataset.view === 'learn') loadActiveTopics().catch(() => {}); // the picker keeps what it had
     openView = btn.dataset.view;
     // The chat greets when it opens, unless a reply is on its way or the student left a draft there.
     if (openView === 'chat' && !companionFor.chat && !$('#chat-input').value.trim()) companionFor.chat = 'chat-idle';
@@ -250,10 +250,25 @@ if (lessonInput) {
   });
 }
 
-async function loadActiveTopics() {
+let activeRefresh;
+function loadActiveTopics({ choice = latestChoice } = {}) {
+  // Refreshes for the same choice share their result, so every caller waits until
+  // the picker is populated. A later choice gets its own request and owns the UI.
+  if (activeRefresh?.choice === choice) return activeRefresh.promise;
+  const refresh = { choice };
+  refresh.promise = readActiveTopics(choice).finally(() => {
+    if (activeRefresh === refresh) activeRefresh = null;
+  });
+  activeRefresh = refresh;
+  return refresh.promise;
+}
+
+async function readActiveTopics(choice) {
   const res = await fetch('/api/progress');
   if (!res.ok) throw new Error('Could not load your topics.'); // keep the list it has
   const data = await res.json();
+  // A stale snapshot must not rewrite the picker after a newer course was chosen.
+  if (choice !== latestChoice) return null;
   const select = $('#active-topic');
   const prev = select.value;
   select.innerHTML = '<option value="">Select a topic...</option>';
@@ -276,11 +291,37 @@ async function loadActiveTopics() {
   return data.active_topics || [];
 }
 
+// Review of #273: two starts can overlap (two course offers, a welcome button and Next lesson).
+// The newest one wins: an older one answering late changes nothing on screen.
+let lessonStart = 0;
+// And the latest thing the student chose, a lesson or a course offered in the chat, is the one that
+// opens: a course still being added or built never takes the screen from a later choice.
+let latestChoice = 0;
+let cancelPendingStart;
+function newChoice() {
+  cancelPendingStart?.();
+  return ++latestChoice;
+}
+
+/** Opens the picker's topic: 'opened' with its lesson on screen, 'complete' when it has none left, else null. */
 async function startLesson() {
   const slug = $('#active-topic').value;
-  if (!slug) return;
+  if (!slug) return null;
 
+  const choice = newChoice();
+  const mine = ++lessonStart;
+  const current = () => mine === lessonStart && choice === latestChoice;
+  cancelPendingStart = () => {
+    if (mine !== lessonStart) return;
+    lessonStart++;
+    cancelPendingStart = null;
+    $('#btn-next').disabled = false;
+    $('#lesson-loading').classList.add('hidden');
+    $('#lesson-area').classList.add('hidden');
+    $('#empty-state').classList.remove('hidden');
+  };
   activeTopicSlug = slug;
+  lessonActive = false; // the lesson on screen is going away: until this one opens, none takes answers
   showOptions(null); // the last lesson's suggested answers belong to it, however this start goes
   companion(null);
   $('#btn-next').disabled = true;
@@ -291,6 +332,7 @@ async function startLesson() {
   try {
     let bubble = null;
     const data = await streamLesson({ topicSlug: slug }, (chunk) => {
+      if (!current()) return;
       if (!bubble) {
         $('#lesson-loading').classList.add('hidden');
         $('#lesson-area').classList.remove('hidden');
@@ -299,6 +341,7 @@ async function startLesson() {
       }
       appendToBubble(bubble, chunk);
     });
+    if (!current()) return null;
 
     if (data.done) {
       showCompletion(data.message);
@@ -307,11 +350,16 @@ async function startLesson() {
     } else {
       showLessonStart(data);
     }
+    return data.done ? 'complete' : 'opened';
   } catch (err) {
-    showError(err.message);
+    if (current()) showError(err.message);
+    return null;
   } finally {
-    $('#btn-next').disabled = false;
-    $('#lesson-loading').classList.add('hidden');
+    if (current()) {
+      cancelPendingStart = null;
+      $('#btn-next').disabled = false;
+      $('#lesson-loading').classList.add('hidden');
+    }
     loadKeyStatus().catch(() => {});
   }
 }
@@ -544,16 +592,20 @@ async function requestTopic(topic, level = 'intermediate') {
 }
 
 async function selectTopic(slug) {
+  let mine = newChoice();
   try {
     $('#topic-error').textContent = '';
     const data = await requestTopic(slug);
+    if (mine !== latestChoice) return;
+    mine = newChoice(); // the activation needs a snapshot taken after it completed
     if (data.status !== 'existing') watchTopicBuild(slug);
-    await loadActiveTopics();
+    await loadActiveTopics({ choice: mine });
+    if (mine !== latestChoice) return;
     $('#active-topic').value = slug;
     $$('.nav-btn')[0].click();
     $('#btn-next').focus(); // the list the student chose from is now hidden: land on the next step
   } catch (err) {
-    $('#topic-error').textContent = err.message;
+    if (mine === latestChoice) $('#topic-error').textContent = err.message;
   }
 }
 
@@ -562,19 +614,22 @@ async function addTopic() {
   if (!topic) return;
 
   const level = $('#new-level').value;
+  let mine = newChoice();
   $('#btn-add').disabled = true;
 
   try {
     $('#topic-error').textContent = '';
     $('#topic-error').textContent = 'Preparing your starter lessons…';
     const data = await requestTopic(topic, level);
+    if (mine !== latestChoice) return;
+    mine = newChoice(); // don't reuse a Learn refresh that began before this addition
     $('#topic-error').textContent = '';
     $('#new-topic').value = '';
-    await enterNewTopic(data);
+    await enterNewTopic(data, { choice: mine });
     loadTopics();
     loadActiveTopics();
   } catch (err) {
-    $('#topic-error').textContent = err.message;
+    if (mine === latestChoice) $('#topic-error').textContent = err.message;
   } finally {
     $('#btn-add').disabled = false;
   }
@@ -583,26 +638,50 @@ async function addTopic() {
 // Build progress survives a page reload: changing the active topic reads its saved job.
 let buildTimer;
 let watchedBuild;
-$('#active-topic').addEventListener('change', () => watchTopicBuild($('#active-topic').value));
+$('#active-topic').addEventListener('change', () => {
+  newChoice();
+  watchTopicBuild($('#active-topic').value);
+});
 $('#btn-retry-build').addEventListener('click', async () => {
   if (!watchedBuild) return;
+  const slug = watchedBuild;
+  let mine = newChoice();
   $('#btn-retry-build').disabled = true;
-  try { await enterNewTopic(await requestTopic(watchedBuild)); }
-  catch (err) { $('#topic-build-status').textContent = err.message; }
+  try {
+    const data = await requestTopic(slug);
+    if (mine !== latestChoice) return;
+    mine = newChoice();
+    await enterNewTopic(data, { choice: mine });
+  }
+  catch (err) { if (mine === latestChoice) $('#topic-build-status').textContent = err.message; }
   finally { $('#btn-retry-build').disabled = false; }
 });
 
-async function enterNewTopic(data) {
+// From the chat's course offer (#273) the student chose this course: `open` is that choice, and its
+// lesson opens even over one in progress, which stays saved, unless something newer was chosen since.
+// From Topics, an open lesson is left alone. Says what happened: opened, failed, building or superseded.
+async function enterNewTopic(data, { open = 0, choice = open || latestChoice } = {}) {
+  const superseded = () => choice !== latestChoice;
+  if (superseded()) return 'superseded';
   $$('.nav-btn')[0].click();
-  await loadActiveTopics();
+  await loadActiveTopics({ choice });
+  if (superseded()) return 'superseded';
+  let outcome = 'building';
   if (data.lessonCount) {
     $('#active-topic').value = data.slug;
-    if (!lessonActive) await startLesson();
+    if (open || !lessonActive) {
+      const started = startLesson();
+      const startedChoice = latestChoice; // startLesson advances the choice before its first await
+      outcome = (await started) || 'failed';
+      if (startedChoice !== latestChoice) return 'superseded';
+    }
   }
-  if (data.status !== 'existing') watchTopicBuild(data.slug, !data.lessonCount);
+  if (data.status !== 'existing') watchTopicBuild(data.slug, !data.lessonCount, open);
+  return outcome;
 }
 
-function watchTopicBuild(slug, waitingForStarter = false) {
+function watchTopicBuild(slug, waitingForStarter = false, open = false) {
+  const since = latestChoice; // its starter lessons open only if nothing was chosen after this
   clearTimeout(buildTimer);
   watchedBuild = slug;
   $('#topic-build-status').textContent = '';
@@ -625,8 +704,14 @@ function watchTopicBuild(slug, waitingForStarter = false) {
         waitingForStarter = false;
         const ready = await requestTopic(slug);
         if (watchedBuild !== slug) return;
-        await loadActiveTopics(); $('#active-topic').value = ready.slug;
-        if (!lessonActive) await startLesson();
+        await loadActiveTopics();
+        if (watchedBuild !== slug) return; // another course took over while the topics loaded
+        // Its lessons open when ready, if nothing was chosen since (a lesson still loading counts):
+        // over an open lesson when the student chose this course in the chat, else only on an empty page.
+        if (latestChoice === since && (open || !lessonActive)) {
+          $('#active-topic').value = ready.slug;
+          await startLesson();
+        }
       }
       if (['ready', 'failed'].includes(data.status)) return;
     } catch (err) {
@@ -675,6 +760,7 @@ async function sendChat() {
     typing.remove();
     companion(null, 'chat');
     appendChat('assistant', data.reply);
+    if (data.course) offerCourse(data.course);
   } catch (err) {
     typing.remove();
     companion(null, 'chat');
@@ -683,6 +769,38 @@ async function sendChat() {
     $('#btn-send').disabled = false;
     input.focus();
   }
+}
+
+// #273: a course the chat offered starts with one tap, through the same add-topic flow as the Topics
+// tab. Nothing starts on its own.
+function offerCourse(course) {
+  const offer = document.createElement('div');
+  offer.className = 'chat-msg course-offer';
+  const start = document.createElement('button');
+  start.type = 'button';
+  start.className = 'secondary course-start';
+  start.textContent = course.slug ? `📚 Start the course: ${course.topic}` : `📚 Build a course on ${course.topic}`;
+  start.addEventListener('click', async () => {
+    start.disabled = true;
+    let mine = newChoice(); // from the click, so a later click wins whichever answers first
+    try {
+      const added = await requestTopic(course.slug || course.topic);
+      if (mine !== latestChoice) { start.disabled = false; return; }
+      mine = newChoice();
+      const outcome = await enterNewTopic(added, { open: mine });
+      // Said once it is true. Anything else leaves the button for another try (Learn shows a failed start).
+      if (outcome === 'opened') appendChat('assistant', `Added **${course.topic}** to your topics. Your first lesson is open in Learn.`);
+      else if (outcome === 'building') appendChat('assistant', `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);
+      else if (outcome === 'complete') appendChat('assistant', `You've already finished every lesson in **${course.topic}**. 🎉`);
+      else start.disabled = false;
+    } catch (err) {
+      start.disabled = false;
+      appendChat('assistant', err.message);
+    }
+  });
+  offer.appendChild(start);
+  $('#chat-messages').appendChild(offer);
+  $('#chat-messages').scrollTop = $('#chat-messages').scrollHeight;
 }
 
 function appendChat(classes, text) {
@@ -1005,6 +1123,7 @@ async function finishConnect() {
 
 async function restoreTopicBuild() {
   const active = await loadActiveTopics();
+  if (!active) return; // a newer choice owns the picker and its build recovery
   try {
     const res = await fetch('/api/topic-build');
     if (!res.ok) return;
