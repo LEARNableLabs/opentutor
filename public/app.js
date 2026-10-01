@@ -654,6 +654,7 @@ async function sendChat() {
     typing.remove();
     companion(null, 'chat');
     appendChat('assistant', data.reply);
+    if (data.course) offerCourse(data.course);
   } catch (err) {
     typing.remove();
     companion(null, 'chat');
@@ -662,6 +663,33 @@ async function sendChat() {
     $('#btn-send').disabled = false;
     input.focus();
   }
+}
+
+// #273: a course the chat offered starts with one tap, through the same add-topic flow as the Topics
+// tab. Nothing starts on its own.
+function offerCourse(course) {
+  const offer = document.createElement('div');
+  offer.className = 'chat-msg course-offer';
+  const start = document.createElement('button');
+  start.type = 'button';
+  start.className = 'secondary course-start';
+  start.textContent = course.slug ? `📚 Start the course: ${course.topic}` : `📚 Build a course on ${course.topic}`;
+  start.addEventListener('click', async () => {
+    start.disabled = true;
+    try {
+      const added = await requestTopic(course.slug || course.topic);
+      appendChat('assistant', course.slug
+        ? `Added **${course.topic}** to your topics. Your first lesson is open in Learn.`
+        : `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);
+      await enterNewTopic(added);
+    } catch (err) {
+      start.disabled = false;
+      appendChat('assistant', err.message);
+    }
+  });
+  offer.appendChild(start);
+  $('#chat-messages').appendChild(offer);
+  $('#chat-messages').scrollTop = $('#chat-messages').scrollHeight;
 }
 
 function appendChat(classes, text) {

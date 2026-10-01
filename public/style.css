@@ -886,3 +886,7 @@ input::placeholder {
 @media (prefers-reduced-motion: reduce) {
   .companion * { animation: none !important; }
 }
+
+/* #273: a course offered in the chat */
+.course-offer { display: flex; }
+.course-start { text-align: left; }

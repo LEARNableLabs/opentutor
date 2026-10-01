@@ -959,3 +959,26 @@ it('sends one chat message at a time, so the companion thinks until the reply ar
   await first; await settle();
   expect(seen(f)).toBe(null);
 });
+
+// #273: a course offered in the chat starts with one tap, through the usual add-topic flow.
+it('turns a course offered in the chat into a button that starts it', async () => {
+  const f = frontend((url) => {
+    if (url === '/api/chat') return [200, { reply: 'Game theory studies strategic choices.', model: 'm', course: { topic: 'Game Theory', slug: 'game-theory' } }];
+    if (url === '/api/add-topic') return [200, { slug: 'game-theory', status: 'existing', lessonCount: 29 }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'teach me game theory';
+  await f.$('#btn-send').click();
+  await settle();
+  const offer = f.$('#chat-messages').children.find((n) => n.className?.includes('course-offer'));
+  expect(offer).toBeTruthy();
+  const button = offer.children.find((n) => n.tagName === 'BUTTON' || n.className?.includes('primary')) || offer.children[0];
+  expect(button.textContent).toBe('📚 Start the course: Game Theory');
+  await button.click();
+  await settle();
+  const add = f.calls.find((c) => c.url === '/api/add-topic');
+  expect(JSON.parse(add.init.body)).toEqual({ topic: 'game-theory', level: 'intermediate' });
+});
