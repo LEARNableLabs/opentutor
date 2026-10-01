@@ -45,7 +45,13 @@ for f in settings.json settings.local.json; do
   chmod 644 "$tmp"
   # -n: never replace a file that appeared meanwhile.
   mv -n "$tmp" "$dir/$f" || true
-  [ -e "$tmp" ] && continue
+  if [ -e "$tmp" ]; then
+    # Lost a race: the file appeared meanwhile. If a concurrent run just registered the
+    # hook there, stop, or the next file would register it a second time.
+    rm -f "$tmp"
+    registered "$dir/$f" && exit 0
+    continue
+  fi
   exit 0
 done
 
