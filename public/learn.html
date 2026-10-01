@@ -88,10 +88,18 @@
 
           <div id="empty-state">
             <p id="empty-title">What are you curious about today?</p>
-            <p class="dim">
+            <p id="empty-hint" class="dim">
               Pick a topic above to start a lesson, or open <strong>Topics</strong> to browse
               ready-made courses.
             </p>
+            <!-- #278: a returning student sees where each course stands, and picks what to do next. -->
+            <div id="welcome" class="hidden">
+              <ul id="welcome-courses"></ul>
+              <div id="welcome-actions">
+                <button type="button" id="welcome-find" class="secondary">🔎 Find a new topic</button>
+                <button type="button" id="welcome-ask" class="secondary">💬 Ask the tutor</button>
+              </div>
+            </div>
           </div>
         </section>
 

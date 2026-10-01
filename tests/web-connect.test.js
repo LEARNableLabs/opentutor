@@ -1044,6 +1044,64 @@ it('keeps the open lesson answerable when the offered course cannot be opened', 
   expect(f.$('#chat-messages').children.some((n) => /is in Learn|is open in Learn/.test(n.innerHTML))).toBe(false);
 });
 
+// #278: a returning student is told where each course stands, and picks what to do next.
+const WELCOME = {
+  name: 'Ada',
+  courses: [
+    { slug: 'game-theory', topic: 'Game Theory', completed: 2, total: 29, next: { day: 3, title: 'Prisoners' }, inFlight: { day: 3, title: 'Prisoners', step: 1, steps: 3 } },
+    { slug: 'amateur-radio', topic: 'Amateur radio — propagation, antenna theory, and protocols', completed: 0, total: 27, next: { day: 1, title: 'Radio waves' }, inFlight: null },
+  ],
+};
+
+it('welcomes a returning student by name, with each course and its next step', async () => {
+  const f = frontend((url) => (url === '/api/user' ? [200, { hasProfile: true, onboarded: true, welcome: WELCOME }] : null));
+  await settle();
+  expect(f.$('#empty-title').textContent).toBe('Welcome back, Ada.');
+  expect(f.$('#empty-hint').classList.contains('hidden')).toBe(true);
+  expect(f.$('#welcome').classList.contains('hidden')).toBe(false);
+  const [first, second] = f.$('#welcome-courses').children;
+  expect(first.children[0].children.map((n) => n.textContent)).toEqual(['Game Theory', '2 of 29 lessons done. You\'re on question 2 of 3 in lesson 3, “Prisoners”']);
+  expect(first.children[1]).toMatchObject({ className: 'primary', textContent: '▶ Continue' });
+  expect(second.children[0].children.map((n) => n.textContent)).toEqual(['Amateur radio', '0 of 27 lessons done. Next: lesson 1, “Radio waves”']);
+  expect(second.children[1]).toMatchObject({ className: 'secondary', textContent: '▶ Start' });
+
+  await second.children[1].click();
+  await settle();
+  expect(JSON.parse(f.calls.find((c) => c.url === '/api/lesson').init.body)).toEqual({ topicSlug: 'amateur-radio' });
+});
+
+it('greets without a name it does not have, and offers a new topic or the chat', async () => {
+  const f = frontend((url) => {
+    if (url === '/api/user') return [200, { hasProfile: false, onboarded: true, welcome: { name: null, courses: [] } }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  expect(f.$('#empty-title').textContent).toBe('Welcome back.');
+  await f.$('#welcome-find').click();
+  expect(f.$('.nav-btn[data-view="topics"]').classList.contains('active')).toBe(true);
+  await f.$('#welcome-ask').click();
+  expect(f.$('.nav-btn[data-view="chat"]').classList.contains('active')).toBe(true);
+  expect(f.focused()).toBe(f.$('#chat-input'));
+});
+
+it('leaves a lesson that opened first alone', async () => {
+  let answer;
+  const f = frontend((url) => {
+    if (url === '/api/user') return new Promise((resolve) => { answer = resolve; });
+    if (url === '/api/lesson') return [200, { reply: 'Q1', step: 0, totalSteps: 3, done: false, lesson: { module: 'M', day: 1, title: 'T' }, lessonId: 'L' }];
+    return null;
+  });
+  await settle();
+  f.$('#active-topic').value = 'game-theory';
+  await f.$('#btn-next').click();
+  await settle();
+  answer([200, { hasProfile: true, onboarded: true, welcome: WELCOME }]);
+  await settle();
+  expect(f.$('#welcome').classList.contains('hidden')).toBe(true);
+  expect(f.$('#empty-title').textContent).not.toMatch(/Welcome back/);
+});
+
 // #272: onboarding is a guided chat: choices as buttons, then a short tour of the tabs.
 function newStudent(onboard) {
   const f = frontend((url, init) => {
