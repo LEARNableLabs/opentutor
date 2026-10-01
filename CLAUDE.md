@@ -218,7 +218,7 @@ Set `OPENTUTOR_DATA_DIR=.test-data` to redirect runtime state to an isolated dir
 
 ## Claude Code settings (#302)
 
-Cloud sessions install dependencies through `.claude/hooks/session-start.sh` (`npm ci`, cloud only, skipped while `node_modules` matches the lockfile). The hook is registered by `.claude/cloud-setup.sh`, which merges `.claude/settings.cloud.json` into the clone's `.claude/settings.json`. Run it from the cloud environment's Setup script: `bash /home/user/opentutor/.claude/cloud-setup.sh || true`.
+Cloud sessions install dependencies through `.claude/hooks/session-start.sh` (`npm ci`, cloud only, skipped while `node_modules` matches the lockfile). The hook is registered by `.claude/cloud-setup.sh`, which copies `.claude/settings.cloud.json` to the clone's `settings.json`, or to `settings.local.json` when `settings.json` exists. It never modifies an existing file. Run it from the cloud environment's Setup script: `bash /home/user/opentutor/.claude/cloud-setup.sh || true`.
 `.claude/settings.json` itself is not tracked, and must not be: `.claude/` is gitignored, so a tracked one would silently overwrite contributors' private settings on their next pull. Files under `.claude/` are force-added (`git add -f`).
 
 ## Durable web generation (#121)
