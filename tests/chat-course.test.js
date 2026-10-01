@@ -91,3 +91,15 @@ it('offers the course and drops an untrusted link from the same reply', async ()
   expect(body.reply).toBe('See this or [Game theory](https://en.wikipedia.org/wiki/Game_theory).');
   expect(system).toMatch(/## Courses/);
 });
+
+it.each(['before', 'after'])('keeps an offer when verified source metadata is %s its hidden marker', async (order) => {
+  const check = vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response(null, { status: 200 }));
+  try {
+    const marker = '<COURSE>game theory</COURSE>';
+    const source = '> 📚 Sources: [Game theory](https://en.wikipedia.org/wiki/Game_theory)';
+    const { body } = await turn(`Strategic choices.\n${order === 'before' ? `${source}\n${marker}` : `${marker}\n${source}`}`);
+    expect(body.course).toEqual({ topic: 'Game Theory', slug: 'game-theory' });
+    expect(body.reply.replace(/\n{2,}/g, '\n')).toBe(`Strategic choices.\n> 📚 Sources: [Game theory](https://en.wikipedia.org/wiki/Game_theory)`);
+    expect(check).toHaveBeenCalledTimes(1);
+  } finally { check.mockRestore(); }
+});

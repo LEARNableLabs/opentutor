@@ -14,6 +14,7 @@ import {
   VOICE,
   FORMAT,
   LINKS,
+  SOURCES,
 } from '../lib/core/prompts.js';
 
 // Mock skills map
@@ -283,6 +284,8 @@ describe('buildSocraticResponsePrompt', () => {
   const WEB_ONLY = [
     `${FORMAT}\n\n---\n\n`,
     `${LINKS}\n\n---\n\n`,
+    `${SOURCES}\n\n---\n\n`,
+    '. A Sources footer may follow that question when you have stated facts; it never replaces the question.',
     "\nTeach this lesson's subject. The student profile below may mention other things they study: it tells you who they are, never what this lesson is about.",
     '- Don\'t say when earlier lessons happened ("yesterday", "last week"): you don\'t know\n',
   ];

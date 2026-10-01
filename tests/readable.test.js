@@ -1,15 +1,16 @@
-import { it, expect, vi } from 'vitest';
+import { it, expect, vi, afterEach } from 'vitest';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { keepTrustedLinks } from '../lib/core/links.js';
-import { buildSocraticResponsePrompt, buildOnboardingPrompt, FORMAT, LINKS } from '../lib/core/prompts.js';
+import { keepTrustedLinks, keepVerifiedSources, sourceFilter } from '../lib/core/links.js';
+import { buildSocraticResponsePrompt, buildOnboardingPrompt, FORMAT, LINKS, SOURCES } from '../lib/core/prompts.js';
 import { chatTurn } from '../api/chat.js';
 import { lessonTurn } from '../api/lesson.js';
 import { formatPracticeFeedback } from '../lib/core/deliberate-practice.js';
 
 // #271: replies that help the reader read, and only links a student can trust.
 const RESOURCE = 'https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/';
+afterEach(() => vi.unstubAllGlobals());
 
 it('keeps a lesson resource, a Wikipedia article and a YouTube search, and unlinks anything else', () => {
   const text = [
@@ -129,4 +130,178 @@ it('unlinks an invented link in a review lesson\'s concept', async () => {
   expect(review.body.lesson).toMatchObject({ review: true });
   expect(review.body.reply).toContain('Explain **payoffs** in your own words');
   expect(review.body.reply).not.toContain('evil.example');
+});
+
+// #281: a reply that presents facts ends with a short quoted line naming real sources.
+it('asks web lesson replies and the chat for a sources line, and never Telegram or onboarding', async () => {
+  expect(web()).toContain(SOURCES);
+  expect(buildSocraticResponsePrompt(PLAN, 'x', 'diagnostic', '').system).not.toContain(SOURCES);
+  expect(buildOnboardingPrompt(new Map()).system).not.toContain(SOURCES);
+  let system = '';
+  const adapter = { generate: async (s) => ((system = s), { text: 'ok', model: 'm' }) };
+  await chatTurn({ state: { readUser: async () => '' }, getAdapter: async () => adapter }, { message: 'How do vaccines work?' });
+  expect(system).toContain(SOURCES);
+  expect(SOURCES).toMatch(/^> 📚 Sources: \[/m); // a quote, as the page renders it
+  expect(SOURCES).toMatch(/Never invent a source/);
+  expect(SOURCES).toMatch(/very last line/);
+});
+
+it('drops an invented source and verifies a Wikipedia citation before including it', async () => {
+  const check = vi.fn(async () => new Response(null, { status: 200 }));
+  vi.stubGlobal('fetch', check);
+  const text = 'Vaccines train the immune system.\n\n> 📚 Sources: [A study](https://invented.example/s); [Vaccine](https://en.wikipedia.org/wiki/Vaccine)';
+  const adapter = { generate: async () => ({ text, model: 'm' }) };
+  const res = await chatTurn({ state: { readUser: async () => '' }, getAdapter: async () => adapter }, { message: 'How do vaccines work?' });
+  expect(res.body.reply).toBe('Vaccines train the immune system.\n\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)');
+  expect(check).toHaveBeenCalledExactlyOnceWith('https://en.wikipedia.org/wiki/Vaccine', expect.objectContaining({ method: 'HEAD', redirect: 'error' }));
+});
+
+it('omits nonexistent or unreachable Wikipedia sources without failing the reply', async () => {
+  for (const check of [async () => new Response(null, { status: 404 }), async () => { throw new Error('timeout'); }]) {
+    vi.stubGlobal('fetch', check);
+    const text = 'Facts.\n> 📚 Sources: [Zorblax effect](https://en.wikipedia.org/wiki/Zorblax_effect)';
+    const adapter = { generate: async () => ({ text, model: 'm' }) };
+    const res = await chatTurn({ state: { readUser: async () => '' }, getAdapter: async () => adapter }, { message: 'Explain Zorblax' });
+    expect(res.body.reply).toBe('Facts.');
+  }
+});
+
+it('uses supplied lesson resources without fetching and never follows a lookalike or a video source', async () => {
+  const check = vi.fn();
+  vi.stubGlobal('fetch', check);
+  const text = `Facts.\n> 📚 Sources: [Notes](${RESOURCE}); [Lookalike](https://en.wikipedia.org.evil.example/wiki/Facts)`;
+  expect(await keepVerifiedSources(text, [RESOURCE])).toBe(`Facts.\n> 📚 Sources: [Notes](${RESOURCE})`);
+  expect(await keepVerifiedSources('Facts.\n> 📚 Sources: [Video](https://www.youtube.com/results?search_query=facts)')).toBe('Facts.');
+  expect(check).not.toHaveBeenCalled();
+});
+
+it('bounds verification to two citations in one footer', async () => {
+  const check = vi.fn(async () => new Response(null, { status: 200 }));
+  vi.stubGlobal('fetch', check);
+  const link = (n) => `[${n}](https://en.wikipedia.org/wiki/${n})`;
+  const reply = await keepVerifiedSources(`Facts.\n> 📚 Sources: ${link('Old')}\n> 📚 Sources: ${link('A')}; ${link('B')}; ${link('C')}`);
+  expect(check).toHaveBeenCalledTimes(2);
+  expect(reply).toBe(`Facts.\n> 📚 Sources: ${link('A')}; ${link('B')}`);
+});
+
+it('recognizes only a terminal marked footer and preserves ordinary Sources quotes', async () => {
+  const check = vi.fn();
+  vi.stubGlobal('fetch', check);
+  const quoted = 'Explain this quotation:\n> Sources: primary inputs';
+  expect(await keepVerifiedSources(quoted)).toBe(quoted);
+  expect(await keepVerifiedSources('Facts.\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)\n\nWhat do you think?')).toBe('Facts.\n\nWhat do you think?');
+  expect(check).not.toHaveBeenCalled();
+});
+
+it.each([' ', '   ', '\t'])('verifies indented source metadata with %j indentation', async (indent) => {
+  const check = vi.fn(async () => new Response(null, { status: 404 }));
+  vi.stubGlobal('fetch', check);
+  const text = `Facts.\n${indent}> 📚 Sources: [Zorblax](https://en.wikipedia.org/wiki/Zorblax_effect)`;
+  expect(await keepVerifiedSources(text)).toBe('Facts.');
+  expect(check).toHaveBeenCalledTimes(1);
+  for (let split = 0; split <= text.length; split++) {
+    const tokens = [];
+    const filter = sourceFilter((t) => tokens.push(t));
+    filter(text.slice(0, split));
+    filter(text.slice(split));
+    expect(tokens.join('')).toBe('Facts.\n');
+  }
+});
+
+it.each(['> An ordinary final quote.', 'Intro\n > Sources: primary inputs', '\t> 📚 A book quote.'])('streams a final ordinary quote without a newline: %s', (text) => {
+  for (let split = 0; split <= text.length; split++) {
+    const tokens = [];
+    const filter = sourceFilter((t) => tokens.push(t));
+    filter(text.slice(0, split));
+    filter(text.slice(split));
+    expect(tokens.join('')).toBe(text);
+  }
+});
+
+it('resumes streaming prose after a nonterminal source line', () => {
+  const text = 'Facts.\n > 📚 Sources: [Zorblax](https://en.wikipedia.org/wiki/Zorblax_effect)\n\nWhat do you think?';
+  for (let split = 0; split <= text.length; split++) {
+    const tokens = [];
+    const filter = sourceFilter((t) => tokens.push(t));
+    filter(text.slice(0, split));
+    filter(text.slice(split));
+    expect(tokens.join('')).toBe('Facts.\n\nWhat do you think?');
+  }
+});
+
+it.each(['Intro\n> 📚 Sources', 'Intro\n> ', 'Intro\n   '])('flushes an unfinished ordinary prefix: %s', (text) => {
+  const tokens = [];
+  const filter = sourceFilter((t) => tokens.push(t));
+  for (const ch of text) filter(ch);
+  filter.flush();
+  filter.flush();
+  expect(tokens.join('')).toBe(text);
+});
+
+it.each([false, true])('flushes an ordinary prefix when generation completes or fails (failure: %s)', async (fail) => {
+  const { ctx } = demoLesson();
+  const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+  const adapter = await ctx.getAdapter();
+  const text = '<assessment>{"score":0.8}</assessment>\nIntro\n> 📚 Sources';
+  adapter.generate.mockImplementation(async (_system, _history, options) => {
+    for (const ch of text) options.onToken(ch);
+    if (fail) throw new Error('broken stream');
+    return { text };
+  });
+  const tokens = [];
+  const next = lessonTurn(ctx, { topicSlug: 'demo', answer: 'because' }, { onToken: (t) => tokens.push(t) });
+  if (fail) await expect(next).rejects.toThrow('broken stream');
+  else await next;
+  expect(tokens.join('')).toBe('Intro\n> 📚 Sources');
+});
+
+it('resumes an already-verified footer without fetching, and drops legacy footers without rewriting the lesson', async () => {
+  const check = vi.fn(async () => new Response(null, { status: 200 }));
+  vi.stubGlobal('fetch', check);
+  const { kv, ctx } = demoLesson();
+  const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+  const adapter = await ctx.getAdapter();
+  adapter.generate.mockResolvedValue({ text: '<assessment>{"score":0.8}</assessment>\nFacts.\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)' });
+  const next = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'because', lessonId: start.body.lessonId, step: start.body.step });
+  expect(check).toHaveBeenCalledTimes(1);
+  const resumed = await lessonTurn(ctx, { topicSlug: 'demo' });
+  expect(resumed.body.reply).toBe(next.body.reply);
+  expect(check).toHaveBeenCalledTimes(1);
+  const key = 'web_lesson:demo';
+  const legacy = JSON.stringify({ ...JSON.parse(kv.get(key)), sourcesVerified: undefined });
+  kv.set(key, legacy);
+  expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe('Facts.');
+  expect(check).toHaveBeenCalledTimes(1);
+  expect(kv.get(key)).toBe(legacy);
+});
+
+it('streams prose and ordinary complete quotes while withholding a source footer split at any token boundary', () => {
+  const prose = 'A fact.\n> An ordinary quote.\nWhat next?\n';
+  const text = prose + '> 📚 Sources: [Zorblax](https://en.wikipedia.org/wiki/Zorblax_effect)\n';
+  for (let split = 0; split <= text.length; split++) {
+    const chunks = [];
+    const filter = sourceFilter((chunk) => chunks.push(chunk));
+    filter(text.slice(0, split));
+    filter(text.slice(split));
+    expect(chunks.join('')).toBe(prose);
+  }
+  const chunks = [];
+  const filter = sourceFilter((chunk) => chunks.push(chunk));
+  for (const ch of text.trimEnd()) filter(ch);
+  expect(chunks.join('')).toBe(prose);
+});
+
+it('delivers verified sources only in the final lesson response, never in streamed tokens', async () => {
+  const { ctx } = demoLesson();
+  const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+  const adapter = await ctx.getAdapter();
+  const text = `<assessment>{"score":0.8}</assessment>\nA fact. What next?\n> 📚 Sources: [Notes](${RESOURCE})`;
+  adapter.generate.mockImplementation(async (_system, _messages, options) => {
+    for (const ch of text) options.onToken(ch);
+    return { text };
+  });
+  const tokens = [];
+  const next = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'because', lessonId: start.body.lessonId, step: start.body.step }, { onToken: (t) => tokens.push(t) });
+  expect(tokens.join('')).toBe('A fact. What next?\n');
+  expect(next.body.reply).toContain(`> 📚 Sources: [Notes](${RESOURCE})`);
 });

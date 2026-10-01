@@ -2,8 +2,8 @@ import { getState, getAdapter } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
-import { VOICE, FORMAT, LINKS } from '../lib/core/prompts.js';
-import { keepTrustedLinks } from '../lib/core/links.js';
+import { VOICE, FORMAT, LINKS, SOURCES } from '../lib/core/prompts.js';
+import { keepTrustedLinks, keepVerifiedSources, withoutSources } from '../lib/core/links.js';
 import { publicCatalog } from '../lib/core/catalog.js';
 import { courseFor } from './onboard.js';
 
@@ -55,6 +55,7 @@ export async function chatTurn({ state, getAdapter }, { message } = {}) {
     '## Courses\n\nWhen the student asks to learn a subject or be taught it (\"teach me…\", \"I want to learn…\", \"how do I get good at…\"), answer briefly, then offer a course: end your reply with <COURSE>the subject alone</COURSE> on its own line, e.g. <COURSE>game theory</COURSE>, with no words like \"basics\" or \"from scratch\". At most one, and never for a quick question. The page turns it into a button; never mention the marker.',
     FORMAT,
     LINKS,
+    SOURCES,
     user ? `## Student\n\n${user}` : '',
   ].filter(Boolean).join('\n\n---\n\n');
 
@@ -63,8 +64,8 @@ export async function chatTurn({ state, getAdapter }, { message } = {}) {
     [{ role: 'user', content: text }],
     { model: 'cheap' },
   );
-  const course = (text.match(OPENING) || []).length ? null : offeredCourse(response.text);
-  const reply = keepTrustedLinks(withoutMarkers(response.text)) || 'What would you like to learn?';
+  const course = (text.match(OPENING) || []).length ? null : offeredCourse(withoutSources(response.text));
+  const reply = keepTrustedLinks(await keepVerifiedSources(withoutMarkers(response.text))) || 'What would you like to learn?';
   return { status: 200, body: { reply, model: response.model, ...(course && { course }) } };
 }
 

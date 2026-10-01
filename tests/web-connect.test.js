@@ -1678,6 +1678,22 @@ it('says a finished course is finished, not open', async () => {
   expect(said).toMatch(/already finished every lesson in <strong>Beta<\/strong>/);
 });
 
+// #281: the sources line renders as a quiet quote, its link kept only where links are allowed.
+it('renders a closing sources line as a quote', () => {
+  const { context } = frontend(() => null);
+  const reply = 'A **key** idea.\n\nWhat next?\n\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)';
+  expect(context.md(reply, { links: true })).toBe('A <strong>key</strong> idea.<br><br>What next?<blockquote class="md-quote">📚 Sources: <a href="https://en.wikipedia.org/wiki/Vaccine" target="_blank" rel="noopener noreferrer">Vaccine</a></blockquote>');
+  expect(context.md(reply)).toContain('<blockquote class="md-quote">📚 Sources: Vaccine</blockquote>'); // no links here
+});
+
+it.each(['- First\n- Second', '1. First\n2. Second', '## A heading'])('renders a source immediately after %s as a quote', (body) => {
+  const { context } = frontend(() => null);
+  const html = context.md(`${body}\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)`, { links: true });
+  expect(html).toContain('<blockquote class="md-quote">📚 Sources: <a');
+  expect(html).not.toContain('&gt;');
+  expect(html).not.toMatch(/<(?:li|h4)[^>]*>[^<]*<blockquote/);
+});
+
 // #279: the day's personal line fills in under the greeting; the chat greets by name.
 it('adds the day\'s personal line under the welcome, and the chat greets the student by name', async () => {
   const f = frontend((url) => {

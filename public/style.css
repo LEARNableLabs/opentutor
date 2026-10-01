@@ -524,6 +524,15 @@ input::placeholder {
   margin-top: 4px;
 }
 
+/* #281: the sources line closing a reply, a footnote rather than part of the answer. */
+.md-quote {
+  margin: 10px 0 0;
+  padding: 4px 0 4px 12px;
+  border-left: 3px solid var(--accent);
+  color: var(--text-dim);
+  font-size: 0.88em;
+}
+
 .md-h {
   margin: 2px 0 4px;
   font-size: 1.05em;
