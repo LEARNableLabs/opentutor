@@ -264,3 +264,127 @@ describe('course titles and tags', () => {
     }
   });
 });
+
+// #272: each onboarding question can come with choices the page shows as buttons.
+describe('choices', () => {
+  const reply = (text) => adapter.generate.mockResolvedValue({ text });
+
+  it('come out of their marker as clean options, and the marker never reaches the student', async () => {
+    reply('Nice to meet you, Sam! What brings you here?\n<OPTIONS> School | Work |Pure curiosity </OPTIONS>');
+    const res = await call({ message: 'Sam' });
+    expect(res.body).toMatchObject({ reply: 'Nice to meet you, Sam! What brings you here?', options: ['School', 'Work', 'Pure curiosity'], confirmedTopic: null });
+  });
+
+  it.each([
+    ['repeated and blank', 'Pick one\n<OPTIONS>Maths | maths | | Maths | Science</OPTIONS>', ['Maths', 'Science']],
+    ['more than five', 'Pick\n<OPTIONS>a | b | c | d | e | f | g</OPTIONS>', ['a', 'b', 'c', 'd', 'e']],
+    ['too long', `Pick\n<OPTIONS>${'x'.repeat(61)} | Short | Also short</OPTIONS>`, ['Short', 'Also short']],
+  ])('are cleaned when %s', async (_case, text, expected) => {
+    reply(text);
+    const res = await call({ message: 'Sam' });
+    expect(res.body.options).toEqual(expected);
+    expect(res.body.reply).not.toMatch(/OPTIONS|[<>]/);
+  });
+
+  it.each([
+    ['only one', 'Pick\n<OPTIONS>Only this</OPTIONS>'],
+    ['an unclosed marker', 'Pick one\n<OPTIONS>School | Work'],
+    ['a stray closing tag', 'Pick one</OPTIONS>'],
+    ['none at all', 'Tell me more.'],
+  ])('are left out when the model sends %s, and no marker is shown', async (_case, text) => {
+    reply(text);
+    const res = await call({ message: 'Sam' });
+    expect(res.body.options).toBeUndefined();
+    expect(res.body.reply).not.toMatch(/OPTIONS|[<>]/);
+  });
+
+  it('end once a course is confirmed: the lesson starts, so there is nothing left to ask', async () => {
+    reply('Great pick.\n<TOPIC>game-theory</TOPIC>\n<OPTIONS>Yes | No</OPTIONS>');
+    const res = await call({ message: 'The first one' }); // only the model knows which that is
+    expect(res.body.confirmedTopic).toBe('game-theory');
+    expect(res.body.options).toBeUndefined();
+    expect(res.body.reply).toBe('Great pick.');
+  });
+});
+
+describe('choosing a ready-made course', () => {
+  const asked = [{ role: 'assistant', content: 'Which sounds best?\n<OPTIONS>Game theory | Something else</OPTIONS>' }];
+
+  it('is confirmed when the student names one exactly, as tapping a suggestion does, with no model call', async () => {
+    const res = await call({ message: 'Game theory', history: asked });
+    expect(res.body).toMatchObject({ confirmedTopic: 'game-theory', reply: expect.stringMatching(/Game Theory/) });
+    expect(res.body.options).toBeUndefined();
+    expect(adapter.generate).not.toHaveBeenCalled();
+    expect(state.writeUser).toHaveBeenCalledWith(expect.stringContaining('- Game theory'));
+  });
+
+  it('still asks the model about anything that is not exactly a course', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Tell me more.\n<OPTIONS>School | Work</OPTIONS>' });
+    const res = await call({ message: 'I like games' });
+    expect(adapter.generate).toHaveBeenCalled();
+    expect(res.body.confirmedTopic).toBeNull();
+  });
+
+  // The first answer is the student's name, and some courses have one-word titles ("Logic", "Tea").
+  it('reads a first answer that happens to be a course title as an answer, not a choice', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Nice to meet you. What brings you here?\n<OPTIONS>School | Work</OPTIONS>' });
+    const res = await call({ message: 'Game theory' });
+    expect(adapter.generate).toHaveBeenCalled();
+    expect(res.body).toMatchObject({ confirmedTopic: null, options: ['School', 'Work'] });
+  });
+
+  // Review of #277: only a course the last question offered, which is what a tap sends. Anywhere
+  // else the model decides, as it did before the shortcut.
+  it.each([
+    ['a question that offered other choices', [{ role: 'assistant', content: 'What brings you here?\n<OPTIONS>School | Work</OPTIONS>' }]],
+    ['a tutor turn with no choices', [{ role: 'assistant', content: 'hello' }]],
+    ['choices quoted mid-text', [{ role: 'assistant', content: 'Say <OPTIONS>Game theory | Logic</OPTIONS> to me' }]],
+  ])('asks the model about a course named after %s', async (_case, history) => {
+    adapter.generate.mockResolvedValue({ text: 'Tell me more.' });
+    const res = await call({ message: 'Game theory', history });
+    expect(adapter.generate).toHaveBeenCalled();
+    expect(res.body.confirmedTopic).toBeNull();
+  });
+
+  // Review of #277: the page keeps a failed turn, so a retried first answer arrives with history.
+  it('treats a retried first answer as the first answer', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Nice to meet you. What brings you here?\n<OPTIONS>School | Work</OPTIONS>' });
+    const res = await call({ message: 'Game theory', history: [{ role: 'user', content: 'Game theory' }] });
+    expect(adapter.generate).toHaveBeenCalled();
+    expect(res.body.confirmedTopic).toBeNull();
+  });
+});
+
+// Review of #277: choices come only from the marker where the protocol puts it, on the last line.
+// Anywhere else it may be the model quoting the student.
+it.each([
+  ['mid-sentence', 'You asked me to quote <OPTIONS>Drop out | Quit work</OPTIONS> but I would rather ask: what brings you here?'],
+  ['ending a sentence', 'You asked me to quote <OPTIONS>Drop out | Quit work</OPTIONS>'],
+])('turns no quoted marker into choices, %s', async (_case, text) => {
+  adapter.generate.mockResolvedValue({ text });
+  const res = await call({ message: 'Sam' });
+  expect(res.body.options).toBeUndefined();
+  expect(res.body.reply).not.toMatch(/OPTIONS|Drop out/);
+});
+
+it('never shows a singular <OPTION> marker either', async () => {
+  adapter.generate.mockResolvedValue({ text: 'Locked in.<OPTION> Game Theory vs Decision Theory </OPTION> Which one?' });
+  const res = await call({ message: 'Sam' });
+  expect(res.body.reply).not.toMatch(/OPTION|[<>]/);
+});
+
+// Review of #277: only the marker makes choices. Bars after a question can be ordinary prose.
+it('reads no choices from bars after a question, and keeps the text', async () => {
+  const text = 'Which notation did you mean? A | B means alternatives in this grammar.';
+  adapter.generate.mockResolvedValue({ text });
+  const res = await call({ message: 'Grammar' });
+  expect(res.body.options).toBeUndefined();
+  expect(res.body.reply).toBe(text);
+});
+
+it('leaves a sentence that merely contains a bar alone', async () => {
+  adapter.generate.mockResolvedValue({ text: 'Rock | paper | scissors is a classic game. What else do you like?' });
+  const res = await call({ message: 'Games' });
+  expect(res.body.options).toBeUndefined();
+  expect(res.body.reply).toBe('Rock | paper | scissors is a classic game. What else do you like?');
+});
