@@ -28,6 +28,7 @@ import { chatTurn } from '../../api/chat.js';
 import { onboardTurn } from '../../api/onboard.js';
 import { authenticateRequest, authFailure } from '../../api/_lib/auth.js';
 import { userView } from '../../lib/core/welcome.js';
+import { dailyGreeting } from '../../lib/core/greeting.js';
 import { checkAdmin, adminFailure } from '../../api/_lib/admin-auth.js';
 import { listStudents, findStudent, provisionStudent, decommissionStudent } from '../../lib/core/students.js';
 import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
@@ -358,6 +359,10 @@ async function handleStudentAPI(req, res, url, state, account) {
 
     // GET /api/user — get student profile
     if (req.method === 'GET' && url.pathname === '/api/user') {
+      if (url.searchParams.get('greeting')) { // #279
+        const getAdapter = () => adapterFor({ state, use: 'greeting', host: () => chatAdapter });
+        return json(res, { greeting: await dailyGreeting({ state, account, getAdapter }) });
+      }
       return json(res, await userView(state, account));
     }
 

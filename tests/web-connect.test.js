@@ -1073,3 +1073,26 @@ it('goes away only through Hide, and stays away for the session', async () => {
   await settle();
   expect(f.$('#companion').classList.contains('hidden')).toBe(true);
 });
+
+// #279: the day's personal line fills in under the greeting; the chat greets by name.
+it('adds the day\'s personal line under the welcome, and the chat greets the student by name', async () => {
+  const f = frontend((url) => {
+    if (url === '/api/user') return [200, { hasProfile: true, onboarded: true, welcome: WELCOME }];
+    if (url === '/api/user?greeting=1') return [200, { greeting: 'Ada means noble, which seems about right.' }];
+    return null;
+  });
+  await settle();
+  expect(f.$('#welcome-touch').textContent).toBe('Ada means noble, which seems about right.');
+  expect(f.$('#welcome-touch').classList.contains('hidden')).toBe(false);
+  await f.$('.nav-btn[data-view="chat"]').click();
+  expect(f.$('#companion-says').textContent).toBe("What's on your mind, Ada?");
+});
+
+it('keeps the welcome as it is when there is no line today', async () => {
+  for (const greeting of [[200, { greeting: null }], [500, { error: 'x' }]]) {
+    const f = frontend((url) => (url === '/api/user' ? [200, { hasProfile: true, onboarded: true, welcome: WELCOME }] : url === '/api/user?greeting=1' ? greeting : null));
+    await settle();
+    expect(f.$('#welcome-touch').classList.contains('hidden')).toBe(true);
+    expect(f.$('#empty-title').textContent).toBe('Welcome back, Ada.');
+  }
+});
