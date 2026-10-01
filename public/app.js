@@ -151,7 +151,7 @@ $$('.nav-btn').forEach((btn) => {
     view.style.display = btn.dataset.view === 'chat' ? 'flex' : 'block'; // the chat is a column: messages, then input
 
     if (btn.dataset.view === 'topics') loadTopics();
-    if (btn.dataset.view === 'learn') loadActiveTopics();
+    if (btn.dataset.view === 'learn') loadActiveTopics().catch(() => {}); // the picker keeps what it had
     openView = btn.dataset.view;
     // The chat greets when it opens, unless a reply is on its way or the student left a draft there.
     if (openView === 'chat' && !companionFor.chat && !$('#chat-input').value.trim()) companionFor.chat = 'chat-idle';
@@ -571,12 +571,14 @@ $('#btn-retry-build').addEventListener('click', async () => {
   finally { $('#btn-retry-build').disabled = false; }
 });
 
-async function enterNewTopic(data) {
+// From the chat's course offer (#273) the student chose this course: its lesson opens even
+// over one in progress, which stays saved. From Topics, an open lesson is left alone.
+async function enterNewTopic(data, { open = false } = {}) {
   $$('.nav-btn')[0].click();
   await loadActiveTopics();
   if (data.lessonCount) {
     $('#active-topic').value = data.slug;
-    if (!lessonActive) await startLesson();
+    if (open || !lessonActive) await startLesson();
   }
   if (data.status !== 'existing') watchTopicBuild(data.slug, !data.lessonCount);
 }
@@ -678,11 +680,10 @@ function offerCourse(course) {
     start.disabled = true;
     try {
       const added = await requestTopic(course.slug || course.topic);
-      lessonActive = false; // the student chose this course: its lesson opens, and the one they leave stays saved
       appendChat('assistant', course.slug
         ? `Added **${course.topic}** to your topics. Your first lesson is open in Learn.`
         : `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);
-      await enterNewTopic(added);
+      await enterNewTopic(added, { open: true });
     } catch (err) {
       start.disabled = false;
       appendChat('assistant', err.message);

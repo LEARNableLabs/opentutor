@@ -1006,3 +1006,31 @@ it('switches to the offered course even while another lesson is open', async () 
   const starts = f.calls.filter((c) => c.url === '/api/lesson' && !JSON.parse(c.init.body).answer).map((c) => JSON.parse(c.init.body).topicSlug);
   expect(starts).toEqual(['demo', 'game-theory']); // the offered course's lesson opens
 });
+
+// Review of #273: a switch that fails half-way leaves the open lesson taking answers.
+it('keeps the open lesson answerable when the offered course cannot be opened', async () => {
+  let added = false;
+  const f = frontend((url, init) => {
+    if (url === '/api/lesson') return [200, { reply: 'Alpha.', step: 0, totalSteps: 3, done: false, lesson: { module: 'M', day: 1, title: 'T' }, lessonId: 'L-demo' }];
+    if (url === '/api/chat') return [200, { reply: 'Sure.', model: 'm', course: { topic: 'Game Theory', slug: 'game-theory' } }];
+    if (url === '/api/add-topic') { added = true; return [200, { slug: 'game-theory', status: 'existing', lessonCount: 29 }]; }
+    if (url === '/api/progress') return added ? [500, { error: 'down' }] : [200, { active_topics: ['demo'] }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  f.$('#active-topic').value = 'demo';
+  await f.$('#btn-next').click();
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'teach me game theory';
+  await f.$('#btn-send').click();
+  await settle();
+  await f.$('#chat-messages').children.find((n) => n.className?.includes('course-offer')).children[0].click();
+  await settle();
+  await f.$('.nav-btn[data-view="learn"]').click();
+  f.$('#lesson-input').value = 'my answer';
+  await f.$('#btn-lesson-answer').click();
+  await settle();
+  expect(f.calls.some((c) => c.url === '/api/lesson' && JSON.parse(c.init.body).answer === 'my answer')).toBe(true);
+});
