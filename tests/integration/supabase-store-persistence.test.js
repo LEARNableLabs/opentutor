@@ -3,6 +3,7 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { generatedTopicKey } from '../../lib/core/generated-topics.js';
+import { whereYouAre } from '../../lib/core/welcome.js';
 
 // #117 — SupabaseStore moved kv to Postgres and left three writes on disk.
 // On Vercel everything outside /tmp is read-only, so all three threw, the
@@ -127,6 +128,19 @@ const freeze = () => {
 };
 
 const store = (opts) => new SupabaseStore(root, opts);
+
+it('pages saved lesson rows for the welcome even when Supabase caps each response at fifty', async () => {
+  client.maxRows = 50;
+  const alice = store({ userId: 'alice' });
+  for (let i = 0; i < 50; i++) client.db.kv.push({ user_id: 'alice', key: `web_lesson:course-${i}`, value: '{}' });
+  const flight = JSON.stringify({ plan: {}, lesson: { day: 1, title: 'A' }, steps: ['diagnostic'], step: 0, history: [], reply: 'Q?' });
+  client.db.kv.push({ user_id: 'alice', key: 'web_lesson:game-theory', value: flight });
+  client.db.kv.push({ user_id: 'bob', key: 'web_lesson:game-theory', value: '{}' });
+  const courses = await whereYouAre(alice, { active_topics: ['game-theory'] });
+  expect(courses).toHaveLength(1);
+  expect(courses[0].inFlight).toEqual({ day: 1, title: 'A', step: 0, steps: 1 });
+  expect(client.requests).toBe(6); // three empty progress tables, then fifty + one + empty lesson rows
+});
 
 describe('on a read-only filesystem, as on Vercel', () => {
   it('records a completed lesson', async () => {
