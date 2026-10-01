@@ -17,7 +17,7 @@ beforeEach(() => {
 });
 afterEach(() => { store.close(); vi.unstubAllEnvs(); fs.rmSync(dir, { recursive: true, force: true }); });
 
-const flight = (day, title, step) => JSON.stringify({ id: 'L1', lessonDay: day, lesson: { day, title }, plan: {}, steps: ['diagnostic', 'followUp', 'application'], step });
+const flight = (day, title, step) => JSON.stringify({ id: 'L1', lessonDay: day, lesson: { day, title }, plan: {}, steps: ['diagnostic', 'followUp', 'application'], step, reply: 'Q?' });
 
 it('calls the student what they asked to be called, then by their account name, else nothing', () => {
   expect(nameOf('- **Name:** Ada Lovelace\n- **What to call them:** Ada', { name: 'ada99' })).toBe('Ada');
@@ -25,6 +25,7 @@ it('calls the student what they asked to be called, then by their account name, 
   expect(nameOf('## In their own words (from onboarding)\n- I like knots', { name: 'Grace' })).toBe('Grace');
   expect(nameOf('', undefined)).toBe(null);
   expect(nameOf('', { name: 'ada@example.com' })).toBe(null); // never greeted by their email address
+  expect(nameOf('- **What to call them:** ada@example.com', { name: 'Ada' })).toBe('Ada'); // nor one they typed
 });
 
 it('lists each course with its progress and the lesson in flight, the one touched last first', async () => {
@@ -74,10 +75,32 @@ it('shows no lesson in flight from a record whose step it cannot trust', async (
     { step: 0 }, // no steps at all
     { step: 0, steps: ['diagnostic'], lesson: { day: '2', title: 'Sets' } }, // "lesson NaN"
     { step: 0, steps: ['diagnostic'], lesson: { day: 2, title: '  ' } }, // a blank title
+    { step: 0, steps: ['diagnostic'], lesson: { day: -1, title: 'Sets' } }, // "lesson -1"
+    { step: 0, steps: ['diagnostic'], lesson: { day: 2 ** 60, title: 'Sets' } },
+    { step: 0, steps: ['diagnostic'], reply: undefined }, // nothing to resume: Continue would plan a new lesson
   ];
   student.updateProgress((p) => { p.active_topics = ['game-theory']; });
   for (const record of records) {
-    student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 2, title: 'Sets' }, ...record }));
+    student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 2, title: 'Sets' }, reply: 'Q?', ...record }));
     expect((await whereYouAre(student, student.readProgress()))[0].inFlight).toBe(null);
+  }
+});
+
+// Review of #278: an unfinished lesson leads, even when another course has newer history.
+it('leads with the lesson in flight over a course finished more recently', async () => {
+  student.updateProgress((p) => { p.active_topics = ['game-theory', 'amateur-radio']; });
+  student.markLessonComplete('amateur-radio', 1); // the latest history entry
+  student.writeKV('web_lesson:game-theory', flight(1, "What makes a situation a 'game'?", 1));
+  expect((await whereYouAre(student, student.readProgress())).map((c) => c.slug)).toEqual(['game-theory', 'amateur-radio']);
+});
+
+it('resumes a record that has only its history or its opening question', async () => {
+  student.updateProgress((p) => { p.active_topics = ['game-theory']; });
+  for (const record of [
+    { reply: undefined, history: [{ role: 'assistant', content: 'Good.' }], step: 1 },
+    { reply: undefined, plan: { diagnostic: 'What is a game?' }, step: 0 },
+  ]) {
+    student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 1, title: 'Games' }, steps: ['diagnostic', 'application'], ...record }));
+    expect((await whereYouAre(student, student.readProgress()))[0].inFlight).not.toBe(null);
   }
 });
