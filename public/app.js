@@ -197,6 +197,12 @@ const COMPANION_MOMENTS = {
   'chat-idle': ['idle', "What's on your mind?"],
   'chat-thinking': ['thinking', 'Thinking it over.'],
 };
+// #270: what a tap on it says, for what is on screen: only what the page really offers there.
+const COMPANION_TIPS = {
+  options: 'Tap a suggested answer, or answer in your own words.',
+  lesson: 'Answer in your own words. A sentence or two is enough.',
+  chat: 'Ask me anything: a question, an example, or a quick explanation.',
+};
 let companionAway = false;
 try { companionAway = sessionStorage.getItem('ot_companion') === 'hidden'; } catch { /* storage may be off */ }
 // Each tab keeps its own moment, and only the open tab's is shown (#269): a reply landing in one tab
@@ -207,11 +213,11 @@ function companion(moment, view = 'learn') {
   companionFor[view] = COMPANION_MOMENTS[moment] ? moment : null;
   if (view === openView) showCompanion();
 }
-function showCompanion() {
+function showCompanion(tip) {
   const el = $('#companion');
   if (!el) return;
-  const moment = companionFor[openView];
-  const known = COMPANION_MOMENTS[moment];
+  // A tip covers the bubble for now; the tab's own moment stays recorded, and comes back on the next update.
+  const known = tip ? ['idle', tip] : COMPANION_MOMENTS[companionFor[openView]];
   if (companionAway || !known) return void el.classList.add('hidden');
   const home = openView === 'chat' ? $('#chat-input-area') : $('#answer-options');
   if (home && el.nextElementSibling !== home) home.parentNode?.insertBefore?.(el, home);
@@ -221,6 +227,10 @@ function showCompanion() {
   $('#companion-says').textContent = known[1];
   el.classList.remove('hidden');
 }
+$('#companion-tip').addEventListener('click', () => {
+  const options = !$('#answer-options').classList.contains('hidden') && $('#answer-options').children.length > 0;
+  showCompanion(COMPANION_TIPS[openView === 'chat' ? 'chat' : options ? 'options' : 'lesson']);
+});
 $('#companion-hide').addEventListener('click', () => {
   companionAway = true;
   try { sessionStorage.setItem('ot_companion', 'hidden'); } catch { /* the choice lasts this page anyway */ }
