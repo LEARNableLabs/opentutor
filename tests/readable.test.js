@@ -158,6 +158,8 @@ it.each([
   ['https://www.youtube-nocookie.com/embed/pantheon-construction', 'invalid YouTube video id'],
   ['https://www.youtube.com/live/pantheon-construction', 'invalid YouTube video id'],
   ['https://youtu.be/%ZZ', 'invalid YouTube video id'], // a malformed escape is no id
+  ['https://%', 'malformed link'], // looks like a link, and does not parse
+  ['http://', 'malformed link'],
   ['https://example.com/video', 'placeholder'],
   ['https://www.example.org/article', 'placeholder'],
   ['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-control', 'placeholder'],
@@ -180,6 +182,9 @@ it.each([
   'https://www.youtube.com/playlist?list=PL41FDABC6AA085E78', // the older 16-digit kind
   'https://www.youtube.com/playlist?list=UUYO_jab_esuFRV4b17AJtAw', // a channel's uploads
   'https://www.youtube.com/playlist?list=RDJpdRchyVtvk', // a mix: RD and a video id, 13 characters
+  'https://www.youtube.com/playlist?list=WL', // YouTube's own two-letter lists: Watch Later, Liked videos, Liked music
+  'https://www.youtube.com/playlist?list=LL',
+  'https://music.youtube.com/playlist?list=LM',
   'https://www.youtube.com/embed/videoseries?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/embed?listType=playlist&list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/watch?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
