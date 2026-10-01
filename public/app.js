@@ -738,19 +738,22 @@ function setOnboarding(open) {
 
 function showOnboarding() {
   setOnboarding(true);
-  appendOnboardMsg('assistant', "Hey! I'm OpenTutor. What's your name? And are you here for school, work, or the noble art of internet rabbit holes?");
+  appendOnboardMsg('assistant', "Hi! I'm OpenTutor 👋 What's your name?");
   $('#onboarding-input').focus();
 }
 
 async function sendOnboard() {
   const input = $('#onboarding-input');
   const message = input.value.trim();
-  if (!message) return;
+  // One answer at a time: a tap or Enter waits for the reply, as the disabled Send button does.
+  if (!message || $('#btn-onboard-send').disabled) return;
   if (message.length > TURN_LIMIT) return appendOnboardMsg('assistant', tooLong(message));
 
   appendOnboardMsg('user', message);
+  showOnboardOptions(null);
   input.value = '';
   $('#btn-onboard-send').disabled = true;
+  $('#btn-onboard-browse').disabled = true; // closing the card now would leave the reply nowhere to land
 
   onboardingHistory.push({ role: 'user', content: message });
   const typing = appendOnboardMsg('assistant typing', 'Thinking...');
@@ -765,26 +768,57 @@ async function sendOnboard() {
     if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
     typing.remove();
     appendOnboardMsg('assistant', data.reply);
-    onboardingHistory.push({ role: 'assistant', content: data.reply });
+    // The choices go back as the model wrote them: shown its own questions without them, it stops offering any.
+    const offered = data.options?.length ? `\n<OPTIONS>${data.options.join(' | ')}</OPTIONS>` : '';
+    onboardingHistory.push({ role: 'assistant', content: data.reply + offered });
 
     if (data.confirmedTopic) {
       const topic = await requestTopic(data.confirmedTopic);
       await enterNewTopic(topic);
-
-      setTimeout(() => {
-        setOnboarding(false);
-        loadActiveTopics();
-        loadTopics();
-      }, 2000);
+      showTour(); // the student closes it when they have read it
+    } else {
+      showOnboardOptions(data.options);
     }
   } catch (err) {
     typing.remove();
     appendOnboardMsg('assistant', `Error: ${err.message}`);
   } finally {
     $('#btn-onboard-send').disabled = false;
-    input.focus();
+    $('#btn-onboard-browse').disabled = false;
+    if ($('#onboarding-tour').classList.contains('hidden')) input.focus(); // the tour keeps its own focus
   }
 }
+
+// #272: a question's choices, as buttons. A tap answers with that text; typing still works.
+function showOnboardOptions(options) {
+  const box = $('#onboarding-options');
+  box.replaceChildren(...(options || []).map((text) => {
+    const choice = document.createElement('button');
+    choice.type = 'button';
+    choice.className = 'secondary answer-option';
+    choice.textContent = text;
+    choice.addEventListener('click', () => {
+      $('#onboarding-input').value = text;
+      sendOnboard();
+    });
+    return choice;
+  }));
+  box.classList.toggle('hidden', !options?.length);
+  $('#onboarding-chat').scrollTop = $('#onboarding-chat').scrollHeight; // the chat got shorter: keep the question in view
+}
+
+// Once a course is chosen: a short tour of the tabs in place of the input.
+function showTour() {
+  for (const id of ['#onboarding-input-area', '#onboarding-options', '#btn-onboard-browse']) $(id).classList.add('hidden');
+  $('#onboarding-tour').classList.remove('hidden');
+  $('#onboarding-chat').scrollTop = $('#onboarding-chat').scrollHeight;
+  $('#btn-tour-start').focus();
+}
+$('#btn-tour-start').addEventListener('click', () => {
+  setOnboarding(false);
+  loadActiveTopics().catch(() => {});
+  loadTopics();
+});
 
 function appendOnboardMsg(classes, text) {
   const div = document.createElement('div');

@@ -147,11 +147,22 @@
       <div id="onboarding-modal">
         <h2>Welcome to OpenTutor</h2>
         <div id="onboarding-chat"></div>
+        <div id="onboarding-options" class="hidden" role="group" aria-label="Suggested answers"></div>
         <div id="onboarding-input-area">
           <input type="text" id="onboarding-input" placeholder="Type your answer" aria-label="Your answer" />
           <button id="btn-onboard-send" class="primary">Send</button>
         </div>
         <button id="btn-onboard-browse" type="button" class="secondary">Browse available topics</button>
+        <!-- #272: once a course is chosen, where things are. Written here, so it is always right. -->
+        <div id="onboarding-tour" class="hidden">
+          <p>You're all set. Here is where things are:</p>
+          <ul class="tour-list">
+            <li><span aria-hidden="true">📚</span> <strong>Learn</strong>: today's lesson, one step at a time.</li>
+            <li><span aria-hidden="true">🗂️</span> <strong>Topics</strong>: browse ready-made courses or add your own.</li>
+            <li><span aria-hidden="true">💬</span> <strong>Chat</strong>: ask anything, or ask for a new course.</li>
+          </ul>
+          <button id="btn-tour-start" type="button" class="primary">Start learning</button>
+        </div>
       </div>
     </div>
 
