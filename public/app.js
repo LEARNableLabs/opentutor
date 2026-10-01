@@ -187,6 +187,9 @@ const COMPANION_MOMENTS = {
   stuck: ['stuck', 'Try the smallest version of the problem first.'],
   'chat-idle': ['idle', "What's on your mind?"],
   'chat-thinking': ['thinking', 'Thinking it over.'],
+  // #270: what a tap on it says, for the tab it's in. Only what the page really does.
+  tip: ['idle', "Tap a suggested answer, or answer in a sentence or two. Not sure? Say so, and I'll walk you through it."],
+  'chat-tip': ['idle', 'Ask me anything: a question, an example, or a quick explanation.'],
 };
 let companionAway = false;
 try { companionAway = sessionStorage.getItem('ot_companion') === 'hidden'; } catch { /* storage may be off */ }
@@ -212,6 +215,7 @@ function showCompanion() {
   $('#companion-says').textContent = known[1];
   el.classList.remove('hidden');
 }
+$('#companion-tip').addEventListener('click', () => companion(openView === 'chat' ? 'chat-tip' : 'tip', openView === 'chat' ? 'chat' : 'learn'));
 $('#companion-hide').addEventListener('click', () => {
   companionAway = true;
   try { sessionStorage.setItem('ot_companion', 'hidden'); } catch { /* the choice lasts this page anyway */ }

@@ -959,3 +959,31 @@ it('sends one chat message at a time, so the companion thinks until the reply ar
   await first; await settle();
   expect(seen(f)).toBe(null);
 });
+
+// #270: a tap on the companion helps; "Hide" in its bubble is how it goes away.
+it('shows a tip for the lesson when the student taps the companion', async () => {
+  const f = await lessonWith([]);
+  await f.$('#companion-tip').click();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(false);
+  expect(f.$('#companion-says').textContent).toBe("Tap a suggested answer, or answer in a sentence or two. Not sure? Say so, and I'll walk you through it.");
+});
+
+it('shows a tip for the chat when the student taps the companion there', async () => {
+  const f = frontend(() => null);
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  await f.$('#companion-tip').click();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(false);
+  expect(f.$('#companion-says').textContent).toBe('Ask me anything: a question, an example, or a quick explanation.');
+});
+
+it('goes away only through Hide, and stays away for the session', async () => {
+  const f = await lessonWith([]);
+  await f.$('#companion-tip').click();
+  await f.$('#companion-hide').click();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(true);
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(true);
+});
