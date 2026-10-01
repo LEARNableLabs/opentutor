@@ -27,5 +27,8 @@ for (const [event, groups] of Object.entries(wanted)) {
     if (!(group.hooks || []).every((h) => commands.has(h.command))) have.push(group);
   }
 }
-fs.writeFileSync(target, JSON.stringify(settings, null, 2) + '\n');
+// Write then rename: an interrupted run never leaves a half-written settings.json.
+const tmp = `${target}.tmp-${process.pid}`;
+fs.writeFileSync(tmp, JSON.stringify(settings, null, 2) + '\n');
+fs.renameSync(tmp, target);
 JS
