@@ -56,3 +56,26 @@ it('adds the welcome to GET /api/user, and a new student has no courses to show'
     profile: '- **Name:** Ada', hasProfile: true, onboarded: false, welcome: { name: 'Ada', courses: [] },
   });
 });
+
+// Review of #278: a cap of five dropped the sixth course even when it was the one used last.
+it('lists every course, leading with the one used last however many there are', async () => {
+  const slugs = ['3d-printer-firmware', 'acoustic-engineering', 'additive-manufacturing', 'amateur-radio', 'algebraic-geometry', 'game-theory'];
+  student.updateProgress((p) => { p.active_topics = slugs; });
+  student.markLessonComplete('game-theory', 1); // the sixth, and the latest in the history
+  const courses = await whereYouAre(student, student.readProgress());
+  expect(courses.map((c) => c.slug)).toEqual(['game-theory', ...slugs.slice(0, 5)]);
+});
+
+it('shows no lesson in flight from a record whose step it cannot trust', async () => {
+  const records = [
+    { step: '1', steps: ['diagnostic', 'application'] }, // "question 11 of 2"
+    { step: 0, steps: [] }, // "question 1 of 0"
+    { step: 2, steps: ['diagnostic', 'application'] }, // past the end
+    { step: 0 }, // no steps at all
+  ];
+  student.updateProgress((p) => { p.active_topics = ['game-theory']; });
+  for (const record of records) {
+    student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 2, title: 'Sets' }, ...record }));
+    expect((await whereYouAre(student, student.readProgress()))[0].inFlight).toBe(null);
+  }
+});

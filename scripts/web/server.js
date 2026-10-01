@@ -358,7 +358,13 @@ async function handleStudentAPI(req, res, url, state, account) {
 
     // GET /api/user — get student profile
     if (req.method === 'GET' && url.pathname === '/api/user') {
-      return json(res, await userView(state, account));
+      try {
+        return json(res, await userView(state, account));
+      } catch (err) { // as api/user.js answers it (#144): the database's words stay in the log
+        console.error('[user]', err.message);
+        res.writeHead(500);
+        return res.end(JSON.stringify({ error: 'Could not load your profile.' }));
+      }
     }
 
     // POST /api/user — save student profile
