@@ -961,11 +961,35 @@ it('sends one chat message at a time, so the companion thinks until the reply ar
 });
 
 // #270: a tap on the companion helps; "Hide" in its bubble is how it goes away.
-it('shows a tip for the lesson when the student taps the companion', async () => {
+it('shows a tip for the lesson that matches what is on screen', async () => {
   const f = await lessonWith([]);
   await f.$('#companion-tip').click();
   expect(f.$('#companion').classList.contains('hidden')).toBe(false);
-  expect(f.$('#companion-says').textContent).toBe("Tap a suggested answer, or answer in a sentence or two. Not sure? Say so, and I'll walk you through it.");
+  expect(f.$('#companion-says').textContent).toBe('Answer in your own words. A sentence or two is enough.'); // no suggested answers here
+  f.$('#answer-options').children = [{}, {}]; // a question with suggested answers on screen
+  f.$('#answer-options').classList.remove('hidden');
+  await f.$('#companion-tip').click();
+  expect(f.$('#companion-says').textContent).toBe('Tap a suggested answer, or answer in your own words.');
+});
+
+it('a tip never replaces what the tab is waiting for', async () => {
+  let reply;
+  const pending = new Promise((r) => (reply = r));
+  const f = frontend((url) => (url === '/api/chat' ? pending : url === '/api/topics' ? [200, []] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'a question';
+  const sent = f.$('#btn-send').click();
+  await settle();
+  await f.$('#companion-tip').click(); // a tip while the reply is on its way
+  expect(f.$('#companion-says').textContent).toBe('Ask me anything: a question, an example, or a quick explanation.');
+  await f.$('.nav-btn[data-view="topics"]').click();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect(f.$('#companion').dataset.state).toBe('thinking'); // back to what the chat is doing
+  expect(f.$('#companion-says').textContent).toBe('Thinking it over.');
+  reply([200, { reply: 'Answer.', model: 'm' }]);
+  await sent; await settle();
 });
 
 it('shows a tip for the chat when the student taps the companion there', async () => {
