@@ -1,6 +1,7 @@
 import { getState } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
+import { userView } from '../lib/core/welcome.js';
 
 export default readsJson(handler);
 
@@ -16,10 +17,7 @@ async function handler(req, res) {
     const state = await getState(auth.userId);
 
     if (req.method === 'GET') {
-      const user = await state.readUser();
-      const progress = await state.readProgress();
-      const hasProfile = user.includes('**Name:**') && !user.match(/\*\*Name:\*\*\s*$/m);
-      return res.status(200).json({ profile: user, hasProfile, onboarded: progress.active_topics?.length > 0 });
+      return res.status(200).json(await userView(state, auth.account));
     }
 
     if (req.method === 'POST') {
