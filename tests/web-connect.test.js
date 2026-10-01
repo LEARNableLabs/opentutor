@@ -1033,6 +1033,8 @@ it('keeps the open lesson answerable when the offered course cannot be opened', 
   await f.$('#btn-lesson-answer').click();
   await settle();
   expect(f.calls.some((c) => c.url === '/api/lesson' && JSON.parse(c.init.body).answer === 'my answer')).toBe(true);
+  // and the chat never said the course was open
+  expect(f.$('#chat-messages').children.some((n) => /is in Learn|is open in Learn/.test(n.innerHTML))).toBe(false);
 });
 
 // #270: a tap on the companion helps; "Hide" in its bubble is how it goes away.
@@ -1089,4 +1091,74 @@ it('goes away only through Hide, and stays away for the session', async () => {
   await f.$('.nav-btn[data-view="chat"]').click();
   await settle();
   expect(f.$('#companion').classList.contains('hidden')).toBe(true);
+});
+
+// Review of #273: overlapping starts and a failed switch.
+const lessonReply = (slug) => [200, { reply: `${slug}, lesson one.`, step: 0, totalSteps: 3, done: false, lesson: { module: 'M', day: 1, title: slug }, lessonId: `L-${slug}` }];
+
+it('lets the newest lesson start win when an older one answers late', async () => {
+  let late;
+  const f = frontend((url, init) => {
+    if (url !== '/api/lesson') return null;
+    const { topicSlug, answer } = JSON.parse(init.body);
+    if (answer) return [200, { reply: 'ok', step: 1, totalSteps: 3, done: false }];
+    return topicSlug === 'beta' ? new Promise((resolve) => { late = () => resolve(lessonReply('beta')); }) : lessonReply(topicSlug);
+  });
+  await settle();
+  f.$('#active-topic').value = 'beta';
+  f.$('#btn-next').click(); // still pending
+  await settle();
+  f.$('#active-topic').value = 'gamma';
+  f.context.startLesson(); // e.g. a second course offer
+  await settle();
+  late();
+  await settle();
+  expect(f.$('#lesson-meta').textContent).toBe('M — Day 1: gamma');
+  f.$('#lesson-input').value = 'mine';
+  await f.$('#btn-lesson-answer').click();
+  await settle();
+  const sent = JSON.parse(f.calls.findLast((c) => c.url === '/api/lesson').init.body);
+  expect(sent).toMatchObject({ topicSlug: 'gamma', lessonId: 'L-gamma', answer: 'mine' });
+});
+
+it('takes no answer for the lesson it left when the new one fails to start', async () => {
+  const f = frontend((url, init) => {
+    if (url !== '/api/lesson') return null;
+    return JSON.parse(init.body).topicSlug === 'beta' ? [500, { error: 'The tutor is unavailable right now.' }] : lessonReply('alpha');
+  });
+  await settle();
+  f.$('#active-topic').value = 'alpha';
+  await f.$('#btn-next').click();
+  await settle();
+  f.$('#active-topic').value = 'beta';
+  await f.$('#btn-next').click();
+  await settle();
+  expect(f.$('#lesson-input-area').classList.contains('hidden')).toBe(true);
+  f.$('#lesson-input').value = 'for alpha';
+  await f.context.sendLessonAnswer();
+  expect(f.calls.some((c) => c.url === '/api/lesson' && JSON.parse(c.init.body).answer)).toBe(false);
+});
+
+it('opens a course built from the chat once its first lessons are ready, even over an open lesson', async () => {
+  const f = frontend((url, init) => {
+    if (url === '/api/lesson') return lessonReply(JSON.parse(init.body).topicSlug);
+    if (url === '/api/chat') return [200, { reply: 'Sure.', model: 'm', course: { topic: 'Bread', slug: null } }];
+    if (url === '/api/add-topic') return [200, { slug: 'bread', status: 'queued', lessonCount: 0 }];
+    if (url.startsWith('/api/topic-build?')) return [200, { slug: 'bread', status: 'building', phase: 'plan', lessonCount: 5 }];
+    if (url === '/api/progress') return [200, { active_topics: ['alpha', 'bread'] }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  f.$('#active-topic').value = 'alpha';
+  await f.$('#btn-next').click();
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'teach me to bake bread';
+  await f.$('#btn-send').click();
+  await settle();
+  await f.$('#chat-messages').children.find((n) => n.className?.includes('course-offer')).children[0].click();
+  await settle();
+  const starts = f.calls.filter((c) => c.url === '/api/lesson').map((c) => JSON.parse(c.init.body).topicSlug);
+  expect(starts).toEqual(['alpha', 'bread']);
 });

@@ -265,11 +265,18 @@ async function loadActiveTopics() {
   return data.active_topics || [];
 }
 
+// Review of #273: two starts can overlap (two course offers, a welcome button and Next lesson).
+// The newest one wins: an older one answering late changes nothing on screen.
+let lessonStart = 0;
+
 async function startLesson() {
   const slug = $('#active-topic').value;
   if (!slug) return;
 
+  const mine = ++lessonStart;
+  const current = () => mine === lessonStart;
   activeTopicSlug = slug;
+  lessonActive = false; // the lesson on screen is going away: until this one opens, none takes answers
   showOptions(null); // the last lesson's suggested answers belong to it, however this start goes
   companion(null);
   $('#btn-next').disabled = true;
@@ -280,6 +287,7 @@ async function startLesson() {
   try {
     let bubble = null;
     const data = await streamLesson({ topicSlug: slug }, (chunk) => {
+      if (!current()) return;
       if (!bubble) {
         $('#lesson-loading').classList.add('hidden');
         $('#lesson-area').classList.remove('hidden');
@@ -288,6 +296,7 @@ async function startLesson() {
       }
       appendToBubble(bubble, chunk);
     });
+    if (!current()) return;
 
     if (data.done) {
       showCompletion(data.message);
@@ -297,10 +306,12 @@ async function startLesson() {
       showLessonStart(data);
     }
   } catch (err) {
-    showError(err.message);
+    if (current()) showError(err.message);
   } finally {
-    $('#btn-next').disabled = false;
-    $('#lesson-loading').classList.add('hidden');
+    if (current()) {
+      $('#btn-next').disabled = false;
+      $('#lesson-loading').classList.add('hidden');
+    }
     loadKeyStatus().catch(() => {});
   }
 }
@@ -590,10 +601,10 @@ async function enterNewTopic(data, { open = false } = {}) {
     $('#active-topic').value = data.slug;
     if (open || !lessonActive) await startLesson();
   }
-  if (data.status !== 'existing') watchTopicBuild(data.slug, !data.lessonCount);
+  if (data.status !== 'existing') watchTopicBuild(data.slug, !data.lessonCount, open);
 }
 
-function watchTopicBuild(slug, waitingForStarter = false) {
+function watchTopicBuild(slug, waitingForStarter = false, open = false) {
   clearTimeout(buildTimer);
   watchedBuild = slug;
   $('#topic-build-status').textContent = '';
@@ -617,7 +628,7 @@ function watchTopicBuild(slug, waitingForStarter = false) {
         const ready = await requestTopic(slug);
         if (watchedBuild !== slug) return;
         await loadActiveTopics(); $('#active-topic').value = ready.slug;
-        if (!lessonActive) await startLesson();
+        if (open || !lessonActive) await startLesson(); // a course chosen in the chat opens when its lessons are ready
       }
       if (['ready', 'failed'].includes(data.status)) return;
     } catch (err) {
@@ -690,10 +701,10 @@ function offerCourse(course) {
     start.disabled = true;
     try {
       const added = await requestTopic(course.slug || course.topic);
-      appendChat('assistant', course.slug
-        ? `Added **${course.topic}** to your topics. Your first lesson is open in Learn.`
-        : `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);
       await enterNewTopic(added, { open: true });
+      appendChat('assistant', course.slug // said once it is true
+        ? `Added **${course.topic}** to your topics. Your first lesson is in Learn.`
+        : `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);
     } catch (err) {
       start.disabled = false;
       appendChat('assistant', err.message);
