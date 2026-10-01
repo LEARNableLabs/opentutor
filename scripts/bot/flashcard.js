@@ -96,11 +96,14 @@ function parseFlashcard(text) {
     const data = parseFirstJson(text);
     if (data) {
       if (data.question && data.options) {
+        // A right answer that is not one of the options (missing, null, out of range) makes a plain
+        // poll (#294): neither a quiz Telegram refuses nor one graded on a made-up option 0.
+        const correct = data.correct ?? data.correct_index;
         return {
           type: 'poll',
           question: `🔁 ${data.question}`,
           options: data.options,
-          correctIndex: data.correct ?? data.correct_index ?? 0,
+          correctIndex: Number.isInteger(correct) && data.options[correct] !== undefined ? correct : undefined,
           explanation: data.explanation || '',
         };
       }

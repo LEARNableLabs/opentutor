@@ -43,7 +43,10 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, dueReview
   try {
     const jsonMatch = response.text.match(/\[[\s\S]*\]/);
     if (!jsonMatch) throw new Error('No JSON array found');
-    const questions = JSON.parse(jsonMatch[0]);
+    // A question whose right answer is not one of its options can't be a quiz: Telegram refuses it,
+    // which ended the whole quiz here, and there would be nothing to grade (#294).
+    const questions = JSON.parse(jsonMatch[0]).filter((q) => Number.isInteger(q?.correct) && q.options?.[q.correct] !== undefined);
+    if (!questions.length) throw new Error('No question with a right answer');
 
     log.info({ topic: topicSlug, question_count: questions.length }, 'quiz generated');
     const graded = new Set();
@@ -53,11 +56,11 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, dueReview
         explanation: q.explanation,
       });
       // The answer reaches spaced review through the topic and concept the question names (#294): two
-      // topics can share a concept name. Once per quiz, on a question with a right answer: three
-      // questions on one concept are one review, not three steps out in its schedule.
+      // topics can share a concept name. Once per quiz: three questions on one concept are one
+      // review, not three steps out in its schedule.
       const tested = concepts.find((c) => c.topic === String(q.topic ?? '').trim()
         && c.concept.toLowerCase() === String(q.concept ?? '').trim().toLowerCase());
-      if (sent?.poll?.id && tested && Number.isInteger(q.correct) && !graded.has(tested)) {
+      if (sent?.poll?.id && tested && !graded.has(tested)) {
         graded.add(tested);
         rememberReviewCard(sent.poll.id, { chatId, topic: tested.topic, concept: tested.concept, correctIndex: q.correct });
       }

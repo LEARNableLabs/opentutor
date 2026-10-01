@@ -36,7 +36,11 @@ const TODAY = new Date().toISOString().split('T')[0];
 const channel = {
   sendMessage: vi.fn(async () => ({ message_id: 1 })),
   sendTyping: vi.fn(),
-  sendPoll: vi.fn(async () => ({ message_id: 2, poll: { id: `poll-${channel.sendPoll.mock.calls.length}` } })),
+  sendPoll: vi.fn(async (chatId, question, options, quiz = {}) => {
+    // Like Telegram: a quiz whose right answer is not one of its options is refused.
+    if (quiz.correctOptionId !== undefined && options[quiz.correctOptionId] === undefined) throw new Error('Telegram sendPoll: Bad Request: wrong correct option id');
+    return { message_id: 2, poll: { id: `poll-${channel.sendPoll.mock.calls.length}` } };
+  }),
   answerCallback: vi.fn(),
   editMessageButtons: vi.fn(),
 };
@@ -119,15 +123,35 @@ describe('quiz poll answers reach spaced review', () => {
     expect(record(CONCEPT)).toMatchObject({ reps: 1, streak: 1 });
   });
 
-  it('grades a concept once per quiz, on its first question with a right answer, and never a concept the quiz did not list', async () => {
+  it('grades a concept once per quiz, and never a concept the quiz did not list', async () => {
     due(TOPIC, CONCEPT);
-    quizReply([CONCEPT, undefined], [CONCEPT, 1], [CONCEPT, 2], ['something it made up', 0]);
+    quizReply([CONCEPT, 1], [CONCEPT, 2], ['something it made up', 0]);
     await send('/review');
-    expect(channel.sendPoll).toHaveBeenCalledTimes(4);
+    expect(channel.sendPoll).toHaveBeenCalledTimes(3);
 
-    for (const [poll, option] of [['poll-1', 1], ['poll-2', 1], ['poll-3', 0], ['poll-4', 0]]) await answerPoll(poll, [option]);
+    for (const [poll, option] of [['poll-1', 1], ['poll-2', 0], ['poll-3', 0]]) await answerPoll(poll, [option]);
 
-    expect(record(CONCEPT)).toMatchObject({ reps: 1, streak: 1 }); // poll-2, answered right
+    expect(record(CONCEPT)).toMatchObject({ reps: 1, streak: 1 }); // poll-1, answered right
+  });
+
+  it('skips a question whose right answer is not one of its options, and sends the rest', async () => {
+    due(TOPIC, CONCEPT);
+    quizReply([CONCEPT, undefined], [CONCEPT, null], [CONCEPT, 7], [CONCEPT, 1]);
+    await send('/review');
+    expect(channel.sendPoll).toHaveBeenCalledTimes(1);
+
+    await answerPoll('poll-1', [1]);
+
+    expect(record(CONCEPT)).toMatchObject({ reps: 1, streak: 1 });
+  });
+
+  it('says so when no question has a right answer', async () => {
+    due(TOPIC, CONCEPT);
+    quizReply([CONCEPT, null], [CONCEPT, 7]);
+    await send('/review');
+
+    expect(channel.sendPoll).not.toHaveBeenCalled();
+    expect(sentText()).toMatch(/couldn't build that quiz/);
   });
 
   it('grades the topic a question names when two due concepts share a name', async () => {
@@ -155,13 +179,12 @@ describe('quiz poll answers reach spaced review', () => {
   });
 
   it.each([
-    ['an unknown poll', 'poll-404', [2], STUDENT, 2],
-    ['a retracted vote', 'poll-1', [], STUDENT, 2],
-    ['someone other than the student it was sent to (a group, a forwarded poll)', 'poll-1', [2], 99, 2],
-    ['a question with no right answer (it goes out as a plain poll, whose vote can change)', 'poll-1', [2], STUDENT, undefined],
-  ])('ignores %s', async (_case, pollId, options, user, correct) => {
+    ['an unknown poll', 'poll-404', [2], STUDENT],
+    ['a retracted vote', 'poll-1', [], STUDENT],
+    ['someone other than the student it was sent to (a group, a forwarded poll)', 'poll-1', [2], 99],
+  ])('ignores %s', async (_case, pollId, options, user) => {
     due(TOPIC, CONCEPT);
-    quizReply([CONCEPT, correct]);
+    quizReply([CONCEPT, 2]);
     await send('/review');
     const before = record(CONCEPT);
 
@@ -194,14 +217,17 @@ describe('quiz poll answers reach spaced review', () => {
 
 describe('flashcards', () => {
   it.each([
-    ['is graded', 1, { reps: 1, streak: 1 }],
-    ['whose right answer is not an index is not graded', '1', { reps: 0 }],
-  ])('a flashcard poll %s', async (_case, correct, expected) => {
+    ['is graded', 1, 1, { reps: 1, streak: 1 }],
+    ['whose right answer is not an index is not graded', '1', 1, { reps: 0 }],
+    ['with no right answer is not graded on a made-up one', undefined, 0, { reps: 0 }],
+    ['with a null right answer is not graded on a made-up one', null, 0, { reps: 0 }],
+    ['whose right answer is not one of its options still goes out, ungraded', 7, 0, { reps: 0 }],
+  ])('a flashcard poll %s', async (_case, correct, option, expected) => {
     due(TOPIC, CONCEPT);
     generate.mockResolvedValue({ text: JSON.stringify({ question: 'Which one?', options: ['a', 'b', 'c', 'd'], correct }) });
 
     await deliverFlashcards(STUDENT, channel, new Map(), 1);
-    await answerPoll('poll-1', [1]);
+    await answerPoll('poll-1', [option]);
 
     expect(record(CONCEPT)).toMatchObject(expected);
   });
