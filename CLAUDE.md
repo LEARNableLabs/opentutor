@@ -216,6 +216,11 @@ Bot supports Telegram groups. Per-student progress in `workspace/students/`, gro
 
 Set `OPENTUTOR_DATA_DIR=.test-data` to redirect runtime state to an isolated directory. Note that the bot also resolves its **domains** from `<dir>/domains` when this is set (`scripts/bot/config.js`), so `npm run bot:test` starts with no topics unless you seed that directory.
 
+## Claude Code settings (#302)
+
+`.claude/settings.json` is tracked: it registers `.claude/hooks/session-start.sh`, which runs `npm ci` at the start of a Claude Code on the web session (local checkouts skip it). `.claude/` is otherwise gitignored, so files there are force-added (`git add -f`).
+Personal hooks and permissions go in `.claude/settings.local.json`, never `settings.json`. A private `settings.json` from before #302 is overwritten without warning by the first pull that brings in the tracked one, so move its entries to `settings.local.json` first.
+
 ## Durable web generation (#121)
 
 `topic-service.js` persists a build and awaits queue acceptance before shared `quick-start.js` creates five starter lessons. `topic-builds.js` performs one quick/plan/build/critique stage per delivery, staging model writes in memory and atomically publishing content with an id/revision compare-and-set. The 300-second lease outlasts each bounded stage (270 seconds of model calls); stale workers cannot overwrite a recovered or recreated job. Generated content is read before shipped content, with student completions overlaid on stable starter lesson ids.
