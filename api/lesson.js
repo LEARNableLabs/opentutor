@@ -8,7 +8,7 @@
  * Active lesson state stored in KV (SQLite or Supabase).
  */
 
-import { keepTrustedLinks, keepVerifiedSources, sourceFilter } from '../lib/core/links.js';
+import { keepTrustedLinks, keepVerifiedSources, sourceFilter, withoutSources } from '../lib/core/links.js';
 import { randomUUID } from 'crypto';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
@@ -169,6 +169,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     // taught it to stop grading, about 1 step in 6 (#224). The student only ever sees `reply`.
     active.history.push({ role: 'assistant', content: response.text });
     active.reply = reply;
+    active.sourcesVerified = true;
     active.step++;
 
     const done = active.step >= steps.length;
@@ -221,7 +222,10 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   const shown = active && lastShown(active);
   if (shown != null) {
     // Filtered here too: a saved reply may predate the filter, or come from the history or plan.
-    return { status: 200, body: { reply: keepTrustedLinks(await keepVerifiedSources(shown, active.resources), active.resources), step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true, ...suggested(active.plan, steps[active.step]) } };
+    // Saved new replies were already verified. Legacy replies lose an unverified footer
+    // without a network request or a write that could race with a progressing lesson.
+    const reply = keepTrustedLinks(active.sourcesVerified === true ? shown : withoutSources(shown), active.resources);
+    return { status: 200, body: { reply, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true, ...suggested(active.plan, steps[active.step]) } };
   }
 
   // ── Start new lesson ──────────────────────────────────────
@@ -363,7 +367,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     plan,
     steps: lessonSteps,
     step: 0,
-    reply: keepTrustedLinks(withGoal(plan, plan[lessonSteps[0]]), lessonResources),
+    reply: keepTrustedLinks(await keepVerifiedSources(withGoal(plan, plan[lessonSteps[0]]), lessonResources), lessonResources),
+    sourcesVerified: true,
     // The lesson's own reading and watching: the only links its replies may carry, besides Wikipedia (#271).
     resources: lessonResources,
     history: [],

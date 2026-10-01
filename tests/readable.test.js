@@ -184,6 +184,35 @@ it('bounds verification to two citations in one footer', async () => {
   expect(reply).toBe(`Facts.\n> 📚 Sources: ${link('A')}; ${link('B')}`);
 });
 
+it('recognizes only a terminal marked footer and preserves ordinary Sources quotes', async () => {
+  const check = vi.fn();
+  vi.stubGlobal('fetch', check);
+  const quoted = 'Explain this quotation:\n> Sources: primary inputs';
+  expect(await keepVerifiedSources(quoted)).toBe(quoted);
+  expect(await keepVerifiedSources('Facts.\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)\n\nWhat do you think?')).toBe('Facts.\n\nWhat do you think?');
+  expect(check).not.toHaveBeenCalled();
+});
+
+it('resumes an already-verified footer without fetching, and drops legacy footers without rewriting the lesson', async () => {
+  const check = vi.fn(async () => new Response(null, { status: 200 }));
+  vi.stubGlobal('fetch', check);
+  const { kv, ctx } = demoLesson();
+  const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+  const adapter = await ctx.getAdapter();
+  adapter.generate.mockResolvedValue({ text: '<assessment>{"score":0.8}</assessment>\nFacts.\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)' });
+  const next = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'because', lessonId: start.body.lessonId, step: start.body.step });
+  expect(check).toHaveBeenCalledTimes(1);
+  const resumed = await lessonTurn(ctx, { topicSlug: 'demo' });
+  expect(resumed.body.reply).toBe(next.body.reply);
+  expect(check).toHaveBeenCalledTimes(1);
+  const key = 'web_lesson:demo';
+  const legacy = JSON.stringify({ ...JSON.parse(kv.get(key)), sourcesVerified: undefined });
+  kv.set(key, legacy);
+  expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe('Facts.');
+  expect(check).toHaveBeenCalledTimes(1);
+  expect(kv.get(key)).toBe(legacy);
+});
+
 it('streams prose and ordinary complete quotes while withholding a source footer split at any token boundary', () => {
   const prose = 'A fact.\n> An ordinary quote.\nWhat next?\n';
   const text = prose + '> 📚 Sources: [Zorblax](https://en.wikipedia.org/wiki/Zorblax_effect)\n';
