@@ -6,6 +6,7 @@ import { keepTrustedLinks } from '../lib/core/links.js';
 import { buildSocraticResponsePrompt, buildOnboardingPrompt, FORMAT, LINKS } from '../lib/core/prompts.js';
 import { chatTurn } from '../api/chat.js';
 import { lessonTurn } from '../api/lesson.js';
+import { formatPracticeFeedback } from '../lib/core/deliberate-practice.js';
 
 // #271: replies that help the reader read, and only links a student can trust.
 const RESOURCE = 'https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/';
@@ -72,7 +73,8 @@ it('unlinks an invented link in a chat reply, and asks the chat for the format',
   expect(system).toContain(LINKS);
 });
 
-it('lets a lesson link its own resources and nothing invented', async () => {
+// A one-lesson topic on disk, its state in memory, and a model that answers a plan or a reply.
+function demoLesson({ diagnostic = 'Why?', feedback = null } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'ot-links-'));
   const dir = path.join(root, 'skills', 'tutor', 'domains', 'demo');
   fs.mkdirSync(dir, { recursive: true });
@@ -86,17 +88,21 @@ it('lets a lesson link its own resources and nothing invented', async () => {
     async updateProgress(fn) { const p = { history: [] }; fn(p); return p; },
     readCurriculum() { return JSON.parse(fs.readFileSync(file, 'utf8')); },
     getNextLesson() { return this.readCurriculum().lessons[0]; },
-    async markLessonComplete() {}, readDomainFile() { return null; },
+    async markLessonComplete() {}, readDomainFile: (slug, name) => (name === 'practice-feedback.md' ? feedback : null),
   };
   const prompts = [];
   const adapter = {
     generate: vi.fn(async (system) => {
       prompts.push(system);
-      if (!system.includes('## Current Step:')) return { text: JSON.stringify({ ...PLAN, diagnostic: 'Read [this post](https://invented.example/p) first. Why?' }) };
+      if (!system.includes('## Current Step:')) return { text: JSON.stringify({ ...PLAN, diagnostic }) };
       return { text: `<assessment>{"score":0.8}</assessment>\nGood. See [the notes](${RESOURCE}) and [my blog](https://invented.example/b).` };
     }),
   };
-  const ctx = { state, getAdapter: async () => adapter, skills: new Map() };
+  return { kv, prompts, ctx: { state, getAdapter: async () => adapter, skills: new Map() } };
+}
+
+it('lets a lesson link its own resources and nothing invented', async () => {
+  const { kv, prompts, ctx } = demoLesson({ diagnostic: 'Read [this post](https://invented.example/p) first. Why?' });
   const start = await lessonTurn(ctx, { topicSlug: 'demo' });
   expect(start.body.reply).toContain('Read this post first.'); // the planner's invented link is unlinked too
   const next = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'because', lessonId: start.body.lessonId, step: start.body.step });
@@ -110,4 +116,17 @@ it('lets a lesson link its own resources and nothing invented', async () => {
   }
   const resumed = await lessonTurn(ctx, { topicSlug: 'demo' });
   expect(resumed.body).toMatchObject({ resumed: true, reply: 'Old phish.' });
+});
+
+it('unlinks an invented link in a review lesson\'s concept', async () => {
+  const feedback = formatPracticeFeedback({
+    timestamp: '2026-10-01T00:00:00.000Z', observations: [],
+    directives: [{ type: 'BLOCK', target: '[payoffs](https://evil.example/p)', reason: 'BLOCK advancement until retested', priority: 'critical' }],
+    model: { recentAccuracy: 0.5, trend: 'steady', difficulty: { level: 3, label: 'standard' }, engagement: 'steady', concepts: { shaky: [] } },
+  }, 'Demo');
+  const { ctx } = demoLesson({ feedback });
+  const review = await lessonTurn(ctx, { topicSlug: 'demo' });
+  expect(review.body.lesson).toMatchObject({ review: true });
+  expect(review.body.reply).toContain('Explain **payoffs** in your own words');
+  expect(review.body.reply).not.toContain('evil.example');
 });

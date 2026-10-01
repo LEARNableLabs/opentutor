@@ -283,7 +283,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         plan,
         steps,
         step: 0,
-        reply: withGoal(plan, `Explain **${block.target}** in your own words: what is it, and why does it matter?`),
+        // The concept comes from a curriculum, which a model may have written: no resources, only the allowlist.
+        reply: keepTrustedLinks(withGoal(plan, `Explain **${block.target}** in your own words: what is it, and why does it matter?`)),
         history: [],
         assessments: [],
         isReview: true,
