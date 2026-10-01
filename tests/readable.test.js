@@ -220,6 +220,15 @@ it('cleans a shipped curriculum file of invented resources and nothing else, kee
   expect(withoutInvented(out)).toEqual({ text: out, removed: [] });
 });
 
+// Shipped domains are written by agents following the skill, not only by the builder: check what ships.
+it('ships no lesson resource whose shape cannot be real', () => {
+  const domains = 'skills/tutor/domains';
+  const invented = fs.readdirSync(domains).filter((slug) => fs.existsSync(path.join(domains, slug, 'curriculum.json')))
+    .flatMap((slug) => JSON.parse(fs.readFileSync(path.join(domains, slug, 'curriculum.json'), 'utf8')).lessons
+      .flatMap((lesson) => lesson.resources || []).filter((url) => inventedLink(url)).map((url) => `${slug}: ${url}`));
+  expect(invented).toEqual([]);
+});
+
 // #281: a reply that presents facts ends with a short quoted line naming real sources.
 it('asks web lesson replies and the chat for a sources line, and never Telegram or onboarding', async () => {
   expect(web()).toContain(SOURCES);
