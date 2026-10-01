@@ -35,10 +35,10 @@ it.each([
 });
 
 it('still answers the profile and progress from a working store', async () => {
-  state = { readUser: async () => '- **Name:** Ada', readProgress: async () => ({ active_topics: ['knots'] }), writeUser: vi.fn() };
+  state = { readUser: async () => '- **Name:** Ada', readProgress: async () => ({ active_topics: ['knots'] }), writeUser: vi.fn(), getTopicProgress: async () => null, readKV: async () => null };
 
   expect((await call(progress, 'GET')).body).toEqual({ active_topics: ['knots'] });
-  expect((await call(user, 'GET')).body).toEqual({ profile: '- **Name:** Ada', hasProfile: true, onboarded: true });
+  expect((await call(user, 'GET')).body).toEqual({ profile: '- **Name:** Ada', hasProfile: true, onboarded: true, welcome: { name: 'Ada', courses: [] } });
   expect(await call(user, 'POST', { name: 'Ada' })).toMatchObject({ statusCode: 200, body: { ok: true } });
   expect(state.writeUser).toHaveBeenCalledWith(expect.stringContaining('**Name:** Ada'));
 });

@@ -27,6 +27,7 @@ import { lessonTurn } from '../../api/lesson.js';
 import { chatTurn } from '../../api/chat.js';
 import { onboardTurn } from '../../api/onboard.js';
 import { authenticateRequest, authFailure } from '../../api/_lib/auth.js';
+import { userView } from '../../lib/core/welcome.js';
 import { checkAdmin, adminFailure } from '../../api/_lib/admin-auth.js';
 import { listStudents, findStudent, provisionStudent, decommissionStudent } from '../../lib/core/students.js';
 import { createAdapterFromEnv, createPipelineAdapterFromEnv } from '../../lib/adapters/index.js';
@@ -236,14 +237,14 @@ async function handleAPI(req, res, url) {
 
   try {
     const rootState = state;
-    return await handleStudentAPI(req, res, url, auth.userId == null ? rootState : rootState.forStudent(auth.userId));
+    return await handleStudentAPI(req, res, url, auth.userId == null ? rootState : rootState.forStudent(auth.userId), auth.account);
   } catch (err) {
     console.error('[api]', err.message);
     return fail(res, 500, 'The tutor is unavailable right now. Please try again.');
   }
 }
 
-async function handleStudentAPI(req, res, url, state) {
+async function handleStudentAPI(req, res, url, state, account) {
   try {
     // GET /api/topics — list all topics with progress
     if (req.method === 'GET' && url.pathname === '/api/topics') {
@@ -357,10 +358,7 @@ async function handleStudentAPI(req, res, url, state) {
 
     // GET /api/user — get student profile
     if (req.method === 'GET' && url.pathname === '/api/user') {
-      const user = await state.readUser();
-      const progress = await state.readProgress();
-      const hasProfile = user.includes('**Name:**') && !user.match(/\*\*Name:\*\*\s*$/m);
-      return json(res, { profile: user, hasProfile, onboarded: progress.active_topics?.length > 0 });
+      return json(res, await userView(state, account));
     }
 
     // POST /api/user — save student profile
