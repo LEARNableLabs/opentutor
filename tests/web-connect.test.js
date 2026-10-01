@@ -381,6 +381,42 @@ it('updates the Topics tab\'s accuracy when the numbers arrive after the list', 
   expect($('#topic-list').innerHTML).toContain('67% accuracy');
 });
 
+// Review of #308: a lesson finished while Topics was open moves its card on, count and bar included.
+it('moves an open Topics card\'s lesson count forward when newer numbers arrive, never back', async () => {
+  const topics = [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }];
+  let stat = { slug: 'knots', completed: 2, total: 5, percent: 40, accuracy: 50 };
+  const f = frontend((url) => (url === '/api/topics' ? [200, topics] : url === '/api/progress' ? [200, { active_topics: ['knots'], topics: [stat] }] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="topics"]').click();
+  await settle();
+  expect(f.$('#topic-list').innerHTML).toContain('2 of 5 lessons<span class="topic-accuracy">50% accuracy</span>');
+
+  stat = { slug: 'knots', completed: 3, total: 5, percent: 60, accuracy: 67 };
+  await f.context.loadProgress();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons<span class="topic-accuracy">67% accuracy</span>');
+  expect(f.$('#topic-list').innerHTML).toContain('width:60%');
+
+  stat = { slug: 'knots', completed: 1, total: 5, percent: 20, accuracy: 67 }; // fewer than the card already shows
+  await f.context.loadProgress();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons');
+});
+
+it('keeps keyboard focus on the same topic card when new numbers redraw the list', async () => {
+  const topics = [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }, { slug: 'bread', topic: 'Bread', total: 3, completed: 1, percent: 33 }];
+  const f = frontend((url) => (url === '/api/topics' ? [200, topics] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="topics"]').click();
+  await settle();
+  // The double's list holds no elements of its own: hand it the cards a redraw makes, and focus one.
+  const card = (slug) => ({ dataset: { slug }, addEventListener() {}, focus: vi.fn(), closest() { return this; } });
+  const drawn = [card('knots'), card('bread')];
+  f.$('#topic-list').querySelectorAll = () => drawn;
+  f.context.document.activeElement = card('bread');
+  await f.context.loadProgress();
+  expect(drawn[1].focus).toHaveBeenCalled();
+  expect(drawn[0].focus).not.toHaveBeenCalled();
+});
+
 it('still celebrates a finished lesson when its streak cannot be loaded', async () => {
   const { $ } = await lastStep({ done: true }, (url) => (url === '/api/progress' ? [500, { error: 'down' }] : null));
   $('#lesson-input').value = 'because the payoffs change';

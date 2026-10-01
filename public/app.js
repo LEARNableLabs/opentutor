@@ -316,7 +316,18 @@ function showProgress(data, asked) {
   const line = [streakText(data?.streak), week].filter(Boolean).join(' · ');
   $('#stats-line').textContent = line;
   $('#stats-line').classList.toggle('hidden', !line);
-  if (openView === 'topics' && allTopics.length) filterTopics(); // the cards on screen take the new accuracy
+  if (openView === 'topics' && allTopics.length) refreshTopics();
+}
+
+// An open Topics tab takes the newer numbers: a lesson finished since the list loaded moves its card on,
+// count and bar included, beside its new accuracy. Counts only grow, so an answer that saw fewer lessons
+// moves nothing back.
+function refreshTopics() {
+  for (const stat of Array.isArray(progressStats.topics) ? progressStats.topics : []) {
+    const topic = allTopics.find((t) => t.slug === stat?.slug);
+    if (topic && Number.isInteger(stat.completed) && stat.completed > topic.completed) Object.assign(topic, { completed: stat.completed, total: stat.total, percent: stat.percent });
+  }
+  filterTopics();
 }
 
 /** The numbers now: this answer, or a newer one already on screen. Null if this request failed. */
@@ -584,6 +595,7 @@ function filterTopics() {
 
 function renderTopics(topics) {
   const list = $('#topic-list');
+  const focused = document.activeElement?.closest?.('.topic-card')?.dataset.slug; // a redraw keeps a keyboard student's place
   const progress = topics.filter((t) => t.completed > 0);
   const available = topics.filter((t) => t.completed === 0);
 
@@ -605,6 +617,7 @@ function renderTopics(topics) {
 
   list.querySelectorAll('.topic-card').forEach((card) => {
     card.addEventListener('click', () => selectTopic(card.dataset.slug));
+    if (focused && card.dataset.slug === focused) card.focus();
   });
 }
 
