@@ -678,6 +678,7 @@ function offerCourse(course) {
     start.disabled = true;
     try {
       const added = await requestTopic(course.slug || course.topic);
+      lessonActive = false; // the student chose this course: its lesson opens, and the one they leave stays saved
       appendChat('assistant', course.slug
         ? `Added **${course.topic}** to your topics. Your first lesson is open in Learn.`
         : `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);

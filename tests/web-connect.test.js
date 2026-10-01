@@ -982,3 +982,27 @@ it('turns a course offered in the chat into a button that starts it', async () =
   const add = f.calls.find((c) => c.url === '/api/add-topic');
   expect(JSON.parse(add.init.body)).toEqual({ topic: 'game-theory', level: 'intermediate' });
 });
+
+it('switches to the offered course even while another lesson is open', async () => {
+  const f = frontend((url, init) => {
+    if (url === '/api/lesson') return [200, { reply: JSON.parse(init.body).topicSlug === 'game-theory' ? 'Game theory, lesson one.' : 'Alpha, lesson one.', step: 0, totalSteps: 3, done: false, lesson: { module: 'M', day: 1, title: 'T' }, lessonId: `L-${JSON.parse(init.body).topicSlug}` }];
+    if (url === '/api/chat') return [200, { reply: 'Sure.', model: 'm', course: { topic: 'Game Theory', slug: 'game-theory' } }];
+    if (url === '/api/add-topic') return [200, { slug: 'game-theory', status: 'existing', lessonCount: 29 }];
+    if (url === '/api/progress') return [200, { active_topics: ['demo', 'game-theory'] }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  f.$('#active-topic').value = 'demo';
+  await f.$('#btn-next').click(); // a lesson in "demo" is open
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'teach me game theory';
+  await f.$('#btn-send').click();
+  await settle();
+  const offer = f.$('#chat-messages').children.find((n) => n.className?.includes('course-offer'));
+  await offer.children[0].click();
+  await settle();
+  const starts = f.calls.filter((c) => c.url === '/api/lesson' && !JSON.parse(c.init.body).answer).map((c) => JSON.parse(c.init.body).topicSlug);
+  expect(starts).toEqual(['demo', 'game-theory']); // the offered course's lesson opens
+});

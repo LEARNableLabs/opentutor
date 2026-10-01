@@ -6,31 +6,41 @@ import { VOICE } from '../lib/core/prompts.js';
 import { publicCatalog } from '../lib/core/catalog.js';
 import { courseFor } from './onboard.js';
 
-// #273: a reply can offer one course. The marker never reaches the student; the subject is matched to a
-// ready-made course when there is one (the matching onboarding uses), and is a new topic otherwise.
-const COURSE = /<\s*COURSE\s*>([^<>]{1,80})<\s*\/\s*COURSE\s*>/i;
+// #273, #275: a reply can offer one course. Only a single marker at the very end of the reply is an offer: an
+// echo of the student's text, a nested marker or two of them are none. No marker ever reaches the student.
+const OFFER = /<\s*COURSE\s*>([^<>]{1,80})<\s*\/\s*COURSE\s*>\s*$/i;
+const OPENING = /<\s*COURSE\s*>/gi;
+function withoutMarkers(text) {
+  let out = text;
+  for (let prev; prev !== out; ) { prev = out; out = out.replace(/<\s*COURSE\s*>[^<>]*<\s*\/\s*COURSE\s*>/gi, ''); }
+  return out.replace(/<\s*\/?\s*COURSE\s*>/gi, '').trim();
+}
+
+// The subject names a ready-made course exactly (the match onboarding uses), or through a known qualifier
+// alone: "game theory basics", "intro to game theory". Any other extra word makes it a new subject, so
+// "architecture decision records" is never Architecture.
 let catalog; // shipped courses don't change while the process runs
 const norm = (text) => text.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+const BEFORE = ['an-introduction-to', 'introduction-to', 'intro-to', 'the-basics-of', 'basics-of', 'fundamentals-of'];
+const AFTER = ['basics', 'fundamentals', 'essentials', 'for-beginners', 'from-scratch', 'from-the-ground-up', '101', 'crash-course', 'made-simple'];
+function core(named) {
+  let subject = norm(named);
+  const before = BEFORE.find((q) => subject.startsWith(`${q}-`));
+  if (before) subject = subject.slice(before.length + 1);
+  const after = AFTER.find((q) => subject.endsWith(`-${q}`));
+  if (after) subject = subject.slice(0, -(after.length + 1));
+  return subject;
+}
 function offeredCourse(text) {
-  const named = text.match(COURSE)?.[1].replace(/\s+/g, ' ').trim();
+  if ((text.match(OPENING) || []).length !== 1) return null;
+  const named = text.match(OFFER)?.[1].replace(/\s+/g, ' ').trim();
   if (!named) return null;
   catalog ||= publicCatalog();
-  // The exact match onboarding uses first. Then, since this is only an offer the student still taps, the
-  // ready-made course whose title starts the subject ("Game theory from scratch" is Game Theory): the
-  // longest such title, whole words only, so "Gamebook writing" is never Game Theory.
-  const wanted = norm(named);
-  const slug = courseFor(named, catalog.map((c) => c.slug)) || catalog
-    .map((c) => ({ slug: c.slug, title: norm(c.topic.split(/\s+[—–-]\s+/)[0]) }))
-    .filter(({ title }) => title && wanted.startsWith(`${title}-`))
-    .sort((a, b) => b.title.length - a.title.length)[0]?.slug || null;
+  const slugs = catalog.map((c) => c.slug);
+  const slug = courseFor(named, slugs) || courseFor(core(named), slugs);
   return { topic: slug ? catalog.find((c) => c.slug === slug).topic : named, slug };
 }
 
-/**
- * One chat turn, shared by this route and the local server (scripts/web/server.js), as
- * lessonTurn and onboardTurn are. The message is checked before `getAdapter` chooses a key,
- * so an empty or oversized message is a 400, never a billed model call (#228).
- */
 export async function chatTurn({ state, getAdapter }, { message } = {}) {
   const text = turnText(message);
   if (text === null) return { status: 400, body: { error: 'A message of 1 to 4,000 characters is required.' } };
@@ -50,7 +60,7 @@ export async function chatTurn({ state, getAdapter }, { message } = {}) {
     { model: 'cheap' },
   );
   const course = offeredCourse(response.text);
-  const reply = response.text.replace(COURSE, '').replace(/<\s*\/?\s*COURSE\s*>/gi, '').trim();
+  const reply = withoutMarkers(response.text);
   return { status: 200, body: { reply, model: response.model, ...(course && { course }) } };
 }
 
