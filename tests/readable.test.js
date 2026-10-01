@@ -150,6 +150,10 @@ it.each([
   ['https://www.youtube.com/watch?list=PLintro-to-chemistry', 'invalid YouTube playlist id'], // plays the list: no video of its own
   ['https://www.youtube.com/embed/videoseries?list=PLintro-to-chemistry', 'invalid YouTube playlist id'],
   ['https://www.youtube.com/embed?listType=playlist&list=PLintro-to-chemistry', 'invalid YouTube playlist id'],
+  ['https://www.youtube.com/embed/videoseries', 'invalid YouTube playlist id'], // embeds a list, and names none
+  ['https://www.youtube.com/playlist?list=UU', 'invalid YouTube playlist id'], // two capitals and nothing after
+  ['https://www.youtube-nocookie.com/embed/videoseries?list=PLintro-to-chemistry', 'invalid YouTube playlist id'],
+  ['https://www.youtube-nocookie.com/embed/pantheon-construction', 'invalid YouTube video id'],
   ['https://example.com/video', 'placeholder'],
   ['https://www.example.org/article', 'placeholder'],
   ['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-control', 'placeholder'],
@@ -170,6 +174,7 @@ it.each([
   'https://www.youtube.com/embed?listType=playlist&list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/watch?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/watch?v=JpdRchyVtvk&list=PLintro-to-chemistry', // the video still plays
+  'https://www.youtube-nocookie.com/embed/JpdRchyVtvk',
   'https://www.youtube.com/@3blue1brown',
   'https://www.youtube.com/results?search_query=example-based+learning',
   'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3172578/',
@@ -210,6 +215,15 @@ it('stops trusting an invented resource saved with a lesson already in flight', 
   const next = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'because', lessonId: start.body.lessonId, step: start.body.step });
   expect(next.body.reply).toBe('Good. See the video.');
   expect(offered(prompts.at(-1))).toEqual([RESOURCE]);
+});
+
+it('keeps a saved sources line that cites only the resources a lesson still has', async () => {
+  const { kv, ctx } = demoLesson();
+  await lessonTurn(ctx, { topicSlug: 'demo' });
+  const key = 'web_lesson:demo';
+  const reply = `Facts.\n> 📚 Sources: [Notes](${RESOURCE})`;
+  kv.set(key, JSON.stringify({ ...JSON.parse(kv.get(key)), resources: [RESOURCE, INVENTED], sourcesVerified: true, reply }));
+  expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe(reply);
 });
 
 it('drops a saved sources line that was verified against an invented resource', async () => {

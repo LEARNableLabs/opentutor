@@ -101,10 +101,11 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   const record = typeof raw === 'string' ? JSON.parse(raw) : raw;
   const active = record?.plan ? record : null; // a record without a plan only counts reviews
   // Checked again, not trusted as saved: a lesson started before #293 may hold an invented resource.
-  // Its saved sources line was verified against that resource, so it counts as unverified.
+  // A saved sources line that cited a removed one was verified against it, so it counts as unverified.
   if (active?.resources) {
     const kept = lessonLinks(active.resources);
-    if (kept.length < active.resources.length) active.sourcesVerified = false;
+    const shown = String(lastShown(active) ?? '');
+    if (active.resources.some((r) => !kept.includes(r) && shown.includes(r))) active.sourcesVerified = false;
     active.resources = kept;
   }
   // A lesson saved before #148 has no step list of its own.
