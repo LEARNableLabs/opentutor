@@ -12,10 +12,11 @@ cd "$CLAUDE_PROJECT_DIR"
 # does, under a different npm version). The container is cached after this hook, so the
 # install is skipped when the tree is known good: a marker holding the lockfile's hash,
 # written only after npm ci succeeds, and every top-level dependency still present.
+# --include=dev: tests and lint need devDependencies even if NODE_ENV=production is set.
 marker=node_modules/.session-start-lock
 want=$(sha256sum package-lock.json | cut -d' ' -f1)
-if [ "$(cat "$marker" 2>/dev/null)" = "$want" ] && npm ls --depth=0 >/dev/null 2>&1; then
+if [ "$(cat "$marker" 2>/dev/null)" = "$want" ] && npm ls --depth=0 --include=dev >/dev/null 2>&1; then
   exit 0
 fi
-npm ci --no-audit --no-fund
+npm ci --include=dev --no-audit --no-fund
 echo "$want" > "$marker"
