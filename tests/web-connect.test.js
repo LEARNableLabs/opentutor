@@ -959,3 +959,32 @@ it('sends one chat message at a time, so the companion thinks until the reply ar
   await first; await settle();
   expect(seen(f)).toBe(null);
 });
+
+// #271: the page renders links, lists and small headings, and nothing unsafe.
+it('renders a safe link only where links are allowed, and never an unsafe one', () => {
+  const { context } = frontend(() => null);
+  const link = '[Nash](https://en.wikipedia.org/wiki/Nash_equilibrium)';
+  expect(context.md(link)).toBe('Nash'); // off by default: user text, streaming, onboarding
+  expect(context.md(link, { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/Nash_equilibrium" target="_blank" rel="noopener noreferrer">Nash</a>');
+  expect(context.md('[click](javascript:alert(1))', { links: true })).not.toContain('<a');
+  expect(context.md('[x](https://a.example/"onmouseover="alert(1))', { links: true })).not.toMatch(/"onmouseover/);
+  expect(context.md('[<img src=x onerror=alert(1)>](https://a.example/)', { links: true })).not.toContain('<img');
+});
+
+it('renders numbered steps, bullets and a small heading', () => {
+  const { context } = frontend(() => null);
+  expect(context.md('### How it works\n1. First\n2. Then\n\n- one\n- two')).toBe('<h4 class="md-h">How it works</h4><ol><li>First</li><li>Then</li></ol><br><ul><li>one</li><li>two</li></ul>');
+});
+
+it('makes links clickable in the tutor\'s chat replies, not in the student\'s messages', async () => {
+  const f = frontend((url) => (url === '/api/chat' ? [200, { reply: 'See [Vaccines](https://en.wikipedia.org/wiki/Vaccine).', model: 'm' }] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'Read [this](https://en.wikipedia.org/wiki/Vaccine)';
+  await f.$('#btn-send').click();
+  await settle();
+  const kids = f.$('#chat-messages').children; // the double keeps the removed "Thinking..." in between
+  const [mine, tutor] = [kids[0], kids.at(-1)];
+  expect(mine.innerHTML).not.toContain('<a ');
+  expect(tutor.innerHTML).toContain('<a href="https://en.wikipedia.org/wiki/Vaccine"');
+});

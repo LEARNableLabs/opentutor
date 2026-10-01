@@ -8,6 +8,7 @@
  * Active lesson state stored in KV (SQLite or Supabase).
  */
 
+import { keepTrustedLinks } from '../lib/core/links.js';
 import { randomUUID } from 'crypto';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
@@ -143,7 +144,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     const course = active.course || String(active.topicSlug || '').replace(/-/g, ' '); // saved before #225: the slug
     // A next question with suggested answers must be asked as planned: they were written for it (#255).
     const askAsPlanned = !!suggestedAnswers(active.plan, steps[active.step + 1]);
-    const responsePrompt = buildSocraticResponsePrompt(active.plan, said, stepName, user, { final: active.step === steps.length - 1, markdown: true, course, askAsPlanned });
+    const responsePrompt = buildSocraticResponsePrompt(active.plan, said, stepName, user, { final: active.step === steps.length - 1, markdown: true, course, askAsPlanned, resources: active.resources || [] });
     const adapter = await getAdapter();
     const response = await adapter.generate(
       responsePrompt.system + '\n\nReturn only polished text.',
@@ -153,7 +154,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
     const { assessment, visible } = parseAssessment(response.text);
     // A reply that was nothing but a broken grade still says something, never an empty bubble.
-    const reply = visible || (active.step === steps.length - 1 ? "Thanks, noted. That's the end of this lesson." : "Thanks, noted. Let's keep going.");
+    // Only links a student can trust stay links: the lesson's resources, Wikipedia, a YouTube search (#271).
+    const reply = keepTrustedLinks(visible, active.resources) || (active.step === steps.length - 1 ? "Thanks, noted. That's the end of this lesson." : "Thanks, noted. Let's keep going.");
     if (assessment) (active.assessments ||= []).push({ step: stepName, ...assessment });
     // The companion's moment (#263): a clearly right answer, or a second miss in a row. The grade itself
     // stays hidden; a reply without one says nothing and leaves the run of misses as it was.
@@ -350,6 +352,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   const lessonSteps = hasRetrieval || retest ? STEPS : STEPS.filter((s) => s !== 'retrieval');
   settleOptions(plan);
 
+  const lessonResources = (Array.isArray(lesson.resources) ? lesson.resources : []).filter((r) => typeof r === 'string' && /^https?:\/\//.test(r)).slice(0, 8);
   const started = {
     id: randomUUID(),
     topicSlug,
@@ -358,7 +361,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     plan,
     steps: lessonSteps,
     step: 0,
-    reply: withGoal(plan, plan[lessonSteps[0]]),
+    reply: keepTrustedLinks(withGoal(plan, plan[lessonSteps[0]]), lessonResources),
+    // The lesson's own reading and watching: the only links its replies may carry, besides Wikipedia (#271).
+    resources: lessonResources,
     history: [],
     assessments: [],
     course,
