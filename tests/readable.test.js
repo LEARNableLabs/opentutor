@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { keepTrustedLinks } from '../lib/core/links.js';
-import { buildSocraticResponsePrompt, buildOnboardingPrompt, FORMAT, LINKS } from '../lib/core/prompts.js';
+import { buildSocraticResponsePrompt, buildOnboardingPrompt, FORMAT, LINKS, SOURCES } from '../lib/core/prompts.js';
 import { chatTurn } from '../api/chat.js';
 import { lessonTurn } from '../api/lesson.js';
 import { formatPracticeFeedback } from '../lib/core/deliberate-practice.js';
@@ -129,4 +129,25 @@ it('unlinks an invented link in a review lesson\'s concept', async () => {
   expect(review.body.lesson).toMatchObject({ review: true });
   expect(review.body.reply).toContain('Explain **payoffs** in your own words');
   expect(review.body.reply).not.toContain('evil.example');
+});
+
+// #281: a reply that presents facts ends with a short quoted line naming real sources.
+it('asks web lesson replies and the chat for a sources line, and never Telegram or onboarding', async () => {
+  expect(web()).toContain(SOURCES);
+  expect(buildSocraticResponsePrompt(PLAN, 'x', 'diagnostic', '').system).not.toContain(SOURCES);
+  expect(buildOnboardingPrompt(new Map()).system).not.toContain(SOURCES);
+  let system = '';
+  const adapter = { generate: async (s) => ((system = s), { text: 'ok', model: 'm' }) };
+  await chatTurn({ state: { readUser: async () => '' }, getAdapter: async () => adapter }, { message: 'How do vaccines work?' });
+  expect(system).toContain(SOURCES);
+  expect(SOURCES).toMatch(/^> 📚 Sources: \[/m); // a quote, as the page renders it
+  expect(SOURCES).toMatch(/Never invent a source/);
+  expect(SOURCES).toMatch(/very last line/);
+});
+
+it('keeps an invented source as plain text in the sources line', async () => {
+  const text = 'Vaccines train the immune system.\n\n> 📚 Sources: [A study](https://invented.example/s); [Vaccine](https://en.wikipedia.org/wiki/Vaccine)';
+  const adapter = { generate: async () => ({ text, model: 'm' }) };
+  const res = await chatTurn({ state: { readUser: async () => '' }, getAdapter: async () => adapter }, { message: 'How do vaccines work?' });
+  expect(res.body.reply).toBe('Vaccines train the immune system.\n\n> 📚 Sources: A study; [Vaccine](https://en.wikipedia.org/wiki/Vaccine)');
 });

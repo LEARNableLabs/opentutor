@@ -2,7 +2,7 @@ import { getState, getAdapter } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
-import { VOICE, FORMAT, LINKS } from '../lib/core/prompts.js';
+import { VOICE, FORMAT, LINKS, SOURCES } from '../lib/core/prompts.js';
 import { keepTrustedLinks } from '../lib/core/links.js';
 
 /**
@@ -21,6 +21,7 @@ export async function chatTurn({ state, getAdapter }, { message } = {}) {
     VOICE,
     FORMAT,
     LINKS,
+    SOURCES,
     user ? `## Student\n\n${user}` : '',
   ].filter(Boolean).join('\n\n---\n\n');
 

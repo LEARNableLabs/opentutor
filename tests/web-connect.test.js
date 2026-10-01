@@ -1148,3 +1148,11 @@ it('goes away only through Hide, and stays away for the session', async () => {
   await settle();
   expect(f.$('#companion').classList.contains('hidden')).toBe(true);
 });
+
+// #281: the sources line renders as a quiet quote, its link kept only where links are allowed.
+it('renders a closing sources line as a quote', () => {
+  const { context } = frontend(() => null);
+  const reply = 'A **key** idea.\n\nWhat next?\n\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)';
+  expect(context.md(reply, { links: true })).toBe('A <strong>key</strong> idea.<br><br>What next?<blockquote class="md-quote">📚 Sources: <a href="https://en.wikipedia.org/wiki/Vaccine" target="_blank" rel="noopener noreferrer">Vaccine</a></blockquote>');
+  expect(context.md(reply)).toContain('<blockquote class="md-quote">📚 Sources: Vaccine</blockquote>'); // no links here
+});
