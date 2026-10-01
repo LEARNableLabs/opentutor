@@ -1303,6 +1303,61 @@ const offerTwice = async (f, courses) => {
   return f.$('#chat-messages').children.filter((n) => n.className?.includes('course-offer')).map((n) => n.children[0]);
 };
 
+it('keeps the newest course selected when an earlier progress snapshot arrives late', async () => {
+  const offers = [{ topic: 'Alpha', slug: 'alpha' }, { topic: 'Beta', slug: 'beta' }];
+  let holdAlpha = false;
+  const releases = [];
+  const f = frontend((url, init) => {
+    if (url === '/api/chat') return [200, { reply: 'Sure.', course: offers.shift() }];
+    if (url === '/api/add-topic') return [200, { slug: JSON.parse(init.body).topic, status: 'existing', lessonCount: 9 }];
+    if (url === '/api/progress') return holdAlpha
+      ? new Promise((resolve) => { releases.push(() => resolve([200, { active_topics: ['alpha'] }])); })
+      : [200, { active_topics: ['alpha', 'beta'] }];
+    if (url === '/api/lesson') return lessonReply(JSON.parse(init.body).topicSlug);
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  const [alpha, beta] = await offerTwice(f, [1, 2]);
+  holdAlpha = true;
+  const pending = alpha.click();
+  await settle();
+  holdAlpha = false;
+  await beta.click();
+  await settle();
+  releases.forEach((release) => release());
+  await pending;
+  await settle();
+  expect(f.$('#active-topic').value).toBe('beta');
+  await f.$('#btn-next').click();
+  expect(f.calls.filter((c) => c.url === '/api/lesson').map((c) => JSON.parse(c.init.body).topicSlug)).toEqual(['beta', 'beta']);
+});
+
+it('keeps a topic-card selection when an earlier chat course finishes building', async () => {
+  let breadLessons = 0;
+  const f = frontend((url, init) => {
+    if (url === '/api/chat') return [200, { reply: 'Sure.', course: { topic: 'Bread', slug: null } }];
+    if (url === '/api/add-topic') return JSON.parse(init.body).topic === 'beta'
+      ? [200, { slug: 'beta', status: 'existing', lessonCount: 9 }]
+      : [200, { slug: 'bread', status: 'queued', lessonCount: breadLessons }];
+    if (url.startsWith('/api/topic-build?')) return [200, { slug: 'bread', status: 'building', phase: 'plan', lessonCount: breadLessons }];
+    if (url === '/api/progress') return [200, { active_topics: ['bread', 'beta'] }];
+    if (url === '/api/topics') return [200, []];
+    if (url === '/api/lesson') return lessonReply(JSON.parse(init.body).topicSlug);
+    return null;
+  });
+  await settle();
+  const [bread] = await offerTwice(f, [1]);
+  await bread.click();
+  await settle();
+  await f.context.selectTopic('beta');
+  breadLessons = 5;
+  f.runTimers();
+  await settle();
+  expect(f.$('#active-topic').value).toBe('beta');
+  expect(f.calls.filter((c) => c.url === '/api/lesson')).toHaveLength(0);
+});
+
 it('opens the course tapped last, even when the one tapped first answers later', async () => {
   const offers = [{ topic: 'Alpha', slug: 'alpha' }, { topic: 'Beta', slug: 'beta' }];
   let release;

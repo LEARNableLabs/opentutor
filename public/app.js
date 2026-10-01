@@ -248,10 +248,14 @@ if (lessonInput) {
   });
 }
 
-async function loadActiveTopics() {
+let topicRefresh = 0;
+async function loadActiveTopics({ choice = latestChoice } = {}) {
+  const refresh = ++topicRefresh;
   const res = await fetch('/api/progress');
   if (!res.ok) throw new Error('Could not load your topics.'); // keep the list it has
   const data = await res.json();
+  // A stale snapshot must not rewrite the picker after a newer course was chosen.
+  if (refresh !== topicRefresh || choice !== latestChoice) return null;
   const select = $('#active-topic');
   const prev = select.value;
   select.innerHTML = '<option value="">Select a topic...</option>';
@@ -560,16 +564,19 @@ async function requestTopic(topic, level = 'intermediate') {
 }
 
 async function selectTopic(slug) {
+  const mine = ++latestChoice;
   try {
     $('#topic-error').textContent = '';
     const data = await requestTopic(slug);
+    if (mine !== latestChoice) return;
     if (data.status !== 'existing') watchTopicBuild(slug);
-    await loadActiveTopics();
+    await loadActiveTopics({ choice: mine });
+    if (mine !== latestChoice) return;
     $('#active-topic').value = slug;
     $$('.nav-btn')[0].click();
     $('#btn-next').focus(); // the list the student chose from is now hidden: land on the next step
   } catch (err) {
-    $('#topic-error').textContent = err.message;
+    if (mine === latestChoice) $('#topic-error').textContent = err.message;
   }
 }
 
@@ -599,7 +606,10 @@ async function addTopic() {
 // Build progress survives a page reload: changing the active topic reads its saved job.
 let buildTimer;
 let watchedBuild;
-$('#active-topic').addEventListener('change', () => watchTopicBuild($('#active-topic').value));
+$('#active-topic').addEventListener('change', () => {
+  latestChoice++;
+  watchTopicBuild($('#active-topic').value);
+});
 $('#btn-retry-build').addEventListener('click', async () => {
   if (!watchedBuild) return;
   $('#btn-retry-build').disabled = true;
@@ -614,7 +624,7 @@ $('#btn-retry-build').addEventListener('click', async () => {
 async function enterNewTopic(data, { open = 0 } = {}) {
   const superseded = () => open && open !== latestChoice;
   $$('.nav-btn')[0].click();
-  await loadActiveTopics();
+  await loadActiveTopics({ choice: open || latestChoice });
   if (superseded()) return 'superseded';
   let outcome = 'building';
   if (data.lessonCount) {
@@ -1008,6 +1018,7 @@ async function finishConnect() {
 
 async function restoreTopicBuild() {
   const active = await loadActiveTopics();
+  if (!active) return; // a newer choice owns the picker and its build recovery
   try {
     const res = await fetch('/api/topic-build');
     if (!res.ok) return;
