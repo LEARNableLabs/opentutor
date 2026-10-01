@@ -17,10 +17,20 @@ dir="$root/.claude"
 source="$dir/settings.cloud.json"
 [ -f "$source" ] || exit 0
 
+# Already registered: a SessionStart hook in either file runs exactly the command in
+# settings.cloud.json. Read only; a file that doesn't parse counts as not registered.
+registered() {
+  node -e '
+    const fs = require("fs");
+    const read = (f) => { try { return JSON.parse(fs.readFileSync(f, "utf8")); } catch { return null; } };
+    const commands = (s) => (Array.isArray(s?.hooks?.SessionStart) ? s.hooks.SessionStart : [])
+      .flatMap((g) => (Array.isArray(g?.hooks) ? g.hooks : [])).map((h) => h?.command);
+    const wanted = commands(read(process.argv[1]));
+    process.exit(wanted.length && wanted.every((c) => commands(read(process.argv[2])).includes(c)) ? 0 : 1);
+  ' "$source" "$1"
+}
 for f in settings.json settings.local.json; do
-  if [ -f "$dir/$f" ] && grep -qF '.claude/hooks/session-start.sh' "$dir/$f"; then
-    exit 0 # already registered
-  fi
+  [ -f "$dir/$f" ] && registered "$dir/$f" && exit 0
 done
 
 for f in settings.json settings.local.json; do
