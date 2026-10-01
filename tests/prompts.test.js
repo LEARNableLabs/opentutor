@@ -12,6 +12,8 @@ import {
   clip,
   escapeXml,
   VOICE,
+  FORMAT,
+  LINKS,
 } from '../lib/core/prompts.js';
 
 // Mock skills map
@@ -276,8 +278,11 @@ describe('buildSocraticResponsePrompt', () => {
   const MARKDOWN = '- Markdown format: use **bold** and *italic* for emphasis. No HTML tags in the student-facing text.';
   const STEPS = ['retrieval', 'diagnostic', 'followUp', 'scaffolding', 'teachBack', 'application'];
 
-  // The web also gets two lines of its own (#225, #224): the bot's prompt is pinned below.
+  // The web also gets lines of its own (#225, #224), and the reader-friendly format and link rules
+  // (#271): the bot's prompt is pinned below.
   const WEB_ONLY = [
+    `${FORMAT}\n\n---\n\n`,
+    `${LINKS}\n\n---\n\n`,
     "\nTeach this lesson's subject. The student profile below may mention other things they study: it tells you who they are, never what this lesson is about.",
     '- Don\'t say when earlier lessons happened ("yesterday", "last week"): you don\'t know\n',
   ];

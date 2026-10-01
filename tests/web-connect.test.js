@@ -1059,3 +1059,92 @@ it('shows a short tour of the tabs once a course is chosen, and Start learning c
   await settle();
   expect(f.$('#onboarding-overlay').classList.contains('hidden')).toBe(true);
 });
+
+// #271: the page renders links, lists and small headings, and nothing unsafe.
+it('renders a safe link only where links are allowed, and never an unsafe one', () => {
+  const { context } = frontend(() => null);
+  const link = '[Nash](https://en.wikipedia.org/wiki/Nash_equilibrium)';
+  expect(context.md(link)).toBe('Nash'); // off by default: user text, streaming, onboarding
+  expect(context.md(link, { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/Nash_equilibrium" target="_blank" rel="noopener noreferrer">Nash</a>');
+  expect(context.md('[click](javascript:alert(1))', { links: true })).not.toContain('<a');
+  expect(context.md('[x](https://a.example/"onmouseover="alert(1))', { links: true })).not.toMatch(/"onmouseover/);
+  expect(context.md('[<img src=x onerror=alert(1)>](https://a.example/)', { links: true })).not.toContain('<img');
+  // A * in a URL is part of it, not emphasis (review of #276).
+  expect(context.md('[A* search](https://en.wikipedia.org/wiki/A*_search_algorithm) is *fast*', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="_blank" rel="noopener noreferrer">A* search</a> is <em>fast</em>');
+  expect(context.md('[MASH](https://en.wikipedia.org/wiki/M*A*S*H_(TV_series))', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)" target="_blank" rel="noopener noreferrer">MASH</a>');
+  expect(context.md('[Mercury](https://en.wikipedia.org/wiki/Mercury_(planet)).', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank" rel="noopener noreferrer">Mercury</a>.');
+});
+
+it('renders numbered steps, bullets and a small heading', () => {
+  const { context } = frontend(() => null);
+  expect(context.md('### How it works\n1. First\n2. Then\n\n- one\n- two')).toBe('<h4 class="md-h">How it works</h4><ol><li>First</li><li>Then</li></ol><br><ul><li>one</li><li>two</li></ul>');
+});
+
+it('makes links clickable in the tutor\'s chat replies, not in the student\'s messages', async () => {
+  const f = frontend((url) => (url === '/api/chat' ? [200, { reply: 'See [Vaccines](https://en.wikipedia.org/wiki/Vaccine).', model: 'm' }] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'Read [this](https://en.wikipedia.org/wiki/Vaccine)';
+  await f.$('#btn-send').click();
+  await settle();
+  const kids = f.$('#chat-messages').children; // the double keeps the removed "Thinking..." in between
+  const [mine, tutor] = [kids[0], kids.at(-1)];
+  expect(mine.innerHTML).not.toContain('<a ');
+  expect(tutor.innerHTML).toContain('<a href="https://en.wikipedia.org/wiki/Vaccine"');
+});
+
+// #270: a tap on the companion helps; "Hide" in its bubble is how it goes away.
+it('shows a tip for the lesson that matches what is on screen', async () => {
+  const f = await lessonWith([]);
+  await f.$('#companion-tip').click();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(false);
+  expect(f.$('#companion-says').textContent).toBe('Answer in your own words. A sentence or two is enough.'); // no suggested answers here
+  f.$('#answer-options').children = [{}, {}]; // a question with suggested answers on screen
+  f.$('#answer-options').classList.remove('hidden');
+  await f.$('#companion-tip').click();
+  expect(f.$('#companion-says').textContent).toBe('Tap a suggested answer, or answer in your own words.');
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await f.$('.nav-btn[data-view="learn"]').click();
+  await settle();
+  expect(f.$('#companion-says').textContent).toBe('Ready when you are.'); // the tip was never the lesson's moment
+});
+
+it('a tip never replaces what the tab is waiting for', async () => {
+  let reply;
+  const pending = new Promise((r) => (reply = r));
+  const f = frontend((url) => (url === '/api/chat' ? pending : url === '/api/topics' ? [200, []] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'a question';
+  const sent = f.$('#btn-send').click();
+  await settle();
+  await f.$('#companion-tip').click(); // a tip while the reply is on its way
+  expect(f.$('#companion-says').textContent).toBe('Ask me anything: a question, an example, or a quick explanation.');
+  await f.$('.nav-btn[data-view="topics"]').click();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect(f.$('#companion').dataset.state).toBe('thinking'); // back to what the chat is doing
+  expect(f.$('#companion-says').textContent).toBe('Thinking it over.');
+  reply([200, { reply: 'Answer.', model: 'm' }]);
+  await sent; await settle();
+});
+
+it('shows a tip for the chat when the student taps the companion there', async () => {
+  const f = frontend(() => null);
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  await f.$('#companion-tip').click();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(false);
+  expect(f.$('#companion-says').textContent).toBe('Ask me anything: a question, an example, or a quick explanation.');
+});
+
+it('goes away only through Hide, and stays away for the session', async () => {
+  const f = await lessonWith([]);
+  await f.$('#companion-tip').click();
+  await f.$('#companion-hide').click();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(true);
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await settle();
+  expect(f.$('#companion').classList.contains('hidden')).toBe(true);
+});

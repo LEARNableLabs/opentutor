@@ -126,15 +126,24 @@ themeToggle.addEventListener('click', () => {
 
 // Escape first, then add the few tags markdown needs: replies are model output and
 // the student's own text, and neither is ever parsed as HTML (#150).
-function md(text) {
+// Markdown, after escaping everything (#271). Links are opt-in: only the tutor's finished lesson and chat
+// replies carry them, after the server kept only trusted ones. Anything else shows a link's text.
+function md(text, { links = false } = {}) {
+  // A finished link is set aside while the rest is formatted, so a * or ` in its URL stays put.
+  const anchors = [];
   return escapeHTML(text ?? '')
+    .replace(/\[([^\]\n]+)\]\((https?:\/\/(?:[^\s()]|\([^\s()]*\))+)\)/g, (_, label, url) => (links ? `\uE000${anchors.push(`<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`) - 1}\uE001` : label))
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code>$1</code>')
+    .replace(/^\d+[.)] (.+)$/gm, '<li class="n">$1</li>')
     .replace(/^- (.+)$/gm, '<li>$1</li>')
-    .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
+    .replace(/(<li>.*<\/li>\n?)+/g, (list) => `<ul>${list.replace(/\n/g, '')}</ul>`)
+    .replace(/(<li class="n">.*<\/li>\n?)+/g, (list) => `<ol>${list.replace(/\n/g, '').replaceAll(' class="n"', '')}</ol>`)
+    .replace(/^#{1,3} (.+)$\n?/gm, '<h4 class="md-h">$1</h4>')
     .replace(/\n{2,}/g, '<br><br>')
-    .replace(/\n/g, '<br>');
+    .replace(/\n/g, '<br>')
+    .replace(/\uE000(\d+)\uE001/g, (_, i) => anchors[i] ?? '');
 }
 
 // ── Navigation ──────────────────────────────────────────────
@@ -188,6 +197,12 @@ const COMPANION_MOMENTS = {
   'chat-idle': ['idle', "What's on your mind?"],
   'chat-thinking': ['thinking', 'Thinking it over.'],
 };
+// #270: what a tap on it says, for what is on screen: only what the page really offers there.
+const COMPANION_TIPS = {
+  options: 'Tap a suggested answer, or answer in your own words.',
+  lesson: 'Answer in your own words. A sentence or two is enough.',
+  chat: 'Ask me anything: a question, an example, or a quick explanation.',
+};
 let companionAway = false;
 try { companionAway = sessionStorage.getItem('ot_companion') === 'hidden'; } catch { /* storage may be off */ }
 // Each tab keeps its own moment, and only the open tab's is shown (#269): a reply landing in one tab
@@ -198,11 +213,11 @@ function companion(moment, view = 'learn') {
   companionFor[view] = COMPANION_MOMENTS[moment] ? moment : null;
   if (view === openView) showCompanion();
 }
-function showCompanion() {
+function showCompanion(tip) {
   const el = $('#companion');
   if (!el) return;
-  const moment = companionFor[openView];
-  const known = COMPANION_MOMENTS[moment];
+  // A tip covers the bubble for now; the tab's own moment stays recorded, and comes back on the next update.
+  const known = tip ? ['idle', tip] : COMPANION_MOMENTS[companionFor[openView]];
   if (companionAway || !known) return void el.classList.add('hidden');
   const home = openView === 'chat' ? $('#chat-input-area') : $('#answer-options');
   if (home && el.nextElementSibling !== home) home.parentNode?.insertBefore?.(el, home);
@@ -212,6 +227,10 @@ function showCompanion() {
   $('#companion-says').textContent = known[1];
   el.classList.remove('hidden');
 }
+$('#companion-tip').addEventListener('click', () => {
+  const options = !$('#answer-options').classList.contains('hidden') && $('#answer-options').children.length > 0;
+  showCompanion(COMPANION_TIPS[openView === 'chat' ? 'chat' : options ? 'options' : 'lesson']);
+});
 $('#companion-hide').addEventListener('click', () => {
   companionAway = true;
   try { sessionStorage.setItem('ot_companion', 'hidden'); } catch { /* the choice lasts this page anyway */ }
@@ -359,7 +378,7 @@ async function sendLessonAnswer() {
       // The server's reply is the one to keep: it is cleaned of anything the stream let through (#224).
       const body = bubble.querySelector?.('div') || bubble;
       body.dataset.raw = data.reply;
-      body.innerHTML = md(data.reply);
+      body.innerHTML = md(data.reply, { links: true });
     }
 
     companion(data.done ? null : data.mood); // a finished lesson has its own celebration
@@ -412,7 +431,7 @@ function appendLessonMsg(classes, text) {
   const div = document.createElement('div');
   div.className = `lesson-msg ${classes}`;
   if (classes.includes('tutor') && !classes.includes('typing')) {
-    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text) + '</div>';
+    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text, { links: true }) + '</div>';
   } else {
     div.innerHTML = md(text);
   }
@@ -668,7 +687,7 @@ function appendChat(classes, text) {
   const div = document.createElement('div');
   div.className = `chat-msg ${classes}`;
   if (classes.includes('assistant') && !classes.includes('typing')) {
-    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text) + '</div>';
+    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text, { links: true }) + '</div>';
   } else {
     div.innerHTML = md(text);
   }
