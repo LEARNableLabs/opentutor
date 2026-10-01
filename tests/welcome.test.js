@@ -72,6 +72,8 @@ it('shows no lesson in flight from a record whose step it cannot trust', async (
     { step: 0, steps: [] }, // "question 1 of 0"
     { step: 2, steps: ['diagnostic', 'application'] }, // past the end
     { step: 0 }, // no steps at all
+    { step: 0, steps: ['diagnostic'], lesson: { day: '2', title: 'Sets' } }, // "lesson NaN"
+    { step: 0, steps: ['diagnostic'], lesson: { day: 2, title: '  ' } }, // a blank title
   ];
   student.updateProgress((p) => { p.active_topics = ['game-theory']; });
   for (const record of records) {
