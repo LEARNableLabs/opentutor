@@ -575,11 +575,12 @@ async function requestTopic(topic, level = 'intermediate') {
 }
 
 async function selectTopic(slug) {
-  const mine = ++latestChoice;
+  let mine = ++latestChoice;
   try {
     $('#topic-error').textContent = '';
     const data = await requestTopic(slug);
     if (mine !== latestChoice) return;
+    mine = ++latestChoice; // the activation needs a snapshot taken after it completed
     if (data.status !== 'existing') watchTopicBuild(slug);
     await loadActiveTopics({ choice: mine });
     if (mine !== latestChoice) return;
@@ -596,7 +597,7 @@ async function addTopic() {
   if (!topic) return;
 
   const level = $('#new-level').value;
-  const mine = ++latestChoice;
+  let mine = ++latestChoice;
   $('#btn-add').disabled = true;
 
   try {
@@ -604,6 +605,7 @@ async function addTopic() {
     $('#topic-error').textContent = 'Preparing your starter lessons…';
     const data = await requestTopic(topic, level);
     if (mine !== latestChoice) return;
+    mine = ++latestChoice; // don't reuse a Learn refresh that began before this addition
     $('#topic-error').textContent = '';
     $('#new-topic').value = '';
     await enterNewTopic(data, { choice: mine });
@@ -626,9 +628,14 @@ $('#active-topic').addEventListener('change', () => {
 $('#btn-retry-build').addEventListener('click', async () => {
   if (!watchedBuild) return;
   const slug = watchedBuild;
-  const mine = ++latestChoice;
+  let mine = ++latestChoice;
   $('#btn-retry-build').disabled = true;
-  try { await enterNewTopic(await requestTopic(slug), { choice: mine }); }
+  try {
+    const data = await requestTopic(slug);
+    if (mine !== latestChoice) return;
+    mine = ++latestChoice;
+    await enterNewTopic(data, { choice: mine });
+  }
   catch (err) { if (mine === latestChoice) $('#topic-build-status').textContent = err.message; }
   finally { $('#btn-retry-build').disabled = false; }
 });
@@ -645,7 +652,12 @@ async function enterNewTopic(data, { open = 0, choice = open || latestChoice } =
   let outcome = 'building';
   if (data.lessonCount) {
     $('#active-topic').value = data.slug;
-    if (open || !lessonActive) outcome = (await startLesson()) || 'failed';
+    if (open || !lessonActive) {
+      const started = startLesson();
+      const startedChoice = latestChoice; // startLesson advances the choice before its first await
+      outcome = (await started) || 'failed';
+      if (startedChoice !== latestChoice) return 'superseded';
+    }
   }
   if (data.status !== 'existing') watchTopicBuild(data.slug, !data.lessonCount, open);
   return outcome;
@@ -753,10 +765,12 @@ function offerCourse(course) {
   start.textContent = course.slug ? `📚 Start the course: ${course.topic}` : `📚 Build a course on ${course.topic}`;
   start.addEventListener('click', async () => {
     start.disabled = true;
-    const mine = ++latestChoice; // from the click, so a later click wins whichever answers first
+    let mine = ++latestChoice; // from the click, so a later click wins whichever answers first
     try {
       const added = await requestTopic(course.slug || course.topic);
-      const outcome = mine === latestChoice ? await enterNewTopic(added, { open: mine }) : 'superseded';
+      if (mine !== latestChoice) { start.disabled = false; return; }
+      mine = ++latestChoice;
+      const outcome = await enterNewTopic(added, { open: mine });
       // Said once it is true. Anything else leaves the button for another try (Learn shows a failed start).
       if (outcome === 'opened') appendChat('assistant', `Added **${course.topic}** to your topics. Your first lesson is open in Learn.`);
       else if (outcome === 'building') appendChat('assistant', `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);
