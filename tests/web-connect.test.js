@@ -969,6 +969,9 @@ it('renders a safe link only where links are allowed, and never an unsafe one', 
   expect(context.md('[click](javascript:alert(1))', { links: true })).not.toContain('<a');
   expect(context.md('[x](https://a.example/"onmouseover="alert(1))', { links: true })).not.toMatch(/"onmouseover/);
   expect(context.md('[<img src=x onerror=alert(1)>](https://a.example/)', { links: true })).not.toContain('<img');
+  // A * in a URL is part of it, not emphasis (review of #276).
+  expect(context.md('[A* search](https://en.wikipedia.org/wiki/A*_search_algorithm) is *fast*', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="_blank" rel="noopener noreferrer">A* search</a> is <em>fast</em>');
+  expect(context.md('[MASH](https://en.wikipedia.org/wiki/M*A*S*H_(TV_series))', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)" target="_blank" rel="noopener noreferrer">MASH</a>');
   expect(context.md('[Mercury](https://en.wikipedia.org/wiki/Mercury_(planet)).', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank" rel="noopener noreferrer">Mercury</a>.');
 });
 

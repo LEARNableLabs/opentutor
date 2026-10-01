@@ -129,8 +129,10 @@ themeToggle.addEventListener('click', () => {
 // Markdown, after escaping everything (#271). Links are opt-in: only the tutor's finished lesson and chat
 // replies carry them, after the server kept only trusted ones. Anything else shows a link's text.
 function md(text, { links = false } = {}) {
+  // A finished link is set aside while the rest is formatted, so a * or ` in its URL stays put.
+  const anchors = [];
   return escapeHTML(text ?? '')
-    .replace(/\[([^\]\n]+)\]\((https?:\/\/(?:[^\s()]|\([^\s()]*\))+)\)/g, (_, label, url) => (links ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>` : label))
+    .replace(/\[([^\]\n]+)\]\((https?:\/\/(?:[^\s()]|\([^\s()]*\))+)\)/g, (_, label, url) => (links ? `\uE000${anchors.push(`<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`) - 1}\uE001` : label))
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code>$1</code>')
@@ -140,7 +142,8 @@ function md(text, { links = false } = {}) {
     .replace(/(<li class="n">.*<\/li>\n?)+/g, (list) => `<ol>${list.replace(/\n/g, '').replaceAll(' class="n"', '')}</ol>`)
     .replace(/^#{1,3} (.+)$\n?/gm, '<h4 class="md-h">$1</h4>')
     .replace(/\n{2,}/g, '<br><br>')
-    .replace(/\n/g, '<br>');
+    .replace(/\n/g, '<br>')
+    .replace(/\uE000(\d+)\uE001/g, (_, i) => anchors[i] ?? '');
 }
 
 // ── Navigation ──────────────────────────────────────────────

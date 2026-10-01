@@ -220,7 +220,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // free lesson. A new one is planned only when there is nothing to show.
   const shown = active && lastShown(active);
   if (shown != null) {
-    return { status: 200, body: { reply: shown, step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true, ...suggested(active.plan, steps[active.step]) } };
+    // Filtered here too: a saved reply may predate the filter, or come from the history or plan.
+    return { status: 200, body: { reply: keepTrustedLinks(shown, active.resources), step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true, ...suggested(active.plan, steps[active.step]) } };
   }
 
   // ── Start new lesson ──────────────────────────────────────

@@ -25,6 +25,8 @@ it('keeps a lesson resource, a Wikipedia article and a YouTube search, and unlin
     '[Edit page](https://en.wikipedia.org/wiki/Nash_equilibrium?action=edit)',
     '[Script](javascript:alert(1))',
     '[Slides](https://ocw.mit.edu/slides_(week_1).pdf)',
+    '[[click](https://x.example)](https://evil.example/phish)',
+    '[[[a](https://x.example)](https://y.example)](https://evil.example/2)',
   ].join('\n');
   expect(keepTrustedLinks(text, [RESOURCE, 'https://www.youtube.com/watch?v=x&t=30', 'https://ocw.mit.edu/slides_(week_1).pdf']).split('\n')).toEqual([
     `[MIT notes](${RESOURCE})`,
@@ -40,6 +42,8 @@ it('keeps a lesson resource, a Wikipedia article and a YouTube search, and unlin
     'Edit page',
     'Script',
     '[Slides](https://ocw.mit.edu/slides_(week_1).pdf)',
+    'click', // unlinking the inner link must not leave the outer one live
+    'a',
   ]);
 });
 
@@ -98,4 +102,12 @@ it('lets a lesson link its own resources and nothing invented', async () => {
   const next = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'because', lessonId: start.body.lessonId, step: start.body.step });
   expect(next.body.reply).toBe(`Good. See [the notes](${RESOURCE}) and my blog.`);
   expect(prompts.at(-1)).toContain(RESOURCE); // the reply prompt was given the lesson's resources
+
+  // A reload shows the saved reply, which may predate the filter (a lesson in flight at deploy).
+  for (const [k, v] of kv) {
+    const lesson = typeof v === 'string' ? JSON.parse(v) : v;
+    if (lesson?.id === start.body.lessonId) kv.set(k, typeof v === 'string' ? JSON.stringify({ ...lesson, reply: 'Old [phish](https://evil.example/p).' }) : { ...lesson, reply: 'Old [phish](https://evil.example/p).' });
+  }
+  const resumed = await lessonTurn(ctx, { topicSlug: 'demo' });
+  expect(resumed.body).toMatchObject({ resumed: true, reply: 'Old phish.' });
 });
