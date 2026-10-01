@@ -11,7 +11,6 @@ vi.mock('../../scripts/bot/state.js', () => ({
 
 vi.mock('../../scripts/bot/lesson.js', () => ({
   deliverNextLesson: vi.fn(),
-  computeStreak: vi.fn(() => 3),
 }));
 
 vi.mock('../../scripts/bot/quiz.js', () => ({
@@ -114,7 +113,9 @@ describe('handleCommand', () => {
 
   // #163
   it('/progress shows the streak and each active topic', async () => {
-    readProgress.mockReturnValue({ active_topics: ['math'], history: [] });
+    // Three days in a row up to today, counted by the streak the web shows too (#292).
+    const day = (n) => new Date(Date.now() - n * 86_400_000).toISOString().slice(0, 10);
+    readProgress.mockReturnValue({ active_topics: ['math'], history: [day(2), day(1), day(0)].map((date) => ({ date })) });
     getTopicProgress.mockReturnValue({ topic: 'Math', percent: 50, completed: 1, total: 2, current: { title: 'Sets' } });
     getRepetitionSummary.mockReturnValue({ total: 0, due: 0, mastered: 0 });
     await handleCommand('/progress', 123, channel, new Map());

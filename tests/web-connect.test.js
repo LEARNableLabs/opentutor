@@ -279,11 +279,11 @@ it('shows a review lesson\'s note before its question, and names it in the lesso
   expect($('#lesson-meta').textContent).toBe('M — Day 7: Review: alpha');
 });
 
-// A lesson on its last step: `last` answers the student's answer.
-async function lastStep(last) {
+// A lesson on its last step: `last` answers the student's answer, and `route` any other request.
+async function lastStep(last, route = () => null) {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3, done: false };
   const page = frontend((url, init) => {
-    if (url !== '/api/lesson') return null;
+    if (url !== '/api/lesson') return route(url, init);
     return JSON.parse(init.body).answer ? [200, { reply: 'Well reasoned.', step: 3, totalSteps: 3, lesson: start.lesson, ...last }] : [200, start];
   });
   await settle();
@@ -320,6 +320,31 @@ it.each([
   await $('#btn-next').click();
   await settle();
   expect(starts(calls)).toBe(2);
+});
+
+// #292: the end-of-lesson message says how many days in a row, once the server has counted the lesson.
+it('adds the streak the finished lesson kept going to the end-of-lesson message, and to the header', async () => {
+  let answered = false;
+  const progress = () => [200, { active_topics: ['demo'], history: [], streak: answered ? 4 : 3, lessonsThisWeek: answered ? 5 : 4, topics: [] }];
+  const { $ } = await lastStep({ done: true }, (url) => (url === '/api/progress' ? progress() : null));
+  expect($('#stats-line').textContent).toBe('🔥 3 days · 4 lessons this week');
+  $('#lesson-input').value = 'because the payoffs change';
+  answered = true;
+  await $('#btn-lesson-answer').click();
+  await settle();
+  const celebration = $('#lesson-conversation').children.find((n) => n.className === 'lesson-celebration');
+  expect(celebration.innerHTML).toContain('<strong>Lesson complete.</strong> 🔥 4 days in a row.');
+  expect($('#stats-line').textContent).toBe('🔥 4 days · 5 lessons this week');
+});
+
+it('still celebrates a finished lesson when its streak cannot be loaded', async () => {
+  const { $ } = await lastStep({ done: true }, (url) => (url === '/api/progress' ? [500, { error: 'down' }] : null));
+  $('#lesson-input').value = 'because the payoffs change';
+  await $('#btn-lesson-answer').click();
+  await settle();
+  const celebration = $('#lesson-conversation').children.find((n) => n.className === 'lesson-celebration');
+  expect(celebration.innerHTML).toContain('Lesson complete.');
+  expect(celebration.innerHTML).not.toContain('🔥');
 });
 
 // #150: a reply is model output, and model output can carry text from the research
@@ -558,6 +583,44 @@ it('shows each topic\'s level and prerequisites on the Topics tab', async () => 
   expect(html).toContain('Before you start: &lt;img src=x&gt;, string theory. Rusty on any of these? Ask the tutor as you go.');
   expect(html).not.toContain('<img src=x>');
   expect(html.match(/Before you start/g)).toHaveLength(1);
+});
+
+// #292: the streak and this week's lessons in the header. Nothing is shown as lost: no history, or a
+// broken streak, leaves that part out rather than showing 0.
+it.each([
+  ['nothing for a student with no history', { active_topics: [], history: [], streak: 0, lessonsThisWeek: 0, topics: [] }, ''],
+  ['nothing for an older response without the numbers', { active_topics: ['knots'] }, ''],
+  ['only this week\'s lessons once the streak is broken', { active_topics: ['knots'], streak: 0, lessonsThisWeek: 2 }, '2 lessons this week'],
+  ['the streak and this week\'s lessons', { active_topics: ['knots'], streak: 4, lessonsThisWeek: 5 }, '🔥 4 days · 5 lessons this week'],
+  ['one of each', { active_topics: ['knots'], streak: 1, lessonsThisWeek: 1 }, '🔥 1 day · 1 lesson this week'],
+  ['nothing it cannot count', { active_topics: ['knots'], streak: '<b>4</b>', lessonsThisWeek: -1 }, ''],
+])('shows %s in the header', async (_case, progress, line) => {
+  const { $ } = frontend((url) => (url === '/api/progress' ? [200, progress] : null));
+  await settle();
+  expect($('#stats-line').textContent).toBe(line);
+  expect($('#stats-line').classList.contains('hidden')).toBe(!line);
+});
+
+it('shows a started topic\'s recent accuracy on the Topics tab, and escapes its name', async () => {
+  const topics = [
+    { slug: 'knots', topic: '<img src=x onerror=alert(1)>', total: 5, completed: 2, percent: 40 },
+    { slug: 'bread', topic: 'Bread', total: 3, completed: 1, percent: 33 },
+    { slug: 'algebra', topic: 'Algebra', total: 4, completed: 0, percent: 0 },
+  ];
+  const progress = { active_topics: ['knots', 'bread'], streak: 1, lessonsThisWeek: 1, topics: [
+    { slug: 'knots', accuracy: 67 },
+    { slug: 'bread', accuracy: null }, // no graded lesson yet
+    { slug: 'algebra', accuracy: '<img src=y>' },
+  ] };
+  const { $ } = frontend((url) => (url === '/api/topics' ? [200, topics] : url === '/api/progress' ? [200, progress] : null));
+  await settle();
+  await $('.nav-btn[data-view="topics"]').click();
+  await settle();
+  const html = $('#topic-list').innerHTML;
+  expect(html).toContain('2 of 5 lessons<span class="topic-accuracy">67% accuracy</span>');
+  expect(html.match(/% accuracy/g)).toHaveLength(1);
+  expect(html).toContain('&lt;img src=x onerror=alert(1)&gt;');
+  expect(html).not.toContain('<img');
 });
 
 // #250: the chat always runs on the student's own key, so offer it before they type.

@@ -4,6 +4,7 @@ import os from 'os';
 import path from 'path';
 import { generatedTopicKey } from '../../lib/core/generated-topics.js';
 import { whereYouAre } from '../../lib/core/welcome.js';
+import { progressView } from '../../lib/core/progress-stats.js';
 
 // #117 — SupabaseStore moved kv to Postgres and left three writes on disk.
 // On Vercel everything outside /tmp is read-only, so all three threw, the
@@ -336,6 +337,79 @@ describe('listTopicProgress reads every topic in a fixed number of queries', () 
 
     const topics = await store({ userId: 'alice' }).listTopicProgress();
     expect(topics.find((t) => t.slug === 'capped')).toMatchObject({ completed: 700 });
+  });
+});
+
+// #292 — GET /api/progress reads each active topic's curriculum, learning log and practice
+// feedback: four round trips a topic on Supabase, done one at a time. It must stay bounded, as
+// #143 made GET /api/topics.
+describe('progressView reads every active topic in a fixed number of queries', () => {
+  const domains = () => path.join(root, 'skills', 'tutor', 'domains');
+  const ship = (slug, curriculum) => {
+    fs.mkdirSync(path.join(domains(), slug), { recursive: true });
+    fs.writeFileSync(path.join(domains(), slug, 'curriculum.json'), JSON.stringify(curriculum));
+  };
+  const lessons = (n) => Array.from({ length: n }, (_, i) => ({ lesson: i + 1, title: `L${i + 1}`, concepts: [`c${i + 1}`], status: 'pending' }));
+  const generated = (s, slug, curriculum) => s.writeKV(generatedTopicKey(slug), { id: slug, revision: 1, curriculum });
+  // The same store, without its batch read: what each topic costs when read on its own.
+  const oneByOne = (s) => ({
+    readProgress: () => s.readProgress(),
+    readCurriculum: (slug) => s.readCurriculum(slug),
+    readDomainFile: (slug, file) => s.readDomainFile(slug, file),
+  });
+
+  it('answers what reading each topic on its own answers', async () => {
+    ship('algebra', { topic: 'Algebra', lessons: lessons(3) });
+    const alice = store({ userId: 'alice' });
+    await generated(alice, 'knots', { topic: 'Knots', lessons: lessons(4) });
+    await alice.writeCurriculum('old-topic', { topic: 'Old topic', lessons: lessons(2) });
+    await alice.writeProgress({ active_topics: ['algebra', 'game-theory', 'knots', 'old-topic', 'gone'], history: [] });
+    await alice.markLessonComplete('algebra', 1, 'correct');
+    await alice.markLessonComplete('knots', 2, 'incorrect');
+    await alice.markLessonComplete('old-topic', 1);
+    await alice.writeDomainFile('algebra', 'learning.md', '- **Last 5:** ✓ ✗ ✓\n');
+    await alice.writeDomainFile('knots', 'practice-feedback.md', '## Retested\n- c2 — passed after 2 lessons\n');
+    const bob = store({ userId: 'bob' });
+    await bob.markLessonComplete('algebra', 2, 'correct');
+    await bob.writeDomainFile('algebra', 'learning.md', '- **Last 5:** ✗ ✗\n');
+    freeze();
+
+    const expected = await progressView(oneByOne(alice));
+    expect(expected.topics.map((t) => t.slug)).toEqual(['algebra', 'game-theory', 'knots', 'old-topic']);
+    expect(expected.topics.find((t) => t.slug === 'algebra')).toMatchObject({ completed: 1, accuracy: 67, mastered: 1 });
+    expect(expected.topics.find((t) => t.slug === 'knots')).toMatchObject({ completed: 1, mastered: 1, reviewDue: 0 });
+    expect(await progressView(alice)).toStrictEqual(expected);
+  });
+
+  it('makes a fixed number of queries, however many topics are active', async () => {
+    const alice = store({ userId: 'alice' });
+    const requests = async (s = alice) => {
+      client.requests = 0;
+      await progressView(s);
+      return client.requests;
+    };
+    const add = async (i) => {
+      const slugs = [`shipped-${i}`, `generated-${i}`, `legacy-${i}`];
+      ship(slugs[0], { topic: `Shipped ${i}`, lessons: lessons(3) });
+      await generated(alice, slugs[1], { topic: `Generated ${i}`, lessons: lessons(3) });
+      await alice.writeCurriculum(slugs[2], { topic: `Legacy ${i}`, lessons: lessons(3) });
+      await alice.updateProgress((p) => { p.active_topics.push(...slugs); });
+      for (const slug of slugs) {
+        await alice.markLessonComplete(slug, 1, 'correct');
+        await alice.writeDomainFile(slug, 'learning.md', '- **Last 5:** ✓\n');
+        await alice.writeDomainFile(slug, 'practice-feedback.md', '## Directives\n');
+      }
+    };
+
+    expect(await requests()).toBe(1); // no active topic: the progress record and nothing else
+    await add(0);
+    // The progress record, then a query per table, each ending on an empty page.
+    expect(await requests()).toBe(9);
+    for (let i = 1; i < 20; i++) await add(i);
+    expect((await progressView(alice)).topics).toHaveLength(60);
+    expect(await requests()).toBe(9);
+    // Read one topic at a time, the same 60 topics cost four or five round trips each.
+    expect(await requests(oneByOne(alice))).toBeGreaterThan(60 * 4);
   });
 });
 

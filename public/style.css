@@ -171,6 +171,15 @@ nav,
   border-bottom-color: var(--accent);
 }
 
+/* #292: the streak and this week's lessons, a quiet line of its own under the brand. */
+#stats-line {
+  flex-basis: 100%;
+  margin-top: -4px;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
 /* ── Views ──────────────────────────────────────────── */
 
 .view {
@@ -645,6 +654,7 @@ input::placeholder {
   color: var(--text-dim);
 }
 
+.topic-accuracy,
 .topic-level {
   display: block;
   margin-top: 2px;

@@ -21,8 +21,7 @@ import { TutorStore } from '../../lib/core/store.js';
 import { addTopic } from '../../lib/core/topic-service.js';
 import { readTopicBuild, buildSummary, listTopicBuilds } from '../../lib/core/topic-builds.js';
 import { startLocalBuildWorker } from '../../lib/core/local-build-worker.js';
-import { buildStudentModel } from '../../lib/core/student-model.js';
-import { parseRetested } from '../../lib/core/deliberate-practice.js';
+import { progressView } from '../../lib/core/progress-stats.js';
 import { lessonTurn } from '../../api/lesson.js';
 import { chatTurn } from '../../api/chat.js';
 import { onboardTurn } from '../../api/onboard.js';
@@ -269,51 +268,8 @@ async function handleStudentAPI(req, res, url, state, account) {
       return json(res, { curriculum, learning, progress });
     }
 
-    // GET /api/progress — active topics with computed stats
-    if (req.method === 'GET' && url.pathname === '/api/progress') {
-      const progress = await state.readProgress();
-      const activeTopics = progress.active_topics || [];
-
-      const history = progress.history || [];
-      const uniqueDays = [...new Set(history.map((h) => h.date))].sort().reverse();
-      const today = new Date().toISOString().split('T')[0];
-      const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
-      let streak = 0;
-      if (uniqueDays[0] === today || uniqueDays[0] === yesterday) {
-        let expected = new Date(uniqueDays[0]);
-        for (const day of uniqueDays) {
-          const d = new Date(day);
-          if (Math.round((expected - d) / 86400000) > 1) break;
-          streak++;
-          expected = d;
-        }
-      }
-
-      // Awaited even though TutorStore is synchronous: awaiting a plain value
-      // is a no-op, and `promise || ''` is truthy, so an unawaited read would
-      // hand buildStudentModel a Promise and silently model nothing.
-      const topics = (await Promise.all(activeTopics.map(async (slug) => {
-        const tp = await state.getTopicProgress(slug);
-        if (!tp) return null;
-        const learningMd = (await state.readDomainFile(slug, 'learning.md')) || '';
-        const curriculum = await state.readCurriculum(slug);
-        const retested = parseRetested(await state.readDomainFile(slug, 'practice-feedback.md')); // #227
-        const model = buildStudentModel(learningMd, curriculum, '', retested);
-        return {
-          slug,
-          topic: tp.topic,
-          completed: tp.completed,
-          total: tp.total,
-          percent: tp.percent,
-          accuracy: Math.round(model.recentAccuracy * 100),
-          mastered: model.concepts.solid.length,
-          reviewDue: model.concepts.shaky.length,
-          nextLesson: tp.current?.title || null,
-        };
-      }))).filter(Boolean);
-
-      return json(res, { ...progress, streak, topics });
-    }
+    // GET /api/progress — the streak and each active topic's numbers, as the Vercel route answers (#292)
+    if (req.method === 'GET' && url.pathname === '/api/progress') return json(res, await progressView(state));
 
     // POST /api/lesson — one turn of the Socratic lesson (same implementation as the Vercel route).
     // Streams over SSE when the client asks for it; plain JSON otherwise.

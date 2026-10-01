@@ -270,6 +270,7 @@ async function readActiveTopics(choice) {
   const res = await fetch('/api/progress');
   if (!res.ok) throw new Error('Could not load your topics.'); // keep the list it has
   const data = await res.json();
+  showProgress(data); // the numbers are as fresh as this answer, whichever choice asked for it
   // A stale snapshot must not rewrite the picker after a newer course was chosen.
   if (choice !== latestChoice) return null;
   const select = $('#active-topic');
@@ -292,6 +293,30 @@ async function readActiveTopics(choice) {
   }
   topicPicked = true;
   return data.active_topics || [];
+}
+
+// ── Progress (#292) ─────────────────────────────────────────
+// The streak and this week's lessons, in the header. No lesson yet, or a broken streak, leaves its
+// part out: nothing is shown as lost, and never as 0.
+let progressStats = {}; // the latest GET /api/progress: the Topics tab reads each topic's accuracy here
+const counted = (n) => Number.isInteger(n) && n > 0;
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+const streakText = (days) => (counted(days) ? `🔥 ${plural(days, 'day')}` : '');
+
+function showProgress(data) {
+  progressStats = data || {};
+  const week = counted(data?.lessonsThisWeek) ? `${plural(data.lessonsThisWeek, 'lesson')} this week` : '';
+  const line = [streakText(data?.streak), week].filter(Boolean).join(' · ');
+  $('#stats-line').textContent = line;
+  $('#stats-line').classList.toggle('hidden', !line);
+}
+
+async function loadProgress() {
+  const res = await fetch('/api/progress');
+  if (!res.ok) return null;
+  const data = await res.json();
+  showProgress(data);
+  return data;
 }
 
 // Review of #273: two starts can overlap (two course offers, a welcome button and Next lesson).
@@ -508,9 +533,16 @@ function showCelebration() {
   const container = $('#lesson-conversation') || $('#lesson-area');
   const celebrationDiv = document.createElement('div');
   celebrationDiv.className = 'lesson-celebration';
-  celebrationDiv.innerHTML = '<strong>Lesson complete.</strong> <span class="dim">Choose <strong>Next lesson</strong> when you are ready for the next one.</span>';
+  const say = (streak) => `<strong>Lesson complete.</strong>${streak ? ` ${streak} in a row.` : ''} <span class="dim">Choose <strong>Next lesson</strong> when you are ready for the next one.</span>`;
+  celebrationDiv.innerHTML = say('');
   container.appendChild(celebrationDiv);
   container.scrollTop = container.scrollHeight;
+  // #292: and the streak this lesson kept going, once the server has counted it. It never waits for it.
+  loadProgress().then((data) => {
+    if (!streakText(data?.streak)) return;
+    celebrationDiv.innerHTML = say(streakText(data.streak));
+    container.scrollTop = container.scrollHeight;
+  }).catch(() => {});
 }
 
 function showError(msg) {
@@ -572,6 +604,8 @@ function topicCard(t) {
   // A course's length until it is started, then how far along it is.
   // #251: how hard it is, and before starting, what to know first.
   const started = t.completed > 0;
+  // #292: how a started topic is going lately, once a graded lesson says.
+  const accuracy = started && Array.isArray(progressStats.topics) ? progressStats.topics.find((s) => s?.slug === t.slug)?.accuracy : null;
   const level = typeof t.level === 'string' && t.level ? t.level[0].toUpperCase() + t.level.slice(1) : '';
   const before = !started && Array.isArray(t.prerequisites) && t.prerequisites.length ? `Before you start: ${t.prerequisites.join(', ')}. Rusty on any of these? Ask the tutor as you go.` : ''; // it prepares, never gates (#260)
   return `<button type="button" class="topic-card" data-slug="${escapeHTML(t.slug)}">
@@ -580,7 +614,7 @@ function topicCard(t) {
       ${before ? `<span class="topic-before">${escapeHTML(before)}</span>` : ''}
       ${started ? `<span class="progress-bar"><span class="progress-fill" style="width:${Number(t.percent) || 0}%"></span></span>` : ''}
     </span>
-    <span class="topic-progress">${started ? `${Number(t.completed)} of ${Number(t.total)} lessons` : `${Number(t.total)} lessons`}${level ? `<span class="topic-level">${escapeHTML(level)}</span>` : ''}</span>
+    <span class="topic-progress">${started ? `${Number(t.completed)} of ${Number(t.total)} lessons` : `${Number(t.total)} lessons`}${Number.isInteger(accuracy) ? `<span class="topic-accuracy">${accuracy}% accuracy</span>` : ''}${level ? `<span class="topic-level">${escapeHTML(level)}</span>` : ''}</span>
   </button>`;
 }
 
