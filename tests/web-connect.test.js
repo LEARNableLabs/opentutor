@@ -970,6 +970,10 @@ it('shows a tip for the lesson that matches what is on screen', async () => {
   f.$('#answer-options').classList.remove('hidden');
   await f.$('#companion-tip').click();
   expect(f.$('#companion-says').textContent).toBe('Tap a suggested answer, or answer in your own words.');
+  await f.$('.nav-btn[data-view="chat"]').click();
+  await f.$('.nav-btn[data-view="learn"]').click();
+  await settle();
+  expect(f.$('#companion-says').textContent).toBe('Ready when you are.'); // the tip was never the lesson's moment
 });
 
 it('a tip never replaces what the tab is waiting for', async () => {
