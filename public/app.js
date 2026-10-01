@@ -281,10 +281,10 @@ let lessonStart = 0;
 // opens: a course still being added or built never takes the screen from a later choice.
 let latestChoice = 0;
 
-/** Opens the picker's topic. True once its lesson (or its completion) is on screen. */
+/** Opens the picker's topic: 'opened' with its lesson on screen, 'complete' when it has none left, else null. */
 async function startLesson() {
   const slug = $('#active-topic').value;
-  if (!slug) return false;
+  if (!slug) return null;
 
   latestChoice++;
   const mine = ++lessonStart;
@@ -310,7 +310,7 @@ async function startLesson() {
       }
       appendToBubble(bubble, chunk);
     });
-    if (!current()) return false;
+    if (!current()) return null;
 
     if (data.done) {
       showCompletion(data.message);
@@ -319,10 +319,10 @@ async function startLesson() {
     } else {
       showLessonStart(data);
     }
-    return true;
+    return data.done ? 'complete' : 'opened';
   } catch (err) {
     if (current()) showError(err.message);
-    return false;
+    return null;
   } finally {
     if (current()) {
       $('#btn-next').disabled = false;
@@ -619,13 +619,14 @@ async function enterNewTopic(data, { open = 0 } = {}) {
   let outcome = 'building';
   if (data.lessonCount) {
     $('#active-topic').value = data.slug;
-    if (open || !lessonActive) outcome = (await startLesson()) ? 'opened' : 'failed';
+    if (open || !lessonActive) outcome = (await startLesson()) || 'failed';
   }
   if (data.status !== 'existing') watchTopicBuild(data.slug, !data.lessonCount, open);
   return outcome;
 }
 
 function watchTopicBuild(slug, waitingForStarter = false, open = false) {
+  const since = latestChoice; // its starter lessons open only if nothing was chosen after this
   clearTimeout(buildTimer);
   watchedBuild = slug;
   $('#topic-build-status').textContent = '';
@@ -650,8 +651,9 @@ function watchTopicBuild(slug, waitingForStarter = false, open = false) {
         if (watchedBuild !== slug) return;
         await loadActiveTopics();
         if (watchedBuild !== slug) return; // another course took over while the topics loaded
-        // A course chosen in the chat opens when its lessons are ready, if nothing was chosen since.
-        if ((open && open === latestChoice) || !lessonActive) {
+        // Its lessons open when ready, if nothing was chosen since (a lesson still loading counts):
+        // over an open lesson when the student chose this course in the chat, else only on an empty page.
+        if (latestChoice === since && (open || !lessonActive)) {
           $('#active-topic').value = ready.slug;
           await startLesson();
         }
@@ -732,6 +734,7 @@ function offerCourse(course) {
       // Said once it is true. Anything else leaves the button for another try (Learn shows a failed start).
       if (outcome === 'opened') appendChat('assistant', `Added **${course.topic}** to your topics. Your first lesson is open in Learn.`);
       else if (outcome === 'building') appendChat('assistant', `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);
+      else if (outcome === 'complete') appendChat('assistant', `You've already finished every lesson in **${course.topic}**. 🎉`);
       else start.disabled = false;
     } catch (err) {
       start.disabled = false;

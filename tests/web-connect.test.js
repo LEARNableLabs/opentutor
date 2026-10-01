@@ -1274,3 +1274,56 @@ it('does not say a course is open when its first lesson fails to start', async (
   expect(f.$('#chat-messages').children.some((n) => /open in Learn/.test(n.innerHTML))).toBe(false);
   expect(beta.disabled).toBe(false);
 });
+
+// Review of #273, round 5.
+it('does not let a build finishing during the next lesson\'s load take the screen', async () => {
+  const offers = [{ topic: 'Bread', slug: null }, { topic: 'Beta', slug: 'beta' }];
+  let breadLessons = 0;
+  let releaseBeta;
+  const f = frontend((url, init) => {
+    if (url === '/api/chat') return [200, { reply: 'Sure.', model: 'm', course: offers.shift() }];
+    if (url === '/api/add-topic') {
+      const { topic } = JSON.parse(init.body);
+      return topic === 'beta' ? [200, { slug: 'beta', status: 'existing', lessonCount: 9 }] : [200, { slug: 'bread', status: 'queued', lessonCount: breadLessons }];
+    }
+    if (url.startsWith('/api/topic-build?')) return [200, { slug: 'bread', status: 'building', phase: 'plan', lessonCount: breadLessons }];
+    if (url === '/api/lesson') {
+      const { topicSlug } = JSON.parse(init.body);
+      return topicSlug === 'beta' ? new Promise((resolve) => { releaseBeta = () => resolve(lessonReply('beta')); }) : lessonReply(topicSlug);
+    }
+    if (url === '/api/progress') return [200, { active_topics: ['bread', 'beta'] }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  const [bread, beta] = await offerTwice(f, [1, 2]);
+  await bread.click();
+  await settle();
+  beta.click(); // Beta's lesson is loading
+  await settle();
+  breadLessons = 5;
+  f.runTimers(); // Bread's starter lessons arrive meanwhile
+  await settle();
+  releaseBeta();
+  await settle();
+  expect(f.calls.filter((c) => c.url === '/api/lesson').map((c) => JSON.parse(c.init.body).topicSlug)).toEqual(['beta']);
+  expect(f.$('#lesson-meta').textContent).toBe('M — Day 1: beta');
+});
+
+it('says a finished course is finished, not open', async () => {
+  const f = frontend((url) => {
+    if (url === '/api/chat') return [200, { reply: 'Sure.', model: 'm', course: { topic: 'Beta', slug: 'beta' } }];
+    if (url === '/api/add-topic') return [200, { slug: 'beta', status: 'existing', lessonCount: 9 }];
+    if (url === '/api/lesson') return [200, { done: true, message: 'All lessons completed!' }];
+    if (url === '/api/progress') return [200, { active_topics: ['beta'] }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  const [beta] = await offerTwice(f, [1]);
+  await beta.click();
+  await settle();
+  const said = f.$('#chat-messages').children.map((n) => n.innerHTML).join('\n');
+  expect(said).not.toMatch(/open in Learn/);
+  expect(said).toMatch(/already finished every lesson in <strong>Beta<\/strong>/);
+});
