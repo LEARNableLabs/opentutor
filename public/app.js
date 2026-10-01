@@ -126,15 +126,24 @@ themeToggle.addEventListener('click', () => {
 
 // Escape first, then add the few tags markdown needs: replies are model output and
 // the student's own text, and neither is ever parsed as HTML (#150).
-function md(text) {
+// Markdown, after escaping everything (#271). Links are opt-in: only the tutor's finished lesson and chat
+// replies carry them, after the server kept only trusted ones. Anything else shows a link's text.
+function md(text, { links = false } = {}) {
+  // A finished link is set aside while the rest is formatted, so a * or ` in its URL stays put.
+  const anchors = [];
   return escapeHTML(text ?? '')
+    .replace(/\[([^\]\n]+)\]\((https?:\/\/(?:[^\s()]|\([^\s()]*\))+)\)/g, (_, label, url) => (links ? `\uE000${anchors.push(`<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`) - 1}\uE001` : label))
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code>$1</code>')
+    .replace(/^\d+[.)] (.+)$/gm, '<li class="n">$1</li>')
     .replace(/^- (.+)$/gm, '<li>$1</li>')
-    .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
+    .replace(/(<li>.*<\/li>\n?)+/g, (list) => `<ul>${list.replace(/\n/g, '')}</ul>`)
+    .replace(/(<li class="n">.*<\/li>\n?)+/g, (list) => `<ol>${list.replace(/\n/g, '').replaceAll(' class="n"', '')}</ol>`)
+    .replace(/^#{1,3} (.+)$\n?/gm, '<h4 class="md-h">$1</h4>')
     .replace(/\n{2,}/g, '<br><br>')
-    .replace(/\n/g, '<br>');
+    .replace(/\n/g, '<br>')
+    .replace(/\uE000(\d+)\uE001/g, (_, i) => anchors[i] ?? '');
 }
 
 // ── Navigation ──────────────────────────────────────────────
@@ -369,7 +378,7 @@ async function sendLessonAnswer() {
       // The server's reply is the one to keep: it is cleaned of anything the stream let through (#224).
       const body = bubble.querySelector?.('div') || bubble;
       body.dataset.raw = data.reply;
-      body.innerHTML = md(data.reply);
+      body.innerHTML = md(data.reply, { links: true });
     }
 
     companion(data.done ? null : data.mood); // a finished lesson has its own celebration
@@ -422,7 +431,7 @@ function appendLessonMsg(classes, text) {
   const div = document.createElement('div');
   div.className = `lesson-msg ${classes}`;
   if (classes.includes('tutor') && !classes.includes('typing')) {
-    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text) + '</div>';
+    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text, { links: true }) + '</div>';
   } else {
     div.innerHTML = md(text);
   }
@@ -678,7 +687,7 @@ function appendChat(classes, text) {
   const div = document.createElement('div');
   div.className = `chat-msg ${classes}`;
   if (classes.includes('assistant') && !classes.includes('typing')) {
-    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text) + '</div>';
+    div.innerHTML = '<span class="tutor-avatar" aria-hidden="true">✦</span><div>' + md(text, { links: true }) + '</div>';
   } else {
     div.innerHTML = md(text);
   }
