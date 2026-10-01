@@ -2,7 +2,7 @@ import { it, expect, vi, afterEach } from 'vitest';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { keepTrustedLinks, keepVerifiedSources } from '../lib/core/links.js';
+import { keepTrustedLinks, keepVerifiedSources, sourceFilter } from '../lib/core/links.js';
 import { buildSocraticResponsePrompt, buildOnboardingPrompt, FORMAT, LINKS, SOURCES } from '../lib/core/prompts.js';
 import { chatTurn } from '../api/chat.js';
 import { lessonTurn } from '../api/lesson.js';
@@ -182,4 +182,35 @@ it('bounds verification to two citations in one footer', async () => {
   const reply = await keepVerifiedSources(`Facts.\n> 📚 Sources: ${link('Old')}\n> 📚 Sources: ${link('A')}; ${link('B')}; ${link('C')}`);
   expect(check).toHaveBeenCalledTimes(2);
   expect(reply).toBe(`Facts.\n> 📚 Sources: ${link('A')}; ${link('B')}`);
+});
+
+it('streams prose and ordinary complete quotes while withholding a source footer split at any token boundary', () => {
+  const prose = 'A fact.\n> An ordinary quote.\nWhat next?\n';
+  const text = prose + '> 📚 Sources: [Zorblax](https://en.wikipedia.org/wiki/Zorblax_effect)\n';
+  for (let split = 0; split <= text.length; split++) {
+    const chunks = [];
+    const filter = sourceFilter((chunk) => chunks.push(chunk));
+    filter(text.slice(0, split));
+    filter(text.slice(split));
+    expect(chunks.join('')).toBe(prose);
+  }
+  const chunks = [];
+  const filter = sourceFilter((chunk) => chunks.push(chunk));
+  for (const ch of text.trimEnd()) filter(ch);
+  expect(chunks.join('')).toBe(prose);
+});
+
+it('delivers verified sources only in the final lesson response, never in streamed tokens', async () => {
+  const { ctx } = demoLesson();
+  const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+  const adapter = await ctx.getAdapter();
+  const text = `<assessment>{"score":0.8}</assessment>\nA fact. What next?\n> 📚 Sources: [Notes](${RESOURCE})`;
+  adapter.generate.mockImplementation(async (_system, _messages, options) => {
+    for (const ch of text) options.onToken(ch);
+    return { text };
+  });
+  const tokens = [];
+  const next = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'because', lessonId: start.body.lessonId, step: start.body.step }, { onToken: (t) => tokens.push(t) });
+  expect(tokens.join('')).toBe('A fact. What next?\n');
+  expect(next.body.reply).toContain(`> 📚 Sources: [Notes](${RESOURCE})`);
 });

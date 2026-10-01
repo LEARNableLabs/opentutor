@@ -8,7 +8,7 @@
  * Active lesson state stored in KV (SQLite or Supabase).
  */
 
-import { keepTrustedLinks, keepVerifiedSources } from '../lib/core/links.js';
+import { keepTrustedLinks, keepVerifiedSources, sourceFilter } from '../lib/core/links.js';
 import { randomUUID } from 'crypto';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
@@ -88,7 +88,7 @@ async function handler(req, res) {
  */
 export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, answer, lessonId, step: at }, { onToken } = {}) {
   // The grading block streams first, so it is filtered before the student sees anything.
-  const stream = onToken ? { onToken: assessmentFilter(onToken) } : {};
+  const stream = onToken ? { onToken: assessmentFilter(sourceFilter(onToken)) } : {};
   if (typeof topicSlug !== 'string' || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(topicSlug)) {
     return { status: 400, body: { error: 'A valid topicSlug is required' } };
   }
