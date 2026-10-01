@@ -2,11 +2,12 @@ import { it, expect, vi, afterEach } from 'vitest';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { keepTrustedLinks, keepVerifiedSources, sourceFilter } from '../lib/core/links.js';
+import { inventedLink, keepTrustedLinks, keepVerifiedSources, sourceFilter } from '../lib/core/links.js';
 import { buildSocraticResponsePrompt, buildOnboardingPrompt, FORMAT, LINKS, SOURCES } from '../lib/core/prompts.js';
 import { chatTurn } from '../api/chat.js';
 import { lessonTurn } from '../api/lesson.js';
 import { formatPracticeFeedback } from '../lib/core/deliberate-practice.js';
+import { withoutInvented } from '../scripts/check-resource-links.js';
 
 // #271: replies that help the reader read, and only links a student can trust.
 const RESOURCE = 'https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/';
@@ -75,12 +76,12 @@ it('unlinks an invented link in a chat reply, and asks the chat for the format',
 });
 
 // A one-lesson topic on disk, its state in memory, and a model that answers a plan or a reply.
-function demoLesson({ diagnostic = 'Why?', feedback = null } = {}) {
+function demoLesson({ diagnostic = 'Why?', feedback = null, resources = [RESOURCE], reply = `Good. See [the notes](${RESOURCE}) and [my blog](https://invented.example/b).` } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'ot-links-'));
   const dir = path.join(root, 'skills', 'tutor', 'domains', 'demo');
   fs.mkdirSync(dir, { recursive: true });
   const file = path.join(dir, 'curriculum.json');
-  fs.writeFileSync(file, JSON.stringify({ topic: 'Demo', lessons: [{ lesson: 1, module: 'M', title: 'L1', concepts: ['c'], resources: [RESOURCE], status: 'pending' }] }));
+  fs.writeFileSync(file, JSON.stringify({ topic: 'Demo', lessons: [{ lesson: 1, module: 'M', title: 'L1', concepts: ['c'], resources, status: 'pending' }] }));
   const kv = new Map();
   const state = {
     async readKV(k) { return kv.get(k) ?? null; }, async writeKV(k, v) { kv.set(k, v); },
@@ -96,7 +97,7 @@ function demoLesson({ diagnostic = 'Why?', feedback = null } = {}) {
     generate: vi.fn(async (system) => {
       prompts.push(system);
       if (!system.includes('## Current Step:')) return { text: JSON.stringify({ ...PLAN, diagnostic }) };
-      return { text: `<assessment>{"score":0.8}</assessment>\nGood. See [the notes](${RESOURCE}) and [my blog](https://invented.example/b).` };
+      return { text: `<assessment>{"score":0.8}</assessment>\n${reply}` };
     }),
   };
   return { kv, prompts, ctx: { state, getAdapter: async () => adapter, skills: new Map() } };
@@ -130,6 +131,93 @@ it('unlinks an invented link in a review lesson\'s concept', async () => {
   expect(review.body.lesson).toMatchObject({ review: true });
   expect(review.body.reply).toContain('Explain **payoffs** in your own words');
   expect(review.body.reply).not.toContain('evil.example');
+});
+
+// #293: a lesson's resources are trusted as links, so one whose shape can't be real never becomes one.
+const INVENTED = 'https://www.youtube.com/watch?v=pantheon-construction';
+
+it.each([
+  [INVENTED, 'invalid YouTube video id'], // a slug where the id belongs
+  ['https://www.youtube.com/watch?v=videoid', 'invalid YouTube video id'],
+  ['https://www.youtube.com/watch?v=YourVideoID', 'invalid YouTube video id'], // 11 characters, but no id ends in D
+  ['https://www.youtube.com/watch?v=', 'invalid YouTube video id'],
+  ['https://youtu.be/stonehenge-secrets', 'invalid YouTube video id'],
+  ['https://www.youtube.com/embed/example-demo', 'invalid YouTube video id'],
+  ['https://m.youtube.com/shorts/abc', 'invalid YouTube video id'],
+  ['https://www.youtube.com/playlist?list=PLintro-to-chemistry', 'invalid YouTube playlist id'],
+  ['https://www.youtube.com/playlist?list=mit-18-06-lectures', 'invalid YouTube playlist id'],
+  ['https://www.youtube.com/playlist?list=', 'invalid YouTube playlist id'],
+  ['https://example.com/video', 'placeholder'],
+  ['https://www.example.org/article', 'placeholder'],
+  ['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-control', 'placeholder'],
+  ['https://www.nature.com/articles/example-article', 'placeholder'],
+])('rejects the invented link %s', (url, why) => {
+  expect(inventedLink(url)).toBe(why);
+});
+
+it.each([
+  'https://www.youtube.com/watch?v=JpdRchyVtvk',
+  'https://www.youtube.com/watch?v=JpdRchyVtvk&t=30s&list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
+  'https://youtu.be/JpdRchyVtvk?t=30',
+  'https://www.youtube.com/embed/JpdRchyVtvk',
+  'https://www.youtube.com/shorts/JpdRchyVtvk',
+  'https://www.youtube.com/playlist?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
+  'https://www.youtube.com/playlist?list=PL41FDABC6AA085E78', // the older 16-digit kind
+  'https://www.youtube.com/playlist?list=UUYO_jab_esuFRV4b17AJtAw', // a channel's uploads
+  'https://www.youtube.com/embed/videoseries?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
+  'https://www.youtube.com/watch?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
+  'https://www.youtube.com/@3blue1brown',
+  'https://www.youtube.com/results?search_query=example-based+learning',
+  'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3172578/',
+  'https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratics/v/example-3-solving-a-quadratic-equation-by-factoring',
+  'https://en.wikipedia.org/wiki/Example-based_machine_translation',
+  'https://p5js.org/examples/math-noise-wave.html',
+  'https://www.permaculturenews.org/2014/05/16/design-examples/',
+  'Futuyma Ch. 11', // a reference, not a link: not this check's to judge
+])('passes the real-shaped %s', (url) => {
+  expect(inventedLink(url)).toBeNull();
+});
+
+// The links a reply prompt offers the model as the lesson's own.
+const offered = (system) => system.match(/<untrusted_data type="lesson-resources">\n([\s\S]*?)\n<\/untrusted_data>/)?.[1].split('\n') ?? [];
+
+it('neither offers nor keeps a lesson resource whose shape cannot be real', async () => {
+  const { kv, prompts, ctx } = demoLesson({
+    resources: [RESOURCE, INVENTED],
+    diagnostic: `Watch [this](${INVENTED}) first. Why?`,
+    reply: `Good. See [the notes](${RESOURCE}) and [the video](${INVENTED}).`,
+  });
+  const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+  expect(start.body.reply).toContain('Watch this first.');
+  expect(JSON.parse(kv.get('web_lesson:demo')).resources).toEqual([RESOURCE]);
+  const next = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'because', lessonId: start.body.lessonId, step: start.body.step });
+  expect(next.body.reply).toBe(`Good. See [the notes](${RESOURCE}) and the video.`);
+  expect(offered(prompts.at(-1))).toEqual([RESOURCE]);
+});
+
+it('stops trusting an invented resource saved with a lesson already in flight', async () => {
+  const { kv, prompts, ctx } = demoLesson({ reply: `Good. See [the video](${INVENTED}).` });
+  const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+  // As saved before #293: the invented link among the lesson's resources, and in the reply on screen.
+  const key = 'web_lesson:demo';
+  kv.set(key, JSON.stringify({ ...JSON.parse(kv.get(key)), resources: [RESOURCE, INVENTED], reply: `Watch [the video](${INVENTED}).` }));
+  expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body).toMatchObject({ resumed: true, reply: 'Watch the video.' });
+  const next = await lessonTurn(ctx, { topicSlug: 'demo', answer: 'because', lessonId: start.body.lessonId, step: start.body.step });
+  expect(next.body.reply).toBe('Good. See the video.');
+  expect(offered(prompts.at(-1))).toEqual([RESOURCE]);
+});
+
+it('cleans a shipped curriculum file of invented resources and nothing else, keeping its layout', () => {
+  const file = (lessons) => `{\n  "lessons": [\n${lessons.map((l) => `    {\n      "concepts": ["a", "b"],\n      "resources": ${l}\n    }`).join(',\n')}\n  ]\n}\n`;
+  const text = file([
+    `[\n        "${RESOURCE}",\n        "${INVENTED}",\n        "https://example.com/x"\n      ]`,
+    `["https://youtu.be/abc", "${RESOURCE}", "Futuyma Ch. 11"]`,
+    `[\n        "${INVENTED}"\n      ]`,
+  ]);
+  const { text: out, removed } = withoutInvented(text);
+  expect(out).toBe(file([`[\n        "${RESOURCE}"\n      ]`, `["${RESOURCE}", "Futuyma Ch. 11"]`, '[]']));
+  expect(removed.map((r) => r.url)).toEqual([INVENTED, 'https://example.com/x', 'https://youtu.be/abc', INVENTED]);
+  expect(withoutInvented(out)).toEqual({ text: out, removed: [] });
 });
 
 // #281: a reply that presents facts ends with a short quoted line naming real sources.

@@ -8,7 +8,7 @@
  * Active lesson state stored in KV (SQLite or Supabase).
  */
 
-import { keepTrustedLinks, keepVerifiedSources, sourceFilter, withoutSources } from '../lib/core/links.js';
+import { inventedLink, keepTrustedLinks, keepVerifiedSources, sourceFilter, withoutSources } from '../lib/core/links.js';
 import { randomUUID } from 'crypto';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
@@ -100,6 +100,8 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   const raw = await state.readKV(kvKey);
   const record = typeof raw === 'string' ? JSON.parse(raw) : raw;
   const active = record?.plan ? record : null; // a record without a plan only counts reviews
+  // Checked again, not trusted as saved: a lesson started before #293 may hold an invented resource.
+  if (active?.resources) active.resources = lessonLinks(active.resources);
   // A lesson saved before #148 has no step list of its own.
   const steps = active?.steps || STEPS;
 
@@ -362,7 +364,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   const lessonSteps = hasRetrieval || retest ? STEPS : STEPS.filter((s) => s !== 'retrieval');
   settleOptions(plan);
 
-  const lessonResources = (Array.isArray(lesson.resources) ? lesson.resources : []).filter((r) => typeof r === 'string' && /^https?:\/\//.test(r)).slice(0, 8);
+  const lessonResources = lessonLinks(lesson.resources);
   const started = {
     id: randomUUID(),
     topicSlug,
@@ -401,6 +403,10 @@ function suggested(plan, step) {
 }
 
 const withGoal = (plan, question) => (plan.goal ? `**Goal:** ${plan.goal}\n\n` : '') + question;
+
+// The links a lesson may carry (#271): at most 8, and none whose shape can't be real (#293).
+const lessonLinks = (resources) => (Array.isArray(resources) ? resources : [])
+  .filter((r) => typeof r === 'string' && /^https?:\/\//.test(r) && !inventedLink(r)).slice(0, 8);
 
 // What the student last saw of a lesson in progress, or null. One saved before #159 has
 // no `reply`: its last tutor message, or at step 0 the opening question the old code sent.
