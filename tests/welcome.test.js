@@ -72,7 +72,6 @@ it('shows no lesson in flight from a record whose step it cannot trust', async (
     { step: '1', steps: ['diagnostic', 'application'] }, // "question 11 of 2"
     { step: 0, steps: [] }, // "question 1 of 0"
     { step: 2, steps: ['diagnostic', 'application'] }, // past the end
-    { step: 0 }, // no steps at all
     { step: 0, steps: ['diagnostic'], lesson: { day: '2', title: 'Sets' } }, // "lesson NaN"
     { step: 0, steps: ['diagnostic'], lesson: { day: 2, title: '  ' } }, // a blank title
     { step: 0, steps: ['diagnostic'], lesson: { day: -1, title: 'Sets' } }, // "lesson -1"
@@ -80,6 +79,7 @@ it('shows no lesson in flight from a record whose step it cannot trust', async (
     { step: 0, steps: ['diagnostic'], reply: undefined }, // nothing to resume: Continue would plan a new lesson
     { step: 0, steps: [null] }, // the current step cannot take an answer
     { step: 0, steps: ['made-up-step'] },
+    { step: 0, steps: ['diagnostic', null] },
     { step: 0, steps: ['diagnostic'], reply: '' },
     { step: 0, steps: ['diagnostic'], reply: 42 },
     { step: 0, steps: ['diagnostic'], reply: undefined, history: { some: true } },
@@ -133,4 +133,10 @@ it('resumes a record that has only its history or its opening question', async (
     student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 1, title: 'Games' }, steps: ['diagnostic', 'application'], history: [], ...record }));
     expect((await whereYouAre(student, student.readProgress()))[0].inFlight).not.toBe(null);
   }
+});
+
+it('offers Continue for a legacy lesson saved without its own step list', async () => {
+  student.updateProgress((p) => { p.active_topics = ['game-theory']; });
+  student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 1, title: 'Games' }, step: 1, history: [], reply: 'What is a game?' }));
+  expect((await whereYouAre(student, student.readProgress()))[0].inFlight).toEqual({ day: 1, title: 'Games', step: 1, steps: 4 });
 });
