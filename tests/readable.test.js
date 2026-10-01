@@ -160,6 +160,9 @@ it.each([
   ['https://youtu.be/%ZZ', 'invalid YouTube video id'], // a malformed escape is no id
   ['https://%', 'malformed link'], // looks like a link, and does not parse
   ['http://', 'malformed link'],
+  ['https://www.youtube.com./watch?v=pantheon-construction', 'invalid YouTube video id'], // a fully qualified host name is the same host
+  ['https://youtu.be./stonehenge-secrets', 'invalid YouTube video id'],
+  ['https://example.com./video', 'placeholder'],
   ['https://example.com/video', 'placeholder'],
   ['https://www.example.org/article', 'placeholder'],
   ['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-control', 'placeholder'],
@@ -174,6 +177,7 @@ it.each([
   'https://www.youtube.com/embed/JpdRchyVtvk',
   'https://www.youtube.com/shorts/JpdRchyVtvk',
   'https://www.youtube.com/live/JpdRchyVtvk',
+  'https://www.youtube.com./watch?v=JpdRchyVtvk',
   'https://www.youtube.com/live', // the live page, and no stream to judge
   'https://www.youtube.com/live/',
   'https://youtu.be/JpdRchyVtv%6B', // the same id with its last character percent-encoded
