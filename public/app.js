@@ -248,14 +248,25 @@ if (lessonInput) {
   });
 }
 
-let topicRefresh = 0;
-async function loadActiveTopics({ choice = latestChoice } = {}) {
-  const refresh = ++topicRefresh;
+let activeRefresh;
+function loadActiveTopics({ choice = latestChoice } = {}) {
+  // Refreshes for the same choice share their result, so every caller waits until
+  // the picker is populated. A later choice gets its own request and owns the UI.
+  if (activeRefresh?.choice === choice) return activeRefresh.promise;
+  const refresh = { choice };
+  refresh.promise = readActiveTopics(choice).finally(() => {
+    if (activeRefresh === refresh) activeRefresh = null;
+  });
+  activeRefresh = refresh;
+  return refresh.promise;
+}
+
+async function readActiveTopics(choice) {
   const res = await fetch('/api/progress');
   if (!res.ok) throw new Error('Could not load your topics.'); // keep the list it has
   const data = await res.json();
   // A stale snapshot must not rewrite the picker after a newer course was chosen.
-  if (refresh !== topicRefresh || choice !== latestChoice) return null;
+  if (choice !== latestChoice) return null;
   const select = $('#active-topic');
   const prev = select.value;
   select.innerHTML = '<option value="">Select a topic...</option>';
@@ -585,19 +596,21 @@ async function addTopic() {
   if (!topic) return;
 
   const level = $('#new-level').value;
+  const mine = ++latestChoice;
   $('#btn-add').disabled = true;
 
   try {
     $('#topic-error').textContent = '';
     $('#topic-error').textContent = 'Preparing your starter lessons…';
     const data = await requestTopic(topic, level);
+    if (mine !== latestChoice) return;
     $('#topic-error').textContent = '';
     $('#new-topic').value = '';
-    await enterNewTopic(data);
+    await enterNewTopic(data, { choice: mine });
     loadTopics();
     loadActiveTopics();
   } catch (err) {
-    $('#topic-error').textContent = err.message;
+    if (mine === latestChoice) $('#topic-error').textContent = err.message;
   } finally {
     $('#btn-add').disabled = false;
   }
@@ -612,19 +625,22 @@ $('#active-topic').addEventListener('change', () => {
 });
 $('#btn-retry-build').addEventListener('click', async () => {
   if (!watchedBuild) return;
+  const slug = watchedBuild;
+  const mine = ++latestChoice;
   $('#btn-retry-build').disabled = true;
-  try { await enterNewTopic(await requestTopic(watchedBuild)); }
-  catch (err) { $('#topic-build-status').textContent = err.message; }
+  try { await enterNewTopic(await requestTopic(slug), { choice: mine }); }
+  catch (err) { if (mine === latestChoice) $('#topic-build-status').textContent = err.message; }
   finally { $('#btn-retry-build').disabled = false; }
 });
 
 // From the chat's course offer (#273) the student chose this course: `open` is that choice, and its
 // lesson opens even over one in progress, which stays saved, unless something newer was chosen since.
 // From Topics, an open lesson is left alone. Says what happened: opened, failed, building or superseded.
-async function enterNewTopic(data, { open = 0 } = {}) {
-  const superseded = () => open && open !== latestChoice;
+async function enterNewTopic(data, { open = 0, choice = open || latestChoice } = {}) {
+  const superseded = () => choice !== latestChoice;
+  if (superseded()) return 'superseded';
   $$('.nav-btn')[0].click();
-  await loadActiveTopics({ choice: open || latestChoice });
+  await loadActiveTopics({ choice });
   if (superseded()) return 'superseded';
   let outcome = 'building';
   if (data.lessonCount) {

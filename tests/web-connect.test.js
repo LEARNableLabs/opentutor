@@ -1303,6 +1303,57 @@ const offerTwice = async (f, courses) => {
   return f.$('#chat-messages').children.filter((n) => n.className?.includes('course-offer')).map((n) => n.children[0]);
 };
 
+it.each(['add', 'retry'])('keeps the topic card chosen after a pending %s request', async (action) => {
+  let releaseAlpha;
+  const f = frontend((url, init) => {
+    if (url === '/api/add-topic') {
+      const { topic } = JSON.parse(init.body);
+      const answer = [200, { slug: topic, status: 'existing', lessonCount: 9 }];
+      return topic === 'alpha' ? new Promise((resolve) => { releaseAlpha = () => resolve(answer); }) : answer;
+    }
+    if (url === '/api/progress') return [200, { active_topics: ['alpha', 'beta'] }];
+    if (url.startsWith('/api/topic-build?')) return [200, { status: 'failed', lessonCount: 0 }];
+    if (url === '/api/topics') return [200, []];
+    if (url === '/api/lesson') return lessonReply(JSON.parse(init.body).topicSlug);
+    return null;
+  });
+  await settle();
+  let pending;
+  if (action === 'retry') {
+    f.context.watchTopicBuild('alpha');
+    pending = f.$('#btn-retry-build').click();
+  } else {
+    f.$('#new-topic').value = 'alpha';
+    pending = f.$('#btn-add').click();
+  }
+  await settle();
+  await f.context.selectTopic('beta');
+  releaseAlpha();
+  await pending;
+  await settle();
+  expect(f.$('#active-topic').value).toBe('beta');
+  expect(f.calls.filter((c) => c.url === '/api/lesson')).toHaveLength(0);
+});
+
+it('shares concurrent progress refreshes so every caller waits for the current picker', async () => {
+  let hold = false, release;
+  const f = frontend((url) => {
+    if (url === '/api/progress') return hold ? new Promise((resolve) => { release = () => resolve([200, { active_topics: ['beta'] }]); }) : [200, { active_topics: [] }];
+    return null;
+  });
+  await settle();
+  hold = true;
+  const before = f.calls.filter((c) => c.url === '/api/progress').length;
+  const a = f.context.loadActiveTopics();
+  const b = f.context.loadActiveTopics();
+  await settle();
+  expect(f.calls.filter((c) => c.url === '/api/progress')).toHaveLength(before + 1);
+  release();
+  expect(await a).toEqual(['beta']);
+  expect(await b).toEqual(['beta']);
+  expect(f.$('#active-topic').children.filter((option) => option.value === 'beta')).toHaveLength(1);
+});
+
 it('keeps the newest course selected when an earlier progress snapshot arrives late', async () => {
   const offers = [{ topic: 'Alpha', slug: 'alpha' }, { topic: 'Beta', slug: 'beta' }];
   let holdAlpha = false;
