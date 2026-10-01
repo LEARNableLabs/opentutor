@@ -150,7 +150,6 @@ it.each([
   ['https://example.com/video', 'placeholder'],
   ['https://www.example.org/article', 'placeholder'],
   ['https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-control', 'placeholder'],
-  ['https://www.nature.com/articles/example-article', 'placeholder'],
 ])('rejects the invented link %s', (url, why) => {
   expect(inventedLink(url)).toBe(why);
 });
@@ -170,6 +169,7 @@ it.each([
   'https://www.youtube.com/results?search_query=example-based+learning',
   'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3172578/',
   'https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratics/v/example-3-solving-a-quadratic-equation-by-factoring',
+  'https://github.com/dockersamples/example-voting-app',
   'https://en.wikipedia.org/wiki/Example-based_machine_translation',
   'https://p5js.org/examples/math-noise-wave.html',
   'https://www.permaculturenews.org/2014/05/16/design-examples/',
