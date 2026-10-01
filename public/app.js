@@ -726,8 +726,53 @@ async function checkOnboarding() {
     const data = await res.json();
     // A student with topics was onboarded, whatever the profile says (#155).
     if (!data.hasProfile && !data.onboarded) showOnboarding();
+    else if (data.welcome) showWelcome(data.welcome);
   } catch { /* server might not support it yet */ }
 }
+
+// #278: where each course stands, and a button for each thing the student can do next.
+// Only over the empty state: a lesson already open (a link, a quick click) keeps the page.
+function showWelcome({ name, courses }) {
+  const title = $('#empty-title');
+  if (lessonActive || !title || $('#empty-state').classList.contains('hidden')) return;
+  title.textContent = name ? `Welcome back, ${name}.` : 'Welcome back.';
+  $('#empty-hint').classList.add('hidden');
+  $('#welcome-courses').replaceChildren(...courses.map((course, i) => welcomeCourse(course, i === 0)));
+  $('#welcome').classList.remove('hidden');
+}
+
+function welcomeCourse({ slug, topic, completed, total, next, inFlight }, lead) {
+  const item = document.createElement('li');
+  const about = document.createElement('div');
+  const name = document.createElement('strong');
+  name.textContent = topic.split(/\s+[—–]\s+/)[0]; // "Amateur radio — propagation, …" is "Amateur radio"
+  const where = document.createElement('p');
+  where.className = 'dim';
+  const done = `${completed} of ${total} lessons done.`;
+  // The title closes the sentence: most are questions, and "…space?". reads badly.
+  where.textContent = inFlight ? `${done} You're on question ${inFlight.step + 1} of ${inFlight.steps} in lesson ${inFlight.day}, “${inFlight.title}”`
+    : next ? `${done} Next: lesson ${next.day}, “${next.title}”`
+    : `All ${total} lessons done. 🎉`;
+  about.appendChild(name);
+  about.appendChild(where);
+  const go = document.createElement('button');
+  go.type = 'button';
+  go.className = lead ? 'primary' : 'secondary';
+  go.textContent = inFlight ? '▶ Continue' : !next ? 'Open' : completed ? '▶ Next lesson' : '▶ Start';
+  go.addEventListener('click', () => {
+    $('#active-topic').value = slug;
+    startLesson();
+  });
+  item.appendChild(about);
+  item.appendChild(go);
+  return item;
+}
+
+$('#welcome-find').addEventListener('click', () => $('.nav-btn[data-view="topics"]').click());
+$('#welcome-ask').addEventListener('click', () => {
+  $('.nav-btn[data-view="chat"]').click();
+  $('#chat-input').focus();
+});
 
 // #167: the dialog is modal, so the page behind it can't be focused or clicked while it is open.
 function setOnboarding(open) {
