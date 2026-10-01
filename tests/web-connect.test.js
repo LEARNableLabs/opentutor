@@ -1398,6 +1398,29 @@ it('keeps a newer build watcher when an earlier lesson start settles', async () 
   expect(f.calls.filter((c) => c.url === '/api/lesson').map((c) => JSON.parse(c.init.body).topicSlug)).toEqual(['alpha', 'beta']);
 });
 
+it('cancels a loading lesson when the picker changes before another lesson starts', async () => {
+  let release;
+  const f = frontend((url, init) => {
+    if (url === '/api/progress') return [200, { active_topics: ['alpha', 'beta'] }];
+    if (url === '/api/lesson') return new Promise((resolve) => { release = () => resolve(lessonReply(JSON.parse(init.body).topicSlug)); });
+    return null;
+  });
+  await settle();
+  f.$('#active-topic').value = 'alpha';
+  const loading = f.$('#btn-next').click();
+  await settle();
+  f.$('#active-topic').value = 'beta';
+  await f.$('#active-topic').dispatch('change');
+  expect(f.$('#lesson-loading').classList.contains('hidden')).toBe(true);
+  expect(f.$('#btn-next').disabled).toBe(false);
+  release();
+  await loading;
+  await settle();
+  expect(f.$('#active-topic').value).toBe('beta');
+  expect(f.$('#lesson-area').classList.contains('hidden')).toBe(true);
+  expect(f.$('#lesson-meta').textContent).not.toContain('alpha');
+});
+
 it('shares concurrent progress refreshes so every caller waits for the current picker', async () => {
   let hold = false, release;
   const f = frontend((url) => {

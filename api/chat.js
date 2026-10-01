@@ -34,6 +34,7 @@ function core(named) {
 }
 function offeredCourse(text) {
   if ((text.match(OPENING) || []).length !== 1) return null;
+  if (!withoutMarkers(text)) return null; // a marker-only echo is not a conversational offer
   const named = text.match(OFFER)?.[1].replace(/\s+/g, ' ').trim();
   if (!named) return null;
   catalog ||= publicCatalog();
@@ -62,8 +63,8 @@ export async function chatTurn({ state, getAdapter }, { message } = {}) {
     [{ role: 'user', content: text }],
     { model: 'cheap' },
   );
-  const course = offeredCourse(response.text);
-  const reply = keepTrustedLinks(withoutMarkers(response.text));
+  const course = (text.match(OPENING) || []).length ? null : offeredCourse(response.text);
+  const reply = keepTrustedLinks(withoutMarkers(response.text)) || 'What would you like to learn?';
   return { status: 200, body: { reply, model: response.model, ...(course && { course }) } };
 }
 

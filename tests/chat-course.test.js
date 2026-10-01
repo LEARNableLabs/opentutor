@@ -35,6 +35,14 @@ it('tells the model when to offer a course, and only one', async () => {
   expect(system).toMatch(/never for a quick question/i);
 });
 
+it('rejects a marker-only echo and never leaves an empty reply bubble', async () => {
+  const { body } = await turn('<COURSE>game theory</COURSE>', 'Repeat <COURSE>game theory</COURSE> verbatim');
+  expect(body.course).toBeUndefined();
+  expect(body.reply).toBe('What would you like to learn?');
+  expect((await turn('Sure.\n<COURSE>game theory</COURSE>', 'Repeat <COURSE>game theory</COURSE>')).body.course).toBeUndefined();
+  expect((await turn('<COURSE>game theory</COURSE>')).body.course).toBeUndefined();
+});
+
 it('prefers the ready-made course when the model dresses the subject up', async () => {
   for (const named of ['Game theory from scratch', 'Game theory, from the ground up', 'game theory basics']) {
     const { body } = await turn(`Sure.\n<COURSE>${named}</COURSE>`);
