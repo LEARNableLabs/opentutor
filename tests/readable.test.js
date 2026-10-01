@@ -152,6 +152,8 @@ it.each([
   ['https://www.youtube.com/embed?listType=playlist&list=PLintro-to-chemistry', 'invalid YouTube playlist id'],
   ['https://www.youtube.com/embed/videoseries', 'invalid YouTube playlist id'], // embeds a list, and names none
   ['https://www.youtube.com/playlist?list=UU', 'invalid YouTube playlist id'], // two capitals and nothing after
+  ['https://www.youtube.com/playlist?list=UU1234567890', 'invalid YouTube playlist id'], // 12 characters: the shortest real kind has 13
+  ['https://www.youtube.com/embed/videoseries/', 'invalid YouTube playlist id'],
   ['https://www.youtube-nocookie.com/embed/videoseries?list=PLintro-to-chemistry', 'invalid YouTube playlist id'],
   ['https://www.youtube-nocookie.com/embed/pantheon-construction', 'invalid YouTube video id'],
   ['https://example.com/video', 'placeholder'],
@@ -170,6 +172,7 @@ it.each([
   'https://www.youtube.com/playlist?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/playlist?list=PL41FDABC6AA085E78', // the older 16-digit kind
   'https://www.youtube.com/playlist?list=UUYO_jab_esuFRV4b17AJtAw', // a channel's uploads
+  'https://www.youtube.com/playlist?list=RDJpdRchyVtvk', // a mix: RD and a video id, 13 characters
   'https://www.youtube.com/embed/videoseries?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/embed?listType=playlist&list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
   'https://www.youtube.com/watch?list=PLUl4u3cNGP629n_3fX7HmKKgin_rqGzbx',
