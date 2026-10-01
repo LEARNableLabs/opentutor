@@ -126,12 +126,13 @@ export function buildOnboardingPrompt(skills) {
   return { system, model: 'cheap', outputMode: 'student' };
 }
 
-export function buildQuizPrompt(_skills, topicSlug, recentLessons) {
+export function buildQuizPrompt(_skills, topicSlug, recentLessons, concepts = []) {
   const system = [
     VOICE,
     untrustedData('quiz-topic', topicSlug, 500),
     untrustedData('recent-lessons', JSON.stringify(recentLessons), 6_000),
-    `## Quiz Generation\n\nGenerate 3–5 review questions using only the supplied lesson data. Each question needs four options, one correct zero-based index, and a brief explanation. Use this exact JSON shape: [{"question":"...","options":["...","...","...","..."],"correct":0,"explanation":"..."}]`,
+    untrustedData('quiz-concepts', JSON.stringify(concepts), 2_000),
+    `## Quiz Generation\n\nGenerate 3–5 review questions using only the supplied lesson data. Each question tests one of the quiz concepts, named in "concept" exactly as listed, and needs four options, one correct zero-based index, and a brief explanation. Use this exact JSON shape: [{"question":"...","concept":"...","options":["...","...","...","..."],"correct":0,"explanation":"..."}]`,
   ].filter(Boolean).join('\n\n---\n\n');
 
   return { system, model: 'strong', outputMode: 'json' };

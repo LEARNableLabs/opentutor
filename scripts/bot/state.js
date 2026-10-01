@@ -42,6 +42,22 @@ export function updateProgress(fn) {
   return data;
 }
 
+// ── Review cards ────────────────────────────────────────────
+
+// What each sent quiz poll or flashcard button reviews, by poll or button id, so its answer
+// reaches spaced review (#294). Kept with progress to survive a restart; only the newest are kept.
+const REVIEW_CARDS_KEPT = 300;
+
+export function rememberReviewCard(id, card) {
+  updateProgress((p) => {
+    p.review_cards = [...(p.review_cards || []), { id, ...card }].slice(-REVIEW_CARDS_KEPT);
+  });
+}
+
+export function findReviewCard(id) {
+  return readProgress().review_cards?.find((c) => c.id === id) || null;
+}
+
 // ── User profile ────────────────────────────────────────────
 
 export function readUser() {

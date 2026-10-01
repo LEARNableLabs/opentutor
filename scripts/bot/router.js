@@ -8,7 +8,8 @@ import { handleCallback } from './callbacks.js';
 import { handleOnboarding, isOnboarding } from './onboarding.js';
 import { handleChat } from './chat.js';
 import { getActiveLesson, handleLessonAnswer } from './lesson.js';
-import { isGroupChat, addGroupMember } from './state.js';
+import { isGroupChat, addGroupMember, appendMemory, findReviewCard } from './state.js';
+import { recordReview } from './spaced-repetition.js';
 import { runWithReqId, log } from './logger.js';
 
 export async function route(update, channel, skills) {
@@ -43,10 +44,16 @@ async function dispatch(update, channel, skills) {
 
   // Poll answer
   if (update.poll_answer) {
-    const { appendMemory } = await import('./state.js');
     const answer = update.poll_answer;
     const optionIds = answer.option_ids || [];
     appendMemory(`Quiz poll answered: options [${optionIds.join(', ')}] by user ${answer.user?.id || 'unknown'}`);
+    // Graded only for a quiz (one right answer, one vote), answered by the student it was sent to (#294):
+    // spaced repetition keeps one record per concept, not one per group member, and a forwarded poll
+    // collects strangers' votes.
+    const card = findReviewCard(answer.poll_id);
+    if (card && Number.isInteger(card.correctIndex) && optionIds.length && answer.user?.id === card.chatId) {
+      recordReview(card.topic, card.concept, optionIds[0] === card.correctIndex ? 'easy' : 'wrong');
+    }
     return;
   }
 
