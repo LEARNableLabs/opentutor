@@ -267,9 +267,11 @@ function loadActiveTopics({ choice = latestChoice } = {}) {
 }
 
 async function readActiveTopics(choice) {
+  const asked = ++progressAsked;
   const res = await fetch('/api/progress');
   if (!res.ok) throw new Error('Could not load your topics.'); // keep the list it has
   const data = await res.json();
+  showProgress(data, asked); // the numbers go by when they were asked for, not by which choice asked
   // A stale snapshot must not rewrite the picker after a newer course was chosen.
   if (choice !== latestChoice) return null;
   const select = $('#active-topic');
@@ -292,6 +294,61 @@ async function readActiveTopics(choice) {
   }
   topicPicked = true;
   return data.active_topics || [];
+}
+
+// ── Progress (#292) ─────────────────────────────────────────
+// The streak and this week's lessons, in the header. No lesson yet, or a broken streak, leaves its
+// part out: nothing is shown as lost, and never as 0.
+let progressStats = {}; // the latest GET /api/progress: the Topics tab reads each topic's accuracy here
+// Each request is numbered. An answer to an older request than the one on screen, say one asked
+// before a lesson was counted and answered after, changes nothing.
+let progressAsked = 0;
+let progressShown = 0;
+const counted = (n) => Number.isInteger(n) && n > 0;
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+const streakText = (days) => (counted(days) ? `🔥 ${plural(days, 'day')}` : '');
+
+function showProgress(data, asked) {
+  if (asked < progressShown) return;
+  progressShown = asked;
+  progressStats = data || {};
+  const week = counted(data?.lessonsThisWeek) ? `${plural(data.lessonsThisWeek, 'lesson')} this week` : '';
+  const line = [streakText(data?.streak), week].filter(Boolean).join(' · ');
+  $('#stats-line').textContent = line;
+  $('#stats-line').classList.toggle('hidden', !line);
+  if (openView === 'topics' && allTopics.length) refreshTopics();
+}
+
+// A topic card never shows fewer lessons than the student has been shown for it. The most lessons seen
+// per topic, from any topic list or progress answer, is kept, and every list is brought up to it: the
+// numbers may arrive after the list, a slow list after them, or an older list after a newer one.
+const reached = new Map();
+function takeProgress() {
+  const seen = (stat) => {
+    if (Number.isInteger(stat?.completed) && stat.completed > (reached.get(stat.slug)?.completed ?? -1)) {
+      reached.set(stat.slug, { completed: stat.completed, total: stat.total, percent: stat.percent });
+    }
+  };
+  (Array.isArray(progressStats.topics) ? progressStats.topics : []).forEach(seen);
+  allTopics.forEach(seen);
+  for (const topic of allTopics) {
+    const most = reached.get(topic.slug);
+    if (most && most.completed > topic.completed) Object.assign(topic, most);
+  }
+}
+
+function refreshTopics() {
+  takeProgress();
+  filterTopics();
+}
+
+/** The numbers now: this answer, or a newer one already on screen. Null if this request failed. */
+async function loadProgress() {
+  const asked = ++progressAsked;
+  const res = await fetch('/api/progress');
+  if (!res.ok) return null;
+  showProgress(await res.json(), asked);
+  return progressStats;
 }
 
 // Review of #273: two starts can overlap (two course offers, a welcome button and Next lesson).
@@ -508,9 +565,16 @@ function showCelebration() {
   const container = $('#lesson-conversation') || $('#lesson-area');
   const celebrationDiv = document.createElement('div');
   celebrationDiv.className = 'lesson-celebration';
-  celebrationDiv.innerHTML = '<strong>Lesson complete.</strong> <span class="dim">Choose <strong>Next lesson</strong> when you are ready for the next one.</span>';
+  const say = (streak) => `<strong>Lesson complete.</strong>${streak ? ` ${streak} in a row.` : ''} <span class="dim">Choose <strong>Next lesson</strong> when you are ready for the next one.</span>`;
+  celebrationDiv.innerHTML = say('');
   container.appendChild(celebrationDiv);
   container.scrollTop = container.scrollHeight;
+  // #292: and the streak this lesson kept going, once the server has counted it. It never waits for it.
+  loadProgress().then((data) => {
+    if (!streakText(data?.streak)) return;
+    celebrationDiv.innerHTML = say(streakText(data.streak));
+    container.scrollTop = container.scrollHeight;
+  }).catch(() => {});
 }
 
 function showError(msg) {
@@ -530,6 +594,7 @@ async function loadTopics() {
   const res = await fetch('/api/topics');
   if (!res.ok) throw new Error('Could not load topics.');
   allTopics = await res.json();
+  takeProgress();
   renderTopics(allTopics);
 }
 
@@ -543,6 +608,7 @@ function filterTopics() {
 
 function renderTopics(topics) {
   const list = $('#topic-list');
+  const focused = document.activeElement?.closest?.('.topic-card')?.dataset.slug; // a redraw keeps a keyboard student's place
   const progress = topics.filter((t) => t.completed > 0);
   const available = topics.filter((t) => t.completed === 0);
 
@@ -564,6 +630,7 @@ function renderTopics(topics) {
 
   list.querySelectorAll('.topic-card').forEach((card) => {
     card.addEventListener('click', () => selectTopic(card.dataset.slug));
+    if (focused && card.dataset.slug === focused) card.focus();
   });
 }
 
@@ -572,6 +639,8 @@ function topicCard(t) {
   // A course's length until it is started, then how far along it is.
   // #251: how hard it is, and before starting, what to know first.
   const started = t.completed > 0;
+  // #292: how a started topic is going lately, once a graded lesson says.
+  const accuracy = started && Array.isArray(progressStats.topics) ? progressStats.topics.find((s) => s?.slug === t.slug)?.accuracy : null;
   const level = typeof t.level === 'string' && t.level ? t.level[0].toUpperCase() + t.level.slice(1) : '';
   const before = !started && Array.isArray(t.prerequisites) && t.prerequisites.length ? `Before you start: ${t.prerequisites.join(', ')}. Rusty on any of these? Ask the tutor as you go.` : ''; // it prepares, never gates (#260)
   return `<button type="button" class="topic-card" data-slug="${escapeHTML(t.slug)}">
@@ -580,7 +649,7 @@ function topicCard(t) {
       ${before ? `<span class="topic-before">${escapeHTML(before)}</span>` : ''}
       ${started ? `<span class="progress-bar"><span class="progress-fill" style="width:${Number(t.percent) || 0}%"></span></span>` : ''}
     </span>
-    <span class="topic-progress">${started ? `${Number(t.completed)} of ${Number(t.total)} lessons` : `${Number(t.total)} lessons`}${level ? `<span class="topic-level">${escapeHTML(level)}</span>` : ''}</span>
+    <span class="topic-progress">${started ? `${Number(t.completed)} of ${Number(t.total)} lessons` : `${Number(t.total)} lessons`}${Number.isInteger(accuracy) ? `<span class="topic-accuracy">${accuracy}% accuracy</span>` : ''}${level ? `<span class="topic-level">${escapeHTML(level)}</span>` : ''}</span>
   </button>`;
 }
 

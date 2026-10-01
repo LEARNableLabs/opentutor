@@ -279,11 +279,11 @@ it('shows a review lesson\'s note before its question, and names it in the lesso
   expect($('#lesson-meta').textContent).toBe('M — Day 7: Review: alpha');
 });
 
-// A lesson on its last step: `last` answers the student's answer.
-async function lastStep(last) {
+// A lesson on its last step: `last` answers the student's answer, and `route` any other request.
+async function lastStep(last, route = () => null) {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3, done: false };
   const page = frontend((url, init) => {
-    if (url !== '/api/lesson') return null;
+    if (url !== '/api/lesson') return route(url, init);
     return JSON.parse(init.body).answer ? [200, { reply: 'Well reasoned.', step: 3, totalSteps: 3, lesson: start.lesson, ...last }] : [200, start];
   });
   await settle();
@@ -320,6 +320,151 @@ it.each([
   await $('#btn-next').click();
   await settle();
   expect(starts(calls)).toBe(2);
+});
+
+// #292: the end-of-lesson message says how many days in a row, once the server has counted the lesson.
+it('adds the streak the finished lesson kept going to the end-of-lesson message, and to the header', async () => {
+  let answered = false;
+  const progress = () => [200, { active_topics: ['demo'], history: [], streak: answered ? 4 : 3, lessonsThisWeek: answered ? 5 : 4, topics: [] }];
+  const { $ } = await lastStep({ done: true }, (url) => (url === '/api/progress' ? progress() : null));
+  expect($('#stats-line').textContent).toBe('🔥 3 days · 4 lessons this week');
+  $('#lesson-input').value = 'because the payoffs change';
+  answered = true;
+  await $('#btn-lesson-answer').click();
+  await settle();
+  const celebration = $('#lesson-conversation').children.find((n) => n.className === 'lesson-celebration');
+  expect(celebration.innerHTML).toContain('<strong>Lesson complete.</strong> 🔥 4 days in a row.');
+  expect($('#stats-line').textContent).toBe('🔥 4 days · 5 lessons this week');
+});
+
+// Review of #308: an older answer arriving last must not take the numbers back.
+it('keeps the newest progress on screen when an older answer arrives late', async () => {
+  const held = [];
+  let hold = false, streak = 3;
+  const f = frontend((url) => {
+    if (url !== '/api/progress') return null;
+    const answer = [200, { active_topics: ['demo'], streak, lessonsThisWeek: streak, topics: [] }];
+    return hold ? new Promise((resolve) => held.push(() => resolve(answer))) : answer;
+  });
+  await settle();
+  hold = true;
+  const older = f.context.loadActiveTopics(); // asked before the lesson was counted, answers last
+  await settle();
+  hold = false;
+  streak = 4;
+  await f.context.loadProgress();
+  expect(f.$('#stats-line').textContent).toBe('🔥 4 days · 4 lessons this week');
+  streak = 3;
+  held.forEach((release) => release());
+  await older;
+  await settle();
+  expect(f.$('#stats-line').textContent).toBe('🔥 4 days · 4 lessons this week');
+});
+
+it('updates the Topics tab\'s accuracy when the numbers arrive after the list', async () => {
+  let release;
+  const topics = [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }];
+  const { $ } = await lastStep({ done: true }, (url) => {
+    if (url === '/api/topics') return [200, topics];
+    if (url === '/api/progress') return release === undefined ? [200, { active_topics: ['knots'], topics: [] }]
+      : new Promise((resolve) => { release = () => resolve([200, { active_topics: ['knots'], streak: 1, lessonsThisWeek: 1, topics: [{ slug: 'knots', accuracy: 67 }] }]); });
+    return null;
+  });
+  release = null; // from now on /api/progress waits: the lesson's end asks, then Topics opens first
+  $('#lesson-input').value = 'because the payoffs change';
+  await $('#btn-lesson-answer').click();
+  await $('.nav-btn[data-view="topics"]').click();
+  await settle();
+  expect($('#topic-list').innerHTML).not.toContain('% accuracy');
+  release();
+  await settle();
+  expect($('#topic-list').innerHTML).toContain('67% accuracy');
+});
+
+// Review of #308: a lesson finished while Topics was open moves its card on, count and bar included.
+it('moves an open Topics card\'s lesson count forward when newer numbers arrive, never back', async () => {
+  const topics = [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }];
+  let stat = { slug: 'knots', completed: 2, total: 5, percent: 40, accuracy: 50 };
+  const f = frontend((url) => (url === '/api/topics' ? [200, topics] : url === '/api/progress' ? [200, { active_topics: ['knots'], topics: [stat] }] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="topics"]').click();
+  await settle();
+  expect(f.$('#topic-list').innerHTML).toContain('2 of 5 lessons<span class="topic-accuracy">50% accuracy</span>');
+
+  stat = { slug: 'knots', completed: 3, total: 5, percent: 60, accuracy: 67 };
+  await f.context.loadProgress();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons<span class="topic-accuracy">67% accuracy</span>');
+  expect(f.$('#topic-list').innerHTML).toContain('width:60%');
+
+  stat = { slug: 'knots', completed: 1, total: 5, percent: 20, accuracy: 67 }; // fewer than the card already shows
+  await f.context.loadProgress();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons');
+});
+
+// Review of #308, round 3: a slow /api/topics answers after /api/progress, with the list as it was before the lesson.
+it('keeps a newer lesson count when an older topic list arrives after it', async () => {
+  const lists = [];
+  const f = frontend((url) => {
+    if (url === '/api/topics') return new Promise((resolve) => lists.push(() => resolve([200, [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }]])));
+    if (url === '/api/progress') return [200, { active_topics: ['knots'], topics: [{ slug: 'knots', completed: 3, total: 5, percent: 60, accuracy: 67 }] }];
+    return null;
+  });
+  await settle();
+  await f.$('.nav-btn[data-view="topics"]').click();
+  await settle();
+  lists.forEach((release) => release());
+  await settle();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons<span class="topic-accuracy">67% accuracy</span>');
+  expect(f.$('#topic-list').innerHTML).toContain('width:60%');
+});
+
+// Review of #308, round 4: two topic lists in flight, and the older answers last.
+it('never moves a card back when an older topic list arrives after a newer one', async () => {
+  const requests = [];
+  const list = (completed) => [{ slug: 'knots', topic: 'Knots', total: 5, completed, percent: completed * 20 }];
+  const f = frontend((url) => {
+    if (url === '/api/topics') return new Promise((resolve) => requests.push((completed) => resolve([200, list(completed)])));
+    if (url === '/api/progress') return [200, { active_topics: ['knots'], topics: [] }]; // no numbers to vouch for the new count
+    return null;
+  });
+  await settle();
+  await f.$('.nav-btn[data-view="topics"]').click();
+  f.context.loadTopics(); // a second list asked for while the first is still out
+  await settle();
+  expect(requests.length).toBe(2);
+  requests[1](3); // the newer request answers first: the lesson is counted
+  await settle();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons');
+  requests[0](2); // the older one, asked before the lesson was counted, answers last
+  await settle();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons');
+  expect(f.$('#topic-list').innerHTML).toContain('width:60%');
+});
+
+it('keeps keyboard focus on the same topic card when new numbers redraw the list', async () => {
+  const topics = [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }, { slug: 'bread', topic: 'Bread', total: 3, completed: 1, percent: 33 }];
+  const f = frontend((url) => (url === '/api/topics' ? [200, topics] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="topics"]').click();
+  await settle();
+  // The double's list holds no elements of its own: hand it the cards a redraw makes, and focus one.
+  const card = (slug) => ({ dataset: { slug }, addEventListener() {}, focus: vi.fn(), closest() { return this; } });
+  const drawn = [card('knots'), card('bread')];
+  f.$('#topic-list').querySelectorAll = () => drawn;
+  f.context.document.activeElement = card('bread');
+  await f.context.loadProgress();
+  expect(drawn[1].focus).toHaveBeenCalled();
+  expect(drawn[0].focus).not.toHaveBeenCalled();
+});
+
+it('still celebrates a finished lesson when its streak cannot be loaded', async () => {
+  const { $ } = await lastStep({ done: true }, (url) => (url === '/api/progress' ? [500, { error: 'down' }] : null));
+  $('#lesson-input').value = 'because the payoffs change';
+  await $('#btn-lesson-answer').click();
+  await settle();
+  const celebration = $('#lesson-conversation').children.find((n) => n.className === 'lesson-celebration');
+  expect(celebration.innerHTML).toContain('Lesson complete.');
+  expect(celebration.innerHTML).not.toContain('🔥');
 });
 
 // #150: a reply is model output, and model output can carry text from the research
@@ -558,6 +703,44 @@ it('shows each topic\'s level and prerequisites on the Topics tab', async () => 
   expect(html).toContain('Before you start: &lt;img src=x&gt;, string theory. Rusty on any of these? Ask the tutor as you go.');
   expect(html).not.toContain('<img src=x>');
   expect(html.match(/Before you start/g)).toHaveLength(1);
+});
+
+// #292: the streak and this week's lessons in the header. Nothing is shown as lost: no history, or a
+// broken streak, leaves that part out rather than showing 0.
+it.each([
+  ['nothing for a student with no history', { active_topics: [], history: [], streak: 0, lessonsThisWeek: 0, topics: [] }, ''],
+  ['nothing for an older response without the numbers', { active_topics: ['knots'] }, ''],
+  ['only this week\'s lessons once the streak is broken', { active_topics: ['knots'], streak: 0, lessonsThisWeek: 2 }, '2 lessons this week'],
+  ['the streak and this week\'s lessons', { active_topics: ['knots'], streak: 4, lessonsThisWeek: 5 }, '🔥 4 days · 5 lessons this week'],
+  ['one of each', { active_topics: ['knots'], streak: 1, lessonsThisWeek: 1 }, '🔥 1 day · 1 lesson this week'],
+  ['nothing it cannot count', { active_topics: ['knots'], streak: '<b>4</b>', lessonsThisWeek: -1 }, ''],
+])('shows %s in the header', async (_case, progress, line) => {
+  const { $ } = frontend((url) => (url === '/api/progress' ? [200, progress] : null));
+  await settle();
+  expect($('#stats-line').textContent).toBe(line);
+  expect($('#stats-line').classList.contains('hidden')).toBe(!line);
+});
+
+it('shows a started topic\'s recent accuracy on the Topics tab, and escapes its name', async () => {
+  const topics = [
+    { slug: 'knots', topic: '<img src=x onerror=alert(1)>', total: 5, completed: 2, percent: 40 },
+    { slug: 'bread', topic: 'Bread', total: 3, completed: 1, percent: 33 },
+    { slug: 'algebra', topic: 'Algebra', total: 4, completed: 0, percent: 0 },
+  ];
+  const progress = { active_topics: ['knots', 'bread'], streak: 1, lessonsThisWeek: 1, topics: [
+    { slug: 'knots', accuracy: 67 },
+    { slug: 'bread', accuracy: null }, // no graded lesson yet
+    { slug: 'algebra', accuracy: '<img src=y>' },
+  ] };
+  const { $ } = frontend((url) => (url === '/api/topics' ? [200, topics] : url === '/api/progress' ? [200, progress] : null));
+  await settle();
+  await $('.nav-btn[data-view="topics"]').click();
+  await settle();
+  const html = $('#topic-list').innerHTML;
+  expect(html).toContain('2 of 5 lessons<span class="topic-accuracy">67% accuracy</span>');
+  expect(html.match(/% accuracy/g)).toHaveLength(1);
+  expect(html).toContain('&lt;img src=x onerror=alert(1)&gt;');
+  expect(html).not.toContain('<img');
 });
 
 // #250: the chat always runs on the student's own key, so offer it before they type.

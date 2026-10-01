@@ -3,12 +3,13 @@
  */
 
 import { readProgress, updateProgress, getTopicProgress, readDomainFile, readCurriculum } from './state.js';
-import { deliverNextLesson, computeStreak } from './lesson.js';
+import { deliverNextLesson } from './lesson.js';
 import { generateQuiz } from './quiz.js';
 import { startScheduler, stopScheduler } from './scheduler.js';
 import { generateAndRegisterTopic } from './curriculum.js';
 import { getDueReviews, getRepetitionSummary } from './spaced-repetition.js';
 import { buildStudentModel } from '../../lib/core/student-model.js';
+import { streakDays } from '../../lib/core/progress-stats.js';
 import { log } from './logger.js';
 import { sendStructuredMessage } from './message.js';
 
@@ -105,7 +106,7 @@ async function cmdProgress(chatId, channel) {
     return;
   }
 
-  const streak = computeStreak(progress);
+  const streak = streakDays(progress.history); // the streak the web shows (#292)
   let text = `📊 <b>Your Progress</b>\n\n🔥 <b>Streak: ${streak} day${streak !== 1 ? 's' : ''}</b>\n`;
 
   for (const slug of activeTopics) {

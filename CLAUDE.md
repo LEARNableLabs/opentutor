@@ -14,6 +14,7 @@ opentutor/
 │   │   ├── store.js                  # TutorStore — SQLite-backed state (local dev)
 │   │   ├── supabase-store.js         # SupabaseStore — Postgres-backed state (see issue #94)
 │   │   ├── progress.js               # Lesson completion: overlay on read, never written to content
+│   │   ├── progress-stats.js         # Streak and each topic's numbers: GET /api/progress on web and Vercel, the bot's streak (#292)
 │   │   ├── db.js                     # SQLite schema and migrations
 │   │   ├── pipeline.js               # CurriculumPipeline — Builder/Critic loop (max 3 iterations)
 │   │   ├── research.js               # 8-source research; the pipeline falls back to it when a caller passes none
