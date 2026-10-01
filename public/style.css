@@ -500,10 +500,39 @@ input::placeholder {
   font-weight: 600;
 }
 
-/* What md() can produce besides bold: lists (the reset above strips their indent) and code. */
+/* What md() can produce besides bold: lists (the reset above strips their indent), small headings,
+   links (#271) and code. */
 .lesson-msg ul,
-.chat-msg ul {
-  padding-left: 1.2em;
+.chat-msg ul,
+.lesson-msg ol,
+.chat-msg ol {
+  padding-left: 1.3em;
+}
+
+.lesson-msg li + li,
+.chat-msg li + li {
+  margin-top: 4px;
+}
+
+.md-h {
+  margin: 2px 0 4px;
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+.lesson-msg a,
+.chat-msg a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* What the student writes is set in the interface face, so their words and the tutor's read apart. */
+.lesson-msg.student,
+.chat-msg.user {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .lesson-msg code,
