@@ -418,6 +418,29 @@ it('keeps a newer lesson count when an older topic list arrives after it', async
   expect(f.$('#topic-list').innerHTML).toContain('width:60%');
 });
 
+// Review of #308, round 4: two topic lists in flight, and the older answers last.
+it('never moves a card back when an older topic list arrives after a newer one', async () => {
+  const requests = [];
+  const list = (completed) => [{ slug: 'knots', topic: 'Knots', total: 5, completed, percent: completed * 20 }];
+  const f = frontend((url) => {
+    if (url === '/api/topics') return new Promise((resolve) => requests.push((completed) => resolve([200, list(completed)])));
+    if (url === '/api/progress') return [200, { active_topics: ['knots'], topics: [] }]; // no numbers to vouch for the new count
+    return null;
+  });
+  await settle();
+  await f.$('.nav-btn[data-view="topics"]').click();
+  f.context.loadTopics(); // a second list asked for while the first is still out
+  await settle();
+  expect(requests.length).toBe(2);
+  requests[1](3); // the newer request answers first: the lesson is counted
+  await settle();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons');
+  requests[0](2); // the older one, asked before the lesson was counted, answers last
+  await settle();
+  expect(f.$('#topic-list').innerHTML).toContain('3 of 5 lessons');
+  expect(f.$('#topic-list').innerHTML).toContain('width:60%');
+});
+
 it('keeps keyboard focus on the same topic card when new numbers redraw the list', async () => {
   const topics = [{ slug: 'knots', topic: 'Knots', total: 5, completed: 2, percent: 40 }, { slug: 'bread', topic: 'Bread', total: 3, completed: 1, percent: 33 }];
   const f = frontend((url) => (url === '/api/topics' ? [200, topics] : null));

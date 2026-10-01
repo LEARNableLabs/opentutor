@@ -319,13 +319,21 @@ function showProgress(data, asked) {
   if (openView === 'topics' && allTopics.length) refreshTopics();
 }
 
-// A topic list takes the newer numbers: a lesson finished since it was read moves its card on, count and
-// bar included, beside its new accuracy. Counts only grow, so a list or an answer that saw fewer lessons
-// moves nothing back. Both orders happen: the numbers arrive after the list, or a slow list after them.
+// A topic card never shows fewer lessons than the student has been shown for it. The most lessons seen
+// per topic, from any topic list or progress answer, is kept, and every list is brought up to it: the
+// numbers may arrive after the list, a slow list after them, or an older list after a newer one.
+const reached = new Map();
 function takeProgress() {
-  for (const stat of Array.isArray(progressStats.topics) ? progressStats.topics : []) {
-    const topic = allTopics.find((t) => t.slug === stat?.slug);
-    if (topic && Number.isInteger(stat.completed) && stat.completed > topic.completed) Object.assign(topic, { completed: stat.completed, total: stat.total, percent: stat.percent });
+  const seen = (stat) => {
+    if (Number.isInteger(stat?.completed) && stat.completed > (reached.get(stat.slug)?.completed ?? -1)) {
+      reached.set(stat.slug, { completed: stat.completed, total: stat.total, percent: stat.percent });
+    }
+  };
+  (Array.isArray(progressStats.topics) ? progressStats.topics : []).forEach(seen);
+  allTopics.forEach(seen);
+  for (const topic of allTopics) {
+    const most = reached.get(topic.slug);
+    if (most && most.completed > topic.completed) Object.assign(topic, most);
   }
 }
 
