@@ -207,6 +207,14 @@ it('stops trusting an invented resource saved with a lesson already in flight', 
   expect(offered(prompts.at(-1))).toEqual([RESOURCE]);
 });
 
+it('drops a saved sources line that was verified against an invented resource', async () => {
+  const { kv, ctx } = demoLesson();
+  await lessonTurn(ctx, { topicSlug: 'demo' });
+  const key = 'web_lesson:demo';
+  kv.set(key, JSON.stringify({ ...JSON.parse(kv.get(key)), resources: [RESOURCE, INVENTED], sourcesVerified: true, reply: `Facts.\n> 📚 Sources: [The video](${INVENTED})` }));
+  expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.reply).toBe('Facts.'); // not "Sources: The video", a source with no link
+});
+
 it('cleans a shipped curriculum file of invented resources and nothing else, keeping its layout', () => {
   const file = (lessons) => `{\n  "lessons": [\n${lessons.map((l) => `    {\n      "concepts": ["a", "b"],\n      "resources": ${l}\n    }`).join(',\n')}\n  ]\n}\n`;
   const text = file([
