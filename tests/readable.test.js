@@ -218,6 +218,17 @@ it.each(['> An ordinary final quote.', 'Intro\n > Sources: primary inputs', '\t>
   }
 });
 
+it('resumes streaming prose after a nonterminal source line', () => {
+  const text = 'Facts.\n > 📚 Sources: [Zorblax](https://en.wikipedia.org/wiki/Zorblax_effect)\n\nWhat do you think?';
+  for (let split = 0; split <= text.length; split++) {
+    const tokens = [];
+    const filter = sourceFilter((t) => tokens.push(t));
+    filter(text.slice(0, split));
+    filter(text.slice(split));
+    expect(tokens.join('')).toBe('Facts.\n\nWhat do you think?');
+  }
+});
+
 it('resumes an already-verified footer without fetching, and drops legacy footers without rewriting the lesson', async () => {
   const check = vi.fn(async () => new Response(null, { status: 200 }));
   vi.stubGlobal('fetch', check);
