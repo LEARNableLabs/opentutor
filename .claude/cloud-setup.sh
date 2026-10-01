@@ -16,7 +16,26 @@ root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 node - "$root/.claude/settings.json" "$root/.claude/settings.cloud.json" << 'JS'
 const fs = require('fs');
 const [target, source] = process.argv.slice(2);
-const read = (f) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { if (e.code === 'ENOENT') return {}; throw e; } };
+// A number JavaScript can't hold exactly (9007199254740993, 1e400) would be written back
+// changed, so reading refuses it. 1.0 and 1e2 read back as 1 and 100: the same value, kept.
+const canonical = (text) => {
+  const [, int, frac = '', exp = '0'] = /^-?(\d+)(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/.exec(text);
+  let digits = (int + frac).replace(/^0+/, '');
+  let power = Number(exp) - frac.length;
+  while (digits.endsWith('0')) { digits = digits.slice(0, -1); power++; }
+  return digits ? `${text.startsWith('-') ? '-' : ''}${digits}e${power}` : '0';
+};
+const exact = (key, value, context) => {
+  if (typeof value === 'number' && (!Number.isFinite(value) || canonical(context.source) !== canonical(String(value)))) {
+    throw new Error(`the number ${context.source} can't be kept exactly`);
+  }
+  return value;
+};
+const read = (f) => {
+  let text;
+  try { text = fs.readFileSync(f, 'utf8'); } catch (e) { if (e.code === 'ENOENT') return {}; throw e; }
+  try { return JSON.parse(text, exact); } catch (e) { console.error(`${f}: ${e.message}; left unchanged`); process.exit(1); }
+};
 const isObject = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
 // The shape Claude Code expects: { hooks?: { <event>: [ { hooks: [ { command, ... } ] } ] } }.
 // Anything else is refused before a byte is written, so a file we don't understand is left as it is.
