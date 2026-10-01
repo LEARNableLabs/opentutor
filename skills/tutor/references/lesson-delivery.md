@@ -30,7 +30,7 @@ Every lesson is a **multi-turn conversation**, not a content dump. The student t
 
 ### Key Principles
 
-- **Student types more than the tutor.** Every tutor message ends with a question (except the final feedback).
+- **Student types more than the tutor.** Every tutor message ends with a question (except the final feedback). On the web, a Sources footer may follow that question when the reply presents facts; it never replaces the question.
 - **Tutor messages are SHORT** — 2-4 sentences, never a wall of text. This is Telegram, not a textbook.
 - **Free-text answers** — open-ended questions, not multiple choice. Production tests beat recognition tests.
 - **Adapt to the answer** — don't ignore what the student said. Reference it specifically.

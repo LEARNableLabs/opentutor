@@ -136,13 +136,14 @@ function md(text, { links = false } = {}) {
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code>$1</code>')
+    // Preserve the preceding line boundary until lists and headings have been grouped.
+    .replace(/^&gt; ?(.+)$/gm, '<blockquote class="md-quote">$1</blockquote>')
     .replace(/^\d+[.)] (.+)$/gm, '<li class="n">$1</li>')
     .replace(/^- (.+)$/gm, '<li>$1</li>')
     .replace(/(<li>.*<\/li>\n?)+/g, (list) => `<ul>${list.replace(/\n/g, '')}</ul>`)
     .replace(/(<li class="n">.*<\/li>\n?)+/g, (list) => `<ol>${list.replace(/\n/g, '').replaceAll(' class="n"', '')}</ol>`)
     .replace(/^#{1,3} (.+)$\n?/gm, '<h4 class="md-h">$1</h4>')
-    // #281: a quoted line, as the sources line at the end of a reply (the > was escaped above).
-    .replace(/\n*^&gt; ?(.+)$\n?/gm, '<blockquote class="md-quote">$1</blockquote>')
+    .replace(/\n*(<blockquote class="md-quote">.*?<\/blockquote>)\n?/g, '$1')
     .replace(/\n{2,}/g, '<br><br>')
     .replace(/\n/g, '<br>')
     .replace(/\uE000(\d+)\uE001/g, (_, i) => anchors[i] ?? '');

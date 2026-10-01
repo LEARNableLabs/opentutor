@@ -3,7 +3,7 @@ import { readsJson } from './_lib/body.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
 import { adapterFor, turnText, KeyRequired } from '../lib/core/llm-access.js';
 import { VOICE, FORMAT, LINKS, SOURCES } from '../lib/core/prompts.js';
-import { keepTrustedLinks } from '../lib/core/links.js';
+import { keepTrustedLinks, keepVerifiedSources } from '../lib/core/links.js';
 
 /**
  * One chat turn, shared by this route and the local server (scripts/web/server.js), as
@@ -30,7 +30,7 @@ export async function chatTurn({ state, getAdapter }, { message } = {}) {
     [{ role: 'user', content: text }],
     { model: 'cheap' },
   );
-  return { status: 200, body: { reply: keepTrustedLinks(response.text), model: response.model } };
+  return { status: 200, body: { reply: keepTrustedLinks(await keepVerifiedSources(response.text)), model: response.model } };
 }
 
 export default readsJson(handler);

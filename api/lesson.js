@@ -8,7 +8,7 @@
  * Active lesson state stored in KV (SQLite or Supabase).
  */
 
-import { keepTrustedLinks } from '../lib/core/links.js';
+import { keepTrustedLinks, keepVerifiedSources } from '../lib/core/links.js';
 import { randomUUID } from 'crypto';
 import { getState, getAdapter, getSkills } from './_lib/init.js';
 import { readsJson } from './_lib/body.js';
@@ -155,7 +155,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     const { assessment, visible } = parseAssessment(response.text);
     // A reply that was nothing but a broken grade still says something, never an empty bubble.
     // Only links a student can trust stay links: the lesson's resources, Wikipedia, a YouTube search (#271).
-    const reply = keepTrustedLinks(visible, active.resources) || (active.step === steps.length - 1 ? "Thanks, noted. That's the end of this lesson." : "Thanks, noted. Let's keep going.");
+    const reply = keepTrustedLinks(await keepVerifiedSources(visible, active.resources), active.resources) || (active.step === steps.length - 1 ? "Thanks, noted. That's the end of this lesson." : "Thanks, noted. Let's keep going.");
     if (assessment) (active.assessments ||= []).push({ step: stepName, ...assessment });
     // The companion's moment (#263): a clearly right answer, or a second miss in a row. The grade itself
     // stays hidden; a reply without one says nothing and leaves the run of misses as it was.
@@ -221,7 +221,7 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   const shown = active && lastShown(active);
   if (shown != null) {
     // Filtered here too: a saved reply may predate the filter, or come from the history or plan.
-    return { status: 200, body: { reply: keepTrustedLinks(shown, active.resources), step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true, ...suggested(active.plan, steps[active.step]) } };
+    return { status: 200, body: { reply: keepTrustedLinks(await keepVerifiedSources(shown, active.resources), active.resources), step: active.step, totalSteps: steps.length, done: false, lesson: active.lesson, lessonId: active.id, resumed: true, ...suggested(active.plan, steps[active.step]) } };
   }
 
   // ── Start new lesson ──────────────────────────────────────

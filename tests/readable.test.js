@@ -1,8 +1,8 @@
-import { it, expect, vi } from 'vitest';
+import { it, expect, vi, afterEach } from 'vitest';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { keepTrustedLinks } from '../lib/core/links.js';
+import { keepTrustedLinks, keepVerifiedSources } from '../lib/core/links.js';
 import { buildSocraticResponsePrompt, buildOnboardingPrompt, FORMAT, LINKS, SOURCES } from '../lib/core/prompts.js';
 import { chatTurn } from '../api/chat.js';
 import { lessonTurn } from '../api/lesson.js';
@@ -10,6 +10,7 @@ import { formatPracticeFeedback } from '../lib/core/deliberate-practice.js';
 
 // #271: replies that help the reader read, and only links a student can trust.
 const RESOURCE = 'https://ocw.mit.edu/courses/14-126-game-theory-spring-2024/pages/lecture-notes/';
+afterEach(() => vi.unstubAllGlobals());
 
 it('keeps a lesson resource, a Wikipedia article and a YouTube search, and unlinks anything else', () => {
   const text = [
@@ -145,9 +146,40 @@ it('asks web lesson replies and the chat for a sources line, and never Telegram 
   expect(SOURCES).toMatch(/very last line/);
 });
 
-it('keeps an invented source as plain text in the sources line', async () => {
+it('drops an invented source and verifies a Wikipedia citation before including it', async () => {
+  const check = vi.fn(async () => new Response(null, { status: 200 }));
+  vi.stubGlobal('fetch', check);
   const text = 'Vaccines train the immune system.\n\n> 📚 Sources: [A study](https://invented.example/s); [Vaccine](https://en.wikipedia.org/wiki/Vaccine)';
   const adapter = { generate: async () => ({ text, model: 'm' }) };
   const res = await chatTurn({ state: { readUser: async () => '' }, getAdapter: async () => adapter }, { message: 'How do vaccines work?' });
-  expect(res.body.reply).toBe('Vaccines train the immune system.\n\n> 📚 Sources: A study; [Vaccine](https://en.wikipedia.org/wiki/Vaccine)');
+  expect(res.body.reply).toBe('Vaccines train the immune system.\n\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)');
+  expect(check).toHaveBeenCalledExactlyOnceWith('https://en.wikipedia.org/wiki/Vaccine', expect.objectContaining({ method: 'HEAD', redirect: 'error' }));
+});
+
+it('omits nonexistent or unreachable Wikipedia sources without failing the reply', async () => {
+  for (const check of [async () => new Response(null, { status: 404 }), async () => { throw new Error('timeout'); }]) {
+    vi.stubGlobal('fetch', check);
+    const text = 'Facts.\n> 📚 Sources: [Zorblax effect](https://en.wikipedia.org/wiki/Zorblax_effect)';
+    const adapter = { generate: async () => ({ text, model: 'm' }) };
+    const res = await chatTurn({ state: { readUser: async () => '' }, getAdapter: async () => adapter }, { message: 'Explain Zorblax' });
+    expect(res.body.reply).toBe('Facts.');
+  }
+});
+
+it('uses supplied lesson resources without fetching and never follows a lookalike or a video source', async () => {
+  const check = vi.fn();
+  vi.stubGlobal('fetch', check);
+  const text = `Facts.\n> 📚 Sources: [Notes](${RESOURCE}); [Lookalike](https://en.wikipedia.org.evil.example/wiki/Facts)`;
+  expect(await keepVerifiedSources(text, [RESOURCE])).toBe(`Facts.\n> 📚 Sources: [Notes](${RESOURCE})`);
+  expect(await keepVerifiedSources('Facts.\n> 📚 Sources: [Video](https://www.youtube.com/results?search_query=facts)')).toBe('Facts.');
+  expect(check).not.toHaveBeenCalled();
+});
+
+it('bounds verification to two citations in one footer', async () => {
+  const check = vi.fn(async () => new Response(null, { status: 200 }));
+  vi.stubGlobal('fetch', check);
+  const link = (n) => `[${n}](https://en.wikipedia.org/wiki/${n})`;
+  const reply = await keepVerifiedSources(`Facts.\n> 📚 Sources: ${link('Old')}\n> 📚 Sources: ${link('A')}; ${link('B')}; ${link('C')}`);
+  expect(check).toHaveBeenCalledTimes(2);
+  expect(reply).toBe(`Facts.\n> 📚 Sources: ${link('A')}; ${link('B')}`);
 });

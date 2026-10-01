@@ -1156,3 +1156,11 @@ it('renders a closing sources line as a quote', () => {
   expect(context.md(reply, { links: true })).toBe('A <strong>key</strong> idea.<br><br>What next?<blockquote class="md-quote">📚 Sources: <a href="https://en.wikipedia.org/wiki/Vaccine" target="_blank" rel="noopener noreferrer">Vaccine</a></blockquote>');
   expect(context.md(reply)).toContain('<blockquote class="md-quote">📚 Sources: Vaccine</blockquote>'); // no links here
 });
+
+it.each(['- First\n- Second', '1. First\n2. Second', '## A heading'])('renders a source immediately after %s as a quote', (body) => {
+  const { context } = frontend(() => null);
+  const html = context.md(`${body}\n> 📚 Sources: [Vaccine](https://en.wikipedia.org/wiki/Vaccine)`, { links: true });
+  expect(html).toContain('<blockquote class="md-quote">📚 Sources: <a');
+  expect(html).not.toContain('&gt;');
+  expect(html).not.toMatch(/<(?:li|h4)[^>]*>[^<]*<blockquote/);
+});
