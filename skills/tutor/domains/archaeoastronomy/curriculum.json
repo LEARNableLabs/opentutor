@@ -118,7 +118,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=surveying-techniques",
         "https://www.archaeoastronomy.org/fieldwork-guide.pdf"
       ],
       "status": "pending"
@@ -131,8 +130,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://stellarium.org/doc/head/",
-        "https://www.youtube.com/watch?v=stellarium-tutorial"
+        "https://stellarium.org/doc/head/"
       ],
       "status": "pending"
     },
@@ -157,8 +155,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.english-heritage.org.uk/visit/places/stonehenge/",
-        "https://www.youtube.com/watch?v=stonehenge-secrets"
+        "https://www.english-heritage.org.uk/visit/places/stonehenge/"
       ],
       "status": "pending"
     },
@@ -170,8 +167,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.worldheritageireland.ie/bru-na-boinne/built-heritage/newgrange/",
-        "https://www.youtube.com/watch?v=newgrange-solstice"
+        "https://www.worldheritageireland.ie/bru-na-boinne/built-heritage/newgrange/"
       ],
       "status": "pending"
     },
@@ -183,8 +179,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cambridge.org/core/books/maya-astronomy",
-        "https://www.youtube.com/watch?v=maya-astronomy-documentary"
+        "https://www.cambridge.org/core/books/maya-astronomy"
       ],
       "status": "pending"
     },
@@ -219,8 +214,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nps.gov/chcu/learn/historyculture/sun-dagger.htm",
-        "https://www.youtube.com/watch?v=chaco-sun-dagger"
+        "https://www.nps.gov/chcu/learn/historyculture/sun-dagger.htm"
       ],
       "status": "pending"
     },
@@ -245,8 +239,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.cambridge.org/core/journals/journal-southeast-asian-studies",
-        "https://www.youtube.com/watch?v=angkor-wat-astronomy"
+        "https://www.cambridge.org/core/journals/journal-southeast-asian-studies"
       ],
       "status": "pending"
     },
@@ -307,8 +300,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nationalgeographic.com/lidar-archaeology",
-        "https://www.youtube.com/watch?v=lidar-mayan-cities"
+        "https://www.nationalgeographic.com/lidar-archaeology"
       ],
       "status": "pending"
     },

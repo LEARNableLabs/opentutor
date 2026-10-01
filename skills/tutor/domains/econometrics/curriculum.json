@@ -181,7 +181,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=UpP-_Givhuq",
         "https://stats.stackexchange.com/questions/11009/interpretation-of-interaction-term"
       ],
       "status": "pending"

@@ -130,8 +130,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.taxidermy.net/threads/borax-chemistry-explained.12345/",
-        "https://www.youtube.com/watch?v=preservation-basics"
+        "https://www.taxidermy.net/threads/borax-chemistry-explained.12345/"
       ],
       "status": "pending"
     },
@@ -194,8 +193,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.mckenziesp.com/Forms/Mammals/",
-        "https://www.youtube.com/watch?v=form-fitting-guide"
+        "https://www.mckenziesp.com/Forms/Mammals/"
       ],
       "status": "pending"
     },
@@ -220,8 +218,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.breakthroughtaxidermy.com/armature-basics/",
-        "https://www.youtube.com/watch?v=wiring-techniques"
+        "https://www.breakthroughtaxidermy.com/armature-basics/"
       ],
       "status": "pending"
     },
@@ -258,8 +255,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.taxidermists.com/bird-wing-techniques/",
-        "https://www.youtube.com/watch?v=bird-wing-mounting"
+        "https://www.taxidermists.com/bird-wing-techniques/"
       ],
       "status": "pending"
     },
@@ -309,8 +305,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.mckenziesp.com/Supplies/Paints/",
-        "https://www.youtube.com/watch?v=taxidermy-painting"
+        "https://www.mckenziesp.com/Supplies/Paints/"
       ],
       "status": "pending"
     },

@@ -38,7 +38,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=shorthand-principles",
         "https://reddit.com/r/shorthand/wiki/comparison"
       ],
       "status": "pending"
@@ -77,8 +76,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://gregg.angelfishy.net/grkeybo.pdf",
-        "https://www.youtube.com/watch?v=gregg-alphabet-basics"
+        "https://gregg.angelfishy.net/grkeybo.pdf"
       ],
       "status": "pending"
     },
@@ -128,7 +126,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=gregg-first-dictation",
         "https://greggshorthand.github.io/beginner-passages"
       ],
       "status": "pending"
@@ -154,8 +151,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://long-live-pitmans-shorthand.org.uk/vowels.htm",
-        "https://www.youtube.com/watch?v=pitman-vowel-system"
+        "https://long-live-pitmans-shorthand.org.uk/vowels.htm"
       ],
       "status": "pending"
     },
@@ -218,8 +214,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.teeline.org.uk/alphabet",
-        "https://www.youtube.com/watch?v=teeline-alphabet"
+        "https://www.teeline.org.uk/alphabet"
       ],
       "status": "pending"
     },
@@ -244,7 +239,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=teeline-dictation-60wpm",
         "https://www.nctj.com/teeline-practice-material"
       ],
       "status": "pending"
@@ -257,8 +251,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://stenospeed.com/speed-building-program",
-        "https://www.youtube.com/watch?v=shorthand-speed-building"
+        "https://stenospeed.com/speed-building-program"
       ],
       "status": "pending"
     },
