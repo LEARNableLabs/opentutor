@@ -277,11 +277,16 @@ async function loadActiveTopics() {
 // Review of #273: two starts can overlap (two course offers, a welcome button and Next lesson).
 // The newest one wins: an older one answering late changes nothing on screen.
 let lessonStart = 0;
+// And the latest thing the student chose, a lesson or a course offered in the chat, is the one that
+// opens: a course still being added or built never takes the screen from a later choice.
+let latestChoice = 0;
 
+/** Opens the picker's topic. True once its lesson (or its completion) is on screen. */
 async function startLesson() {
   const slug = $('#active-topic').value;
-  if (!slug) return;
+  if (!slug) return false;
 
+  latestChoice++;
   const mine = ++lessonStart;
   const current = () => mine === lessonStart;
   activeTopicSlug = slug;
@@ -305,7 +310,7 @@ async function startLesson() {
       }
       appendToBubble(bubble, chunk);
     });
-    if (!current()) return;
+    if (!current()) return false;
 
     if (data.done) {
       showCompletion(data.message);
@@ -314,8 +319,10 @@ async function startLesson() {
     } else {
       showLessonStart(data);
     }
+    return true;
   } catch (err) {
     if (current()) showError(err.message);
+    return false;
   } finally {
     if (current()) {
       $('#btn-next').disabled = false;
@@ -601,16 +608,21 @@ $('#btn-retry-build').addEventListener('click', async () => {
   finally { $('#btn-retry-build').disabled = false; }
 });
 
-// From the chat's course offer (#273) the student chose this course: its lesson opens even
-// over one in progress, which stays saved. From Topics, an open lesson is left alone.
-async function enterNewTopic(data, { open = false } = {}) {
+// From the chat's course offer (#273) the student chose this course: `open` is that choice, and its
+// lesson opens even over one in progress, which stays saved, unless something newer was chosen since.
+// From Topics, an open lesson is left alone. Says what happened: opened, failed, building or superseded.
+async function enterNewTopic(data, { open = 0 } = {}) {
+  const superseded = () => open && open !== latestChoice;
   $$('.nav-btn')[0].click();
   await loadActiveTopics();
+  if (superseded()) return 'superseded';
+  let outcome = 'building';
   if (data.lessonCount) {
     $('#active-topic').value = data.slug;
-    if (open || !lessonActive) await startLesson();
+    if (open || !lessonActive) outcome = (await startLesson()) ? 'opened' : 'failed';
   }
   if (data.status !== 'existing') watchTopicBuild(data.slug, !data.lessonCount, open);
+  return outcome;
 }
 
 function watchTopicBuild(slug, waitingForStarter = false, open = false) {
@@ -636,8 +648,13 @@ function watchTopicBuild(slug, waitingForStarter = false, open = false) {
         waitingForStarter = false;
         const ready = await requestTopic(slug);
         if (watchedBuild !== slug) return;
-        await loadActiveTopics(); $('#active-topic').value = ready.slug;
-        if (open || !lessonActive) await startLesson(); // a course chosen in the chat opens when its lessons are ready
+        await loadActiveTopics();
+        if (watchedBuild !== slug) return; // another course took over while the topics loaded
+        // A course chosen in the chat opens when its lessons are ready, if nothing was chosen since.
+        if ((open && open === latestChoice) || !lessonActive) {
+          $('#active-topic').value = ready.slug;
+          await startLesson();
+        }
       }
       if (['ready', 'failed'].includes(data.status)) return;
     } catch (err) {
@@ -708,12 +725,14 @@ function offerCourse(course) {
   start.textContent = course.slug ? `📚 Start the course: ${course.topic}` : `📚 Build a course on ${course.topic}`;
   start.addEventListener('click', async () => {
     start.disabled = true;
+    const mine = ++latestChoice; // from the click, so a later click wins whichever answers first
     try {
       const added = await requestTopic(course.slug || course.topic);
-      await enterNewTopic(added, { open: true });
-      appendChat('assistant', course.slug // said once it is true
-        ? `Added **${course.topic}** to your topics. Your first lesson is in Learn.`
-        : `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);
+      const outcome = mine === latestChoice ? await enterNewTopic(added, { open: mine }) : 'superseded';
+      // Said once it is true. Anything else leaves the button for another try (Learn shows a failed start).
+      if (outcome === 'opened') appendChat('assistant', `Added **${course.topic}** to your topics. Your first lesson is open in Learn.`);
+      else if (outcome === 'building') appendChat('assistant', `Building your course on **${course.topic}**. The first lessons take about a minute: you'll see the progress in Learn.`);
+      else start.disabled = false;
     } catch (err) {
       start.disabled = false;
       appendChat('assistant', err.message);

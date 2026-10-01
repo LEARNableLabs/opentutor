@@ -1195,3 +1195,82 @@ it('opens a course built from the chat once its first lessons are ready, even ov
   const starts = f.calls.filter((c) => c.url === '/api/lesson').map((c) => JSON.parse(c.init.body).topicSlug);
   expect(starts).toEqual(['alpha', 'bread']);
 });
+
+// Review of #273, round 4: the latest choice opens, whatever answers first.
+const offerTwice = async (f, courses) => {
+  await f.$('.nav-btn[data-view="chat"]').click();
+  for (const _ of courses) { f.$('#chat-input').value = 'teach me'; await f.$('#btn-send').click(); await settle(); }
+  return f.$('#chat-messages').children.filter((n) => n.className?.includes('course-offer')).map((n) => n.children[0]);
+};
+
+it('opens the course tapped last, even when the one tapped first answers later', async () => {
+  const offers = [{ topic: 'Alpha', slug: 'alpha' }, { topic: 'Beta', slug: 'beta' }];
+  let release;
+  const f = frontend((url, init) => {
+    if (url === '/api/chat') return [200, { reply: 'Sure.', model: 'm', course: offers.shift() }];
+    if (url === '/api/add-topic') {
+      const { topic } = JSON.parse(init.body);
+      const answer = [200, { slug: topic, status: 'existing', lessonCount: 9 }];
+      return topic === 'alpha' ? new Promise((resolve) => { release = () => resolve(answer); }) : answer;
+    }
+    if (url === '/api/lesson') return lessonReply(JSON.parse(init.body).topicSlug);
+    if (url === '/api/progress') return [200, { active_topics: ['alpha', 'beta'] }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  const [a, b] = await offerTwice(f, [1, 2]);
+  a.click(); // still being added
+  await settle();
+  await b.click();
+  await settle();
+  release();
+  await settle();
+  expect(f.calls.filter((c) => c.url === '/api/lesson').map((c) => JSON.parse(c.init.body).topicSlug)).toEqual(['beta']);
+  expect(a.disabled).toBe(false); // free for another try
+});
+
+it('does not open a course built from the chat over one chosen after it', async () => {
+  const offers = [{ topic: 'Bread', slug: null }, { topic: 'Beta', slug: 'beta' }];
+  let breadLessons = 0;
+  const f = frontend((url, init) => {
+    if (url === '/api/chat') return [200, { reply: 'Sure.', model: 'm', course: offers.shift() }];
+    if (url === '/api/add-topic') {
+      const { topic } = JSON.parse(init.body);
+      return topic === 'beta' ? [200, { slug: 'beta', status: 'existing', lessonCount: 9 }] : [200, { slug: 'bread', status: 'queued', lessonCount: breadLessons }];
+    }
+    if (url.startsWith('/api/topic-build?')) return [200, { slug: 'bread', status: 'building', phase: 'plan', lessonCount: breadLessons }];
+    if (url === '/api/lesson') return lessonReply(JSON.parse(init.body).topicSlug);
+    if (url === '/api/progress') return [200, { active_topics: ['bread', 'beta'] }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  const [bread, beta] = await offerTwice(f, [1, 2]);
+  await bread.click(); // building, no lessons yet
+  await settle();
+  await beta.click(); // opens now
+  await settle();
+  breadLessons = 5; // Bread's starter lessons are ready
+  f.runTimers();
+  await settle();
+  expect(f.calls.filter((c) => c.url === '/api/lesson').map((c) => JSON.parse(c.init.body).topicSlug)).toEqual(['beta']);
+  expect(f.$('#lesson-meta').textContent).toBe('M — Day 1: beta');
+});
+
+it('does not say a course is open when its first lesson fails to start', async () => {
+  const f = frontend((url) => {
+    if (url === '/api/chat') return [200, { reply: 'Sure.', model: 'm', course: { topic: 'Beta', slug: 'beta' } }];
+    if (url === '/api/add-topic') return [200, { slug: 'beta', status: 'existing', lessonCount: 9 }];
+    if (url === '/api/lesson') return [500, { error: 'The tutor is unavailable right now.' }];
+    if (url === '/api/progress') return [200, { active_topics: ['beta'] }];
+    if (url === '/api/topics') return [200, []];
+    return null;
+  });
+  await settle();
+  const [beta] = await offerTwice(f, [1]);
+  await beta.click();
+  await settle();
+  expect(f.$('#chat-messages').children.some((n) => /open in Learn/.test(n.innerHTML))).toBe(false);
+  expect(beta.disabled).toBe(false);
+});
