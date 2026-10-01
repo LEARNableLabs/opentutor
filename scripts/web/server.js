@@ -359,11 +359,17 @@ async function handleStudentAPI(req, res, url, state, account) {
 
     // GET /api/user — get student profile
     if (req.method === 'GET' && url.pathname === '/api/user') {
-      if (url.searchParams.get('greeting')) { // #279
-        const getAdapter = () => adapterFor({ state, use: 'greeting', host: () => chatAdapter });
-        return json(res, { greeting: await dailyGreeting({ state, account, getAdapter }) });
+      try {
+        if (url.searchParams.get('greeting')) {
+          const getAdapter = () => adapterFor({ state, use: 'greeting', host: () => chatAdapter });
+          return json(res, { greeting: await dailyGreeting({ state, account, getAdapter }) });
+        }
+        return json(res, await userView(state, account));
+      } catch (err) {
+        console.error('[user]', err.message);
+        res.writeHead(500);
+        return res.end(JSON.stringify({ error: 'Could not load your profile.' }));
       }
-      return json(res, await userView(state, account));
     }
 
     // POST /api/user — save student profile

@@ -209,7 +209,7 @@ it('makes the page behind the onboarding dialog inert until the dialog closes', 
 
 it('returns focus to the topic picker when onboarding closes on a chosen topic', async () => {
   const start = { reply: 'Why?', lesson: { module: 'M', day: 1, title: 'T' }, step: 0, totalSteps: 3 };
-  const { $, focused, runTimers } = frontend((url) => ({
+  const { $, focused } = frontend((url) => ({
     '/api/user': [200, { hasProfile: false, onboarded: false }],
     '/api/onboard': [200, { reply: 'Game theory it is.', confirmedTopic: 'game-theory' }],
     '/api/add-topic': [200, { slug: 'game-theory', status: 'existing', lessonCount: 29 }],
@@ -220,8 +220,9 @@ it('returns focus to the topic picker when onboarding closes on a chosen topic',
   $('#onboarding-input').value = 'Game theory, please';
   await $('#btn-onboard-send').click();
   await settle();
-  expect(focused()).toBe($('#onboarding-input'));
-  runTimers();
+  // #272: a short tour of the tabs waits for the student, focused on its one button.
+  expect(focused()).toBe($('#btn-tour-start'));
+  await $('#btn-tour-start').click();
   await settle();
   expect($('#onboarding-overlay').classList.contains('hidden')).toBe(true);
   expect($('#app').inert).toBe(false);
@@ -659,6 +660,12 @@ it('lets the chat layout shrink to the visible window on phones', () => {
   expect(rule).toMatch(/min-height: 0/);
 });
 
+// A suggested answer can be a sentence. Buttons don't wrap, so one widened the whole page on a phone.
+it('wraps a long suggested answer instead of widening the page', () => {
+  const css = fs.readFileSync(new URL('../public/style.css', import.meta.url), 'utf8');
+  expect(css.match(/\n\.answer-option \{([^}]*)\}/)[1]).toMatch(/white-space: normal/);
+});
+
 it('knows a saved key at once, without waiting for the status to reload', async () => {
   const never = deferred();
   let gets = 0;
@@ -1016,6 +1023,132 @@ it('leaves a lesson that opened first alone', async () => {
   await settle();
   expect(f.$('#welcome').classList.contains('hidden')).toBe(true);
   expect(f.$('#empty-title').textContent).not.toMatch(/Welcome back/);
+});
+
+// #272: onboarding is a guided chat: choices as buttons, then a short tour of the tabs.
+function newStudent(onboard) {
+  const f = frontend((url, init) => {
+    if (url === '/api/user') return [200, { hasProfile: false, onboarded: false }];
+    if (url === '/api/onboard') return onboard(JSON.parse(init.body));
+    if (url === '/api/add-topic') return [200, { slug: 'game-theory', status: 'existing', lessonCount: 29 }];
+    if (url === '/api/topics') return [200, []];
+    if (url === '/api/lesson') return [200, { reply: 'First question?', step: 0, totalSteps: 3, done: false, lesson: { module: 'Basics', day: 1, title: 'Games' }, lessonId: 'L1' }];
+    return null;
+  });
+  return f;
+}
+const onboardCalls = (f) => f.calls.filter((c) => c.url === '/api/onboard').map((c) => JSON.parse(c.init.body).message);
+
+it('greets a new student by asking only their name', async () => {
+  const f = newStudent(() => [200, { reply: 'Hi.' }]);
+  await settle();
+  expect(f.$('#onboarding-overlay').classList.contains('hidden')).toBe(false);
+  expect(f.$('#onboarding-chat').children[0].innerHTML).toMatch(/What(&#39;|&#x27;|')s your name\?<\/div>$/); // and nothing more
+  expect(f.$('#onboarding-options').classList.contains('hidden')).toBe(true);
+});
+
+it('shows an onboarding question\'s choices as buttons, and a tap answers with that text', async () => {
+  const f = newStudent(({ message }) => (message === 'Sam'
+    ? [200, { reply: 'Nice to meet you, Sam! What brings you here?', options: ['School', 'Work', 'Pure curiosity'] }]
+    : [200, { reply: 'Which area are you curious about?', options: ['Science', 'Maths'] }]));
+  await settle();
+  f.$('#onboarding-input').value = 'Sam';
+  await f.$('#btn-onboard-send').click();
+  await settle();
+  const box = f.$('#onboarding-options');
+  expect(box.classList.contains('hidden')).toBe(false);
+  expect(box.children.map((b) => b.textContent)).toEqual(['School', 'Work', 'Pure curiosity']);
+  await box.children[1].click();
+  await settle();
+  expect(onboardCalls(f)).toEqual(['Sam', 'Work']);
+  expect(box.children.map((b) => b.textContent)).toEqual(['Science', 'Maths']);
+});
+
+// Live, a model shown its own questions without their choices stopped offering any (0 of 4 runs).
+it('sends the choices it showed back in the history, so the model keeps offering them', async () => {
+  const f = newStudent(({ message }) => (message === 'Sam'
+    ? [200, { reply: 'What brings you here?', options: ['School', 'Work'] }]
+    : [200, { reply: 'Which area?' }]));
+  await settle();
+  f.$('#onboarding-input').value = 'Sam';
+  await f.$('#btn-onboard-send').click();
+  await settle();
+  await f.$('#onboarding-options').children[0].click();
+  await settle();
+  const sent = JSON.parse(f.calls.filter((c) => c.url === '/api/onboard')[1].init.body);
+  expect(sent.history).toEqual([{ role: 'user', content: 'Sam' }, { role: 'assistant', content: 'What brings you here?\n<OPTIONS>School | Work</OPTIONS>' }]);
+});
+
+it('sends one onboarding answer at a time, however fast the taps', async () => {
+  let release;
+  const f = newStudent(({ message }) => (message === 'Sam'
+    ? [200, { reply: 'What brings you here?', options: ['School', 'Work'] }]
+    : new Promise((r) => (release = r))));
+  await settle();
+  f.$('#onboarding-input').value = 'Sam';
+  await f.$('#btn-onboard-send').click();
+  await settle();
+  const [school, work] = f.$('#onboarding-options').children;
+  school.click();
+  work.click(); // a second tap while the first answer is on its way
+  await settle();
+  expect(onboardCalls(f)).toEqual(['Sam', 'School']);
+  // Review of #277: Browse would close the card under a reply that then opens the tour.
+  expect(f.$('#btn-onboard-browse').disabled).toBe(true);
+  release([200, { reply: 'Got it.' }]);
+  await settle();
+  expect(f.$('#btn-onboard-browse').disabled).toBe(false);
+});
+
+it('shows a short tour of the tabs once a course is chosen, and Start learning closes it', async () => {
+  const f = newStudent(({ message }) => (message === 'Game theory'
+    ? [200, { reply: 'Great pick. Your first lesson is ready.', confirmedTopic: 'game-theory' }]
+    : [200, { reply: 'Hi.' }]));
+  await settle();
+  f.$('#onboarding-input').value = 'Game theory';
+  await f.$('#btn-onboard-send').click();
+  await settle();
+  expect(f.$('#onboarding-tour').classList.contains('hidden')).toBe(false);
+  expect(f.$('#onboarding-input-area').classList.contains('hidden')).toBe(true);
+  expect(f.$('#onboarding-overlay').classList.contains('hidden')).toBe(false); // it waits for the student
+  f.runTimers();
+  expect(f.$('#onboarding-overlay').classList.contains('hidden')).toBe(false); // no timer closes it
+  await f.$('#btn-tour-start').click();
+  await settle();
+  expect(f.$('#onboarding-overlay').classList.contains('hidden')).toBe(true);
+});
+
+// #271: the page renders links, lists and small headings, and nothing unsafe.
+it('renders a safe link only where links are allowed, and never an unsafe one', () => {
+  const { context } = frontend(() => null);
+  const link = '[Nash](https://en.wikipedia.org/wiki/Nash_equilibrium)';
+  expect(context.md(link)).toBe('Nash'); // off by default: user text, streaming, onboarding
+  expect(context.md(link, { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/Nash_equilibrium" target="_blank" rel="noopener noreferrer">Nash</a>');
+  expect(context.md('[click](javascript:alert(1))', { links: true })).not.toContain('<a');
+  expect(context.md('[x](https://a.example/"onmouseover="alert(1))', { links: true })).not.toMatch(/"onmouseover/);
+  expect(context.md('[<img src=x onerror=alert(1)>](https://a.example/)', { links: true })).not.toContain('<img');
+  // A * in a URL is part of it, not emphasis (review of #276).
+  expect(context.md('[A* search](https://en.wikipedia.org/wiki/A*_search_algorithm) is *fast*', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="_blank" rel="noopener noreferrer">A* search</a> is <em>fast</em>');
+  expect(context.md('[MASH](https://en.wikipedia.org/wiki/M*A*S*H_(TV_series))', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)" target="_blank" rel="noopener noreferrer">MASH</a>');
+  expect(context.md('[Mercury](https://en.wikipedia.org/wiki/Mercury_(planet)).', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank" rel="noopener noreferrer">Mercury</a>.');
+});
+
+it('renders numbered steps, bullets and a small heading', () => {
+  const { context } = frontend(() => null);
+  expect(context.md('### How it works\n1. First\n2. Then\n\n- one\n- two')).toBe('<h4 class="md-h">How it works</h4><ol><li>First</li><li>Then</li></ol><br><ul><li>one</li><li>two</li></ul>');
+});
+
+it('makes links clickable in the tutor\'s chat replies, not in the student\'s messages', async () => {
+  const f = frontend((url) => (url === '/api/chat' ? [200, { reply: 'See [Vaccines](https://en.wikipedia.org/wiki/Vaccine).', model: 'm' }] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'Read [this](https://en.wikipedia.org/wiki/Vaccine)';
+  await f.$('#btn-send').click();
+  await settle();
+  const kids = f.$('#chat-messages').children; // the double keeps the removed "Thinking..." in between
+  const [mine, tutor] = [kids[0], kids.at(-1)];
+  expect(mine.innerHTML).not.toContain('<a ');
+  expect(tutor.innerHTML).toContain('<a href="https://en.wikipedia.org/wiki/Vaccine"');
 });
 
 // #270: a tap on the companion helps; "Hide" in its bubble is how it goes away.

@@ -35,7 +35,7 @@ it.each([
 });
 
 it('still answers the profile and progress from a working store', async () => {
-  state = { readUser: async () => '- **Name:** Ada', readProgress: async () => ({ active_topics: ['knots'] }), writeUser: vi.fn(), getTopicProgress: async () => null, readKV: async () => null };
+  state = { readUser: async () => '- **Name:** Ada', readProgress: async () => ({ active_topics: ['knots'] }), writeUser: vi.fn(), getTopicProgress: async () => null, listKV: async () => [] };
 
   expect((await call(progress, 'GET')).body).toEqual({ active_topics: ['knots'] });
   expect((await call(user, 'GET')).body).toEqual({ profile: '- **Name:** Ada', hasProfile: true, onboarded: true, welcome: { name: 'Ada', courses: [] } });
