@@ -17,7 +17,7 @@ beforeEach(() => {
 });
 afterEach(() => { store.close(); vi.unstubAllEnvs(); fs.rmSync(dir, { recursive: true, force: true }); });
 
-const flight = (day, title, step) => JSON.stringify({ id: 'L1', lessonDay: day, lesson: { day, title }, plan: {}, steps: ['diagnostic', 'followUp', 'application'], step, reply: 'Q?' });
+const flight = (day, title, step) => JSON.stringify({ id: 'L1', lessonDay: day, lesson: { day, title }, plan: {}, steps: ['diagnostic', 'followUp', 'application'], step, reply: 'Q?', history: [] });
 
 it('calls the student what they asked to be called, then by their account name, else nothing', () => {
   expect(nameOf('- **Name:** Ada Lovelace\n- **What to call them:** Ada', { name: 'ada99' })).toBe('Ada');
@@ -83,6 +83,8 @@ it('shows no lesson in flight from a record whose step it cannot trust', async (
     { step: 0, steps: ['diagnostic'], reply: '' },
     { step: 0, steps: ['diagnostic'], reply: 42 },
     { step: 0, steps: ['diagnostic'], reply: undefined, history: { some: true } },
+    { step: 0, steps: ['diagnostic'], history: undefined },
+    { step: 0, steps: ['diagnostic'], history: null },
     { step: 0, steps: ['diagnostic'], reply: undefined, history: [null] },
     { step: 0, steps: ['diagnostic'], reply: undefined, history: [{ role: 'assistant', content: null }] },
     { step: 0, steps: ['diagnostic'], reply: undefined, history: [{ role: 'assistant', content: '   ' }] },
@@ -90,7 +92,7 @@ it('shows no lesson in flight from a record whose step it cannot trust', async (
   ];
   student.updateProgress((p) => { p.active_topics = ['game-theory']; });
   for (const record of records) {
-    student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 2, title: 'Sets' }, reply: 'Q?', ...record }));
+    student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 2, title: 'Sets' }, reply: 'Q?', history: [], ...record }));
     expect((await whereYouAre(student, student.readProgress()))[0].inFlight).toBe(null);
   }
 });
@@ -125,7 +127,7 @@ it('resumes a record that has only its history or its opening question', async (
     { reply: undefined, history: [{ role: 'assistant', content: 'Good.' }], step: 1 },
     { reply: undefined, plan: { diagnostic: 'What is a game?' }, step: 0 },
   ]) {
-    student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 1, title: 'Games' }, steps: ['diagnostic', 'application'], ...record }));
+    student.writeKV('web_lesson:game-theory', JSON.stringify({ plan: {}, lesson: { day: 1, title: 'Games' }, steps: ['diagnostic', 'application'], history: [], ...record }));
     expect((await whereYouAre(student, student.readProgress()))[0].inFlight).not.toBe(null);
   }
 });
