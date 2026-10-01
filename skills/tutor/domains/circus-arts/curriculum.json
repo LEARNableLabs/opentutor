@@ -38,8 +38,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://aerialphysique.com/physics-of-fabric-friction",
-        "https://www.youtube.com/watch?v=example-friction-demo"
+        "https://aerialphysique.com/physics-of-fabric-friction"
       ],
       "status": "pending"
     },
@@ -64,8 +63,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://circussciences.org/dynamic-forces-in-aerial",
-        "https://www.youtube.com/watch?v=example-drop-force-analysis"
+        "https://circussciences.org/dynamic-forces-in-aerial"
       ],
       "status": "pending"
     },
@@ -102,8 +100,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://aerialrigging.com/swivel-guide",
-        "https://www.youtube.com/watch?v=example-swivel-comparison"
+        "https://aerialrigging.com/swivel-guide"
       ],
       "status": "pending"
     },
@@ -178,8 +175,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://aerialphysique.com/fabric-width-biomechanics",
-        "https://www.youtube.com/watch?v=example-pressure-demo"
+        "https://aerialphysique.com/fabric-width-biomechanics"
       ],
       "status": "pending"
     },
@@ -241,8 +237,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://aerialphysique.com/climbing-mechanics",
-        "https://www.youtube.com/watch?v=example-climb-analysis"
+        "https://aerialphysique.com/climbing-mechanics"
       ],
       "status": "pending"
     },
@@ -267,7 +262,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=example-sequence-breakdown",
         "https://circussciences.org/video-analysis-tools"
       ],
       "status": "pending"

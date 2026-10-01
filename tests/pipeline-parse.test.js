@@ -92,6 +92,17 @@ describe('_parsePipelineOutput', () => {
     const result = pipeline._parsePipelineOutput(text, 'X', 'x');
     expect(result.curriculum.lessons).toHaveLength(1);
   });
+
+  // #293: a lesson resource becomes a trusted link, so a generated one whose shape can't be real is dropped.
+  it.each(['deterministic', 'agentic'])('drops invented lesson resources from a %s build', async (mode) => {
+    const resources = ['https://www.youtube.com/watch?v=tea-aroma-wheel', 'https://www.youtube.com/watch?v=JpdRchyVtvk', 'Futuyma Ch. 11'];
+    const decisions = [{ action: 'build' }, { action: 'finish' }];
+    const adapter = { generate: async (system) => ({ text: JSON.stringify(system.includes('ORCHESTRATOR') ? decisions.shift()
+      : { plan: 'P', curriculum: { topic: 'Tea', lessons: [{ lesson: 1, title: 'Leaves', resources }] }, status: 'APPROVED', critique: 'ok' }) }) };
+    const built = new CurriculumPipeline({ adapter, state: dummyState, skills: { get: () => '' }, mode, research: async () => 'S' });
+    const { curriculum } = await built.run('Tea', 'tea', 'beginner');
+    expect(curriculum.lessons[0].resources).toEqual(resources.slice(1));
+  });
 });
 
 describe('_parseCriticOutput', () => {

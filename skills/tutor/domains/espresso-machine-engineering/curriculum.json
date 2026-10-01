@@ -38,7 +38,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=pump-comparison-hoffmann",
         "https://www.home-barista.com/espresso-machines/pump-types-explained-t5678.html"
       ],
       "status": "pending"
@@ -64,8 +63,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.home-barista.com/espresso-machines/opv-adjustment-guide-t9012.html",
-        "https://www.youtube.com/watch?v=opv-setup-tutorial"
+        "https://www.home-barista.com/espresso-machines/opv-adjustment-guide-t9012.html"
       ],
       "status": "pending"
     },
@@ -103,7 +101,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=boiler-comparison-hoffmann",
         "https://www.baristahustle.com/blog/boiler-systems-explained/"
       ],
       "status": "pending"
@@ -129,7 +126,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=pid-tuning-tutorial",
         "https://www.home-barista.com/espresso-machines/pid-tuning-guide-t6789.html"
       ],
       "status": "pending"
@@ -246,8 +242,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://decentespresso.com/blog/pressure-vs-flow-profiling",
-        "https://www.youtube.com/watch?v=profiling-comparison-hedrick"
+        "https://decentespresso.com/blog/pressure-vs-flow-profiling"
       ],
       "status": "pending"
     },
@@ -272,8 +267,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.baristahustle.com/blog/espresso-compass/",
-        "https://www.youtube.com/watch?v=troubleshooting-hoffmann"
+        "https://www.baristahustle.com/blog/espresso-compass/"
       ],
       "status": "pending"
     },
@@ -311,7 +305,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=turbo-shots-hoffmann",
         "https://coffeeadastra.com/2020/08/28/turbulent-extraction/"
       ],
       "status": "pending"

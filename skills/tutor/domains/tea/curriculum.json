@@ -38,8 +38,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.tres.gov.tw/cultivar-database",
-        "https://www.youtube.com/watch?v=tea-cultivar-science"
+        "https://www.tres.gov.tw/cultivar-database"
       ],
       "status": "pending"
     },
@@ -116,7 +115,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=green-tea-processing-science",
         "https://www.specialtyteainstitute.org/green-tea-methods"
       ],
       "status": "pending"
@@ -167,8 +165,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://pubmed.ncbi.nlm.nih.gov/puerh-microbiology",
-        "https://www.youtube.com/watch?v=sheng-vs-shou-puerh"
+        "https://pubmed.ncbi.nlm.nih.gov/puerh-microbiology"
       ],
       "status": "pending"
     },
@@ -231,8 +228,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/tea-aroma-chemistry",
-        "https://www.youtube.com/watch?v=tea-aroma-wheel"
+        "https://www.ncbi.nlm.nih.gov/pmc/tea-aroma-chemistry"
       ],
       "status": "pending"
     },
@@ -244,8 +240,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://meileaf.com/article/gongfu-brewing-guide",
-        "https://www.youtube.com/watch?v=gongfu-introduction"
+        "https://meileaf.com/article/gongfu-brewing-guide"
       ],
       "status": "pending"
     },
@@ -295,7 +290,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=gongfu-timing-masterclass",
         "https://meileaf.com/article/infusion-timing-science"
       ],
       "status": "pending"
@@ -308,8 +302,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.globalteachampionship.com/tasting-protocols",
-        "https://www.youtube.com/watch?v=oolong-session-analysis"
+        "https://www.globalteachampionship.com/tasting-protocols"
       ],
       "status": "pending"
     },
@@ -334,8 +327,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/tea-aging-chemistry",
-        "https://www.youtube.com/watch?v=puerh-aging-science"
+        "https://www.ncbi.nlm.nih.gov/pmc/tea-aging-chemistry"
       ],
       "status": "pending"
     },
@@ -348,8 +340,7 @@
       "type": "teach-back",
       "resources": [
         "https://www.specialtyteainstitute.org/comprehensive-evaluation",
-        "https://www.globalteachampionship.com/masterclass-protocols",
-        "https://www.youtube.com/watch?v=tea-identification-masterclass"
+        "https://www.globalteachampionship.com/masterclass-protocols"
       ],
       "status": "pending"
     },

@@ -50,7 +50,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=roman-surveying-techniques",
         "https://www.britishmuseum.org/collection/roman-tools"
       ],
       "status": "pending"
@@ -121,9 +120,7 @@
       "concepts": ["material durability", "maintenance design", "basalt paving"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=roman-road-durability"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -205,7 +202,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=pont-du-gard-engineering",
         "https://whc.unesco.org/en/list/pont-du-gard"
       ],
       "status": "pending"
@@ -290,8 +286,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.khanacademy.org/humanities/ancient-art/roman-art/pantheon",
-        "https://www.youtube.com/watch?v=pantheon-construction"
+        "https://www.khanacademy.org/humanities/ancient-art/roman-art/pantheon"
       ],
       "status": "pending"
     },
@@ -349,7 +344,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=fall-of-rome-technology",
         "https://www.historytoday.com/lost-roman-technology"
       ],
       "status": "pending"
