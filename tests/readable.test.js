@@ -193,6 +193,31 @@ it('recognizes only a terminal marked footer and preserves ordinary Sources quot
   expect(check).not.toHaveBeenCalled();
 });
 
+it.each([' ', '   ', '\t'])('verifies indented source metadata with %j indentation', async (indent) => {
+  const check = vi.fn(async () => new Response(null, { status: 404 }));
+  vi.stubGlobal('fetch', check);
+  const text = `Facts.\n${indent}> 📚 Sources: [Zorblax](https://en.wikipedia.org/wiki/Zorblax_effect)`;
+  expect(await keepVerifiedSources(text)).toBe('Facts.');
+  expect(check).toHaveBeenCalledTimes(1);
+  for (let split = 0; split <= text.length; split++) {
+    const tokens = [];
+    const filter = sourceFilter((t) => tokens.push(t));
+    filter(text.slice(0, split));
+    filter(text.slice(split));
+    expect(tokens.join('')).toBe('Facts.\n');
+  }
+});
+
+it.each(['> An ordinary final quote.', 'Intro\n > Sources: primary inputs', '\t> 📚 A book quote.'])('streams a final ordinary quote without a newline: %s', (text) => {
+  for (let split = 0; split <= text.length; split++) {
+    const tokens = [];
+    const filter = sourceFilter((t) => tokens.push(t));
+    filter(text.slice(0, split));
+    filter(text.slice(split));
+    expect(tokens.join('')).toBe(text);
+  }
+});
+
 it('resumes an already-verified footer without fetching, and drops legacy footers without rewriting the lesson', async () => {
   const check = vi.fn(async () => new Response(null, { status: 200 }));
   vi.stubGlobal('fetch', check);
