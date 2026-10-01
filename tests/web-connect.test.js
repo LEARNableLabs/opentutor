@@ -1037,6 +1037,39 @@ it('keeps the open lesson answerable when the offered course cannot be opened', 
   expect(f.$('#chat-messages').children.some((n) => /is in Learn|is open in Learn/.test(n.innerHTML))).toBe(false);
 });
 
+// #271: the page renders links, lists and small headings, and nothing unsafe.
+it('renders a safe link only where links are allowed, and never an unsafe one', () => {
+  const { context } = frontend(() => null);
+  const link = '[Nash](https://en.wikipedia.org/wiki/Nash_equilibrium)';
+  expect(context.md(link)).toBe('Nash'); // off by default: user text, streaming, onboarding
+  expect(context.md(link, { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/Nash_equilibrium" target="_blank" rel="noopener noreferrer">Nash</a>');
+  expect(context.md('[click](javascript:alert(1))', { links: true })).not.toContain('<a');
+  expect(context.md('[x](https://a.example/"onmouseover="alert(1))', { links: true })).not.toMatch(/"onmouseover/);
+  expect(context.md('[<img src=x onerror=alert(1)>](https://a.example/)', { links: true })).not.toContain('<img');
+  // A * in a URL is part of it, not emphasis (review of #276).
+  expect(context.md('[A* search](https://en.wikipedia.org/wiki/A*_search_algorithm) is *fast*', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="_blank" rel="noopener noreferrer">A* search</a> is <em>fast</em>');
+  expect(context.md('[MASH](https://en.wikipedia.org/wiki/M*A*S*H_(TV_series))', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)" target="_blank" rel="noopener noreferrer">MASH</a>');
+  expect(context.md('[Mercury](https://en.wikipedia.org/wiki/Mercury_(planet)).', { links: true })).toBe('<a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank" rel="noopener noreferrer">Mercury</a>.');
+});
+
+it('renders numbered steps, bullets and a small heading', () => {
+  const { context } = frontend(() => null);
+  expect(context.md('### How it works\n1. First\n2. Then\n\n- one\n- two')).toBe('<h4 class="md-h">How it works</h4><ol><li>First</li><li>Then</li></ol><br><ul><li>one</li><li>two</li></ul>');
+});
+
+it('makes links clickable in the tutor\'s chat replies, not in the student\'s messages', async () => {
+  const f = frontend((url) => (url === '/api/chat' ? [200, { reply: 'See [Vaccines](https://en.wikipedia.org/wiki/Vaccine).', model: 'm' }] : null));
+  await settle();
+  await f.$('.nav-btn[data-view="chat"]').click();
+  f.$('#chat-input').value = 'Read [this](https://en.wikipedia.org/wiki/Vaccine)';
+  await f.$('#btn-send').click();
+  await settle();
+  const kids = f.$('#chat-messages').children; // the double keeps the removed "Thinking..." in between
+  const [mine, tutor] = [kids[0], kids.at(-1)];
+  expect(mine.innerHTML).not.toContain('<a ');
+  expect(tutor.innerHTML).toContain('<a href="https://en.wikipedia.org/wiki/Vaccine"');
+});
+
 // #270: a tap on the companion helps; "Hide" in its bubble is how it goes away.
 it('shows a tip for the lesson that matches what is on screen', async () => {
   const f = await lessonWith([]);

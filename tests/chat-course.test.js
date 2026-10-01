@@ -75,3 +75,11 @@ it.each([
   const { body } = await turn(`Sure.\n<COURSE>${named}</COURSE>`);
   expect(body.course.slug).toBe(slug);
 });
+
+// With #271: the offer and the link filter both apply to one reply.
+it('offers the course and drops an untrusted link from the same reply', async () => {
+  const { body, system } = await turn('See [this](https://evil.example/x) or [Game theory](https://en.wikipedia.org/wiki/Game_theory).\n<COURSE>game theory</COURSE>');
+  expect(body.course).toEqual({ topic: 'Game Theory', slug: 'game-theory' });
+  expect(body.reply).toBe('See this or [Game theory](https://en.wikipedia.org/wiki/Game_theory).');
+  expect(system).toMatch(/## Courses/);
+});
