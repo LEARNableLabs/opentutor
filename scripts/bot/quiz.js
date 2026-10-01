@@ -34,7 +34,7 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, dueReview
     await channel.sendMessage(chatId, "🧠 <b>Pop quiz!</b> Don't panic — let's see what stuck.\n");
   }
 
-  const { system, model, outputMode } = buildQuizPrompt(skills, topicSlug, recent, concepts.map((c) => c.concept));
+  const { system, model, outputMode } = buildQuizPrompt(skills, topicSlug, recent, concepts.map(({ topic, concept }) => ({ topic, concept })));
   const response = await generate(system, [
     { role: 'user', content: `Generate a review quiz for: ${quizTarget}` },
   ], { model, outputMode });
@@ -52,10 +52,12 @@ export async function generateQuiz(topicSlug, chatId, channel, skills, dueReview
         correctOptionId: q.correct,
         explanation: q.explanation,
       });
-      // The answer reaches spaced review through the concept the question names (#294), once per
-      // quiz: three questions on one concept are one review, not three steps out in its schedule.
-      const tested = concepts.find((c) => c.concept.toLowerCase() === String(q.concept ?? '').toLowerCase());
-      if (sent?.poll?.id && tested && !graded.has(tested)) {
+      // The answer reaches spaced review through the topic and concept the question names (#294): two
+      // topics can share a concept name. Once per quiz, on a question with a right answer: three
+      // questions on one concept are one review, not three steps out in its schedule.
+      const tested = concepts.find((c) => c.topic === String(q.topic ?? '').trim()
+        && c.concept.toLowerCase() === String(q.concept ?? '').trim().toLowerCase());
+      if (sent?.poll?.id && tested && Number.isInteger(q.correct) && !graded.has(tested)) {
         graded.add(tested);
         rememberReviewCard(sent.poll.id, { chatId, topic: tested.topic, concept: tested.concept, correctIndex: q.correct });
       }

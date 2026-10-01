@@ -73,16 +73,17 @@ export async function handleFlashcardCallback(data, chatId, channel, messageId) 
     await channel.editMessageButtons(chatId, messageId, []);
   } catch { /* old message */ }
 
-  // A button from before ids (#294), or one older than the cards state keeps, has nothing to grade.
+  // A button from before ids (#294), one already answered, or one older than the cards state keeps
+  // has nothing to grade.
   if (!card) {
     await channel.sendMessage(chatId, 'That card has expired. Type /review for what is due now.');
     return;
   }
   if (verdict === 'correct') {
-    recordReview(card.topic, card.concept, 'easy');
+    recordReview(card.topic, card.concept, 'easy', card.id);
     await channel.sendMessage(chatId, "✅ Got it! Moving on.");
   } else {
-    recordReview(card.topic, card.concept, 'wrong');
+    recordReview(card.topic, card.concept, 'wrong', card.id);
     await channel.sendMessage(chatId, "❌ Not quite — we'll revisit this one soon.");
   }
 }

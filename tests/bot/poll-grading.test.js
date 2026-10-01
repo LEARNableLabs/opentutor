@@ -44,20 +44,22 @@ const channel = {
 const send = (text, via = route) => via({ message: { text, chat: { id: STUDENT }, from: { id: STUDENT } } }, channel, new Map());
 const answerPoll = (poll_id, option_ids, user = STUDENT, via = route) => via({ poll_answer: { poll_id, user: { id: user }, option_ids } }, channel, new Map());
 const tap = (data) => route({ callback_query: { id: 'cb', data, from: { id: STUDENT }, message: { chat: { id: STUDENT }, message_id: 9 } } }, channel, new Map());
-const record = (concept) => Object.values(readProgress().spaced_repetition || {}).find((r) => r.concept === concept);
+const find = (records, topic, concept) => Object.values(records || {}).find((r) => r.topic === topic && r.concept === concept);
+const record = (concept, topic = TOPIC) => find(readProgress().spaced_repetition, topic, concept);
 const sentText = () => channel.sendMessage.mock.calls.map(([, text]) => text).join('\n');
 
 function due(topic, concept, fields = {}) {
   registerConcept(topic, concept);
   updateProgress((p) => {
-    Object.assign(Object.values(p.spaced_repetition).find((r) => r.concept === concept), { next_review: '2020-01-01', ...fields });
+    Object.assign(find(p.spaced_repetition, topic, concept), { next_review: '2020-01-01', ...fields });
     p.active_topics = [TOPIC];
   });
 }
 
+// Each question: [concept, correct option, topic]
 function quizReply(...questions) {
-  generate.mockResolvedValue({ text: JSON.stringify(questions.map(([concept, correct]) => ({
-    question: `About ${concept}?`, concept, options: ['a', 'b', 'c', 'd'], correct, explanation: 'Because.',
+  generate.mockResolvedValue({ text: JSON.stringify(questions.map(([concept, correct, topic = TOPIC]) => ({
+    question: `About ${concept}?`, topic, concept, options: ['a', 'b', 'c', 'd'], correct, explanation: 'Because.',
   }))) });
 }
 
@@ -117,13 +119,37 @@ describe('quiz poll answers reach spaced review', () => {
     expect(record(CONCEPT)).toMatchObject({ reps: 1, streak: 1 });
   });
 
-  it('grades a concept once per quiz, and never a concept the quiz did not list', async () => {
+  it('grades a concept once per quiz, on its first question with a right answer, and never a concept the quiz did not list', async () => {
     due(TOPIC, CONCEPT);
-    quizReply([CONCEPT, 0], [CONCEPT, 1], ['something it made up', 0]);
+    quizReply([CONCEPT, undefined], [CONCEPT, 1], [CONCEPT, 2], ['something it made up', 0]);
     await send('/review');
-    expect(channel.sendPoll).toHaveBeenCalledTimes(3);
+    expect(channel.sendPoll).toHaveBeenCalledTimes(4);
 
-    for (const [poll, option] of [['poll-1', 0], ['poll-2', 1], ['poll-3', 0]]) await answerPoll(poll, [option]);
+    for (const [poll, option] of [['poll-1', 1], ['poll-2', 1], ['poll-3', 0], ['poll-4', 0]]) await answerPoll(poll, [option]);
+
+    expect(record(CONCEPT)).toMatchObject({ reps: 1, streak: 1 }); // poll-2, answered right
+  });
+
+  it('grades the topic a question names when two due concepts share a name', async () => {
+    due(TOPIC, 'Bias');
+    due('statistics', 'Bias');
+    quizReply(['Bias', 0, 'statistics']);
+    await send('/review');
+
+    await answerPoll('poll-1', [0]);
+
+    expect(record('Bias', 'statistics')).toMatchObject({ reps: 1 });
+    expect(record('Bias', TOPIC)).toMatchObject({ reps: 0 });
+  });
+
+  it('grades the student once, however often the answer arrives and whoever else votes', async () => {
+    due(TOPIC, CONCEPT);
+    quizReply([CONCEPT, 2]);
+    await send('/review');
+
+    await answerPoll('poll-1', [2], 99); // someone else, on a forwarded copy
+    await answerPoll('poll-1', [2]);
+    await answerPoll('poll-1', [2]); // Telegram delivers it again after a restart
 
     expect(record(CONCEPT)).toMatchObject({ reps: 1, streak: 1 });
   });
@@ -166,7 +192,20 @@ describe('quiz poll answers reach spaced review', () => {
   });
 });
 
-describe('flashcard buttons', () => {
+describe('flashcards', () => {
+  it.each([
+    ['is graded', 1, { reps: 1, streak: 1 }],
+    ['whose right answer is not an index is not graded', '1', { reps: 0 }],
+  ])('a flashcard poll %s', async (_case, correct, expected) => {
+    due(TOPIC, CONCEPT);
+    generate.mockResolvedValue({ text: JSON.stringify({ question: 'Which one?', options: ['a', 'b', 'c', 'd'], correct }) });
+
+    await deliverFlashcards(STUDENT, channel, new Map(), 1);
+    await answerPoll('poll-1', [1]);
+
+    expect(record(CONCEPT)).toMatchObject(expected);
+  });
+
   const LONG_TOPIC = 'history-and-philosophy-of-science-from-antiquity-to-the-present';
   const LONG_CONCEPT = 'the demarcation problem between sciences and pseudo-sciences';
 
@@ -180,8 +219,9 @@ describe('flashcard buttons', () => {
     for (const button of [gotIt, forgot]) expect(Buffer.byteLength(button.callback_data)).toBeLessThanOrEqual(64);
 
     await tap(gotIt.callback_data);
+    await tap(gotIt.callback_data); // a second tap, before the buttons were removed
 
-    expect(record(LONG_CONCEPT)).toMatchObject({ reps: 1, streak: 1 });
+    expect(record(LONG_CONCEPT, LONG_TOPIC)).toMatchObject({ reps: 1, streak: 1 });
   });
 
   it('a button from before short ids fails soft', async () => {

@@ -52,7 +52,7 @@ async function dispatch(update, channel, skills) {
     // collects strangers' votes.
     const card = findReviewCard(answer.poll_id);
     if (card && Number.isInteger(card.correctIndex) && optionIds.length && answer.user?.id === card.chatId) {
-      recordReview(card.topic, card.concept, optionIds[0] === card.correctIndex ? 'easy' : 'wrong');
+      recordReview(card.topic, card.concept, optionIds[0] === card.correctIndex ? 'easy' : 'wrong', card.id);
     }
     return;
   }
