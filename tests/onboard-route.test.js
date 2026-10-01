@@ -264,3 +264,92 @@ describe('course titles and tags', () => {
     }
   });
 });
+
+// #272: each onboarding question can come with choices the page shows as buttons.
+describe('choices', () => {
+  const reply = (text) => adapter.generate.mockResolvedValue({ text });
+
+  it('come out of their marker as clean options, and the marker never reaches the student', async () => {
+    reply('Nice to meet you, Sam! What brings you here?\n<OPTIONS> School | Work |Pure curiosity </OPTIONS>');
+    const res = await call({ message: 'Sam' });
+    expect(res.body).toMatchObject({ reply: 'Nice to meet you, Sam! What brings you here?', options: ['School', 'Work', 'Pure curiosity'], confirmedTopic: null });
+  });
+
+  it.each([
+    ['repeated and blank', 'Pick one\n<OPTIONS>Maths | maths | | Maths | Science</OPTIONS>', ['Maths', 'Science']],
+    ['more than five', 'Pick\n<OPTIONS>a | b | c | d | e | f | g</OPTIONS>', ['a', 'b', 'c', 'd', 'e']],
+    ['too long', `Pick\n<OPTIONS>${'x'.repeat(61)} | Short | Also short</OPTIONS>`, ['Short', 'Also short']],
+  ])('are cleaned when %s', async (_case, text, expected) => {
+    reply(text);
+    const res = await call({ message: 'Sam' });
+    expect(res.body.options).toEqual(expected);
+    expect(res.body.reply).not.toMatch(/OPTIONS|[<>]/);
+  });
+
+  it.each([
+    ['only one', 'Pick\n<OPTIONS>Only this</OPTIONS>'],
+    ['an unclosed marker', 'Pick one\n<OPTIONS>School | Work'],
+    ['a stray closing tag', 'Pick one</OPTIONS>'],
+    ['none at all', 'Tell me more.'],
+  ])('are left out when the model sends %s, and no marker is shown', async (_case, text) => {
+    reply(text);
+    const res = await call({ message: 'Sam' });
+    expect(res.body.options).toBeUndefined();
+    expect(res.body.reply).not.toMatch(/OPTIONS|[<>]/);
+  });
+
+  it('end once a course is confirmed: the lesson starts, so there is nothing left to ask', async () => {
+    reply('Great pick.\n<TOPIC>game-theory</TOPIC>\n<OPTIONS>Yes | No</OPTIONS>');
+    const res = await call({ message: 'The first one' }); // only the model knows which that is
+    expect(res.body.confirmedTopic).toBe('game-theory');
+    expect(res.body.options).toBeUndefined();
+    expect(res.body.reply).toBe('Great pick.');
+  });
+});
+
+describe('choosing a ready-made course', () => {
+  const asked = [{ role: 'assistant', content: 'Which sounds best?\n<OPTIONS>Game theory | Something else</OPTIONS>' }];
+
+  it('is confirmed when the student names one exactly, as tapping a suggestion does, with no model call', async () => {
+    const res = await call({ message: 'Game theory', history: asked });
+    expect(res.body).toMatchObject({ confirmedTopic: 'game-theory', reply: expect.stringMatching(/Game Theory/) });
+    expect(res.body.options).toBeUndefined();
+    expect(adapter.generate).not.toHaveBeenCalled();
+    expect(state.writeUser).toHaveBeenCalledWith(expect.stringContaining('- Game theory'));
+  });
+
+  it('still asks the model about anything that is not exactly a course', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Tell me more.\n<OPTIONS>School | Work</OPTIONS>' });
+    const res = await call({ message: 'I like games' });
+    expect(adapter.generate).toHaveBeenCalled();
+    expect(res.body.confirmedTopic).toBeNull();
+  });
+
+  // The first answer is the student's name, and some courses have one-word titles ("Logic", "Tea").
+  it('reads a first answer that happens to be a course title as an answer, not a choice', async () => {
+    adapter.generate.mockResolvedValue({ text: 'Nice to meet you. What brings you here?\n<OPTIONS>School | Work</OPTIONS>' });
+    const res = await call({ message: 'Game theory' });
+    expect(adapter.generate).toHaveBeenCalled();
+    expect(res.body).toMatchObject({ confirmedTopic: null, options: ['School', 'Work'] });
+  });
+});
+
+it('never shows a singular <OPTION> marker either', async () => {
+  adapter.generate.mockResolvedValue({ text: 'Locked in.<OPTION> Game Theory vs Decision Theory </OPTION> Which one?' });
+  const res = await call({ message: 'Sam' });
+  expect(res.body.reply).not.toMatch(/OPTION|[<>]/);
+});
+
+it('reads choices the model wrote inline, without their marker, and takes them out of the text', async () => {
+  adapter.generate.mockResolvedValue({ text: 'Science covers a lot. Where would you place yourself? New to it | Know the basics | Pretty advanced' });
+  const res = await call({ message: 'Science' });
+  expect(res.body.options).toEqual(['New to it', 'Know the basics', 'Pretty advanced']);
+  expect(res.body.reply).toBe('Science covers a lot. Where would you place yourself?');
+});
+
+it('leaves a sentence that merely contains a bar alone', async () => {
+  adapter.generate.mockResolvedValue({ text: 'Rock | paper | scissors is a classic game. What else do you like?' });
+  const res = await call({ message: 'Games' });
+  expect(res.body.options).toBeUndefined();
+  expect(res.body.reply).toBe('Rock | paper | scissors is a classic game. What else do you like?');
+});

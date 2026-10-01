@@ -37,13 +37,22 @@ async function handler(req, res) {
 export async function onboardTurn({ state, skills, getAdapter }, { message, history }) {
   const text = turnText(message);
   if (text === null) return { status: 400, body: { error: 'A message of 1 to 4,000 characters is required.' } };
-  const adapter = await getAdapter();
-
-  const user = await state.readUser();
   // #223: the ready-made courses come first, and only a student who can have a topic built may
   // leave the list. Onboarding once confirmed any phrase, so a trial account's first step after
   // it was "connect OpenRouter".
   const availableTopics = await state.listTopics();
+  // #272: a course named exactly, which is what tapping a suggested course sends, is chosen as it
+  // stands. The model, asked again, sometimes kept asking instead of confirming. Not as the first
+  // answer, which is the student's name.
+  const picked = Array.isArray(history) && history.length ? courseFor(text, availableTopics) : null;
+  if (picked) {
+    await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
+    const name = titles.get(picked) || picked.replace(/-/g, ' ');
+    return { status: 200, body: { reply: `Good choice: ${name}. Your first lesson is ready.`, confirmedTopic: picked } };
+  }
+  const adapter = await getAdapter();
+
+  const user = await state.readUser();
   const customTopics = await canCreateTopics(state);
   const { system, model } = buildOnboardingPrompt(skills, user, { availableTopics, customTopics });
   const messages = [...(isAccount(state) ? trimHistory(history) : history || []), { role: 'user', content: text }];
@@ -53,7 +62,9 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   // spaces inside the tags are the model's slip, not a reason to show them.
   const named = response.text.match(/<\s*TOPIC\s*>([^<>]*)<\s*\/\s*TOPIC\s*>/i)?.[1].trim() || null;
   const confirmedTopic = named && (courseFor(named, availableTopics) || (customTopics ? named : null));
-  let reply = response.text.replace(/<\s*TOPIC\s*>[^<>]*<\s*\/\s*TOPIC\s*>/gi, '').replace(/<\s*\/?\s*TOPIC\s*>/gi, '').trim();
+  let reply = response.text.replace(/<\s*TOPIC\s*>[^<>]*<\s*\/\s*TOPIC\s*>/gi, '').replace(/<\s*\/?\s*TOPIC\s*>/gi, '')
+    // #272: a question's choices travel in their own marker. An unclosed one takes its text with it.
+    .replace(/<\s*OPTIONS?\s*>[^<>]*/gi, '').replace(/<\s*\/?\s*OPTIONS?\s*>/gi, '').trim();
   const ask = 'What would you like to learn? Tell me in a few words, or browse the ready-made topics.';
   // A marker that confirmed nothing (refused, empty or broken) leaves words that may promise a
   // course that isn't coming, so they are replaced, not added to.
@@ -63,7 +74,25 @@ export async function onboardTurn({ state, skills, getAdapter }, { message, hist
   // The model gets the trimmed history; the profile gets what the student said from the
   // start, so a name given in the first answer survives a long conversation.
   if (confirmedTopic) await keepOwnWords(state, [...(Array.isArray(history) ? history : []), { role: 'user', content: text }]);
-  return { status: 200, body: { reply, confirmedTopic, model: response.model } };
+  // Choices belong to a question; a turn that confirmed, refused or broke a topic marker asks none.
+  let options = null;
+  if (!/<\s*\/?\s*TOPIC\s*>/i.test(response.text)) {
+    options = choicesFrom(response.text.match(/<\s*OPTIONS\s*>([^<>]*)<\s*\/\s*OPTIONS\s*>/i)?.[1]);
+    // The model sometimes writes them inline after its question, with no marker.
+    const inline = !options && reply.match(/\?\s*([^?\n|]{1,60}(?:\s\|\s[^?\n|]{1,60}){1,4})\s*$/);
+    if (inline && (options = choicesFrom(inline[1]))) reply = reply.slice(0, inline.index + 1).trim();
+  }
+  return { status: 200, body: { reply, confirmedTopic, ...(options && { options }), model: response.model } };
+}
+
+// 2 to 5 short, distinct choices from a "a | b | c" list, or none.
+function choicesFrom(offered) {
+  if (!offered) return null;
+  const seen = new Set();
+  const list = offered.split('|').map((o) => o.trim())
+    .filter((o) => o && o.length <= 60 && !seen.has(o.toLowerCase()) && seen.add(o.toLowerCase()))
+    .slice(0, 5);
+  return list.length >= 2 ? list : null;
 }
 
 const norm = (text) => text.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
