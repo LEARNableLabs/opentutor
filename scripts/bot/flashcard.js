@@ -4,11 +4,12 @@
  * Formats: multiple choice (buttons), true/false, fill-in-the-blank.
  */
 
+import { randomBytes } from 'node:crypto';
 import { generate } from './claude.js';
 import { buildFlashcardPrompt } from './context.js';
 import { parseFirstJson } from '../../lib/core/json.js';
 import { getDueReviews, recordReview } from './spaced-repetition.js';
-import { appendMemory } from './state.js';
+import { appendMemory, rememberReviewCard, findReviewCard } from './state.js';
 import { log } from './logger.js';
 
 /**
@@ -34,15 +35,18 @@ export async function deliverFlashcards(chatId, channel, skills, limit = 1) {
       { role: 'user', content: `Generate a flashcard for: "${review.concept}" (rep ${review.reps + 1}, streak ${review.streak})` },
     ], { model, outputMode });
 
-    const card = parseFlashcard(response.text, review);
+    const card = parseFlashcard(response.text);
+    const reviewed = { topic: review.topic, concept: review.concept };
 
     if (card.type === 'poll') {
-      await channel.sendPoll(chatId, card.question, card.options, {
+      const sent = await channel.sendPoll(chatId, card.question, card.options, {
         correctOptionId: card.correctIndex,
         explanation: card.explanation,
       });
+      if (sent?.poll?.id) rememberReviewCard(sent.poll.id, { chatId, ...reviewed, correctIndex: card.correctIndex });
     } else {
       // Button-based card
+      rememberReviewCard(card.id, reviewed);
       await channel.sendMessage(chatId, card.question, {
         buttons: card.buttons,
       });
@@ -54,45 +58,52 @@ export async function deliverFlashcards(chatId, channel, skills, limit = 1) {
 
 /**
  * Handle flashcard button callback.
- * @param {string} data - callback_data (e.g., "fc_concept-name_A_correct")
+ * @param {string} data - callback_data (e.g., "fc::1a2b3c4d::correct")
  * @param {number} chatId
  * @param {object} channel
  * @param {number} messageId
  */
 export async function handleFlashcardCallback(data, chatId, channel, messageId) {
-  const parts = data.split('::');
-  const topic = parts[1];
-  const concept = parts[2]?.replace(/-/g, ' ');
-  const isCorrect = parts[3] === 'correct';
-  log.info({ topic, concept, is_correct: isCorrect }, 'flashcard callback');
+  const [, id, verdict] = data.match(/^fc::([a-f0-9]{8})::(correct|wrong)$/) || [];
+  const card = id ? findReviewCard(id) : null;
+  log.info({ topic: card?.topic, concept: card?.concept, is_correct: verdict === 'correct' }, 'flashcard callback');
 
   // Remove buttons
   try {
     await channel.editMessageButtons(chatId, messageId, []);
   } catch { /* old message */ }
 
-  if (isCorrect) {
-    recordReview(topic, concept, 'easy');
+  // A button from before ids (#294), one already answered, or one older than the cards state keeps
+  // has nothing to grade.
+  if (!card) {
+    await channel.sendMessage(chatId, 'That card has expired. Type /review for what is due now.');
+    return;
+  }
+  if (verdict === 'correct') {
+    recordReview(card.topic, card.concept, 'easy', card.id);
     await channel.sendMessage(chatId, "✅ Got it! Moving on.");
   } else {
-    recordReview(topic, concept, 'wrong');
+    recordReview(card.topic, card.concept, 'wrong', card.id);
     await channel.sendMessage(chatId, "❌ Not quite — we'll revisit this one soon.");
   }
 }
 
 // ── Parse flashcard from Claude's response ─────────────────
 
-function parseFlashcard(text, review) {
+function parseFlashcard(text) {
   // Try to detect poll format (JSON with question/options/correct)
   try {
     const data = parseFirstJson(text);
     if (data) {
       if (data.question && data.options) {
+        // A right answer that is not one of the options (missing, null, out of range) makes a plain
+        // poll (#294): neither a quiz Telegram refuses nor one graded on a made-up option 0.
+        const correct = data.correct ?? data.correct_index;
         return {
           type: 'poll',
           question: `🔁 ${data.question}`,
           options: data.options,
-          correctIndex: data.correct ?? data.correct_index ?? 0,
+          correctIndex: Number.isInteger(correct) && data.options[correct] !== undefined ? correct : undefined,
           explanation: data.explanation || '',
         };
       }
@@ -101,9 +112,10 @@ function parseFlashcard(text, review) {
     // Not JSON — use as button card
   }
 
-  // Fallback: button-based multiple choice
-  const conceptSlug = review.concept.toLowerCase().replace(/\s+/g, '-').slice(0, 30);
-  const topicSlug = review.topic;
+  // Fallback: button-based multiple choice. The buttons carry a short id that state maps to the
+  // whole concept (#294): a slug of it was cut to 30 characters, and with a long topic slug the
+  // callback data still overran Telegram's 64 bytes.
+  const id = randomBytes(4).toString('hex');
 
   // Extract question (first line or up to ?)
   const questionMatch = text.match(/(?:🔁\s*)?(.+?\?)/s);
@@ -111,11 +123,12 @@ function parseFlashcard(text, review) {
 
   return {
     type: 'buttons',
+    id,
     question,
     buttons: [
       [
-        { text: '✅ Got it', callback_data: `fc::${topicSlug}::${conceptSlug}::correct` },
-        { text: '❌ Forgot', callback_data: `fc::${topicSlug}::${conceptSlug}::wrong` },
+        { text: '✅ Got it', callback_data: `fc::${id}::correct` },
+        { text: '❌ Forgot', callback_data: `fc::${id}::wrong` },
       ],
     ],
   };

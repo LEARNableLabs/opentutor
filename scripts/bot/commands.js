@@ -94,8 +94,7 @@ async function cmdReview(chatId, channel, skills, args) {
   await channel.sendMessage(chatId, `🔄 <b>Spaced review</b> — ${due.length} concept${due.length > 1 ? 's' : ''} due\n`);
 
   // Generate a quick quiz on the due concepts
-  const concepts = due.map((r) => r.concept).join(', ');
-  await generateQuiz(due[0].topic, chatId, channel, skills, concepts);
+  await generateQuiz(due[0].topic, chatId, channel, skills, due);
 }
 
 async function cmdProgress(chatId, channel) {
