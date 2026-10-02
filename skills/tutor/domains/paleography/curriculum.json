@@ -36,9 +36,7 @@
       "concepts": ["contextual reading", "pattern recognition", "letterform analysis"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -73,9 +71,7 @@
       "concepts": ["Carolingian minuscule", "script reform", "Tours scriptorium"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.bl.uk/manuscripts/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -86,8 +82,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.digipal.eu/",
-        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
+        "https://www.digipal.eu/"
       ],
       "status": "pending"
     },
@@ -122,9 +117,7 @@
       "concepts": ["textualis variants", "rotunda", "cursiva", "bastarda"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.bl.uk/manuscripts/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -135,8 +128,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://gallica.bnf.fr/",
-        "https://www.bl.uk/manuscripts/"
+        "https://gallica.bnf.fr/"
       ],
       "status": "pending"
     },
@@ -147,9 +139,7 @@
       "concepts": ["Gothic cursiva", "legal abbreviations", "documentary context"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -184,9 +174,7 @@
       "concepts": ["print-manuscript interaction", "standardization", "italic script"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.bl.uk/collection-guides/early-european-printed-books"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -196,9 +184,7 @@
       "concepts": ["Secretary hand", "English documents 1500-1700", "cursive forms"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -208,9 +194,7 @@
       "concepts": ["Secretary transcription", "early modern conventions", "personal correspondence"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -232,9 +216,7 @@
       "concepts": ["suspension", "contraction", "nomina sacra", "standard forms"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.nationalarchives.gov.uk/palaeography/default.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -244,9 +226,7 @@
       "concepts": ["contextual expansion", "abbreviation dictionaries", "problem-solving"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.bl.uk/manuscripts/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -268,9 +248,7 @@
       "concepts": ["diagnostic features", "dating criteria", "script chronology"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.bl.uk/manuscripts/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -281,8 +259,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.e-codices.ch/en",
-        "https://www.bl.uk/manuscripts/"
+        "https://www.e-codices.ch/en"
       ],
       "status": "pending"
     },
@@ -306,7 +283,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.nationalarchives.gov.uk/palaeography/default.htm",
         "https://www.e-codices.ch/en"
       ],
       "status": "pending"

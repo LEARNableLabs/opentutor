@@ -5,7 +5,6 @@
 ### Foundational Textbooks
 
 - **Botany in a Day: The Patterns Method of Plant Identification** by Thomas J. Elpel
-  - [https://www.hopspress.com/botany-in-a-day.htm](https://www.hopspress.com/botany-in-a-day.htm)
   - Pattern-based family identification. Essential for intermediate learners moving beyond picture matching.
   - Best for: Plant family recognition, morphological thinking
 
@@ -25,7 +24,6 @@
 ### Regional Field Guides
 
 - **Peterson Field Guides to Edible Wild Plants** (Eastern/Central North America)
-  - [https://www.hmhco.com/peterson-field-guides](https://www.hmhco.com/peterson-field-guides)
   - Portable, well-illustrated, region-specific
 
 - **Newcomb's Wildflower Guide** by Lawrence Newcomb
@@ -34,7 +32,6 @@
   - Best for: Building ID skills beyond pictures
 
 - **Audubon Society Field Guides** (regional variations)
-  - [https://www.audubon.org/field-guides](https://www.audubon.org/field-guides)
   - Photo-based, comprehensive, regionally specific
 
 ### Academic and Scientific Resources
@@ -85,7 +82,6 @@
   - Best for: Community connection, diverse perspectives
 
 - **The Mushroom Hour Podcast**
-  - [https://www.themushroomhour.com/](https://www.themushroomhour.com/)
   - Mushroom-focused but covers broader foraging topics
   - Best for: Deep dives, expert interviews
 
@@ -293,7 +289,6 @@
 ### Community Education
 
 - **Brooklyn Botanic Garden Adult Education**
-  - [https://www.bbg.org/learn/adults](https://www.bbg.org/learn/adults)
   - Periodic foraging and ethnobotany courses
   - Best for: Structured in-person learning
 

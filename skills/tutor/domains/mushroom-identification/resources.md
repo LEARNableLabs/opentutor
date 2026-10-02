@@ -22,7 +22,6 @@
 ## Supplementary Resources
 
 ### Videos and Video Channels
-- **North American Mycological Association (NAMA) YouTube** (https://www.youtube.com/c/NAMYCO) — identification workshops, forays, expert talks
 - **Learn Your Land** YouTube channel — field identification videos, emphasis on edible/medicinal species
 - **Mushroom Identification** by Shroomery — community-contributed videos and guides (focus on active ID skills)
 - **Cornell Mushroom Blog** — video field guides to common species in the Northeast
@@ -43,8 +42,6 @@
 
 ### Code and Data
 - **iNaturalist API** (https://api.inaturalist.org/v1/docs) — programmatic access to observation data for analysis
-- **Mushroom Observer API** (https://mushroomobserver.org/api) — access specimen data and identifications
-- **Fungal Trait Database** (https://www.fungaltraits.org) — ecological and functional trait data for research
 
 ### People and Communities
 - **Michael Kuo** — author of MushroomExpert.com and multiple field guides; excellent writer
@@ -54,9 +51,7 @@
 - **Local mushroom clubs** — find your nearest NAMA-affiliated club at https://www.namyco.org/clubs.php for forays, workshops, and expert mentorship
 
 ### Toxicology and Safety
-- **NAMA Toxicology Committee** (https://www.namyco.org/toxicology.php) — authoritative resource on mushroom poisoning syndromes
 - **Poison Control** (1-800-222-1222 in the US) — 24/7 hotline for suspected mushroom poisoning
-- **Case Studies in Mushroom Poisoning** (https://www.namyco.org/toxicology_case_registry.php) — real poisoning cases with identification lessons
 
 ### Scientific Literature (advanced)
 - **Mycologia** — journal of the Mycological Society of America

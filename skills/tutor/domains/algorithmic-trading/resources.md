@@ -17,7 +17,6 @@
   - https://www.cambridge.org/core/books/algorithmic-and-highfrequency-trading/5A9C48A0A6417D07B72DE8ECB2C2CC59
 
 - **"Algorithmic Trading and DMA" by Barry Johnson** (4Myeloma Press, 2010) — practitioner's guide to direct market access and execution algorithms. Very practical.
-  - https://www.algorithmictradinganddma.com/
 
 ### Academic Papers (Open Access)
 
@@ -34,7 +33,6 @@
   - https://arxiv.org/abs/1003.4739
 
 - **Almgren & Chriss (2000)** "Optimal execution of portfolio transactions" — optimal execution with market impact
-  - https://www.math.nyu.edu/faculty/chriss/optliq_f.pdf
 
 ### University Courses
 
@@ -64,7 +62,6 @@
 
 - **QuantInsti YouTube Channel**
   - Tutorials on algorithmic trading strategies, backtesting, risk management
-  - https://www.youtube.com/c/QuantInsti
 
 - **QuantPy YouTube Channel**
   - Python implementations of trading strategies and microstructure analysis
@@ -76,7 +73,6 @@
 
 - **High-Frequency Trading Explained (60 Minutes)**
   - Popular accessible explanation of HFT and latency advantages
-  - https://www.youtube.com/watch?v=OTjyO2ztAOQ
 
 ### Interactive Tools and Platforms
 

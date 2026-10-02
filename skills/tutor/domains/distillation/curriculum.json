@@ -38,7 +38,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=7PCUy3LqLQM",
         "https://www.ncbi.nlm.nih.gov/books/NBK22593/"
       ],
       "status": "pending"
@@ -51,8 +50,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Book%3A_Organic_Chemistry_Lab_Techniques_(Nichols)/05%3A_Distillation",
-        "https://www.youtube.com/watch?v=JHVGs37lWe0"
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Book%3A_Organic_Chemistry_Lab_Techniques_(Nichols)/05%3A_Distillation"
       ],
       "status": "pending"
     },
@@ -64,7 +62,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.chemguide.co.uk/physical/phaseeqia/idealmix.html",
         "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Solutions_and_Mixtures/Ideal_Solutions/Deviations_from_Raoult's_Law"
       ],
       "status": "pending"
@@ -77,8 +74,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Solutions_and_Mixtures/Nonideal_Solutions/Azeotropes",
-        "https://www.youtube.com/watch?v=XQRQvx1fVkI"
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Solutions_and_Mixtures/Nonideal_Solutions/Azeotropes"
       ],
       "status": "pending"
     },
@@ -90,8 +86,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.artisan-distiller.com/distillation-basics",
-        "https://homedistiller.org/intro/basics"
+        "https://www.artisan-distiller.com/distillation-basics"
       ],
       "status": "pending"
     },
@@ -102,10 +97,7 @@
       "concepts": ["phase diagrams", "vapor-liquid equilibrium", "T-x-y diagrams"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=JPErPFFauVQ",
-        "https://ocw.mit.edu/courses/10-213j-chemical-and-biological-reaction-engineering-spring-2006/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -116,7 +108,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=yFLM8GkFF3k",
         "https://www.diffordsguide.com/encyclopedia/1273/spirits/pot-still-vs-column-still"
       ],
       "status": "pending"
@@ -129,8 +120,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Analytical_Chemiluminescence/Distillation_I_-_Fractional_Distillation",
-        "https://www.youtube.com/watch?v=qU7XUdqFJjw"
+        "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Analytical_Chemiluminescence/Distillation_I_-_Fractional_Distillation"
       ],
       "status": "pending"
     },
@@ -142,8 +132,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://ocw.mit.edu/courses/10-32-separation-processes-spring-2005/",
-        "https://www.youtube.com/watch?v=zPYYk5JZPLU"
+        "https://ocw.mit.edu/courses/10-32-separation-processes-spring-2005/"
       ],
       "status": "pending"
     },
@@ -181,7 +170,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=pMiGK7P-LEM",
         "https://www.artisan-distiller.com/distillation-equipment-guide"
       ],
       "status": "pending"
@@ -194,7 +182,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://homedistiller.org/wiki/htm/config/methanol.htm",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6099584/"
       ],
       "status": "pending"
@@ -233,8 +220,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.whisky.com/information/knowledge/production/malting.html",
-        "https://www.youtube.com/watch?v=YZGwLx5_Ipw"
+        "https://www.whisky.com/information/knowledge/production/malting.html"
       ],
       "status": "pending"
     },
@@ -246,8 +232,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.diffordsguide.com/encyclopedia/467/spirits/vodka-production",
-        "https://imbibemagazine.com/vodka-production-methods/"
+        "https://www.diffordsguide.com/encyclopedia/467/spirits/vodka-production"
       ],
       "status": "pending"
     },
@@ -259,8 +244,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.rumproject.com/rumforum/viewtopic.php?t=1634",
-        "https://cocktailwonker.com/2016/06/science-of-rum-congeners.html"
+        "https://www.rumproject.com/rumforum/viewtopic.php?t=1634"
       ],
       "status": "pending"
     },
@@ -272,8 +256,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.artisan-distiller.com/spirit-flavor-chemistry",
-        "https://www.youtube.com/watch?v=Dp4vD3PkESI"
+        "https://www.artisan-distiller.com/spirit-flavor-chemistry"
       ],
       "status": "pending"
     },
@@ -284,10 +267,7 @@
       "concepts": ["vapor extraction", "essential oils", "botanical chemistry", "distillation vs maceration"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.diffordsguide.com/encyclopedia/468/spirits/gin-distillation-methods",
-        "https://www.youtube.com/watch?v=7k8FACq_YTo"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -298,7 +278,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://modernist-pantry.com/blogs/news/the-science-of-tequila",
         "https://pubs.acs.org/doi/10.1021/jf901742b"
       ],
       "status": "pending"
@@ -324,8 +303,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.whiskyscience.com/2016/09/the-angels-share.html",
-        "https://www.youtube.com/watch?v=XbHCvs5FhAE"
+        "https://www.whiskyscience.com/2016/09/the-angels-share.html"
       ],
       "status": "pending"
     },
@@ -350,8 +328,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.artisan-distiller.com/complete-distillation-guide",
-        "https://www.youtube.com/watch?v=vFJMVdNRG6I"
+        "https://www.artisan-distiller.com/complete-distillation-guide"
       ],
       "status": "pending"
     }

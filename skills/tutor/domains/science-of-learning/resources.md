@@ -17,7 +17,6 @@
 - **"How Learning Works: Seven Research-Based Principles for Smart Teaching"** by Susan A. Ambrose et al. (2010)
   - **What it covers:** Prior knowledge, organization, motivation, practice, feedback, metacognition, goal-directed practice
   - **Why it's good for intermediate learners:** Research-based, excellent for understanding *why* strategies work, teaching-focused but applicable to self-learning
-  - **URL:** https://www.wiley.com/en-us/How+Learning+Works%3A+Seven+Research+Based+Principles+for+Smart+Teaching-p-9780470484104
 
 - **"A Mind for Numbers: How to Excel at Math and Science"** by Barbara Oakley (2014)
   - **What it covers:** Focused and diffuse thinking, chunking, procrastination, memory techniques, testing strategies
@@ -62,7 +61,6 @@
 
 - **Barbara Oakley TED Talks and Interviews**
   - "Learning How to Learn" talks, interviews about metacognition
-  - **URL (TED):** https://www.ted.com/speakers/barbara_oakley
 
 - **Veritasium: "The Science of Thinking"**
   - Educational videos on cognitive biases, learning, memory
@@ -134,7 +132,6 @@
   - **URL:** https://www.kent.edu/psychology/john-dunlosky
 
 - **Henry Roediger III (Washington University)** — Testing effect research, co-author of *Make It Stick*
-  - **URL:** https://psychweb.wustl.edu/
 
 - **Yana Weinstein and Megan Sumeracki** — The Learning Scientists founders
   - **URL:** https://www.learningscientists.org/about
@@ -168,7 +165,6 @@
 
 - **Expertise Research (Chess, Music, Sports)**
   - Anders Ericsson's deliberate practice research
-  - **URL:** https://www.cambridge.org/core/books/cambridge-handbook-of-expertise-and-expert-performance/
   - **Connection:** How experts build mental representations through practice — applies to *learning* expertise too
 
 - **The Replication Crisis and Growth Mindset**
@@ -180,7 +176,6 @@
 
 - **"The Cambridge Handbook of Cognition and Education"** edited by John Dunlosky and Katherine A. Rawson (2019)
   - Comprehensive academic overview, excellent for advanced learners
-  - **URL:** https://www.cambridge.org/core/books/cambridge-handbook-of-cognition-and-education/
 
 - **"Peak: Secrets from the New Science of Expertise"** by Anders Ericsson and Robert Pool (2016)
   - Deliberate practice, expertise acquisition, critique of "10,000 hour rule"

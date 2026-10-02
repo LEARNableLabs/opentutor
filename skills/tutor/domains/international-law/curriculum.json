@@ -114,8 +114,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.un.org/en/",
-        "https://www.icrc.org/en/who-we-are"
+        "https://www.un.org/en/"
       ],
       "status": "pending"
     },
@@ -202,7 +201,6 @@
       "type": "resource-drop",
       "resources": [
         "https://www.echr.coe.int/",
-        "https://www.corteidh.or.cr/index-en.cfm",
         "https://www.achpr.org/"
       ],
       "status": "pending"
@@ -215,7 +213,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.icrc.org/en/war-and-law",
         "https://ihl-databases.icrc.org/en/ihl-treaties"
       ],
       "status": "pending"
@@ -263,9 +260,7 @@
       "concepts": ["Geneva Conventions", "distinction", "war crimes"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.icrc.org/en/war-and-law"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -275,9 +270,7 @@
       "concepts": ["ICJ jurisdiction", "contentious cases", "advisory opinions"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.icj-cij.org/en/how-court-works"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

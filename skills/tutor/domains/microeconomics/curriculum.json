@@ -28,8 +28,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.core-econ.org/the-economy/book/text/01.html",
-        "https://mru.org/courses/principles-economics-microeconomics/introduction-economics"
+        "https://www.core-econ.org/the-economy/book/text/01.html"
       ],
       "status": "pending"
     },
@@ -54,8 +53,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium/supply-curve-tutorial",
-        "https://mru.org/courses/principles-economics-microeconomics/supply-curve-economics"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/supply-demand-equilibrium/supply-curve-tutorial"
       ],
       "status": "pending"
     },
@@ -80,8 +78,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/elasticity-tutorial",
-        "https://mru.org/courses/principles-economics-microeconomics/elasticity-definition-economics"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/elasticity-tutorial"
       ],
       "status": "pending"
     },
@@ -93,8 +90,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-producer-surplus/deadweight-loss-tutorial",
-        "https://mru.org/courses/principles-economics-microeconomics/taxes-deadweight-loss"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-producer-surplus/deadweight-loss-tutorial"
       ],
       "status": "pending"
     },
@@ -132,8 +128,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-producer-surplus/consumer-surplus-tutorial",
-        "https://mru.org/courses/principles-economics-microeconomics/budget-constraint"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-producer-surplus/consumer-surplus-tutorial"
       ],
       "status": "pending"
     },
@@ -158,8 +153,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/",
-        "https://mru.org/courses/principles-economics-microeconomics/income-substitution-effects"
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/"
       ],
       "status": "pending"
     },
@@ -184,8 +178,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/elasticity-tutorial",
-        "https://mru.org/courses/principles-economics-microeconomics/income-elasticity-demand"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/elasticity-tutorial"
       ],
       "status": "pending"
     },
@@ -223,8 +216,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit/economic-profit-tutorial",
-        "https://mru.org/courses/principles-economics-microeconomics/marginal-cost"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit/economic-profit-tutorial"
       ],
       "status": "pending"
     },
@@ -249,7 +241,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://mru.org/courses/principles-economics-microeconomics/fixed-variable-costs",
         "https://www.core-econ.org/the-economy/book/text/07.html"
       ],
       "status": "pending"
@@ -262,8 +253,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit",
-        "https://mru.org/courses/principles-economics-microeconomics/economic-profit"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit"
       ],
       "status": "pending"
     },
@@ -275,8 +265,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit",
-        "https://mru.org/courses/principles-economics-microeconomics/economies-scale"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/firm-economic-profit"
       ],
       "status": "pending"
     },
@@ -314,8 +303,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/imperfect-competition",
-        "https://mru.org/courses/principles-economics-microeconomics/monopoly"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/imperfect-competition"
       ],
       "status": "pending"
     },
@@ -327,7 +315,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://mru.org/courses/principles-economics-microeconomics/price-discrimination",
         "https://www.core-econ.org/the-economy/book/text/07.html"
       ],
       "status": "pending"
@@ -340,8 +327,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/imperfect-competition",
-        "https://mru.org/courses/principles-economics-microeconomics/oligopoly"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/imperfect-competition"
       ],
       "status": "pending"
     },
@@ -366,8 +352,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/",
-        "https://mru.org/courses/principles-economics-microeconomics/oligopoly"
+        "https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/pages/lecture-notes/"
       ],
       "status": "pending"
     },
@@ -392,8 +377,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.core-econ.org/the-economy/book/text/11.html",
-        "https://mru.org/courses/principles-economics-microeconomics/market-failures"
+        "https://www.core-econ.org/the-economy/book/text/11.html"
       ],
       "status": "pending"
     },
@@ -405,8 +389,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/externalities-topic",
-        "https://mru.org/courses/principles-economics-microeconomics/externalities"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/externalities-topic"
       ],
       "status": "pending"
     },
@@ -418,8 +401,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/externalities-topic/public-goods-tutorial",
-        "https://mru.org/courses/principles-economics-microeconomics/public-goods"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/externalities-topic/public-goods-tutorial"
       ],
       "status": "pending"
     },
@@ -444,8 +426,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.core-econ.org/the-economy/book/text/12.html",
-        "https://mru.org/courses/principles-economics-microeconomics/moral-hazard"
+        "https://www.core-econ.org/the-economy/book/text/12.html"
       ],
       "status": "pending"
     },
@@ -496,8 +477,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/microeconomics/nash-equilibrium-tutorial/prisoners-dilemma-tutorial",
-        "https://mru.org/courses/principles-economics-microeconomics/prisoners-dilemma-game-theory"
+        "https://www.khanacademy.org/economics-finance-domain/microeconomics/nash-equilibrium-tutorial/prisoners-dilemma-tutorial"
       ],
       "status": "pending"
     },
@@ -509,8 +489,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.core-econ.org/the-economy/book/text/04.html",
-        "https://mru.org/courses/principles-economics-microeconomics/repeated-games"
+        "https://www.core-econ.org/the-economy/book/text/04.html"
       ],
       "status": "pending"
     },

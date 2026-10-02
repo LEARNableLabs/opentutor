@@ -52,8 +52,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.embedded.com/introduction-to-the-volatile-keyword/",
-        "https://embeddedartistry.com/blog/2018/08/01/c-volatile-the-most-common-keyword/"
+        "https://www.embedded.com/introduction-to-the-volatile-keyword/"
       ],
       "status": "pending"
     },
@@ -77,9 +76,7 @@
       "concepts": ["microcontroller architecture", "memory", "registers", "datasheets"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://github.com/embedded-artistry/embedded-resources"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -90,7 +87,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://deepbluembedded.com/stm32-gpio-tutorial-examples/",
         "https://www.allaboutcircuits.com/technical-articles/what-is-a-push-pull-output/"
       ],
       "status": "pending"
@@ -103,7 +99,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.embeddedrelated.com/showarticle/71.php",
         "https://www.ganssle.com/debouncing.htm"
       ],
       "status": "pending"
@@ -180,7 +175,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://interrupt.memfault.com/blog/hardware-watchdog-timers",
         "https://www.embedded.com/how-to-use-timers-in-embedded-systems/"
       ],
       "status": "pending"
@@ -232,7 +226,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://interrupt.memfault.com/blog/testing-vs-checking",
         "https://www.embedded.com/error-detection-and-correction-in-embedded-systems/"
       ],
       "status": "pending"
@@ -245,7 +238,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://interrupt.memfault.com/blog/zero-to-dma",
         "https://www.embedded.com/how-to-use-dma-in-embedded-systems/"
       ],
       "status": "pending"
@@ -257,9 +249,7 @@
       "concepts": ["UART", "SPI", "I2C", "DMA", "error handling"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://github.com/istarc/awesome-embedded-systems"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -309,8 +299,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.embedded.com/low-power-design-for-embedded-systems/",
-        "https://interrupt.memfault.com/blog/reducing-firmware-size"
+        "https://www.embedded.com/low-power-design-for-embedded-systems/"
       ],
       "status": "pending"
     },

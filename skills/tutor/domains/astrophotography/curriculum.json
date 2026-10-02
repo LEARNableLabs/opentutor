@@ -104,7 +104,7 @@
       "concepts": ["foreground interest", "rule of thirds", "leading lines", "Milky Way framing"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.lonelyspeck.com/composition-and-the-milky-way/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -114,7 +114,7 @@
       "concepts": ["manual focus", "live view", "focus peaking", "infinity focus myth"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://astrobackyard.com/focusing-camera-lens-astrophotography/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -134,7 +134,7 @@
       "concepts": ["planning", "exposure", "composition", "focus", "stacking"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.lonelyspeck.com/milky-way-photography-101/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -164,7 +164,7 @@
       "concepts": ["sub-exposure length", "ISO invariance", "read noise", "total integration time"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://astrobackyard.com/dslr-astrophotography-settings/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -194,7 +194,7 @@
       "concepts": ["polar alignment", "framing", "focus", "exposure planning", "dithering"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://astrobackyard.com/deep-sky-imaging-session/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -204,7 +204,7 @@
       "concepts": ["calibration frames", "dark current", "vignetting", "read noise"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://astrobackyard.com/calibration-frames/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -224,7 +224,7 @@
       "concepts": ["histogram stretch", "linear data", "non-linear adjustments", "clipping"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://astrobackyard.com/stretching-images/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -284,7 +284,7 @@
       "concepts": ["multi-session stacking", "registration", "normalization", "integration"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://astrobackyard.com/multi-night-stacking/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -294,7 +294,7 @@
       "concepts": ["equipment selection", "upgrade path", "cost-benefit analysis", "diminishing returns"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": ["https://astrobackyard.com/equipment/", "https://www.cloudynights.com/"],
+      "resources": ["https://www.cloudynights.com/"],
       "status": "pending"
     },
     {

@@ -32,7 +32,6 @@
 
 - **University of Michigan — Patent Law Video Series** — 35+ videos covering patent fundamentals, prosecution, and litigation [Patent Resources LibGuide](https://navsea-navy-mil.libguides.com/c.php?g=924236&p=6661424)
 
-- **NC State University — Copyrights & Patents Lecture** — Accessible lecture notes and materials [Lecture 3](https://people.engr.ncsu.edu/efg/379/f04/lectures/wk03/lecture.html)
 
 ### Podcasts
 - **Finnegan Intellectual Property Law Podcast Series** — Latest developments in IP law covering patents, trademarks, copyrights, trade secrets, and advertising. Great for staying current on case law.

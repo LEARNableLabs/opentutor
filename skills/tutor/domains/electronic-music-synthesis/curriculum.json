@@ -246,8 +246,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://online.berklee.edu/courses/composing-and-producing-electronic-music-1",
-        "https://www.xferrecords.com/products/serum"
+        "https://online.berklee.edu/courses/composing-and-producing-electronic-music-1"
       ],
       "status": "pending"
     },

@@ -35,13 +35,10 @@
 
 ### Online Courses
 
-- **Coursera: "Competition Law" (Lund University)** — [https://www.coursera.org/learn/competition-law](https://www.coursera.org/learn/competition-law)  
   EU-focused, covers cartels, abuse of dominance, and merger control. Good production quality, includes case studies.
 
-- **edX: "EU Competition Law" (KU Leuven)** — [https://www.edx.org/course/eu-competition-law](https://www.edx.org/course/eu-competition-law)  
   Taught by leading European scholars. Focuses on Articles 101/102 and merger regulation.
 
-- **MIT OpenCourseWare: "Industrial Organization and Competitive Strategy"** — [https://ocw.mit.edu/courses/sloan-school-of-management/15-013-industrial-organization-and-competitive-strategy-spring-2016/](https://ocw.mit.edu/courses/sloan-school-of-management/15-013-industrial-organization-and-competitive-strategy-spring-2016/)  
   Not antitrust-specific, but provides economic foundations (oligopoly theory, entry barriers, predatory pricing). Lecture notes and problem sets.
 
 ### Case Law and Materials
@@ -62,7 +59,6 @@
 
 ### Videos and Lectures
 
-- **Yale Law School: Antitrust Economics** — [https://www.youtube.com/c/YaleCourses](https://www.youtube.com/c/YaleCourses)  
   Search for economics department lectures on industrial organization and competition. High-quality academic content.
 
 - **University of Amsterdam: Competition Law Lecture Series** — Available on university website and some public repositories. Covers EU competition law with case studies.
@@ -81,7 +77,6 @@
 - **OECD Competition Assessment Toolkit** — [https://www.oecd.org/competition/toolkit/](https://www.oecd.org/competition/toolkit/)  
   Framework for identifying regulatory barriers to competition. Interactive guides and checklists.
 
-- **Merger Simulation Tools** — Academic repositories (e.g., GitHub) have R and Python packages for upward pricing pressure (UPP) and compensating marginal cost reduction (CMCR) calculations. Example: [https://github.com/lukehuo/mergersim](https://github.com/luehuo/mergersim) (note: third-party, verify before use).
 
 - **Case Study Databases** — Stanford, NYU, and Columbia law schools maintain competition law case databases with teaching notes. Check university library access.
 
@@ -116,7 +111,6 @@
 - **Truth on the Market** — [https://truthonthemarket.com/](https://truthonthemarket.com/)  
   Law and economics perspective, often critical of aggressive enforcement. Good counterpoint to progressive antitrust blogs.
 
-- **The Antitrust Economist** — [https://www.theantitrusteconomist.com/](https://www.theantitrusteconomist.com/)  
   Economic analysis of cases, policy, and empirical research.
 
 ### Podcasts
@@ -208,7 +202,6 @@
 - Debate over whether antitrust should pursue distributional goals (neo-Brandeisian view)
 - Market power and wage stagnation linkage
 - "Common ownership" hypothesis (BlackRock/Vanguard passive investing reduces competition)
-- Resources: [https://equitablegrowth.org/research-paper/market-power-inequality/](https://equitablegrowth.org/research-paper/market-power-inequality/)
 
 ### Antitrust and Behavioral Economics
 

@@ -135,22 +135,18 @@
   - Best for: Understanding internal arc separate from plot structure
 
 - **StudioBinder — A Story, B Story, C Story**
-  - https://www.studiobinder.com/blog/a-story-b-story-c-story/
   - Subplot structure and integration
   - Best for: Understanding multi-threaded narratives
 
 - **StudioBinder — The Hero's Journey**
-  - https://www.studiobinder.com/blog/heros-journey/
   - Campbell's monomyth applied to film with examples
   - Best for: Understanding archetypal structure patterns
 
 - **StudioBinder — Antagonist vs. Villain**
-  - https://www.studiobinder.com/blog/antagonist-vs-villain/
   - Clarifies antagonist as structural function vs. character type
   - Best for: Correcting common misconception about antagonist role
 
 - **StudioBinder — What is Inciting Incident?**
-  - https://www.studiobinder.com/blog/what-is-inciting-incident/
   - Detailed exploration of catalyst moment
   - Best for: Understanding how stories launch
 

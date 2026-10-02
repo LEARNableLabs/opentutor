@@ -51,8 +51,7 @@
       "difficulty": 1,
       "type": "real-world",
       "resources": [
-        "https://www.oliveoiltimes.com/olive-oil-basics/history-of-olive-oil",
-        "https://www.ancientolivepress.com/"
+        "https://www.oliveoiltimes.com/olive-oil-basics/history-of-olive-oil"
       ],
       "status": "pending"
     },
@@ -76,10 +75,7 @@
       "concepts": ["Arbequina characteristics", "mild flavor profile", "commercial importance"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.oliveoilsource.com/definition/arbequina-olive",
-        "https://olivecenter.ucdavis.edu/media/files/arbequina-profile.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -115,7 +111,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.oliveoilsource.com/page/cultivar-flavor-wheel",
         "https://olivecenter.ucdavis.edu/sensory-evaluation-resources"
       ],
       "status": "pending"
@@ -167,8 +162,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.internationaloliveoil.org/what-we-do/chemistry-standardisation-unit/standards-and-methods/",
-        "https://olivecenter.ucdavis.edu/media/files/fatty-acid-guide.pdf"
+        "https://www.internationaloliveoil.org/what-we-do/chemistry-standardisation-unit/standards-and-methods/"
       ],
       "status": "pending"
     },
@@ -218,7 +212,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/",
         "https://olivecenter.ucdavis.edu/sensory-panel-protocols"
       ],
       "status": "pending"
@@ -230,10 +223,7 @@
       "concepts": ["fruitiness", "bitterness", "pungency", "positive attributes"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/sensory-attributes/",
-        "https://cooc.com/sensory-analysis-basics/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -243,10 +233,7 @@
       "concepts": ["sensory defects", "fusty", "rancid", "muddy sediment", "winey-vinegary"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/defects/",
-        "https://olivecenter.ucdavis.edu/media/files/sensory-defects-guide.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -257,7 +244,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/tasting-protocol/",
         "https://www.oliveoiltimes.com/olive-oil-basics/sensory-evaluation-techniques"
       ],
       "status": "pending"
@@ -281,10 +267,7 @@
       "concepts": ["IOC scoring system", "median calculation", "panel methodology", "certification"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.internationaloliveoil.org/what-we-do/sensory-analysis/panel-method/",
-        "https://cooc.com/panel-testing-methodology/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -308,8 +291,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://olivecenter.ucdavis.edu/comprehensive-quality-guide",
-        "https://www.internationaloliveoil.org/olive-knowledge/"
+        "https://olivecenter.ucdavis.edu/comprehensive-quality-guide"
       ],
       "status": "pending"
     },

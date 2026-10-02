@@ -66,8 +66,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/heredity/chromosomal-basis-of-genetics/v/sex-linkage",
-        "https://medlineplus.gov/genetics/understanding/inheritance/sexlinked/"
+        "https://www.khanacademy.org/science/ap-biology/heredity/chromosomal-basis-of-genetics/v/sex-linkage"
       ],
       "status": "pending"
     },
@@ -79,7 +78,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/genetic-mapping-fact-sheet-1/",
         "https://ocw.mit.edu/courses/7-03-genetics-fall-2004/"
       ],
       "status": "pending"
@@ -104,7 +102,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.dnalc.org/resources/3d/dna-structure.html",
         "https://www.nature.com/scitable/topicpage/discovery-of-dna-structure-and-function-watson-397/"
       ],
       "status": "pending"
@@ -117,8 +114,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/dna-replication/v/molecular-mechanism-of-dna-replication",
-        "https://www.dnalc.org/resources/3d/dna-replication.html"
+        "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/dna-replication/v/molecular-mechanism-of-dna-replication"
       ],
       "status": "pending"
     },
@@ -156,7 +152,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/dna-damage-repair-mechanisms-for-maintaining-344/",
         "https://www.ncbi.nlm.nih.gov/books/NBK26879/"
       ],
       "status": "pending"
@@ -234,7 +229,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.genome.gov/genetics-glossary/Comparative-Genomics",
         "https://www.ensembl.org/info/genome/compara/index.html"
       ],
       "status": "pending"
@@ -247,7 +241,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/gene-expression-analysis-15994/",
         "https://www.ncbi.nlm.nih.gov/geo/"
       ],
       "status": "pending"
@@ -285,8 +278,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/natural-selection/population-genetics/v/hardy-weinberg",
-        "https://www.nature.com/scitable/knowledge/library/hardy-weinberg-equilibrium-84235612/"
+        "https://www.khanacademy.org/science/ap-biology/natural-selection/population-genetics/v/hardy-weinberg"
       ],
       "status": "pending"
     },
@@ -310,10 +302,7 @@
       "concepts": ["molecular phylogenetics", "coalescent theory", "molecular clock", "ancestral reconstruction"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nature.com/scitable/topicpage/phylogenetic-trees-14056446/",
-        "https://evolution.berkeley.edu/the-history-of-life-looking-at-the-patterns/phylogenies-and-the-history-of-life/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -324,8 +313,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/quantitative-trait-locus-qtl-analysis-53904/",
-        "https://www.genome.gov/genetics-glossary/Quantitative-Trait-Loci"
+        "https://www.nature.com/scitable/topicpage/quantitative-trait-locus-qtl-analysis-53904/"
       ],
       "status": "pending"
     },
@@ -387,10 +375,7 @@
       "concepts": ["genetic engineering ethics", "germline vs somatic editing", "designer babies", "genetic diversity"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing",
-        "https://www.biointeractive.org/classroom-resources/crispr-and-ethics-human-genome-editing"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

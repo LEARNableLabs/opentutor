@@ -36,9 +36,7 @@
       "concepts": ["force vectors", "anchor loads", "mechanical equilibrium"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://slacklineindustries.com/rigging-basics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -48,10 +46,7 @@
       "concepts": ["dynamic loading", "oscillations", "energy transfer"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.physicsclassroom.com/class/waves/Lesson-0/Waves-and-Wavelike-Motion",
-        "https://balancecommunity.com/dynamic-slacklining"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -61,9 +56,7 @@
       "concepts": ["resonance", "natural frequency", "standing waves"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.isa-slackline.org/physics-fundamentals"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -73,9 +66,7 @@
       "concepts": ["safety factors", "working load limits", "risk assessment"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.slackline.com/safety-guidelines"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -85,9 +76,7 @@
       "concepts": ["material elasticity", "stretch characteristics", "damping properties"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://slacklineindustries.com/webbing-comparison"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -97,9 +86,7 @@
       "concepts": ["base of support", "stability margins", "sensory feedback"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://balancecommunity.com/choosing-your-line"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -109,9 +96,7 @@
       "concepts": ["span-to-sag ratio", "effective stiffness", "feedback latency"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.isa-slackline.org/line-dynamics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -122,8 +107,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://slacklinetools.com/tension-calculator",
-        "https://github.com/slackline-physics/simulator"
+        "https://slacklinetools.com/tension-calculator"
       ],
       "status": "pending"
     },
@@ -135,8 +119,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.khanacademy.org/science/physics",
-        "https://balancecommunity.com/physics-quiz"
+        "https://www.khanacademy.org/science/physics"
       ],
       "status": "pending"
     },
@@ -169,9 +152,7 @@
       "concepts": ["muscle co-contraction", "agonist-antagonist pairs", "motor unit recruitment"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://balancecommunity.com/muscle-mechanics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -191,9 +172,7 @@
       "concepts": ["movement efficiency", "minimal intervention control", "anticipatory adjustments"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://balancecommunity.com/expert-vs-novice"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -227,9 +206,7 @@
       "concepts": ["sensory reweighting", "visual dependence", "proprioceptive training"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://balancecommunity.com/eyes-closed-training"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -259,9 +236,7 @@
       "concepts": ["biomechanics integration", "proprioception", "vestibular function"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://balancecommunity.com/quiz-biomechanics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -281,9 +256,7 @@
       "concepts": ["contextual interference", "transfer of learning", "adaptive expertise"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://balancecommunity.com/training-design"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -293,10 +266,7 @@
       "concepts": ["progressive overload", "specificity", "recovery", "periodization"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://balancecommunity.com/training-programs",
-        "https://www.isa-slackline.org/coaching-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

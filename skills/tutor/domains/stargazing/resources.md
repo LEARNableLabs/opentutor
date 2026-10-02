@@ -8,7 +8,6 @@
   - Premier beginner-to-intermediate guide; covers naked-eye through telescope observing
   - Includes monthly star charts, equipment recommendations, observing techniques
   - Perfect match for intermediate level — accessible but not dumbed down
-  - [Publisher link](https://fireflybookscom/collections/astronomy/products/nightwatch)
 
 - **Turn Left at Orion** by Guy Consolmagno and Dan M. Davis
   - Essential observing guide for small telescopes (binoculars through 6-8" scopes)
@@ -19,24 +18,20 @@
 - **The Backyard Astronomer's Guide** by Terence Dickinson and Alan Dyer
   - Comprehensive intermediate reference covering equipment, techniques, and astrophotography
   - Excellent technical depth on optics, mounts, collimation, alignment
-  - [Publisher link](https://fireflybookscom/collections/astronomy/products/the-backyard-astronomers-guide)
 
 - **Star Ware** by Philip Harrington
   - Detailed telescope and equipment buying guide
   - Reviews of specific models, optical tests, mount comparisons
   - Updated regularly; invaluable for purchase decisions
-  - [Wiley publisher](https://www.wiley.com/en-us/Star+Ware)
 
 - **Astronomy: A Self-Teaching Guide** by Dinah L. Moché
   - Structured self-study with exercises and quizzes
   - Covers theory alongside practical observing
-  - [Wiley publisher](https://www.wiley.com/en-us/Astronomy%3A+A+Self+Teaching+Guide)
 
 ### Online Courses
 
 - **MIT OpenCourseWare: 8.282 Introduction to Astronomy**
   - Free lecture notes, assignments, exams
-  - [MIT OCW](https://ocw.mit.edu/courses/physics/8-282-introduction-to-astronomy-spring-2006/)
 
 - **Crash Course Astronomy** (YouTube series by Phil Plait)
   - 46-episode series covering fundamentals with excellent visuals
@@ -67,7 +62,6 @@
 
 - **Sky & Telescope YouTube Channel**
   - Observing guides, astronomy news, equipment reviews
-  - [Channel link](https://www.youtube.com/user/SkyandTelescope)
 
 - **AstronomyCast** (podcast)
   - Long-running astronomy podcast by Dr. Pamela Gay and Fraser Cain
@@ -125,7 +119,6 @@
 
 - **Pocket Sky Atlas** by Roger Sinnott
   - Portable star atlas for visual observers
-  - [Sky Publishing](https://shopatsky.com/products/pocket-sky-atlas-jumbo-edition)
 
 ### Code and Data
 
@@ -190,7 +183,6 @@
 - **Phil Plait** (@BadAstronomer)
   - Astronomer, author of Bad Astronomy blog
   - Excellent debunker of astronomy misconceptions
-  - [badastronomy.com](https://www.syfy.com/bad-astronomy)
 
 - **Neil deGrasse Tyson**
   - Director of Hayden Planetarium
@@ -226,7 +218,6 @@
 - **Dylan O'Donnell**
   - Australian astrophotographer
   - Planetary and deep sky imaging tutorials
-  - [twitter.com/InTheSkyAus](https://twitter.com/InTheSkyAus)
 
 ### Professional Astronomers Active in Outreach
 
@@ -251,7 +242,6 @@
   - [USNO Navigation page](https://www.usno.navy.mil/USNO/astronomical-applications)
 
 - **Mythology and cultural astronomy** — constellation stories across cultures; archeoastronomy
-  - [World Mythology](https://www.greekmythology.com/Myths/Constellations/constellations.html)
 
 - **DIY telescope building** — mirror grinding, optical testing, homemade mounts
   - [Stellafane](http://stellafane.org/) — telescope makers organization

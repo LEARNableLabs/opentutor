@@ -70,14 +70,12 @@
 - https://mw.lojban.org — Lojban wiki and learning materials
 
 ### Video Series
-- https://www.youtube.com/@janMisali — Conlang Critic, detailed analyses of conlangs
 - https://www.youtube.com/@Artifexian — phonology, syntax, worldbuilding tutorials
 - https://www.youtube.com/@Biblaridion — Alien Biospheres series includes language evolution
 
 ### Tools & Databases
 - https://conlang.org — Language Creation Society official site
 - https://zompist.com/kit.html — The Language Construction Kit online
-- http://www.carolandray.plus.com/Glosso.html — Glossopoeia (conlang bibliography)
 
 ### Academic Papers
 - "Phonological Typology and Naturalness in Constructed Languages" (various linguistics journals)

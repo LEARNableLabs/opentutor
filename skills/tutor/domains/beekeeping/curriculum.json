@@ -29,7 +29,7 @@
       "concepts": ["superorganism concept", "collective intelligence", "emergent behavior"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/c/UGAHoneyBee", "https://entnemdept.ufl.edu/honey-bee/"],
+      "resources": ["https://entnemdept.ufl.edu/honey-bee/"],
       "status": "pending"
     },
     {
@@ -49,7 +49,7 @@
       "concepts": ["seasonal polymorphism", "vitellogenin", "longevity factors"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://beeinformed.org/"],
+      "resources": ["https://beeinformed.org/"],
       "status": "pending"
     },
     {
@@ -59,7 +59,7 @@
       "concepts": ["thermoregulation", "cluster dynamics", "metabolic heat production"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://entnemdept.ufl.edu/honey-bee/", "https://www.youtube.com/c/NorfolkHoneyCompany"],
+      "resources": ["https://entnemdept.ufl.edu/honey-bee/"],
       "status": "pending"
     },
     {
@@ -69,7 +69,7 @@
       "concepts": ["waggle dance", "spatial communication", "polarized light navigation"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://honey.ucdavis.edu/", "https://www.youtube.com/c/UGAHoneyBee"],
+      "resources": ["https://honey.ucdavis.edu/"],
       "status": "pending"
     },
     {
@@ -79,7 +79,7 @@
       "concepts": ["brood pattern analysis", "queen quality", "population dynamics"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://www.hivetracks.com/"],
+      "resources": ["https://www.hivetracks.com/"],
       "status": "pending"
     },
     {
@@ -99,7 +99,7 @@
       "concepts": ["swarm cells", "population pressure", "behavioral indicators"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.youtube.com/c/NorfolkHoneyCompany", "https://pollinator.cals.cornell.edu/bees/beekeeping/"],
+      "resources": ["https://pollinator.cals.cornell.edu/bees/beekeeping/"],
       "status": "pending"
     },
     {
@@ -119,7 +119,7 @@
       "concepts": ["drone production", "colony health indicators", "seasonal timing"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://beeinformed.org/"],
+      "resources": ["https://beeinformed.org/"],
       "status": "pending"
     },
     {
@@ -129,7 +129,7 @@
       "concepts": ["population reduction", "split timing", "reproductive drive"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/c/UGAHoneyBee", "https://honey.ucdavis.edu/"],
+      "resources": ["https://honey.ucdavis.edu/"],
       "status": "pending"
     },
     {
@@ -139,7 +139,7 @@
       "concepts": ["walk-away split", "split with queen", "resource allocation"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://scientificbeekeeping.com/", "https://www.youtube.com/c/NorfolkHoneyCompany"],
+      "resources": ["https://scientificbeekeeping.com/"],
       "status": "pending"
     },
     {
@@ -149,7 +149,7 @@
       "concepts": ["swarm capture", "bait hives", "hiving techniques"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://pollinator.cals.cornell.edu/bees/beekeeping/", "https://www.youtube.com/c/UGAHoneyBee"],
+      "resources": ["https://pollinator.cals.cornell.edu/bees/beekeeping/"],
       "status": "pending"
     },
     {
@@ -169,7 +169,7 @@
       "concepts": ["varroa biology", "resistance development", "integrated management"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://scientificbeekeeping.com/", "https://beeinformed.org/citizen-science/loss-and-management-survey/"],
+      "resources": ["https://scientificbeekeeping.com/"],
       "status": "pending"
     },
     {
@@ -179,7 +179,7 @@
       "concepts": ["varroa monitoring", "alcohol wash", "sugar roll", "threshold levels"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://honey.ucdavis.edu/", "https://www.youtube.com/c/UGAHoneyBee"],
+      "resources": ["https://honey.ucdavis.edu/"],
       "status": "pending"
     },
     {
@@ -189,7 +189,7 @@
       "concepts": ["treatment options", "brood breaks", "screened bottom boards", "treatment timing"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": ["https://scientificbeekeeping.com/", "https://extension.psu.edu/honeybee-biology-and-behavior"],
+      "resources": ["https://scientificbeekeeping.com/"],
       "status": "pending"
     },
     {
@@ -219,7 +219,7 @@
       "concepts": ["queen quality", "genetic diversity", "planned requeening", "productivity"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://www.youtube.com/c/NorfolkHoneyCompany"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -249,7 +249,7 @@
       "concepts": ["queen introduction", "candy plug method", "acceptance", "timing"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.youtube.com/c/UGAHoneyBee", "https://pollinator.cals.cornell.edu/bees/beekeeping/"],
+      "resources": ["https://pollinator.cals.cornell.edu/bees/beekeeping/"],
       "status": "pending"
     },
     {
@@ -259,7 +259,7 @@
       "concepts": ["capping", "moisture content", "refractometer use", "nectar flow timing"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://extension.psu.edu/honeybee-biology-and-behavior", "https://www.youtube.com/c/NorfolkHoneyCompany"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -279,7 +279,7 @@
       "concepts": ["overwintering prep", "cluster size", "food stores", "regional variation"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": ["https://scientificbeekeeping.com/", "https://beeinformed.org/citizen-science/loss-and-management-survey/"],
+      "resources": ["https://scientificbeekeeping.com/"],
       "status": "pending"
     },
     {

@@ -28,9 +28,7 @@
       ],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.worldarchery.sport/news/177425/biomechanics-basics-understanding-archery-form"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -45,7 +43,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://usarchery.org/coaching/bone-on-bone-alignment",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8234567"
       ],
       "status": "pending"
@@ -61,9 +58,7 @@
       ],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://journals.lww.com/nsca-scj/archery-muscle-activation"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -93,9 +88,7 @@
       ],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.archerylibrary.com/books/total-archery-kisik-lee"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -109,9 +102,7 @@
       ],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://usarchery.org/biomechanics-fundamentals"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -125,9 +116,7 @@
       ],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.lancasterarchery.com/blog/understanding-archers-paradox"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -141,9 +130,7 @@
       ],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://worldarchery.sport/news/finger-release-technique"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -157,9 +144,7 @@
       ],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://usarchery.org/nts-anchor-point-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -189,9 +174,7 @@
       ],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://usarchery.org/form-analysis-checklist"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -269,9 +252,7 @@
       ],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.lancasterarchery.com/blog/understanding-bow-torque"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -285,9 +266,7 @@
       ],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.lancasterarchery.com/blog/bow-comparison"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -301,9 +280,7 @@
       ],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://journals.humankinetics.com/view/motor-learning-archery"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -318,8 +295,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9123456",
-        "https://usarchery.org/proprioceptive-training"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9123456"
       ],
       "status": "pending"
     },
@@ -334,9 +310,7 @@
       ],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://worldarchery.sport/aiming-biomechanics-study"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -350,9 +324,7 @@
       ],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://journals.lww.com/mental-practice-archery"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -366,9 +338,7 @@
       ],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://usarchery.org/shot-sequence-design"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -383,8 +353,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8765432",
-        "https://journals.lww.com/fatigue-archery-performance"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8765432"
       ],
       "status": "pending"
     },
@@ -415,9 +384,7 @@
       ],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.lancasterarchery.com/blog/equipment-fitting-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -431,9 +398,7 @@
       ],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": [
-        "https://apps.apple.com/us/app/onform-video-analysis"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -447,9 +412,7 @@
       ],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://usarchery.org/self-coaching-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -464,8 +427,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7654321",
-        "https://usarchery.org/performance-health-guide"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7654321"
       ],
       "status": "pending"
     }

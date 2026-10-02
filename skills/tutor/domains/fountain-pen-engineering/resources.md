@@ -30,7 +30,6 @@
 
 ### Videos
 
-- **Goulet Pens YouTube Channel** (https://www.youtube.com/user/TheGouletPenCompany) — "Nib Nook" series explains nib terminology and characteristics. "Ink Drop" videos review ink properties including shading, sheen, and flow. Beginner to intermediate level, very accessible.
 
 - **Pen Habit YouTube Channel** (https://www.youtube.com/c/PenHabit) — "Fountain Pen 101" series covers basics with some engineering discussion. Good for visual learners.
 

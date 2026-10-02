@@ -67,7 +67,7 @@
       "concepts": ["burnup", "fission products", "fuel depletion"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.youtube.com/watch?v=rcOFV4y5fAc"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -137,7 +137,7 @@
       "concepts": ["two-phase flow", "void fraction", "flow regimes"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://www.youtube.com/watch?v=fZyxvJn5HWw"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -247,7 +247,7 @@
       "concepts": ["control rod design", "shutdown systems", "negative reactivity"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.nuclear-power.com/nuclear-power/reactor-physics/reactor-control/"],
+      "resources": [],
       "status": "pending"
     },
     {

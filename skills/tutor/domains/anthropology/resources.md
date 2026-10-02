@@ -20,11 +20,9 @@
 
 - **Evans-Pritchard, E.E. *The Nuer* (1940)** — Foundational study of segmentary lineage system. Case study for lessons 4, 7.
   - Oxford University Press
-  - Available: https://archive.org/details/nuer00evanrich
 
 - **Malinowski, Bronislaw. *Argonauts of the Western Pacific* (1922)** — Classic Trobriand ethnography. Kula ring, matrilineal kinship, exchange.
   - Routledge
-  - Available: https://archive.org/details/argonautsofthewe033976mbp
 
 - **Turner, Victor. *The Ritual Process: Structure and Anti-Structure* (1969)** — Essential for lessons 11-12 on liminality and communitas.
   - Aldine Transaction
@@ -54,11 +52,9 @@
 ### MIT OpenCourseWare
 
 - **21A.01 How Culture Works** (Fall 2012)
-  - https://ocw.mit.edu/courses/21a-01-how-culture-works-fall-2012/
   - Intro to cultural anthropology. Good for lessons 1-2.
 
 - **21A.112 Culture and Society in Southeast Asia** (Spring 2006)
-  - https://ocw.mit.edu/courses/21a-112-culture-and-society-in-southeast-asia-spring-2006/
   - Kinship and ritual in ethnographic context.
 
 ### Yale Open Courses
@@ -91,7 +87,6 @@
   - 12 episodes covering basics. Good for visual learners.
 
 - **The Santa Fe Institute** — Lectures on complexity and cultural evolution
-  - https://www.youtube.com/c/SantaFeInstitute
   - David Krakauer, Sam Bowles, and others on cultural evolution.
 
 - **Center for Behavior, Evolution, and Culture (UCLA)**
@@ -101,7 +96,6 @@
 ### Individual Lectures
 
 - **Joseph Henrich: "The WEIRdest People in the World"** (Long Now Foundation)
-  - https://www.youtube.com/watch?v=LDn7D0CK3uA
   - 1-hour talk summarizing the book. Excellent for lesson 19.
 
 - **Robert Sapolsky: "Behavioral Evolution II"** (Stanford)
@@ -135,7 +129,6 @@
   - Tutorial on drawing kinship diagrams.
 
 - **Anthropological notation guide**
-  - https://anthro.vancouver.wsu.edu/media/Course_files/anth-302-edward-h-hagen/kinship-terminology.htm
   - Interactive kinship terminology reference.
 
 ### Cultural Evolution Simulations
@@ -183,7 +176,6 @@
 - **Cultural Evolution Society** — https://culturalevolutionsociety.org/
   - Interdisciplinary group focused on cultural evolution research.
 
-- **Society for Anthropological Sciences** — https://anthropology.msu.edu/sas/
   - Focus on scientific approaches (evolution, cognition, quantitative methods).
 
 - **European Association of Social Anthropologists** — https://www.easaonline.org/
@@ -220,13 +212,11 @@
   - https://henrich.fas.harvard.edu/
 
 - **Robert Boyd** (ASU) — Dual inheritance theory, cultural evolution
-  - https://www.robertboyd.io/
 
 - **Peter Richerson** (UC Davis, emeritus) — Cultural evolution
   - https://des.ucdavis.edu/faculty/peter-richerson
 
 - **Kim Hill** (ASU) — Forager societies, cooperation, food sharing
-  - https://shesc.asu.edu/people/kim-hill
 
 - **Harvey Whitehouse** (Oxford) — Ritual, memory, social cohesion
   - https://www.anthro.ox.ac.uk/people/professor-harvey-whitehouse
@@ -235,10 +225,8 @@
   - https://www.ucl.ac.uk/anthropology/people/academic-and-teaching-staff/ruth-mace
 
 - **Daniel Hruschka** (ASU) — Friendship, cooperation, cross-cultural psychology
-  - https://shesc.asu.edu/people/daniel-hruschka
 
 - **Cristine Legare** (UT Austin) — Ritual cognition, causal reasoning
-  - https://liberalarts.utexas.edu/psychology/faculty/legare
 
 ## Code and Data
 
@@ -253,7 +241,6 @@
 ### Teaching Resources
 
 - **Kinship and Social Organization** (teaching module)
-  - https://www.americananthro.org/TeachingResources/
 
 - **RACE: Are We So Different?** (museum exhibit materials)
   - https://www.understandingrace.org/

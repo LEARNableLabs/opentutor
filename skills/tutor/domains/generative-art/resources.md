@@ -64,7 +64,6 @@
 
 - **Matt DesLauriers' workshop repos** (https://github.com/mattdesl) — canvas-sketch framework, tutorials on generative art for print/web
 
-- **Generative Artistry tutorials** (https://generative-artistry.com/) — step-by-step recreations of classic generative algorithms (Schotter, Joy Division, Tiled Lines)
 
 - **Tyler Hobbs' essays** (https://tylerxhobbs.com/essays) — deep writing on flow fields, color, aesthetics in generative art
 
@@ -88,7 +87,6 @@
 
 ### Pioneers (historical context)
 
-- **Vera Molnár** — pioneer of computer art, "machine imaginaire," plotter works (https://spalterdigital.com/artworks/vera-molnar/)
 - **Manfred Mohr** — early algorithmic artist, hypercube series
 - **Frieder Nake** — computer art pioneer, walked-through-raster (1965)
 - **Harold Cohen** — creator of AARON, one of first AI art systems
@@ -102,7 +100,6 @@
 - **Anders Hoff (Inconvergent)** (https://inconvergent.net/) — differential growth, algorithmic line work
 - **Zach Lieberman** (http://zach.li/) — daily sketches, poetic code, openFrameworks co-creator
 - **Casey Reas** (http://reas.com/) — Processing co-creator, software artist
-- **Manoloide** (https://www.manoloide.com/) — algorithmic patterns, plotter art
 - **Saskia Freeke** (https://twitter.com/sasj_nl) — daily generative art, minimal geometric work
 - **Raven Kwok** (https://ravenkwok.com/) — audiovisual generative systems
 - **Jared Tarbell** (http://www.complexification.net/) — early generative artist, substrate, happy place algorithms
@@ -110,7 +107,6 @@
 - **Nervous System** (https://n-e-r-v-o-u-s.com/) — generative design for jewelry, textiles, housewares
 - **Jonathan McCabe** (https://www.jonathanmccabe.com/) — multi-scale Turing patterns, reaction-diffusion
 - **Anna Carreras** (https://www.annacarreras.com/) — color, textures, Spanish generative artist
-- **Indre Klimasauskaite** (https://www.iklimauskaite.com/) — generative embroidery and textiles
 
 ### Researchers & Educators
 

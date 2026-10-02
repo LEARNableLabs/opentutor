@@ -18,7 +18,6 @@
 - **Shafarevich, "Basic Algebraic Geometry" (2 volumes)** (Springer, 2013) — Gentler introduction. Volume 1 covers varieties, Volume 2 covers schemes and complex geometry. Good for building classical intuition before schemes.
 
 - **Gathmann, "Algebraic Geometry" (Lecture Notes)** — Free, well-written lecture notes. Covers varieties and schemes with good examples.
-  - https://www.mathematik.uni-kl.de/~gathmann/class/alggeom-2019/alggeom-2019.pdf
 
 ### Commutative Algebra Prerequisites
 
@@ -102,7 +101,6 @@
 ### Code and Computational Resources
 
 - **SageMath tutorials for algebraic geometry** — Tutorials on computing with varieties, ideals, schemes.
-  - http://doc.sagemath.org/html/en/thematic_tutorials/algebraic_geometry.html
 
 - **Macaulay2 tutorials** — Extensive documentation and examples.
   - https://macaulay2.com/doc/Macaulay2/

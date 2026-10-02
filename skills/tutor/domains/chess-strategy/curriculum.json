@@ -37,7 +37,7 @@
       "concepts": ["development tempo", "piece coordination", "useful squares"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://lichess.org/practice", "https://www.chess.com/article/view/chess-opening-principles"],
+      "resources": ["https://lichess.org/practice"],
       "status": "pending"
     },
     {
@@ -47,7 +47,7 @@
       "concepts": ["opening to middlegame transition", "strategic themes", "typical plans"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.youtube.com/watch?v=U2huVf1l4UE", "https://www.chessable.com/blog/opening-principles/"],
+      "resources": ["https://www.youtube.com/watch?v=U2huVf1l4UE"],
       "status": "pending"
     },
     {
@@ -57,7 +57,7 @@
       "concepts": ["open games", "closed games", "opening repertoire building"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.chess.com/article/view/1-e4-vs-1-d4", "https://lichess.org/study"],
+      "resources": ["https://lichess.org/study"],
       "status": "pending"
     },
     {
@@ -67,7 +67,7 @@
       "concepts": ["king safety", "timing in chess", "center tension"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.youtube.com/watch?v=mFEWLEQ0lW8", "https://lichess.org/training"],
+      "resources": ["https://lichess.org/training"],
       "status": "pending"
     },
     {
@@ -77,7 +77,7 @@
       "concepts": ["isolated queen pawn", "dynamic compensation", "structural weaknesses"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.chess.com/article/view/pawn-structures-101-the-isolani", "https://www.youtube.com/watch?v=rG-sRR8D5jc"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -97,7 +97,7 @@
       "concepts": ["pawn chains", "attacking the base", "typical plans by structure"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.chess.com/article/view/pawn-chains", "https://www.youtube.com/watch?v=4vTgPQJLRdY"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -107,7 +107,7 @@
       "concepts": ["doubled pawns", "open files", "compensation for structural damage"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://lichess.org/study/pawn-structure", "https://www.chess.com/lessons/pawn-structures"],
+      "resources": ["https://www.chess.com/lessons/pawn-structures"],
       "status": "pending"
     },
     {
@@ -117,7 +117,7 @@
       "concepts": ["schematic thinking", "structure-based planning", "minority attack"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://www.youtube.com/watch?v=y7Nf3b5qJH4", "https://www.chessable.com/pawn-structures/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -127,7 +127,7 @@
       "concepts": ["outposts", "knight placement", "controlling key squares"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.chess.com/article/view/the-mighty-outpost", "https://lichess.org/practice/intermediate-tactics/outpost/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -137,7 +137,7 @@
       "concepts": ["piece imbalances", "good vs bad bishops", "minor piece endgames"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.youtube.com/watch?v=mVRNMZ_ySug", "https://www.chess.com/article/view/bishop-vs-knight"],
+      "resources": ["https://www.chess.com/article/view/bishop-vs-knight"],
       "status": "pending"
     },
     {
@@ -147,7 +147,7 @@
       "concepts": ["rook activity", "open files", "prophylaxis"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://lichess.org/practice/intermediate-tactics/rook-placement/", "https://www.chess.com/lessons/rook-activity"],
+      "resources": ["https://www.chess.com/lessons/rook-activity"],
       "status": "pending"
     },
     {
@@ -157,7 +157,7 @@
       "concepts": ["structure evaluation", "piece placement", "plan creation"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://lichess.org/training", "https://www.chesstempo.com/tactical-motifs/"],
+      "resources": ["https://lichess.org/training"],
       "status": "pending"
     },
     {
@@ -167,7 +167,7 @@
       "concepts": ["exchanges", "simplification", "material vs. activity"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.youtube.com/watch?v=eHqNQ8r0kpY", "https://www.chess.com/article/view/when-to-trade-pieces"],
+      "resources": ["https://www.chess.com/article/view/when-to-trade-pieces"],
       "status": "pending"
     },
     {
@@ -177,7 +177,7 @@
       "concepts": ["candidate moves", "calculation technique", "defensive tactics"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": ["https://www.youtube.com/watch?v=KdIPlCHP-rE", "https://lichess.org/training/daily"],
+      "resources": ["https://lichess.org/training/daily"],
       "status": "pending"
     },
     {
@@ -187,7 +187,7 @@
       "concepts": ["initiative", "threats", "tempo"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.chess.com/article/view/the-initiative-in-chess", "https://www.youtube.com/watch?v=wvMhWrHPVhg"],
+      "resources": ["https://www.chess.com/article/view/the-initiative-in-chess"],
       "status": "pending"
     },
     {
@@ -197,7 +197,7 @@
       "concepts": ["positional sacrifices", "compensation", "long-term pressure"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://www.youtube.com/watch?v=ybD3EbzOEcQ", "https://www.chessable.com/positional-play/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -227,7 +227,7 @@
       "concepts": ["king activity", "endgame principles", "centralization"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://lichess.org/practice/pawn-endgames/king-activity/", "https://www.youtube.com/watch?v=K6YEkOQCnIQ"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -237,7 +237,7 @@
       "concepts": ["opposition", "key squares", "pawn endgames"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.chess.com/article/view/the-opposition-in-chess", "https://lichess.org/practice/pawn-endgames/opposition/"],
+      "resources": ["https://www.chess.com/article/view/the-opposition-in-chess"],
       "status": "pending"
     },
     {
@@ -247,7 +247,7 @@
       "concepts": ["rook endgames", "theoretical positions", "endgame technique"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": ["https://www.youtube.com/watch?v=WokLu_6V4mA", "https://lichess.org/practice/rook-endgames/lucena/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -257,7 +257,7 @@
       "concepts": ["practical endgame play", "conversion technique", "pattern recognition"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.chess.com/article/view/practical-endgame-tips", "https://www.youtube.com/watch?v=DYR03Qv8GS8"],
+      "resources": ["https://www.chess.com/article/view/practical-endgame-tips"],
       "status": "pending"
     },
     {
@@ -267,7 +267,7 @@
       "concepts": ["game analysis", "mistake patterns", "improvement methodology"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://lichess.org/analysis", "https://www.youtube.com/watch?v=RiKd8BdMf9c", "https://www.chess.com/analysis"],
+      "resources": ["https://lichess.org/analysis", "https://www.chess.com/analysis"],
       "status": "pending"
     },
     {

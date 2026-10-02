@@ -41,15 +41,12 @@
   - Seminars from leaders in the field (Drew Endy, Christina Smolke, etc.)
 - **MIT OpenCourseWare** — https://ocw.mit.edu/
   - Video lectures from various biology and engineering courses
-- **SynBioBeta YouTube** — https://www.youtube.com/c/SynBioBeta
   - Industry perspectives, startup pitches, panel discussions
 - **Nature Video: Synthetic Biology** — https://www.youtube.com/playlist?list=PLRjYW1kO8FrS5KfgLfh7Bf-W6EF2r0x3R
   - Short explainers and animations
 
 #### Specific Recommended Videos
-- **"What is Synthetic Biology?" by Kurzgesagt** — https://www.youtube.com/watch?v=D5ebXQPakxo
   - Excellent beginner-friendly animation (good for motivation)
-- **Drew Endy's TEDx Talk** — "Synthetic Biology: Life by Design" — https://www.youtube.com/watch?v=EH4v5dWw5fY
   - Vision and philosophy of the field
 - **CRISPR Explained** by Yourgenome — https://www.youtube.com/watch?v=4YKFw2KZA5o
   - Clear mechanism explanation
@@ -179,13 +176,11 @@
 
 ## News & Current Developments
 
-- **SynBioBeta Newsletter** — https://synbiobeta.com/newsletter/
   - Weekly industry news
 - **Nature Biotechnology** — https://www.nature.com/nbt/
   - Leading journal; monthly updates
 - **Synthetic Biology Journal** — https://academic.oup.com/synbio
   - Open access journal focused on synthetic biology
-- **MIT Technology Review (Biotech Section)** — https://www.technologyreview.com/topic/biotech/
   - Accessible reporting on latest developments
 
 ## Hands-On Kits (If Accessible)

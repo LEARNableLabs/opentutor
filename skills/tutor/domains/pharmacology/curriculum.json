@@ -39,7 +39,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.fda.gov/drugs/drug-information-consumers/prescription-drugs-and-over-counter-otc-drugs-questions-and-answers",
         "https://accesspharmacy.mhmedical.com/content.aspx?bookid=2189&sectionid=170302295"
       ],
       "status": "pending"
@@ -52,7 +51,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=SPC58eNHFHE",
         "https://www.drugbank.com/guides/drug-targets"
       ],
       "status": "pending"
@@ -65,7 +63,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=PZxccXxTJ2k",
         "https://www.ncbi.nlm.nih.gov/books/NBK537166/"
       ],
       "status": "pending"
@@ -117,7 +114,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=ZiR2g8tTNHs",
         "https://www.ncbi.nlm.nih.gov/books/NBK547662/"
       ],
       "status": "pending"
@@ -130,7 +126,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=6kJGXc8k8TU",
         "https://www.pharmgkb.org/page/cyp450RefMaterials"
       ],
       "status": "pending"
@@ -169,7 +164,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=JuWQF8aTc_E",
         "https://www.osmosis.org/learn/Pharmacokinetics"
       ],
       "status": "pending"
@@ -182,8 +176,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK539735/",
-        "https://www.youtube.com/watch?v=QYKdNPH24SI"
+        "https://www.ncbi.nlm.nih.gov/books/NBK539735/"
       ],
       "status": "pending"
     },
@@ -195,7 +188,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=OmXDsq6T4Eg",
         "https://www.ncbi.nlm.nih.gov/books/NBK499843/"
       ],
       "status": "pending"
@@ -208,7 +200,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=dNWEu9pCgPM",
         "https://www.ncbi.nlm.nih.gov/books/NBK532906/"
       ],
       "status": "pending"
@@ -221,8 +212,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK547663/",
-        "https://www.youtube.com/watch?v=y4XNhvXXxec"
+        "https://www.ncbi.nlm.nih.gov/books/NBK547663/"
       ],
       "status": "pending"
     },
@@ -234,7 +224,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.bindingdb.org/bind/index.jsp",
         "https://www.ncbi.nlm.nih.gov/books/NBK539745/"
       ],
       "status": "pending"
@@ -247,7 +236,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=2Lx4Y1VJzMI",
         "https://www.ncbi.nlm.nih.gov/books/NBK554518/"
       ],
       "status": "pending"
@@ -260,7 +248,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=6B_YIwQgZAY",
         "https://www.ncbi.nlm.nih.gov/books/NBK547742/"
       ],
       "status": "pending"
@@ -273,7 +260,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=IFbaEhfN-VY",
         "https://www.ncbi.nlm.nih.gov/books/NBK535443/"
       ],
       "status": "pending"
@@ -286,7 +272,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=kRCdxOHQz6I",
         "https://www.ncbi.nlm.nih.gov/books/NBK554406/"
       ],
       "status": "pending"
@@ -299,7 +284,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=ApFMKxLVKv8",
         "https://www.ncbi.nlm.nih.gov/books/NBK537076/"
       ],
       "status": "pending"
@@ -312,7 +296,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=TtRPJdK1NY8",
         "https://www.ncbi.nlm.nih.gov/books/NBK564367/"
       ],
       "status": "pending"
@@ -325,8 +308,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.fda.gov/drugs/therapeutic-biologics-applications-bla/biosimilars",
-        "https://www.youtube.com/watch?v=sBOQ1_-dQHg"
+        "https://www.fda.gov/drugs/therapeutic-biologics-applications-bla/biosimilars"
       ],
       "status": "pending"
     },
@@ -351,8 +333,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.pharmgkb.org/",
-        "https://www.youtube.com/watch?v=kxXWOqR31L4"
+        "https://www.pharmgkb.org/"
       ],
       "status": "pending"
     },
@@ -364,8 +345,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK537009/",
-        "https://www.youtube.com/watch?v=KUz-qbHPPRE"
+        "https://www.ncbi.nlm.nih.gov/books/NBK537009/"
       ],
       "status": "pending"
     },
@@ -376,10 +356,7 @@
       "concepts": ["drug resistance mechanisms", "evolution under selection pressure", "stewardship", "resistance spread"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.cdc.gov/antibiotic-use/antibiotic-resistance.html",
-        "https://www.youtube.com/watch?v=znnp-Iwoeic"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -391,8 +368,7 @@
       "type": "resource-drop",
       "resources": [
         "https://www.fda.gov/patients/drug-development-process/step-3-clinical-research",
-        "https://www.coursera.org/learn/drug-development",
-        "https://www.youtube.com/watch?v=SnwLkiyQfOc"
+        "https://www.coursera.org/learn/drug-development"
       ],
       "status": "pending"
     }

@@ -30,8 +30,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://earthobservatory.nasa.gov/features/AtmosphereOverview",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap1.html"
+        "https://earthobservatory.nasa.gov/features/AtmosphereOverview"
       ],
       "status": "pending"
     },
@@ -47,10 +46,7 @@
       ],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://gml.noaa.gov/education/info_activities/pdfs/TBI_air_composition.pdf",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap2.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -85,7 +81,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap9.html",
         "https://csl.noaa.gov/groups/csl7/measurements/"
       ],
       "status": "pending"
@@ -103,7 +98,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap7.html",
         "https://www.esrl.noaa.gov/gmd/grad/solcalc/"
       ],
       "status": "pending"
@@ -121,7 +115,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap9.html",
         "https://csl.noaa.gov/groups/csl7/"
       ],
       "status": "pending"
@@ -137,9 +130,7 @@
       ],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -155,8 +146,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.epa.gov/ground-level-ozone-pollution",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap11.html"
+        "https://www.epa.gov/ground-level-ozone-pollution"
       ],
       "status": "pending"
     },
@@ -191,7 +181,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap11.html",
         "https://www.epa.gov/ozone-pollution-and-your-patients-health"
       ],
       "status": "pending"
@@ -209,7 +198,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap9.html",
         "https://csl.noaa.gov/groups/csl7/measurements/"
       ],
       "status": "pending"
@@ -226,8 +214,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.airnow.gov/",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/"
+        "https://www.airnow.gov/"
       ],
       "status": "pending"
     },
@@ -244,8 +231,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ozonewatch.gsfc.nasa.gov/",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap10.html"
+        "https://ozonewatch.gsfc.nasa.gov/"
       ],
       "status": "pending"
     },
@@ -263,8 +249,7 @@
       "type": "real-world",
       "resources": [
         "https://ozonewatch.gsfc.nasa.gov/facts/hole_SH.html",
-        "https://www.esrl.noaa.gov/csd/assessments/ozone/",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap10.html"
+        "https://www.esrl.noaa.gov/csd/assessments/ozone/"
       ],
       "status": "pending"
     },
@@ -301,8 +286,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap13.html"
+        "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics"
       ],
       "status": "pending"
     },
@@ -318,7 +302,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/",
         "https://ozonewatch.gsfc.nasa.gov/",
         "https://www.epa.gov/pm-pollution"
       ],
@@ -336,10 +319,7 @@
       ],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap13.html",
-        "https://csl.noaa.gov/groups/csl8/aerosol/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -428,8 +408,7 @@
       "type": "review",
       "resources": [
         "https://www.ready.noaa.gov/HYSPLIT.php",
-        "https://worldview.earthdata.nasa.gov/",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/"
+        "https://worldview.earthdata.nasa.gov/"
       ],
       "status": "pending"
     },
@@ -446,8 +425,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ipcc.ch/report/ar6/wg1/",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/bookchap14.html"
+        "https://www.ipcc.ch/report/ar6/wg1/"
       ],
       "status": "pending"
     },
@@ -483,9 +461,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.epa.gov/air-trends",
-        "https://www.eea.europa.eu/themes/air/intro",
-        "http://acmg.seas.harvard.edu/people/faculty/djj/book/"
+        "https://www.epa.gov/air-trends"
       ],
       "status": "pending"
     }

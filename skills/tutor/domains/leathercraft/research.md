@@ -38,11 +38,9 @@
 - **How to Dye Leather** by Chris Gronski (Weaver Leather)
 
 ### Online Resources
-- **Tandy Leather Library** — free PDFs, video tutorials, technique guides (https://tandyleather.com/pages/leather-library)
 - **Leathercraft Masterclass** — structured courses by Phil Hobson (https://leathercraftmasterclass.com/)
 - **Corter Leather** — YouTube channel with intermediate-advanced techniques (https://www.youtube.com/c/CorterLeather)
 - **Ian Atkinson / LeatherHub** — technical videos, tool reviews (https://www.youtube.com/c/LeatherHub)
-- **Chuck Dorsett** — carving and tooling tutorials (https://www.youtube.com/c/ChuckDorsett)
 
 ### Communities & Forums
 - **r/Leathercraft** — active Reddit community (https://www.reddit.com/r/Leathercraft/)

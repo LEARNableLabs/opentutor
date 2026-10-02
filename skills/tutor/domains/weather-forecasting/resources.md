@@ -18,7 +18,6 @@
 ## Supplementary (for engagement)
 
 ### Videos & Visual Learning
-- **NOAA SciJinks** (https://scijinks.gov/) — Engaging weather explainers with animations, videos, and games. Good for visual learners and reinforcing concepts.
 - **NWS WFO Birmingham Cloud Spotter Training** (YouTube: search "NWS Birmingham cloud spotter") — Practical video training on cloud identification and severe weather features.
 - **Pecos Hank** (YouTube channel) — Storm chaser who explains cloud structures and severe weather indicators with stunning footage. Great for engagement, but supplement with technical resources.
 - **WMO Cloud Atlas Videos** (https://cloudatlas.wmo.int/en/videos.html) — Time-lapse cloud videos showing formation and evolution.

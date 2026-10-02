@@ -22,7 +22,6 @@
   - https://ocw.mit.edu/courses/7-014-introductory-biology-spring-2005/
 
 - **MIT OpenCourseWare: 7.342 Viruses and Cells** — advanced undergraduate seminar on viral biology
-  - https://ocw.mit.edu/courses/7-342-viruses-and-cells-fall-2020/
 
 - **NCBI Bookshelf** — free medical and biology textbooks, including Medical Microbiology
   - https://www.ncbi.nlm.nih.gov/books/
@@ -36,12 +35,9 @@
 ### Videos & Lectures
 
 - **iBiology Microbiology** — research talks and educational lectures from leading microbiologists
-  - https://www.ibiology.org/microbiology/
 
 - **HHMI BioInteractive** — animations of viral life cycles, immune responses, biofilms
-  - https://www.biointeractive.org/classroom-resources/how-viruses-work
   - https://www.biointeractive.org/classroom-resources/hiv-life-cycle
-  - https://www.biointeractive.org/classroom-resources/biofilms-antibiotic-resistance
 
 - **MicrobeTV** — podcasts and video series on microbiology (TWiM, TWiV)
   - https://www.microbe.tv/
@@ -95,7 +91,6 @@
 
 - **American Society for Microbiology (ASM)** — leading professional organization, excellent educational resources
   - https://asm.org/
-  - ASM MicrobeLibrary: https://asm.org/ASM/media/LibraryImages/Education/ASM-Curriculum-Guidelines-for-Undergraduate-Microbiology.pdf
 
 - **Society for General Microbiology (SGM/Microbiology Society)** — UK-based, excellent outreach
   - https://microbiologyonline.org/
@@ -153,19 +148,14 @@
   - Example: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6718013/
 
 - **Art and extremophiles** — Artists use extremophile pigments (thermophiles, halophiles) in paintings
-  - https://www.atlasobscura.com/articles/art-made-from-bacteria
 
 - **Fermentation and food science** — cheese, beer, kimchi, sourdough all rely on microbial metabolism
-  - https://www.nature.com/articles/s41586-021-03532-4
 
 - **Space microbiology** — microbes on the ISS, planetary protection, searching for life on Mars/Europa
-  - https://www.nasa.gov/mission_pages/station/research/benefits/microbiology.html
 
 - **Microbial forensics** — using microbiome signatures to identify individuals or locations
-  - https://www.nature.com/articles/s41564-019-0651-4
 
 - **Bioluminescence** — from fireflies to anglerfish to bacteria (Vibrio fischeri)
-  - https://www.biointeractive.org/classroom-resources/bioluminescence
 
 - **Biological computation** — using bacteria as logic gates and biosensors
   - https://www.nature.com/articles/s41589-020-0510-4
@@ -174,4 +164,3 @@
   - https://www.nature.com/articles/s41579-019-0173-x
 
 - **Symbiosis at vents** — deep-sea hydrothermal vent ecosystems powered by chemosynthetic bacteria
-  - https://oceanexplorer.noaa.gov/facts/vents-bacteria.html

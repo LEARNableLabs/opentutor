@@ -12,17 +12,14 @@
 - **Harvard's Justice with Michael Sandel**: https://www.edx.org/course/justice — Includes bioethics modules on abortion, genetic enhancement. Sandel's teaching style is engaging and dialectical. Free audit option.
 - **Georgetown Bioethics online programs**: https://bioethics.georgetown.edu/online-learning/ — Kennedy Institute runs certificate programs. More advanced than this curriculum but excellent for going deeper.
 - **MIT OpenCourseWare — Brains, Minds and Machines**: https://ocw.mit.edu/courses/res-9-003-brains-minds-and-machines-summer-course-summer-2015/ — For AI ethics, neuroscience, and BCIs (lessons 14-18, 32).
-- **Coursera Medical Humanities**: https://www.coursera.org/learn/medical-humanities — Pairs ethics with literature and history. Broader than pure philosophy.
 
 ### Stanford Encyclopedia of Philosophy
 Essential reference for all major topics. Written for philosophers but accessible to motivated intermediate students:
-- **Bioethics**: https://plato.stanford.edu/entries/bioethics/
 - **Enhancement**: https://plato.stanford.edu/entries/enhancement/
 - **Informed Consent**: https://plato.stanford.edu/entries/informed-consent/
 - **Disability**: https://plato.stanford.edu/entries/disability/
 - **Euthanasia**: https://plato.stanford.edu/entries/euthanasia-voluntary/
 - **Death, definition of**: https://plato.stanford.edu/entries/death-definition/
-- **Reproductive Ethics**: https://plato.stanford.edu/entries/repro-ethics/
 - **Ethics of AI**: https://plato.stanford.edu/entries/ethics-ai/
 - **Distributive Justice**: https://plato.stanford.edu/entries/justice-distributive/
 - **Privacy**: https://plato.stanford.edu/entries/privacy/
@@ -45,7 +42,6 @@ Essential reference for all major topics. Written for philosophers but accessibl
 - **Google DeepMind, "AlphaFold: The making of a scientific breakthrough"**: https://www.youtube.com/watch?v=gg7WjuFs8F4 — Positive AI application in biology. Contrast with bias discussions.
 
 #### Reproductive Ethics
-- **The Center for Bioethics & Culture, "Eggsploitation"**: https://www.cbc-network.org/issues/reproductive-technologies/ — Critical perspective on IVF industry. Controversial but useful for showing one side of lesson 10 debate.
 
 #### Enhancement
 - **TED: Dan Ariely, "Our buggy moral code"**: https://www.ted.com/talks/dan_ariely_our_buggy_moral_code — Behavioral economics insights on cheating. Relevant to cognitive enhancement arms race (lesson 19).
@@ -53,13 +49,11 @@ Essential reference for all major topics. Written for philosophers but accessibl
 
 #### End-of-Life
 - **TED: BJ Miller, "What really matters at the end of life"**: https://www.ted.com/talks/bj_miller_what_really_matters_at_the_end_of_life — Palliative care physician. Humanizing perspective on lessons 27-30.
-- **NOVA, "The Suicide Tourist"**: https://www.pbs.org/wgbh/nova/article/suicide-tourist/ — Documentary on Dignitas clinic (Switzerland). For lesson 30.
 
 ### Interactive Tools & Databases
 
 #### Case Databases
 - **AI Incident Database**: https://incidentdatabase.ai/ — Real-world AI failures. Search for healthcare incidents for lessons 14-18. Students can explore bias, transparency, liability cases.
-- **NIH Bioethics Resources**: https://www.nih.gov/health-information/nih-clinical-research-trials-you/bioethics-resources — Case studies, policy documents, teaching materials.
 - **Presidential Commission for Bioethical Issues (archive)**: https://bioethicsarchive.georgetown.edu/pcsbi/ — Historical policy reports on cloning, synthetic biology, neuroscience, pandemic ethics.
 
 #### Genetics & Genomics
@@ -79,8 +73,6 @@ Essential reference for all major topics. Written for philosophers but accessibl
 
 - **MIMIC-III Clinical Database**: https://mimic.mit.edu/ — De-identified health data for ML research. Shows the data behind AI diagnostics (lesson 14). Requires training to access.
 - **Fairlearn (Microsoft)**: https://fairlearn.org/ — Python toolkit for assessing and improving fairness in ML. For lesson 15, 17.
-- **AI Fairness 360 (IBM)**: https://aif360.mybluemix.net/ — Another fairness toolkit with metrics and algorithms. Interactive demos.
-- **UCI Machine Learning Repository — Health datasets**: https://archive.ics.uci.edu/ml/datasets.php — Accessible datasets for students to experiment with bias/fairness.
 
 ### People (researchers, practitioners, advocates to follow)
 
@@ -113,7 +105,6 @@ Essential reference for all major topics. Written for philosophers but accessibl
 - **The Hastings Center**: https://www.thehastingscenter.org/ — Independent bioethics research. *Hastings Center Report* is flagship journal.
 - **Kennedy Institute of Ethics (Georgetown)**: https://kennedyinstitute.georgetown.edu/ — Oldest bioethics center in US. Library is world's largest bioethics collection.
 - **Nuffield Council on Bioethics (UK)**: https://www.nuffieldbioethics.org/ — Excellent policy reports on genetics, AI, dementia, public health.
-- **UNESCO Bioethics Programme**: https://www.unesco.org/en/ethics-science-and-technology/bioethics — International declarations, capacity building.
 - **Presidential Commission for Bioethical Issues (archive)**: https://bioethicsarchive.georgetown.edu/pcsbi/ — US advisory body (variable activity).
 
 ### Journals (for going deeper)

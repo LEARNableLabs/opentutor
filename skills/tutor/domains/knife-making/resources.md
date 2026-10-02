@@ -55,7 +55,6 @@
 
 ### Video Channels (YouTube)
 
-- **Walter Sorrells** — https://youtube.com/@WalterSorrellsKnives
   - Bladesmithing tutorials, technique deep-dives
   - Excellent explanations of design principles
   - Mix of forging and stock removal
@@ -67,7 +66,6 @@
   - Energetic presentation, good for engagement
   - Shows advanced forging techniques
 
-- **Aaron Gough** — https://youtube.com/@AaronGoughCom
   - Stock removal focus
   - Precision grinding and machinery
   - Excellent for students without forging setup

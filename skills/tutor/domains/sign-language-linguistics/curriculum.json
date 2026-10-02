@@ -29,8 +29,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.gallaudet.edu/documents/Research-Support-and-International-Affairs/ASL_Linguistics.pdf",
-        "https://www.lifeprint.com/asl101/topics/linguistics.htm"
+        "https://www.gallaudet.edu/documents/Research-Support-and-International-Affairs/ASL_Linguistics.pdf"
       ],
       "status": "pending"
     },
@@ -47,8 +46,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.jstor.org/stable/4178916",
-        "https://www.youtube.com/watch?v=pZC3hKNS7fg"
+        "https://www.jstor.org/stable/4178916"
       ],
       "status": "pending"
     },
@@ -82,10 +80,7 @@
       ],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.ethnologue.com/subgroups/sign-language",
-        "https://www.signlanguagestudies.org"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -100,7 +95,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.lifeprint.com/asl101/topics/signedenglis.htm",
         "https://doi.org/10.1093/oxfordhb/9780199935345.013.55"
       ],
       "status": "pending"
@@ -135,10 +129,7 @@
       ],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=Yr_pQJJJXXM",
-        "https://www.lifeprint.com/asl101/pages-signs/s/phonology.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -170,10 +161,7 @@
       ],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://doi.org/10.1016/B978-012493553-3/50004-0",
-        "https://www.youtube.com/watch?v=8aNqZ0JK5Tc"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -188,10 +176,7 @@
       ],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://doi.org/10.1093/acprof:oso/9780199727698.003.0002",
-        "https://www.signlang.uni-hamburg.de/dgs-korpus/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -207,7 +192,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://doi.org/10.1162/ling_a_00116",
         "https://www.jstor.org/stable/4615764"
       ],
       "status": "pending"
@@ -224,9 +208,7 @@
       ],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.lifeprint.com/asl101/topics/phonology-review.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -241,10 +223,7 @@
       ],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://doi.org/10.1093/oxfordhb/9780199935345.013.31",
-        "https://www.youtube.com/watch?v=jKZQR7YZxmg"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -260,7 +239,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://doi.org/10.1093/oxfordhb/9780199935345.013.63",
         "https://www.semanticsarchive.net/Archive/TI1MTlhY/"
       ],
       "status": "pending"
@@ -278,8 +256,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://doi.org/10.1515/9783110261325",
-        "https://www.lifeprint.com/asl101/topics/verb-agreement.htm"
+        "https://doi.org/10.1515/9783110261325"
       ],
       "status": "pending"
     },
@@ -296,7 +273,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://doi.org/10.1093/acprof:oso/9780199921218.003.0008",
         "https://www.signbank.org/signpuddle2.0/"
       ],
       "status": "pending"
@@ -314,8 +290,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://doi.org/10.1017/langcog.2016.23",
-        "https://www.youtube.com/watch?v=VfTmTQC4K6E"
+        "https://doi.org/10.1017/langcog.2016.23"
       ],
       "status": "pending"
     },
@@ -350,7 +325,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://doi.org/10.1093/acprof:oso/9780199921218.003.0011",
         "https://www.jstor.org/stable/4615755"
       ],
       "status": "pending"
@@ -368,7 +342,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://doi.org/10.1093/oxfordhb/9780199935345.013.56",
         "https://www.youtube.com/watch?v=3L4YrGaR8E4"
       ],
       "status": "pending"
@@ -385,10 +358,7 @@
       ],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://doi.org/10.1093/acprof:oso/9780199921218.003.0012",
-        "https://www.signlang.uni-hamburg.de/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -422,7 +392,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://doi.org/10.1093/acprof:oso/9780199727698.001.0001",
         "https://www.youtube.com/watch?v=4p6dkMIEOfw"
       ],
       "status": "pending"
@@ -474,10 +443,7 @@
       ],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://doi.org/10.1017/CBO9781139108607",
-        "https://www.youtube.com/watch?v=dQxZ0q4HZu0"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -493,7 +459,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://signlang.mpi.nl",
         "https://www.sign-lang.uni-hamburg.de/lrec/pub/",
         "https://doi.org/10.1146/annurev-linguistics-011718-011820"
       ],

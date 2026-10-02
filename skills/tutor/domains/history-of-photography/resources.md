@@ -26,7 +26,6 @@
   - Editorial/essays: https://aperture.org/editorial/
 - **Magnum Photos** — documentary photography cooperative, excellent photographer profiles. https://www.magnumphotos.com/
 - **International Center of Photography** — exhibitions and educational resources. https://www.icp.org/
-- **British Journal of Photography** — industry and art photography coverage. https://www.bjp-online.com/
 
 ## Supplementary (for engagement)
 
@@ -39,7 +38,6 @@
 
 #### YouTube Channels & Specific Videos
 - **The Art Assignment (PBS)** — "The Case for Daguerreotypes" and other photography history episodes. https://www.youtube.com/c/theartassignment
-- **Smarthistory** — art history video lessons including photography. https://www.youtube.com/c/smarthistory
   - Khan Academy partnership: https://www.khanacademy.org/humanities/art-history
 - **George Eastman Museum YouTube** — process demonstrations, curator talks. https://www.youtube.com/user/GeorgeEastmanHouse
 - **MoMA YouTube** — artist interviews, exhibition walkthroughs. https://www.youtube.com/user/MoMAvideos
@@ -56,7 +54,6 @@
 - **The Daguerreian Society** — technical resources on daguerreotype process. https://daguerre.org/
 
 #### Virtual Exhibitions
-- **Google Arts & Culture — Photography** — curated collections from museums worldwide. https://artsandculture.google.com/category/photography
 - **Met Heilbrunn Timeline** — thematic photography exhibitions. https://www.metmuseum.org/toah/
 - **Tate Photography** — British and international photography. https://www.tate.org.uk/art/art-terms/p/photography
 
@@ -141,8 +138,6 @@
 - **Photography and spiritualism** — spirit photography, double exposures as "proof" of afterlife (1860s-1920s)
 
 ### Philosophical Connections
-- **Roland Barthes, "Camera Lucida"** (1980) — phenomenology of photography, punctum vs. studium. https://www.upress.umn.edu/book-division/books/camera-lucida
-- **Susan Sontag, "On Photography"** (1977) — photography and violence, consumption of images. https://www.sontag.foundation/
 - **Walter Benjamin, "The Work of Art in the Age of Mechanical Reproduction"** (1935) — aura, authenticity, politics
 - **Vilém Flusser, "Towards a Philosophy of Photography"** (1983) — apparatus, program, technical images
 

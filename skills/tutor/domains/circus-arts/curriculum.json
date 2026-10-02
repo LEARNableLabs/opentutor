@@ -25,8 +25,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/physics/forces-newtons-laws/tension-tutorial",
-        "https://circussciences.org/basics-of-aerial-forces"
+        "https://www.khanacademy.org/science/physics/forces-newtons-laws/tension-tutorial"
       ],
       "status": "pending"
     },
@@ -37,9 +36,7 @@
       "concepts": ["friction", "normal force", "coefficient of friction", "wrap mechanics"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://aerialphysique.com/physics-of-fabric-friction"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -50,8 +47,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://dragonflyaerial.com/rigging-load-basics",
-        "https://etcprigging.org/load-calculations"
+        "https://dragonflyaerial.com/rigging-load-basics"
       ],
       "status": "pending"
     },
@@ -62,9 +58,7 @@
       "concepts": ["dynamic loading", "impact force", "deceleration", "load factor"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://circussciences.org/dynamic-forces-in-aerial"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -74,9 +68,7 @@
       "concepts": ["force review", "load calculation practice"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://aerialphysique.com/force-fundamentals-quiz"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -99,9 +91,7 @@
       "concepts": ["rotation management", "swivel mechanics", "twist accumulation"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://aerialrigging.com/swivel-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -112,7 +102,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://etcprigging.org/bridle-angle-calculator",
         "https://theatrecrafts.com/pages/home/topics/rigging/bridle-geometry"
       ],
       "status": "pending"
@@ -125,8 +114,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://dragonflyaerial.com/bridle-angles-explained",
-        "https://circussciences.org/dangerous-rigging-configurations"
+        "https://dragonflyaerial.com/bridle-angles-explained"
       ],
       "status": "pending"
     },
@@ -137,9 +125,7 @@
       "concepts": ["system redundancy", "load path analysis", "weak link identification"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://aerialrigging.com/load-path-fundamentals"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -162,7 +148,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://aerialessentials.com/fabric-material-comparison",
         "https://verticalwise.com/silk-fabric-guide"
       ],
       "status": "pending"
@@ -174,9 +159,7 @@
       "concepts": ["pressure distribution", "contact area", "force per unit area"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://aerialphysique.com/fabric-width-biomechanics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -199,10 +182,7 @@
       "concepts": ["failure analysis", "root cause identification", "UV degradation", "cyclic loading fatigue"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://circussciences.org/case-study-fabric-failure",
-        "https://etcprigging.org/incident-reports-analysis"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -212,9 +192,7 @@
       "concepts": ["visual inspection", "tactile assessment", "documentation", "replacement schedules"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://aerialessentials.com/fabric-inspection-protocol"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -236,9 +214,7 @@
       "concepts": ["climbing biomechanics", "muscular force", "friction-assisted movement"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://aerialphysique.com/climbing-mechanics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -248,10 +224,7 @@
       "concepts": ["rotational mechanics", "angular momentum", "torque on joints", "asymmetric loading"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://circussciences.org/biomechanics-of-drops",
-        "https://aerialphysique.com/hip-key-physics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -261,9 +234,7 @@
       "concepts": ["video analysis", "force estimation", "peak load timing", "injury risk assessment"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://circussciences.org/video-analysis-tools"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -274,7 +245,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://aerialphysique.com/timing-in-drops",
         "https://khanacademy.org/science/physics/linear-momentum/impulse-momentum"
       ],
       "status": "pending"
@@ -286,9 +256,7 @@
       "concepts": ["movement analysis", "force management"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://aerialphysique.com/dynamic-movement-quiz"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -299,7 +267,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://etcprigging.org/redundancy-design",
         "https://dragonflyaerial.com/building-backup-systems"
       ],
       "status": "pending"
@@ -311,10 +278,7 @@
       "concepts": ["inspection protocols", "systematic checks", "documentation", "go/no-go criteria"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://aerialrigging.com/pre-flight-checklist",
-        "https://circussciences.org/safety-protocols"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -325,7 +289,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://etcprigging.org/audit-guidelines",
         "https://dragonflyaerial.com/rigging-audit-template"
       ],
       "status": "pending"

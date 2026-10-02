@@ -72,7 +72,6 @@
 
 ### Interactive Tools & Websites
 
-- **Philosophy Experiments** (https://www.philosophyexperiment.com/) — Interactive thought experiments including epistemological scenarios. Try the "Battleground God" game to test consistency of beliefs.
 
 - **Stanford Encyclopedia of Philosophy** (https://plato.stanford.edu/contents.html) — Browsable by topic, with visual diagrams showing relationships between concepts.
 
@@ -98,7 +97,6 @@
 
 - **Bayesian epistemology simulations** — Simple Python notebooks showing how credences update with evidence. GitHub: search "bayesian epistemology jupyter"
 
-- **Formal epistemology resources** — For students interested in mathematical approaches: https://www.fitelson.org/few/few.html (Formal Epistemology Workshop papers)
 
 ## People to Follow
 

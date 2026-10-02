@@ -59,8 +59,6 @@
   - Excellent for real-world context and applications
 
 - **ITER Organization Educational Materials**
-  - https://www.iter.org/sci/plasmabasics
-  - https://www.iter.org/mach
   - High-quality animations of plasma confinement and fusion
   - Good for lesson 26 on magnetic confinement
 

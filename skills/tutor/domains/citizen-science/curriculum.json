@@ -24,7 +24,7 @@
       "concepts": ["participatory research", "amateur science history", "public engagement"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.citizenscience.gov/about/", "https://ecsa.ngo/ten-principles-of-citizen-science/"],
+      "resources": ["https://www.citizenscience.gov/about/"],
       "status": "pending"
     },
     {
@@ -54,7 +54,7 @@
       "concepts": ["contributory projects", "collaborative projects", "co-created research", "Shirk framework"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.jstor.org/stable/27786204", "https://www.wilsoncenter.org/article/public-participation-scientific-research-framework-deliberate-design"],
+      "resources": ["https://www.jstor.org/stable/27786204"],
       "status": "pending"
     },
     {
@@ -144,7 +144,7 @@
       "concepts": ["error detection", "consensus models", "expert validation", "statistical filtering"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://royalsocietypublishing.org/doi/10.1098/rstb.2011.0388", "https://www.nature.com/articles/d41586-018-05083-x"],
+      "resources": ["https://royalsocietypublishing.org/doi/10.1098/rstb.2011.0388"],
       "status": "pending"
     },
     {
@@ -204,7 +204,7 @@
       "concepts": ["data ownership", "intellectual property", "open data", "licensing"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://creativecommons.org/", "https://ecsa.ngo/wp-content/uploads/2020/03/ECSA_Data_Sharing_Fact_Sheet.pdf"],
+      "resources": ["https://creativecommons.org/"],
       "status": "pending"
     },
     {

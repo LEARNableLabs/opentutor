@@ -51,7 +51,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.asahq.org/about-asa/governance-and-committees/asa-committees/committee-on-library-and-archival-services/wood-library-museum",
         "https://jamanetwork.com/journals/jama/fullarticle/328286"
       ],
       "status": "pending"
@@ -89,10 +88,7 @@
       "concepts": ["pre-anesthetic era", "early experiments", "social context"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.asahq.org/timeline/",
-        "https://teachmeanatomy.info/the-basics/history-of-anaesthesia/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -168,7 +164,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.asahq.org/timeline/",
         "https://www.britannica.com/science/anesthesia/History-of-anesthesia"
       ],
       "status": "pending"
@@ -246,7 +241,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.asahq.org/timeline/",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3140225/"
       ],
       "status": "pending"
@@ -285,7 +279,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.asahq.org/about-asa/asa-history",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4124653/"
       ],
       "status": "pending"
@@ -324,7 +317,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.asahq.org/timeline/",
         "https://academic.oup.com/bja/article/120/4/659/4829409"
       ],
       "status": "pending"

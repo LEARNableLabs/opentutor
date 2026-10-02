@@ -14,7 +14,6 @@
 - **The Unexpected Hanging and Other Mathematical Diversions** (1969) — Logic puzzles and paradoxes. Includes the title paradox, Newcomb's problem, and probability puzzles.
 
 ### Online Archives
-- **MAA Convergence** — https://www.maa.org/press/periodicals/convergence — Digital archive with commentary and modern perspectives
 - **Scientific American archives** — https://www.scientificamerican.com/ — Original columns (subscription required)
 
 ## Video Lectures and Channels
@@ -23,7 +22,6 @@
 - **Numberphile** — https://www.youtube.com/user/numberphile — 50+ videos on Gardner-related topics (flexagons, Game of Life, Monty Hall, surreal numbers, etc.). Brady Haran's interview style makes experts accessible.
 - **3Blue1Brown** — https://www.youtube.com/c/3blue1brown — Visual mathematics in Gardner's spirit. See especially: probability paradoxes, topological invariants, Game of Life.
 - **Mathologer** — https://www.youtube.com/c/Mathologer — Recreational math with rigorous proofs. Excellent on paradoxes and visual geometry.
-- **Stand-up Maths** — https://www.youtube.com/c/standupmaths — Matt Parker's blend of comedy and mathematics. Strong on recreational problems and counterintuitive results.
 
 ### Academic Lecture Series
 - **MIT OpenCourseWare — 18.S34 Mathematical Problem Solving (Putnam Seminar)** — https://ocw.mit.edu/ — Recreational approach to competition mathematics
@@ -54,7 +52,6 @@
 ## Code and Computational Resources
 
 ### GitHub Repositories
-- **Golly Patterns** — https://github.com/ceebo/golly — Community collection of Life patterns
 - **Game of Life Implementations** — Multiple repos implementing Life in various languages. Good for understanding the simplicity of the rules.
 - **Flexagon Simulators** — https://github.com/loki3/flexagonator — TypeScript library for flexagon exploration
 
@@ -112,7 +109,6 @@
 
 ### Gatherings
 - **Gathering 4 Gardner (G4G)** — https://gathering4gardner.org/ — Biennial conference celebrating Gardner's legacy. Invitation-only but proceedings are published.
-- **G4G Celebration** — https://www.gathering4gardner.org/g4g-celebration/ — Worldwide simultaneous celebration of Gardner's work (around October 21)
 
 ### Online Communities
 - **Math StackExchange** — https://math.stackexchange.com/ — Tag: recreational-mathematics

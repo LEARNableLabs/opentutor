@@ -30,7 +30,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
         "https://sci.esa.int/web/gaia"
       ],
       "status": "pending"
@@ -43,7 +42,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://lweb.cfa.harvard.edu/~pberlind/atlas/htmls/atlas.html",
         "https://www.sdss.org/dr12/spectro/"
       ],
       "status": "pending"
@@ -107,7 +105,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
         "https://en.wikipedia.org/wiki/Radiative_transfer"
       ],
       "status": "pending"
@@ -171,9 +168,7 @@
       "concepts": ["stellar structure equations", "energy transport", "nuclear fusion"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -196,10 +191,7 @@
       "concepts": ["mass-luminosity relation", "energy generation rate", "stellar lifetime"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
-        "http://astro.unl.edu/classaction/animations/stellarprops/mlr.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -224,7 +216,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
         "https://en.wikipedia.org/wiki/Red_giant"
       ],
       "status": "pending"
@@ -275,7 +266,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/",
         "https://en.wikipedia.org/wiki/Stellar_wind"
       ],
       "status": "pending"
@@ -391,8 +381,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "http://astro.unl.edu/classaction/animations/stellarprops/hrexplorer.html",
-        "https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/"
+        "http://astro.unl.edu/classaction/animations/stellarprops/hrexplorer.html"
       ],
       "status": "pending"
     }

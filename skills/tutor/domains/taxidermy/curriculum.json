@@ -25,10 +25,7 @@
       "concepts": ["taxidermy definition", "historical evolution", "contemporary practice"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.taxidermists.com/about-taxidermy/",
-        "https://www.smithsonianmag.com/arts-culture/how-to-stuff-wild-boar-87489883/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -51,10 +48,7 @@
       "concepts": ["skeletal structure", "range of motion", "anatomical landmarks", "reference measurement"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.mckenziesp.com/Anatomy-Resources/",
-        "https://www.youtube.com/c/TaxidermyInstructionNetwork"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -65,7 +59,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.fieldmuseum.org/science/special-projects/taxidermy-dioramas",
         "https://www.taxidermy.net/forum/"
       ],
       "status": "pending"
@@ -91,7 +84,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.taxidermists.com/about-taxidermy/",
         "https://www.fws.gov/law/migratory-bird-treaty-act-1918"
       ],
       "status": "pending"
@@ -104,8 +96,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK535340/",
-        "https://www.taxidermists.com/preservation-techniques/"
+        "https://www.ncbi.nlm.nih.gov/books/NBK535340/"
       ],
       "status": "pending"
     },
@@ -116,10 +107,7 @@
       "concepts": ["salt tanning", "acid tanning", "pH control", "penetration rates"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.mckenziesp.com/Tanning/",
-        "https://www.leatherchem.org/tanning-chemistry/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -129,9 +117,7 @@
       "concepts": ["borax chemistry", "application limits", "tissue type", "environmental factors"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.taxidermy.net/threads/borax-chemistry-explained.12345/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -141,10 +127,7 @@
       "concepts": ["lipid oxidation", "degreasing agents", "temperature control", "grease staining"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.taxidermy.net/threads/grease-burn-solutions.23456/",
-        "https://www.mckenziesp.com/degreasing-guide/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,9 +137,7 @@
       "concepts": ["decay prevention", "tanning", "pH management", "troubleshooting"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.taxidermists.com/preservation-techniques/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -166,10 +147,7 @@
       "concepts": ["skinning techniques", "incision placement", "tissue planes", "damage prevention"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/c/TaxidermyInstructionNetwork",
-        "https://www.breakthroughtaxidermy.com/skinning-guide/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -179,10 +157,7 @@
       "concepts": ["fleshing", "membrane removal", "cartilage", "ears and eyes"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.mckenziesp.com/fleshing-tips/",
-        "https://www.taxidermy.net/threads/fleshing-mastery.34567/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -192,9 +167,7 @@
       "concepts": ["form selection", "measurement", "alteration", "custom forms"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.mckenziesp.com/Forms/Mammals/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -204,10 +177,7 @@
       "concepts": ["eye anatomy", "pupil orientation", "eyelid mechanics", "expression"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.mckenziesp.com/Supplies/Eyes/",
-        "https://www.taxidermists.com/eye-setting-techniques/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -217,9 +187,7 @@
       "concepts": ["armature", "wire gauge", "joint angles", "weight distribution"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.breakthroughtaxidermy.com/armature-basics/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -229,9 +197,7 @@
       "concepts": ["skinning", "fleshing", "tanning", "form fitting", "mounting"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.taxidermy.net/threads/complete-mammal-workflow.45678/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -242,7 +208,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.mckenziesp.com/Instruction/Birds/",
         "https://www.amazon.com/Complete-Guide-Bird-Taxidermy-Janelli/dp/0811732002"
       ],
       "status": "pending"
@@ -254,9 +219,7 @@
       "concepts": ["wing wiring", "feather alignment", "pinning", "drying technique"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.taxidermists.com/bird-wing-techniques/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -266,10 +229,7 @@
       "concepts": ["skin shrinkage", "color loss", "replication technology", "cost-benefit"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.mckenziesp.com/Reproductions/Fish/",
-        "https://www.taxidermy.net/threads/fish-replica-vs-skin.56789/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -280,8 +240,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3234352/",
-        "https://www.taxidermy.net/threads/iridescence-preservation.67890/"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3234352/"
       ],
       "status": "pending"
     },
@@ -292,9 +251,7 @@
       "concepts": ["feather care", "wing mounting", "fish replication", "color preservation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.mckenziesp.com/Instruction/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -304,9 +261,7 @@
       "concepts": ["painting techniques", "airbrush", "reference photos", "color theory"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.mckenziesp.com/Supplies/Paints/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -317,7 +272,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.taxidermists.com/competitions/judging-criteria/",
         "https://www.worldtaxidermychampionships.com/"
       ],
       "status": "pending"
@@ -329,10 +283,7 @@
       "concepts": ["habitat design", "base construction", "composition", "context"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.mckenziesp.com/Habitat/",
-        "https://www.taxidermy.net/threads/habitat-design-principles.78901/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -342,10 +293,7 @@
       "concepts": ["sourcing ethics", "cultural sensitivity", "conservation impact", "transparency"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.smithsonianmag.com/science-nature/ethics-of-taxidermy/",
-        "https://www.taxidermists.com/code-of-ethics/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -356,7 +304,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.taxidermists.com/business-resources/",
         "https://www.taxidermy.net/forums/business-practices.12/"
       ],
       "status": "pending"

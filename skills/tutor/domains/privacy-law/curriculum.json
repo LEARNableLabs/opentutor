@@ -39,8 +39,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ftc.gov/reports/privacy-online-report-congress",
-        "https://iapp.org/resources/article/fair-information-practices/"
+        "https://www.ftc.gov/reports/privacy-online-report-congress"
       ],
       "status": "pending"
     },
@@ -51,10 +50,7 @@
       "concepts": ["comprehensive vs sectoral regulation", "cultural differences", "regulatory philosophy"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://fpf.org/blog/the-privacy-regulatory-landscape/",
-        "https://iapp.org/news/a/looking-to-comply-with-gdpr-heres-a-primer/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -78,8 +74,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://gdpr-info.eu/art-4-gdpr/",
-        "https://ico.org.uk/for-organisations/controllers-and-processors/"
+        "https://gdpr-info.eu/art-4-gdpr/"
       ],
       "status": "pending"
     },
@@ -90,9 +85,7 @@
       "concepts": ["review of FIPPs", "personal data", "controller/processor"],
       "difficulty": 1,
       "type": "teach-back",
-      "resources": [
-        "https://iapp.org/resources/article/privacy-law-fundamentals/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -116,8 +109,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://gdpr-info.eu/art-6-gdpr/",
-        "https://ico.org.uk/for-organisations/lawful-basis/"
+        "https://gdpr-info.eu/art-6-gdpr/"
       ],
       "status": "pending"
     },
@@ -129,8 +121,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://gdpr-info.eu/art-7-gdpr/",
-        "https://edpb.europa.eu/our-work-tools/documents/public-consultations/2020/guidelines-022020-consent-under-regulation_en"
+        "https://gdpr-info.eu/art-7-gdpr/"
       ],
       "status": "pending"
     },
@@ -142,8 +133,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://gdpr-info.eu/chapter-3/",
-        "https://ico.org.uk/for-organisations/individual-rights/"
+        "https://gdpr-info.eu/chapter-3/"
       ],
       "status": "pending"
     },
@@ -155,8 +145,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://gdpr-info.eu/art-35-gdpr/",
-        "https://ico.org.uk/for-organisations/dpia-guidance/"
+        "https://gdpr-info.eu/art-35-gdpr/"
       ],
       "status": "pending"
     },
@@ -180,9 +169,7 @@
       "concepts": ["GDPR principles", "lawful bases", "data subject rights", "breach response"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://iapp.org/resources/article/gdpr-at-a-glance/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -193,8 +180,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ftc.gov/business-guidance/privacy-security",
-        "https://iapp.org/resources/article/us-privacy-law-overview/"
+        "https://www.ftc.gov/business-guidance/privacy-security"
       ],
       "status": "pending"
     },
@@ -219,8 +205,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://oag.ca.gov/privacy/ccpa",
-        "https://iapp.org/resources/article/ccpa-compliance-framework/"
+        "https://oag.ca.gov/privacy/ccpa"
       ],
       "status": "pending"
     },
@@ -232,8 +217,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://iapp.org/resources/article/us-state-privacy-legislation-tracker/",
-        "https://fpf.org/blog/state-privacy-law-tracker/"
+        "https://iapp.org/resources/article/us-state-privacy-legislation-tracker/"
       ],
       "status": "pending"
     },
@@ -245,8 +229,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.ftc.gov/business-guidance/resources/childrens-online-privacy-protection-rule-six-step-compliance-plan-your-business",
-        "https://iapp.org/news/a/coppa-2-0-what-you-need-to-know/"
+        "https://www.ftc.gov/business-guidance/resources/childrens-online-privacy-protection-rule-six-step-compliance-plan-your-business"
       ],
       "status": "pending"
     },
@@ -257,9 +240,7 @@
       "concepts": ["regulatory approaches", "enforcement mechanisms", "individual rights", "compliance burdens"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://iapp.org/resources/article/gdpr-vs-ccpa-comparison/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -270,8 +251,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://gdpr-info.eu/chapter-5/",
-        "https://edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices/guidelines-22018-territorial_en"
+        "https://gdpr-info.eu/chapter-5/"
       ],
       "status": "pending"
     },
@@ -283,8 +263,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en",
-        "https://edpb.europa.eu/our-work-tools/documents/public-consultations/2021/recommendations-012020-measures-supplement-transfer_en"
+        "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en"
       ],
       "status": "pending"
     },
@@ -296,8 +275,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/",
-        "https://www.datatransferframework.eu/"
+        "https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/"
       ],
       "status": "pending"
     },
@@ -321,10 +299,7 @@
       "concepts": ["anonymization", "pseudonymization", "k-anonymity", "differential privacy", "re-identification risks"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://ico.org.uk/for-organisations/anonymisation-and-pseudonymisation/",
-        "https://www.nist.gov/blogs/cybersecurity-insights/exploring-differential-privacy"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -347,9 +322,7 @@
       "concepts": ["transfer mechanisms", "privacy by design", "compliance strategy"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://iapp.org/resources/topics/international-transfer-mechanisms/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -373,8 +346,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://privacyinternational.org/topics",
-        "https://www.eff.org/deeplinks/2023"
+        "https://privacyinternational.org/topics"
       ],
       "status": "pending"
     }

@@ -51,9 +51,7 @@
       "concepts": ["polarization", "Jones vectors", "linear and circular polarization"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.animations.physics.unsw.edu.au/jw/light/polarisation.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -64,8 +62,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/resources/interference-of-electromagnetic-waves/",
-        "https://www.youtube.com/watch?v=6vFMo-kP7-c"
+        "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/resources/interference-of-electromagnetic-waves/"
       ],
       "status": "pending"
     },
@@ -219,10 +216,7 @@
       "concepts": ["shot noise", "photon counting", "quantum fluctuations"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.youtube.com/watch?v=qFBP8lYGSIg",
-        "https://qutip.org/docs/latest/guide/guide-states.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -243,8 +237,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/",
-        "https://www.youtube.com/watch?v=ZqkL_ZLQ7W0"
+        "https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/"
       ],
       "status": "pending"
     },
@@ -306,7 +299,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=LaOHRoGwVEw",
         "https://qiskit.org/textbook/ch-algorithms/quantum-key-distribution.html"
       ],
       "status": "pending"

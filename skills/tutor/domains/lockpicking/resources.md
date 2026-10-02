@@ -96,7 +96,6 @@
 ### Information Sites
 
 - **Hack Your Lock: Locksports Guide** — Comprehensive guide to techniques, competitions, and resources
-  - https://hackyourlock.com/locksports/
 
 - **LockJudge: Locksport Guide** — Overview of locksport as a hobby with community and competition information
   - https://lockjudge.com/locksport/

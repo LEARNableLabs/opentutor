@@ -7,7 +7,6 @@
 - **"Poor Economics" by Abhijit Banerjee and Esther Duflo** (2011) — Accessible, narrative-driven, evidence-based. Perfect for intermediate learners. Covers microfinance, health, education, entrepreneurship. https://www.pooreconomics.com/
 - **"Development Economics" by Debraj Ray** (1998) — Comprehensive textbook with theory and evidence. More formal, good for reference. Covers growth, inequality, credit markets, institutions.
 - **"Economic Development" by Michael Todaro and Stephen Smith** (12th ed, 2015) — Policy-oriented, covers macro and micro. Good for context on growth, trade, and development strategies.
-- **"Randomized Evaluations in Development Economics" by Duflo, Glennerster, Kremer** (2007) — Methods chapter for understanding RCT design. https://economics.mit.edu/sites/default/files/publications/Uses%20of%20Randomization%20in%20Development.pdf
 
 ### Academic Papers (landmark studies)
 
@@ -20,8 +19,6 @@
 
 ## Courses and Syllabi
 
-- **MIT 14.73: The Challenge of World Poverty** (Esther Duflo) — Covers poverty measurement, health, education, microfinance, governance. https://ocw.mit.edu/courses/14-73-the-challenge-of-world-poverty-fall-2020/
-- **MIT 14.74: Development Economics: Macroeconomics** (Ben Olken) — Growth, institutions, finance, political economy. https://economics.mit.edu/courses/14-74-development-economics-macroeconomics
 - **Stanford ECON 135: Economic Development in Comparative Perspective** — https://economics.stanford.edu/courses
 - **Yale ECON 435: Economics of Development and Growth** — Growth theory, poverty traps, structural transformation.
 
@@ -53,7 +50,6 @@
 
 ## Code and Notebooks
 
-- **Running Randomized Evaluations (J-PAL)** — Free online course with Stata tutorials. https://www.povertyactionlab.org/resource/running-randomized-evaluations
 - **Development Impact blog (World Bank)** — Stata/R code for impact evaluation methods. https://blogs.worldbank.org/impactevaluations
 - **Mixtape Sessions (Scott Cunningham)** — Causal inference workshops with code examples. https://github.com/Mixtape-Sessions
 - **DIME Analytics (World Bank)** — Stata packages for development research (ietoolkit, iefieldkit). https://github.com/worldbank/dime-data-handbook

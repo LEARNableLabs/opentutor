@@ -53,7 +53,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/plastids-the-double-edged-sword-of-endosymbiosis-13648330/",
         "https://doi.org/10.1098/rstb.2009.0103"
       ],
       "status": "pending"
@@ -66,7 +65,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://protistimagedata.org",
         "https://www.microscopy-uk.org.uk/mag/indexmag.html"
       ],
       "status": "pending"
@@ -79,8 +77,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://cyanosite.bio.purdue.edu",
-        "https://ucmp.berkeley.edu/bacteria/cyanobacteria.html"
+        "https://cyanosite.bio.purdue.edu"
       ],
       "status": "pending"
     },
@@ -92,7 +89,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://astrobiology.nasa.gov/news/the-great-oxidation-event/",
         "https://www.pnas.org/content/117/35/21219"
       ],
       "status": "pending"
@@ -104,10 +100,7 @@
       "concepts": ["nitrogen fixation", "heterocysts", "cell differentiation", "anaerobic metabolism"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.nature.com/articles/s41579-019-0222-6",
-        "https://microbewiki.kenyon.edu/index.php/Heterocyst"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -143,8 +136,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/articles/nrg.2016.27",
-        "https://www.youtube.com/watch?v=VCWRUGRrTi4"
+        "https://www.nature.com/articles/nrg.2016.27"
       ],
       "status": "pending"
     },
@@ -194,7 +186,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ucmp.berkeley.edu/rhodophyta/rhodophyta.html",
         "https://oceanservice.noaa.gov/facts/redalgae.html"
       ],
       "status": "pending"
@@ -207,7 +198,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.botany.org/Algae/RedAlgae.php",
         "https://doi.org/10.1111/jpy.12947"
       ],
       "status": "pending"
@@ -219,10 +209,7 @@
       "concepts": ["Phaeophyceae", "kelp", "holdfast-stipe-blade", "ecosystem engineering"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/facts/kelp-forest.html",
-        "https://www.youtube.com/watch?v=DgIyAXUkJdY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -259,7 +246,6 @@
       "type": "resource-drop",
       "resources": [
         "https://diatoms.org",
-        "https://www.youtube.com/watch?v=8KqQfgZDdgo",
         "https://www.microscopyu.com/techniques/polarized-light/diatoms"
       ],
       "status": "pending"
@@ -284,10 +270,7 @@
       "concepts": ["dinoflagellates", "bioluminescence", "luciferase", "ecological function"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.mbari.org/bioluminescence-research/",
-        "https://doi.org/10.1038/s41598-018-36495-8"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -298,8 +281,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://oceanservice.noaa.gov/hazards/hab/",
-        "https://www.whoi.edu/oceanus/feature/the-dangers-of-harmful-algal-blooms/"
+        "https://oceanservice.noaa.gov/hazards/hab/"
       ],
       "status": "pending"
     },
@@ -337,7 +319,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.energy.gov/eere/bioenergy/algae",
         "https://doi.org/10.1038/s41587-019-0053-y"
       ],
       "status": "pending"
@@ -363,8 +344,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.sciencedirect.com/topics/engineering/phycoremediation",
-        "https://www.epa.gov/nutrient-policy-data/algae-wastewater-treatment"
+        "https://www.sciencedirect.com/topics/engineering/phycoremediation"
       ],
       "status": "pending"
     },

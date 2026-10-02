@@ -5,7 +5,6 @@
 ### Textbooks and Treatises
 
 - **Cybersecurity Law (2nd ed, 2020)** by Jeff Kosseff — Comprehensive, accessible overview for technical and legal audiences. Covers CFAA, breach notification, privacy, surveillance. Excellent for intermediate students.
-  - Publisher: Wiley (https://www.wiley.com/en-us/Cybersecurity+Law%2C+2nd+Edition-p-9781119517207)
 
 - **Information Privacy Law (7th ed, 2021)** by Daniel Solove & Paul Schwartz — Standard privacy law casebook. Detailed but readable. Strong on constitutional foundations and comparative approaches.
   - Publisher: Wolters Kluwer
@@ -13,7 +12,6 @@
 - **Computer Crime Law (5th ed, 2022)** (West Academic) — Authoritative treatise on CFAA, wire fraud, identity theft. Written for practitioners but accessible.
 
 - **Prosecuting Computer Crimes Manual** (DOJ) — Free government resource. Practical guidance on federal computer crime statutes.
-  - https://www.justice.gov/criminal-ccips/prosecuting-computer-crimes
 
 ### University Courses and Open Materials
 
@@ -77,10 +75,8 @@
   - YouTube, EFF Deeplinks blog
 
 - **Lawfare Podcast** — National security law, surveillance, cybercrime. Episodes on FISA, encryption, attribution.
-  - https://www.lawfaremedia.com/
 
 - **Privacy, Security, & OSINT Show** (IntelTechniques) — Practical privacy from investigator perspective
-  - https://inteltechniques.com/podcast.html
 
 - **DEF CON and Black Hat Talks** — Security conference presentations, many touch on legal issues (vulnerability disclosure, DMCA, CFAA)
   - YouTube channels: DEF CON Conference, Black Hat
@@ -91,7 +87,6 @@
   - https://cyberlaw.stanford.edu/
 
 - **GDPR Compliance Checker** (IAPP) — Self-assessment tools
-  - https://iapp.org/resources/article/gdpr-readiness-assessment/
 
 - **Privacy Simulator** (Future of Privacy Forum) — Scenario-based privacy decision-making
   - https://fpf.org/
@@ -149,7 +144,6 @@
 ### Blogs and News Sources
 
 - **Lawfare Blog** — National security law, deep legal analysis
-  - https://www.lawfaremedia.com/
 
 - **Krebs on Security** — Brian Krebs, investigative security journalism (breaches, cybercrime)
   - https://krebsonsecurity.com/

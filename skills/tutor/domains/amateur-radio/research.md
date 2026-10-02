@@ -41,7 +41,6 @@
 
 ### Online Courses and Tutorials
 - **ARRL Learning Center** — structured courses on all license levels and specialized topics
-  - URL: https://arrl.cloud/courses
 - **HamStudy.org** — interactive practice exams with detailed explanations
   - URL: https://hamstudy.org
 - **eHam.net** — articles, reviews, and tutorials from experienced operators
@@ -51,7 +50,6 @@
 
 ### Video Resources
 - **Dave Casler (KE0OG)** — YouTube channel with clear explanations of radio theory
-  - URL: https://www.youtube.com/c/DaveCasler
 - **K7AGE Ham Radio Tutorials** — practical demonstrations and explanations
   - URL: https://www.youtube.com/user/K7age
 - **Ham Radio Crash Course** — modern approach to amateur radio education

@@ -38,11 +38,9 @@
   - 150,000+ historical maps, many with propaganda/colonial themes. Excellent for finding specific examples (Nazi expansion maps, imperial atlases, Soviet cartography). Georeferencing tools let you overlay historical maps on modern geography.
 
 - **British Library — Maps Collection**
-  - https://www.bl.uk/collection-guides/maps
   - Strong on British imperial cartography. Good for lessons on colonial mapping, Greenwich meridian, and territorial claims in Africa/Asia.
 
 - **Cornell University — Maps as Weapons of Imperialism (exhibit)**
-  - https://news.cornell.edu/stories/2012/06/exhibit-focuses-maps-weapons-imperialism
   - Focused exhibit on maps as tools of conquest. Good curated introduction to the topic.
 
 ### Educational Resources
@@ -94,7 +92,6 @@
   - Fictional debate over replacing Mercator with Peters in a government office. Dramatizes the projection controversy. Use in Lesson 8.
 
 - **Johnny Harris (Vox Borders) — How Maps Lie**
-  - https://www.youtube.com/user/johnnyharris
   - Video journalist with several map-analysis pieces. Accessible, visually engaging. Good supplementary content.
 
 ### Data Visualization & Analysis

@@ -194,8 +194,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.jstor.org/stable/3178066",
-        "https://press.uchicago.edu/ucp/books/book/chicago/S/bo3773607.html"
+        "https://www.jstor.org/stable/3178066"
       ],
       "status": "pending"
     },
@@ -207,7 +206,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://warwick.ac.uk/fac/arts/english/currentstudents/undergraduate/modules/fictionnow/manifestly_haraway/",
         "https://www.routledge.com/The-Cyborg-Handbook/Gray-Mentor-Figueroa-Salas/p/book/9780415908498"
       ],
       "status": "pending"
@@ -220,7 +218,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.dukeupress.edu/imperial-science",
         "https://www.jstor.org/stable/j.ctt6wpw1w"
       ],
       "status": "pending"
@@ -232,10 +229,7 @@
       "concepts": ["expertise", "public understanding of science", "citizen science"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://press.uchicago.edu/ucp/books/book/chicago/D/bo20903538.html",
-        "https://www.hup.harvard.edu/catalog.php?isbn=9780674979666"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,7 +291,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.hup.harvard.edu/catalog.php?isbn=9780674979666",
         "https://yalebooks.yale.edu/book/9780300209365/merchants-doubt/"
       ],
       "status": "pending"

@@ -42,7 +42,6 @@
 - **Best for**: Contemporary applications, inequality focus, empirical emphasis
 
 **MIT OpenCourseWare 14.01: Principles of Microeconomics (Fall 2018)**
-- https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2018/
 - Complete course materials: lecture notes, problem sets, exams with solutions
 - Professor Jonathan Gruber (well-known labor/health economist)
 - Rigorous intermediate treatment
@@ -118,7 +117,6 @@
 - **Best for**: Creating custom graphs, experimenting with functions
 
 **GeoGebra: Economics Applets**
-- https://www.geogebra.org/m/h8bq8ycz
 - Interactive economics visualizations
 - Supply and demand, elasticity, consumer/producer surplus
 - **Best for**: Visual, interactive exploration

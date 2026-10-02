@@ -90,9 +90,7 @@
       "concepts": ["GDPR", "CCPA", "sectoral laws", "enforcement mechanisms"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://iapp.org/resources/topics/privacy-law/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -103,8 +101,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncsl.org/technology-and-communication/security-breach-notification-laws",
-        "https://www.bakerlaw.com/databreach"
+        "https://www.ncsl.org/technology-and-communication/security-breach-notification-laws"
       ],
       "status": "pending"
     },
@@ -116,7 +113,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://epic.org/issues/consumer-privacy/data-breaches/",
         "https://www.supremecourt.gov/opinions/20pdf/20-297_4g25.pdf"
       ],
       "status": "pending"
@@ -167,9 +163,7 @@
       "concepts": ["notification requirements", "standing", "CFAA basics", "regulatory enforcement"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.justice.gov/criminal-ccips/prosecuting-computer-crimes"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -180,7 +174,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.justice.gov/criminal-fraud/page/file/1535301/download",
         "https://www.hackerone.com/vulnerability-disclosure"
       ],
       "status": "pending"
@@ -205,10 +198,7 @@
       "concepts": ["Stored Communications Act", "third-party doctrine", "Carpenter v. United States", "reasonable expectation of privacy"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.brennancenter.org/issues/national-security/privacy-civil-liberties",
-        "https://epic.org/issues/privacy-surveillance/government-surveillance/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -219,8 +209,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.eff.org/issues/fisa",
-        "https://www.brennancenter.org/our-work/research-reports/reform-fisa-court"
+        "https://www.eff.org/issues/fisa"
       ],
       "status": "pending"
     },
@@ -232,8 +221,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.eff.org/deeplinks/2016/02/eff-support-apple-encryption-battle",
-        "https://www.lawfaremedia.com/topics/encryption"
+        "https://www.eff.org/deeplinks/2016/02/eff-support-apple-encryption-battle"
       ],
       "status": "pending"
     },
@@ -270,8 +258,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.justice.gov/archives/usao/file/804681/download",
-        "https://www.finnegan.com/en/insights/trade-secrets.html"
+        "https://www.justice.gov/archives/usao/file/804681/download"
       ],
       "status": "pending"
     },
@@ -296,7 +283,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.whitecase.com/insight-alert/extraterritoriality-gdpr",
         "https://edpb.europa.eu/"
       ],
       "status": "pending"
@@ -321,9 +307,7 @@
       "concepts": ["DMCA scope", "trade secrets", "extraterritorial jurisdiction", "data transfers"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.councilofeuropeconventions.coe.int/Treaty/en/Treaties/Html/185.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -334,8 +318,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.acc.com/resource-library/cybersecurity-incident-response-plan",
-        "https://www.nixonpeabody.com/en/ideas/articles/2021/08/10/privilege-considerations-in-cyber-incident-response"
+        "https://www.acc.com/resource-library/cybersecurity-incident-response-plan"
       ],
       "status": "pending"
     },

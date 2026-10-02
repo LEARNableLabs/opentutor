@@ -24,7 +24,7 @@
       "concepts": ["wavelength-frequency relationship", "diffraction", "barrier transmission"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://ocw.mit.edu/courses/2-067-acoustics-and-sensing-spring-2015/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -34,7 +34,7 @@
       "concepts": ["superposition", "constructive interference", "destructive interference", "phase"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.acoustics.salford.ac.uk/acoustics_world/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -44,7 +44,7 @@
       "concepts": ["specular reflection", "angle of incidence", "impedance discontinuity"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.masterhandbook.com/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,7 +154,7 @@
       "concepts": ["porous absorption", "flow resistance", "thickness-frequency relationship"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.acousticfields.com/porous-absorption/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -174,7 +174,7 @@
       "concepts": ["resonant absorption", "Helmholtz resonance", "tuned absorption"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.acoustics.salford.ac.uk/feschools/waves/resonanc.htm"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -184,7 +184,7 @@
       "concepts": ["diffusion", "scattering", "QRD diffusers", "phase grating"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://www.acousticfields.com/diffusion/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -194,7 +194,7 @@
       "concepts": ["bass trapping", "corner placement", "absorption coefficient"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.gikacoustics.com/bass-traps/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -224,7 +224,7 @@
       "concepts": ["frequency response", "swept sine", "averaging", "smoothing"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": ["https://www.roomeqwizard.com/", "https://www.youtube.com/watch?v=OLRsRyXkzJ8"],
+      "resources": ["https://www.roomeqwizard.com/"],
       "status": "pending"
     },
     {

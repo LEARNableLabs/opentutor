@@ -80,7 +80,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/applied-ethics/",
         "https://iep.utm.edu/ap-ethic/"
       ],
       "status": "pending"
@@ -284,10 +283,7 @@
       ],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://plato.stanford.edu/entries/ross-ethics/",
-        "https://iep.utm.edu/primduti/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -421,8 +417,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.utilitarian.net/singer/by/1972----.htm",
-        "https://www.youtube.com/watch?v=P9oia8i7iuE"
+        "https://www.utilitarian.net/singer/by/1972----.htm"
       ],
       "status": "pending"
     },

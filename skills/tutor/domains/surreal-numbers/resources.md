@@ -18,7 +18,6 @@
 
 - **UC Berkeley CS 294: Combinatorial Game Theory** — Graduate course covering surreal numbers and game applications. Lecture notes sometimes available online.
 
-- **Stanford Encyclopedia of Philosophy: "Mathematical Games"** — Philosophical perspective on surreal numbers and their foundations. Good for understanding the conceptual landscape. https://plato.stanford.edu/entries/mathematical-games/
 
 ## Videos and Visual Explanations
 
@@ -34,7 +33,6 @@
 
 - **CGSuite (Combinatorial Game Suite)** — Free software for analyzing combinatorial games and computing surreal values. Essential for serious game theory work. https://cgsuite.sourceforge.net/
 
-- **SageMath surreal number class** — Implementation of surreal arithmetic in the Sage computer algebra system. Good for computational exploration. https://doc.sagemath.org/html/en/reference/games/sage/games/surreal.html
 
 - **Online Hackenbush solvers** — Various web tools for analyzing Hackenbush positions. Search "Hackenbush solver" for current options.
 
@@ -46,7 +44,6 @@
 
 - **Python implementations** — Search GitHub for "surreal numbers python" for educational implementations. Useful for building intuition through coding.
 
-- **David Moews' surreal number calculator** — Historical implementation with detailed documentation. https://math.uic.edu/~moews/ (archived materials)
 
 ## Papers and Academic Resources
 
@@ -58,7 +55,6 @@
 
 - **Wikipedia: "Surreal number"** — Comprehensive overview with good references. Start here for quick orientation. https://en.wikipedia.org/wiki/Surreal_number
 
-- **Stanford Encyclopedia: "Non-standard Analysis"** — Context for infinitesimal applications. https://plato.stanford.edu/entries/nonstandard-analysis/
 
 ## Books on Combinatorial Game Theory
 

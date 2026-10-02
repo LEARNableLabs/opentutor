@@ -20,7 +20,6 @@
   - Free online textbook, comprehensive coverage
   - Cantor sets, Hausdorff dimension, symbolic dynamics, one-dimensional Markov maps
   - Perfect intermediate-level depth with rigorous proofs
-  - https://www.math.uh.edu/~climenha/doc/fractals.pdf
 
 ### University Lecture Notes
 

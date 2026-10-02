@@ -55,7 +55,6 @@
 - **Planck Mission Website** — https://www.cosmos.esa.int/web/planck — CMB data and analysis
 - **NASA WMAP Mission** — https://map.gsfc.nasa.gov/ — CMB temperature maps and educational resources
 - **Illustris Simulation** — https://www.illustris-project.org/ — large-scale structure formation visualization
-- **Cosmic Microwave Background Power Spectrum Calculator** — https://lambda.gsfc.nasa.gov/toolbox/tb_cmbfast_ov.cfm
 
 ### Primary Data Sources
 - **Planck Legacy Archive** — https://pla.esac.esa.int/

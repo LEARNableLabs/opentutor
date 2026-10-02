@@ -26,7 +26,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.britishlichensociety.org.uk/what-are-lichens",
         "https://www.fs.usda.gov/wildflowers/beauty/lichens/biology.shtml"
       ],
       "status": "pending"
@@ -38,9 +37,7 @@
       "concepts": ["mutualism", "nutrient exchange", "carbon flow", "nitrogen fixation"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.nhm.ac.uk/discover/what-are-lichens.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -51,8 +48,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://doi.org/10.1126/science.aaf8287",
-        "https://lichenportal.org/cnalh/"
+        "https://doi.org/10.1126/science.aaf8287"
       ],
       "status": "pending"
     },
@@ -87,10 +83,7 @@
       "concepts": ["symbiosis review", "mycobiont-photobiont partnerships", "tripartite lichens", "co-evolution"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.britishlichensociety.org.uk/what-are-lichens",
-        "https://www.nhm.ac.uk/discover/what-are-lichens.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -100,10 +93,7 @@
       "concepts": ["growth forms", "crustose", "foliose", "fruticose"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.fs.usda.gov/wildflowers/beauty/lichens/morphology.shtml",
-        "https://www.britishlichensociety.org.uk/lichen-forms"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -125,9 +115,7 @@
       "concepts": ["asexual propagules", "soredia", "isidia", "fragmentation", "sexual spores"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.britishlichensociety.org.uk/reproduction"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -138,7 +126,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://doi.org/10.1007/s13199-010-0104-4",
         "https://lichenportal.org/portal/checklists/checklist.php?clid=1"
       ],
       "status": "pending"
@@ -162,9 +149,7 @@
       "concepts": ["primary succession", "substrate weathering", "soil formation", "facilitation"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nps.gov/articles/lichens-primary-succession.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -174,9 +159,7 @@
       "concepts": ["poikilohydry", "stress tolerance", "photosynthetic recovery", "cryoprotection"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://doi.org/10.1007/s00442-003-1404-y"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -222,9 +205,7 @@
       "concepts": ["succession", "stress tolerance", "dispersal", "community assembly"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.britishlichensociety.org.uk/ecology"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -234,10 +215,7 @@
       "concepts": ["bioindication", "pollution sensitivity", "diversity indices", "monitoring protocols"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.fs.usda.gov/fia/topics/lichen-monitoring/",
-        "https://gml.noaa.gov/education/info_activities/pdfs/TBI_lichens_and_air_quality.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -247,9 +225,7 @@
       "concepts": ["physiological sensitivity", "sulfur dioxide effects", "acidophily", "tolerance gradients"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://doi.org/10.1111/j.1469-8137.1973.tb04821.x"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -259,10 +235,7 @@
       "concepts": ["sampling design", "transect methods", "species abundance", "statistical analysis"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.fs.usda.gov/research/treesearch/41546",
-        "https://lichenportal.org/cnalh/projects/index.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,9 +270,7 @@
       "concepts": ["air quality assessment", "study design", "climate impacts"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.fs.usda.gov/fia/topics/lichen-monitoring/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -310,8 +281,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.inaturalist.org/guides/16028",
-        "https://www.britishlichensociety.org.uk/resources/identification"
+        "https://www.inaturalist.org/guides/16028"
       ],
       "status": "pending"
     },
@@ -323,8 +293,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://lichenportal.org/portal/taxa/index.php?taxon=Lichens",
-        "https://www.britishlichensociety.org.uk/chemical-spot-tests"
+        "https://lichenportal.org/portal/taxa/index.php?taxon=Lichens"
       ],
       "status": "pending"
     },
@@ -336,7 +305,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://lichenportal.org/cnalh/",
         "https://www.inaturalist.org/observations?place_id=any&taxon_id=54743&view=species"
       ],
       "status": "pending"
@@ -349,8 +317,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.fs.usda.gov/pnw/lwm/lichens/conservation.shtml",
-        "https://lichenportal.org/cnalh/collections/index.php"
+        "https://www.fs.usda.gov/pnw/lwm/lichens/conservation.shtml"
       ],
       "status": "pending"
     },
@@ -361,10 +328,7 @@
       "concepts": ["field identification", "chemical taxonomy", "biodiversity patterns", "conservation strategies"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.britishlichensociety.org.uk/resources/identification",
-        "https://lichenportal.org/cnalh/"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

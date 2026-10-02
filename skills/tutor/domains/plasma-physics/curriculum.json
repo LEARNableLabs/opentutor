@@ -81,8 +81,7 @@
       "difficulty": 1,
       "type": "real-world",
       "resources": [
-        "https://science.nasa.gov/heliophysics/focus-areas/magnetosphere-ionosphere",
-        "https://www.iter.org/sci/plasmabasics"
+        "https://science.nasa.gov/heliophysics/focus-areas/magnetosphere-ionosphere"
       ],
       "status": "pending"
     },
@@ -282,8 +281,7 @@
       "difficulty": 5,
       "type": "question",
       "resources": [
-        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node34.html",
-        "https://www.youtube.com/watch?v=rlOP1fDLnAQ"
+        "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node34.html"
       ],
       "status": "pending"
     },
@@ -466,9 +464,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.iter.org/mach",
-        "https://www.pppl.gov/education",
-        "https://www.euro-fusion.org/wpcms/wp-content/uploads/2020/02/JET_introduction.pdf"
+        "https://www.pppl.gov/education"
       ],
       "status": "pending"
     }

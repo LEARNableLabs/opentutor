@@ -40,7 +40,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=d_GIL1MhEqE",
         "https://www.essentialchemicalindustry.org/polymers/thermoplastics-and-thermosetting-polymers.html"
       ],
       "status": "pending"
@@ -66,7 +65,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=uZrN3wMKhvM",
         "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Polymer_Chemistry_(Schaller)/02%3A_Synthetic_Methods_in_Polymer_Chemistry/2.02%3A_Radical_Polymerization"
       ],
       "status": "pending"
@@ -79,8 +77,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://pubs.acs.org/doi/10.1021/acs.macromol.5b02634",
-        "https://www.youtube.com/watch?v=hx_K7RwX2oU"
+        "https://pubs.acs.org/doi/10.1021/acs.macromol.5b02634"
       ],
       "status": "pending"
     },
@@ -92,7 +89,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=SMyL-VP_7oY",
         "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Polymer_Chemistry_(Schaller)/02%3A_Synthetic_Methods_in_Polymer_Chemistry/2.03%3A_Step_Growth_Polymerization"
       ],
       "status": "pending"
@@ -117,8 +113,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://polymerdatabase.com/polymer%20chemistry/Copolymerization.html",
-        "https://www.youtube.com/watch?v=rQpZvN9KXHM"
+        "https://polymerdatabase.com/polymer%20chemistry/Copolymerization.html"
       ],
       "status": "pending"
     },
@@ -131,7 +126,6 @@
       "type": "resource-drop",
       "resources": [
         "https://pubs.acs.org/doi/10.1021/acs.chemrev.0c01328",
-        "https://www.youtube.com/watch?v=bDsL6P0AYHU",
         "https://www.sigmaaldrich.com/US/en/technical-documents/technical-article/chemistry-and-synthesis/click-chemistry/controlled-radical-polymerization"
       ],
       "status": "pending"
@@ -144,8 +138,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://polymerdatabase.com/polymer%20physics/Flory%20Radius.html",
-        "https://www.youtube.com/watch?v=pDsPgpSt8nE"
+        "https://polymerdatabase.com/polymer%20physics/Flory%20Radius.html"
       ],
       "status": "pending"
     },
@@ -157,8 +150,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.agilent.com/en/product/molecular-spectroscopy/gel-permeation-chromatography-gpc-size-exclusion-chromatography-sec",
-        "https://www.youtube.com/watch?v=viFUkCKRGMc"
+        "https://www.agilent.com/en/product/molecular-spectroscopy/gel-permeation-chromatography-gpc-size-exclusion-chromatography-sec"
       ],
       "status": "pending"
     },
@@ -170,8 +162,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://polymerdatabase.com/polymer%20physics/Crystallinity.html",
-        "https://www.youtube.com/watch?v=oyGVe2JZFHA"
+        "https://polymerdatabase.com/polymer%20physics/Crystallinity.html"
       ],
       "status": "pending"
     },
@@ -182,10 +173,7 @@
       "concepts": ["X-ray scattering", "SAXS", "WAXS", "scattering patterns"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=5wXDnLYuJl8",
-        "https://www.nist.gov/programs-projects/small-angle-x-ray-scattering-saxs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -208,8 +196,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://polymerdatabase.com/polymer%20physics/GlassTrans.html",
-        "https://www.youtube.com/watch?v=vKlxGNEKtbw"
+        "https://polymerdatabase.com/polymer%20physics/GlassTrans.html"
       ],
       "status": "pending"
     },
@@ -221,7 +208,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=_DHe_44O6C8",
         "https://polymerdatabase.com/polymer%20physics/Rubber%20Elasticity.html"
       ],
       "status": "pending"
@@ -234,7 +220,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=QdKqUUAhvbQ",
         "https://polymerdatabase.com/polymer%20physics/Viscoelasticity.html"
       ],
       "status": "pending"
@@ -247,9 +232,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=_Q5Cr1F5g4w",
-        "https://www.tainstruments.com/rheology-basics/",
-        "https://www.anton-paar.com/us-en/products/applications/rheology-basics/"
+        "https://www.tainstruments.com/rheology-basics/"
       ],
       "status": "pending"
     },
@@ -261,8 +244,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://polymerdatabase.com/",
-        "https://www.youtube.com/watch?v=GkLPHFq9eMc"
+        "https://polymerdatabase.com/"
       ],
       "status": "pending"
     },
@@ -274,8 +256,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://polymerdatabase.com/polymer%20physics/Flory-Huggins.html",
-        "https://www.youtube.com/watch?v=qF7Q7yV8Ywo"
+        "https://polymerdatabase.com/polymer%20physics/Flory-Huggins.html"
       ],
       "status": "pending"
     },
@@ -299,7 +280,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=8GK_LdT3zDg",
         "https://www.youtube.com/watch?v=RMjtmsr3CqA"
       ],
       "status": "pending"
@@ -312,7 +292,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=bKwmQ9IKP0g",
         "https://polymerdatabase.com/Composites/Composites.html"
       ],
       "status": "pending"
@@ -325,7 +304,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=mFt_e0jt0FI",
         "https://pubs.acs.org/doi/10.1021/acs.chemrev.0c00938",
         "https://www.nobelprize.org/prizes/chemistry/2000/summary/"
       ],
@@ -339,7 +317,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=DhH46ZEFJqY",
         "https://www.ellenmacarthurfoundation.org/topics/plastics/overview"
       ],
       "status": "pending"

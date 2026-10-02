@@ -39,8 +39,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "http://parts.igem.org/",
-        "https://www.addgene.org/molecular-biology-reference/synthetic-biology/"
+        "http://parts.igem.org/"
       ],
       "status": "pending"
     },
@@ -52,7 +51,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.addgene.org/mol-bio-reference/bacterial-promoters/",
         "https://2020.igem.org/Resources/Getting_Started"
       ],
       "status": "pending"
@@ -270,8 +268,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/nbt.1614",
-        "https://cobramethods.readthedocs.io/"
+        "https://www.nature.com/articles/nbt.1614"
       ],
       "status": "pending"
     },
@@ -372,10 +369,7 @@
       "concepts": ["future directions", "emerging technologies", "societal impact", "governance"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.nature.com/articles/s41587-020-0740-4",
-        "https://www.engineeringbiologybook.org/"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

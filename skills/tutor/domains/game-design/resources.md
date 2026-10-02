@@ -84,7 +84,6 @@
   - Best for: supplementary examples, making concepts concrete
 
 - **Game Maker's Toolkit (Mark Brown)** — YouTube Channel
-  - URL: https://www.youtube.com/gamemakers_toolkit
   - Deep-dive video essays on game design
   - Topics include level design, difficulty, player choice
   - 10-20 minutes per video, intermediate depth

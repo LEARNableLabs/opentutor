@@ -26,8 +26,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/pseudo-science/",
-        "https://www.youtube.com/watch?v=pJdVT-Usls0"
+        "https://plato.stanford.edu/entries/pseudo-science/"
       ],
       "status": "pending"
     },
@@ -39,8 +38,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/popper/",
-        "https://ocw.mit.edu/courses/24-00-problems-in-philosophy-fall-2019/"
+        "https://plato.stanford.edu/entries/popper/"
       ],
       "status": "pending"
     },
@@ -52,8 +50,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://plato.stanford.edu/entries/scientific-method/",
-        "https://www.youtube.com/watch?v=n4WN2X3-pck"
+        "https://plato.stanford.edu/entries/scientific-method/"
       ],
       "status": "pending"
     },
@@ -78,8 +75,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://plato.stanford.edu/entries/scientific-underdetermination/",
-        "https://www.youtube.com/watch?v=WZgkd4u8K8c"
+        "https://plato.stanford.edu/entries/scientific-underdetermination/"
       ],
       "status": "pending"
     },
@@ -91,8 +87,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/induction-problem/",
-        "https://www.youtube.com/watch?v=_bQFS9VYpdw"
+        "https://plato.stanford.edu/entries/induction-problem/"
       ],
       "status": "pending"
     },
@@ -104,8 +99,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://plato.stanford.edu/entries/epistemology-naturalized/",
-        "https://ocw.mit.edu/courses/24-118-paradox-and-infinity-fall-2019/"
+        "https://plato.stanford.edu/entries/epistemology-naturalized/"
       ],
       "status": "pending"
     },
@@ -142,8 +136,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/logical-empiricism/",
-        "https://www.youtube.com/watch?v=nA6LOT2cPTU"
+        "https://plato.stanford.edu/entries/logical-empiricism/"
       ],
       "status": "pending"
     },
@@ -194,8 +187,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/scientific-progress/",
-        "https://ocw.mit.edu/courses/24-00-problems-in-philosophy-fall-2019/"
+        "https://plato.stanford.edu/entries/scientific-progress/"
       ],
       "status": "pending"
     },
@@ -232,8 +224,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/thomas-kuhn/",
-        "https://www.youtube.com/watch?v=O7omWW9S6Qo"
+        "https://plato.stanford.edu/entries/thomas-kuhn/"
       ],
       "status": "pending"
     },
@@ -258,8 +249,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/scientific-progress/",
-        "https://www.youtube.com/watch?v=m_-q2JWjRHI"
+        "https://plato.stanford.edu/entries/scientific-progress/"
       ],
       "status": "pending"
     },
@@ -271,8 +261,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/confirmation/",
-        "https://www.youtube.com/watch?v=w-T-Y4gqDDg"
+        "https://plato.stanford.edu/entries/confirmation/"
       ],
       "status": "pending"
     },
@@ -322,8 +311,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/scientific-explanation/",
-        "https://www.youtube.com/watch?v=jV1n0A1WaWs"
+        "https://plato.stanford.edu/entries/scientific-explanation/"
       ],
       "status": "pending"
     },
@@ -348,8 +336,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://plato.stanford.edu/entries/scientific-method/",
-        "https://ocw.mit.edu/courses/24-00-problems-in-philosophy-fall-2019/"
+        "https://plato.stanford.edu/entries/scientific-method/"
       ],
       "status": "pending"
     }

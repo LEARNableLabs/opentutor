@@ -12,7 +12,6 @@
 - **MIT OCW 2.004: Dynamics and Control II** — [https://ocw.mit.edu/courses/2-004-dynamics-and-control-ii-spring-2008/](https://ocw.mit.edu/courses/2-004-dynamics-and-control-ii-spring-2008/) — control systems with mechanical focus, includes MATLAB assignments
 - **MIT OCW 2.12: Introduction to Robotics** — [https://ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/](https://ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/) — mechatronics foundations with robotics applications
 - **Stanford ME218: Smart Product Design** — project-based mechatronics (syllabus and resources available via web search)
-- **UC Berkeley EECS C106A: Introduction to Robotics** — [https://ucb-ee106.github.io/106a-fa20site/](https://ucb-ee106.github.io/106a-fa20site/) — includes sensor fusion, control, and kinematics
 
 ### Online Tutorials & References
 - **All About Circuits** — [https://www.allaboutcircuits.com/](https://www.allaboutcircuits.com/) — comprehensive electronics tutorials (sensors, motor drivers, power electronics)
@@ -23,7 +22,6 @@
 ## Supplementary (for engagement)
 
 ### Video Series
-- **Brian Douglas (MATLAB Tech Talks)** — [https://www.youtube.com/c/BrianBDouglas](https://www.youtube.com/c/BrianBDouglas) — exceptional control systems series (PID, state-space, frequency response). Clear animations and intuition-building.
 - **Jeremy Blum Arduino Tutorials** — [https://www.youtube.com/playlist?list=PLA567CE235D39FA84](https://www.youtube.com/playlist?list=PLA567CE235D39FA84) — foundational Arduino skills with strong explanations
 - **Real Engineering** — [https://www.youtube.com/c/RealEngineering](https://www.youtube.com/c/RealEngineering) — mechatronic systems in the real world (automotive, aerospace, robotics)
 - **Lesics (Learn Engineering)** — [https://www.youtube.com/c/Lesics](https://www.youtube.com/c/Lesics) — mechanical systems animations (transmissions, actuators, mechanisms)
@@ -116,4 +114,3 @@
 - **RoboCup** — [https://www.robocup.org/](https://www.robocup.org/) — autonomous soccer robots
 - **Micromouse** — [https://www.micromouseonline.com/](https://www.micromouseonline.com/) — autonomous maze-solving robots
 - **Battlebots** — [https://battlebots.com/](https://battlebots.com/) — combat robotics (advanced mechatronics + entertainment)
-- **NASA Robotics Mining Competition** — [https://www.nasa.gov/learning-resources/NASA-Robotic-Mining-Competition/](https://www.nasa.gov/learning-resources/NASA-Robotic-Mining-Competition/)

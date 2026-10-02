@@ -28,7 +28,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.worldcocoafoundation.org/about-cocoa/",
         "https://ucce.ucdavis.edu/newsletters/Coffee_Grapevine30832.pdf"
       ],
       "status": "pending"
@@ -41,8 +40,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6356213/",
-        "https://www.finecacao.org/cacao-varieties"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6356213/"
       ],
       "status": "pending"
     },
@@ -54,8 +52,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0216071",
-        "https://www.nature.com/articles/s41467-018-05013-5"
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0216071"
       ],
       "status": "pending"
     },
@@ -67,8 +64,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.sciencedirect.com/science/article/pii/S0959652619309837",
-        "https://www.youtube.com/watch?v=70FyDAQxPZg"
+        "https://www.sciencedirect.com/science/article/pii/S0959652619309837"
       ],
       "status": "pending"
     },
@@ -93,8 +89,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://aem.asm.org/content/76/7/2357",
-        "https://www.youtube.com/watch?v=3kfSg7MgYZQ"
+        "https://aem.asm.org/content/76/7/2357"
       ],
       "status": "pending"
     },
@@ -131,9 +126,7 @@
       "concepts": ["genetics to fermentation", "microbial processes", "quality markers"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=mLAkDKNaWiA"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -144,8 +137,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://pubs.acs.org/doi/abs/10.1021/jf0114709",
-        "https://www.youtube.com/watch?v=8cQQwZLrOWM"
+        "https://pubs.acs.org/doi/abs/10.1021/jf0114709"
       ],
       "status": "pending"
     },
@@ -170,7 +162,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.seriouseats.com/the-science-of-roasting-cocoa-beans",
         "https://www.sciencedirect.com/science/article/abs/pii/S0308814617313948"
       ],
       "status": "pending"
@@ -196,8 +187,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sciencedirect.com/science/article/abs/pii/S0260877408004391",
-        "https://www.youtube.com/watch?v=Dy8aSHgFD2M"
+        "https://www.sciencedirect.com/science/article/abs/pii/S0260877408004391"
       ],
       "status": "pending"
     },
@@ -209,8 +199,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sciencedirect.com/science/article/abs/pii/S0924224410002207",
-        "https://link.springer.com/article/10.1007/s00217-003-0720-4"
+        "https://www.sciencedirect.com/science/article/abs/pii/S0924224410002207"
       ],
       "status": "pending"
     },
@@ -221,9 +210,7 @@
       "concepts": ["flavor development", "chemical reactions", "processing effects"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=dC2LBH8iMVw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -247,8 +234,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.sciencedirect.com/science/article/abs/pii/S0963996913003943",
-        "https://www.youtube.com/watch?v=093Gq8kbBq8"
+        "https://www.sciencedirect.com/science/article/abs/pii/S0963996913003943"
       ],
       "status": "pending"
     },
@@ -273,8 +259,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.sciencedirect.com/science/article/abs/pii/S0260877410003973",
-        "https://www.youtube.com/watch?v=RlW4FxnJIIU"
+        "https://www.sciencedirect.com/science/article/abs/pii/S0260877410003973"
       ],
       "status": "pending"
     },
@@ -298,10 +283,7 @@
       "concepts": ["precision temperature control", "alternative methods", "equipment"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.seriouseats.com/how-to-temper-chocolate",
-        "https://www.youtube.com/watch?v=XwX8TifJaF4"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -311,9 +293,7 @@
       "concepts": ["crystal forms", "tempering technique", "troubleshooting"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=AHrqP8JFb9w"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -324,8 +304,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.sciencedirect.com/science/article/abs/pii/S0963996909002129",
-        "https://www.youtube.com/watch?v=v8f7c_OIZAs"
+        "https://www.sciencedirect.com/science/article/abs/pii/S0963996909002129"
       ],
       "status": "pending"
     },
@@ -336,10 +315,7 @@
       "concepts": ["tasting methodology", "flavor wheels", "quality assessment"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.finecacao.org/cacao-of-excellence-flavour-map",
-        "https://www.youtube.com/watch?v=90OwRxp0rGw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -363,7 +339,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=elAeRteSsXA",
         "https://www.sciencedirect.com/science/article/abs/pii/S0260877416302065"
       ],
       "status": "pending"

@@ -24,7 +24,7 @@
       "concepts": ["capillary action", "gravity feed", "air pressure equilibrium"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": ["https://www.richardspens.com/ref/anatomy/anatomy.htm"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -64,7 +64,7 @@
       "concepts": ["iridium alloys", "hardness", "wear resistance", "welding technique"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.peytonstreetpens.com/tipping-material-what-it-is-and-why-it-matters.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -104,7 +104,7 @@
       "concepts": ["feed channels", "air exchange", "ink capacity", "saturation control"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.richardspens.com/ref/anatomy/feeds.htm"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -114,7 +114,7 @@
       "concepts": ["stub grind", "italic grind", "line variation", "pressure response"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.nibgrinder.com/guide-to-custom-grinds"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -144,7 +144,7 @@
       "concepts": ["capillary action review", "ink composition review"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://www.gouletpens.com/pages/ink-properties"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -164,7 +164,7 @@
       "concepts": ["dye concentration gradients", "surface pooling", "chromatography", "surfactant migration"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.mountainofink.com/blog/sheen-and-shading"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -184,7 +184,7 @@
       "concepts": ["grinding angles", "tipping reshaping", "smoothing techniques", "microscopy inspection"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": ["https://www.nibs.com/blog/posts/custom-nib-grinding-guide", "https://www.youtube.com/watch?v=E2EvB5BR8Do"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -204,7 +204,7 @@
       "concepts": ["nib materials review", "geometry-flow relationships"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.richardspens.com/ref/nibs/primer.htm"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -214,7 +214,7 @@
       "concepts": ["nib defects", "tipping geometry errors", "slit misalignment", "repair techniques"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://www.peytonstreetpens.com/nib-problems-and-solutions.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -254,7 +254,7 @@
       "concepts": ["nib-ink compatibility", "flow matching", "design integration", "performance optimization"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.gouletpens.com/pages/matching-nibs-and-inks"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -264,7 +264,7 @@
       "concepts": ["reliability engineering", "cost-performance balance", "manufacturing tolerances", "user experience"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.richardspens.com/ref/design/design_considerations.htm"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -274,7 +274,7 @@
       "concepts": ["comprehensive review", "nib-ink integration", "system optimization", "engineering synthesis"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.richardspens.com/ref/reference.htm", "https://www.fountainpennetwork.com/forum/"],
+      "resources": ["https://www.fountainpennetwork.com/forum/"],
       "status": "pending"
     }
   ]

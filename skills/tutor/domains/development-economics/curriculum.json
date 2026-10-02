@@ -20,7 +20,7 @@
       "concepts": ["poverty lines", "absolute vs relative poverty", "multidimensional poverty"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://ocw.mit.edu/courses/14-73-the-challenge-of-world-poverty-fall-2020/", "https://ourworldindata.org/poverty"],
+      "resources": ["https://ourworldindata.org/poverty"],
       "status": "pending"
     },
     {
@@ -30,7 +30,7 @@
       "concepts": ["poverty traps", "intergenerational mobility", "nutrition-productivity linkages"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.povertyactionlab.org/policy-insight/poverty-traps", "https://www.nber.org/papers/w9694"],
+      "resources": ["https://www.nber.org/papers/w9694"],
       "status": "pending"
     },
     {
@@ -80,7 +80,7 @@
       "concepts": ["returns to schooling", "credit constraints", "opportunity costs"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.povertyactionlab.org/policy-insight/education-poor", "https://ocw.mit.edu/courses/14-73-the-challenge-of-world-poverty-fall-2020/resources/lecture-4-education/"],
+      "resources": ["https://ocw.mit.edu/courses/14-73-the-challenge-of-world-poverty-fall-2020/resources/lecture-4-education/"],
       "status": "pending"
     },
     {
@@ -90,7 +90,7 @@
       "concepts": ["externalities in health", "cost-effectiveness", "Miguel-Kremer study"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.povertyactionlab.org/case-study/deworming-schools-improves-attendance-and-benefits-communities-kenya", "https://www.nber.org/papers/w8481"],
+      "resources": ["https://www.nber.org/papers/w8481"],
       "status": "pending"
     },
     {
@@ -100,7 +100,7 @@
       "concepts": ["education quality", "teacher incentives", "learning outcomes"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://riseprogramme.org/", "https://www.povertyactionlab.org/policy-insight/teacher-incentives"],
+      "resources": ["https://riseprogramme.org/"],
       "status": "pending"
     },
     {
@@ -120,7 +120,7 @@
       "concepts": ["price elasticity of demand", "screening effects", "subsidy design"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.povertyactionlab.org/evaluation/price-and-access-health-products-kenya", "https://www.sciencedirect.com/science/article/pii/S0047272710000782"],
+      "resources": ["https://www.sciencedirect.com/science/article/pii/S0047272710000782"],
       "status": "pending"
     },
     {
@@ -150,7 +150,7 @@
       "concepts": ["commitment devices", "present bias", "self-control"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.povertyactionlab.org/policy-insight/encouraging-saving-poor", "https://www.aeaweb.org/articles?id=10.1257/app.3.1.1"],
+      "resources": ["https://www.aeaweb.org/articles?id=10.1257/app.3.1.1"],
       "status": "pending"
     },
     {
@@ -160,7 +160,7 @@
       "concepts": ["informal credit markets", "adverse selection", "moral hazard"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://economics.mit.edu/sites/default/files/publications/The%20Miracle%20of%20Microfinance.pdf", "https://www.jstor.org/stable/1942563"],
+      "resources": ["https://www.jstor.org/stable/1942563"],
       "status": "pending"
     },
     {
@@ -180,7 +180,7 @@
       "concepts": ["index insurance", "basis risk", "demand for insurance"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": ["https://www.povertyactionlab.org/policy-insight/impact-index-insurance", "https://www.aeaweb.org/articles?id=10.1257/aer.103.1.37"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -190,7 +190,7 @@
       "concepts": ["microcredit", "savings", "insurance demand"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.povertyactionlab.org/policy-area/finance"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -200,7 +200,7 @@
       "concepts": ["technology adoption", "learning barriers", "risk aversion"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.povertyactionlab.org/policy-insight/agricultural-technology-adoption", "https://www.nber.org/papers/w16054"],
+      "resources": ["https://www.nber.org/papers/w16054"],
       "status": "pending"
     },
     {
@@ -220,7 +220,7 @@
       "concepts": ["property rights", "collateral", "land tenure"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.aeaweb.org/articles?id=10.1257/app.1.3.94", "https://www.povertyactionlab.org/policy-insight/land-tenure-security"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -230,7 +230,7 @@
       "concepts": ["market access", "value chains", "intermediaries"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.povertyactionlab.org/policy-area/agriculture", "https://www.ifad.org/en/web/knowledge/-/publication/smallholder-market-access"],
+      "resources": ["https://www.ifad.org/en/web/knowledge/-/publication/smallholder-market-access"],
       "status": "pending"
     },
     {
@@ -250,7 +250,7 @@
       "concepts": ["technology adoption", "property rights", "social learning", "market access"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.povertyactionlab.org/policy-area/agriculture"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -260,7 +260,7 @@
       "concepts": ["corruption", "accountability", "rent-seeking"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.povertyactionlab.org/policy-insight/reducing-corruption", "https://www.cgdev.org/topics/corruption"],
+      "resources": ["https://www.cgdev.org/topics/corruption"],
       "status": "pending"
     },
     {
@@ -270,7 +270,7 @@
       "concepts": ["CCTs", "targeting", "conditionality"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.povertyactionlab.org/policy-insight/conditional-cash-transfers", "https://openknowledge.worldbank.org/handle/10986/27854"],
+      "resources": ["https://openknowledge.worldbank.org/handle/10986/27854"],
       "status": "pending"
     },
     {
@@ -280,7 +280,7 @@
       "concepts": ["transparency", "monitoring", "community participation"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://www.povertyactionlab.org/evaluation/community-monitoring-ugandas-primary-education-system", "https://academic.oup.com/qje/article/121/2/427/1884026"],
+      "resources": ["https://academic.oup.com/qje/article/121/2/427/1884026"],
       "status": "pending"
     },
     {
@@ -290,7 +290,7 @@
       "concepts": ["participatory governance", "civic engagement", "accountability mechanisms"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.worldbank.org/en/topic/socialdevelopment/brief/participatory-budgeting", "https://www.povertyactionlab.org/policy-area/political-economy-and-governance"],
+      "resources": ["https://www.worldbank.org/en/topic/socialdevelopment/brief/participatory-budgeting"],
       "status": "pending"
     },
     {

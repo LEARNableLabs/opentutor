@@ -5,9 +5,7 @@
 ### Technical Documentation
 - **Console5 Wiki** (https://console5.com/wiki/) — Platform-specific repair guides, capacitor lists, schematics. Strongest for Commodore, Atari, Sega, Nintendo. The recapping reference.
 - **Minuszerodegrees.net** (https://www.minuszerodegrees.net/) — IBM PC/XT/AT technical reference. BIOS, POST codes, interrupt resources, detailed hardware guides.
-- **Service Manuals Collection** (https://archive.org/details/bitsavers_dataBooks_02ac9894) — Archive.org's Bitsavers collection. Original equipment service manuals, datasheets, schematics. The authoritative source when it exists.
 - **RetroRGB** (https://www.retrorgb.com/) — Video signal tech reference. RGB, sync types, upscaling, mods. Goes deep on video quality.
-- **6502.org** (http://www.6502.org/) — 6502 CPU platform resources. Hardware projects, repair guides, community forums.
 
 ### Community Forums and Wikis
 - **Vintage Computer Federation (VCFed)** (https://www.vcfed.org/) — Premier restoration community. Forums cover every platform. Annual VCF events. Wiki has platform-specific guides.
@@ -34,11 +32,8 @@
 - **Adrian's Digital Basement** (https://www.youtube.com/c/AdrianBlack) — Intermediate/advanced board-level repairs. Oscilloscope work, custom solutions. Excellent diagnostic methodology.
 - **Noel's Retro Lab** (https://www.youtube.com/c/NoelsRetroLab) — Platform deep-dives with technical depth. Amiga, SGI, NeXT. Clean explanations of complex systems.
 - **Jan Beta** (https://www.youtube.com/c/JanBeta) — Amiga-focused restoration. German creator, English subs. Recapping, PSU rebuilds, mods.
-- **LGR (Lazy Game Reviews)** (https://www.youtube.com/c/LGR) — Peripherals, oddware, and software demos. Less repair-focused but great for context on "what did this machine do?"
-- **Usagi Electric** (https://www.youtube.com/c/UsagiElectric) — Mainframe and minicomputer restoration. 1960s-70s tech. Vacuum tube logic, core memory. Extreme difficulty but inspiring.
 
 ### Video Channels — Electronics Fundamentals
-- **EEVblog** (https://www.youtube.com/c/EEVblog) — Electronics engineering tutorials. Multimeter use, oscilloscope basics, power supply design. Grumpy Australian explains everything.
 - **Moritz Klein** (https://www.youtube.com/c/MoritzKlein0) — Analog circuit design, synthesizer modules. Helps understand signal paths in vintage computers.
 - **BigClive** (https://www.youtube.com/c/Bigclive) — Reverse engineering power supplies and consumer electronics. Schematic tracing, failure analysis.
 
@@ -59,7 +54,6 @@
 ### Code and Projects
 - **Sidekick64** (https://github.com/frntc/Sidekick64) — Raspberry Pi cartridge for C64. Demonstrates modern integration with vintage systems.
 - **PiStorm** (https://github.com/captain-amygdala/pistorm) — Raspberry Pi as Amiga accelerator. FPGA-adjacent project for advanced students.
-- **Booting the Computer** (https://www.patreon.com/jj_botc) — Visual explanations of CPU and chip internals. Webcomic format makes complex topics accessible.
 - **RetroCMP** (http://retrocmp.com/projects) — Custom replacement boards, modern PSU builds, upgrade projects. For students ready to design their own solutions.
 
 ### Parts Suppliers
@@ -87,7 +81,6 @@
 ### Active Community Contributors
 - **Noel Llopis** (Noel's Retro Lab) — Deep technical content, Amiga expertise.
 - **Jan Beta** — German Amiga restoration community leader.
-- **Tech Tangents** (https://www.youtube.com/c/TechTangents) — Oddware and rare platform restoration.
 - **16-Bit Mods** — Amiga and Atari ST modifications and repairs.
 
 ### Tool and Product Creators
@@ -97,7 +90,6 @@
 
 ### Follow for Unexpected Connections
 - **CuriousMarc** (https://www.youtube.com/c/CuriousMarc) — Apollo Guidance Computer restoration, HP calculator repairs. Shows restoration principles scale across eras.
-- **Fran Blanche (Fran Lab)** (https://www.youtube.com/c/FranLab) — Vintage electronics, vector displays, space tech. Cross-discipline inspiration.
 - **Joe Grand** — Hardware hacker, reverse engineer. Demonstrates advanced diagnostic techniques applicable to vintage systems.
 
 ## Unexpected Connections (cross-discipline links)
@@ -142,7 +134,6 @@
 
 ### Alternative Platforms (Non-Western Computing)
 - Soviet clones (ZX Spectrum → Byte-01, Apple II → Agat), Eastern Bloc computers. Different design constraints, rare parts, geopolitical history.
-- **Resource:** Soviet Computer Museum (https://www.sovietcomputers.com/)
 
 ### Homebrew Hardware Development
 - Building new hardware for vintage platforms (cartridges, accelerators, SD card adapters). Requires PCB design, understanding bus protocols.

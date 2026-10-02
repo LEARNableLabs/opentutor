@@ -52,10 +52,7 @@
       "concepts": ["latent heat", "phase changes", "energy balance"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://ocw.mit.edu/courses/1-72-groundwater-hydrology/",
-        "https://www.cuahsi.org/education/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -66,7 +63,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.usgs.gov/special-topics/water-science-school/science/water-cycle-precipitation",
         "https://water.usgs.gov/edu/earthwherewater.html"
       ],
       "status": "pending"
@@ -117,8 +113,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.weather.gov/jetstream/precip_types",
-        "https://www.ncei.noaa.gov/products/land-based-station/global-precipitation-climatology-project"
+        "https://www.weather.gov/jetstream/precip_types"
       ],
       "status": "pending"
     },
@@ -155,8 +150,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.usgs.gov/special-topics/water-science-school/science/watersheds-and-drainage-basins",
-        "https://www.epa.gov/hwp/what-watershed"
+        "https://www.usgs.gov/special-topics/water-science-school/science/watersheds-and-drainage-basins"
       ],
       "status": "pending"
     },
@@ -168,8 +162,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.usgs.gov/special-topics/water-science-school/science/runoff-surface-and-overland-water-runoff",
-        "https://www.cuahsi.org/education/"
+        "https://www.usgs.gov/special-topics/water-science-school/science/runoff-surface-and-overland-water-runoff"
       ],
       "status": "pending"
     },
@@ -181,8 +174,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.hec.usace.army.mil/software/hec-hms/",
-        "https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/national/water/manage/hydrology/"
+        "https://www.hec.usace.army.mil/software/hec-hms/"
       ],
       "status": "pending"
     },
@@ -232,8 +224,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.usgs.gov/special-topics/water-science-school/science/groundwater-what-groundwater",
-        "https://www.usgs.gov/mission-areas/water-resources/science/groundwater"
+        "https://www.usgs.gov/special-topics/water-science-school/science/groundwater-what-groundwater"
       ],
       "status": "pending"
     },
@@ -245,7 +236,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://ocw.mit.edu/courses/1-72-groundwater-hydrology/",
         "https://www.usgs.gov/special-topics/water-science-school/science/aquifers-and-groundwater"
       ],
       "status": "pending"
@@ -271,7 +261,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.usgs.gov/special-topics/water-science-school/science/groundwater-discharge-and-streamflow",
         "https://waterdata.usgs.gov/nwis/rt"
       ],
       "status": "pending"
@@ -283,10 +272,7 @@
       "concepts": ["potentiometric surface", "flow nets", "aquifer mapping"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.usgs.gov/mission-areas/water-resources/science/national-water-information-system-nwis",
-        "https://www.usgs.gov/special-topics/water-science-school/science/aquifer-basics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -296,9 +282,7 @@
       "concepts": ["groundwater review", "surface-groundwater connection"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.usgs.gov/mission-areas/water-resources/science/groundwater"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -337,7 +321,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.cuahsi.org/education/",
         "https://www.hydroshare.org/"
       ],
       "status": "pending"
@@ -376,8 +359,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.epa.gov/green-infrastructure",
-        "https://www.usgs.gov/mission-areas/water-resources/science/effects-urbanization-streamflow"
+        "https://www.epa.gov/green-infrastructure"
       ],
       "status": "pending"
     },
@@ -389,8 +371,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.usgs.gov/mission-areas/water-resources",
-        "https://www.cuahsi.org/education/"
+        "https://www.usgs.gov/mission-areas/water-resources"
       ],
       "status": "pending"
     },

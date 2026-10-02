@@ -59,8 +59,6 @@
 ### Educational Resources
 - The Synesthesia Battery: https://www.synesthete.org/
 - Edward Hubbard's lab: http://website.education.wisc.edu/edneurolab/
-- Jamie Ward's Synesthesia Research: https://www.sussex.ac.uk/profiles/155
-- V.S. Ramachandran TED Talk: https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain
 - Scientific American articles on synesthesia
 - Association for the Scientific Study of Consciousness resources
 

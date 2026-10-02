@@ -48,9 +48,7 @@
 
 - **Surgeon's Photograph Hoax Revelation** (https://www.smithsonianmag.com/smart-news/loch-ness-monster-hoax-180968854/) — How Christian Spurling confessed in 1994. Use for Lesson 12.
 
-- **Coelacanth Discovery History** (https://www.nationalgeographic.com/animals/fish/facts/coelacanth) — National Geographic article on the 1938 rediscovery. Use for Lesson 13 to understand what actually happened (vs. the crypto narrative).
 
-- **Committee for Skeptical Inquiry's Bigfoot page** (https://www.csicop.org/si/show/bigfoot_at_50_evaluating_half-century_of_bigfoot_evidence) — Comprehensive evidence review. Use for lessons 5, 11, 14.
 
 ## Books by Level
 

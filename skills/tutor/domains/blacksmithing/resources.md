@@ -40,7 +40,6 @@
 
 - **Christ Centered Ironworks** (https://www.youtube.com/@ChristCenteredIronworks) — Detailed forge welding tutorials with good failure analysis. Slower pace; ideal for careful study.
 
-- **DF in the Shop** (https://www.youtube.com/c/DFintheshop) — Tool making with strong heat treatment science explanations. Good for students wanting metallurgical depth.
 
 - **Essential Craftsman** (https://www.youtube.com/@essentialcraftsman) — Blacksmith tools in trade context (carpentry, masonry). Shows how tool design serves real work.
 
@@ -56,7 +55,6 @@
 
 - **Blacksmith's Depot** (https://www.blacksmithsdepot.com/) — Beginner through advanced tools. Good educational blog covering forge welding and heat treatment.
 
-- **New England Forge** (https://www.newenglandforge.com/) — Tool steel supplier with detailed composition charts and heat treatment specs.
 
 ### Code/Simulations
 - No coding resources directly applicable, but students with programming background might enjoy modeling heat diffusion or building quench rate calculators.

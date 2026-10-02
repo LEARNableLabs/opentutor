@@ -38,8 +38,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://mathshistory.st-andrews.ac.uk/HistTopics/Babylonian_mathematics/",
-        "https://www.youtube.com/watch?v=aSF9tD5wC1s"
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Babylonian_mathematics/"
       ],
       "status": "pending"
     },
@@ -64,7 +63,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://mathshistory.st-andrews.ac.uk/HistTopics/Irrational_numbers/",
         "https://www.youtube.com/user/numberphile"
       ],
       "status": "pending"
@@ -78,7 +76,6 @@
       "type": "resource-drop",
       "resources": [
         "https://mathshistory.st-andrews.ac.uk/HistTopics/Indian_mathematics/",
-        "https://mathshistory.st-andrews.ac.uk/HistTopics/Chinese_mathematics/",
         "https://www.storyofmathematics.com/indian.html"
       ],
       "status": "pending"
@@ -116,8 +113,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://mathshistory.st-andrews.ac.uk/HistTopics/Arabic_mathematics/",
-        "https://www.youtube.com/watch?v=Tn7GYGck7P8"
+        "https://mathshistory.st-andrews.ac.uk/HistTopics/Arabic_mathematics/"
       ],
       "status": "pending"
     },
@@ -168,7 +164,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://mathshistory.st-andrews.ac.uk/HistTopics/Mathematical_notation/",
         "https://mathshistory.st-andrews.ac.uk/Biographies/Viete/"
       ],
       "status": "pending"
@@ -232,8 +227,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Jacob/",
-        "https://www.storyofmathematics.com/17th_bernoulli.html"
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Jacob/"
       ],
       "status": "pending"
     },
@@ -296,8 +290,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/",
-        "https://www.storyofmathematics.com/20th_noether.html"
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/"
       ],
       "status": "pending"
     },

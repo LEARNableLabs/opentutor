@@ -65,8 +65,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.rp-photonics.com/chromatic_dispersion.html",
-        "https://www.ieee.li/pdf/viewgraphs/dispersion_in_optical_fibers.pdf"
+        "https://www.rp-photonics.com/chromatic_dispersion.html"
       ],
       "status": "pending"
     },
@@ -78,7 +77,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rp-photonics.com/fiber_attenuation.html",
         "https://www.fiberoptics4sale.com/blogs/archive-posts/95048006-optical-fiber-loss-and-attenuation"
       ],
       "status": "pending"
@@ -91,8 +89,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.rp-photonics.com/fibers.html",
-        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048006-optical-fiber-basics"
+        "https://www.rp-photonics.com/fibers.html"
       ],
       "status": "pending"
     },
@@ -104,8 +101,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.rp-photonics.com/laser_diodes.html",
-        "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/understanding-laser-diodes/"
+        "https://www.rp-photonics.com/laser_diodes.html"
       ],
       "status": "pending"
     },
@@ -130,8 +126,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.rp-photonics.com/erbium_doped_fiber_amplifiers.html",
-        "https://www.youtube.com/watch?v=Qb3WpEQJwpM"
+        "https://www.rp-photonics.com/erbium_doped_fiber_amplifiers.html"
       ],
       "status": "pending"
     },
@@ -156,8 +151,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.rp-photonics.com/noise_figure.html",
-        "https://www.ieee.li/pdf/viewgraphs/optical_amplifiers.pdf"
+        "https://www.rp-photonics.com/noise_figure.html"
       ],
       "status": "pending"
     },
@@ -168,9 +162,7 @@
       "concepts": ["component review", "system integration", "performance trade-offs"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048070-optical-transceiver-module-overview"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -181,8 +173,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rp-photonics.com/intensity_modulators.html",
-        "https://www.youtube.com/watch?v=fCu7qeT4Y-o"
+        "https://www.rp-photonics.com/intensity_modulators.html"
       ],
       "status": "pending"
     },
@@ -194,8 +185,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.rp-photonics.com/wavelength_division_multiplexing.html",
-        "https://www.cisco.com/c/en/us/products/collateral/optical-networking/dense-wavelength-division-multiplexing-dwdm/white-paper-c11-743214.html"
+        "https://www.rp-photonics.com/wavelength_division_multiplexing.html"
       ],
       "status": "pending"
     },
@@ -207,7 +197,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rp-photonics.com/polarization_division_multiplexing.html",
         "https://ieeexplore.ieee.org/document/6027961"
       ],
       "status": "pending"
@@ -219,10 +208,7 @@
       "concepts": ["digital modulation formats", "QPSK", "QAM", "constellation diagrams"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.rp-photonics.com/phase_shift_keying.html",
-        "https://www.youtube.com/watch?v=r1h-y4JpRic"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -232,9 +218,7 @@
       "concepts": ["WDM system design", "channel allocation", "amplifier placement", "dispersion management"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.cisco.com/c/en/us/td/docs/optical/15000r7_0/dwdm/configuration/guide/454_DWDM_Config_Guide/links.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -257,7 +241,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048006-link-power-budget-calculation",
         "https://www.thefoa.org/tech/ref/testing/test/dB.html"
       ],
       "status": "pending"
@@ -269,9 +252,7 @@
       "concepts": ["rise time budget", "bandwidth-distance product", "system bandwidth", "timing constraints"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048070-rise-time-budget-analysis"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -281,10 +262,7 @@
       "concepts": ["receiver noise", "shot noise", "thermal noise", "signal-to-noise ratio"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.rp-photonics.com/receiver_noise.html",
-        "https://www.youtube.com/watch?v=7CiHkNg27FY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -295,8 +273,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rp-photonics.com/bit_error_rate.html",
-        "https://www.ieee.li/pdf/viewgraphs/ber_measurements.pdf"
+        "https://www.rp-photonics.com/bit_error_rate.html"
       ],
       "status": "pending"
     },
@@ -307,9 +284,7 @@
       "concepts": ["end-to-end system design", "budget allocation", "performance verification", "measurement"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.cisco.com/c/en/us/support/docs/optical-networking/ons-15454-sonet-multiservice-provisioning-platform-mspp/27042-tcc2p-loss-budget.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -319,9 +294,7 @@
       "concepts": ["integrated system design", "trade-off analysis", "verification"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.fiberoptics4sale.com/blogs/archive-posts/95048006-fiber-optic-system-design-overview"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -332,8 +305,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rp-photonics.com/nonlinearities.html",
-        "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-23-1-346"
+        "https://www.rp-photonics.com/nonlinearities.html"
       ],
       "status": "pending"
     },
@@ -345,7 +317,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rp-photonics.com/coherent_detection.html",
         "https://ieeexplore.ieee.org/document/5406316"
       ],
       "status": "pending"
@@ -359,8 +330,7 @@
       "type": "resource-drop",
       "resources": [
         "https://www.rp-photonics.com/multi_core_fibers.html",
-        "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-31-4-565",
-        "https://www.youtube.com/watch?v=TQVKVnxZG-A"
+        "https://opg.optica.org/jlt/abstract.cfm?uri=jlt-31-4-565"
       ],
       "status": "pending"
     }

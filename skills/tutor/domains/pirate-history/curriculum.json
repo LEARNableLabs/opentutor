@@ -39,8 +39,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://avalon.law.yale.edu/subject_menus/letters.asp",
-        "https://www.history.com/news/privateers-pirates-difference"
+        "https://avalon.law.yale.edu/subject_menus/letters.asp"
       ],
       "status": "pending"
     },
@@ -64,10 +63,7 @@
       "concepts": ["ship design", "navigation tools", "weaponry"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.marinersmuseum.org/sites/micro/pirates/pirates.htm",
-        "https://archive.org/details/searoverspracti00litt"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -78,8 +74,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.worldhistory.org/Buccaneer/",
-        "https://www.rmg.co.uk/stories/topics/who-were-buccaneers"
+        "https://www.worldhistory.org/Buccaneer/"
       ],
       "status": "pending"
     },
@@ -91,8 +86,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.britannica.com/biography/Henry-Morgan-Welsh-buccaneer",
-        "https://www.youtube.com/watch?v=b9pGfJcgAH8"
+        "https://www.britannica.com/biography/Henry-Morgan-Welsh-buccaneer"
       ],
       "status": "pending"
     },
@@ -103,10 +97,7 @@
       "concepts": ["Pirate Round", "Red Sea route", "Madagascar base"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.rmg.co.uk/stories/topics/pirate-round",
-        "https://archive.org/details/piratesofcolonia00zack"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -129,8 +120,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.britannica.com/event/War-of-the-Spanish-Succession",
-        "https://avalon.law.yale.edu/18th_century/sp1713.asp"
+        "https://www.britannica.com/event/War-of-the-Spanish-Succession"
       ],
       "status": "pending"
     },
@@ -142,7 +132,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rmg.co.uk/stories/topics/nassau-pirate-republic",
         "https://www.youtube.com/watch?v=T0fAznO1wA8"
       ],
       "status": "pending"
@@ -154,10 +143,7 @@
       "concepts": ["Blackbeard", "psychological warfare", "reputation building"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.ncpedia.org/biography/teach-edward",
-        "https://www.history.com/topics/exploration/blackbeard"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -206,8 +192,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.britannica.com/topic/piracy-international-law",
-        "https://www.law.berkeley.edu/research/the-robbins-collection/robbins-collection-resources/property-law-and-legal-history/special-topics-in-legal-history/piracy/"
+        "https://www.britannica.com/topic/piracy-international-law"
       ],
       "status": "pending"
     },
@@ -219,7 +204,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://avalon.law.yale.edu/subject_menus/lawofwar.asp",
         "https://www.jstor.org/stable/2194256"
       ],
       "status": "pending"
@@ -245,7 +229,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.rmg.co.uk/stories/topics/pirate-code",
         "https://www.youtube.com/watch?v=T0fAznO1wA8"
       ],
       "status": "pending"
@@ -258,8 +241,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.britannica.com/topic/piracy-international-law",
-        "https://www.rmg.co.uk/stories/topics/pirate-code"
+        "https://www.britannica.com/topic/piracy-international-law"
       ],
       "status": "pending"
     },
@@ -271,8 +253,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://archive.org/details/generalhistoryof00john",
-        "https://www.marinersmuseum.org/sites/micro/pirates/pirates.htm"
+        "https://archive.org/details/generalhistoryof00john"
       ],
       "status": "pending"
     },
@@ -283,10 +264,7 @@
       "concepts": ["women pirates", "gender disguise", "historical sources"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.rmg.co.uk/stories/topics/anne-bonny-mary-read",
-        "https://www.history.com/news/female-pirates-anne-bonny-mary-read"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,8 +275,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.jstor.org/stable/2636690",
-        "https://www.youtube.com/watch?v=b9pGfJcgAH8"
+        "https://www.jstor.org/stable/2636690"
       ],
       "status": "pending"
     },
@@ -310,8 +287,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.britannica.com/biography/Woodes-Rogers",
-        "https://www.rmg.co.uk/stories/topics/woodes-rogers-pirate-hunter"
+        "https://www.britannica.com/biography/Woodes-Rogers"
       ],
       "status": "pending"
     },

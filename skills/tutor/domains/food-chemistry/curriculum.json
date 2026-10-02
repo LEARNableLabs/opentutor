@@ -42,7 +42,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.moleculekitchen.com/",
         "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
       ],
       "status": "pending"
@@ -80,8 +79,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/",
-        "https://www.moleculekitchen.com/"
+        "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
       ],
       "status": "pending"
     },
@@ -106,7 +104,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.moleculekitchen.com/",
         "https://journals.helsinki.fi/lumat/article/download/1109/1102/3579"
       ],
       "status": "pending"
@@ -119,7 +116,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.moleculekitchen.com/",
         "https://www.educationaldesigner.org/ed/volume3/issue12/article48/pdf/molecular-gastronomy-manual.pdf"
       ],
       "status": "pending"
@@ -157,7 +153,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.moleculekitchen.com/",
         "https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/"
       ],
       "status": "pending"
@@ -170,7 +165,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.moleculekitchen.com/",
         "https://www.educationaldesigner.org/ed/volume3/issue12/article48/pdf/molecular-gastronomy-manual.pdf"
       ],
       "status": "pending"
@@ -234,7 +228,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.moleculekitchen.com/",
         "https://journals.helsinki.fi/lumat/article/download/1109/1102/3579"
       ],
       "status": "pending"
@@ -260,7 +253,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.moleculekitchen.com/",
         "https://www.educationaldesigner.org/ed/volume3/issue12/article48/pdf/molecular-gastronomy-manual.pdf"
       ],
       "status": "pending"
@@ -286,7 +278,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.moleculekitchen.com/",
         "https://journals.helsinki.fi/lumat/article/download/1109/1102/3579"
       ],
       "status": "pending"
@@ -324,8 +315,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130",
-        "https://www.moleculekitchen.com/"
+        "https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130"
       ],
       "status": "pending"
     },
@@ -363,7 +353,6 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.moleculekitchen.com/",
         "https://openlearning.mit.edu/news/ten-free-mit-courses-and-lectures-food-lovers",
         "https://journals.helsinki.fi/lumat/article/download/1109/1102/3579"
       ],

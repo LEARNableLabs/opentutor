@@ -46,17 +46,13 @@
 - **Shobogenzo** (Dogen) - Treasury of the True Dharma Eye
 
 ### Stanford Encyclopedia of Philosophy
-- Entry on Vedanta: https://plato.stanford.edu/entries/vedanta/
 - Entry on Laozi: https://plato.stanford.edu/entries/laozi/
 - Entry on Zhuangzi: https://plato.stanford.edu/entries/zhuangzi/
 - Entry on Zen Buddhism: https://plato.stanford.edu/entries/japanese-zen/
-- Entry on Consciousness in Indian Philosophy: https://plato.stanford.edu/entries/consciousness-indian/
 
 ### Internet Encyclopedia of Philosophy
 - Advaita Vedanta: https://iep.utm.edu/adv-veda/
-- Taoism: https://iep.utm.edu/taoism/
 - Zen Buddhism: https://iep.utm.edu/zen/
-- Comparative Eastern Philosophy: https://iep.utm.edu/east-phi/
 
 ### Academic Courses & Syllabi
 - Yale Open Courses - Philosophy and the Science of Human Nature (includes Eastern perspectives)

@@ -50,8 +50,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://ncase.me/remember/",
-        "https://artofmemory.com/wiki/Peg_System"
+        "https://ncase.me/remember/"
       ],
       "status": "pending"
     },
@@ -102,8 +101,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://artofmemory.com/wiki/How_to_Build_a_Memory_Palace",
-        "https://www.youtube.com/c/MemorySportTV"
+        "https://artofmemory.com/wiki/How_to_Build_a_Memory_Palace"
       ],
       "status": "pending"
     },
@@ -115,7 +113,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://artofmemory.com/wiki/How_to_Memorize_Abstract_Information",
         "https://www.gwern.net/Spaced-repetition#mnemonic-techniques"
       ],
       "status": "pending"
@@ -127,10 +124,7 @@
       "concepts": ["palace navigation", "image placement", "retrieval practice"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://artofmemory.com/blog/how-to-memorize-a-speech/",
-        "https://www.youtube.com/watch?v=mh9B5UJnejc"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -141,7 +135,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://artofmemory.com/wiki/Peg_System",
         "https://www.memoryleague.com/"
       ],
       "status": "pending"
@@ -153,10 +146,7 @@
       "concepts": ["palace construction", "encoding practice", "retrieval testing"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://artofmemory.com/wiki/Memory_Techniques",
-        "https://www.youtube.com/c/MemorySportTV"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -167,8 +157,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.gwern.net/Spaced-repetition#mnemonic-techniques",
-        "https://artofmemory.com/wiki/Memory_Techniques"
+        "https://www.gwern.net/Spaced-repetition#mnemonic-techniques"
       ],
       "status": "pending"
     },
@@ -206,8 +195,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge",
-        "https://apps.ankiweb.net/docs/manual.html"
+        "https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge"
       ],
       "status": "pending"
     },
@@ -284,7 +272,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.supermemo.com/en/blog/archive",
         "https://refold.la/roadmap"
       ],
       "status": "pending"
@@ -297,8 +284,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.gwern.net/Spaced-repetition#personal-experimentation",
-        "https://apps.ankiweb.net/docs/manual.html#statistics"
+        "https://www.gwern.net/Spaced-repetition#personal-experimentation"
       ],
       "status": "pending"
     },
@@ -323,8 +309,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://andymatuschak.org/prompts/",
-        "https://artofmemory.com/wiki/Memory_Techniques"
+        "https://andymatuschak.org/prompts/"
       ],
       "status": "pending"
     }

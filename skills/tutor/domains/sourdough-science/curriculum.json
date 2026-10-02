@@ -27,8 +27,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sciencedirect.com/science/article/pii/S0924224414002386",
-        "https://www.youtube.com/watch?v=yYkTrGHNxCg"
+        "https://www.sciencedirect.com/science/article/pii/S0924224414002386"
       ],
       "status": "pending"
     },
@@ -53,8 +52,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163316/",
-        "https://www.youtube.com/watch?v=hmZOWQyLGrk"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163316/"
       ],
       "status": "pending"
     },
@@ -118,7 +116,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=vJhEsq-sKMU",
         "https://www.breadwerx.com/sourdough-science/"
       ],
       "status": "pending"
@@ -183,8 +180,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.sciencedirect.com/science/article/pii/S0963996915000764",
-        "https://www.youtube.com/watch?v=kzJEz1mpwDk"
+        "https://www.sciencedirect.com/science/article/pii/S0963996915000764"
       ],
       "status": "pending"
     },
@@ -196,8 +192,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.breadwerx.com/understanding-sourdough-chemistry/",
-        "https://www.theperfectloaf.com/sourdough-bread-baking-schedule/"
+        "https://www.breadwerx.com/understanding-sourdough-chemistry/"
       ],
       "status": "pending"
     },
@@ -209,8 +204,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4161275/",
-        "https://www.youtube.com/watch?v=beKzcRNEsPo"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4161275/"
       ],
       "status": "pending"
     },
@@ -222,8 +216,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1750-3841.2011.02088.x",
-        "https://www.thefreshloaf.com/node/10901/hydration-and-sourdough"
+        "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1750-3841.2011.02088.x"
       ],
       "status": "pending"
     },
@@ -248,8 +241,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4161272/",
-        "https://www.kingarthurbaking.com/blog/2017/08/22/salt-in-sourdough"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4161272/"
       ],
       "status": "pending"
     },
@@ -261,8 +253,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.theperfectloaf.com/guides/sourdough-starter/",
-        "https://brodandtaylor.com/sourdough-feeding-schedules/"
+        "https://www.theperfectloaf.com/guides/sourdough-starter/"
       ],
       "status": "pending"
     },
@@ -300,8 +291,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4951208/",
-        "https://link.springer.com/article/10.1007/s00253-009-2154-0"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4951208/"
       ],
       "status": "pending"
     },
@@ -326,8 +316,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.sciencedirect.com/science/article/pii/S0963996919304995",
-        "https://www.youtube.com/watch?v=rYwPJgszIL0"
+        "https://www.sciencedirect.com/science/article/pii/S0963996919304995"
       ],
       "status": "pending"
     },
@@ -338,10 +327,7 @@
       "concepts": ["over-acidification", "yeast death", "contamination", "troubleshooting"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.theperfectloaf.com/sourdough-starter-troubleshooting/",
-        "https://www.thefreshloaf.com/handbook/sourdough-starter-faq"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -352,8 +338,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.sciencedirect.com/science/article/pii/S0924224413001689",
-        "https://www.youtube.com/watch?v=r1ATvb-_8yA"
+        "https://www.sciencedirect.com/science/article/pii/S0924224413001689"
       ],
       "status": "pending"
     },
@@ -365,8 +350,7 @@
       "difficulty": 5,
       "type": "teach-back",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6523910/",
-        "https://www.theperfectloaf.com/my-sourdough-starter-maintenance-routine/"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6523910/"
       ],
       "status": "pending"
     }

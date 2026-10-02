@@ -20,7 +20,6 @@
 
 - **Network Science (University of Michigan)** — Coursera course focusing on social networks, with computational labs.
 
-- **Systems Innovation YouTube Channel** — https://www.youtube.com/c/ComplexityLabs. Short videos on complexity concepts applied to sustainability, economics, and social systems.
 
 ## Interactive Tools and Visualizations
 
@@ -108,5 +107,3 @@
 - **Complexity Science Hub Vienna** — https://www.csh.ac.at/. European complexity research.
 
 - **MIT Media Lab** — Human dynamics, social networks, collective intelligence.
-
-- **Complexity@Oxford** — https://www.complexity.ox.ac.uk/. UK research hub.

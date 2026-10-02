@@ -25,10 +25,7 @@
       "concepts": ["switch anatomy", "actuation mechanisms", "tactile feedback"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://keyboard.university/100-courses/switches-101-xrEmR",
-        "https://www.keychron.com/blogs/news/keyboard-switch-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -38,10 +35,7 @@
       "concepts": ["force curves", "actuation force", "bottom-out force", "travel distance"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://deskthority.net/wiki/Force_curves",
-        "https://www.youtube.com/watch?v=xlxrfQj0F-M"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -65,8 +59,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/c/SwitchandClick",
-        "https://switchandclick.com/ultimate-guide-to-modding-mechanical-keyboards/"
+        "https://www.youtube.com/c/SwitchandClick"
       ],
       "status": "pending"
     },
@@ -78,7 +71,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://ergodox-ez.com/pages/our-switches",
         "https://www.theremingoat.com/"
       ],
       "status": "pending"
@@ -91,8 +83,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://docs.qmk.fm/#/how_a_matrix_works",
-        "https://www.youtube.com/watch?v=3j4w8H_xdMk"
+        "https://docs.qmk.fm/#/how_a_matrix_works"
       ],
       "status": "pending"
     },
@@ -130,7 +121,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://keyboard.university/",
         "https://docs.qmk.fm/"
       ],
       "status": "pending"
@@ -169,8 +159,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://github.com/ruiqimao/keyboard-pcb-guide#routing",
-        "https://www.youtube.com/watch?v=3D_QKIjnAPg"
+        "https://github.com/ruiqimao/keyboard-pcb-guide#routing"
       ],
       "status": "pending"
     },
@@ -327,7 +316,6 @@
       "type": "real-world",
       "resources": [
         "https://usevia.app/",
-        "https://github.com/the-via/via",
         "https://get.vial.today/"
       ],
       "status": "pending"
@@ -366,7 +354,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.keyboard.university/200-courses/keyboard-mounting-styles-4lpp7",
         "https://thomasbaart.nl/2019/04/13/physical-keyboard-mounting-styles/"
       ],
       "status": "pending"
@@ -379,8 +366,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/c/TaehaTypes",
-        "https://switchandclick.com/keyboard-foam-guide/"
+        "https://www.youtube.com/c/TaehaTypes"
       ],
       "status": "pending"
     },
@@ -392,8 +378,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=cD5Zj-ZgMLA",
-        "https://keyboard.university/guides/build-guides/keyboard-stabilizers-rxnRr"
+        "https://www.youtube.com/watch?v=cD5Zj-ZgMLA"
       ],
       "status": "pending"
     },
@@ -405,7 +390,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://keyboard.university/",
         "https://docs.qmk.fm/",
         "https://www.reddit.com/r/MechanicalKeyboards/"
       ],

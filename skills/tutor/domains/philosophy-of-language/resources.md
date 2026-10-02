@@ -52,7 +52,6 @@
 - **Soames, S. *Philosophical Analysis in the Twentieth Century, Volume 2* (Princeton, 2003)**
   - Historical approach covering Frege through Kripke
   - Excellent for context and connections
-  - Available: https://press.princeton.edu/books/paperback/9780691115733/philosophical-analysis-in-the-twentieth-century-volume-2
 
 - **Martinich, A.P. & Sosa, D. (eds.) *The Philosophy of Language* (7th ed., Oxford, 2021)**
   - Anthology with original papers and helpful introductions
@@ -84,8 +83,6 @@
 - **Wireless Philosophy (Wi-Phi)**
   - https://www.youtube.com/@WirelessPhilosophy
   - Short animated videos on philosophy of language topics
-  - "Frege on Sense and Reference": https://www.youtube.com/watch?v=K5f88_kCgWg
-  - "Kripke's Naming and Necessity": https://www.youtube.com/watch?v=1P_4R9q96aw
 
 - **Philosophy Overdose**
   - https://www.youtube.com/@PhilosophyOverdose
@@ -173,7 +170,6 @@
 
 - **Linguistics and Generative Grammar**
   - How Chomsky's linguistic theories connect to semantic theory
-  - https://plato.stanford.edu/entries/generative-grammar/
 
 - **Cognitive Science and Concepts**
   - How psychological research on concepts relates to theories of meaning

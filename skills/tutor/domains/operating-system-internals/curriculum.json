@@ -128,8 +128,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf",
-        "https://lwn.net/Articles/582144/"
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf"
       ],
       "status": "pending"
     },
@@ -191,8 +190,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf",
-        "https://ext4.wiki.kernel.org/index.php/Main_Page"
+        "https://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf"
       ],
       "status": "pending"
     },

@@ -215,8 +215,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.mysimulator.uk/categories/sound/",
-        "https://www.niu.edu/clas/physics/_pdf/spring-2019/Phys-180-syllabus.pdf"
+        "https://www.mysimulator.uk/categories/sound/"
       ],
       "status": "pending"
     },
@@ -289,8 +288,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/pages/syllabus/",
-        "https://www.niu.edu/clas/physics/_pdf/spring-2019/Phys-180-syllabus.pdf"
+        "https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/pages/syllabus/"
       ],
       "status": "pending"
     },
@@ -326,8 +324,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/pages/syllabus/",
-        "https://www.niu.edu/clas/physics/_pdf/spring-2019/Phys-180-syllabus.pdf"
+        "https://ocw.mit.edu/courses/6-551j-acoustics-of-speech-and-hearing-fall-2004/pages/syllabus/"
       ],
       "status": "pending"
     },

@@ -50,8 +50,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.musictheory.net/lessons/30",
-        "https://teoria.com/en/tutorials/melody/index.php"
+        "https://www.musictheory.net/lessons/30"
       ],
       "status": "pending"
     },
@@ -118,8 +117,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.musictheory.net/lessons/44",
-        "https://teoria.com/en/tutorials/roman-numerals/index.php"
+        "https://www.musictheory.net/lessons/44"
       ],
       "status": "pending"
     },
@@ -152,7 +150,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.musictheory.net/lessons/41",
         "https://ocw.mit.edu/courses/21m-301-harmony-and-counterpoint-i-spring-2005/"
       ],
       "status": "pending"
@@ -169,8 +166,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.musictheory.net/lessons/52",
-        "https://teoria.com/en/tutorials/embellishments/index.php"
+        "https://www.musictheory.net/lessons/52"
       ],
       "status": "pending"
     },
@@ -288,8 +284,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://archive.org/details/BooksOnMusicTheoryHarmonyCounterpointOrchestrationinEnglishJazzToo",
-        "https://teoria.com/en/tutorials/counterpoint/index.php"
+        "https://archive.org/details/BooksOnMusicTheoryHarmonyCounterpointOrchestrationinEnglishJazzToo"
       ],
       "status": "pending"
     },
@@ -305,7 +300,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://teoria.com/en/tutorials/counterpoint/index.php",
         "https://musescore.org/"
       ],
       "status": "pending"
@@ -322,7 +316,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://teoria.com/en/tutorials/counterpoint/index.php",
         "https://archive.org/details/BooksOnMusicTheoryHarmonyCounterpointOrchestrationinEnglishJazzToo"
       ],
       "status": "pending"
@@ -339,8 +332,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://musescore.org/",
-        "https://www.youtube.com/c/DrKatiMeyer"
+        "https://musescore.org/"
       ],
       "status": "pending"
     },
@@ -356,7 +348,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.musictheory.net/lessons/54",
         "https://ocw.mit.edu/courses/21m-302-harmony-and-counterpoint-ii-spring-2005/"
       ],
       "status": "pending"
@@ -492,7 +483,6 @@
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
-        "https://www.musictheory.net/lessons/34",
         "https://www.youtube.com/c/AdamNeely"
       ],
       "status": "pending"

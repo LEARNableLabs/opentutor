@@ -32,7 +32,6 @@
 ### Podcasts About Podcasting
 - **HowSound** (https://transom.org/category/howsound/) — Rob Rosenthal's show on audio storytelling craft, featuring working producers
 - **Podcast Engineering School** (YouTube channel) — technical deep-dives on recording, mixing, and mastering
-- **The Podcast Host** (https://www.thepodcasthost.com/podcast/) — beginner-friendly show on podcasting how-to
 - **Sound School Podcast** — from PRX and Google, focused on tools and techniques
 - **The Fizzle Show** — includes episodes on audio production and podcasting business
 

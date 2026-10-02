@@ -24,10 +24,7 @@
       "concepts": ["constructed languages", "auxlangs", "artistic languages"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/@janMisali",
-        "https://conlang.org/what-is-a-conlang/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -37,10 +34,7 @@
       "concepts": ["philosophical languages", "taxonomies", "Wilkins"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://plato.stanford.edu/entries/artificial-languages/",
-        "https://www.youtube.com/watch?v=_nMv5TveI8c"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -51,8 +45,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.duolingo.com/course/tlh/en/Learn-Klingon",
-        "https://www.youtube.com/watch?v=eLJQ8E5K82E"
+        "https://www.duolingo.com/course/tlh/en/Learn-Klingon"
       ],
       "status": "pending"
     },
@@ -64,7 +57,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://conlang.org/cms/the-basics-of-language-creation/",
         "https://zompist.com/kitlong.html"
       ],
       "status": "pending"
@@ -89,9 +81,7 @@
       "concepts": ["classification review", "phonology review"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/@janMisali"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -102,8 +92,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/@Artifexian",
-        "https://zompist.com/morphology.html"
+        "https://www.youtube.com/@Artifexian"
       ],
       "status": "pending"
     },
@@ -128,7 +117,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=3i-cJ_6RhqE",
         "https://tokipona.org"
       ],
       "status": "pending"
@@ -179,7 +167,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=35jGemlQt8E",
         "https://en.wikipedia.org/wiki/Interlingua",
         "https://en.wikipedia.org/wiki/Ido"
       ],
@@ -193,8 +180,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://tokipona.org",
-        "https://www.youtube.com/watch?v=3i-cJ_6RhqE"
+        "https://tokipona.org"
       ],
       "status": "pending"
     },
@@ -206,8 +192,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://mw.lojban.org/papri/Lojban",
-        "https://www.youtube.com/watch?v=K4Mp9yAaNhY"
+        "https://mw.lojban.org/papri/Lojban"
       ],
       "status": "pending"
     },
@@ -231,9 +216,7 @@
       "concepts": ["Toki Pona review", "Lojban review", "design constraints"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/@janMisali"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -244,8 +227,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "http://www.ithkuil.net",
-        "https://www.youtube.com/watch?v=E4zEYlmJfY8"
+        "http://www.ithkuil.net"
       ],
       "status": "pending"
     },
@@ -256,10 +238,7 @@
       "concepts": ["artistic conlangs", "Quenya", "linguistic aesthetics", "sound symbolism"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=YrRj_1vPXMA",
-        "https://folk.uib.no/hnohf/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -269,10 +248,7 @@
       "concepts": ["modern media conlangs", "Dothraki", "cultural linguistics", "worldbuilding"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=QF93l-AShII",
-        "https://dedalvs.com/dothraki.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -321,7 +297,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://zompist.com/gen/phonology.html",
         "https://www.youtube.com/@Artifexian"
       ],
       "status": "pending"

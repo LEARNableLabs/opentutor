@@ -48,14 +48,12 @@
 - **Penn State GEOG 480/580: Introduction to Remote Sensing**
   - Free online course materials
   - Practical labs using ENVI and other tools
-  - https://www.e-education.psu.edu/geog480/
 
 ### Mission-Specific Documentation
 
 - **Copernicus Sentinel Online**
   - Complete documentation for Sentinel-1 (SAR), Sentinel-2 (optical), Sentinel-3 (ocean/land), etc.
   - Data access guides
-  - https://sentinel.esa.int/web/sentinel/home
 
 - **NASA MODIS Website**
   - Documentation for Moderate Resolution Imaging Spectroradiometer
@@ -173,7 +171,6 @@
 
 - **ENVI** — advanced image processing
   - Free trial, academic licenses
-  - https://www.l3harrisgeospatial.com/Software-Technology/ENVI
 
 - **ArcGIS** — Esri's platform
   - Image Analyst extension for remote sensing

@@ -27,8 +27,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
-        "https://www.youtube.com/watch?v=7gfZNNZW_ak"
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
       ],
       "status": "pending"
     },
@@ -40,7 +39,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.myphysicslab.com/pendulum/movable-pendulum-en.html",
         "https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_en.html"
       ],
       "status": "pending"
@@ -66,8 +64,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/resources/mit8_223iap17_lec1/",
-        "https://mathworld.wolfram.com/HolonomicConstraint.html"
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/resources/mit8_223iap17_lec1/"
       ],
       "status": "pending"
     },
@@ -144,8 +141,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.feynmanlectures.caltech.edu/II_19.html",
-        "https://www.youtube.com/watch?v=Nd8SsRvnuTc"
+        "https://www.feynmanlectures.caltech.edu/II_19.html"
       ],
       "status": "pending"
     },
@@ -157,8 +153,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
-        "https://www.youtube.com/watch?v=7gfZNNZW_ak"
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
       ],
       "status": "pending"
     },
@@ -196,7 +191,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=r_bqVQq9xXI",
         "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
       ],
       "status": "pending"
@@ -235,8 +229,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
-        "https://www.youtube.com/watch?v=SvZPERcFBEc"
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
       ],
       "status": "pending"
     },
@@ -248,8 +241,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
-        "https://mathworld.wolfram.com/HamiltonianFunction.html"
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
       ],
       "status": "pending"
     },
@@ -261,8 +253,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
-        "https://www.youtube.com/watch?v=BVMd4b8sLxg"
+        "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
       ],
       "status": "pending"
     },
@@ -287,7 +278,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=SvZPERcFBEc",
         "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/"
       ],
       "status": "pending"
@@ -340,7 +330,6 @@
       "type": "resource-drop",
       "resources": [
         "https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/",
-        "https://www.youtube.com/watch?v=7UlPd1bp6g4",
         "https://en.wikipedia.org/wiki/Analytical_mechanics"
       ],
       "status": "pending"

@@ -27,8 +27,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/rationality-normative-utility/",
-        "https://www.youtube.com/watch?v=X9fEVBu2Thw"
+        "https://plato.stanford.edu/entries/rationality-normative-utility/"
       ],
       "status": "pending"
     },
@@ -92,7 +91,6 @@
       "type": "mini-lesson",
       "resources": [
         "https://plato.stanford.edu/entries/rationality-normative-utility/",
-        "https://www.youtube.com/watch?v=kfFQEb4dBlY",
         "https://ocw.mit.edu/courses/14-123-microeconomic-theory-iii-spring-2015/"
       ],
       "status": "pending"
@@ -132,7 +130,6 @@
       "type": "mini-lesson",
       "resources": [
         "https://plato.stanford.edu/entries/paradox-stpetersburg/",
-        "https://www.youtube.com/watch?v=MlJQPb-mhPI",
         "https://en.wikipedia.org/wiki/Allais_paradox"
       ],
       "status": "pending"
@@ -172,7 +169,6 @@
       "type": "question",
       "resources": [
         "https://plato.stanford.edu/entries/paradox-stpetersburg/",
-        "https://www.youtube.com/watch?v=bqMOGnovLqw",
         "https://en.wikipedia.org/wiki/St._Petersburg_paradox"
       ],
       "status": "pending"
@@ -199,7 +195,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.lesswrong.com/posts/ix7ioXbPesX2eNs9T/loss-aversion",
         "https://en.wikipedia.org/wiki/Loss_aversion",
         "https://www.khanacademy.org/economics-finance-domain/ap-microeconomics"
       ],
@@ -251,8 +246,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://plato.stanford.edu/entries/paradox-ellsberg/",
-        "https://www.youtube.com/watch?v=8v0E5cO7UT0",
         "https://en.wikipedia.org/wiki/Ellsberg_paradox"
       ],
       "status": "pending"
@@ -345,8 +338,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://plato.stanford.edu/entries/decision-theory/",
-        "https://www.lesswrong.com/posts/wAXodw6LPScjrdnkR/rationality-appreciating-the-art-of-rationality"
+        "https://plato.stanford.edu/entries/decision-theory/"
       ],
       "status": "pending"
     }

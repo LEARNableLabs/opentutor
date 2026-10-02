@@ -56,9 +56,7 @@
 ## Research URLs
 
 1. https://ocw.mit.edu/courses/experimental-study-group/es-287-kitchen-chemistry-spring-2009/
-2. https://foodsci.rutgers.edu/Undergraduate/Curriculum/pdf/11-400-411.pdf
 3. https://nutrisci.med.utoronto.ca/sites/default/files/inline-files/2021-22%20NFS386H1F%20Food%20Chemistry-Syllabus-Fall2021-ATaibi-Final_0.pdf
-4. https://www.moleculekitchen.com/
 5. https://pubs.acs.org/doi/10.1021/acs.jchemed.3c00130
 6. https://www.educationaldesigner.org/ed/volume3/issue12/article48/pdf/molecular-gastronomy-manual.pdf
 7. https://journals.helsinki.fi/lumat/article/download/1109/1102/3579

@@ -26,8 +26,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.metmuseum.org/toah/hd/writ/hd_writ.htm",
-        "https://www.vam.ac.uk/articles/a-brief-history-of-writing"
+        "https://www.metmuseum.org/toah/hd/writ/hd_writ.htm"
       ],
       "status": "pending"
     },
@@ -38,10 +37,7 @@
       "concepts": ["broad-edge pens", "pointed pens", "brushes", "tool-script matching"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.iampeth.com/lessons/tools-materials",
-        "https://www.johnnealbookseller.com/pages/calligraphy-tools-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -64,8 +60,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://archive.org/details/writingilluminat00john",
-        "https://www.bl.uk/collection-guides/calligraphy"
+        "https://archive.org/details/writingilluminat00john"
       ],
       "status": "pending"
     },
@@ -77,8 +72,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.metmuseum.org/art/collection/search/245328",
-        "https://www.vam.ac.uk/articles/roman-lettering"
+        "https://www.metmuseum.org/art/collection/search/245328"
       ],
       "status": "pending"
     },
@@ -89,10 +83,7 @@
       "concepts": ["italic minuscules", "pen angle", "x-height", "slant"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.iampeth.com/lessons/italic-calligraphy",
-        "https://www.youtube.com/c/SchinLoong"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -115,8 +106,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Royal_MS_2_B_VII",
-        "https://archive.org/details/gothicalphabet00goog"
+        "https://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Royal_MS_2_B_VII"
       ],
       "status": "pending"
     },
@@ -128,7 +118,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iampeth.com/lessons/engrossers-script",
         "https://thepostmansknock.com/copperplate-calligraphy-guide/"
       ],
       "status": "pending"
@@ -141,8 +130,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://archive.org/details/writingilluminat00john",
-        "https://www.vam.ac.uk/articles/edward-johnston"
+        "https://archive.org/details/writingilluminat00john"
       ],
       "status": "pending"
     },
@@ -167,7 +155,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.vam.ac.uk/articles/arabic-calligraphy",
         "https://qalam.org/theory/proportions"
       ],
       "status": "pending"
@@ -218,7 +205,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.vam.ac.uk/articles/islamic-calligraphy-composition",
         "https://weavesilk.com"
       ],
       "status": "pending"
@@ -257,8 +243,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.metmuseum.org/toah/hd/chbr/hd_chbr.htm",
-        "https://archive.org/details/artofchinesecall0000nakata"
+        "https://www.metmuseum.org/toah/hd/chbr/hd_chbr.htm"
       ],
       "status": "pending"
     },
@@ -270,7 +255,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.vam.ac.uk/articles/chinese-calligraphy-styles",
         "https://www.metmuseum.org/toah/hd/chca/hd_chca.htm"
       ],
       "status": "pending"
@@ -295,8 +279,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.metmuseum.org/toah/hd/jaca/hd_jaca.htm",
-        "https://archive.org/details/artofjapanesecal0000nakata"
+        "https://www.metmuseum.org/toah/hd/jaca/hd_jaca.htm"
       ],
       "status": "pending"
     },
@@ -321,7 +304,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.bl.uk/medieval-literature/articles/the-influence-of-islamic-art",
         "https://www.metmuseum.org/toah/hd/medm/hd_medm.htm"
       ],
       "status": "pending"
@@ -334,8 +316,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.fonts.com/content/learning/fontology/level-1/type-anatomy",
-        "https://www.myfonts.com/pages/calligraphic-fonts"
+        "https://www.fonts.com/content/learning/fontology/level-1/type-anatomy"
       ],
       "status": "pending"
     },
@@ -347,8 +328,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.calligraphy.org/gallery",
-        "https://www.iampeth.com/gallery"
+        "https://www.calligraphy.org/gallery"
       ],
       "status": "pending"
     }

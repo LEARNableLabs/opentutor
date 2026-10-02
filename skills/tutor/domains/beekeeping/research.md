@@ -32,7 +32,6 @@
 - **University of Florida Honey Bee Research and Extension Lab** — comprehensive beekeeping curriculum
   - https://entnemdept.ufl.edu/honey-bee/
 - **Penn State Extension Beekeeping** — courses, workshops, resources
-  - https://extension.psu.edu/honeybee-biology-and-behavior
 - **Cornell University Master Beekeeping Program** — structured certification track
   - https://pollinator.cals.cornell.edu/bees/beekeeping/
 - **UC Davis Honey and Pollination Center** — research-based resources
@@ -46,10 +45,8 @@
 
 ### Video Resources
 - **University of Georgia Honey Bee Program** (YouTube)
-  - https://www.youtube.com/c/UGAHoneyBee
   - Detailed hive inspections, management techniques
 - **Norfolk Honey Company** (YouTube) — practical management from commercial perspective
-  - https://www.youtube.com/c/NorfolkHoneyCompany
 - **Bee Informed Partnership** — science-based beekeeping videos
   - https://beeinformed.org/
 
@@ -59,7 +56,6 @@
 - **HiveTracks** — digital hive management platform
   - https://www.hivetracks.com/
 - **Bee Informed Partnership Loss Survey** — data on colony losses, management practices
-  - https://beeinformed.org/citizen-science/loss-and-management-survey/
 
 ### Key Researchers & Practitioners
 - **Thomas Seeley** (Cornell) — swarm behavior, nest site selection, wild colony biology

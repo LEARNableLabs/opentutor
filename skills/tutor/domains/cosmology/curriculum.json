@@ -232,7 +232,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://lambda.gsfc.nasa.gov/toolbox/tb_cmbfast_ov.cfm",
         "https://www.cosmos.esa.int/web/planck"
       ],
       "status": "pending"
@@ -267,7 +266,6 @@
       "type": "resource-drop",
       "resources": [
         "https://pla.esac.esa.int/",
-        "https://lambda.gsfc.nasa.gov/toolbox/tb_cmbfast_ov.cfm",
         "https://arxiv.org/list/astro-ph.CO/recent"
       ],
       "status": "pending"

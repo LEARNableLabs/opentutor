@@ -39,10 +39,7 @@
       "concepts": ["network topology", "small-world networks", "path length", "clustering coefficient"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://networkscience.igraph.org/",
-        "https://www.youtube.com/watch?v=EQ7WGUD0bLI"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -53,8 +50,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.science.org/doi/10.1126/science.286.5439.509",
-        "https://networkscience.igraph.org/book.html"
+        "https://www.science.org/doi/10.1126/science.286.5439.509"
       ],
       "status": "pending"
     },
@@ -143,7 +139,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.cellsignal.com/science-resources/pathway-resources",
         "https://www.signaling-gateway.org/"
       ],
       "status": "pending"
@@ -156,7 +151,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://cytoscape.org/documentation.html",
         "https://manual.cytoscape.org/en/stable/"
       ],
       "status": "pending"
@@ -194,10 +188,7 @@
       "concepts": ["ordinary differential equations", "production and degradation", "steady state"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://ocw.mit.edu/courses/7-32-systems-biology-fall-2014/",
-        "https://www.youtube.com/watch?v=0MJWp7N1mZQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -208,7 +199,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.weizmann.ac.il/mcb/UriAlon/materials",
         "https://www.cell.com/fulltext/S0092-8674(02)00808-7"
       ],
       "status": "pending"
@@ -273,9 +263,7 @@
       "concepts": ["ODEs", "Boolean", "FBA", "feedback"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://ocw.mit.edu/courses/7-32-systems-biology-fall-2014/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -325,8 +313,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.nature.com/articles/nature01250",
-        "https://cytoscape.org/cytoscape-tutorials/protocols/network-analysis/"
+        "https://www.nature.com/articles/nature01250"
       ],
       "status": "pending"
     },

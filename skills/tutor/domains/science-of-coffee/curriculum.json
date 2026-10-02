@@ -26,8 +26,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://worldcoffeeresearch.org/",
-        "https://coffee.ucdavis.edu/research"
+        "https://worldcoffeeresearch.org/"
       ],
       "status": "pending"
     },
@@ -65,7 +64,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://coffee.ucdavis.edu/",
         "https://www.baristahustle.com/blog/soil-and-coffee-flavor/"
       ],
       "status": "pending"
@@ -78,7 +76,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://worldcoffeeresearch.org/topics/climate-change/",
         "https://www.nature.com/articles/nclimate1788"
       ],
       "status": "pending"
@@ -156,7 +153,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.compoundchem.com/2014/10/08/coffee-roasting/",
         "https://www.baristahustle.com/blog/roasting-chemistry-the-maillard-reaction/"
       ],
       "status": "pending"
@@ -169,8 +165,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/@jameshoffmann",
-        "https://www.sweetmarias.com/what-is-first-crack.html"
+        "https://www.youtube.com/@jameshoffmann"
       ],
       "status": "pending"
     },
@@ -195,7 +190,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.compoundchem.com/2014/10/08/coffee-roasting/",
         "https://sca.coffee/"
       ],
       "status": "pending"
@@ -221,7 +215,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://sca.coffee/research/protocols-best-practices",
         "https://www.youtube.com/@jameshoffmann"
       ],
       "status": "pending"
@@ -299,8 +292,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.baristahustle.com/blog/water-for-coffee-an-introduction/",
-        "https://sca.coffee/research/water-quality-handbook"
+        "https://www.baristahustle.com/blog/water-for-coffee-an-introduction/"
       ],
       "status": "pending"
     },
@@ -312,7 +304,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://sca.coffee/research/coffee-tasters-flavor-wheel",
         "https://www.baristahustle.com/blog/coffee-flavor-wheel/"
       ],
       "status": "pending"
@@ -351,7 +342,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://sca.coffee/research/protocols-best-practices",
         "https://www.youtube.com/@jameshoffmann"
       ],
       "status": "pending"

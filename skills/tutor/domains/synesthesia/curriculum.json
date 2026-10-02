@@ -24,7 +24,7 @@
       "concepts": ["synesthesia definition", "phenomenological reports", "inducer-concurrent pairs"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": ["https://www.synesthete.org/", "https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "resources": ["https://www.synesthete.org/"],
       "status": "pending"
     },
     {
@@ -34,7 +34,7 @@
       "concepts": ["test-retest consistency", "Synesthesia Battery", "automatic binding"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.synesthete.org/", "https://www.sussex.ac.uk/profiles/155"],
+      "resources": ["https://www.synesthete.org/"],
       "status": "pending"
     },
     {
@@ -54,7 +54,7 @@
       "concepts": ["lexical-gustatory", "mirror-touch", "spatial sequences", "personification"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -64,7 +64,7 @@
       "concepts": ["qualia", "conscious experience", "automaticity vs voluntary"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -114,7 +114,7 @@
       "concepts": ["disinhibited feedback", "top-down processing", "parietal involvement"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -134,7 +134,7 @@
       "concepts": ["heritability", "familial clustering", "X-linked patterns"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,7 +154,7 @@
       "concepts": ["neonatal synesthesia hypothesis", "pruning", "critical periods"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -174,7 +174,7 @@
       "concepts": ["multisensory integration", "binding problem", "synesthesia vs normal cross-modal"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -184,7 +184,7 @@
       "concepts": ["McGurk effect", "audio-visual integration", "temporal binding"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -204,7 +204,7 @@
       "concepts": ["multisensory integration", "synesthesia specificity", "binding mechanisms"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -244,7 +244,7 @@
       "concepts": ["memory advantages", "dual encoding", "cognitive load"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.sussex.ac.uk/profiles/155"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -254,7 +254,7 @@
       "concepts": ["creativity", "metaphor", "selection bias"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -264,7 +264,7 @@
       "concepts": ["perception as construction", "modularity", "consciousness"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain"],
+      "resources": [],
       "status": "pending"
     },
     {

@@ -14,13 +14,11 @@
   - Nutrition Society's official textbook
   - Balanced coverage of biochemistry, physiology, and public health perspectives
   - Intermediate level, accessible writing
-  - https://www.wiley.com/en-us/Introduction+to+Human+Nutrition%2C+3rd+Edition-p-9781118660959
 
 - **Berg, Tymoczko & Stryer, "Biochemistry" (9th edition, 2019)**
   - Canonical biochemistry reference
   - In-depth coverage of metabolic pathways with excellent diagrams
   - Use for detailed pathway mechanisms
-  - https://www.macmillanlearning.com/college/us/product/Biochemistry/p/1319114652
 
 - **Whitney & Rolfes, "Understanding Nutrition" (15th edition, 2018)**
   - More accessible than Gropper; good for reviewing fundamentals
@@ -31,7 +29,6 @@
 
 - **MIT OCW 7.06 Cell Biology (Spring 2007)**
   - Free lecture notes and assignments on metabolism modules
-  - https://ocw.mit.edu/courses/7-06-cell-biology-spring-2007/
 
 - **NCBI Bookshelf — "Medical Biochemistry" (4th edition)**
   - Free comprehensive biochemistry textbook
@@ -137,7 +134,6 @@
 
 - **NutritionData.self.com**
   - Nutrient analysis tool with glycemic index and inflammatory index
-  - https://nutritiondata.self.com/
 
 - **Open Food Facts API**
   - Open database of food products with nutritional information
@@ -195,7 +191,6 @@
 - **Satchin Panda's "Circadian Code"**
   - Research on time-restricted eating and circadian metabolism
   - Bridges molecular biology and nutrition
-  - https://www.salk.edu/scientist/satchidananda-panda/
 
 ### Microbiome and Metabolism
 - **American Gut Project**
@@ -207,7 +202,6 @@
 - **"The Story of the Human Body" by Daniel Lieberman (Harvard)**
   - Evolutionary perspective on human metabolism and diet
   - Explains why our metabolism is adapted to ancestral environments
-  - https://www.danielliberman.com/
 
 ### Metabolic Psychiatry
 - **Dr. Chris Palmer — "Brain Energy"**

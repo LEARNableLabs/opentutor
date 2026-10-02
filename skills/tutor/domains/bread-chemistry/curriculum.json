@@ -25,10 +25,7 @@
       "concepts": ["gluten proteins", "gliadin vs glutenin", "protein hydration"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.kingarthurbaking.com/blog/2016/04/29/gluten-free-baking-science",
-        "https://www.seriouseats.com/bread-dough-science"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -39,8 +36,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/c/ChainBaker",
-        "https://www.kingarthurbaking.com/blog/2017/03/01/kneading-dough"
+        "https://www.youtube.com/c/ChainBaker"
       ],
       "status": "pending"
     },
@@ -52,7 +48,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.kingarthurbaking.com/blog/2018/09/14/understanding-flour-types",
         "https://thebreadlab.wsu.edu/"
       ],
       "status": "pending"
@@ -64,9 +59,7 @@
       "concepts": ["gluten development stages", "over-kneading", "dough breakdown"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.seriouseats.com/how-to-knead-dough"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -77,7 +70,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.kingarthurbaking.com/blog/2017/09/29/autolyse-how-what-when",
         "https://www.youtube.com/c/Foodgeek"
       ],
       "status": "pending"
@@ -100,7 +92,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.kingarthurbaking.com/blog/2023/05/05/bakers-percentage",
         "https://www.thefreshloaf.com/lessons/yourfirstloaf"
       ],
       "status": "pending"
@@ -113,7 +104,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.seriouseats.com/how-to-make-ciabatta-bread",
         "https://www.youtube.com/c/ChainBaker"
       ],
       "status": "pending"
@@ -126,8 +116,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.bakerpedia.com/ingredients/water/",
-        "https://www.kingarthurbaking.com/blog/2016/07/11/does-water-matter-in-bread-baking"
+        "https://www.bakerpedia.com/ingredients/water/"
       ],
       "status": "pending"
     },
@@ -138,9 +127,7 @@
       "concepts": ["temperature and hydration rate", "protein swelling", "enzyme activation"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.kingarthurbaking.com/blog/2020/05/01/desired-dough-temperature"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -150,10 +137,7 @@
       "concepts": ["yeast metabolism", "anaerobic respiration", "CO2 and ethanol production"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.kingarthurbaking.com/blog/2015/04/17/yeast-101",
-        "https://www.seriouseats.com/how-yeast-works-bread-baking"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -174,8 +158,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/c/Foodgeek",
-        "https://www.kingarthurbaking.com/blog/2020/04/07/sourdough-starter-science"
+        "https://www.youtube.com/c/Foodgeek"
       ],
       "status": "pending"
     },
@@ -187,8 +170,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.bakerpedia.com/ingredients/enzymes/",
-        "https://www.kingarthurbaking.com/blog/2017/05/19/enzyme-magic"
+        "https://www.bakerpedia.com/ingredients/enzymes/"
       ],
       "status": "pending"
     },
@@ -199,9 +181,7 @@
       "concepts": ["gas bubble formation", "coalescence", "gluten film strength", "shaping tension"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.seriouseats.com/bread-crumb-structure"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -211,10 +191,7 @@
       "concepts": ["temperature and metabolism", "flavor compound development", "retarded fermentation"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.kingarthurbaking.com/blog/2015/02/27/cold-fermentation",
-        "https://www.youtube.com/c/AdamRagusea"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -224,10 +201,7 @@
       "concepts": ["oven spring", "yeast death", "alcohol vaporization", "gas expansion"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.kingarthurbaking.com/blog/2017/07/14/oven-spring",
-        "https://www.seriouseats.com/what-happens-when-bread-bakes"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -259,10 +233,7 @@
       "concepts": ["starch gelatinization", "retrogradation", "amylose and amylopectin"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.kingarthurbaking.com/blog/2016/06/17/starch-in-baking",
-        "https://www.seriouseats.com/starch-science"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -272,10 +243,7 @@
       "concepts": ["Maillard reaction", "caramelization", "crust chemistry"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.seriouseats.com/maillard-reaction-science-cooking",
-        "https://www.kingarthurbaking.com/blog/2015/06/19/bread-crust-color"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -286,7 +254,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.kingarthurbaking.com/blog/2017/02/03/salt-in-bread-dough",
         "https://www.bakerpedia.com/ingredients/salt/"
       ],
       "status": "pending"
@@ -298,10 +265,7 @@
       "concepts": ["fat and gluten interference", "sugar and yeast", "emulsification", "enrichment chemistry"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.kingarthurbaking.com/blog/2016/11/18/enriched-bread-dough",
-        "https://www.seriouseats.com/brioche-science"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -311,10 +275,7 @@
       "concepts": ["troubleshooting", "applying chemical principles", "systematic diagnosis"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.kingarthurbaking.com/blog/2018/03/23/troubleshooting-bread",
-        "https://www.thefreshloaf.com/handbook/troubleshooting-bread"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

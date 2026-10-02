@@ -65,7 +65,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=Z_P5rqHcw_A",
         "https://archive.org/details/gunsgermssteelfa00diam"
       ],
       "status": "pending"
@@ -78,8 +77,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.jstor.org/stable/228962",
-        "https://ocw.mit.edu/courses/21h-210-history-of-technology-spring-2013/"
+        "https://www.jstor.org/stable/228962"
       ],
       "status": "pending"
     },
@@ -90,10 +88,7 @@
       "concepts": ["printing press", "knowledge dissemination", "standardization"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=Rnj11kVgWdE",
-        "https://www.historyextra.com/period/medieval/printing-press-gutenberg-revolution-europe/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -104,7 +99,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://ocw.mit.edu/courses/21h-210-history-of-technology-spring-2013/",
         "https://www.jstor.org/stable/40060472"
       ],
       "status": "pending"
@@ -117,8 +111,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=zhL5DCizj5c",
-        "https://archive.org/details/technicsciviliza00mumf"
+        "https://www.youtube.com/watch?v=zhL5DCizj5c"
       ],
       "status": "pending"
     },
@@ -142,9 +135,7 @@
       "concepts": ["agricultural revolution", "printing", "industrialization", "steam and electricity"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://ocw.mit.edu/courses/21h-210-history-of-technology-spring-2013/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -259,8 +250,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.jstor.org/stable/2234208",
-        "https://www.youtube.com/watch?v=ZLtlntKZ8IE"
+        "https://www.jstor.org/stable/2234208"
       ],
       "status": "pending"
     },
@@ -284,8 +274,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.jstor.org/stable/3178066",
-        "https://archive.org/details/modestwitnessse00hara"
+        "https://www.jstor.org/stable/3178066"
       ],
       "status": "pending"
     },
@@ -362,8 +351,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://plato.stanford.edu/entries/technology/",
-        "https://ocw.mit.edu/courses/21h-210-history-of-technology-spring-2013/"
+        "https://plato.stanford.edu/entries/technology/"
       ],
       "status": "pending"
     }

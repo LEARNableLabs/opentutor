@@ -30,7 +30,6 @@
   - Classic guide using the Peterson Identification System (arrows pointing to field marks)
   - Longstanding standard; many birders grew up with Peterson
 
-- **The Crossley ID Guide** — https://www.crossleybooks.com/
   - Photo-based guide showing birds in realistic contexts
   - Helps build "search image" for birds in habitat
   - Excellent complement to illustration-based guides
@@ -96,7 +95,6 @@
 
 ### YouTube Channels
 
-- **Cornell Lab of Ornithology** — https://www.youtube.com/@LabofOrnithology
   - Species spotlights, ID tips, birding how-tos, live cams (nest cams, feeders)
   - High production quality; scientifically accurate
   - Playlist recommendations: "Bird ID Skills", "Inside Birding"
@@ -115,7 +113,6 @@
   - 2-minute daily episodes on bird science and stories
   - Excellent for building birding habit and expanding knowledge
 
-- **Flocking Around** — https://flockingpod.com/
   - Birding culture, science, and humor
   - Intermediate-level discussions; accessible and entertaining
 
@@ -280,7 +277,6 @@
   - https://www.birds.cornell.edu/home/seven-simple-actions/
 
 - **Policy advocacy** — Migratory Bird Treaty Act, habitat protection
-  - Audubon Advocacy: https://www.audubon.org/conservation/advocacy
 
 ---
 

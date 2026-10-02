@@ -8,7 +8,6 @@
   - Accessible overview from two pioneers in the field
   - Distinguishes state effects from trait effects
   - Good for intermediate students; balances rigor with readability
-  - https://www.penguinrandomhouse.com/books/246050/altered-traits-by-daniel-goleman-and-richard-j-davidson-phd/
 
 - **"The Neuroscience of Mindfulness Meditation"** edited by Yi-Yuan Tang (2017)
   - Academic textbook covering mechanisms and applications
@@ -19,7 +18,6 @@
 - **"The Craving Mind: From Cigarettes to Smartphones to Love—Why We Get Hooked and How We Can Break Bad Habits"** by Judson Brewer (2017)
   - Focuses on addiction neuroscience and mindfulness
   - Accessible neuroscience with clinical applications
-  - https://www.judsonbrewer.com/the-craving-mind/
 
 ### Review Articles and Meta-Analyses
 
@@ -63,7 +61,6 @@
 
 - **"De-Mystifying Mindfulness"** — Leiden University (Coursera)
   - Academic course on mindfulness and neuroscience
-  - https://www.coursera.org/learn/demystifying-mindfulness
 
 - **"Buddhism and Modern Psychology"** — Princeton University (Coursera)
   - Robert Wright's course on evolutionary psychology and meditation
@@ -77,7 +74,6 @@
 
 - **Richard Davidson TED Talks**
   - "How Mindfulness Changes the Emotional Life of Our Brains" (2019)
-  - https://www.ted.com/speakers/richard_davidson
 
 - **Sara Lazar: How Meditation Can Reshape Our Brains** (TEDxCambridge 2011)
   - Accessible overview of structural changes research
@@ -141,28 +137,22 @@
 - **Richard Davidson** — Center for Healthy Minds, University of Wisconsin-Madison
   - Emotion neuroscience, meditation expertise studies
   - https://centerhealthyminds.org/
-  - https://scholar.google.com/citations?user=BGJ1a7sAAAAJ
 
 - **Sara Lazar** — Massachusetts General Hospital / Harvard Medical School
   - Structural brain changes, yoga and meditation
-  - https://scholar.google.com/citations?user=hSy7i1YAAAAJ
   - https://www.nmr.mgh.harvard.edu/user/6267
 
 - **Judson Brewer** — Brown University Mindfulness Center
   - Addiction, craving, habit change
   - https://www.brown.edu/public-health/mindfulness/
-  - https://www.judsonbrewer.com/
 
 - **Antoine Lutz** — Lyon Neuroscience Research Center
   - Expert meditators, gamma oscillations, attention
-  - https://scholar.google.com/citations?user=qpEiVk4AAAAJ
 
 ### Active Researchers
 
 - **Amishi Jha** — University of Miami
   - Attention training, working memory, military applications
-  - https://www.amishi-jha.com/
-  - https://scholar.google.com/citations?user=9oLMTPUAAAAJ
 
 - **Cliff Saron** — UC Davis Center for Mind and Brain
   - Shamatha Project (3-month retreat studies)
@@ -172,35 +162,27 @@
 - **Wendy Hasenkamp** — Mind & Life Institute
   - Mind-wandering, attention, network dynamics
   - https://www.mindandlife.org/
-  - https://scholar.google.com/citations?user=Xm0cMY4AAAAJ
 
 - **Britta Hölzel** — Technical University Munich
   - MBSR mechanisms, emotion regulation, stress
-  - https://scholar.google.com/citations?user=qAJqE-8AAAAJ
 
 - **Yi-Yuan Tang** — Texas Tech University
   - Integrative body-mind training, neuroplasticity
-  - https://scholar.google.com/citations?user=4dVbLdYAAAAJ
 
 - **Fadel Zeidan** — UC San Diego
   - Pain modulation, mindfulness mechanisms
   - https://profiles.ucsd.edu/fadel.zeidan
-  - https://scholar.google.com/citations?user=7cMEzB8AAAAJ
 
 - **Kalina Christoff** — University of British Columbia
   - Mind-wandering, default mode network, spontaneous thought
-  - https://christofflab.psych.ubc.ca/
-  - https://scholar.google.com/citations?user=6fJMPFEAAAAJ
 
 ### Clinical Researchers
 
 - **Zindel Segal** — University of Toronto
   - Mindfulness-Based Cognitive Therapy (MBCT), depression
-  - https://scholar.google.com/citations?user=vl8x1vsAAAAJ
 
 - **Mark Williams** — Oxford University
   - MBCT co-developer, depression relapse prevention
-  - https://scholar.google.com/citations?user=TFgWKPoAAAAJ
 
 ## Organizations and Research Centers
 
@@ -226,7 +208,6 @@
 
 - **Max Planck Institute for Human Cognitive and Brain Sciences**
   - ReSource Project (9-month meditation training study)
-  - https://www.cbs.mpg.de/research/research-groups
 
 ## Unexpected Connections (Cross-Discipline Links)
 
@@ -238,7 +219,6 @@
 ### Evolutionary Psychology
 - **Robert Wright** — "Why Buddhism is True" (2017)
   - Evolutionary mismatch and meditation as corrective
-  - https://www.robertwright.com/
 
 ### Psychedelic Science
 - **Robin Carhart-Harris** — Imperial College London
@@ -253,12 +233,10 @@
 ### Contemplative Education
 - **Patricia Jennings** — University of Virginia
   - Mindfulness in schools, teacher training
-  - https://curry.virginia.edu/faculty-research/faculty/patricia-a-jennings
 
 ### Cultural Neuroscience
 - **Shihui Han** — Peking University
   - Cultural differences in self-processing and meditation
-  - https://scholar.google.com/citations?user=AqxPqOIAAAAJ
 
 ## Journals (Where to Find New Research)
 

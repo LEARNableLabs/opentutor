@@ -23,13 +23,11 @@
   - Strong on evolutionary perspectives in ecology
   - Detailed treatment of life history theory
   - May be dense for some intermediate students but excellent reference
-  - https://www.wiley.com/en-us/Ecology%3A+From+Individuals+to+Ecosystems%2C+4th+Edition-p-9781405111171
 
 - **"Introduction to Population Ecology" by Larry L. Rockwood** (2nd edition, 2015)
   - Focused treatment of population dynamics
   - Excellent on density dependence, life tables, and demographic models
   - Case studies from wildlife management and conservation
-  - https://www.wiley.com/en-us/Introduction+to+Population+Ecology%2C+2nd+Edition-p-9781118947586
 
 ### Open Educational Resources
 
@@ -50,7 +48,6 @@
   - Written by active researchers
   - Covers current topics and classic concepts
   - Free access, excellent for building on textbook knowledge
-  - https://www.nature.com/scitable/knowledge/library/ecology-13228167/
 
 - **SERC (Science Education Resource Center): Teaching Quantitative Skills in the Geosciences**
   - Datasets and activities for hands-on ecological analysis
@@ -107,7 +104,6 @@
   - Free, downloadable, runs on any computer
   - Wolf Sheep Predation, Rabbits Grass Weeds, Virus, Cooperation models
   - Students can modify parameters and explore emergent phenomena
-  - https://ccl.northwestern.edu/netlogo/models/index.cgi?path=Sample%20Models/Biology
 
 - **EcoLab**
   - Population dynamics simulator for growth models and species interactions
@@ -158,7 +154,6 @@
   - https://slevin.princeton.edu/
 
 - **Stuart Pimm** (Duke) — conservation biology, extinction rates, species invasions
-  - https://sites.nicholas.duke.edu/pimm/
 
 - **Mary Power** (UC Berkeley) — food webs, trophic cascades, river ecology
   - https://ib.berkeley.edu/people/faculty/powerme

@@ -25,8 +25,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.wildflowers-and-weeds.com/Plant_Families/",
-        "https://www.youtube.com/watch?v=xR5QF6lLeJU"
+        "https://www.wildflowers-and-weeds.com/Plant_Families/"
       ],
       "status": "pending"
     },
@@ -38,8 +37,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.inaturalist.org/taxa/47124-Rosaceae",
-        "https://www.botanical-online.com/en/botany/rosaceae-family"
+        "https://www.inaturalist.org/taxa/47124-Rosaceae"
       ],
       "status": "pending"
     },
@@ -51,8 +49,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.inaturalist.org/taxa/47602-Apiaceae",
-        "https://www.wildflowerfinder.org.uk/Families/Apiaceae.htm"
+        "https://www.inaturalist.org/taxa/47602-Apiaceae"
       ],
       "status": "pending"
     },
@@ -64,8 +61,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.inaturalist.org/taxa/47125-Brassicaceae",
-        "https://www.eattheweeds.com/brassicaceae-broccolis-kin-2/"
+        "https://www.inaturalist.org/taxa/47125-Brassicaceae"
       ],
       "status": "pending"
     },
@@ -89,9 +85,7 @@
       "concepts": ["family characteristics review", "pattern consolidation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=kR1lKPElLiw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -102,7 +96,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.eattheweeds.com/why-weeds-are-successful/",
         "https://www.fs.usda.gov/wildflowers/ethnobotany/food/index.shtml"
       ],
       "status": "pending"
@@ -127,10 +120,7 @@
       "concepts": ["phenology", "growing degree days", "seasonal timing"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.usanpn.org/data/forecasts/Phenology_Forecast_Maps",
-        "https://extension.umaine.edu/gardening/manual/phenology/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -141,7 +131,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=M7w099FPrh0",
         "https://link.springer.com/article/10.1007/s11101-012-9230-8"
       ],
       "status": "pending"
@@ -178,10 +167,7 @@
       "concepts": ["toxin types", "dose-response", "preparation effects"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.ars.usda.gov/pacific-west-area/burns-or/forage-and-range-research/docs/poisonous-plants/",
-        "https://www.wildedible.com/plant-toxins"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -193,8 +179,7 @@
       "type": "question",
       "resources": [
         "https://www.inaturalist.org/taxa/51905-Daucus-carota",
-        "https://www.inaturalist.org/taxa/51905-Conium-maculatum",
-        "https://www.youtube.com/watch?v=7MbHFYJ4L0M"
+        "https://www.inaturalist.org/taxa/51905-Conium-maculatum"
       ],
       "status": "pending"
     },
@@ -205,10 +190,7 @@
       "concepts": ["risk calibration", "probability of error", "severity hierarchy"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.eattheweeds.com/apiaceae-the-carrot-family/",
-        "https://www.youtube.com/watch?v=qJaQ6RLxF0A"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -219,7 +201,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.atsdr.cdc.gov/csem/lead/docs/lead.pdf",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6766499/"
       ],
       "status": "pending"
@@ -231,10 +212,7 @@
       "concepts": ["error analysis", "cognitive bias", "confirmation bias"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.poison.org/articles/what-you-need-to-know-about-poisonous-plants",
-        "https://www.youtube.com/watch?v=Vl92hqINPh4"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -245,7 +223,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.wildedible.com/deadly-plants-north-america",
         "https://www.inaturalist.org/guides/2488"
       ],
       "status": "pending"
@@ -257,9 +234,7 @@
       "concepts": ["safety review", "risk assessment consolidation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=kMfh0SXk8CQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -269,10 +244,7 @@
       "concepts": ["seasonal progression", "spring ephemerals", "limited options advantage"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.wildedible.com/spring-foraging",
-        "https://www.youtube.com/watch?v=C0hd7u8lRgU"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -283,7 +255,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.eattheweeds.com/plant-profiles-alphabetically/",
         "https://www.inaturalist.org/observation_fields/6"
       ],
       "status": "pending"
@@ -295,10 +266,7 @@
       "concepts": ["winter foraging", "root identification", "evergreen greens"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": [
-        "https://www.youtube.com/watch?v=YLTnJMozcKc",
-        "https://www.wildedible.com/winter-foraging-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -322,8 +290,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.foragecast.com/",
-        "https://www.youtube.com/watch?v=C0hd7u8lRgU"
+        "https://www.foragecast.com/"
       ],
       "status": "pending"
     },
@@ -360,10 +327,7 @@
       "concepts": ["ethical framework", "personal practice", "ongoing learning"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.youtube.com/watch?v=kPFBXZVZWMw",
-        "https://www.wildedible.com/foraging-ethics"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

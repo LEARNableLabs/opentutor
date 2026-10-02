@@ -14,9 +14,7 @@
 
 ### Online Courses & Platforms
 
-- **Delphi Glass Resource Center** (https://www.delphiglass.com/resource-center) — Free tutorials, technique videos, and buying guides. Intermediate-friendly and professionally produced.
 
-- **Craftsy/Bluprint Stained Glass Courses** (https://www.craftsy.com/browse/glass-art) — Structured video courses on both techniques. Subscription-based but high production quality.
 
 - **Anything in Stained Glass** (https://www.anythinginstainedglass.com) — Educational site with technique library, pattern vault, and project walkthroughs.
 
@@ -25,28 +23,22 @@
 ### Video Channels & Demonstrations
 
 - **Let's Make Stained Glass** (YouTube) — Friendly, beginner-to-intermediate tutorials with good close-up camera work on technique details
-  - https://www.youtube.com/@letsmakestainedglass
 
 - **Stained Glass Express** (YouTube) — Product reviews, technique comparisons, and troubleshooting videos
   - https://www.youtube.com/@stainedglassexpress
 
 - **Warner Crivellaro** (YouTube) — Professional-level technique demonstrations, especially strong on lead came work
-  - https://www.youtube.com/@warnercrivellaro
 
 - **Glasswerkz Studio** (YouTube) — Advanced projects, 3D construction, and hybrid techniques
-  - https://www.youtube.com/@glasswerkzstudio
 
 ### Interactive Tools & Design Resources
 
 - **Glass Pattern Source** (https://www.glasspatterns.com) — Downloadable patterns at multiple skill levels, useful for practice projects
 
 - **Stained Glass Design Software**:
-  - **Glass Eye 2000** (https://www.dragonflysw.com) — Professional CAD for glass artists, free trial available
   - **Stained Glass Pattern Maker** (free, web-based) — Simple pattern creation tool
 
 - **Color Selection Tools**:
-  - Spectrum Glass color library (https://www.spectrumglass.com/color-library) — Browse glass colors with transmitted light samples
-  - Bullseye Glass color explorer (https://www.bullseyeglass.com/colors) — Interactive color compatibility and transmission data
 
 ### Museums & Galleries (Virtual Tours)
 
@@ -77,7 +69,6 @@
 ## Code & Digital Tools
 
 - **Stained Glass Pattern Generator** (Python library, GitHub) — Algorithmic pattern generation for computational design experiments
-  - https://github.com/stained-glass-tools/pattern-generator
 
 - **Glass Cut Optimizer** — Minimize waste when cutting multiple pieces from a sheet
   - https://www.glassattic.com/cut-optimizer (web-based)

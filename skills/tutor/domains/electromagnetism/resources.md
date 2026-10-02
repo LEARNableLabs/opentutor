@@ -5,11 +5,8 @@
 ### Textbooks
 
 **Intermediate Level (Primary):**
-- **Griffiths, "Introduction to Electrodynamics" (4th ed.)** — The gold standard for intermediate classical EM. Clear explanations, excellent problems, perfect balance of rigor and intuition. Covers Maxwell's equations through radiation. [Publisher](https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/2D2C1A88F496953FB6D39A4C69B86BB1)
 
-- **Purcell & Morin, "Electricity and Magnetism" (3rd ed.)** — Beautiful treatment emphasizing special relativity. More conceptual than Griffiths. Excellent for understanding field transformations. [Publisher](https://www.cambridge.org/highereducation/books/electricity-and-magnetism/72C097F6B07C3A94D0CA8F0BC91A6B16)
 
-- **Zangwill, "Modern Electrodynamics"** — Comprehensive modern treatment. More advanced than Griffiths but excellent reference. Strong on applications and numerical methods. [Publisher](https://www.cambridge.org/highereducation/books/modern-electrodynamics/E0E7A5901F7BF37004F194F3C1CB7DE4)
 
 **Wave Optics & Photonics:**
 - **Saleh & Teich, "Fundamentals of Photonics" (2nd ed.)** — Comprehensive photonics from wave optics through quantum. Covers fibers, lasers, nonlinear optics, photonic crystals. Excellent diagrams. [Wiley](https://www.wiley.com/en-us/Fundamentals+of+Photonics%2C+3rd+Edition-p-9781119506874)
@@ -27,14 +24,12 @@
 **MIT OpenCourseWare:**
 - **8.02: Physics II — Electricity and Magnetism** — Undergraduate E&M fundamentals. Walter Lewin's lectures are legendary. [MIT OCW](https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/)
 
-- **8.03: Physics III — Vibrations and Waves** — Wave phenomena, interference, diffraction, Fourier analysis. Essential for wave optics. [MIT OCW](https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/)
 
 - **8.07: Electromagnetism II** — Intermediate/advanced EM. Maxwell's equations, waves, radiation, relativity. [MIT OCW](https://ocw.mit.edu/courses/8-07-electromagnetism-ii-fall-2012/)
 
 - **6.013: Electromagnetics and Applications** — Engineering perspective on EM. Waveguides, resonators, antennas, optical fibers. [MIT OCW](https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/)
 
 **Other Universities:**
-- **Stanford EE 364: Photonics** — Graduate-level photonics course materials. [Stanford](https://web.stanford.edu/class/ee364/)
 
 - **Khan Academy: Physics (Electricity & Magnetism)** — Accessible introductions to E&M concepts. Good for review or prerequisites. [Khan Academy](https://www.khanacademy.org/science/physics/electric-charge-electric-force-and-voltage)
 
@@ -70,9 +65,7 @@
 - **Color Vision** — Spectrum, color perception, RGB. [PhET](https://phet.colorado.edu/en/simulations/color-vision)
 
 **Falstad Simulations:**
-- **3D Electromagnetic Wave Simulation** — Real-time visualization of plane waves, polarization, reflection. [Falstad](https://www.falstad.com/emwave3d/)
 
-- **EM Wave 2D** — 2D wave propagation, boundary conditions, waveguides. [Falstad](https://www.falstad.com/emwave/)
 
 - **Ripple Tank** — Wave interference, diffraction, refraction. [Falstad](https://www.falstad.com/ripple/)
 
@@ -135,8 +128,6 @@
 ### Modern Researchers & Educators
 
 **Photonics & Metamaterials:**
-- **John Pendry** (Imperial College London) — Metamaterials, perfect lens, cloaking. [Google Scholar](https://scholar.google.com/citations?user=2RKRvNMAAAAJ)
-- **Eli Yablonovitch** (UC Berkeley) — Photonic crystals pioneer. [Google Scholar](https://scholar.google.com/citations?user=3hB8PXQAAAAJ)
 - **Marin Soljačić** (MIT) — Photonic crystals, wireless power transfer, nonlinear optics. [MIT](http://www.rle.mit.edu/marin/)
 
 **Quantum Optics:**

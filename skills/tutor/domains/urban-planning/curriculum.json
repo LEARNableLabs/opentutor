@@ -26,8 +26,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=3UgpfSp2t6k",
-        "https://99percentinvisible.org/episode/the-grand-model/"
+        "https://www.youtube.com/watch?v=3UgpfSp2t6k"
       ],
       "status": "pending"
     },
@@ -39,8 +38,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.pps.org/article/what-is-placemaking",
-        "https://gehlpeople.com/tools/"
+        "https://www.pps.org/article/what-is-placemaking"
       ],
       "status": "pending"
     },
@@ -52,7 +50,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.lincolninst.edu/publications/articles/density-dilemma",
         "https://www.citylab.com/design/2020/02/population-density-cities-urban-planning-coronavirus/606622/"
       ],
       "status": "pending"
@@ -78,8 +75,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.pps.org/article/11steps",
-        "https://www.youtube.com/watch?v=8bLWHK4kbdg"
+        "https://www.pps.org/article/11steps"
       ],
       "status": "pending"
     },
@@ -180,8 +176,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.planetizen.com/definition/zoning",
-        "https://www.youtube.com/watch?v=0lvyU1E5vHM"
+        "https://www.planetizen.com/definition/zoning"
       ],
       "status": "pending"
     },
@@ -193,7 +188,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.brookings.edu/research/exclusionary-zoning-its-effect-on-racial-segregation-in-the-urban-united-states/",
         "https://belonging.berkeley.edu/single-family-zoning-san-francisco-bay-area"
       ],
       "status": "pending"
@@ -206,8 +200,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://formbasedcodes.org/",
-        "https://www.cnu.org/publicsquare/introduction-form-based-codes"
+        "https://formbasedcodes.org/"
       ],
       "status": "pending"
     },
@@ -219,8 +212,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://missingmiddlehousing.com/",
-        "https://www.spur.org/publications/urbanist-article/2014-02-11/how-read-zoning-map"
+        "https://missingmiddlehousing.com/"
       ],
       "status": "pending"
     },
@@ -285,8 +277,7 @@
       "type": "resource-drop",
       "resources": [
         "https://urbansim.com/",
-        "https://ccl.northwestern.edu/netlogo/models/community/Urban%20Suite",
-        "https://www.youtube.com/watch?v=T5Z7xeSaqTs"
+        "https://ccl.northwestern.edu/netlogo/models/community/Urban%20Suite"
       ],
       "status": "pending"
     },
@@ -337,7 +328,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.urban.org/urban-wire/new-tool-helps-planners-implement-equitable-community-engagement",
         "https://www.policylink.org/our-work/community/equitable-development-toolkit"
       ],
       "status": "pending"
@@ -349,9 +339,7 @@
       "concepts": ["sustainability integration", "equity synthesis", "holistic planning"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.cnu.org/our-projects/charter-new-urbanism"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -362,7 +350,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.cnu.org/our-projects/charter-new-urbanism",
         "https://www.citylab.com/solutions/"
       ],
       "status": "pending"

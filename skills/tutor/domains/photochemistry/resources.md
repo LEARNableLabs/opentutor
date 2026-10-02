@@ -120,7 +120,6 @@
 ### Photophysical Properties
 - **Fluorophore Database** (Thermo Fisher) — https://www.thermofisher.com/us/en/home/references/molecular-probes-the-handbook.html
   - Quantum yields, lifetimes, spectra for common fluorophores
-- **Photochemistry Portal** — https://photochemistry.us/
   - Links to photochemistry resources, databases, labs
 
 ## Research Journals (for Advanced Reading)
@@ -228,8 +227,6 @@
 
 ### Professional Societies
 - **Inter-American Photochemical Society (I-APS)** — https://i-aps.org/
-- **European Photochemistry Association (EPA)** — https://www.epa-photo.eu/
-- **Asian and Oceanian Photochemistry Association (APA)** — https://www.apa-photo.org/
 
 ### Conferences (Check Annual Schedules)
 - **International Conference on Photochemistry (ICP)**

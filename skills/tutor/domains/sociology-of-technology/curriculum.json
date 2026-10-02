@@ -24,8 +24,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://web.mit.edu/sts/",
-        "https://www.youtube.com/watch?v=eaqKyTFJbH8"
+        "https://web.mit.edu/sts/"
       ],
       "status": "pending"
     },
@@ -137,8 +136,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.jstor.org/stable/1805621",
-        "https://www.youtube.com/watch?v=9ET1090RYf4"
+        "https://www.jstor.org/stable/1805621"
       ],
       "status": "pending"
     },
@@ -174,8 +172,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.jstor.org/stable/3827749",
-        "https://monoskop.org/images/f/f3/Wajcman_Judy_Technofeminism.pdf"
+        "https://www.jstor.org/stable/3827749"
       ],
       "status": "pending"
     },
@@ -212,8 +209,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.jstor.org/stable/285419",
-        "https://ocw.mit.edu/courses/sts-005-technology-in-a-dangerous-world-fall-2016/"
+        "https://www.jstor.org/stable/285419"
       ],
       "status": "pending"
     },
@@ -275,7 +271,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://shoshannazuboff.com/book/about/",
         "https://www.jstor.org/stable/48588902"
       ],
       "status": "pending"

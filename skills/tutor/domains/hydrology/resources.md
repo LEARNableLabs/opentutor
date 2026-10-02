@@ -37,7 +37,6 @@
 ### University Courses (OpenCourseWare)
 
 - **MIT OpenCourseWare: 1.72 Groundwater Hydrology**
-  - https://ocw.mit.edu/courses/1-72-groundwater-hydrology/
   - *Content:* Complete course materials, lecture notes, problem sets, exams
   - *Best for:* Groundwater modules (lessons 17-22)
 
@@ -49,12 +48,10 @@
 ### CUAHSI HydroLearn
 
 - **CUAHSI HydroLearn Platform**
-  - https://www.cuahsi.org/education/
   - *Content:* Modular educational materials created by hydrology educators, includes interactive exercises, data activities, and case studies
   - *Best for:* All modules—search by topic for supplementary materials
 
 - **CUAHSI Virtual University**
-  - https://www.cuahsi.org/education/hydrology-virtual-university/
   - *Content:* Recorded webinars on cutting-edge hydrology topics
   - *Best for:* Enrichment on current research topics
 
@@ -111,7 +108,6 @@
   - *Best for:* Water cycle fundamentals (lessons 1-4)
 
 - **USGS Water Science School Activities**
-  - https://www.usgs.gov/special-topics/water-science-school/science/water-science-school-activity-center
   - *Content:* Interactive activities, calculators, educational games
   - *Best for:* Engaging activities throughout
 
@@ -203,7 +199,6 @@
 ### Python Libraries
 
 - **PyHydroQC** — Quality control for hydrology data
-  - https://github.com/USGS-python/hydrocalcs
 
 - **PyGeoprocessing** — Geospatial processing
   - https://github.com/natcap/pygeoprocessing
@@ -222,7 +217,6 @@
 ### Example Notebooks and Tutorials
 
 - **CUAHSI HydroLearn Jupyter Notebooks**
-  - https://www.hydroshare.org/resource/6e8e9ac3116a4c38a99cd45cfbbb658d/
   - *Content:* Computational hydrology exercises in Python
 
 ## Organizations and Professional Societies

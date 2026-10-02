@@ -18,7 +18,6 @@
 
 - **Royal Museums Greenwich** (https://www.rmg.co.uk/) — Houses all four Harrison chronometers (H1-H4). Excellent online exhibits on navigation, longitude, and historic clocks.
 
-- **National Watch and Clock Museum** (https://nawcc.org/museums/) — NAWCC collection in Columbia, PA. Online database and educational resources.
 
 - **Smithsonian National Museum of American History** (https://americanhistory.si.edu/collections/subjects/timekeeping) — Time measurement collection including early American clocks, patents, and industrial timekeeping.
 
@@ -36,7 +35,6 @@
 
 - **PBS Space Time** (https://www.youtube.com/c/pbsspacetime) — Advanced physics content on special and general relativity, time dilation, and quantum mechanics. For students who want deep physics.
 
-- **Institute of Making** (https://www.youtube.com/c/instituteofmaking) — Materials science perspective on clockmaking: metallurgy, alloys, precision machining.
 
 ### Lectures & Courses
 
@@ -56,9 +54,7 @@
   - https://astro.unl.edu/classaction/animations/coordsmotion/sunmotions.html — University of Nebraska astronomy animations
 
 - **Mechanical Clock Animations**
-  - https://www.theclockdepot.com/clocks-blog/clock-escapements/ — Interactive escapement diagrams
   - https://www.animatedengines.com/ — Mechanical animations including clock escapements
-  - https://woodgears.ca/clock/wood_pendulum.html — Matthias Wandel's wooden clock designs with videos
 
 - **Quartz Oscillator Resources**
   - https://www.sparkfun.com/tutorials/57 — Tutorial on real-time clocks and crystal oscillators
@@ -67,7 +63,6 @@
 - **Atomic Clock Visualizations**
   - https://www.nist.gov/pml/time-and-frequency-division — NIST Time and Frequency Division (current research, webcam of atomic clocks)
   - https://www.ptb.de/cms/en.html — PTB (Germany) atomic clock research
-  - https://www.bipm.org/en/time-ftp/tai — Bureau International des Poids et Mesures (international time coordination)
 
 - **GPS & Relativity Calculators**
   - https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit5/gps.html — Detailed explanation of GPS relativity corrections with calculations
@@ -85,7 +80,6 @@
   - https://phet.colorado.edu/en/simulation/pendulum-lab — PhET Interactive Simulations
 
 - **Frequency analysis tools**
-  - https://www.jittertime.eu/ — Allan variance calculator for oscillator stability
   - https://www.stable32.com/ — Frequency stability analysis software (industry standard)
 
 ## People to Follow

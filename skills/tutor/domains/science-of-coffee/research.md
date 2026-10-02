@@ -42,7 +42,6 @@
 ## Key Sources
 
 ### Academic & Research Institutions
-- **UC Davis Coffee Center** (https://coffee.ucdavis.edu/) — research on cultivation, processing, sensory science
 - **World Coffee Research** (https://worldcoffeeresearch.org/) — breeding, agronomy, quality research
 - **Specialty Coffee Association (SCA)** (https://sca.coffee/) — standards, education, flavor wheel, cupping protocols
 - **Food Chemistry journals** — Maillard chemistry, volatile compounds, extraction kinetics

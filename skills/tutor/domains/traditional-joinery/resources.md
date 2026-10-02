@@ -11,12 +11,10 @@
 - **"The Art of Japanese Joinery"** by Kiyosi Seike
   - Definitive catalog of Japanese joints with diagrams and applications
   - Best for: understanding Japanese tradition philosophy and joint diversity (Lessons 11-16)
-  - Available: https://www.amazon.com/Art-Japanese-Joinery-Kiyosi-Seike/dp/0834815648
 
 - **"Taunton's Complete Illustrated Guide to Joinery"** by Gary Rogowski
   - Western joinery reference with clear diagrams, wood movement considerations
   - Best for: comprehensive overview and joint selection guidance (all modules)
-  - Available: https://www.finewoodworking.com/book/taunton-s-complete-illustrated-guide-to-joinery
 
 - **"With the Grain: A Craftsman's Guide to Understanding Wood"** by Christian Becksvoort
   - Essential for wood movement and grain orientation concepts
@@ -57,11 +55,9 @@
   - Traditional Japanese temple carpentry, real project documentation
   - Best for: Japanese techniques in context (Lessons 11-16)
 
-- **The Samurai Carpenter** — https://www.youtube.com/user/TheSamuraiCarpenter
   - Japanese techniques explained in English, good cross-cultural perspective
   - Best for: Japanese basics with Western comparison (Lessons 11-13)
 
-- **Matt Estlea** — https://www.youtube.com/user/MattEstlea
   - Modern hand tool joinery with clear explanations
   - Best for: technique refinement and project applications (Lessons 18-21)
 
@@ -86,7 +82,6 @@
 - **Wood Magazine** — https://www.woodmagazine.com/
   - Project-based joinery, tool reviews, technique tips
 
-- **Mortise & Tenon Magazine** — https://www.mortiseandtenonmagazine.com/
   - Historical furniture and traditional joinery focus
   - Best for: furniture history and period-accurate techniques (Lesson 23)
 
@@ -124,7 +119,6 @@
   - Best for: visualizing complex joints before cutting
 
 - **Dovetail Layout Calculators** — various online tools
-  - https://www.blocklayer.com/dovetail-angleeng
   - Calculates pin/tail spacing for balanced proportions (Lesson 8)
 
 - **Wood Movement Calculator** — https://www.popularwoodworking.com/calculators/wood-movement-calculator/

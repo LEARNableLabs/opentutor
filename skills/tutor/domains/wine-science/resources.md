@@ -32,7 +32,6 @@
 - **Washington State University Wine Science Center**
   - Research on viticulture, enology, extension resources
   - https://wine.wsu.edu/
-  - https://wine.wsu.edu/research/
   - https://wine.wsu.edu/extension/
 
 ### Industry and Research Organizations
@@ -106,7 +105,6 @@
   
 - **Climate Data and Vintage Charts**
   - Historical weather data, vintage quality ratings
-  - https://winefolly.com/tips/vintage-charts/
 
 ### Code and Data
 

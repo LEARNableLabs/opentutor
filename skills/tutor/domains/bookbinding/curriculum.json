@@ -27,7 +27,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.loc.gov/preservation/care/books.html",
         "https://www.youtube.com/watch?v=nuNfdHNTv9o"
       ],
       "status": "pending"
@@ -40,7 +39,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.bl.uk/collection-care/bookbinding-techniques",
         "https://www.youtube.com/c/DASBookbinding"
       ],
       "status": "pending"
@@ -53,7 +51,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.loc.gov/preservation/about/prd/presdig/paper-care.pdf",
         "https://www.nedcc.org/free-resources/preservation-leaflets/2.-the-environment/2.1-temperature-humidity-light-and-air"
       ],
       "status": "pending"
@@ -79,7 +76,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.loc.gov/preservation/scientists/projects/acid_paper.html",
         "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.5-the-environmental-protection-of-books-and-related-materials"
       ],
       "status": "pending"
@@ -92,8 +88,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.loc.gov/preservation/care/deterioratebrochure.html",
-        "https://www.youtube.com/watch?v=E8nXU3XH-4s"
+        "https://www.loc.gov/preservation/care/deterioratebrochure.html"
       ],
       "status": "pending"
     },
@@ -104,9 +99,7 @@
       "concepts": ["codex evolution", "grain direction", "acidity and degradation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.loc.gov/preservation/care/books.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -117,8 +110,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.4-polyester-film-encapsulation",
-        "https://www.youtube.com/watch?v=Xh8Q6KT-HNo"
+        "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.4-polyester-film-encapsulation"
       ],
       "status": "pending"
     },
@@ -130,7 +122,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.loc.gov/preservation/care/leather.html",
         "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.6-leather-and-parchment"
       ],
       "status": "pending"
@@ -142,10 +133,7 @@
       "concepts": ["sewing materials", "thread weight", "compatibility", "strength vs. flexibility"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.talasonline.com/Bookbinding-Thread",
-        "https://www.youtube.com/watch?v=mCnKB_qPDNE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -156,7 +144,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=S2FRKZAMnvE",
         "https://www.nedcc.org/preservation-training/training-calendar"
       ],
       "status": "pending"
@@ -169,7 +156,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=aWHkY5jOoqk",
         "https://www.loc.gov/collections/japanese-rare-books"
       ],
       "status": "pending"
@@ -182,7 +168,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=Av_rU-ysPa0",
         "https://www.nedcc.org/free-resources/preservation-leaflets/6.-reformatting/6.6-microfilm-and-microfiche"
       ],
       "status": "pending"
@@ -194,9 +179,7 @@
       "concepts": ["adhesive selection", "leather degradation", "sewing structure function"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.loc.gov/preservation/care/books.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -206,10 +189,7 @@
       "concepts": ["library binding", "oversewing", "functional priorities", "trade-offs"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.ala.org/alcts/resources/preserve/library-binding",
-        "https://www.youtube.com/watch?v=fVq4_HhHShs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -220,8 +200,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.loc.gov/preservation/care/deterioratebrochure.html",
-        "https://www.youtube.com/watch?v=cq01SLQdIk0"
+        "https://www.loc.gov/preservation/care/deterioratebrochure.html"
       ],
       "status": "pending"
     },
@@ -246,8 +225,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nedcc.org/free-resources/preservation-leaflets/2.-the-environment/2.1-temperature-humidity-light-and-air",
-        "https://www.youtube.com/watch?v=OaVJUr0fPkA"
+        "https://www.nedcc.org/free-resources/preservation-leaflets/2.-the-environment/2.1-temperature-humidity-light-and-air"
       ],
       "status": "pending"
     },
@@ -259,7 +237,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.loc.gov/preservation/about/prd/presdig/",
         "https://www.culturalheritage.org/docs/default-source/administration/governance/code-of-ethics-and-guidelines-for-practice"
       ],
       "status": "pending"
@@ -271,10 +248,7 @@
       "concepts": ["sympathetic repair", "material compatibility", "aesthetic integration", "historical integrity"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.loc.gov/preservation/care/books.html",
-        "https://www.youtube.com/watch?v=K4M8cDVKqCg"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,8 +271,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nedcc.org/free-resources/preservation-leaflets/7.-conservation-procedures/7.2-mending-paper-artifacts",
-        "https://www.youtube.com/watch?v=pXWXlAu_-h4"
+        "https://www.nedcc.org/free-resources/preservation-leaflets/7.-conservation-procedures/7.2-mending-paper-artifacts"
       ],
       "status": "pending"
     },
@@ -309,10 +282,7 @@
       "concepts": ["hinge repair", "endpaper attachment", "stress points", "material selection"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.loc.gov/preservation/care/books.html",
-        "https://www.youtube.com/watch?v=W8k3Kl9CNz0"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -323,8 +293,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nedcc.org/preservation-training/",
-        "https://www.youtube.com/watch?v=T9z9p7iR7zU"
+        "https://www.nedcc.org/preservation-training/"
       ],
       "status": "pending"
     },
@@ -335,10 +304,7 @@
       "concepts": ["leather consolidation", "Klucel G", "surface treatments", "material science"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.loc.gov/preservation/care/leather.html",
-        "https://www.youtube.com/watch?v=K9P5yb_eGZs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -349,8 +315,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.1-storage-methods-and-handling-practices",
-        "https://www.youtube.com/watch?v=Bv4aBQQ2FPE"
+        "https://www.nedcc.org/free-resources/preservation-leaflets/4.-storage-and-handling/4.1-storage-methods-and-handling-practices"
       ],
       "status": "pending"
     },

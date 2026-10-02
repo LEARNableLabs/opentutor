@@ -14,7 +14,6 @@
   - Covers all manufacturing processes including machining theory
   - Excellent material science foundation for machinability
   - Used in university manufacturing courses
-  - https://www.wiley.com/en-us/Fundamentals+of+Modern+Manufacturing
 
 - **"Metal Cutting Theory and Practice" by David A. Stephenson & John S. Agapiou** (3rd Edition, 2016)
   - Deep dive into cutting mechanics and tool wear
@@ -33,11 +32,9 @@
 - **MIT 2.008 Design and Manufacturing II**
   - OpenCourseWare materials available
   - Covers manufacturing processes including CNC fundamentals
-  - https://ocw.mit.edu/courses/2-008-design-and-manufacturing-ii-spring-2004/
 
 - **Penn State EME 405 Computer-Aided Manufacturing**
   - Course materials on CAM software and toolpath generation
-  - https://www.e-education.psu.edu/eme405/
 
 ## Supplementary Resources
 
@@ -47,7 +44,6 @@
   - Practical machining tutorials and shop workflow
   - Excellent for seeing real-world CNC operations
   - Beginner to intermediate level
-  - https://www.youtube.com/c/NYCCNC
 
 - **This Old Tony**
   - Machining fundamentals with humor
@@ -69,7 +65,6 @@
 - **Haas Automation**
   - Machine manufacturer's training channel
   - Setup, programming, and operations
-  - https://www.youtube.com/user/haastop5
 
 ### Interactive Tools & Software
 
@@ -89,7 +84,6 @@
   - Feeds and speeds calculator
   - Tool deflection analysis
   - Material database
-  - https://www.gwizardfree.com/
 
 - **HSMAdvisor** (Commercial)
   - Advanced cutting parameter optimization
@@ -112,7 +106,6 @@
 - **NIST Manufacturing Engineering Laboratory**
   - Research publications on machining
   - Cutting force models, process optimization
-  - https://www.nist.gov/programs-projects/machining
 
 - **Sandvik Coromant Technical Library**
   - Tool manufacturer's extensive knowledge base
@@ -195,7 +188,6 @@
 
 - **Dr. Tony Schmitz** — University of Tennessee
   - Machine tool dynamics, chatter prediction
-  - https://scholar.google.com/citations?user=tony_schmitz
 
 - **Dr. Shreyes Melkote** — Georgia Tech
   - Machining process mechanics, micro-machining
@@ -245,7 +237,6 @@
 
 - **The Manufacturing Show**
   - News and trends in manufacturing technology
-  - https://themanufacturingshow.com/
 
 ## Trade Publications
 

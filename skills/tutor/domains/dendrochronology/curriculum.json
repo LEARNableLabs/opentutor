@@ -36,7 +36,7 @@
       "concepts": ["limiting factors", "temperature vs precipitation sensitivity", "competition and disturbance"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.swisseduc.ch/glaciers/glossary/dendrochronology-en.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -46,7 +46,7 @@
       "concepts": ["false rings", "missing rings", "cellular anatomy", "microsections"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://dendrochronologia.org/resources"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -66,7 +66,7 @@
       "concepts": ["increment borer technique", "core mounting", "sample preparation", "field protocols"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://ltrr.arizona.edu/webhome/dmeko/dend_course.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -106,7 +106,7 @@
       "concepts": ["hands-on crossdating", "master chronology comparison", "quality control"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": ["https://www.ncei.noaa.gov/products/paleoclimatology/international-tree-ring-data-bank"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -116,7 +116,7 @@
       "concepts": ["inter-observer variability", "consensus dating", "problem cores", "documentation"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://dendrochronologia.org/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -136,7 +136,7 @@
       "concepts": ["curve fitting", "high vs low frequency preservation", "detrending tradeoffs"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://andybunn.shinyapps.io/dplR_tutorial/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -176,7 +176,7 @@
       "concepts": ["pointer years", "volcanic forcing", "global signals", "superposed epoch analysis"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.nature.com/subjects/dendrochronology"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -186,7 +186,7 @@
       "concepts": ["signal asymmetry", "stress physiology", "moisture sensitivity", "complacency"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://dendrochronologia.org/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -196,7 +196,7 @@
       "concepts": ["sample depth", "replication", "chronology strength", "uncertainty quantification"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.ncei.noaa.gov/products/paleoclimatology/international-tree-ring-data-bank"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -246,7 +246,7 @@
       "concepts": ["art and artifact dating", "wood identification", "floating chronologies", "cultural heritage"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://dendrochronologia.org/resources"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -266,7 +266,7 @@
       "concepts": ["stable isotope dendrochronology", "δ13C and δ18O", "stomatal conductance", "water use efficiency"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": ["https://www.wsl.ch/en/about-wsl/instrumented-field-sites-and-laboratories/dendrosciences.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -276,7 +276,7 @@
       "concepts": ["archaeological dating", "fire history", "disturbance ecology", "expanding the proxy toolbox"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.treeringsociety.org/", "https://dendrochronologia.org/"],
+      "resources": ["https://www.treeringsociety.org/"],
       "status": "pending"
     },
     {
@@ -286,7 +286,7 @@
       "concepts": ["blue intensity", "wood density", "reflectance measurements", "cost-effective proxies"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.cambridge.org/core/journals/holocene"],
+      "resources": [],
       "status": "pending"
     },
     {

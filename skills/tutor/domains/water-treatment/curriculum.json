@@ -52,8 +52,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/1-77-water-quality-control-spring-2006/pages/lecture-notes/",
-        "https://www.youtube.com/watch?v=xOH8VvDgJ2A"
+        "https://ocw.mit.edu/courses/1-77-water-quality-control-spring-2006/pages/lecture-notes/"
       ],
       "status": "pending"
     },
@@ -65,7 +64,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.awwa.org/Resources-Tools/Resource-Topics/Water-Treatment",
         "https://www.epa.gov/sites/default/files/2015-09/documents/archive_of_document_describing_small_drinking_water_systems.pdf"
       ],
       "status": "pending"
@@ -77,10 +75,7 @@
       "concepts": ["coagulation", "flocculation", "particle destabilization", "jar tests"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=lUW3gRJXzKo",
-        "https://www.lenntech.com/processes/coagulation-flocculation/coagulation/coagulation.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -116,7 +111,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.who.int/tools/compendium-on-health-and-environment/water-sanitation",
         "https://www.youtube.com/c/PracticalEngineeringChannel"
       ],
       "status": "pending"
@@ -129,8 +123,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.epa.gov/dwreginfo/drinking-water-regulations",
-        "https://www.cdc.gov/healthywater/drinking/public/water_disinfection.html"
+        "https://www.epa.gov/dwreginfo/drinking-water-regulations"
       ],
       "status": "pending"
     },
@@ -155,7 +148,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.awwa.org/Publications/Journal-AWWA",
         "https://iwaponline.com/wst"
       ],
       "status": "pending"
@@ -168,8 +160,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/1-018j-ecology-i-the-earth-system-fall-2009/",
-        "https://www.youtube.com/watch?v=xRIwWm1Lk8A"
+        "https://ocw.mit.edu/courses/1-018j-ecology-i-the-earth-system-fall-2009/"
       ],
       "status": "pending"
     },
@@ -193,7 +184,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=YIzJBP6Ff8c",
         "https://www.iwapublishing.com/news/biological-wastewater-treatment-principles-modelling-and-design"
       ],
       "status": "pending"
@@ -205,10 +195,7 @@
       "concepts": ["activated sludge process", "mixed liquor", "sludge recycle", "SRT and HRT"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=K8YhvCDRw1c",
-        "https://www.wef.org/resources/for-the-public/what-are-biosolids/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -218,10 +205,7 @@
       "concepts": ["nitrification", "denitrification", "biological phosphorus removal", "nutrient cycling"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.epa.gov/nutrient-policy-data/nitrogen",
-        "https://www.wef.org/globalassets/assets-wef/direct-download-library/public/03---resources/wsec-2017-fs-009-nutrient-removal.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -231,10 +215,7 @@
       "concepts": ["integrated treatment", "plant operations", "process sequencing"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.youtube.com/watch?v=6LsJwN0M6dU",
-        "https://www.youtube.com/watch?v=RlVEAaLEE_4"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -244,10 +225,7 @@
       "concepts": ["industrial wastewater", "design parameters", "nutrient removal design", "troubleshooting"],
       "difficulty": 5,
       "type": "real-world",
-      "resources": [
-        "https://www.epa.gov/eg/industrial-wastewater",
-        "https://www.wef.org/resources/topics/industrial-water-and-wastewater/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -258,7 +236,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.epa.gov/dwreginfo/membrane-filtration-guidance-manual",
         "https://www.youtube.com/watch?v=c8dDGAYc2VM"
       ],
       "status": "pending"
@@ -270,9 +247,7 @@
       "concepts": ["microbial kinetics review", "activated sludge review", "nutrient removal review"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.edx.org/learn/environmental-science/delft-university-of-technology-wastewater-treatment"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -283,7 +258,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.epa.gov/dwreginfo/drinking-water-treatment-technology-unit-cost-models",
         "https://www.carbontrust.com/resources"
       ],
       "status": "pending"
@@ -296,7 +270,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.epa.gov/chemicals-under-tsca/contaminants-emerging-concern",
         "https://iwaponline.com/wst/article/76/2/292/19386"
       ],
       "status": "pending"
@@ -309,8 +282,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.epa.gov/waterreuse/basic-information-about-water-reuse",
-        "https://www.youtube.com/watch?v=h0F4E5G3XfI"
+        "https://www.epa.gov/waterreuse/basic-information-about-water-reuse"
       ],
       "status": "pending"
     },
@@ -322,8 +294,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.iea.org/reports/water-energy-nexus",
-        "https://www.wef.org/resources/topics/energy-management/"
+        "https://www.iea.org/reports/water-energy-nexus"
       ],
       "status": "pending"
     },
@@ -335,7 +306,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.epa.gov/dwreginfo/drinking-water-treatment-technology-unit-cost-models",
         "https://iwaponline.com/wst/article-abstract/67/1/1/19599"
       ],
       "status": "pending"

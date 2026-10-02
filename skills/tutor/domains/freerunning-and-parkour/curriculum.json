@@ -26,8 +26,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435787/",
-        "https://www.youtube.com/watch?v=KE_EnzF1UxM"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435787/"
       ],
       "status": "pending"
     },
@@ -51,10 +50,7 @@
       "concepts": ["momentum", "impulse", "momentum transfer"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=Jq3LbRp7g8g",
-        "https://parkourvisions.org/training-resources"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -77,9 +73,7 @@
       "concepts": ["force analysis", "biomechanical modeling", "movement efficiency"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=5Y0NNdZkZ3w"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -103,9 +97,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=0fGPyTB5mvo",
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6186985/",
-        "https://americanparkour.com/tutorial-the-shoulder-roll/"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6186985/"
       ],
       "status": "pending"
     },
@@ -117,8 +109,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5054876/",
-        "https://www.youtube.com/watch?v=8C6n7aXqDEQ"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5054876/"
       ],
       "status": "pending"
     },
@@ -142,10 +133,7 @@
       "concepts": ["progressive overload", "adaptation", "landing technique progression"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://parkourvisions.org/classes-workshops",
-        "https://www.youtube.com/watch?v=qFmHjZl0w6I"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -156,8 +144,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435792/",
-        "https://www.youtube.com/watch?v=2P7GW9l7d_E"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435792/"
       ],
       "status": "pending"
     },
@@ -168,10 +155,7 @@
       "concepts": ["vault biomechanics", "approach velocity", "take-off angle", "hand placement"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=NLEbIVqDGjI",
-        "https://americanparkour.com/vaults/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -182,7 +166,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=wRThTZZp7vs",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6413866/"
       ],
       "status": "pending"
@@ -195,8 +178,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4637913/",
-        "https://www.youtube.com/watch?v=8S5YC4mXxII"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4637913/"
       ],
       "status": "pending"
     },
@@ -208,8 +190,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://journals.humankinetics.com/view/journals/jab/jab-overview.xml",
-        "https://www.youtube.com/watch?v=U7RJ1VdmM0A"
+        "https://journals.humankinetics.com/view/journals/jab/jab-overview.xml"
       ],
       "status": "pending"
     },
@@ -220,11 +201,7 @@
       "concepts": ["technique analysis", "speed-accuracy tradeoff", "movement variation"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.youtube.com/watch?v=LAPo1x_4zsk",
-        "https://www.youtube.com/watch?v=nSSs0K7dkjw",
-        "https://www.redbull.com/int-en/films/parkour-atlas"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -235,7 +212,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=eRgGz9LmBpQ",
         "https://parkourvisions.org/blog"
       ],
       "status": "pending"
@@ -248,8 +224,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4555593/",
-        "https://www.youtube.com/watch?v=J7YwRJPK_gE"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4555593/"
       ],
       "status": "pending"
     },
@@ -261,8 +236,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5854281/",
-        "https://www.youtube.com/watch?v=fX8KMWND9_U"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5854281/"
       ],
       "status": "pending"
     },
@@ -274,8 +248,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6180277/",
-        "https://www.youtube.com/watch?v=nkq3WcJMxPE"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6180277/"
       ],
       "status": "pending"
     },
@@ -300,8 +273,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435789/",
-        "https://www.youtube.com/watch?v=n1K9yBlVlh4"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435789/"
       ],
       "status": "pending"
     },
@@ -313,8 +285,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4235546/",
-        "https://www.youtube.com/watch?v=2k-bV5u6q7c"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4235546/"
       ],
       "status": "pending"
     },
@@ -326,8 +297,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://parkourvisions.org/coach-training",
-        "https://www.youtube.com/watch?v=JQ8Q0LfLUFA"
+        "https://parkourvisions.org/coach-training"
       ],
       "status": "pending"
     },
@@ -340,8 +310,7 @@
       "type": "teach-back",
       "resources": [
         "https://journals.lww.com/nsca-jscr/pages/default.aspx",
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6413866/",
-        "https://www.youtube.com/watch?v=PnQzs3ZoFp4"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6413866/"
       ],
       "status": "pending"
     },
@@ -353,7 +322,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=kOZTlEMxZrg",
         "https://parkourvisions.org"
       ],
       "status": "pending"

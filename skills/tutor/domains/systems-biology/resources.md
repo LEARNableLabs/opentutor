@@ -28,12 +28,10 @@
 - **MIT 7.32 Systems Biology (MIT OpenCourseWare)**
   - Instructor: Jeff Gore. Covers network motifs, robustness, evolution of cooperation.
   - Video lectures, lecture notes, problem sets available free.
-  - URL: https://ocw.mit.edu/courses/7-32-systems-biology-fall-2014/
 
 - **MIT 7.91J Foundations of Computational and Systems Biology (edX)**
   - Broader than systems biology; includes genomics, proteomics, network analysis.
   - Good for computational techniques (alignment, assembly, network inference).
-  - URL: https://www.edx.org/course/foundations-of-computational-and-systems-biology
 
 - **Systems Biology: Cell-Cell Communication (Icahn School of Medicine at Mount Sinai, Coursera)**
   - Focuses on signaling networks and crosstalk. Good for lessons 10, 21.
@@ -71,7 +69,6 @@
 
 - **iBiology Systems Biology Talks**
   - Short talks by leaders in the field (Uri Alon, Wendell Lim, Michael Elowitz). High-quality, 20-30 min each.
-  - URL: https://www.ibiology.org/systems-biology/
 
 - **Complexity Explorer (Santa Fe Institute)**
   - Free courses on complex systems, including network science and dynamical systems.
@@ -83,7 +80,6 @@
 
 - **Cell Signaling Technology: Pathway Resources**
   - Video animations of signaling pathways (MAPK, PI3K/Akt, etc.). Beautiful visualizations.
-  - URL: https://www.cellsignal.com/science-resources/pathway-resources
 
 ### Interactive Tools
 
@@ -204,7 +200,6 @@
   - Twitter: @barabasi; Website: https://barabasi.com/
 
 - **Hiroaki Kitano** (RIKEN, Sony CSL) — systems biology founding figure, robustness theory
-  - Website: http://www.kitano.bio/
 
 - **Marc Kirschner** (Harvard Medical School) — cell systems, robustness, evolution
   - Lab: https://kirschner.med.harvard.edu/
@@ -232,7 +227,6 @@
   - Lab: https://www.collinslab.mit.edu/
 
 - **Christopher Voigt** (MIT) — genetic circuit design, CRISPR applications
-  - Twitter: @VoigtLab; Lab: http://voigtlab.mit.edu/
 
 ### Computational and Theoretical
 
@@ -240,7 +234,6 @@
   - Twitter: @chris_wiggins
 
 - **Nir Friedman** (Hebrew University) — probabilistic models, network inference
-  - Website: http://www.cs.huji.ac.il/~nir/
 
 - **Eduardo Sontag** (Northeastern) — control theory in biology, feedback systems
   - Website: http://sontaglab.org/

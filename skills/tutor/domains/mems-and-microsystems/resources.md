@@ -26,7 +26,6 @@
   - Often available on Stanford Online or EdX. Covers fundamentals, fabrication, and applications.
 
 - **NPTEL (India): MEMS courses**
-  - https://nptel.ac.in/courses/112/106/112106234/
   - Free video lectures from IITs. Good for alternative explanations and additional examples.
 
 ### Journal Articles and Reviews
@@ -59,7 +58,6 @@
   - Cleanroom processes, microfabrication tutorials, fab safety. Good for visualizing processes.
 
 - **Texas Instruments DLP Technology**
-  - https://www.youtube.com/watch?v=7V4IjHWHfNI
   - Official videos explaining DMD technology. Great for lesson 19.
 
 - **How It's Made: MEMS** (YouTube, various)
@@ -76,7 +74,6 @@
   - MEMS-specific FEM and system-level simulation. Process-aware modeling.
 
 - **SUGAR** (open-source)
-  - http://www-bsac.eecs.berkeley.edu/cadtools/sugar/sugar/
   - Nodal simulation tool from UC Berkeley. MATLAB-based. Good for quick mechanical analysis of beams, plates, comb drives. Free but dated.
 
 - **MEMSolver** (open-source Python)

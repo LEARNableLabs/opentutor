@@ -25,7 +25,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://michaelbach.de/ot/lum-mach/index.html",
         "https://www.ncbi.nlm.nih.gov/books/NBK11084/"
       ],
       "status": "pending"
@@ -38,8 +37,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://michaelbach.de/ot/lum-herGrid/index.html",
-        "https://www.exploratorium.edu/snacks/hermann-grid"
+        "https://michaelbach.de/ot/lum-herGrid/index.html"
       ],
       "status": "pending"
     },
@@ -63,10 +61,7 @@
       "concepts": ["photoreceptor adaptation", "opponent processing", "negative aftereffects"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://michaelbach.de/ot/col-adapt/index.html",
-        "https://www.scientificamerican.com/article/how-do-afterimages-work/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -103,8 +98,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.interaction-design.org/literature/topics/gestalt-principles",
-        "https://michaelbach.de/ot/cog-gestaltGrouping/index.html"
+        "https://www.interaction-design.org/literature/topics/gestalt-principles"
       ],
       "status": "pending"
     },
@@ -116,7 +110,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.exploratorium.edu/snacks/ambiguous-figures",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3482909/"
       ],
       "status": "pending"
@@ -155,7 +148,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.logodesignlove.com/gestalt-principles",
         "https://www.smashingmagazine.com/2014/03/design-principles-visual-perception-and-the-principles-of-gestalt/"
       ],
       "status": "pending"
@@ -194,8 +186,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://michaelbach.de/ot/mot-adapt/index.html",
-        "https://www.youtube.com/watch?v=GkRHN0rnzRs"
+        "https://michaelbach.de/ot/mot-adapt/index.html"
       ],
       "status": "pending"
     },
@@ -207,8 +198,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://michaelbach.de/ot/mot-feetLin/index.html",
-        "https://www.scientificamerican.com/article/why-does-film-work/"
+        "https://michaelbach.de/ot/mot-feetLin/index.html"
       ],
       "status": "pending"
     },
@@ -246,7 +236,6 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.exploratorium.edu/snacks/ames-room",
         "https://www.youtube.com/watch?v=gJhyu6nlGt8"
       ],
       "status": "pending"
@@ -285,7 +274,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.scientificamerican.com/article/the-science-of-why-no-one-agrees-on-the-color-of-this-dress/",
         "https://www.cell.com/current-biology/fulltext/S0960-9822(15)00502-5"
       ],
       "status": "pending"
@@ -376,7 +364,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.scientificamerican.com/article/10-mind-expanding-optical-illusions/",
         "https://www.annualreviews.org/doi/10.1146/annurev-vision-030320-041239"
       ],
       "status": "pending"

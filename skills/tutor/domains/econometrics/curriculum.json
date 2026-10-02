@@ -53,8 +53,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample",
-        "https://www.econometrics-with-r.org/2-htaciimr.html"
+        "https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample"
       ],
       "status": "pending"
     },
@@ -91,9 +90,7 @@
       "concepts": ["sampling distributions", "estimators", "inference"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.econometrics-with-r.org/2-htaciimr.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -117,7 +114,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.econometrics-with-r.org/5-htonfie.html",
         "https://www.youtube.com/watch?v=0Rnq1NpHdmw"
       ],
       "status": "pending"
@@ -130,7 +126,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=VQKHTcVMXeQ",
         "https://cran.r-project.org/web/packages/lmtest/vignettes/lmtest-intro.pdf"
       ],
       "status": "pending"
@@ -155,10 +150,7 @@
       "concepts": ["omitted variable bias", "endogeneity", "bias formula"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=g0m6YEAAkO8",
-        "https://www.econometrics-with-r.org/6-2-omitted-variable-bias.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -193,7 +185,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=Rq3tGWBJL6Y",
         "https://kenbenoit.net/assets/courses/ME104/logmodels2.pdf"
       ],
       "status": "pending"
@@ -206,7 +197,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=ZJaRZwlPQzk",
         "https://www.nber.org/papers/w5024"
       ],
       "status": "pending"
@@ -218,10 +208,7 @@
       "concepts": ["model selection", "adjusted R-squared", "information criteria"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=a4NQp_W-wJY",
-        "https://www.econometrics-with-r.org/7-6-analysis-of-the-test-score-data-set.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -232,7 +219,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=GMJZuIna4wI",
         "https://cran.r-project.org/web/packages/sandwich/vignettes/sandwich.pdf"
       ],
       "status": "pending"
@@ -244,9 +230,7 @@
       "concepts": ["residual analysis", "assumption testing", "specification"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.econometrics-with-r.org/5-3-asotoclrm.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -269,10 +253,7 @@
       "concepts": ["autocorrelation", "Durbin-Watson test", "Newey-West standard errors"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=tNKbkhR8bWE",
-        "https://www.econometrics-with-r.org/16-3-fixed-effects-regression.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -283,8 +264,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.stata.com/support/faqs/statistics/stepwise-regression-problems/",
-        "https://www.youtube.com/watch?v=QLrmWqkjzog"
+        "https://www.stata.com/support/faqs/statistics/stepwise-regression-problems/"
       ],
       "status": "pending"
     },
@@ -309,7 +289,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=sAjf4LW86hU",
         "https://www.econometrics-with-r.org/12-ivr.html"
       ],
       "status": "pending"
@@ -333,10 +312,7 @@
       "concepts": ["panel data", "fixed effects", "difference-in-differences"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=iNE20hBOmWk",
-        "https://www.econometrics-with-r.org/16-2-regression-with-time-fixed-effects.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -347,8 +323,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=ARfXDSkQf1Y",
-        "https://www.econometrics-with-r.org/11-rtwabdv.html"
+        "https://www.youtube.com/watch?v=ARfXDSkQf1Y"
       ],
       "status": "pending"
     }

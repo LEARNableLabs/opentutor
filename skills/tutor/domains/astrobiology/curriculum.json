@@ -52,7 +52,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://astrobiology.nasa.gov/news/hydrothermal-vents-and-the-origin-of-life/",
         "https://www.youtube.com/@NASAAstrobiology"
       ],
       "status": "pending"
@@ -64,9 +63,7 @@
       "concepts": ["alternative biochemistries", "silicon-based life", "ammonia solvents"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.seti.org/alternative-biochemistries"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -76,10 +73,7 @@
       "concepts": ["extremophiles", "temperature limits", "pH limits", "pressure limits"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://astrobiology.nasa.gov/research/life-detection/extremophiles/",
-        "https://microbewiki.kenyon.edu/index.php/Extremophile"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -90,7 +84,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.nasa.gov/feature/ames/tardigrades",
         "https://www.youtube.com/watch?v=7W194GQ6fHI"
       ],
       "status": "pending"
@@ -102,9 +95,7 @@
       "concepts": ["deep biosphere", "subsurface microbial communities", "endoliths"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://astrobiology.nasa.gov/news/deep-biosphere/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -140,8 +131,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://solarsystem.nasa.gov/moons/jupiter-moons/europa/overview/",
-        "https://www.youtube.com/watch?v=0eZCoVjBB34"
+        "https://solarsystem.nasa.gov/moons/jupiter-moons/europa/overview/"
       ],
       "status": "pending"
     },
@@ -241,8 +231,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://mars.nasa.gov/mars2020/",
-        "https://astrobiology.nasa.gov/news/searching-for-life-on-mars/"
+        "https://mars.nasa.gov/mars2020/"
       ],
       "status": "pending"
     },
@@ -266,10 +255,7 @@
       "concepts": ["Enceladus", "cryovolcanism", "organics in plumes", "hydrothermal activity"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://solarsystem.nasa.gov/moons/saturn-moons/enceladus/overview/",
-        "https://www.youtube.com/watch?v=bWx0mH93U1s"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -292,7 +278,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://astrobiology.nasa.gov/research/life-detection/biosignatures/",
         "https://arxiv.org/abs/1705.07560"
       ],
       "status": "pending"

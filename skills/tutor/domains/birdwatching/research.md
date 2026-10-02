@@ -27,7 +27,6 @@
 
 ### Video & Audio Learning
 
-- **Cornell Lab YouTube Channel** (https://www.youtube.com/@LabofOrnithology) — species spotlights, ID tips, birding how-tos
 - **Bird Academy courses** (https://academy.allaboutbirds.org/) — online courses from Cornell Lab (Joy of Birdwatching, Bird Biology, Hawk ID)
 - **Xeno-canto** (https://xeno-canto.org/) — community-contributed bird sound recordings worldwide
 

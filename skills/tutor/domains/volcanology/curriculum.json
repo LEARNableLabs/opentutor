@@ -26,10 +26,7 @@
       "concepts": ["volcanic systems", "magma vs lava", "volcanic anatomy"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-processes",
-        "https://www.youtube.com/watch?v=cvNIQtheUiM"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -40,7 +37,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iris.edu/hq/inclass/animation/how_magma_forms",
         "https://www.open.edu/openlearn/science-maths-technology/volcanoes-earthquakes-and-tsunamis"
       ],
       "status": "pending"
@@ -52,10 +48,7 @@
       "concepts": ["silica content", "basaltic vs rhyolitic magma", "viscosity"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://volcano.oregonstate.edu/magma-composition",
-        "https://www.youtube.com/watch?v=4E84WICoNYY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -65,10 +58,7 @@
       "concepts": ["magma chambers", "fractional crystallization", "magma mixing"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.usgs.gov/observatories/cvo/magma-reservoirs",
-        "https://www.youtube.com/watch?v=AXJJmRN_VNA"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -78,9 +68,7 @@
       "concepts": ["melting processes", "magma composition", "pre-eruptive storage"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-processes"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -91,7 +79,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/types-volcanic-eruptions",
         "https://www.youtube.com/watch?v=kq7DDk8eLs8"
       ],
       "status": "pending"
@@ -104,7 +91,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://volcano.oregonstate.edu/role-gases",
         "https://www.youtube.com/watch?v=BUREX8aFbMs"
       ],
       "status": "pending"
@@ -117,8 +103,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://volcano.si.edu/faq/index.cfm?question=vei",
-        "https://www.usgs.gov/programs/VHP/volcanic-explosivity-index-vei"
+        "https://volcano.si.edu/faq/index.cfm?question=vei"
       ],
       "status": "pending"
     },
@@ -129,10 +114,7 @@
       "concepts": ["eruption classification", "Hawaiian style", "Strombolian", "Vulcanian", "Plinian"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/eruption-styles",
-        "https://www.youtube.com/watch?v=9vBHlXkv-c0"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -143,7 +125,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.usgs.gov/observatories/hvo/1980-mount-st-helens-eruption",
         "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
       ],
       "status": "pending"
@@ -155,9 +136,7 @@
       "concepts": ["eruption styles", "VEI", "controls on explosivity"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/types-volcanic-eruptions"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -167,10 +146,7 @@
       "concepts": ["pahoehoe", "aa lava", "lava viscosity", "cooling rates"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.usgs.gov/observatories/hvo/lava-flows",
-        "https://www.youtube.com/watch?v=gPjjhq0GC7s"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -180,10 +156,7 @@
       "concepts": ["pyroclastic materials", "tephra classification", "volcanic bombs"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://volcano.oregonstate.edu/pyroclastic-materials",
-        "https://www.usgs.gov/programs/VHP/volcanic-ash"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -193,10 +166,7 @@
       "concepts": ["shield volcanoes", "stratovolcanoes", "cinder cones", "volcanic morphology"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/volcano-types",
-        "https://www.youtube.com/watch?v=sHl9hDs4Z4M"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -206,10 +176,7 @@
       "concepts": ["calderas", "ignimbrites", "caldera formation", "resurgence"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.usgs.gov/observatories/yvo/caldera-forming-eruptions",
-        "https://www.youtube.com/watch?v=VqzJpQxgBvM"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -219,9 +186,7 @@
       "concepts": ["lava types", "pyroclastics", "volcano types", "calderas"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/volcano-types"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -231,10 +196,7 @@
       "concepts": ["lava flow hazards", "lahars", "debris flows", "secondary hazards"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-lahars",
-        "https://www.youtube.com/watch?v=lP4B2KqG9dw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -244,10 +206,7 @@
       "concepts": ["pyroclastic density currents", "base surges", "lateral blasts"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.usgs.gov/observatories/cvo/pyroclastic-flows",
-        "https://www.youtube.com/watch?v=vAknJoATKIw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -258,7 +217,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-ash-impacts",
         "https://volcano.si.edu/faq/index.cfm?question=ash"
       ],
       "status": "pending"
@@ -270,10 +228,7 @@
       "concepts": ["volcanic aerosols", "climate forcing", "volcanic winter", "sulfur dioxide"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanoes-and-climate",
-        "https://www.youtube.com/watch?v=FXWm0k9v4jM"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -283,9 +238,7 @@
       "concepts": ["lava and lahar hazards", "pyroclastic flows", "ashfall", "climate impacts"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-hazards"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -295,10 +248,7 @@
       "concepts": ["volcano seismology", "tremor", "magma movement signals"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/seismic-monitoring",
-        "https://www.iris.edu/hq/inclass/fact-sheet/volcano_seismology"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -308,10 +258,7 @@
       "concepts": ["ground deformation", "GPS", "InSAR", "tiltmeters"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/ground-deformation",
-        "https://www.youtube.com/watch?v=Xp8vqhE9z4A"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -321,10 +268,7 @@
       "concepts": ["eruption forecasting", "uncertainty", "false alarms", "volcano observatories"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.usgs.gov/programs/VHP/eruption-forecasting",
-        "https://www.youtube.com/watch?v=u6e6gQ9z8xs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -335,7 +279,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcano-monitoring",
         "https://volcano.si.edu"
       ],
       "status": "pending"

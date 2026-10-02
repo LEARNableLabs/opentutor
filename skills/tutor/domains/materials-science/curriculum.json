@@ -27,8 +27,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/",
-        "https://www.youtube.com/watch?v=gJ3pv-ZMsGE"
+        "https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/"
       ],
       "status": "pending"
     },
@@ -53,8 +52,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://physicstoday.scitation.org/doi/10.1063/1.1784272",
-        "https://www.youtube.com/watch?v=zRxNFQQF_W8"
+        "https://physicstoday.scitation.org/doi/10.1063/1.1784272"
       ],
       "status": "pending"
     },
@@ -66,8 +64,7 @@
       "difficulty": 1,
       "type": "real-world",
       "resources": [
-        "https://www.sciencedirect.com/topics/materials-science/smart-materials",
-        "https://www.youtube.com/watch?v=r0vN1KvnPzk"
+        "https://www.sciencedirect.com/topics/materials-science/smart-materials"
       ],
       "status": "pending"
     },
@@ -92,8 +89,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.sciencemag.org/content/312/5781/1777",
-        "https://www.youtube.com/watch?v=AXOxUwhKO3A"
+        "https://www.sciencemag.org/content/312/5781/1777"
       ],
       "status": "pending"
     },
@@ -105,8 +101,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/",
-        "https://nanohub.org/resources/photonic"
+        "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/"
       ],
       "status": "pending"
     },
@@ -118,8 +113,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.science.org/doi/10.1126/science.1096796",
-        "https://www.youtube.com/watch?v=wKbSr-9hT4Q"
+        "https://www.science.org/doi/10.1126/science.1096796"
       ],
       "status": "pending"
     },
@@ -131,8 +125,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/articles/nphoton.2007.249",
-        "https://comsol.com/blogs/modeling-metamaterials-comsol-multiphysics"
+        "https://www.nature.com/articles/nphoton.2007.249"
       ],
       "status": "pending"
     },
@@ -157,8 +150,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.sciencemag.org/content/235/4792/1038",
-        "https://www.youtube.com/watch?v=5wAXG3Y3v7c"
+        "https://www.sciencemag.org/content/235/4792/1038"
       ],
       "status": "pending"
     },
@@ -170,7 +162,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.105101",
         "https://demonstrations.wolfram.com/PentamodeMetamaterials/"
       ],
       "status": "pending"
@@ -196,9 +187,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.nature.com/articles/nmat4540",
-        "https://www.youtube.com/watch?v=VHk0q3cCZMg",
-        "https://github.com/paulmasson/origami-metamaterials"
+        "https://www.nature.com/articles/nmat4540"
       ],
       "status": "pending"
     },
@@ -209,10 +198,7 @@
       "concepts": ["martensitic transformation", "austenite-martensite", "hysteresis", "training"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://ocw.mit.edu/courses/3-22-mechanical-properties-of-materials-spring-2008/",
-        "https://www.youtube.com/watch?v=wI-qAxKJoSQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -236,7 +222,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.nature.com/articles/s41578-017-0066-z",
         "https://www.annualreviews.org/doi/10.1146/annurev-matsci-070214-020815"
       ],
       "status": "pending"
@@ -249,8 +234,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/articles/nmat1834",
-        "https://www.youtube.com/watch?v=8JOZzWkwQAc"
+        "https://www.nature.com/articles/nmat1834"
       ],
       "status": "pending"
     },
@@ -262,7 +246,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=j_aig3fhGdw",
         "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.56.4328"
       ],
       "status": "pending"
@@ -275,8 +258,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/nature00991",
-        "https://www.youtube.com/watch?v=iCUTJ3I8Pr8"
+        "https://www.nature.com/articles/nature00991"
       ],
       "status": "pending"
     },
@@ -314,8 +296,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/articles/s41893-019-0388-x",
-        "https://www.youtube.com/watch?v=VWF_Ig-3Rew"
+        "https://www.nature.com/articles/s41893-019-0388-x"
       ],
       "status": "pending"
     },
@@ -340,9 +321,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://comsol.com/c/7azr",
-        "https://meep.readthedocs.io/en/latest/",
-        "https://www.youtube.com/watch?v=QqPxF7V5Lnw"
+        "https://meep.readthedocs.io/en/latest/"
       ],
       "status": "pending"
     },
@@ -354,8 +333,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/s41578-018-0061-4",
-        "https://www.youtube.com/watch?v=ykOdON8oj0M"
+        "https://www.nature.com/articles/s41578-018-0061-4"
       ],
       "status": "pending"
     },
@@ -368,8 +346,7 @@
       "type": "teach-back",
       "resources": [
         "https://www.nature.com/articles/s41578-021-00340-w",
-        "https://www.science.org/doi/10.1126/science.aaz0941",
-        "https://www.youtube.com/watch?v=Uk3h_5KqG3k"
+        "https://www.science.org/doi/10.1126/science.aaz0941"
       ],
       "status": "pending"
     }

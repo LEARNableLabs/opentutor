@@ -43,7 +43,6 @@
 
 - **edX "Nanotechnology: The Basics"** (Rice University)
   - Covers nanofabrication techniques relevant to metamaterials
-  - https://www.edx.org/course/nanotechnology-the-basics
 
 ## Supplementary (for engagement)
 
@@ -51,7 +50,6 @@
 
 - **Veritasium: "The Invisibility Cloak"**
   - Excellent explanation of metamaterial cloaking for general audiences
-  - https://www.youtube.com/watch?v=AXOxUwhKO3A
 
 - **Applied Science (Ben Krasnow)**
   - DIY metamaterial fabrication, piezoelectric experiments
@@ -60,7 +58,6 @@
 
 - **The Royal Institution: "The Magic of Metamaterials"** (Ortwin Hess)
   - Engaging lecture for general audience
-  - https://www.youtube.com/watch?v=gJ3pv-ZMsGE
 
 - **3Blue1Brown: Wave Interference**
   - Beautiful animations of wave phenomena (helpful for understanding bandgaps)
@@ -72,11 +69,9 @@
 
 - **TED-Ed: "The Science of Invisibility"**
   - Accessible 5-minute primer on cloaking
-  - https://www.youtube.com/watch?v=zRxNFQQF_W8
 
 - **Steve Mould: "Auxetic Materials"**
   - Fun demonstration of negative Poisson's ratio
-  - https://www.youtube.com/watch?v=5wAXG3Y3v7c
 
 ### Interactive Tools and Simulations
 
@@ -88,7 +83,6 @@
 - **COMSOL Multiphysics Gallery**
   - Metamaterial simulation examples (photonic crystals, cloaking, acoustic absorption)
   - Can download models if you have COMSOL license
-  - https://comsol.com/models/metamaterials
 
 - **Wolfram Demonstrations Project**
   - Split-ring resonator models, bandgap calculators, auxetic structure visualizations
@@ -143,7 +137,6 @@
 
 - **Berkeley Nanosciences and Nanoengineering Institute**
   - Work on optical metamaterials and plasmonic devices
-  - https://nanosciences.lbl.gov/
 
 - **Harvard Materials Science and Mechanical Behavior Group** (Bertoldi Lab)
   - Mechanical metamaterials, instability-driven design
@@ -288,7 +281,6 @@
   - https://www.astm.org/
 
 - **IEEE Antennas and Propagation Society**: Conferences on metamaterial antennas
-  - https://www.ieee-aps.org/
 
 - **MRS (Materials Research Society)**: Symposia on metamaterials and smart materials
   - https://www.mrs.org/

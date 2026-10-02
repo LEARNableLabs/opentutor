@@ -45,10 +45,7 @@
       ],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://ocw.mit.edu/courses/15-136j-drugs-politics-and-culture-spring-2003/",
-        "https://www.fda.gov/patients/drug-development-process"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -63,8 +60,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://pubs.acs.org/doi/10.1021/cr100117x",
-        "https://www.rcsb.org/docs/general-help/pharmacophore-models"
+        "https://pubs.acs.org/doi/10.1021/cr100117x"
       ],
       "status": "pending"
     },
@@ -80,8 +76,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3195271/",
-        "https://www.youtube.com/watch?v=KM3KXz6gEA8"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3195271/"
       ],
       "status": "pending"
     },
@@ -98,8 +93,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.5b01684",
-        "https://www.rcsb.org/docs/general-help/molecular-interactions"
+        "https://pubs.acs.org/doi/10.1021/acs.jmedchem.5b01684"
       ],
       "status": "pending"
     },
@@ -115,9 +109,7 @@
       ],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://teachopencadd.github.io/talktorials.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -302,9 +294,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "http://www.swissadme.ch/",
-        "https://www.nature.com/articles/s41598-017-02893-w",
-        "https://pkcsm.org/"
+        "http://www.swissadme.ch/"
       ],
       "status": "pending"
     },
@@ -423,7 +413,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://teachopencadd.github.io/talktorials.html",
         "https://www.ebi.ac.uk/chembl/"
       ],
       "status": "pending"
@@ -527,7 +516,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://teachopencadd.github.io/talktorials.html",
         "https://www.rdkit.org/"
       ],
       "status": "pending"

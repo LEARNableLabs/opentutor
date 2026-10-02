@@ -25,7 +25,6 @@
 ### Key Papers
 
 - **An Axiomatic Basis for Computer Programming (Hoare, 1969)** — The original Hoare logic paper. Readable and foundational.
-  - https://www.cs.cmu.edu/~aldrich/courses/15-819O-13sp/resources/hoare-original.pdf
 
 - **How Amazon Web Services Uses Formal Methods (Newcombe et al., 2015)** — Case study of TLA+ at AWS. Shows real-world impact.
   - https://cacm.acm.org/magazines/2015/4/184701-how-amazon-web-services-uses-formal-methods/
@@ -98,7 +97,6 @@
   - https://iris-project.org/
 
 - **Dafny Examples** — Verified programs: sorting, binary search, graph algorithms.
-  - https://github.com/dafny-lang/dafny/tree/master/Test
 
 ### Research Groups & People
 
@@ -112,7 +110,6 @@
   - https://xavierleroy.org/
 
 - **Gernot Heiser (UNSW, seL4)** — Led seL4 microkernel verification, now works on verified OS ecosystems.
-  - https://trustworthy.systems/people/gernotheiser/
 
 - **Hillel Wayne** — Formal methods educator, writes practical guides for working programmers.
   - https://www.hillelwayne.com/
@@ -129,7 +126,6 @@
 ### Industry Applications & Case Studies
 
 - **Amazon Web Services (TLA+)** — Specs for S3, DynamoDB, EBS. Open-source examples and experience reports.
-  - https://github.com/aws/tlaplus-workshop
 
 - **Facebook Infer** — Open-source static analyzer using separation logic. Analyzes millions of lines of code.
   - https://fbinfer.com/
@@ -152,7 +148,6 @@
   - https://groups.google.com/g/tlaplus
 
 - **Coq Discourse** — Q&A forum for Coq users.
-  - https://coq.discourse.group/
 
 - **r/formal_verification subreddit** — Reddit community for formal methods news and discussion.
   - https://www.reddit.com/r/formal_verification/
@@ -163,7 +158,6 @@
 ## Wild Cards & Unexpected Connections
 
 - **Formal Verification in Game Design** — Can you verify a game is fair? Poker hand probabilities, chess endgames.
-  - https://www.hillelwayne.com/post/formally-modeling-regex/
 
 - **Mathematical Components Library (Coq)** — Formalized Four Color Theorem and Feit-Thompson Theorem. Pure math meets proof assistants.
   - https://math-comp.github.io/

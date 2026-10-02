@@ -39,8 +39,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/knowledge-analysis/",
-        "https://1000wordphilosophy.com/2014/02/09/the-analysis-of-knowledge/"
+        "https://plato.stanford.edu/entries/knowledge-analysis/"
       ],
       "status": "pending"
     },
@@ -65,8 +64,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/knowledge-analysis/#PostGettDeve",
-        "https://1000wordphilosophy.com/2020/09/02/gettier-problems/"
+        "https://plato.stanford.edu/entries/knowledge-analysis/#PostGettDeve"
       ],
       "status": "pending"
     },
@@ -116,8 +114,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/testimony-episprob/",
-        "https://1000wordphilosophy.com/2016/03/21/testimony/"
+        "https://plato.stanford.edu/entries/testimony-episprob/"
       ],
       "status": "pending"
     },
@@ -142,8 +139,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://plato.stanford.edu/entries/rationalism-empiricism/",
-        "https://iep.utm.edu/emp-rat/"
+        "https://plato.stanford.edu/entries/rationalism-empiricism/"
       ],
       "status": "pending"
     },
@@ -321,8 +317,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://plato.stanford.edu/entries/epistemology-virtue/",
-        "https://iep.utm.edu/virtueep/"
+        "https://plato.stanford.edu/entries/epistemology-virtue/"
       ],
       "status": "pending"
     },
@@ -334,8 +329,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/epistemology-social/",
-        "https://iep.utm.edu/soc-epis/"
+        "https://plato.stanford.edu/entries/epistemology-social/"
       ],
       "status": "pending"
     },
@@ -347,8 +341,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://plato.stanford.edu/entries/epistemic-injustice/",
-        "https://1000wordphilosophy.com/2017/12/18/epistemic-injustice/"
+        "https://plato.stanford.edu/entries/epistemic-injustice/"
       ],
       "status": "pending"
     },
@@ -360,8 +353,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://plato.stanford.edu/entries/ethics-belief/",
-        "https://iep.utm.edu/eth-beli/"
+        "https://plato.stanford.edu/entries/ethics-belief/"
       ],
       "status": "pending"
     },

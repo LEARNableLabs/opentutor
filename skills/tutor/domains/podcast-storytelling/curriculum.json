@@ -40,7 +40,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://training.npr.org/2017/01/31/openings-that-hook-listeners/",
         "https://transom.org/2011/radiolab-howsound/"
       ],
       "status": "pending"
@@ -53,8 +52,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://transom.org/2011/storytelling-for-radio/",
-        "https://www.prx.org/articles/how-to-structure-your-podcast"
+        "https://transom.org/2011/storytelling-for-radio/"
       ],
       "status": "pending"
     },
@@ -79,8 +77,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://transom.org/2014/tape-transitions/",
-        "https://www.youtube.com/watch?v=_VAa3LfLTK4"
+        "https://transom.org/2014/tape-transitions/"
       ],
       "status": "pending"
     },
@@ -92,8 +89,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://transom.org/2013/the-power-of-silence/",
-        "https://www.prx.org/articles/silence-in-audio-storytelling"
+        "https://transom.org/2013/the-power-of-silence/"
       ],
       "status": "pending"
     },
@@ -118,7 +114,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://training.npr.org/2018/06/06/interviewing-101/",
         "https://transom.org/2013/interviewing-principles/"
       ],
       "status": "pending"
@@ -144,8 +139,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://transom.org/2008/field-recording-basics/",
-        "https://www.youtube.com/watch?v=xHF0rGFzLwE"
+        "https://transom.org/2008/field-recording-basics/"
       ],
       "status": "pending"
     },
@@ -157,8 +151,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://transom.org/2015/ethics-in-audio/",
-        "https://www.prx.org/articles/ethics-documentary-storytelling"
+        "https://transom.org/2015/ethics-in-audio/"
       ],
       "status": "pending"
     },
@@ -170,8 +163,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://transom.org/showcase/",
-        "https://thirdcoastfestival.org/library"
+        "https://transom.org/showcase/"
       ],
       "status": "pending"
     },
@@ -183,8 +175,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://transom.org/2011/the-uses-of-ambient-sound/",
-        "https://www.youtube.com/watch?v=dqPxDYzbWeI"
+        "https://transom.org/2011/the-uses-of-ambient-sound/"
       ],
       "status": "pending"
     },
@@ -196,8 +187,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://transom.org/2014/music-in-radio/",
-        "https://www.prx.org/articles/using-music-podcasts"
+        "https://transom.org/2014/music-in-radio/"
       ],
       "status": "pending"
     },
@@ -209,8 +199,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://transom.org/2010/sound-effects/",
-        "https://www.youtube.com/watch?v=7-Yo5TdTPRo"
+        "https://transom.org/2010/sound-effects/"
       ],
       "status": "pending"
     },
@@ -222,8 +211,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://transom.org/2012/layering-sound/",
-        "https://training.npr.org/2019/03/28/mixing-audio-for-podcasts/"
+        "https://transom.org/2012/layering-sound/"
       ],
       "status": "pending"
     },
@@ -235,8 +223,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://transom.org/2011/radiolab-howsound/",
-        "https://www.youtube.com/watch?v=P5aw76Oi_DY"
+        "https://transom.org/2011/radiolab-howsound/"
       ],
       "status": "pending"
     },
@@ -261,8 +248,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://transom.org/2013/tape-editing/",
-        "https://training.npr.org/2017/03/02/editing-audio-storytelling/"
+        "https://transom.org/2013/tape-editing/"
       ],
       "status": "pending"
     },
@@ -274,8 +260,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://transom.org/2017/audio-processing-basics/",
-        "https://www.youtube.com/watch?v=PhVcJV_XqKQ"
+        "https://transom.org/2017/audio-processing-basics/"
       ],
       "status": "pending"
     },
@@ -286,10 +271,7 @@
       "concepts": ["loudness normalization", "broadcast standards", "platform compliance"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.buzzsprout.com/blog/podcast-loudness",
-        "https://www.youtube.com/watch?v=gZPvDv_KdT4"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -300,8 +282,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://transom.org/2019/multitrack-mixing/",
-        "https://www.youtube.com/watch?v=qMfZvSKOYdE"
+        "https://transom.org/2019/multitrack-mixing/"
       ],
       "status": "pending"
     },
@@ -313,8 +294,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://transom.org/topics/mixing/",
-        "https://training.npr.org/audio/"
+        "https://transom.org/topics/mixing/"
       ],
       "status": "pending"
     },
@@ -338,10 +318,7 @@
       "concepts": ["metadata optimization", "discoverability", "honest marketing"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.buzzsprout.com/blog/write-podcast-description",
-        "https://www.prx.org/articles/podcast-discovery-seo"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -351,10 +328,7 @@
       "concepts": ["RSS mechanics", "hosting platforms", "distribution networks"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.buzzsprout.com/blog/what-is-podcast-rss-feed",
-        "https://podnews.net/article/what-is-a-podcast-rss-feed"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -364,10 +338,7 @@
       "concepts": ["listener metrics", "engagement patterns", "growth indicators"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.buzzsprout.com/blog/podcast-analytics",
-        "https://www.thepodcasthost.com/planning/podcast-analytics-guide/"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

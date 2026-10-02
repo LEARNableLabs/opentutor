@@ -25,7 +25,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/4-401-environmental-design-fall-2017/",
         "https://www.khanacademy.org/humanities/art-history"
       ],
       "status": "pending"
@@ -38,8 +37,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.archdaily.com/tag/light",
-        "https://www.youtube.com/c/TheB1M"
+        "https://www.archdaily.com/tag/light"
       ],
       "status": "pending"
     },
@@ -50,10 +48,7 @@
       "concepts": ["threshold", "transition", "spatial hierarchy"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.archdaily.com/tag/threshold",
-        "https://architecture.mit.edu/lecture-series"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -64,7 +59,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/c/30by40DesignWorkshop",
         "https://vimeo.com/channels/architecture"
       ],
       "status": "pending"
@@ -76,10 +70,7 @@
       "concepts": ["spatial sequence", "diagram", "analysis"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://archfoundation.org.uk/learn/",
-        "https://www.archdaily.com/tag/diagram"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -89,9 +80,7 @@
       "concepts": ["spatial analysis", "review"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://ocw.mit.edu/courses/4-401-environmental-design-fall-2017/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -115,7 +104,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.archdaily.com/tag/massing",
         "https://architecture.yale.edu/news"
       ],
       "status": "pending"
@@ -128,7 +116,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/c/TheB1M",
         "https://www.archdaily.com/tag/scale"
       ],
       "status": "pending"
@@ -140,10 +127,7 @@
       "concepts": ["typology", "architectural type", "formal patterns"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": [
-        "https://www.archdaily.com/tag/typology",
-        "https://ocw.mit.edu/courses/4-663-architecture-studios-building-in-landscapes-spring-2016/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,8 +138,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.archdaily.com/tag/structure",
-        "https://www.youtube.com/c/30by40DesignWorkshop"
+        "https://www.archdaily.com/tag/structure"
       ],
       "status": "pending"
     },
@@ -166,10 +149,7 @@
       "concepts": ["formal analysis", "diagram", "synthesis"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.archdaily.com/tag/analysis",
-        "https://archfoundation.org.uk/learn/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -179,9 +159,7 @@
       "concepts": ["formal systems", "review"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.archdaily.com/tag/diagram"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -205,8 +183,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.archdaily.com/tag/place",
-        "https://architecture.mit.edu/lecture-series"
+        "https://www.archdaily.com/tag/place"
       ],
       "status": "pending"
     },
@@ -257,8 +234,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.archdaily.com/tag/vernacular-architecture",
-        "https://www.youtube.com/c/TheB1M"
+        "https://www.archdaily.com/tag/vernacular-architecture"
       ],
       "status": "pending"
     },
@@ -282,8 +258,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.archdaily.com/tag/materials",
-        "https://www.youtube.com/c/30by40DesignWorkshop"
+        "https://www.archdaily.com/tag/materials"
       ],
       "status": "pending"
     },
@@ -295,8 +270,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://ocw.mit.edu/courses/4-205-analysis-of-contemporary-architecture-fall-2009/",
-        "https://archfoundation.org.uk/learn/"
+        "https://ocw.mit.edu/courses/4-205-analysis-of-contemporary-architecture-fall-2009/"
       ],
       "status": "pending"
     },
@@ -321,7 +295,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.archdaily.com/tag/experience",
         "https://architecture.yale.edu/news"
       ],
       "status": "pending"
@@ -334,8 +307,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.archdaily.com/",
-        "https://ocw.mit.edu/courses/4-401-environmental-design-fall-2017/"
+        "https://www.archdaily.com/"
       ],
       "status": "pending"
     }

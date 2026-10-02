@@ -26,7 +26,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.acs.psu.edu/drussell/Demos/string-waves/string-waves.html",
         "https://phet.colorado.edu/en/simulations/wave-on-a-string"
       ],
       "status": "pending"
@@ -39,8 +38,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/harmonics.html",
-        "https://www.youtube.com/watch?v=i_0DXxNeaQ0"
+        "https://newt.phys.unsw.edu.au/jw/harmonics.html"
       ],
       "status": "pending"
     },
@@ -104,8 +102,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/strings.html",
-        "https://www.acs.psu.edu/drussell/Demos/string-waves/string-waves.html"
+        "https://newt.phys.unsw.edu.au/jw/strings.html"
       ],
       "status": "pending"
     },
@@ -129,10 +126,7 @@
       "concepts": ["damping", "energy dissipation", "Q factor", "sustain mechanisms"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://newt.phys.unsw.edu.au/jw/guitar.html",
-        "https://ccrma.stanford.edu/~jos/pasp/Decay_Parameters.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -143,7 +137,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/guitar.html",
         "https://www.acoustics.asn.au/"
       ],
       "status": "pending"
@@ -156,8 +149,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/Bows.html",
-        "https://www.acs.psu.edu/drussell/bowed-string/bowed-string.html"
+        "https://newt.phys.unsw.edu.au/jw/Bows.html"
       ],
       "status": "pending"
     },
@@ -195,8 +187,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/flutes.v.clarinets.html",
-        "https://www.acs.psu.edu/drussell/Demos/Pipes/Pipes.html"
+        "https://newt.phys.unsw.edu.au/jw/flutes.v.clarinets.html"
       ],
       "status": "pending"
     },
@@ -208,8 +199,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/flutes.v.clarinets.html",
-        "https://www.acs.psu.edu/drussell/Demos/Pipes-Closed/Closed-Pipes.html"
+        "https://newt.phys.unsw.edu.au/jw/flutes.v.clarinets.html"
       ],
       "status": "pending"
     },
@@ -221,7 +211,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/clarinet.html",
         "https://www.phys.unsw.edu.au/jw/saxacoustics.html"
       ],
       "status": "pending"
@@ -234,8 +223,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/brassacoustics.html",
-        "https://www.phys.unsw.edu.au/jw/trumpet.html"
+        "https://newt.phys.unsw.edu.au/jw/brassacoustics.html"
       ],
       "status": "pending"
     },
@@ -247,8 +235,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/fluteacoustics.html",
-        "https://www.phys.unsw.edu.au/jw/flute.html"
+        "https://newt.phys.unsw.edu.au/jw/fluteacoustics.html"
       ],
       "status": "pending"
     },
@@ -259,10 +246,7 @@
       "concepts": ["review: pipe modes", "review: reed oscillation", "review: brass acoustics"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://newt.phys.unsw.edu.au/jw/wind.html",
-        "https://www.youtube.com/watch?v=E3GfKhQygKE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -273,7 +257,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/drums.html",
         "https://www.acs.psu.edu/drussell/Demos/MembraneCircle/Circle.html"
       ],
       "status": "pending"
@@ -285,10 +268,7 @@
       "concepts": ["vibrating bars", "flexural waves", "tuning and undercutting", "harmonic bar design"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://newt.phys.unsw.edu.au/jw/xylophone.html",
-        "https://www.acs.psu.edu/drussell/Demos/BarWaves/BarWaves.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -299,7 +279,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://newt.phys.unsw.edu.au/jw/electricguitar.html",
         "https://en.wikipedia.org/wiki/Pickup_(music_technology)"
       ],
       "status": "pending"
@@ -312,8 +291,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://ccrma.stanford.edu/~jos/pasp/",
-        "https://www.music.mcgill.ca/~gary/courses/papers/Karplus-Strong-CMJ-1983.pdf"
+        "https://ccrma.stanford.edu/~jos/pasp/"
       ],
       "status": "pending"
     },

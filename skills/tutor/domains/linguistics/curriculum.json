@@ -308,9 +308,7 @@
       "concepts": ["deixis", "person deixis", "spatial deixis", "temporal deixis"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://linguistics.uchicago.edu/intro-semantics-and-pragmatics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -356,9 +354,7 @@
       "concepts": ["metonymy", "reference transfer", "pragmatic enrichment"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://linguistics.uchicago.edu/intro-semantics-and-pragmatics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -380,9 +376,7 @@
       "concepts": ["cross-linguistic variation", "typology", "universals"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": [
-        "https://www.cambridge.org/highereducation/books/exploring-language-and-linguistics/3DBD29516B335491267E9C04403CB616/pragmatics/C84E482E5B3BDCA25BE6ADE8F166CD65"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

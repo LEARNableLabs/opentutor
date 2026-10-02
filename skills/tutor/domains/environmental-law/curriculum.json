@@ -64,8 +64,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.law.cornell.edu/wex/commerce_clause",
-        "https://www.epa.gov/regulatory-information-topic/regulatory-information-topic-laws-and-regulations"
+        "https://www.law.cornell.edu/wex/commerce_clause"
       ],
       "status": "pending"
     },
@@ -89,10 +88,7 @@
       "concepts": ["State Implementation Plans", "cooperative federalism", "SIP approval process"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.epa.gov/sips-tribal-tips",
-        "https://www.eli.org/vibrant-environment-blog/2019/08/state-implementation-plans-under-clean-air-act-primer"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -241,9 +237,7 @@
       "concepts": ["Section 9 take prohibition", "incidental take permits", "habitat conservation plans"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.fws.gov/service/incidental-take-permits-under-esa"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -279,7 +273,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.epa.gov/ghgemissions/basics-climate-change",
         "https://supreme.justia.com/cases/federal/us/549/497/"
       ],
       "status": "pending"
@@ -303,10 +296,7 @@
       "concepts": ["environmental justice", "disparate impact", "EJ screening tools", "Executive Order 12898"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.epa.gov/environmentaljustice",
-        "https://www.epa.gov/ejscreen"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -343,8 +333,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.epa.gov/enforcement",
-        "https://www.epa.gov/enforcement/enforcement-annual-results"
+        "https://www.epa.gov/enforcement"
       ],
       "status": "pending"
     },

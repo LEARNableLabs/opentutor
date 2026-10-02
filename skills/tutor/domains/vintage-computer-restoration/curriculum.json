@@ -28,7 +28,7 @@
       "concepts": ["visual inspection", "common failure indicators", "safety assessment"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/watch?v=OB1xOWUalQQ"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -48,7 +48,7 @@
       "concepts": ["corrosion patterns", "battery leak damage", "component dating", "board revisions"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://console5.com/wiki/Identifying_Capacitor_Damage"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -58,7 +58,7 @@
       "concepts": ["triage assessment", "scope definition", "parts availability", "realistic timelines"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": ["https://www.vcfed.org/forum/forum/genres/vintage-computer-restoration"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -68,7 +68,7 @@
       "concepts": ["electrolytic capacitor aging", "ESR (equivalent series resistance)", "capacitor plague", "failure modes"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/watch?v=5pIzdECPMo8", "https://console5.com/wiki/Capacitor"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -78,7 +78,7 @@
       "concepts": ["recapping procedure", "capacitor polarity", "ESR testing", "bleeder resistors"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/watch?v=0OTZPdD1ZVU", "https://www.mouser.com/pdfDocs/capacitor-selection.pdf"],
+      "resources": ["https://www.mouser.com/pdfDocs/capacitor-selection.pdf"],
       "status": "pending"
     },
     {
@@ -88,7 +88,7 @@
       "concepts": ["load vs no-load testing", "voltage regulation", "ripple measurement", "rail diagnostics"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.youtube.com/watch?v=Il-STRn7hEQ"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -98,7 +98,7 @@
       "concepts": ["linear regulator failure", "platform-specific PSU quirks", "modern replacements", "7805 regulator"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://www.youtube.com/watch?v=6swCyqY0aWw", "https://console5.com/wiki/Commodore_64"],
+      "resources": ["https://console5.com/wiki/Commodore_64"],
       "status": "pending"
     },
     {
@@ -108,7 +108,7 @@
       "concepts": ["safety protocols", "assessment workflow", "power supply troubleshooting", "systematic diagnosis"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://console5.com/wiki/Capacitor", "https://www.vcfed.org/forum/forum/genres/vintage-computer-restoration"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -118,7 +118,7 @@
       "concepts": ["POST process", "beep codes", "IC seating", "clock signal verification"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.minuszerodegrees.net/5150/post/5150_post.htm"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -128,7 +128,7 @@
       "concepts": ["continuity testing", "visual trace following", "bodge wires", "wire wrapping"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/watch?v=M1WTgFqBjyA", "https://www.youtube.com/watch?v=L-63xJPC6bI"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -138,7 +138,7 @@
       "concepts": ["IC socket corrosion", "socket replacement", "desoldering technique", "chip insertion force"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/watch?v=Z38ws6wwkXI"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -148,7 +148,7 @@
       "concepts": ["ROM reading", "EPROM burning", "checksum verification", "programmer hardware"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": ["https://www.minuszerodegrees.net/rom/rom.htm", "https://archive.org/details/bitsavers_dataBooksa_26667987"],
+      "resources": ["https://www.minuszerodegrees.net/rom/rom.htm"],
       "status": "pending"
     },
     {
@@ -158,7 +158,7 @@
       "concepts": ["alkaline corrosion chemistry", "neutralization", "vinegar vs isopropyl", "protective coating"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.youtube.com/watch?v=4ao7CB_cyLE", "https://www.ifixit.com/Wiki/Battery_Leakage_Cleaning"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -168,7 +168,7 @@
       "concepts": ["IC failure modes", "cascade failures", "preventive replacement", "socket vs soldered"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.youtube.com/watch?v=Z38ws6wwkXI", "https://www.vcfed.org/forum/"],
+      "resources": ["https://www.vcfed.org/forum/"],
       "status": "pending"
     },
     {
@@ -178,7 +178,7 @@
       "concepts": ["integrated troubleshooting", "systematic diagnosis", "repair documentation"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://www.vcfed.org/forum/forum/genres/vintage-computer-restoration"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -188,7 +188,7 @@
       "concepts": ["high voltage safety", "anode discharge", "implosion risk", "neck board hazards"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/watch?v=FXgW2YLUrYs", "https://console5.com/wiki/CRT_Safety"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -198,7 +198,7 @@
       "concepts": ["composite video signals", "sync separation", "color burst", "video amplifier"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://www.youtube.com/watch?v=l8l1Be3yOSM", "https://www.retrorgb.com/sync.html"],
+      "resources": ["https://www.retrorgb.com/sync.html"],
       "status": "pending"
     },
     {
@@ -218,7 +218,7 @@
       "concepts": ["read/write head alignment", "drive cleaning", "speed calibration", "belt replacement"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.youtube.com/watch?v=EHwj3v4tktg", "https://www.kryoflux.com/"],
+      "resources": ["https://www.kryoflux.com/"],
       "status": "pending"
     },
     {
@@ -238,7 +238,7 @@
       "concepts": ["Alps vs Cherry switches", "keycap cleaning", "foam and foil repairs", "stabilizer restoration"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": ["https://www.youtube.com/watch?v=m1xF-CDmq5s", "https://deskthority.net/wiki/Alps_SKCM_series"],
+      "resources": ["https://deskthority.net/wiki/Alps_SKCM_series"],
       "status": "pending"
     },
     {
@@ -248,7 +248,7 @@
       "concepts": ["end-to-end system testing", "peripheral integration", "user experience restoration"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://www.youtube.com/watch?v=kFREJ8OM-pI"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -258,7 +258,7 @@
       "concepts": ["Amiga 500/600/1200 PSU", "surface-mount recapping", "Varta battery damage", "DRAM corrosion"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/watch?v=0jZMRgIJ9Ks", "http://www.amiga.org/"],
+      "resources": ["http://www.amiga.org/"],
       "status": "pending"
     },
     {
@@ -268,7 +268,7 @@
       "concepts": ["analog board isolation", "CRT safety protocols", "compact Mac disassembly", "PRAM battery"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://www.youtube.com/watch?v=cH8GqJysOMg", "https://68kmla.org/bb/index.php?forums/compact-macs.76/"],
+      "resources": ["https://68kmla.org/bb/index.php?forums/compact-macs.76/"],
       "status": "pending"
     },
     {
@@ -278,7 +278,7 @@
       "concepts": ["IRQ and DMA assignment", "base address conflicts", "jumper configuration", "system resources"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.minuszerodegrees.net/pc_interrupt_resources.htm", "https://www.youtube.com/watch?v=1uw_nKGJz-g"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -288,7 +288,7 @@
       "concepts": ["reversible modifications", "documentation standards", "original vs reproduction parts", "community contribution"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": ["https://www.vcfed.org/wp/", "https://archive.org/details/vintagecomputer"],
+      "resources": [],
       "status": "pending"
     },
     {

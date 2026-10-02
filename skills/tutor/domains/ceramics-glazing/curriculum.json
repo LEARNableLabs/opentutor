@@ -28,8 +28,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://digitalfire.com/article/why+do+glazes+melt",
-        "https://glazy.org/posts/glaze-chemistry-basics"
+        "https://digitalfire.com/article/why+do+glazes+melt"
       ],
       "status": "pending"
     },
@@ -41,8 +40,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://digitalfire.com/glossary/unity+molecular+formula",
-        "https://www.youtube.com/watch?v=vJ8K7xLqE9k"
+        "https://digitalfire.com/glossary/unity+molecular+formula"
       ],
       "status": "pending"
     },
@@ -54,8 +52,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://digitalfire.com/article/understanding+oxide+roles",
-        "https://glazy.org/posts/oxide-basics"
+        "https://digitalfire.com/article/understanding+oxide+roles"
       ],
       "status": "pending"
     },
@@ -80,8 +77,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://digitalfire.com/material/silica",
-        "https://www.youtube.com/watch?v=BkR8ZqLqLmE"
+        "https://digitalfire.com/material/silica"
       ],
       "status": "pending"
     },
@@ -93,8 +89,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://digitalfire.com/material/sodium+feldspar",
-        "https://glazy.org/materials/feldspar"
+        "https://digitalfire.com/material/sodium+feldspar"
       ],
       "status": "pending"
     },
@@ -106,8 +101,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://digitalfire.com/article/flux+comparison",
-        "https://glazy.org/posts/understanding-fluxes"
+        "https://digitalfire.com/article/flux+comparison"
       ],
       "status": "pending"
     },
@@ -119,8 +113,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://digitalfire.com/material/alumina",
-        "https://www.youtube.com/watch?v=aKZ8vT9xPqM"
+        "https://digitalfire.com/material/alumina"
       ],
       "status": "pending"
     },
@@ -132,8 +125,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://digitalfire.com/article/eutectic+interactions",
-        "https://glazy.org/posts/eutectic-behavior"
+        "https://digitalfire.com/article/eutectic+interactions"
       ],
       "status": "pending"
     },
@@ -145,8 +137,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://digitalfire.com/glossary/flux",
-        "https://glazy.org/posts/flux-review"
+        "https://digitalfire.com/glossary/flux"
       ],
       "status": "pending"
     },
@@ -171,8 +162,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://digitalfire.com/glossary/unity+molecular+formula",
-        "https://www.youtube.com/watch?v=dLX7k8Hp9aQ"
+        "https://digitalfire.com/glossary/unity+molecular+formula"
       ],
       "status": "pending"
     },
@@ -197,8 +187,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://digitalfire.com/article/limit+formulas",
-        "https://glazy.org/posts/understanding-limits"
+        "https://digitalfire.com/article/limit+formulas"
       ],
       "status": "pending"
     },
@@ -210,8 +199,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://digitalfire.com/article/formula+to+recipe",
-        "https://glazy.org/recipes/new"
+        "https://digitalfire.com/article/formula+to+recipe"
       ],
       "status": "pending"
     },
@@ -236,8 +224,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://digitalfire.com/article/ceramic+colorants",
-        "https://www.youtube.com/watch?v=nLJ8YLqKz3w"
+        "https://digitalfire.com/article/ceramic+colorants"
       ],
       "status": "pending"
     },
@@ -249,8 +236,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://digitalfire.com/material/copper+oxide",
-        "https://glazy.org/posts/copper-reds"
+        "https://digitalfire.com/material/copper+oxide"
       ],
       "status": "pending"
     },
@@ -262,8 +248,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://digitalfire.com/article/matte+glazes",
-        "https://glazy.org/posts/matte-surfaces"
+        "https://digitalfire.com/article/matte+glazes"
       ],
       "status": "pending"
     },
@@ -275,8 +260,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://digitalfire.com/article/crystalline+glazes",
-        "https://www.youtube.com/watch?v=kY8LqWxK6F4"
+        "https://digitalfire.com/article/crystalline+glazes"
       ],
       "status": "pending"
     },
@@ -301,8 +285,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://digitalfire.com/article/crazing",
-        "https://glazy.org/posts/fixing-crazing"
+        "https://digitalfire.com/article/crazing"
       ],
       "status": "pending"
     },
@@ -314,8 +297,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://digitalfire.com/article/adjusting+firing+temperature",
-        "https://glazy.org/posts/temperature-adjustments"
+        "https://digitalfire.com/article/adjusting+firing+temperature"
       ],
       "status": "pending"
     },
@@ -327,9 +309,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://digitalfire.com/article/testing+methodology",
-        "https://www.youtube.com/watch?v=aX8vF9hLqJ0",
-        "https://glazy.org/posts/systematic-testing"
+        "https://digitalfire.com/article/testing+methodology"
       ],
       "status": "pending"
     },
@@ -341,9 +321,7 @@
       "difficulty": 5,
       "type": "teach-back",
       "resources": [
-        "https://glazy.org/recipes/new",
-        "https://digitalfire.com/article/formulating+glazes",
-        "https://glazy.org/posts/building-base-glazes"
+        "https://digitalfire.com/article/formulating+glazes"
       ],
       "status": "pending"
     }

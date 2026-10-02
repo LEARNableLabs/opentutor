@@ -50,7 +50,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.permacultureprinciples.com/principles/",
         "https://www.youtube.com/watch?v=0mwRAf3z9ag"
       ],
       "status": "pending"
@@ -104,7 +103,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.permacultureprinciples.com/permaculture-design/",
         "https://www.permaculturenews.org/2012/06/08/understanding-zones-and-sectors/"
       ],
       "status": "pending"
@@ -175,8 +173,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.permacultureprinciples.com/principles/_4/",
-        "https://www.youtube.com/watch?v=hftgWcD-1Nw"
+        "https://www.permacultureprinciples.com/principles/_4/"
       ],
       "status": "pending"
     },
@@ -246,8 +243,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.permaculturenews.org/2010/07/16/swales/",
-        "https://www.youtube.com/watch?v=zTEuPjSW2I4"
+        "https://www.permaculturenews.org/2010/07/16/swales/"
       ],
       "status": "pending"
     },
@@ -282,7 +278,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/health/biology/",
         "https://www.permaculturenews.org/2016/05/20/soil-food-web/"
       ],
       "status": "pending"
@@ -300,8 +295,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.permaculturenews.org/2013/02/15/sheet-mulching/",
-        "https://www.youtube.com/watch?v=_I6WzT_4rLw"
+        "https://www.permaculturenews.org/2013/02/15/sheet-mulching/"
       ],
       "status": "pending"
     },
@@ -336,8 +330,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.permaculturenews.org/2016/07/08/plant-guilds/",
-        "https://www.youtube.com/watch?v=HXLbEl_W0YU"
+        "https://www.permaculturenews.org/2016/07/08/plant-guilds/"
       ],
       "status": "pending"
     },
@@ -354,8 +347,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.permaculturenews.org/2012/09/14/how-to-design-and-build-a-food-forest/",
-        "https://www.youtube.com/watch?v=Q_m_6y2SJGk"
+        "https://www.permaculturenews.org/2012/09/14/how-to-design-and-build-a-food-forest/"
       ],
       "status": "pending"
     },
@@ -372,8 +364,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.permaculturenews.org/2015/05/08/integrating-chickens/",
-        "https://www.youtube.com/watch?v=CxB1hLhGb6E"
+        "https://www.permaculturenews.org/2015/05/08/integrating-chickens/"
       ],
       "status": "pending"
     },
@@ -390,8 +381,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.permaculturenews.org/2016/08/12/beneficial-insects/",
-        "https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/plantsanimals/pollinate/"
+        "https://www.permaculturenews.org/2016/08/12/beneficial-insects/"
       ],
       "status": "pending"
     },
@@ -426,8 +416,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.permaculturenews.org/2013/03/08/scale-of-permanence/",
-        "https://www.youtube.com/watch?v=fjTDIfhK4E8"
+        "https://www.permaculturenews.org/2013/03/08/scale-of-permanence/"
       ],
       "status": "pending"
     },
@@ -462,8 +451,7 @@
       "difficulty": 5,
       "type": "teach-back",
       "resources": [
-        "https://www.permaculturenews.org/2016/10/14/common-mistakes/",
-        "https://www.youtube.com/watch?v=YPHb6aVRC5Y"
+        "https://www.permaculturenews.org/2016/10/14/common-mistakes/"
       ],
       "status": "pending"
     },
@@ -480,8 +468,7 @@
       "difficulty": 5,
       "type": "real-world",
       "resources": [
-        "https://www.permaculturenews.org/2014/05/16/design-examples/",
-        "https://www.youtube.com/watch?v=zSXPA5gfN-M"
+        "https://www.permaculturenews.org/2014/05/16/design-examples/"
       ],
       "status": "pending"
     },
@@ -497,7 +484,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.permacultureprinciples.com/design/",
         "https://www.permaculturenews.org/2016/11/11/design-process/"
       ],
       "status": "pending"
@@ -516,8 +502,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.permaculturenews.org/2015/12/04/implementation-strategies/",
-        "https://www.youtube.com/watch?v=xzTHjlueqFI"
+        "https://www.permaculturenews.org/2015/12/04/implementation-strategies/"
       ],
       "status": "pending"
     },
@@ -534,8 +519,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.permaculturenews.org/2016/12/16/maintaining-permaculture-systems/",
-        "https://www.youtube.com/watch?v=LQ0kJKbQq_k"
+        "https://www.permaculturenews.org/2016/12/16/maintaining-permaculture-systems/"
       ],
       "status": "pending"
     }

@@ -51,7 +51,7 @@
       "concepts": ["lead glass", "borosilicate", "coefficient of thermal expansion"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.lettherebeneonneon.com/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -101,7 +101,7 @@
       "concepts": ["tubulation", "bombarder processing", "electrode sealing", "vacuum evacuation"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.lettherebeneonneon.com/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -151,7 +151,7 @@
       "concepts": ["emission spectra", "ionization energy", "glow discharge", "voltage characteristics"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://phet.colorado.edu/en/simulations/neon-lights-and-discharge-lamps"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -181,7 +181,7 @@
       "concepts": ["pattern making", "full-scale templates", "bend radius constraints", "electrode placement"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.lettherebeneonneon.com/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -221,7 +221,7 @@
       "concepts": ["pattern making", "bending", "gas filling", "transformer selection", "safety"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.lettherebeneonnyon.com/workshops"],
+      "resources": [],
       "status": "pending"
     }
   ]

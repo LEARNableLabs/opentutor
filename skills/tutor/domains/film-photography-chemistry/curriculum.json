@@ -24,7 +24,7 @@
       "concepts": ["photosensitivity", "silver halide crystals", "reduction reactions"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.georgeeastmanmuseum.org/photography-chemistry"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -44,7 +44,7 @@
       "concepts": ["spectral sensitization", "dye sensitizers", "orthochromatic vs panchromatic"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.kodak.com/en/motion/page/spectral-sensitivity"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -54,7 +54,7 @@
       "concepts": ["grain structure", "surface-to-volume ratio", "T-grain vs conventional grain"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.fujifilm.com/us/en/consumer/film-quicksnap/film-education"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -94,7 +94,7 @@
       "concepts": ["oxidation", "preservatives", "sulfite function", "developer exhaustion"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.kodak.com/en/motion/page/developer-chemistry"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -114,7 +114,7 @@
       "concepts": ["development contrast control", "gamma", "push/pull processing", "N-1/N+1"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://unblinkingeye.com/Articles/WBM/wbm.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -164,7 +164,7 @@
       "concepts": ["print developer formulation", "warm tone vs cold tone", "chlorobromide papers"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.kodak.com/en/motion/page/dektol"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -174,7 +174,7 @@
       "concepts": ["selenium toning", "silver selenide", "archival stability", "color shifts"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.kodak.com/en/motion/page/selenium-toner"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -204,7 +204,7 @@
       "concepts": ["wet plate collodion", "albumen printing", "historical processes"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": ["https://www.georgeeastmanmuseum.org/wet-plate-collodion"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -244,7 +244,7 @@
       "concepts": ["split toning", "selective toning", "highlight vs shadow chemistry", "multi-bath toning"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://unblinkingeye.com/Articles/Toning/toning.html"],
+      "resources": [],
       "status": "pending"
     },
     {

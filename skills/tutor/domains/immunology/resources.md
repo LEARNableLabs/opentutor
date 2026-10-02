@@ -18,7 +18,6 @@
 
 ### Online Courses
 
-- **Johns Hopkins Immunology** (Coursera) — https://www.coursera.org/learn/hopkins-immunology
   - Structured video lectures by Andrea Cox
   - Intermediate level, clinically oriented
   - Includes quizzes and peer-reviewed assessments
@@ -69,7 +68,6 @@
 
 ### Interactive Tools
 
-- **HHMI BioInteractive** — https://www.biointeractive.org/classroom-resources/immunology
   - Click & Learn modules on immune system, vaccines, HIV
   - Interactive animations of antibody-antigen binding, T cell activation
   - Virtual labs and case studies

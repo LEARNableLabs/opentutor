@@ -69,7 +69,6 @@
 
 - **UNC Chapel Hill — PSYC 230**
   - Three-module structure: Attention & Perception, Learning & Memory, Higher Cognitive Function
-  - https://psychology.unc.edu/files/2018/10/PSYC-230-Syllabus.pdf
 
 - **UC Berkeley Extension — Cognitive Psychology**
   - Covers decision-making, memory stages, individual differences
@@ -201,7 +200,6 @@
 
 - **Canyons College — PSYC 126 Cognitive Psychology Textbook**
   - Free OER textbook
-  - https://www.canyons.edu/_resources/documents/academics/onlineeducation/Psych126TextbookFinalV1_2.pdf
 
 - **UT Austin — Cognitive Psychology OER Guide**
   - Curated open education resources for cognitive psychology

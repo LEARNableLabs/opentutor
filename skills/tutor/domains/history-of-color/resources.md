@@ -40,7 +40,6 @@
   - Publications: https://www.getty.edu/conservation/publications_resources/
   - Best for: Egyptian blue research, degradation studies, spectroscopy.
 
-- **Victoria & Albert Museum — Materials & Techniques** — https://www.vam.ac.uk/articles/conservation-techniques
   - Textile and dye focus — indigo, madder, cochineal, synthetic dyes.
   - Good images of historical fabrics with pigment annotations.
 
@@ -99,7 +98,6 @@
   - Structured data on pigments: chemical formulas, historical use, color values.
   - Queryable via SPARQL for data projects.
 
-- **Paul Tol's Color Schemes** — https://personal.sron.nl/~pault/
   - Color-blind-safe palettes with historical pigment references.
 
 ### People to Follow
@@ -116,7 +114,6 @@
   - https://99percentinvisible.org/
 
 - **The Allusionist — "Colours"** — color naming across languages.
-  - https://www.theallusionist.org/allusionist/colours
 
 - **Distillations (Science History Institute)** — episodes on chemical innovations, including synthetic dyes.
   - https://www.sciencehistory.org/distillations/podcast
@@ -155,8 +152,6 @@
 ## Museums & Exhibitions (virtual tours available)
 
 - **Cooper Hewitt — "The Color Exhibit"** (2015) — https://www.cooperhewitt.org/
-- **Victoria & Albert Museum — Textiles** — https://www.vam.ac.uk/collections/textiles-fashion
-- **Harvard Art Museums — Forbes Pigment Collection** — https://harvardartmuseums.org/tour/the-forbes-pigment-collection
   - 2,700 pigments collected by Edward Forbes — viewable online.
 - **Rijksmuseum — Art is Therapy** — high-res scans showing pigment detail — https://www.rijksmuseum.nl/
 

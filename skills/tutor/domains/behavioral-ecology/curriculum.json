@@ -20,7 +20,7 @@
       "concepts": ["Tinbergen's four questions", "proximate vs ultimate causation", "levels of analysis"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.nature.com/scitable/knowledge/library/tinbergen-s-four-questions-13682772/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -40,7 +40,7 @@
       "concepts": ["optimization models", "fitness currency", "constraints", "tradeoffs"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.cambridge.org/core/books/behavioural-ecology/optimization-and-behavioral-ecology/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -60,7 +60,7 @@
       "concepts": ["optimal diet model", "prey profitability", "handling time", "search time"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.nature.com/scitable/knowledge/library/foraging-theory-103491369/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -160,7 +160,7 @@
       "concepts": ["altruism", "kin selection", "Hamilton's rule", "inclusive fitness"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.nature.com/scitable/knowledge/library/altruism-cooperation-and-kin-selection-13260526/"],
+      "resources": [],
       "status": "pending"
     },
     {

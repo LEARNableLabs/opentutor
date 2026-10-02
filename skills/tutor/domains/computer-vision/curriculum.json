@@ -26,8 +26,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "http://szeliski.org/Book/",
-        "https://docs.opencv.org/master/d9/df8/tutorial_root.html"
+        "http://szeliski.org/Book/"
       ],
       "status": "pending"
     },
@@ -39,8 +38,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "http://szeliski.org/Book/",
-        "https://docs.opencv.org/master/dc/dbb/tutorial_py_calibration.html"
+        "http://szeliski.org/Book/"
       ],
       "status": "pending"
     },
@@ -52,7 +50,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://docs.opencv.org/master/df/d9d/tutorial_py_colorspaces.html",
         "http://szeliski.org/Book/"
       ],
       "status": "pending"
@@ -78,8 +75,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "http://cs231n.stanford.edu/",
-        "https://docs.opencv.org/master/d4/d13/tutorial_py_filtering.html"
+        "http://cs231n.stanford.edu/"
       ],
       "status": "pending"
     },
@@ -91,7 +87,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://docs.opencv.org/master/da/d22/tutorial_py_canny.html",
         "http://szeliski.org/Book/"
       ],
       "status": "pending"
@@ -116,9 +111,7 @@
       "concepts": ["convolution", "edge detection", "color spaces"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://docs.opencv.org/master/d9/df8/tutorial_root.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -129,7 +122,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://docs.opencv.org/master/d4/d13/tutorial_py_filtering.html",
         "http://szeliski.org/Book/"
       ],
       "status": "pending"
@@ -142,8 +134,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "http://szeliski.org/Book/",
-        "https://docs.opencv.org/master/dc/d0d/tutorial_py_features_harris.html"
+        "http://szeliski.org/Book/"
       ],
       "status": "pending"
     },
@@ -155,8 +146,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "http://szeliski.org/Book/",
-        "https://docs.opencv.org/master/da/df5/tutorial_py_sift_intro.html"
+        "http://szeliski.org/Book/"
       ],
       "status": "pending"
     },
@@ -168,7 +158,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://docs.opencv.org/master/d1/de0/tutorial_py_feature_homography.html",
         "http://szeliski.org/Book/"
       ],
       "status": "pending"
@@ -180,9 +169,7 @@
       "concepts": ["corners", "descriptors", "matching"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://docs.opencv.org/master/d9/df8/tutorial_root.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -347,8 +334,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "http://szeliski.org/Book/",
-        "https://docs.opencv.org/master/dd/d53/tutorial_py_depthmap.html"
+        "http://szeliski.org/Book/"
       ],
       "status": "pending"
     },

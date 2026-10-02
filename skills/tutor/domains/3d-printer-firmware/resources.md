@@ -4,7 +4,6 @@
 
 ### Official Firmware Documentation
 
-- **Marlin Firmware Documentation** — https://marlinfw.org/docs/
   - Comprehensive reference for the most popular firmware
   - Great for understanding motion control architecture, G-code reference, feature implementation
   - Well-suited for intermediate students who want to read authoritative sources
@@ -32,7 +31,6 @@
 
 ### Foundational Theory
 
-- **RepRap Wiki — Kinematics** — https://reprap.org/wiki/Kinematics
   - Historical reference with good geometric explanations
   - Covers Cartesian, CoreXY, Delta, SCARA, and more
 
@@ -40,7 +38,6 @@
   - Comprehensive G-code reference
   - Explains command syntax and common implementations
 
-- **RepRap Wiki — Motion Control** — https://reprap.org/wiki/Motion_control
   - Foundational concepts for stepper control and motion planning
   - Somewhat dated but conceptually solid
 
@@ -185,7 +182,6 @@
   - Development environment for embedded firmware
   - Easiest way to compile and flash Marlin/RepRapFirmware
 
-- **Marlin Configuration Tool** — https://marlinfw.org/tools/
   - Web-based configurator for Marlin
   - Helps generate configuration files
 
@@ -245,7 +241,6 @@
   - See real-world problems and solutions
   - Follow development of new features
 
-- **Klipper GitHub Discussions** — https://github.com/Klipper3d/klipper/discussions
   - Feature proposals and community feedback
   - Insight into firmware evolution
 

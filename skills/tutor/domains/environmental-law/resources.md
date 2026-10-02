@@ -9,8 +9,6 @@
 - **Plater, Abrams, Goldfarb, Graham, Heinzerling & Wirth**, *Environmental Law and Policy: Nature, Law, and Society* (Aspen) — interdisciplinary approach, strong on environmental justice and international law.
 
 ### Online Courses and Syllabi
-- **Harvard Law School** — Environmental Law and Policy (Prof. Richard Lazarus) syllabus available at https://hls.harvard.edu/academics/curriculum/catalog/default.aspx?o=72657
-- **Yale Law School** — Environmental Law (Prof. Dan Esty) resources at https://law.yale.edu/studying-law-yale/degree-programs/graduate-programs/environmental-law
 - **UC Berkeley School of Law** — Environmental Law course materials (Prof. Dan Farber) at https://www.law.berkeley.edu/research/clee/
 - **Vermont Law and Graduate School** — extensive environmental law curriculum and resources at https://www.vermontlaw.edu/academics/environmental-law-center
 
@@ -24,16 +22,13 @@
 ## Supplementary (for engagement)
 
 ### Videos and Video Series
-- **Environmental Law Institute (ELI)** webinar series — practical, current topics: https://www.eli.org/events
 - **ABA Section of Environment, Energy, and Resources** — recorded CLE programs (some free): https://www.americanbar.org/groups/environment_energy_resources/
 - **Yale Environment 360** — interviews and short documentaries on environmental law and policy: https://e360.yale.edu
 - **PBS Frontline** — documentaries on environmental disasters (Flint water crisis, toxic waste): https://www.pbs.org/wgbh/frontline/
-- **C-SPAN** — Supreme Court oral arguments (Massachusetts v. EPA, Rapanos, etc.): https://www.c-span.org/series/?scotus
 - **TED Talks** — environmental justice (Mustafa Santiago Ali), climate law (Mary Robinson): https://www.ted.com/topics/climate+change
 
 ### Interactive Tools
 - **EPA EnviroAtlas** — mapping tool for environmental data: https://www.epa.gov/enviroatlas — visualize pollution sources, demographics, regulated facilities
-- **EPA EJScreen** — environmental justice screening and mapping tool: https://www.epa.gov/ejscreen — identify EJ communities
 - **Regulations.gov** — live federal rulemaking database: https://www.regulations.gov — search EPA proposed rules, read comments, track final rules
 - **Climate Change Litigation Databases** (Sabin Center for Climate Change Law): http://climatecasechart.com — searchable database of U.S. and global climate cases
 - **CourtListener** — free legal research tool: https://www.courtlistener.com — search environmental case law
@@ -45,10 +40,8 @@
 - **GitHub repos for environmental law research** — e.g., text analysis of EPA regulations, NEPA documents corpus (search "environmental law" on GitHub)
 
 ### Journals and Scholarship
-- **Harvard Environmental Law Review**: https://harvardelr.com
 - **Stanford Environmental Law Journal**: https://law.stanford.edu/stanford-environmental-law-journal-selj/
 - **Ecology Law Quarterly** (UC Berkeley): https://www.boalt.org/elq/
-- **Environmental Law Reporter** (ELI): https://www.eli.org/environmental-law-reporter
 - **Columbia Journal of Environmental Law**: https://cjel.law.columbia.edu
 
 ### Key People to Follow
@@ -70,7 +63,6 @@
 - **The Anthropocene and legal personhood** — Ecuador and New Zealand granting rivers legal rights; implications for standing, environmental governance. See https://www.theguardian.com/world/2017/mar/16/new-zealand-river-granted-same-legal-rights-as-human-being
 - **Environmental law and national security** — climate change as threat multiplier (DOD's Climate Adaptation Plan), ESA and military base operations. See https://www.defense.gov/News/Releases/Release/Article/2484504/dod-releases-climate-risk-analysis/
 - **Public health law and environmental law** — COVID-19 highlighted public health emergency powers; similar statutory structures to environmental emergencies (e.g., CERCLA emergency removal). See https://www.cdc.gov/phlp/index.html
-- **Indigenous sovereignty and environmental law** — tribal co-management of resources, reserved treaty rights, sacred sites protection under NEPA. See https://narf.org/cases/environment/
 
 ## Research and Practitioner Organizations
 

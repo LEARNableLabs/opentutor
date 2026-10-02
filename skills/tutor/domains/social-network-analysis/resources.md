@@ -33,7 +33,6 @@
   - Modern perspective connecting network analysis to ML
   - Excellent for community detection, link prediction, graph neural networks
 
-- **Network Science** (Northeastern, Albert-László Barabási) — https://www.barabasilab.com/course
   - Video lectures accompanying the textbook
   - Visual and intuitive presentations
   - Good for degree distributions, network models
@@ -52,7 +51,6 @@
   - Modern, ML-oriented perspective
   - Great for visual learners
 
-- **Network Science Lectures** (Barabási) — https://www.youtube.com/user/BarabasiLab
   - Barabási's course videos
   - Excellent visualizations
   - Physics-informed approach
@@ -184,7 +182,6 @@
   - Fun application of shortest paths and small-world property
   - Use as icebreaker or real-world example (Lesson 13)
 
-- **Network Medicine** (Barabási Lab) — https://www.barabasilab.com/research/network-medicine
   - Disease genes cluster in networks, network-based drug discovery
   - Shows how network thinking revolutionizes biology and medicine
   - Great for real-world lessons

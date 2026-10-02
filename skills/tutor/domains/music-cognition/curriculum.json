@@ -25,8 +25,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor/sound-and-hearing/v/sound-properties-amplitude-period-frequency-wavelength",
-        "https://musiccognition.org/basics/pitch-perception"
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor/sound-and-hearing/v/sound-properties-amplitude-period-frequency-wavelength"
       ],
       "status": "pending"
     },
@@ -38,8 +37,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=XJk8ijAUCiI",
-        "https://musiccognition.org/basics/rhythm-and-meter"
+        "https://www.youtube.com/watch?v=XJk8ijAUCiI"
       ],
       "status": "pending"
     },
@@ -51,7 +49,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.animations.physics.unsw.edu.au/jw/sound-timbre.htm",
         "https://musiclab.chromeexperiments.com/Spectrogram"
       ],
       "status": "pending"
@@ -63,10 +60,7 @@
       "concepts": ["auditory scene analysis", "grouping principles", "streaming"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.mcgill.ca/spl/research/auditory-scene-analysis",
-        "https://musiccognition.org/research/auditory-streaming"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -76,10 +70,7 @@
       "concepts": ["gestalt principles", "perceptual constancy", "context effects"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=NvgtzYCSpRk",
-        "https://musiccognition.org/basics/musical-gestalt"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -90,8 +81,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3541678/",
-        "https://www.scientificamerican.com/article/why-does-music-give-us-chills/"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3541678/"
       ],
       "status": "pending"
     },
@@ -103,7 +93,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://music-cognition.com/expectation-and-prediction/",
         "https://www.mitpressjournals.org/doi/abs/10.1162/jocn.2009.21085"
       ],
       "status": "pending"
@@ -115,9 +104,7 @@
       "concepts": ["pitch", "rhythm", "timbre", "expectation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://musiccognition.org/quiz/perception-basics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -127,10 +114,7 @@
       "concepts": ["prediction error", "surprise", "tension-resolution", "ITPRA theory"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://cognitrn.psych.indiana.edu/rgoldsto/courses/concepts/huron.pdf",
-        "https://www.musiccognition.org/huron-itpra-theory"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -141,7 +125,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/s41586-019-0962-3",
         "https://musiclab.citizenscience.ch/"
       ],
       "status": "pending"
@@ -154,8 +137,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=_kZsOISarzg",
-        "https://musiccognition.org/research/meaning-in-music"
+        "https://www.youtube.com/watch?v=_kZsOISarzg"
       ],
       "status": "pending"
     },
@@ -180,8 +162,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.psych.mcgill.ca/levitin.html",
-        "https://musiccognition.org/memory/recognition"
+        "https://www.psych.mcgill.ca/levitin.html"
       ],
       "status": "pending"
     },
@@ -194,8 +175,7 @@
       "type": "resource-drop",
       "resources": [
         "https://www.nature.com/articles/365611a0",
-        "https://journals.sagepub.com/doi/10.1177/1747021819893124",
-        "https://musiccognition.org/research/music-and-cognition"
+        "https://journals.sagepub.com/doi/10.1177/1747021819893124"
       ],
       "status": "pending"
     },
@@ -206,9 +186,7 @@
       "concepts": ["prediction", "violation", "earworms", "recognition"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://musiccognition.org/quiz/emotion-memory"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -219,8 +197,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.01090/full",
-        "https://musiccognition.org/evolution/theories"
+        "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.01090/full"
       ],
       "status": "pending"
     },
@@ -232,8 +209,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4531613/",
-        "https://musiccognition.org/social/synchrony"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4531613/"
       ],
       "status": "pending"
     },
@@ -244,10 +220,7 @@
       "concepts": ["infant-directed singing", "motherese", "developmental origins"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=NvYPZlDRMME",
-        "https://musiccognition.org/development/infant-music"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,8 +244,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/articles/nrn2152",
-        "https://musiccognition.org/neuroscience/brain-regions"
+        "https://www.nature.com/articles/nrn2152"
       ],
       "status": "pending"
     },
@@ -284,8 +256,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/nn.2726",
-        "https://musiccognition.org/neuroscience/reward"
+        "https://www.nature.com/articles/nn.2726"
       ],
       "status": "pending"
     },
@@ -296,9 +267,7 @@
       "concepts": ["evolution", "synchrony", "brain networks", "reward"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://musiccognition.org/quiz/social-neural"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -310,8 +279,7 @@
       "type": "resource-drop",
       "resources": [
         "https://mitpress.mit.edu/books/music-language-and-brain",
-        "https://www.annualreviews.org/doi/10.1146/annurev.psych.56.091103.070225",
-        "https://musiccognition.org/neuroscience/music-language"
+        "https://www.annualreviews.org/doi/10.1146/annurev.psych.56.091103.070225"
       ],
       "status": "pending"
     },
@@ -323,8 +291,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/articles/nrn2882",
-        "https://musiccognition.org/training/brain-changes"
+        "https://www.nature.com/articles/nrn2882"
       ],
       "status": "pending"
     },
@@ -336,8 +303,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.frontiersin.org/articles/10.3389/fnhum.2013.00687/full",
-        "https://musiccognition.org/clinical/music-therapy"
+        "https://www.frontiersin.org/articles/10.3389/fnhum.2013.00687/full"
       ],
       "status": "pending"
     },
@@ -349,7 +315,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.musiccognition.org/education/",
         "https://journals.sagepub.com/home/pom"
       ],
       "status": "pending"
@@ -363,8 +328,7 @@
       "type": "teach-back",
       "resources": [
         "https://www.frontiersin.org/journals/psychology/sections/auditory-cognitive-neuroscience",
-        "https://smpc.ucsd.edu/",
-        "https://musiccognition.org/resources/future-directions"
+        "https://smpc.ucsd.edu/"
       ],
       "status": "pending"
     },
@@ -375,9 +339,7 @@
       "concepts": ["emotion", "expectation", "memory", "evolution", "neural systems"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://musiccognition.org/resources/comprehensive-review"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

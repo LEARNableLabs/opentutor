@@ -42,8 +42,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Electronic_Spectroscopy_Basics/The_Beer-Lambert_Law",
-        "https://www.youtube.com/watch?v=kJy7KTvO0cU"
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Electronic_Spectroscopy_Basics/The_Beer-Lambert_Law"
       ],
       "status": "pending"
     },
@@ -81,7 +80,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=uKdQmYEgF0g",
         "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Vibrational_Spectroscopy/Vibronic_Coupling/Franck-Condon_Principle"
       ],
       "status": "pending"
@@ -94,7 +92,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.chemguide.co.uk/physical/basicrates/singletandtriplet.html",
         "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Quantum_Mechanics/10%3A_Multi-electron_Atoms/Singlet_and_Triplet_Excited_States"
       ],
       "status": "pending"
@@ -119,7 +116,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=2L8lF0bcJQg",
         "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Instrumentation_and_Analysis/Luminescence/Jablonski_Diagram"
       ],
       "status": "pending"
@@ -144,7 +140,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=8wW739TloHo",
         "https://www.microscopyu.com/techniques/fluorescence/introduction-to-fluorescence-microscopy"
       ],
       "status": "pending"
@@ -157,8 +152,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Fluorescence_and_Phosphorescence",
-        "https://www.youtube.com/watch?v=hRdMzY2KaZk"
+        "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Fluorescence_and_Phosphorescence"
       ],
       "status": "pending"
     },
@@ -183,8 +177,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.edinst.com/blog/what-is-fluorescence-lifetime/",
-        "https://www.youtube.com/watch?v=pPyPy5L7WLU"
+        "https://www.edinst.com/blog/what-is-fluorescence-lifetime/"
       ],
       "status": "pending"
     },
@@ -221,7 +214,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=0FtU8x7HVd4",
         "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Electronic_Energy_Transfer"
       ],
       "status": "pending"
@@ -234,8 +226,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.thermofisher.com/us/en/home/references/molecular-probes-the-handbook/technical-notes-and-product-highlights/fluorescence-resonance-energy-transfer-fret.html",
-        "https://www.youtube.com/watch?v=RRlnAyC0kJg"
+        "https://www.thermofisher.com/us/en/home/references/molecular-probes-the-handbook/technical-notes-and-product-highlights/fluorescence-resonance-energy-transfer-fret.html"
       ],
       "status": "pending"
     },
@@ -260,8 +251,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=uixA8ZXx0KU",
-        "https://www.nature.com/scitable/topicpage/photosynthetic-light-harvesting-pigments-and-organization-of-14376666/"
+        "https://www.youtube.com/watch?v=uixA8ZXx0KU"
       ],
       "status": "pending"
     },
@@ -273,8 +263,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Reactions/Photochemical_Reactions/Norrish_Type_I_Reaction",
-        "https://www.youtube.com/watch?v=V9yW5ZMmLhg"
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Reactions/Photochemical_Reactions/Norrish_Type_I_Reaction"
       ],
       "status": "pending"
     },
@@ -285,9 +274,7 @@
       "concepts": ["review Norrish, isomerization, cycloaddition"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.chemguide.co.uk/organicprops/carbonylcompounds/photochemistry.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -311,7 +298,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=Uc0Fk8QnHXs",
         "https://pubs.rsc.org/en/content/articlelanding/2020/cs/c9cs00203k"
       ],
       "status": "pending"
@@ -324,8 +310,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Reactions/Cycloaddition_Reactions/Photochemical_Cycloaddition",
-        "https://www.organic-chemistry.org/namedreactions/photochemical-cycloaddition.shtm"
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Reactions/Cycloaddition_Reactions/Photochemical_Cycloaddition"
       ],
       "status": "pending"
     },
@@ -337,7 +322,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=F0cPw2QqWdo",
         "https://pubs.acs.org/doi/10.1021/acs.chemrev.6b00057"
       ],
       "status": "pending"
@@ -350,9 +334,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=L_q6LRgKpTw",
-        "https://www.nrel.gov/pv/organic-photovoltaic-solar-cells.html",
-        "https://www.youtube.com/watch?v=xqhLQt4PvBY"
+        "https://www.youtube.com/watch?v=L_q6LRgKpTw"
       ],
       "status": "pending"
     },
@@ -365,7 +347,6 @@
       "type": "real-world",
       "resources": [
         "https://www.cancer.gov/about-cancer/treatment/types/photodynamic-therapy",
-        "https://www.youtube.com/watch?v=zD5hH7N0QMc",
         "https://www.nature.com/articles/nrc1071"
       ],
       "status": "pending"

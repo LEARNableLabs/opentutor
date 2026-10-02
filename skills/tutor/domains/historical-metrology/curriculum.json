@@ -25,8 +25,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Ancient_Egyptian_units_of_measurement",
-        "https://www.youtube.com/watch?v=VpWw_cjMWT0"
+        "https://en.wikipedia.org/wiki/Ancient_Egyptian_units_of_measurement"
       ],
       "status": "pending"
     },
@@ -64,8 +63,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://en.wikipedia.org/wiki/Egyptian_pyramid_construction_techniques",
-        "https://archive.org/details/ancientegyptians00will"
+        "https://en.wikipedia.org/wiki/Egyptian_pyramid_construction_techniques"
       ],
       "status": "pending"
     },
@@ -77,8 +75,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Ancient_Mesopotamian_units_of_measurement",
-        "https://cdli.ucla.edu/"
+        "https://en.wikipedia.org/wiki/Ancient_Mesopotamian_units_of_measurement"
       ],
       "status": "pending"
     },
@@ -103,8 +100,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://en.wikipedia.org/wiki/History_of_measurement",
-        "https://www.youtube.com/watch?v=VpWw_cjMWT0"
+        "https://en.wikipedia.org/wiki/History_of_measurement"
       ],
       "status": "pending"
     },
@@ -155,8 +151,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://en.wikipedia.org/wiki/Water_clock",
-        "https://www.youtube.com/watch?v=J7sXRSL5omY"
+        "https://en.wikipedia.org/wiki/Water_clock"
       ],
       "status": "pending"
     },
@@ -207,7 +202,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://en.wikipedia.org/wiki/False_weights_and_measures",
         "https://www.metmuseum.org/art/collection/search/464941"
       ],
       "status": "pending"

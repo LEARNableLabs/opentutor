@@ -29,7 +29,6 @@
   - Lectures, labs, and the Lee/Seshia textbook.
 
 - **MIT 6.08: Introduction to EECS via Embedded Systems**
-  - https://web.mit.edu/6.08/www/
   - Python on ESP32. Less low-level than this curriculum but good for project ideas.
 
 - **UT Austin Embedded Systems - Shape the World**
@@ -118,7 +117,6 @@
 ### Code Repositories
 
 - **Embedded Artistry's embedded-resources**
-  - https://github.com/embedded-artistry/embedded-resources
   - Curated list of embedded tools, libraries, and best practices.
 
 - **Awesome Embedded**
@@ -240,7 +238,6 @@
   - https://www.analog.com/en/analog-dialogue/articles/introduction-to-spi-interface.html
 
 - **CAN Specification** — Bosch CAN 2.0
-  - https://www.bosch-semiconductors.com/ip-modules/can-ip-modules/can-protocol/
 
 - **USB 2.0 Specification** — USB Implementers Forum
   - https://www.usb.org/document-library/usb-20-specification

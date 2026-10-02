@@ -24,10 +24,7 @@
       "concepts": ["psychogeography definition", "emotional geography", "subjective space"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=YwHo25U5YZY",
-        "https://www.theguardian.com/cities/2014/dec/10/psychogeography-drifting-cities-emotional-map"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -38,7 +35,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cddc.vt.edu/sionline/",
         "https://www.tate.org.uk/art/art-terms/s/situationist-international"
       ],
       "status": "pending"
@@ -76,10 +72,7 @@
       "concepts": ["dérive", "drift", "rapid passage", "playful-constructive behavior"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.cddc.vt.edu/sionline/si/theory.html",
-        "https://www.youtube.com/watch?v=bXUzg8vgCdM"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -90,8 +83,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://psychogeographicreview.com/",
-        "https://www.theguardian.com/books/2016/jul/30/merlin-coverley-walking-the-streets-psychogeography"
+        "https://psychogeographicreview.com/"
       ],
       "status": "pending"
     },
@@ -116,8 +108,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://placesjournal.org/article/urban-ambiance-and-the-idiorhythmic-city/",
-        "https://www.youtube.com/watch?v=Qj11lZOGCJc"
+        "https://placesjournal.org/article/urban-ambiance-and-the-idiorhythmic-city/"
       ],
       "status": "pending"
     },
@@ -129,8 +120,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.architecturalreview.com/essays/revisiting-new-babylon",
-        "https://www.youtube.com/watch?v=N-LiKdQ8fVk"
+        "https://www.architecturalreview.com/essays/revisiting-new-babylon"
       ],
       "status": "pending"
     },
@@ -141,10 +131,7 @@
       "concepts": ["dérive preparation", "duration", "starting points", "documentation tools"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.writersintheworld.com/psychogeography-a-practical-guide/",
-        "https://www.youtube.com/watch?v=9iR8DqjYCCY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -155,7 +142,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://theconversation.com/the-art-of-urban-wandering-psychogeography-and-the-derive-107543",
         "https://www.walklondon.org.uk/"
       ],
       "status": "pending"
@@ -167,10 +153,7 @@
       "concepts": ["liminal spaces", "thresholds", "non-places", "urban margins"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.theguardian.com/books/2011/mar/19/edgelands-paul-farley-michael-symmons",
-        "https://www.youtube.com/watch?v=mjQhCSR2NxU"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -181,8 +164,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.smithsonianmag.com/travel/psychogeography-art-drifting-through-city-180971673/",
-        "https://www.youtube.com/watch?v=_TqxfJKdlTc"
+        "https://www.smithsonianmag.com/travel/psychogeography-art-drifting-through-city-180971673/"
       ],
       "status": "pending"
     },
@@ -193,10 +175,7 @@
       "concepts": ["temporal psychogeography", "night walking", "diurnal rhythms", "urban fear"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.theguardian.com/books/2015/nov/20/night-walks-matthew-beaumont-review",
-        "https://www.atlasobscura.com/articles/why-we-walk-at-night"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -220,8 +199,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.moma.org/collection/works/145638",
-        "https://www.youtube.com/watch?v=VhHLPKk_sRA"
+        "https://www.moma.org/collection/works/145638"
       ],
       "status": "pending"
     },
@@ -233,8 +211,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.degruyter.com/document/doi/10.7312/fren17157/html",
-        "https://emotionaldatalab.com/"
+        "https://www.degruyter.com/document/doi/10.7312/fren17157/html"
       ],
       "status": "pending"
     },
@@ -246,8 +223,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.oldmapsonline.org/",
-        "https://www.youtube.com/watch?v=b_C4KdpqLqU"
+        "https://www.oldmapsonline.org/"
       ],
       "status": "pending"
     },
@@ -271,10 +247,7 @@
       "concepts": ["review of mapping methods", "synthesis", "application"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.creativemappingmethods.net/",
-        "https://www.youtube.com/watch?v=fv_8GfBmxQ0"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,10 +270,7 @@
       "concepts": ["contemporary practice", "political psychogeography", "spatial justice"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.theguardian.com/artanddesign/2011/jun/27/psychogeography-will-self-iain-sinclair",
-        "https://www.youtube.com/watch?v=kBzBCgIL9A4"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -323,10 +293,7 @@
       "concepts": ["teaching others", "public engagement", "accessibility", "introduction design"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.derive.org.uk/",
-        "https://www.youtube.com/watch?v=zGZKWHmQBvQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -337,8 +304,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.placesjournal.org/",
-        "https://www.youtube.com/watch?v=VdaJakiTxPE"
+        "https://www.placesjournal.org/"
       ],
       "status": "pending"
     },
@@ -350,8 +316,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://psychogeographicreview.com/",
-        "https://www.theguardian.com/cities/2015/jun/26/psychogeography-cities-emotional-cartography-derive"
+        "https://psychogeographicreview.com/"
       ],
       "status": "pending"
     }

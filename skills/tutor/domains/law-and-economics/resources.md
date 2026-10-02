@@ -48,17 +48,14 @@
 
 - **Khan Academy — Microeconomics** — Review of foundational concepts (externalities, Pareto efficiency, game theory). [Link](https://www.khanacademy.org/economics-finance-domain/microeconomics)
 
-- **MIT OpenCourseWare — 14.03 Microeconomic Theory and Public Policy** — Includes applications to law. Lecture notes and problem sets. [Link](https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/)
 
 - **Coursera — Microeconomics Principles (University of Illinois)** — Covers foundational micro concepts with some law applications. [Link](https://www.coursera.org/learn/microeconomics)
 
 ### University Programs & Centers
 
-- **Coase-Sandor Institute for Law and Economics (University of Chicago)** — Birthplace of law and economics. Working papers, events, podcast. [Link](https://www.law.uchicago.edu/coase-sandor-institute)
 
 - **Harvard Law School Program on Corporate Governance** — Research and commentary on corporate law and economics. [Link](https://corpgov.law.harvard.edu/)
 
-- **Yale Law School Center for the Study of Corporate Law** — Corporate governance, securities regulation, M&A. [Link](https://law.yale.edu/studying-law-yale/areas-study/center-study-corporate-law)
 
 - **NYU Law and Economics** — Research center with working papers and conferences. [Link](https://www.law.nyu.edu/centers/laweconomics)
 
@@ -72,7 +69,6 @@
 
 - **Hand Formula Calculator** — Tool for computing negligence under different care levels. [Educational resource, various university sites]
 
-- **Game Theory Toolbox** — Solve simple games (settlement bargaining, Coase negotiations). [GameTheory.net](http://www.gametheory.net/dictionary/Toolbox.html)
 
 - **Marginal Cost / Marginal Benefit Graphs** — Interactive Desmos graphs for optimal deterrence, optimal care. [Desmos](https://www.desmos.com/calculator)
 
@@ -90,7 +86,6 @@
 
 ### Code & Data
 
-- **NBER Law and Economics Program** — Working papers, datasets, replication code. [Link](https://www.nber.org/programs-projects/projects-and-centers/law-and-economics-program)
 
 - **Harvard Dataverse — Law and Economics Datasets** — Empirical data on tort reforms, crime, litigation. [Link](https://dataverse.harvard.edu/)
 
@@ -117,7 +112,6 @@
 
 - **European Association of Law and Economics (EALE)** — European perspective, annual conference. [Link](https://www.eale.nl/)
 
-- **Canadian Law and Economics Association (CLEA)** — Canadian research and policy. [Link](https://www.clea.ca/)
 
 ## Unexpected Connections (Rabbit Holes)
 

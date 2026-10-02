@@ -40,8 +40,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://mathworld.wolfram.com/Origami.html",
-        "https://www.geogebra.org/m/origami"
+        "https://mathworld.wolfram.com/Origami.html"
       ],
       "status": "pending"
     },
@@ -66,7 +65,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=AmX2EhKnPIE",
         "https://demonstrations.wolfram.com/MapFolding/"
       ],
       "status": "pending"
@@ -79,7 +77,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://langorigami.com/article/mathematical-origami/",
         "https://arxiv.org/abs/1106.1146"
       ],
       "status": "pending"
@@ -91,10 +88,7 @@
       "concepts": ["Maekawa's theorem", "M-V parity", "topological argument"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=TFaWkN8fIYc",
-        "https://erikdemaine.org/class/6849/fall2012/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -105,8 +99,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://origamisimulator.org/",
-        "https://www.geogebra.org/m/kawasaki"
+        "https://origamisimulator.org/"
       ],
       "status": "pending"
     },
@@ -118,8 +111,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/math/0406417",
-        "https://www.youtube.com/watch?v=fU8qg7gzGCw"
+        "https://arxiv.org/abs/math/0406417"
       ],
       "status": "pending"
     },
@@ -131,7 +123,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.langorigami.com/article/counting-mountain-valley-assignments/",
         "https://arxiv.org/abs/1410.5022"
       ],
       "status": "pending"
@@ -144,8 +135,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://origamisimulator.org/",
-        "https://erikdemaine.org/fonts/origami/"
+        "https://origamisimulator.org/"
       ],
       "status": "pending"
     },
@@ -157,8 +147,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/cs/0112022",
-        "https://www.youtube.com/watch?v=qPeHB0BdGLo"
+        "https://arxiv.org/abs/cs/0112022"
       ],
       "status": "pending"
     },
@@ -170,7 +159,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://langorigami.com/article/layer-ordering/",
         "https://arxiv.org/abs/1203.3602"
       ],
       "status": "pending"
@@ -182,10 +170,7 @@
       "concepts": ["obstruction arguments", "contradiction", "cycle detection"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://erikdemaine.org/papers/FoldingPaper_CGTA/",
-        "https://www.youtube.com/watch?v=Tl7qQcZdLAE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -196,8 +181,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://origamisimulator.org/",
-        "https://www.geogebra.org/m/flat-foldability"
+        "https://origamisimulator.org/"
       ],
       "status": "pending"
     },
@@ -209,8 +193,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/cs/0107024",
-        "https://erikdemaine.org/class/6849/"
+        "https://arxiv.org/abs/cs/0107024"
       ],
       "status": "pending"
     },
@@ -222,8 +205,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/cs/9603101",
-        "https://www.youtube.com/watch?v=lZ0gMCQyasc"
+        "https://arxiv.org/abs/cs/9603101"
       ],
       "status": "pending"
     },
@@ -236,8 +218,7 @@
       "type": "resource-drop",
       "resources": [
         "https://langorigami.com/article/treemaker/",
-        "https://www.youtube.com/watch?v=NYKcOFQCeno",
-        "https://github.com/langorigami/treemaker"
+        "https://www.youtube.com/watch?v=NYKcOFQCeno"
       ],
       "status": "pending"
     },
@@ -249,8 +230,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://en.wikipedia.org/wiki/Huzita–Hatori_axioms",
-        "https://www.youtube.com/watch?v=raINIIjFQ3c"
+        "https://en.wikipedia.org/wiki/Huzita–Hatori_axioms"
       ],
       "status": "pending"
     },
@@ -262,8 +242,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/cs/9907001",
-        "https://erikdemaine.org/papers/OrigamiUniversal/"
+        "https://arxiv.org/abs/cs/9907001"
       ],
       "status": "pending"
     },
@@ -275,7 +254,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=Yx-13rjfGzE",
         "https://origami.c.u-tokyo.ac.jp/~tachi/software/"
       ],
       "status": "pending"
@@ -301,8 +279,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://selfassemblylab.mit.edu/",
-        "https://www.youtube.com/watch?v=0r_8B8ov3y4"
+        "https://selfassemblylab.mit.edu/"
       ],
       "status": "pending"
     },

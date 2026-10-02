@@ -58,7 +58,6 @@
   - Interviews with elite climbers and coaches, training tips, program discussions
   - Key content: podcast interviews, training series
 
-- **Eric Hörst / PhysiVantage** — https://www.youtube.com/@PhysiVantage
   - Training exercises, fingerboard protocols, program design
   - Best for: practical how-to guides
 
@@ -68,7 +67,6 @@
 
 ### IFSC Competition Footage
 
-- **IFSC Official Channel** — https://www.youtube.com/@ifsclimbing
   - Full competition broadcasts, finals, qualification rounds
   - Use for: route reading practice, observing competition tactics, warm-up analysis
   - Key competitions: World Championships, World Cup circuit, Olympic Games
@@ -79,7 +77,6 @@
   - Assessment tools, periodized training plans, video exercise library
   - Paid but high quality, evidence-based
 
-- **TrainingBeta Programs** — https://www.trainingbeta.com/training-programs/
   - Structured training programs from various coaches
   - Range of focuses: finger strength, power, endurance, technique
 
@@ -99,11 +96,9 @@
   - Training log, session planning, analytics, hangboard timer
   - Free with premium features
 
-- **MyClimb** — https://myclimb.app
   - Training diary, route pyramid tracking, performance analytics
   - Free with premium features
 
-- **MaxClimb** — https://maxclimb.app
   - Project tracking, beta notes, send analysis
   - Free
 
@@ -119,7 +114,6 @@
   - Built-in programming, data tracking
   - ~$600 USD
 
-- **BeastMaker Training App** — https://www.beastmaker.co.uk/pages/beastmaker-app
   - Hangboard timer and protocol guide
   - Free, pairs with BeastMaker boards
 
@@ -149,7 +143,6 @@
 
 ### Programming Training Tools
 
-- **GymTimer** — https://gymtimer.app
   - Customizable interval timer for training protocols
   - Free, web-based
 
@@ -181,7 +174,6 @@
 
 - **Jonathan Siegrist** — Elite sport climber, shares training insights and mental approach
   - Instagram: https://www.instagram.com/jondoessickthings
-  - Blog: https://climbingdabbler.com
 
 - **Sasha DiGiulian** — Competition climber, route reading and mental training insights
   - Website: https://www.sashadigiulian.com
@@ -189,7 +181,6 @@
 
 - **Eva López-Rivera** — Researcher and coach, finger strength and periodization expert
   - Research: Search "Eva López climbing research"
-  - Blog: https://en.Eva-lopez.net (if available)
 
 ### Sport Scientists
 
@@ -206,11 +197,9 @@
 
 ### Training and Performance
 
-- **TrainingBeta Podcast** — https://www.trainingbeta.com/category/podcast/
   - Interviews with elite climbers, coaches, researchers
   - Wide range of topics: training, mental game, competition
 
-- **The Nugget Climbing Podcast** — https://www.enormocast.com/category/the-nugget/
   - Climbing culture, athlete interviews, training discussions
 
 - **The Power Company Podcast** — https://www.powercompanyclimbing.com/podcast
@@ -237,7 +226,6 @@
   - Training questions, program discussions, injury advice
   - Large community, varying quality
 
-- **BetaCloud** — https://www.betacloud.app
   - Route beta sharing, project tracking
   - Community-driven movement analysis
 

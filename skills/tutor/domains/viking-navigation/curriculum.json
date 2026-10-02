@@ -64,10 +64,7 @@
       "concepts": ["saga literature genre", "oral tradition vs written record", "historical reliability"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.cambridge.org/core/books/abs/cambridge-companion-to-the-icelandic-sagas/sagas-and-history/3B8E9E8F9F8E9E8F9F8E9E8F",
-        "https://notendur.hi.is/~eybjorn/ugm/sagas/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -78,8 +75,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.khm.uio.no/english/visit-us/viking-ship-museum/",
-        "https://www.archaeology.org/issues/52-1403/features/1945-vikings-voyage-north-atlantic"
+        "https://www.khm.uio.no/english/visit-us/viking-ship-museum/"
       ],
       "status": "pending"
     },
@@ -90,9 +86,7 @@
       "concepts": ["consolidation", "source evaluation", "chronology review"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=8BaPzXLs0bw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -139,9 +133,7 @@
       "concepts": ["open ocean navigation challenges", "cognitive load", "error accumulation"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.bbc.com/travel/article/20160314-the-vikings-navigational-secret"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -165,8 +157,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.academia.edu/12345678/The_Uunartoq_Disc",
-        "https://tidsskrift.dk/kuml/article/view/54845"
+        "https://www.academia.edu/12345678/The_Uunartoq_Disc"
       ],
       "status": "pending"
     },
@@ -177,9 +168,7 @@
       "concepts": ["navigation methods consolidation", "solar observation practice"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=RqXxtv4kF4U"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -189,9 +178,7 @@
       "concepts": ["Arctic summer phenomena", "continuous daylight", "shadow navigation"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.sciencenorway.no/climate-history-polar-research/how-the-vikings-navigated-in-fog/1415154"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -202,7 +189,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.astronomy.com/science/how-vikings-navigated-by-the-stars/",
         "https://arxiv.org/abs/1411.2145"
       ],
       "status": "pending"
@@ -266,9 +252,7 @@
       "concepts": ["method integration", "celestial and optical techniques", "tool evaluation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=_fWSZZZKUCI"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -279,7 +263,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.theguardian.com/science/2013/mar/03/viking-sunstone-navigation-crystal",
         "https://www.newscientist.com/article/dn23235-viking-sunstone-found-in-shipwreck/"
       ],
       "status": "pending"
@@ -291,10 +274,7 @@
       "concepts": ["kennings for directions", "place descriptions", "route narratives"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://notendur.hi.is/eybjorn/rit/nav.html",
-        "https://www.medievalists.net/2015/08/viking-navigation/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -305,7 +285,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cambridge.org/core/journals/antiquity/article/viking-navigation/E8F8E8F8E8F8E8F8",
         "https://www.jstor.org/stable/40311234"
       ],
       "status": "pending"
@@ -318,8 +297,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.drakenexpeditionamerica.com/",
-        "https://www.vikingeskibsmuseet.dk/en/professions/boatyard/our-ships/sea-stallion/"
+        "https://www.drakenexpeditionamerica.com/"
       ],
       "status": "pending"
     },
@@ -330,10 +308,7 @@
       "concepts": ["synthesis of methods", "cultural knowledge systems", "embodied expertise"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.bbc.com/reel/video/p04bxvqw/the-secrets-of-viking-navigation",
-        "https://www.historytoday.com/archive/viking-navigation"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

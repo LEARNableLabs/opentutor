@@ -51,8 +51,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://jeb.biologists.org/content/209/15/2813",
-        "https://www.youtube.com/watch?v=3_oDLEeDJKQ"
+        "https://jeb.biologists.org/content/209/15/2813"
       ],
       "status": "pending"
     },
@@ -64,8 +63,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.marinebio.org/creatures/facts/tide-pools/",
-        "https://tidepool.org/education"
+        "https://www.marinebio.org/creatures/facts/tide-pools/"
       ],
       "status": "pending"
     },
@@ -90,8 +88,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.inaturalist.org/guides/9087",
-        "https://www.youtube.com/watch?v=dW9NqGJpkYY"
+        "https://www.inaturalist.org/guides/9087"
       ],
       "status": "pending"
     },
@@ -128,10 +125,7 @@
       "concepts": ["desiccation resistance", "behavioral adaptations", "shell morphology"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.calacademy.org/explore-science/tide-pool-adaptations",
-        "https://www.youtube.com/watch?v=kBGJpN1NJDk"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -142,7 +136,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://jeb.biologists.org/content/211/17/2689",
         "https://www.nature.com/articles/nclimate1876"
       ],
       "status": "pending"
@@ -155,8 +148,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.marinebio.org/creatures/facts/osmoregulation/",
-        "https://opentext.wsu.edu/biology/chapter/marine-adaptations/"
+        "https://www.marinebio.org/creatures/facts/osmoregulation/"
       ],
       "status": "pending"
     },
@@ -168,7 +160,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://jeb.biologists.org/content/206/8/1331",
         "https://www.youtube.com/watch?v=yzbfuI0PMdA"
       ],
       "status": "pending"
@@ -181,9 +172,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.inaturalist.org/",
-        "https://www.montereybayaquarium.org/-/m/pdf/education/field-guide.pdf",
-        "https://naturemappingfoundation.org/natmap/maps/wa/tide_pool/"
+        "https://www.inaturalist.org/"
       ],
       "status": "pending"
     },
@@ -195,8 +184,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.2307/1948498",
-        "https://www.nature.com/scitable/knowledge/library/intertidal-communities-13236541/"
+        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.2307/1948498"
       ],
       "status": "pending"
     },
@@ -221,8 +209,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.journals.uchicago.edu/doi/10.1086/282400",
-        "https://www.youtube.com/watch?v=0WOw3zsoqBU"
+        "https://www.journals.uchicago.edu/doi/10.1086/282400"
       ],
       "status": "pending"
     },
@@ -234,8 +221,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9658(1997)078[1958:PEACAS]2.0.CO;2",
-        "https://www.nature.com/scitable/knowledge/library/community-ecology-13228159/"
+        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9658(1997)078[1958:PEACAS]2.0.CO;2"
       ],
       "status": "pending"
     },
@@ -260,8 +246,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.annualreviews.org/doi/abs/10.1146/annurev.es.11.110180.001121",
-        "https://www.youtube.com/watch?v=UvW_13HGB3s"
+        "https://www.annualreviews.org/doi/abs/10.1146/annurev.es.11.110180.001121"
       ],
       "status": "pending"
     },
@@ -273,8 +258,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.journals.uchicago.edu/doi/10.1086/282519",
-        "https://www.nature.com/scitable/knowledge/library/the-intermediate-disturbance-hypothesis-the-role-96039254/"
+        "https://www.journals.uchicago.edu/doi/10.1086/282519"
       ],
       "status": "pending"
     },
@@ -286,8 +270,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9658(2003)084[0028:LSATRV]2.0.CO;2",
-        "https://www.youtube.com/watch?v=G0LqDQqrqIc"
+        "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9658(2003)084[0028:LSATRV]2.0.CO;2"
       ],
       "status": "pending"
     },
@@ -325,8 +308,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.annualreviews.org/doi/abs/10.1146/annurev.ecolsys.38.091206.095632",
-        "https://www.montereybayaquarium.org/conservation-and-science/our-priorities/ocean-conservation"
+        "https://www.annualreviews.org/doi/abs/10.1146/annurev.ecolsys.38.091206.095632"
       ],
       "status": "pending"
     }

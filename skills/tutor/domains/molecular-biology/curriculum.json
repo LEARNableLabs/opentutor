@@ -50,8 +50,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK26834/",
-        "https://www.ibiology.org/genetics-and-gene-regulation/chromatin-structure/"
+        "https://www.ncbi.nlm.nih.gov/books/NBK26834/"
       ],
       "status": "pending"
     },
@@ -127,8 +126,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK9956/",
-        "https://www.ibiology.org/genetics-and-gene-regulation/gene-regulation/"
+        "https://www.ncbi.nlm.nih.gov/books/NBK9956/"
       ],
       "status": "pending"
     },
@@ -206,7 +204,6 @@
       "type": "resource-drop",
       "resources": [
         "https://www.rcsb.org/structure/4V6X",
-        "https://www.ibiology.org/molecular-biology/ribosome-structure/",
         "https://www.youtube.com/watch?v=TfYf_rPWUdY",
         "https://www.nature.com/articles/nature08403"
       ],
@@ -299,9 +296,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.nature.com/articles/s41576-020-0258-0",
         "https://www.science.org/doi/10.1126/science.abe0075",
-        "https://www.ibiology.org/human-disease/mrna-vaccines/",
         "https://www.broadinstitute.org/what-broad/areas-focus/project-spotlight/questions-and-answers-about-crispr"
       ],
       "status": "pending"

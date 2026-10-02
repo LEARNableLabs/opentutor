@@ -24,10 +24,7 @@
       "concepts": ["cave definition", "natural vs artificial", "karst vs non-karst"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nps.gov/subjects/caves/what-is-a-cave.htm",
-        "http://www.goodearthgraphics.com/virtual_cave/index.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -37,10 +34,7 @@
       "concepts": ["soluble rocks", "limestone", "dolomite", "gypsum"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.usgs.gov/special-topics/water-science-school/science/karst-landscape",
-        "http://www.goodearthgraphics.com/virtual_cave/vccave.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -50,10 +44,7 @@
       "concepts": ["lava tubes", "non-karst caves", "thermal erosion"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.nps.gov/labe/learn/nature/lava-tube-formation.htm",
-        "https://www.hawaii.edu/news/2018/05/25/lava-tube-discovery/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -63,10 +54,7 @@
       "concepts": ["carbonic acid", "CO2 dissolution", "pH and dissolution"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.usgs.gov/special-topics/water-science-school/science/acidic-water",
-        "http://www.goodearthgraphics.com/virtual_cave/vcdissol.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -76,10 +64,7 @@
       "concepts": ["dissolution kinetics", "saturation state", "flow rate effects"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/vcchem.html",
-        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -89,9 +74,7 @@
       "concepts": ["carbonic acid review", "dissolution review", "rock solubility"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/index.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -102,8 +85,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.usgs.gov/special-topics/water-science-school/science/aquifers-and-groundwater",
-        "http://www.goodearthgraphics.com/virtual_cave/vcwater.html"
+        "https://www.usgs.gov/special-topics/water-science-school/science/aquifers-and-groundwater"
       ],
       "status": "pending"
     },
@@ -114,10 +96,7 @@
       "concepts": ["phreatic morphology", "vadose morphology", "passage shape"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/vcmorph.html",
-        "https://caves.org/section/comms/books/nssguidebookseries.shtml"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -127,9 +106,7 @@
       "concepts": ["cave evolution", "multi-stage development", "relict passages"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/vcspelgen.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -139,9 +116,7 @@
       "concepts": ["inception horizons", "bedding planes", "fractures"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -152,8 +127,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.usgs.gov/programs/earthquake-hazards/faults",
-        "http://www.goodearthgraphics.com/virtual_cave/vcspelgen.html"
+        "https://www.usgs.gov/programs/earthquake-hazards/faults"
       ],
       "status": "pending"
     },
@@ -164,9 +138,7 @@
       "concepts": ["speleogenesis review", "phreatic vs vadose", "structural control"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/index.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -177,8 +149,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nps.gov/subjects/caves/speleothems.htm",
-        "http://www.goodearthgraphics.com/virtual_cave/vcstalac.html"
+        "https://www.nps.gov/subjects/caves/speleothems.htm"
       ],
       "status": "pending"
     },
@@ -189,10 +160,7 @@
       "concepts": ["stalagmites", "columns", "growth rates"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/vcstalag.html",
-        "https://www.nps.gov/cave/learn/nature/speleothem-growth-rates.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -202,10 +170,7 @@
       "concepts": ["helictites", "capillary forces", "crystallization pressure"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/vchelict.html",
-        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -215,9 +180,7 @@
       "concepts": ["cave pearls", "rimstone dams", "nucleation"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/vcpearl.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -228,8 +191,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.usgs.gov/special-topics/water-science-school/science/sinkholes",
-        "http://www.goodearthgraphics.com/virtual_cave/vckarst.html"
+        "https://www.usgs.gov/special-topics/water-science-school/science/sinkholes"
       ],
       "status": "pending"
     },
@@ -240,10 +202,7 @@
       "concepts": ["dye tracing", "groundwater flow", "springs"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.usgs.gov/mission-areas/water-resources/science/dye-tracing",
-        "https://caves.org/grotto/dcg/conserve/dyetracing.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -253,9 +212,7 @@
       "concepts": ["karst hydrology review", "sinking streams", "dye tracing"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/vcwater.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -265,9 +222,7 @@
       "concepts": ["single rope technique", "vertical caving", "rappelling"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://caves.org/section/vertical/index.shtml"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -277,10 +232,7 @@
       "concepts": ["cave surveying", "compass and tape", "station placement"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://caves.org/section/survey/index.shtml",
-        "http://www.goodearthgraphics.com/virtual_cave/vcsurvey.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -290,9 +242,7 @@
       "concepts": ["LIDAR", "3D cave models", "digital mapping"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -302,10 +252,7 @@
       "concepts": ["flash flooding", "siphons", "weather awareness"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://caves.org/pub/aca/index.htm",
-        "https://www.nss.org/safety/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -316,8 +263,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.whitenosesyndrome.org/",
-        "https://caves.org/WNS/index.htm"
+        "https://www.whitenosesyndrome.org/"
       ],
       "status": "pending"
     },
@@ -328,10 +274,7 @@
       "concepts": ["cave conservation", "minimal impact", "restoration ethics"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://caves.org/conservation/index.htm",
-        "https://www.nss.org/about-nss/nss-policy-statements/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -342,7 +285,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/index.html",
         "https://caves.org/"
       ],
       "status": "pending"

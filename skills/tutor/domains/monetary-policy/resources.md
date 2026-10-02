@@ -53,12 +53,9 @@
 
 - **Bank of England — Explainers**
   - URL: https://www.bankofengland.co.uk/explainers
-  - "How does monetary policy work?" (video + article): https://www.bankofengland.co.uk/monetary-policy/how-does-monetary-policy-work
   - Excellent visual explanations of transmission mechanisms
 
 - **EconTalk Podcast Episodes**
-  - John Taylor on the Taylor Rule: https://www.econtalk.org/john-taylor-on-the-taylor-rule/
-  - Ben Bernanke on the Federal Reserve: https://www.econtalk.org/ben-bernanke-on-the-federal-reserve-and-the-financial-crisis/
 
 - **Bloomberg "Odd Lots" Podcast**
   - Regular episodes on Fed policy, yield curves, repo markets, QE
@@ -99,12 +96,10 @@
 ### Research and Working Papers
 
 - **NBER Monetary Economics Working Papers**
-  - URL: https://www.nber.org/programs-projects/projects-and-centers/monetary-economics
   - Cutting-edge research, many papers are accessible to intermediate students
   - Especially useful for current debates (NGDP targeting, NIRP, CBDCs)
 
 - **BIS Working Papers and Quarterly Reviews**
-  - URL: https://www.bis.org/list/publs/index.htm
   - International perspective on central banking
   - Quarterly Review has excellent non-technical summaries of policy issues
 
@@ -124,7 +119,6 @@
   - Advanced students can explore policy simulations
 
 - **IRIS Toolbox for MATLAB**
-  - URL: https://iristoolbox.codeplex.com/
   - Build and simulate DSGE models
   - Requires MATLAB proficiency
 
@@ -182,7 +176,6 @@
 
 - **Monetary Policy and Inequality**
   - Does QE worsen wealth inequality? Debate between Saez/Zucman vs. Bernanke
-  - ECB research: https://www.ecb.europa.eu/pub/economic-bulletin/articles/2021/html/ecb.ebart202102_01~c2fbaa9de5.en.html
 
 - **Central Banking and Climate Change**
   - Network for Greening the Financial System (NGFS): https://www.ngfs.net/en
@@ -190,14 +183,12 @@
 
 - **Cryptocurrency and Central Banks**
   - Does Bitcoin compete with fiat money? CBDCs as a response?
-  - BIS Innovation Hub: https://www.bis.org/about/bisih.htm
 
 - **Monetary Policy in Space Colonies**
   - Thought experiment: how would you design monetary policy for a Mars colony?
   - Connects to optimal currency area theory, Hayek's denationalization of money
 
 - **Central Banking and Behavioral Economics**
-  - Akerlof & Shiller, "Animal Spirits": https://press.princeton.edu/books/paperback/9780691142333/animal-spirits
   - How do central banks manage irrational exuberance and panic?
 
 - **Political Economy of Central Banking**

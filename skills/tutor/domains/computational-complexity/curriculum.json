@@ -114,8 +114,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://theory.cs.princeton.edu/complexity/book.pdf",
-        "https://www.claymath.org/millennium-problems/p-vs-np-problem"
+        "https://theory.cs.princeton.edu/complexity/book.pdf"
       ],
       "status": "pending"
     },
@@ -139,7 +138,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.claymath.org/millennium-problems/p-vs-np-problem",
         "https://www.scottaaronson.com/blog/"
       ],
       "status": "pending"
@@ -417,8 +415,7 @@
       "type": "resource-drop",
       "resources": [
         "https://www.scottaaronson.com/blog/",
-        "https://rjlipton.wpcomstaging.com/",
-        "https://www.claymath.org/millennium-problems/p-vs-np-problem"
+        "https://rjlipton.wpcomstaging.com/"
       ],
       "status": "pending"
     },

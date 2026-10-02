@@ -25,7 +25,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nibib.nih.gov/science-education/science-topics/x-rays",
         "https://radiopaedia.org/articles/x-ray-production"
       ],
       "status": "pending"
@@ -51,8 +50,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://radiopaedia.org/articles/spatial-resolution-radiology",
-        "https://www.aapm.org/education/SAM/"
+        "https://radiopaedia.org/articles/spatial-resolution-radiology"
       ],
       "status": "pending"
     },
@@ -64,7 +62,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.nibib.nih.gov/science-education/science-topics/radiation-safety",
         "https://www.radiologyinfo.org/en/info/safety-xray"
       ],
       "status": "pending"
@@ -205,8 +202,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nibib.nih.gov/science-education/science-topics/magnetic-resonance-imaging-mri",
-        "https://ocw.mit.edu/courses/hst-583-functional-magnetic-resonance-imaging-data-acquisition-and-analysis-fall-2006/"
+        "https://www.nibib.nih.gov/science-education/science-topics/magnetic-resonance-imaging-mri"
       ],
       "status": "pending"
     },
@@ -282,7 +278,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nibib.nih.gov/science-education/science-topics/positron-emission-tomography-pet",
         "https://radiopaedia.org/articles/fluorodeoxyglucose-f-18"
       ],
       "status": "pending"
@@ -321,8 +316,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://radiopaedia.org/articles/functional-mri",
-        "https://ocw.mit.edu/courses/hst-583-functional-magnetic-resonance-imaging-data-acquisition-and-analysis-fall-2006/"
+        "https://radiopaedia.org/articles/functional-mri"
       ],
       "status": "pending"
     },
@@ -334,7 +328,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.radiologyinfo.org/en/info/choosing-imaging-exam",
         "https://www.acr.org/Clinical-Resources/ACR-Appropriateness-Criteria"
       ],
       "status": "pending"
@@ -347,7 +340,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.nibib.nih.gov/research-funding/emerging-imaging-technologies",
         "https://radiopaedia.org/articles/photon-counting-ct"
       ],
       "status": "pending"

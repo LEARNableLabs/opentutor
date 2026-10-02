@@ -25,8 +25,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ucmp.berkeley.edu/education/explorations/tours/fossil/",
-        "https://www.youtube.com/watch?v=d0uNwY0hp7g"
+        "https://ucmp.berkeley.edu/education/explorations/tours/fossil/"
       ],
       "status": "pending"
     },
@@ -37,9 +36,7 @@
       "concepts": ["taphonomic bias", "sampling", "fossilization conditions"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.smithsonianmag.com/science-nature/why-fossil-record-incomplete-180975853/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -113,8 +110,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ucmp.berkeley.edu/bacteria/bacterialh.html",
-        "https://www.youtube.com/watch?v=cKOJ2dP_3qY"
+        "https://ucmp.berkeley.edu/bacteria/bacterialh.html"
       ],
       "status": "pending"
     },
@@ -125,9 +121,7 @@
       "concepts": ["Great Oxidation Event", "cyanobacteria", "banded iron formations"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=DE4CPmLRVXs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -137,10 +131,7 @@
       "concepts": ["endosymbiosis", "eukaryogenesis", "complexity evolution"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://evolution.berkeley.edu/the-origin-of-complex-life-it-was-a-freak-accident/",
-        "https://www.youtube.com/watch?v=Z5jYqxLhBb0"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -151,7 +142,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=bZW_kJjarCQ",
         "https://ucmp.berkeley.edu/vendian/critters.html"
       ],
       "status": "pending"
@@ -164,7 +154,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=pKA384OSeZw",
         "https://ucmp.berkeley.edu/cambrian/camb.html"
       ],
       "status": "pending"
@@ -189,8 +178,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ucmp.berkeley.edu/plants/plantae.html",
-        "https://www.youtube.com/watch?v=L93nR_mCAHs"
+        "https://ucmp.berkeley.edu/plants/plantae.html"
       ],
       "status": "pending"
     },
@@ -201,9 +189,7 @@
       "concepts": ["terrestrialization", "exoskeletons", "respiratory adaptations"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=Np3pGhoHxfA"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -214,7 +200,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=Gj-c4NnbZMA",
         "https://tiktaalik.uchicago.edu/"
       ],
       "status": "pending"
@@ -226,9 +211,7 @@
       "concepts": ["Carboniferous period", "giant arthropods", "coal formation"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.youtube.com/watch?v=ehnFt-buLrk"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -239,7 +222,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=KeJgLxSrZ3g",
         "https://ucmp.berkeley.edu/education/events/cowen2a.html"
       ],
       "status": "pending"
@@ -263,9 +245,7 @@
       "concepts": ["Triassic recovery", "archosaur radiation", "competitive replacement"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=RqMAdKbLB0A"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -289,7 +269,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=mZnVwGLKsNE",
         "https://www.smithsonianmag.com/science-nature/how-dinosaurs-shrank-became-birds-180949895/"
       ],
       "status": "pending"
@@ -301,10 +280,7 @@
       "concepts": ["marine reptiles", "pterosaurs", "flight evolution"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.youtube.com/watch?v=EM0Ztq_bWvA",
-        "https://www.youtube.com/watch?v=nsF4jbjNhpA"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -314,9 +290,7 @@
       "concepts": ["Mesozoic mammals", "ecological niches", "nocturnal adaptations"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=F5H0rPVUsZc"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -352,7 +326,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=Rh7RCbb_JLI",
         "https://ucmp.berkeley.edu/mammal/mammal.html"
       ],
       "status": "pending"
@@ -365,7 +338,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=bm7eZ0vXBaE",
         "https://evolution.berkeley.edu/the-evolution-of-whales/"
       ],
       "status": "pending"
@@ -378,8 +350,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://humanorigins.si.edu/evidence",
-        "https://www.youtube.com/watch?v=lLgPmK72CBA"
+        "https://humanorigins.si.edu/evidence"
       ],
       "status": "pending"
     },
@@ -390,9 +361,7 @@
       "concepts": ["Pleistocene extinctions", "overkill hypothesis", "climate change"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=zfn0d_fVZoI"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -403,7 +372,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=iSO3GA9HqPc",
         "https://www.smithsonianmag.com/science-nature/what-is-the-anthropocene-and-are-we-in-it-164801414/"
       ],
       "status": "pending"
@@ -416,8 +384,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.annualreviews.org/journal/earth",
-        "https://www.youtube.com/c/PBS_Eons/videos"
+        "https://www.annualreviews.org/journal/earth"
       ],
       "status": "pending"
     }

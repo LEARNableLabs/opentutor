@@ -58,7 +58,6 @@
 
 ### Interactive Tools & Demos
 - **AllenNLP Demos**
-  - https://demo.allennlp.org/
   - Live demos: sentiment analysis, NER, reading comprehension, dependency parsing, coreference resolution
   - **Best for**: seeing models in action, understanding task definitions
 
@@ -201,7 +200,6 @@
   - Shows up in: attention metaphors (lesson 15), model interpretability (lesson 29)
 
 - **Semiotics** — signs, symbols, meaning-making beyond language
-  - https://plato.stanford.edu/entries/semiotics/
   - Shows up in: multimodal learning, grounding
 
 - **Philosophy of language** — Wittgenstein's language games, Searle's Chinese Room

@@ -16,7 +16,6 @@
 
 - **Software Foundations** (Volume 1: Logical Foundations, Volume 2: PLF) — Self-paced Coq-based course with exercises: https://softwarefoundations.cis.upenn.edu/
 
-- **CMU 15-312 (Principles of Programming Languages)** — Robert Harper's legendary course. Lecture notes available: https://www.cs.cmu.edu/~rwh/courses/ppl/
 
 - **Cornell CS 6110 (Advanced Programming Languages)** — Covers operational semantics, type systems, and program analysis: https://www.cs.cornell.edu/courses/cs6110/
 

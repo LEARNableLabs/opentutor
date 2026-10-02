@@ -6,11 +6,9 @@
 
 - **Alcock & Rubenstein: "Animal Behavior" (11th edition, 2019)** — More natural history-focused than Davies et al., with vivid case studies and beautiful photography. Emphasizes evolutionary perspective. Good complement to theory-heavy treatment. [Sinauer/Oxford catalog](https://global.oup.com/ushe/product/animal-behavior-9780878939664)
 
-- **Dugatkin: "Principles of Animal Behavior" (4th edition, 2020)** — Integrates neural, hormonal, and developmental mechanisms with evolutionary analysis. Good for students interested in proximate-ultimate integration. [University of Chicago Press](https://press.uchicago.edu/ucp/books/book/chicago/P/bo45478344.html)
 
 - **Westneat & Fox (eds): "Evolutionary Behavioral Ecology" (2010)** — Advanced textbook with chapters by leading researchers. Each chapter covers one topic in depth. Good reference for diving deeper on specific areas. [Oxford Scholarship Online](https://academic.oup.com/book/9355)
 
-- **MIT OCW: 9.20 Animal Behaviour (Spring 2014)** — Full course with lecture notes, readings, and assignments by Prof. Thomas W. Polger. Covers Tinbergen's questions, foraging, mating, social behavior. [OCW course page](https://ocw.mit.edu/courses/9-20-animal-behavior-spring-2014/)
 
 - **Stanford: Evolution and Ecology of Animal Behavior (BIO 117)** — Syllabus and reading list often available via department. Covers game theory, sexual selection, cooperation. Look for materials from Prof. Joan Roughgarden or similar faculty.
 
@@ -22,7 +20,6 @@
 
 - **Cornell Lab of Ornithology: Bird Academy courses** — "The Basics of Bird Behavior" and other courses with video, quizzes, and expert instruction. [Bird Academy](https://academy.allaboutbirds.org/)
 
-- **Howard Hughes Medical Institute BioInteractive** — Short films on stickleback evolution, rock pocket mouse adaptation, Grants' finch research. Excellent for showing evolution in action. [BioInteractive video library](https://www.biointeractive.org/classroom-resources/video)
 
 - **TEDx Talks on behavioral ecology** — Search for talks by researchers like Marlene Zuk (sexual selection), Jennifer Verdolin (prairie dogs), or Meg Crofoot (collective behavior). Variable quality but accessible entry points.
 

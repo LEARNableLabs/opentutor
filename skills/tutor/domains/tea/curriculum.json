@@ -24,10 +24,7 @@
       "concepts": ["Camellia sinensis taxonomy", "var. sinensis vs. var. assamica", "domestication history"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.worldteaacademy.com/tea-plant-species",
-        "https://pubmed.ncbi.nlm.nih.gov/tea-plant-genetics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -88,10 +85,7 @@
       "concepts": ["enzymatic activity", "polyphenol oxidase", "withering", "cell damage"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://ocw.mit.edu/food-chemistry-oxidation",
-        "https://www.teaguardian.com/oxidation-basics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -101,10 +95,7 @@
       "concepts": ["minimal processing", "enzymatic browning inhibition", "white tea chemistry"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/white-tea-antioxidants",
-        "https://www.seriouseats.com/white-tea-processing"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -114,9 +105,7 @@
       "concepts": ["sha qing", "enzyme deactivation", "temperature control", "pan-firing vs. steaming"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.specialtyteainstitute.org/green-tea-methods"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -139,7 +128,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.seriouseats.com/oolong-processing-science",
         "https://taiwanoolongs.com/processing-deep-dive"
       ],
       "status": "pending"
@@ -152,8 +140,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.sciencedirect.com/black-tea-oxidation-products",
-        "https://www.chineseteastory.com/red-tea-terminology"
+        "https://www.sciencedirect.com/black-tea-oxidation-products"
       ],
       "status": "pending"
     },
@@ -164,9 +151,7 @@
       "concepts": ["pile fermentation", "microbial activity", "puerh processing", "aging chemistry"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://pubmed.ncbi.nlm.nih.gov/puerh-microbiology"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -177,8 +162,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sciencedirect.com/tea-flavor-chemistry",
-        "https://www.coffeeandteachemistry.com/tea-compounds"
+        "https://www.sciencedirect.com/tea-flavor-chemistry"
       ],
       "status": "pending"
     },
@@ -189,10 +173,7 @@
       "concepts": ["L-theanine", "glutamate receptors", "umami chemistry", "shade-growing effects"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/l-theanine-tea",
-        "https://www.yunomi.life/theanine-umami-science"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -202,9 +183,7 @@
       "concepts": ["six processing categories", "oxidation levels", "fermentation types"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.worldteaacademy.com/processing-quiz"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -215,8 +194,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sciencedirect.com/astringency-mechanisms",
-        "https://www.seriouseats.com/tea-astringency-science"
+        "https://www.sciencedirect.com/astringency-mechanisms"
       ],
       "status": "pending"
     },
@@ -227,9 +205,7 @@
       "concepts": ["aromatic compounds", "terpenes", "aldehydes", "volatile extraction"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/tea-aroma-chemistry"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -251,10 +227,7 @@
       "concepts": ["heat retention", "porosity", "yixing clay", "porcelain vs. glass"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.teaguardian.com/teaware-science",
-        "https://crimsonlotustea.com/blogs/teawareguide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -264,10 +237,7 @@
       "concepts": ["water chemistry", "mineral content", "pH effects", "water temperature"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.seriouseats.com/tea-water-quality",
-        "https://www.specialtyteainstitute.org/water-standards"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -277,9 +247,7 @@
       "concepts": ["flavor chemistry", "gongfu basics", "sensory evaluation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.worldteaacademy.com/intermediate-review"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -314,7 +282,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.specialtyteainstitute.org/grading-standards",
         "https://www.tres.gov.tw/quality-assessment-protocol"
       ],
       "status": "pending"
@@ -326,9 +293,7 @@
       "concepts": ["storage chemistry", "aging mechanisms", "humidity effects", "flavor development"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/tea-aging-chemistry"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -339,7 +304,6 @@
       "difficulty": 5,
       "type": "teach-back",
       "resources": [
-        "https://www.specialtyteainstitute.org/comprehensive-evaluation",
         "https://www.globalteachampionship.com/masterclass-protocols"
       ],
       "status": "pending"
@@ -351,10 +315,7 @@
       "concepts": ["cultivar science synthesis", "processing chemistry integration", "gongfu technique mastery", "quality assessment", "comprehensive tea knowledge"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.worldteaacademy.com/mastery-assessment",
-        "https://www.specialtyteainstitute.org/certification-prep"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

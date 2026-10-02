@@ -30,7 +30,7 @@
       "concepts": ["exoskeleton structure", "cuticle layers", "molting necessity"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://entomology.ca.uky.edu/ent425/c02/integument", "https://www.britannica.com/science/exoskeleton"],
+      "resources": ["https://www.britannica.com/science/exoskeleton"],
       "status": "pending"
     },
     {
@@ -40,7 +40,7 @@
       "concepts": ["tracheal system", "spiracles", "gas exchange"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://askabiologist.asu.edu/how-do-insects-breathe", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3367411/"],
+      "resources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3367411/"],
       "status": "pending"
     },
     {
@@ -50,7 +50,7 @@
       "concepts": ["compound eyes", "visual processing", "UV perception"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.science.org/content/article/how-flies-fly", "https://www.nationalgeographic.com/science/article/insect-vision"],
+      "resources": ["https://www.science.org/content/article/how-flies-fly"],
       "status": "pending"
     },
     {
@@ -60,7 +60,7 @@
       "concepts": ["holometaboly", "hemimetaboly", "imaginal discs", "hormonal control"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://entomology.ca.uky.edu/ent425/c07/metamor", "https://www.youtube.com/watch?v=3BZNUx4K7Js"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -70,7 +70,7 @@
       "concepts": ["body plan review", "physiology integration", "metamorphosis types"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://askabiologist.asu.edu/explore/insects"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -90,7 +90,7 @@
       "concepts": ["Lepidoptera characteristics", "wing scales", "morphological differences"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.butterfliesandmoths.org/faq", "https://www.fs.usda.gov/wildflowers/pollinators/documents/InsectSynopsesLepidoptera.pdf"],
+      "resources": ["https://www.butterfliesandmoths.org/faq"],
       "status": "pending"
     },
     {
@@ -100,7 +100,7 @@
       "concepts": ["Hymenoptera taxonomy", "social organization", "ecological roles"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": ["https://www.fs.usda.gov/wildflowers/pollinators/documents/InsectSynopsesHymenoptera.pdf", "https://entomology.ca.uky.edu/ent425/c15/hymenop"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -120,7 +120,7 @@
       "concepts": ["Hemiptera characteristics", "piercing-sucking mouthparts", "incomplete metamorphosis"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://entomology.ca.uky.edu/ent425/c16/hemipte", "https://bugguide.net/node/view/94"],
+      "resources": ["https://bugguide.net/node/view/94"],
       "status": "pending"
     },
     {
@@ -130,7 +130,7 @@
       "concepts": ["insect phylogeny", "living fossils", "evolutionary history"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": ["https://www.nature.com/articles/s41586-018-0590-4", "https://evolution.berkeley.edu/the-history-of-life-on-earth/the-mesozoic-era/insects-take-to-the-skies/"],
+      "resources": ["https://www.nature.com/articles/s41586-018-0590-4"],
       "status": "pending"
     },
     {
@@ -150,7 +150,7 @@
       "concepts": ["molting process", "ecdysis", "ecdysone hormone"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://askabiologist.asu.edu/molting", "https://entomology.ca.uky.edu/ent425/c07/growth"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -160,7 +160,7 @@
       "concepts": ["diapause", "migration strategies", "seasonal adaptations"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.fs.usda.gov/wildflowers/pollinators/Monarch_Butterfly/migration/", "https://entomology.wisc.edu/blog/2020/12/02/overwintering-insects/"],
+      "resources": ["https://www.fs.usda.gov/wildflowers/pollinators/Monarch_Butterfly/migration/"],
       "status": "pending"
     },
     {
@@ -170,7 +170,7 @@
       "concepts": ["chemoreception", "antennae function", "olfactory receptors"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3894723/", "https://askabiologist.asu.edu/antenna-senses"],
+      "resources": ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3894723/"],
       "status": "pending"
     },
     {
@@ -180,7 +180,7 @@
       "concepts": ["flight muscle physiology", "metabolic rate", "energy efficiency"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://jeb.biologists.org/content/218/1/153", "https://www.annualreviews.org/doi/10.1146/annurev.ento.44.1.429"],
+      "resources": ["https://www.annualreviews.org/doi/10.1146/annurev.ento.44.1.429"],
       "status": "pending"
     },
     {
@@ -190,7 +190,7 @@
       "concepts": ["aquatic adaptations", "plastron respiration", "gills"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.bioone.org/doi/10.1899/0887-3593(2006)25%5B887:AIROAI%5D2.0.CO%3B2", "https://extension.oregonstate.edu/ask-expert/featured/how-do-aquatic-insects-breathe"],
+      "resources": ["https://www.bioone.org/doi/10.1899/0887-3593(2006)25%5B887:AIROAI%5D2.0.CO%3B2"],
       "status": "pending"
     },
     {
@@ -200,7 +200,7 @@
       "concepts": ["bioluminescence", "luciferin-luciferase reaction", "mate attraction"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.nationalgeographic.com/animals/article/fireflies", "https://www.science.org/content/article/how-fireflies-light"],
+      "resources": ["https://www.science.org/content/article/how-fireflies-light"],
       "status": "pending"
     },
     {
@@ -210,7 +210,7 @@
       "concepts": ["growth and development", "sensory systems", "special adaptations"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://askabiologist.asu.edu/explore/insects"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -220,7 +220,7 @@
       "concepts": ["pheromone trails", "chemical communication", "collective behavior"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://askabiologist.asu.edu/explore/ant-communication", "https://www.antwiki.org/wiki/Chemical_Communication"],
+      "resources": ["https://www.antwiki.org/wiki/Chemical_Communication"],
       "status": "pending"
     },
     {
@@ -240,7 +240,7 @@
       "concepts": ["decomposition", "cellulose digestion", "symbiosis"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.smithsonianmag.com/science-nature/how-termites-conquered-world-180976677/", "https://entomology.ca.uky.edu/ent425/c19/isoptera"],
+      "resources": ["https://www.smithsonianmag.com/science-nature/how-termites-conquered-world-180976677/"],
       "status": "pending"
     },
     {
@@ -250,7 +250,7 @@
       "concepts": ["predation strategies", "ambush vs pursuit", "specialized structures"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.youtube.com/watch?v=EJ_y8xCJId8", "https://entomology.ca.uky.edu/ent425/c12/mantid"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -260,7 +260,7 @@
       "concepts": ["Batesian mimicry", "Müllerian mimicry", "aposematism"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.amnh.org/explore/science-topics/biodiversity/mimicry", "https://evolution.berkeley.edu/mimicry-a-model-system-for-evolution/"],
+      "resources": ["https://www.amnh.org/explore/science-topics/biodiversity/mimicry"],
       "status": "pending"
     },
     {
@@ -280,7 +280,7 @@
       "concepts": ["social insects", "predator-prey dynamics", "ecosystem services"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://www.entsoc.org/resources/education"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -290,7 +290,7 @@
       "concepts": ["pollinator decline", "habitat loss", "pesticides", "climate change"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.fs.usda.gov/wildflowers/pollinators/What_is_Pollination/threats.shtml", "https://www.unep.org/resources/publication/assessment-report-pollinators-pollination-and-food-production"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -300,7 +300,7 @@
       "concepts": ["disease vectors", "pathogen transmission", "vector biology"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.cdc.gov/mosquitoes/about/mosquitoes-and-disease.html", "https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases"],
+      "resources": ["https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases"],
       "status": "pending"
     },
     {
@@ -310,7 +310,7 @@
       "concepts": ["integrated pest management", "biological control", "edible insects", "sustainable agriculture"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.fao.org/edible-insects/en/", "https://ipmworld.umn.edu/what-ipm"],
+      "resources": ["https://www.fao.org/edible-insects/en/"],
       "status": "pending"
     },
     {
@@ -330,7 +330,7 @@
       "concepts": ["curriculum synthesis", "conservation priorities", "applied entomology", "future directions"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.entsoc.org/resources/education", "https://entomologytoday.org/"],
+      "resources": ["https://entomologytoday.org/"],
       "status": "pending"
     }
   ]

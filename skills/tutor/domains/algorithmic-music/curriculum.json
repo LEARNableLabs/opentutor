@@ -64,7 +64,7 @@
       "concepts": ["Markov chains", "state transitions", "probability matrices"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://setosa.io/blog/2014/07/26/markov-chains/", "https://github.com/korymath/markov-music"],
+      "resources": ["https://setosa.io/blog/2014/07/26/markov-chains/"],
       "status": "pending"
     },
     {
@@ -74,7 +74,7 @@
       "concepts": ["implementation", "debugging", "musical output"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://github.com/korymath/markov-music", "https://tonejs.github.io/"],
+      "resources": ["https://tonejs.github.io/"],
       "status": "pending"
     },
     {
@@ -104,7 +104,7 @@
       "concepts": ["genetic algorithms", "fitness functions", "evolution"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://en.wikipedia.org/wiki/Genetic_algorithm", "https://github.com/osteele/genetic-algorithm-music"],
+      "resources": ["https://en.wikipedia.org/wiki/Genetic_algorithm"],
       "status": "pending"
     },
     {
@@ -164,7 +164,7 @@
       "concepts": ["pattern languages", "mini-notation", "temporal composition"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://tidalcycles.org/docs/", "https://tidalcycles.org/docs/patternlib/tutorials/mini_notation/"],
+      "resources": ["https://tidalcycles.org/docs/"],
       "status": "pending"
     },
     {
@@ -204,7 +204,7 @@
       "concepts": ["abstraction levels", "expressiveness", "workflow"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://toplap.org/wiki/Videos", "https://github.com/toplap/awesome-livecoding"],
+      "resources": ["https://github.com/toplap/awesome-livecoding"],
       "status": "pending"
     },
     {

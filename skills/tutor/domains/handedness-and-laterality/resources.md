@@ -26,13 +26,11 @@
 
 #### Educational Series
 - **2-Minute Neuroscience: Split-Brain Patients** — concise explanation of corpus callosum cutting and hemispheric specialization. [https://www.youtube.com/watch?v=ZMLzP1VCANo](https://www.youtube.com/watch?v=ZMLzP1VCANo)
-- **Crash Course Psychology #28: Brain Asymmetry** — accessible overview of lateralization for general audience. [https://www.youtube.com/watch?v=TaC_MygfKpQ](https://www.youtube.com/watch?v=TaC_MygfKpQ)
 - **Khan Academy: Hemispheric Specialization** — free educational content on left/right brain differences. [https://www.khanacademy.org/science/health-and-medicine/executive-systems-of-the-brain](https://www.khanacademy.org/science/health-and-medicine/executive-systems-of-the-brain)
 
 #### Classic Demonstrations
 - **Michael Gazzaniga: Split-Brain Experiments** — Nobel Prize-related work showing hemispheric independence. [https://www.youtube.com/watch?v=dFs9WO2B8uI](https://www.youtube.com/watch?v=dFs9WO2B8uI)
 - **Jill Bolte Taylor: My Stroke of Insight (TED)** — neuroanatomist describes her own stroke, hemispheric differences (note: somewhat oversimplified but engaging). [https://www.ted.com/talks/jill_bolte_taylor_my_stroke_of_insight](https://www.ted.com/talks/jill_bolte_taylor_my_stroke_of_insight)
-- **V.S. Ramachandran on Phantom Limbs and Brain Plasticity** — discusses lateralization and reorganization. [https://www.youtube.com/watch?v=1wqM7kD5UqY](https://www.youtube.com/watch?v=1wqM7kD5UqY)
 
 #### Documentaries
 - **BBC Horizon: The Brain: A Secret History** — episode on split-brain research and hemispheric specialization.
@@ -42,7 +40,6 @@
 
 #### Self-Assessment
 - **Edinburgh Handedness Inventory (online)** — take the standard questionnaire, see your laterality quotient. [https://www.brainmapping.org/shared/Edinburgh.php](https://www.brainmapping.org/shared/Edinburgh.php)
-- **Oldfield Handedness Questionnaire** — alternative online version. [https://www.psytoolkit.org/survey-library/handedness-oldfield.html](https://www.psytoolkit.org/survey-library/handedness-oldfield.html)
 
 #### Brain Imaging Databases
 - **Human Connectome Project (HCP)** — open-access brain imaging data including structural asymmetries. [https://www.humanconnectome.org/](https://www.humanconnectome.org/)

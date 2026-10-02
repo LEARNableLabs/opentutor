@@ -5,7 +5,6 @@
 ### Textbooks & Academic
 
 - **"The Alcohol Textbook" (5th ed.) by Jacques, Lyons, and Kelsall** — Industry-standard reference covering fermentation science, distillation theory, and quality control. Comprehensive but accessible. Best for: deep dives into fermentation biochemistry and industrial processes.
-  - https://www.nottingham.ac.uk/biosciences/documents/alcohol-textbook-5th-edition.pdf
 
 - **"Whisky: Technology, Production and Marketing" (2nd ed.) by Inge Russell et al.** — Detailed chemistry and engineering of whisky production. Excellent on malting, distillation equipment, and maturation. Best for: lessons 17, 23-24.
   - https://www.elsevier.com/books/whisky/russell/978-0-12-401735-1
@@ -61,7 +60,6 @@
   - https://www.chemours.com/en/resource-library/ethanol-water-equilibrium-calculator
 
 - **Proof Calculator (TTB formula)** — Convert between ABV, proof, and density. Practical tool for lessons 17-18.
-  - https://www.ttb.gov/spirits/bam/chapter4.pdf
 
 ### Code & Simulations
 
@@ -77,10 +75,8 @@
   - https://www.amazon.com/Food-Cooking-Science-Lore-Kitchen/dp/0684800012
 
 - **"Proof: The Science of Booze" by Adam Rogers** — Pop-science book on distillation, fermentation, and aging. Engaging introduction to the topic; good supplementary reading.
-  - https://www.hmhbooks.com/shop/books/Proof/9780547897912
 
 - **"The Drunken Botanist" by Amy Stewart** — Chemistry and botany of spirit ingredients (grains, agave, botanicals). Best for: lessons 17, 20-22 (spirit-specific).
-  - https://www.algonquinbooks.com/book/the-drunken-botanist/
 
 ## Academic Papers (Deep Dives)
 
@@ -120,7 +116,6 @@
   - https://www.artisan-distiller.com/community
 
 - **ADI Forums (American Distilling Institute)** — Industry professionals; requires membership. Best for advanced questions and commercial perspectives.
-  - https://distilling.com/community/
 
 ## Unexpected Connections
 
@@ -142,7 +137,6 @@
   - https://www.ttb.gov/spirits
 
 - **OSHA Distillery Safety Guidelines** — Flammability, ventilation, and hazard management. Important safety context for lessons 3, 8.
-  - https://www.osha.gov/distilleries
 
 - **Methanol Safety Data (NIH)** — Toxicology and exposure data; addresses methanol fears in lesson 14.
   - https://pubchem.ncbi.nlm.nih.gov/compound/Methanol

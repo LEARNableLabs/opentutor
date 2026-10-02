@@ -55,8 +55,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf",
-        "https://www.youtube.com/user/stevebruntonchannel"
+        "https://www.cds.caltech.edu/~murray/books/AM05/pdf/fbs-principles_13Jan14.pdf"
       ],
       "status": "pending"
     },
@@ -133,8 +132,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf",
-        "https://www.youtube.com/user/stevebruntonchannel"
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf"
       ],
       "status": "pending"
     },
@@ -197,8 +195,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf",
-        "https://www.youtube.com/user/stevebruntonchannel"
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf"
       ],
       "status": "pending"
     },
@@ -275,8 +272,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf",
-        "https://www.youtube.com/user/stevebruntonchannel"
+        "https://ocw.mit.edu/courses/6-241j-dynamic-systems-and-control-spring-2011/996025f6db0d90b00f11c44fc49b85f9_MIT6_241JS11_textbook.pdf"
       ],
       "status": "pending"
     },

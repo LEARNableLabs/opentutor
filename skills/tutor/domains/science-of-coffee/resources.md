@@ -4,7 +4,6 @@
 
 ### Academic & Research
 
-- **UC Davis Coffee Center** (https://coffee.ucdavis.edu/)
   - Covers: cultivation science, sensory research, sustainability, processing innovations
   - Why it's good: Peer-reviewed research made accessible; excellent for intermediate students who want academic rigor without dense jargon
   - Best for: Lessons 1-10 (cultivation, processing), lesson 26 (sensory)
@@ -31,7 +30,6 @@
   - Why it's good: Technical depth with clear explanations; intermediate-to-advanced
   - Best for: Lessons 11-15 (roasting), 17-20 (extraction)
 
-- **SCA Water Quality Handbook** (https://sca.coffee/research/water-quality-handbook)
   - Covers: Water hardness, alkalinity, TDS, mineral composition, target ranges
   - Why it's good: Free, practical, backs up recommendations with chemistry
   - Best for: Lesson 22 (water chemistry)
@@ -56,7 +54,6 @@
     - "The Ultimate V60 Technique" (lessons 17-20)
     - "Roasting Coffee - What Happens Inside the Bean" (lessons 11-15)
 
-- **Compound Chemistry** (https://www.compoundchem.com/2014/10/08/coffee-roasting/)
   - Format: Infographics and explainer posts on coffee chemistry
   - Why it's good: Visual, concise, chemically accurate
   - Best for: Lesson 11 (Maillard reaction), lesson 15 (volatile compounds)
@@ -68,7 +65,6 @@
 
 ### Interactive Tools
 
-- **SCA Coffee Taster's Flavor Wheel** (https://sca.coffee/research/coffee-tasters-flavor-wheel)
   - Format: Interactive wheel (also available as poster)
   - Why it's good: Visual taxonomy of coffee flavors; essential for sensory training
   - Best for: Lesson 23 (flavor wheel), lesson 26 (cupping)

@@ -26,8 +26,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.complexityexplorer.org/courses/104-introduction-to-complexity",
-        "https://www.youtube.com/watch?v=oi7MdC6ALRU"
+        "https://www.complexityexplorer.org/courses/104-introduction-to-complexity"
       ],
       "status": "pending"
     },
@@ -39,7 +38,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://complexity-explorables.org/explorables/flock/",
         "https://www.youtube.com/watch?v=QbUPfMXXQIY"
       ],
       "status": "pending"
@@ -52,7 +50,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://complexity-explorables.org/explorables/a-patchwork-darwinian-life/",
         "https://arxiv.org/abs/1310.5417"
       ],
       "status": "pending"
@@ -142,8 +139,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "http://networksciencebook.com/chapter/5",
-        "https://complexity-explorables.org/explorables/baraba/"
+        "http://networksciencebook.com/chapter/5"
       ],
       "status": "pending"
     },
@@ -232,8 +228,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.santafe.edu/research/results/working-papers/the-structure-of-the-space-of-genotypes-and-it",
-        "https://complexity-explorables.org/explorables/nk-ruggedness/"
+        "https://www.santafe.edu/research/results/working-papers/the-structure-of-the-space-of-genotypes-and-it"
       ],
       "status": "pending"
     },
@@ -282,10 +277,7 @@
       "concepts": ["co-evolution", "arms races", "mutualism"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=vf7nj01ccNM",
-        "https://plato.stanford.edu/entries/evolution-cooperation/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -296,7 +288,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://complexity-explorables.org/explorables/the-beauty-of-bacteria/",
         "https://ncase.me/trust/"
       ],
       "status": "pending"
@@ -322,8 +313,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.santafe.edu/research/results/working-papers/agent-based-computational-economics",
-        "https://www.youtube.com/watch?v=S7d-VbsXClg"
+        "https://www.santafe.edu/research/results/working-papers/agent-based-computational-economics"
       ],
       "status": "pending"
     },
@@ -335,8 +325,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.nature.com/articles/nrn3214",
-        "https://www.youtube.com/watch?v=JZBccyBvbUY"
+        "https://www.nature.com/articles/nrn3214"
       ],
       "status": "pending"
     },
@@ -348,8 +337,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/461472a",
-        "https://complexity-explorables.org/explorables/oh-shoot/"
+        "https://www.nature.com/articles/461472a"
       ],
       "status": "pending"
     },

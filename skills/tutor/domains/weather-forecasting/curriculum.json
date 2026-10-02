@@ -34,7 +34,7 @@
       "concepts": ["stratus", "stratocumulus", "cumulus", "fog"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://cloudatlas.wmo.int/en/clouds-low-etage.html", "https://scijinks.gov/clouds/"],
+      "resources": ["https://cloudatlas.wmo.int/en/clouds-low-etage.html"],
       "status": "pending"
     },
     {
@@ -64,7 +64,7 @@
       "concepts": ["cumulonimbus", "vertical development", "convection", "precipitation"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.weather.gov/jetstream/cumulonimbus", "https://scijinks.gov/thunderstorms/"],
+      "resources": ["https://www.weather.gov/jetstream/cumulonimbus"],
       "status": "pending"
     },
     {
@@ -94,7 +94,7 @@
       "concepts": ["anticyclones", "subsidence", "fair weather patterns"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.weather.gov/jetstream/high", "https://www.metoffice.gov.uk/weather/learn-about/weather/atmosphere/pressure"],
+      "resources": ["https://www.weather.gov/jetstream/high"],
       "status": "pending"
     },
     {
@@ -104,7 +104,7 @@
       "concepts": ["cyclones", "convergence", "lifting mechanisms", "storminess"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.weather.gov/jetstream/cyclone", "https://scijinks.gov/low-pressure/"],
+      "resources": ["https://www.weather.gov/jetstream/cyclone"],
       "status": "pending"
     },
     {
@@ -114,7 +114,7 @@
       "concepts": ["cold fronts", "squall lines", "frontal lifting", "post-frontal clearing"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.weather.gov/jetstream/cfront", "https://www.metoffice.gov.uk/weather/learn-about/weather/types-of-weather/fronts"],
+      "resources": ["https://www.weather.gov/jetstream/cfront"],
       "status": "pending"
     },
     {
@@ -154,7 +154,7 @@
       "concepts": ["pressure tendency", "three-hour change", "trend interpretation"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.weather.gov/source/zhu/ZHU_Training_Page/pressure_tendency/pressure_tendency.html", "https://aviationweather.gov/metar/data"],
+      "resources": ["https://aviationweather.gov/metar/data"],
       "status": "pending"
     },
     {
@@ -184,7 +184,7 @@
       "concepts": ["precipitation types", "thermal profiles", "melting layer", "surface temperature"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.weather.gov/jetstream/precip_types", "https://scijinks.gov/rain-snow-sleet/"],
+      "resources": ["https://www.weather.gov/jetstream/precip_types"],
       "status": "pending"
     },
     {
@@ -224,7 +224,7 @@
       "concepts": ["24-hour forecasting", "forecast limits", "uncertainty quantification"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://www.weather.gov/jetstream/fcst", "https://www.metoffice.gov.uk/weather/guides/forecasts"],
+      "resources": ["https://www.weather.gov/jetstream/fcst"],
       "status": "pending"
     },
     {

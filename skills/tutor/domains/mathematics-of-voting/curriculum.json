@@ -64,7 +64,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cut-the-knot.org/Curriculum/SocialScience/Borda.shtml",
         "https://en.wikipedia.org/wiki/Borda_count"
       ],
       "status": "pending"
@@ -183,7 +182,6 @@
       "difficulty": 5,
       "type": "teach-back",
       "resources": [
-        "https://web.stanford.edu/~jdlevin/Econ%20202/Arrow.pdf",
         "https://math.stackexchange.com/questions/tagged/arrows-theorem"
       ],
       "status": "pending"
@@ -217,8 +215,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Fair_division",
-        "https://www.youtube.com/watch?v=VLz9VqFuqh4"
+        "https://en.wikipedia.org/wiki/Fair_division"
       ],
       "status": "pending"
     },
@@ -268,8 +265,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Envy-free_item_allocation",
-        "https://www.cs.cmu.edu/~sandholm/cs15-892F13/Fair%20division.pdf"
+        "https://en.wikipedia.org/wiki/Envy-free_item_allocation"
       ],
       "status": "pending"
     },
@@ -319,8 +315,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://en.wikipedia.org/wiki/Divide_and_choose",
-        "https://www.cut-the-knot.org/Curriculum/SocialScience/CakeCutting.shtml"
+        "https://en.wikipedia.org/wiki/Divide_and_choose"
       ],
       "status": "pending"
     },
@@ -404,8 +399,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Shapley%E2%80%93Shubik_power_index",
-        "https://www.youtube.com/watch?v=V62eBDnWPMw"
+        "https://en.wikipedia.org/wiki/Shapley%E2%80%93Shubik_power_index"
       ],
       "status": "pending"
     },
@@ -421,8 +415,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://en.wikipedia.org/wiki/Mechanism_design",
-        "https://www.cs.cmu.edu/~sandholm/cs15-892F13/Fair%20division.pdf"
+        "https://en.wikipedia.org/wiki/Mechanism_design"
       ],
       "status": "pending"
     },

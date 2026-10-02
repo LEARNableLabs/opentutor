@@ -25,8 +25,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.inaturalist.org/guides/1352",
-        "https://www.cybertracker.org/tracking-basics"
+        "https://www.inaturalist.org/guides/1352"
       ],
       "status": "pending"
     },
@@ -37,9 +36,7 @@
       "concepts": ["locomotion anatomy", "toe patterns", "pad structure", "claws vs. retractable"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.wildernessawareness.org/articles/track-anatomy"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -50,7 +47,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://trackercertification.com/resources/canid-comparison",
         "https://www.inaturalist.org/observations?taxon_id=41067"
       ],
       "status": "pending"
@@ -74,9 +70,7 @@
       "concepts": ["track identification", "elimination method", "field diagnosis"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.cybertracker.org/track-quiz"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -98,9 +92,7 @@
       "concepts": ["gait definition", "four fundamental gaits", "energy efficiency"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.wildernessawareness.org/articles/understanding-gaits"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -123,9 +115,7 @@
       "concepts": ["stride vs. straddle", "speed indicators", "gait transitions"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.cybertracker.org/gait-identification"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -147,9 +137,7 @@
       "concepts": ["behavioral transitions", "alarm response", "terrain adaptation", "investigation behavior"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.wildernessawareness.org/articles/gait-transitions"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -159,9 +147,7 @@
       "concepts": ["gait recognition", "speed estimation", "behavior interpretation"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://trackercertification.com/practice-gaits"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -183,9 +169,7 @@
       "concepts": ["browse patterns", "kill sites", "bone evidence", "foraging trails"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.wildernessawareness.org/articles/feeding-signs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -208,9 +192,7 @@
       "concepts": ["day beds", "denning behavior", "thermal refugia", "security sites"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.wildernessawareness.org/articles/bedding-sites"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -232,9 +214,7 @@
       "concepts": ["sign integration", "behavioral narrative", "multiple evidence types"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://trackercertification.com/scenario-practice"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -244,9 +224,7 @@
       "concepts": ["scat vs. tracks vs. feeding", "sign complex reading", "species stories"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.cybertracker.org/sign-identification"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -256,9 +234,7 @@
       "concepts": ["track aging", "weathering stages", "environmental factors", "relative dating"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.wildernessawareness.org/articles/aging-tracks"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -268,9 +244,7 @@
       "concepts": ["precipitation effects", "freeze-thaw cycles", "desiccation", "track preservation"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://trackercertification.com/weathering-effects"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -280,9 +254,7 @@
       "concepts": ["substrate effects", "track fidelity", "registration quality", "medium-specific interpretation"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.wildernessawareness.org/articles/substrate-tracking"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -292,9 +264,7 @@
       "concepts": ["context reconstruction", "environmental timeline", "weather indicators in tracks"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.cybertracker.org/track-aging-quiz"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -304,9 +274,7 @@
       "concepts": ["trailing methodology", "step-by-step tracking", "track traps", "sign cutting"],
       "difficulty": 5,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.wildernessawareness.org/articles/trailing-techniques"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -316,9 +284,7 @@
       "concepts": ["integrated tracking", "morphology to behavior", "full skill integration"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://trackercertification.com/field-scenarios"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -328,9 +294,7 @@
       "concepts": ["behavioral reconstruction", "narrative from evidence", "tracker interpretation", "field mastery"],
       "difficulty": 5,
       "type": "real-world",
-      "resources": [
-        "https://www.cybertracker.org/advanced-scenarios"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

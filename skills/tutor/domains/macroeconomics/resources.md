@@ -5,7 +5,6 @@
 ### Textbooks
 
 - **Mankiw, N. Gregory. *Macroeconomics* (9th ed.)** — Gold standard intermediate text. Clear exposition, extensive policy applications, US-focused. Best for traditional IS-LM approach.
-  - https://www.macmillanihe.com/page/detail/Macroeconomics/?k=9781319106058
 
 - **Blanchard, Olivier and David R. Johnson. *Macroeconomics* (7th ed.)** — Alternative to Mankiw, stronger on European perspective and open economy. More emphasis on dynamics.
   - https://www.pearson.com/en-us/subject-catalog/p/macroeconomics/P200000005835
@@ -25,7 +24,6 @@
   - https://ocw.mit.edu/courses/14-05-intermediate-macroeconomics-spring-2013/
 
 - **MIT OpenCourseWare 14.06 Macroeconomic Theory IV** — Advanced undergraduate/early graduate. For students who want to go deeper.
-  - https://ocw.mit.edu/courses/14-06-intermediate-macroeconomics-spring-2004/
 
 - **Stanford Online Economics Courses** — Various macro courses with video lectures.
   - https://online.stanford.edu/
@@ -44,7 +42,6 @@
   - https://www.federalreserveeducation.org/resources/video
 
 - **EconplusDal** — YouTube channel with whiteboard-style macro lessons, exam prep.
-  - https://www.youtube.com/c/EconplusDal
 
 - **Economic Synopses (St. Louis Fed)** — Short video explainers on current economic topics.
   - https://research.stlouisfed.org/publications/economic-synopses
@@ -87,10 +84,8 @@
   - https://github.com/mortada/fredapi
 
 - **Macroeconomic Models in Python** — GitHub repo with implementations of Solow, RBC, New Keynesian DSGE.
-  - https://github.com/jesusfv/econ-models
 
 - **Notebook Economics** — Jupyter notebooks for teaching macro concepts.
-  - https://github.com/rstudio/teaching-economics
 
 ## Research and Policy Sources
 
@@ -182,7 +177,6 @@
   - https://www.lse.ac.uk/granthaminstitute/publication/the-economics-of-climate-change-the-stern-review/
 
 - **Nordhaus Integrated Assessment Models** — DICE/RICE models linking climate and economy (Nobel 2018)
-  - https://williamnordhaus.com/
 
 ### Macro and Psychology
 - **Behavioral Macroeconomics** — Animal spirits, over-optimism, narrative economics (Shiller, Akerlof)
@@ -208,7 +202,6 @@
 
 ### Macro and Institutions
 - **Why Nations Fail** (Acemoglu & Robinson) — Institutions determine long-run prosperity
-  - https://www.penguinrandomhouse.com/books/209838/why-nations-fail-by-daron-acemoglu-and-james-a-robinson/
 
 ### Macro and Finance
 - **Asset pricing and macro** — Equity premium puzzle, consumption-based CAPM
@@ -254,7 +247,6 @@
   - https://www.core-econ.org/the-economy/
 
 - **Fed Challenge** — National competition where students present monetary policy recommendations
-  - https://www.federalreserve.gov/events/fed-challenge/
 
 - **Federal Reserve Educational Lesson Plans** — Classroom activities and problem sets
   - https://www.federalreserveeducation.org/resources/

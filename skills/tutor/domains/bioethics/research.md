@@ -72,8 +72,6 @@ Bioethics at the intersection of technology and moral boundaries, covering:
 ## Key Sources
 
 ### Academic Resources
-- **Stanford Encyclopedia of Philosophy — Bioethics**: https://plato.stanford.edu/entries/bioethics/
-- **NIH Bioethics Resources**: https://www.nih.gov/health-information/nih-clinical-research-trials-you/bioethics-resources
 - **Kennedy Institute of Ethics (Georgetown)**: https://kennedyinstitute.georgetown.edu/
 - **The Hastings Center**: https://www.thehastingscenter.org/
 - **Presidential Commission for Bioethical Issues archives**: https://bioethicsarchive.georgetown.edu/pcsbi/
@@ -87,7 +85,6 @@ Bioethics at the intersection of technology and moral boundaries, covering:
 ### Online Courses
 - **Harvard's Justice with Michael Sandel**: https://www.edx.org/course/justice (includes bioethics modules)
 - **Georgetown Bioethics online programs**: https://bioethics.georgetown.edu/online-learning/
-- **Coursera Medical Ethics**: https://www.coursera.org/learn/medical-ethics
 
 ### Video Lectures
 - **Harvard's Justice (Sandel)**: https://www.youtube.com/playlist?list=PL30C13C91CFFEFEA6
@@ -96,11 +93,9 @@ Bioethics at the intersection of technology and moral boundaries, covering:
 
 ### Interactive Tools
 - **AI Incident Database**: https://incidentdatabase.ai/ (real-world AI ethics cases)
-- **CRISPR Babies case studies**: https://www.genome.gov/about-genomics/policy-issues/Genome-Editing
 - **Global Observatory for Genome Editing**: https://www.who.int/groups/expert-advisory-committee-on-developing-global-standards-for-governance-and-oversight-of-human-genome-editing
 
 ### Organizations & Journals
-- UNESCO Bioethics Programme: https://www.unesco.org/en/ethics-science-and-technology/bioethics
 - *American Journal of Bioethics*
 - *Journal of Medical Ethics*
 - *Bioethics* (Wiley)

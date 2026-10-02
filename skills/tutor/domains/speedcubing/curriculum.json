@@ -24,7 +24,7 @@
       "concepts": ["cross importance", "inspection time", "efficient cross"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": ["https://www.cubeskills.com/tutorials/improving-your-cross"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -54,7 +54,7 @@
       "concepts": ["cross orientation", "color neutrality", "cross-to-F2L transition"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.cubeskills.com/tutorials/colour-neutrality"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -94,7 +94,7 @@
       "concepts": ["F2L case patterns", "corner-edge relationships", "algorithmic F2L"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": ["https://www.speedsolving.com/wiki/index.php/F2L", "https://algdb.net/puzzle/333/f2l"],
+      "resources": ["https://www.speedsolving.com/wiki/index.php/F2L"],
       "status": "pending"
     },
     {
@@ -104,7 +104,7 @@
       "concepts": ["cross preservation", "slot choice", "pair insertion technique"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.cubeskills.com/tutorials/advanced-cross-techniques"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -144,7 +144,7 @@
       "concepts": ["57 OLL cases", "pattern recognition", "OLL algorithm selection"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": ["https://www.speedsolving.com/wiki/index.php/OLL", "https://algdb.net/puzzle/333/oll"],
+      "resources": ["https://www.speedsolving.com/wiki/index.php/OLL"],
       "status": "pending"
     },
     {
@@ -174,7 +174,7 @@
       "concepts": ["finger tricks", "turning technique", "ergonomic movement"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.cubeskills.com/tutorials/finger-tricks-and-fast-turning"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -184,7 +184,7 @@
       "concepts": ["lookahead", "tracking next pair", "pause reduction"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.cubeskills.com/tutorials/improving-lookahead"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -254,7 +254,7 @@
       "concepts": ["practice strategy", "weakness identification", "progress tracking"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": ["https://www.cubeskills.com/blog/how-to-practice-efficiently"],
+      "resources": [],
       "status": "pending"
     },
     {

@@ -59,7 +59,6 @@
 ### Videos
 
 **Two Minute Papers** (YouTube)
-- https://www.youtube.com/c/TwoMinutePapers
 - **Content**: Concise explanations of cutting-edge graphics research papers
 - **Use for**: "Rabbit hole" moments showing modern techniques (neural rendering, path guiding)
 - **Best episodes**: "This is Why Ray Tracing is a BIG Deal", "NVIDIA's AI: Rendering Scenes in Real-Time!"
@@ -159,7 +158,6 @@
 - **Why**: Theoretical foundation for all light transport; introduce in lesson 23
 
 **"Bidirectional Path Tracing"** (Lafortune & Willems, 1993)
-- **Link**: http://graphics.stanford.edu/courses/cs348b-03/papers/lafortune-thesis.pdf
 - **Why**: Advanced technique preview for lesson 26
 
 ## People to Follow
