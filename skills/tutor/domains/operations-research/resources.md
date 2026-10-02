@@ -255,6 +255,7 @@ For a student beginning this curriculum:
    - JuMP: https://jump.dev/JuMP.jl/stable/
    - CVXPY: https://www.cvxpy.org/
 5. **Clone example repos** (optional but helpful):
+   - `git clone https://github.com/google/or-tools.git`
    - Explore `or-tools/examples/python/` or `/julia/`
 
 ## Unexpected Connections (for wild cards)
