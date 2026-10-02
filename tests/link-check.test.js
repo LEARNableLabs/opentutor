@@ -13,10 +13,17 @@ describe('verify-links', () => {
     expect(plan('https://youtu.be/dQw4w9WgXcQ').url).toContain('oembed');
   });
 
-  it('routes DOIs to Crossref and arXiv to its API', () => {
+  it('routes DOIs to the handle system and arXiv to its API', () => {
     // The handle system, not Crossref: a Zenodo or arXiv DOI is DataCite's and Crossref answers 404 for it.
     expect(plan('https://doi.org/10.5281/zenodo.1234').url).toBe('https://doi.org/api/handles/10.5281/zenodo.1234');
     expect(plan('https://arxiv.org/pdf/1706.03762.pdf').url).toContain('id_list=1706.03762');
+  });
+
+  it('keeps transient and access failures unknown so the audit retries them', async () => {
+    for (const status of [401, 403, 429, 500, 503]) {
+      expect(await check('https://example.org/a', answer(status))).toEqual({ status: 'unknown', reason: status });
+    }
+    expect(await check('https://example.org/a', answer(200))).toEqual({ status: 'ok' });
   });
 
   it('calls a link dead on 404/410 or an unresolvable host, and nothing else', async () => {

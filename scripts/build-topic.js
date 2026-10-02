@@ -15,6 +15,7 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { buildTopicSlug, installDomain } from '../lib/core/domain-install.js';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -22,7 +23,7 @@ const flag = (name) => (args.includes(name) ? args[args.indexOf(name) + 1] : und
 const topic = args.find((a, i) => !a.startsWith('--') && !args[i - 1]?.startsWith('--'));
 if (!topic) { console.error('usage: build-topic.js "<topic>" [--level L] [--slug S] [--install]'); process.exit(1); }
 const level = flag('--level') || 'intermediate';
-const slug = flag('--slug') || topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const slug = buildTopicSlug(topic, flag('--slug'));
 process.env.OPENTUTOR_PIPELINE_LLM ||= 'cli';
 
 const { TutorStore } = await import('../lib/core/store.js');
@@ -100,10 +101,7 @@ try {
     // The six files a shipped domain has. plan.md and critique.md stay in the log: they are build-time notes.
     // An unapproved build is installed only on purpose; its critique says what is still wrong.
     const dest = path.join(tutor, 'domains', slug);
-    fs.mkdirSync(dest, { recursive: true });
-    for (const file of ['curriculum.json', 'concept-map.md', 'teaching-notes.md', 'resources.md', 'research.md', 'teacher.md']) {
-      if (fs.existsSync(path.join(built, file))) fs.copyFileSync(path.join(built, file), path.join(dest, file));
-    }
+    installDomain(built, dest);
     console.log(`installed into skills/tutor/domains/${slug}${result.approved ? '' : ' (NOT approved by the Critic, see domain/critique.md in the log)'}`);
   }
   console.log(`log: ${logDir}`);

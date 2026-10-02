@@ -79,6 +79,9 @@ describe('URL extraction', () => {
 });
 
 describe('URL extraction details', () => {
+  it('preserves a literal resource URL with an unmatched closing parenthesis', () => {
+    expect(extractUrls({ resources: ['https://example.org/archive/part)'] })).toEqual(['https://example.org/archive/part)']);
+  });
   it('drops sentence punctuation, decodes JSON slashes, and walks every string of a value', () => {
     expect(extractUrls('Read https://example.org/paper! Or "https://example.org/b?".')).toEqual(['https://example.org/paper', 'https://example.org/b']);
     expect(extractUrls('{"url":"https:\\/\\/example.org\\/x"}')).toEqual(['https://example.org/x']);
@@ -87,6 +90,16 @@ describe('URL extraction details', () => {
 });
 
 describe('URL verification across rounds', () => {
+  it('passes verified dead URLs to the Critic in agentic mode', async () => {
+    const { pipeline, adapter } = make({ domainReplies: [] });
+    const verifyUrls = vi.fn(async (urls) => urls.map((url) => ({ url, ok: false })));
+    const parsed = { resources: 'https://example.org/dead', curriculum: { lessons: [] } };
+    const ctx = { topic: 'T', slug: 't', studentLevel: 'beginner', parsed };
+    await pipeline._act('critique', ctx, { verifyUrls });
+    expect(verifyUrls).toHaveBeenCalledWith(['https://example.org/dead']);
+    expect(adapter.generate.mock.calls.at(-1)[0]).toContain('https://example.org/dead');
+    expect(ctx.status).toBe('APPROVED');
+  });
   it('checks each URL once per run and reports a dead one every round', async () => {
     const verifyUrls = vi.fn(async (urls) => urls.map((url) => ({ url, ok: !url.includes('dead') })));
     const { pipeline } = make({ domainReplies: [] });

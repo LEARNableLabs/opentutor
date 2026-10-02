@@ -9,6 +9,15 @@ const reply = (text) => ({ generate: vi.fn(async () => ({ text })) });
 const R = (url, type = 'video') => ({ url, type, title: `T ${url}`, why: 'because' });
 
 describe('findResources', () => {
+  it('bounds verification work even if the reply duplicates a lesson or has too many resources', async () => {
+    const candidates = Array.from({ length: 20 }, (_, n) => R(`https://example.org/${n}`));
+    const adapter = reply(JSON.stringify({ lessons: [{ lesson: 1, resources: candidates }, { lesson: 1, resources: candidates }] }));
+    const isReal = vi.fn(async () => true);
+    const found = await findResources({ adapter, topic: 'T', level: 'beginner', lessons, isReal });
+    expect(isReal).toHaveBeenCalledTimes(6);
+    expect(found).toHaveLength(1);
+    expect(found[0].resources).toHaveLength(6);
+  });
   it('asks for the web tools, and keeps only real URLs', async () => {
     const adapter = reply(JSON.stringify({ lessons: [{ lesson: 1, resources: [R('https://youtu.be/AAAAAAAAAAA'), R('https://made.up/x'), R('http://insecure.example/y'), R('https://youtu.be/AAAAAAAAAAA')] }] }));
     const notes = [];
