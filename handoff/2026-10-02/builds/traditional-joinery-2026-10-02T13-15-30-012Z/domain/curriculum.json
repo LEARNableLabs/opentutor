@@ -1,0 +1,569 @@
+{
+  "topic": "Traditional joinery — Japanese and Western wood joints",
+  "slug": "traditional-joinery",
+  "created": "2026-10-02",
+  "student_level": "intermediate",
+  "exit_criteria": [
+    "Explain how grain direction and moisture movement constrain joint design",
+    "Identify each core Western and Japanese joint in scope and sketch it as an exploded view",
+    "State the load each core joint resists and its typical failure mode",
+    "Give the assembly direction and order for each core joint",
+    "Compare a Western and a Japanese solution to the same structural problem",
+    "Separate documented claims from tradition or anecdote (pull saws, earthquake performance)"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Wood as a Material",
+      "title": "Why does wood split easily along the grain but hardly at all across it?",
+      "concepts": [
+        "grain direction",
+        "anisotropy",
+        "longitudinal, radial and tangential directions"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending",
+      "notes": "Search directions: 'Wood Handbook: Wood as an Engineering Material', USDA Forest Products Laboratory, General Technical Report FPL-GTR-190 (search: Wood Handbook FPL-GTR-190). Add the URL only after it passes the verification gate."
+    },
+    {
+      "lesson": 2,
+      "module": "Wood as a Material",
+      "title": "Why does a tabletop glued down to its frame crack?",
+      "concepts": [
+        "wood movement",
+        "tangential vs radial shrinkage",
+        "cross-grain constraint"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending",
+      "notes": "Search directions: Wood Handbook FPL-GTR-190, chapters on moisture relations and dimensional change. Add the URL only after it passes the verification gate."
+    },
+    {
+      "lesson": 3,
+      "module": "Wood as a Material",
+      "title": "What does 'seasoned' wood really mean, and why should a joint-maker care?",
+      "concepts": [
+        "moisture content",
+        "equilibrium moisture content",
+        "wood movement"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Wood as a Material",
+      "title": "Why won't end grain hold glue?",
+      "concepts": [
+        "end grain",
+        "long-grain glue surface",
+        "glue joint strength"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Forces and Failure",
+      "title": "What is a joint actually resisting?",
+      "concepts": [
+        "tension",
+        "compression",
+        "shear",
+        "racking"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Forces and Failure",
+      "title": "Review: can you predict how a board will move and what will pull on it?",
+      "concepts": [
+        "grain direction",
+        "wood movement",
+        "forces on joints"
+      ],
+      "difficulty": 1,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Forces and Failure",
+      "title": "Why do beams fail at the bottom first?",
+      "concepts": [
+        "bending and shear",
+        "neutral axis",
+        "tension face"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=f08Y39UiC-o",
+        "https://unseel.com/engineering/beam-bending",
+        "https://practical.engineering/blog/2018/8/1/why-does-concrete-need-reinforcement",
+        "https://www.gutenberg.org/files/12299/12299-h/12299-h.htm"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Forces and Failure",
+      "title": "Glue, peg, wedge or nail: what actually holds a joint together?",
+      "concepts": [
+        "mechanical lock",
+        "friction fit",
+        "glue vs fasteners"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=dEVm5Jmvtmc",
+        "https://woodgears.ca/joint_strength/glue.html",
+        "https://www.youtube.com/watch?v=ugw29gB8HW0",
+        "https://research.fs.usda.gov/fpl/wood-handbook"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Forces and Failure",
+      "title": "Where does this joint break first?",
+      "concepts": [
+        "failure modes",
+        "load path",
+        "weakest cross-section"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=lpjf5KoqpRQ",
+        "https://woodgears.ca/joint_strength/pockethole.html",
+        "https://ftet.com/sites/default/files/2018-07/miller_report.pdf"
+      ],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: a butt joint, with the end grain of member A nailed into the face of member B, set at a right-angle corner. (b) Loading: pull A away from B (tension), push them together (compression), then slide A along B (shear). For each case, predict what yields first: the nails withdrawing, the end grain crushing, or the wood splitting at the nail line. (c) Sketch: draw an exploded view with the nails shown and arrows marking each load. Then circle the spot where you expect it to fail."
+    },
+    {
+      "lesson": 10,
+      "module": "Western Core Joints",
+      "title": "Why is the mortise and tenon everywhere?",
+      "concepts": [
+        "mortise and tenon",
+        "draw-bore",
+        "racking resistance",
+        "failure modes"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=iblkJnlmg4w",
+        "https://woodgears.ca/mortise/strong.html",
+        "https://www.popularwoodworking.com/techniques/drawboring-resurrected/",
+        "https://en.wikipedia.org/wiki/Nuki_(joinery)"
+      ],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: the tenon is a tongue cut on the end of the rail, with shoulders on each side. The mortise is a matching rectangular hole in the stile. In a draw-bore joint, the peg hole through the tenon sits slightly closer to the shoulder than the hole through the mortise cheeks, so driving the peg pulls the shoulder tight. (b) Assembly: the tenon slides straight into the mortise along the rail's axis, then the peg is driven across the joint. Typical failures are a tenon cheek shearing off, a mortise wall splitting near the end of the stile, and the peg bending or shearing. (c) Sketch: draw an exploded view with the offset peg holes marked."
+    },
+    {
+      "lesson": 11,
+      "module": "Western Core Joints",
+      "title": "Why does a dovetail lock in one direction only?",
+      "concepts": [
+        "through dovetail",
+        "half-blind dovetail",
+        "assembly direction",
+        "failure modes"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=OCYjoj6cfno",
+        "https://www.youtube.com/watch?v=cRPgCMmbeyQ",
+        "https://woodgears.ca/dovetail/strength.html",
+        "https://japanesewoodjoints.com/joint/koshikake-ari-tsugi"
+      ],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: the tails are flared fingers on one board and the pins are wedge-shaped fingers on the other. On a through dovetail, both sets show on the outside faces. On a half-blind dovetail, the pin board is only partly cut through, so the tails are hidden from the front (the classic drawer front). (b) Assembly: the tails drop onto the pins along a single direction. The flare blocks pulling apart in the direction at right angles to that path, but the joint slides apart freely along the path. Typical failures are short grain at a pin or tail breaking off, and glue failure letting the joint back out along its assembly path. (c) Sketch: draw an exploded view and add an arrow for the one direction the joint can come apart."
+    },
+    {
+      "lesson": 12,
+      "module": "Western Core Joints",
+      "title": "Review: which force does each joint resist, and how does it fail?",
+      "concepts": [
+        "forces on joints",
+        "mortise and tenon",
+        "dovetail",
+        "failure modes"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=CE147Ow7RmM",
+        "https://woodgears.ca/joint_strength/",
+        "https://www.arch2o.com/perfection-traditional-japanese-joinery-animated-illustrations-gifs/",
+        "https://www.designboom.com/technology/free-interactive-software-easily-complex-japanese-wooden-joints-furniture-04-13-2021/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Western Core Joints",
+      "title": "Lap, bridle or dado: which one would you pick for this load?",
+      "concepts": [
+        "lap joint",
+        "bridle joint",
+        "basic dado",
+        "failure modes"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: in a lap joint, each member is cut to half its thickness where they overlap, so the faces end up flush. In a bridle joint, a slot is cut in the end of one member and the other member has a tenon-like tongue that sits in it, open on three sides. In a basic dado, a square-bottomed groove runs across the grain of one board and the end of the other board sits in it (as with a shelf in a bookcase side). (b) Assembly: the lap drops straight down, the bridle slides on from the open end, and the dado accepts the shelf from the front or from above. Typical failures are glue-line shear on the lap, splitting of the bridle's slot cheeks, and the shelf in a dado crushing the groove edge or pulling out of it. (c) Sketch: draw an exploded view of each joint with its main load arrow."
+    },
+    {
+      "lesson": 14,
+      "module": "Western Core Joints",
+      "title": "Why do old doors have floating panels?",
+      "concepts": [
+        "frame-and-panel",
+        "wood movement",
+        "failure modes"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Western Core Joints",
+      "title": "Can you explain, and sketch, why you'd choose a mortise and tenon over a dovetail?",
+      "concepts": [
+        "mortise and tenon",
+        "dovetail",
+        "sketching",
+        "assembly direction"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Tools and Layout",
+      "title": "Why do Japanese saws cut on the pull stroke?",
+      "concepts": [
+        "pull saw vs push saw",
+        "blade tension and buckling",
+        "documented vs anecdote"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [],
+      "status": "pending",
+      "notes": "Hedge: the mechanics are well established. A blade that cuts on the pull works in tension, so it can be made thinner without buckling and leaves a narrower kerf. The history of why the pull stroke became standard in Japan is a separate question with no single settled answer. Teach the mechanics as documented and the historical explanations as proposed ones."
+    },
+    {
+      "lesson": 17,
+      "module": "Tools and Layout",
+      "title": "What does a kanna do differently from a Western bench plane?",
+      "concepts": [
+        "kanna",
+        "bench plane",
+        "chisels (nomi vs Western bench chisels)"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Tools and Layout",
+      "title": "How do you lay out a joint: with a marking gauge, or with a sumitsubo and sashigane?",
+      "concepts": [
+        "marking gauge",
+        "sumitsubo",
+        "sashigane",
+        "sketching"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Tools and Layout",
+      "title": "Review: which Western joint, and which tool would you reach for?",
+      "concepts": [
+        "Western core joints",
+        "tool traditions",
+        "layout"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Japanese Splices",
+      "title": "What is a splice for? Meet the koshikake ari tsugi",
+      "concepts": [
+        "tsugi (splices)",
+        "koshikake ari tsugi",
+        "failure modes"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: two members meet end to end on one axis. One has a dovetail-shaped tenon (ari) with a ledge cut beneath it. The other has a matching dovetail socket above a seat (koshikake), which carries vertical load. (b) Assembly: the dovetail member drops down into the socket from above until it rests on the seat. The dovetail resists the two ends pulling apart along the axis. Typical failures are the dovetail neck shearing or splitting under tension, and the seat crushing. (c) Sketch: draw an exploded side view with the drop-in direction and the seat marked."
+    },
+    {
+      "lesson": 21,
+      "module": "Japanese Splices",
+      "title": "Which way does a kama tsugi come apart?",
+      "concepts": [
+        "koshikake kama tsugi",
+        "assembly direction",
+        "failure modes"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: this is a seated splice like the ari tsugi, but the tenon is a gooseneck (kama): a narrow neck ending in a wider head. The other member has a matching socket and a seat. (b) Assembly: the gooseneck member drops in from above onto the seat. The head hooks against the socket, so the ends cannot pull apart along the axis. The joint can only come apart by lifting the member back up. Typical failures are the neck of the gooseneck shearing in tension and the socket walls splitting. (c) Sketch: draw an exploded view and add arrows for the one way it comes apart and the ways it resists."
+    },
+    {
+      "lesson": 22,
+      "module": "Japanese Splices",
+      "title": "How does an okkake daisen tsugi stand up to bending?",
+      "concepts": [
+        "okkake daisen tsugi",
+        "bending and shear",
+        "failure modes"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: a long, slanted, stepped scarf in which the two members overlap along a sloping cut. Large pegs (daisen) are driven through the overlap. (b) Assembly: the two halves are brought together side by side, slid along the scarf until the steps lock, then pegged. The long overlap carries bending across the joint, and the pegs pull it tight. Typical failures are the pegs shearing, splitting along the scarf from a peg hole, and the steps crushing. (c) Sketch: draw an exploded view with the sliding direction and peg positions, and mark the tension and compression faces."
+    },
+    {
+      "lesson": 23,
+      "module": "Japanese Splices",
+      "title": "Why does a kanawa tsugi need a wedge?",
+      "concepts": [
+        "kanawa tsugi",
+        "wedge (sen) tightening",
+        "failure modes"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: two identical halves of a slanted, rebated scarf with small interlocking tongues at each end. When the halves are in place, a rectangular slot remains between them. (b) Assembly: the halves slide together side by side. Then a wedge (sen) is driven through the slot, forcing the halves apart along the axis so they bear hard against each other's stepped ends. This lets the joint resist tension, bending and twisting. Typical failures are the wedge loosening as the wood shrinks, splitting at the slot, and the stepped ends crushing. (c) Sketch: draw an exploded view showing the two halves, the wedge, and which way it is driven."
+    },
+    {
+      "lesson": 24,
+      "module": "Japanese Splices",
+      "title": "Can you explain, and sketch, how the wedge makes a kanawa tsugi work?",
+      "concepts": [
+        "kanawa tsugi",
+        "sketching",
+        "assembly order"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Japanese Splices",
+      "title": "Review: which splice would you choose, and how would each one fail?",
+      "concepts": [
+        "tsugi (splices)",
+        "failure modes",
+        "assembly direction"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Japanese Connections",
+      "title": "How does a nagahozo with komisen pin a beam into a post?",
+      "concepts": [
+        "nagahozo (long tenon)",
+        "komisen (draw pin)",
+        "bending and shear",
+        "failure modes"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: a long tenon (nagahozo) on the end of a beam or sill goes deep into, or right through, a post. A pin with a squared, tapered section (komisen) is driven through the post and tenon. (b) Assembly: the tenon goes into the post's mortise, then the komisen is driven across it. Like a draw-bore, it pulls the joint tight. Typical failures are the tenon shearing at the shoulder, the post splitting along the pin line, and the pin crushing or loosening as the wood dries. (c) Sketch: draw an exploded view with the pin's direction and the shear plane marked."
+    },
+    {
+      "lesson": 27,
+      "module": "Japanese Connections",
+      "title": "What happens when two beams cross? The watari ago",
+      "concepts": [
+        "watari ago",
+        "shiguchi (connections)",
+        "failure modes"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: two beams cross at right angles at different heights. The upper beam has a notch with a raised cog or 'jaw' (ago), and the lower beam is cut to match, so the beams lock without either being cut through. (b) Assembly: the upper beam drops onto the lower one. The cog stops them sliding along each other and stops the upper beam lifting sideways. Typical failures are the notched section crushing or shearing, and the cog breaking off along the grain. (c) Sketch: draw an exploded view showing the two notches and the drop direction."
+    },
+    {
+      "lesson": 28,
+      "module": "Japanese Connections",
+      "title": "How can three beams meet one post? The sampo zashi",
+      "concepts": [
+        "sampo zashi",
+        "post section loss",
+        "failure modes"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending",
+      "notes": "Text fallback (3D). (a) Parts: one post receives beams from three directions at about the same height. Each beam ends in a tenon shaped to interlock with the others inside the post. (b) Assembly: the order matters. Each tenon must go in before the one that would block it, and pins or wedges may lock the set together. Typical failures come from the post losing much of its cross-section at the joint, so it can split or crush. Tenons can also shear where they are thinned to share the space. (c) Sketch: draw a top-down exploded view with the assembly order numbered."
+    },
+    {
+      "lesson": 29,
+      "module": "Japanese Connections",
+      "title": "Same load, two traditions: how would each one solve it?",
+      "concepts": [
+        "Western vs Japanese comparison",
+        "bending and shear",
+        "wood movement",
+        "failure modes"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Japanese Connections",
+      "title": "Review: can you match each connection to its load and its failure mode?",
+      "concepts": [
+        "shiguchi (connections)",
+        "Western vs Japanese comparison",
+        "failure modes"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Joinery Now",
+      "title": "Do traditional joints really survive earthquakes better?",
+      "concepts": [
+        "seismic behavior of timber frames",
+        "ductility and energy dissipation",
+        "documented vs anecdote"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [],
+      "status": "pending",
+      "notes": "Qualitative label: CONTESTED, partly supported. Joints that can deform and rub without breaking can absorb some energy. But how a building performs depends on the whole system (roof mass, bracing, foundations, maintenance), so there is no blanket claim that 'traditional is better'. This lesson gives no numbers. Frame it as a test of the student's skill at separating evidence from story."
+    },
+    {
+      "lesson": 32,
+      "module": "Joinery Now",
+      "title": "Why is the Ise shrine rebuilt every 20 years?",
+      "concepts": [
+        "Shikinen Sengu",
+        "transmission of skill",
+        "UNESCO Intangible Cultural Heritage"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [],
+      "status": "pending",
+      "notes": "Accuracy: Ise Jingu is NOT a UNESCO World Heritage site. The relevant UNESCO source is the 2020 Intangible Cultural Heritage inscription 'Traditional skills, techniques and knowledge for the conservation and transmission of wooden architecture in Japan'. Search directions: UNESCO ICH list, search that exact title. Add the URL only after it passes the verification gate."
+    },
+    {
+      "lesson": 33,
+      "module": "Joinery Now",
+      "title": "Can a computer design a wood joint? (Tsugite)",
+      "concepts": [
+        "computational joint design",
+        "CNC fabrication",
+        "engineered timber context"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [],
+      "status": "pending",
+      "notes": "No verified source for Tsugite in this build. Planned source: Larsson et al., 'Tsugite: Interactive Design and Fabrication of Wood Joints', UIST 2020. Its DOI (10.1145/3379337.3415899) is pending verification. Search: Tsugite UIST 2020. Ramage et al. (2017) may be added only as a second item, next to a verified Larsson, and only for 'engineered timber context'."
+    },
+    {
+      "lesson": 34,
+      "module": "Joinery Now",
+      "title": "Capstone: can you design and sketch a joint for a given load?",
+      "concepts": [
+        "joint selection",
+        "load path",
+        "sketching",
+        "assembly order"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [],
+      "status": "pending"
+    },
+    {
+      "lesson": 35,
+      "module": "Joinery Now",
+      "title": "Final review: can you defend every joint choice you'd make?",
+      "concepts": [
+        "failure modes",
+        "wood movement",
+        "Western vs Japanese comparison",
+        "documented vs anecdote"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [],
+      "status": "pending"
+    }
+  ],
+  "level": "beginner",
+  "prerequisites": [
+    "High-school idea of force (push, pull, weight)",
+    "Willingness to build paper or foam models (no workshop needed)"
+  ],
+  "preliminary": false
+}

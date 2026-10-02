@@ -1,0 +1,170 @@
+[
+ {
+  "lesson": 1,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=3g7sGpYUieg",
+    "type": "video",
+    "title": "What is Gluten Anyway? (America's Test Kitchen Kids)",
+    "why": "A recipe tester makes 'webbed proteins' easy to picture, so you can see why only wheat dough can trap gas like a balloon."
+   },
+   {
+    "url": "https://annex.exploratorium.edu/cooking/bread/bread_science.html",
+    "type": "article",
+    "title": "Science of Bread: Bread Science 101 (Exploratorium)",
+    "why": "It compares gluten to the rubber of a balloon and shows how starch reinforces it, which explains in a few minutes why rice flour falls flat."
+   },
+   {
+    "url": "https://www.sciencedaily.com/releases/2017/03/170322092653.htm",
+    "type": "article",
+    "title": "Gluten free rice-flour bread could revolutionize global bread production (ScienceDaily)",
+    "why": "Researchers got rice-flour bread to rise with no gluten at all, and how they did it shows exactly what gluten normally does."
+   },
+   {
+    "url": "https://www.compoundchem.com/2016/01/13/bread/",
+    "type": "interactive",
+    "title": "Baking Bread: The Chemistry of Bread-Making (Compound Interest)",
+    "why": "A one-page infographic that shows flour proteins, water, enzymes and yeast all working toward a risen loaf."
+   }
+  ]
+ },
+ {
+  "lesson": 2,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=-JVO62Vzhqc",
+    "type": "video",
+    "title": "The Only Video You'll Ever Need to Watch About Gluten (Reactions)",
+    "why": "The American Chemical Society's channel breaks gluten into its two proteins and explains, molecule by molecule, why dough both stretches and snaps back."
+   },
+   {
+    "url": "https://modernistcuisine.com/mcah/gluten-how-does-it-work/",
+    "type": "article",
+    "title": "Gluten: How Does It Work? (Modernist Cuisine)",
+    "why": "The rubber-band image (gliadin lets dough stretch, glutenin makes it snap back) will change how you think about every dough you knead."
+   },
+   {
+    "url": "https://www.semanticscholar.org/paper/The-structure-and-properties-of-gluten:-an-elastic-Shewry-Halford/8ef16ac3eab3c11c6add37d509b7ce49711df922",
+    "type": "paper",
+    "title": "The structure and properties of gluten: an elastic protein from wheat grain (Shewry et al., Phil. Trans. R. Soc. B)",
+    "why": "This is the classic primary source for the 'elastic backbone' idea, and its 'loop and train' model of how glutenin stores springiness is easy to picture."
+   }
+  ]
+ },
+ {
+  "lesson": 3,
+  "resources": [
+   {
+    "url": "https://youtube.com/watch?pp=0gcJCdgAo7VqN5tD&v=3ziMBDPMuP8",
+    "type": "video",
+    "title": "How a Chemist Makes the Softest Bread You'll Ever Eat",
+    "why": "The tangzhong trick (pre-cooking some flour with water) shows starch grabbing water and turning it into a softer loaf."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=BMOgr-Buiag",
+    "type": "video",
+    "title": "What is Starch Gelatinization?",
+    "why": "A short look at what happens inside starch granules when dough turns into crumb in the oven."
+   },
+   {
+    "url": "https://bakerpedia.com/processes/damaged-starch/",
+    "type": "article",
+    "title": "Damaged Starch (BAKERpedia)",
+    "why": "Granules broken in the mill soak up 2–3 times more water and feed the yeast, so the way flour is milled quietly changes your dough."
+   },
+   {
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9238825/",
+    "type": "paper",
+    "title": "The Chemistry of Breadmaking (open-access review)",
+    "why": "A free review that follows amylose and amylopectin from dough through baking to staling, for when you want the full story."
+   }
+  ]
+ },
+ {
+  "lesson": 4,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=7M1X4UFgn4w",
+    "type": "video",
+    "title": "Thursday Thoughts: Baking With Enzymes",
+    "why": "A baker explains how the enzymes already in flour (and the ones mills add) change dough before the yeast even gets going."
+   },
+   {
+    "url": "https://www.pizzablab.com/learning-and-resources/flour/enzymatic-activity-in-flour/",
+    "type": "article",
+    "title": "Enzymatic Activity (Alpha-Amylase) in Flour & Its Impact on Dough (Pizza Blab)",
+    "why": "Too much native amylase, from wheat that sprouted in the field, gives a gummy crumb that seems underbaked, and the 'falling number' test catches it."
+   },
+   {
+    "url": "https://bakerpedia.com/wp-content/uploads/2020/09/Enzymes-ebook_2020.pdf",
+    "type": "article",
+    "title": "Enzymes in Bread Baking: What They Are, How They Work (BAKERpedia e-book)",
+    "why": "A free, plain-language guide to amylases and the xylanases that break down arabinoxylans, the 'minor' fibre that holds up to a quarter of the water in dough."
+   },
+   {
+    "url": "https://www.chemistryworld.com/features/bread-chemistry-on-the-rise/3004720.article",
+    "type": "article",
+    "title": "Bread chemistry on the rise (Chemistry World)",
+    "why": "A chemist's tour of the less-famous parts of flour, such as the lipids that sit at bubble surfaces and keep gas cells from merging."
+   }
+  ]
+ },
+ {
+  "lesson": 5,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=otTGwL5RQn4",
+    "type": "video",
+    "title": "Expert's Guide to Flour Types (America's Test Kitchen)",
+    "why": "Jack Bishop shows side by side how a few points of protein take you from tender cake to chewy loaf."
+   },
+   {
+    "url": "https://www.kingarthurbaking.com/blog/2022/04/28/what-is-bakers-math-and-how-can-i-use-it-in-my-everyday-bread-baking",
+    "type": "article",
+    "title": "What is baker's math, and how can I use it in my everyday bread baking? (King Arthur)",
+    "why": "Once flour is always 100%, you can compare any two recipes at a glance and see why each flour needs a different amount of water."
+   },
+   {
+    "url": "https://annex.exploratorium.edu/cooking/icooks/4-21-03.html",
+    "type": "article",
+    "title": "Science of Cooking: Ask the Inquisitive Cooks! (Exploratorium)",
+    "why": "Whole wheat flour has more protein yet makes denser bread, because sharp flakes of bran cut the gluten strands as they form."
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Wheat_flour",
+    "type": "article",
+    "title": "Wheat flour (Wikipedia)",
+    "why": "A handy reference for how hard and soft wheats are graded into flour types and protein ranges in different countries."
+   }
+  ]
+ },
+ {
+  "lesson": 6,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=BXjvlYKsXgA",
+    "type": "video",
+    "title": "Science: What happens when you wash a Dough? Here's how to see and feel gluten",
+    "why": "Watch a ball of dough rinsed under water until the starch runs off and only a stretchy, gummy lump of gluten is left."
+   },
+   {
+    "url": "https://annex.exploratorium.edu/cooking/bread/activity-gluten.html",
+    "type": "interactive",
+    "title": "Science of Bread: Great Balls of Gluten Activity (Exploratorium)",
+    "why": "A kitchen experiment you can do in 20 minutes that proves gluten only exists once water and kneading build it."
+   },
+   {
+    "url": "https://www.sciencebuddies.org/science-fair-projects/project-ideas/FoodSci_p040/cooking-food-science/which-wheat-flour-has-the-most-gluten",
+    "type": "interactive",
+    "title": "Which Wheat Flour Has the Most Gluten? (Science Buddies)",
+    "why": "Turns the dough-washing test into a real experiment: weigh the gluten balls from different flours and check them against the labels."
+   },
+   {
+    "url": "https://www.kingarthurbaking.com/blog/2021/08/18/a-beginners-guide-to-gluten",
+    "type": "article",
+    "title": "A beginner's guide to gluten (King Arthur)",
+    "why": "It explains why dry flour holds only the two proteins and water is what turns them into gluten."
+   }
+  ]
+ }
+]

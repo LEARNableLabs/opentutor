@@ -1,0 +1,179 @@
+{
+ "arxiv": [
+  {
+   "title": "Bayesian uncertainty analysis for complex systems biology models: emulation, global parameter searches and evaluation of gene functions",
+   "summary": "Background: Many mathematical models have now been employed across every area of systems biology. These models increasingly involve large numbers of unknown parameters, have complex structure which can result in substantial evaluation time relative to the needs of the analysis, and need to be compar",
+   "year": "2016",
+   "authors": [
+    "Ian Vernon",
+    "Junli Liu",
+    "Michael Goldstein",
+    "James Rowe",
+    "Jen Topping",
+    "Keith Lindsey"
+   ],
+   "url": "http://arxiv.org/abs/1607.06358v2"
+  },
+  {
+   "title": "An Introduction to Software Ecosystems",
+   "summary": "This chapter defines and presents different kinds of software ecosystems. The focus is on the development, tooling and analytics aspects of software ecosystems, i.e., communities of software developers and the interconnected software components (e.g., projects, libraries, packages, repositories, plu",
+   "year": "2023",
+   "authors": [
+    "Tom Mens",
+    "Coen De Roover"
+   ],
+   "url": "http://arxiv.org/abs/2307.15709v1"
+  },
+  {
+   "title": "Deep Learning and Computational Physics (Lecture Notes)",
+   "summary": "These notes were compiled as lecture notes for a course developed and taught at the University of the Southern California. They should be accessible to a typical engineering graduate student with a strong background in Applied Mathematics. The main objective of these notes is to introduce a student ",
+   "year": "2023",
+   "authors": [
+    "Deep Ray",
+    "Orazio Pinti",
+    "Assad A. Oberai"
+   ],
+   "url": "http://arxiv.org/abs/2301.00942v1"
+  },
+  {
+   "title": "From Physics to Biology by Extending Criticality and Symmetry Breakings",
+   "summary": "Symmetries play a major role in physics, in particular since the work by E. Noether and H. Weyl in the first half of last century. Herein, we briefly review their role by recalling how symmetry changes allow to conceptually move from classical to relativistic and quantum physics. We then introduce o",
+   "year": "2011",
+   "authors": [
+    "Giuseppe Longo",
+    "Maël Montévil"
+   ],
+   "url": "http://arxiv.org/abs/1103.1833v2"
+  },
+  {
+   "title": "Memorization in Deep Neural Networks: Does the Loss Function matter?",
+   "summary": "Deep Neural Networks, often owing to the overparameterization, are shown to be capable of exactly memorizing even randomly labelled data. Empirical studies have also shown that none of the standard regularization techniques mitigate such overfitting. We investigate whether the choice of the loss fun",
+   "year": "2021",
+   "authors": [
+    "Deep Patel",
+    "P. S. Sastry"
+   ],
+   "url": "http://arxiv.org/abs/2107.09957v2"
+  },
+  {
+   "title": "On the approximation of rough functions with deep neural networks",
+   "summary": "Deep neural networks and the ENO procedure are both efficient frameworks for approximating rough functions. We prove that at any order, the ENO interpolation procedure can be cast as a deep ReLU neural network. This surprising fact enables the transfer of several desirable properties of the ENO proc",
+   "year": "2019",
+   "authors": [
+    "Tim De Ryck",
+    "Siddhartha Mishra",
+    "Deep Ray"
+   ],
+   "url": "http://arxiv.org/abs/1912.06732v2"
+  },
+  {
+   "title": "Learn to Accumulate Evidence from All Training Samples: Theory and Practice",
+   "summary": "Evidential deep learning, built upon belief theory and subjective logic, offers a principled and computationally efficient way to turn a deterministic neural network uncertainty-aware. The resultant evidential models can quantify fine-grained uncertainty using the learned evidence. To ensure theoret",
+   "year": "2023",
+   "authors": [
+    "Deep Pandey",
+    "Qi Yu"
+   ],
+   "url": "http://arxiv.org/abs/2306.11113v2"
+  },
+  {
+   "title": "DILIE: Deep Internal Learning for Image Enhancement",
+   "summary": "We consider the generic deep image enhancement problem where an input image is transformed into a perceptually better-looking image. Recent methods for image enhancement consider the problem by performing style transfer and image restoration. The methods mostly fall into two categories: training dat",
+   "year": "2020",
+   "authors": [
+    "Indra Deep Mastan",
+    "Shanmuganathan Raman"
+   ],
+   "url": "http://arxiv.org/abs/2012.06469v1"
+  },
+  {
+   "title": "A digital business ecosystem maturity model for personal service firms",
+   "summary": "Personal services can be found in sectors such as education, retail, hospitality, and craftsmanship. As of today, personal service firms lack the know-how and experience on how to implement processes and practices to effectively build digital business ecosystems. This becomes an obstacle for these k",
+   "year": "2022",
+   "authors": [
+    "Ricardo Guerrero",
+    "Christoph Lattemann",
+    "Simon Michalke",
+    "Dominik Siemon"
+   ],
+   "url": "http://arxiv.org/abs/2211.01104v1"
+  },
+  {
+   "title": "Solution of Physics-based Bayesian Inverse Problems with Deep Generative Priors",
+   "summary": "Inverse problems are ubiquitous in nature, arising in almost all areas of science and engineering ranging from geophysics and climate science to astrophysics and biomechanics. One of the central challenges in solving inverse problems is tackling their ill-posed nature. Bayesian inference provides a ",
+   "year": "2021",
+   "authors": [
+    "Dhruv V Patel",
+    "Deep Ray",
+    "Assad A Oberai"
+   ],
+   "url": "http://arxiv.org/abs/2107.02926v2"
+  }
+ ],
+ "semanticScholar": [],
+ "wikipedia": null,
+ "openAlex": [
+  {
+   "type": "work",
+   "name": "Planetary Boundaries: Exploring the Safe Operating Space for Humanity",
+   "description": "2009 — 7214 citations",
+   "worksCount": 7214,
+   "authors": [
+    "Johan Rockström",
+    "Will Steffen",
+    "Kevin J. Noone"
+   ],
+   "doi": "https://doi.org/10.5751/es-03180-140232"
+  },
+  {
+   "type": "work",
+   "name": "The Problem of Pattern and Scale in Ecology: The Robert H. MacArthur Award Lecture",
+   "description": "1992 — 6886 citations",
+   "worksCount": 6886,
+   "authors": [
+    "Simon A. Levin"
+   ],
+   "doi": "https://doi.org/10.2307/1941447"
+  },
+  {
+   "type": "work",
+   "name": "Natural products in drug discovery: advances and opportunities",
+   "description": "2021 — 5438 citations",
+   "worksCount": 5438,
+   "authors": [
+    "Atanas G. Atanasov",
+    "Sergey B. Zotchev",
+    "Verena Maria Dirsch"
+   ],
+   "doi": "https://doi.org/10.1038/s41573-020-00114-z"
+  },
+  {
+   "type": "work",
+   "name": "Habitat fragmentation and its lasting impact on Earth’s ecosystems",
+   "description": "2015 — 4850 citations",
+   "worksCount": 4850,
+   "authors": [
+    "Nick M. Haddad",
+    "Lars Andrew Brudvig",
+    "Jean Clobert"
+   ],
+   "doi": "https://doi.org/10.1126/sciadv.1500052"
+  },
+  {
+   "type": "work",
+   "name": "Anthropogenic ocean acidification over the twenty-first century and its impact on calcifying organisms",
+   "description": "2005 — 4754 citations",
+   "worksCount": 4754,
+   "authors": [
+    "James C. Orr",
+    "Victoria J. Fabry",
+    "Olivier Aumont"
+   ],
+   "doi": "https://doi.org/10.1038/nature04095"
+  }
+ ],
+ "syllabi": [],
+ "youtube": [],
+ "github": [],
+ "wikiLinks": []
+}

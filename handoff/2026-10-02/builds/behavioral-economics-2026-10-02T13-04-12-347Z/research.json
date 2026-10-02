@@ -1,0 +1,305 @@
+{
+ "arxiv": [
+  {
+   "title": "Statistical Physics Perspective on Economic Inequality",
+   "summary": "This article is a supplement to my main contribution to the Routledge Handbook of Complexity Economics (2023). On the basis of three recent papers, it presents an unconventional perspective on economic inequality from a statistical physics point of view. One section demonstrates empirical evidence f",
+   "year": "2023",
+   "authors": [
+    "Victor M. Yakovenko"
+   ],
+   "url": "http://arxiv.org/abs/2307.02470v1"
+  },
+  {
+   "title": "Evaluating the Economic Feasibility of Labor Replacement Through Robotics and Automation in Qatar",
+   "summary": "This paper investigates the economic feasibility of replacing human labor with robotics and automation in Qatar's manufacturing and service sectors. By analyzing labor costs, productivity gains, and implementation expenses, the study assesses the potential financial impact and return on investment o",
+   "year": "2025",
+   "authors": [
+    "Tariq Eldakruri",
+    "Edip Senyurek"
+   ],
+   "url": "http://arxiv.org/abs/2509.10152v1"
+  },
+  {
+   "title": "The Economics of No-regret Learning Algorithms",
+   "summary": "A fundamental challenge for modern economics is to understand what happens when actors in an economy are replaced with algorithms. Like rationality has enabled understanding of outcomes of classical economic actors, no-regret can enable the understanding of outcomes of algorithmic actors. This revie",
+   "year": "2026",
+   "authors": [
+    "Jason Hartline"
+   ],
+   "url": "http://arxiv.org/abs/2601.22079v1"
+  },
+  {
+   "title": "The economics of stop-and-go epidemic control",
+   "summary": "We analyse 'stop-and-go' containment policies that produce infection cycles as periods of tight lockdowns are followed by periods of falling infection rates. The subsequent relaxation of containment measures allows cases to increase again until another lockdown is imposed and the cycle repeats. The ",
+   "year": "2020",
+   "authors": [
+    "Claudius Gros",
+    "Daniel Gros"
+   ],
+   "url": "http://arxiv.org/abs/2012.07739v2"
+  },
+  {
+   "title": "An Interacting Agent Model of Economic Crisis",
+   "summary": "Most national economies are linked by international trade. Consequently, economic globalization forms a massive and complex economic network with strong links, that is, interactions arising from increasing trade. Various interesting collective motions are expected to emerge from strong economic inte",
+   "year": "2020",
+   "authors": [
+    "Yuichi Ikeda"
+   ],
+   "url": "http://arxiv.org/abs/2001.11843v1"
+  },
+  {
+   "title": "The Economics of AI Supply Chain Regulation",
+   "summary": "The rise of foundation models has driven the emergence of AI supply chains, where upstream foundation model providers offer fine-tuning and inference services to downstream firms developing domain-specific applications. Downstream firms pay providers to use their computing infrastructure to fine-tun",
+   "year": "2026",
+   "authors": [
+    "Sihan Qian",
+    "Amit Mehra",
+    "Dengpan Liu"
+   ],
+   "url": "http://arxiv.org/abs/2603.12630v1"
+  },
+  {
+   "title": "Teaching Economics and Providing Visual \"Big Pictures\"",
+   "summary": "The goal of this paper is to investigate the importance of providing visual \"big pictures\" in the teaching of economics. The plurality and variety of concepts, variables, diagrams, and models involved in economics can be a source of confusion for many economics students. However, reviewing the exist",
+   "year": "2016",
+   "authors": [
+    "Seyyed Ali Zeytoon Nejad Moosavian"
+   ],
+   "url": "http://arxiv.org/abs/1601.01771v1"
+  },
+  {
+   "title": "Wasserstein Index Generation Model: Automatic Generation of Time-series Index with Application to Economic Policy Uncertainty",
+   "summary": "I propose a novel method, the Wasserstein Index Generation model (WIG), to generate a public sentiment index automatically. To test the model`s effectiveness, an application to generate Economic Policy Uncertainty (EPU) index is showcased.",
+   "year": "2019",
+   "authors": [
+    "Fangzhou Xie"
+   ],
+   "url": "http://arxiv.org/abs/1908.04369v4"
+  },
+  {
+   "title": "Modeling the out-of-equilibrium dynamics of bounded rationality and economic constraints",
+   "summary": "The analogies between economics and classical mechanics can be extended from constrained optimization to constrained dynamics by formalizing economic (constraint) forces and economic power in analogy to physical (constraint) forces in Lagrangian mechanics. In the differential-algebraic equation fram",
+   "year": "2021",
+   "authors": [
+    "Oliver Richters"
+   ],
+   "url": "http://arxiv.org/abs/2106.00483v2"
+  },
+  {
+   "title": "The Quantitative Comparative Economics: indices of similarity to economic systems",
+   "summary": "This paper presents a novel quantitative approach for comparative economic studies, addressing limitations in current classification methods. Conventional approaches in comparative economics often rely on ad hoc and categorical classifications, leading to subjective judgments and disregarding the co",
+   "year": "2025",
+   "authors": [
+    "Ali Zeytoon-Nejad"
+   ],
+   "url": "http://arxiv.org/abs/2512.19985v1"
+  }
+ ],
+ "semanticScholar": [],
+ "wikipedia": {
+  "title": "Behavioral economics",
+  "extract": "Behavioral economics is the study of the psychological factors involved in the decisions of individuals or institutions, and how these decisions deviate from those implied by traditional economic theory.",
+  "url": "https://en.wikipedia.org/wiki/Behavioral_economics",
+  "description": "Factors influencing economic decisions"
+ },
+ "openAlex": [
+  {
+   "type": "topic",
+   "name": "Decision-Making and Behavioral Economics",
+   "description": "This cluster of papers explores the intersection of psychology and economics, focusing on behavioral economics and decision making. It covers topics such as risk aversion, time discounting, heuristic decision making, the influence of emotion on choices, cognitive reflection, prospect theory, nudging, and the anchoring effect.",
+   "worksCount": 63650,
+   "keywords": [
+    "Risk Aversion",
+    "Decision Making",
+    "Time Discounting",
+    "Heuristic",
+    "Emotion"
+   ]
+  },
+  {
+   "type": "topic",
+   "name": "Experimental Behavioral Economics Studies",
+   "description": "This cluster of papers explores the role of social preferences in economic behavior through a wide range of experimental studies. It investigates topics such as reciprocity, cooperation, incentives, gender differences, trust, fairness, altruism, and competition. The research delves into the psychological and behavioral aspects that influence decision-making in economic contexts.",
+   "worksCount": 59975,
+   "keywords": [
+    "Social Preferences",
+    "Economic Experiments",
+    "Reciprocity",
+    "Cooperation",
+    "Incentives"
+   ]
+  },
+  {
+   "type": "topic",
+   "name": "Economic Theory and Institutions",
+   "description": "This cluster of papers explores the study of economic institutions, behavior, and evolution, encompassing topics such as institutional economics, evolutionary economics, behavioral economics, market evolution, property rights, macroeconomics, social evolution, neoliberalism, and Darwinism in economics.",
+   "worksCount": 130631,
+   "keywords": [
+    "Institutional Economics",
+    "Economic Institutions",
+    "Evolutionary Economics",
+    "Behavioral Economics",
+    "Market Evolution"
+   ]
+  },
+  {
+   "type": "work",
+   "name": "Fitting Linear Mixed-Effects Models Using lme4",
+   "description": "2015 — 89612 citations",
+   "worksCount": 89612,
+   "authors": [
+    "Douglas M. Bates",
+    "Martin Mächler",
+    "Benjamin M. Bolker"
+   ],
+   "doi": "https://doi.org/10.18637/jss.v067.i01"
+  },
+  {
+   "type": "work",
+   "name": "The PRISMA Statement for Reporting Systematic Reviews and Meta-Analyses of Studies That Evaluate Health Care Interventions: Explanation and Elaboration",
+   "description": "2009 — 28089 citations",
+   "worksCount": 28089,
+   "authors": [
+    "Alessandro Liberati",
+    "Douglas G. Altman",
+    "Jennifer Tetzlaff"
+   ],
+   "doi": "https://doi.org/10.1371/journal.pmed.1000100"
+  },
+  {
+   "type": "work",
+   "name": "The iron cage revisited institutional isomorphism and collective rationality in organizational fields",
+   "description": "2004 — 25925 citations",
+   "worksCount": 25925,
+   "authors": [
+    "Paul DiMaggio",
+    "Walter W. Powell"
+   ],
+   "doi": "https://doi.org/10.1016/s0742-3322(00)17011-1"
+  },
+  {
+   "type": "work",
+   "name": "Applied Multiple Regression/Correlation Analysis for the Behavioral Sciences",
+   "description": "2014 — 20845 citations",
+   "worksCount": 20845,
+   "authors": [
+    "Patricia Cohen",
+    "Patricia Cohen",
+    "Stephen G. West"
+   ],
+   "doi": "https://doi.org/10.4324/9781410606266"
+  },
+  {
+   "type": "work",
+   "name": "Increasing Returns and Long-Run Growth",
+   "description": "1986 — 20159 citations",
+   "worksCount": 20159,
+   "authors": [
+    "Paul Michael Romer"
+   ],
+   "doi": "https://doi.org/10.1086/261420"
+  }
+ ],
+ "syllabi": [],
+ "youtube": [],
+ "github": [
+  {
+   "name": "Aryia-Behroziuan/neurons",
+   "description": "An ANN is a model based on a collection of connected units or nodes called \"artificial neurons\", which loosely model the neurons in a biological brain",
+   "url": "https://github.com/Aryia-Behroziuan/neurons",
+   "stars": 93,
+   "language": null,
+   "topics": [
+    "an-ann",
+    "android",
+    "artificial-intelligence",
+    "aryia-behroziuan",
+    "bootstrap"
+   ]
+  },
+  {
+   "name": "MassimilianoPozzi/python_julia_structural_behavioral_economics",
+   "description": "Python and Julia Code for Structural Behavioral Economics",
+   "url": "https://github.com/MassimilianoPozzi/python_julia_structural_behavioral_economics",
+   "stars": 58,
+   "language": "MATLAB",
+   "topics": []
+  },
+  {
+   "name": "econ-ai-guide/resources",
+   "description": "A community-maintained collection of resources for economists applying microeconomic theory, game theory, econometrics, industrial organization, and b",
+   "url": "https://github.com/econ-ai-guide/resources",
+   "stars": 51,
+   "language": null,
+   "topics": []
+  },
+  {
+   "name": "fifidayone/aileron-protocol",
+   "description": "Aileron Protocol: A strict system harness override enforcing deterministic AI behavior through codebase-first execution, strict token economics, and r",
+   "url": "https://github.com/fifidayone/aileron-protocol",
+   "stars": 37,
+   "language": null,
+   "topics": [
+    "agentic-ai",
+    "agentic-os",
+    "agentic-workflow",
+    "ai-coding-assistant",
+    "antigravity"
+   ]
+  },
+  {
+   "name": "johnmyleswhite/BehavioralEconomics",
+   "description": "R package for behavioral economics",
+   "url": "https://github.com/johnmyleswhite/BehavioralEconomics",
+   "stars": 33,
+   "language": "R",
+   "topics": []
+  },
+  {
+   "name": "rastian/behavioral-design-skills",
+   "description": "A Claude skill for applying behavioral psychology and behavioral economics to product and UX design. Behavioral diagnosis, nudge design, intervention ",
+   "url": "https://github.com/rastian/behavioral-design-skills",
+   "stars": 24,
+   "language": null,
+   "topics": [
+    "behavior-change",
+    "behavioral-design",
+    "behavioral-economics",
+    "conversion-optimization",
+    "design-psychology"
+   ]
+  }
+ ],
+ "wikiLinks": [
+  "AGM postulates",
+  "A Behavioral Theory of the Firm",
+  "Abhijit Banerjee",
+  "Accelerator effect",
+  "Accident-proneness",
+  "Acquired characteristic",
+  "Adam Smith",
+  "Adaptationism",
+  "Adaptive market hypothesis",
+  "Adaptive unconscious",
+  "Administered prices",
+  "Affect (psychology)",
+  "Affect display",
+  "Affectional bond",
+  "Affective forecasting",
+  "Affective neuroscience",
+  "Affordable Care Act tax provisions",
+  "Age disparity in sexual relationships",
+  "Aggregation problem",
+  "Aggression",
+  "Agricultural economics",
+  "Albert O. Hirschman",
+  "Aldo Rustichini",
+  "Allais paradox",
+  "Altruism",
+  "Altruism (biology)",
+  "Alvin E. Roth",
+  "Ambiguity aversion",
+  "American Economic Association",
+  "American School (economics)"
+ ]
+}

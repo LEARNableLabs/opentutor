@@ -1,0 +1,221 @@
+{
+ "arxiv": [
+  {
+   "title": "Low Frequency Dielectric Loss of Metal/Insulator/Organic Semiconductor Junctions in Ambient Conditions",
+   "summary": "The complex admittance of metal/oxide/pentacene thin film junctions is investigated under ambient conditions. At low frequencies, a contribution attributed to proton diffusion through the oxide is seen. This diffusion is shown to be anomalous and is believed to be also at the origin of the bias stre",
+   "year": "2012",
+   "authors": [
+    "R. Ledru",
+    "S. Pleutin",
+    "B. Grouiez",
+    "D. Zander",
+    "H. Bejbouji",
+    "K. Lmimouni",
+    "D. Vuillaume"
+   ],
+   "url": "http://arxiv.org/abs/1204.6406v1"
+  },
+  {
+   "title": "Neural networks for the prediction organic chemistry reactions",
+   "summary": "Reaction prediction remains one of the major challenges for organic chemistry, and is a pre-requisite for efficient synthetic planning. It is desirable to develop algorithms that, like humans, \"learn\" from being exposed to examples of the application of the rules of organic chemistry. We explore the",
+   "year": "2016",
+   "authors": [
+    "Jennifer N. Wei",
+    "David Duvenaud",
+    "Alán Aspuru-Guzik"
+   ],
+   "url": "http://arxiv.org/abs/1608.06296v2"
+  },
+  {
+   "title": "Linking the Neural Machine Translation and the Prediction of Organic Chemistry Reactions",
+   "summary": "Finding the main product of a chemical reaction is one of the important problems of organic chemistry. This paper describes a method of applying a neural machine translation model to the prediction of organic chemical reactions. In order to translate 'reactants and reagents' to 'products', a gated r",
+   "year": "2016",
+   "authors": [
+    "Juno Nam",
+    "Jurae Kim"
+   ],
+   "url": "http://arxiv.org/abs/1612.09529v1"
+  },
+  {
+   "title": "Aromatics and Cyclic Molecules in Molecular Clouds: A New Dimension of Interstellar Organic Chemistry",
+   "summary": "Astrochemistry lies at the nexus of astronomy, chemistry, and molecular physics. On the basis of precise laboratory data, a rich collection of more than 200 familiar and exotic molecules have been identified in the interstellar medium, the vast majority by their unique rotational fingerprint. Despit",
+   "year": "2021",
+   "authors": [
+    "Michael C. McCarthy",
+    "Brett A. McGuire"
+   ],
+   "url": "http://arxiv.org/abs/2103.09608v1"
+  },
+  {
+   "title": "Microwave Engineering of Tunable Spin Interactions with Superconducting Qubits",
+   "summary": "Quantum simulation has emerged as a powerful framework for investigating complex many - body phenomena. A key requirement for emulating these dynamics is the realization of fully controllable quantum systems enabling various spin interactions. Yet, quantum simulators remain constrained in the types ",
+   "year": "2025",
+   "authors": [
+    "Kui Zhao",
+    "Ziting Wang",
+    "Yu Liu",
+    "Gui - Han Liang",
+    "Cai - Ping Fang",
+    "Yun - Hao Shi",
+    "Lv Zhang",
+    "Jia - Chi Zhang",
+    "Tian - Ming Li",
+    "Hao Li",
+    "Yueshan Xu",
+    "Wei - Guo Ma",
+    "Hao - Tian Liu",
+    "Jia - Cheng Song",
+    "Zhen - Ting Bao",
+    "Yong - Xi Xiao",
+    "Bing - Jie Chen",
+    "Cheng - Lin Deng",
+    "Zheng - He Liu",
+    "Yang He",
+    "Si - Yun Zhou",
+    "Xiaohui Song",
+    "Zhongcheng Xiang",
+    "Dongning Zheng",
+    "Kaixuan Huang",
+    "Kai Xu",
+    "Heng Fan"
+   ],
+   "url": "http://arxiv.org/abs/2505.16286v2"
+  },
+  {
+   "title": "Development of organic passive devices for RF applications",
+   "summary": "A huge interesting progress in the field of organic electronic materials and devices has been observed in the last decade. However, the understanding of these materials is still a challenge to overcome. Most studies in literature focus on active devices such as OTFTs, OLEDs and OPVs. Nevertheless, a",
+   "year": "2025",
+   "authors": [
+    "A. Aliane",
+    "A. Daami",
+    "T. Card",
+    "R. Gwoziecki",
+    "I. Chartier",
+    "R. Coppard",
+    "E. Bergeret",
+    "E. Bènevent",
+    "P. Pannier"
+   ],
+   "url": "http://arxiv.org/abs/2510.27449v1"
+  },
+  {
+   "title": "Radiation Chemistry of Organic Liquids: Saturated Hydrocarbons",
+   "summary": "In this review (124 refs), several problems in radiolysis of saturated hydrocarbons are examined. Special attention is paid to the chemistry of radical cations, high-mobility holes, excited state and spur dynamics, magnetic field and spin effects, and optically detected magnetic resonance spectrosco",
+   "year": "2004",
+   "authors": [
+    "Ilya A. Shkrob",
+    "Myran C. Sauer,",
+    "Alexander D. Trifunac"
+   ],
+   "url": "http://arxiv.org/abs/physics/0405014v1"
+  },
+  {
+   "title": "Guest Editorial: Special Topic on Data-enabled Theoretical Chemistry",
+   "summary": "A survey of the contributions to the Special Topic on Data-enabled Theoretical Chemistry is given, including a glossary of relevant machine learning terms.",
+   "year": "2018",
+   "authors": [
+    "Matthias Rupp",
+    "O. Anatole von Lilienfeld",
+    "Kieron Burke"
+   ],
+   "url": "http://arxiv.org/abs/1806.02690v2"
+  },
+  {
+   "title": "Organic Carbon Cycle in the Atmosphere of Venus",
+   "summary": "The community commonly assumes that the Venusian atmosphere lacks organic (reduced) carbon. This is reflected in the literature, which now for almost a half a century does not mention organic carbon in connection with the Venus atmosphere. This assumption persists despite the failure of models that ",
+   "year": "2021",
+   "authors": [
+    "Jan Spacek"
+   ],
+   "url": "http://arxiv.org/abs/2108.02286v1"
+  },
+  {
+   "title": "ChemPro: A Progressive Chemistry Benchmark for Large Language Models",
+   "summary": "We introduce ChemPro, a progressive benchmark with 4100 natural language question-answer pairs in Chemistry, across 4 coherent sections of difficulty designed to assess the proficiency of Large Language Models (LLMs) in a broad spectrum of general chemistry topics. We include Multiple Choice Questio",
+   "year": "2026",
+   "authors": [
+    "Aaditya Baranwal",
+    "Shruti Vyas"
+   ],
+   "url": "http://arxiv.org/abs/2602.03108v4"
+  }
+ ],
+ "semanticScholar": [],
+ "wikipedia": null,
+ "openAlex": [
+  {
+   "type": "topic",
+   "name": "Chemical Reaction Mechanisms",
+   "description": "This cluster of papers explores nucleophilic reactivity in organic chemistry, covering topics such as nucleophilicity scales, acidity scales, phosphate hydrolysis mechanisms, enzymatic mechanisms, superbases for organic synthesis, electrophilicity parameters, aminolysis reactions, transition state analysis, hydride transfer reactions, and their applications in organic synthesis.",
+   "worksCount": 64574,
+   "keywords": [
+    "Nucleophilicity",
+    "Acidity Scales",
+    "Phosphate Hydrolysis",
+    "Enzymatic Mechanisms",
+    "Superbases"
+   ]
+  },
+  {
+   "type": "work",
+   "name": "Two new Later Stone Age sites from the Final Pleistocene in the Falémé Valley, eastern Senegal",
+   "description": "2024 — 24110 citations",
+   "worksCount": 24110,
+   "authors": [
+    "Ndiaye, Matar",
+    "Lespez, Laurent",
+    "Tribolo, Chantal"
+   ],
+   "doi": "https://doi.org/10.3929/ethz-b-000667478"
+  },
+  {
+   "type": "work",
+   "name": "Single-crystal structure validation with the program PLATON",
+   "description": "2003 — 14107 citations",
+   "worksCount": 14107,
+   "authors": [
+    "Anthony L. Spek"
+   ],
+   "doi": "https://doi.org/10.1107/s0021889802022112"
+  },
+  {
+   "type": "work",
+   "name": "Palladium-Catalyzed Cross-Coupling Reactions of Organoboron Compounds",
+   "description": "1995 — 12862 citations",
+   "worksCount": 12862,
+   "authors": [
+    "Norio Miyaura",
+    "Akira Suzuki"
+   ],
+   "doi": "https://doi.org/10.1021/cr00039a007"
+  },
+  {
+   "type": "work",
+   "name": "LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales",
+   "description": "2021 — 12675 citations",
+   "worksCount": 12675,
+   "authors": [
+    "Aidan P. Thompson",
+    "Hasan Metin Aktulga",
+    "Richard A. Berger"
+   ],
+   "doi": "https://doi.org/10.1016/j.cpc.2021.108171"
+  },
+  {
+   "type": "work",
+   "name": "Blast2GO: a universal tool for annotation, visualization and analysis in functional genomics research",
+   "description": "2005 — 12188 citations",
+   "worksCount": 12188,
+   "authors": [
+    "Ana Conesa",
+    "Stefan Götz",
+    "Juan Miguel Garcia-Gomez"
+   ],
+   "doi": "https://doi.org/10.1093/bioinformatics/bti610"
+  }
+ ],
+ "syllabi": [],
+ "youtube": [],
+ "github": [],
+ "wikiLinks": []
+}

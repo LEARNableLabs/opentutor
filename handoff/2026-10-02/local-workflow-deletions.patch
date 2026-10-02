@@ -1,0 +1,2071 @@
+diff --git a/.claude/workflows/curriculum-build.js b/.claude/workflows/curriculum-build.js
+deleted file mode 100644
+index b460046..0000000
+--- a/.claude/workflows/curriculum-build.js
++++ /dev/null
+@@ -1,458 +0,0 @@
+-export const meta = {
+-  name: 'curriculum-build',
+-  description: 'Build a full curriculum from research — modules, lessons, concept map, teaching notes. Supports patch mode for targeted fixes.',
+-  whenToUse: 'After running the research workflow. Usage: run with args {topic: "optimal transport", level: "intermediate"} for full build, or {topic: "...", level: "...", mode: "patch", feedback: "fix lessons 12-15..."} for targeted fixes',
+-  phases: [
+-    { title: 'Read', detail: 'Load research document and existing domain data' },
+-    { title: 'Design', detail: 'Parallel agents design curriculum structure, concept map, and teaching notes' },
+-    { title: 'Gate', detail: 'Quality gate checks pedagogical soundness and completeness' },
+-    { title: 'Assemble', detail: 'Merge designs into final curriculum.json and supporting files' },
+-  ],
+-}
+-
+-const topic = args?.topic
+-if (!topic) throw new Error('Missing args.topic — pass {topic: "optimal transport", level: "intermediate"}')
+-const level = args?.level || 'intermediate'
+-const mode = args?.mode || 'full'
+-const feedback = args?.feedback || null
+-const audience = args?.audience || null
+-
+-const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+-const domainDir = `skills/tutor/domains/${slug}`
+-const researchPath = `${domainDir}/research.md`
+-
+-const audienceContext = audience
+-  ? `\n## Target Audience\n${typeof audience === 'string' ? audience : JSON.stringify(audience, null, 2)}`
+-  : ''
+-
+-// ══════════════════════════════════════════════════════════════
+-// PATCH MODE — targeted fixes based on feedback
+-// ══════════════════════════════════════════════════════════════
+-
+-if (mode === 'patch' && feedback) {
+-  phase('Read')
+-  log(`Patch mode: applying targeted fixes to "${topic}" curriculum`)
+-
+-  phase('Design')
+-
+-  const patchResults = await parallel([
+-    () => agent(
+-      `Read these files:
+-- ${domainDir}/curriculum.json
+-- ${domainDir}/concept-map.md
+-- ${researchPath} (check for any "Targeted Research" sections at the end — these contain new material)
+-
+-Apply these specific fixes to the curriculum and concept map:
+-${feedback}
+-${audienceContext}
+-
+-Rules:
+-- Only modify the parts cited in the feedback
+-- Preserve all lessons/concepts not mentioned in the feedback
+-- If adding new lessons, maintain day number sequence
+-- If the feedback mentions thin resources, pull from research.md
+-- If new targeted research sections exist, incorporate relevant findings
+-- Write the complete corrected curriculum.json back to ${domainDir}/curriculum.json
+-- If the concept map needs updates, write the corrected version to ${domainDir}/concept-map.md
+-
+-Report what you changed at the end of your response.`,
+-      { label: 'patch:curriculum', phase: 'Design' }
+-    ),
+-    () => agent(
+-      `Read these files:
+-- ${domainDir}/resources.md
+-- ${domainDir}/teaching-notes.md
+-- ${researchPath} (check for any "Targeted Research" sections at the end — these contain new material)
+-
+-Apply these specific fixes:
+-${feedback}
+-${audienceContext}
+-
+-Rules:
+-- Only modify sections cited in the feedback
+-- If new targeted research sections exist in research.md, incorporate relevant resources
+-- Preserve all content not mentioned in the feedback
+-- Write corrected files back to their original paths
+-- If a file needs no changes, do not rewrite it
+-
+-Report what you changed at the end of your response.`,
+-      { label: 'patch:resources', phase: 'Design' }
+-    ),
+-  ])
+-
+-  // ── Gate — same quality check as full mode ───────────────────
+-
+-  phase('Gate')
+-
+-  const GATE_SCHEMA = {
+-    type: 'object',
+-    properties: {
+-      verdict: { type: 'string', enum: ['PROCEED', 'ISSUES'] },
+-      sequencing_ok: { type: 'boolean' },
+-      coverage_ok: { type: 'boolean' },
+-      difficulty_curve_ok: { type: 'boolean' },
+-      issues: { type: 'array', items: { type: 'string' } },
+-      suggestions: { type: 'array', items: { type: 'string' } },
+-    },
+-    required: ['verdict', 'issues'],
+-  }
+-
+-  const gate = await agent(
+-    `You are a pedagogical quality gate. Review the patched curriculum for "${topic}" (${level} level).
+-
+-Read these files (they have just been updated by a patch operation):
+-- ${domainDir}/curriculum.json
+-- ${domainDir}/concept-map.md
+-- ${domainDir}/teaching-notes.md
+-- ${domainDir}/resources.md
+-
+-The patch was applied to fix these issues:
+-${feedback}
+-
+-Check:
+-1. **Sequencing** — Do prerequisites still come before dependents after the patch?
+-2. **Coverage** — Did the patch address the cited issues without breaking other coverage?
+-3. **Difficulty curve** — Is the progression still gradual?
+-4. **Regression** — Did the patch introduce any new problems?
+-5. **Completeness** — Were all items in the feedback actually addressed?
+-
+-Report as JSON. PROCEED if the patch looks good. ISSUES if there are remaining or new problems.`,
+-    { label: 'patch-gate', phase: 'Gate', schema: GATE_SCHEMA }
+-  )
+-
+-  log(`Patch gate: ${gate?.verdict || 'unknown'}, issues: ${gate?.issues?.length || 0}`)
+-  return { topic, slug, level, domainDir, mode: 'patch', gate: gate?.verdict, issues: gate?.issues }
+-}
+-
+-// ══════════════════════════════════════════════════════════════
+-// FULL MODE — complete curriculum design (default)
+-// ══════════════════════════════════════════════════════════════
+-
+-// ── Phase 1: Read — load research and templates ───────────────
+-
+-phase('Read')
+-log(`Building curriculum for "${topic}" (level: ${level})`)
+-
+-const reader = await agent(
+-  `Read the following files and return their contents as a JSON object with keys matching the filenames. If a file doesn't exist, set its value to null.
+-
+-Files to read:
+-1. ${researchPath}
+-2. skills/tutor/references/curriculum-format.md
+-3. skills/tutor/templates/domain-template.md
+-4. skills/tutor/references/teaching-method.md
+-5. workspace/USER.md
+-
+-Return JSON: {"research": "...", "curriculumFormat": "...", "domainTemplate": "...", "teachingMethod": "...", "userProfile": "..."}`,
+-  {
+-    label: 'read-inputs',
+-    phase: 'Read',
+-    schema: {
+-      type: 'object',
+-      properties: {
+-        research: { type: ['string', 'null'] },
+-        curriculumFormat: { type: ['string', 'null'] },
+-        domainTemplate: { type: ['string', 'null'] },
+-        teachingMethod: { type: ['string', 'null'] },
+-        userProfile: { type: ['string', 'null'] },
+-      },
+-      required: ['research'],
+-    },
+-  }
+-)
+-
+-if (!reader?.research) {
+-  log(`WARNING: No research found at ${researchPath}. Run the research workflow first.`)
+-}
+-
+-let ctx = `Topic: "${topic}"
+-Student level: ${level}
+-${audienceContext}
+-${feedback ? `\n## Previous Feedback to Address\n${feedback}` : ''}
+-${reader?.research ? `\n## Research\n${reader.research}` : '(no research available — generate from knowledge)'}
+-${reader?.userProfile ? `\n## Student Profile\n${reader.userProfile}` : ''}
+-${reader?.curriculumFormat ? `\n## Curriculum Format Reference\n${reader.curriculumFormat}` : ''}
+-${reader?.teachingMethod ? `\n## Teaching Method Reference\n${reader.teachingMethod}` : ''}`
+-
+-// ── Cross-topic overlap scan ──────────────────────────────────
+-
+-const OVERLAP_SCHEMA = {
+-  type: 'object',
+-  properties: {
+-    existingTopics: {
+-      type: 'array',
+-      items: {
+-        type: 'object',
+-        properties: {
+-          slug: { type: 'string' },
+-          topic: { type: 'string' },
+-          sharedConcepts: { type: 'array', items: { type: 'string' } },
+-          connectionPoints: { type: 'array', items: { type: 'string' } },
+-        },
+-        required: ['slug', 'topic'],
+-      },
+-    },
+-  },
+-  required: ['existingTopics'],
+-}
+-
+-const overlap = await agent(
+-  `List all directories under skills/tutor/domains/ (excluding "${slug}").
+-For each existing domain directory found, read its concept-map.md and curriculum.json.
+-
+-Then identify concepts that overlap or connect with the new topic "${topic}".
+-
+-A "shared concept" is a concept that appears in both the existing domain and would naturally appear in a course on "${topic}" (e.g., "linear programming" might be shared between "optimal transport" and "operations research").
+-
+-A "connection point" is a specific way the two topics relate — how a concept learned in the existing topic enables or enriches understanding of the new topic (e.g., "Kantorovich duality from optimal-transport provides foundation for understanding LP duality in this course").
+-
+-If no other domains exist, return {"existingTopics": []}.
+-
+-Return as JSON.`,
+-  { label: 'overlap-scan', phase: 'Read', schema: OVERLAP_SCHEMA }
+-)
+-
+-const crossTopicConnections = (overlap?.existingTopics || []).filter(t => (t.sharedConcepts?.length || 0) > 0 || (t.connectionPoints?.length || 0) > 0)
+-
+-const overlapContext = crossTopicConnections.length > 0
+-  ? '\n## Cross-Topic Connections\nThe student has already studied these related topics:\n' +
+-    crossTopicConnections.map(t =>
+-      '- **' + t.topic + '** (' + t.slug + '): ' +
+-      (t.sharedConcepts?.length ? 'shares concepts [' + t.sharedConcepts.join(', ') + ']' : '') +
+-      (t.connectionPoints?.length ? ' — ' + t.connectionPoints.join('; ') : '')
+-    ).join('\n')
+-  : ''
+-
+-if (crossTopicConnections.length > 0) {
+-  log(`Found ${crossTopicConnections.length} related topic(s) with concept overlap`)
+-  ctx = ctx + overlapContext
+-}
+-
+-// ── Phase 2: Design — parallel curriculum design agents ───────
+-
+-phase('Design')
+-
+-const DESIGNERS = [
+-  {
+-    id: 'structure',
+-    prompt: `You are a curriculum architect. Design the module structure and lesson sequence for a course on "${topic}" for a ${level} student.
+-
+-${ctx}
+-
+-Design requirements:
+-- Let the material dictate the curriculum size. A narrow topic might need 18 lessons; a broad one might need 35. Do NOT default to 30. Think about how much ground this specific topic needs to cover at the ${level} level.
+-- Organize into modules by coherent subtopic (typically 3-7 modules, but the material decides)
+-- Each lesson: sequential lesson number, module name, title (as a question or provocation, NOT a topic label), concepts (2-4 per lesson), difficulty (1-5 cognitive load scale), type (delivery format), resources (real URLs from the research)
+-- Difficulty scale: 1=review/light, 2=accessible new material, 3=standard, 4=challenging, 5=peak difficulty. Early lessons should be 1-2, building to 3-4 peaks, with review dips. The curve should match the actual conceptual demands, not follow a formula.
+-- Delivery types: "mini-lesson" (concept+example+exercise), "question" (thought-provoking question), "resource-drop" (share and discuss a resource), "teach-back" (student explains), "real-world" (hands-on challenge), "review" (spaced repetition). Vary them — don't use mini-lesson for everything.
+-- Include review lessons every 5-7 lessons (type: "review", difficulty: 1-2)
+-- Sequence must respect concept dependencies (prerequisites before dependents)
+-- Lesson titles should be engaging questions like "Why does moving dirt cost money?" not labels like "Introduction to optimal transport"
+-- First lessons should be accessible and motivating (difficulty 1-2)
+-- Last lessons should connect to cutting-edge applications
+-- Prerequisites: list what's genuinely needed — could be 3, could be 10
+-- Exit criteria: list what the student can concretely do after completing. Match ambition to material, not to a fixed count.
+-
+-Output as JSON:
+-{
+-  "modules": [
+-    {
+-      "name": "Module Name",
+-      "lessons": [
+-        {
+-          "lesson": 1,
+-          "title": "Why does X happen?",
+-          "concepts": ["concept1", "concept2"],
+-          "difficulty": 2,
+-          "type": "mini-lesson",
+-          "resources": ["url1", "url2"],
+-          "status": "pending"
+-        }
+-      ]
+-    }
+-  ],
+-  "prerequisites": ["list of external prerequisites the student needs before starting"],
+-  "exit_criteria": ["concrete things the student can do after completing"]
+-}`,
+-  },
+-  {
+-    id: 'concept-map',
+-    prompt: `You are a concept mapping specialist. Create a detailed concept dependency map for a course on "${topic}" for a ${level} student.
+-
+-${ctx}
+-
+-Create a concept map covering:
+-1. **Core concepts** in learning order (numbered, with one-line descriptions and dependencies)
+-2. **Dependency graph** (ASCII art showing which concepts depend on which)
+-3. **Bottleneck concepts** — the "gates" where if the student doesn't get it, everything after is shaky
+-4. **Mind-blowing concepts** — the "aha!" moments that drive engagement (with suggested lesson day)
+-5. **Common misconceptions** — table of concept, misconception, and reality
+-6. **Prerequisite topics** — external topics needed and which concepts they enable
+-
+-Output as markdown following this structure. Be thorough — this map guides the entire course.`,
+-  },
+-  {
+-    id: 'teaching-notes',
+-    prompt: `You are a pedagogical specialist. Write detailed teaching notes for a course on "${topic}" for a ${level} student.
+-
+-${ctx}
+-
+-Write teaching notes covering:
+-1. **Approach** — How to teach this topic at the ${level} level. What makes it unique pedagogically? Is it visual, algebraic, proof-heavy, experiment-driven?
+-2. **Common misconceptions** — At least 5 specific misconceptions students have, why they get them wrong, and how to correct them
+-3. **Level adjustments** — How delivery differs at ${level} vs other levels. What to emphasize, skip, or adjust depth on
+-4. **Rabbit holes** — 4-6 fascinating tangential connections to drop in during lessons (with suggested timing)
+-5. **Difficulty progression** — Where the difficulty spikes are and how to manage them
+-6. **Assessment strategies** — What kinds of exercises work best for each module (multiple choice, open-ended, computation, proof, application)
+-7. **Cross-topic connections** — If the context includes cross-topic connections from other domains the student has studied, write a section listing: which previously learned concepts connect to this course, at which lesson to surface each connection, and how to frame it ("You already know X from your study of Y — here it shows up as Z"). If no cross-topic connections exist, omit this section.
+-
+-Output as markdown. Be specific and practical — a tutor bot will use these notes to adapt its delivery.`,
+-  },
+-  {
+-    id: 'resources',
+-    prompt: `You are a resource curator. Compile a comprehensive resource guide for a course on "${topic}" for a ${level} student.
+-
+-${ctx}
+-
+-Organize resources into:
+-1. **Primary sources** — Main textbooks/courses for lesson content (with URLs, availability, level suitability)
+-2. **Videos** — Specific channels, series, or episodes (with URLs)
+-3. **Interactive tools** — Desmos, GeoGebra, simulators, playgrounds (with URLs)
+-4. **Code** — Repos, notebooks, libraries for hands-on work (with URLs)
+-5. **People** — Researchers, educators, practitioners to follow
+-6. **Unexpected connections** — Cross-discipline links for engagement
+-
+-Rules:
+-- Only include resources with real, verifiable URLs
+-- Note which resources are best for which modules/concepts
+-- Mark free vs paid resources
+-- Prioritize resources appropriate for ${level} level
+-
+-Output as markdown.`,
+-  },
+-]
+-
+-const designs = await parallel(
+-  DESIGNERS.map(d => () =>
+-    agent(d.prompt, { label: `design:${d.id}`, phase: 'Design' })
+-  )
+-)
+-
+-const [structure, conceptMap, teachingNotes, resources] = designs
+-
+-// ── Phase 3: Gate — pedagogical quality check ─────────────────
+-
+-phase('Gate')
+-
+-const GATE_SCHEMA = {
+-  type: 'object',
+-  properties: {
+-    verdict: { type: 'string', enum: ['PROCEED', 'ISSUES'] },
+-    sequencing_ok: { type: 'boolean' },
+-    coverage_ok: { type: 'boolean' },
+-    difficulty_curve_ok: { type: 'boolean' },
+-    issues: { type: 'array', items: { type: 'string' } },
+-    suggestions: { type: 'array', items: { type: 'string' } },
+-  },
+-  required: ['verdict', 'issues'],
+-}
+-
+-const gate = await agent(
+-  `You are a pedagogical quality gate. Review a curriculum design for "${topic}" (${level} level).
+-
+-## Curriculum Structure
+-${structure || '(missing)'}
+-
+-## Concept Map
+-${conceptMap || '(missing)'}
+-
+-## Teaching Notes
+-${teachingNotes || '(missing)'}
+-
+-## Resources
+-${resources || '(missing)'}
+-
+----
+-
+-Check these dimensions:
+-
+-1. **Sequencing** — Do prerequisites come before dependents? Are there circular dependencies? Does the concept map match the lesson order?
+-2. **Coverage** — Does the curriculum cover all key aspects of "${topic}"? Any major gaps?
+-3. **Difficulty curve** — Is the progression gradual? Any sudden spikes? Are early lessons accessible?
+-4. **Review placement** — Are review days placed every 5-7 lessons? Are they after difficulty spikes?
+-5. **Engagement** — Are lesson titles engaging questions/provocations? Do they drive curiosity?
+-6. **Resource quality** — Are resources real and appropriate for ${level} level?
+-7. **Exit criteria** — Do exit criteria match what the curriculum actually teaches?
+-
+-Report as JSON. PROCEED if all major checks pass. ISSUES if there are problems that need fixing.`,
+-  { label: 'pedagogy-gate', phase: 'Gate', schema: GATE_SCHEMA }
+-)
+-
+-log(`Gate: ${gate?.verdict || 'unknown'}, issues: ${gate?.issues?.length || 0}`)
+-
+-// ── Phase 4: Assemble — write final files ─────────────────────
+-
+-phase('Assemble')
+-
+-const assemblePrompt = `You are a curriculum assembler for OpenTutor. Take the following curriculum designs and write them as files.
+-
+-## Curriculum Structure (from structure agent)
+-${structure || '(missing)'}
+-
+-## Quality Gate Assessment
+-${JSON.stringify(gate, null, 2)}
+-
+----
+-
+-TASK: Create the directory ${domainDir} if it doesn't exist, then write the curriculum to ${domainDir}/curriculum.json
+-
+-The curriculum.json must follow this exact schema:
+-{
+-  "topic": "${topic}",
+-  "slug": "${slug}",
+-  "created": "(today's date YYYY-MM-DD)",
+-  "student_level": "${level}",
+-  "prerequisites": [...],
+-  "exit_criteria": [...],
+-  "lessons": [
+-    {
+-      "lesson": 1,
+-      "module": "Module Name",
+-      "title": "Why does X happen?",
+-      "concepts": ["concept1", "concept2"],
+-      "difficulty": 2,
+-      "type": "mini-lesson",
+-      "resources": ["url1"],
+-      "status": "pending"
+-    }
+-  ]
+-}
+-
+-Requirements:
+-- Flatten the module structure into a flat lessons array, but keep the "module" field on each lesson
+-- Every lesson must have: lesson (sequential number), module, title, concepts, difficulty (1-5), type (mini-lesson|question|resource-drop|teach-back|real-world|review), resources, status
+-- Every lesson must have status: "pending"
+-- Keep the lesson count from the structure agent — do NOT pad or truncate to hit a round number
+-- Include review lessons (type: "review") — these should already be in the structure
+-${gate?.issues?.length ? '\nFix these issues identified by the quality gate:\n' + gate.issues.map(i => '- ' + i).join('\n') : ''}
+-
+-Write ONLY the curriculum.json file.`
+-
+-const writeFiles = await parallel([
+-  () => agent(assemblePrompt, { label: 'write:curriculum', phase: 'Assemble' }),
+-  () => agent(
+-    `Write the following concept map to ${domainDir}/concept-map.md\n\nCreate the directory if needed.\n\n${conceptMap || '(generate a basic concept map for ' + topic + ')'}`,
+-    { label: 'write:concept-map', phase: 'Assemble' }
+-  ),
+-  () => agent(
+-    `Write the following teaching notes to ${domainDir}/teaching-notes.md\n\nCreate the directory if needed.\n\n${teachingNotes || '(generate basic teaching notes for ' + topic + ')'}`,
+-    { label: 'write:teaching-notes', phase: 'Assemble' }
+-  ),
+-  () => agent(
+-    `Write the following resources guide to ${domainDir}/resources.md\n\nCreate the directory if needed.\n\n${resources || '(generate a basic resource guide for ' + topic + ')'}`,
+-    { label: 'write:resources', phase: 'Assemble' }
+-  ),
+-])
+-
+-log(`Curriculum written to ${domainDir}/ (4 files)`)
+-return { topic, slug, level, domainDir, mode: 'full', gate: gate?.verdict, issues: gate?.issues }
+diff --git a/.claude/workflows/curriculum-qa.js b/.claude/workflows/curriculum-qa.js
+deleted file mode 100644
+index 80f8633..0000000
+--- a/.claude/workflows/curriculum-qa.js
++++ /dev/null
+@@ -1,319 +0,0 @@
+-export const meta = {
+-  name: 'curriculum-qa',
+-  description: 'Adversarial QA for curriculum correctness — sequencing, resources, coverage, pedagogy, schema',
+-  whenToUse: 'After building or modifying a curriculum. Usage: run with args {topic: "optimal transport"}',
+-  phases: [
+-    { title: 'QA', detail: 'Fork 5 specialist QA agents checking different dimensions' },
+-    { title: 'Verify', detail: 'Adversarially verify each finding — reject plausible-but-wrong' },
+-    { title: 'Verdict', detail: 'Synthesize findings into pass/fail report with fix recommendations' },
+-  ],
+-}
+-
+-const topic = args?.topic
+-if (!topic) throw new Error('Missing args.topic — pass {topic: "optimal transport"}')
+-
+-const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+-const domainDir = `skills/tutor/domains/${slug}`
+-
+-const FINDING_SCHEMA = {
+-  type: 'object',
+-  properties: {
+-    dimension: { type: 'string' },
+-    status: { type: 'string', enum: ['pass', 'warn', 'fail'] },
+-    findings: {
+-      type: 'array',
+-      items: {
+-        type: 'object',
+-        properties: {
+-          severity: { type: 'string', enum: ['critical', 'warning', 'info'] },
+-          description: { type: 'string' },
+-          location: { type: 'string' },
+-          fix: { type: 'string' },
+-        },
+-        required: ['severity', 'description'],
+-      },
+-    },
+-    summary: { type: 'string' },
+-  },
+-  required: ['dimension', 'status', 'findings', 'summary'],
+-}
+-
+-const FILE_CONTEXT = `Read these files for context:
+-- ${domainDir}/curriculum.json
+-- ${domainDir}/concept-map.md
+-- ${domainDir}/teaching-notes.md
+-- ${domainDir}/resources.md`
+-
+-// ── Phase 1: QA — parallel specialist agents ──────────────────
+-// Inspired by remote-factory's deep-QA fork: health_checker, code_reviewer, adversarial_tester
+-
+-phase('QA')
+-log(`QA checking curriculum for "${topic}"`)
+-
+-const QA_AGENTS = [
+-  {
+-    id: 'sequencing',
+-    prompt: `You are a curriculum sequencing checker. Verify that lesson prerequisites are properly ordered.
+-
+-${FILE_CONTEXT}
+-
+-Check:
+-1. **Prerequisite ordering** — For each lesson, verify that all concepts it depends on (from the concept map) have been taught in earlier lessons
+-2. **Module coherence** — Do lessons within a module actually relate to each other?
+-3. **Circular dependencies** — Are there any concepts that reference each other as prerequisites?
+-4. **Review day placement** — Are review days placed after every 5-7 lessons? After module transitions?
+-5. **Progressive difficulty** — Does each module build naturally on the previous one?
+-
+-For each issue found, report:
+-- severity: "critical" (prerequisite taught after dependent), "warning" (suboptimal order), "info" (suggestion)
+-- description: what's wrong
+-- location: which lesson day(s)
+-- fix: how to fix it`,
+-  },
+-  {
+-    id: 'resources',
+-    prompt: `You are a resource verification agent. Check that curriculum resources are real and accessible.
+-
+-${FILE_CONTEXT}
+-
+-Check:
+-1. **URL validity** — For each resource URL in lessons and resources.md, verify it looks like a real URL (correct domain, reasonable path). Flag obviously fake or hallucinated URLs.
+-2. **Resource existence** — Search the web to verify that key resources actually exist (textbooks, courses, video series)
+-3. **Level appropriateness** — Are resources appropriate for the stated student level?
+-4. **Coverage** — Does each lesson have at least one resource? Are there lessons with no resources?
+-5. **Diversity** — Is there a mix of resource types (text, video, interactive)?
+-
+-For each issue found, report:
+-- severity: "critical" (broken/fake URL), "warning" (resource may not exist), "info" (improvement suggestion)
+-- description: what's wrong
+-- location: which lesson day(s) or resource
+-- fix: suggested replacement resource`,
+-  },
+-  {
+-    id: 'coverage',
+-    prompt: `You are a concept coverage analyst. Verify the curriculum covers all key aspects of "${topic}".
+-
+-${FILE_CONTEXT}
+-
+-Check:
+-1. **Concept completeness** — Are all concepts from the concept map covered by at least one lesson?
+-2. **Orphan concepts** — Are there concepts in lessons that aren't in the concept map?
+-3. **Depth balance** — Are some subtopics over-covered while others are thin?
+-4. **Exit criteria alignment** — Can a student actually achieve each exit criterion by completing the curriculum?
+-5. **Gap analysis** — What important aspects of "${topic}" are missing entirely?
+-
+-For each issue found, report severity, description, location, and fix.`,
+-  },
+-  {
+-    id: 'pedagogy',
+-    prompt: `You are a pedagogical reviewer. Check the curriculum for teaching quality issues.
+-
+-${FILE_CONTEXT}
+-
+-Check:
+-1. **Lesson titles** — Are they engaging questions/provocations? Flag any that are dry topic labels.
+-2. **Concept density** — Are there lessons with too many concepts (>4) or too few (<1)?
+-3. **Difficulty spikes** — Are there sudden jumps in difficulty without preparation?
+-4. **Engagement pacing** — Are "mind-blowing" moments spread throughout, not clumped?
+-5. **Misconception coverage** — Do lessons address known misconceptions from the teaching notes?
+-6. **Exercise opportunities** — Can each lesson generate a meaningful exercise? Flag abstract lessons with no testable content.
+-
+-For each issue found, report severity, description, location, and fix.`,
+-  },
+-  {
+-    id: 'schema',
+-    prompt: `You are a data integrity checker. Verify the curriculum.json follows the required schema.
+-
+-${FILE_CONTEXT}
+-
+-Check curriculum.json for:
+-1. **Required fields** — Every lesson must have: lesson (int), module, title, concepts (array), difficulty (int 1-5), type (one of: mini-lesson, question, resource-drop, teach-back, real-world, review), resources (array), status
+-2. **Lesson sequence** — lesson numbers must be sequential (1, 2, 3...) with no gaps or duplicates
+-3. **Status values** — Every status must be "pending" or "completed" (not null, undefined, or other)
+-4. **Non-empty arrays** — concepts and resources arrays must not be empty
+-5. **Top-level fields** — Must have: topic, slug, created, student_level, prerequisites, exit_criteria, lessons
+-6. **Difficulty values** — Must be integers 1-5. Check the curve is plausible (early lessons should be low, reviews should be 1-2)
+-7. **Type values** — Must be one of the valid delivery types. Review lessons must have type "review". Check for variety (not all mini-lesson).
+-8. **String quality** — No empty strings, no placeholder text, no "TBD"
+-9. **JSON validity** — Check it actually parses as valid JSON
+-
+-For each issue found, report severity (critical for schema violations), description, location, and fix.`,
+-  },
+-]
+-
+-const qaResults = await parallel(
+-  QA_AGENTS.map(qa => () =>
+-    agent(qa.prompt, {
+-      label: `qa:${qa.id}`,
+-      phase: 'QA',
+-      schema: FINDING_SCHEMA,
+-    })
+-  )
+-)
+-
+-const allFindings = []
+-for (let i = 0; i < QA_AGENTS.length; i++) {
+-  const result = qaResults[i]
+-  if (result) {
+-    allFindings.push(result)
+-    const criticals = result.findings?.filter(f => f.severity === 'critical').length || 0
+-    const warnings = result.findings?.filter(f => f.severity === 'warning').length || 0
+-    log(`${QA_AGENTS[i].id}: ${result.status} (${criticals} critical, ${warnings} warnings)`)
+-  }
+-}
+-
+-// ── Phase 2: Verify — adversarially verify critical findings ──
+-
+-phase('Verify')
+-
+-const criticalFindings = allFindings.flatMap(r =>
+-  (r.findings || [])
+-    .filter(f => f.severity === 'critical')
+-    .map(f => ({ ...f, dimension: r.dimension }))
+-)
+-
+-log(`${criticalFindings.length} critical findings to verify`)
+-
+-let verified = []
+-if (criticalFindings.length > 0) {
+-  const verificationResults = await parallel(
+-    criticalFindings.map((finding, i) => () =>
+-      agent(
+-        `You are an adversarial verifier. Your job is to REFUTE this finding if it's wrong. Default to confirming if you're uncertain.
+-
+-${FILE_CONTEXT}
+-
+-## Finding to verify
+-Dimension: ${finding.dimension}
+-Description: ${finding.description}
+-Location: ${finding.location || 'not specified'}
+-Suggested fix: ${finding.fix || 'not specified'}
+-
+-Try hard to refute this. Check:
+-- Is the claim actually true? Read the files and verify.
+-- Could there be a valid reason for what the finder flagged?
+-- Is the location correct?
+-
+-Report as JSON:
+-{
+-  "confirmed": true or false,
+-  "reason": "why you confirmed or refuted",
+-  "adjusted_severity": "critical" or "warning" or "info"
+-}`,
+-        {
+-          label: `verify:${i}`,
+-          phase: 'Verify',
+-          schema: {
+-            type: 'object',
+-            properties: {
+-              confirmed: { type: 'boolean' },
+-              reason: { type: 'string' },
+-              adjusted_severity: { type: 'string', enum: ['critical', 'warning', 'info'] },
+-            },
+-            required: ['confirmed', 'reason'],
+-          },
+-        }
+-      ).then(v => ({
+-        ...finding,
+-        verified: v?.confirmed ?? true,
+-        verify_reason: v?.reason,
+-        final_severity: v?.adjusted_severity || finding.severity,
+-      }))
+-    )
+-  )
+-
+-  verified = verificationResults.filter(Boolean).filter(f => f.verified)
+-  const refuted = verificationResults.filter(Boolean).filter(f => !f.verified)
+-  log(`Verified: ${verified.length} confirmed, ${refuted.length} refuted`)
+-} else {
+-  log('No critical findings to verify')
+-}
+-
+-// ── Phase 3: Verdict — synthesize report ──────────────────────
+-
+-phase('Verdict')
+-
+-const VERDICT_SCHEMA = {
+-  type: 'object',
+-  properties: {
+-    verdict: { type: 'string', enum: ['PASS', 'PASS_WITH_WARNINGS', 'FAIL'] },
+-    overall_score: { type: 'number' },
+-    dimensions: {
+-      type: 'array',
+-      items: {
+-        type: 'object',
+-        properties: {
+-          name: { type: 'string' },
+-          status: { type: 'string' },
+-          score: { type: 'number' },
+-        },
+-      },
+-    },
+-    critical_issues: { type: 'array', items: { type: 'string' } },
+-    warnings: { type: 'array', items: { type: 'string' } },
+-    fix_plan: { type: 'array', items: { type: 'string' } },
+-    summary: { type: 'string' },
+-  },
+-  required: ['verdict', 'overall_score', 'critical_issues', 'summary'],
+-}
+-
+-const verdict = await agent(
+-  `You are the final verdict synthesizer for a curriculum QA pipeline. Produce the overall assessment.
+-
+-## QA Results by Dimension
+-${allFindings.map(r => `### ${r.dimension}\nStatus: ${r.status}\n${r.summary}\nFindings: ${r.findings?.length || 0} (${r.findings?.filter(f => f.severity === 'critical').length || 0} critical)`).join('\n\n')}
+-
+-## Verified Critical Findings (survived adversarial check)
+-${verified.length > 0 ? verified.map(f => `- [${f.final_severity}] ${f.description} (${f.dimension}): ${f.verify_reason}`).join('\n') : 'None — all critical findings were refuted or none existed.'}
+-
+-## All Findings Detail
+-${JSON.stringify(allFindings, null, 2)}
+-
+----
+-
+-Produce the final verdict:
+-- **PASS** — No critical issues, minor warnings only
+-- **PASS_WITH_WARNINGS** — No critical issues, but warnings that should be addressed
+-- **FAIL** — Confirmed critical issues that must be fixed before use
+-
+-Score each dimension 0-10 and compute an overall weighted average.
+-List all confirmed critical issues and all warnings.
+-Provide a prioritized fix plan (what to fix first, what can wait).`,
+-  { label: 'verdict', phase: 'Verdict', schema: VERDICT_SCHEMA }
+-)
+-
+-// Write QA report
+-const reportPrompt = `Write a QA report to ${domainDir}/qa-report.md with the following content:
+-
+-# QA Report: ${topic}
+-Generated: (today's date)
+-
+-## Verdict: ${verdict?.verdict || 'UNKNOWN'}
+-Overall Score: ${verdict?.overall_score || '?'}/10
+-
+-## Dimensions
+-${verdict?.dimensions?.map(d => `- **${d.name}**: ${d.status} (${d.score}/10)`).join('\n') || 'No dimension scores available'}
+-
+-## Critical Issues (verified)
+-${verdict?.critical_issues?.length ? verdict.critical_issues.map(i => `- ${i}`).join('\n') : 'None'}
+-
+-## Warnings
+-${verdict?.warnings?.length ? verdict.warnings.map(w => `- ${w}`).join('\n') : 'None'}
+-
+-## Fix Plan
+-${verdict?.fix_plan?.length ? verdict.fix_plan.map((f, i) => `${i + 1}. ${f}`).join('\n') : 'No fixes needed'}
+-
+-## Summary
+-${verdict?.summary || 'No summary available'}`
+-
+-await agent(reportPrompt, { label: 'write-report', phase: 'Verdict' })
+-
+-log(`QA complete: ${verdict?.verdict || 'UNKNOWN'} (${verdict?.overall_score || '?'}/10)`)
+-return {
+-  topic,
+-  slug,
+-  verdict: verdict?.verdict,
+-  score: verdict?.overall_score,
+-  criticalIssues: verdict?.critical_issues?.length || 0,
+-  warnings: verdict?.warnings?.length || 0,
+-}
+diff --git a/.claude/workflows/dashboard.js b/.claude/workflows/dashboard.js
+deleted file mode 100644
+index 5ea7eda..0000000
+--- a/.claude/workflows/dashboard.js
++++ /dev/null
+@@ -1,144 +0,0 @@
+-export const meta = {
+-  name: 'dashboard',
+-  description: 'Generate an HTML progress dashboard from curriculum data',
+-  whenToUse: 'To visualize learning progress across all topics. Usage: run with no args, or {outputPath: "custom/path.html"}',
+-  phases: [
+-    { title: 'Gather', detail: 'Read progress, curriculum, and QA data' },
+-    { title: 'Render', detail: 'Generate self-contained HTML dashboard' },
+-  ],
+-}
+-
+-const outputPath = args?.outputPath || 'workspace/tutor/dashboard.html'
+-
+-// ── Phase 1: Gather ──────────────────────────────────────────
+-
+-phase('Gather')
+-log('Gathering progress and curriculum data')
+-
+-const DATA_SCHEMA = {
+-  type: 'object',
+-  properties: {
+-    schedule: {
+-      type: 'object',
+-      properties: {
+-        times: { type: 'array', items: { type: 'string' } },
+-        timezone: { type: 'string' },
+-        pacing: { type: 'string' },
+-      },
+-    },
+-    topics: {
+-      type: 'array',
+-      items: {
+-        type: 'object',
+-        properties: {
+-          slug: { type: 'string' },
+-          name: { type: 'string' },
+-          level: { type: 'string' },
+-          created: { type: 'string' },
+-          totalLessons: { type: 'number' },
+-          completedLessons: { type: 'number' },
+-          modules: {
+-            type: 'array',
+-            items: {
+-              type: 'object',
+-              properties: {
+-                name: { type: 'string' },
+-                total: { type: 'number' },
+-                completed: { type: 'number' },
+-              },
+-              required: ['name', 'total', 'completed'],
+-            },
+-          },
+-          concepts: { type: 'array', items: { type: 'string' } },
+-          completedConcepts: { type: 'array', items: { type: 'string' } },
+-          qaVerdict: { type: 'string' },
+-          qaScore: { type: 'number' },
+-          exitCriteria: { type: 'array', items: { type: 'string' } },
+-        },
+-        required: ['slug', 'name', 'totalLessons', 'completedLessons', 'modules'],
+-      },
+-    },
+-    history: {
+-      type: 'array',
+-      items: {
+-        type: 'object',
+-        properties: {
+-          date: { type: 'string' },
+-          topic: { type: 'string' },
+-          lesson: { type: 'number' },
+-          engagement: { type: 'string' },
+-        },
+-      },
+-    },
+-    streak: { type: 'number' },
+-  },
+-  required: ['topics', 'history', 'schedule', 'streak'],
+-}
+-
+-const data = await agent(
+-  `Read and synthesize all learning data from the OpenTutor workspace.
+-
+-1. Read workspace/tutor/progress.json for active_topics, schedule, and history.
+-
+-2. List the directories under skills/tutor/domains/ — each directory is a topic.
+-
+-3. For EACH topic directory found:
+-   a. Read curriculum.json — extract: topic name, slug, student_level, created date, lessons array (count total, count where status === "completed"), group lessons by module field (count total and completed per module), collect all unique concepts across all lessons, collect concepts from completed lessons only, exit_criteria
+-   b. Read qa-report.md if it exists — extract the verdict (PASS/PASS_WITH_WARNINGS/FAIL) and overall score
+-
+-4. From history in progress.json, compute current streak: count consecutive days (ending today or yesterday) that have at least one history entry. If no history, streak is 0.
+-
+-Return the full data as JSON matching the schema. Include ALL topics found in domains/, not just those in active_topics.`,
+-  { label: 'gather', phase: 'Gather', schema: DATA_SCHEMA }
+-)
+-
+-const topicCount = data?.topics?.length || 0
+-const totalLessons = (data?.topics || []).reduce((s, t) => s + t.totalLessons, 0)
+-const completedLessons = (data?.topics || []).reduce((s, t) => s + t.completedLessons, 0)
+-log('Found ' + topicCount + ' topics, ' + totalLessons + ' lessons (' + completedLessons + ' completed)')
+-
+-// ── Phase 2: Render ──────────────────────────────────────────
+-
+-phase('Render')
+-
+-const dataJson = JSON.stringify(data, null, 2)
+-
+-await agent(
+-  'Generate a self-contained HTML dashboard file and write it to ' + outputPath + '.\n\n' +
+-  '## Data\n```json\n' + dataJson + '\n```\n\n' +
+-  '## Requirements\n\n' +
+-  'Build a single HTML file with ALL CSS inline (no external dependencies). The page should include:\n\n' +
+-  '### 1. Overview Cards Row\n' +
+-  '4 stat cards in a row: Total Topics, Total Lessons, Completion %, Current Streak (days).\n' +
+-  'Each card: white background, subtle box-shadow (0 1px 3px rgba(0,0,0,0.12)), rounded corners (8px), padding 24px.\n' +
+-  'The number should be large (36px, bold, color #2563eb), label below in small gray text.\n\n' +
+-  '### 2. Per-Topic Progress Section\n' +
+-  'For each topic: a card with the topic name as header, level badge, created date.\n' +
+-  'A full-width progress bar showing completed/total lessons (gradient from #2563eb to #7c3aed).\n' +
+-  'Below it: a row of mini progress bars, one per module, with module name labels.\n' +
+-  'Show QA verdict badge if available (PASS=#16a34a, PASS_WITH_WARNINGS=#eab308, FAIL=#dc2626).\n' +
+-  'List exit criteria as a checklist.\n\n' +
+-  '### 3. Concept Mastery Grid\n' +
+-  'For each topic: a grid of small pills/tags, one per concept.\n' +
+-  'Color: #e2e8f0 (not started), #93c5fd (in completed lesson = learned), #2563eb (mastered if topic 100%).\n' +
+-  'Group by topic with topic name as subheader.\n\n' +
+-  '### 4. Lesson History Timeline\n' +
+-  'Show the most recent 20 history entries as a vertical timeline.\n' +
+-  'Each entry: date on the left, topic + lesson number + engagement on the right.\n' +
+-  'Use a vertical line with dots. If no history, show "No lessons delivered yet."\n\n' +
+-  '### 5. Schedule Info Card\n' +
+-  'Show delivery times, timezone, pacing. Clean card format.\n\n' +
+-  '### Style Rules\n' +
+-  '- Font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif\n' +
+-  '- Background: #f8fafc, text: #1e293b\n' +
+-  '- Primary: #2563eb, Success: #16a34a, Warning: #eab308, Error: #dc2626\n' +
+-  '- Max content width: 960px, centered\n' +
+-  '- Responsive: cards wrap on narrow screens (use CSS grid or flexbox with wrap)\n' +
+-  '- Page title: "OpenTutor Dashboard"\n' +
+-  '- Add a header with the OpenTutor name and a "Generated: (today date)" subtitle\n\n' +
+-  'Write the complete HTML file. It must render correctly when opened in a browser.',
+-  { label: 'render', phase: 'Render' }
+-)
+-
+-log('Dashboard written to ' + outputPath)
+-return { outputPath, topics: topicCount, lessons: totalLessons, completed: completedLessons }
+diff --git a/.claude/workflows/new-topic.js b/.claude/workflows/new-topic.js
+deleted file mode 100644
+index 4d9d1a6..0000000
+--- a/.claude/workflows/new-topic.js
++++ /dev/null
+@@ -1,577 +0,0 @@
+-export const meta = {
+-  name: 'new-topic',
+-  description: 'Tutor-controlled pipeline: survey → audience → build → QA → schedule. The tutor judges each step and decides where more work is needed.',
+-  whenToUse: 'When adding a completely new topic. Usage: run with args {topic: "category theory", level: "intermediate"}. For preview only: {topic: "...", dryRun: true}. To resume after escalation: {topic: "...", humanGuidance: "your answer"}',
+-  phases: [
+-    { title: 'Survey', detail: 'Broad multi-source research to map the field' },
+-    { title: 'Audience', detail: 'Tutor assesses target audience and tailors approach' },
+-    { title: 'Build', detail: 'Design curriculum, concept map, teaching notes' },
+-    { title: 'QA', detail: 'Adversarial quality checks' },
+-    { title: 'Schedule', detail: 'Generate optimal delivery schedule' },
+-    { title: 'Register', detail: 'Register topic in progress.json' },
+-  ],
+-}
+-
+-const topic = args?.topic
+-if (!topic) throw new Error('Missing args.topic — pass {topic: "category theory", level: "intermediate"}')
+-
+-const level = args?.level || 'intermediate'
+-const timezone = args?.timezone || 'America/New_York'
+-const humanGuidance = args?.humanGuidance || null
+-const dryRun = args?.dryRun || false
+-const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+-const domainDir = `skills/tutor/domains/${slug}`
+-
+-// ── Iteration caps ────────────────────────────────────────────
+-
+-const CAPS = {
+-  targetedResearch: 3,
+-  buildRedos: 2,
+-  scheduleRedos: 1,
+-  qaCycles: 2,
+-}
+-
+-// ── Tutor state ───────────────────────────────────────────────
+-
+-const tutorMemory = []
+-const executionLog = []
+-let researchRounds = 0
+-
+-function logStep(entry) {
+-  executionLog.push({ ...entry, timestamp: executionLog.length + 1 })
+-}
+-
+-if (humanGuidance) {
+-  tutorMemory.push(`[human-guidance] The human provided this guidance to resume: ${humanGuidance}`)
+-}
+-
+-// ── Tutor decision schema ─────────────────────────────────────
+-
+-const TUTOR_DECISION_SCHEMA = {
+-  type: 'object',
+-  properties: {
+-    decision: { type: 'string', enum: ['ADVANCE', 'RESEARCH', 'REDO', 'ESCALATE'] },
+-    confidence: { type: 'number' },
+-    reasoning: { type: 'string' },
+-    research_query: { type: 'string' },
+-    redo_feedback: { type: 'string' },
+-    redo_targets: { type: 'array', items: { type: 'string' } },
+-    escalation_question: { type: 'string' },
+-    context_update: { type: 'string' },
+-    quality_snapshot: { type: 'string' },
+-  },
+-  required: ['decision', 'confidence', 'reasoning', 'context_update', 'quality_snapshot'],
+-}
+-
+-// ── Step-specific evaluation criteria ─────────────────────────
+-
+-const STEP_CRITERIA = {
+-  survey: `## Evaluation Criteria: Research Survey
+-Read the research document at ${domainDir}/research.md to form your judgment.
+-
+-- Does the research cover the major branches and subtopics of "${topic}"?
+-- Are there enough papers (10+) to support a full curriculum?
+-- Are educational resources diverse (courses, videos, interactive tools, code)?
+-- Are there any critical subtopics with zero coverage that would leave lessons unsupported?
+-- Is the field landscape clear enough to structure a course?
+-- What are the 4-6 major pillars/branches of this field?`,
+-
+-  'survey-enriched': `## Evaluation Criteria: Enriched Research
+-Read the research document at ${domainDir}/research.md — check especially the "Targeted Research" sections at the end.
+-
+-- Did the targeted research fill the gaps you identified?
+-- Is coverage now sufficient to build a full curriculum?
+-- Are there still critical blind spots that would leave lessons unsupported?`,
+-
+-  build: `## Evaluation Criteria: Curriculum Build
+-Read the domain files to evaluate the actual output:
+-- ${domainDir}/curriculum.json
+-- ${domainDir}/concept-map.md
+-- ${domainDir}/teaching-notes.md
+-- ${domainDir}/resources.md
+-
+-Check:
+-- Does the lesson sequence respect concept dependencies from the concept map?
+-- Are lesson titles engaging questions or provocations (not dry topic labels)?
+-- Is the difficulty progression gradual and appropriate for ${level}?
+-- Does the lesson count fit the material (not padded or truncated to a round number)?
+-- Are there review lessons (type: "review") every 5-7 lessons?
+-- Does every lesson have difficulty (1-5) and type fields?
+-- Are there "thin" lessons with only 1 concept and no resources?
+-- Does the concept map match the lesson sequence (no orphan concepts)?
+-- Are teaching notes specific enough to guide delivery?
+-- Are resources real, diverse, and linked to specific lessons?`,
+-
+-  qa: `## Evaluation Criteria: QA Results
+-Read the QA report at ${domainDir}/qa-report.md for full details.
+-
+-- Are the critical findings legitimate? QA agents sometimes over-flag.
+-- If critical findings were verified by the adversarial check, they are real.
+-- If overall score is 7+/10 with no verified critical issues, ADVANCE.
+-- If there are verified critical issues (wrong prereq order, fake URLs, missing foundational concepts), REDO is mandatory.
+-- Your REDO feedback should translate QA findings into specific build instructions, not just repeat the QA agent's words.`,
+-
+-  schedule: `## Evaluation Criteria: Schedule
+-Read workspace/tutor/progress.json to see the applied schedule.
+-
+-- Are delivery times reasonable for ${timezone}? (not 3am)
+-- Is pacing appropriate for ${level} level?
+-- Are review days placed after difficulty spikes?
+-- Is estimated completion realistic for the lesson count?`,
+-}
+-
+-// ── Tutor judge helper ────────────────────────────────────────
+-
+-async function tutorJudge(step, stepOutput, extra) {
+-  const iteration = extra?.iteration || null
+-  const maxIterations = extra?.max || null
+-  const isLastIteration = iteration && maxIterations && iteration >= maxIterations
+-
+-  const prompt = `You are the Tutor — the quality controller for OpenTutor's curriculum generation pipeline for a course on "${topic}" at ${level} level.
+-
+-You carry accumulated knowledge across every judgment you make. Your context below represents everything you have decided so far. Use it to make sharper decisions — you know what gaps existed, what was enriched, where things were thin.
+-
+-## Decision Options
+-- ADVANCE — Quality is sufficient for this student's learning. Move forward.
+-- RESEARCH — You need more depth on a specific subtopic before this step's output can be adequate. Be precise: "Sinkhorn convergence rate analysis" not "more research." This triggers a targeted search for papers and resources on that exact subtopic.
+-- REDO — This step's output has fixable problems. Provide specific, actionable feedback that a rebuild agent can act on without guessing. Cite specific lessons, sections, or files.
+-- ESCALATE — You genuinely cannot proceed without human judgment. This is rare — use it for fundamental questions about scope, level, or approach.
+-
+-## Decision Principles
+-1. Perfect is the enemy of good. A curriculum that ships is better than one endlessly refined.
+-2. Focus on pedagogical impact. Would this issue actually harm the student's learning? If not, ADVANCE.
+-3. RESEARCH is for genuine knowledge gaps that make lessons thin or inaccurate, not stylistic preferences.
+-4. REDO feedback must name specific items: "Lessons 12-15 need X" not "some lessons need improvement."
+-${isLastIteration ? '5. THIS IS THE FINAL ALLOWED ITERATION. You MUST choose ADVANCE unless there are critical pedagogical errors (wrong prerequisite ordering, missing foundational concepts, dangerously incorrect content). Cosmetic issues and minor gaps are acceptable.' : ''}
+-
+-## Your Accumulated Context
+-${tutorMemory.length > 0
+-    ? tutorMemory.map((m, i) => `${i + 1}. ${m}`).join('\n')
+-    : '(This is your first judgment. No prior context.)'}
+-
+-${STEP_CRITERIA[step] || ''}
+-
+-## Step Output Summary
+-${typeof stepOutput === 'string' ? stepOutput : JSON.stringify(stepOutput, null, 2)}
+-
+-${iteration ? `\nThis is attempt ${iteration} of ${maxIterations}.` : ''}
+-${researchRounds > 0 ? `\nTargeted research rounds used: ${researchRounds}/${CAPS.targetedResearch}` : ''}`
+-
+-  const decision = await agent(prompt, {
+-    label: `tutor:${step}${iteration ? ':' + iteration : ''}`,
+-    phase: step === 'survey' || step === 'survey-enriched' ? 'Survey' : step === 'build' ? 'Build' : step === 'qa' ? 'QA' : step === 'schedule' ? 'Schedule' : 'Survey',
+-    schema: TUTOR_DECISION_SCHEMA,
+-  })
+-
+-  if (decision?.context_update) {
+-    tutorMemory.push(`[${step}] ${decision.context_update}`)
+-  }
+-
+-  logStep({
+-    type: 'tutor-decision',
+-    step,
+-    iteration: iteration || 1,
+-    decision: decision?.decision,
+-    confidence: decision?.confidence,
+-    reasoning: decision?.reasoning,
+-    research_query: decision?.research_query,
+-    redo_feedback: decision?.redo_feedback,
+-    quality_snapshot: decision?.quality_snapshot,
+-  })
+-
+-  log(`Tutor (${step}): ${decision?.decision || 'unknown'} (confidence: ${decision?.confidence || '?'}/10) — ${decision?.quality_snapshot || ''}`)
+-
+-  return decision || { decision: 'ADVANCE', confidence: 5, reasoning: 'No response from tutor', context_update: 'Tutor did not respond, defaulting to ADVANCE', quality_snapshot: 'unknown' }
+-}
+-
+-// ── ESCALATE handler ──────────────────────────────────────────
+-
+-async function handleEscalate(decision) {
+-  if (decision?.decision !== 'ESCALATE') return
+-
+-  await agent(
+-    `Write a file to ${domainDir}/escalation.md with the following content:
+-
+-# Escalation: ${topic}
+-
+-## Question for Human
+-${decision.escalation_question || 'The tutor needs human guidance to proceed.'}
+-
+-## Tutor Reasoning
+-${decision.reasoning || 'No reasoning provided.'}
+-
+-## Context So Far
+-${tutorMemory.map((m, i) => (i + 1) + '. ' + m).join('\n')}
+-
+-## How to Resume
+-Re-run the pipeline with:
+-args: {topic: "${topic}", level: "${level}", humanGuidance: "your answer here"}`,
+-    { label: 'escalate:write', phase: 'Survey' }
+-  )
+-
+-  throw new Error(`ESCALATE: ${decision.escalation_question || 'Tutor needs human guidance'}. See ${domainDir}/escalation.md`)
+-}
+-
+-// ══════════════════════════════════════════════════════════════
+-// PIPELINE
+-// ══════════════════════════════════════════════════════════════
+-
+-// ── Phase 1: Survey Research ──────────────────────────────────
+-
+-phase('Survey')
+-log(`Starting tutor-controlled pipeline for "${topic}" (${level})`)
+-
+-const surveyResult = await workflow({scriptPath: '.claude/workflows/research.js'}, { topic, mode: 'survey' })
+-logStep({ type: 'workflow', name: 'research', mode: 'survey', result: { coverage: surveyResult?.coverage, gaps: surveyResult?.gaps } })
+-log(`Survey done: coverage ${surveyResult?.coverage || '?'}/10`)
+-
+-let decision = await tutorJudge('survey', surveyResult)
+-
+-while (decision.decision === 'RESEARCH' && researchRounds < CAPS.targetedResearch) {
+-  log(`Tutor requests targeted research: "${decision.research_query}"`)
+-  const targetedResult = await workflow({scriptPath: '.claude/workflows/research.js'}, { topic, mode: 'targeted', query: decision.research_query })
+-  logStep({ type: 'workflow', name: 'research', mode: 'targeted', query: decision.research_query, result: targetedResult })
+-  researchRounds++
+-  decision = await tutorJudge('survey-enriched', { enrichedWith: decision.research_query, roundsUsed: researchRounds, roundsMax: CAPS.targetedResearch })
+-}
+-
+-if (decision.decision === 'RESEARCH' && researchRounds >= CAPS.targetedResearch) {
+-  tutorMemory.push(`[cap-hit] Research cap reached (${CAPS.targetedResearch} rounds). Proceeding with available research.`)
+-  log(`Research cap reached (${CAPS.targetedResearch} rounds). Advancing.`)
+-}
+-
+-await handleEscalate(decision)
+-
+-// ── Phase 2: Audience Assessment ──────────────────────────────
+-
+-phase('Audience')
+-log('Tutor assessing target audience')
+-
+-const AUDIENCE_SCHEMA = {
+-  type: 'object',
+-  properties: {
+-    audience_type: { type: 'string' },
+-    goal: { type: 'string' },
+-    background: { type: 'string' },
+-    tone: { type: 'string' },
+-    depth: { type: 'string' },
+-    time_commitment: { type: 'string' },
+-    summary: { type: 'string' },
+-  },
+-  required: ['audience_type', 'goal', 'depth', 'summary'],
+-}
+-
+-const audience = await agent(
+-  `You are the Tutor for OpenTutor. Based on the research and context available, define the target audience profile for a course on "${topic}" at ${level} level.
+-
+-Read:
+-- ${domainDir}/research.md — to understand the field's scope and available resources
+-- workspace/USER.md — for any existing student profile
+-- skills/tutor/references/teaching-method.md — for the teaching methodology
+-
+-## Your Accumulated Context
+-${tutorMemory.map((m, i) => (i + 1) + '. ' + m).join('\n')}
+-
+-${humanGuidance ? '## Human Guidance\n' + humanGuidance : ''}
+-
+-Determine:
+-
+-1. **audience_type** — Who is this for? (e.g., "graduate students in applied math", "software engineers exploring ML theory", "curious adults with calculus background")
+-2. **goal** — What is the learning goal? (e.g., "preparation for research", "practical application in ML pipelines", "intellectual enrichment", "exam prep")
+-3. **background** — What prerequisites can we assume? Be specific about math/CS/domain knowledge.
+-4. **tone** — What teaching tone fits this audience? (e.g., "rigorous but accessible", "hands-on and example-driven", "conversational with formal foundations")
+-5. **depth** — How deep should the course go? (e.g., "intuition + key proofs", "full formal treatment", "applied recipes with theoretical grounding")
+-6. **time_commitment** — How much time per lesson? (e.g., "3-5 min read + 10 min exercises", "15-20 min deep study")
+-7. **summary** — A 2-3 sentence profile that the curriculum builder can use as a north star.
+-
+-Report as JSON.`,
+-  { label: 'audience', phase: 'Audience', schema: AUDIENCE_SCHEMA }
+-)
+-
+-logStep({ type: 'agent', name: 'audience', result: audience })
+-tutorMemory.push(`[audience] ${audience?.summary || 'Audience assessment completed.'}`)
+-log(`Audience: ${audience?.audience_type || 'unknown'} — ${audience?.goal || 'unknown goal'}`)
+-
+-// ── Dry-run exit point ────────────────────────────────────────
+-
+-if (dryRun) {
+-  await agent(
+-    `Write a preview report to ${domainDir}/preview.md.
+-
+-Read ${domainDir}/research.md to summarize what was found.
+-
+-Write the report with this structure:
+-
+-# Preview: ${topic}
+-Generated: (today's date)
+-Mode: DRY RUN — no curriculum built yet
+-
+-## Field Map
+-Summarize the major branches/pillars of "${topic}" based on the research.
+-List the top 5-8 subtopics that a curriculum would cover.
+-
+-## Audience Profile
+-- **Type**: ${audience?.audience_type || 'unknown'}
+-- **Goal**: ${audience?.goal || 'unknown'}
+-- **Background**: ${audience?.background || 'unknown'}
+-- **Tone**: ${audience?.tone || 'unknown'}
+-- **Depth**: ${audience?.depth || 'unknown'}
+-- **Time per lesson**: ${audience?.time_commitment || 'unknown'}
+-
+-## Research Coverage
+-Summarize: how many papers found, how many educational resources, any major gaps.
+-
+-## Tutor Notes
+-${tutorMemory.map((m, i) => (i + 1) + '. ' + m).join('\n')}
+-
+-## Next Step
+-To proceed with the full pipeline, run:
+-args: {topic: "${topic}", level: "${level}"}`,
+-    { label: 'preview', phase: 'Audience' }
+-  )
+-
+-  log(`Dry run complete. Preview written to ${domainDir}/preview.md`)
+-  return {
+-    topic,
+-    slug,
+-    level,
+-    dryRun: true,
+-    audience,
+-    researchRounds,
+-    tutorMemory,
+-  }
+-}
+-
+-// ── Phase 3: Build Curriculum ─────────────────────────────────
+-
+-phase('Build')
+-
+-let buildFeedback = null
+-for (let attempt = 1; attempt <= CAPS.buildRedos + 1; attempt++) {
+-  const buildMode = buildFeedback ? 'patch' : 'full'
+-  const buildResult = await workflow({scriptPath: '.claude/workflows/curriculum-build.js'}, {
+-    topic,
+-    level,
+-    mode: buildMode,
+-    feedback: buildFeedback,
+-    audience: audience?.summary,
+-  })
+-  logStep({ type: 'workflow', name: 'curriculum-build', mode: buildMode, attempt, result: { gate: buildResult?.gate, issues: buildResult?.issues } })
+-
+-  log(`Build attempt ${attempt}: gate=${buildResult?.gate || '?'}, mode=${buildMode}`)
+-
+-  decision = await tutorJudge('build', buildResult, { iteration: attempt, max: CAPS.buildRedos + 1 })
+-
+-  if (decision.decision === 'ADVANCE') break
+-
+-  await handleEscalate(decision)
+-
+-  if (decision.decision === 'RESEARCH' && researchRounds < CAPS.targetedResearch) {
+-    log(`Tutor requests targeted research before rebuild: "${decision.research_query}"`)
+-    const targetedResult = await workflow({scriptPath: '.claude/workflows/research.js'}, { topic, mode: 'targeted', query: decision.research_query })
+-    logStep({ type: 'workflow', name: 'research', mode: 'targeted', query: decision.research_query, result: targetedResult })
+-    researchRounds++
+-  }
+-
+-  buildFeedback = decision.redo_feedback || 'Improve overall quality based on tutor feedback.'
+-}
+-
+-// ── Phase 4: QA ───────────────────────────────────────────────
+-
+-phase('QA')
+-
+-for (let cycle = 1; cycle <= CAPS.qaCycles + 1; cycle++) {
+-  const qaResult = await workflow({scriptPath: '.claude/workflows/curriculum-qa.js'}, { topic })
+-  logStep({ type: 'workflow', name: 'curriculum-qa', cycle, result: { verdict: qaResult?.verdict, score: qaResult?.score, criticalIssues: qaResult?.criticalIssues, warnings: qaResult?.warnings } })
+-
+-  log(`QA cycle ${cycle}: verdict=${qaResult?.verdict || '?'}, score=${qaResult?.score || '?'}/10`)
+-
+-  decision = await tutorJudge('qa', qaResult, { iteration: cycle, max: CAPS.qaCycles + 1 })
+-
+-  if (decision.decision === 'ADVANCE') break
+-
+-  await handleEscalate(decision)
+-
+-  if (decision.decision === 'RESEARCH' && researchRounds < CAPS.targetedResearch) {
+-    log(`Tutor requests targeted research to fix QA issues: "${decision.research_query}"`)
+-    const targetedResult = await workflow({scriptPath: '.claude/workflows/research.js'}, { topic, mode: 'targeted', query: decision.research_query })
+-    logStep({ type: 'workflow', name: 'research', mode: 'targeted', query: decision.research_query, result: targetedResult })
+-    researchRounds++
+-  }
+-
+-  if (decision.decision === 'REDO' || decision.decision === 'RESEARCH') {
+-    log(`Rebuilding (patch) with QA feedback before re-running QA`)
+-    const patchResult = await workflow({scriptPath: '.claude/workflows/curriculum-build.js'}, {
+-      topic,
+-      level,
+-      mode: 'patch',
+-      feedback: decision.redo_feedback || 'Address QA findings.',
+-      audience: audience?.summary,
+-    })
+-    logStep({ type: 'workflow', name: 'curriculum-build', mode: 'patch', cycle, result: { gate: patchResult?.gate, issues: patchResult?.issues } })
+-  }
+-}
+-
+-// ── Phase 5: Schedule ─────────────────────────────────────────
+-
+-phase('Schedule')
+-
+-let schedFeedback = null
+-for (let attempt = 1; attempt <= CAPS.scheduleRedos + 1; attempt++) {
+-  const schedResult = await workflow({scriptPath: '.claude/workflows/schedule.js'}, { topic, timezone, feedback: schedFeedback })
+-  logStep({ type: 'workflow', name: 'schedule', attempt, result: { pacing: schedResult?.schedule?.pacing, gate: schedResult?.gate } })
+-
+-  log(`Schedule attempt ${attempt}: pacing=${schedResult?.schedule?.pacing || '?'}`)
+-
+-  decision = await tutorJudge('schedule', schedResult, { iteration: attempt, max: CAPS.scheduleRedos + 1 })
+-
+-  if (decision.decision === 'ADVANCE') break
+-
+-  await handleEscalate(decision)
+-  schedFeedback = decision.redo_feedback
+-}
+-
+-// ── Phase 6: Register ─────────────────────────────────────────
+-
+-phase('Register')
+-
+-await agent(
+-  `Read workspace/tutor/progress.json and ensure:
+-1. "${slug}" is in the active_topics array
+-2. The schedule section is set (should already be from schedule workflow)
+-
+-If "${slug}" is not in active_topics, add it. Write the updated file back.
+-
+-Then read ${domainDir}/curriculum.json and report:
+-- Total lesson count
+-- Module count
+-- First lesson title`,
+-  { label: 'register', phase: 'Register' }
+-)
+-
+-// ── Pipeline Report ───────────────────────────────────────────
+-
+-await agent(
+-  `Write a pipeline run report to ${domainDir}/pipeline-report.md.
+-
+-Read these files to gather final stats:
+-- ${domainDir}/curriculum.json — lesson count, module count
+-- ${domainDir}/qa-report.md — QA verdict and score (if exists)
+-- workspace/tutor/progress.json — schedule details
+-
+-Write the report with this structure:
+-
+-# Pipeline Report: ${topic}
+-Generated: (today's date)
+-
+-## Summary
+-- **Topic**: ${topic}
+-- **Level**: ${level}
+-- **Audience**: ${audience?.summary || 'Not assessed'}
+-- **Tutor Judgments**: ${tutorMemory.length}
+-- **Targeted Research Rounds**: ${researchRounds}/${CAPS.targetedResearch}
+-
+-## Tutor Decision Log
+-${tutorMemory.map((m, i) => (i + 1) + '. ' + m).join('\n')}
+-
+-## Pipeline Stats
+-(Fill in from the files you read)
+-- Total lessons:
+-- Total modules:
+-- QA verdict:
+-- QA score:
+-- Schedule pacing:
+-- Estimated completion:
+-
+-## Files Generated
+-List all files in ${domainDir}/ with their sizes.
+-
+-## Execution Log
+-${executionLog.map(e => {
+-    if (e.type === 'tutor-decision') return '### Step ' + e.timestamp + ': Tutor → ' + e.step + ' (attempt ' + e.iteration + ')\n- **Decision**: ' + e.decision + ' (confidence: ' + e.confidence + '/10)\n- **Reasoning**: ' + e.reasoning + (e.research_query ? '\n- **Research query**: ' + e.research_query : '') + (e.redo_feedback ? '\n- **Redo feedback**: ' + e.redo_feedback : '') + '\n- **Quality**: ' + e.quality_snapshot
+-    if (e.type === 'workflow') return '### Step ' + e.timestamp + ': Workflow → ' + e.name + ' (' + (e.mode || 'default') + ')' + (e.query ? '\n- **Query**: ' + e.query : '') + (e.attempt ? '\n- **Attempt**: ' + e.attempt : '') + (e.cycle ? '\n- **Cycle**: ' + e.cycle : '') + '\n- **Result**: ' + JSON.stringify(e.result)
+-    if (e.type === 'agent') return '### Step ' + e.timestamp + ': Agent → ' + e.name + '\n- **Result**: ' + JSON.stringify(e.result)
+-    return '### Step ' + e.timestamp + ': ' + e.type + '\n' + JSON.stringify(e)
+-  }).join('\n\n')}`,
+-  { label: 'report', phase: 'Register' }
+-)
+-
+-// ── Write execution log as JSON ──────────────────────────────
+-
+-await agent(
+-  'Write the following JSON to ' + domainDir + '/execution-log.json:\n\n' + JSON.stringify({ topic, slug, level, audience: audience?.summary, tutorMemory, executionLog, researchRounds, caps: CAPS }, null, 2),
+-  { label: 'write-log', phase: 'Register' }
+-)
+-
+-// ── Write HTML pipeline report ───────────────────────────────
+-
+-const reportData = JSON.stringify({
+-  topic,
+-  slug,
+-  level,
+-  audience,
+-  tutorMemory,
+-  executionLog,
+-  researchRounds,
+-  caps: CAPS,
+-}, null, 2)
+-
+-await agent(
+-  'Generate a self-contained HTML pipeline report and write it to ' + domainDir + '/pipeline-report.html.\n\n' +
+-  '## Data\n```json\n' + reportData + '\n```\n\n' +
+-  '## Requirements\n\n' +
+-  'Build a single HTML file with ALL CSS inline (no external dependencies). The page should visualize the full pipeline execution.\n\n' +
+-  '### 1. Header\n' +
+-  '- Title: "Pipeline Report: ' + topic + '"\n' +
+-  '- Subtitle: generated date, level, audience summary\n' +
+-  '- 4 stat cards in a row: Tutor Judgments (count), Research Rounds (used/max), Total Steps (count), Final Verdict (from last QA tutor decision)\n\n' +
+-  '### 2. Pipeline Flow Diagram\n' +
+-  'A horizontal or vertical flow showing the pipeline steps as connected nodes:\n' +
+-  '- Each step is a rounded box with the step name (Survey, Audience, Build, QA, Schedule, Register)\n' +
+-  '- Color-code by what happened: green = ADVANCE on first try, yellow = ADVANCE after iteration, blue = included RESEARCH, gray = not reached\n' +
+-  '- Show arrows between steps. If a step looped (REDO/RESEARCH), show a curved arrow back to itself with the iteration count\n' +
+-  '- Use CSS flexbox/grid, not SVG — keep it simple\n\n' +
+-  '### 3. Tutor Decision Timeline\n' +
+-  'A vertical timeline of every tutor decision, in order. For each:\n' +
+-  '- Step name and attempt number as header\n' +
+-  '- Decision badge: ADVANCE (green), RESEARCH (blue), REDO (yellow), ESCALATE (red)\n' +
+-  '- Confidence as a small horizontal bar (1-10 scale)\n' +
+-  '- Reasoning text (collapsible via <details> tag)\n' +
+-  '- If RESEARCH: show the query in a highlighted box\n' +
+-  '- If REDO: show the feedback in a highlighted box\n' +
+-  '- Quality snapshot as a subtle italic line\n\n' +
+-  '### 4. Workflow Calls Table\n' +
+-  'A table of all workflow/agent calls (non-tutor entries in executionLog):\n' +
+-  '- Columns: Step #, Workflow Name, Mode, Attempt/Cycle, Key Results\n' +
+-  '- Highlight targeted research rows in light blue\n' +
+-  '- Highlight patch rebuilds in light yellow\n\n' +
+-  '### 5. Audience Profile Card\n' +
+-  'If audience data exists, show a card with: audience_type, goal, background, tone, depth, time_commitment, summary.\n' +
+-  'Use a 2-column layout with labels on the left and values on the right.\n\n' +
+-  '### 6. Tutor Memory (accumulated context)\n' +
+-  'Show the full tutorMemory array as a numbered list. Each entry is one judgment summary.\n' +
+-  'Use a monospace font for this section — it is the tutor\'s internal narrative.\n\n' +
+-  '### Style Rules\n' +
+-  '- Font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif\n' +
+-  '- Background: #f8fafc, text: #1e293b\n' +
+-  '- Primary: #2563eb, Success: #16a34a, Warning: #eab308, Error: #dc2626, Info: #0ea5e9\n' +
+-  '- Cards: white background, box-shadow: 0 1px 3px rgba(0,0,0,0.12), border-radius: 8px, padding: 24px\n' +
+-  '- Decision badges: small rounded pills with white text on colored background\n' +
+-  '- Max content width: 960px, centered\n' +
+-  '- Responsive: cards wrap on narrow screens\n' +
+-  '- Page title: "Pipeline Report: ' + topic + '"\n\n' +
+-  'Write the complete HTML file. It must render correctly when opened in a browser.',
+-  { label: 'html-report', phase: 'Register' }
+-)
+-
+-log('Pipeline complete for "' + topic + '" — ' + tutorMemory.length + ' tutor judgments, ' + researchRounds + ' targeted research rounds')
+-
+-return {
+-  topic,
+-  slug,
+-  level,
+-  audience: audience?.summary,
+-  tutorJudgments: tutorMemory.length,
+-  researchRounds,
+-  finalMemory: tutorMemory,
+-}
+diff --git a/.claude/workflows/research.js b/.claude/workflows/research.js
+deleted file mode 100644
+index 62c862d..0000000
+--- a/.claude/workflows/research.js
++++ /dev/null
+@@ -1,327 +0,0 @@
+-export const meta = {
+-  name: 'research',
+-  description: 'Academic research for a topic — broad survey or targeted deep-dive on a specific subtopic',
+-  whenToUse: 'When adding a new topic or filling research gaps. Usage: run with args {topic: "optimal transport"} for survey, or {topic: "optimal transport", mode: "targeted", query: "Sinkhorn regularization"} for targeted',
+-  phases: [
+-    { title: 'Gather', detail: 'Fan out research agents across academic APIs and web sources' },
+-    { title: 'Gate', detail: 'Quality gate reviews research coverage and gaps (survey only)' },
+-    { title: 'Synthesize', detail: 'Merge and write structured research document' },
+-  ],
+-}
+-
+-const topic = args?.topic
+-if (!topic) throw new Error('Missing args.topic — pass {topic: "your topic"}')
+-
+-const mode = args?.mode || 'survey'
+-const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+-const domainDir = `skills/tutor/domains/${slug}`
+-
+-// ══════════════════════════════════════════════════════════════
+-// TARGETED MODE — focused research on a specific subtopic
+-// ══════════════════════════════════════════════════════════════
+-
+-if (mode === 'targeted') {
+-  const query = args?.query
+-  if (!query) throw new Error('Targeted mode requires args.query — pass {topic: "...", mode: "targeted", query: "specific subtopic"}')
+-
+-  phase('Gather')
+-  log(`Targeted research: "${query}" within "${topic}"`)
+-
+-  const results = await parallel([
+-    () => agent(
+-      `You are a research agent. Search the web for academic papers specifically about "${query}" in the context of "${topic}".
+-
+-Find the 5-8 most relevant papers. For each paper report:
+-- title
+-- authors
+-- year
+-- one-sentence summary of contribution
+-- URL (arxiv, DOI, or Semantic Scholar)
+-
+-Focus narrowly on "${query}" — not the broader field. Only include papers you can verify exist.
+-Write as structured markdown.`,
+-      { label: 'targeted:academic', phase: 'Gather' }
+-    ),
+-    () => agent(
+-      `You are a research agent. Search the web for practical educational resources specifically about "${query}" in the context of "${topic}".
+-
+-Find resources in these categories:
+-1. **Course modules/lectures** — specific lectures or chapters covering "${query}" (with URLs)
+-2. **Tutorials/blog posts** — particularly good explanations of "${query}" (with URLs)
+-3. **Code/tools** — repos, notebooks, or interactive demos for "${query}" (with URLs)
+-4. **Videos** — specific talks or video explanations (with URLs)
+-
+-Focus narrowly on "${query}". Only include resources you can confirm exist with real URLs.
+-Write as structured markdown.`,
+-      { label: 'targeted:practical', phase: 'Gather' }
+-    ),
+-  ])
+-
+-  phase('Synthesize')
+-
+-  const synthesis = await agent(
+-    `You are a research synthesizer. Merge the following targeted research on "${query}" (within "${topic}") into a structured markdown section.
+-
+-## Academic Papers
+-${results[0] || '(no results)'}
+-
+-## Practical Resources
+-${results[1] || '(no results)'}
+-
+----
+-
+-Write a focused research section with this exact structure:
+-
+-## Targeted Research: ${query}
+-_Added: (today's date)_
+-
+-### Key Papers
+-Deduplicated list of papers. For each:
+-- **Title** (Year) — Authors. One-line summary. URL
+-
+-### Educational Resources
+-Organized by type (courses, tutorials, code, videos).
+-
+-### Implications for Curriculum
+-2-3 sentences: what concepts from "${query}" should a course on "${topic}" cover? What's the right depth for a student?
+-
+-Rules:
+-- Only include resources with real, verifiable URLs
+-- Be concise — this supplements existing research, not replaces it`,
+-    { label: 'synthesize', phase: 'Synthesize' }
+-  )
+-
+-  await agent(
+-    `Read the file ${domainDir}/research.md (if it exists).
+-
+-APPEND the following section at the end of the file. Do NOT modify any existing content.
+-If the file does not exist, create it with just this content.
+-
+-${synthesis}`,
+-    { label: 'append', phase: 'Synthesize' }
+-  )
+-
+-  const paperCount = (results[0] || '').split('\n').filter(l => l.match(/^\s*-\s*\*\*/)).length
+-  const resourceCount = (results[1] || '').split('\n').filter(l => l.match(/^\s*-\s*\*\*/)).length
+-
+-  log(`Targeted research on "${query}" appended to ${domainDir}/research.md`)
+-  return { topic, slug, mode: 'targeted', query, paperCount, resourceCount }
+-}
+-
+-// ══════════════════════════════════════════════════════════════
+-// SURVEY MODE — broad multi-source research (default)
+-// ══════════════════════════════════════════════════════════════
+-
+-phase('Gather')
+-log(`Researching "${topic}" across 5 sources`)
+-
+-const RESEARCHERS = [
+-  {
+-    id: 'arxiv',
+-    prompt: `You are a research agent. Search the web for arxiv papers on "${topic}".
+-
+-Find the 10 most relevant papers. For each paper report:
+-- title
+-- authors (list)
+-- year
+-- abstract (first 300 chars)
+-- arxiv URL
+-
+-Write your findings as a structured markdown document with one section per paper. Include only real papers with real URLs. If you cannot verify a paper exists, exclude it.`,
+-  },
+-  {
+-    id: 'semantic-scholar',
+-    prompt: `You are a research agent. Search the web for Semantic Scholar results on "${topic}".
+-
+-Find the 10 most highly-cited papers. For each paper report:
+-- title
+-- authors
+-- year
+-- citation count
+-- one-sentence TLDR
+-- Semantic Scholar URL
+-
+-Sort by citation count descending. Write as structured markdown. Only include papers you can verify exist.`,
+-  },
+-  {
+-    id: 'openalex',
+-    prompt: `You are a research agent. Search the web for OpenAlex results on "${topic}".
+-
+-Find:
+-1. The 3 most related academic topics/concepts — with names, descriptions, work counts, keywords
+-2. The 5 most-cited works (>100 citations) — with titles, years, citation counts, authors, DOIs
+-
+-Write as structured markdown with separate sections for Topics and Works.`,
+-  },
+-  {
+-    id: 'wikipedia',
+-    prompt: `You are a research agent. Look up "${topic}" on Wikipedia.
+-
+-Find the main Wikipedia article and report:
+-- Article title
+-- A 500-character summary/extract
+-- The Wikipedia URL
+-- The short description
+-
+-If the exact title doesn't match, find the closest article. Write as structured markdown.`,
+-  },
+-  {
+-    id: 'educational',
+-    prompt: `You are a research agent. Search the web for the best educational resources on "${topic}".
+-
+-Find real, verifiable resources in these categories:
+-1. **University courses** — MIT OCW, Stanford, Coursera, edX (with URLs and level)
+-2. **Textbooks** — note if free PDF available
+-3. **Video series** — 3Blue1Brown, Khan Academy, lecture series (with URLs)
+-4. **Interactive tools** — Desmos, GeoGebra, simulators (with URLs)
+-5. **Key people** — researchers, educators, practitioners (name + why they matter)
+-6. **Blog posts/tutorials** — particularly good introductions (with URLs)
+-
+-Only include resources you can confirm exist with real URLs. Write as structured markdown.`,
+-  },
+-]
+-
+-const results = await parallel(
+-  RESEARCHERS.map(r => () =>
+-    agent(r.prompt, { label: `research:${r.id}`, phase: 'Gather' })
+-  )
+-)
+-
+-const gathered = {}
+-for (let i = 0; i < RESEARCHERS.length; i++) {
+-  gathered[RESEARCHERS[i].id] = results[i]
+-}
+-const successCount = results.filter(Boolean).length
+-log(`Gathered from ${successCount}/${RESEARCHERS.length} sources`)
+-
+-// ── Phase 2: Gate — quality review ────────────────────────────
+-
+-phase('Gate')
+-
+-const gatePrompt = `You are a research quality gate. Review the following research gathered for "${topic}".
+-
+-## arxiv results
+-${gathered.arxiv || '(no results)'}
+-
+-## Semantic Scholar results
+-${gathered['semantic-scholar'] || '(no results)'}
+-
+-## OpenAlex results
+-${gathered.openalex || '(no results)'}
+-
+-## Wikipedia
+-${gathered.wikipedia || '(no results)'}
+-
+-## Educational Resources
+-${gathered.educational || '(no results)'}
+-
+----
+-
+-Evaluate:
+-1. **Coverage** — Are all major aspects of "${topic}" represented? Any blind spots?
+-2. **Quality** — Are the papers relevant and highly-cited? Are educational resources real and accessible?
+-3. **Gaps** — What subtopics or resource types are missing?
+-4. **Deduplication needed** — Are there papers that appear in multiple sources?
+-
+-Report your assessment as JSON:
+-{
+-  "verdict": "PROCEED" or "GAPS",
+-  "coverage_score": 1-10,
+-  "gaps": ["list of missing areas"],
+-  "dedup_needed": ["list of duplicate papers across sources"],
+-  "notes": "any other observations"
+-}`
+-
+-const GATE_SCHEMA = {
+-  type: 'object',
+-  properties: {
+-    verdict: { type: 'string', enum: ['PROCEED', 'GAPS'] },
+-    coverage_score: { type: 'number' },
+-    gaps: { type: 'array', items: { type: 'string' } },
+-    dedup_needed: { type: 'array', items: { type: 'string' } },
+-    notes: { type: 'string' },
+-  },
+-  required: ['verdict', 'coverage_score', 'gaps'],
+-}
+-
+-const gate = await agent(gatePrompt, { label: 'quality-gate', phase: 'Gate', schema: GATE_SCHEMA })
+-log(`Gate verdict: ${gate?.verdict || 'unknown'}, coverage: ${gate?.coverage_score || '?'}/10, gaps: ${gate?.gaps?.length || 0}`)
+-
+-// ── Phase 3: Synthesize — merge into research document ────────
+-
+-phase('Synthesize')
+-
+-const synthesisPrompt = `You are a research synthesizer for an AI tutor called OpenTutor. Merge the following multi-source research on "${topic}" into a single structured markdown document.
+-
+-## Raw Research Data
+-
+-### arxiv
+-${gathered.arxiv || '(no results)'}
+-
+-### Semantic Scholar
+-${gathered['semantic-scholar'] || '(no results)'}
+-
+-### OpenAlex
+-${gathered.openalex || '(no results)'}
+-
+-### Wikipedia
+-${gathered.wikipedia || '(no results)'}
+-
+-### Educational Resources
+-${gathered.educational || '(no results)'}
+-
+-## Quality Gate Assessment
+-Coverage score: ${gate?.coverage_score || '?'}/10
+-Gaps identified: ${gate?.gaps?.join(', ') || 'none'}
+-Duplicates to merge: ${gate?.dedup_needed?.join(', ') || 'none'}
+-
+----
+-
+-Write a complete research document with these sections:
+-
+-# Research: ${topic}
+-Generated: (today's date)
+-
+-## Overview
+-A grounding paragraph about the field based on Wikipedia. What is this topic, why does it matter, what are its major branches?
+-
+-## Key Papers
+-Deduplicated list of the 10-15 most important papers (merge across arxiv + Semantic Scholar + OpenAlex). For each:
+-- **Title** (Year) — Authors
+-  Citation count. One-line summary.
+-  URL
+-
+-## Academic Landscape
+-Related fields, subfields, active research areas. What's hot right now?
+-
+-## Educational Resources
+-### Courses
+-### Textbooks
+-### Videos
+-### Interactive Tools
+-
+-## Key People
+-Researchers, educators, practitioners relevant to this topic.
+-
+-## Resource Quality Notes
+-Which resources work best at which level (beginner, intermediate, advanced)?
+-
+-## Research Gaps
+-${gate?.gaps?.length ? 'The quality gate identified these gaps: ' + gate.gaps.join(', ') : 'No major gaps identified.'}
+-
+-Rules:
+-- Only include resources with real, verifiable URLs
+-- Merge duplicates — each paper appears once with the best metadata from all sources
+-- Be thorough but concise
+-- Write the full document in markdown`
+-
+-const synthesis = await agent(synthesisPrompt, { label: 'synthesize', phase: 'Synthesize' })
+-
+-const writePrompt = `Create the directory ${domainDir} if it doesn't exist, then write the following research document to ${domainDir}/research.md
+-
+-${synthesis}`
+-
+-await agent(writePrompt, { label: 'write', phase: 'Synthesize' })
+-
+-log(`Research written to ${domainDir}/research.md`)
+-return { topic, slug, domainDir, coverage: gate?.coverage_score, gaps: gate?.gaps }
+diff --git a/.claude/workflows/schedule.js b/.claude/workflows/schedule.js
+deleted file mode 100644
+index d71483e..0000000
+--- a/.claude/workflows/schedule.js
++++ /dev/null
+@@ -1,210 +0,0 @@
+-export const meta = {
+-  name: 'schedule',
+-  description: 'Analyze curriculum difficulty and generate optimal lesson schedule with review day placement',
+-  whenToUse: 'After building a curriculum. Usage: run with args {topic: "optimal transport", timezone: "America/New_York"}',
+-  phases: [
+-    { title: 'Analyze', detail: 'Assess curriculum difficulty curve and student profile' },
+-    { title: 'Design', detail: 'Generate pacing strategy and review day placement' },
+-    { title: 'Gate', detail: 'Verify schedule makes pedagogical sense' },
+-    { title: 'Apply', detail: 'Write schedule to progress.json' },
+-  ],
+-}
+-
+-const topic = args?.topic
+-if (!topic) throw new Error('Missing args.topic — pass {topic: "optimal transport"}')
+-
+-const timezone = args?.timezone || 'America/New_York'
+-const timesPerDay = args?.timesPerDay || 3
+-const feedback = args?.feedback || null
+-const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+-const domainDir = `skills/tutor/domains/${slug}`
+-
+-// ── Phase 1: Analyze ──────────────────────────────────────────
+-
+-phase('Analyze')
+-log(`Analyzing curriculum for "${topic}"`)
+-
+-const analysis = await agent(
+-  `Read these files and analyze the curriculum difficulty:
+-
+-1. ${domainDir}/curriculum.json — the lesson sequence
+-2. ${domainDir}/concept-map.md — concept dependencies
+-3. ${domainDir}/teaching-notes.md — pedagogical guidance
+-4. workspace/USER.md — student profile
+-5. workspace/tutor/progress.json — current progress and schedule
+-
+-Each lesson in curriculum.json has a "difficulty" field (1-5 scale) and a "type" field (delivery format). Use these directly — do not re-estimate difficulty from scratch.
+-
+-For each lesson, extract:
+-- The difficulty value from the curriculum
+-- Whether it's a spike (difficulty >= 4, or a jump of 2+ from the previous lesson)
+-- The delivery type (review lessons need less time than real-world challenges)
+-
+-Report as JSON:
+-{
+-  "lessonCount": number,
+-  "moduleCount": number,
+-  "currentProgress": {"completed": number, "total": number},
+-  "currentSchedule": {"times": [...], "timezone": "...", "paused": boolean} or null,
+-  "difficultyProfile": [{"lesson": 1, "title": "...", "difficulty": 3, "type": "mini-lesson", "spike": false}],
+-  "spikeDays": [lesson numbers where difficulty spikes],
+-  "studentLevel": "beginner|intermediate|advanced",
+-  "estimatedWeeks": number
+-}`,
+-  {
+-    label: 'analyze',
+-    phase: 'Analyze',
+-    schema: {
+-      type: 'object',
+-      properties: {
+-        lessonCount: { type: 'number' },
+-        moduleCount: { type: 'number' },
+-        currentProgress: { type: 'object' },
+-        currentSchedule: { type: ['object', 'null'] },
+-        difficultyProfile: { type: 'array' },
+-        spikeDays: { type: 'array', items: { type: 'number' } },
+-        studentLevel: { type: 'string' },
+-        estimatedWeeks: { type: 'number' },
+-      },
+-      required: ['lessonCount', 'difficultyProfile', 'spikeDays'],
+-    },
+-  }
+-)
+-
+-log(`Curriculum: ${analysis?.lessonCount || '?'} lessons, ${analysis?.spikeDays?.length || 0} difficulty spikes`)
+-
+-// ── Phase 2: Design — generate schedule ───────────────────────
+-
+-phase('Design')
+-
+-const schedule = await agent(
+-  `You are a learning schedule optimizer. Design an optimal lesson delivery schedule for "${topic}".
+-${feedback ? `\n## Previous Attempt Feedback\nThe previous schedule had these issues — address them in your design:\n${feedback}\n` : ''}
+-
+-## Curriculum Analysis
+-${JSON.stringify(analysis, null, 2)}
+-
+-## Constraints
+-- Timezone: ${timezone}
+-- Delivery slots per day: ${timesPerDay}
+-- Spaced repetition reviews should happen at the last slot of each day
+-- Review days should be placed after difficulty spikes (days: ${analysis?.spikeDays?.join(', ') || 'none detected'})
+-
+-## Design the schedule:
+-
+-1. **Daily timing** — Choose ${timesPerDay} delivery times that make pedagogical sense:
+-   - Morning: new concepts (freshest mind)
+-   - Afternoon: practice/application
+-   - Evening: review/flashcards (spaced repetition)
+-
+-2. **Pacing strategy**:
+-   - For easy lessons (load 1-2): can deliver 2 per day
+-   - For medium lessons (load 3): 1 per day
+-   - For hard lessons (load 4-5): 1 per day + extra review day after
+-   - After difficulty spikes: always insert a review day
+-
+-3. **Review day placement** — Insert review days:
+-   - Every 5-7 lessons
+-   - After each difficulty spike
+-   - At module transitions
+-
+-4. **Rest days** — Optional rest days on weekends or after particularly dense modules
+-
+-Report as JSON:
+-{
+-  "times": ["09:00", "13:00", "19:00"],
+-  "timezone": "${timezone}",
+-  "paused": false,
+-  "pacing": "standard|intensive|relaxed",
+-  "lessonsPerDay": 1,
+-  "reviewDays": [day numbers that are review days],
+-  "restDays": ["sat", "sun"] or [],
+-  "estimatedCompletionDays": number,
+-  "rationale": "brief explanation of schedule choices"
+-}`,
+-  {
+-    label: 'design-schedule',
+-    phase: 'Design',
+-    schema: {
+-      type: 'object',
+-      properties: {
+-        times: { type: 'array', items: { type: 'string' } },
+-        timezone: { type: 'string' },
+-        paused: { type: 'boolean' },
+-        pacing: { type: 'string' },
+-        lessonsPerDay: { type: 'number' },
+-        reviewDays: { type: 'array', items: { type: 'number' } },
+-        restDays: { type: 'array', items: { type: 'string' } },
+-        estimatedCompletionDays: { type: 'number' },
+-        rationale: { type: 'string' },
+-      },
+-      required: ['times', 'timezone', 'pacing', 'rationale'],
+-    },
+-  }
+-)
+-
+-log(`Schedule: ${schedule?.times?.join(', ') || '?'} ${schedule?.timezone || ''}, pacing: ${schedule?.pacing || '?'}`)
+-
+-// ── Phase 3: Gate — verify schedule ───────────────────────────
+-
+-phase('Gate')
+-
+-const gate = await agent(
+-  `You are a schedule quality gate. Verify this lesson schedule for "${topic}".
+-
+-## Schedule
+-${JSON.stringify(schedule, null, 2)}
+-
+-## Curriculum Analysis
+-${JSON.stringify(analysis, null, 2)}
+-
+-Check:
+-1. Are delivery times reasonable for the timezone? (not 3am)
+-2. Is pacing appropriate for the student's level (${analysis?.studentLevel || 'unknown'})?
+-3. Are review days placed after all difficulty spikes?
+-4. Is the estimated completion time realistic?
+-5. Are there enough review days relative to lesson count?
+-
+-Report as JSON:
+-{
+-  "verdict": "PROCEED" or "ISSUES",
+-  "issues": ["list of problems"],
+-  "adjustments": ["suggested fixes"]
+-}`,
+-  {
+-    label: 'schedule-gate',
+-    phase: 'Gate',
+-    schema: {
+-      type: 'object',
+-      properties: {
+-        verdict: { type: 'string', enum: ['PROCEED', 'ISSUES'] },
+-        issues: { type: 'array', items: { type: 'string' } },
+-        adjustments: { type: 'array', items: { type: 'string' } },
+-      },
+-      required: ['verdict'],
+-    },
+-  }
+-)
+-
+-log(`Gate: ${gate?.verdict || 'unknown'}, issues: ${gate?.issues?.length || 0}`)
+-
+-// ── Phase 4: Apply — write to progress.json ───────────────────
+-
+-phase('Apply')
+-
+-await agent(
+-  `Read workspace/tutor/progress.json and update ONLY the schedule section. Keep all other fields (active_topics, history, onboarding, spaced_repetition) unchanged.
+-
+-Set the schedule to:
+-${JSON.stringify(schedule, null, 2)}
+-
+-${gate?.issues?.length ? 'Apply these adjustments: ' + gate.adjustments?.join(', ') : ''}
+-
+-Also make sure "${slug}" is in the active_topics array.
+-
+-Write the updated progress.json back to workspace/tutor/progress.json.`,
+-  { label: 'apply-schedule', phase: 'Apply' }
+-)
+-
+-log(`Schedule applied to workspace/tutor/progress.json`)
+-return { topic, slug, schedule, gate: gate?.verdict }

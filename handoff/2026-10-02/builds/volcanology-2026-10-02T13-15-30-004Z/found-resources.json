@@ -1,0 +1,210 @@
+[
+ {
+  "lesson": 13,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=xX6YGpk3DWk",
+    "type": "video",
+    "title": "Rock ID With Willsey, Ep #5: Volcanic Rocks (Tuff, Obsidian, Pumice)",
+    "why": "A geology professor holds up the actual rocks, so you see that obsidian and pumice can be the same melt, where one kept its gas and the other frothed into foam."
+   },
+   {
+    "url": "https://ed.ted.com/lessons/what-makes-volcanoes-erupt-steven-anderson",
+    "type": "video",
+    "title": "Volcanic eruption explained – Steven Anderson (TED-Ed)",
+    "why": "A short animation that makes the soda-bottle idea concrete: drop the pressure on gas-rich magma and bubbles decide whether it oozes or blows apart."
+   },
+   {
+    "url": "https://gonnermann.rice.edu/publications/gonnermann-2015-magma-fragmentation.pdf",
+    "type": "paper",
+    "title": "Magma Fragmentation – Helge Gonnermann (Annual Review, open PDF)",
+    "why": "The field's own review of how magma breaks apart. Skim the intro and figures to see why runny magma gets torn into sheets and threads while sticky magma cracks like glass."
+   }
+  ]
+ },
+ {
+  "lesson": 14,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=iic5VEpIdgE",
+    "type": "video",
+    "title": "BRITANNICA FILE: The 6 types of volcanic eruptions",
+    "why": "Runs the eruption styles side by side, from gentle Hawaiian lava to Plinian columns, so the spectrum sticks as pictures, not a list of names."
+   },
+   {
+    "url": "https://mapscaping.com/significant-global-volcanic-eruptions-map/",
+    "type": "interactive",
+    "title": "Significant Global Volcanic Eruptions Map: Explore 887 Events by VEI, Deaths, and Tsunamis",
+    "why": "Filter real eruptions by VEI and you can see the log scale at work: small eruptions everywhere, giant ones very rare."
+   }
+  ]
+ },
+ {
+  "lesson": 15,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=RhXdDA15SR4",
+    "type": "video",
+    "title": "Lava: The Hazard (VolFilm)",
+    "why": "Made by volcanologists and filmmakers, it shows the odd thing about lava: it almost never kills anyone, yet it destroys everything in its path."
+   },
+   {
+    "url": "https://m.youtube.com/watch?v=vkaGvP8IKJM",
+    "type": "video",
+    "title": "The Types of Lava Flows; ʻAʻā, Pāhoehoe, and More",
+    "why": "Walks through ropy pāhoehoe, jagged ʻaʻā, block lava and pillow lava, so you can name a flow just by looking at its surface."
+   },
+   {
+    "url": "https://www.usgs.gov/media/videos/time-series-kilauea-volcanos-lower-east-rift-zone-lava-flow-maps",
+    "type": "video",
+    "title": "Time Series of Kīlauea Volcano's Lower East Rift Zone Lava-Flow Maps",
+    "why": "Near-daily USGS maps from 2018 play like a time-lapse, showing lava slowly spreading over Leilani Estates and out to the ocean."
+   }
+  ]
+ },
+ {
+  "lesson": 16,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=pkyNoJupihA",
+    "type": "video",
+    "title": "Iceland Eyjafjallajökull Volcano Eruption, 2010 Ash Cloud Dispersal",
+    "why": "Shows how a mid-sized eruption in Iceland ended up over European flight paths and caused the biggest air-travel shutdown since WWII."
+   },
+   {
+    "url": "https://www.cam.ac.uk/research/news/video-analysis-of-iceland-2010-eruption-could-improve-volcanic-ash-forecasts-for-aviation-safety",
+    "type": "article",
+    "title": "Video analysis of Iceland 2010 eruption could improve volcanic ash forecasts for aviation safety",
+    "why": "Cambridge researchers measured the plume's behaviour from ordinary video footage, which shows that the jet and buoyant-plume physics are things you can actually watch."
+   },
+   {
+    "url": "https://pubs.usgs.gov/fs/2010/3116/fs2010-3116.pdf",
+    "type": "article",
+    "title": "Airborne Volcanic Ash—A Global Threat to Aviation (USGS Fact Sheet)",
+    "why": "A short primary source on how ash columns can reach jet cruising height in minutes and how glassy ash makes engines fail."
+   },
+   {
+    "url": "https://all-geo.org/volcan01010/2014/02/a-history-of-ash-clouds-and-aviation/",
+    "type": "article",
+    "title": "A history of ash clouds and aviation",
+    "why": "A volcanologist tells the earlier near-disasters with ash, which explain why Europe chose to ground everything in 2010."
+   }
+  ]
+ },
+ {
+  "lesson": 17,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=N4-5kLbHY2Y",
+    "type": "video",
+    "title": "Pyroclastic Flows: The Hazard (VolFilm)",
+    "why": "Volcanologists explain on real footage why you cannot outrun or shelter from a hot avalanche of gas and rock."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=IeskQETCT8Q",
+    "type": "video",
+    "title": "The 1902 Eruption of Mount Pelee — USGS (1980s)",
+    "why": "An old-school USGS and Michigan Tech documentary on how one glowing cloud wiped out the city of Saint-Pierre, about 28,000–30,000 people, in minutes."
+   },
+   {
+    "url": "https://www.usgs.gov/volcanoes/mount-st.-helens/science/1980-cataclysmic-eruption",
+    "type": "article",
+    "title": "1980 Cataclysmic Eruption (USGS)",
+    "why": "Follows the chain at St. Helens step by step: the landslide uncorked a pressurized dome of magma and set off a sideways blast that flattened about 600 km² of forest."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=p5RohaQ3wfk",
+    "type": "video",
+    "title": "May 18, 1980 Mount St. Helens Eruption: Stories from USGS Scientists",
+    "why": "The geologists who were there describe what it was like to watch a sideways blast no scientist had ever recorded before."
+   }
+  ]
+ },
+ {
+  "lesson": 18,
+  "resources": [
+   {
+    "url": "https://scied.ucar.edu/image/how-big-was-eruption-check-volcanic-explosivity-index",
+    "type": "article",
+    "title": "How Big Was That Eruption? Check the Volcanic Explosivity Index! (UCAR)",
+    "why": "One graphic that links plume height and erupted volume to a VEI number. Keep it next to you while you work through the review questions."
+   },
+   {
+    "url": "https://www.usgs.gov/media/images/amount-magma-fragmentation-and-resulting-dispersal-tephra",
+    "type": "article",
+    "title": "Amount of magma fragmentation and resulting dispersal of tephra (USGS figure)",
+    "why": "A single USGS diagram that ties lesson 13 to lesson 16: the more finely the magma shatters, the farther its tephra travels."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=jlPB0MWyA5o",
+    "type": "video",
+    "title": "Volcanic Explosivity Index (VEI)",
+    "why": "Works out the VEI for one real eruption, Taal in 2020, which is exactly the kind of reasoning this review asks you to do."
+   },
+   {
+    "url": "https://volcano.si.edu/faq/index.cfm?question=eruptionsbyyear",
+    "type": "interactive",
+    "title": "Global Volcanism Program (Smithsonian) – eruptions by year",
+    "why": "The official record behind every VEI number. Look up any eruption from the course and check your own classification against it."
+   }
+  ]
+ },
+ {
+  "lesson": 31,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=98iCzrNRWmQ",
+    "type": "video",
+    "title": "The Bizarre Characteristics of Io (Astrum)",
+    "why": "Astrum's footage makes Io feel like a real place: a moon that Jupiter squeezes so hard it is turning itself inside out, with lava fountains taller than any on Earth."
+   },
+   {
+    "url": "https://www.nasa.gov/missions/juno/nasas-juno-gets-a-close-up-look-at-lava-lakes-on-jupiters-moon-io/",
+    "type": "article",
+    "title": "NASA's Juno Gets a Close-Up Look at Lava Lakes on Jupiter's Moon Io",
+    "why": "This is the primary source: infrared views of lava lakes up to 200 km across, each with a crusted center and a glowing ring at the edge, which tells you right away that Io works on a different scale from Earth."
+   },
+   {
+    "url": "https://www.forbes.com/sites/robinandrews/2018/08/31/this-is-why-mars-will-always-have-the-solar-systems-largest-volcano/",
+    "type": "article",
+    "title": "This Is Why The Solar System's Largest Volcano Will Always Be Martian",
+    "why": "Volcanologist Robin Andrews explains why low gravity alone doesn't account for Olympus Mons, and why the bigger factor is that Mars never moved its crust off the hotspot."
+   },
+   {
+    "url": "https://eos.org/features/cryovolcanisms-song-of-ice-and-fire",
+    "type": "article",
+    "title": "Cryovolcanism's Song of Ice and Fire (Eos)",
+    "why": "Here the volcano's 'magma' is salty water and the 'rock' is ice, so you can check which Earth rules about buoyancy and pressure still hold on Enceladus and Europa."
+   }
+  ]
+ },
+ {
+  "lesson": 32,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=NpD16effFiQ",
+    "type": "video",
+    "title": "Told to Stay At Home: The Armero Disaster 1985 (Plainly Difficult)",
+    "why": "Scientists had a hazard map that put Armero in the lahar path, yet people were told to stay home, and this video shows in a few minutes what the 'mayor phone call' looks like when it goes wrong."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=um3APcwT8FQ",
+    "type": "video",
+    "title": "How to predict a volcanic eruption (The Royal Society)",
+    "why": "Scientists explain how they read the warning signs, so you understand what the data can and can't promise before you give the mayor a number."
+   },
+   {
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6560653/",
+    "type": "paper",
+    "title": "Volcano alert level systems: managing the challenges of effective volcanic crisis communication",
+    "why": "This open-access paper looks at how scientists turn uncertain data into a single alert level while dealing with politics and nervous officials, which is exactly the job in this capstone."
+   },
+   {
+    "url": "https://eos.org/articles/how-the-armero-tragedy-changed-volcanology-in-colombia",
+    "type": "article",
+    "title": "How the Armero Tragedy Changed Volcanology in Colombia (Eos)",
+    "why": "It shows the fix after the failure: Colombia went from one ignored map to 600 monitoring stations and 14 hazard maps, which gives you a model for a warning system people actually trust."
+   }
+  ]
+ }
+]

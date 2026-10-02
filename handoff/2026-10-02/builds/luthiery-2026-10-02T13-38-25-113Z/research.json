@@ -1,0 +1,160 @@
+{
+ "arxiv": [
+  {
+   "title": "Improved normal-boundary intersection algorithm: a method for energy optimization strategy in smart buildings",
+   "summary": "With the widespread use of distributed energy sources, the advantages of smart buildings over traditional buildings are becoming increasingly obvious. Subsequently, its energy optimal scheduling and multi-objective optimization have become more and more complex and need to be solved urgently. This p",
+   "year": "2022",
+   "authors": [
+    "Jia Cui",
+    "Jiang Pan",
+    "Shunjiang Wang",
+    "Martin Onyeka Okoye",
+    "Junyou Yang",
+    "Yang Li",
+    "Hao Wang"
+   ],
+   "url": "http://arxiv.org/abs/2201.10303v1"
+  },
+  {
+   "title": "Elastic buildings: Calibrated district-scale simulation of occupant-flexible campus operation for hybrid work optimization",
+   "summary": "Before 2020, the way occupants utilized the built environment had been changing slowly towards scenarios in which occupants have more choice and flexibility in where and how they work. The global COVID-19 pandemic accelerated this phenomenon rapidly through lockdowns and hybrid work arrangements. Ma",
+   "year": "2022",
+   "authors": [
+    "Martín Mosteiro-Romero",
+    "Clayton Miller",
+    "Adrian Chong",
+    "Rudi Stouffs"
+   ],
+   "url": "http://arxiv.org/abs/2210.06124v2"
+  },
+  {
+   "title": "Microwave Engineering of Tunable Spin Interactions with Superconducting Qubits",
+   "summary": "Quantum simulation has emerged as a powerful framework for investigating complex many - body phenomena. A key requirement for emulating these dynamics is the realization of fully controllable quantum systems enabling various spin interactions. Yet, quantum simulators remain constrained in the types ",
+   "year": "2025",
+   "authors": [
+    "Kui Zhao",
+    "Ziting Wang",
+    "Yu Liu",
+    "Gui - Han Liang",
+    "Cai - Ping Fang",
+    "Yun - Hao Shi",
+    "Lv Zhang",
+    "Jia - Chi Zhang",
+    "Tian - Ming Li",
+    "Hao Li",
+    "Yueshan Xu",
+    "Wei - Guo Ma",
+    "Hao - Tian Liu",
+    "Jia - Cheng Song",
+    "Zhen - Ting Bao",
+    "Yong - Xi Xiao",
+    "Bing - Jie Chen",
+    "Cheng - Lin Deng",
+    "Zheng - He Liu",
+    "Yang He",
+    "Si - Yun Zhou",
+    "Xiaohui Song",
+    "Zhongcheng Xiang",
+    "Dongning Zheng",
+    "Kaixuan Huang",
+    "Kai Xu",
+    "Heng Fan"
+   ],
+   "url": "http://arxiv.org/abs/2505.16286v2"
+  },
+  {
+   "title": "MPSN: Motion-aware Pseudo Siamese Network for Indoor Video Head Detection in Buildings",
+   "summary": "Head detection in the indoor video is an essential component of building occupancy detection. While deep models have achieved remarkable progress in general object detection, they are not satisfying enough in complex indoor scenes. The indoor surveillance video often includes cluttered background ob",
+   "year": "2021",
+   "authors": [
+    "Kailai Sun",
+    "Xiaoteng Ma",
+    "Peng Liu",
+    "Qianchuan Zhao"
+   ],
+   "url": "http://arxiv.org/abs/2110.03302v5"
+  },
+  {
+   "title": "Overview of the High-Definition X-ray Imager instrument on the Lynx x-ray surveyor",
+   "summary": "Four NASA Science and Technology Definition Teams have been convened in order to develop and study four mission concepts to be evaluated by the upcoming 2020 Decadal Survey. The Lynx x-ray surveyor mission is one of these four large missions. Lynx will couple fine angular resolution (&lt;0.5 arcsec ",
+   "year": "2019",
+   "authors": [
+    "Abraham D. Falcone",
+    "Ralph P. Kraft",
+    "Marshall W. Bautz",
+    "Jessica A. Gaskin",
+    "John A. Mulqueen",
+    "Doug A. Swartz"
+   ],
+   "url": "http://arxiv.org/abs/1906.09974v1"
+  },
+  {
+   "title": "An instrument for advanced in situ x-ray studies of metal-organic vapor phase epitaxy of III-nitrides",
+   "summary": "We describe an instrument that exploits the ongoing revolution in synchrotron sources, optics, and detectors to enable in situ studies of metal-organic vapor phase epitaxy (MOVPE) growth of III-nitride materials using coherent x-ray methods. The system includes high-resolution positioning of the sam",
+   "year": "2017",
+   "authors": [
+    "Guangxu Ju",
+    "Matthew J. Highland",
+    "Angel Yanguas-Gil",
+    "Carol Thompson",
+    "Jeffrey A. Eastman",
+    "Hua Zhou",
+    "Sean M. Brennan",
+    "G. Brian Stephenson",
+    "Paul H. Fuoss"
+   ],
+   "url": "http://arxiv.org/abs/1702.03003v2"
+  },
+  {
+   "title": "Topological Considerations for Tuning and Fingering Stringed Instruments",
+   "summary": "We present a formal language for assigning pitches to strings for fingered multi-string instruments, particularly the six-string guitar. Given the instrument's tuning (the strings' open pitches) and the compass of the fingers of the hand stopping the strings, the formalism yields a framework for sim",
+   "year": "2011",
+   "authors": [
+    "Terry Allen",
+    "Camille Goudeseune"
+   ],
+   "url": "http://arxiv.org/abs/1105.1383v1"
+  },
+  {
+   "title": "Instrument Signature Removal and Calibration Products for the Rubin Legacy Survey of Space and Time",
+   "summary": "The Vera C. Rubin Legacy Survey of Space and Time (LSST) will conduct an unprecedented optical survey of the southern sky, imaging the entire available sky every few nights for 10 years. To achieve its ambitious science goals of probing dark energy and dark matter, mapping the Milky Way, and explori",
+   "year": "2024",
+   "authors": [
+    "Andrés A. Plazas Malagón",
+    "Chris Waters",
+    "Alex Broughton",
+    "Eli Rykoff",
+    "Agnès Ferté",
+    "Merlin Fisher-Levine",
+    "Robert Lupton"
+   ],
+   "url": "http://arxiv.org/abs/2404.14516v2"
+  },
+  {
+   "title": "The Effects of Instrumental Deadtime on NICER Timing Products",
+   "summary": "The X-ray Timing Instrument as part of the Neutron Star Interior Composition Explorer has the potential to examine the time-domain properties of compact objects in regimes not explored by previous timing instruments, due to its combination of high effective area and timing resolution. We consider th",
+   "year": "2024",
+   "authors": [
+    "Robbie Webbe",
+    "A. J. Young"
+   ],
+   "url": "http://arxiv.org/abs/2409.12574v1"
+  },
+  {
+   "title": "UV and EUV Instruments",
+   "summary": "We describe telescopes and instruments that were developed and used for astronomical research in the ultraviolet (UV) and extreme ultraviolet (EUV) regions of the electromagnetic spectrum. The wavelength ranges covered by these bands are not uniquely defined. We use the following convention here: Th",
+   "year": "2010",
+   "authors": [
+    "K. Werner"
+   ],
+   "url": "http://arxiv.org/abs/1001.0294v1"
+  }
+ ],
+ "semanticScholar": [],
+ "wikipedia": null,
+ "openAlex": [],
+ "syllabi": [],
+ "youtube": [],
+ "github": [],
+ "wikiLinks": []
+}
