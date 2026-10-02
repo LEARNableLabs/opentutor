@@ -2,89 +2,58 @@
 
 ## Core Concepts (in learning order)
 
-1. **Volcanic systems** — anatomy of a volcano from magma source to surface
-2. **Magma vs lava** — distinction between subsurface and erupted molten rock
-3. **Partial melting** — how solid mantle rock melts under specific P-T-composition conditions
-4. **Tectonic controls** — why volcanoes occur where they do (subduction, rifts, hotspots)
-5. **Silica content** — the fundamental chemical property controlling magma behavior. Depends on: partial melting, tectonic setting
-6. **Viscosity** — resistance to flow, controlled by silica and temperature. Depends on: silica content
-7. **Magma chambers** — subsurface storage and evolution zones. Depends on: tectonic controls
-8. **Fractional crystallization** — magma evolution through mineral removal. Depends on: magma chambers
-9. **Volatile content** — dissolved gases (H₂O, CO₂, SO₂) in magma. Depends on: silica content, magma chambers
-10. **Effusive eruptions** — lava flows, low explosivity. Depends on: viscosity, volatile content
-11. **Explosive eruptions** — fragmentation-driven eruptions. Depends on: viscosity, volatile content
-12. **Gas exsolution** — gas bubble formation as magma rises. Depends on: volatile content
-13. **Fragmentation** — magma breaking into pyroclastic particles. Depends on: gas exsolution, viscosity
-14. **Volcanic Explosivity Index (VEI)** — quantitative eruption scale. Depends on: explosive eruptions
-15. **Eruption styles** — Hawaiian, Strombolian, Vulcanian, Plinian classifications. Depends on: effusive eruptions, explosive eruptions, VEI
-16. **Eruption columns** — vertical plumes of hot gas and tephra. Depends on: explosive eruptions, fragmentation
-17. **Pahoehoe and aa lava** — textural varieties of basaltic lava flows. Depends on: effusive eruptions, viscosity
-18. **Pyroclastic materials** — ash, lapilli, bombs, blocks. Depends on: fragmentation
-19. **Shield volcanoes** — broad, gentle-sloped volcanoes from fluid lava. Depends on: effusive eruptions, pahoehoe and aa lava
-20. **Stratovolcanoes** — steep composite volcanoes from alternating lava and pyroclastics. Depends on: effusive eruptions, explosive eruptions
-21. **Cinder cones** — small steep cones from Strombolian activity. Depends on: eruption styles
-22. **Calderas** — large collapse depressions from chamber evacuation. Depends on: magma chambers, explosive eruptions
-23. **Ignimbrites** — massive pyroclastic flow deposits. Depends on: calderas, pyroclastic materials
-24. **Lava flow hazards** — property destruction, infrastructure damage. Depends on: effusive eruptions
-25. **Lahars** — volcanic mudflows and debris flows. Depends on: pyroclastic materials
-26. **Pyroclastic density currents** — fast-moving ground-hugging flows of hot gas and rock. Depends on: explosive eruptions, eruption columns
-27. **Ashfall hazards** — respiratory, aviation, infrastructure impacts. Depends on: pyroclastic materials, eruption columns
-28. **Volcanic aerosols** — sulfate particles in stratosphere. Depends on: volatile content, eruption columns
-29. **Climate forcing** — radiative effects of volcanic emissions. Depends on: volcanic aerosols
-30. **Volcano seismology** — earthquake signals from magma and fluid movement. Depends on: magma chambers, volatile content
-31. **Ground deformation** — surface changes from magma intrusion. Depends on: magma chambers
-32. **Eruption forecasting** — probabilistic prediction using multiple data streams. Depends on: volcano seismology, ground deformation
-33. **Risk communication** — translating volcanic hazard into public safety decisions. Depends on: eruption forecasting, all hazard types
+1. **Solid mantle and the solidus**: the mantle is hot but almost entirely solid. Melting happens only where the temperature–depth curve (geotherm) crosses the melting curve (solidus).
+2. **Plate-tectonic settings**: divergent boundaries, convergent (subduction) boundaries and intraplate hotspots. Depends on: 1
+3. **Decompression melting**: rising mantle loses pressure faster than it loses heat and crosses the solidus. Depends on: 1, 2
+4. **Flux melting**: water released from a subducting slab lowers the solidus of the mantle wedge. Depends on: 1, 2
+5. **Hotspots and mantle plumes**: hot upwellings that melt by decompression and leave age-progressive island chains. Depends on: 2, 3
+6. **Magma composition spectrum**: basalt, andesite, dacite and rhyolite, ordered by SiO2 content. Magma is melt plus crystals plus volatiles. Depends on: 3, 4
+7. **Silicate polymerization and viscosity**: more silica means more linked SiO4 tetrahedra and a stiffer melt. Depends on: 6
+8. **Viscosity controls**: temperature, dissolved water and crystal content. Basalt is roughly 10^1–10^3 Pa·s; rhyolite is roughly 10^8 Pa·s or more. Depends on: 7
+9. **Volatile solubility and exsolution**: H2O and CO2 dissolve at high pressure and form bubbles as pressure drops. Depends on: 6
+10. **Ascent, storage and differentiation**: buoyant rise, magma chambers and crystal mush, fractional crystallization and assimilation. Depends on: 6, 8, 9
+11. **Fragmentation**: bubbly magma breaks into gas-driven fragments when bubbles cannot escape. Depends on: 8, 9
+12. **Eruption style spectrum and VEI**: from Hawaiian to Plinian, with explosivity on a logarithmic size scale. Depends on: 11
+13. **Lava flows**: pāhoehoe, ʻaʻā, block lava and lava tubes. Depends on: 8, 12
+14. **Eruption columns and tephra**: jet, buoyant plume, umbrella cloud and fallout. Depends on: 11, 12
+15. **Pyroclastic density currents (PDCs)**: column collapse, dome collapse and lateral blasts. Depends on: 14
+16. **Volcano landforms**: shields, stratovolcanoes, cinder cones and domes. Depends on: 8, 12, 13
+17. **Calderas**: collapse after a magma chamber empties rapidly, often with ignimbrites. Depends on: 10, 12, 15
+18. **Deposits and stratigraphy**: telling fall, flow and lava deposits apart, and dating them with tephrochronology. Depends on: 13, 14, 15
+19. **Volcano seismicity**: volcano-tectonic (VT) events, long-period (LP) events, tremor and swarms. Depends on: 10
+20. **Ground deformation**: inflation and deflation measured by GPS, tilt and InSAR. Depends on: 10
+21. **Gas geochemistry**: SO2 and CO2 fluxes, and the CO2/SO2 ratio. Depends on: 9, 10
+22. **Probabilistic forecasting**: event trees, false alarms and failed eruptions. Depends on: 19, 20, 21
+23. **Lahars**: volcanic mudflows triggered by eruptions, melting ice or rain. Depends on: 14, 16
+24. **Hazard versus risk and hazard maps**: risk = hazard × exposure × vulnerability. Depends on: 13, 15, 23
+25. **Risk communication**: alert levels, trust and evacuation decisions. Depends on: 22, 24
+26. **Climate effects**: stratospheric sulfate aerosols cause short-term cooling. Depends on: 9, 14
+27. **Planetary volcanism**: Io, Mars and cryovolcanism as tests of Earth-based rules. Depends on: 1–8
 
-## Major Dependencies
+## The Master Chain
 
-### Chemistry → Physics
-- **Silica content** determines **viscosity**, which controls eruption style
-- **Volatile content** drives **gas exsolution**, which triggers **fragmentation**
-- The composition of magma is the primary control on volcanic behavior
+Most of the course hangs on one causal chain. The student should be able to recite it and apply it:
 
-### Subsurface → Surface
-- **Magma chambers** are where **fractional crystallization** occurs
-- **Gas exsolution** happens during ascent from chamber to surface
-- Understanding the plumbing system is essential for interpreting surface activity
+**setting → melting mechanism → composition (SiO2) → viscosity (plus temperature, water and crystals) → can gas escape? → fragmentation or not → eruption style and VEI → products (lava, tephra, PDC) → landform and deposits → hazards**
 
-### Process → Product
-- **Effusive eruptions** create **pahoehoe and aa lava**, which build **shield volcanoes**
-- **Explosive eruptions** generate **pyroclastic materials** and **eruption columns**
-- **Calderas** form when **explosive eruptions** evacuate large **magma chambers**
-- The eruption process determines the volcanic landform
+## Dependencies
 
-### Hazard Assessment Chain
-- **Eruption styles** determine which **hazards** are likely
-- **Volcano seismology** and **ground deformation** feed **eruption forecasting**
-- **Eruption forecasting** enables **risk communication**
-- Each hazard type requires specific monitoring approaches
+- **Decompression and flux melting (3, 4) need the solidus (1).** Both mechanisms only make sense as ways of moving rock across a melting curve without adding heat.
+- **Composition (6) depends on setting (2–5).** Ridges and hotspots mostly make basalt. Subduction zones make wetter, more evolved magmas, especially after differentiation (10).
+- **Viscosity (7, 8) is the gatekeeper for everything in Module 3.** If a student cannot rank viscosities, fragmentation and eruption style become things to memorise rather than things to predict.
+- **Fragmentation (11) needs both viscosity (8) and volatiles (9).** Gas supplies the driving force, and viscosity decides whether the gas escapes quietly or tears the magma apart.
+- **PDCs (15) build on eruption columns (14).** The most important PDC mechanism is a column that becomes too dense to stay buoyant and collapses.
+- **Landforms (16) and calderas (17) are eruption styles (12) added up over time.** A volcano's shape is the accumulated record of its typical behaviour.
+- **All three monitoring methods (19–21) are ways of observing ascent and storage (10) indirectly.** Earthquakes show rock breaking and fluids moving, deformation shows volume change, and gas shows degassing depth.
+- **Forecasting (22) needs all three monitoring methods,** because no single signal is diagnostic on its own.
+- **Risk communication (25) combines forecasting uncertainty (22) with hazard geography (24).** The Pinatubo and Ruiz contrast depends on both.
+- **Climate effects (26) depend on volatiles (9) and on eruption columns reaching the stratosphere (14).** Sulfur only has a lasting effect if it gets above the weather.
 
 ## Prerequisite Topics
 
-- **Plate tectonics** — needed for understanding tectonic controls, volcanic distribution, subduction zones
-- **Rock cycle and igneous rocks** — needed for understanding partial melting, magma composition, fractional crystallization
-- **Earth's interior structure** — needed for understanding magma genesis, mantle melting
-- **Basic chemistry** — helpful for understanding silica content, volatile species, gas behavior
-- **Basic physics** — helpful for viscosity, eruption column dynamics, heat transfer
-
-## Conceptual Bottlenecks
-
-**Viscosity as the master control** — Students must internalize how silica content controls viscosity, and how viscosity controls almost everything else (flow behavior, gas escape, explosivity). This is THE central concept connecting chemistry to physical processes.
-
-**Gas exsolution and fragmentation** — The transition from continuous magma to fragmented pyroclasts is non-intuitive. Students need to understand pressure-dependent solubility and the positive feedback loop: gas bubbles → expansion → acceleration → more decompression → more bubbles.
-
-**Scale and timescales** — Volcanic processes span milliseconds (fragmentation) to millions of years (magma chamber evolution). Students struggle to keep track of which processes are fast vs slow.
-
-**Probabilistic forecasting** — Moving from deterministic thinking ("the volcano will erupt on X date") to probabilistic reasoning ("there's a Y% chance of eruption in the next Z days") is challenging but essential.
-
-## Common Misconceptions
-
-1. **"Lava comes directly from Earth's core"** — Actually forms in upper mantle or crust, not the core
-2. **"All volcanoes are cone-shaped mountains"** — Many volcanic landforms exist (shields, calderas, fissures)
-3. **"Lava is the main volcanic hazard"** — Pyroclastic flows, lahars, and ashfall often more deadly
-4. **"Eruptions are unpredictable"** — While not perfectly predictable, monitoring provides actionable forecasts
-5. **"Dormant means safe"** — Dormant volcanoes can reawaken after centuries
-6. **"Volcanic ash is like wood ash"** — It's actually fine rock particles and glass, abrasive and damaging
-7. **"Big mountains = big eruptions"** — Explosivity depends on magma properties, not volcano size
-8. **"We can see eruptions coming days in advance"** — Some precursors are short-term (hours) or ambiguous
+- **Pressure, density and buoyancy**: needed for melting (3), magma ascent (10), eruption columns (14) and PDCs (15)
+- **Gas solubility (high-school chemistry)**: needed for volatiles (9) and fragmentation (11)
+- **Oxides and chemical formulas (SiO2, H2O, CO2, SO2)**: needed for composition (6) and gas geochemistry (21)
+- **Powers of ten and log scales**: needed for viscosity (8), VEI (12) and forecasting probabilities (22)
+- **Basic plate tectonics**: needed for settings (2); refreshed in Lesson 2
+- **Optional Python**: needed only to explore the REDPy and MSNoise repositories in Lesson 22

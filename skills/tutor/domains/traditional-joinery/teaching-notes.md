@@ -2,126 +2,31 @@
 
 ## Approach
 
-Traditional joinery is fundamentally **embodied knowledge** — understanding comes from the hand-brain loop of cutting, fitting, and correcting. At the intermediate level, shift from "follow these steps" to "understand why this works so you can adapt it." Emphasize the physical principles (wood movement, mechanical advantage, grain direction) over rote memorization of joint types. Use comparative analysis between Western and Japanese traditions to build mental models rather than teaching two separate systems. Encourage students to diagnose joint failures and design solutions, not just execute perfect joints from instructions.
-
-This domain is **highly visual and tactile** — prioritize video demonstrations, 3D diagrams, and close-up photography over text descriptions. Many concepts (dovetail slope, tenon shoulder crispness, shachi-sen wedge angle) are nearly impossible to communicate verbally.
+This is a spatial, mechanical topic, so teach it model-first. Every joint lesson asks the same three questions: what load does it carry, which way does it go together, and where does it break? The student has no workshop, so paper or foam models and exploded-view sketches stand in for cutting wood. Each 3D lesson has a text fallback in three steps: (a) parts, (b) assembly and failure, (c) sketch. Use it whenever no verified visual is available. Keep the mechanics qualitative: load paths and failure modes, not calculations.
 
 ## Common Misconceptions
 
-1. **"Japanese joinery is inherently superior to Western joinery"**
-   - Why students think this: The complexity and elegance of Japanese joints (especially temple carpentry showcases) creates an impression of advanced sophistication.
-   - How to correct: Show contexts where Western glued joints outperform mechanical-only joints (thin stock, racking resistance, repair). Emphasize that each tradition optimized for different constraints — Japanese joinery evolved for timber-frame seismic resistance and disassembly; Western joinery evolved for furniture scale and permanence.
-
-2. **"Tight joints are always better joints"**
-   - Why students think this: Initial fit feels satisfying; gap-free assembly looks professional.
-   - How to correct: Demonstrate seasonal failures from overly tight cross-grain joints. Show calculations for wood movement and design appropriate clearances. Teach that "perfect fit" varies by grain direction — tight along grain, clearance across grain.
-
-3. **"Dovetails are decorative; mortise and tenon is structural"**
-   - Why students think this: Dovetails are visible on drawer fronts (aesthetic application); mortise and tenon hidden in chair frames (structural).
-   - How to correct: Compare tensile strength resistance — dovetails excel at preventing pull-apart forces (drawer sides under load, carcase corners in seasonal movement). Show structural applications like timber frame dovetail lap joints.
-
-4. **"You must use Japanese tools to cut Japanese joints"**
-   - Why students think this: Traditional technique videos show specialized tools; Japanese joinery seems inseparable from pull saws and nomi.
-   - How to correct: Cut a hozo joint with Western chisels and backsaw to prove the philosophy (reversible, mechanical) matters more than the tools. Discuss tool advantages (pull saw kerf width, chisel sharpening angle) as refinements, not requirements.
-
-5. **"End grain glue surfaces are always weak"**
-   - Why students think this: Repeated warnings about end grain absorption, weak bonds.
-   - How to correct: Clarify that end grain glue IS weak, which is why joint geometry provides long-grain surfaces (tenon cheeks, dovetail sides). The joint design compensates for end grain weakness — it's not avoided, it's managed. Show how bridle joints maximize long-grain glue surface.
-
-6. **"Traditional joinery is obsolete in the age of pocket screws and biscuits"**
-   - Why students think this: Modern fasteners are faster; production furniture uses simpler techniques.
-   - How to correct: Compare longevity (300-year-old dovetailed furniture vs 20-year-old particleboard with dowels). Discuss repairability, wood movement accommodation, and strength-to-weight ratio. Show applications where traditional joinery still dominates (fine furniture, timber framing, restoration work).
-
-7. **"Complex joints are always stronger than simple joints"**
-   - Why students think this: More cutting and fitting seems more robust; shachi-sen looks stronger than through mortise.
-   - How to correct: Teach that complexity serves specific functions (resistance to specific forces, disassembly, aesthetic), not universal strength. A simple through mortise with wedges can outlast a poorly executed complex joint. Match joint to load type.
-
-8. **"Layout precision doesn't matter much; you can fit it with a chisel"**
-   - Why students think this: Experienced woodworkers do pare joints to fit; minor layout errors seem correctable.
-   - How to correct: Show how cumulative layout errors compound (dovetail pins that drift across a board, mortises that aren't parallel). Demonstrate that fitting should refine, not rescue. Teach "measure twice, cut once" with emphasis on how precision reduces fitting labor.
-
-9. **"All mortise and tenon joints use the 1/3 rule (tenon = 1/3 stock thickness)"**
-   - Why students think this: It's taught as a universal rule in beginner resources.
-   - How to correct: Show contexts where it fails (thin stock, deep mortises in post faces, offset mortises for aprons). Teach the principle behind the rule (balanced wall thickness, grain integrity) so students can adapt it. Compare with Japanese hozo proportions.
-
-10. **"Kumiko is just decorative filler"**
-    - Why students think this: It appears in screens and panels, not structural elements.
-    - How to correct: Explain kumiko as a structural lattice that allows airflow while providing racking resistance. Show how the precision-fit joints resist movement without glue. Discuss applications in sliding doors (shoji) where rigidity without weight is critical.
+1. **'Wood shrinks evenly in all directions.'** Students picture wood like metal. Correct this with the grain: movement along the length is tiny, while movement across the grain is large and differs between radial and tangential directions. Point to a cracked tabletop or a floating panel.
+2. **'Glue makes any joint strong.'** End-grain glue joints are weak because glue needs long-grain to long-grain contact. Show that good joints create long-grain glue surfaces or rely on a mechanical lock instead.
+3. **'A dovetail can't come apart.'** It locks against pulling in one direction only and slides apart freely along its assembly path. Have the student find that path on their model.
+4. **'Japanese joinery never uses glue or nails, so it's stronger.'** That overgeneralizes a tradition and confuses method with strength. Pegs, wedges and mechanical locks are used, and strength depends on the joint and its load.
+5. **'Pull saws are better, full stop.'** The tension and thin-blade mechanics are documented, but the history of why the pull stroke became standard is not settled. Keep the two apart.
+6. **'Traditional joints make buildings earthquake-proof.'** This is contested. Performance depends on the whole structure. Treat it as an exercise in evidence, not a fact (see L31's qualitative label).
+7. **'Ise Jingu is a UNESCO World Heritage site.'** It is not. The UNESCO link is the 2020 Intangible Cultural Heritage inscription for traditional wooden-architecture skills in Japan.
 
 ## Level Adjustments
 
-### Beginner Level (if student needs to step back)
-- Focus on three joints only: through mortise and tenon, half-lap, basic dovetail
-- Emphasize accurate layout and cut discipline over speed
-- Use simpler wood species (poplar, pine) to reduce grain challenges
-- Provide templates and jigs rather than layout-from-scratch
-- Skip Japanese techniques entirely until Western basics are solid
+The student is intermediate but the topic is beginner-level, so expect fast uptake of the vocabulary and push on reasoning. Ask 'why here and not there?', make them predict the failure point before you reveal it, and give the assembly order for every joint. Use the Japanese terms alongside a plain-English gloss each time until L25, then use the terms alone. Skip workshop technique, safety, finishing and numeric engineering. Recurring tags to retest: `failure modes` (L9–14, 20–23, 25–30, 35), `bending and shear` (L7, 22, 26, 29), `wood movement` (L2, 3, 6, 14, 29, 35) and `sketching` (L15, 18, 24, 34, plus step (c) of every 3D fallback).
 
-### Intermediate Level (current target)
-- Cover full range of joint types across both traditions
-- Emphasize design thinking: when to use which joint, troubleshooting failures
-- Introduce hand-cut precision without jigs
-- Compare Western and Japanese approaches to build mental models
-- Expect students to adapt joint dimensions to their projects
+Delivery mix (counted from the final JSON): mini-lesson 16, question 5, real-world 5, review 6, teach-back 3, resource-drop 0. Total 35.
 
-### Advanced Level (if student progresses faster)
-- Dig into timber framing joints (scarf joints, housing joints, complex compound angles)
-- Explore historical regional variations (English vs German vs Scandinavian)
-- Design hybrid joints and innovation
-- Repair and restoration techniques (consolidating failed joints, invisible repairs)
-- Production techniques: cutting multiples, jigs that preserve hand-cut character
-- Advanced Japanese joints: kanawa-tsugi (complex splices), makomi (hidden wedge)
+## Source Status
 
-## Rabbit Holes (Fascinating Connections)
+No lesson's `resources` array has a URL in this build. Nothing could be checked against the verification gate here (no network access). Anchors to verify and add: the USDA FPL Wood Handbook (FPL-GTR-190), the UNESCO ICH 2020 inscription, and Larsson et al. 2020 Tsugite (DOI pending verification). Until then, use the search directions in each lesson's `notes`. The Ramage et al. paper must not be the only source for L33.
 
-### Historical Cross-Pollination
-Dutch traders in 1600s Japan brought Japanese joinery knowledge back to Europe. Some English furniture shows "hidden dovetails" (influenced by ari-otoshi) decades after first contact. Drop this in during Lesson 23 (furniture history).
+## Rabbit Holes
 
-### Physics of Wedges
-Shachi-sen demonstrates mechanical advantage through compound angles — the same physics as climbing cams in rock climbing or self-tightening tool handles. Connect to engineering students. Introduce in Lesson 14.
-
-### Seismic Engineering
-Japanese timber frame temples survive earthquakes through joinery that allows controlled movement. Compare to modern base isolation. Connects to structural engineering. Mention in Lesson 11 (Japanese philosophy).
-
-### Mathematics of Kumiko
-Geometric patterns in kumiko involve tessellations, Islamic geometric art parallels, and woodworking precision requirements (0.1mm tolerances). Connect to math/geometry enthusiasts. Explore in Lesson 16.
-
-### Wood Movement Calculations
-You can mathematically predict seasonal movement using wood species expansion coefficients, grain orientation, and moisture content delta. Turns "allow for movement" into quantitative design. Introduce in Lesson 1.
-
-### Tool Metallurgy
-Japanese laminated steel (soft back, hard edge) vs Western tool steel. Connects to materials science and sharpening technique differences. Drop in during Lesson 13 (pull saws).
-
-### Furniture Archaeology
-Joint analysis reveals furniture age, regional origin, maker identity. Show how conservators use joint style to authenticate and date pieces. Mention in Lesson 23.
-
-### Cognitive Motor Learning
-Why cutting joints improves with practice beyond muscle memory — error correction loops, proprioception, visual-haptic integration. Neuroscience angle for curious students. Mention when students struggle with Lesson 5-6.
-
-## Difficulty Progression Notes
-
-- **Lessons 1-3**: Conceptual foundation, low difficulty (1-2) to build confidence
-- **Lessons 4-9**: Western basics, moderate difficulty (2-3), peaks at hand-cutting techniques (Lessons 5-6, 8)
-- **Lesson 10**: Review to consolidate before switching traditions
-- **Lessons 11-13**: Japanese philosophy and basic techniques, return to moderate (2) for conceptual shift
-- **Lessons 14-16**: Japanese advanced techniques, difficulty peak (3-4) at shachi-sen
-- **Lesson 17**: Review before synthesis
-- **Lessons 18-21**: Advanced applications, sustained difficulty (3-4) with compound angles as peak
-- **Lessons 22-24**: Comparative synthesis, high cognitive load (3-4) but less motor skill demand
-- **Lesson 25**: Final review, consolidation (2)
-
-## Common Sticking Points
-
-- **Mortise tearout** (Lesson 5): Students chop too aggressively near edges. Teach progressive undercutting.
-- **Dovetail fit** (Lesson 8): Students cut too tight, then over-correct to loose. Calibrate with test pieces.
-- **Japanese philosophy disconnect** (Lesson 11): Western students see "no glue" as impractical. Show structural tests.
-- **Shachi-sen layout** (Lesson 14): Compound angles are conceptually hard. Use 3D models and rotation animations.
-- **Technique selection paralysis** (Lesson 22): Too many options overwhelm. Provide decision flowchart.
-
-## Assessment Strategies
-
-- **Can they explain failures?** Show photos of failed joints, ask students to diagnose (grain direction error, wood movement, poor fit, wrong joint choice)
-- **Design challenges**: "Design a joint for a table apron that's 2" wide and 3/4" thick, attaching to a 3" square leg. Explain your choice."
-- **Adaptation tests**: "You laid out a tenon but cut it 1/16" too narrow. What are three repair options?"
-- **Cross-tradition comparison**: "When would you choose a sliding dovetail over an ari joint?"
-- **Real-world application**: "You're building a dining chair. Identify all joints needed and justify each choice."
+- **Ise's 20-year cycle as a way to pass down skill.** Each rebuild trains the next generation. Drop this in at L32, or at L17 when a student asks how hand-tool skill survives.
+- **Computational joint design.** Interactive tools now check whether a joint can be assembled and send it straight to a CNC milling machine (search: Tsugite UIST 2020; do not link the editor). Drop this in at L33 or after L28's assembly-order puzzle.
+- **Joints that 'give' on purpose.** The idea of a connection that deforms instead of snapping links to how engineers think about ductility in steel and concrete. Use it at L31.
+- **Dovetails as a signature.** Pin spacing and angle can date and attribute antique furniture. Use it at L11 or L15.
