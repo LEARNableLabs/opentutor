@@ -23,7 +23,7 @@
 
 ### MIT OpenCourseWare
 - **8.902 Astrophysics II: Stellar Physics** — Complete course materials including lecture notes, problem sets, and exams. Excellent match for intermediate level.
-  - [Course page](https://ocw.mit.edu/courses/8-902-astrophysics-ii-spring-2004/)
+  - Course page
 
 ### University Lecture Notes
 - **Princeton Astrophysics (Gerry Garmany & James Gunn)** — Comprehensive lecture notes on stellar structure and evolution from Princeton's graduate astrophysics course.
@@ -51,13 +51,13 @@
   - [EZ interface](http://user.astro.wisc.edu/~townsend/static.php?ref=ez-web)
 
 - **MESA Summer School materials** — Tutorials, lectures, and exercises from annual MESA summer schools.
-  - [MESA Summer School](https://cococubed.com/mesa_market/mesa_schools.html)
+  - MESA Summer School
 
 ### Interactive Simulations
 - **NAAP (Nebraska Astronomy Applet Project) — H-R Diagram Explorer** — Interactive tool for exploring stellar populations on the H-R diagram.
   - [H-R Explorer](http://astro.unl.edu/classaction/animations/stellarprops/hrexplorer.html)
   - [Eclipsing Binary Simulator](http://astro.unl.edu/naap/ebs/ebs.html)
-  - [Mass-Luminosity Relation](http://astro.unl.edu/classaction/animations/stellarprops/mlr.html)
+  - Mass-Luminosity Relation
 
 - **Stellar Evolution Animations** — Time-lapse animations of stellar evolution tracks on the H-R diagram.
   - [University of Oregon animations](http://abyss.uoregon.edu/~js/ast123/lectures/)
@@ -75,7 +75,7 @@
 
 ### Spectral Atlases
 - **Harvard-Smithsonian CfA Stellar Spectral Atlas** — High-resolution spectra of stars across all spectral types.
-  - [CfA Spectral Atlas](https://lweb.cfa.harvard.edu/~pberlind/atlas/htmls/atlas.html)
+  - CfA Spectral Atlas
 
 ## Key Papers & Historical Sources
 

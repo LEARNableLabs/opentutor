@@ -53,8 +53,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Wallpaper_group",
-        "https://www.youtube.com/watch?v=o4Z4PfhT-R4"
+        "https://en.wikipedia.org/wiki/Wallpaper_group"
       ],
       "status": "pending"
     },
@@ -144,8 +143,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/1501.01313",
-        "https://www.math.uni-bielefeld.de/baake/ao.html"
+        "https://arxiv.org/abs/1501.01313"
       ],
       "status": "pending"
     },
@@ -195,8 +193,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://en.wikipedia.org/wiki/Penrose_tiling#Rhombus_tiling_(P3)",
-        "https://www.mathpuzzle.com/Penrose.htm"
+        "https://en.wikipedia.org/wiki/Penrose_tiling#Rhombus_tiling_(P3)"
       ],
       "status": "pending"
     },
@@ -208,7 +205,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://plus.maths.org/content/penrose-tiles-0",
         "https://www.youtube.com/watch?v=48sCx-wBs34"
       ],
       "status": "pending"
@@ -311,8 +307,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://en.wikipedia.org/wiki/Wang_tile#Applications",
-        "https://www.youtube.com/watch?v=MhfECxSUcJE"
+        "https://en.wikipedia.org/wiki/Wang_tile#Applications"
       ],
       "status": "pending"
     },
@@ -337,8 +332,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://en.wikipedia.org/wiki/Quasicrystal",
-        "https://www.youtube.com/watch?v=aj1RfaCnrAY"
+        "https://en.wikipedia.org/wiki/Quasicrystal"
       ],
       "status": "pending"
     },
@@ -350,8 +344,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/1501.01313",
-        "https://www.math.uni-bielefeld.de/baake/ao.html"
+        "https://arxiv.org/abs/1501.01313"
       ],
       "status": "pending"
     },
@@ -362,10 +355,7 @@
       "concepts": ["natural patterns", "Islamic art", "architectural design"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.islamicart.com/main/geometry/tilings.html",
-        "https://www.youtube.com/watch?v=dCSkXKvR19Y"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

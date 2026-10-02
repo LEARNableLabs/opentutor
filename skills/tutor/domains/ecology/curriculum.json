@@ -40,8 +40,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/ecology-ap/population-ecology-ap/a/life-tables-survivorship-age-sex-structure",
-        "https://serc.carleton.edu/quantskills/methods/quantlit/PopulationPyramids.html"
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/population-ecology-ap/a/life-tables-survivorship-age-sex-structure"
       ],
       "status": "pending"
     },
@@ -79,8 +78,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/ecology-ap/population-ecology-ap/a/exponential-logistic-growth",
-        "https://ccl.northwestern.edu/netlogo/models/Rabbits"
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/population-ecology-ap/a/exponential-logistic-growth"
       ],
       "status": "pending"
     },
@@ -91,10 +89,7 @@
       "concepts": ["Allee effects", "minimum viable population", "extinction vortex"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.nature.com/scitable/knowledge/library/extinction-causes-and-consequences-25679729/",
-        "https://www.biointeractive.org/classroom-resources/rhinos-in-kenya"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -104,9 +99,7 @@
       "concepts": ["exponential vs logistic", "interpreting growth curves", "applying models"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://serc.carleton.edu/quantskills/activities/popgrowth.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -117,8 +110,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/niches-competition",
-        "https://www.nature.com/scitable/knowledge/library/community-ecology-13228167/"
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/niches-competition"
       ],
       "status": "pending"
     },
@@ -143,7 +135,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://ccl.northwestern.edu/netlogo/models/PredatorPrey",
         "https://www.ecolab.com.au/",
         "https://services.math.duke.edu/education/ccp/materials/diffeq/predprey/pred1.html"
       ],
@@ -157,8 +148,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/symbiosis-mutualism-commensalism-parasitism",
-        "https://www.biointeractive.org/classroom-resources/some-animals-are-more-equal-than-others-keystone-species"
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/symbiosis-mutualism-commensalism-parasitism"
       ],
       "status": "pending"
     },
@@ -182,8 +172,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/community-structure",
-        "https://www.nature.com/scitable/knowledge/library/what-maintains-high-species-diversity-in-tropical-13262708/"
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/community-structure"
       ],
       "status": "pending"
     },
@@ -194,9 +183,7 @@
       "concepts": ["competition vs cooperation", "diversity metrics", "community patterns"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://serc.carleton.edu/quantskills/activities/biodiversity.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -207,8 +194,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/succession",
-        "https://www.biointeractive.org/classroom-resources/returning-the-forest"
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/community-ecology-ap/a/succession"
       ],
       "status": "pending"
     },
@@ -220,7 +206,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.biointeractive.org/classroom-resources/some-animals-are-more-equal-than-others-keystone-species",
         "https://www.youtube.com/watch?v=ysa5OBhXz-Q"
       ],
       "status": "pending"
@@ -233,8 +218,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/ecology-ap/energy-flow-through-ecosystems/a/food-chains-food-webs",
-        "https://www.nature.com/scitable/knowledge/library/energy-flow-in-ecosystems-15650937/"
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/energy-flow-through-ecosystems/a/food-chains-food-webs"
       ],
       "status": "pending"
     },
@@ -246,8 +230,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/ecology-ap/energy-flow-through-ecosystems/a/food-chains-food-webs",
-        "https://ccl.northwestern.edu/netlogo/models/SimpleEcosystem"
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/energy-flow-through-ecosystems/a/food-chains-food-webs"
       ],
       "status": "pending"
     },
@@ -259,8 +242,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/ap-biology/ecology-ap/biogeochemical-cycles/a/introduction-to-biogeochemical-cycles",
-        "https://www.biointeractive.org/classroom-resources/carbon-cycle"
+        "https://www.khanacademy.org/science/ap-biology/ecology-ap/biogeochemical-cycles/a/introduction-to-biogeochemical-cycles"
       ],
       "status": "pending"
     },
@@ -272,7 +254,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.biointeractive.org/classroom-resources/carbon-cycle",
         "https://earthobservatory.nasa.gov/features/CarbonCycle"
       ],
       "status": "pending"
@@ -284,9 +265,7 @@
       "concepts": ["energy transfer", "nutrient cycling", "ecosystem processes"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://serc.carleton.edu/quantskills/activities/nutrient_cycling.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -296,10 +275,7 @@
       "concepts": ["invasion ecology", "competitive release", "novel ecosystems"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.biointeractive.org/classroom-resources/anole-lizards",
-        "https://www.nature.com/scitable/knowledge/library/biological-invasions-89450090/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -309,10 +285,7 @@
       "concepts": ["island biogeography", "SLOSS debate", "metapopulation theory"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.nature.com/scitable/knowledge/library/island-biogeography-an-overview-82641429/",
-        "https://www.biointeractive.org/classroom-resources/ecology-biodiversity-and-evolution-of-darwins-finches"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -323,8 +296,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.biointeractive.org/classroom-resources/great-elephant-census",
-        "https://www.nature.com/scitable/knowledge/library/conservation-biology-132391290/"
+        "https://www.biointeractive.org/classroom-resources/great-elephant-census"
       ],
       "status": "pending"
     }

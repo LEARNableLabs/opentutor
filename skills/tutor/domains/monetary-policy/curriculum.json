@@ -26,8 +26,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.federalreserveeducation.org/about-the-fed/structure-and-functions",
-        "https://www.bankofengland.co.uk/knowledgebank/what-is-a-central-bank"
+        "https://www.federalreserveeducation.org/about-the-fed/structure-and-functions"
       ],
       "status": "pending"
     },
@@ -39,8 +38,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.imf.org/en/Publications/fandd/issues/2019/09/central-bank-independence-in-crisis-times-waller",
-        "https://www.ecb.europa.eu/ecb/educational/explainers/tell-me-more/html/why_independent.en.html"
+        "https://www.imf.org/en/Publications/fandd/issues/2019/09/central-bank-independence-in-crisis-times-waller"
       ],
       "status": "pending"
     },
@@ -143,7 +141,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.brookings.edu/articles/the-power-of-words-how-does-the-fed-move-markets/",
         "https://www.ecb.europa.eu/press/key/html/index.en.html"
       ],
       "status": "pending"
@@ -168,7 +165,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.federalreserve.gov/econres/notes/feds-notes/the-transmission-of-monetary-policy-through-bank-lending-20180813.htm",
         "https://www.ecb.europa.eu/mopo/intro/transmission/html/index.en.html"
       ],
       "status": "pending"
@@ -181,7 +177,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.clevelandfed.org/publications/economic-commentary/2018/ec-201815-monetary-policy-and-bank-lending",
         "https://www.bis.org/publ/work278.htm"
       ],
       "status": "pending"
@@ -207,8 +202,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.stlouisfed.org/on-the-economy/2022/mar/long-variable-lags-monetary-policy",
-        "https://www.brookings.edu/articles/the-hutchins-center-explains-monetary-policy-lags/"
+        "https://www.stlouisfed.org/on-the-economy/2022/mar/long-variable-lags-monetary-policy"
       ],
       "status": "pending"
     },
@@ -272,8 +266,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.mercatus.org/research/policy-briefs/case-nominal-gdp-targeting",
-        "https://www.brookings.edu/articles/the-case-for-a-nominal-gdp-target/"
+        "https://www.mercatus.org/research/policy-briefs/case-nominal-gdp-targeting"
       ],
       "status": "pending"
     },
@@ -297,10 +290,7 @@
       "concepts": ["negative interest rates", "zero lower bound", "NIRP effectiveness"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.brookings.edu/articles/the-case-for-negative-interest-rates/",
-        "https://www.ecb.europa.eu/press/key/date/2016/html/sp160908.en.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -311,7 +301,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.ecb.europa.eu/press/blog/date/2021/03/html/ecb.blog210318~3bbc68ffc5.en.html",
         "https://www.bis.org/publ/othp31.htm"
       ],
       "status": "pending"
@@ -324,7 +313,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.atlantafed.org/cenfis/publications/cbdc",
         "https://www.bis.org/publ/othp33.htm"
       ],
       "status": "pending"
@@ -338,8 +326,7 @@
       "type": "resource-drop",
       "resources": [
         "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20230503.htm",
-        "https://fred.stlouisfed.org/series/CPIAUCSL",
-        "https://www.ecb.europa.eu/press/accounts/2023/html/ecb.mg230316~54c9dc6cd9.en.html"
+        "https://fred.stlouisfed.org/series/CPIAUCSL"
       ],
       "status": "pending"
     },

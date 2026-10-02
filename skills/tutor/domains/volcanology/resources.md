@@ -63,13 +63,13 @@
   - Subscription required but worth it for teaching
 
 - **USGS Video Library**
-  - https://www.usgs.gov/media/videos
+
   - Filter for volcano content—extensive archive from Hawaii, Cascades, Alaska
 
 ### Interactive Tools and Simulations
 
 - **USGS Real-Time Volcano Monitoring**
-  - https://www.usgs.gov/programs/VHP/volcanoes
+
   - Live seismograms, webcams, deformation data for US volcanoes
   - Essential for connecting concepts to real-world observations
 
@@ -85,7 +85,7 @@
   - Excellent for tracking lava effusion rates
 
 - **InSAR Map of Ground Deformation**
-  - https://volcanoes.usgs.gov/vsc/file_mngr/file-151/INSAR.pdf
+
   - Visualize ground deformation from satellite radar
   - NASA's ARIA project provides public InSAR products
 
@@ -111,7 +111,7 @@
   - Monitoring for Ruapehu, Tongariro, White Island
   - Strong on volcanic hazard mapping
 
-- **JMA** (Japan Meteorological Agency) — https://www.jma.go.jp/jma/en/Activities/volcano.html
+- **JMA** (Japan Meteorological Agency)
   - Extensive monitoring network across Japan
   - Volcanic alert levels and eruption warnings
 
@@ -121,19 +121,19 @@
 
 ### Case Study Archives
 
-- **1980 Mount St. Helens Eruption** — https://www.usgs.gov/observatories/cvo/science/1980-cataclysmic-eruption
+- **1980 Mount St. Helens Eruption**
   - Comprehensive archive: precursors, eruption, aftermath
   - Ideal for teaching lateral blasts, lahars, monitoring
 
-- **2010 Eyjafjallajökull Eruption** — https://www.vedur.is/media/jar/Eyjafjallajokull_2010.pdf
+- **2010 Eyjafjallajökull Eruption**
   - Aviation impacts, phreatomagmatic eruptions
   - IMO (Icelandic Met Office) archives
 
-- **2018 Kilauea Lower East Rift Zone Eruption** — https://www.usgs.gov/volcanoes/kilauea/2018-lower-east-rift-zone-eruption
+- **2018 Kilauea Lower East Rift Zone Eruption**
   - Modern basaltic fissure eruption with excellent documentation
   - Lava flows, fountains, summit collapse
 
-- **2021 Cumbre Vieja Eruption (La Palma)** — https://www.ign.es/web/resources/volcanologia/html/CA_vulca_la_palma.html
+- **2021 Cumbre Vieja Eruption (La Palma)**
   - Recent Strombolian eruption with massive lava flows
   - Excellent media coverage and real-time monitoring documentation
 
@@ -153,7 +153,7 @@
 
 - **Seismic Sound Visualization**
   - Convert seismograms to audio to "hear" volcanic tremor
-  - https://www.iris.edu/hq/inclass/animation/seismicsound_spectrogramsonification
+
 
 - **Google Earth Engine** — https://earthengine.google.com/
   - Access satellite imagery archives
@@ -172,9 +172,9 @@
 
 - **USGS Volcano Data**
   - Downloadable datasets for deformation, gas emissions, seismicity
-  - https://www.usgs.gov/natural-hazards/volcano-hazards/data
 
-- **LavaPy** (https://github.com/TristanSalles/LavaPy)
+
+- **LavaPy** ()
   - Lava flow simulations in Python
   - Educational-level implementation
 

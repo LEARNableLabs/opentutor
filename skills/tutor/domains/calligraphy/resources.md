@@ -7,13 +7,13 @@
 - **Edward Johnston, *Writing & Illuminating, & Lettering* (1906)** — [Internet Archive](https://archive.org/details/writingilluminat00john)  
   The foundational text of the modern Western calligraphy revival. Dense but essential. Covers Roman capitals, Uncial, Gothic, Italic. Best for intermediate+ students due to Victorian prose.
 
-- **Sheila Waters, *Foundations of Calligraphy*** — [John Neal Books](https://www.johnnealbookseller.com/)  
+- **Sheila Waters, *Foundations of Calligraphy*** — John Neal Books
   Modern, comprehensive guide to Western broad-edge calligraphy. Clear instructions, excellent exemplars. Good for systematic learning.
 
 - **Marc Drogin, *Medieval Calligraphy: Its History and Technique*** — [Internet Archive](https://archive.org/details/medievalcalligra0000drog)  
   Historical scripts with technical breakdowns. Includes Gothic, Uncial, Carolingian, Beneventan. Strong on historical context.
 
-- **Yujiro Nakata, *The Art of Japanese Calligraphy*** — [Internet Archive](https://archive.org/details/artofjapanesecal0000nakata)  
+- **Yujiro Nakata, *The Art of Japanese Calligraphy*** — Internet Archive
   Comprehensive survey of Japanese calligraphic traditions (kaisho, gyosho, sosho, kana). Well-illustrated, translated.
 
 - **Hassan Massoudy, *Calligraphy: The Rhythm of Writing*** — Contemporary Arabic calligraphy from a master artist. Emphasizes creative expression while respecting tradition.
@@ -22,7 +22,7 @@
 
 ### Online Courses & Syllabi
 
-- **IAMPETH (International Association of Master Penmen)** — [https://www.iampeth.com/lessons](https://www.iampeth.com/lessons)  
+- **IAMPETH (International Association of Master Penmen)**
   Free lessons on Engrosser's Script, Spencerian, Ornamental Penmanship, Business Writing. Historical exemplars and modern instruction.
 
 - **Qalam.org** — [https://qalam.org/](https://qalam.org/)  
@@ -39,10 +39,10 @@
 - **Metropolitan Museum of Art — Islamic Calligraphy** — [https://www.metmuseum.org/toah/hd/cali/hd_cali.htm](https://www.metmuseum.org/toah/hd/cali/hd_cali.htm)  
   Timeline of Art History section on Islamic calligraphy. High-res images, historical context, script identification.
 
-- **British Library — Sacred Texts** — [https://www.bl.uk/sacred-texts](https://www.bl.uk/sacred-texts)  
+- **British Library — Sacred Texts**
   Digitized manuscripts from Christian, Islamic, Jewish, Hindu, Buddhist traditions. Search by script, region, date. Invaluable for exemplars.
 
-- **Victoria & Albert Museum — Calligraphy Collections** — [https://www.vam.ac.uk/collections/calligraphy](https://www.vam.ac.uk/collections/calligraphy)  
+- **Victoria & Albert Museum — Calligraphy Collections**
   Western and Islamic calligraphy. Strong on Arts & Crafts movement and Edward Johnston materials.
 
 - **Freer|Sackler (Smithsonian) — Asian Calligraphy** — [https://asia.si.edu/learn/for-educators/teaching-china-with-the-smithsonian/explore-by-topic/calligraphy/](https://asia.si.edu/learn/for-educators/teaching-china-with-the-smithsonian/explore-by-topic/calligraphy/)  
@@ -55,7 +55,7 @@
 
 ### Video Demonstrations
 
-- **Schin Loong (YouTube)** — [https://www.youtube.com/c/SchinLoong](https://www.youtube.com/c/SchinLoong)  
+- **Schin Loong (YouTube)**
   Western calligraphy tutorials. Copperplate, Italic, flourishing. Clear demonstrations, real-time practice sessions.
 
 - **Takumi (YouTube)** — [https://www.youtube.com/user/takumichannel](https://www.youtube.com/user/takumichannel)  
@@ -158,7 +158,7 @@
 
 ### Where to Buy
 
-- **John Neal Bookseller** — [https://www.johnnealbookseller.com/](https://www.johnnealbookseller.com/)  
+- **John Neal Bookseller**
   Specialty calligraphy supplier. Broad-edge pens, nibs, holders, inks, paper. US-based, ships internationally.
 
 - **Scribblers (UK)** — [https://www.scribblers.co.uk/](https://www.scribblers.co.uk/)  

@@ -22,7 +22,7 @@
 ### Online Courses & Tutorials
 
 - **Guild of American Luthiers Learning Center** — Extensive article archive on all aspects of lutherie, searchable by topic. Free for members.
-  - https://www.luth.org/learning-center
+
 
 - **Stewart-MacDonald Video & Ideas** — Hundreds of free instructional videos on guitar and bass building, setup, and repair.
   - https://www.stewmac.com/video-and-ideas/
@@ -47,7 +47,7 @@
   - https://www.liutaiomottola.com/formulae/
 
 - **Guitar Acoustics (UNSW Physics)** — Interactive explanations of guitar acoustics by Joe Wolfe. Covers Helmholtz resonance, modes, and harmonics.
-  - https://newt.phys.unsw.edu.au/jw/guitars.html
+
 
 ### Videos (specific series and episodes)
 
@@ -58,10 +58,10 @@
   - https://www.youtube.com/playlist?list=PLqQ0Z9Z0Z0Z0Z0Z0Z0Z0Z0Z0Z0Z0Z0Z0Z
 
 - **"Violin Making Process" by The Strad** — Time-lapse and detailed footage of professional violin makers.
-  - https://www.youtube.com/c/TheStrad
+
 
 - **"Tap Tuning Tutorial" by StewMac** — How to hear and interpret tap tones on soundboards.
-  - https://www.youtube.com/watch?v=_7lH5K8mXYo
+
 
 ### Code & Software
 
@@ -80,7 +80,7 @@
   - https://www.maestronet.com/forum/
 
 - **Guild of American Luthiers Forum** — Members-only forum for lutherie discussions across all instrument families.
-  - https://www.luth.org/forum
+
 
 - **The Acoustic Guitar Forum** — Community for guitar builders and players. Good for beginner questions and build journals.
   - https://www.acousticguitarforum.com
@@ -112,7 +112,7 @@
 - **Carleen Hutchins (1911-2009)** — Physicist and violin maker who studied violin acoustics using Chladni patterns and developed the violin octet.
 
 - **Joseph Curtin** — Violin maker and researcher who collaborated on blind listening tests comparing Stradivari violins to modern instruments.
-  - https://www.curtinstudios.com
+
 
 - **Dr. Knut Guettler** — Researcher at Norwegian Academy of Music studying bowing physics and violin acoustics.
 
@@ -126,7 +126,7 @@
   - https://www.lmii.com
 
 - **International Violin Company** — Tools and materials specifically for violin family instruments. Good source for specialized planes and knives.
-  - https://www.intviolins.com
+
 
 - **Lee Valley Tools** — High-quality hand tools (planes, chisels, saws) useful for lutherie. Not lutherie-specific but excellent quality.
   - https://www.leevalley.com
@@ -136,10 +136,10 @@
 
 ### Specialized Tools
 - **Ibex Planes** — Makers of specialized lutherie planes (finger planes, violin planes, channel gouges).
-  - https://www.ibexplanes.com
+
 
 - **Two Cherries Carving Tools** — German-made gouges and carving chisels, favored by many luthiers.
-  - https://www.fine-tools.com/two-cherries.html
+
 
 - **Mitutoyo Digital Calipers** — Industry-standard precision measurement tools for thickness, scale length, and fret spacing.
   - https://www.mitutoyo.com

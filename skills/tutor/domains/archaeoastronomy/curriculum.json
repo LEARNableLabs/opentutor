@@ -54,8 +54,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.britannica.com/science/heliacal-rising",
-        "https://www.cambridge.org/core/journals/journal-for-the-history-of-astronomy"
+        "https://www.britannica.com/science/heliacal-rising"
       ],
       "status": "pending"
     },
@@ -67,8 +66,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Axial_precession",
-        "https://www.youtube.com/watch?v=IjWNH8vCYnE"
+        "https://en.wikipedia.org/wiki/Axial_precession"
       ],
       "status": "pending"
     },
@@ -178,9 +176,7 @@
       "concepts": ["El Caracol observatory", "Venus tables", "Uaxactun E-Group", "Maya calendar systems"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.cambridge.org/core/books/maya-astronomy"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -201,7 +197,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/nature-giza-alignment",
         "https://www.aeraweb.org"
       ],
       "status": "pending"
@@ -213,9 +208,7 @@
       "concepts": ["Fajada Butte petroglyph", "Chacoan roads and solstice", "Pueblo cosmology", "erosion and preservation"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.nps.gov/chcu/learn/historyculture/sun-dagger.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -238,9 +231,7 @@
       "concepts": ["Angkor Wat orientation", "equinox alignment", "Hindu cosmology in architecture", "Khmer astronomy"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.cambridge.org/core/journals/journal-southeast-asian-studies"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -250,10 +241,7 @@
       "concepts": ["cosmology vs cosmography", "three-world vs four-world models", "sacred directions", "astronomy and power"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.anthrosource.net",
-        "https://yalebooks.yale.edu/skywatchers"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -264,8 +252,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://journals.equinoxpub.com/JSA/article/view/interpretation-ethics",
-        "https://www.archaeoastronomy.org/best-practices"
+        "https://journals.equinoxpub.com/JSA/article/view/interpretation-ethics"
       ],
       "status": "pending"
     },
@@ -299,9 +286,7 @@
       "concepts": ["LiDAR archaeology", "digital elevation models", "3D site reconstruction", "modern discovery examples"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.nationalgeographic.com/lidar-archaeology"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

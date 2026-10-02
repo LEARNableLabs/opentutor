@@ -50,7 +50,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://coffeeadastra.com/2019/07/16/preinfusion/",
         "https://www.baristahustle.com/blog/pre-infusion-at-home/"
       ],
       "status": "pending"
@@ -75,8 +74,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.baristahustle.com/blog/pressure-gauges/",
-        "https://coffeeadastra.com/2021/09/07/pressure-measurement/"
+        "https://www.baristahustle.com/blog/pressure-gauges/"
       ],
       "status": "pending"
     },
@@ -88,7 +86,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/physics/thermodynamics-heat-transfer/",
         "https://www.home-barista.com/espresso-machines/temperature-stability-t3456.html"
       ],
       "status": "pending"
@@ -113,8 +110,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.home-barista.com/espresso-machines/pid-control-explained-t2345.html",
-        "https://coffeeadastra.com/2018/12/20/temperature-control/"
+        "https://www.home-barista.com/espresso-machines/pid-control-explained-t2345.html"
       ],
       "status": "pending"
     },
@@ -138,8 +134,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.baristahustle.com/blog/espresso-machine-basics/",
-        "https://coffeeadastra.com/espresso-guide/"
+        "https://www.baristahustle.com/blog/espresso-machine-basics/"
       ],
       "status": "pending"
     },
@@ -151,8 +146,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.baristahustle.com/blog/the-coffee-extraction-and-how-to-taste-it/",
-        "https://coffeeadastra.com/2018/11/05/extraction-and-how-to-measure-it/"
+        "https://www.baristahustle.com/blog/the-coffee-extraction-and-how-to-taste-it/"
       ],
       "status": "pending"
     },
@@ -177,8 +171,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.baristahustle.com/blog/grind-size-and-brew-time/",
-        "https://coffeeadastra.com/2019/04/07/an-introduction-to-grinders/"
+        "https://www.baristahustle.com/blog/grind-size-and-brew-time/"
       ],
       "status": "pending"
     },
@@ -203,8 +196,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.baristahustle.com/blog/how-to-use-a-refractometer/",
-        "https://coffeeadastra.com/2019/01/08/measuring-extraction/"
+        "https://www.baristahustle.com/blog/how-to-use-a-refractometer/"
       ],
       "status": "pending"
     },
@@ -216,8 +208,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.baristahustle.com/blog/espresso-recipes-putting-it-all-together/",
-        "https://coffeeadastra.com/espresso-guide/"
+        "https://www.baristahustle.com/blog/espresso-recipes-putting-it-all-together/"
       ],
       "status": "pending"
     },
@@ -229,7 +220,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://coffeeadastra.com/2020/01/12/flow-profiling/",
         "https://www.home-barista.com/tips/flow-control-vs-pressure-profiling-t7890.html"
       ],
       "status": "pending"
@@ -241,9 +231,7 @@
       "concepts": ["pressure profiling", "flow profiling", "control modes"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://decentespresso.com/blog/pressure-vs-flow-profiling"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -253,10 +241,7 @@
       "concepts": ["declining pressure profiles", "blooming profiles", "extraction uniformity"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://coffeeadastra.com/2019/08/30/blooming-espresso/",
-        "https://decentespresso.com/blog/adaptive-profiles"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -278,10 +263,7 @@
       "concepts": ["sensory analysis", "profile design", "iterative refinement"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://coffeeadastra.com/2021/03/15/taste-driven-profiling/",
-        "https://decentespresso.com/blog/profile-library"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -292,8 +274,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.baristahustle.com/blog/dialing-in-espresso/",
-        "https://coffeeadastra.com/espresso-guide/"
+        "https://www.baristahustle.com/blog/dialing-in-espresso/"
       ],
       "status": "pending"
     },
@@ -304,9 +285,7 @@
       "concepts": ["turbo shots", "high flow", "unconventional ratios"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://coffeeadastra.com/2020/08/28/turbulent-extraction/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -317,7 +296,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://decentespresso.com/blog/roast-specific-profiles",
         "https://www.baristahustle.com/blog/roast-and-extraction/"
       ],
       "status": "pending"
@@ -330,9 +308,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://coffeeadastra.com/2019/07/29/espresso-recipes/",
-        "https://www.baristahustle.com/blog/espresso-recipe-design/",
-        "https://decentespresso.com/blog/workflow-guide"
+        "https://www.baristahustle.com/blog/espresso-recipe-design/"
       ],
       "status": "pending"
     }

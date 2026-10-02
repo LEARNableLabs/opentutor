@@ -76,7 +76,7 @@
       "concepts": ["fractional dimension", "topological vs fractal dimension", "dimension intuition"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.math.uh.edu/~climenha/doc/fractals.pdf"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -106,7 +106,7 @@
       "concepts": ["similarity dimension", "scaling factor", "self-similar sets"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.math.uh.edu/~climenha/doc/fractals.pdf"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -136,7 +136,7 @@
       "concepts": ["dimension comparison", "when definitions agree", "computational trade-offs"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": ["https://www.math.uh.edu/~climenha/doc/fractals.pdf"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -206,7 +206,7 @@
       "concepts": ["IFS", "affine transformations", "attractor sets"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.math.uh.edu/~climenha/doc/fractals.pdf"],
+      "resources": [],
       "status": "pending"
     },
     {

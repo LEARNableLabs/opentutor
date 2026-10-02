@@ -11,14 +11,14 @@
 
 ### Courses & Structured Programs
 - **Leathercraft Masterclass** (https://leathercraftmasterclass.com/) — Phil Hobson's modular courses cover tooling, construction, and finishing at intermediate-advanced level. Well-structured video lessons with project-based learning.
-- **Tandy Leather Library** (https://tandyleather.com/pages/leather-library) — Free downloadable PDFs and video tutorials covering basic through intermediate techniques. Excellent supplement for all lessons.
+- **Tandy Leather Library** () — Free downloadable PDFs and video tutorials covering basic through intermediate techniques. Excellent supplement for all lessons.
 
 ## Supplementary (for engagement)
 
 ### YouTube Channels (video demonstrations)
 - **Corter Leather** (https://www.youtube.com/c/CorterLeather) — Detailed intermediate-advanced technique videos, especially strong on construction, edge finishing, and dyeing. Calm, methodical presentation style.
 - **Ian Atkinson / LeatherHub** (https://www.youtube.com/c/LeatherHub) — Comprehensive beginner-to-intermediate series covering tools, techniques, and projects. Excellent tool reviews and technique comparisons.
-- **Chuck Dorsett** (https://www.youtube.com/c/ChuckDorsett) — Focus on carving and tooling, especially Sheridan-style floral work. Great for lessons 7-11 on complex carving.
+- **Chuck Dorsett** () — Focus on carving and tooling, especially Sheridan-style floral work. Great for lessons 7-11 on complex carving.
 - **Nigel Armitage** — Artistic tooling and design, European perspective. Good for design inspiration and alternative approaches.
 
 ### Interactive Tools

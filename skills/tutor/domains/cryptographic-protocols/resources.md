@@ -60,7 +60,7 @@
 
 - **DEF CON Crypto Village Talks**
   - Real-world protocol attacks, cutting-edge research, hacker perspective
-  - URL: https://www.youtube.com/c/DEFCONConference/search?query=crypto
+  - URL:
 
 - **Real World Crypto Symposium**
   - Annual conference on practical cryptography, protocol deployment
@@ -70,7 +70,7 @@
 
 - **CrypTool 2**
   - Protocol visualization, hands-on experimentation, algorithm animations
-  - URL: https://www.cryptool.org/en/cryptool2
+  - URL:
 
 - **Cryptopals Crypto Challenges**
   - Hands-on protocol attacks, implement-and-break exercises
@@ -211,7 +211,7 @@
   - Website: https://paterson.tech/
 
 - **Yehuda Lindell** — secure computation, protocol theory
-  - Website: https://www.cs.biu.ac.il/~lindell/
+  - Website:
 
 ### Organizations & Communities
 
@@ -277,7 +277,7 @@
 
 - **SSL/TLS Vulnerabilities Timeline**
   - Heartbleed, POODLE, BEAST, etc.
-  - URL: https://www.ssl.com/article/ssl-tls-vulnerabilities-timeline/
+  - URL:
 
 ### Testing Tools
 - **SSL Labs SSL Server Test**

@@ -43,7 +43,7 @@
 - **Balance Community** — https://balancecommunity.com
   Largest online slackline community. Forums, tutorials, gear reviews, technique discussions. Mix of practitioners and researchers.
 
-- **International Slackline Association (ISA)** — https://www.isa-slackline.org
+- **International Slackline Association (ISA)**
   Standards, safety guidelines, educational resources. Official organization for the sport.
 
 - **Slackline Industries** — https://slacklineindustries.com

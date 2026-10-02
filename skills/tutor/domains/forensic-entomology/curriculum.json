@@ -26,8 +26,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6474513/",
-        "https://www.youtube.com/watch?v=tGQ8N0xYMsg"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6474513/"
       ],
       "status": "pending"
     },
@@ -52,8 +51,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/decomposition",
-        "https://www.youtube.com/watch?v=hP2jkXP5P9k"
+        "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/decomposition"
       ],
       "status": "pending"
     },
@@ -78,8 +76,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.abfe.org/certification",
-        "https://www.ncjrs.gov/pdffiles1/nij/228091.pdf"
+        "https://www.abfe.org/certification"
       ],
       "status": "pending"
     },
@@ -103,7 +100,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=xaZvSZB84Y8",
         "https://entnemdept.ufl.edu/creatures/misc/flies/blow_flies.htm"
       ],
       "status": "pending"
@@ -129,8 +125,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://bugguide.net/node/view/304/data",
-        "https://www.youtube.com/watch?v=kDN4vY9s7Ks"
+        "https://bugguide.net/node/view/304/data"
       ],
       "status": "pending"
     },
@@ -155,8 +150,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5343516/",
-        "https://www.youtube.com/watch?v=uNM-Q2e0m1k"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5343516/"
       ],
       "status": "pending"
     },
@@ -193,8 +187,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.forensicentomology.com/pmi-estimation.html",
-        "https://www.youtube.com/watch?v=Q9kC2e8P2zU"
+        "https://www.forensicentomology.com/pmi-estimation.html"
       ],
       "status": "pending"
     },
@@ -269,10 +262,7 @@
       "concepts": ["collection protocols", "chain of custody", "scene preservation", "documentation standards"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.ncjrs.gov/pdffiles1/nij/228091.pdf",
-        "https://www.youtube.com/watch?v=T7gN7yZ0zVY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -309,8 +299,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.abfe.org/standards",
-        "https://www.ncjrs.gov/pdffiles1/nij/228091.pdf"
+        "https://www.abfe.org/standards"
       ],
       "status": "pending"
     },
@@ -334,8 +323,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.abfe.org/testimony-guide",
-        "https://www.ncjrs.gov/pdffiles1/nij/228091.pdf"
+        "https://www.abfe.org/testimony-guide"
       ],
       "status": "pending"
     },
@@ -348,8 +336,7 @@
       "type": "resource-drop",
       "resources": [
         "https://www.innocenceproject.org/",
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6062302/",
-        "https://www.youtube.com/watch?v=4l6BbFt9k3Q"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6062302/"
       ],
       "status": "pending"
     }

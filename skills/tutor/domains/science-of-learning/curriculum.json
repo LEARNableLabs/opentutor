@@ -37,9 +37,7 @@
       "concepts": ["metacognition", "metacognitive knowledge", "self-awareness"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.learningscientists.org/metacognition"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -251,9 +249,7 @@
       "concepts": ["study planning", "time management", "prioritization", "task analysis"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.learningscientists.org/study-strategies"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

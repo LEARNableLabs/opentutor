@@ -76,7 +76,7 @@
   - Excellent for transformative constitutionalism lessons
   - Clear, accessible reasoning style
 
-- **Supreme Court of India** — https://main.sci.gov.in/
+- **Supreme Court of India**
   - Leading cases database
   - Important for basic structure doctrine, federalism, positive rights
   - SCC Online (requires access): https://www.scconline.com/
@@ -112,11 +112,11 @@
   - Use for US system baseline (Lessons 1, 11, 22)
 
 - **Harvard Law School: Comparative Constitutional Law** (Various)
-  - Harvard Law Library research guides: https://guides.library.harvard.edu/comparative_constitutional_law
+  - Harvard Law Library research guides:
   - Not full courses but excellent resource lists
 
 - **Coursera: Constitutional Law (Penn Law)**
-  - https://www.coursera.org/learn/constitutional-law
+
   - Intermediate level, certificates available
   - Good supplementary structure
 
@@ -147,7 +147,7 @@
   - Visualizations of constitutional trends
   - For quantitatively-inclined students
 
-- **World Constitutions Illustrated (WCI)** — https://www.law.berkeley.edu/library/wci/
+- **World Constitutions Illustrated (WCI)**
   - HeinOnline database (requires institutional access)
   - Historical and current constitutions
   - Drafting histories and amendments
@@ -171,7 +171,7 @@
 
 - **Oral Arguments (Various Courts)**
   - US Supreme Court: https://www.oyez.org/
-  - UK Supreme Court hearings: https://www.supremecourt.uk/live/
+  - UK Supreme Court hearings:
   - Live-streaming when in session
 
 ## Deep Dives (Advanced Readings)
@@ -248,7 +248,7 @@
   - Leading comparative constitutional law journal
   - Search by topic for lesson-specific articles
 
-- **American Journal of Comparative Law** — https://www.amjcomplaw.org/
+- **American Journal of Comparative Law**
   - Comparative law generally, strong constitutional section
 
 - **European Constitutional Law Review** — https://www.cambridge.org/core/journals/european-constitutional-law-review
@@ -336,7 +336,7 @@
 - **Cornell LII (Legal Information Institute)** — https://www.law.cornell.edu/ — free US legal materials
 
 ### Writing & Analysis
-- **Purdue OWL (Legal Writing)** — https://owl.purdue.edu/owl/subject_specific_writing/pre_professional_writing/legal_writing/index.html
+- **Purdue OWL (Legal Writing)**
 - **Bluebook (legal citation)** — standard for US; some international use
 - **Oxford Standard for Citation of Legal Authorities (OSCOLA)** — UK/Commonwealth standard
 

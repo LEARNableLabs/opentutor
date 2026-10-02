@@ -3,10 +3,10 @@
 ## Primary Sources (for lesson content)
 
 ### Books and Guides
-- **"The Physics of Filter Coffee" by Jonathan Gagné** (Coffee ad Astra) — while focused on filter, the extraction science and fluid dynamics apply to espresso. Available at https://coffeeadastra.com/book/
+- **"The Physics of Filter Coffee" by Jonathan Gagné** (Coffee ad Astra) — while focused on filter, the extraction science and fluid dynamics apply to espresso. Available at
 - **"The Professional Barista's Handbook" by Scott Rao** — covers espresso fundamentals, extraction theory, and workflow optimization. Industry standard reference.
 - **"Everything but Espresso" by Scott Rao** — coffee science fundamentals including grinding, water, and extraction chemistry
-- **SCA Coffee Brewing Handbook** — Specialty Coffee Association's official guide to brewing science and standards. https://sca.coffee/research/protocols-best-practices
+- **SCA Coffee Brewing Handbook** — Specialty Coffee Association's official guide to brewing science and standards.
 
 ### Online Courses and Technical Resources
 - **Barista Hustle Education** — comprehensive espresso courses covering extraction, milk science, and machine operation. https://www.baristahustle.com/education/
@@ -20,7 +20,7 @@
 - **James Hoffmann (YouTube)** — equipment reviews, technique guides, and espresso theory. Excellent for visual learners. https://www.youtube.com/@jameshoffmann
 - **Lance Hedrick (YouTube)** — technical espresso tutorials, grinder reviews, and extraction experiments. https://www.youtube.com/@LanceHedrick
 - **Sprometheus (YouTube)** — machine modifications, engineering deep-dives, and pressure profiling. https://www.youtube.com/@Sprometheus
-- **Whole Latte Love (YouTube)** — machine reviews, maintenance guides, and technique tutorials. https://www.youtube.com/@WholeLatteLove
+- **Whole Latte Love (YouTube)** — machine reviews, maintenance guides, and technique tutorials.
 
 ### Interactive Tools and Software
 - **Decent Espresso Visualizer** — real-time pressure, flow, and temperature logging. Open API for custom profiles. https://decentespresso.com/

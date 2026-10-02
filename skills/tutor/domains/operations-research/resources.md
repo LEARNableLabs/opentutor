@@ -33,7 +33,7 @@
 
 - **MIT OCW 15.093: Optimization Methods**
   - More advanced than 15.053, stronger on algorithms
-  - https://ocw.mit.edu/courses/15-093-optimization-methods-fall-2009/
+
 
 - **Stanford EE364A: Convex Optimization**
   - Video lectures by Stephen Boyd himself
@@ -43,11 +43,11 @@
 - **Coursera: Discrete Optimization** (University of Melbourne)
   - Excellent on IP, constraint programming, local search
   - Programming assignments in Python/Java
-  - https://www.coursera.org/learn/discrete-optimization
+
 
 - **Coursera: Linear and Integer Programming** (University of Colorado Boulder)
   - Practical focus, uses Excel and Python
-  - https://www.coursera.org/specializations/optimization-methods-business-analytics
+
 
 ## Supplementary (for engagement)
 
@@ -138,7 +138,7 @@
 
 - **JuMP Tutorials**
   - Interactive notebooks for LP, IP, NLP, SDP
-  - https://jump.dev/JuMP.jl/stable/tutorials/
+
 
 - **CVXPY Examples**
   - Finance, ML, signal processing, control
@@ -189,7 +189,7 @@
   - https://www.mit.edu/~dbertsim/
 
 - **Laurence Wolsey** (UC Louvain) — Integer programming, polyhedral theory
-  - https://uclouvain.be/en/directories/laurence.wolsey
+
 
 - **Michel Goemans** (MIT) — Combinatorial optimization, approximation algorithms
   - https://math.mit.edu/~goemans/
@@ -202,7 +202,6 @@
 ### Machine Learning
 - Optimization is the engine of ML: gradient descent, stochastic optimization, convex relaxations
 - **Resources**: Boyd's CVX book, CVXPY ML examples, "Optimization for Machine Learning" (Sra et al.)
-- https://www.cvxpy.org/examples/machine_learning/index.html
 
 ### Economics & Game Theory
 - OR and economics are deeply intertwined: equilibrium as optimization, mechanism design, auction theory

@@ -26,7 +26,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://knotinfo.math.indiana.edu/",
         "https://www.youtube.com/watch?v=aqz-KE-bpKQ"
       ],
       "status": "pending"
@@ -51,10 +50,7 @@
       "concepts": ["Reidemeister moves", "diagram equivalence", "knot equivalence"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=Wz49Wd_6RU8",
-        "https://katlas.org/wiki/Reidemeister_Moves"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -65,7 +61,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://knotinfo.math.indiana.edu/descriptions/connected_sum.html",
         "https://arxiv.org/abs/math/0601026"
       ],
       "status": "pending"
@@ -77,10 +72,7 @@
       "concepts": ["tricolorability", "knot invariants", "coloring rules"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.math.toronto.edu/~drorbn/classes/0405/KnotTheory/",
-        "https://www.youtube.com/watch?v=Hu5Y8dQW9DQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -91,7 +83,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://knotinfo.math.indiana.edu/descriptions/tricolorable.html",
         "https://arxiv.org/abs/1310.7667"
       ],
       "status": "pending"
@@ -104,7 +95,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://knotinfo.math.indiana.edu/",
         "https://katlas.org/wiki/Main_Page"
       ],
       "status": "pending"
@@ -117,7 +107,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://knotinfo.math.indiana.edu/descriptions/unknotting_number.html",
         "https://arxiv.org/abs/1508.03499"
       ],
       "status": "pending"
@@ -129,10 +118,7 @@
       "concepts": ["braid representation", "braid group", "Alexander theorem"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://katlas.org/wiki/Braids",
-        "https://www.youtube.com/watch?v=Ku3OmjUZphc"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -143,9 +129,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://arxiv.org/abs/math/0309252",
-        "https://www.youtube.com/watch?v=5bJSGP-6blg",
-        "https://knotinfo.math.indiana.edu/descriptions/jones_polynomial.html"
+        "https://arxiv.org/abs/math/0309252"
       ],
       "status": "pending"
     },
@@ -157,7 +141,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://katlas.org/wiki/The_Kauffman_Bracket",
         "https://arxiv.org/abs/1212.6359"
       ],
       "status": "pending"
@@ -170,7 +153,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://knotinfo.math.indiana.edu/descriptions/alexander_polynomial.html",
         "https://arxiv.org/abs/1001.0116"
       ],
       "status": "pending"
@@ -183,7 +165,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://knotinfo.math.indiana.edu/",
         "https://katlas.org/wiki/Main_Page"
       ],
       "status": "pending"
@@ -196,7 +177,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://knotinfo.math.indiana.edu/descriptions/mutant.html",
         "https://arxiv.org/abs/math/0606078"
       ],
       "status": "pending"
@@ -209,7 +189,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://katlas.org/wiki/The_HOMFLY_Polynomial",
         "https://arxiv.org/abs/1502.03442"
       ],
       "status": "pending"
@@ -222,8 +201,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/math/0508200",
-        "https://www.youtube.com/watch?v=kd6q3BF_DBY"
+        "https://arxiv.org/abs/math/0508200"
       ],
       "status": "pending"
     },
@@ -235,7 +213,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://katlas.org/wiki/Seifert_Surfaces",
         "https://arxiv.org/abs/1309.1698"
       ],
       "status": "pending"
@@ -248,7 +225,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://knotinfo.math.indiana.edu/descriptions/seifert_matrix.html",
         "https://arxiv.org/abs/1411.3308"
       ],
       "status": "pending"
@@ -274,8 +250,7 @@
       "difficulty": 5,
       "type": "teach-back",
       "resources": [
-        "https://arxiv.org/abs/1001.0116",
-        "https://www.math.toronto.edu/~drorbn/classes/0405/KnotTheory/"
+        "https://arxiv.org/abs/1001.0116"
       ],
       "status": "pending"
     },
@@ -287,8 +262,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://arxiv.org/abs/1310.7624",
-        "https://www.youtube.com/watch?v=Ro5DixtHgdw"
+        "https://arxiv.org/abs/1310.7624"
       ],
       "status": "pending"
     },
@@ -314,8 +288,7 @@
       "type": "resource-drop",
       "resources": [
         "https://arxiv.org/abs/math/9908171",
-        "https://arxiv.org/abs/1409.6442",
-        "https://www.youtube.com/watch?v=8w0L78AsSNc"
+        "https://arxiv.org/abs/1409.6442"
       ],
       "status": "pending"
     },
@@ -328,7 +301,6 @@
       "type": "question",
       "resources": [
         "https://arxiv.org/abs/1603.05316",
-        "https://knotinfo.math.indiana.edu/",
         "https://arxiv.org/abs/2008.11288"
       ],
       "status": "pending"
@@ -341,7 +313,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://knotinfo.math.indiana.edu/",
         "https://katlas.org/wiki/Main_Page",
         "https://arxiv.org/list/math.GT/recent"
       ],

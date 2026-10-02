@@ -178,8 +178,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.generic.average_shortest_path_length.html",
-        "https://www.microsoft.com/en-us/research/publication/six-degrees/"
+        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.generic.average_shortest_path_length.html"
       ],
       "status": "pending"
     },
@@ -203,8 +202,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://networksciencebook.com/chapter/4",
-        "https://barabasi.com/f/622.pdf"
+        "https://networksciencebook.com/chapter/4"
       ],
       "status": "pending"
     },
@@ -341,8 +339,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.simple_paths.all_simple_paths.html",
-        "https://web.stanford.edu/~jugander/papers/icwsm2012-influence.pdf"
+        "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.simple_paths.all_simple_paths.html"
       ],
       "status": "pending"
     },
@@ -354,8 +351,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://networkx.org/documentation/stable/reference/algorithms/link_prediction.html",
-        "https://snap.stanford.edu/class/cs224w-2020/slides/09-network-evolution.pdf"
+        "https://networkx.org/documentation/stable/reference/algorithms/link_prediction.html"
       ],
       "status": "pending"
     },

@@ -37,10 +37,7 @@
       "concepts": ["masking", "critical bands", "mix clarity"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.soundonsound.com/techniques/practical-masking",
-        "https://www.izotope.com/en/learn/understanding-frequency-masking.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -51,7 +48,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.waves.com/360-ambisonics-tools-for-vr-ar-and-360-video",
         "https://www.youtube.com/watch?v=Yd5i7TlpzCk"
       ],
       "status": "pending"
@@ -64,7 +60,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://designingsound.org/2010/03/22/sound-design-creating-size/",
         "https://www.asoundeffect.com/sound-design-size/"
       ],
       "status": "pending"
@@ -77,7 +72,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.soundonsound.com/sound-advice/q-what-proximity-effect",
         "https://www.shure.com/en-US/performance-production/louder/proximity-effect"
       ],
       "status": "pending"
@@ -115,10 +109,7 @@
       "concepts": ["location sound", "noise reduction", "microphone selection"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.soundonsound.com/techniques/recording-dialogue-location",
-        "https://www.izotope.com/en/learn/tips-for-recording-dialogue-on-location.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -142,8 +133,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.asoundeffect.com/layering-sound-effects/",
-        "https://designingsound.org/2011/10/18/the-art-of-layering/"
+        "https://www.asoundeffect.com/layering-sound-effects/"
       ],
       "status": "pending"
     },
@@ -155,7 +145,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.filmsound.org/articles/worldizing/",
         "https://www.soundworkscollection.com/"
       ],
       "status": "pending"
@@ -167,10 +156,7 @@
       "concepts": ["processing artifacts", "transparency", "creative effects"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.soundonsound.com/techniques/practical-audio-effects",
-        "https://www.izotope.com/en/learn/audio-effects-101.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -180,10 +166,7 @@
       "concepts": ["synthesis for SFX", "procedural audio", "hybrid approaches"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": [
-        "https://obiwannabe.co.uk/html/music/musictechcentral/synthesis-for-sound-design.html",
-        "https://www.youtube.com/watch?v=tgpc9Vq-3Xk"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -219,10 +202,7 @@
       "concepts": ["adaptive music", "horizontal re-sequencing", "vertical layering"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.audiokinetic.com/en/learn/",
-        "https://www.youtube.com/watch?v=JuaXDc0W_qE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -245,10 +225,7 @@
       "concepts": ["event-driven design", "parameter automation", "material systems"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.audiokinetic.com/en/learn/certifications/",
-        "https://www.youtube.com/watch?v=dJfkWQy-7nU"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -272,7 +249,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.audiokinetic.com/en/learn/",
         "https://www.fmod.com/learn"
       ],
       "status": "pending"
@@ -284,10 +260,7 @@
       "concepts": ["mix translation", "monitoring", "delivery formats"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.soundonsound.com/techniques/mixing-film-sound",
-        "https://www.pro-tools-expert.com/home-page/2019/5/17/mixing-for-film-and-tv"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -298,8 +271,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.soundonsound.com/techniques/compression-made-easy",
-        "https://www.izotope.com/en/learn/sidechain-compression-in-music-production.html"
+        "https://www.soundonsound.com/techniques/compression-made-easy"
       ],
       "status": "pending"
     },
@@ -311,8 +283,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.dolby.com/about/support/guide/dolby-atmos-workflows/",
-        "https://www.soundonsound.com/techniques/introduction-dolby-atmos"
+        "https://www.dolby.com/about/support/guide/dolby-atmos-workflows/"
       ],
       "status": "pending"
     },
@@ -323,10 +294,7 @@
       "concepts": ["stem organization", "deliverables", "professional standards"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.filmsound.org/terminology/stems.htm",
-        "https://www.pro-tools-expert.com/production-expert-1/2017/10/3/what-are-stems-and-why-are-they-useful"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

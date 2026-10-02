@@ -18,7 +18,7 @@
 
 - **"Tubes: A Journey to the Center of the Internet"** by Andrew Blum — Physical infrastructure of the internet: data centers, submarine cables, exchange points. Makes abstract networks concrete.
   - Best for: Lesson 22 (infrastructure review)
-  - https://www.andrewblum.net/tubes
+
 
 - **"The Innovators"** by Walter Isaacson — Broader computing history with strong sections on internet pioneers. Good biographical context.
   - Best for: Background reading across all modules
@@ -70,7 +70,7 @@
 - **Computerphile** (YouTube) — Technical deep-dives on protocols, DNS, routing. UK professors explaining concepts clearly.
   - DNS: https://www.youtube.com/watch?v=uOfonONtIuk
   - TCP/IP: https://www.youtube.com/watch?v=PG9oKZdFb7w
-  - BGP: https://www.youtube.com/watch?v=gU-H77KUQAs
+  - BGP:
 
 - **"Lo and Behold: Reveries of the Connected World"** (Werner Herzog) — Philosophical documentary on internet's impact. Great for sparking discussion.
   - https://www.imdb.com/title/tt5275828/
@@ -79,7 +79,7 @@
   - https://www.imdb.com/title/tt3268458/
 
 - **Vint Cerf talks** — Many YouTube videos of Cerf explaining TCP/IP design. Hearing from the source is powerful.
-  - Example: https://www.youtube.com/watch?v=aV_Sfj4sg0Y
+  - Example:
 
 ### Interactive Tools
 
@@ -111,7 +111,7 @@
 
 - **Simple HTTP server projects** — Build a basic web server to understand HTTP internals
   - Python: https://docs.python.org/3/library/http.server.html
-  - Node.js: https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/
+  - Node.js:
 
 ### Organizations & Standards Bodies
 
@@ -165,7 +165,7 @@
 ### Cross-Discipline Links
 
 - **Internet geography** — Physical infrastructure is not evenly distributed. Most cables land in wealthy nations. Internet has a geography.
-  - Resource: https://global-internet-geography.com/
+  - Resource:
 
 - **Internet and urbanism** — Data centers reshape cities. Fiber routes follow railroads. Internet geography mirrors colonialism.
   - Book: "The Undersea Network" by Nicole Starosielski
@@ -174,7 +174,7 @@
   - Resource: https://knowyourmeme.com/
 
 - **Internet energy consumption** — Data centers use 1-2% of global electricity. Network efficiency matters for climate.
-  - Resource: https://www.iea.org/reports/data-centres-and-data-transmission-networks
+  - Resource:
 
 - **Cybernetics and internet theory** — Norbert Wiener's feedback loops, Vannevar Bush's Memex, Ted Nelson's hypertext. Internet has deep roots.
   - Original: Bush's "As We May Think" (1945)

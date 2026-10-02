@@ -12,7 +12,7 @@
 ### Online Courses & Syllabi
 - **University of Washington — School of Aquatic and Fishery Sciences (SAFS)** — Course materials often publicly available. Look for FISH 310 (Introductory Fisheries Science), FISH 458 (Aquatic Ecology).
 - **Woods Hole Oceanographic Institution (WHOI) — Fisheries Oceanography** — Lectures and notes on climate-fisheries links. Relevant for Lessons 21-22.
-- **FAO E-learning Academy** — Free courses on fisheries management, aquaculture. [http://www.fao.org/elearning](http://www.fao.org/elearning)
+- **FAO E-learning Academy** — Free courses on fisheries management, aquaculture.
 - **MIT OpenCourseWare — Sustainable Fisheries** — Economics and policy focus. [https://ocw.mit.edu/](https://ocw.mit.edu/)
 
 ## Supplementary Resources (for engagement)
@@ -76,13 +76,13 @@
 ### Foundations of Marine Ecosystems (Lessons 1-4)
 - FAO SOFIA reports — global overview
 - FishBase — species lookup
-- NOAA Fisheries 101 — [https://www.fisheries.noaa.gov/insight/fishery-management-101](https://www.fisheries.noaa.gov/insight/fishery-management-101)
+- NOAA Fisheries 101
 - RAM Legacy Database — stock trends
 
 ### Wild Fisheries Management (Lessons 5-11)
 - "The End of the Line" documentary
 - Daniel Pauly TED Talk on shifting baselines
-- NOAA overfishing explainer — [https://www.fisheries.noaa.gov/insight/understanding-overfishing](https://www.fisheries.noaa.gov/insight/understanding-overfishing)
+- NOAA overfishing explainer
 - EDF catch shares — [https://www.edf.org/oceans/catch-shares](https://www.edf.org/oceans/catch-shares)
 - ICES advice portal — [https://www.ices.dk/advice/Pages/default.aspx](https://www.ices.dk/advice/Pages/default.aspx)
 - Atlantic cod stock assessment — NOAA Northeast Fisheries Science Center
@@ -105,8 +105,8 @@
 ### Integration and Future (Lessons 23-25)
 - FAO SOFIA 2022 report
 - Ocean Health Index
-- EDF smart solutions — [https://www.edf.org/oceans/smart-solutions-healthy-oceans](https://www.edf.org/oceans/smart-solutions-healthy-oceans)
-- IMTA resources — [https://www.integratedmultitrophicaquaculture.com/](https://www.integratedmultitrophicaquaculture.com/)
+- EDF smart solutions
+- IMTA resources
 - Nature paper "The Future of Food from the Sea" (Costello et al. 2020) — [https://www.nature.com/articles/s41586-020-2616-y](https://www.nature.com/articles/s41586-020-2616-y)
 
 ## Unexpected Connections (for wild cards)

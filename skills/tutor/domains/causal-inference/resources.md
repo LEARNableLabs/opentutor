@@ -74,7 +74,7 @@
   - Alternative to EconML, good for lessons 22, 24
 
 - **CausalNex** (QuantumBlack/McKinsey)
-  - https://github.com/quantumblacklabs/causalnex
+
   - Bayesian networks and structure learning
   - More advanced, optional supplement
 

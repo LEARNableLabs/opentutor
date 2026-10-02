@@ -204,7 +204,7 @@
   - Resources on European mathematical heritage.
 
 - **Convergence (MAA)**
-  - https://maa.org/press/periodicals/convergence
+
   - Online magazine on history and teaching of mathematics.
 
 ## Unexpected Connections (for Wild Cards)

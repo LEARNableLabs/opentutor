@@ -25,7 +25,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://bonsaiempire.com/tree-cultivation/watering",
         "https://www.youtube.com/watch?v=BickMFHAZR0"
       ],
       "status": "pending"
@@ -37,10 +36,7 @@
       "concepts": ["root respiration", "soil aeration", "container constraints", "mycorrhizal fungi"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://bonsaiempire.com/tree-species/bonsai-tree-care/soil",
-        "https://www.nationalbonsai.org/bonsai-basics/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -50,10 +46,7 @@
       "concepts": ["apical dominance", "auxin distribution", "branching patterns", "hormonal control"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://bonsaiempire.com/origin/bonsai-tree-care/pruning",
-        "https://www.youtube.com/watch?v=dQZq6bKVONc"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -64,7 +57,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://bonsaiempire.com/blog/bonsai-defoliation",
         "https://live.bonsaimirai.com/library/video/fundamentals-energy-systems"
       ],
       "status": "pending"
@@ -76,10 +68,7 @@
       "concepts": ["dormancy cycles", "chilling requirements", "temperate vs. tropical species", "vernalization"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://bonsaiempire.com/tree-species/bonsai-tree-care/overwintering-bonsai",
-        "https://www.youtube.com/watch?v=5RXmRXP5VZw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -89,9 +78,7 @@
       "concepts": ["vascular transport", "root function", "hormones", "seasonal cycles"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://bonsaiempire.com/origin/bonsai-care"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -101,10 +88,7 @@
       "concepts": ["particle size", "water retention vs. drainage", "aeration", "inorganic vs. organic components"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://bonsaiempire.com/tree-species/bonsai-tree-care/soil",
-        "https://www.youtube.com/watch?v=jSDvmVr34wY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -114,10 +98,7 @@
       "concepts": ["osmotic pressure", "field capacity", "wilting point", "species-specific water needs"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://bonsaiempire.com/tree-cultivation/watering",
-        "https://www.youtube.com/watch?v=3JBbuJuER1s"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -128,7 +109,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://bonsaiempire.com/tree-species/bonsai-tree-care/fertilizing",
         "https://live.bonsaimirai.com/library/video/science-fertility"
       ],
       "status": "pending"
@@ -140,10 +120,7 @@
       "concepts": ["root pruning physiology", "fine root development", "root-shoot balance", "timing by phenology"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://bonsaiempire.com/origin/bonsai-tree-care/repotting",
-        "https://www.youtube.com/watch?v=BYx8MAkN5x0"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,8 +131,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://bonsaiempire.com/tree-species",
-        "https://www.absbonsai.org/species-guides"
+        "https://bonsaiempire.com/tree-species"
       ],
       "status": "pending"
     },
@@ -166,9 +142,7 @@
       "concepts": ["soil", "water", "nutrients", "root systems"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://bonsaiempire.com/origin/bonsai-care"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -178,10 +152,7 @@
       "concepts": ["wabi-sabi", "imperfection as beauty", "age and patina", "naturalness vs. artifice"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://bonsaiempire.com/inspiration/bonsai-styles",
-        "https://www.youtube.com/watch?v=1KJ_eKpVZqE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -191,11 +162,7 @@
       "concepts": ["classical bonsai styles", "formal upright", "informal upright", "slanting", "cascade", "literati"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://bonsaiempire.com/inspiration/bonsai-styles",
-        "https://www.youtube.com/watch?v=rrT0NkXG1CU",
-        "https://www.nationalbonsai.org/collections/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -206,7 +173,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://bonsaiempire.com/inspiration/bonsai-aesthetics",
         "https://live.bonsaimirai.com/library/video/design-theory-balance"
       ],
       "status": "pending"
@@ -218,10 +184,7 @@
       "concepts": ["negative space (yohaku)", "ma (interval)", "viewer perception", "depth illusion"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://bonsaiempire.com/inspiration/bonsai-aesthetics",
-        "https://www.youtube.com/watch?v=NTXQZpJjWyU"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -231,10 +194,7 @@
       "concepts": ["seasonal display", "spring flowers", "autumn color", "winter silhouette", "dynamic composition"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://bonsaiempire.com/blog/seasonal-display",
-        "https://www.youtube.com/watch?v=kLF8vH6gF4Y"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -256,10 +216,7 @@
       "concepts": ["pruning theory", "structural vs. maintenance pruning", "energy redirection", "timing by species"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://bonsaiempire.com/origin/bonsai-tree-care/pruning",
-        "https://www.youtube.com/watch?v=j0QaIglvIWY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -270,8 +227,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://bonsaiempire.com/origin/bonsai-tree-care/wiring",
-        "https://www.youtube.com/watch?v=K5NEUsAWoHs",
         "https://live.bonsaimirai.com/library/video/wiring-fundamentals"
       ],
       "status": "pending"
@@ -283,10 +238,7 @@
       "concepts": ["repotting technique", "root work extent", "soil replacement strategy", "aftercare protocols"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://bonsaiempire.com/origin/bonsai-tree-care/repotting",
-        "https://www.youtube.com/watch?v=dUPFy1KnLBs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,7 +249,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://bonsaiempire.com/origin/bonsai-tree-care/advanced-techniques",
         "https://live.bonsaimirai.com/library/video/branch-selection-principles"
       ],
       "status": "pending"
@@ -309,10 +260,7 @@
       "concepts": ["air layering", "propagation techniques", "rooting hormones", "cutting vs. layering vs. grafting"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://bonsaiempire.com/origin/bonsai-tree-care/advanced-techniques/propagation",
-        "https://www.youtube.com/watch?v=H48KFiVcZ8s"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -322,9 +270,7 @@
       "concepts": ["pruning timing", "wiring windows", "repotting seasons", "technique integration"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://bonsaiempire.com/origin/bonsai-tree-care/seasonal-care"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -335,9 +281,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://bonsaiempire.com/tree-species",
-        "https://www.youtube.com/watch?v=NxvVbKXB8Og",
-        "https://www.absbonsai.org/species-guides"
+        "https://bonsaiempire.com/tree-species"
       ],
       "status": "pending"
     },
@@ -349,7 +293,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://bonsaiempire.com/origin/bonsai-tree-care/seasonal-care",
         "https://live.bonsaimirai.com/library/video/seasonal-approaches"
       ],
       "status": "pending"

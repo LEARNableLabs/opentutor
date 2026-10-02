@@ -19,7 +19,7 @@
       "concepts": ["naked-eye astronomy", "celestial sphere", "cultural astronomy vs ethnoastronomy"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.iau.org/public/themes/cultural_astronomy/", "https://stellarium.org/"],
+      "resources": ["https://stellarium.org/"],
       "status": "pending"
     },
     {
@@ -29,7 +29,7 @@
       "concepts": ["oral traditions", "archaeological evidence", "ethnographic records", "cultural context"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.worldarchaeoastronomy.com/", "https://arxiv.org/abs/1901.00062"],
+      "resources": ["https://arxiv.org/abs/1901.00062"],
       "status": "pending"
     },
     {
@@ -39,7 +39,7 @@
       "concepts": ["pattern recognition", "cultural meaning-making", "asterisms vs constellations"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.adlerplanetarium.org/education/resources/indigenous-astronomy/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -79,7 +79,7 @@
       "concepts": ["dark constellations", "dust lanes", "Aboriginal astronomy", "Milky Way structure"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.atnf.csiro.au/outreach/education/senior/astrophysics/indigenous_astronomy.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -89,7 +89,7 @@
       "concepts": ["songlines", "celestial navigation", "oral knowledge systems", "cultural astronomy"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": ["https://www.csiro.au/en/research/indigenous-science", "https://www.youtube.com/watch?v=8_FGKEm3R60"],
+      "resources": ["https://www.csiro.au/en/research/indigenous-science"],
       "status": "pending"
     },
     {
@@ -129,7 +129,7 @@
       "concepts": ["seasonal markers", "animal behavior", "plant cycles", "ecological astronomy"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.anu.edu.au/news/all-news/aboriginal-astronomy"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -149,7 +149,7 @@
       "concepts": ["medicine wheels", "solstice alignment", "cairn astronomy", "Plains cultures"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.nps.gov/articles/medicine-wheel.htm"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -159,7 +159,7 @@
       "concepts": ["sun dagger", "spiral petroglyphs", "solstice markers", "Ancestral Puebloan astronomy"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.nps.gov/chcu/learn/historyculture/archaeoastronomy.htm"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -169,7 +169,7 @@
       "concepts": ["Pleiades disappearance", "agricultural timing", "regional variations", "cosmology"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://native-land.ca/", "https://airandspace.si.edu/exhibitions/native-skies"],
+      "resources": ["https://native-land.ca/"],
       "status": "pending"
     },
     {
@@ -199,7 +199,7 @@
       "concepts": ["equinox alignments", "El Caracol observatory", "zenith passages", "ceremonial architecture"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": ["https://www.mesoweb.com/", "https://www.youtube.com/watch?v=BVZ5_ItVqU4"],
+      "resources": ["https://www.mesoweb.com/"],
       "status": "pending"
     },
     {
@@ -219,7 +219,7 @@
       "concepts": ["Chinese constellations", "28 lunar mansions", "circumpolar stars", "celestial bureaucracy"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.chinapage.com/astronomy.html", "https://www2.hao.ucar.edu/Education/AncientObs"],
+      "resources": ["https://www.chinapage.com/astronomy.html"],
       "status": "pending"
     },
     {
@@ -239,7 +239,7 @@
       "concepts": ["qibla direction", "mosque orientation", "spherical trigonometry", "mathematical astronomy"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://muslimheritage.com/astronomy-and-astrology-in-the-medieval-islamic-world/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -249,7 +249,7 @@
       "concepts": ["astrolabe construction", "stereographic projection", "timekeeping", "altitude measurement"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": ["https://www.astrolabes.org/", "https://www.youtube.com/watch?v=2X2n3BYE8mI"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -259,7 +259,7 @@
       "concepts": ["cosmology vs astronomy", "cultural values in sky mapping", "synthesis across traditions"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": ["https://www.iau.org/public/images/detail/ann19029a/", "https://stellarium.org/"],
+      "resources": ["https://stellarium.org/"],
       "status": "pending"
     },
     {
@@ -269,7 +269,7 @@
       "concepts": ["comparative ethnoastronomy", "universal patterns", "cultural specificity", "methodology"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.iau.org/public/themes/cultural_astronomy/"],
+      "resources": [],
       "status": "pending"
     }
   ]

@@ -20,7 +20,7 @@
 - Organized by rating level, so students can focus on relevant endgames
 - Intermediate section covers: opposition, key squares, basic rook endgames
 - Practical approach emphasizing pattern recognition over pure theory
-- Available: https://www.silmanchess.com/
+- Available:
 
 **100 Endgames You Must Know** by Jesus de la Villa
 - Focused on most important theoretical positions

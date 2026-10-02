@@ -29,8 +29,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.arrl.org/propagation-of-rf-signals",
-        "https://www.youtube.com/c/DaveCasler"
+        "https://www.arrl.org/propagation-of-rf-signals"
       ],
       "status": "pending"
     },
@@ -328,8 +327,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.arrl.org/operating-modes",
-        "https://www.youtube.com/c/DaveCasler"
+        "https://www.arrl.org/operating-modes"
       ],
       "status": "pending"
     },

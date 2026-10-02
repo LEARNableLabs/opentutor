@@ -53,12 +53,12 @@
 - The Engineering Mindset grid videos: https://www.youtube.com/c/TheEngineeringMindset
 
 ### Analysis Methods
-- PowerWorld educational resources: https://www.powerworld.com/products/simulator/educational-resources
+- PowerWorld educational resources:
 - NPTEL Power Systems lectures: https://nptel.ac.in/courses/108105053
 
 ### Modern Grid Topics
 - IEEE Smart Grid portal: https://smartgrid.ieee.org/
-- NREL renewable integration studies: https://www.nrel.gov/grid/
+- NREL renewable integration studies:
 - Practical Engineering grid infrastructure: https://www.youtube.com/c/PracticalEngineeringChannel
 
 ### Software and Simulation

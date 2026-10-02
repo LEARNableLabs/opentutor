@@ -25,8 +25,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4054695/",
-        "https://centerhealthyminds.org/science/meditation-research"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4054695/"
       ],
       "status": "pending"
     },
@@ -116,8 +115,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.pnas.org/doi/10.1073/pnas.0707678104",
-        "https://www.amishi-jha.com/lab"
+        "https://www.pnas.org/doi/10.1073/pnas.0707678104"
       ],
       "status": "pending"
     },
@@ -361,7 +359,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/articles/s41583-018-0081-4",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6671026/"
       ],
       "status": "pending"

@@ -25,8 +25,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health",
-        "https://www.soils.org/about-soils/basics"
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health"
       ],
       "status": "pending"
     },
@@ -38,8 +37,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.nature.com/scitable/knowledge/library/soil-carbon-storage-84223790",
-        "https://soilhealthinstitute.org/what-is-soil-health/"
+        "https://www.nature.com/scitable/knowledge/library/soil-carbon-storage-84223790"
       ],
       "status": "pending"
     },
@@ -50,10 +48,7 @@
       "concepts": ["microbial diversity", "biomass", "scale"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=0-uAOEI4p8Y",
-        "https://rodaleinstitute.org/science/articles/the-soil-food-web/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -89,9 +84,7 @@
       "concepts": ["soil ecosystem", "microbial diversity", "soil structure", "plant-microbe interactions"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.nrcs.usda.gov/sites/default/files/2022-09/Soil-Biology-Primer-Full.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -102,8 +95,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/articles/nature.2016.19775",
-        "https://www.youtube.com/watch?v=yxUzz5gNRuM"
+        "https://www.nature.com/articles/nature.2016.19775"
       ],
       "status": "pending"
     },
@@ -115,8 +107,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.soilfoodweb.com/soil-food-web/",
-        "https://rodaleinstitute.org/science/articles/fungi-bacteria-ratio/"
+        "https://www.soilfoodweb.com/soil-food-web/"
       ],
       "status": "pending"
     },
@@ -127,10 +118,7 @@
       "concepts": ["bioturbation", "casting", "soil fauna", "nutrient cycling"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.scientificamerican.com/article/why-are-earthworms-good-for-soil/",
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health/soil-biology"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -140,10 +128,7 @@
       "concepts": ["microbivores", "predator-prey dynamics", "nitrogen mineralization"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.soils.org/files/science-policy/fact-sheets/soil-organisms.pdf",
-        "https://www.ars.usda.gov/ARSUserFiles/np212/SoilBiology/soilbiologyprimer.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,8 +139,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health",
-        "https://extension.oregonstate.edu/soil-health/soil-food-web-its-role-soil-health"
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health"
       ],
       "status": "pending"
     },
@@ -167,8 +151,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.soilfoodweb.com/",
-        "https://www.youtube.com/watch?v=UOqvwZzWjzY"
+        "https://www.soilfoodweb.com/"
       ],
       "status": "pending"
     },
@@ -179,9 +162,7 @@
       "concepts": ["mycorrhizae", "trophic levels", "nutrient cycling", "soil fauna"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.nrcs.usda.gov/sites/default/files/2022-09/Soil-Biology-Primer-Full.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -191,10 +172,7 @@
       "concepts": ["soil health definition", "physical/chemical/biological indicators", "context-dependency"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://soilhealthinstitute.org/what-is-soil-health/",
-        "https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-health-assessment"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -204,10 +182,7 @@
       "concepts": ["aggregation", "water stability", "erosion resistance"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.nrcs.usda.gov/sites/default/files/2022-10/Aggregate-Stability-Soil-Health-Indicator.pdf",
-        "https://www.youtube.com/watch?v=8ORRWkSjgT8"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -217,10 +192,7 @@
       "concepts": ["visual soil assessment", "slake test", "field indicators", "smell and color"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.nrcs.usda.gov/resources/guides-and-instructions/visual-soil-assessment",
-        "https://www.youtube.com/watch?v=_XjuTcWjJdw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -231,8 +203,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://soiltesting.okstate.edu/soil-test-interpretations",
-        "https://understandingag.com/soil-health-tests/"
+        "https://soiltesting.okstate.edu/soil-test-interpretations"
       ],
       "status": "pending"
     },
@@ -243,10 +214,7 @@
       "concepts": ["organic matter", "carbon storage", "cation exchange capacity", "water holding capacity"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.nrcs.usda.gov/sites/default/files/2022-10/Soil-Organic-Matter-Soil-Health-Indicator.pdf",
-        "https://rodaleinstitute.org/science/articles/soil-organic-matter/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -269,8 +237,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sare.org/publications/managing-cover-crops-profitably/",
-        "https://www.nrcs.usda.gov/conservation-basics/conservation-by-state/cover-crops"
+        "https://www.sare.org/publications/managing-cover-crops-profitably/"
       ],
       "status": "pending"
     },
@@ -282,8 +249,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://rodaleinstitute.org/science/farming-systems-trial/",
-        "https://www.nrcs.usda.gov/conservation-basics/conservation-by-state/no-till"
+        "https://rodaleinstitute.org/science/farming-systems-trial/"
       ],
       "status": "pending"
     },
@@ -295,8 +261,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.sare.org/publications/crop-rotation-on-organic-farms/",
-        "https://rodaleinstitute.org/science/articles/crop-rotation/"
+        "https://www.sare.org/publications/crop-rotation-on-organic-farms/"
       ],
       "status": "pending"
     },
@@ -320,10 +285,7 @@
       "concepts": ["composting", "C:N ratio", "pathogen reduction", "nutrient availability"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://rodaleinstitute.org/science/articles/compost-101/",
-        "https://extension.psu.edu/composting"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -334,8 +296,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.fs.usda.gov/nac/practices/index.shtml",
-        "https://www.youtube.com/watch?v=a7UvQ4RJN9s"
+        "https://www.fs.usda.gov/nac/practices/index.shtml"
       ],
       "status": "pending"
     },
@@ -347,7 +308,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://rodaleinstitute.org/science/regenerative-organic-agriculture/",
         "https://regenerationinternational.org/"
       ],
       "status": "pending"
@@ -372,8 +332,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/articles/nclimate2870",
-        "https://rodaleinstitute.org/science/articles/regenerative-organic-agriculture-and-climate-change/"
+        "https://www.nature.com/articles/nclimate2870"
       ],
       "status": "pending"
     },
@@ -385,8 +344,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.sciencedirect.com/science/article/pii/S0016706120322990",
-        "https://www.nori.com/resources"
+        "https://www.sciencedirect.com/science/article/pii/S0016706120322990"
       ],
       "status": "pending"
     },

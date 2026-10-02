@@ -70,18 +70,18 @@
 
 - **Master Organic Chemistry (YouTube channel)**
   - Channel by James Ashenhurst. Complements the blog (see below) with mechanism videos.
-  - https://www.youtube.com/@masterorganicchemistry
+
 
 ### Interactive Tools
 
 - **ChemDraw (PerkinElmer)**
   - Industry-standard chemical drawing software. Free trial available; student licenses discounted.
-  - https://perkinelmerinformatics.com/products/research/chemdraw/
+
   - Essential for drawing mechanisms with proper formatting.
 
 - **MarvinSketch (ChemAxon)**
   - Free chemical structure editor. Good alternative to ChemDraw for students.
-  - https://chemaxon.com/products/marvin
+
   - Draw mechanisms, predict products, visualize 3D structures.
 
 - **MolView**
@@ -104,9 +104,9 @@
   - Outstanding blog with mechanism walkthroughs, reaction summaries, study guides, and practice problems.
   - https://www.masterorganicchemistry.com/
   - Key posts:
-    - https://www.masterorganicchemistry.com/2011/02/03/introduction-to-curved-arrows-in-organic-chemistry/
-    - https://www.masterorganicchemistry.com/2012/05/24/deciding-sn1sn2e1e2-the-decision-chart/
-    - https://www.masterorganicchemistry.com/2011/06/22/electrophilic-aromatic-substitution-ortho-meta-para-directors/
+
+
+
 
 - **Chemistry LibreTexts**
   - Crowd-sourced open textbooks. Comprehensive, well-organized, free.
@@ -118,7 +118,7 @@
 
 - **Not Voodoo (MIT OpenCourseWare adjacent site)**
   - Practical tips for lab techniques, but also conceptual explanations of mechanisms.
-  - http://chem.chem.rochester.edu/~nvd/
+
 
 ### Code and Molecular Modeling
 
@@ -152,11 +152,11 @@
 
 - **Organic Chemistry Problems (University of Alberta)**
   - Free problem bank organized by topic.
-  - https://sites.ualberta.ca/~adcramer/organic-chemistry-problems/
+
 
 - **Master Organic Chemistry Practice Problems**
   - Topic-specific practice problems with explanations.
-  - https://www.masterorganicchemistry.com/tips/practice-problems-index/
+
 
 ### Community and Q&A
 
@@ -202,7 +202,7 @@
   - https://www.ncbi.nlm.nih.gov/books/NBK22586/ (NCBI Bookshelf)
 
 - **Drug mechanisms** — How do antibiotics work? Beta-lactams (penicillin) inhibit cell wall synthesis via acyl-enzyme intermediate (nucleophilic acyl substitution)
-  - Resource: https://www.youtube.com/watch?v=PF36HoQ8Qfw (mechanism of aspirin)
+  - Resource:  (mechanism of aspirin)
 
 ### Materials Science
 
@@ -214,7 +214,7 @@
 ### Environmental Chemistry
 
 - **Atmospheric chemistry** — Ozone depletion by CFCs (radical chain mechanisms), smog formation (radical reactions)
-  - Resource: https://www.youtube.com/watch?v=Rj2c58Pgxxw (radical polymerization and atmospheric radicals)
+  - Resource:  (radical polymerization and atmospheric radicals)
 
 ### History of Science
 

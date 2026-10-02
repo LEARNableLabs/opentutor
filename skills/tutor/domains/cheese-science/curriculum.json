@@ -26,7 +26,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ucdavis.edu/food/news/science-cheese",
         "https://www.journalofdairyscience.org"
       ],
       "status": "pending"
@@ -39,7 +38,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://cdr.wisc.edu/cultures",
         "https://www.sciencedirect.com/journal/international-dairy-journal"
       ],
       "status": "pending"
@@ -52,7 +50,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cheesescience.org/cultures.html",
         "https://aem.asm.org"
       ],
       "status": "pending"
@@ -65,8 +62,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/subjects/food-microbiology",
-        "https://culturechemag.com"
+        "https://www.nature.com/subjects/food-microbiology"
       ],
       "status": "pending"
     },
@@ -78,8 +74,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.journalofdairyscience.org",
-        "https://cdr.wisc.edu/phage-control"
+        "https://www.journalofdairyscience.org"
       ],
       "status": "pending"
     },
@@ -129,8 +124,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sciencedirect.com/journal/food-chemistry",
-        "https://www.cheesescience.org/flavor.html"
+        "https://www.sciencedirect.com/journal/food-chemistry"
       ],
       "status": "pending"
     },
@@ -142,7 +136,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://cdr.wisc.edu/cheese-texture",
         "https://www.journalofdairyscience.org"
       ],
       "status": "pending"
@@ -180,8 +173,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.journalofdairyscience.org/article/S0022-0302(15)00531-7",
-        "https://www.ams.usda.gov/grades-standards/dairy"
+        "https://www.journalofdairyscience.org/article/S0022-0302(15)00531-7"
       ],
       "status": "pending"
     },
@@ -206,8 +198,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes",
-        "https://www.originaldiversity.org"
+        "https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes"
       ],
       "status": "pending"
     },
@@ -219,8 +210,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.sciencedirect.com/journal/international-dairy-journal",
-        "https://culturechemag.com/terroir-debate"
+        "https://www.sciencedirect.com/journal/international-dairy-journal"
       ],
       "status": "pending"
     },
@@ -232,8 +222,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.journalofdairyscience.org",
-        "https://www.ams.usda.gov/grades-standards/dairy"
+        "https://www.journalofdairyscience.org"
       ],
       "status": "pending"
     },
@@ -257,7 +246,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ucdavis.edu/food/dairy-chemistry",
         "https://www.journalofdairyscience.org"
       ],
       "status": "pending"
@@ -270,7 +258,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://cdr.wisc.edu/syneresis",
         "https://www.sciencedirect.com/topics/food-science/syneresis"
       ],
       "status": "pending"
@@ -296,7 +283,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.fda.gov/food/buy-store-serve-safe-food/dangers-raw-milk",
         "https://www.cdc.gov/listeria"
       ],
       "status": "pending"
@@ -308,10 +294,7 @@
       "concepts": ["sensory evaluation", "defect identification", "late gas formation", "bitterness"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.cheesesociety.org/education",
-        "https://culturechemag.com/cheese-judging"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -322,7 +305,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://cdr.wisc.edu/manufacturing",
         "https://www.sciencedirect.com/journal/international-dairy-journal"
       ],
       "status": "pending"
@@ -373,7 +355,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.coursera.org/learn/food-fermentation",
         "https://www.nature.com/subjects/food-microbiology"
       ],
       "status": "pending"
@@ -412,8 +393,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.cheesescience.org",
-        "https://culturechemag.com"
+        "https://www.cheesescience.org"
       ],
       "status": "pending"
     }

@@ -37,7 +37,7 @@ Open-source intelligence (OSINT), social media investigation, reverse image sear
 - **Poynter Institute** (https://www.poynter.org/) — journalism training programs including investigative techniques
 - **Knight Center for Journalism** (https://knightcenter.utexas.edu/) — online courses including investigative reporting
 - **Columbia Journalism School** (https://journalism.columbia.edu/) — graduate-level investigative programs and online resources
-- **UC Berkeley Advanced Media Institute** (https://ami.berkeley.edu/) — investigative journalism training
+- **UC Berkeley Advanced Media Institute** () — investigative journalism training
 
 ### Organizations and Resource Centers
 - **Investigative Reporters and Editors (IRE)** (https://www.ire.org/) — tip sheets, training, annual conference, resource center with thousands of investigative examples

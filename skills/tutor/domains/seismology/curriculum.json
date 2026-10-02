@@ -26,10 +26,7 @@
       "concepts": ["elastic waves", "seismic energy", "wave propagation"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/fact-sheet/how_are_earthquakes_recorded",
-        "https://earthquake.usgs.gov/learn/topics/seismology/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -39,10 +36,7 @@
       "concepts": ["P-waves", "S-waves", "wave velocity", "particle motion"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/animations/6",
-        "https://www.usgs.gov/programs/earthquake-hazards/science/seismic-waves"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -53,8 +47,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.iris.edu/hq/inclass/animations",
-        "https://www.mtu.edu/geo/community/seismology/learn/earthquake-measure/wave-types/"
+        "https://www.iris.edu/hq/inclass/animations"
       ],
       "status": "pending"
     },
@@ -66,8 +59,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/12-510-introduction-to-seismology-spring-2010/",
-        "https://www.iris.edu/hq/inclass/fact-sheet/seismic_wave_propagation"
+        "https://ocw.mit.edu/courses/12-510-introduction-to-seismology-spring-2010/"
       ],
       "status": "pending"
     },
@@ -79,7 +71,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.iris.edu/hq/programs/education_and_outreach/amaseis",
         "https://ds.iris.edu/ieb/"
       ],
       "status": "pending"
@@ -91,10 +82,7 @@
       "concepts": ["reflection", "refraction", "Snell's law", "critical refraction"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/animations/seismic_waves_refracting_reflecting",
-        "https://www.eas.slu.edu/eqc/eqc_mt/TUTORIAL/Seismogram/index.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -105,8 +93,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.iris.edu/hq/inclass/animations",
-        "https://www.usgs.gov/programs/earthquake-hazards/science/seismic-waves"
+        "https://www.iris.edu/hq/inclass/animations"
       ],
       "status": "pending"
     },
@@ -117,10 +104,7 @@
       "concepts": ["travel times", "ray paths", "Earth layers", "discontinuities"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/fact-sheet/earths_interior",
-        "https://www.usgs.gov/media/images/structure-earth"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -130,10 +114,7 @@
       "concepts": ["S-wave shadow zone", "liquid outer core", "seismic discontinuities"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/animations/13",
-        "https://earthquake.usgs.gov/learn/topics/earth_structure.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -144,7 +125,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iris.edu/hq/inclass/fact-sheet/travel_time_curves",
         "https://ds.iris.edu/spud/earthmodel"
       ],
       "status": "pending"
@@ -156,10 +136,7 @@
       "concepts": ["seismic tomography", "velocity anomalies", "mantle plumes", "subduction zones"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/animations/14",
-        "https://earthquake.usgs.gov/research/structure/crust/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -171,7 +148,6 @@
       "type": "resource-drop",
       "resources": [
         "https://ds.iris.edu/ieb/",
-        "https://www.seis.sc.edu/software/TauP/",
         "https://ds.iris.edu/ds/products/emc-earthmodels/"
       ],
       "status": "pending"
@@ -184,7 +160,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.seis.sc.edu/software/TauP/",
         "https://ds.iris.edu/ds/products/taup/",
         "https://ds.iris.edu/ds/products/emc-earthmodels/"
       ],
@@ -198,8 +173,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.iris.edu/hq/inclass/animations",
-        "https://earthquake.usgs.gov/learn/topics/"
+        "https://www.iris.edu/hq/inclass/animations"
       ],
       "status": "pending"
     },
@@ -210,10 +184,7 @@
       "concepts": ["elastic rebound theory", "fault mechanics", "stick-slip", "stress accumulation"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/fact-sheet/plate_tectonics_earthquakes",
-        "https://earthquake.usgs.gov/learn/topics/how_eq_happen.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -224,8 +195,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity",
-        "https://www.iris.edu/hq/inclass/fact-sheet/measuring_earthquakes"
+        "https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity"
       ],
       "status": "pending"
     },
@@ -236,10 +206,7 @@
       "concepts": ["Gutenberg-Richter law", "earthquake statistics", "power-law distribution", "b-value"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://earthquake.usgs.gov/research/induced/myths.php",
-        "https://www.iris.edu/hq/inclass/fact-sheet/earthquake_frequency"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -249,11 +216,7 @@
       "concepts": ["focal mechanisms", "moment tensor", "fault plane solutions", "first motion polarity"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/fact-sheet/focalmechanism",
-        "https://earthquake.usgs.gov/research/cmt/",
-        "https://www.usgs.gov/media/images/focal-mechanism-beach-ball"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -278,8 +241,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.iris.edu/hq/inclass/fact-sheet",
-        "https://earthquake.usgs.gov/learn/topics/how_eq_happen.php"
+        "https://www.iris.edu/hq/inclass/fact-sheet"
       ],
       "status": "pending"
     },
@@ -290,10 +252,7 @@
       "concepts": ["seismometer design", "inertial sensors", "feedback systems", "frequency response"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/fact-sheet/seismometer",
-        "https://www.usgs.gov/programs/earthquake-hazards/monitoring-ground-shaking"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -305,7 +264,6 @@
       "type": "real-world",
       "resources": [
         "https://www.iris.edu/hq/programs/gsn",
-        "https://earthquake.usgs.gov/monitoring/gsn/",
         "https://ds.iris.edu/gmap/"
       ],
       "status": "pending"
@@ -317,10 +275,7 @@
       "concepts": ["epicenter location", "triangulation", "arrival time differences", "depth determination"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.iris.edu/hq/inclass/fact-sheet/locating_earthquakes",
-        "https://earthquake.usgs.gov/learn/topics/determining_depth.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -331,8 +286,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://ds.iris.edu/ds/nodes/dmc/tutorials/",
-        "https://www.iris.edu/hq/programs/education_and_outreach/amaseis"
+        "https://ds.iris.edu/ds/nodes/dmc/tutorials/"
       ],
       "status": "pending"
     },
@@ -358,8 +312,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.iris.edu/hq/inclass/fact-sheet",
-        "https://earthquake.usgs.gov/learn/faq/"
+        "https://www.iris.edu/hq/inclass/fact-sheet"
       ],
       "status": "pending"
     },
@@ -371,8 +324,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://earthquake.usgs.gov/hazards/",
-        "https://www.usgs.gov/programs/earthquake-hazards/science/seismic-hazard-maps-and-site-specific-data"
+        "https://earthquake.usgs.gov/hazards/"
       ],
       "status": "pending"
     },
@@ -383,10 +335,7 @@
       "concepts": ["site effects", "soil amplification", "liquefaction", "basin resonance"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://earthquake.usgs.gov/research/structure/3dgeologic/",
-        "https://www.usgs.gov/programs/earthquake-hazards/liquefaction"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -397,8 +346,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.shakealert.org/",
-        "https://earthquake.usgs.gov/research/earlywarning/"
+        "https://www.shakealert.org/"
       ],
       "status": "pending"
     }

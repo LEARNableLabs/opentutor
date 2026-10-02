@@ -25,8 +25,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.britannica.com/topic/shorthand",
-        "https://archive.org/details/historyofshorthand"
+        "https://www.britannica.com/topic/shorthand"
       ],
       "status": "pending"
     },
@@ -75,9 +74,7 @@
       "concepts": ["Gregg alphabet", "stroke direction", "size relationships", "joining principles"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://gregg.angelfishy.net/grkeybo.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -87,9 +84,7 @@
       "concepts": ["system comparison", "Gregg fundamentals", "practice habits"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://greggshorthand.github.io/practice-drills"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -99,10 +94,7 @@
       "concepts": ["vowel representation", "position writing", "omission strategies"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://gregg.angelfishy.net/vowels.htm",
-        "https://archive.org/details/gregg-simplified-manual"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -113,7 +105,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://greggshorthand.github.io/brief-forms-list",
         "https://quizlet.com/gregg-brief-forms"
       ],
       "status": "pending"
@@ -125,9 +116,7 @@
       "concepts": ["connected writing", "phrasing", "transcription", "accuracy"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://greggshorthand.github.io/beginner-passages"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -138,8 +127,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://long-live-pitmans-shorthand.org.uk/consonants.htm",
-        "https://www.pitmanshorthand.co.uk/basics.html"
+        "https://long-live-pitmans-shorthand.org.uk/consonants.htm"
       ],
       "status": "pending"
     },
@@ -162,10 +150,7 @@
       "concepts": ["grammalogues", "special outlines", "word grouping", "Pitman phrases"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://pitmanshorthand.homestead.com/grammalogues.html",
-        "https://archive.org/details/pitman-2000-manual"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -188,7 +173,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.pepysdiary.com/encyclopedia/shorthand/",
         "https://long-live-pitmans-shorthand.org.uk/reading-practice.htm"
       ],
       "status": "pending"
@@ -201,8 +185,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.nctj.com/journalism-skills/teeline/",
-        "https://www.teeline.org.uk/about"
+        "https://www.nctj.com/journalism-skills/teeline/"
       ],
       "status": "pending"
     },
@@ -213,9 +196,7 @@
       "concepts": ["letter reduction", "removal of unnecessary strokes", "indicator marks", "blending"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.teeline.org.uk/alphabet"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -225,10 +206,7 @@
       "concepts": ["word grouping", "special outlines", "common words", "blending techniques"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.teeline.org.uk/special-outlines",
-        "https://archive.org/details/teeline-gold-standard"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -238,9 +216,7 @@
       "concepts": ["live dictation", "speed writing", "note-taking strategies", "transcription under pressure"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.nctj.com/teeline-practice-material"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -288,7 +264,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://greggshorthand.github.io/reading-exercises",
         "https://archive.org/search.php?query=shorthand%20dictation"
       ],
       "status": "pending"

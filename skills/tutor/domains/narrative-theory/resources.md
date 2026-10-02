@@ -53,7 +53,7 @@
 
 - **Stockholm University**: Narrative Theory, Literary Studies
   - Course syllabus with clear learning outcomes and structure
-  - https://www.su.se/english/course-syllabus-search/course-syllabus?code=ENPS27
+
 
 ### MIT OpenCourseWare (Free Lecture Notes and Assignments)
 

@@ -30,7 +30,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://eagereyes.org/basics/preattentive-processing",
         "https://observablehq.com/@observablehq/plot-marks"
       ],
       "status": "pending"
@@ -82,8 +81,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://vega.github.io/vega-lite/docs/type.html",
-        "https://academy.datawrapper.de/article/117-which-data-types-can-be-visualized"
+        "https://vega.github.io/vega-lite/docs/type.html"
       ],
       "status": "pending"
     },
@@ -116,7 +114,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://eagereyes.org/basics",
         "https://observablehq.com/@observablehq/plot-cheatsheets"
       ],
       "status": "pending"
@@ -151,8 +148,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://observablehq.com/@observablehq/plot-histogram",
-        "https://academy.datawrapper.de/article/120-what-to-consider-when-creating-a-histogram"
+        "https://observablehq.com/@observablehq/plot-histogram"
       ],
       "status": "pending"
     },
@@ -168,8 +164,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://observablehq.com/@d3/treemap",
-        "https://www.storytellingwithdata.com/blog/2020/6/23/how-to-make-a-treemap-in-excel"
+        "https://observablehq.com/@d3/treemap"
       ],
       "status": "pending"
     },
@@ -186,8 +181,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://observablehq.com/@observablehq/plot-group",
-        "https://academy.datawrapper.de/article/146-stacked-column-and-bar-charts"
+        "https://observablehq.com/@observablehq/plot-group"
       ],
       "status": "pending"
     },
@@ -203,7 +197,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://flowingdata.com/2021/06/08/visualize-this-the-book/",
         "https://github.com/rfordatascience/tidytuesday"
       ],
       "status": "pending"
@@ -238,8 +231,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.data-to-viz.com/",
-        "https://academy.datawrapper.de/article/127-what-charts-do"
+        "https://www.data-to-viz.com/"
       ],
       "status": "pending"
     },
@@ -255,8 +247,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://pudding.cool/",
-        "https://www.storytellingwithdata.com/blog/2018/5/30/declutter-this"
+        "https://pudding.cool/"
       ],
       "status": "pending"
     },
@@ -429,10 +420,7 @@
       ],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.storytellingwithdata.com/blog/2020/4/9/bring-on-the-tables",
-        "https://flowingdata.com/2016/10/26/make-better-tables/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -466,8 +454,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://observablehq.com/@d3/brushable-scatterplot",
-        "https://idl.cs.washington.edu/papers/interaction-dynamics/"
+        "https://observablehq.com/@d3/brushable-scatterplot"
       ],
       "status": "pending"
     },
@@ -501,8 +488,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.stephen-few.com/",
-        "https://www.storytellingwithdata.com/blog/2021/6/8/what-is-a-dashboard"
+        "https://www.stephen-few.com/"
       ],
       "status": "pending"
     },
@@ -537,8 +523,7 @@
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
-        "https://observablehq.com/@mjskay/uncertainty-visualization",
-        "https://mucollective.northwestern.edu/project/uncertainty-visualization"
+        "https://observablehq.com/@mjskay/uncertainty-visualization"
       ],
       "status": "pending"
     },
@@ -555,8 +540,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://observablehq.com/@d3/force-directed-graph",
-        "https://www.visualcinnamon.com/2019/09/node-link-diagrams"
+        "https://observablehq.com/@d3/force-directed-graph"
       ],
       "status": "pending"
     }

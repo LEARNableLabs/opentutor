@@ -9,7 +9,7 @@
 - **"Manufacturing Consent: The Political Economy of the Mass Media" by Edward S. Herman and Noam Chomsky (1988)** — Classic analysis of media propaganda in democracies. Introduces the propaganda model (five filters). Dense but essential. Use selected chapters rather than full book for intermediate level.
 
 - **"LikeWar: The Weaponization of Social Media" by P.W. Singer and Emerson T. Brooking (2018)** — Accessible overview of digital propaganda and information warfare. Covers bots, trolls, viral spread, state actors. Excellent case studies. Perfect for intermediate students transitioning from theory to practice.
-  - https://www.penguinrandomhouse.com/books/555678/likewar-by-pw-singer-and-emerson-t-brooking/
+
 
 - **"Network Propaganda: Manipulation, Disinformation, and Radicalization in American Politics" by Yochai Benkler, Robert Faris, and Hal Roberts (2018)** — Data-driven analysis of propaganda ecosystems. Shows asymmetric polarization. More academic but crucial for understanding network effects.
   - https://global.oup.com/academic/product/network-propaganda-9780190923631
@@ -66,7 +66,7 @@
   - https://www.activemeasures.com/
 
 - **TED Talks on Misinformation:**
-  - Sinan Aral: "The spread of misinformation online" — https://www.ted.com/talks/sinan_aral_the_spread_of_misinformation_online
+  - Sinan Aral: "The spread of misinformation online"
   - Claire Wardle: "How you can help transform the internet into a place of trust" — https://www.ted.com/talks/claire_wardle_how_you_can_help_transform_the_internet_into_a_place_of_trust
 
 - **C-SPAN Lectures and Congressional Hearings** — Testimony from tech CEOs, security officials on election interference, platform responsibility.
@@ -107,7 +107,7 @@
   - https://propaganda.qcri.org/
 
 - **Twitter API for Academic Research** — Access historical tweet data for analysis (requires approval).
-  - https://developer.twitter.com/en/products/twitter-api/academic-research
+
 
 - **ClaimBuster API** — Automated claim detection in text. Can integrate into projects.
   - https://idir.uta.edu/claimbuster/
@@ -210,7 +210,7 @@
 ### Government and Policy Resources
 
 - **CISA (Cybersecurity & Infrastructure Security Agency) — Misinformation, Disinformation, and Malinformation** — US government guidance and resources.
-  - https://www.cisa.gov/topics/election-security/misinformation-disinformation-and-malinformation
+
 
 - **EU Code of Practice on Disinformation** — European regulatory framework for platform responsibilities.
   - https://digital-strategy.ec.europa.eu/en/policies/code-practice-disinformation
@@ -227,7 +227,7 @@
   - https://about.fb.com/news/category/integrity-and-security/
 
 - **Twitter Election Integrity Datasets** — Historical archives of information operations.
-  - https://transparency.twitter.com/en/reports/information-operations.html
+
 
 - **Lumen Database** — Tracks content removal requests, provides transparency on censorship.
   - https://www.lumendatabase.org/

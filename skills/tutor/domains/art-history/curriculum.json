@@ -38,8 +38,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://smarthistory.org/michelangelo-ceiling-of-the-sistine-chapel/",
-        "https://artsandculture.google.com/story/explore-the-sistine-chapel/jAKCv4KBUAniJg"
+        "https://smarthistory.org/michelangelo-ceiling-of-the-sistine-chapel/"
       ],
       "status": "pending"
     },
@@ -103,8 +102,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://smarthistory.org/bernini-ecstasy-of-st-theresa/",
-        "https://artsandculture.google.com/asset/the-ecstasy-of-saint-teresa/bAFyef8DGDVbNw"
+        "https://smarthistory.org/bernini-ecstasy-of-st-theresa/"
       ],
       "status": "pending"
     },
@@ -116,8 +114,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://smarthistory.org/vermeer/",
-        "https://www.rijksmuseum.nl/en/vermeer"
+        "https://smarthistory.org/vermeer/"
       ],
       "status": "pending"
     },
@@ -324,8 +321,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://smarthistory.org/abstraction/",
-        "https://www.guggenheim.org/artwork/artist/wassily-kandinsky"
+        "https://smarthistory.org/abstraction/"
       ],
       "status": "pending"
     },
@@ -415,8 +411,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.tate.org.uk/art/art-terms/i/installation-art",
-        "https://artsandculture.google.com/story/installation-art/wAKCHnJJ_fKdKg"
+        "https://www.tate.org.uk/art/art-terms/i/installation-art"
       ],
       "status": "pending"
     },
@@ -428,7 +423,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.tate.org.uk/research/tate-papers/08/contemporary-art-and-globalization",
         "https://smarthistory.org/art-since-1980/"
       ],
       "status": "pending"
@@ -441,8 +435,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.moma.org/learn/moma_learning/themes/what-is-contemporary-art/",
-        "https://www.tate.org.uk/art/art-terms/s/social-practice"
+        "https://www.moma.org/learn/moma_learning/themes/what-is-contemporary-art/"
       ],
       "status": "pending"
     }

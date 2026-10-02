@@ -104,7 +104,7 @@
       "concepts": ["significance testing", "hypothesis testing", "Neyman-Pearson framework", "Fisher's approach"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://errorstatistics.com/2016/06/24/s-senn-fisher-and-the-logic-of-inductive-inference-2/", "http://www.stat.columbia.edu/~gelman/research/published/pvalues3.pdf"],
+      "resources": ["http://www.stat.columbia.edu/~gelman/research/published/pvalues3.pdf"],
       "status": "pending"
     },
     {
@@ -224,7 +224,7 @@
       "concepts": ["multiple testing", "false discovery rate", "family-wise error rate", "Bonferroni"],
       "difficulty": 4,
       "type": "question",
-      "resources": ["https://www.stat.berkeley.edu/~mgoldman/Section0402.pdf", "https://www.jstor.org/stable/2346101"],
+      "resources": ["https://www.jstor.org/stable/2346101"],
       "status": "pending"
     },
     {

@@ -24,10 +24,7 @@
       "concepts": ["medical ethics history", "autonomy", "beneficence", "non-maleficence"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://plato.stanford.edu/entries/bioethics/",
-        "https://www.nih.gov/health-information/nih-clinical-research-trials-you/bioethics-resources"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -76,7 +73,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing",
         "https://www.who.int/groups/expert-advisory-committee-on-developing-global-standards-for-governance-and-oversight-of-human-genome-editing"
       ],
       "status": "pending"
@@ -88,9 +84,7 @@
       "concepts": ["research ethics violations", "informed consent", "risk assessment", "international norms"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -126,9 +120,7 @@
       "concepts": ["CRISPR", "therapy vs enhancement", "consent", "privacy"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -152,7 +144,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.genome.gov/about-genomics/policy-issues/Genome-Editing",
         "https://plato.stanford.edu/entries/disability/"
       ],
       "status": "pending"
@@ -165,7 +156,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/feminist-ethics/",
         "https://www.thehastingscenter.org/"
       ],
       "status": "pending"
@@ -307,7 +297,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nih.gov/health-information/nih-clinical-research-trials-you/bioethics-resources",
         "https://incidentdatabase.ai/"
       ],
       "status": "pending"
@@ -424,8 +413,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/res-9-003-brains-minds-and-machines-summer-course-summer-2015/",
-        "https://plato.stanford.edu/entries/neuroscience-bioethics/"
+        "https://ocw.mit.edu/courses/res-9-003-brains-minds-and-machines-summer-course-summer-2015/"
       ],
       "status": "pending"
     },
@@ -436,10 +424,7 @@
       "concepts": ["dual-use research", "biosecurity", "scientific freedom", "pandemic risk"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.nih.gov/health-information/nih-clinical-research-trials-you/bioethics-resources",
-        "https://www.unesco.org/en/ethics-science-and-technology/bioethics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -450,7 +435,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.unesco.org/en/ethics-science-and-technology/bioethics",
         "https://www.thehastingscenter.org/"
       ],
       "status": "pending"

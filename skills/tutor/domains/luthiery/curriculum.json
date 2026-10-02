@@ -28,8 +28,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.lmii.com/learning-center/tonewood-101",
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/tone-wood-guitar-choices/"
+        "https://www.lmii.com/learning-center/tonewood-101"
       ],
       "status": "pending"
     },
@@ -40,10 +39,7 @@
       "concepts": ["equilibrium moisture content", "wood movement", "seasoning"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.luth.org/articles/moisture-and-wood-stability",
-        "https://www.wood-database.com/wood-articles/understanding-wood-moisture-content/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -54,8 +50,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.lmii.com/learning-center/wood-grading",
-        "https://www.thewoodwhisperer.com/articles/quartersawn-vs-flatsawn/"
+        "https://www.lmii.com/learning-center/wood-grading"
       ],
       "status": "pending"
     },
@@ -67,8 +62,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.emeraldguitars.com/carbon-fiber-guitars",
-        "https://www.youtube.com/watch?v=qXJv8V8kZ8Q"
+        "https://www.emeraldguitars.com/carbon-fiber-guitars"
       ],
       "status": "pending"
     },
@@ -79,10 +73,7 @@
       "concepts": ["tap tones", "plate modes", "resonant frequencies"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.luth.org/articles/tap-tuning-basics",
-        "https://www.youtube.com/watch?v=_7lH5K8mXYo"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -92,9 +83,7 @@
       "concepts": ["tonewood review", "moisture review", "tap tone practice"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -105,7 +94,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.luth.org/articles/bridge-design-acoustics",
         "https://www.frets.com/FretsPages/Musician/Guitar/Setup/BridgeSetup/bridgesetup.html"
       ],
       "status": "pending"
@@ -117,10 +105,7 @@
       "concepts": ["Helmholtz resonance", "air cavity modes", "soundhole tuning"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://newt.phys.unsw.edu.au/jw/guitars.html",
-        "https://www.youtube.com/watch?v=qK7p5WLlYYk"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -131,7 +116,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-instrument-building-and-repair/sharpening-basics/",
         "https://www.youtube.com/watch?v=Ki8tt-VjwqI"
       ],
       "status": "pending"
@@ -143,10 +127,7 @@
       "concepts": ["steam bending", "heat bending", "bending jigs"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/bending-guitar-sides/",
-        "https://www.youtube.com/watch?v=Y0m8E7Q7TgM"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -157,7 +138,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.luth.org/articles/precision-in-lutherie",
         "https://www.maestronet.com/forum/index.php?/topic/333291-how-precise-do-you-need-to-be/"
       ],
       "status": "pending"
@@ -169,9 +149,7 @@
       "concepts": ["sharpening review", "bending review", "precision review"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-instrument-building-and-repair/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -182,8 +160,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.frets.com/FretsPages/Musician/Guitar/Setup/NeckRod/neckrod.html",
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-and-bass-setup-and-maintenance/understanding-guitar-neck-relief/"
+        "https://www.frets.com/FretsPages/Musician/Guitar/Setup/NeckRod/neckrod.html"
       ],
       "status": "pending"
     },
@@ -194,10 +171,7 @@
       "concepts": ["Spanish heel", "neck-to-body joinery", "structural integrity"],
       "difficulty": 5,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.luth.org/articles/spanish-heel-construction",
-        "https://www.youtube.com/watch?v=7KW4GxZ7WpQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -220,10 +194,7 @@
       "concepts": ["bracing patterns", "structural vs. acoustic function", "tradition vs. experimentation"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.luth.org/articles/guitar-bracing-patterns",
-        "https://www.youtube.com/watch?v=Zq9K8kZ3wXg"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -234,7 +205,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.luth.org/articles/soundboard-thickness",
         "https://maestronet.com/forum/index.php?/topic/330045-top-thickness-for-violins/"
       ],
       "status": "pending"
@@ -246,9 +216,7 @@
       "concepts": ["neck relief review", "bracing review", "thickness review"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -259,8 +227,7 @@
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
-        "https://www.maestronet.com/forum/index.php?/topic/333456-carving-violin-plates/",
-        "https://www.youtube.com/watch?v=3VhN0Z2Z7vE"
+        "https://www.maestronet.com/forum/index.php?/topic/333456-carving-violin-plates/"
       ],
       "status": "pending"
     },
@@ -272,8 +239,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.maestronet.com/forum/index.php?/topic/330256-purpose-of-purfling/",
-        "https://www.luth.org/articles/purfling-inlay"
+        "https://www.maestronet.com/forum/index.php?/topic/330256-purpose-of-purfling/"
       ],
       "status": "pending"
     },
@@ -284,10 +250,7 @@
       "concepts": ["clamping strategy", "glue squeeze-out", "alignment jigs"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=oJ5KjZ8X9zE",
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-acoustic-guitar-and-amplifier-design-and-construction/gluing-a-guitar-body/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -298,8 +261,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.maestronet.com/forum/index.php?/topic/331982-soundpost-positioning/",
-        "https://www.youtube.com/watch?v=8Z7qK8vZ8Zg"
+        "https://www.maestronet.com/forum/index.php?/topic/331982-soundpost-positioning/"
       ],
       "status": "pending"
     },
@@ -311,8 +273,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.frets.com/FretsPages/Musician/Guitar/Setup/GeneralSetup/gensetup.html",
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-and-bass-setup-and-maintenance/guitar-action-how-low-can-you-go/"
+        "https://www.frets.com/FretsPages/Musician/Guitar/Setup/GeneralSetup/gensetup.html"
       ],
       "status": "pending"
     },
@@ -323,10 +284,7 @@
       "concepts": ["finish mass", "damping effects", "tone myths"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.luth.org/articles/finish-and-tone",
-        "https://www.youtube.com/watch?v=d8kZ9K8X9zE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -336,9 +294,7 @@
       "concepts": ["assembly review", "setup review", "finish review"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.stewmac.com/video-and-ideas/online-resources/learn-about-guitar-and-bass-setup-and-maintenance/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -348,10 +304,7 @@
       "concepts": ["French polishing", "shellac application", "rubbing technique"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.luth.org/articles/french-polishing",
-        "https://www.youtube.com/watch?v=qK7p5WLlYYo"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

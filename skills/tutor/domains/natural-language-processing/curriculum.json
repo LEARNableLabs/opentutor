@@ -79,8 +79,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://web.stanford.edu/~jurafsky/slp3/23.pdf",
-        "https://demo.allennlp.org/reading-comprehension"
+        "https://web.stanford.edu/~jurafsky/slp3/23.pdf"
       ],
       "status": "pending"
     },
@@ -142,8 +141,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://web.stanford.edu/~jurafsky/slp3/12.pdf",
-        "https://demo.allennlp.org/dependency-parsing"
+        "https://web.stanford.edu/~jurafsky/slp3/12.pdf"
       ],
       "status": "pending"
     },
@@ -334,8 +332,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://arxiv.org/abs/1606.05250",
-        "https://demo.allennlp.org/reading-comprehension"
+        "https://arxiv.org/abs/1606.05250"
       ],
       "status": "pending"
     },

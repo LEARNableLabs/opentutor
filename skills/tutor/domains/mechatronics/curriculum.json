@@ -25,7 +25,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=tK3zs0QOFgA",
         "https://www.allaboutcircuits.com/textbook/alternating-current/chpt-13/what-is-mechatronics/"
       ],
       "status": "pending"
@@ -154,10 +153,7 @@
       "concepts": ["power transmission", "mechanical advantage", "backlash", "precision vs speed"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.linearmotiontips.com/ball-screw-vs-belt-drive/",
-        "https://reprap.org/wiki/Mechanical_Considerations"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -167,10 +163,7 @@
       "concepts": ["failure modes", "mechanical debugging", "system constraints"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.youtube.com/watch?v=YEZQDdE3LZk",
-        "https://hackaday.com/2020/11/24/fail-of-the-week-cnc-machine-skips-steps-and-burns-up-driver/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -233,8 +226,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=fusr9eTceEo",
-        "https://controlguru.com/ziegler-nichols-tuning-rules/"
+        "https://www.youtube.com/watch?v=fusr9eTceEo"
       ],
       "status": "pending"
     },
@@ -246,7 +238,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=IrIXzwLqW9Q",
         "https://www.allaboutcircuits.com/textbook/alternating-current/chpt-16/system-stability/"
       ],
       "status": "pending"
@@ -310,10 +301,7 @@
       "concepts": ["real-time constraints", "interrupt priorities", "RTOS basics", "timing analysis"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.freertos.org/implementation/a00002.html",
-        "https://www.embeddedrelated.com/showarticle/743.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -337,8 +325,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.mathworks.com/help/simulink/hardware-in-the-loop-simulation.html",
-        "https://www.youtube.com/watch?v=9HQaBTqY8Lc"
+        "https://www.mathworks.com/help/simulink/hardware-in-the-loop-simulation.html"
       ],
       "status": "pending"
     },
@@ -349,10 +336,7 @@
       "concepts": ["reliability", "safety systems", "fault tolerance", "industrial standards"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.automation.com/en-us/articles/2016-1/fundamentals-of-industrial-automation",
-        "https://www.youtube.com/watch?v=J5bAYdHj8E8"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -389,7 +373,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=KY4yLzdUL6I",
         "https://robotics.sciencemag.org/content/5/45/eabb0839"
       ],
       "status": "pending"

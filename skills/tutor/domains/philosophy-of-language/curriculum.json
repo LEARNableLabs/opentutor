@@ -39,8 +39,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://plato.stanford.edu/entries/nonexistent-objects/",
-        "https://iep.utm.edu/emp-name/"
+        "https://plato.stanford.edu/entries/nonexistent-objects/"
       ],
       "status": "pending"
     },
@@ -65,8 +64,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/quotation/",
-        "https://iep.utm.edu/quine-la/#H3"
+        "https://plato.stanford.edu/entries/quotation/"
       ],
       "status": "pending"
     },
@@ -91,8 +89,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://plato.stanford.edu/entries/meaning/",
-        "https://iep.utm.edu/ref-desc/"
+        "https://plato.stanford.edu/entries/meaning/"
       ],
       "status": "pending"
     },
@@ -130,8 +127,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/presupposition/",
-        "https://iep.utm.edu/strawson/"
+        "https://plato.stanford.edu/entries/presupposition/"
       ],
       "status": "pending"
     },
@@ -155,10 +151,7 @@
       "concepts": ["descriptivism about names", "Frege-Russell view", "cluster theory"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://plato.stanford.edu/entries/proper-names/",
-        "https://iep.utm.edu/prop-nam/#H2"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -182,8 +175,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://plato.stanford.edu/entries/descriptions/",
-        "https://iep.utm.edu/ref-desc/"
+        "https://plato.stanford.edu/entries/descriptions/"
       ],
       "status": "pending"
     },
@@ -195,8 +187,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/reference/#CauTheRef",
-        "https://iep.utm.edu/prop-nam/#H3"
+        "https://plato.stanford.edu/entries/reference/#CauTheRef"
       ],
       "status": "pending"
     },
@@ -208,7 +199,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://plato.stanford.edu/entries/proper-names/#CauTheProNam",
         "https://philpapers.org/browse/causal-theories-of-reference"
       ],
       "status": "pending"
@@ -260,8 +250,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://plato.stanford.edu/entries/reference/",
-        "https://iep.utm.edu/prop-nam/"
+        "https://plato.stanford.edu/entries/reference/"
       ],
       "status": "pending"
     },
@@ -286,7 +275,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://plato.stanford.edu/entries/meaning-social/",
         "https://philpapers.org/browse/the-division-of-linguistic-labor"
       ],
       "status": "pending"
@@ -299,8 +287,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://plato.stanford.edu/entries/natural-kinds/",
-        "https://plato.stanford.edu/entries/essentialism/"
+        "https://plato.stanford.edu/entries/natural-kinds/"
       ],
       "status": "pending"
     },
@@ -338,8 +325,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/indexicals/",
-        "https://iep.utm.edu/kaplan/"
+        "https://plato.stanford.edu/entries/indexicals/"
       ],
       "status": "pending"
     },

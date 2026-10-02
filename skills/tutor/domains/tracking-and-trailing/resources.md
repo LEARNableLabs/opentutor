@@ -17,12 +17,12 @@
 - **"Peterson Field Guide to Animal Tracks" by Olaus Murie & Mark Elbroch** (3rd edition, 2005)
   - Covers: Classic illustrated guide, track patterns, scat, sign
   - Why it's good: Portable field reference, excellent illustrations, time-tested accuracy
-  - URL: https://www.hmhbooks.com/peterson-field-guides
+  - URL:
 
 - **"The Art of Tracking: The Origin of Science" by Louis Liebenberg** (1990, David Philip Publishers)
   - Covers: Tracking methodology, cognitive aspects, evolutionary theory, San bushmen tracking culture
   - Why it's good: Philosophical and methodological depth; reframes tracking as scientific reasoning
-  - URL: https://www.cybertracker.org/tracking-books
+  - URL:
 
 ### Academic & Technical Resources
 
@@ -30,7 +30,7 @@
   - Connects sign to behavior ecology; essential for interpreting what tracks mean, not just what they are
 
 - **Track and Sign Journals** — CyberTracker and Tracker Certification publish ongoing research, case studies, and technique refinements
-  - URL: https://www.cybertracker.org/resources
+  - URL:
 
 ## Supplementary Resources (for engagement)
 
@@ -39,7 +39,7 @@
 - **"The Art of Tracking" documentary** (1996) — follows Louis Liebenberg and San trackers in the Kalahari
   - When to use: Lessons 1, 24, 26 — shows tracking as a holistic practice
 
-- **YouTube: Winterberry Wildlife** — https://www.youtube.com/@WinterberryWildlife
+- **YouTube: Winterberry Wildlife**
   - Short field demonstrations of track ID, gait analysis, sign reading
   - When to use: Supplement lessons 3-4 (track ID), 7-11 (gaits)
 
@@ -65,11 +65,11 @@
   - Originally for data collection, now used for track documentation and journaling
   - When to use: Recommend for lessons 24-26 (field documentation practice)
 
-- **Track Identification Quiz** — https://www.trackercertification.com/quiz
+- **Track Identification Quiz**
   - Self-assessment tool for track ID skills
   - When to use: After lesson 5, before lesson 6 review
 
-- **Scat Identification Database** — https://www.bear.org/scat-identification
+- **Scat Identification Database**
   - Visual database of scats with diet analysis
   - When to use: Lesson 13-14
 
@@ -147,7 +147,7 @@
 
 ### Tracking → Archaeology & Paleoanthropology
 - Hominin trackways (Laetoli footprints, 3.6 million years old) reveal bipedal gait evolution
-- Resources: "The Fossil Footprint Maker website" — https://www.fossilfootprints.org
+- Resources: "The Fossil Footprint Maker website"
 - When to drop in: Lesson 1 (what footprints preserve), lesson 8 (gait as evolutionary signal)
 
 ### Tracking → Machine Learning
@@ -165,13 +165,13 @@
 ### Tracking → Indigenous Knowledge Systems
 - Traditional ecological knowledge (TEK) includes millennia of observational tracking data
 - Example: Inuit knowledge of caribou migration predicted from track aging and sign density
-- Resource: "Arctic Trails" database — https://www.trackingproject.org
+- Resource: "Arctic Trails" database
 - When to drop in: Lesson 20 (aging), 24 (trailing methodology)
 
 ### Tracking → Non-Invasive Wildlife Monitoring
 - Modern ecology relies on sign surveys (track plates, scat transects, hair snares) because direct observation is often impossible
 - Resource: "Noninvasive Survey Methods for Carnivores" (USDA Forest Service, free PDF)
-- URL: https://www.fs.usda.gov/psw/publications/zielinski/psw_2006_zielinski001.pdf
+- URL:
 - When to drop in: Lesson 13 (scat as data), 17 (incidental sign for science)
 
 ### Tracking → Citizen Science
@@ -201,7 +201,7 @@
 ## Tools & Equipment
 
 - **Tracking stick** — adjustable measuring tool for stride/straddle
-  - DIY instructions: https://www.wildernessawareness.org/tracking-stick-guide
+  - DIY instructions:
 
 - **Field journal** — waterproof notebook (Rite in the Rain brand)
 
@@ -210,7 +210,7 @@
 - **Measuring tape** — flexible fabric or metal, 150cm minimum
 
 - **Plaster or dental stone** — for making track casts
-  - Guide: https://www.nps.gov/articles/track-casting.htm
+  - Guide:
 
 - **Hand lens (10x magnification)** — for examining scat content, hair
 

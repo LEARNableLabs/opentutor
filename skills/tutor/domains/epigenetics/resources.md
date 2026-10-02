@@ -7,7 +7,7 @@
   - https://www.amazon.com/Epigenetics-Second-Cold-Spring-Laboratory/dp/1936113597
 
 - **Carey, _Epigenetics_ (Academic Cell, 2021)** — More accessible than Allis, good balance of mechanisms and applications. Strong on disease and therapeutics.
-  - https://www.elsevier.com/books/epigenetics/carey/978-0-12-824050-4
+
 
 - **Ptashne, _Genes & Signals_ (2002)** — Classic short book on gene regulation, foundational for understanding chromatin regulation.
 
@@ -29,10 +29,10 @@
 
 ### Online Courses
 - **Coursera: "Introduction to Genomic Technologies" (Johns Hopkins University)** — Includes excellent modules on ChIP-seq, methylation profiling, and epigenomic data analysis.
-  - https://www.coursera.org/learn/genomic-technologies
+
 
 - **edX: "Epigenetic Control of Gene Expression" (University of Melbourne)** — Focused course specifically on epigenetics, intermediate level.
-  - https://www.edx.org/course/epigenetic-control-of-gene-expression
+
 
 - **MIT OpenCourseWare: 7.91J Foundations of Computational and Systems Biology** — Includes epigenomics analysis modules.
   - https://ocw.mit.edu/courses/7-91j-foundations-of-computational-and-systems-biology-spring-2014/
@@ -46,10 +46,10 @@
 
 #### Lecture Series
 - **iBiology: Chromatin and Epigenetics Seminar Series** — World-class researchers presenting their work. Includes talks by Danny Reinberg, Ali Shilatifard, Yang Shi, and others.
-  - https://www.ibiology.org/genetics-and-gene-regulation/
+
   
 - **Cold Spring Harbor Laboratory: Epigenetics Video Lectures** — Conference talks and summer course lectures.
-  - https://www.cshl.edu/education/courses/
+
 
 - **NIH VideoCasting: Epigenomics Lectures** — Wednesday Afternoon Lecture Series includes epigenetics talks.
   - https://videocast.nih.gov/
@@ -65,7 +65,7 @@
   - https://www.youtube.com/watch?v=kp1bZEUgqVI
 
 - **PBS Nova: "Epigenetics"** — Documentary-style, covers history and applications.
-  - https://www.pbs.org/wgbh/nova/article/epigenetics/
+
 
 ### Interactive Tools
 
@@ -125,7 +125,7 @@
   - https://deeptools.readthedocs.io/
 
 - **PyMethylation** — DNA methylation analysis toolkit.
-  - https://github.com/christacaggiano/pyMethylation
+
 
 #### Web-based Analysis
 - **Galaxy** — Web platform for genomic data analysis, includes epigenomics workflows.
@@ -162,7 +162,7 @@
   - http://compbio.mit.edu/ChromHMM/
 
 - **Meissner Lab (Max Planck)** — Methylation methods, single-cell epigenomics
-  - https://www.meissnerlab.de/
+
 
 ### Unexpected Connections (Rabbit Holes)
 
@@ -182,7 +182,7 @@
 
 #### Neuroscience and Cognition
 - **Sweatt Lab (Vanderbilt)** — Epigenetics of learning and memory
-  - https://lab.vanderbilt.edu/sweatt-lab/
+
 
 - **HDAC inhibitors for memory** — Drugs that enhance memory consolidation
   - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2755056/
@@ -267,7 +267,7 @@
   - https://www.amazon.com/Epigenetics-Revolution-Modern-Biology-Rewriting/dp/0231161174
 
 - **Ghost in Your Genes (BBC Documentary, 2006)** — Slightly dated but excellent storytelling
-  - https://www.bbc.co.uk/programmes/b0074vr9
+
 
 - **Radiolab: "Inheritance"** — Podcast episode on transgenerational epigenetics, compelling narrative
   - https://radiolab.org/podcast/inheritance

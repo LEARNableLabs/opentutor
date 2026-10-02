@@ -279,7 +279,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cvphysiology.com/Blood%20Pressure/BP005",
         "https://www.khanacademy.org/science/health-and-medicine/circulatory-system/autonomic-nervous-system"
       ],
       "status": "pending"
@@ -327,9 +326,7 @@
       "concepts": ["beta blockers", "ACE inhibitors", "diuretics", "pharmacological targets"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.cvphysiology.com/Pharmacology/P001"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -377,9 +374,7 @@
       "concepts": ["diagnostic reasoning", "clinical integration", "testing strategy", "probabilistic diagnosis"],
       "difficulty": 5,
       "type": "teach-back",
-      "resources": [
-        "https://www.cvphysiology.com/Clinical%20Cases/CC001"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

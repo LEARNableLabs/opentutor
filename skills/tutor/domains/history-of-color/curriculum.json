@@ -25,8 +25,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.getty.edu/conservation/publications_resources/teaching/",
-        "https://www.colourlex.com/learn/"
+        "https://www.getty.edu/conservation/publications_resources/teaching/"
       ],
       "status": "pending"
     },
@@ -50,10 +49,7 @@
       "concepts": ["archaeometry", "spectroscopy", "pigment analysis", "conservation"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.getty.edu/conservation/our_projects/science/",
-        "https://www.vam.ac.uk/articles/conservation-techniques"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -115,7 +111,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.vam.ac.uk/articles/a-history-of-indigo",
         "https://naturalhistory.si.edu/research/botany/about/historical-perspectives/economic-botany/indigo"
       ],
       "status": "pending"
@@ -128,7 +123,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.vam.ac.uk/articles/madder",
         "https://www.colourlex.com/project/madder-lake/"
       ],
       "status": "pending"
@@ -141,7 +135,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nationalgallery.org.uk/paintings/glossary/ultramarine",
         "https://www.metmuseum.org/art/collection/search/459118"
       ],
       "status": "pending"
@@ -154,7 +147,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.chemheritage.org/historical-profile/alchemy-and-chemistry",
         "https://www.colourlex.com/project/lead-tin-yellow/"
       ],
       "status": "pending"
@@ -167,7 +159,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nationalgallery.org.uk/paintings/learn-about-art/paintings-in-depth/oil-painting",
         "https://www.tate.org.uk/art/art-terms/o/oil-paint"
       ],
       "status": "pending"
@@ -179,10 +170,7 @@
       "concepts": ["pigment degradation", "copper resinate", "smalt", "conservation challenges"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.getty.edu/conservation/our_projects/science/postprints/",
-        "https://www.nationalgallery.org.uk/about-us/conservation"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -205,8 +193,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.sciencehistory.org/historical-profile/william-henry-perkin",
-        "https://www.rsc.org/images/perkin-booklet_tcm18-215077.pdf"
+        "https://www.sciencehistory.org/historical-profile/william-henry-perkin"
       ],
       "status": "pending"
     },
@@ -218,7 +205,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.chemheritage.org/historical-profile/karl-graebe-and-carl-liebermann",
         "https://pubs.acs.org/doi/10.1021/ed034p660"
       ],
       "status": "pending"
@@ -230,10 +216,7 @@
       "concepts": ["coal tar derivatives", "aniline dyes", "chemical industry", "German chemistry"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.sciencehistory.org/distillations/magazine/the-coal-tar-revolution",
-        "https://www.chemheritage.org/historical-profile/adolf-von-baeyer"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -244,7 +227,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.vam.ac.uk/articles/synthetic-dyes",
         "https://www.metmuseum.org/toah/hd/synt/hd_synt.htm"
       ],
       "status": "pending"
@@ -257,7 +239,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.sciencehistory.org/historical-profile/ig-farben",
         "https://www.chemheritage.org/historical-profile/fritz-haber"
       ],
       "status": "pending"
@@ -269,9 +250,7 @@
       "concepts": ["mauveine", "alizarin", "coal tar", "social impact"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.sciencehistory.org/distillations/magazine/the-coal-tar-revolution"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -282,8 +261,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.metmuseum.org/toah/hd/ccol/hd_ccol.htm",
-        "https://www.vam.ac.uk/articles/the-meaning-of-colour"
+        "https://www.metmuseum.org/toah/hd/ccol/hd_ccol.htm"
       ],
       "status": "pending"
     },
@@ -308,8 +286,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.metmuseum.org/toah/hd/budd/hd_budd.htm",
-        "https://www.vam.ac.uk/articles/sacred-colour-in-hindu-and-buddhist-traditions"
+        "https://www.metmuseum.org/toah/hd/budd/hd_budd.htm"
       ],
       "status": "pending"
     },
@@ -321,8 +298,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.smithsonianmag.com/history/the-color-of-revolution-180975513/",
-        "https://www.colourlex.com/learn/symbolism/"
+        "https://www.smithsonianmag.com/history/the-color-of-revolution-180975513/"
       ],
       "status": "pending"
     },
@@ -334,8 +310,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.pnas.org/doi/10.1073/pnas.0503281102",
-        "https://www.scientificamerican.com/article/how-language-shapes-color-perception/"
+        "https://www.pnas.org/doi/10.1073/pnas.0503281102"
       ],
       "status": "pending"
     },
@@ -347,7 +322,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.vam.ac.uk/articles/the-meaning-of-colour",
         "https://www.metmuseum.org/toah/hd/ccol/hd_ccol.htm"
       ],
       "status": "pending"
@@ -360,8 +334,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00001",
-        "https://www.tate.org.uk/art/art-terms/c/colour-theory"
+        "https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00001"
       ],
       "status": "pending"
     },
@@ -373,7 +346,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/color-vision-6567858/",
         "https://www.nei.nih.gov/learn-about-eye-health/healthy-vision/how-eyes-work"
       ],
       "status": "pending"
@@ -386,7 +358,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.adobe.com/creativecloud/design/discover/rgb-vs-cmyk.html",
         "https://www.pantone.com/color-systems/pantone-color-systems-explained"
       ],
       "status": "pending"
@@ -399,8 +370,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.getty.edu/conservation/our_projects/",
-        "https://www.nationalgallery.org.uk/about-us/conservation/conservation-department"
+        "https://www.getty.edu/conservation/our_projects/"
       ],
       "status": "pending"
     },
@@ -412,7 +382,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.colourlex.com/learn/",
         "https://www.getty.edu/conservation/"
       ],
       "status": "pending"

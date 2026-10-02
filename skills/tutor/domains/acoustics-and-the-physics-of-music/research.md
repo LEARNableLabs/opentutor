@@ -16,7 +16,7 @@
   - URL: https://courses.physics.illinois.edu/phys406/sp2017/Course_Info/Phys406POM_Course_Syllabus.pdf
   
 - **Northern Illinois University Physics 180: Acoustics, Music and Hearing** — covers fundamentals through perception
-  - URL: https://www.niu.edu/clas/physics/_pdf/spring-2019/Phys-180-syllabus.pdf
+  - URL:
 
 - **University of Maryland Physics 102: Physics of Music** — study of physical basis of sound, acoustical properties, human ear and voice, reproduction of sound, electronic music, acoustical properties of auditoriums
   - URL: https://www.umdphysics.umd.edu/academics/courses/989-physics-102-physics-of-music.html

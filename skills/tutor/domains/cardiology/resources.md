@@ -26,7 +26,7 @@
   - Definitive hemodynamics reference
   - Advanced treatment of wave propagation, impedance, compliance
   - For deep dives into vascular mechanics
-  - [CRC Press](https://www.routledge.com/McDonalds-Blood-Flow-in-Arteries-Sixth-Edition-Theoretical-Experimental/Nichols-ORourke-Vlachopoulos/p/book/9780340985014)
+  - CRC Press
 
 ### Online Courses & Textbooks
 
@@ -45,7 +45,7 @@
 - **PhysioNet — Teaching Resources**
   - Real physiological datasets (ECGs, hemodynamic waveforms)
   - Signal processing tutorials
-  - [https://physionet.org/about/teaching-resources/](https://physionet.org/about/teaching-resources/)
+
 
 ## Supplementary Resources (for engagement)
 
@@ -70,7 +70,7 @@
 
 - **Stanford Medcast — Cardiovascular Physiology Lectures**
   - University-level lectures, more formal but comprehensive
-  - [https://www.youtube.com/stanfordmedcast](https://www.youtube.com/user/stanfordmedcast)
+  - []()
 
 ### Interactive Tools & Simulations
 

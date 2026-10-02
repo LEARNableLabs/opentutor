@@ -64,7 +64,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://mathworld.wolfram.com/WolframsClassification.html",
         "https://en.wikipedia.org/wiki/Cellular_automaton#Wolfram's_classification"
       ],
       "status": "pending"

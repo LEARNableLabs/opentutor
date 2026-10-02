@@ -26,10 +26,7 @@
       "concepts": ["technique selection", "structural properties", "aesthetic differences"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.delphiglass.com/blogs/stained-glass-blog/lead-vs-copper-foil",
-        "https://www.youtube.com/watch?v=XK8YzJqFGhQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -65,10 +62,7 @@
       "concepts": ["pattern making", "registration marks", "grain direction", "inside vs outside cuts"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.delphiglass.com/blogs/stained-glass-blog/pattern-making-basics",
-        "https://www.youtube.com/watch?v=vH8YJzpqNYo"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -79,8 +73,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.bullseyeglass.com/education/",
-        "https://www.spectrumglass.com/glass-education"
+        "https://www.bullseyeglass.com/education/"
       ],
       "status": "pending"
     },
@@ -91,9 +84,7 @@
       "concepts": ["technique selection review", "pattern and material fundamentals", "design translation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.delphiglass.com/blogs/stained-glass-blog/choosing-your-method"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -103,10 +94,7 @@
       "concepts": ["H-channel came", "U-channel came", "came width", "structural requirements"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.delphiglass.com/lead-came-guide",
-        "https://www.youtube.com/watch?v=RKj5l5c9TYE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -116,10 +104,7 @@
       "concepts": ["lead stretching", "structural tension", "came preparation"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=Z5jPGqX8bQM",
-        "https://www.wardellpublications.com/lead-stretching"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -129,10 +114,7 @@
       "concepts": ["came cutting", "miter joints", "T-joints", "corner technique"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=Q8yP8vN7Jxo",
-        "https://www.glasswerkzstudio.com/lead-joinery"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -142,10 +124,7 @@
       "concepts": ["lead soldering", "flux for lead", "heat management", "bead formation"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.youtube.com/watch?v=kL9vN5cJgNY",
-        "https://www.delphiglass.com/blogs/stained-glass-blog/soldering-lead-came"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -156,8 +135,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sgaaonline.com/cementing-techniques",
-        "https://www.youtube.com/watch?v=M7qL5kT9Pxc"
+        "https://www.sgaaonline.com/cementing-techniques"
       ],
       "status": "pending"
     },
@@ -168,9 +146,7 @@
       "concepts": ["workflow review", "troubleshooting", "technique synthesis"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=QfB3vJ8KNl0"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -180,10 +156,7 @@
       "concepts": ["foil sizing", "glass thickness", "seam strength", "foil types"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.delphiglass.com/copper-foil-selection",
-        "https://www.edco.com/copper-foil-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -193,10 +166,7 @@
       "concepts": ["foil application", "burnishing", "edge preparation", "adhesion"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=hLqT8IvH7Gk",
-        "https://www.delphiglass.com/blogs/stained-glass-blog/perfect-foiling"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -206,10 +176,7 @@
       "concepts": ["flux chemistry", "liquid vs paste flux", "flux residue", "tinning"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=cP5gOqL9F1Y",
-        "https://www.glasscrafters.com/flux-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -219,10 +186,7 @@
       "concepts": ["bead technique", "temperature control", "solder flow", "flat vs round beads"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.youtube.com/watch?v=8vN5jP3qNgY",
-        "https://www.let-make-stained-glass.com/soldering-techniques"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -232,10 +196,7 @@
       "concepts": ["three-dimensional construction", "internal bracing", "assembly order", "geometric stability"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=Q9rN8j7LKlM",
-        "https://www.glasswerkzstudio.com/3d-construction"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -245,9 +206,7 @@
       "concepts": ["foil workflow", "quality control", "common errors"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=TN9P8fL7q3M"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -257,10 +216,7 @@
       "concepts": ["came framing", "zinc channel", "brass came", "frame soldering"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=zX8TqN0L9pY",
-        "https://www.delphiglass.com/blogs/stained-glass-blog/framing-panels"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,8 +227,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.sgaaonline.com/structural-support",
-        "https://www.youtube.com/watch?v=mK4bN9pQrLs"
+        "https://www.sgaaonline.com/structural-support"
       ],
       "status": "pending"
     },
@@ -283,10 +238,7 @@
       "concepts": ["patina chemistry", "copper sulfate patina", "black patina", "surface preparation", "sealing"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=fR7pK9qP1Xo",
-        "https://www.delphiglass.com/patina-application"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,8 +249,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.cmog.org/article/science/how-light-interacts-with-glass",
-        "https://www.bullseyeglass.com/education/light-and-glass"
+        "https://www.cmog.org/article/science/how-light-interacts-with-glass"
       ],
       "status": "pending"
     },
@@ -309,10 +260,7 @@
       "concepts": ["hybrid techniques", "mixed methods", "design integration", "technical challenges"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.youtube.com/watch?v=dP7qN8LkTlY",
-        "https://www.glasswerkzstudio.com/mixed-technique"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -323,8 +271,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.sgaaonline.com/professional-practices",
-        "https://www.youtube.com/watch?v=vK8pL0qN7Qk"
+        "https://www.sgaaonline.com/professional-practices"
       ],
       "status": "pending"
     }

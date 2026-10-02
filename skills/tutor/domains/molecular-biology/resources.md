@@ -11,7 +11,7 @@
   - Chapter 6 (DNA to RNA), Chapter 7 (Protein synthesis)
 
 - **Lehninger Principles of Biochemistry** (Nelson & Cox, 8th edition)
-  - https://www.macmillanlearning.com/college/us/product/Lehninger-Principles-of-Biochemistry/p/1464126119
+
   - Strong on biochemical mechanisms and energetics
   - Chapter 26 (RNA metabolism), Chapter 27 (Protein metabolism)
 
@@ -22,7 +22,7 @@
 ### Online Textbooks & References
 
 - **Nature Scitable: Genetics and Gene Regulation**
-  - https://www.nature.com/scitable/topic/genetics-and-gene-regulation-6/
+
   - Free, peer-reviewed educational resource with excellent review articles
   - Topic pages on transcription, translation, gene expression
 
@@ -89,7 +89,7 @@
     - tRNA: 1EHZ
 
 - **Molecule World**
-  - https://molworldapp.com/
+
   - iOS/Android app for exploring PDB structures
   - Great for students to manipulate structures on their devices
 
@@ -199,7 +199,7 @@
 - **Archaeology and Ancient DNA**
   - Reading DNA from extinct species (mammoths, Neanderthals)
   - How DNA degrades over time
-  - https://www.nature.com/articles/nature14736
+
 
 - **Forensics and the Central Dogma**
   - DNA profiling, paternity testing
@@ -229,13 +229,13 @@
   - Editing the genome to fix disease
 
 - **Synthetic Biology and Minimal Genomes**
-  - https://www.jcvi.org/research/synthetic-genomics
+
   - Craig Venter's minimal cell: what genes are essential?
   - Programming cells like computers
 
 - **Anti-Aging and Telomerase**
   - Connection to transcription and cancer
-  - https://www.nature.com/articles/s41568-019-0224-y
+
 
 ## Journals & Publications
 
@@ -267,10 +267,10 @@
 ### Classic Experiments
 
 - **Meselson-Stahl** — DNA replication mechanism
-  - https://www.nature.com/scitable/topicpage/meselson-and-stahl-dna-replication-is-473/
+
 
 - **Nirenberg-Matthaei** — Cracking the genetic code with synthetic RNA
-  - https://profiles.nlm.nih.gov/spotlight/jj/feature/doublehelix
+
 
 - **Anfinsen** — Protein folding is determined by sequence
   - https://www.nobelprize.org/prizes/chemistry/1972/anfinsen/facts/

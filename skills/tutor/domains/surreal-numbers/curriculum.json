@@ -62,9 +62,7 @@
       ],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://plato.stanford.edu/entries/mathematical-games/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -332,9 +330,7 @@
       ],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://plato.stanford.edu/entries/nonstandard-analysis/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -364,9 +360,7 @@
       ],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://plato.stanford.edu/entries/mathematical-games/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -396,8 +390,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://arxiv.org/abs/math/0410026",
-        "https://plato.stanford.edu/entries/mathematical-games/"
+        "https://arxiv.org/abs/math/0410026"
       ],
       "status": "pending"
     },

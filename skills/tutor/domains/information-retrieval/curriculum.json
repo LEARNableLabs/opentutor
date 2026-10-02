@@ -26,8 +26,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://nlp.stanford.edu/IR-book/pdf/01bool.pdf",
-        "https://www.youtube.com/watch?v=kNkbFfEGSFY"
+        "https://nlp.stanford.edu/IR-book/pdf/01bool.pdf"
       ],
       "status": "pending"
     },
@@ -65,8 +64,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://nlp.stanford.edu/IR-book/pdf/06vect.pdf",
-        "https://www.youtube.com/watch?v=hc3CrezcCSE"
+        "https://nlp.stanford.edu/IR-book/pdf/06vect.pdf"
       ],
       "status": "pending"
     },
@@ -104,8 +102,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://nlp.stanford.edu/IR-book/pdf/05comp.pdf",
-        "https://www.elastic.co/blog/index-compression-in-elasticsearch"
+        "https://nlp.stanford.edu/IR-book/pdf/05comp.pdf"
       ],
       "status": "pending"
     },
@@ -142,8 +139,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://nlp.stanford.edu/IR-book/pdf/06vect.pdf",
-        "https://www.youtube.com/watch?v=V1K8B4VMBYw"
+        "https://nlp.stanford.edu/IR-book/pdf/06vect.pdf"
       ],
       "status": "pending"
     },
@@ -260,7 +256,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=JcW9kDGOZNo",
         "https://dl.acm.org/doi/10.1145/1571941.1572012"
       ],
       "status": "pending"
@@ -313,8 +308,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://nlp.stanford.edu/IR-book/pdf/19web.pdf",
-        "https://www.youtube.com/watch?v=ltZbHPXNfLY"
+        "https://nlp.stanford.edu/IR-book/pdf/19web.pdf"
       ],
       "status": "pending"
     },
@@ -326,7 +320,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=kNkbFfEGSFY",
         "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-analyzer.html"
       ],
       "status": "pending"
@@ -367,8 +360,7 @@
       "type": "mini-lesson",
       "resources": [
         "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf",
-        "https://www.elastic.co/guide/en/elasticsearch/reference/current/learning-to-rank.html",
-        "https://www.youtube.com/watch?v=E2UBGKR4gqo"
+        "https://www.elastic.co/guide/en/elasticsearch/reference/current/learning-to-rank.html"
       ],
       "status": "pending"
     },
@@ -393,8 +385,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://nlp.stanford.edu/IR-book/",
-        "https://www.youtube.com/watch?v=kNkbFfEGSFY"
+        "https://nlp.stanford.edu/IR-book/"
       ],
       "status": "pending"
     }

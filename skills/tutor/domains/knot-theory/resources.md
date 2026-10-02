@@ -26,7 +26,7 @@
   - Includes knot theory module with lecture notes
 
 - **University of Toronto Knot Theory Course** (Dror Bar-Natan)
-  - https://www.math.toronto.edu/~drorbn/classes/0405/KnotTheory/
+
   - Excellent lecture notes, diagrams, and computational examples
 
 - **arXiv:math.GT preprints**
@@ -66,7 +66,7 @@
   - Wiki-style collaborative resource
 
 - **KnotInfo**
-  - https://knotinfo.math.indiana.edu/
+
   - Comprehensive database of knot invariants. Look up any standard knot.
   - Includes tables, invariant values, diagrams
 

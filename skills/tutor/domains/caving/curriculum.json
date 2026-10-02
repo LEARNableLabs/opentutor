@@ -26,7 +26,7 @@
       "concepts": ["static vs dynamic rope", "kernmantle construction", "rope degradation in caves"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://caves.org/pub/bnl/bnl.htm", "https://www.petzl.com/US/en/Sport/Ropes"],
+      "resources": ["https://www.petzl.com/US/en/Sport/Ropes"],
       "status": "pending"
     },
     {
@@ -46,7 +46,7 @@
       "concepts": ["harness selection", "rack configuration", "cow's tails", "safety checks"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://caves.org/pub/bnl/bnl.htm", "https://www.petzl.com/US/en/Sport/Harnesses"],
+      "resources": ["https://www.petzl.com/US/en/Sport/Harnesses"],
       "status": "pending"
     },
     {
@@ -56,7 +56,7 @@
       "concepts": ["NSS standards", "NFPA ratings", "wet rope behavior", "abrasion resistance"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://caves.org/committee/salonsafety/", "https://www.nfpa.org/"],
+      "resources": ["https://www.nfpa.org/"],
       "status": "pending"
     },
     {
@@ -66,7 +66,7 @@
       "concepts": ["accident analysis", "human factors", "equipment failure modes", "risk assessment"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://caves.org/committee/salonsafety/aam.html", "https://ncrc.us/"],
+      "resources": ["https://ncrc.us/"],
       "status": "pending"
     },
     {
@@ -76,7 +76,7 @@
       "concepts": ["frog system mechanics", "croll", "hand ascender", "foot loop length"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://caves.org/section/vertical/bnl/50/www_5.htm", "https://www.petzl.com/US/en/Sport/Ascenders"],
+      "resources": ["https://www.petzl.com/US/en/Sport/Ascenders"],
       "status": "pending"
     },
     {
@@ -96,7 +96,7 @@
       "concepts": ["cam mechanics", "rope sheath damage", "toothed vs smooth cams", "ascender selection"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.petzl.com/US/en/Sport/Ascenders", "https://caves.org/pub/bnl/bnl.htm"],
+      "resources": ["https://www.petzl.com/US/en/Sport/Ascenders"],
       "status": "pending"
     },
     {
@@ -106,7 +106,7 @@
       "concepts": ["rest positions", "breathing technique", "pacing strategies", "mental game"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://caves.org/section/vertical/bnl/50/www_6.htm", "https://ncrc.us/"],
+      "resources": ["https://ncrc.us/"],
       "status": "pending"
     },
     {
@@ -126,7 +126,7 @@
       "concepts": ["system comparison", "troubleshooting", "personal optimization"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://caves.org/section/vertical/", "https://caves.org/pub/bnl/bnl.htm"],
+      "resources": ["https://caves.org/section/vertical/"],
       "status": "pending"
     },
     {
@@ -136,7 +136,7 @@
       "concepts": ["rack mechanics", "bar configuration", "heat dissipation", "friction control"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://caves.org/section/vertical/bnl/50/www_7.htm", "https://www.petzl.com/US/en/Sport/Descenders"],
+      "resources": ["https://www.petzl.com/US/en/Sport/Descenders"],
       "status": "pending"
     },
     {
@@ -146,7 +146,7 @@
       "concepts": ["rope heating", "glove failure", "speed management", "locked-off descent"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://caves.org/committee/salonsafety/", "https://www.petzl.com/US/en/Sport/Descenders"],
+      "resources": ["https://www.petzl.com/US/en/Sport/Descenders"],
       "status": "pending"
     },
     {
@@ -166,7 +166,7 @@
       "concepts": ["edge geometry", "rope protectors", "deviation rigging", "abrasion prevention"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://caves.org/section/vertical/bnl/50/www_8.htm", "https://www.petzl.com/US/en/Professional/Edge-rollers"],
+      "resources": ["https://www.petzl.com/US/en/Professional/Edge-rollers"],
       "status": "pending"
     },
     {
@@ -206,7 +206,7 @@
       "concepts": ["descent-to-ascent changeover", "ascent-to-descent changeover", "efficiency", "safety sequence"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://caves.org/section/vertical/bnl/50/www_9.htm", "https://ncrc.us/"],
+      "resources": ["https://ncrc.us/"],
       "status": "pending"
     },
     {
@@ -226,7 +226,7 @@
       "concepts": ["deviation vs rebelay", "rigging strategy", "rope management", "clean descents"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://caves.org/section/vertical/bnl/50/www_10.htm", "https://www.ukclimbing.com/articles/skills/series/caving_techniques-5167"],
+      "resources": ["https://www.ukclimbing.com/articles/skills/series/caving_techniques-5167"],
       "status": "pending"
     },
     {
@@ -246,7 +246,7 @@
       "concepts": ["changeover technique", "rebelay navigation", "deviation strategy", "obstacle management"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://caves.org/section/vertical/", "https://caves.org/section/vertical/bnl/50/www_9.htm"],
+      "resources": ["https://caves.org/section/vertical/"],
       "status": "pending"
     },
     {
@@ -256,7 +256,7 @@
       "concepts": ["prusik escape", "self-rescue", "backup prusiks", "emergency procedures"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://ncrc.us/", "https://caves.org/committee/salonsafety/"],
+      "resources": ["https://ncrc.us/"],
       "status": "pending"
     },
     {
@@ -276,7 +276,7 @@
       "concepts": ["emergency decision-making", "contingency planning", "rope sacrifice", "risk calculation"],
       "difficulty": 5,
       "type": "question",
-      "resources": ["https://caves.org/committee/salonsafety/aam.html", "https://ncrc.us/"],
+      "resources": ["https://ncrc.us/"],
       "status": "pending"
     }
   ]

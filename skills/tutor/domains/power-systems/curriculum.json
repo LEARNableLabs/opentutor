@@ -27,8 +27,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=v1BMWczn7JM",
-        "https://www.energy.gov/oe/articles/how-does-electric-grid-work"
+        "https://www.youtube.com/watch?v=v1BMWczn7JM"
       ],
       "status": "pending"
     },
@@ -40,7 +39,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=MViVyocQDME",
         "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/readings/"
       ],
       "status": "pending"
@@ -66,8 +64,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
-        "https://www.powerworld.com/products/simulator/educational-resources"
+        "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/"
       ],
       "status": "pending"
     },
@@ -91,9 +88,7 @@
       "concepts": ["three-phase systems", "single-line diagrams", "per-unit"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.powerworld.com/products/simulator/educational-resources"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -104,7 +99,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=hL2tKdJbHyA",
         "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/"
       ],
       "status": "pending"
@@ -117,7 +111,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=C4jwKW7JjHU",
         "https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic"
       ],
       "status": "pending"
@@ -130,7 +123,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.3blue1brown.com/lessons/eulers-formula",
         "https://nptel.ac.in/courses/108105053"
       ],
       "status": "pending"
@@ -143,8 +135,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.pandapower.org/start/",
-        "https://www.powerworld.com/products/simulator/educational-resources"
+        "https://www.pandapower.org/start/"
       ],
       "status": "pending"
     },
@@ -181,9 +172,7 @@
       "concepts": ["reactive power", "power factor", "voltage regulation"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.powerworld.com/products/simulator/educational-resources"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -233,7 +222,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=jvhnLFvbWRs",
         "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/"
       ],
       "status": "pending"
@@ -246,8 +234,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/c/PracticalEngineeringChannel",
-        "https://www.nrel.gov/grid/"
+        "https://www.youtube.com/c/PracticalEngineeringChannel"
       ],
       "status": "pending"
     },
@@ -272,7 +259,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nrel.gov/grid/",
         "https://www.iea.org/"
       ],
       "status": "pending"
@@ -284,9 +270,7 @@
       "concepts": ["synchronous machines", "economic dispatch", "renewable integration"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.powerworld.com/products/simulator/educational-resources"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -323,8 +307,7 @@
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
-        "https://nptel.ac.in/courses/108105053",
-        "https://www.powerworld.com/products/simulator/educational-resources"
+        "https://nptel.ac.in/courses/108105053"
       ],
       "status": "pending"
     },
@@ -336,7 +319,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.powerworld.com/products/simulator/educational-resources",
         "https://www.pandapower.org/"
       ],
       "status": "pending"
@@ -362,7 +344,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nrel.gov/grid/",
         "https://www.gridlabd.org/"
       ],
       "status": "pending"

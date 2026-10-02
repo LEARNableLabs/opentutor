@@ -27,8 +27,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.soa.org/education/exam-req/edu-exam-p-detail/",
-        "https://www.casact.org/exams-admissions/exam-study-resources"
+        "https://www.soa.org/education/exam-req/edu-exam-p-detail/"
       ],
       "status": "pending"
     },
@@ -52,9 +51,7 @@
       "concepts": ["transformation method", "Jacobian", "change of variables"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -65,7 +62,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.soa.org/education/resources/",
         "https://mort.soa.org/"
       ],
       "status": "pending"
@@ -77,9 +73,7 @@
       "concepts": ["exponential distribution", "memoryless property", "constant hazard"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.beanactuary.org/study/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -89,9 +83,7 @@
       "concepts": ["distribution fitting", "parameter estimation", "survival models"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.soa.org/education/exam-req/syllabus-study-materials/edu-multiple-choice-exam.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -114,9 +106,7 @@
       "concepts": ["APV", "actuarial present value", "life insurance premiums", "net single premium"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.soa.org/education/exam-req/edu-fam-detail/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -126,9 +116,7 @@
       "concepts": ["annuities", "life annuities", "annuity-due vs immediate", "whole life annuity"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.soa.org/education/exam-req/edu-fam-detail/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -138,9 +126,7 @@
       "concepts": ["reserves", "policy values", "prospective vs retrospective", "Thiele's equation"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.soa.org/globalassets/assets/files/edu/edu-2018-10-ltam-syllabus.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -150,9 +136,7 @@
       "concepts": ["select mortality", "mortality improvement", "substandard lives"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.soa.org/research/experience-studies/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -186,9 +170,7 @@
       "concepts": ["policy modifications", "deductibles", "policy limits", "coinsurance"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.casact.org/sites/default/files/2021-02/pubs_proceed_proceed96_96201.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -198,9 +180,7 @@
       "concepts": ["excess distributions", "limited expected value", "mean residual life"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.soa.org/education/exam-req/edu-fam-detail/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -210,9 +190,7 @@
       "concepts": ["frequency models", "Poisson distribution", "negative binomial", "overdispersion"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.casact.org/exams-admissions/exam-study-resources"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -222,9 +200,7 @@
       "concepts": ["truncation", "censoring", "zero-truncated models", "observational bias"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.soa.org/sections/technology/technology-newsletter/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -246,10 +222,7 @@
       "concepts": ["Panjer's algorithm", "recursive methods", "computational efficiency"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.soa.org/education/resources/",
-        "https://github.com/open-actuarial/computational-actuarial-models"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,9 +244,7 @@
       "concepts": ["ruin theory", "surplus process", "adjustment coefficient", "Cramér-Lundberg model"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.casact.org/sites/default/files/2021-02/ratemaking_werner_modlin_1.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -283,9 +254,7 @@
       "concepts": ["Lundberg inequality", "exponential bound", "safety loading"],
       "difficulty": 5,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.soa.org/education/exam-req/edu-asm-detail/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -295,9 +264,7 @@
       "concepts": ["heavy-tailed claims", "subexponential distributions", "net profit condition"],
       "difficulty": 5,
       "type": "question",
-      "resources": [
-        "https://www.casact.org/monographs-and-textbooks"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -307,9 +274,7 @@
       "concepts": ["credibility theory", "limited fluctuation", "full credibility", "partial credibility"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.casact.org/sites/default/files/2021-02/pubs_proceed_proceed01_01103.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -319,9 +284,7 @@
       "concepts": ["Bühlmann credibility", "empirical Bayes", "greatest accuracy", "credibility factor Z"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.casact.org/exams-admissions/exam-mas-i"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -331,9 +294,7 @@
       "concepts": ["experience rating", "class rating", "merit rating", "bonus-malus systems"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.casact.org/exams-admissions/exam-study-resources"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -343,9 +304,7 @@
       "concepts": ["ruin", "adjustment coefficient", "credibility", "experience rating"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.soa.org/education/exam-req/syllabus-study-materials/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -355,10 +314,7 @@
       "concepts": ["ERM framework", "risk taxonomy", "risk appetite", "COSO framework"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.soa.org/professional-development/e-learning/erm/",
-        "https://www.casact.org/exams-admissions/exam-7"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -381,10 +337,7 @@
       "concepts": ["emerging risks", "model uncertainty", "parameter uncertainty", "tail dependence"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": [
-        "https://www.soa.org/resources/research-reports/2020/climate-change-scenarios/",
-        "https://www.casact.org/newsletter/article/advancing-actuarial-profession-age-climate-change"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -395,8 +348,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.soa.org/professional-development/e-learning/erm/",
-        "https://www.casact.org/monographs-and-textbooks",
         "https://people.math.ethz.ch/~embrechts/"
       ],
       "status": "pending"

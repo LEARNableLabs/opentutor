@@ -42,7 +42,7 @@
 
 ### Videos
 
-- **Illinois EnergyProf (YouTube)** — Prof. Kozlowski's nuclear engineering lectures. Clear explanations of reactor physics, thermal-hydraulics, and safety. https://www.youtube.com/user/illinoisenergyprof
+- **Illinois EnergyProf (YouTube)** — Prof. Kozlowski's nuclear engineering lectures. Clear explanations of reactor physics, thermal-hydraulics, and safety.
 
 - **MIT OpenCourseWare (YouTube)** — Full lecture videos for MIT nuclear engineering courses. Professional production quality. https://www.youtube.com/user/MIT
 
@@ -88,7 +88,7 @@
 
 - **North American Young Generation in Nuclear (NAYGN)** — Networking and professional development for early-career nuclear professionals. https://www.naygn.org/
 
-- **PhysicsForums - Nuclear Engineering subforum** — Active Q&A community. Good for getting unstuck on problems. https://www.physicsforums.com/forums/nuclear-engineering.132/
+- **PhysicsForums - Nuclear Engineering subforum** — Active Q&A community. Good for getting unstuck on problems.
 
 - **Reddit r/NuclearPower** — Mix of professionals, students, and enthusiasts. Decent technical discussions. https://www.reddit.com/r/NuclearPower/
 

@@ -30,7 +30,7 @@
       "concepts": ["hydraulic locomotion", "hemolymph pressure", "joint mechanics"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://ucmp.berkeley.edu/arthropoda/arachnida/spiders.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -60,7 +60,7 @@
       "concepts": ["mechanoreception", "trichobothria", "vibration detection"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://www.youtube.com/watch?v=DGIR1iKLd8I"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -90,7 +90,7 @@
       "concepts": ["signal transmission", "web vibrations", "sensory filtering"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.youtube.com/watch?v=8hZl3arO7SU"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -160,7 +160,7 @@
       "concepts": ["web architecture", "silk specialization", "engineering trade-offs"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.youtube.com/watch?v=DoW_Yb-B4Ew"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -220,7 +220,7 @@
       "concepts": ["evolutionary patterns", "ecological niches", "adaptation synthesis"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://ucmp.berkeley.edu/arthropoda/arachnida/spiders.html"],
+      "resources": [],
       "status": "pending"
     },
     {

@@ -51,7 +51,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.fisheries.noaa.gov/national/science-data/introduction-fisheries-science",
         "https://www.ramlegacy.org/"
       ],
       "status": "pending"
@@ -77,7 +76,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.fisheries.noaa.gov/insight/understanding-overfishing",
         "https://www.worldbank.org/en/topic/environment/brief/the-sunken-billions"
       ],
       "status": "pending"
@@ -102,7 +100,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.fisheries.noaa.gov/insight/fishery-management-101",
         "https://www.ices.dk/data/assessment-tools/Pages/default.aspx"
       ],
       "status": "pending"
@@ -114,10 +111,7 @@
       "concepts": ["quota systems", "ITQs", "allocation methods", "common pool resources"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.perc.org/2015/02/19/catch-shares-in-action/",
-        "https://www.fisheries.noaa.gov/topic/fishing-quota-programs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -153,9 +147,7 @@
       "concepts": ["management plan synthesis", "quota design", "monitoring"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.fisheries.noaa.gov/topic/fishery-management-plans"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -179,7 +171,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://extension.psu.edu/pond-aquaculture",
         "https://www.fao.org/fishery/docs/CDrom/FAO_Training/FAO_Training/General/x6709e/x6709e00.htm"
       ],
       "status": "pending"
@@ -192,8 +183,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://marinecadastre.gov/ais/",
-        "https://www.oceansciencetrust.org/project/aquaculture-permitting/"
+        "https://marinecadastre.gov/ais/"
       ],
       "status": "pending"
     },
@@ -205,7 +195,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://thefishsite.com/articles/recirculating-aquaculture-systems-ras",
         "https://www.usda.gov/media/blog/2021/07/13/recirculating-aquaculture-systems-future-fish-farming"
       ],
       "status": "pending"
@@ -217,10 +206,7 @@
       "concepts": ["aquaculture feeds", "fishmeal", "alternative proteins", "feed conversion ratio"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.seafoodsource.com/news/aquaculture/fishmeal-and-fish-oil-facts-figures-and-trends",
-        "https://www.iffo.com/what-fishmeal-and-fish-oil"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -256,7 +242,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.msc.org/standards-and-certification/msc-standards",
         "https://www.asc-aqua.org/what-we-do/our-standards/"
       ],
       "status": "pending"
@@ -295,8 +280,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.fisheries.noaa.gov/topic/climate/adaptation",
-        "https://www.nature.com/articles/s41558-018-0249-7"
+        "https://www.fisheries.noaa.gov/topic/climate/adaptation"
       ],
       "status": "pending"
     },
@@ -320,7 +304,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.integratedmultitrophicaquaculture.com/",
         "https://www.fao.org/3/i1092e/i1092e.pdf"
       ],
       "status": "pending"
@@ -333,8 +316,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.nature.com/articles/s41586-020-2616-y",
-        "https://www.edf.org/oceans/smart-solutions-healthy-oceans"
+        "https://www.nature.com/articles/s41586-020-2616-y"
       ],
       "status": "pending"
     }

@@ -111,13 +111,13 @@
   - Source code for open-source Braille translation
   - Good for: lesson 18 (translation algorithms)
 
-- **Braille ASCII** — http://brailleauthority.org/bana/banabrascii.html
+- **Braille ASCII**
   - Text representation of Braille for email and digital communication
   - Good for: lesson 10 (computer Braille)
 
 ### Physical Materials
 
-- **APH Braille Bug Alphabet Card** — https://www.aph.org/braille-bug-alphabet-card
+- **APH Braille Bug Alphabet Card**
   - Printable tactile Braille samples
   - Good for: hands-on exploration (lessons 5-7)
 
@@ -241,6 +241,6 @@
   - Assistive technology magazine, product reviews, how-tos
   - Good for: technology lessons (16-20)
 
-- **Paths to Technology** — http://www.pathstotechnology.org
+- **Paths to Technology**
   - Ed-tech blog for teachers of students with visual impairments
   - Good for: classroom integration, technology (16-20)

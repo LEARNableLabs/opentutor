@@ -45,7 +45,7 @@
 
 - **Georgia Tech MATH 4803 (Geometric Group Theory)**
   - Syllabus and course outline following Meier's textbook
-  - https://math.gatech.edu/courses/math/4803-mar
+
   - **Use for:** Lesson sequencing, examples (Baumslag-Solitar, Thompson, lamplighter)
 
 - **University of Southampton MATH6138** (2026-27)

@@ -13,7 +13,7 @@
 ### Online Courses
 - **Type@Cooper Public Workshop** (https://coopertype.org/) — condensed type design workshops from Cooper Union. Professional-level but accessible to serious intermediate students.
 - **Skillshare Lettering Courses** (https://www.skillshare.com/browse/lettering) — wide variety of hand lettering and brush lettering tutorials. Filter for intermediate level.
-- **Domestika Typography Courses** (https://www.domestika.org/en/courses/areas/13-calligraphy-typography) — high-quality video courses from working designers. Many focus on applied projects.
+- **Domestika Typography Courses** () — high-quality video courses from working designers. Many focus on applied projects.
 - **Learn Type Design** at Envato Tuts+ (https://design.tutsplus.com/categories/typography) — free tutorials covering both typography and type design.
 
 ### Educational Websites
@@ -37,7 +37,7 @@
 ### Video Resources
 - **The Futur YouTube Channel** — typography tutorials and design business content. Search for "typography" for specific episodes.
 - **Skillshare** (https://www.skillshare.com/browse/lettering) — subscription service with hundreds of lettering and typography courses
-- **Domestika** (https://www.domestika.org/en/courses/areas/13-calligraphy-typography) — project-based video courses
+- **Domestika** () — project-based video courses
 - **Lynda/LinkedIn Learning** — comprehensive typography foundations courses
 
 ### Code and Technical Resources
@@ -54,7 +54,7 @@
 - **Figma Typography** — community files and tutorials for typography in Figma
 
 ### Specimen Books and Archives
-- **Type Specimens** (https://typespecimens.io/) — digital archive of historical type specimens
+- **Type Specimens** () — digital archive of historical type specimens
 - **Letterform Archive** (https://letterformarchive.org/) — museum and library dedicated to lettering and typography
 - **Cooper Hewitt Type Collection** — Smithsonian design museum's digitized type specimens
 - **Internet Archive Specimen Books** — historical type catalogs
@@ -119,7 +119,7 @@
 
 ## Accessibility Resources
 
-- **WebAIM: Fonts** (https://webaim.org/articles/fonts/) — evidence-based guidance on accessible typography
+- **WebAIM: Fonts** () — evidence-based guidance on accessible typography
 - **WCAG 2.1 Understanding Docs** (https://www.w3.org/WAI/WCAG21/Understanding/) — official guidelines on contrast, text sizing, and readability
 - **Accessible Typography** by Gareth Ford Williams — comprehensive guide to inclusive type design
 - **The A11Y Project** (https://www.a11yproject.com/) — community-driven accessibility resources including typography

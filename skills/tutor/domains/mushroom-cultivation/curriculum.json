@@ -24,10 +24,7 @@
       "concepts": ["fungal life cycle", "mycelial growth", "dikaryotic phase"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.shroomery.org/8407/The-Mushroom-Life-Cycle",
-        "https://www.youtube.com/watch?v=bEtFWfDKFvk"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -38,8 +35,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7022788/",
-        "https://www.youtube.com/watch?v=HwATBE8sD4I"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7022788/"
       ],
       "status": "pending"
     },
@@ -50,10 +46,7 @@
       "concepts": ["species ecology", "wood-decay types", "cultivation niches"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://extension.psu.edu/mushroom-cultivation",
-        "https://www.fieldforest.net/category/mushroom-cultivation"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -64,8 +57,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6274837/",
-        "https://grocycle.com/substrate-nutrition/"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6274837/"
       ],
       "status": "pending"
     },
@@ -76,10 +68,7 @@
       "concepts": ["substrate preparation", "pasteurization", "moisture content"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=45b2t7fqKDo",
-        "https://freshcapmushrooms.com/learn/growing-oyster-mushrooms-on-straw/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -90,8 +79,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.shroomery.org/forums/showflat.php/Number/24076162",
-        "https://www.youtube.com/watch?v=hH86e9KpVPE"
+        "https://www.shroomery.org/forums/showflat.php/Number/24076162"
       ],
       "status": "pending"
     },
@@ -103,7 +91,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://grocycle.com/mushroom-substrate-guide/",
         "https://www.shroomery.org/13878/Fruiting-Chamber-FAQ"
       ],
       "status": "pending"
@@ -115,10 +102,7 @@
       "concepts": ["supplementation", "contamination risk", "nitrogen excess"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=BZGZmHU0gTs",
-        "https://fieldforest.net/Substrate-Supplementation/departments/111/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -128,10 +112,7 @@
       "concepts": ["grain spawn", "inoculation density", "spawn run"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=BBXcfs0xL2A",
-        "https://freshcapmushrooms.com/learn/mushroom-grain-spawn/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -142,8 +123,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.shroomery.org/forums/showflat.php/Number/24461957",
-        "https://www.youtube.com/watch?v=m5y_d_QSodY"
+        "https://www.shroomery.org/forums/showflat.php/Number/24461957"
       ],
       "status": "pending"
     },
@@ -168,8 +148,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.shroomery.org/13878/Fruiting-Chamber-FAQ",
-        "https://www.youtube.com/watch?v=nkk6HPLr01I"
+        "https://www.shroomery.org/13878/Fruiting-Chamber-FAQ"
       ],
       "status": "pending"
     },
@@ -181,7 +160,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://grocycle.com/growing-mushrooms-for-beginners/",
         "https://freshcapmushrooms.com/learn/"
       ],
       "status": "pending"
@@ -194,7 +172,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=6J0KG1w4Iak",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4320875/"
       ],
       "status": "pending"
@@ -206,10 +183,7 @@
       "concepts": ["relative humidity", "evaporation", "mushroom morphology"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://grocycle.com/humidity-for-mushrooms/",
-        "https://www.youtube.com/watch?v=7DVFY4I1e_E"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -220,7 +194,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=wDwKx3SAk0c",
         "https://www.shroomery.org/forums/showflat.php/Number/17332777"
       ],
       "status": "pending"
@@ -232,10 +205,7 @@
       "concepts": ["species requirements", "ecological strategy", "cultivation system matching"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://extension.psu.edu/oyster-mushroom-cultivation",
-        "https://extension.psu.edu/shiitake-mushroom-cultivation"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -245,10 +215,7 @@
       "concepts": ["lion's mane parameters", "morphological sensitivity", "antler formation"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=vZDZfKLWjqw",
-        "https://freshcapmushrooms.com/learn/growing-lions-mane-mushrooms/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -258,10 +225,7 @@
       "concepts": ["parameter translation", "substrate modification", "fruiting adaptation"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://grocycle.com/growing-reishi-mushrooms/",
-        "https://www.youtube.com/watch?v=KFxmwMdKP5s"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -272,8 +236,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.shroomery.org/13887/Simplified-Cultivation-Methods-Easy-As-Fuck",
-        "https://grocycle.com/mushroom-growing-problems/"
+        "https://www.shroomery.org/13887/Simplified-Cultivation-Methods-Easy-As-Fuck"
       ],
       "status": "pending"
     },
@@ -284,10 +247,7 @@
       "concepts": ["biological efficiency", "yield metrics", "performance benchmarks"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://grocycle.com/biological-efficiency-mushrooms/",
-        "https://www.youtube.com/watch?v=8fHvyT-hLiY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -298,8 +258,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.shroomery.org/forums/showflat.php/Number/17231150",
-        "https://freshcapmushrooms.com/learn/flush-mushrooms/"
+        "https://www.shroomery.org/forums/showflat.php/Number/17231150"
       ],
       "status": "pending"
     },
@@ -311,8 +270,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://grocycle.com/mushroom-contamination/",
-        "https://www.youtube.com/watch?v=iRNlFB6yGjI"
+        "https://grocycle.com/mushroom-contamination/"
       ],
       "status": "pending"
     },
@@ -323,10 +281,7 @@
       "concepts": ["system integration", "scaling strategy", "performance monitoring"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.youtube.com/watch?v=7MnEmnIqy3w",
-        "https://extension.psu.edu/small-scale-mushroom-cultivation"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

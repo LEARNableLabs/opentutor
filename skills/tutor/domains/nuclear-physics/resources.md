@@ -115,7 +115,7 @@
 - **Jupyter Notebooks for Nuclear Engineering** — Various GitHub repos  
   Search "nuclear engineering jupyter" on GitHub. Examples:  
   - https://github.com/katyhuff/npre412 (UIUC reactor physics course)  
-  - https://github.com/kbuff/2018-bae-412 (nuclear fuel cycle modeling)
+  (nuclear fuel cycle modeling)
 
 ### Real-World Context
 

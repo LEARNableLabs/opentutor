@@ -27,7 +27,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/materials-science-and-engineering/3-051j-materials-for-biomedical-applications-spring-2014/",
         "https://www.fda.gov/medical-devices/overview-device-regulation/classify-your-medical-device"
       ],
       "status": "pending"
@@ -40,8 +39,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5793298/",
-        "https://www.jomi.com/principles-of-osseointegration"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5793298/"
       ],
       "status": "pending"
     },
@@ -53,8 +51,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://opensim.stanford.edu/",
-        "https://www.youtube.com/watch?v=gybW7JJGZe0"
+        "https://opensim.stanford.edu/"
       ],
       "status": "pending"
     },
@@ -104,7 +101,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.ottobock.com/en-us/prosthetics/lower-limb-prosthetics/solution-overview/microprocessor-controlled-knee-joints",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315991/"
       ],
       "status": "pending"
@@ -130,8 +126,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6067791/",
-        "https://integrum.se/technology/"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6067791/"
       ],
       "status": "pending"
     },
@@ -142,10 +137,7 @@
       "concepts": ["mechanical advantage", "cable systems", "terminal devices", "user training"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.youtube.com/watch?v=XCCu4FxiRmg",
-        "https://www.oandp.org/publications/jop/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -194,8 +186,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5444528/",
-        "https://www.luriechildrens.org/en/specialties-conditions/targeted-muscle-reinnervation/"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5444528/"
       ],
       "status": "pending"
     },
@@ -220,8 +211,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6345497/",
-        "https://spectrum.ieee.org/prosthetic-arm-with-sense-of-touch"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6345497/"
       ],
       "status": "pending"
     },
@@ -245,9 +235,7 @@
       "concepts": ["EMG review", "BCI review", "sensory feedback review"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=6Jd7fU7yzYM"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -284,8 +272,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nidcd.nih.gov/health/cochlear-implants",
-        "https://www.youtube.com/watch?v=AqZKE7JgLJs"
+        "https://www.nidcd.nih.gov/health/cochlear-implants"
       ],
       "status": "pending"
     },
@@ -296,10 +283,7 @@
       "concepts": ["FDA classification", "risk-based regulation", "510(k) pathway", "PMA requirements"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.fda.gov/medical-devices/classify-your-medical-device",
-        "https://www.fda.gov/training-and-continuing-education/cdrh-learn/device-advice"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -322,9 +306,7 @@
       "concepts": ["design review", "clinical testing review", "regulatory review"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.fda.gov/medical-devices/device-development-process"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -334,10 +316,7 @@
       "concepts": ["neuroethics", "autonomy", "privacy of neural data", "equitable access"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.nature.com/articles/s41591-019-0432-x",
-        "https://neuroethicsblog.bioethics.ox.ac.uk/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -348,7 +327,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.nature.com/articles/s41551-020-00688-x",
         "https://www.sciencedirect.com/journal/biomaterials"
       ],
       "status": "pending"

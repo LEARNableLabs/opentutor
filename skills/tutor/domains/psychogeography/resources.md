@@ -11,9 +11,9 @@
 - **Will Self, *Psychogeography* (2007)** — Collected essays. Accessible, witty, demonstrates contemporary practice without academic jargon.
 
 ### Academic Papers and Essays
-- **Guy Debord, "Theory of the Dérive" (1956)** — Essential primary source. Short, clear. Available: https://www.cddc.vt.edu/sionline/si/theory.html
-- **"Definitions" from *Internationale Situationniste* #1 (1958)** — Key terms defined by the SI themselves. Available: https://www.cddc.vt.edu/sionline/si/definitions.html
-- **Situationist International Online** (https://www.cddc.vt.edu/sionline/) — Full digital archive of SI journals, texts, and documents
+- **Guy Debord, "Theory of the Dérive" (1956)** — Essential primary source. Short, clear. Available:
+- **"Definitions" from *Internationale Situationniste* #1 (1958)** — Key terms defined by the SI themselves. Available:
+- **Situationist International Online** () — Full digital archive of SI journals, texts, and documents
 - **Tate Modern: Situationist International** (https://www.tate.org.uk/art/art-terms/s/situationist-international) — Art historical context, visual resources
 
 ## Supplementary (for engagement)
@@ -21,7 +21,7 @@
 ### Videos and Films
 - **Adam Curtis, *HyperNormalisation* (2016)** — Not specifically about psychogeography, but excellent on spectacle and contemporary media
 - **Ubu Web: Guy Debord Films** (https://www.ubu.com/film/debord.html) — Debord's experimental films including *The Society of the Spectacle* (1973)
-- **YouTube: "Introduction to Psychogeography"** (various) — Multiple accessible intros, e.g., https://www.youtube.com/watch?v=YwHo25U5YZY
+- **YouTube: "Introduction to Psychogeography"** (various) — Multiple accessible intros, e.g.,
 - **YouTube: Will Self on Psychogeography** — Talks and walks demonstrating contemporary practice
 - **BBC: Iain Sinclair documentaries** — Several on London psychogeography, tracking urban change
 
@@ -37,7 +37,7 @@
 - **OpenStreetMap** (https://www.openstreetmap.org/) — Collaborative mapping platform; use as base for psychogeographic overlays
 - **Google My Maps** (https://www.google.com/maps/d/) — Simple tool for creating custom maps with routes, markers, and notes
 - **GPS Drawing** (https://www.gpsdrawing.com/) — Track walks and create drawings with GPS traces
-- **Emotional Data Lab** (https://emotionaldatalab.com/) — Tools and methods for collecting and visualizing emotional data
+- **Emotional Data Lab** () — Tools and methods for collecting and visualizing emotional data
 
 ### Documentation Tools
 - **Strava / Komoot** — GPS tracking apps (repurposed for derives)
@@ -46,7 +46,7 @@
 - **Instagram / VSCO** — Visual documentation (despite their complicity in spectacle!)
 
 ### Archives and Collections
-- **Situationist International Online** (https://www.cddc.vt.edu/sionline/) — Complete digital archive
+- **Situationist International Online** () — Complete digital archive
 - **Monoskop** (https://monoskop.org/Situationist_International) — Extensive bibliography, texts, and links
 - **Radical Cartography** (https://www.radicalcartography.net/) — Alternative mapping projects and resources
 - **Not Bored! Guy Debord Archive** (https://www.notbored.org/the-SI.html) — Translations and commentary
@@ -101,7 +101,7 @@
 ### Walking Groups and Collectives
 - **Walking Artists Network** (https://www.walkingartistsnetwork.org/) — International network for walking-based practice
 - **Walk London** (https://www.walklondon.org.uk/) — London walking routes and resources
-- **Derive** (https://www.derive.org.uk/) — UK psychogeography collective and walks
+- **Derive** () — UK psychogeography collective and walks
 - **Loiterers Resistance Movement** (LRM) — Performance and psychogeographic walks
 
 ### Urban Research and Activism

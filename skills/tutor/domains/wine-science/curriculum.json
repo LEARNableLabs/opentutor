@@ -52,7 +52,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://winefolly.com/deep-dive/the-concept-of-terroir-in-wine/",
         "https://www.jancisrobinson.com/learn/categories/wine-terroir"
       ],
       "status": "pending"
@@ -65,8 +64,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://grapesandwine.cals.cornell.edu/resources/viticulture/",
-        "https://wine.wsu.edu/research/"
+        "https://grapesandwine.cals.cornell.edu/resources/viticulture/"
       ],
       "status": "pending"
     },
@@ -78,7 +76,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://winefolly.com/tips/vintage-charts/",
         "https://www.guildsomm.com/public_content"
       ],
       "status": "pending"
@@ -91,7 +88,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://winefolly.com/review/viticulture-basics/",
         "https://grapesandwine.cals.cornell.edu/resources/viticulture/"
       ],
       "status": "pending"
@@ -130,7 +126,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://winefolly.com/tips/phylloxera-how-a-bug-changed-wine/",
         "https://wineserver.ucdavis.edu/industry-info/enology"
       ],
       "status": "pending"
@@ -156,8 +151,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://grapesandwine.cals.cornell.edu/resources/ipm/",
-        "https://wine.wsu.edu/research/plant-pathology/"
+        "https://grapesandwine.cals.cornell.edu/resources/ipm/"
       ],
       "status": "pending"
     },
@@ -169,7 +163,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://winefolly.com/review/viticulture-basics/",
         "https://www.guildsomm.com/public_content"
       ],
       "status": "pending"
@@ -234,8 +227,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques",
-        "https://wine.wsu.edu/extension/winemaking/"
+        "https://wineserver.ucdavis.edu/industry-info/enology/methods-and-techniques"
       ],
       "status": "pending"
     },
@@ -273,7 +265,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://winefolly.com/deep-dive/oak-wine-aging/",
         "https://www.guildsomm.com/public_content"
       ],
       "status": "pending"
@@ -286,7 +277,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://winefolly.com/deep-dive/champagne-method/",
         "https://www.guildsomm.com/public_content/features"
       ],
       "status": "pending"
@@ -312,8 +302,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://wineserver.ucdavis.edu/industry-info/enology",
-        "https://wine.wsu.edu/extension/winemaking/"
+        "https://wineserver.ucdavis.edu/industry-info/enology"
       ],
       "status": "pending"
     },
@@ -325,7 +314,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://winefolly.com/review/winemaking-process/",
         "https://www.guildsomm.com/public_content"
       ],
       "status": "pending"

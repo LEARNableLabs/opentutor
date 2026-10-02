@@ -26,10 +26,7 @@
       "concepts": ["carbon content", "crystal structure", "hardness vs. toughness"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://knifesteelnerds.com/2018/07/14/what-is-steel/",
-        "https://youtube.com/@WalterSorrellsKnives"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -40,7 +37,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://knifesteelnerds.com/2020/05/01/knife-steels-rated-by-a-metallurgist-toughness-edge-retention-and-corrosion-resistance/",
         "https://crucible.com/resources/technical-data-sheets/"
       ],
       "status": "pending"
@@ -53,7 +49,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://knifesteelnerds.com/2021/10/04/stainless-steel-or-carbon-steel-for-knives/",
         "https://americanbladesmith.com"
       ],
       "status": "pending"
@@ -66,7 +61,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://knifesteelnerds.com/2018/12/17/what-steel-should-i-use-for-my-knife/",
         "https://bladeforums.com"
       ],
       "status": "pending"
@@ -92,7 +86,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://knifesteelnerds.com/2019/04/08/why-does-steel-get-hard-when-you-heat-it-and-quench-it/",
         "https://youtube.com/@AlecSteele"
       ],
       "status": "pending"
@@ -104,9 +97,7 @@
       "concepts": ["steel composition", "alloying effects", "austenite formation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://knifesteelnerds.com/2018/07/14/what-is-steel/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -117,7 +108,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://knifesteelnerds.com/2018/09/10/why-does-steel-get-harder-when-you-quench-it-faster/",
         "https://crucible.com"
       ],
       "status": "pending"
@@ -129,10 +119,7 @@
       "concepts": ["thermal stress", "transformation stress", "quench cracking", "warping prevention"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://knifesteelnerds.com/2020/07/27/why-do-knives-warp-when-heat-treating/",
-        "https://youtube.com/@WalterSorrellsKnives"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -143,7 +130,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://knifesteelnerds.com/2018/08/27/tempering-of-steel/",
         "https://cartech.com"
       ],
       "status": "pending"
@@ -156,7 +142,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://knifesteelnerds.com/2019/07/29/how-to-choose-a-tempering-temperature/",
         "https://crucible.com/resources/technical-data-sheets/"
       ],
       "status": "pending"
@@ -169,7 +154,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://youtube.com/@WalterSorrellsKnives",
         "https://www.newenglandschoolofmetalwork.com",
         "https://americanbladesmith.com"
       ],
@@ -182,9 +166,7 @@
       "concepts": ["austenite", "martensite", "quenching", "tempering"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://knifesteelnerds.com/2019/04/08/why-does-steel-get-hard-when-you-heat-it-and-quench-it/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -194,10 +176,7 @@
       "concepts": ["heat treatment protocol", "temperature verification", "soak time", "quench technique"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://knifesteelnerds.com/2019/02/18/metallurgy-and-heat-treatment-of-1084-steel/",
-        "https://youtube.com/@AaronGoughCom"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -208,7 +187,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://knifesteelnerds.com/2020/03/02/stainless-steel-heat-treating/",
         "https://youtube.com/@AlecSteele"
       ],
       "status": "pending"
@@ -221,7 +199,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://knifesteelnerds.com/2020/07/27/why-do-knives-warp-when-heat-treating/",
         "https://bladeforums.com"
       ],
       "status": "pending"
@@ -246,10 +223,7 @@
       "concepts": ["edge angle", "apex geometry", "cutting performance", "edge stability"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://knifesteelnerds.com/2018/06/18/what-is-the-best-knife-steel/",
-        "https://youtube.com/@WalterSorrellsKnives"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,10 +245,7 @@
       "concepts": ["grind types", "hollow grind", "flat grind", "convex grind", "scandi grind"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://knifesteelnerds.com/2019/09/16/what-is-the-best-grind-for-knives/",
-        "https://youtube.com/@AaronGoughCom"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -285,7 +256,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://youtube.com/@WalterSorrellsKnives",
         "https://britishblades.com"
       ],
       "status": "pending"
@@ -297,10 +267,7 @@
       "concepts": ["geometry optimization", "edge-to-spine taper", "distal taper", "blade thickness"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://knifesteelnerds.com/2019/02/25/edge-geometry-and-cutting-performance/",
-        "https://youtube.com/@AaronGoughCom"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -337,8 +304,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://knifesteelnerds.com",
-        "https://youtube.com/@WalterSorrellsKnives"
+        "https://knifesteelnerds.com"
       ],
       "status": "pending"
     },

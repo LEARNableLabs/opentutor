@@ -104,7 +104,7 @@
   - Excellent on *Phaedo* and *Republic*
   - Engaging lecturer, full semester course
 
-- **MIT OpenCourseWare: 24.200 Ancient Philosophy** — https://ocw.mit.edu/courses/24-200-ancient-philosophy-fall-2009/
+- **MIT OpenCourseWare: 24.200 Ancient Philosophy**
   - Complete syllabus, readings, lecture notes
   - No videos, but excellent written materials
 
@@ -132,7 +132,7 @@
 
 ### Concept Mapping and Visualization
 
-- **Philosophy Mapper** — http://philosophymapper.com/
+- **Philosophy Mapper**
   - Not Greek-specific, but helps visualize philosophical relationships
 
 - **Agora: Roots of European Culture** — https://www.agora.gr/
@@ -145,7 +145,7 @@
   - Interactive thought experiments
   - "Battleground God" and other tools for testing consistency
 
-- **Stanford Encyclopedia: Supplement on the Cave** — https://plato.stanford.edu/entries/plato-ethics-shorter/supplement1.html
+- **Stanford Encyclopedia: Supplement on the Cave**
   - Interactive exploration of the Allegory
 
 ### Primary Text Browsers
@@ -244,7 +244,7 @@
   - Text analysis and visualization
   - Can upload philosophical texts and analyze patterns
 
-- **PhiloLogic** — https://philologic.uchicago.edu/
+- **PhiloLogic**
   - Database of philosophical texts, searchable
 
 ## Curated Reading Lists

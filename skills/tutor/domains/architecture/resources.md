@@ -3,38 +3,38 @@
 ## Primary Sources (for lesson content)
 
 ### Foundational Textbooks
-- **Francis D.K. Ching: *Architecture: Form, Space, and Order*** — visual encyclopedia of spatial and formal principles. Essential reference for intermediate students. Clear diagrams and examples across history. https://www.wiley.com/en-us/Architecture%3A+Form%2C+Space%2C+and+Order%2C+4th+Edition-p-9781118745083
+- **Francis D.K. Ching: *Architecture: Form, Space, and Order*** — visual encyclopedia of spatial and formal principles. Essential reference for intermediate students. Clear diagrams and examples across history.
 - **Steen Eiler Rasmussen: *Experiencing Architecture*** — classic text on perceptual and experiential dimensions. Accessible, humane writing. Ideal for phenomenology lessons.
 - **Bruno Zevi: *Architecture as Space*** — focuses on spatial analysis as the core of architectural thinking. Complements Ching's formal approach.
 - **Christian Norberg-Schulz: *Genius Loci: Towards a Phenomenology of Architecture*** — essential for understanding place and meaning. More theoretical but foundational for Lessons 14-20.
-- **Juhani Pallasmaa: *The Eyes of the Skin: Architecture and the Senses*** — phenomenology made accessible. Perfect for Lessons 21-23. https://www.wiley.com/en-us/The+Eyes+of+the+Skin%3A+Architecture+and+the+Senses%2C+3rd+Edition-p-9781119941286
+- **Juhani Pallasmaa: *The Eyes of the Skin: Architecture and the Senses*** — phenomenology made accessible. Perfect for Lessons 21-23.
 
 ### Academic Courses (Open Educational Resources)
-- **MIT OpenCourseWare: 4.401 Environmental Design** — foundational course on spatial design. Includes lectures, assignments, and student work. https://ocw.mit.edu/courses/4-401-environmental-design-fall-2017/
+- **MIT OpenCourseWare: 4.401 Environmental Design** — foundational course on spatial design. Includes lectures, assignments, and student work.
 - **MIT OpenCourseWare: 4.205 Analysis of Contemporary Architecture** — theory and criticism. Good for cultural context and meaning modules. https://ocw.mit.edu/courses/4-205-analysis-of-contemporary-architecture-fall-2009/
-- **MIT OpenCourseWare: 4.663 Architecture Studios: Building in Landscapes** — case studies in site and place. https://ocw.mit.edu/courses/4-663-architecture-studios-building-in-landscapes-spring-2016/
+- **MIT OpenCourseWare: 4.663 Architecture Studios: Building in Landscapes** — case studies in site and place.
 - **Khan Academy: Art History** — includes strong architectural coverage across cultures and periods. Accessible videos and readings. https://www.khanacademy.org/humanities/art-history
 
 ### Online Lectures and Talks
 - **Yale School of Architecture Lecture Series** — contemporary architects and theorists. https://architecture.yale.edu/news
-- **MIT Architecture Lecture Series** — visiting scholars and practitioners. https://architecture.mit.edu/lecture-series
-- **Architecture Foundation (UK) Learn** — public programs, workshops, and educational resources. https://archfoundation.org.uk/learn/
+- **MIT Architecture Lecture Series** — visiting scholars and practitioners.
+- **Architecture Foundation (UK) Learn** — public programs, workshops, and educational resources.
 
 ## Supplementary (for engagement and depth)
 
 ### Videos and Documentaries
-- **The B1M** — YouTube channel covering architecture, engineering, and construction. Excellent for real-world examples and contemporary projects. https://www.youtube.com/c/TheB1M
-- **30X40 Design Workshop** — architect Eric Reinholdt's channel. Focuses on design process, spatial thinking, and residential architecture. https://www.youtube.com/c/30by40DesignWorkshop
+- **The B1M** — YouTube channel covering architecture, engineering, and construction. Excellent for real-world examples and contemporary projects.
+- **30X40 Design Workshop** — architect Eric Reinholdt's channel. Focuses on design process, spatial thinking, and residential architecture.
 - **Vimeo Architecture Channels** — curated architectural films and documentaries. High-quality visual content. https://vimeo.com/channels/architecture
-- **Louisiana Channel (Architecture)** — interviews with major architects. Thoughtful, artistic documentation. https://www.youtube.com/user/LouisianaChannel
+- **Louisiana Channel (Architecture)** — interviews with major architects. Thoughtful, artistic documentation.
 
 ### Interactive Tools and Visual Resources
 - **ArchDaily** — daily architecture news, case studies, and project documentation. Rich image galleries and plans/sections. https://www.archdaily.com/
   - **ArchDaily Tag: Light** — https://www.archdaily.com/tag/light
   - **ArchDaily Tag: Geometry** — https://www.archdaily.com/tag/geometry
   - **ArchDaily Tag: Materials** — https://www.archdaily.com/tag/materials
-  - **ArchDaily Tag: Diagram** — https://www.archdaily.com/tag/diagram
-- **Google Arts & Culture: Architecture** — 3D building tours and historical collections. https://artsandculture.google.com/category/architecture
+  - **ArchDaily Tag: Diagram**
+- **Google Arts & Culture: Architecture** — 3D building tours and historical collections.
 - **Drawing tools** — encourage students to sketch and diagram. Tracing paper over plan images is a powerful analytical tool.
 
 ### Case Study Collections
@@ -134,7 +134,7 @@
 - **Sergei Eisenstein** — film montage theory influenced architectural sequence thinking
 - **Alfred Hitchcock** — spatial suspense and control (e.g., *Rear Window*)
 - **Andrei Tarkovsky** — atmospheric space and duration (e.g., *Stalker*, *The Sacrifice*)
-- **Documentary: *My Architect*** — Louis Kahn's life and work. https://www.myarchitectfilm.com/
+- **Documentary: *My Architect*** — Louis Kahn's life and work.
 
 ### Architecture and Philosophy
 - **Michel Foucault: *Discipline and Punish*** — architecture as social control (panopticon)
@@ -156,7 +156,7 @@
 - **Architectural Review** — long-running critical journal. https://www.architectural-review.com/
 - **Harvard Design Magazine** — theory and criticism. https://www.harvarddesignmagazine.org/
 - **Places Journal** — architecture, landscape, and urbanism. https://placesjournal.org/
-- **Log** — theoretical and critical writing. https://www.anycorp.com/log
+- **Log** — theoretical and critical writing.
 
 ## Further Learning Paths
 

@@ -27,7 +27,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.maa.org/press/periodicals/convergence/mathematical-treasure-martin-gardners-mathematical-games-columns",
         "https://www.scientificamerican.com/article/martin-gardner-1914-2010/"
       ],
       "status": "pending"
@@ -39,10 +38,7 @@
       "concepts": ["hexaflexagons", "paper folding", "hidden geometry"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=VIVIegSt81k",
-        "https://www.cutoutfoldup.com/hexaflexagons.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -79,8 +75,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://philosophy.hku.hk/think/logic/knights.php",
-        "https://www.cut-the-knot.org/SimpleGames/LiarsAndTruthTellers.shtml"
+        "https://philosophy.hku.hk/think/logic/knights.php"
       ],
       "status": "pending"
     },
@@ -91,9 +86,7 @@
       "concepts": ["review", "integration", "foundational patterns"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.maa.org/press/maa-reviews/the-colossal-book-of-mathematics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -104,8 +97,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/epistemic-paradoxes/",
-        "https://www.youtube.com/watch?v=x_xoXF9T5IE"
+        "https://plato.stanford.edu/entries/epistemic-paradoxes/"
       ],
       "status": "pending"
     },
@@ -116,10 +108,7 @@
       "concepts": ["puzzle design", "meta-reasoning", "elegant problem formulation"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.scientificamerican.com/article/raymond-smullyan-puzzles/",
-        "https://philosophy.hku.hk/think/logic/smullyan.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -156,7 +145,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.cut-the-knot.org/Curriculum/Geometry/Dissection.shtml",
         "https://mathworld.wolfram.com/Dissection.html"
       ],
       "status": "pending"
@@ -181,9 +169,7 @@
       "concepts": ["review", "integration", "pattern recognition"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.maa.org/press/maa-reviews/the-colossal-book-of-mathematics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -207,8 +193,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.archimedes-lab.org/game_nim/nim.html",
-        "https://www.youtube.com/watch?v=niMjT9Gp3sE"
+        "https://www.archimedes-lab.org/game_nim/nim.html"
       ],
       "status": "pending"
     },
@@ -220,7 +205,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.maa.org/press/maa-reviews/winning-ways-for-your-mathematical-plays",
         "https://www.youtube.com/watch?v=ZYj4NkeGPdM"
       ],
       "status": "pending"
@@ -232,10 +216,7 @@
       "concepts": ["graph games", "topological games", "strategic analysis"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://mathworld.wolfram.com/Sprouts.html",
-        "https://nrich.maths.org/1190"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,9 +252,7 @@
       "concepts": ["review", "game analysis", "pattern application"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.maa.org/press/periodicals/convergence/martin-gardners-mathematical-games"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -283,10 +262,7 @@
       "concepts": ["Newcomb's paradox", "decision theory", "free will and prediction"],
       "difficulty": 5,
       "type": "mini-lesson",
-      "resources": [
-        "https://plato.stanford.edu/entries/paradox-newcomb/",
-        "https://www.youtube.com/watch?v=R3B_rKI94qI"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,8 +273,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.cut-the-knot.org/Probability/",
-        "https://brilliant.org/wiki/probability-paradoxes/"
+        "https://www.cut-the-knot.org/Probability/"
       ],
       "status": "pending"
     },
@@ -323,8 +298,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://mathworld.wolfram.com/MoebiusStrip.html",
-        "https://www.youtube.com/watch?v=3sM7yRvV2jI"
+        "https://mathworld.wolfram.com/MoebiusStrip.html"
       ],
       "status": "pending"
     },
@@ -336,7 +310,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.maa.org/press/maa-reviews/magical-mathematics",
         "https://www.youtube.com/watch?v=l7lP9y7Bb5g"
       ],
       "status": "pending"
@@ -349,8 +322,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://g4g.org/",
-        "https://www.gathering4gardner.org/g4g-celebration/"
+        "https://g4g.org/"
       ],
       "status": "pending"
     },
@@ -361,9 +333,7 @@
       "concepts": ["review", "synthesis", "mathematical culture"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.maa.org/press/maa-reviews/martin-gardner-in-the-twenty-first-century"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

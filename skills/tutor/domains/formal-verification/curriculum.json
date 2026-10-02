@@ -35,7 +35,7 @@
       "concepts": ["specifications", "invariants", "pre/postconditions"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.hillelwayne.com/post/spec-notation/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -105,7 +105,7 @@
       "concepts": ["abstraction", "symmetry reduction", "bounded model checking"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["http://nusmv.fbk.eu/NuSMV/tutorial/v25/tutorial.pdf"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -145,7 +145,7 @@
       "concepts": ["functional correctness", "induction", "tactics"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": ["https://softwarefoundations.cis.upenn.edu/lf-current/Sort.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -165,7 +165,7 @@
       "concepts": ["Hoare logic", "Hoare triples", "axiomatic semantics"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.cs.cmu.edu/~aldrich/courses/15-819O-13sp/resources/hoare-original.pdf"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -175,7 +175,7 @@
       "concepts": ["weakest preconditions", "strongest postconditions", "verification conditions"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.microsoft.com/en-us/research/publication/guarded-commands-non-determinacy-formal-derivation-programs/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -195,7 +195,7 @@
       "concepts": ["specification techniques", "proof strategies", "tool selection"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.cs.umd.edu/~mwh/se-tutori/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -225,7 +225,7 @@
       "concepts": ["cost-benefit analysis", "verification economics", "tool limitations"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.hillelwayne.com/post/when-to-use-formal-methods/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -245,7 +245,7 @@
       "concepts": ["research frontiers", "open problems", "future directions"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": ["https://www.cs.cmu.edu/~emc/papers/Conference%20Papers/Grand%20Challenges%20in%20Verified%20Software.pdf"],
+      "resources": [],
       "status": "pending"
     },
     {

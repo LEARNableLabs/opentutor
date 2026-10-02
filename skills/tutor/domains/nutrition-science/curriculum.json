@@ -134,8 +134,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6041804/",
-        "https://ods.od.nih.gov/factsheets/Fiber-Consumer/"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6041804/"
       ],
       "status": "pending"
     },
@@ -232,9 +231,7 @@
       "concepts": ["essential amino acids", "protein quality", "complete proteins"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://ods.od.nih.gov/factsheets/Protein-HealthProfessional/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

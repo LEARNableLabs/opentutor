@@ -31,7 +31,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://marlinfw.org/docs/hardware/stepper_drivers.html",
         "https://www.youtube.com/watch?v=eyqwLiowZiU"
       ],
       "status": "pending"
@@ -111,10 +110,7 @@
       ],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://marlinfw.org/docs/hardware/stepper_drivers.html",
-        "https://reprap.org/wiki/Motion_control"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -129,8 +125,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.klipper3d.org/Kinematics.html#cartesian-kinematics",
-        "https://reprap.org/wiki/Kinematics"
+        "https://www.klipper3d.org/Kinematics.html#cartesian-kinematics"
       ],
       "status": "pending"
     },
@@ -193,9 +188,7 @@
       ],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://reprap.org/wiki/Kinematics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -227,7 +220,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://marlinfw.org/docs/features/linear_advance.html",
         "https://www.klipper3d.org/Kinematics.html#acceleration"
       ],
       "status": "pending"
@@ -244,8 +236,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://github.com/MarlinFirmware/Marlin/blob/2.1.x/Marlin/src/module/planner.cpp",
-        "https://marlinfw.org/docs/features/s_curve.html"
+        "https://github.com/MarlinFirmware/Marlin/blob/2.1.x/Marlin/src/module/planner.cpp"
       ],
       "status": "pending"
     },
@@ -309,9 +300,7 @@
       ],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://marlinfw.org/docs/features/s_curve.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -360,7 +349,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://reprap.org/wiki/Kinematics",
         "https://www.youtube.com/c/CNCKitchen"
       ],
       "status": "pending"
@@ -390,9 +378,7 @@
       ],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://reprap.org/wiki/Kinematics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

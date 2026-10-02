@@ -25,7 +25,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/saussure/",
         "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem01.html"
       ],
       "status": "pending"
@@ -101,8 +100,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem03.html",
-        "https://plato.stanford.edu/entries/saussure/"
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem03.html"
       ],
       "status": "pending"
     },
@@ -290,8 +288,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem10.html",
-        "https://www.signosemio.com/greimas/semiotic-square.asp"
+        "https://www.visual-memory.co.uk/daniel/Documents/S4B/sem10.html"
       ],
       "status": "pending"
     },

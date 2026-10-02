@@ -40,8 +40,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://pubs.acs.org/doi/10.1021/cr9411886",
-        "https://www.youtube.com/watch?v=nO0D6M4rPAE"
+        "https://pubs.acs.org/doi/10.1021/cr9411886"
       ],
       "status": "pending"
     },
@@ -130,8 +129,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://pubs.rsc.org/en/content/articlelanding/2008/cs/b718768h",
-        "https://www.youtube.com/watch?v=kJ3wPU2YXq0"
+        "https://pubs.rsc.org/en/content/articlelanding/2008/cs/b718768h"
       ],
       "status": "pending"
     },
@@ -156,8 +154,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://pubs.acs.org/doi/10.1021/ed400808e",
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945991/"
+        "https://pubs.acs.org/doi/10.1021/ed400808e"
       ],
       "status": "pending"
     },
@@ -194,8 +191,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://pubs.acs.org/doi/10.1021/cr9603800",
-        "https://www.rsc.org/suppdata/cs/c7/c7cs00885f/c7cs00885f1.pdf"
+        "https://pubs.acs.org/doi/10.1021/cr9603800"
       ],
       "status": "pending"
     },
@@ -233,8 +229,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://pubs.rsc.org/en/content/articlelanding/2013/cs/c3cs60061e",
-        "https://www.youtube.com/watch?v=0dKrUll2f7Q"
+        "https://pubs.rsc.org/en/content/articlelanding/2013/cs/c3cs60061e"
       ],
       "status": "pending"
     },
@@ -258,7 +253,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/articles/nchem.2013.166",
         "https://pubs.rsc.org/en/content/articlelanding/2009/cs/b800796j"
       ],
       "status": "pending"
@@ -297,8 +291,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://pubs.rsc.org/en/content/articlelanding/2005/cs/b316898k",
-        "https://www.youtube.com/watch?v=8dJAH9Q9VC4"
+        "https://pubs.rsc.org/en/content/articlelanding/2005/cs/b316898k"
       ],
       "status": "pending"
     },

@@ -4,7 +4,7 @@
 
 ### Textbooks
 - **Biomechanics and Motor Control of Human Movement (4th ed.)** by David Winter — authoritative reference for gait analysis, joint kinetics, and motion analysis. Excellent for lessons 3-4 on biomechanics foundations. Accessible to intermediate students with calculus background.
-  - https://www.wiley.com/en-us/Biomechanics+and+Motor+Control+of+Human+Movement
+
 
 - **Introduction to Biomedical Engineering (3rd ed.)** by John Enderle, Joseph Bronzino, Susan Blanchard — comprehensive coverage of prosthetics, implants, and medical devices. Good balance of engineering principles and clinical applications.
   - https://www.elsevier.com/books/introduction-to-biomedical-engineering/enderle/978-0-12-374979-6
@@ -20,10 +20,10 @@
 
 ### Open Educational Resources
 - **MIT OpenCourseWare: Biomedical Device Design (2.75)** — complete course with lecture notes, assignments, and readings. Covers design process, regulatory pathways, prototyping.
-  - https://ocw.mit.edu/courses/mechanical-engineering/2-75-medical-device-design-spring-2004/
+
 
 - **MIT OCW: Materials for Biomedical Applications (3.051J)** — deep dive into biomaterials selection, biocompatibility testing, surface modification.
-  - https://ocw.mit.edu/courses/materials-science-and-engineering/3-051j-materials-for-biomedical-applications-spring-2014/
+
 
 - **Stanford Biodesign Innovation Process** — freely available online book covering needs finding, concept generation, implementation strategy for medical devices.
   - http://biodesign.stanford.edu/resources.html
@@ -32,7 +32,7 @@
 
 ### Video Lectures and Demonstrations
 - **Institute of Physics YouTube** — excellent biomechanics visualizations, gait analysis demonstrations
-  - https://www.youtube.com/user/institvteofphysics
+
 
 - **Applied Biomechanics Lab (University of Nebraska)** — gait analysis videos, prosthetic testing demonstrations
   - https://www.youtube.com/channel/UCVqWY7ZFqJqL-Z8eJqp8RYg
@@ -44,7 +44,7 @@
   - https://www.youtube.com/playlist?list=PLlE5WjhMb7XMDMN3g7cOCjJDOaS8_sVaO
 
 - **Össur Academy** — prosthetic manufacturer's educational content, device demonstrations, clinical training
-  - https://academy.ossur.com/
+
 
 ### Interactive Tools and Software
 - **OpenSim** — open-source musculoskeletal modeling platform. Essential for understanding gait biomechanics and joint loading.
@@ -57,7 +57,7 @@
   - https://3dprint.nih.gov/
 
 - **Ottobock Mobility Lab** — virtual lab for exploring prosthetic components and configurations
-  - https://www.ottobock.com/en-us/mobility-lab
+
 
 - **BioDigital Human** — interactive 3D anatomy platform useful for understanding implant placement
   - https://www.biodigital.com/
@@ -145,7 +145,7 @@
   - Lab: https://www.sralab.org/researchers/levi-hargrove-phd
 
 - **Helen Huang** (NC State/UNC) — neural interfaces for prosthetic control, sensory feedback
-  - Lab: https://research.unc.edu/neural-engineering-lab/
+  - Lab:
 
 - **Dustin Tyler** (Case Western) — peripheral nerve interfaces, sensory restoration
   - Lab: https://engineering.case.edu/ebme/tyler

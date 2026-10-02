@@ -30,7 +30,7 @@
 
 - **Donna Haraway, "A Cyborg Manifesto" (1985)**
   - Short, influential essay. Essential feminist STS.
-  - https://warwick.ac.uk/fac/arts/english/currentstudents/undergraduate/modules/fictionnow/manifestly_haraway/
+
 
 - **Langdon Winner, "Do Artifacts Have Politics?" (Daedalus, 1980)**
   - Classic paper on embedded values. Very readable.
@@ -38,16 +38,16 @@
 
 - **Sheila Jasanoff, ed., *States of Knowledge: The Co-Production of Science and Social Order* (Routledge, 2004)**
   - Key work on regulatory science and co-production.
-  - https://www.routledge.com/States-of-Knowledge-The-Co-production-of-Science-and-the-Social-Order/Jasanoff/p/book/9780415403283
+
 
 ## Courses and Syllabi
 
 ### MIT OpenCourseWare
 - **STS.004: Intersections: Science, Technology, and the World**
-  - https://ocw.mit.edu/courses/sts-004-intersections-science-technology-and-the-world-spring-2022/
+
 
 - **STS.089: Technology and Innovation in Africa**
-  - https://ocw.mit.edu/courses/sts-089-technology-and-innovation-in-africa-spring-2012/
+
 
 - **MIT STS Program home**
   - https://web.mit.edu/sts/
@@ -55,10 +55,10 @@
 ### University Programs
 - **Stanford STS** — https://sts.stanford.edu/
 - **Cornell STS** — https://sts.cornell.edu/
-- **UC Berkeley Science & Technology Studies** — https://igs.berkeley.edu/research/science-technology-and-society
+- **UC Berkeley Science & Technology Studies**
 - **Harvard Kennedy School STS** — https://www.hks.harvard.edu/
 - **UCL STS** — https://www.ucl.ac.uk/sts/
-- **University of Edinburgh STIS** — https://www.ed.ac.uk/science-technology-innovation-studies
+- **University of Edinburgh STIS**
 
 ## Videos and Lectures
 

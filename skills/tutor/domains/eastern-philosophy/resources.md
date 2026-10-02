@@ -30,7 +30,7 @@
 
 ### Zen Buddhism
 - **Platform Sutra** (Huineng)
-  - http://www.sacred-texts.com/bud/zen/platform.htm
+
   - Foundational Chan/Zen text, accessible narrative
 - **Mumonkan** (The Gateless Gate)
   - http://www.sacred-texts.com/bud/zen/mumonkan.htm
@@ -45,22 +45,22 @@
 ## Academic & Reference
 
 ### Stanford Encyclopedia of Philosophy (Comprehensive, Peer-Reviewed)
-- **Vedanta**: https://plato.stanford.edu/entries/vedanta/
+- **Vedanta**:
 - **Laozi**: https://plato.stanford.edu/entries/laozi/
 - **Zhuangzi**: https://plato.stanford.edu/entries/zhuangzi/
 - **Japanese Zen**: https://plato.stanford.edu/entries/japanese-zen/
 - **Buddha**: https://plato.stanford.edu/entries/buddha/
-- **Consciousness in Indian Philosophy**: https://plato.stanford.edu/entries/consciousness-indian/
-- **Comparative Philosophy**: https://plato.stanford.edu/entries/comparative-philosophy/
+- **Consciousness in Indian Philosophy**:
+- **Comparative Philosophy**:
 - **Mysticism**: https://plato.stanford.edu/entries/mysticism/
 
 ### Internet Encyclopedia of Philosophy (Accessible Introductions)
 - **Advaita Vedanta**: https://iep.utm.edu/adv-veda/
-- **Taoism**: https://iep.utm.edu/taoism/
+- **Taoism**:
 - **Zen Buddhism**: https://iep.utm.edu/zen/
-- **Eastern Philosophy**: https://iep.utm.edu/east-phi/
+- **Eastern Philosophy**:
 - **Yin and Yang**: https://iep.utm.edu/yinyang/
-- **Ramana Maharshi**: https://iep.utm.edu/ramana/
+- **Ramana Maharshi**:
 
 ### Textbooks & Scholarly Overviews
 - **Huston Smith**, *The World's Religions*
@@ -84,7 +84,7 @@
 
 ### Online Courses
 - **Coursera: "Buddhism and Modern Psychology"** (Princeton/Robert Wright)
-  - https://www.coursera.org/learn/buddhism-and-modern-psychology
+
   - Includes Zen perspectives, strong on meditation and philosophy intersection
 - **edX: "Chinese Thought: Ancient Wisdom Meets Modern Science"** (Harvard)
   - Covers Taoism and Confucianism in cultural context

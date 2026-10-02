@@ -25,10 +25,7 @@
       "concepts": ["anthropological questions", "cultural variation", "human universals"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://ocw.mit.edu/courses/21a-01-how-culture-works-fall-2012/",
-        "https://www.youtube.com/watch?v=a7xJ_qJ7iL8"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -39,8 +36,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.americananthro.org/AdvanceYourCareer/Content.aspx?ItemNumber=2150",
-        "https://courses.washington.edu/anth457/"
+        "https://www.americananthro.org/AdvanceYourCareer/Content.aspx?ItemNumber=2150"
       ],
       "status": "pending"
     },
@@ -52,7 +48,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/21a-112-culture-and-society-in-southeast-asia-spring-2006/",
         "https://www.britannica.com/topic/kinship"
       ],
       "status": "pending"
@@ -65,8 +60,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.jstor.org/stable/2844259",
-        "https://archive.org/details/kinshipandmarria00evan"
+        "https://www.jstor.org/stable/2844259"
       ],
       "status": "pending"
     },
@@ -77,10 +71,7 @@
       "concepts": ["matrilineal descent", "avunculate", "Trobriand kinship"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.sapiens.org/culture/matrilineal-societies/",
-        "https://www.youtube.com/watch?v=TqV5E7KdXeY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -91,8 +82,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Kinship_terminology",
-        "https://anthro.vancouver.wsu.edu/media/Course_files/anth-302-edward-h-hagen/kinship-terminology.htm"
+        "https://en.wikipedia.org/wiki/Kinship_terminology"
       ],
       "status": "pending"
     },
@@ -117,8 +107,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.jstor.org/stable/2741866",
-        "https://www.youtube.com/watch?v=Ll7y5NnMV5M"
+        "https://www.jstor.org/stable/2741866"
       ],
       "status": "pending"
     },
@@ -130,8 +119,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.annualreviews.org/doi/10.1146/annurev-anthro-092412-155505",
-        "https://www.sapiens.org/culture/kinship-studies/"
+        "https://www.annualreviews.org/doi/10.1146/annurev-anthro-092412-155505"
       ],
       "status": "pending"
     },
@@ -143,8 +131,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.britannica.com/topic/ritual",
-        "https://www.youtube.com/watch?v=oP7mZs3D5p8"
+        "https://www.britannica.com/topic/ritual"
       ],
       "status": "pending"
     },
@@ -169,8 +156,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.jstor.org/stable/1159789",
-        "https://www.youtube.com/watch?v=Hm5rQYLE9_E"
+        "https://www.jstor.org/stable/1159789"
       ],
       "status": "pending"
     },
@@ -195,8 +181,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.americananthro.org/",
-        "https://www.sapiens.org/culture/ritual-anthropology/"
+        "https://www.americananthro.org/"
       ],
       "status": "pending"
     },
@@ -208,8 +193,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.jstor.org/stable/2151264",
-        "https://genius.com/Clifford-geertz-deep-play-notes-on-the-balinese-cockfight-annotated"
+        "https://www.jstor.org/stable/2151264"
       ],
       "status": "pending"
     },
@@ -220,10 +204,7 @@
       "concepts": ["dual inheritance theory", "cultural transmission", "Boyd and Richerson"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.cambridge.org/core/books/not-by-genes-alone/0F394FE1D0C4E5C0E3C0B4C0E3C0B4C0E3",
-        "https://www.youtube.com/watch?v=iVhLlT7Kz4Y"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -234,7 +215,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://evolution-institute.org/focus-article/prestige-dominance-and-cultural-evolution/",
         "https://www.eva.mpg.de/comparative-cultural-psychology/index.html"
       ],
       "status": "pending"
@@ -273,7 +253,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nature.com/scitable/knowledge/library/gene-culture-coevolution-127732/",
         "https://www.annualreviews.org/doi/10.1146/annurev-anthro-092412-155554"
       ],
       "status": "pending"
@@ -286,8 +265,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://culturalevolutionsociety.org/",
-        "https://www.youtube.com/watch?v=1i_TReM_zJo"
+        "https://culturalevolutionsociety.org/"
       ],
       "status": "pending"
     },
@@ -299,8 +277,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.journals.uchicago.edu/doi/10.1086/668207",
-        "https://www.sapiens.org/culture/anthropology-integration/"
+        "https://www.journals.uchicago.edu/doi/10.1086/668207"
       ],
       "status": "pending"
     },

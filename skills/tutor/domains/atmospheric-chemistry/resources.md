@@ -5,7 +5,7 @@
 ### Textbooks
 
 - **Introduction to Atmospheric Chemistry (Daniel Jacob)** — Free online textbook, accessible for intermediate level, excellent for self-study. Covers tropospheric and stratospheric chemistry with clear explanations.
-  - http://acmg.seas.harvard.edu/people/faculty/djj/book/
+
 
 - **Atmospheric Chemistry and Physics (Seinfeld & Pandis)** — Comprehensive reference, more quantitative and detailed. Graduate-level but excellent for deep dives.
   - University libraries or ISBN: 978-1118947401
@@ -16,7 +16,7 @@
 ### Online Courses
 
 - **MIT OpenCourseWare 12.806 — Atmospheric Chemistry** — Video lectures, problem sets, exams. Covers full semester of graduate atmospheric chemistry.
-  - https://ocw.mit.edu/courses/12-806-atmospheric-chemistry-fall-2005/
+
 
 - **Coursera — Air Pollution courses** — Various universities offer air quality courses at different levels.
   - https://www.coursera.org/
@@ -33,7 +33,7 @@
   - https://www.epa.gov/air-research
 
 - **NASA Atmospheric Science** — Satellite missions, data portals, and global observations.
-  - https://science.nasa.gov/earth-science/focus-areas/atmosphere/
+
 
 ## Supplementary (for engagement)
 
@@ -85,7 +85,7 @@
   - https://www.ready.noaa.gov/HYSPLIT.php
 
 - **TropChem** — Educational box model for tropospheric chemistry (requires MATLAB or octave).
-  - http://www.chm.bris.ac.uk/~chsswjpb/TropChem/
+
 
 - **NOAA Solar Calculator** — Calculate solar angles and actinic flux for photochemistry calculations.
   - https://www.esrl.noaa.gov/gmd/grad/solcalc/
@@ -108,7 +108,7 @@
   - https://ads.atmosphere.copernicus.eu/
 
 - **PyCAM-chem** — Python interface for Community Atmosphere Model chemistry.
-  - https://github.com/NCAR/PyCAM-chem (check NCAR repositories)
+  (check NCAR repositories)
 
 - **Open-source chemical mechanisms** — MCM (Master Chemical Mechanism), SAPRC, etc.
   - http://mcm.leeds.ac.uk/MCM/
@@ -238,7 +238,7 @@
   - http://iupac.pole-ether.fr/
 
 - **JPL Chemical Kinetics Data** — NASA JPL evaluation of chemical kinetics and photochemical data.
-  - https://jpldataeval.jpl.nasa.gov/
+
 
 ### For Satellite Remote Sensing Focus
 

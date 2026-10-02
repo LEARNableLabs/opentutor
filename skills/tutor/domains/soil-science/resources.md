@@ -16,7 +16,7 @@
 
 - **USDA NRCS Soil Science Division** (https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils) — Official resources, guides, manuals. Free access to Soil Survey Manual, Keys to Soil Taxonomy, and educational materials.
 
-- **Soil Science Society of America** (https://www.soils.org/about-soils/) — "About Soils" section has accessible explanations of core concepts. Good for quick reference.
+- **Soil Science Society of America** () — "About Soils" section has accessible explanations of core concepts. Good for quick reference.
 
 - **FAO Soils Portal** (https://www.fao.org/soils-portal/en/) — Global perspective, World Reference Base classification, international soil resources. Good for non-US contexts.
 
@@ -30,7 +30,7 @@
 ## Supplementary (for engagement)
 
 ### Videos & Channels
-- **Soil Science Society of America YouTube** (https://www.youtube.com/@SoilScienceSocietyofAmerica) — Educational videos on various soil topics, ranging from basic to advanced.
+- **Soil Science Society of America YouTube** () — Educational videos on various soil topics, ranging from basic to advanced.
 
 - **Kiss the Ground (2020)** — Netflix documentary on soil health and regenerative agriculture. Good for motivation/context, though not a technical resource. https://www.youtube.com/watch?v=K3-V1j-zMZw (trailer)
 
@@ -43,7 +43,7 @@
 
 - **SoilWeb Earth** (https://casoilresource.lawr.ucdavis.edu/soilweb-apps/) — Google Earth interface for soil data. Visualize soils in 3D landscape context.
 
-- **NRCS Soil Texture Calculator** (https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-texture-calculator) — Interactive texture triangle tool.
+- **NRCS Soil Texture Calculator** () — Interactive texture triangle tool.
 
 - **SoilGrids** (https://soilgrids.org/) — Global soil information at 250m resolution from ISRIC. For international soil data.
 
@@ -83,7 +83,7 @@
 ### Organizations & Communities
 - **Soil Science Society of America (SSSA)** (https://www.soils.org/) — Professional society with publications, meetings, certification programs. Student memberships available.
 
-- **National Cooperative Soil Survey (NCSS)** (https://www.nrcs.usda.gov/resources/guides-and-instructions/national-cooperative-soil-survey-ncss) — Partnership creating soil surveys. Get involved as volunteer or student.
+- **National Cooperative Soil Survey (NCSS)** () — Partnership creating soil surveys. Get involved as volunteer or student.
 
 - **International Union of Soil Sciences (IUSS)** (https://www.iuss.org/) — Global organization for soil science. World Congress every 4 years.
 

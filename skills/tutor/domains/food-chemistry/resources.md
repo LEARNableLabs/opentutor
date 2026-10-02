@@ -21,7 +21,7 @@
   - Syllabus: https://ocw.mit.edu/courses/es-287-kitchen-chemistry-spring-2009/pages/syllabus/
 
 - **Rutgers University: Food Chemistry (11:400:411)** — University food chemistry course syllabus
-  - PDF: https://foodsci.rutgers.edu/Undergraduate/Curriculum/pdf/11-400-411.pdf
+  - PDF:
 
 - **University of Toronto: NFS386H1F Food Chemistry** — Upper-level food chemistry course materials
   - Syllabus: https://nutrisci.med.utoronto.ca/sites/default/files/inline-files/2021-22%20NFS386H1F%20Food%20Chemistry-Syllabus-Fall2021-ATaibi-Final_0.pdf
@@ -53,7 +53,7 @@
   - Spherification calculators
   - Thermal profile optimization
   - Free "Molecular Starter Kit" with agar calculators and safety guides
-  - https://www.moleculekitchen.com/
+
 
 - **Chemistry LibreTexts: Interactive Applications** — Web-based chemistry tutorials and simulations applicable to food chemistry
   - https://chem.libretexts.org/Ancillary_Materials/Interactive_Applications

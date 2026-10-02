@@ -41,8 +41,8 @@ GIS, satellite imagery, and interactive web maps introduce new forms of selectiv
 ### Online Collections
 - Library of Congress Persuasive Cartography: https://www.loc.gov/collections/persuasive-cartography/
 - David Rumsey Map Collection: https://www.davidrumsey.com/
-- British Library Maps: https://www.bl.uk/collection-guides/maps
-- Cornell Maps as Weapons: https://news.cornell.edu/stories/2012/06/exhibit-focuses-maps-weapons-imperialism
+- British Library Maps:
+- Cornell Maps as Weapons:
 
 ### Interactive Tools
 - The True Size: https://thetruesize.com/ (projection distortion demo)

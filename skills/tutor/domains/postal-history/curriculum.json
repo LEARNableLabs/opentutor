@@ -34,7 +34,7 @@
       "concepts": ["pre-adhesive postal markings", "manuscript postage", "postal routes"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://postalmuseum.si.edu/collections/postal-history", "https://www.rpsl.org.uk/Educational.aspx"],
+      "resources": ["https://postalmuseum.si.edu/collections/postal-history"],
       "status": "pending"
     },
     {
@@ -54,7 +54,7 @@
       "concepts": ["military postal systems", "censorship markings", "emergency postal services"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": ["https://www.stamps.org/Military-Postal-History-Resources", "https://postalmuseum.si.edu/exhibition/victory-wwii-allied-home-fronts-postal-services-and-rationing"],
+      "resources": ["https://postalmuseum.si.edu/exhibition/victory-wwii-allied-home-fronts-postal-services-and-rationing"],
       "status": "pending"
     },
     {
@@ -94,7 +94,7 @@
       "concepts": ["lithography", "offset printing", "surface printing"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.stamps.org/Encyclopedia-Printing-Methods", "https://postalmuseum.si.edu/stamp-printing-methods"],
+      "resources": ["https://postalmuseum.si.edu/stamp-printing-methods"],
       "status": "pending"
     },
     {
@@ -104,7 +104,7 @@
       "concepts": ["watermarks", "paper security", "dandy rolls"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.stamps.org/Watermark-Detection-Guide", "https://www.gibbonsstampmonthly.com/watermark-identification"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -114,7 +114,7 @@
       "concepts": ["plate varieties", "re-entries", "constant plate flaws"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.stamps.org/Plate-Varieties-Guide", "https://www.linns.com/news/us-stamps-postal-history/collecting-plate-varieties"],
+      "resources": ["https://www.linns.com/news/us-stamps-postal-history/collecting-plate-varieties"],
       "status": "pending"
     },
     {
@@ -124,7 +124,7 @@
       "concepts": ["color errors", "inverted centers", "production errors"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": ["https://postalmuseum.si.edu/exhibition/treasures-national-postal-museum-inverted-jenny", "https://www.stamps.org/Famous-Stamp-Errors"],
+      "resources": ["https://postalmuseum.si.edu/exhibition/treasures-national-postal-museum-inverted-jenny"],
       "status": "pending"
     },
     {
@@ -134,7 +134,7 @@
       "concepts": ["modern stamp production", "security features", "digital printing"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": ["https://about.usps.com/who/profile/history/stamp-production.htm", "https://www.upu.int/en/Postal-Solutions/Programmes-Services/Security-Solutions"],
+      "resources": ["https://www.upu.int/en/Postal-Solutions/Programmes-Services/Security-Solutions"],
       "status": "pending"
     },
     {
@@ -144,7 +144,7 @@
       "concepts": ["printing techniques", "varieties", "production"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://www.stamps.org/Stamp-Production-Review"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,7 +154,7 @@
       "concepts": ["Scott catalogue", "Stanley Gibbons", "Michel catalogue"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.stamps.org/Stamp-Catalog-Systems", "https://www.stanleygibbons.com/catalogues"],
+      "resources": ["https://www.stanleygibbons.com/catalogues"],
       "status": "pending"
     },
     {
@@ -164,7 +164,7 @@
       "concepts": ["authentication", "expertization", "forgery detection"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.stamps.org/Expertizing-Services", "https://www.rpsl.org.uk/ExpertCommittee.aspx"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -174,7 +174,7 @@
       "concepts": ["exhibition philately", "treatment", "research presentation"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": ["https://www.stamps.org/Exhibiting-Stamps", "https://www.aape.org/exhibiting-basics"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -184,7 +184,7 @@
       "concepts": ["philatelic libraries", "postal archives", "research resources"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://stamps.org/american-philatelic-research-library", "https://postalmuseum.si.edu/research"],
+      "resources": ["https://postalmuseum.si.edu/research"],
       "status": "pending"
     },
     {
@@ -194,7 +194,7 @@
       "concepts": ["route research", "postmark interpretation", "historical context"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": ["https://www.stamps.org/Postal-History-Society", "https://postalhistoryfoundation.org/"],
+      "resources": ["https://postalhistoryfoundation.org/"],
       "status": "pending"
     },
     {
@@ -214,7 +214,7 @@
       "concepts": ["catalogues", "authentication", "research"],
       "difficulty": 1,
       "type": "review",
-      "resources": ["https://www.stamps.org/Research-Tools"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -224,7 +224,7 @@
       "concepts": ["postmarks", "cancellations", "postal markings"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.stamps.org/Postmark-Collectors-Club", "https://postalmuseum.si.edu/collections/postmarks"],
+      "resources": ["https://postalmuseum.si.edu/collections/postmarks"],
       "status": "pending"
     },
     {
@@ -234,7 +234,7 @@
       "concepts": ["revenue stamps", "fiscal philately", "tax stamps"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": ["https://www.asdarevenue.com/", "https://postalmuseum.si.edu/exhibition/the-price-of-freedom-revenue-stamps"],
+      "resources": ["https://postalmuseum.si.edu/exhibition/the-price-of-freedom-revenue-stamps"],
       "status": "pending"
     },
     {
@@ -244,7 +244,7 @@
       "concepts": ["thematic collecting", "topical collecting", "collection development"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": ["https://www.stamps.org/Thematic-Philately", "https://www.aijp.net/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -254,7 +254,7 @@
       "concepts": ["grading standards", "centering", "condition factors"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.psacard.com/services/tradingcardgrading/stamps", "https://www.stamps.org/Grading-Guide"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -274,7 +274,7 @@
       "concepts": ["collection building", "specialization", "market knowledge"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.stamps.org/Collecting-Strategies", "https://postalmuseum.si.edu/learn"],
+      "resources": ["https://postalmuseum.si.edu/learn"],
       "status": "pending"
     }
   ]

@@ -55,17 +55,17 @@
   - https://www.youtube.com/watch?v=lyu7v7nWzfo
 
 - **Konkoly et al. (2021) Media Coverage** — Videos explaining the real-time communication experiment
-  - https://www.youtube.com/watch?v=mzW7YgQ8u3Y
+
 
 - **World Science Festival: "The Science of Dreaming"** — Panel with dream researchers including Deirdre Barrett
-  - https://www.youtube.com/watch?v=tEkwr2v5YHo
+
 
 - **"Your Brain on Lucid Dreaming" (Seeker)** — YouTube explainer on neuroscience
-  - https://www.youtube.com/watch?v=G5Dqd6aK4Tw
+
 
 ### Interactive Tools & Apps
 - **Dream Journal Ultimate** (iOS/Android) — Dream logging with reality check reminders, pattern analysis
-  - https://www.dreamjournalultimate.com/
+
 
 - **Awoken** (Android) — Reality testing app with customizable cues and totem features
   - https://play.google.com/store/apps/details?id=com.lucid_dreaming.awoken
@@ -98,10 +98,10 @@
   - https://www.psychologie.uni-frankfurt.de/
 
 - **Dr. Benjamin Baird** — University of Wisconsin-Madison; cognitive neuroscience of lucid dreaming, induction techniques
-  - https://bablab.psych.wisc.edu/
+
 
 - **Dr. Karen Konkoly** — Northwestern University; real-time communication experiments
-  - https://www.kkonkoly.com/
+
 
 - **Dr. Deirdre Barrett** — Harvard Medical School; dream content, applications, cross-cultural dream studies
   - https://psychology.fas.harvard.edu/people/deirdre-barrett
@@ -144,7 +144,7 @@
 - **Memory Consolidation and Lucid Dreaming** — Does lucidity disrupt the memory processing functions of REM? Or enhance them? Active area of research with mixed findings.
 
 - **Lucid Dreaming as Consciousness Probe** — Tool for studying hard problem of consciousness, sense of self, and volition. See Thomas Metzinger's work on "minimal phenomenal selfhood" in lucid dreams.
-  - https://www.philosophie.fb05.uni-mainz.de/metzinger/
+
 
 ### Practical Connections
 - **Athletic Performance** — Gymnasts, skateboarders, and martial artists using lucid dreams for mental rehearsal (motor cortex activation during dream movement)

@@ -4,7 +4,7 @@
 
 ### Institutional Resources
 - **Smithsonian National Postal Museum** (https://postalmuseum.si.edu) — World-class exhibitions, research collections, and educational resources covering all aspects of postal history. Virtual exhibitions and detailed object records. Excellent for intermediate students because curators provide expert context.
-- **American Philatelic Research Library** (https://stamps.org/american-philatelic-research-library) — Comprehensive philatelic literature collection, digitized resources, and research assistance. Online catalog searchable by topic. Essential for serious research.
+- **American Philatelic Research Library** () — Comprehensive philatelic literature collection, digitized resources, and research assistance. Online catalog searchable by topic. Essential for serious research.
 - **American Philatelic Society** (https://stamps.org) — Educational resources, expertizing services, collector resources, and insurance. Membership provides access to *The American Philatelist* journal and educational webinars.
 - **Royal Philatelic Society London** (https://www.rpsl.org.uk) — Oldest philatelic society, expert committees for authentication, extensive library, and *The London Philatelist* journal. Educational resources section valuable for intermediate students.
 
@@ -37,7 +37,7 @@
 ### Interactive Tools
 
 #### Digital Resources
-- **Online watermark detection guides** (https://www.stamps.org/Watermark-Detection) — Visual comparisons and detection techniques
+- **Online watermark detection guides** () — Visual comparisons and detection techniques
 - **Stamp identifier tools** — Various online tools help identify stamps by country, design, or characteristics
 - **Auction archives** — Searchable databases of past auction realizations for price research (major auction houses maintain archives)
 - **Perforation gauges online** — Digital tools to measure perforations from scanned images
@@ -57,7 +57,7 @@
 
 #### Specialized Societies (by topic)
 - **United Postal Stationery Society** (https://www.upss.org) — Postal stationery specialists
-- **American Revenue Association** (https://www.asdarevenue.com) — Revenue and fiscal stamps
+- **American Revenue Association** () — Revenue and fiscal stamps
 - **American First Day Cover Society** — First day covers and event covers
 - **Postmark Collectors Club** — Postal markings and cancellations
 - **Postal History Society** — Research-focused postal history organization
@@ -155,7 +155,7 @@ Auction catalogues are valuable research tools—descriptions identify varieties
 ### Grading and Certification Services
 
 - **Philatelic Foundation** (https://www.philatelicfoundation.org) — U.S. expertizing service, issues certificates
-- **Professional Stamp Experts (PSE)** (https://www.psacard.com/services/tradingcardgrading/stamps) — Grading and authentication, encapsulated grading service
+- **Professional Stamp Experts (PSE)** () — Grading and authentication, encapsulated grading service
 - **American Philatelic Expertizing Service** (APEX) — APS expertizing service
 - **Royal Philatelic Society London Expert Committee** — International expertizing, highly regarded
 

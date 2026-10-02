@@ -26,8 +26,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.metmuseum.org/toah/hd/camo/hd_camo.htm",
-        "https://www.vam.ac.uk/articles/a-brief-history-of-the-camera"
+        "https://www.metmuseum.org/toah/hd/camo/hd_camo.htm"
       ],
       "status": "pending"
     },
@@ -65,7 +64,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.vam.ac.uk/articles/william-henry-fox-talbot",
         "https://www.eastman.org/calotype-process"
       ],
       "status": "pending"
@@ -91,8 +89,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.eastman.org/wet-plate-collodion",
-        "https://www.vam.ac.uk/articles/wet-collodion-process"
+        "https://www.eastman.org/wet-plate-collodion"
       ],
       "status": "pending"
     },
@@ -168,8 +165,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.getty.edu/art/collection/search?q=pictorialist+photography",
-        "https://www.vam.ac.uk/articles/pictorialism"
+        "https://www.getty.edu/art/collection/search?q=pictorialist+photography"
       ],
       "status": "pending"
     },
@@ -245,8 +241,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.metmuseum.org/toah/hd/docp/hd_docp.htm",
-        "https://aperture.org/editorial/photography-truth/"
+        "https://www.metmuseum.org/toah/hd/docp/hd_docp.htm"
       ],
       "status": "pending"
     },
@@ -309,8 +304,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.moma.org/artists/1741",
-        "https://www.getty.edu/art/exhibitions/eggleston/"
+        "https://www.moma.org/artists/1741"
       ],
       "status": "pending"
     },
@@ -335,8 +329,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.moma.org/collection/terms/appropriation",
-        "https://aperture.org/editorial/pictures-generation/"
+        "https://www.moma.org/collection/terms/appropriation"
       ],
       "status": "pending"
     },
@@ -373,8 +366,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.moma.org/calendar/exhibitions/5159",
-        "https://aperture.org/editorial/computational-photography/"
+        "https://www.moma.org/calendar/exhibitions/5159"
       ],
       "status": "pending"
     },
@@ -386,8 +378,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.moma.org/collection/works/topics/photography-now",
-        "https://aperture.org/editorial/photography-social-media-age/"
+        "https://www.moma.org/collection/works/topics/photography-now"
       ],
       "status": "pending"
     }

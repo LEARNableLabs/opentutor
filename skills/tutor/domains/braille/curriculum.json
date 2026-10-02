@@ -25,7 +25,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.afb.org/aw/2/2/14534",
         "https://www.perkins.org/history-of-braille"
       ],
       "status": "pending"
@@ -38,8 +37,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.afb.org/blindness-and-low-vision/braille/what-braille",
-        "https://www.perkins.org/resource/louis-braille-designer-of-braille-alphabet"
+        "https://www.afb.org/blindness-and-low-vision/braille/what-braille"
       ],
       "status": "pending"
     },
@@ -51,7 +49,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.loc.gov/nls/about/organization/laws-regulations/braille-history",
         "https://www.brailleinstitute.org/wp-content/uploads/2021/06/History-of-Braille.pdf"
       ],
       "status": "pending"
@@ -64,8 +61,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "http://www.iceb.org/ueb.html",
-        "https://www.perkins.org/unified-english-braille"
+        "http://www.iceb.org/ueb.html"
       ],
       "status": "pending"
     },
@@ -76,10 +72,7 @@
       "concepts": ["six-dot cell", "dot numbering", "63 possible combinations"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.afb.org/blindness-and-low-vision/braille/braille-basics",
-        "https://www.braillebug.org/braille_print.asp"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -89,9 +82,7 @@
       "concepts": ["historical timeline", "system comparison", "Braille structure"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.perkins.org/braille-alphabet-letters-numbers-symbols-punctuation"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -102,7 +93,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.afb.org/aw/18/10/15211",
         "https://www.uebonline.org"
       ],
       "status": "pending"
@@ -114,10 +104,7 @@
       "concepts": ["Nemeth Code", "mathematical notation", "specialized codes"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "http://www.brailleauthority.org/nemeth/nemeth.html",
-        "https://www.perkins.org/resource/nemeth-braille"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -128,7 +115,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.afb.org/aw/15/4/14904",
         "http://www.brailleauthority.org/music/music.html"
       ],
       "status": "pending"
@@ -154,7 +140,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://nfb.org/images/nfb/publications/fr/fr33/1/fr330102.html",
         "https://www.afb.org/research-and-initiatives/statistics/adults"
       ],
       "status": "pending"
@@ -166,10 +151,7 @@
       "concepts": ["early literacy", "pre-braille skills", "tactile exploration"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.perkins.org/resource/pre-braille-skills-checklist",
-        "https://www.pathstoliterate.org"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -179,9 +161,7 @@
       "concepts": ["Braille codes", "literacy pedagogy", "reading methods"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.teachingvisuallyimpaired.com/braille.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -192,7 +172,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.perkins.org/deafblind-program",
         "https://nationaldb.org/library/page/1941"
       ],
       "status": "pending"
@@ -204,10 +183,7 @@
       "concepts": ["teaching methodologies", "whole-word vs phonics", "evidence-based practice"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.afb.org/aw/18/9/15184",
-        "https://www.teachingvisuallyimpaired.com/reading.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -217,10 +193,7 @@
       "concepts": ["refreshable Braille displays", "piezoelectric pins", "electronic Braille"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.afb.org/blindness-and-low-vision/using-technology/assistive-technology-products/refreshable-braille-displays",
-        "https://www.humanware.com/en-usa/products/blindness/braille-displays"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -231,8 +204,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.afb.org/node/16207/refreshable-braille-displays",
-        "https://nfb.org/programs-services/center-excellence-nonvisual-access/braille-displays"
+        "https://www.afb.org/node/16207/refreshable-braille-displays"
       ],
       "status": "pending"
     },
@@ -282,7 +254,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.afb.org/blindness-and-low-vision/creating-accessible-print-braille-audio-materials/producing-tactile-graphics",
         "https://www.pathstoliteracy.org/tactile-graphics"
       ],
       "status": "pending"
@@ -295,8 +266,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.access-board.gov/ada/guides",
-        "https://www.lighthouseguild.org/programs-services/environmental-design"
+        "https://www.access-board.gov/ada/guides"
       ],
       "status": "pending"
     },
@@ -308,7 +278,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.perkins.org/resource/3d-printing-tactile-learning",
         "https://www.thingiverse.com/tag:tactile"
       ],
       "status": "pending"
@@ -321,7 +290,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.afb.org/consulting/afb-consulting-design-services/tactile-design-solutions",
         "https://artbeyondsight.org/mei/museum-education-and-interpretation-resources-for-museums-and-cultural-institutions"
       ],
       "status": "pending"
@@ -333,10 +301,7 @@
       "concepts": ["product labeling", "functional accessibility", "user testing"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.afb.org/consulting/afb-consulting-design-services/product-accessibility",
-        "https://nfb.org/programs-services/braille-literacy/prescription-bottle-labeling-project"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -347,7 +312,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.afb.org/aw/20/3/15580",
         "https://nfb.org/images/nfb/publications/bm/bm15/bm1501/bm150102.htm"
       ],
       "status": "pending"

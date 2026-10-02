@@ -28,8 +28,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://gijn.org/stories/investigative-journalism-manual/",
-        "https://www.ire.org/resource-center/"
+        "https://gijn.org/stories/investigative-journalism-manual/"
       ],
       "status": "pending"
     },
@@ -54,7 +53,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.occrp.org/en/resources",
         "https://gijn.org/series/follow-the-money/"
       ],
       "status": "pending"
@@ -119,7 +117,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.ire.org/resource-center/",
         "https://www.poynter.org/"
       ],
       "status": "pending"
@@ -132,8 +129,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rcfp.org/open-government-guide/",
-        "https://www.ire.org/resource-center/"
+        "https://www.rcfp.org/open-government-guide/"
       ],
       "status": "pending"
     },
@@ -185,8 +181,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.documentcloud.org/",
-        "https://www.ire.org/resource-center/"
+        "https://www.documentcloud.org/"
       ],
       "status": "pending"
     },
@@ -224,7 +219,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.ire.org/resource-center/",
         "https://www.poynter.org/"
       ],
       "status": "pending"
@@ -380,7 +374,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.ire.org/resource-center/",
         "https://gijn.org/",
         "https://www.propublica.org/"
       ],

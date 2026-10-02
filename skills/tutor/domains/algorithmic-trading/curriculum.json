@@ -31,7 +31,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.interactivebrokers.com/en/trading/orders.php",
         "https://ocw.mit.edu/courses/15-433-investments-spring-2003/"
       ],
       "status": "pending"
@@ -65,7 +64,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=jYjHOP-fs-M",
         "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1976691"
       ],
       "status": "pending"
@@ -99,8 +97,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.quantstart.com/articles/market-making-strategy-introduction/",
-        "https://www.youtube.com/watch?v=b1e4t2k2KJE"
+        "https://www.quantstart.com/articles/market-making-strategy-introduction/"
       ],
       "status": "pending"
     },
@@ -150,8 +147,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://arxiv.org/abs/1710.03870",
-        "https://github.com/lobsterdata/lobster_tutorial"
+        "https://arxiv.org/abs/1710.03870"
       ],
       "status": "pending"
     },
@@ -167,7 +163,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=OTjyO2ztAOQ",
         "https://blog.quantinsti.com/high-frequency-trading/"
       ],
       "status": "pending"
@@ -320,9 +315,7 @@
       ],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://blog.quantinsti.com/market-data/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -371,8 +364,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2435323",
-        "https://www.investopedia.com/articles/trading/08/momentum-trading.asp"
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2435323"
       ],
       "status": "pending"
     },
@@ -405,8 +397,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://arxiv.org/abs/1105.3115",
-        "https://www.youtube.com/watch?v=wukJBlX_8to"
+        "https://arxiv.org/abs/1105.3115"
       ],
       "status": "pending"
     },
@@ -542,7 +533,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.coursera.org/learn/machine-learning-trading",
         "https://github.com/stefan-jansen/machine-learning-for-trading"
       ],
       "status": "pending"

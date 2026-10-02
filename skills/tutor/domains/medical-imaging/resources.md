@@ -22,7 +22,7 @@
 
 - **AAPM (American Association of Physicists in Medicine)** — Educational resources, webinars, and the Science & Medicine (SAM) modules. [https://www.aapm.org/education/](https://www.aapm.org/education/)
 
-- **MIT OpenCourseWare — HST.583 Functional Magnetic Resonance Imaging** — Full course materials (lecture notes, assignments, exams) on fMRI. Advanced but excellent. [https://ocw.mit.edu/courses/hst-583-functional-magnetic-resonance-imaging-data-acquisition-and-analysis-fall-2006/](https://ocw.mit.edu/courses/hst-583-functional-magnetic-resonance-imaging-data-acquisition-and-analysis-fall-2006/)
+- **MIT OpenCourseWare — HST.583 Functional Magnetic Resonance Imaging** — Full course materials (lecture notes, assignments, exams) on fMRI. Advanced but excellent.
 
 - **IMAIOS e-Anatomy** — Interactive anatomical atlas with CT and MRI cross-sections. Great for correlating anatomy with imaging. [https://www.imaios.com/en/e-anatomy](https://www.imaios.com/en/e-anatomy)
 
@@ -64,7 +64,7 @@
 
 - **TorchIO** — PyTorch library for medical image preprocessing and augmentation. Good for deep learning on medical images. [https://torchio.readthedocs.io](https://torchio.readthedocs.io)
 
-- **MONAI (Medical Open Network for AI)** — PyTorch-based framework for deep learning in medical imaging. Developed by NVIDIA, King's College London, et al. [https://monai.io](https://monai.io)
+- **MONAI (Medical Open Network for AI)** — PyTorch-based framework for deep learning in medical imaging. Developed by NVIDIA, King's College London, et al.
 
 - **FreeSurfer** — Brain MRI analysis software (segmentation, surface reconstruction, cortical thickness). Gold standard in neuroimaging research. [https://surfer.nmr.mgh.harvard.edu](https://surfer.nmr.mgh.harvard.edu)
 
@@ -135,17 +135,17 @@
 ## Datasets for Practice
 
 - **The Cancer Imaging Archive (TCIA)** — Public datasets with real clinical CT, MRI, PET scans. [https://www.cancerimagingarchive.net](https://www.cancerimagingarchive.net)
-- **NIH Medical Imaging Datasets** — Various datasets for research and education. [https://www.nih.gov/research-training/medical-research-initiatives/big-data](https://www.nih.gov/research-training/medical-research-initiatives/big-data)
+- **NIH Medical Imaging Datasets** — Various datasets for research and education.
 - **OASIS (Open Access Series of Imaging Studies)** — Brain MRI datasets with demographic and clinical data. [https://www.oasis-brains.org](https://www.oasis-brains.org)
 - **UK Biobank** — Massive dataset (100,000+ subjects) with brain, cardiac, body MRI. Requires application for access. [https://www.ukbiobank.ac.uk](https://www.ukbiobank.ac.uk)
 - **fastMRI (NYU)** — Raw k-space data for MRI reconstruction research. [https://fastmri.med.nyu.edu](https://fastmri.med.nyu.edu)
-- **LIDC-IDRI (Lung Image Database Consortium)** — CT scans of lung nodules with radiologist annotations. [https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI)
+- **LIDC-IDRI (Lung Image Database Consortium)** — CT scans of lung nodules with radiologist annotations.
 
 ## Safety & Regulatory
 
-- **FDA — Medical Imaging** — Regulatory perspective on safety, device approval, dose management. [https://www.fda.gov/radiation-emitting-products/medical-imaging](https://www.fda.gov/radiation-emitting-products/medical-imaging)
+- **FDA — Medical Imaging** — Regulatory perspective on safety, device approval, dose management.
 - **ICRP (International Commission on Radiological Protection)** — Global authority on radiation dose limits and safety recommendations. [https://www.icrp.org](https://www.icrp.org)
-- **ACR MRI Safety resources** — Comprehensive safety screening forms, guidelines for implants, contrast. [https://www.acr.org/Clinical-Resources/MRI-Safety](https://www.acr.org/Clinical-Resources/MRI-Safety)
+- **ACR MRI Safety resources** — Comprehensive safety screening forms, guidelines for implants, contrast.
 
 ## Staying Current
 

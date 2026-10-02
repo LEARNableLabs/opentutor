@@ -52,10 +52,7 @@
       "concepts": ["physical clocks", "clock skew", "NTP"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.cs.rutgers.edu/~pxk/417/notes/clocks/index.html",
-        "https://jvns.ca/blog/2016/09/14/clock-skew-and-ntp/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -130,8 +127,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://jepsen.io/consistency/models/linearizable",
-        "https://www.cs.princeton.edu/courses/archive/fall19/cos418/docs/p6-linearizability.pdf"
+        "https://jepsen.io/consistency/models/linearizable"
       ],
       "status": "pending"
     },
@@ -156,7 +152,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cs.princeton.edu/courses/archive/fall16/cos418/docs/L4-vector-clocks.pdf",
         "https://jepsen.io/consistency/models/causal"
       ],
       "status": "pending"
@@ -232,8 +227,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf",
-        "https://docs.scylladb.com/stable/architecture/architecture-overview.html"
+        "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf"
       ],
       "status": "pending"
     },
@@ -374,7 +368,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.cockroachlabs.com/blog/rebalancing-and-load-distribution/",
         "https://www.vldb.org/pvldb/vol13/p3281-tan.pdf"
       ],
       "status": "pending"
@@ -412,8 +405,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf",
-        "https://cassandra.apache.org/doc/latest/cassandra/operating/failure-detection.html"
+        "https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf"
       ],
       "status": "pending"
     },

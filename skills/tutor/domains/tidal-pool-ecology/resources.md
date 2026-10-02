@@ -36,7 +36,7 @@
 - **"Marine biodiversity in temperate and tropical rocky intertidal systems"** (Nature Scitable overview)
   - Accessible synthesis of zonation, competition, predation
   - Good for intermediate students
-  - https://www.nature.com/scitable/knowledge/library/intertidal-communities-13236541/
+
 
 ## Classic Research Papers (Canonical Studies)
 
@@ -100,7 +100,7 @@
 
 - **Nature Education (Scitable): Community Ecology**
   - Curated learning modules on competition, predation, keystone species
-  - https://www.nature.com/scitable/knowledge/library/community-ecology-13228159/
+
 
 ## Field Guides & Species Identification
 
@@ -111,7 +111,7 @@
 
 - **National Audubon Society Field Guide to North American Seashore Creatures** by Norman Meinkoth (1981, Knopf)
   - Photographic guide, accessible for beginners
-  - https://www.penguinrandomhouse.com/books/324283/
+
 
 - **Beachcomber's Guide to Seashore Life in the Pacific Northwest** by J. Duane Sept (2009, Harbour)
   - Regional guide for Washington, Oregon, British Columbia
@@ -154,7 +154,7 @@
 - **Crash Course Ecology**
   - Episode 4: Community Ecology (covers keystone species, competition)
   - Accessible, fast-paced, animated
-  - https://www.youtube.com/watch?v=NNuO1o87kG0
+
 
 - **Tidepool Tim** (Tim Visel)
   - Educational videos on tide pool organisms and ecology
@@ -183,7 +183,7 @@
 - **Virtual Tide Pool** (California Academy of Sciences)
   - Interactive 360° exploration of tide pool habitats
   - Species identification, ecological relationships
-  - https://www.calacademy.org/explore-science/virtual-tide-pool
+
 
 - **Natural History Museum Virtual Tour: Tidal Zone**
   - Interactive exploration with species profiles
@@ -237,7 +237,7 @@
 ### Community Ecology
 - **Bruce Menge** (Oregon State University)
   - Environmental stress gradients, food web dynamics, climate impacts
-  - https://today.oregonstate.edu/archives/2022/feb/celebrating-bruce-menge
+
 
 - **Jane Lubchenco** (Oregon State University)
   - Community ecology, marine conservation, science policy
@@ -293,7 +293,7 @@
 
 - **The Nature Conservancy: Marine Program**
   - Coastal resilience, marine protected areas
-  - https://www.nature.org/en-us/what-we-do/our-priorities/protect-water-and-land/land-and-water-stories/marine-protected-areas/
+
 
 - **Ocean Conservancy**
   - Marine debris, climate change, ocean health advocacy

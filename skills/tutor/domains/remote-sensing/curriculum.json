@@ -127,9 +127,7 @@
       ],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://earth.esa.int/eogateway/instruments"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -192,8 +190,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.usgs.gov/landsat-missions",
-        "https://sentinel.esa.int/web/sentinel/missions"
+        "https://www.usgs.gov/landsat-missions"
       ],
       "status": "pending"
     },
@@ -288,9 +285,7 @@
       ],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.usgs.gov/landsat-missions/landsat-data-quality"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

@@ -61,11 +61,11 @@
 - **LessemsOnline (YouTube)**
   - Clear explanations of fiber optics fundamentals
   - Good animations for mode propagation and dispersion
-  - https://www.youtube.com/user/LessemsOnline
+
 
 - **The Photonics Spotlight (YouTube)**
   - Industry updates and deep-dives into photonic technologies
-  - https://www.youtube.com/channel/UCvpZYYYYYYYYYYYYYYYYYYYY
+
 
 - **Branch Education (YouTube)**
   - "How do Fiber Optic Cables Work?" — excellent visual explanation
@@ -89,7 +89,7 @@
 - **RP Fiber Power (software)**
   - Simulation software for fiber optics and amplifiers
   - Free demo version available
-  - https://www.rp-photonics.com/fiber_power.html
+
 
 - **Lumerical MODE Solutions**
   - Professional fiber mode solver
@@ -113,7 +113,7 @@
 
 - **GitHub: Fiber Optic Simulations**
   - Search for "fiber optic simulation python" or "SSMF dispersion matlab"
-  - Example: https://github.com/xmhk/FiberPropagation (Python-based fiber propagation)
+  - Example:  (Python-based fiber propagation)
 
 - **GitHub: OptiCommPy**
   - Open-source Python library for simulating optical communications systems
@@ -139,7 +139,7 @@
 
 - **Cisco Dense Wavelength Division Multiplexing Guide**
   - Practical DWDM design guide
-  - https://www.cisco.com/c/en/us/products/collateral/optical-networking/dense-wavelength-division-multiplexing-dwdm/white-paper-c11-743214.html
+
 
 - **Submarine Cable Map**
   - Interactive map of undersea fiber optic cables
@@ -227,7 +227,7 @@
 
 - **Link budget calculators**
   - Online tools: search "fiber optic link budget calculator"
-  - Example: https://www.fiberoptics4sale.com/blogs/archive-posts/95048006-link-power-budget-calculation
+  - Example:
 
 - **BER testers and analyzers**
   - Keysight, Anritsu, EXFO — learn what industry measures

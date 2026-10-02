@@ -45,7 +45,7 @@
 - **Coursera: Samurai and Japanese History** (University of Tokyo)
   - Historical context for feudal periods, samurai class evolution
   - Good supplemental background for lessons 3, 23-25
-  - https://www.coursera.org/learn/asian-history
+
 
 ## Museums and Collections (Online Resources)
 
@@ -76,7 +76,6 @@
 ### The Wallace Collection (London)
 - Excellent samurai armor displays
 - Free online catalog with conservation reports (revealing construction details)
-- https://www.wallacecollection.org/collection/oriental-arms-and-armour/
 
 ## Supplementary (for engagement)
 
@@ -88,7 +87,7 @@
   - Eccentric but technically accurate demonstrations of traditional techniques
   - Shows tamahagane smelting, forging, sharpening
   - Visually engaging, minimal narration
-  - https://www.youtube.com/c/kiwamijapan
+
 
 - **That Works** (NHK World)
   - Documentary series on traditional Japanese crafts
@@ -106,7 +105,7 @@
   - Historical weapons analysis (sometimes polemical, but thorough)
   - Good videos debunking katana myths (use for misconception correction)
   - Compare European vs. Japanese sword engineering
-  - https://www.youtube.com/c/Shadiversity
+
 
 #### Specific Documentaries
 
@@ -189,11 +188,11 @@
   - Society for Preservation of Japanese Art Swords
   - Sets appraisal standards, issues authenticity papers
   - Publishes Token Bijutsu journal
-  - https://www.nbthk.or.jp/
+
 
 - **NTHK (Nihon Token Hozon Kai)**
   - Rival preservation organization, slightly different appraisal criteria
-  - https://www.nthk.or.jp/
+
 
 ### Online Communities
 
@@ -214,7 +213,7 @@
 
 - **Tenshin Shoden Katori Shinto-ryu** — separate lineage of above
 - **Kyudo Federation** — preserves traditional Japanese archery (yumi)
-  - https://www.kyudousa.org/
+
 
 ## Unexpected Connections (Cross-Discipline Links)
 

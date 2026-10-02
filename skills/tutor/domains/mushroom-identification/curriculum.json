@@ -45,7 +45,7 @@
       "concepts": ["gill attachment", "gill spacing", "pore structure", "spore-bearing surfaces"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": ["https://www.mushroomexpert.com/gills.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -55,7 +55,7 @@
       "concepts": ["stem structure", "volva", "ring/annulus", "base characteristics"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.mushroomexpert.com/stems.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -85,7 +85,7 @@
       "concepts": ["Amanita genus", "universal veil", "deadly species", "look-alikes"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.mushroomexpert.com/amanita.html", "https://www.namyco.org/toxicology.php"],
+      "resources": ["https://www.mushroomexpert.com/amanita.html"],
       "status": "pending"
     },
     {
@@ -105,7 +105,7 @@
       "concepts": ["LBMs", "Cortinarius", "Galerina", "microscopy requirements"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://www.mushroomexpert.com/lbms.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -145,7 +145,7 @@
       "concepts": ["amatoxins", "toxin mechanisms", "delayed symptoms", "treatment"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.namyco.org/toxicology.php", "https://www.mushroomexpert.com/amanita_phalloides.html"],
+      "resources": ["https://www.mushroomexpert.com/amanita_phalloides.html"],
       "status": "pending"
     },
     {
@@ -155,7 +155,7 @@
       "concepts": ["toxin syndromes", "symptom timing", "medical identification"],
       "difficulty": 3,
       "type": "question",
-      "resources": ["https://www.namyco.org/toxicology.php"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -165,7 +165,7 @@
       "concepts": ["convergent evolution", "confusion pairs", "safety protocols"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.mushroomexpert.com/look_alikes.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -195,7 +195,7 @@
       "concepts": ["mycorrhizal associations", "tree partnerships", "host specificity"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.mushroomexpert.com/ecology.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -205,7 +205,7 @@
       "concepts": ["substrate preference", "wood decay types", "ecological niches"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": ["https://www.mushroomexpert.com/substrates.html"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -235,7 +235,7 @@
       "concepts": ["collection ethics", "conservation", "private land access", "sustainability"],
       "difficulty": 2,
       "type": "question",
-      "resources": ["https://www.namyco.org/collecting_ethics.php"],
+      "resources": [],
       "status": "pending"
     },
     {

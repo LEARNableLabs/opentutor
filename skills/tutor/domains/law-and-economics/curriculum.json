@@ -26,10 +26,7 @@
       "concepts": ["positive vs normative analysis", "efficiency as a goal", "law and economics origins"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.law.uchicago.edu/coase-sandor-institute",
-        "https://press.princeton.edu/books/paperback/9780691161730/law-and-economics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -39,10 +36,7 @@
       "concepts": ["Pareto efficiency", "Kaldor-Hicks efficiency", "wealth maximization"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.econlib.org/library/Enc/ParetianEconomics.html",
-        "https://plato.stanford.edu/entries/legal-economics/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -66,8 +60,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.journals.uchicago.edu/doi/10.1086/466560",
-        "https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/"
+        "https://www.journals.uchicago.edu/doi/10.1086/466560"
       ],
       "status": "pending"
     },
@@ -103,10 +96,7 @@
       "concepts": ["eminent domain", "takings", "just compensation", "public use"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.supremecourt.gov/opinions/04pdf/04-108.pdf",
-        "https://law.yale.edu/studying-law-yale/areas-study/public-law"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -143,8 +133,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://academic.oup.com/jla",
-        "https://www.nber.org/programs-projects/projects-and-centers/law-and-economics-program"
+        "https://academic.oup.com/jla"
       ],
       "status": "pending"
     },
@@ -156,7 +145,6 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.yalelawjournal.org/article/the-content-of-our-casebooks",
         "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2600235"
       ],
       "status": "pending"
@@ -207,7 +195,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.aeaweb.org/articles?id=10.1257/jel.45.3.715",
         "https://www.law.uchicago.edu/news/does-criminal-law-deter-review-evidence"
       ],
       "status": "pending"
@@ -246,8 +233,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.rand.org/pubs/monograph_reports/MR1079.html",
-        "https://law.stanford.edu/directory/robert-cooter/"
+        "https://www.rand.org/pubs/monograph_reports/MR1079.html"
       ],
       "status": "pending"
     },
@@ -297,7 +283,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.justice.gov/atr/case-document/united-states-v-microsoft-corporation",
         "https://www.econlib.org/library/Enc/Antitrust.html"
       ],
       "status": "pending"
@@ -336,8 +321,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.law.harvard.edu/programs/olin_center/behavioral_economics/",
-        "https://www.yalelawjournal.org/article/behavioral-analysis-of-law"
+        "https://www.law.harvard.edu/programs/olin_center/behavioral_economics/"
       ],
       "status": "pending"
     },
@@ -348,10 +332,7 @@
       "concepts": ["synthesis", "policy evaluation", "efficiency vs equity"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.law.uchicago.edu/coase-sandor-institute",
-        "https://www.nber.org/programs-projects/projects-and-centers/law-and-economics-program"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

@@ -17,7 +17,7 @@
   - https://www.routledge.com/Cake-Cutting-Algorithms-Be-Fair-If-You-Can/Robertson-Webb/p/book/9781568810768
 
 - **"Social Choice and the Mathematics of Manipulation"** by Alan D. Taylor (Cambridge University Press, 2005) — Focused on strategic voting and manipulation. Covers Gibbard-Satterthwaite and related results.
-  - https://www.cambridge.org/core/books/social-choice-and-the-mathematics-of-manipulation/
+
 
 ### Academic Papers (Foundational)
 
@@ -28,7 +28,7 @@
   - https://www.jstor.org/stable/1914083
 
 - **Brams, Steven J., and Alan D. Taylor.** "Fair Division: From Cake-Cutting to Dispute Resolution" (1996)
-  - https://www.cambridge.org/core/books/fair-division/
+
 
 ### Open Educational Resources
 
@@ -65,11 +65,11 @@
   - Another interactive fair division platform with different algorithms
 
 - **GeoGebra Cake Cutting Applets**
-  - https://www.geogebra.org/m/nqymeyc4
+
   - Visual demonstrations of cake cutting protocols
 
 - **Cut-the-Knot: Fair Division**
-  - https://www.cut-the-knot.org/Curriculum/SocialScience/FairDivision.shtml
+
   - Interactive demonstrations with explanations
 
 ### Video Lectures & Explainers
@@ -99,13 +99,13 @@
   - Mathematical deep dive into Arrow's proof structure
 
 - **Lecture by Ariel Procaccia — "Computational Fair Division"**
-  - https://www.youtube.com/watch?v=V62eBDnWPMw
+
   - Advanced but accessible lecture on modern algorithmic approaches
 
 ### Podcasts & Audio
 
 - **EconTalk — "Steven Brams on Fair Division"** (2008)
-  - https://www.econtalk.org/steven-brams-on-fair-division/
+
   - Interview with leading researcher on practical applications
 
 - **My Favorite Theorem — "Arrow's Theorem"** (2017)
@@ -131,7 +131,7 @@
 ### Jupyter Notebooks & Tutorials
 
 - **Social Choice in Python — Tutorial by Eric Gorr**
-  - https://github.com/ericgorr/socialchoice
+
   - Worked examples of voting systems with code
 
 - **Fair Division Algorithms — Erel Segal-Halevi**
@@ -141,11 +141,11 @@
 ### Online Calculators
 
 - **Voting Power Calculator (Banzhaf & Shapley-Shubik)**
-  - https://www.cut-the-knot.org/Curriculum/SocialScience/VotingPower.shtml
+
   - Compute voting power indices for small examples
 
 - **Borda Count Calculator**
-  - https://www.cut-the-knot.org/Curriculum/SocialScience/Borda.shtml
+
 
 ## Organizations & Communities
 
@@ -180,7 +180,7 @@
   - https://procaccia.info/
 
 - **Erel Segal-Halevi** (Ariel University) — Fair division algorithms, computational approaches
-  - https://erelsegal-halevi.github.io/
+
 
 - **Edith Elkind** (Oxford) — Computational social choice, voting theory
   - https://www.cs.ox.ac.uk/people/edith.elkind/
@@ -189,7 +189,7 @@
   - https://home.agh.edu.pl/~faliszew/
 
 - **Toby Walsh** (UNSW) — AI and voting, computational social choice
-  - https://tobywalsh.org/
+
 
 ### Communicators & Educators
 
@@ -210,7 +210,7 @@
 - **Computational Complexity of Voting**
   - NP-hardness of manipulation, winner determination
   - "Computational Social Choice" edited by Brandt et al. (2016)
-  - https://www.cambridge.org/core/books/handbook-of-computational-social-choice/
+
 
 ### Philosophy
 

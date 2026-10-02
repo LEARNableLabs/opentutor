@@ -84,7 +84,7 @@
   - Graduate-level, computational vision
   - Covers spatial vision, color, motion from engineering perspective
   - Lots of MATLAB code for illusions
-  - https://www.stanford.edu/class/psych221/
+
 
 - **Coursera: Visual Perception and the Brain (Duke University, Dale Purves)**
   - MOOC covering illusions, empirical approach
@@ -116,7 +116,7 @@
 - **Optical Illusions & Visual Phenomena (Archimedes Lab)**
   - Curated collection, puzzle/game format
   - Good for warm-ups or breaks
-  - https://www.archimedes-lab.org/illusions.html
+
 
 - **Mighty Optical Illusions**
   - Daily illusion blog, user submissions
@@ -143,7 +143,7 @@
 - **TED: V.S. Ramachandran "3 Clues to Understanding Your Brain"**
   - Phantom limbs, synesthesia, Capgras delusion
   - Links illusions to broader brain function
-  - https://www.ted.com/talks/vilayanur_ramachandran_3_clues_to_understanding_your_brain
+
 
 - **TED: Anil Seth "Your Brain Hallucinates Your Conscious Reality"**
   - Predictive coding, interoception, conscious experience
@@ -222,8 +222,8 @@
 
 - **GitHub: Illusion Code Repositories**
   - Search "optical illusions python" or "peripheral drift illusion"
-  - Example: https://github.com/mathisonian/illusions (interactive JavaScript)
-  - Example: https://github.com/akitaoka-lab/ (Kitaoka's illusion code)
+  - Example:  (interactive JavaScript)
+  - Example:  (Kitaoka's illusion code)
 
 ### Books for Deeper Dives
 
@@ -241,7 +241,7 @@
 - **"Phantoms in the Brain" by V.S. Ramachandran & Sandra Blakeslee** (1998)
   - Neurological case studies (phantom limbs, Capgras, neglect)
   - Illusions as windows into brain organization
-  - https://www.harpercollins.com/products/phantoms-in-the-brain-v-s-ramachandrans-blakeslee
+
 
 ## People to Follow
 

@@ -78,15 +78,15 @@
 
 - **Game of Life implementations** — GitHub collection of implementations in every language: [https://github.com/topics/conways-game-of-life](https://github.com/topics/conways-game-of-life)
 
-- **Golly source code** — C++ reference implementation, very efficient: [https://github.com/GollyGang/golly](https://github.com/GollyGang/golly)
+- **Golly source code** — C++ reference implementation, very efficient:
 
-- **p5.js Game of Life** — JavaScript/canvas implementation for web: [https://github.com/CodingTrain/website/tree/main/Tutorials/P5JS/GameOfLife](https://github.com/CodingTrain/website/tree/main/Tutorials/P5JS/GameOfLife)
+- **p5.js Game of Life** — JavaScript/canvas implementation for web:
 
 - **Lenia** — continuous cellular automata (beautiful extension): [https://github.com/Chakazul/Lenia](https://github.com/Chakazul/Lenia)
 
 ### Collections
 
-- **Awesome Cellular Automata** — curated list of CA resources: [https://github.com/CellularAutomaton/awesome-cellular-automata](https://github.com/CellularAutomaton/awesome-cellular-automata)
+- **Awesome Cellular Automata** — curated list of CA resources:
 
 - **LifeWiki Scripts** — Python scripts for pattern analysis: [https://conwaylife.com/wiki/Category:Scripts](https://conwaylife.com/wiki/Category:Scripts)
 

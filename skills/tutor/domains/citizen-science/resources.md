@@ -87,11 +87,11 @@
 
 - **Zooniverse Project Talks** (YouTube channel)
   - Behind-the-scenes on major projects (Snapshot Serengeti, Planet Hunters, etc.)
-  - https://www.youtube.com/user/ZooniverseProject
+
 
 - **Public Lab Video Tutorials**
   - DIY environmental monitoring (balloon mapping, spectrometry)
-  - https://publiclab.org/wiki/video
+
 
 ### Interactive Tools & Platforms
 
@@ -158,7 +158,7 @@
 
 - **Wilson Center Commons Lab** — policy and practice research
   - Toolkits, case studies, policy briefs
-  - https://www.wilsoncenter.org/program/commons-lab
+
 
 - **CitizenScience.gov** — US federal government catalog
   - Accelerate Use of Crowdsourcing and Citizen Science Act
@@ -260,7 +260,7 @@
 
 - **PPSR Core Dataset Standards**
   - Metadata standards for citizen science projects
-  - https://www.wilsoncenter.org/article/ppsr-core
+
 
 ### Data Management
 - **DataONE Best Practices**
@@ -325,7 +325,7 @@
 ### Labor Economics & Motivation Theory
 - **Yochai Benkler: Commons-Based Peer Production**
   - *The Wealth of Networks* — theory of collaborative production
-  - https://www.benkler.org/wealth_of_networks/
+
 
 - **Self-Determination Theory (Deci & Ryan)**
   - Intrinsic motivation, autonomy, competence, relatedness

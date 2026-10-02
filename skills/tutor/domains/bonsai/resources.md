@@ -39,8 +39,8 @@
 - **Best for:** Self-paced learning, species identification, technique demonstrations
 - **Key resources:**  
   - Tree species guide: https://bonsaiempire.com/tree-species  
-  - Care basics: https://bonsaiempire.com/origin/bonsai-care  
-  - Styling guide: https://bonsaiempire.com/inspiration/bonsai-styles  
+  - Care basics:
+  - Styling guide:
 
 ### Bonsai Mirai (live.bonsaimirai.com)
 - **Structure:** Subscription-based professional instruction by Ryan Neil
@@ -57,7 +57,7 @@
 - **Strengths:** Community connection, hands-on workshops, mentorship opportunities
 - **Resources:** Species guides, care sheets, event calendar
 - **Best for:** Finding local teachers, attending workshops, seeing trees in person
-- **Key resource:** Species care guides: https://www.absbonsai.org/species-guides
+- **Key resource:** Species care guides:
 
 ### National Bonsai Foundation (nationalbonsai.org)
 - **Structure:** Supports the US National Arboretum bonsai collection in Washington, DC
@@ -65,8 +65,8 @@
 - **Resources:** Tree profiles, care basics, virtual tours
 - **Best for:** Inspiration, aesthetic study, historical context
 - **Key resources:**  
-  - Collection tours: https://www.nationalbonsai.org/collections/  
-  - Bonsai basics: https://www.nationalbonsai.org/bonsai-basics/  
+  - Collection tours:
+  - Bonsai basics:
 
 ## Video Resources
 
@@ -99,10 +99,10 @@ Tropical bonsai from the Philippines. Ficus, bougainvillea, schefflera. Essentia
 ### Specific Video Playlists
 
 - **Vascular transport demonstration:** https://www.youtube.com/watch?v=BickMFHAZR0 (science explainer)
-- **Soil particle size comparison:** https://www.youtube.com/watch?v=jSDvmVr34wY (Herons Bonsai)
-- **Wiring fundamentals:** https://www.youtube.com/watch?v=K5NEUsAWoHs (Bonsai Empire)
-- **Repotting step-by-step:** https://www.youtube.com/watch?v=dUPFy1KnLBs (Bonsai Empire)
-- **Air layering demonstration:** https://www.youtube.com/watch?v=H48KFiVcZ8s (Herons Bonsai)
+- **Soil particle size comparison:**  (Herons Bonsai)
+- **Wiring fundamentals:**  (Bonsai Empire)
+- **Repotting step-by-step:**  (Bonsai Empire)
+- **Air layering demonstration:**  (Herons Bonsai)
 
 ## Interactive Tools
 
@@ -122,7 +122,7 @@ Tropical bonsai from the Philippines. Ficus, bougainvillea, schefflera. Essentia
 ### Design & Aesthetics
 
 - **Virtual Bonsai Collections:**  
-  - US National Arboretum: https://www.nationalbonsai.org/collections/  
+  - US National Arboretum:
   - Pacific Bonsai Museum: https://pacificbonsaimuseum.org/  
   - Kokufu-ten (Japan's premier exhibition): photos circulate annually on social media and forums
 

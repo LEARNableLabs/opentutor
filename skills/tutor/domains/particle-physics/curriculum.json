@@ -94,7 +94,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-feynman-diagrams.pdf",
         "https://home.cern/science/physics/antimatter"
       ],
       "status": "pending"
@@ -133,7 +132,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-qed.pdf",
         "https://www.youtube.com/watch?v=gEKSpZPByD0"
       ],
       "status": "pending"
@@ -146,8 +144,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/1110.2253",
-        "https://home.cern/science/physics/higgs-boson/higgs-boson-discovery"
+        "https://arxiv.org/abs/1110.2253"
       ],
       "status": "pending"
     },
@@ -171,10 +168,7 @@
       "concepts": ["fermions vs bosons", "spin-statistics theorem", "Pauli exclusion"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-spin-statistics.pdf",
-        "https://www.youtube.com/watch?v=TxwZLNF9Wdk"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -198,7 +192,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://home.cern/science/physics/quarks",
         "https://pdg.lbl.gov/2024/tables/contents_tables.html"
       ],
       "status": "pending"
@@ -211,8 +204,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://arxiv.org/abs/hep-ph/9901374",
-        "https://home.cern/science/physics/strong-force"
+        "https://arxiv.org/abs/hep-ph/9901374"
       ],
       "status": "pending"
     },
@@ -238,8 +230,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/0812.1594",
-        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-weak-interactions.pdf"
+        "https://arxiv.org/abs/0812.1594"
       ],
       "status": "pending"
     },
@@ -250,10 +241,7 @@
       "concepts": ["W bosons", "Z bosons", "charged currents", "neutral currents"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://home.cern/science/physics/w-boson-z-boson",
-        "https://www.youtube.com/watch?v=RVMZNksLy_I"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -264,8 +252,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://arxiv.org/abs/1201.0537",
-        "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-electroweak-model.pdf"
+        "https://arxiv.org/abs/1201.0537"
       ],
       "status": "pending"
     },
@@ -316,7 +303,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://home.cern/science/physics/strong-force",
         "https://arxiv.org/abs/1011.5131"
       ],
       "status": "pending"
@@ -369,8 +355,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://arxiv.org/abs/1709.07852",
-        "https://home.cern/science/physics/beyond-standard-model"
+        "https://arxiv.org/abs/1709.07852"
       ],
       "status": "pending"
     },

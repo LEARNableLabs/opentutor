@@ -23,7 +23,7 @@
   - Data-driven argument for density and cities
   - Good for: understanding agglomeration economics
   - Level: Intermediate, some economics background helpful
-  - [Penguin Random House](https://www.penguinrandomhouse.com/books/202620/triumph-of-the-city-by-edward-glaeser/)
+  - Penguin Random House
 
 - **"Happy City"** by Charles Montgomery (2013)
   - Behavioral science and urban design
@@ -75,11 +75,11 @@
 - **MITx 11.133x: "Urban Planning and Digital Tools"**
   - Computational methods for planning
   - Covers GIS, data analysis, visualization
-  - [edX](https://www.edx.org/course/introduction-to-urban-planning)
+  - edX
 
 - **"Introduction to Urban Planning"** — University of Geneva
   - Broad survey of planning topics
-  - [Coursera](https://www.coursera.org/learn/introduction-urban-planning)
+  - Coursera
 
 - **"Sustainable Urban Development"** — Lund University
   - Focus on environmental sustainability
@@ -339,7 +339,7 @@
 
 - **Jeff Speck** — Walkable cities, urban design
   - Author of "Walkable City"
-  - [Website](https://www.jeffspeck.com/)
+  - Website
 
 - **Janette Sadik-Khan** — Former NYC Transportation Commissioner
   - Led Times Square pedestrianization
@@ -359,7 +359,7 @@
 
 - **Angie Schmitt** — Transportation writer and advocate
   - Author of "Right of Way"
-  - [Substack](https://angiesschmidt.substack.com/)
+  - Substack
 
 ## Unexpected Connections (Interdisciplinary Resources)
 
@@ -384,7 +384,7 @@
 - **Robert Caro — "The Power Broker"**
   - Biography of Robert Moses
   - Epic study of power and planning
-  - [Vintage](https://www.penguinrandomhouse.com/books/12104/the-power-broker-by-robert-a-caro/)
+  - Vintage
 
 ### Ecology
 
@@ -396,7 +396,7 @@
 
 - **Gehl Institute Public Life Data Protocol**
   - Methods for studying public space use
-  - [Gehl Institute](https://gehlpeople.com/tools/)
+  - Gehl Institute
 
 - **ITDP (Institute for Transportation and Development Policy) Case Studies**
   - Transit-oriented development worldwide

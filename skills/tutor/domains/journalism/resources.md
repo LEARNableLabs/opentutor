@@ -25,14 +25,14 @@
 ### Video Courses and Lectures
 - **Knight Center for Journalism in the Americas** (https://knightcenter.utexas.edu/) — Free MOOCs on investigative reporting, data journalism, digital verification. Many courses available in English, Spanish, Portuguese.
 - **Poynter Institute** (https://www.poynter.org/) — Video courses and webinars on investigative techniques, ethics, verification. Some free, some paid.
-- **GIJN YouTube Channel** (https://www.youtube.com/@GlobalInvestigativeJournalism) — Conference panels, tool tutorials, investigation walkthroughs.
-- **Bellingcat YouTube** (https://www.youtube.com/@bellingcat) — OSINT tutorials showing how to use open-source tools for verification and investigation.
+- **GIJN YouTube Channel** () — Conference panels, tool tutorials, investigation walkthroughs.
+- **Bellingcat YouTube** () — OSINT tutorials showing how to use open-source tools for verification and investigation.
 
 ### Podcasts and Audio
 - **"Reveal" from The Center for Investigative Reporting** (https://revealnews.org/) — Each episode is an investigation with behind-the-scenes commentary.
 - **"The Lead: An Investigative Journalism Podcast"** — Interviews with investigative reporters about specific stories and methods.
 - **"On the Media" (WNYC)** — Media criticism and journalism practice, often covers investigative methodology.
-- **IRE Radio podcasts** — Conference sessions and interviews available at https://www.ire.org/podcasts/
+- **IRE Radio podcasts** — Conference sessions and interviews available at
 
 ### Interactive Tools and Platforms
 
@@ -56,7 +56,7 @@
 #### Digital Verification
 - **InVID/WeVerify Plugin** (https://weverify.eu/verification-plugin/) — Browser extension for video and image verification, reverse search, metadata extraction.
 - **TinEye** (https://tineye.com/) — Reverse image search to find image origins and manipulations.
-- **Jeffrey's Image Metadata Viewer** (http://exif.regex.info/exif.cgi) — Extract EXIF data from images to verify time, location, camera.
+- **Jeffrey's Image Metadata Viewer** () — Extract EXIF data from images to verify time, location, camera.
 - **Wayback Machine** (https://archive.org/web/) — Internet Archive for checking historical versions of websites and verifying deleted content.
 
 #### OSINT (Open-Source Intelligence)
@@ -76,7 +76,7 @@
 #### Training and Professional Development
 - **Stabile Center for Investigative Journalism** (https://brown.columbia.edu/stabile-center/) — Columbia's investigative center. Research, fellowships, public events.
 - **Dart Center for Journalism and Trauma** (https://dartcenter.org/) — Resources for reporting on trauma, violence, and sensitive topics ethically.
-- **News Leaders Association** (https://newsleaders.org/) — Professional association with ethics resources and training.
+- **News Leaders Association** () — Professional association with ethics resources and training.
 - **Online News Association** (https://journalists.org/) — Digital journalism organization with focus on innovation, including data and investigative work.
 
 #### Investigative Newsrooms (for examples and methods)
@@ -101,7 +101,7 @@
 - **USA Spending** (https://www.usaspending.gov/) — Federal spending and contracts database.
 
 #### Specialized Investigative Databases
-- **NICAR Database Library** (https://www.ire.org/nicar/database-library/) — IRE members can access cleaned datasets (FOIA logs, campaign finance, inspections).
+- **NICAR Database Library** () — IRE members can access cleaned datasets (FOIA logs, campaign finance, inspections).
 - **OpenSecrets** (https://www.opensecrets.org/) — Campaign finance and lobbying data from Center for Responsive Politics.
 - **Gun Violence Archive** (https://www.gunviolencearchive.org/) — Crowdsourced gun incident database.
 - **OCCRP Aleph** (https://aleph.occrp.org/) — Searchable collection of leaked data, public records, and investigation materials.

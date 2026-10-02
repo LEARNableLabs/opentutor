@@ -8,7 +8,7 @@
   - Comprehensive coverage of loss distributions, frequency models, and aggregate losses
   - Standard reference for SOA exams
   - Excellent for lessons 12-19, 21-23
-  - [Wiley page](https://www.wiley.com/en-us/Loss+Models%3A+From+Data+to+Decisions%2C+5th+Edition-p-9781119523796)
+  - Wiley page
 
 - **Actuarial Mathematics for Life Contingent Risks** (Dickson, Hardy, Waters)
   - Modern treatment of life insurance mathematics
@@ -29,24 +29,24 @@
 - **Foundations of Casualty Actuarial Science** (CAS)
   - Free online textbook from Casualty Actuarial Society
   - Comprehensive, exam-focused
-  - [CAS website](https://www.casact.org/professional-education/education-programs)
+  - CAS website
 
 ### Course Materials
 
 - **MIT OpenCourseWare: Probability and Statistics**
   - 18.05 Introduction to Probability and Statistics
   - Excellent for foundational review (lessons 1-6)
-  - [MIT OCW](https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/)
+  - MIT OCW
 
 - **University of Connecticut Actuarial Science Program**
   - Publishes syllabi and practice problems
   - One of top-ranked actuarial programs in US
-  - [UConn Actuarial](https://actuarial.uconn.edu/)
+  - UConn Actuarial
 
 - **Heriot-Watt University Online Actuarial Science Materials**
   - Free resources for life contingencies and loss models
   - Well-structured, exam-aligned
-  - [Heriot-Watt](https://www.hw.ac.uk/uk/schools/mathematical-computer-sciences/study-with-us/actuarial-science.htm)
+  - Heriot-Watt
 
 ## Supplementary (for engagement)
 
@@ -65,11 +65,11 @@
 - **Society of Actuaries Webcasts**
   - Professional development webinars, often technical
   - Archive available to members
-  - [SOA Learning](https://www.soa.org/professional-development/webinars/)
+  - SOA Learning
 
 - **Casualty Actuarial Society Webinar Series**
   - Emerging topics, practical applications
-  - [CAS Webinars](https://www.casact.org/professional-education/webinars)
+  - CAS Webinars
 
 ### Interactive Tools
 
@@ -89,7 +89,7 @@
 
 - **GeoGebra**
   - Interactive probability and statistics applets
-  - [GeoGebra Probability](https://www.geogebra.org/m/KBRPqT2d)
+  - GeoGebra Probability
 
 ### Code and Datasets
 
@@ -117,7 +117,7 @@
 
 - **CAS Loss Data**
   - Historical insurance claim datasets
-  - [CAS Datasets](https://www.casact.org/research/index.cfm?fa=loss_reserves_data)
+  - CAS Datasets
 
 - **GitHub: Open Actuarial Models**
   - Community-contributed actuarial code
@@ -184,7 +184,7 @@
 - **ASTIN (Actuarial Studies in Non-Life Insurance)**
   - Research section of IAA
   - Publishes ASTIN Bulletin
-  - [astin.org](https://www.actuaries.org/IAA/IAA/Sections/ASTIN_NEW/ASTIN_Home.aspx)
+  - astin.org
 
 ## Journals and Publications
 
@@ -206,7 +206,7 @@
 
 - **Variance (CAS Journal)**
   - Practical articles for property/casualty actuaries
-  - [CAS Variance](https://www.casact.org/publications-research/journals/variance)
+  - CAS Variance
 
 ## Unexpected Connections (for wild cards)
 
@@ -216,7 +216,7 @@
 
 - **Pandemic Modeling**
   - SIR models, epidemiology → aggregate loss models for pandemic risk
-  - [CDC Pandemic Planning](https://www.cdc.gov/flu/pandemic-resources/index.htm)
+  - CDC Pandemic Planning
 
 - **Sports Analytics**
   - Injury rates, player longevity → actuarial methods applied to sports

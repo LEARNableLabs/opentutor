@@ -24,10 +24,7 @@
       "concepts": ["siege warfare context", "defensive architecture", "tactical problem space"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=4_oiHfeITC8",
-        "https://www.bl.uk/medieval-literature/articles/medieval-castles"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -38,8 +35,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.real-world-physics-problems.com/projectile-motion.html",
-        "https://www.pbslearningmedia.org/resource/phy03.sci.phys.mfw.lp_trebuchet/trebuchet/"
+        "https://www.real-world-physics-problems.com/projectile-motion.html"
       ],
       "status": "pending"
     },
@@ -50,10 +46,7 @@
       "concepts": ["energy-range tradeoffs", "rate of fire vs impact", "tactical objectives"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=0MCAz5vCMmI",
-        "https://acoup.blog/2021/07/23/collections-the-practical-realities-of-siege-warfare/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -77,7 +70,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=n9fJzsgUM_A",
         "https://myarmoury.com/feature_spot_ballista.html"
       ],
       "status": "pending"
@@ -90,8 +82,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.jstor.org/stable/506273",
-        "https://www.historytoday.com/archive/feature/lost-technologies-ancient-world"
+        "https://www.jstor.org/stable/506273"
       ],
       "status": "pending"
     },
@@ -115,7 +106,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=UrP8LcOLB_Y",
         "https://www.trebuchet.com/plans/traction-trebuchet/"
       ],
       "status": "pending"
@@ -128,8 +118,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.dtic.mil/dtic/tr/fulltext/u2/a423363.pdf",
-        "https://www.youtube.com/watch?v=8vkhPGRlQ_c"
+        "https://www.dtic.mil/dtic/tr/fulltext/u2/a423363.pdf"
       ],
       "status": "pending"
     },
@@ -151,8 +140,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=kfchvCyHmsc",
-        "https://www.algobeautiful.com/orgasmica/trebuchet.html"
+        "https://www.youtube.com/watch?v=kfchvCyHmsc"
       ],
       "status": "pending"
     },
@@ -177,7 +165,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=VbDHWxXLgzI",
         "https://www.pbs.org/wgbh/nova/lostempires/trebuchet/"
       ],
       "status": "pending"
@@ -199,10 +186,7 @@
       "concepts": ["material properties", "wood selection", "structural engineering"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.wood-database.com/wood-articles/wood-strength/",
-        "https://www.youtube.com/watch?v=gW9w6FsF2k4"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -213,7 +197,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=JEpsKnWZrJ8",
         "https://trebuchet.com/commentary/stress-analysis/"
       ],
       "status": "pending"
@@ -226,7 +209,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.historyextra.com/period/medieval/medieval-biological-warfare-disease-siege/",
         "https://www.youtube.com/watch?v=yJXTXN4xrI8"
       ],
       "status": "pending"
@@ -238,10 +220,7 @@
       "concepts": ["counter-battery fire", "defensive trebuchets", "range estimation"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=bnZBCf4JL-M",
-        "https://acoup.blog/2021/08/06/collections-the-siege-of-gondor-part-ii/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -252,9 +231,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=0L2iU4CiN40",
-        "https://www.jstor.org/stable/1348630",
-        "https://www.medievalists.net/2021/05/fall-of-acre-1291/"
+        "https://www.jstor.org/stable/1348630"
       ],
       "status": "pending"
     },
@@ -275,10 +252,7 @@
       "concepts": ["technological obsolescence", "gunpowder revolution", "comparative engineering"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.youtube.com/watch?v=xtP0dqcBwjY",
-        "https://www.historytoday.com/archive/months-past/end-era-medieval-siege-warfare"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -288,10 +262,7 @@
       "concepts": ["experimental archaeology", "reverse engineering", "physics education"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=7ic_w9L0YJk",
-        "https://www.sciencefriday.com/segments/trebuchet-physics/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

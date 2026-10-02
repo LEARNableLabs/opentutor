@@ -118,8 +118,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.cmegroup.com/education/courses/introduction-to-futures.html",
-        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/"
+        "https://www.cmegroup.com/education/courses/introduction-to-futures.html"
       ],
       "status": "pending"
     },
@@ -195,7 +194,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.cboe.com/education/tools/option-strategy-quick-guide/",
         "https://www.investopedia.com/terms/s/shortstraddle.asp"
       ],
       "status": "pending"
@@ -208,8 +206,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.investopedia.com/terms/p/putcallparity.asp",
-        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/"
+        "https://www.investopedia.com/terms/p/putcallparity.asp"
       ],
       "status": "pending"
     },
@@ -222,7 +219,6 @@
       "type": "mini-lesson",
       "resources": [
         "https://www.investopedia.com/terms/b/binomialoptionpricing.asp",
-        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/",
         "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/black-scholes/v/binomial-option-pricing"
       ],
       "status": "pending"
@@ -261,7 +257,6 @@
       "type": "mini-lesson",
       "resources": [
         "https://www.investopedia.com/terms/b/blackscholes.asp",
-        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/",
         "https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/black-scholes/v/introduction-to-the-black-scholes-formula"
       ],
       "status": "pending"
@@ -274,8 +269,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.investopedia.com/terms/b/blackscholes.asp",
-        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/"
+        "https://www.investopedia.com/terms/b/blackscholes.asp"
       ],
       "status": "pending"
     },
@@ -287,8 +281,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.investopedia.com/terms/g/greeks.asp",
-        "https://www.cboe.com/education/tools/greeks-calculator/"
+        "https://www.investopedia.com/terms/g/greeks.asp"
       ],
       "status": "pending"
     },
@@ -300,8 +293,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.investopedia.com/terms/t/theta.asp",
-        "https://www.cboe.com/education/tools/greeks-calculator/"
+        "https://www.investopedia.com/terms/t/theta.asp"
       ],
       "status": "pending"
     },
@@ -327,8 +319,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.investopedia.com/terms/b/blackscholes.asp",
-        "https://www.cboe.com/education/tools/greeks-calculator/"
+        "https://www.investopedia.com/terms/b/blackscholes.asp"
       ],
       "status": "pending"
     },
@@ -353,8 +344,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.investopedia.com/terms/s/swaprate.asp",
-        "https://www.investopedia.com/terms/s/sofr.asp"
+        "https://www.investopedia.com/terms/s/swaprate.asp"
       ],
       "status": "pending"
     },
@@ -379,7 +369,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://ocw.mit.edu/courses/15-437-options-and-futures-markets-fall-2005/",
         "https://www.cmegroup.com/education/",
         "https://www.cboe.com/education/"
       ],

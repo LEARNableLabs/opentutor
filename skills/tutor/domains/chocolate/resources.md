@@ -30,12 +30,12 @@
 
 - **Reading University International Centre for Cacao Research** (ICCR)
   - Cacao genetics, disease resistance, sustainability
-  - https://research.reading.ac.uk/international-cocoa-quarantine-centre/
+
 
 ### Scientific Papers (Open Access)
 - **Cacao Genome Project** — Nature Communications (2018)
   - Genetic basis of flavor diversity
-  - https://www.nature.com/articles/s41467-018-05013-5
+
 
 - **Cocoa Bean Fermentation** — Applied and Environmental Microbiology (2010)
   - Microbial succession and flavor precursors
@@ -52,11 +52,11 @@
 #### General Overview
 - **How It's Made: Chocolate** (Science Channel)
   - Factory tour showing bean-to-bar. Good visual anchor for processing.
-  - https://www.youtube.com/watch?v=mLAkDKNaWiA
+
 
 - **The Chemistry of Chocolate** (Reactions, ACS)
   - 6-minute overview of Maillard reactions and tempering
-  - https://www.youtube.com/watch?v=8cQQwZLrOWM
+
 
 #### Tempering Demonstrations
 - **ChefSteps: Tempering Chocolate**
@@ -65,25 +65,25 @@
 
 - **Serious Eats: How to Temper Chocolate**
   - Kenji López-Alt demonstrates seeding method with explanation
-  - https://www.youtube.com/watch?v=XwX8TifJaF4
+
 
 - **Ecole Chocolat: Tabling Technique**
   - Traditional marble slab tempering. Beautiful to watch.
-  - https://www.youtube.com/watch?v=093Gq8kbBq8
+
 
 #### Fermentation
 - **BBC Earth: Cacao Fermentation in Ecuador**
   - On-site fermentation footage. Shows the pile, banana leaves, temperature monitoring.
-  - https://www.youtube.com/watch?v=3kfSg7MgYZQ
+
 
 - **Dandelion Chocolate: Bean to Bar**
   - Small-batch maker's perspective. Emphasizes sourcing and fermentation quality.
-  - https://www.youtube.com/watch?v=elAeRteSsXA
+
 
 #### Genetics and Agriculture
 - **Smithsonian: Saving Cacao from Extinction**
   - Disease pressure and genetic conservation efforts
-  - https://www.youtube.com/watch?v=70FyDAQxPZg
+
 
 - **World Cocoa Foundation: Sustainable Cacao**
   - Cultivation challenges, climate change, farmer livelihoods
@@ -93,7 +93,7 @@
 
 - **Fine Cacao Flavor Map**
   - Interactive flavor wheel for chocolate tasting. Use in sensory module.
-  - https://www.finecacao.org/cacao-of-excellence-flavour-map
+
 
 - **Cocoa Butter Phase Diagram Tool** (simulation)
   - Limited availability, but check university food science sites for crystallization simulators
@@ -116,7 +116,7 @@
 
 - **Valrhona Technical Guides**
   - Tempering curves, recipe formulation, troubleshooting
-  - https://www.valrhona.com/en/l-ecole-valrhona
+
 
 - **Barry Callebaut Chocolate Academy**
   - Processing techniques, product development

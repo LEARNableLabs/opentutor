@@ -71,7 +71,7 @@
 - **Mathematica/Wolfram Alpha** — Can compute Lebesgue integrals, manipulate measures, work with Lp norms.
 
 - **Lean theorem prover** — Measure theory formalized in Lean's mathlib. For students interested in formalization and proof verification.
-  - https://leanprover-community.github.io/mathlib_docs/measure_theory/
+
 
 ## People to Follow (researchers and educators)
 

@@ -115,7 +115,7 @@
 
 - **Karplus-Strong String Synthesis** (Python/JS implementations)
   - Simple, elegant digital string model
-  - Paper: https://www.music.mcgill.ca/~gary/courses/papers/Karplus-Strong-CMJ-1983.pdf
+  - Paper:
   - Code examples: https://github.com/topics/karplus-strong
 
 - **Tone.js** (Web Audio synthesis library)
@@ -143,7 +143,7 @@
 - **Architecture & Concert Hall Acoustics**
   - Sabine's equation, reverberation time, diffusion
   - Connects instrument physics to performance spaces
-  - Resource: https://www.acoustics.salford.ac.uk/
+  - Resource:
 
 - **Metamaterials & Acoustic Cloaking**
   - Engineered materials with exotic properties (negative index, band gaps)
@@ -167,7 +167,7 @@
 
 - **Nonlinear Dynamics & Chaos in Reeds**
   - Clarinet multiphonics, saxophone altissimo involve chaotic regimes
-  - Resource: https://www.phys.unsw.edu.au/jw/multiphonics.html
+  - Resource:
 
 - **3D Printing Custom Instruments**
   - Additive manufacturing enables novel geometries
@@ -186,7 +186,7 @@
 
 - **International Symposium on Musical Acoustics (ISMA)**
   - Conference proceedings, cutting-edge research
-  - https://www.isa-music-acoustics.org/
+
 
 - **New Interfaces for Musical Expression (NIME)**
   - Conference on instrument design, electronic instruments, HCI

@@ -15,8 +15,8 @@
 - **MIT OpenCourseWare: Ancient Astronomy** — lecture notes and problem sets available
 
 ### Online Databases
-- **World Archaeoastronomy Database** (https://www.worldarchaeoastronomy.com/) — searchable database of sites with astronomical alignments
-- **International Astronomical Union: Astronomy and World Heritage** (https://www.iau.org/public/themes/cultural_astronomy/) — official IAU resources on cultural astronomy
+- **World Archaeoastronomy Database** () — searchable database of sites with astronomical alignments
+- **International Astronomical Union: Astronomy and World Heritage** () — official IAU resources on cultural astronomy
 
 ## Supplementary (for engagement)
 

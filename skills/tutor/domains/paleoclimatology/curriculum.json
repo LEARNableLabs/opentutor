@@ -52,8 +52,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.ncei.noaa.gov/products/paleoclimatology/tree-ring",
-        "https://www.ltrr.arizona.edu/about/treerings"
+        "https://www.ncei.noaa.gov/products/paleoclimatology/tree-ring"
       ],
       "status": "pending"
     },
@@ -64,10 +63,7 @@
       "concepts": ["marine sediment cores", "foraminifera", "biomarkers"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.ncei.noaa.gov/products/paleoclimatology/ocean-sediment",
-        "https://www.whoi.edu/know-your-ocean/ocean-topics/how-the-ocean-works/ocean-chemistry/marine-sediments/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -77,9 +73,7 @@
       "concepts": ["proxy comparison", "temporal resolution", "spatial coverage"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.ncei.noaa.gov/products/paleoclimatology/primers"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -102,7 +96,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.asa3.org/ASA/education/views/radiocarbon.htm",
         "https://www.radiocarbon.org/"
       ],
       "status": "pending"
@@ -139,9 +132,7 @@
       "concepts": ["proxy synthesis", "dating integration", "uncertainty"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.ncei.noaa.gov/products/paleoclimatology/primers"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -165,7 +156,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncei.noaa.gov/sites/default/files/2021-11/State%20of%20the%20Climate%202010%20last%20glacial%20maximum.pdf",
         "https://www.usgs.gov/special-topics/water-science-school/science/ice-snow-and-glaciers-and-water-cycle"
       ],
       "status": "pending"
@@ -178,7 +168,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/399429a0",
         "https://www.science.org/doi/10.1126/science.1059412"
       ],
       "status": "pending"
@@ -204,7 +193,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.ncei.noaa.gov/products/paleoclimatology/holocene",
         "https://www.nature.com/articles/nature14518"
       ],
       "status": "pending"
@@ -217,8 +205,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.science.org/doi/10.1126/science.281.5381.1342",
-        "https://www.nceas.ucsb.edu/snowball-earth"
+        "https://www.science.org/doi/10.1126/science.281.5381.1342"
       ],
       "status": "pending"
     },
@@ -256,7 +243,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/articles/s41561-020-0647-z",
         "https://www.pnas.org/doi/full/10.1073/pnas.1903656116"
       ],
       "status": "pending"

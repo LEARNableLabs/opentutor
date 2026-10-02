@@ -78,7 +78,7 @@
 ## Available Resources
 
 ### Primary Learning Materials
-- Daniel Jacob's free online textbook: http://acmg.seas.harvard.edu/people/faculty/djj/book/
+- Daniel Jacob's free online textbook:
 - NOAA CSL atmospheric chemistry tutorials
 - EPA Air Quality training modules
 - ACS atmospheric chemistry resources

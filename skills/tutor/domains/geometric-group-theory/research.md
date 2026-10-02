@@ -71,7 +71,7 @@
 
 - **Georgia Tech MATH 4803** - Following Meier's textbook
   - Topics: Cayley graphs, reflections, trees, Baumslag-Solitar, word problem, hyperbolic groups
-  - https://math.gatech.edu/courses/math/4803-mar
+
 
 - **University of Southampton MATH6138** (2026-27)
   - Topics: Free groups, trees, hyperbolic plane, triangle groups, surface groups, CAT(0) cube complexes

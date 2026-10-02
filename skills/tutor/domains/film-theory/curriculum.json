@@ -25,8 +25,7 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.criterion.com/current/posts/59-introduction-to-film-analysis",
-        "https://www.bfi.org.uk/learn-film-guide/using-film-language"
+        "https://www.criterion.com/current/posts/59-introduction-to-film-analysis"
       ],
       "status": "pending"
     },
@@ -38,7 +37,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=3gK_2XdjOdY",
         "https://ocw.mit.edu/courses/21l-011-the-film-experience-fall-2013/"
       ],
       "status": "pending"
@@ -77,8 +75,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.criterion.com/current/posts/59-introduction-to-film-analysis",
-        "https://www.bfi.org.uk/learn-film-guide/using-film-language"
+        "https://www.criterion.com/current/posts/59-introduction-to-film-analysis"
       ],
       "status": "pending"
     },
@@ -89,10 +86,7 @@
       "concepts": ["mise-en-scene", "frame composition", "theatrical vs. cinematic staging"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.bfi.org.uk/film-industry/mise-en-scene",
-        "https://filmschoolrejects.com/mise-en-scene/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -103,8 +97,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.studiobinder.com/blog/rules-of-shot-composition-in-film/",
-        "https://www.youtube.com/watch?v=mHXEHr2L8pE"
+        "https://www.studiobinder.com/blog/rules-of-shot-composition-in-film/"
       ],
       "status": "pending"
     },
@@ -116,8 +109,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.criterion.com/current/posts/4552-in-a-lonely-place-dark-passions",
-        "https://www.youtube.com/watch?v=pxLzwsqc5Lw"
+        "https://www.criterion.com/current/posts/4552-in-a-lonely-place-dark-passions"
       ],
       "status": "pending"
     },
@@ -128,10 +120,7 @@
       "concepts": ["spatial composition", "foreground/background tension", "depth staging"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.youtube.com/watch?v=v4seDVHf4KM",
-        "https://www.indiewire.com/features/general/depth-of-field-cinematography-1201950294/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -155,8 +144,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.criterion.com/current/posts/3742-the-grand-budapest-hotel-wes-anderson-s-literary-vision",
-        "https://www.youtube.com/watch?v=ba3c9KEWpc8"
+        "https://www.criterion.com/current/posts/3742-the-grand-budapest-hotel-wes-anderson-s-literary-vision"
       ],
       "status": "pending"
     },
@@ -168,7 +156,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=K1Mzll8rcvI",
         "https://www.criterion.com/current/posts/1964-the-shining-kubrick-s-horror-show"
       ],
       "status": "pending"
@@ -181,7 +168,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.bfi.org.uk/film-industry/mise-en-scene",
         "https://www.criterion.com/current/posts/59-introduction-to-film-analysis"
       ],
       "status": "pending"
@@ -207,7 +193,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/watch?v=pVrh_32Xxcs",
         "https://www.moma.org/collection/works/90398"
       ],
       "status": "pending"
@@ -246,7 +231,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.studiobinder.com/blog/continuity-editing-definition/",
         "https://www.youtube.com/watch?v=8q4X2vDRfRk"
       ],
       "status": "pending"
@@ -259,8 +243,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.criterion.com/current/posts/127-breathless-making-it-new",
-        "https://www.youtube.com/watch?v=e2eVMCP3i_c"
+        "https://www.criterion.com/current/posts/127-breathless-making-it-new"
       ],
       "status": "pending"
     },
@@ -272,8 +255,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=doaQC-S8de8",
-        "https://filmschoolrejects.com/editing-rules/"
+        "https://www.youtube.com/watch?v=doaQC-S8de8"
       ],
       "status": "pending"
     },
@@ -285,8 +267,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.criterion.com/current/posts/4395-montage-soviet-style",
-        "https://www.studiobinder.com/blog/continuity-editing-definition/"
+        "https://www.criterion.com/current/posts/4395-montage-soviet-style"
       ],
       "status": "pending"
     },
@@ -311,8 +292,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.criterion.com/current/posts/2103-pulp-fiction-what-s-in-the-briefcase",
-        "https://www.youtube.com/watch?v=cSZ9O7rApS4"
+        "https://www.criterion.com/current/posts/2103-pulp-fiction-what-s-in-the-briefcase"
       ],
       "status": "pending"
     },
@@ -336,10 +316,7 @@
       "concepts": ["parallel editing", "cross-cutting", "narrative convergence", "temporal manipulation"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.youtube.com/watch?v=Yh-f2BCVZ4c",
-        "https://www.indiewire.com/features/general/best-parallel-editing-examples-1234598745/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -350,7 +327,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.studiobinder.com/blog/what-is-narrative-structure/",
         "https://www.youtube.com/watch?v=AjgD3CvWzS0"
       ],
       "status": "pending"
@@ -362,10 +338,7 @@
       "concepts": ["genre theory", "narrative conventions", "subversion vs. satisfaction", "intertextuality"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.bfi.org.uk/films-tv-people/4ce2b6b4c5ec6",
-        "https://www.youtube.com/watch?v=q0Ja6YFn3sI"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -376,8 +349,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.studiobinder.com/blog/three-act-structure/",
-        "https://www.studiobinder.com/blog/what-is-narrative-structure/"
+        "https://www.studiobinder.com/blog/three-act-structure/"
       ],
       "status": "pending"
     },

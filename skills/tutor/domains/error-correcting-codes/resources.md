@@ -16,9 +16,9 @@
 
 - **MIT 6.02 Digital Communication Systems** (Fall 2012) — https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/ — Complete course with lectures, notes, and labs. Covers foundations through LDPC codes. Excellent Python implementations.
 
-- **Stanford EE 387 Algebraic Coding Theory** — https://web.stanford.edu/class/ee387/ — Graduate-level course covering cyclic codes, BCH, Reed-Solomon in depth. Strong on finite field algebra.
+- **Stanford EE 387 Algebraic Coding Theory** — Graduate-level course covering cyclic codes, BCH, Reed-Solomon in depth. Strong on finite field algebra.
 
-- **NPTEL Coding Theory** (various Indian institutes) — https://nptel.ac.in/courses/117/106/117106137/ — Free video lectures covering foundations, linear codes, cyclic codes. Good supplementary resource.
+- **NPTEL Coding Theory** (various Indian institutes) — Free video lectures covering foundations, linear codes, cyclic codes. Good supplementary resource.
 
 ## Supplementary (for engagement)
 
@@ -36,7 +36,7 @@
 
 - **Sage Math Coding Theory Package** — https://doc.sagemath.org/html/en/reference/coding/index.html — Computational exploration of linear codes, cyclic codes, BCH, RS. Can construct and test codes interactively.
 
-- **Hamming Code Visualizer** — https://www.cs.cmu.edu/~guyb/realworld/error_correction.html — Step through encoding and decoding Hamming(7,4). Flip bits and watch syndrome decoding recover them.
+- **Hamming Code Visualizer** — Step through encoding and decoding Hamming(7,4). Flip bits and watch syndrome decoding recover them.
 
 - **CRC Calculator** — https://crccalc.com/ — Online tool to compute CRC checksums with various polynomials. Experiment with different data and polynomials.
 

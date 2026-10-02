@@ -53,7 +53,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://psychology.unc.edu/files/2018/10/PSYC-230-Syllabus.pdf",
         "https://ocw.metu.edu.tr/course/view.php?id=87"
       ],
       "status": "pending"
@@ -89,9 +88,7 @@
       "concepts": ["inattentional blindness", "change blindness", "attentional capture"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://psychology.unc.edu/files/2018/10/PSYC-230-Syllabus.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -333,9 +330,7 @@
       "concepts": ["cognitive ergonomics", "user attention", "memory limitations", "decision architecture"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://psychology.unc.edu/files/2018/10/PSYC-230-Syllabus.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -359,8 +354,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.cmu.edu/dietrich/psychology/pdf/syllabi/85-211%20Kemp.pdf",
-        "https://psychology.unc.edu/files/2018/10/PSYC-230-Syllabus.pdf"
+        "https://www.cmu.edu/dietrich/psychology/pdf/syllabi/85-211%20Kemp.pdf"
       ],
       "status": "pending"
     }

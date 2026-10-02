@@ -52,7 +52,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.idea.int/publications/catalogue/what-makes-constitution-legitimate",
         "https://www.constituteproject.org/content/legitimacy"
       ],
       "status": "pending"
@@ -64,10 +63,7 @@
       "concepts": ["entrenchment", "amendment procedures", "rigidity vs flexibility", "constitutional stability"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "http://comparativeconstitutionsproject.org/amendment-difficulty/",
-        "https://www.law.nyu.edu/sites/default/files/upload_documents/Constitutional%20Rigidity.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -130,8 +126,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.law.cornell.edu/wex/federalism",
-        "https://www.idea.int/publications/catalogue/federalism-constitutional-design"
+        "https://www.law.cornell.edu/wex/federalism"
       ],
       "status": "pending"
     },
@@ -220,10 +215,7 @@
       "concepts": ["positive rights", "negative rights", "socioeconomic rights", "enforceability"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.constitutionnet.org/vl/positive-rights",
-        "https://www.law.berkeley.edu/research/the-chief-justice-earl-warren-institute-on-law-and-social-policy/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -247,7 +239,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.law.utoronto.ca/utfl_file/count/documents/conferences/proportionality_conf08.pdf",
         "https://www.echr.coe.int/Documents/Guide_Art_10_ENG.pdf"
       ],
       "status": "pending"
@@ -260,7 +251,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.idea.int/publications/catalogue/emergency-law-responses-covid-19",
         "https://www.echr.coe.int/Documents/FS_Derogation_ENG.pdf"
       ],
       "status": "pending"
@@ -312,7 +302,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.law.cornell.edu/wex/living_constitution",
         "https://plato.stanford.edu/entries/constitutionalism/"
       ],
       "status": "pending"
@@ -351,7 +340,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.idea.int/publications/catalogue/annual-review-constitution-building-processes",
         "http://comparativeconstitutionsproject.org/"
       ],
       "status": "pending"

@@ -14,7 +14,7 @@
   - Advanced treatment of zone system, sensitometry, and chemistry
   - Excellent chapters on developer chemistry and toning
   - Includes digital negative techniques for alternative processes
-  - https://www.routledge.com/Way-Beyond-Monochrome/Lambrecht-Woodhouse/p/book/9781138228368
+
 
 - **The Darkroom Cookbook** by Steve Anchell (4th ed.)
   - Deep dive into printing chemistry and formulations
@@ -43,7 +43,7 @@
 - **Kodak Professional Technical Publications**
   - Historical archive of technical bulletins (many still relevant)
   - Deep coverage of sensitometry, grain structure, spectral sensitivity
-  - https://www.kodak.com/en/motion/page/technical-information
+
 
 - **Digital Truth Photo / Massive Dev Chart**
   - Comprehensive database of film/developer combinations
@@ -58,7 +58,7 @@
   - Professional darkroom techniques and chemistry explanations
   - High production quality, accurate information
   - Good visual demonstrations of development, printing, toning
-  - https://www.youtube.com/user/ilfordphoto
+
 
 - **The Art of Photography** (Ted Forbes)
   - Film photography and darkroom episodes
@@ -87,12 +87,12 @@
   - Searchable database of development times
   - Timer with temperature compensation
   - iOS and Android
-  - https://www.digitaltruth.com/mobile/
+
 
 - **Analyzer Light Meter Simulator**
   - Simulates spot meter readings for zone system work
   - Connects chemistry choices (N+1/N-1) to exposure strategy
-  - https://apps.apple.com/us/app/analyzer/id1050812610
+
 
 ### Online Communities & Forums
 
@@ -122,12 +122,12 @@
   - Open-source tool for tracking development experiments
   - Log film/developer/time/temperature, compare results
   - Good for systematic exploration of chemistry variables
-  - https://github.com/filmdev/tracker
+
 
 - **Cyanotype Chemistry Calculator**
   - Python script for scaling cyanotype chemistry formulas
   - Example of using code to manage chemistry workflows
-  - https://github.com/altphoto/cyanotype-calculator
+
 
 ## People to Follow
 
@@ -136,13 +136,13 @@
 - **Quinn Jacobson**
   - Platinum/palladium printer with deep chemistry knowledge
   - Workshops and writing on alternative processes
-  - https://quinnjacobson.com/
+
 
 - **Christina Z. Anderson**
   - Professor specializing in alternative processes
   - Co-author of *Alternative Photographic Processes*
   - Active in educational community
-  - https://christinazsanderson.com/
+
 
 - **Christopher James**
   - Master printer and author
@@ -164,7 +164,7 @@
 - **Mark Osterman** (George Eastman Museum)
   - Process historian and practitioner
   - Expert on wet plate collodion and 19th-century chemistry
-  - https://www.georgeeastmanmuseum.org/
+
 
 ## Institutions & Museums
 
@@ -172,7 +172,7 @@
   - World's oldest photography museum
   - Extensive archives and educational resources
   - Conservation lab insights into chemistry and archival science
-  - https://www.georgeeastmanmuseum.org/
+
 
 - **Image Permanence Institute** (Rochester Institute of Technology)
   - Research on photographic materials stability and preservation

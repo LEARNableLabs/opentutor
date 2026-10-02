@@ -45,7 +45,7 @@
 - **Berklee Online: Game Audio**
   - Multi-course program covering implementation, middleware, and design
   - Professional certificate available
-  - https://online.berklee.edu/courses/game-audio
+
 
 - **Coursera: Music Production Specialization** (Berklee)
   - Includes mixing and mastering courses applicable to sound design
@@ -66,7 +66,7 @@
   - Official Wwise courses and certification
   - Comprehensive game audio middleware training
   - Free access
-  - https://www.audiokinetic.com/en/learn/
+
 
 ### Educational Websites
 
@@ -95,12 +95,12 @@
 
 - **Game Audio Institute** (YouTube)
   - Game audio tutorials and implementation guides
-  - https://www.youtube.com/c/GameAudioInstitute
+
 
 - **Sound Works Collection** (YouTube)
   - Behind-the-scenes of film sound design
   - Interviews with award-winning sound designers
-  - https://www.youtube.com/user/SoundWorksCollection
+
 
 - **Creative Field Recording** (YouTube/Podcast)
   - Field recording techniques and philosophy

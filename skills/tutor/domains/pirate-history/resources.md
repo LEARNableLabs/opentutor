@@ -21,7 +21,7 @@
   - https://avalon.law.yale.edu/subject_menus/letters.asp
 
 - **Treaty of Utrecht (1713)** — Ended War of Spanish Succession and privateer employment.
-  - https://avalon.law.yale.edu/18th_century/sp1713.asp
+
 
 ## Secondary Sources (Modern Scholarship)
 
@@ -46,7 +46,7 @@
   - Deep dive into maritime technology and combat methods
   - Primary source-heavy
   - Level: Advanced
-  - Archive.org: https://archive.org/details/searoverspracti00litt
+  - Archive.org:
 
 - **Colin Woodard — "The Republic of Pirates" (2007)**
   - Focuses on Nassau period and Woodes Rogers
@@ -79,11 +79,11 @@
 - **"The Real Pirates of the Caribbean"** — History Channel series
   - Covers major figures and periods
   - Good production value, accessible
-  - https://www.history.com/topics/exploration/pirates
+
 
 - **"Blackbeard: Terror at Sea"** — National Geographic (2006)
   - Focus on Blackbeard and his suppression
-  - https://www.youtube.com/watch?v=b9pGfJcgAH8
+
 
 - **"Golden Age of Piracy"** — PBS Documentary
   - Emphasis on archaeological evidence
@@ -111,7 +111,7 @@
 - **Mariners' Museum (Newport News, VA)**
   - Pirates and Privateers exhibit
   - Interactive displays
-  - https://www.marinersmuseum.org/sites/micro/pirates/pirates.htm
+
 
 - **Whydah Pirate Museum (Cape Cod, MA)**
   - Only authenticated pirate treasure ship wreck
@@ -162,7 +162,7 @@
 
 - **North Carolina Encyclopedia — Edward Teach (Blackbeard)**
   - Scholarly but accessible biography
-  - https://www.ncpedia.org/biography/teach-edward
+
 
 ## Legal Resources
 
@@ -170,11 +170,11 @@
 
 - **Yale Law School Avalon Project** — Historical legal documents
   - Treaties, letters of marque, prize law
-  - https://avalon.law.yale.edu/subject_menus/lawofwar.asp
+
 
 - **UC Berkeley Robbins Collection** — Property law and piracy
   - Historical legal analysis
-  - https://www.law.berkeley.edu/research/the-robbins-collection/robbins-collection-resources/property-law-and-legal-history/special-topics-in-legal-history/piracy/
+
 
 ### Modern Law
 

@@ -26,8 +26,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nybg.org/plant-research-and-conservation/institute-of-economic-botany/",
-        "https://people.wku.edu/charles.smith/biogeog/ETHN0002.htm"
+        "https://www.nybg.org/plant-research-and-conservation/institute-of-economic-botany/"
       ],
       "status": "pending"
     },
@@ -38,10 +37,7 @@
       "concepts": ["field methods", "participatory research", "informed consent", "documentation"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://toolkit.culturalsurvival.org/references/gary-j-martin-ethnobotany-methods-manual",
-        "https://ethnobiology.org/what-we-do/core-programs/ethics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -52,8 +48,7 @@
       "difficulty": 1,
       "type": "resource-drop",
       "resources": [
-        "https://www.kew.org/read-and-watch/richard-evans-schultes",
-        "https://www.youtube.com/watch?v=vD76s8EqMl4"
+        "https://www.kew.org/read-and-watch/richard-evans-schultes"
       ],
       "status": "pending"
     },
@@ -77,10 +72,7 @@
       "concepts": ["Vavilov centers", "centers of diversity", "crop wild relatives"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.ars.usda.gov/oc/timeline/vavilov/",
-        "https://www.croptrust.org/our-work/supporting-crop-conservation/vavilov/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -103,9 +95,7 @@
       "concepts": ["field methods review", "ethics review", "domestication basics"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.ethnobiology.org/what-we-do/core-programs/education"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -116,7 +106,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.reneesgarden.com/blogs/gardening-resources/the-three-sisters",
         "http://naeb.brit.org/"
       ],
       "status": "pending"
@@ -142,8 +131,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sapiens.org/culture/traditional-ecological-knowledge/",
-        "https://www.fs.usda.gov/pnw/pubs/journals/pnw_2004_berkes001.pdf"
+        "https://www.sapiens.org/culture/traditional-ecological-knowledge/"
       ],
       "status": "pending"
     },
@@ -193,9 +181,7 @@
       "concepts": ["TEK review", "folk taxonomy review", "cultural transmission"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.ethnobiology.org/what-we-do/core-programs/education"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,7 +257,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://maps.org/news/media/7421-the-new-yorker-the-promise-of-psychedelic-therapy",
         "https://www.jstor.org/stable/40316683"
       ],
       "status": "pending"

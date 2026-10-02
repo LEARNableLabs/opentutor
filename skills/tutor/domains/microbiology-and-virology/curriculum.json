@@ -48,8 +48,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK8477/",
-        "https://www.biointeractive.org/classroom-resources/visualizing-bacterial-cell-wall"
+        "https://www.ncbi.nlm.nih.gov/books/NBK8477/"
       ],
       "status": "pending"
     },
@@ -65,7 +64,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ibiology.org/microbiology/bacterial-motility/",
         "https://www.khanacademy.org/science/biology/bacteria-archaea/prokaryote-structure"
       ],
       "status": "pending"
@@ -82,7 +80,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/archaea-14173304/",
         "https://ocw.mit.edu/courses/7-014-introductory-biology-spring-2005/resources/lecture-notes/"
       ],
       "status": "pending"
@@ -99,8 +96,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK8458/",
-        "https://microbiologyinfo.com/types-of-microbial-metabolism/"
+        "https://www.ncbi.nlm.nih.gov/books/NBK8458/"
       ],
       "status": "pending"
     },
@@ -168,10 +164,7 @@
       ],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.nature.com/scitable/topicpage/bacterial-biofilms-14184699/",
-        "https://www.biointeractive.org/classroom-resources/biofilms-antibiotic-resistance"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -221,7 +214,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/horizontal-gene-transfer-in-bacteria-543/",
         "https://www.ncbi.nlm.nih.gov/books/NBK8477/"
       ],
       "status": "pending"
@@ -237,10 +229,7 @@
       ],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.cdc.gov/drugresistance/about/how-resistance-happens.html",
-        "https://www.biointeractive.org/classroom-resources/antibiotic-resistance"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -308,8 +297,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://viralzone.expasy.org/254",
-        "https://www.nature.com/scitable/topicpage/biology-of-human-tumor-viruses-14118934/"
+        "https://viralzone.expasy.org/254"
       ],
       "status": "pending"
     },
@@ -325,7 +313,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.biointeractive.org/classroom-resources/how-viruses-work",
         "https://www.ncbi.nlm.nih.gov/books/NBK8149/"
       ],
       "status": "pending"
@@ -343,7 +330,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ibiology.org/microbiology/viral-entry/",
         "https://www.khanacademy.org/science/biology/biology-of-viruses/virus-biology"
       ],
       "status": "pending"
@@ -412,10 +398,7 @@
       ],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.nature.com/scitable/topicpage/rna-virus-replication-and-evolution-22960164/",
-        "https://www.cdc.gov/flu/about/viruses/change.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -430,7 +413,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/bacteriophages-14related062/",
         "https://phagesdb.org/"
       ],
       "status": "pending"
@@ -448,8 +430,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK8526/",
-        "https://www.cdc.gov/infectioncontrol/basics/index.html"
+        "https://www.ncbi.nlm.nih.gov/books/NBK8526/"
       ],
       "status": "pending"
     },
@@ -465,10 +446,7 @@
       ],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.nature.com/scitable/topicpage/host-microbe-interactions-14209079/",
-        "https://www.nih.gov/news-events/nih-research-matters/gut-microbes-immune-system"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -483,8 +461,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK8149/",
-        "https://www.biointeractive.org/classroom-resources/immune-evasion"
+        "https://www.ncbi.nlm.nih.gov/books/NBK8149/"
       ],
       "status": "pending"
     },
@@ -501,7 +478,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.cdc.gov/onehealth/basics/zoonotic-diseases.html",
         "https://www.nature.com/articles/nrmicro.2017.45"
       ],
       "status": "pending"
@@ -520,8 +496,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK8526/",
-        "https://www.cdc.gov/vaccines/vpd/vaccines-diseases.html"
+        "https://www.ncbi.nlm.nih.gov/books/NBK8526/"
       ],
       "status": "pending"
     },
@@ -538,8 +513,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.biointeractive.org/classroom-resources/immune-system",
-        "https://www.cdc.gov/vaccines/vpd/vaccines-diseases.html"
+        "https://www.biointeractive.org/classroom-resources/immune-system"
       ],
       "status": "pending"
     },
@@ -556,8 +530,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK8535/",
-        "https://www.nature.com/scitable/topicpage/microbial-biotechnology-40232668/"
+        "https://www.ncbi.nlm.nih.gov/books/NBK8535/"
       ],
       "status": "pending"
     },
@@ -574,7 +547,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/metagenomics-an-introduction-14255596/",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3531572/"
       ],
       "status": "pending"

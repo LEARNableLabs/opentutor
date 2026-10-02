@@ -247,8 +247,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/",
-        "https://www.nuclear-power.com/nuclear-power/reactor-physics/reactor-kinetics/"
+        "https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/"
       ],
       "status": "pending"
     },
@@ -285,7 +284,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nrc.gov/about-nrc/emerg-preparedness/about-emerg-preparedness.html",
         "https://www.iaea.org/topics/nuclear-safety-and-security"
       ],
       "status": "pending"
@@ -311,8 +309,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.nrc.gov/about-nrc/radiation/protects-you/protection-principles.html",
-        "https://www.epa.gov/radiation/radiation-protection"
+        "https://www.nrc.gov/about-nrc/radiation/protects-you/protection-principles.html"
       ],
       "status": "pending"
     },

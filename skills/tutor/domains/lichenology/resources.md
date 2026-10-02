@@ -19,17 +19,17 @@
   - https://ecampus.oregonstate.edu
 
 - **British Lichen Society — Educational Resources** — Training modules, identification guides, and field course listings. Excellent for UK/European species but concepts are universal.
-  - https://www.britishlichensociety.org.uk/learning
+
 
 - **USDA Forest Service FIA Lichen Program** — Protocols, training materials, and monitoring data for North American bioindication studies. Free and comprehensive.
-  - https://www.fs.usda.gov/fia/topics/lichen-monitoring/
+
 
 ## Supplementary (for engagement)
 
 ### Videos and Lectures
 
 - **"Lichen: The Remarkable Organism That Made Life on Land Possible"** (PBS Eons) — 10-minute animated overview of lichen evolution and ecology. Great hook for Lesson 1.
-  - https://www.youtube.com/watch?v=HFX9kKpl1JA (check YouTube for PBS Eons lichens)
+  (check YouTube for PBS Eons lichens)
 
 - **"The Hidden Kingdom of Fungi" (BBC/PBS)** — Episode 2 features lichen symbiosis with high-quality cinematography. Use clips for Lessons 2-3.
 
@@ -41,7 +41,7 @@
 ### Interactive Tools
 
 - **Consortium of Lichen Herbaria (formerly CNALH)** — Searchable database of 2+ million lichen specimens with photos, locality data, and identification keys. Essential for Lessons 23-26.
-  - https://lichenportal.org/cnalh/
+
 
 - **iNaturalist — Lichens** — Crowdsourced observation platform with AI-assisted identification suggestions. Students can upload photos and get community feedback. Gamifies learning.
   - https://www.inaturalist.org/taxa/54743-Lichens
@@ -50,12 +50,12 @@
   - https://lichenportal.org/portal/checklists/checklist.php?clid=14 (check for regional keys)
 
 - **British Lichen Society Spot Test Guide** — Photos and videos demonstrating K, C, KC, P reagent tests with color change examples.
-  - https://www.britishlichensociety.org.uk/chemical-spot-tests
+
 
 ### Citizen Science and Monitoring Projects
 
 - **North American Lichen Project** — Community science initiative documenting lichen diversity across the continent. Students can contribute observations.
-  - https://lichenportal.org/cnalh/projects/
+
 
 - **USFS FIA Lichen Air Quality Gradient Projects** — Access to long-term monitoring data for student data analysis exercises (Lesson 19).
   - https://www.fs.usda.gov/research/products/dataandtools/datasets
@@ -105,14 +105,14 @@
 - **Lichen-eating snails** — Gastropods in genus *Pallifera* specialize on lichens; radula adaptations for scraping thalli. Neat example of coevolution and trophic specialization.
 
 - **Beatrix Potter's lichen drawings** — Before *Peter Rabbit*, Potter was an accomplished lichen illustrator and amateur researcher who challenged Victorian mycologists. Gender and science history angle.
-  - https://www.nhm.ac.uk/discover/beatrix-potter-pioneering-scientist.html
+
 
 - **Lichen green roofs** — Some green roof designs intentionally cultivate *Cladonia*, *Cetraria*, and other lichens for stormwater management and urban biodiversity. Ties ecology to green infrastructure.
 
 ## Academic Journals (for deeper dives)
 
 - **The Bryologist** — Quarterly journal of the American Bryological and Lichenological Society. Open-access archive after embargo period.
-  - https://www.abls.org/the-bryologist
+
 
 - **Lichenologist** — Cambridge University Press journal covering all aspects of lichenology.
   - https://www.cambridge.org/core/journals/lichenologist
@@ -132,10 +132,10 @@
 ## Workshops and Field Courses
 
 - **Eagle Hill Institute (Maine) — Lichen Workshops** — Week-long field courses on identification, ecology, and biomonitoring. Highly recommended for hands-on learners.
-  - https://eaglehill.us/programs/nhs/
+
 
 - **British Lichen Society Field Meetings** — Regional forays throughout UK and Europe, open to international participants.
-  - https://www.britishlichensociety.org.uk/field-meetings
+
 
 - **Oregon Lichenologists — Annual Foray** — Pacific Northwest lichen enthusiasts hold annual collecting trips. Community-building and mentorship.
 

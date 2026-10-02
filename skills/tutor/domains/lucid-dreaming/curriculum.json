@@ -64,8 +64,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00459/full",
-        "https://asdreams.org/journal/"
+        "https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00459/full"
       ],
       "status": "pending"
     },
@@ -77,8 +76,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.cell.com/current-biology/fulltext/S0960-9822(21)00059-2",
-        "https://www.youtube.com/watch?v=mzW7YgQ8u3Y"
+        "https://www.cell.com/current-biology/fulltext/S0960-9822(21)00059-2"
       ],
       "status": "pending"
     },
@@ -194,7 +192,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202242",
         "https://lucidity.com/NL11.RU.IncLDs.html"
       ],
       "status": "pending"
@@ -220,7 +217,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202242",
         "https://www.sleepfoundation.org/sleep-hygiene"
       ],
       "status": "pending"
@@ -350,8 +346,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.cell.com/current-biology/fulltext/S0960-9822(21)00059-2",
-        "https://www.youtube.com/watch?v=mzW7YgQ8u3Y"
+        "https://www.cell.com/current-biology/fulltext/S0960-9822(21)00059-2"
       ],
       "status": "pending"
     },

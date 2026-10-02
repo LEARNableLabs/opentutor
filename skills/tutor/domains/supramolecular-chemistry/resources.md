@@ -7,7 +7,7 @@
   - The standard reference for supramolecular chemistry
   - Covers all interaction types, host-guest chemistry, crystal engineering, and applications
   - Excellent for intermediate learners — good balance of theory and examples
-  - https://www.wiley.com/en-us/Supramolecular+Chemistry%2C+3rd+Edition-p-9781119657453
+
 
 - **Lehn, J.-M. "Supramolecular Chemistry: Concepts and Perspectives" (VCH, 1995)**
   - Nobel Prize winner's vision of the field
@@ -143,7 +143,7 @@
   - https://www.mdanalysis.org/
 
 - **PyMOL API** — programmatic molecular visualization
-  - https://pymolwiki.org/index.php/PyMOL_API
+
 
 ### Simulation Tutorials
 - **GROMACS tutorials** — molecular dynamics simulations
@@ -233,7 +233,7 @@
 ## Datasets and Databases
 
 - **CoRE MOF Database** — computed structures and properties of MOFs
-  - http://gregchung.github.io/CoRE-MOFs/
+
 
 - **BindingDB** — database of measured binding affinities
   - https://www.bindingdb.org/

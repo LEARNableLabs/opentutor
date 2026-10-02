@@ -26,7 +26,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.scientificamerican.com/article/what-causes-some-people-to-be-left-handed/",
         "https://pubmed.ncbi.nlm.nih.gov/32668444/"
       ],
       "status": "pending"
@@ -39,7 +38,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.brainmapping.org/NITP/NITP_Edinburgh_Handedness_Inventory.pdf",
         "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0206297"
       ],
       "status": "pending"
@@ -64,10 +62,7 @@
       "concepts": ["mixed-handedness", "atypical laterality", "cognitive correlates"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.nature.com/articles/s41598-020-74469-9",
-        "https://www.youtube.com/watch?v=k0BWVmwJJrs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -77,10 +72,7 @@
       "concepts": ["cultural attitudes", "forced conversion", "historical stigma"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.bbc.com/future/article/20141215-why-lefties-were-losers",
-        "https://psychcentral.com/lib/left-handedness-history-and-myths"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -189,7 +181,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/s41562-021-01085-3",
         "https://pubmed.ncbi.nlm.nih.gov/31048045/"
       ],
       "status": "pending"
@@ -202,7 +193,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.frontiersin.org/articles/10.3389/fpsyg.2012.00302/full",
         "https://journals.sagepub.com/doi/10.1177/0956797617727459"
       ],
       "status": "pending"
@@ -228,8 +218,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://royalsocietypublishing.org/doi/10.1098/rstb.2008.0304",
-        "https://www.youtube.com/watch?v=sXyWCgFOWKU"
+        "https://royalsocietypublishing.org/doi/10.1098/rstb.2008.0304"
       ],
       "status": "pending"
     },
@@ -277,7 +266,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.lefthandersday.com/statistics",
         "https://designmuseum.org/discover-design/all-stories/left-handed-design"
       ],
       "status": "pending"
@@ -290,7 +278,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/s41398-019-0666-8",
         "https://pubmed.ncbi.nlm.nih.gov/25646265/"
       ],
       "status": "pending"
@@ -316,8 +303,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.annualreviews.org/doi/10.1146/annurev-neuro-071714-033948",
-        "https://www.nature.com/articles/s41583-019-0206-2"
+        "https://www.annualreviews.org/doi/10.1146/annurev-neuro-071714-033948"
       ],
       "status": "pending"
     }

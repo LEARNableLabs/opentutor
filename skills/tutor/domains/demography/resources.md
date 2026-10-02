@@ -49,7 +49,7 @@
 
 - **UN Population Pyramids (interactive)**
   - Official UN data, all countries, historical and projected
-  - https://population.un.org/wpp/Graphs/DemographicProfiles/
+
 
 - **Gapminder World**
   - Animated scatter plots of population indicators over time
@@ -94,7 +94,7 @@
 - **PRB Webinars**
   - Regular expert presentations on current demographic topics
   - Archive of past webinars available
-  - https://www.prb.org/events-webinars/
+
 
 - **Population Association of America (PAA)**
   - Professional association, some public lecture recordings
@@ -108,7 +108,7 @@
 - **BBC — "Don't Panic: The Truth About Population" (2013)**
   - Hans Rosling documentary on population growth myths
   - 60 minutes, accessible, policy-relevant
-  - https://www.gapminder.org/videos/dont-panic-the-truth-about-population/
+
 
 ### Hands-on Tools
 
@@ -139,7 +139,7 @@
 - **Omran, Abdel R.** (1971) — "The Epidemiological Transition"
   - Classic paper explaining mortality decline through disease patterns
   - Complements lesson 10 and 24
-  - https://www.milbank.org/quarterly/featured-articles/classic-article-epidemiologic-transition-theory-health-populations-developing-countries/
+
 
 - **Lee, Ronald** (2003) — "The Demographic Transition: Three Centuries of Fundamental Change"
   - Comprehensive review of demographic transition theory
@@ -171,11 +171,11 @@
 
 - **Jennifer Sciubba** — Political demographer, author of "8 Billion and Counting"
   - Twitter: @profsciubba
-  - https://www.rhodescollege.edu/academics/faculty/jennifer-sciubba
+
 
 - **Lyman Stone** — Demographer studying fertility decline
   - Twitter: @lymanstoneky
-  - https://ifstudies.org/authors/lyman-stone
+
 
 - **John Wilmoth** — Director of UN Population Division
   - Oversees World Population Prospects
@@ -198,7 +198,7 @@
 
 ### Demography + Economics
 - **Demographic dividend** — East Asian growth driven by age structure
-  - David Bloom et al. work: https://www.hks.harvard.edu/centers/cid/publications/faculty-working-papers/demographic-dividend-new-perspective
+  - David Bloom et al. work:
 
 ### Demography + Climate
 - **Population scenarios in IPCC models** — SSPs (Shared Socioeconomic Pathways)
@@ -212,7 +212,7 @@
 ### Demography + Genetics
 - **Effective population size** — genetic diversity depends on demographic history
   - Bottlenecks, founder effects
-  - https://www.nature.com/scitable/knowledge/library/genetic-drift-and-effective-population-size-12523692/
+
 
 ### Demography + Machine Learning
 - **Mortality forecasting with neural networks** — competing with Lee-Carter models
@@ -234,7 +234,7 @@
 
 - **University of Pennsylvania — Population Studies Center**
   - Graduate level but some accessible content
-  - https://pop.upenn.edu/
+
 
 - **London School of Economics — Department of Social Policy**
   - European perspective, strong on aging and policy
@@ -243,7 +243,7 @@
 ## Quick Reference Sites
 
 - **PRB Glossary of Demographic Terms**
-  - https://www.prb.org/resources/population-reference-bureau-glossary-of-population-terms/
+
 
 - **CDC Wonder** — US vital statistics query system
   - https://wonder.cdc.gov/

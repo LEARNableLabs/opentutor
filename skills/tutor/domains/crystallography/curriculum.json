@@ -29,8 +29,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/2",
-        "https://www.youtube.com/watch?v=Esc6kcReJIg"
+        "https://www.iucr.org/education/pamphlets/2"
       ],
       "status": "pending"
     },
@@ -81,8 +80,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/5",
-        "https://www.youtube.com/watch?v=nj8LD9b7j9w"
+        "https://www.iucr.org/education/pamphlets/5"
       ],
       "status": "pending"
     },
@@ -94,8 +92,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.iucr.org/education/pamphlets",
-        "http://pd.chem.ucl.ac.uk/pdnn/symm1/index.htm"
+        "https://www.iucr.org/education/pamphlets"
       ],
       "status": "pending"
     },
@@ -107,8 +104,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/3-60-symmetry-structure-and-tensor-properties-of-materials-fall-2005/",
-        "https://www.youtube.com/watch?v=oJCYI8wZPPQ"
+        "https://ocw.mit.edu/courses/3-60-symmetry-structure-and-tensor-properties-of-materials-fall-2005/"
       ],
       "status": "pending"
     },
@@ -120,8 +116,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/6",
-        "https://www.youtube.com/watch?v=TKjkGKV8sJg"
+        "https://www.iucr.org/education/pamphlets/6"
       ],
       "status": "pending"
     },
@@ -133,8 +128,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.doitpoms.ac.uk/tlplib/miller_indices/index.php",
-        "https://www.youtube.com/watch?v=g5z5FiMBP4s"
+        "https://www.doitpoms.ac.uk/tlplib/miller_indices/index.php"
       ],
       "status": "pending"
     },
@@ -146,8 +140,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.mindat.org/",
-        "http://www.minsocam.org/amcsd/"
+        "https://www.mindat.org/"
       ],
       "status": "pending"
     },
@@ -185,8 +178,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/9",
-        "https://www.youtube.com/watch?v=DjnDdmBdgFk"
+        "https://www.iucr.org/education/pamphlets/9"
       ],
       "status": "pending"
     },
@@ -211,8 +203,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "http://www.cryst.ehu.es/cryst/get_gen.html",
-        "https://www.youtube.com/watch?v=eEGNKt0OQgQ"
+        "http://www.cryst.ehu.es/cryst/get_gen.html"
       ],
       "status": "pending"
     },
@@ -237,8 +228,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/11",
-        "https://www.youtube.com/watch?v=s9ZVIplw45M"
+        "https://www.iucr.org/education/pamphlets/11"
       ],
       "status": "pending"
     },
@@ -263,8 +253,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/13",
-        "https://www.youtube.com/watch?v=6hOpGbAKpKQ"
+        "https://www.iucr.org/education/pamphlets/13"
       ],
       "status": "pending"
     },
@@ -289,8 +278,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/14",
-        "https://www.youtube.com/watch?v=RZqjfTSBHCo"
+        "https://www.iucr.org/education/pamphlets/14"
       ],
       "status": "pending"
     },
@@ -302,8 +290,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.rcsb.org/",
-        "https://www.youtube.com/watch?v=zHkWJQQSdro"
+        "https://www.rcsb.org/"
       ],
       "status": "pending"
     },
@@ -315,8 +302,7 @@
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/15",
-        "https://www.youtube.com/watch?v=0oXcKT5HQDE"
+        "https://www.iucr.org/education/pamphlets/15"
       ],
       "status": "pending"
     },
@@ -328,8 +314,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/17",
-        "http://pd.chem.ucl.ac.uk/pdnn/powintro.htm"
+        "https://www.iucr.org/education/pamphlets/17"
       ],
       "status": "pending"
     },
@@ -341,8 +326,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.iucr.org/education/pamphlets/16",
-        "https://www.youtube.com/watch?v=z-Mq0lNjGpo"
+        "https://www.iucr.org/education/pamphlets/16"
       ],
       "status": "pending"
     },

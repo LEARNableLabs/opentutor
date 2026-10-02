@@ -18,7 +18,7 @@
 
 ### Online Courses and Guides
 
-- **ARRL Learning Center** — https://arrl.cloud/courses
+- **ARRL Learning Center**
   - Structured online courses covering license exam preparation and specialized topics (antennas, propagation, digital modes, contesting). Self-paced with quizzes. Useful as parallel study or review.
 
 - **HamStudy.org** — https://hamstudy.org
@@ -39,7 +39,7 @@
 
 ### YouTube Channels
 
-- **Dave Casler (KE0OG)** — https://www.youtube.com/c/DaveCasler
+- **Dave Casler (KE0OG)**
   - Clear, well-structured explanations of amateur radio theory and practice. Excellent videos on propagation ("How the Ionosphere Works"), antennas ("Dipole vs Vertical"), and modes. Highly recommended for visual learners. Pace is deliberate—suitable for reinforcing curriculum concepts.
 
 - **K7AGE Ham Radio Tutorials** — https://www.youtube.com/user/K7age
@@ -48,7 +48,7 @@
 - **Ham Radio Crash Course** — https://www.youtube.com/c/HamRadioCrashCourse
   - Modern approach emphasizing digital modes, SDR, and computer integration. Excellent FT8, PSK31, and SSTV tutorials. Good production quality and enthusiasm. Targets newer operators but intermediate students will find value in digital mode deep-dives.
 
-- **K6UDA Radio** — https://www.youtube.com/c/K6UDARadi0
+- **K6UDA Radio**
   - Strong technical focus with antenna theory, propagation modeling, and SDR content. More advanced than other channels; useful for students who want deeper theory.
 
 ### Lecture Series and Presentations
@@ -56,7 +56,7 @@
 - **DX University** — https://www.dxuniversity.com
   - Annual educational event (recordings available) covering DXing techniques, propagation, antennas, and contest operating. Features presentations from top operators and engineers. Intermediate to advanced level.
 
-- **ARRL On-Demand Webinars** — https://home.arrl.org/action/Courses/Webinars
+- **ARRL On-Demand Webinars**
   - Recorded webinars on specialized topics: antenna modeling, propagation prediction, digital modes, emergency communications. Free for ARRL members. Searchable archive.
 
 ## Interactive Tools and Simulators
@@ -107,7 +107,7 @@
 - **Red Pitaya SDR Transceiver** — https://github.com/pavel-demin/red-pitaya-notes
   - Open-source SDR transceiver project using Red Pitaya hardware. Shows modern integration of software-defined radio with amateur radio. Advanced but fascinating for students interested in SDR.
 
-- **QRadioLink** — https://github.com/qradiolink/qradiolink
+- **QRadioLink**
   - Open-source SDR transceiver application for Linux. Supports many modes and can work with RTL-SDR, LimeSDR, PlutoSDR. Good example of modern software integration.
 
 - **Hamlib** — https://github.com/Hamlib/Hamlib

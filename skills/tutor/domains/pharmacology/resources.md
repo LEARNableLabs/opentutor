@@ -109,7 +109,7 @@
   - **How to use:** Clinical drug information, patient education materials
 
 - **PK/PD Simulator (University of Florida)**
-  - https://pkpdsim.boomer.org/
+
   - Interactive pharmacokinetic simulations (one-compartment, two-compartment models)
   - **How to use:** Visualize concentration-time curves, manipulate parameters (Vd, CL, ka)
   - **Essential for:** Lessons 9-11 (PK concepts)
@@ -123,7 +123,7 @@
   - **Use for:** Lesson 28, understanding translational research
 
 - **Coursera: Introduction to Pharmacology (University of Pennsylvania)**
-  - https://www.coursera.org/learn/pharmacology
+
   - Foundational course, clinical emphasis
   - **Level:** Beginner to intermediate
   - **Use for:** Supplementary explanations, alternative perspectives
@@ -186,11 +186,11 @@
 
 - **Economics: Patent cliffs and generic competition**
   - Why drug prices drop after patent expiry; pharmaceutical business models
-  - **Resource:** https://www.fda.gov/drugs/development-approval-process-drugs/generic-drugs-questions-answers
+  - **Resource:**
 
 - **Evolution: Antibiotic resistance as natural selection in real-time**
   - Fastest observable evolution; implications for drug design
-  - **Resource:** https://www.cdc.gov/antibiotic-use/antibiotic-resistance.html
+  - **Resource:**
 
 - **Chemistry: Chirality and enantiomers in drug action**
   - Thalidomide disaster, ibuprofen (one active enantiomer), why stereochemistry matters

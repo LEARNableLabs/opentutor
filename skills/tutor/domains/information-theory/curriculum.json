@@ -118,8 +118,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf",
-        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html"
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf"
       ],
       "status": "pending"
     },
@@ -157,8 +156,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=BCiZc0n6COY",
-        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html"
+        "https://www.youtube.com/watch?v=BCiZc0n6COY"
       ],
       "status": "pending"
     },
@@ -247,7 +245,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html",
         "https://web.stanford.edu/class/ee376a/"
       ],
       "status": "pending"
@@ -285,8 +282,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf",
-        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html"
+        "https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf"
       ],
       "status": "pending"
     },
@@ -311,7 +307,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://people.cs.umass.edu/~arya/courses/650/CS650-2016.html",
         "https://www.youtube.com/watch?v=BCiZc0n6COY"
       ],
       "status": "pending"

@@ -31,7 +31,7 @@
 ### Video Content
 
 **Geoff Lawton (Permaculture Research Institute)**
-- YouTube channel: Geoff Lawton — https://www.youtube.com/@geofflawton  
+- YouTube channel: Geoff Lawton
 - "Greening the Desert" project (Jordan) — iconic water harvesting case study
 - "Establishing a Food Forest" — practical implementation series
 - Site-specific PDC videos from around the world
@@ -55,7 +55,7 @@
 - Honest about failures and learning process
 
 **Richard Perkins (Ridgedale Permaculture)**
-- YouTube channel: Ridgedale Permaculture — https://www.youtube.com/@RidgedalePermaculture  
+- YouTube channel: Ridgedale Permaculture
 - Commercial-scale permaculture in Sweden
 - Market gardening integration with permaculture design
 - Business and production focus

@@ -20,7 +20,7 @@
 
 - **UC Davis: Food Science & Technology Lectures** — Some lectures available on YouTube covering LAB fermentation and artisan bread. Search "UC Davis food fermentation" for video playlists.
 
-- **Harvard's "Science & Cooking" course** — Includes modules on fermentation chemistry and gluten networks. Some lectures freely available. [EdX](https://www.edx.org/course/science-cooking-from-haute-cuisine-to-soft-matter-science)
+- **Harvard's "Science & Cooking" course** — Includes modules on fermentation chemistry and gluten networks. Some lectures freely available. EdX
 
 ## Supplementary Resources
 
@@ -46,13 +46,13 @@
 
 - **PubMed** — Search "sourdough microbiome", "Lactobacillus fermentation", or "sourdough biochemistry" for primary literature. Filter for free full-text and reviews. [https://pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov)
 
-- **FoodCROP (Fermented Foods Database)** — Curated database of fermented food microbiomes, including sourdough. Useful for species comparisons. [https://foodcrops.org](https://foodcrops.org) (Note: URL may have changed; search "fermented foods database")
+- **FoodCROP (Fermented Foods Database)** — Curated database of fermented food microbiomes, including sourdough. Useful for species comparisons.  (Note: URL may have changed; search "fermented foods database")
 
 ### Code & Computational Resources
 
 - **Sourdough Starter Calculator (GitHub)** — Open-source tools for calculating feeding ratios and fermentation timelines. Search "sourdough calculator github" for multiple repos.
 
-- **Microbial growth curve simulators** — While not sourdough-specific, tools like **COMBASE Predictor** model bacterial growth under different temperatures and pH. Adaptable to LAB. [https://www.combase.cc/index.php/en/](https://www.combase.cc/index.php/en/)
+- **Microbial growth curve simulators** — While not sourdough-specific, tools like **COMBASE Predictor** model bacterial growth under different temperatures and pH. Adaptable to LAB.
 
 - **R Phyloseq tutorials** — For advanced students interested in microbiome sequencing data. Learn to analyze 16S rRNA data from sourdough starters. [https://joey711.github.io/phyloseq/](https://joey711.github.io/phyloseq/)
 

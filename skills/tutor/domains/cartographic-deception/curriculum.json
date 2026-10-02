@@ -124,7 +124,7 @@
       "concepts": ["prime meridian", "temporal imperialism", "arbitrary standards"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.bl.uk/collection-guides/maps"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -174,7 +174,7 @@
       "concepts": ["omission", "selective labeling", "erasure techniques"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.loc.gov/collections/persuasive-cartography/", "https://news.cornell.edu/stories/2012/06/exhibit-focuses-maps-weapons-imperialism"],
+      "resources": ["https://www.loc.gov/collections/persuasive-cartography/"],
       "status": "pending"
     },
     {
@@ -214,7 +214,7 @@
       "concepts": ["historical synthesis", "propaganda patterns", "visual continuity"],
       "difficulty": 2,
       "type": "review",
-      "resources": ["https://www.loc.gov/collections/persuasive-cartography/", "https://news.cornell.edu/stories/2012/06/exhibit-focuses-maps-weapons-imperialism"],
+      "resources": ["https://www.loc.gov/collections/persuasive-cartography/"],
       "status": "pending"
     },
     {

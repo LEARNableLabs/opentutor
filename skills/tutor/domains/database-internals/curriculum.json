@@ -40,8 +40,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://colin-scott.github.io/personal_website/research/interactive_latency.html",
-        "https://www.cs.cornell.edu/projects/ladis2009/papers/dean-keynote-ladis2009.pdf"
+        "https://colin-scott.github.io/personal_website/research/interactive_latency.html"
       ],
       "status": "pending"
     },
@@ -79,8 +78,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cs.usfca.edu/~galles/visualization/BTree.html",
-        "https://15445.courses.cs.cmu.edu/fall2023/notes/07-trees.pdf"
+        "https://www.cs.usfca.edu/~galles/visualization/BTree.html"
       ],
       "status": "pending"
     },
@@ -104,10 +102,7 @@
       "concepts": ["B+ tree structure", "leaf node linking", "range scans"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.postgresql.org/docs/current/btree-implementation.html",
-        "https://15445.courses.cs.cmu.edu/fall2023/notes/07-trees.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -118,8 +113,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://15445.courses.cs.cmu.edu/fall2023/notes/09-indexconcurrency.pdf",
-        "https://www.youtube.com/watch?v=Y8BrHwR58Gg"
+        "https://15445.courses.cs.cmu.edu/fall2023/notes/09-indexconcurrency.pdf"
       ],
       "status": "pending"
     },
@@ -157,8 +151,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://github.com/facebook/rocksdb/wiki/RocksDB-Basics",
-        "https://15445.courses.cs.cmu.edu/fall2023/notes/08-trees2.pdf"
+        "https://github.com/facebook/rocksdb/wiki/RocksDB-Basics"
       ],
       "status": "pending"
     },
@@ -248,7 +241,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://15445.courses.cs.cmu.edu/fall2023/notes/11-queryexecution1.pdf",
         "https://www.postgresql.org/docs/current/query-path.html"
       ],
       "status": "pending"
@@ -260,10 +252,7 @@
       "concepts": ["nested loop join", "hash join", "sort-merge join"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://15445.courses.cs.cmu.edu/fall2023/notes/12-queryexecution2.pdf",
-        "https://www.youtube.com/watch?v=nUCo7Y_OJKs"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -287,7 +276,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://15445.courses.cs.cmu.edu/fall2023/notes/11-queryexecution1.pdf",
         "https://www.postgresql.org/docs/current/query-path.html"
       ],
       "status": "pending"
@@ -300,8 +288,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.postgresql.org/docs/current/planner-stats.html",
-        "https://15445.courses.cs.cmu.edu/fall2023/notes/14-costmodels.pdf"
+        "https://www.postgresql.org/docs/current/planner-stats.html"
       ],
       "status": "pending"
     },
@@ -313,7 +300,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://use-the-index-luke.com/sql/explain-plan/postgresql/cardinality-estimation",
         "https://www.postgresql.org/docs/current/runtime-config-query.html"
       ],
       "status": "pending"
@@ -326,7 +312,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://15445.courses.cs.cmu.edu/fall2023/notes/13-optimization.pdf",
         "https://dl.acm.org/doi/10.1145/582.582444"
       ],
       "status": "pending"
@@ -379,9 +364,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://arxiv.org/abs/1712.01208",
-        "https://www.youtube.com/watch?v=5K1JXvvqBnE",
-        "https://db.cs.cmu.edu/papers/2021/p2884-marcus.pdf"
+        "https://arxiv.org/abs/1712.01208"
       ],
       "status": "pending"
     }

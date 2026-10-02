@@ -92,10 +92,7 @@
       "concepts": ["relativity of simultaneity", "spacetime diagrams", "reference frames"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/watch?v=vVKb3vKd8Tw",
-        "https://www.real-world-physics-problems.com/relativity-of-simultaneity.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -144,8 +141,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Minkowski_space",
-        "https://www.youtube.com/watch?v=7VPBRs8z_Rc"
+        "https://en.wikipedia.org/wiki/Minkowski_space"
       ],
       "status": "pending"
     },
@@ -323,8 +319,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://en.wikipedia.org/wiki/Error_analysis_for_the_Global_Positioning_System",
-        "https://www.youtube.com/watch?v=xo-YqeYZbJ0"
+        "https://en.wikipedia.org/wiki/Error_analysis_for_the_Global_Positioning_System"
       ],
       "status": "pending"
     },

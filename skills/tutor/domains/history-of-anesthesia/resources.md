@@ -13,7 +13,7 @@
   - Site of October 16, 1846 demonstration
   - Historical context, architectural information, primary documents
 
-- **American Society of Anesthesiologists Timeline** — [asahq.org/timeline](https://www.asahq.org/timeline/)
+- **American Society of Anesthesiologists Timeline** — asahq.org/timeline
   - Interactive chronological overview
   - Key dates, people, and innovations from 1842 to present
 
@@ -38,7 +38,7 @@
   - Historical medical texts, images, manuscripts
   - Digital collections on surgery and anesthesia
 
-- **Wellcome Collection** — [wellcome.org/collections](https://wellcome.org/collections)
+- **Wellcome Collection** — wellcome.org/collections
   - UK-based medical history archive
   - Strong on British anesthesia history (Simpson, Snow)
 
@@ -60,7 +60,7 @@
 
 ### Interactive Tools and Visualizations
 
-- **ASA Interactive Timeline** — [asahq.org/timeline](https://www.asahq.org/timeline/)
+- **ASA Interactive Timeline** — asahq.org/timeline
   - Clickable events with images and descriptions
   - Good for visual learners and timeline orientation
 

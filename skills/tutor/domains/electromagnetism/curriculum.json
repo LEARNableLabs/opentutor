@@ -46,7 +46,7 @@
       "concepts": ["electromagnetic potentials", "scalar potential", "vector potential", "gauge freedom"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/2D2C1A88F496953FB6D39A4C69B86BB1"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -86,7 +86,7 @@
       "concepts": ["Poynting vector", "energy flux", "electromagnetic momentum"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": ["https://ocw.mit.edu/courses/8-03-physics-iii-vibrations-and-waves-fall-2004/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -146,7 +146,7 @@
       "concepts": ["dielectric materials", "polarization density", "electric susceptibility", "refractive index"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.cambridge.org/highereducation/books/introduction-to-electrodynamics/2D2C1A88F496953FB6D39A4C69B86BB1"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -206,7 +206,7 @@
       "concepts": ["waveguides", "waveguide modes", "TE modes", "TM modes", "TEM modes"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": ["https://www.falstad.com/emwave/"],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -286,7 +286,7 @@
       "concepts": ["metamaterials", "negative refraction", "negative index", "split-ring resonators"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": ["https://www.rp-photonics.com/metamaterials.html"],
+      "resources": [],
       "status": "pending"
     },
     {

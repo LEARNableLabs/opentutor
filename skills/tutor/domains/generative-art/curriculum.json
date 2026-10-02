@@ -29,8 +29,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://p5js.org/reference/#/p5/random",
-        "https://www.tylerlhobbs.com/writings/randomness-in-generative-art"
+        "https://p5js.org/reference/#/p5/random"
       ],
       "status": "pending"
     },
@@ -56,8 +55,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html",
-        "https://editor.p5js.org/codingtrain/sketches/L-HQz13WI"
+        "https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html"
       ],
       "status": "pending"
     },
@@ -69,8 +67,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://inconvergent.net/2016/shepherding-random-numbers/",
-        "https://tylerxhobbs.com/essays/2018/randomness"
+        "https://inconvergent.net/2016/shepherding-random-numbers/"
       ],
       "status": "pending"
     },
@@ -82,7 +79,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://p5js.org/examples/math-noise-wave.html",
         "https://github.com/mattdesl/workshop-data-artwork"
       ],
       "status": "pending"
@@ -95,7 +91,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://generative-artistry.com/tutorials/",
         "https://openprocessing.org/browse/#"
       ],
       "status": "pending"
@@ -107,10 +102,7 @@
       "concepts": ["grid systems", "tessellation", "modular composition"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://generative-artistry.com/tutorials/tiled-lines/",
-        "https://p5js.org/examples/structure-create-graphics.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -121,7 +113,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://generative-artistry.com/tutorials/un-deuxtrois/",
         "https://www.youtube.com/watch?v=0jjeOYMjmDU"
       ],
       "status": "pending"
@@ -133,10 +124,7 @@
       "concepts": ["recursion", "fractals", "self-similarity"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://thecodingtrain.com/CodingChallenges/014-fractaltree.html",
-        "https://p5js.org/examples/simulate-recursive-tree.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -146,10 +134,7 @@
       "concepts": ["recursive subdivision", "binary space partitioning", "aesthetic rules"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://generative-artistry.com/tutorials/piet-mondrian/",
-        "https://github.com/erdavids/Generative-Art-Tutorials"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -160,7 +145,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://p5js.org/examples/transform-rotate.html",
         "https://openprocessing.org/sketch/378706"
       ],
       "status": "pending"
@@ -173,7 +157,6 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://thecodingtrain.com/CodingChallenges/146-rendering-ray-casting.html",
         "https://inconvergent.net/generative/",
         "https://en.wikipedia.org/wiki/Hilbert_curve"
       ],
@@ -187,7 +170,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://generative-artistry.com/",
         "https://openprocessing.org/browse/?time=anytime&type=tags&q=patterns"
       ],
       "status": "pending"
@@ -200,7 +182,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://p5js.org/examples/motion-bounce.html",
         "https://easings.net/",
         "https://www.youtube.com/watch?v=17WoOqgXsRM"
       ],
@@ -214,7 +195,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://thecodingtrain.com/CodingChallenges/078-simple-particle-system.html",
         "https://natureofcode.com/book/chapter-4-particle-systems/"
       ],
       "status": "pending"
@@ -227,8 +207,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://natureofcode.com/book/chapter-2-forces/",
-        "https://p5js.org/examples/simulate-forces.html"
+        "https://natureofcode.com/book/chapter-2-forces/"
       ],
       "status": "pending"
     },
@@ -253,7 +232,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://p5js.org/examples/color-linear-gradient.html",
         "https://openprocessing.org/sketch/413567"
       ],
       "status": "pending"
@@ -292,7 +270,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://tylerxhobbs.com/essays/2021/using-color-in-generative-art",
         "https://coolors.co/",
         "https://www.youtube.com/watch?v=riiJTF5-N7c"
       ],
@@ -306,8 +283,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://p5js.org/reference/#/p5/pixels",
-        "https://thecodingtrain.com/CodingChallenges/011-pixelsorting.html"
+        "https://p5js.org/reference/#/p5/pixels"
       ],
       "status": "pending"
     },
@@ -333,8 +309,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://natureofcode.com/book/chapter-6-autonomous-agents/",
-        "https://thecodingtrain.com/CodingChallenges/124-flocking-boids.html"
+        "https://natureofcode.com/book/chapter-6-autonomous-agents/"
       ],
       "status": "pending"
     },
@@ -346,8 +321,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "http://algorithmicbotany.org/papers/abop/abop.pdf",
-        "https://thecodingtrain.com/CodingChallenges/016-lsystem.html"
+        "http://algorithmicbotany.org/papers/abop/abop.pdf"
       ],
       "status": "pending"
     },
@@ -400,8 +374,6 @@
       "type": "resource-drop",
       "resources": [
         "https://www.artnome.com/news/2018/8/8/why-love-generative-art",
-        "https://www.rightclicksave.com/article/the-history-of-generative-art",
-        "https://spalterdigital.com/artworks/vera-molnar/",
         "https://www.youtube.com/watch?v=_8DMEHxOLQE"
       ],
       "status": "pending"

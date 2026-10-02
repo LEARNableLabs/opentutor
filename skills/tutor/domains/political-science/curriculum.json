@@ -103,8 +103,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ncase.me/ballot/",
-        "https://www.electology.org/voting-methods-101"
+        "https://ncase.me/ballot/"
       ],
       "status": "pending"
     },
@@ -129,8 +128,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.britannica.com/topic/proportional-representation",
-        "https://www.electology.org/proportional"
+        "https://www.britannica.com/topic/proportional-representation"
       ],
       "status": "pending"
     },
@@ -168,8 +166,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://ncase.me/ballot/",
-        "https://www.electology.org/voting-methods-101"
+        "https://ncase.me/ballot/"
       ],
       "status": "pending"
     },
@@ -181,7 +178,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.quantamagazine.org/the-mathematics-of-gerrymandering-20171012/",
         "https://www.youtube.com/watch?v=Mky11UJb9AY"
       ],
       "status": "pending"
@@ -220,7 +216,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.electology.org/spoiler-effect",
         "https://ncase.me/ballot/"
       ],
       "status": "pending"
@@ -233,8 +228,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/voting-methods/",
-        "https://www.electology.org/approval-voting-versus-irv"
+        "https://plato.stanford.edu/entries/voting-methods/"
       ],
       "status": "pending"
     },
@@ -285,8 +279,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/voting-methods/",
-        "https://www.electology.org/tactical-voting"
+        "https://plato.stanford.edu/entries/voting-methods/"
       ],
       "status": "pending"
     },
@@ -350,7 +343,6 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://plato.stanford.edu/entries/voting-power/",
         "https://www.cut-the-knot.org/Curriculum/SocialScience/PowerIndex.shtml"
       ],
       "status": "pending"
@@ -389,8 +381,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://constitutionnet.org/",
-        "https://www.idea.int/publications/catalogue/constitution-building-primer"
+        "https://constitutionnet.org/"
       ],
       "status": "pending"
     }

@@ -66,8 +66,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.cell.com/cell/fulltext/S0092-8674(13)00533-4",
-        "https://www.youtube.com/watch?v=U47G_9Y9zLo"
+        "https://www.cell.com/cell/fulltext/S0092-8674(13)00533-4"
       ],
       "status": "pending"
     },
@@ -79,7 +78,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/chromatin-regulation-and-dynamics-123/",
         "https://pdb101.rcsb.org/motm/7"
       ],
       "status": "pending"
@@ -92,8 +90,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cell.com/cell/fulltext/S0092-8674(07)00127-0",
-        "https://www.youtube.com/watch?v=7iAJYKglq4M"
+        "https://www.cell.com/cell/fulltext/S0092-8674(07)00127-0"
       ],
       "status": "pending"
     },
@@ -118,8 +115,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/articles/nrm3011",
-        "https://www.ibiology.org/genetics-and-gene-regulation/"
+        "https://www.nature.com/articles/nrm3011"
       ],
       "status": "pending"
     },
@@ -145,8 +141,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/nrg3074",
-        "https://www.youtube.com/watch?v=JcAfY95K6QE"
+        "https://www.nature.com/articles/nrg3074"
       ],
       "status": "pending"
     },
@@ -171,7 +166,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/scitable/topicpage/genomic-imprinting-and-parent-of-origin-effects-903/",
         "https://www.cell.com/cell/fulltext/S0092-8674(01)00192-8"
       ],
       "status": "pending"
@@ -197,8 +191,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.nature.com/articles/nrg2613",
-        "https://www.coursera.org/learn/genomic-technologies"
+        "https://www.nature.com/articles/nrg2613"
       ],
       "status": "pending"
     },
@@ -210,8 +203,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cell.com/cell/fulltext/S0092-8674(13)00024-0",
-        "https://www.youtube.com/watch?v=gdUCijN7h44"
+        "https://www.cell.com/cell/fulltext/S0092-8674(13)00024-0"
       ],
       "status": "pending"
     },
@@ -249,8 +241,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3923653/",
-        "https://www.youtube.com/watch?v=oEOrnqTEULM"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3923653/"
       ],
       "status": "pending"
     },
@@ -262,8 +253,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.cell.com/cell/fulltext/S0092-8674(14)00288-1",
-        "https://www.nature.com/articles/s41576-020-0232-y"
+        "https://www.cell.com/cell/fulltext/S0092-8674(14)00288-1"
       ],
       "status": "pending"
     },
@@ -314,8 +304,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/articles/nrd.2016.256",
-        "https://www.fda.gov/drugs/resources-information-approved-drugs"
+        "https://www.nature.com/articles/nrd.2016.256"
       ],
       "status": "pending"
     },
@@ -327,8 +316,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/nbt.3199",
-        "https://www.addgene.org/crispr/epigenome-editing/"
+        "https://www.nature.com/articles/nbt.3199"
       ],
       "status": "pending"
     },

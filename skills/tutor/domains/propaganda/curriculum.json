@@ -27,10 +27,7 @@
       "concepts": ["propaganda definition", "historical context", "information as weapon"],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.archives.gov/exhibits/powers_of_persuasion",
-        "https://www.iwm.org.uk/history/how-britain-used-propaganda-in-the-first-world-war"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -40,10 +37,7 @@
       "concepts": ["ethical boundaries", "consent", "information asymmetry", "intent"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://plato.stanford.edu/entries/manipulation/",
-        "https://www.ethicsandsociety.org/propaganda-persuasion-ethics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -54,8 +48,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-102744",
-        "https://www.psychologytoday.com/us/basics/confirmation-bias"
+        "https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-102744"
       ],
       "status": "pending"
     },
@@ -80,8 +73,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/s41562-020-0850-9",
-        "https://press.princeton.edu/books/hardcover/9780691174488/network-propaganda"
+        "https://www.nature.com/articles/s41562-020-0850-9"
       ],
       "status": "pending"
     },
@@ -106,8 +98,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://thedecisionlab.com/biases",
-        "https://www.mediasmarts.ca/digital-media-literacy/media-issues/online-propaganda"
+        "https://thedecisionlab.com/biases"
       ],
       "status": "pending"
     },
@@ -119,8 +110,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://propagandacritic.com/index.php/how-to-decode-propaganda/",
-        "https://www.thirteen.org/edonline/lessons/propaganda/index.html"
+        "https://propagandacritic.com/index.php/how-to-decode-propaganda/"
       ],
       "status": "pending"
     },
@@ -132,7 +122,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.cambridge.org/core/books/abs/oxford-handbook-of-political-psychology/emotion-and-political-psychology/",
         "https://journals.sagepub.com/doi/10.1177/1948550620923229"
       ],
       "status": "pending"
@@ -158,8 +147,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.science.org/doi/10.1126/science.aap9559",
-        "https://knightcolumbia.org/content/how-algorithms-amplify-misinformation"
+        "https://www.science.org/doi/10.1126/science.aap9559"
       ],
       "status": "pending"
     },
@@ -184,7 +172,6 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.deepfakedetection.org/",
         "https://www.media.mit.edu/projects/detect-fakes/overview/",
         "https://sensity.ai/deepfakes-detection/"
       ],
@@ -211,8 +198,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://firstdraftnews.org/articles/information-disorder-the-essential-glossary/",
-        "https://www.cisa.gov/mdm"
+        "https://firstdraftnews.org/articles/information-disorder-the-essential-glossary/"
       ],
       "status": "pending"
     },
@@ -263,7 +249,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cam.ac.uk/research/news/fake-news-vaccine-game-reduces-susceptibility-to-misinformation",
         "https://www.getbadnews.com/"
       ],
       "status": "pending"
@@ -276,7 +261,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.digitallearning.washington.edu/civicverify/",
         "https://cor.stanford.edu/curriculum/"
       ],
       "status": "pending"
@@ -302,7 +286,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://intelligence.house.gov/social-media-content/",
         "https://cyber.fsi.stanford.edu/io/news/russian-interference-2016-election"
       ],
       "status": "pending"
@@ -328,8 +311,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.who.int/teams/risk-communication/infodemic-management",
-        "https://www.nature.com/articles/s41586-021-04135-0"
+        "https://www.who.int/teams/risk-communication/infodemic-management"
       ],
       "status": "pending"
     },
@@ -354,8 +336,7 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://arxiv.org/abs/2004.09657",
-        "https://www.cl.cam.ac.uk/~sht25/propaganda.html"
+        "https://arxiv.org/abs/2004.09657"
       ],
       "status": "pending"
     },

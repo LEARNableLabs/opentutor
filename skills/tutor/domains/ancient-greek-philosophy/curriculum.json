@@ -39,7 +39,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://plato.stanford.edu/entries/thales/",
         "https://www.historyofphilosophy.net/thales"
       ],
       "status": "pending"
@@ -52,8 +51,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://plato.stanford.edu/entries/heraclitus/",
-        "https://classics.mit.edu/Heraclitus/heraclitus.html"
+        "https://plato.stanford.edu/entries/heraclitus/"
       ],
       "status": "pending"
     },
@@ -78,8 +76,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/democritus/",
-        "https://iep.utm.edu/democrit/"
+        "https://plato.stanford.edu/entries/democritus/"
       ],
       "status": "pending"
     },
@@ -157,8 +154,7 @@
       "type": "mini-lesson",
       "resources": [
         "https://plato.stanford.edu/entries/plato/",
-        "https://plato.stanford.edu/entries/plato-ethics/",
-        "https://iep.utm.edu/platonic-forms/"
+        "https://plato.stanford.edu/entries/plato-ethics/"
       ],
       "status": "pending"
     },
@@ -208,7 +204,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://plato.stanford.edu/entries/plato-politics/",
         "https://classics.mit.edu/Plato/republic.html"
       ],
       "status": "pending"
@@ -355,7 +350,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://plato.stanford.edu/entries/cynics/",
         "https://iep.utm.edu/cynics/"
       ],
       "status": "pending"
@@ -368,7 +362,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://plato.stanford.edu/entries/hellenistic-epistemology/",
         "https://iep.utm.edu/hellenistic/"
       ],
       "status": "pending"

@@ -39,8 +39,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.dcode.fr/caesar-cipher",
-        "https://simonsingh.net/cryptography/caesar-shift/"
+        "https://www.dcode.fr/caesar-cipher"
       ],
       "status": "pending"
     },
@@ -52,7 +51,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cryptomuseum.com/crypto/substitution.htm",
         "https://pages.mtu.edu/~shene/NSF-4/Tutorial/VIG/Vig-Base.html"
       ],
       "status": "pending"
@@ -78,7 +76,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.cryptomuseum.com/crypto/transposition.htm",
         "https://crypto.interactive-maths.com/columnar-transposition-cipher.html"
       ],
       "status": "pending"
@@ -104,8 +101,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Al-Kindi#Cryptography",
-        "https://www.youtube.com/watch?v=2s4X85pJc1I"
+        "https://en.wikipedia.org/wiki/Al-Kindi#Cryptography"
       ],
       "status": "pending"
     },
@@ -116,10 +112,7 @@
       "concepts": ["polyalphabetic ciphers", "Alberti disk", "cipher evolution"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.cryptomuseum.com/crypto/alberti/",
-        "https://cryptii.com/pipes/alberti-cipher"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -142,10 +135,7 @@
       "concepts": ["nomenclators", "codebooks", "hybrid systems"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.cryptomuseum.com/crypto/nomenclator.htm",
-        "https://www.youtube.com/watch?v=4qZ3EKQmHuI"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -156,7 +146,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://simonsingh.net/cryptography/mary-queen-of-scots/",
         "https://en.wikipedia.org/wiki/Babington_Plot#Cipher"
       ],
       "status": "pending"
@@ -182,8 +171,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://en.wikipedia.org/wiki/Great_Cipher",
-        "https://www.youtube.com/watch?v=VaudiJzKg6Y"
+        "https://en.wikipedia.org/wiki/Great_Cipher"
       ],
       "status": "pending"
     },
@@ -195,7 +183,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cryptomuseum.com/crypto/jefferson/",
         "https://www.monticello.org/thomas-jefferson/jefferson-s-wheel-cipher/"
       ],
       "status": "pending"
@@ -208,8 +195,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://en.wikipedia.org/wiki/Commercial_code_(communications)",
-        "https://www.cryptomuseum.com/crypto/telegraph.htm"
+        "https://en.wikipedia.org/wiki/Commercial_code_(communications)"
       ],
       "status": "pending"
     },
@@ -260,8 +246,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://en.wikipedia.org/wiki/Zimmermann_Telegram",
-        "https://www.youtube.com/watch?v=qk8PrhO8FeA"
+        "https://en.wikipedia.org/wiki/Zimmermann_Telegram"
       ],
       "status": "pending"
     },
@@ -325,8 +310,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://en.wikipedia.org/wiki/Ultra",
-        "https://www.bletchleypark.org.uk/our-story/bletchley-park-and-the-war"
+        "https://en.wikipedia.org/wiki/Ultra"
       ],
       "status": "pending"
     },

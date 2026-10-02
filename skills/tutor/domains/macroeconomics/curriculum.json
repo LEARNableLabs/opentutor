@@ -103,8 +103,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-growth/v/total-factor-productivity",
-        "https://fred.stlouisfed.org/series/MFPUS"
+        "https://www.khanacademy.org/economics-finance-domain/macroeconomics/macro-economic-growth/v/total-factor-productivity"
       ],
       "status": "pending"
     },
@@ -116,7 +115,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://mru.org/courses/principles-economics-macroeconomics/endogenous-growth-model",
         "https://data.oecd.org/rd/gross-domestic-spending-on-r-d.htm"
       ],
       "status": "pending"
@@ -402,7 +400,6 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.federalreserve.gov/econres/notes/feds-notes/the-financial-crisis-at-10-will-we-ever-recover-20180813.htm",
         "https://www.imf.org/external/pubs/ft/fandd/2018/09/pdf/what-caused-2008-global-financial-crisis-balakrishnan.pdf",
         "https://www.core-econ.org/the-economy/book/text/17.html"
       ],

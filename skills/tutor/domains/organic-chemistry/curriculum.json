@@ -40,8 +40,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/pages/lecture-notes/",
-        "https://www.masterorganicchemistry.com/2011/02/03/introduction-to-curved-arrows-in-organic-chemistry/"
+        "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/pages/lecture-notes/"
       ],
       "status": "pending"
     },
@@ -53,7 +52,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=IKxlXvY1bkU",
         "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/06%3A_An_Overview_of_Organic_Reactions/6.07%3A_Describing_a_Reaction_-_Nucleophiles_and_Electrophiles"
       ],
       "status": "pending"
@@ -66,7 +64,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=PF36HoQ8Qfw",
         "https://chemistry.stackexchange.com/questions/39896/mechanism-of-action-of-aspirin"
       ],
       "status": "pending"
@@ -79,7 +76,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.masterorganicchemistry.com/2017/01/27/practice-problems-nucleophiles-electrophiles/",
         "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/06%3A_An_Overview_of_Organic_Reactions"
       ],
       "status": "pending"
@@ -104,10 +100,7 @@
       "concepts": ["nucleophile strength", "substrate structure", "leaving group ability", "solvent effects"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.masterorganicchemistry.com/2012/05/16/what-makes-a-good-nucleophile/",
-        "https://www.youtube.com/watch?v=LMXJ-EIW_uw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -131,7 +124,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.masterorganicchemistry.com/2012/05/24/deciding-sn1sn2e1e2-the-decision-chart/",
         "https://www.organic-chemistry.org/namedreactions/"
       ],
       "status": "pending"
@@ -144,7 +136,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=5hKXLs2NUug",
         "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/11%3A_Reactions_of_Alkyl_Halides-_Nucleophilic_Substitutions_and_Eliminations/11.06%3A_A_Comparison_of_SN1_and_SN2_Reactions"
       ],
       "status": "pending"
@@ -157,7 +148,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.masterorganicchemistry.com/2012/06/01/practice-problems-for-sn1-sn2-e1-e2/",
         "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/pages/study-materials/"
       ],
       "status": "pending"
@@ -182,10 +172,7 @@
       "concepts": ["regioselectivity", "Zaitsev product", "Hofmann product", "steric effects on base"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.masterorganicchemistry.com/2012/06/15/regiochemistry-in-elimination-reactions/",
-        "https://www.youtube.com/watch?v=ZZnHAP3UQPE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -208,10 +195,7 @@
       "concepts": ["carbocation stability", "hyperconjugation", "resonance stabilization", "rearrangements preview"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.masterorganicchemistry.com/2011/02/10/3-factors-that-stabilize-carbocations/",
-        "https://www.youtube.com/watch?v=aS-V6vJ4Q1A"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -222,7 +206,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=Rj2c58Pgxxw",
         "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Polymers/Synthesis_of_Polymers/Addition_Polymers"
       ],
       "status": "pending"
@@ -235,7 +218,6 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.masterorganicchemistry.com/2012/06/01/practice-problems-for-sn1-sn2-e1-e2/",
         "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/08%3A_Alkenes-_Reactions_and_Synthesis"
       ],
       "status": "pending"
@@ -260,10 +242,7 @@
       "concepts": ["directing effects", "activating groups", "deactivating groups", "ortho/meta/para selectivity"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.masterorganicchemistry.com/2011/06/22/electrophilic-aromatic-substitution-ortho-meta-para-directors/",
-        "https://www.youtube.com/watch?v=CLXFQW3VVfE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -286,10 +265,7 @@
       "concepts": ["retrosynthetic analysis", "functional group transformations", "strategic disconnections"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.masterorganicchemistry.com/2015/03/13/retrosynthesis-organic-chemistry/",
-        "https://www.organic-chemistry.org/topics/retrosynthesis.shtm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -313,7 +289,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=OVhzEcZMpL4",
         "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/21%3A_Carboxylic_Acid_Derivatives-_Nucleophilic_Acyl_Substitution_Reactions"
       ],
       "status": "pending"
@@ -326,7 +301,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.masterorganicchemistry.com/tips/big-topics-in-org-1-and-org-2/",
         "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/pages/exams/"
       ],
       "status": "pending"
@@ -338,10 +312,7 @@
       "concepts": ["carbocation rearrangements", "hydride shifts", "alkyl shifts", "pinacol rearrangement"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.masterorganicchemistry.com/2013/04/05/carbocation-rearrangements/",
-        "https://www.youtube.com/watch?v=nAz0PqYFAG8"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

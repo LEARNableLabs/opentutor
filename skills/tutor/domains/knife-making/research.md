@@ -50,11 +50,11 @@
 
 ### Video Education
 - **Walter Sorrells** (YouTube) — Bladesmithing tutorials, design theory
-  - https://youtube.com/@WalterSorrellsKnives
+
 - **Alec Steele** (YouTube) — Forging, pattern welding, heat treatment
   - https://youtube.com/@AlecSteele
 - **Aaron Gough** (YouTube) — Stock removal, precision grinding
-  - https://youtube.com/@AaronGoughCom
+
 
 ### Books
 - **"The Complete Bladesmith"** by Jim Hrisoulas — Classic bladesmithing text

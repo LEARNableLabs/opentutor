@@ -46,8 +46,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/",
-        "https://www.nature.com/subjects/neuroplasticity"
+        "https://ocw.mit.edu/courses/9-01-introduction-to-neuroscience-fall-2007/"
       ],
       "status": "pending"
     },
@@ -136,8 +135,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.pnas.org/doi/10.1073/pnas.070039597",
-        "https://www.ted.com/talks/marian_diamond_on_enriched_environments"
+        "https://www.pnas.org/doi/10.1073/pnas.070039597"
       ],
       "status": "pending"
     },
@@ -341,8 +339,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6620061/",
-        "https://www.nature.com/articles/s41583-019-0109-2"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6620061/"
       ],
       "status": "pending"
     },
@@ -394,7 +391,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/s41583-019-0109-2",
         "https://jneuroengrehab.biomedcentral.com/"
       ],
       "status": "pending"
@@ -407,8 +403,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.ahajournals.org/doi/10.1161/STR.0000000000000098",
-        "https://www.nature.com/subjects/neuroplasticity"
+        "https://www.ahajournals.org/doi/10.1161/STR.0000000000000098"
       ],
       "status": "pending"
     }

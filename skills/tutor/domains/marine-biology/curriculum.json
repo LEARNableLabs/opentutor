@@ -26,7 +26,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/zones.html",
         "https://ocean.si.edu/ecosystems/deep-sea/deep-sea"
       ],
       "status": "pending"
@@ -38,10 +37,7 @@
       "concepts": ["hydrostatic pressure", "pressure adaptation", "hadal zone"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.mbari.org/pressure-in-the-deep-sea/",
-        "https://www.whoi.edu/know-your-ocean/ocean-topics/how-the-ocean-works/ocean-pressure/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -77,10 +73,7 @@
       "concepts": ["osmotic pressure", "protein adaptation", "TMAO"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.mbari.org/adaptations-to-the-deep-sea/",
-        "https://oceanexplorer.noaa.gov/facts/pressure-adapt.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -90,9 +83,7 @@
       "concepts": ["zonation", "pressure", "light penetration"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/edu/oceanage/welcome.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -103,7 +94,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.mbari.org/products/creature-feature/gelatinous-zooplankton/",
         "https://ocean.si.edu/ocean-life/invertebrates/gelatinous-zooplankton"
       ],
       "status": "pending"
@@ -116,7 +106,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.whoi.edu/multimedia/v-deep-sea-fish-challenges/",
         "https://www.mbari.org/science/upper-ocean-systems/biological-oceanography/"
       ],
       "status": "pending"
@@ -128,10 +117,7 @@
       "concepts": ["chemoreception", "mechanoreception", "bioluminescent signals"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/facts/senses.html",
-        "https://www.nationalgeographic.com/animals/article/deep-sea-creatures"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,10 +140,7 @@
       "concepts": ["hydrothermal vents", "thermophiles", "vent fauna"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/facts/vents.html",
-        "https://www.whoi.edu/know-your-ocean/ocean-topics/volcanoes-and-hydrothermal-vents/hydrothermal-vents/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -167,10 +150,7 @@
       "concepts": ["chemosynthesis", "hydrogen sulfide oxidation", "primary production"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/facts/chemosynthesis.html",
-        "https://www.mbari.org/chemosynthesis-comes-to-light/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -192,10 +172,7 @@
       "concepts": ["symbiosis", "endosymbionts", "metabolic dependence"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/facts/tubeworms.html",
-        "https://www.mbari.org/vent-tubeworms-can-live-astonishingly-long/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -205,11 +182,7 @@
       "concepts": ["exploration", "ROV technology", "in situ observation"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://schmidtocean.org/cruise-log/",
-        "https://www.mbari.org/products/video-lab/",
-        "https://oceanexplorer.noaa.gov/okeanos/explorations/explorations.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -220,7 +193,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/biolum.html",
         "https://ocean.si.edu/ocean-life/fish/bioluminescence"
       ],
       "status": "pending"
@@ -233,7 +205,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.mbari.org/bioluminescence-in-the-deep-sea/",
         "https://ocean.si.edu/ocean-life/fish/why-do-animals-deep-sea-glow"
       ],
       "status": "pending"
@@ -245,10 +216,7 @@
       "concepts": ["function prediction", "ecological niche", "light patterns"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.mbari.org/products/creature-feature/bioluminescent-jellies/",
-        "http://www.coml.org/bioluminescence"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -258,9 +226,7 @@
       "concepts": ["bacterial vs. intrinsic", "communication", "defense"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/edu/learning/player/lesson09.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -270,11 +236,7 @@
       "concepts": ["in situ bioluminescence", "diversity", "visual observation"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.mbari.org/products/video-lab/video-search/?search=bioluminescence",
-        "https://schmidtocean.org/technology/bioluminescence-camera/",
-        "https://www.nationalgeographic.com/video/bioluminescence"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -284,10 +246,7 @@
       "concepts": ["marine snow", "detrital pathway", "particulate organic carbon"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/facts/marine-snow.html",
-        "https://www.mbari.org/marine-snow-connecting-surface-and-seafloor/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,10 +256,7 @@
       "concepts": ["whale falls", "succession", "chemosynthetic stage"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/facts/whalefall.html",
-        "https://www.mbari.org/whale-fall/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -323,10 +279,7 @@
       "concepts": ["trophic levels", "energy transfer", "detrital vs. chemosynthetic pathways"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/edu/learning/player/lesson08.html",
-        "https://www.whoi.edu/oceanus/feature/food-webs-in-the-deep-sea/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -336,9 +289,7 @@
       "concepts": ["adaptations", "energy sources", "biodiversity"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://oceanexplorer.noaa.gov/edu/materials/deepocean-background.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

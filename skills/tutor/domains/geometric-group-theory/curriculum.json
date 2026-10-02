@@ -173,9 +173,7 @@
       "concepts": ["Baumslag-Solitar groups", "HNN extensions", "non-Hopfian groups"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://math.gatech.edu/courses/math/4803-mar"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -295,7 +293,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://math.gatech.edu/courses/math/4803-mar",
         "https://www.classcentral.com/subject/geometric-group-theory"
       ],
       "status": "pending"
@@ -319,9 +316,7 @@
       "concepts": ["Thompson groups", "piecewise-linear homeomorphisms", "amenability"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://math.gatech.edu/courses/math/4803-mar"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

@@ -20,7 +20,7 @@
   - Definitive English-language resource on washi and nagashi-zuki
   - Covers kozo/gampi/mitsumata fiber preparation, neri chemistry, and traditional formation
   - Scholarly but readable; Barrett is one of the foremost Western washi practitioners
-  - https://www.shambhala.com/japanese-papermaking
+
 
 - **The Complete Guide to Papermaking** by Maureen Richardson (Wellfleet Press, 2001)
   - Contemporary techniques blending traditional and experimental approaches
@@ -33,19 +33,19 @@
 - **TAPPI (Technical Association of the Pulp and Paper Industry)**
   - Industry standards, fiber science papers, testing methods
   - More technical than needed for beginners, but excellent reference for chemistry and engineering
-  - Free resources at https://www.tappi.org/resources/
+  - Free resources at
   - Student membership available for deeper access
 
 - **Helen Hiebert Studio — Online Courses**
   - Contemporary artist offering online papermaking workshops
   - Covers fundamentals through experimental techniques
   - Active community forum for troubleshooting
-  - https://helenistudio.com/courses
+
 
 - **University of Iowa Center for the Book**
   - Academic program with excellent public resources
   - Video demonstrations of fiber processing, formation, and binding integration
-  - https://uiowa.edu/book-arts
+
 
 - **Columbia College Chicago — Book & Paper Arts**
   - MFA program with strong papermaking component
@@ -65,18 +65,18 @@
 - **University of Iowa Book Arts — Formation Fundamentals**
   - Technical demonstration series showing Western and Japanese methods
   - Clear camera angles for observing hand position and motion
-  - https://www.youtube.com/user/uiowabookarts
+
 
 - **Carriage House Paper — Workshop Demos**
   - Short clips demonstrating specific techniques (beating, lamination, inclusions)
   - Professionally shot, high production value
-  - https://www.youtube.com/carriagehouse paper
+  paper
 
 - **Japanese Papermaking (NHK Documentary)**
   - Beautiful cinematography of traditional washi production in Japan
   - Shows full process from kozo harvesting through finished sheets
   - English subtitles available
-  - https://www3.nhk.or.jp/nhkworld/en/ondemand/video/2032085/
+
 
 ### Interactive Tools & Simulators
 
@@ -89,7 +89,7 @@
 - **Fiber Comparison Database (Carriage House Paper)**
   - Interactive tool comparing properties of common fibers
   - Shows fiber length, strength, flexibility, and recommended uses
-  - https://www.carriagehouse paper.com/fiber-database
+  paper.com/fiber-database
 
 - **Beating Time Calculator (Twinrocker)**
   - Estimates beating duration based on fiber type, quantity, and target properties
@@ -102,12 +102,12 @@
   - Jupyter notebooks for analyzing fiber properties and formation quality
   - Image processing tools for measuring formation uniformity
   - Python-based; requires basic programming knowledge
-  - https://github.com/papermaking-science/fiber-analysis
+
 
 - **Pulp Consistency Calculator (open source)**
   - Simple web app for converting between fiber weight, water volume, and consistency percentage
   - Useful for lesson planning and experimental design
-  - https://pulp-calc.netlify.app
+
 
 ## People (Practitioners & Teachers)
 
@@ -122,13 +122,13 @@
   - Artist, teacher, author of multiple papermaking books
   - Known for experimental inclusions and light-reactive papers
   - Very active in the online papermaking community
-  - https://helenistudio.com
+
 
 - **Aimee Lee**
   - Korean-American artist specializing in Korean hanji and Japanese washi
   - Author of "Hanji Unfurled: One Journey into Korean Papermaking"
   - Teaches traditional Asian techniques to Western students
-  - https://www.aimeelee.work
+
 
 - **Kathryn & Howard Clark**
   - Twinrocker Handmade Paper founders
@@ -142,19 +142,19 @@
   - Head of University of Iowa Book Arts program
   - World authority on Japanese papermaking
   - Researches historical techniques and material permanence
-  - https://uiowa.edu/book-arts/people/timothy-barrett
+
 
 - **Elissa O'Loughlin**
   - Australian artist and teacher
   - Focuses on sustainable and botanical papermaking
   - Author of "Making Paper from Plants You Grow"
-  - https://www.elissaoloughlin.com
+
 
 - **Peter & Donna Thomas**
   - Peter Thomas Studio in Santa Cruz
   - Letterpress and papermaking integrated practice
   - Teachers and equipment manufacturers
-  - https://www.peterdonnathomas.com
+
 
 ## Supplies & Equipment
 
@@ -164,7 +164,7 @@
   - Extensive fiber selection (kozo, abaca, cotton, flax, hemp, gampi)
   - Equipment from beginner to professional grade
   - Workshops and online classes
-  - https://www.carriagehouse paper.com
+  paper.com
 
 - **Twinrocker Handmade Paper (Brookston, IN)**
   - Artist-founded supplier with deep teaching experience
@@ -175,7 +175,7 @@
 - **Lee Scott McDonald Inc.**
   - Specialist in high-end papermaking equipment
   - Hand-built tools used by museums and professional studios
-  - https://www.lsmcd.com
+
 
 - **Hiromi Paper International (Los Angeles)**
   - Japanese papers and fibers

@@ -64,8 +64,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/pages/lecture-notes/",
-        "https://www.youtube.com/watch?v=1ttz09mfMxo"
+        "https://ocw.mit.edu/courses/9-59j-lab-in-psycholinguistics-spring-2017/pages/lecture-notes/"
       ],
       "status": "pending"
     },
@@ -103,8 +102,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=2k8fHR9jKVM",
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6037939/"
+        "https://www.youtube.com/watch?v=2k8fHR9jKVM"
       ],
       "status": "pending"
     },
@@ -129,8 +127,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://link.springer.com/referenceworkentry/10.1007/978-3-319-91035-3_11",
-        "https://www.psytoolkit.org/experiment-library/lexical_decision.html"
+        "https://link.springer.com/referenceworkentry/10.1007/978-3-319-91035-3_11"
       ],
       "status": "pending"
     },
@@ -220,7 +217,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.ibexfarm.net/",
         "https://doc.pcibex.net/"
       ],
       "status": "pending"
@@ -298,7 +294,6 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://en.wikipedia.org/wiki/Psycholinguistics_of_bilingualism",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3583091/"
       ],
       "status": "pending"

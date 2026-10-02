@@ -26,10 +26,7 @@
       "concepts": ["control voltage", "modular synthesis", "1V/octave standard"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.musicfromouterspace.com/index.php?MAINTAB=SYNTHDIY&VPW=1900&VPH=1050",
-        "https://www.soundonsound.com/techniques/synth-secrets-part-2"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -40,7 +37,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.schmitzbits.de/expo_tutorial.html",
         "https://www.doepfer.de/DIY/a100_diy.htm"
       ],
       "status": "pending"
@@ -66,8 +62,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://sound-au.com/articles/audio-mixing.htm",
-        "https://www.musicfromouterspace.com/analogsynth_new/MATCHEDTRANSISTORS/matchedtransistors.php"
+        "https://sound-au.com/articles/audio-mixing.htm"
       ],
       "status": "pending"
     },
@@ -91,7 +86,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.schmitzbits.de/vco.html",
         "https://www.falstad.com/circuit/circuitjs.html"
       ],
       "status": "pending"
@@ -104,7 +98,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.soundonsound.com/techniques/synthesizing-strings-part-1",
         "https://www.electro-music.com/forum/topic-25084.html"
       ],
       "status": "pending"
@@ -130,10 +123,7 @@
       "concepts": ["waveshaping", "differential pair shaper", "nonlinear transfer function"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.schmitzbits.de/tri2sin.html",
-        "https://www.musicfromouterspace.com/analogsynth_new/WAVESHAPEVCO/WAVESHAPEVCO.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -169,9 +159,7 @@
       "concepts": ["VCO review", "signal path", "control path"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.musicfromouterspace.com/analogsynth_new/SOUNDLAB_ULTIMATE/SLUM_VCO/SLUM_VCO.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -195,8 +183,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.timstinchcombe.co.uk/synth/MS20_study.pdf",
-        "https://www.acoustics.ed.ac.uk/wp-content/uploads/DAFx04_Proceedings/P_211.pdf"
+        "https://www.timstinchcombe.co.uk/synth/MS20_study.pdf"
       ],
       "status": "pending"
     },
@@ -208,7 +195,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.schmitzbits.de/vcf.html",
         "https://www.electro-music.com/forum/topic-29845.html"
       ],
       "status": "pending"
@@ -220,10 +206,7 @@
       "concepts": ["overdrive characteristics", "headroom", "tonal color", "noise floor"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://sound-au.com/articles/ladder-filter.htm",
-        "https://www.musicfromouterspace.com/analogsynth_new/MOOGLADDERFILTER/ladder_filter.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -235,8 +218,7 @@
       "type": "resource-drop",
       "resources": [
         "https://www.ti.com/lit/an/sloa093/sloa093.pdf",
-        "https://www.doepfer.de/DIY/a100_diy.htm",
-        "https://www.youtube.com/watch?v=9y7gvLSdG-U"
+        "https://www.doepfer.de/DIY/a100_diy.htm"
       ],
       "status": "pending"
     },
@@ -273,7 +255,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.musicfromouterspace.com/analogsynth_new/VCF/vcf.php",
         "https://sound-au.com/project99.htm"
       ],
       "status": "pending"
@@ -285,10 +266,7 @@
       "concepts": ["subjective sound quality", "distortion characteristics", "frequency response irregularities"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.soundonsound.com/techniques/synthesizer-filters",
-        "https://www.timstinchcombe.co.uk/synth/filters.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -299,7 +277,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.soundonsound.com/techniques/buchla-200e",
         "https://www.perfectcircuit.com/signal/east-coast-vs-west-coast-synthesis"
       ],
       "status": "pending"
@@ -312,7 +289,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.electricdruid.net/technical-documents/",
         "https://www.schmitzbits.de/index.html"
       ],
       "status": "pending"
@@ -324,10 +300,7 @@
       "concepts": ["VCO+VCF+VCA chain", "modulation routing", "signal flow", "complete voice architecture"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.musicfromouterspace.com/analogsynth_new/WALLWARTSYNTH/WALLWARTSYNTH.php",
-        "https://www.youtube.com/watch?v=VYWtyNRJCfU"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -339,8 +312,7 @@
       "type": "real-world",
       "resources": [
         "https://www.electro-music.com/forum/",
-        "https://www.schmitzbits.de/index.html",
-        "https://www.electricdruid.net/technical-documents/"
+        "https://www.schmitzbits.de/index.html"
       ],
       "status": "pending"
     },
@@ -352,9 +324,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.musicfromouterspace.com/",
-        "https://www.schmitzbits.de/",
-        "https://www.soundonsound.com/techniques/synth-secrets-part-1"
+        "https://www.schmitzbits.de/"
       ],
       "status": "pending"
     }

@@ -25,7 +25,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rmg.co.uk/stories/topics/history-time-measurement",
         "https://www.britannica.com/technology/sundial"
       ],
       "status": "pending"
@@ -38,8 +37,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.suncalc.org",
-        "https://www.youtube.com/watch?v=8y1mVPp3Bnk"
+        "https://www.suncalc.org"
       ],
       "status": "pending"
     },
@@ -63,9 +61,7 @@
       "concepts": ["nighttime timekeeping", "star clocks", "water clocks", "limitations"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.scientificamerican.com/article/ancient-egyptians-used-the-night-sky-as-a-clock/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -87,9 +83,7 @@
       "concepts": ["sundials", "water clocks", "environmental limits", "pre-mechanical era"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.rmg.co.uk/stories/topics/history-time-measurement"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -100,7 +94,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=528hcposes4",
         "https://www.britannica.com/technology/escapement"
       ],
       "status": "pending"
@@ -112,9 +105,7 @@
       "concepts": ["monastery clocks", "canonical hours", "civic timekeeping"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.historytoday.com/archive/months-past/first-public-clock"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -137,8 +128,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.aps.org/publications/apsnews/200606/history.cfm",
-        "https://www.youtube.com/watch?v=OeYAz4hmmo0"
+        "https://www.aps.org/publications/apsnews/200606/history.cfm"
       ],
       "status": "pending"
     },
@@ -161,9 +151,7 @@
       "concepts": ["sundials", "water clocks", "mechanical escapements", "pendulums", "accuracy evolution"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=qP94MWbh5Lg"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -173,10 +161,7 @@
       "concepts": ["longitude problem", "navigation", "marine chronometer", "economic stakes"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.rmg.co.uk/stories/topics/longitude-problem",
-        "https://www.youtube.com/watch?v=sYqdXCLEsHY"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -187,7 +172,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.rmg.co.uk/stories/topics/harrisons-clocks",
         "https://www.youtube.com/c/Clickspring"
       ],
       "status": "pending"
@@ -199,10 +183,7 @@
       "concepts": ["local solar time", "railway accidents", "time standardization", "time zones"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.scientificamerican.com/article/the-clocks-that-changed-the-world/",
-        "https://education.nationalgeographic.org/resource/standard-time/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -212,9 +193,7 @@
       "concepts": ["factory time", "shift work", "productivity", "synchronization"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.bbc.co.uk/history/british/victorians/time_01.shtml"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -224,9 +203,7 @@
       "concepts": ["electromagnetic pendulum", "master-slave systems", "grid synchronization", "millisecond accuracy"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://spectrum.ieee.org/the-surprisingly-short-history-of-electric-clocks"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -249,7 +226,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/quartz-oscillators",
         "https://www.youtube.com/watch?v=1pM6uD8nePo"
       ],
       "status": "pending"
@@ -274,7 +250,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.qualcomm.com/news/onq/2019/09/how-your-smartphone-knows-what-time-it",
         "https://www.ntp.org/"
       ],
       "status": "pending"
@@ -286,9 +261,7 @@
       "concepts": ["aging", "temperature drift", "quantum noise", "need for atomic standards"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/primary-standard-accuracy"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -298,9 +271,7 @@
       "concepts": ["pendulum oscillation", "quartz resonance", "frequency stability", "environmental factors"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.youtube.com/watch?v=p2R4Roay7kI"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -311,7 +282,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/primary-standard",
         "https://www.youtube.com/watch?v=p2BxAu6WZI8"
       ],
       "status": "pending"
@@ -336,10 +306,7 @@
       "concepts": ["nanosecond precision", "fountain clocks", "optical lattice clocks", "10^-18 accuracy"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": [
-        "https://www.nist.gov/news-events/news/2022/02/jila-atomic-clock-sets-new-record",
-        "https://www.nist.gov/pml/time-and-frequency-division/time-realization/optical-frequency-standards"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -350,8 +317,7 @@
       "difficulty": 5,
       "type": "real-world",
       "resources": [
-        "https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit5/gps.html",
-        "https://www.youtube.com/watch?v=EvwCDu3d5OM"
+        "https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit5/gps.html"
       ],
       "status": "pending"
     },
@@ -362,10 +328,7 @@
       "concepts": ["optical clocks", "nuclear clocks", "quantum logic", "fundamental physics"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nature.com/articles/s41586-019-1225-7",
-        "https://www.quantamagazine.org/the-new-science-of-old-clocks-20210921/"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

@@ -49,8 +49,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.biointeractive.org/classroom-resources/immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -139,8 +138,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.biointeractive.org/classroom-resources/immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -192,8 +190,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.biointeractive.org/classroom-resources/immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -210,8 +207,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.coursera.org/learn/hopkins-immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -245,8 +241,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.biointeractive.org/classroom-resources/immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -299,8 +294,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.coursera.org/learn/hopkins-immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -316,8 +310,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.biointeractive.org/classroom-resources/immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -387,8 +380,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.coursera.org/learn/hopkins-immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -405,8 +397,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.biointeractive.org/classroom-resources/immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -479,8 +470,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.coursera.org/learn/hopkins-immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -497,8 +487,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.biointeractive.org/classroom-resources/immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -551,8 +540,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.coursera.org/learn/hopkins-immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     },
@@ -588,8 +576,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK27092/",
-        "https://www.biointeractive.org/classroom-resources/immunology"
+        "https://www.ncbi.nlm.nih.gov/books/NBK27092/"
       ],
       "status": "pending"
     }

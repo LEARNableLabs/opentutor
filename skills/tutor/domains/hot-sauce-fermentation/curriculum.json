@@ -25,8 +25,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.science.org/content/article/why-do-we-love-spicy-food",
-        "https://www.youtube.com/watch?v=zhFEHFcSDQ8"
+        "https://www.science.org/content/article/why-do-we-love-spicy-food"
       ],
       "status": "pending"
     },
@@ -38,8 +37,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.nature.com/articles/s41598-019-49001-7",
-        "https://www.seriouseats.com/the-scoville-scale-a-guide-to-hot-peppers"
+        "https://www.nature.com/articles/s41598-019-49001-7"
       ],
       "status": "pending"
     },
@@ -64,8 +62,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.chilipeppermadness.com/chili-pepper-types/",
-        "https://www.bonappetit.com/story/how-to-make-hot-sauce"
+        "https://www.chilipeppermadness.com/chili-pepper-types/"
       ],
       "status": "pending"
     },
@@ -77,8 +74,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sciencedirect.com/topics/food-science/lactic-acid-fermentation",
-        "https://www.youtube.com/watch?v=R3nCv38fGKg"
+        "https://www.sciencedirect.com/topics/food-science/lactic-acid-fermentation"
       ],
       "status": "pending"
     },
@@ -91,7 +87,6 @@
       "type": "mini-lesson",
       "resources": [
         "https://www.frontiersin.org/articles/10.3389/fmicb.2019.00594",
-        "https://www.culturesforhealth.com/learn/recipe/lacto-fermentation-recipes/",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6780695/"
       ],
       "status": "pending"
@@ -103,10 +98,7 @@
       "concepts": ["salt percentage", "osmotic pressure", "microbial selection"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.wildfermentation.com/salt-in-fermentation/",
-        "https://nchfp.uga.edu/publications/uga/uga_pickled_products.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -117,8 +109,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.tandfonline.com/doi/full/10.1080/10408398.2019.1631752",
-        "https://www.youtube.com/watch?v=iMwMqXEKJ8U"
+        "https://www.tandfonline.com/doi/full/10.1080/10408398.2019.1631752"
       ],
       "status": "pending"
     },
@@ -130,8 +121,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.reddit.com/r/fermentation/wiki/index",
-        "https://www.makesauerkraut.com/fermentation-timeline/"
+        "https://www.reddit.com/r/fermentation/wiki/index"
       ],
       "status": "pending"
     },
@@ -142,9 +132,7 @@
       "concepts": ["capsaicin", "LAB", "salt", "pH"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://thenomaproject.com/fermentation-guide"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -155,8 +143,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.sciencedirect.com/science/article/pii/fermented-flavor-profiles",
-        "https://www.seriouseats.com/why-ferment-hot-sauce"
+        "https://www.sciencedirect.com/science/article/pii/fermented-flavor-profiles"
       ],
       "status": "pending"
     },
@@ -180,10 +167,7 @@
       "concepts": ["barrel aging", "oak interactions", "time-dependent changes"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.tabasco.com/visit-avery-island/production-process/",
-        "https://www.youtube.com/watch?v=x7_Fn5bYq54"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -193,10 +177,7 @@
       "concepts": ["flavor pairing", "volatile matching", "sweetness-heat balance"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.foodpairing.com/en/applications/pairing-theory",
-        "https://www.chilipeppermadness.com/recipes/hot-sauces/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -219,10 +200,7 @@
       "concepts": ["flavor compounds", "acid balance", "aging", "pairing"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://thenomaproject.com/fermentation-guide",
-        "https://www.seriouseats.com/why-ferment-hot-sauce"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -245,10 +223,7 @@
       "concepts": ["Clostridium botulinum", "pH thresholds", "acid safety"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp/acidified-foods",
-        "https://nchfp.uga.edu/publications/usda/GUIDE01_HomeCan_rev0715.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -259,7 +234,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.culturesforhealth.com/learn/fermentation/wild-vs-cultured-fermentation/",
         "https://www.youtube.com/watch?v=GNRMeaz6QRI"
       ],
       "status": "pending"
@@ -272,7 +246,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.wildfermentation.com/troubleshooting-fermentation-problems/",
         "https://www.reddit.com/r/fermentation/wiki/faq"
       ],
       "status": "pending"
@@ -285,8 +258,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.sciencedirect.com/topics/food-science/pasteurization",
-        "https://www.seriouseats.com/how-to-bottle-hot-sauce"
+        "https://www.sciencedirect.com/topics/food-science/pasteurization"
       ],
       "status": "pending"
     },
@@ -311,7 +283,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.seriouseats.com/taste-test-hot-sauce",
         "https://www.youtube.com/watch?v=UGjCeAbWKPo"
       ],
       "status": "pending"
@@ -324,8 +295,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.chilipeppermadness.com/chili-pepper-recipes/hot-sauces/",
-        "https://www.bonappetit.com/gallery/best-hot-sauce-recipes"
+        "https://www.chilipeppermadness.com/chili-pepper-recipes/hot-sauces/"
       ],
       "status": "pending"
     },
@@ -336,10 +306,7 @@
       "concepts": ["garlic", "onions", "fruit additions", "sugar impact", "microbial effects"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.fermentingforfoodies.com/fermented-hot-sauce-with-fruit/",
-        "https://www.culturesforhealth.com/learn/recipe/lacto-fermentation-recipes/fermented-salsa/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -349,10 +316,7 @@
       "concepts": ["post-fermentation processing", "texture control", "secondary aging"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.seriouseats.com/fermented-hot-sauce-technique",
-        "https://www.youtube.com/watch?v=9g0kNxb3Qj4"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -363,8 +327,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.reddit.com/r/FermentedHotSauce/top/",
-        "https://thenomaproject.com/fermentation-recipes"
+        "https://www.reddit.com/r/FermentedHotSauce/top/"
       ],
       "status": "pending"
     }

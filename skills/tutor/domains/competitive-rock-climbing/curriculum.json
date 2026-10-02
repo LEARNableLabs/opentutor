@@ -24,10 +24,7 @@
       "concepts": ["visual scanning patterns", "hold identification", "rest position spotting"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://latticetraining.com/route-reading-skills/",
-        "https://www.youtube.com/watch?v=Zyqd58mCbdw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -37,10 +34,7 @@
       "concepts": ["rest position identification", "sequence chunking", "energy management"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.trainingbeta.com/route-reading/",
-        "https://www.youtube.com/watch?v=kNWJ0XE3Dho"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -51,7 +45,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.davemacleod.com/blog/route-reading-technique",
         "https://www.youtube.com/channel/UC6-rliFvsdCUTZndrZTQjMA"
       ],
       "status": "pending"
@@ -63,10 +56,7 @@
       "concepts": ["onsight strategy", "beta refinement", "observation time management"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.trainingforclimbing.com/onsight-climbing-tips/",
-        "https://latticetraining.com/onsight-vs-redpoint/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -89,10 +79,7 @@
       "concepts": ["visual scanning review", "sequence reading", "rest position identification"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://latticetraining.com/route-reading-skills/",
-        "https://www.trainingbeta.com/route-reading/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -103,7 +90,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://latticetraining.com/energy-systems-climbing/",
         "https://www.trainingforclimbing.com/energy-system-training/"
       ],
       "status": "pending"
@@ -115,10 +101,7 @@
       "concepts": ["supercompensation", "recovery adaptation", "overtraining syndrome"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.trainingbeta.com/recovery-for-climbers/",
-        "https://latticetraining.com/recovery-climbing-performance/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -128,10 +111,7 @@
       "concepts": ["periodization", "training blocks", "tapering", "peaking"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.trainingforclimbing.com/periodization-training/",
-        "https://latticetraining.com/periodisation-for-climbers/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -141,10 +121,7 @@
       "concepts": ["energy system review", "periodization review", "recovery principles"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.trainingforclimbing.com/training-basics/",
-        "https://latticetraining.com/training-principles/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,10 +131,7 @@
       "concepts": ["fingerboard protocols", "recruitment vs. capacity", "strength-endurance continuum"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://latticetraining.com/fingerboard-training-guide/",
-        "https://www.trainingforclimbing.com/fingerboard-training/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -167,10 +141,7 @@
       "concepts": ["power training readiness", "campus board protocols", "injury risk assessment"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.trainingforclimbing.com/campus-training/",
-        "https://latticetraining.com/campus-board-training/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -181,8 +152,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.trainingbeta.com/limit-bouldering/",
-        "https://latticetraining.com/limit-bouldering-guide/"
+        "https://www.trainingbeta.com/limit-bouldering/"
       ],
       "status": "pending"
     },
@@ -193,10 +163,7 @@
       "concepts": ["core tension", "body positioning", "steep climbing mechanics", "antagonist training"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.trainingforclimbing.com/core-training/",
-        "https://latticetraining.com/core-strength-climbing/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -206,10 +173,7 @@
       "concepts": ["mobility requirements", "hip flexibility", "movement range", "functional flexibility"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.trainingbeta.com/flexibility-for-climbers/",
-        "https://latticetraining.com/mobility-for-climbers/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -219,10 +183,7 @@
       "concepts": ["training week structure", "stimulus variation", "recovery distribution"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.trainingforclimbing.com/sample-training-programs/",
-        "https://latticetraining.com/training-plans/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -232,10 +193,7 @@
       "concepts": ["fingerboard review", "training method selection", "program design principles"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.trainingforclimbing.com/training-overview/",
-        "https://latticetraining.com/training-guide/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -245,10 +203,7 @@
       "concepts": ["fight-or-flight response", "performance anxiety", "physiological arousal"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.davemacleod.com/blog/mental-training-fear",
-        "https://www.trainingbeta.com/managing-fear-climbing/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -258,10 +213,7 @@
       "concepts": ["mental rehearsal", "motor imagery", "visualization protocols", "neural priming"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://latticetraining.com/mental-training-climbing/",
-        "https://www.trainingforclimbing.com/mental-training/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,10 +223,7 @@
       "concepts": ["competition psychology", "isolation zone management", "performance under pressure"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.trainingbeta.com/competition-climbing-psychology/",
-        "https://latticetraining.com/competition-psychology/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -284,10 +233,7 @@
       "concepts": ["flow state", "optimal arousal", "performance zone", "trigger conditions"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.davemacleod.com/blog/flow-state-climbing",
-        "https://www.trainingbeta.com/flow-state-performance/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -297,10 +243,7 @@
       "concepts": ["warm-up structure", "activation without fatigue", "psychological priming"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://latticetraining.com/competition-warm-up/",
-        "https://www.trainingforclimbing.com/competition-warm-up/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -310,10 +253,7 @@
       "concepts": ["time management", "effort distribution", "strategic rest", "problem selection"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.trainingbeta.com/competition-tactics/",
-        "https://latticetraining.com/boulder-comp-strategy/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -323,10 +263,7 @@
       "concepts": ["mental training review", "competition strategy", "performance optimization"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.trainingforclimbing.com/competition-guide/",
-        "https://latticetraining.com/competition-prep/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -336,10 +273,7 @@
       "concepts": ["pulley anatomy", "load management", "progressive overload", "injury mechanisms"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.trainingforclimbing.com/finger-injury-prevention/",
-        "https://latticetraining.com/pulley-injury-prevention/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -349,10 +283,7 @@
       "concepts": ["pain vs. injury signals", "autoregulation", "recovery monitoring", "training load management"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.trainingbeta.com/injury-prevention-climbers/",
-        "https://latticetraining.com/injury-prevention-guide/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -362,10 +293,7 @@
       "concepts": ["program design integration", "load monitoring", "recovery strategies", "long-term athlete development"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.trainingforclimbing.com/training-plans/",
-        "https://latticetraining.com/coaching-resources/"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

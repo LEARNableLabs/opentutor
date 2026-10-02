@@ -64,7 +64,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ctbuh.org/resource/wind-engineering",
         "https://en.wikipedia.org/wiki/Wind_engineering"
       ],
       "status": "pending"
@@ -77,7 +76,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://earthquake.usgs.gov/learn/topics/buildingdesign.php",
         "https://www.youtube.com/watch?v=kzVvd4Dk6sw"
       ],
       "status": "pending"
@@ -192,8 +190,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Arch_bridge",
-        "https://www.youtube.com/watch?v=jkDZ3xCAb5I"
+        "https://en.wikipedia.org/wiki/Arch_bridge"
       ],
       "status": "pending"
     },
@@ -205,8 +202,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://en.wikipedia.org/wiki/Golden_Gate_Bridge",
-        "https://www.youtube.com/watch?v=Mjt1YjxjFoo"
+        "https://en.wikipedia.org/wiki/Golden_Gate_Bridge"
       ],
       "status": "pending"
     },
@@ -217,10 +213,7 @@
       "concepts": ["cable analysis", "tension distribution", "tower loads"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.goldengate.org/bridge/bridge-design-construction/",
-        "https://www.pbs.org/wgbh/americanexperience/features/goldengate-bridge/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -231,8 +224,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://en.wikipedia.org/wiki/Cable-stayed_bridge",
-        "https://www.youtube.com/watch?v=VXCZpMK5rIo"
+        "https://en.wikipedia.org/wiki/Cable-stayed_bridge"
       ],
       "status": "pending"
     },
@@ -244,8 +236,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.fhwa.dot.gov/bridge/prefab/",
-        "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2021/03/building-bridges"
+        "https://www.fhwa.dot.gov/bridge/prefab/"
       ],
       "status": "pending"
     },
@@ -269,8 +260,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.ctbuh.org/resource/height",
-        "https://www.youtube.com/watch?v=f2pSFZwzQQ0"
+        "https://www.ctbuh.org/resource/height"
       ],
       "status": "pending"
     },
@@ -282,7 +272,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ctbuh.org/resource/structural-systems",
         "https://en.wikipedia.org/wiki/Tube_(structure)"
       ],
       "status": "pending"
@@ -294,10 +283,7 @@
       "concepts": ["diagrid structures", "diagonal members", "load efficiency"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.ctbuh.org/resource/diagrid-structures",
-        "https://www.youtube.com/watch?v=0eTSkUbLQ0s"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -346,8 +332,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://en.wikipedia.org/wiki/John_Hancock_Center",
-        "https://www.ctbuh.org/resource/exterior-bracing"
+        "https://en.wikipedia.org/wiki/John_Hancock_Center"
       ],
       "status": "pending"
     },
@@ -372,7 +357,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=IW4TCDkoHfw",
         "https://ascelibrary.org/journal/jpeodx",
         "https://en.wikipedia.org/wiki/List_of_bridge_failures"
       ],

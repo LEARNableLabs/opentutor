@@ -39,8 +39,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://skyandtelescope.org/astronomy-resources/measuring-the-sky-by-hand/",
-        "https://www.astronomy.com/observing/get-to-know-the-night-sky/2020/04/measure-the-sky"
+        "https://skyandtelescope.org/astronomy-resources/measuring-the-sky-by-hand/"
       ],
       "status": "pending"
     },
@@ -51,10 +50,7 @@
       "concepts": ["ecliptic", "seasonal constellations", "Earth's orbit"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.astronomy.com/observing/constellations/",
-        "https://www.iau.org/public/themes/constellations/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -65,8 +61,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.skyandtelescope.com/observing/naked-eye-objects/",
-        "https://www.astronomy.com/observing/observe-the-solar-system/2019/09/the-top-25-binocular-objects"
+        "https://www.skyandtelescope.com/observing/naked-eye-objects/"
       ],
       "status": "pending"
     },
@@ -79,7 +74,6 @@
       "type": "mini-lesson",
       "resources": [
         "https://www.lightpollutionmap.info",
-        "https://www.darksky.org/our-work/grassroots-advocacy/resources/",
         "https://skyandtelescope.org/astronomy-resources/light-pollution-and-astronomy-the-bortle-dark-sky-scale/"
       ],
       "status": "pending"
@@ -92,7 +86,6 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.astronomy.com/observing/how-to-find-polaris/",
         "https://skyandtelescope.org/astronomy-resources/find-the-north-star/"
       ],
       "status": "pending"
@@ -118,8 +111,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://skyandtelescope.org/astronomy-equipment/how-to-choose-a-telescope/",
-        "https://www.astronomy.com/observing/how-to-choose-your-first-telescope/"
+        "https://skyandtelescope.org/astronomy-equipment/how-to-choose-a-telescope/"
       ],
       "status": "pending"
     },
@@ -144,8 +136,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://skyandtelescope.org/astronomy-equipment/how-to-use-telescope-eyepieces/",
-        "https://www.astronomy.com/observing/eyepieces-the-ultimate-guide/"
+        "https://skyandtelescope.org/astronomy-equipment/how-to-use-telescope-eyepieces/"
       ],
       "status": "pending"
     },
@@ -170,8 +161,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.skyandtelescope.com/astronomy-equipment/binoculars-for-astronomy/",
-        "https://www.astronomy.com/observing/binocular-basics-for-astronomy/"
+        "https://www.skyandtelescope.com/astronomy-equipment/binoculars-for-astronomy/"
       ],
       "status": "pending"
     },
@@ -183,8 +173,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://skyandtelescope.org/astronomy-equipment/telescope-mounts/",
-        "https://www.astronomy.com/observing/how-to-polar-align-your-telescope/"
+        "https://skyandtelescope.org/astronomy-equipment/telescope-mounts/"
       ],
       "status": "pending"
     },
@@ -235,8 +224,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://skyandtelescope.org/astronomy-resources/observing-faint-objects/",
-        "https://www.astronomy.com/observing/learn-the-secret-of-successful-observing/"
+        "https://skyandtelescope.org/astronomy-resources/observing-faint-objects/"
       ],
       "status": "pending"
     },
@@ -249,7 +237,6 @@
       "type": "real-world",
       "resources": [
         "https://skyandtelescope.org/astronomy-resources/star-hopping/",
-        "https://www.astronomy.com/observing/learn-to-star-hop-your-way-around-the-sky/",
         "https://www.skymaps.com/downloads.html"
       ],
       "status": "pending"
@@ -288,8 +275,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://skyandtelescope.org/astronomy-resources/the-value-of-keeping-an-observing-log/",
-        "https://www.astronomy.com/observing/how-to-keep-an-astronomical-observing-log/"
+        "https://skyandtelescope.org/astronomy-resources/the-value-of-keeping-an-observing-log/"
       ],
       "status": "pending"
     },
@@ -328,8 +314,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://skyandtelescope.org/astronomy-resources/atmospheric-seeing-turbulence/",
-        "https://www.astronomy.com/observing/what-is-astronomical-seeing/"
+        "https://skyandtelescope.org/astronomy-resources/atmospheric-seeing-turbulence/"
       ],
       "status": "pending"
     },

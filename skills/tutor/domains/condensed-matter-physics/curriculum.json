@@ -103,8 +103,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html",
-        "https://nanohub.org/resources/phonons"
+        "https://www.damtp.cam.ac.uk/user/tong/solidstate.html"
       ],
       "status": "pending"
     },
@@ -139,9 +138,7 @@
       "concepts": ["thermal conductivity", "phonon scattering", "Umklapp processes"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://nanohub.org/resources/thermal"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -187,8 +184,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://phet.colorado.edu/en/simulations/band-structure",
-        "https://nanohub.org/resources/bandstructure"
+        "https://phet.colorado.edu/en/simulations/band-structure"
       ],
       "status": "pending"
     },
@@ -225,7 +221,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://nanohub.org/resources/semiconductors",
         "https://www.doitpoms.ac.uk/tlplib/semiconductors/"
       ],
       "status": "pending"
@@ -272,9 +267,7 @@
       "concepts": ["antiferromagnetism", "Néel temperature", "spin waves"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.doitpoms.ac.uk/tlplib/magnetism/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -284,9 +277,7 @@
       "concepts": ["magnetic domains", "domain walls", "hysteresis"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.doitpoms.ac.uk/tlplib/magnetism/domains.php"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -356,9 +347,7 @@
       "concepts": ["SQUIDs", "Josephson junctions", "quantum computing"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://nanohub.org/resources/superconductivity"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

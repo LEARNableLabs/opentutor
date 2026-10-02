@@ -41,7 +41,7 @@
 
 ### Documentation & Guides
 - **QMK Firmware Documentation** (https://docs.qmk.fm/) — comprehensive firmware reference, features guide, and API docs
-- **Keyboard University** (https://keyboard.university/) — structured learning platform covering all aspects from switches to firmware
+- **Keyboard University** () — structured learning platform covering all aspects from switches to firmware
 - **Keyboard PCB Design Guide** (https://github.com/ruiqimao/keyboard-pcb-guide) — step-by-step PCB design in KiCad
 - **Thomas Baart's Blog** (https://thomasbaart.nl/category/mechanical-keyboards/) — in-depth build guides and design theory
 - **Deskthority Wiki** (https://deskthority.net/wiki/Main_Page) — comprehensive switch database and historical reference
@@ -60,7 +60,7 @@
 
 ### Code Repositories
 - **QMK Firmware** (https://github.com/qmk/qmk_firmware) — open-source keyboard firmware
-- **VIA** (https://github.com/the-via/via) — configurator application
+- **VIA** () — configurator application
 
 ### Communities
 - **r/MechanicalKeyboards** (https://www.reddit.com/r/MechanicalKeyboards/) — active community for all skill levels

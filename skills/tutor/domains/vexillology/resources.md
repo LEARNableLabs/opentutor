@@ -3,7 +3,7 @@
 ## Primary Sources (for lesson content)
 
 ### Books
-- **Good Flag, Bad Flag** (NAVA, 2006) — the 24-page pamphlet that codified modern flag design principles. Essential reading, available free at https://nava.org/good-flag-bad-flag/
+- **Good Flag, Bad Flag** (NAVA, 2006) — the 24-page pamphlet that codified modern flag design principles. Essential reading, available free at
 - **The Art of the Flag** by Whitney Smith — comprehensive introduction to vexillology by the discipline's founder
 - **Flags Through the Ages and Across the World** by Whitney Smith — visual encyclopedia with historical context
 - **A Flag Worth Dying For** by Tim Marshall — geopolitics and flag symbolism, engaging narrative style
@@ -24,7 +24,7 @@
 
 ### Videos & Talks
 - **Roman Mars: "Why city flags may be the worst-designed thing you've never noticed"** — https://www.ted.com/talks/roman_mars_why_city_flags_may_be_the_worst_designed_thing_you_ve_never_noticed — 17M+ views, perfect introduction (18 min)
-- **99% Invisible: "Vexillology Revisited"** — https://99percentinvisible.org/episode/vexillology-revisited/ — podcast deep-dive with Roman Mars
+- **99% Invisible: "Vexillology Revisited"** — podcast deep-dive with Roman Mars
 - **Fun With Flags** — educational YouTube series (not the Big Bang Theory parody)
 - **CGP Grey: "The Trouble with the Flag of Nepal"** — https://www.youtube.com/watch?v=f2Gne3UHKHs — geometry and construction of Nepal's unique flag
 - **Half as Interesting: "The Fascinating History of How [X] Got Its Flag"** — series on flag origins

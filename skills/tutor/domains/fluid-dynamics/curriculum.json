@@ -52,10 +52,7 @@
       "concepts": ["streamlines", "pathlines", "streaklines", "steady flow"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.grc.nasa.gov/www/k-12/airplane/streamline.html",
-        "https://www.cfd-online.com/Wiki/Streamlines"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -154,7 +151,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.cfd-online.com/Wiki/Euler_equations",
         "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
       ],
       "status": "pending"
@@ -179,7 +175,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.grc.nasa.gov/www/k-12/airplane/potential.html",
         "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
       ],
       "status": "pending"
@@ -256,8 +251,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/",
-        "https://www.cfd-online.com/Wiki/Boundary_layer_equations"
+        "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
       ],
       "status": "pending"
     },
@@ -295,7 +289,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.grc.nasa.gov/www/k-12/airplane/dimoan.html",
         "https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/"
       ],
       "status": "pending"
@@ -308,7 +301,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.cfd-online.com/Wiki/Dimensionless_numbers",
         "https://www.grc.nasa.gov/www/k-12/airplane/reynolds.html"
       ],
       "status": "pending"

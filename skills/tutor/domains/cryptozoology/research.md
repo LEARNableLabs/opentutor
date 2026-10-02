@@ -37,8 +37,8 @@
 
 - https://www.csicop.org/si/ (Skeptical Inquirer)
 - https://mitpress.mit.edu/books/philosophy-pseudoscience (Philosophy of Pseudoscience textbook)
-- https://www.theguardian.com/science/2013/oct/05/cryptozoology-bigfoot-yeti-real-science (Guardian science coverage)
-- https://www.scientificamerican.com/search/?q=cryptozoology (Scientific American articles)
+-  (Guardian science coverage)
+-  (Scientific American articles)
 - https://www.youtube.com/user/1veritasium (Veritasium channel)
 - https://skepticsguide.org/ (Skeptics Guide to the Universe)
 - https://www.pbs.org/wgbh/nova/evolution/ (PBS NOVA evolution resources)

@@ -10,7 +10,7 @@
 
 - **Ruggles, Clive (2005). _Ancient Astronomy: An Encyclopedia of Cosmologies and Myth_. ABC-CLIO.**
   - Reference work with entries on sites, concepts, and cultures worldwide. Good for looking up specific topics. More Eurocentric than Aveni but strong on British Isles.
-  - https://www.abc-clio.com/products/a2139c/
+
 
 - **Krupp, E. C. (1983). _Echoes of the Ancient Skies: The Astronomy of Lost Civilizations_. Oxford University Press.**
   - Combines archaeology with myth and cosmology. Engaging narrative style. Slightly dated but still valuable for understanding cultural astronomy.
@@ -18,7 +18,7 @@
 
 - **Hoskin, Michael (2001). _Tombs, Temples and Their Orientations: A New Perspective on Mediterranean Prehistory_. Cambridge University Press.**
   - Rigorous quantitative approach to Mediterranean and Middle Eastern sites. Good model for statistical methods.
-  - https://www.cambridge.org/core/books/tombs-temples-and-their-orientations/9780521765541
+
 
 - **Magli, Giulio (2016). _Archaeoastronomy: Introduction to the Science of Stars and Stones_. Springer.**
   - Modern undergraduate-level textbook with mathematical rigor. Covers methods, statistics, and global case studies. Best for students comfortable with equations.
@@ -38,7 +38,7 @@
 ### Online Courses and Educational Resources
 
 - **Universidad Politécnica de Madrid: Archaeoastronomy courses** — several MOOCs and degree-level courses available.
-  - https://www.edx.org/learn/astronomy/universitat-politecnica-de-valencia-archaeoastronomy
+
 
 - **University of Leicester: MSc in Archaeological Studies** — includes archaeoastronomy modules.
   - https://le.ac.uk/courses/archaeological-studies-msc
@@ -60,7 +60,7 @@
   - https://www.pbs.org/wgbh/nova/maya/
 
 - **"Chaco Canyon: Solving the Mystery" (KNME)**
-  - https://www.youtube.com/watch?v=chaco-mystery-documentary
+
 
 - **The Great Courses: "Archaeoastronomy" by Ed Krupp**
   - https://www.thegreatcourses.com/
@@ -72,7 +72,7 @@
   - https://www.rigb.org/christmas-lectures
 
 - **"Standing with Stones" documentary series** — beautiful cinematography of megalithic sites with astronomical context.
-  - https://www.standingwithstones.com/
+
 
 ### Interactive Tools and Software
 
@@ -131,7 +131,7 @@
 ### Contemporary Scholars
 
 - **Clive Ruggles (University of Leicester)** — leading authority on statistical methods and prehistoric European astronomy. UNESCO advisor on astronomical heritage.
-  - https://www2.le.ac.uk/departments/archaeology/people/academic-staff/prof-clive-ruggles
+
 
 - **E. C. Krupp (Griffith Observatory)** — director of Griffith Observatory, prolific author, global archaeoastronomy expert.
   - https://griffithobservatory.org/about/director/
@@ -139,7 +139,7 @@
 - **Ed Krupp (Griffith Observatory)** — cultural astronomy and archaeomythology.
 
 - **Giulio Magli (Politecnico di Milano)** — Egyptian and Mediterranean archaeoastronomy; mathematical approaches.
-  - http://www.giuliomagli.it/
+
 
 - **Juan Antonio Belmonte (Instituto de Astrofísica de Canarias)** — Iberian and Egyptian archaeoastronomy.
   - https://www.iac.es/en/personal/belmonte
@@ -153,7 +153,7 @@
 ### Indigenous Scholars and Practitioners
 
 - **Ray Norris (CSIRO Australia)** — Aboriginal Australian astronomy and ethnoastronomy.
-  - https://www.atnf.csiro.au/people/Ray.Norris/
+
 
 - **Duane Hamacher (University of Melbourne)** — Indigenous astronomy, Aboriginal and Torres Strait Islander knowledge.
   - https://findanexpert.unimelb.edu.au/profile/duane-hamacher
@@ -195,7 +195,7 @@
   - https://www.nps.gov/chcu/
 
 - **Maeshowe** — Orkney, Scotland. Winter solstice illumination chamber.
-  - https://www.historicenvironment.scot/visit-a-place/places/maeshowe/
+
 
 - **Angkor Wat** — Cambodia. Equinox sunrise over central tower.
   - https://www.tourismcambodia.com/

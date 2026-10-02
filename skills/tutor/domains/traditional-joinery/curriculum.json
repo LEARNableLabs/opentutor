@@ -30,10 +30,7 @@
       ],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.finewoodworking.com/2011/11/03/understanding-wood-movement",
-        "https://www.woodmagazine.com/wood-movement-basics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -47,10 +44,7 @@
       ],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.popularwoodworking.com/article/grain-direction-matters/",
-        "https://www.youtube.com/watch?v=uJRX6ZqLxHo"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -64,10 +58,7 @@
       ],
       "difficulty": 1,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.finewoodworking.com/2008/09/11/glue-vs-mechanical-strength",
-        "https://www.popularwoodworking.com/woodworking-blogs/editors-blog/joints-glue-mechanical-advantage/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -98,10 +89,7 @@
       ],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.popularwoodworking.com/projects/chopping-mortises-by-hand/",
-        "https://www.youtube.com/watch?v=4VVWvxKLh5o"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -115,10 +103,7 @@
       ],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.finewoodworking.com/2017/08/23/cut-perfect-tenons",
-        "https://www.woodmagazine.com/woodworking-how-to/joinery/mortise-tenon"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -134,10 +119,7 @@
       ],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.finewoodworking.com/2008/09/11/glue-vs-mechanical-strength",
-        "https://www.popularwoodworking.com/woodworking-blogs/editors-blog/joints-glue-mechanical-advantage/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -151,10 +133,7 @@
       ],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.finewoodworking.com/project-guides/joinery/dovetails",
-        "https://www.youtube.com/watch?v=OCYjoj2jSgQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -168,10 +147,7 @@
       ],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.popularwoodworking.com/projects/dovetail-layout-secrets/",
-        "https://www.finewoodworking.com/2011/04/01/laying-out-dovetails"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -185,10 +161,7 @@
       ],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.finewoodworking.com/2013/12/18/bridle-joints-basics",
-        "https://www.woodmagazine.com/woodworking-tips/techniques/joinery/bridle-joint"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -202,10 +175,7 @@
       ],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.finewoodworking.com/2019/08/07/japanese-joinery-philosophy",
-        "https://www.youtube.com/watch?v=rMbeGxBxYGQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -219,10 +189,7 @@
       ],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.popularwoodworking.com/article/japanese-mortise-and-tenon/",
-        "https://www.finewoodworking.com/2016/03/22/japanese-joinery-basics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -237,8 +204,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://www.finewoodworking.com/membership/pdf/48652/011176052.pdf",
-        "https://www.popularwoodworking.com/article/joinery-comparison-chart/"
+        "https://www.finewoodworking.com/membership/pdf/48652/011176052.pdf"
       ],
       "status": "pending"
     },
@@ -253,11 +219,7 @@
       ],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.finewoodworking.com/2012/09/17/japanese-saws-basics",
-        "https://www.youtube.com/watch?v=KxYQoMN_cjY",
-        "https://www.popularwoodworking.com/article/japanese-saws-guide/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,10 +233,7 @@
       ],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.finewoodworking.com/2020/02/12/japanese-wedge-joint",
-        "https://www.youtube.com/watch?v=8wZ1v2GiTjU"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -288,10 +247,7 @@
       ],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.popularwoodworking.com/article/japanese-sliding-dovetail/",
-        "https://www.youtube.com/watch?v=3KiWHT5XFSc"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -305,10 +261,7 @@
       ],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.finewoodworking.com/2018/11/14/kumiko-basics",
-        "https://www.youtube.com/watch?v=xVv43K9ihZA"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -323,8 +276,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.finewoodworking.com/membership/pdf/301174/fwjapanesejoinery.pdf",
-        "https://www.youtube.com/watch?v=rMbeGxBxYGQ"
+        "https://www.finewoodworking.com/membership/pdf/301174/fwjapanesejoinery.pdf"
       ],
       "status": "pending"
     },
@@ -339,10 +291,7 @@
       ],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.finewoodworking.com/2015/06/23/knockdown-joinery",
-        "https://www.popularwoodworking.com/article/demountable-joinery/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -357,7 +306,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.finewoodworking.com/2014/03/05/compound-angle-joinery",
         "https://www.woodmagazine.com/woodworking-tips/techniques/joinery/compound-angles"
       ],
       "status": "pending"
@@ -374,7 +322,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.finewoodworking.com/2013/09/25/sliding-dovetails-east-west",
         "https://www.popularwoodworking.com/article/sliding-dovetails/"
       ],
       "status": "pending"
@@ -390,10 +337,7 @@
       ],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.finewoodworking.com/2009/11/05/repairing-wood-joints",
-        "https://www.popularwoodworking.com/article/joint-repair-techniques/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -407,10 +351,7 @@
       ],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.finewoodworking.com/2019/10/22/east-meets-west-joinery",
-        "https://www.popularwoodworking.com/article/comparing-joinery-traditions/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -424,11 +365,7 @@
       ],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": [
-        "https://www.finewoodworking.com/project-guides/furniture/furniture-styles",
-        "https://www.popularwoodworking.com/article/furniture-styles-timeline/",
-        "https://www.youtube.com/watch?v=U_eZmEiyJ6I"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -442,10 +379,7 @@
       ],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.finewoodworking.com/2021/05/18/modern-joinery-innovations",
-        "https://www.popularwoodworking.com/article/contemporary-joinery/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -460,9 +394,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.finewoodworking.com/project-guides/joinery",
-        "https://www.popularwoodworking.com/woodworking-projects/",
-        "https://www.woodmagazine.com/woodworking-plans"
+        "https://www.finewoodworking.com/project-guides/joinery"
       ],
       "status": "pending"
     }

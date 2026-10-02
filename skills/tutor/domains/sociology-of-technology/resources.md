@@ -5,12 +5,12 @@
 **Foundational Textbooks:**
 - **Bijker, Hughes, Pinch (eds.) - *The Social Construction of Technological Systems*** (MIT Press, 1987) — The SCOT bible. Essential for lessons 3, 6, 11. [MIT Press](https://mitpress.mit.edu/9780262517607/the-social-construction-of-technological-systems/)
 - **Wiebe Bijker - *Of Bicycles, Bakelites, and Bulbs*** (MIT Press, 1995) — The definitive SCOT case study book. Core for lesson 6. [MIT Press](https://mitpress.mit.edu/9780262522274/of-bicycles-bakelites-and-bulbs/)
-- **Langdon Winner - *The Whale and the Reactor*** (University of Chicago Press, 1986) — "Do Artifacts Have Politics?" is in here. Lesson 2. [UChicago Press](https://press.uchicago.edu/ucp/books/book/chicago/W/bo5961206.html)
+- **Langdon Winner - *The Whale and the Reactor*** (University of Chicago Press, 1986) — "Do Artifacts Have Politics?" is in here. Lesson 2. UChicago Press
 - **Donald MacKenzie & Judy Wajcman (eds.) - *The Social Shaping of Technology*** (Open University Press, 2nd ed. 1999) — Comprehensive reader. Good overview. [Amazon](https://www.amazon.com/Social-Shaping-Technology-Donald-MacKenzie/dp/0335199135)
 - **Bruno Latour - *Reassembling the Social*** (Oxford, 2005) — ANT manifesto. Dense but essential for lessons 7-8. [Oxford UP](https://global.oup.com/academic/product/reassembling-the-social-9780199256044)
 
 **Contemporary Works:**
-- **Shoshana Zuboff - *The Age of Surveillance Capitalism*** (PublicAffairs, 2019) — Core for lesson 21. [Website](https://shoshannazuboff.com/book/about/)
+- **Shoshana Zuboff - *The Age of Surveillance Capitalism*** (PublicAffairs, 2019) — Core for lesson 21. Website
 - **Ruha Benjamin - *Race After Technology*** (Polity, 2019) — Essential for lesson 22. [Website](https://www.ruhabenjamin.com/race-after-technology)
 - **Nick Srnicek - *Platform Capitalism*** (Polity, 2016) — Short, sharp analysis for lesson 23. [Wiley](https://www.wiley.com/en-us/Platform+Capitalism-p-9781509504862)
 - **Sasha Costanza-Chock - *Design Justice*** (MIT Press, 2020) — Participatory design framework for lesson 25. [MIT Press](https://mitpress.mit.edu/9780262043458/design-justice/)
@@ -26,9 +26,9 @@
 
 - **MIT STS Program** — [https://web.mit.edu/sts/](https://web.mit.edu/sts/) — Syllabi, reading lists, department overview
 - **MIT OCW: STS.050 The History of MIT** — [https://ocw.mit.edu/courses/sts-050-the-history-of-mit-spring-2011/](https://ocw.mit.edu/courses/sts-050-the-history-of-mit-spring-2011/)
-- **MIT OCW: STS.005 Technology in a Dangerous World** — [https://ocw.mit.edu/courses/sts-005-technology-in-a-dangerous-world-fall-2016/](https://ocw.mit.edu/courses/sts-005-technology-in-a-dangerous-world-fall-2016/) — Risk and controversy
+- **MIT OCW: STS.005 Technology in a Dangerous World** — Risk and controversy
 - **Stanford STS Program** — [https://sts.stanford.edu/](https://sts.stanford.edu/)
-- **University of Edinburgh STS** — [https://www.ed.ac.uk/science-technology-society](https://www.ed.ac.uk/science-technology-society)
+- **University of Edinburgh STS**
 
 ## Videos & Lectures
 
@@ -36,7 +36,7 @@
 - **Langdon Winner lectures** — Search YouTube for "Langdon Winner technology politics" — multiple talks available
 - **Ruha Benjamin talks** — [TED Talk on Race After Technology](https://www.youtube.com/results?search_query=ruha+benjamin+race+after+technology)
 - **Shoshana Zuboff on Surveillance Capitalism** — [YouTube search](https://www.youtube.com/results?search_query=shoshana+zuboff+surveillance+capitalism)
-- **SCOT Bicycle Case Explained** — Multiple educational videos on YouTube: [Example](https://www.youtube.com/watch?v=9ET1090RYf4)
+- **SCOT Bicycle Case Explained** — Multiple educational videos on YouTube: Example
 - **Actor-Network Theory Intro** — [YouTube educational videos](https://www.youtube.com/results?search_query=actor+network+theory+introduction)
 
 ## Journals & Ongoing Scholarship
@@ -74,8 +74,8 @@
 
 While STS is not code-heavy, some resources bridge technical and social:
 - **Algorithmic Fairness Libraries** — [Fairlearn](https://fairlearn.org/), [AI Fairness 360](https://aif360.mybluemix.net/) — For understanding algorithmic bias (lesson 22)
-- **Platform Cooperatives** — [Awesome Platform Coops list](https://github.com/platform-coop-toolkit/awesome-platform-coops) — Alternative tech models
-- **Critical Algorithm Studies reading list** — [GitHub repo](https://github.com/casmlab/critical-algorithm-studies)
+- **Platform Cooperatives** — Awesome Platform Coops list — Alternative tech models
+- **Critical Algorithm Studies reading list** — GitHub repo
 
 ## Documentaries & Popular Media
 

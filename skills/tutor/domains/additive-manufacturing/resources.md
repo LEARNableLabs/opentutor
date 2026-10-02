@@ -9,7 +9,7 @@
 
 ### University Courses
 - **MIT 2.S998: Additive Manufacturing** — https://ocw.mit.edu/ — Graduate course covering process fundamentals, materials, and design. Lecture notes and assignments available.
-- **Penn State Center for Additive Manufacturing and Logistics** — https://www.lps.psu.edu/academic-programs/graduate-degrees/additive-manufacturing-and-design — Graduate certificate program with excellent pedagogical materials.
+- **Penn State Center for Additive Manufacturing and Logistics** — Graduate certificate program with excellent pedagogical materials.
 - **Georgia Tech PACE (Professional and Continuing Education) AM Certificate** — https://pe.gatech.edu/degrees/additive-manufacturing — Industry-focused professional education.
 
 ### Standards & Technical Documentation
@@ -28,7 +28,7 @@
 - **Teaching Tech** — https://www.youtube.com/c/TeachingTech — FDM calibration, troubleshooting, and parameter optimization. Great for Lesson 10 (review/troubleshooting).
 - **Maker's Muse** — https://www.youtube.com/c/MakersMuse — Design for AM principles, support strategies, orientation effects. Use for Lessons 17-21.
 - **GE Additive Webinar Series** — https://www.ge.com/additive/ — Industrial metal AM applications, particularly aerospace. Excellent for Lesson 24 (LEAP engine fuel nozzle).
-- **Desktop Metal** — https://www.desktopmetal.com/resources/webinars — Binder jetting process and applications. Useful for Lesson 15.
+- **Desktop Metal** — Binder jetting process and applications. Useful for Lesson 15.
 
 ### Journal Articles (Open Access)
 - **Additive Manufacturing (Elsevier)** — https://www.journals.elsevier.com/additive-manufacturing — Top-tier peer-reviewed research. Many articles on process-microstructure-property relationships.
@@ -38,7 +38,7 @@
 ### Interactive Tools & Software
 - **nTopology** — https://ntopology.com/ — Free educational license for lattice design and implicit modeling. Use for Lesson 19 (lattice structures).
 - **Autodesk Fusion 360** — https://www.autodesk.com/products/fusion-360/ — Free for students/educators. Topology optimization built-in. Use for Lesson 18.
-- **Materialise Magics** — https://www.materialise.com/en/industrial/software/magics — Industry-standard build preparation. Limited free trial.
+- **Materialise Magics** — Industry-standard build preparation. Limited free trial.
 - **PrusaSlicer** — https://www.prusa3d.com/page/prusaslicer_424/ — Open-source FDM slicer with excellent parameter visualization. Use for Lessons 6-7.
 - **Simplify3D** — https://www.simplify3d.com/ — Commercial FDM slicer with advanced support and process control.
 

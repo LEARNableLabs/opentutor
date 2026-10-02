@@ -56,7 +56,7 @@
       "concepts": ["Church encodings", "booleans", "numerals", "pairs"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": ["https://www.cs.princeton.edu/~dpw/courses/cos326/", "https://plzoo.andrej.com/"],
+      "resources": ["https://plzoo.andrej.com/"],
       "status": "pending"
     },
     {
@@ -176,7 +176,7 @@
       "concepts": ["semantic modeling", "reduction visualization"],
       "difficulty": 2,
       "type": "resource-drop",
-      "resources": ["https://redex.racket-lang.org/", "https://www.youtube.com/watch?v=BuCRTock1_k"],
+      "resources": ["https://redex.racket-lang.org/"],
       "status": "pending"
     },
     {

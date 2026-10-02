@@ -48,7 +48,7 @@ Weather forecasting through cloud identification and pressure system analysis �
 
 ### Video Series
 - **NWS WFO Birmingham Cloud Spotter Training** (YouTube) — practical cloud identification
-- **NOAA SciJinks** (https://scijinks.gov/) — engaging explainers for intermediate learners
+- **NOAA SciJinks** () — engaging explainers for intermediate learners
 
 ## Pedagogical Considerations
 - **Visual-heavy domain** — requires extensive photo/satellite examples

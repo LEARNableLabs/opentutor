@@ -140,7 +140,7 @@
   - https://www.nrcs.usda.gov/
 
 - **Carbon Cowboys** — Australian grazing and soil carbon pioneers
-  - https://www.carboncowboys.com.au/
+
 
 - **Quivira Coalition** — regenerative ranching, New Mexico-based
   - https://quiviracoalition.org/
@@ -150,7 +150,7 @@
 ### Cross-Disciplinary Links
 
 - **Soil and Mental Health** — "Nature Deficit Disorder," biophilia, soil microbes (M. vaccae) and mood
-  - https://www.scientificamerican.com/article/is-dirt-the-new-prozac/
+
 
 - **Soil Art and Aesthetics** — soil painting, soil color charts, photography
   - https://www.munsell.com/color-solutions/soil-color-charts/
@@ -170,8 +170,8 @@
 ### Controversial/Emerging Topics
 
 - **Soil Carbon Markets** — promise, pitfalls, permanence debates
-  - https://www.nori.com/
-  - https://www.indigo.ag/carbon
+
+
 
 - **Allan Savory and Holistic Grazing** — contested evidence, case studies vs trials
   - https://savory.global/
@@ -190,10 +190,10 @@
 
 ### DIY Soil Assessments
 - **Jar Test** — soil texture analysis with water and a jar
-  - https://www.nrcs.usda.gov/Internet/FSE_DOCUMENTS/nrcs142p2_053260.pdf
+
 
 - **Slake Test** — aggregate stability in water
-  - https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-health-assessment
+
 
 - **Earthworm Count** — dig 1 cubic foot, count worms (healthy = 10+)
   - https://rodaleinstitute.org/
@@ -203,7 +203,7 @@
 
 ### Hands-On Projects
 - **Compost Building** — hot composting, C:N balancing, temperature monitoring
-  - https://rodaleinstitute.org/science/articles/compost-101/
+
 
 - **Cover Crop Trial** — plant a cocktail mix, observe root diversity and biomass
   - https://www.sare.org/publications/managing-cover-crops-profitably/

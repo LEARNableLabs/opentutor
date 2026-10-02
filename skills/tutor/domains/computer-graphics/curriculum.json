@@ -27,7 +27,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-rendering.html",
         "https://raytracing.github.io/books/RayTracingInOneWeekend.html"
       ],
       "status": "pending"
@@ -40,7 +39,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.scratchapixel.com/lessons/digital-imaging/digital-images.html",
         "https://learnopengl.com/Getting-started/Hello-Window"
       ],
       "status": "pending"
@@ -66,7 +64,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.scratchapixel.com/lessons/3d-basic-rendering/3d-viewing-pinhole-camera.html",
         "https://raytracing.github.io/books/RayTracingInOneWeekend.html#positionablecamera"
       ],
       "status": "pending"
@@ -79,7 +76,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation.html",
         "https://learnopengl.com/Getting-started/Hello-Triangle"
       ],
       "status": "pending"
@@ -104,9 +100,7 @@
       "concepts": ["mental model", "teaching analogy", "problem decomposition"],
       "difficulty": 1,
       "type": "teach-back",
-      "resources": [
-        "https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -117,8 +111,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://raytracing.github.io/books/RayTracingInOneWeekend.html#rays,asimplecamera,andbackground",
-        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/ray-tracing-generating-camera-rays.html"
+        "https://raytracing.github.io/books/RayTracingInOneWeekend.html#rays,asimplecamera,andbackground"
       ],
       "status": "pending"
     },
@@ -180,9 +173,7 @@
       "concepts": ["ray generation", "intersection tests", "scene traversal"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -193,7 +184,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading.html",
         "https://learnopengl.com/Lighting/Basic-Lighting"
       ],
       "status": "pending"
@@ -283,7 +273,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/texture-mapping.html",
         "https://learnopengl.com/Getting-started/Textures"
       ],
       "status": "pending"
@@ -309,8 +298,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.pbr-book.org/3ed-2018/Monte_Carlo_Integration.html",
-        "https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice.html"
+        "https://www.pbr-book.org/3ed-2018/Monte_Carlo_Integration.html"
       ],
       "status": "pending"
     },

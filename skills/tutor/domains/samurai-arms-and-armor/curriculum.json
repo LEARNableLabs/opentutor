@@ -51,7 +51,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.coursera.org/learn/asian-history",
         "https://www.britannica.com/topic/samurai"
       ],
       "status": "pending"
@@ -64,8 +63,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www3.nhk.or.jp/nhkworld/en/shows/",
-        "https://www.youtube.com/c/kiwamijapan"
+        "https://www3.nhk.or.jp/nhkworld/en/shows/"
       ],
       "status": "pending"
     },
@@ -77,7 +75,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nbthk.or.jp/",
         "https://www.tf.uni-kiel.de/matwis/amat/iss/kap_6/backbone/r6_1_2.html"
       ],
       "status": "pending"
@@ -113,8 +110,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.touken.or.jp/english/",
-        "https://www.nbthk.or.jp/"
+        "https://www.touken.or.jp/english/"
       ],
       "status": "pending"
     },
@@ -139,7 +135,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.nbthk.or.jp/",
         "https://www.britannica.com/technology/sword"
       ],
       "status": "pending"
@@ -250,7 +245,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.kyudousa.org/",
         "https://www.metmuseum.org/art/collection/search#!/search?q=yumi"
       ],
       "status": "pending"
@@ -276,8 +270,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.touken.or.jp/english/",
-        "https://www.nbthk.or.jp/"
+        "https://www.touken.or.jp/english/"
       ],
       "status": "pending"
     },
@@ -299,8 +292,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.britannica.com/topic/Bushido",
-        "https://www.coursera.org/learn/asian-history"
+        "https://www.britannica.com/topic/Bushido"
       ],
       "status": "pending"
     },

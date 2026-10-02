@@ -21,7 +21,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://nava.org/good-flag-bad-flag/",
         "https://www.ted.com/talks/roman_mars_why_city_flags_may_be_the_worst_designed_thing_you_ve_never_noticed"
       ],
       "status": "pending"
@@ -33,10 +32,7 @@
       "concepts": ["NAVA principles", "scalability", "universal symbols"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://nava.org/good-flag-bad-flag/",
-        "https://www.fotw.info/flags/vxt-prin.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -46,10 +42,7 @@
       "concepts": ["color limitation", "visual complexity", "manufacturing constraints"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://99percentinvisible.org/episode/vexillology-revisited/",
-        "https://www.crwflags.com/fotw/flags/vxt-dsgn.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -98,10 +91,7 @@
       "concepts": ["Pan-African colors", "political symbolism", "shared identity"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.fotw.info/flags/vxt-pafr.html",
-        "https://africanhistory.about.com/od/flags/a/PanAfricanFlag.htm"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -112,7 +102,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.fotw.info/flags/vxt-symb.html",
         "https://en.wikipedia.org/wiki/Star_and_crescent"
       ],
       "status": "pending"
@@ -137,9 +126,7 @@
       "concepts": ["NAVA principles", "color symbolism", "cultural meaning"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://nava.org/good-flag-bad-flag/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -150,8 +137,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.heraldsnet.org/saitou/parker/index.htm",
-        "https://www.fotw.info/flags/vxt-hera.html"
+        "https://www.heraldsnet.org/saitou/parker/index.htm"
       ],
       "status": "pending"
     },
@@ -163,8 +149,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.britannica.com/topic/flag-vexillology/Tricolour-flags",
-        "https://www.fotw.info/flags/vxt-tric.html"
+        "https://www.britannica.com/topic/flag-vexillology/Tricolour-flags"
       ],
       "status": "pending"
     },
@@ -175,10 +160,7 @@
       "concepts": ["Nordic cross", "regional identity", "Christian symbolism"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.fotw.info/flags/vxt-nord.html",
-        "https://satwcomic.com/flag-day"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -189,8 +171,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.imo.org/en/OurWork/Safety/Pages/SignalsCode.aspx",
-        "https://www.fotw.info/flags/vxt-mari.html"
+        "https://www.imo.org/en/OurWork/Safety/Pages/SignalsCode.aspx"
       ],
       "status": "pending"
     },
@@ -201,10 +182,7 @@
       "concepts": ["post-colonial design", "national identity", "break from colonizers"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.bbc.com/news/world-africa-42946013",
-        "https://africanarguments.org/2020/07/flags-africa-symbols-independence/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -227,7 +205,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.crwflags.com/fotw/flags/vxt-rat.html",
         "https://en.wikipedia.org/wiki/List_of_aspect_ratios_of_national_flags"
       ],
       "status": "pending"
@@ -266,8 +243,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://krikienoid.github.io/flagwaver/",
-        "https://www.fotw.info/flags/vxt-dist.html"
+        "https://krikienoid.github.io/flagwaver/"
       ],
       "status": "pending"
     },
@@ -279,7 +255,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://nava.org/surveys/state-provincial-territory-flags/state-and-provincial-survey-results/",
         "https://flagmakerjr.stg7.net/"
       ],
       "status": "pending"
@@ -291,10 +266,7 @@
       "concepts": ["aspect ratio", "construction sheets", "scalability", "distinctiveness"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://nava.org/good-flag-bad-flag/",
-        "https://www.fotw.info/flags/vxt-prin.html"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -304,10 +276,7 @@
       "concepts": ["democratic design", "public consultation", "tradition vs innovation"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.govt.nz/browse/engaging-with-government/the-nz-flag-your-chance-to-decide/",
-        "https://www.bbc.com/news/world-asia-35890566"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -318,7 +287,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://nava.org/surveys/",
         "https://www.reddit.com/r/vexillology/"
       ],
       "status": "pending"

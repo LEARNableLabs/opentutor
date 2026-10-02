@@ -32,12 +32,12 @@
 
 - **Iowa State University Extension Entomology**
   - Practical resources on IPM, pollinators, and pest identification.
-  - https://hortnews.extension.iastate.edu/taxonomy/term/164
+
 
 - **Ask A Biologist (Arizona State University)**
   - Accessible articles, activities, and visuals for learners at all levels.
   - Especially good for insect anatomy, life cycles, and ecology.
-  - https://askabiologist.asu.edu/explore/insects
+
 
 - **Featured Creatures (University of Florida)**
   - Detailed species profiles: biology, identification, management.

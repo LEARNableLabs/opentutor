@@ -28,8 +28,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://pubmed.ncbi.nlm.nih.gov/15798847/",
-        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/mammalian-diving-reflex/"
+        "https://pubmed.ncbi.nlm.nih.gov/15798847/"
       ],
       "status": "pending"
     },
@@ -78,8 +77,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://pubmed.ncbi.nlm.nih.gov/19092328/",
-        "https://www.molchanovs.com/blogs/education"
+        "https://pubmed.ncbi.nlm.nih.gov/19092328/"
       ],
       "status": "pending"
     },
@@ -151,8 +149,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/books/NBK539858/",
-        "https://www.youtube.com/watch?v=hAqDPEP7z74"
+        "https://www.ncbi.nlm.nih.gov/books/NBK539858/"
       ],
       "status": "pending"
     },
@@ -186,8 +183,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://pubmed.ncbi.nlm.nih.gov/19092328/",
-        "https://www.dan.org/alert-diver/article/the-spleen-and-diving/"
+        "https://pubmed.ncbi.nlm.nih.gov/19092328/"
       ],
       "status": "pending"
     },
@@ -210,9 +206,7 @@
       "concepts": ["heart rate monitoring", "dive reflex measurement", "training assessment"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.molchanovs.com/blogs/education/dive-response"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -246,8 +240,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://pubmed.ncbi.nlm.nih.gov/19211945/",
-        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/blood-shift/"
+        "https://pubmed.ncbi.nlm.nih.gov/19211945/"
       ],
       "status": "pending"
     },
@@ -271,8 +264,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://pubmed.ncbi.nlm.nih.gov/24298996/",
-        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/equalization/"
+        "https://pubmed.ncbi.nlm.nih.gov/24298996/"
       ],
       "status": "pending"
     },
@@ -294,8 +286,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://pubmed.ncbi.nlm.nih.gov/21558571/",
-        "https://www.molchanovs.com/blogs/education/co2-tolerance"
+        "https://pubmed.ncbi.nlm.nih.gov/21558571/"
       ],
       "status": "pending"
     },
@@ -332,8 +323,7 @@
       "difficulty": 5,
       "type": "mini-lesson",
       "resources": [
-        "https://pubmed.ncbi.nlm.nih.gov/21558571/",
-        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/shallow-water-blackout/"
+        "https://pubmed.ncbi.nlm.nih.gov/21558571/"
       ],
       "status": "pending"
     },
@@ -345,7 +335,6 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.dan.org/health-medicine/health-resources/diseases-conditions/contraindications-freediving/",
         "https://www.aida-international.org/Education/Medical"
       ],
       "status": "pending"

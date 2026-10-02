@@ -39,10 +39,7 @@
       "concepts": ["soil as ecosystem", "soil-plant-atmosphere continuum", "ecosystem services"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.soils.org/about-soils/basics",
-        "https://www.youtube.com/watch?v=0olLjzWZLFQ"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -66,7 +63,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-formation",
         "https://en.wikipedia.org/wiki/Pedogenesis"
       ],
       "status": "pending"
@@ -78,10 +74,7 @@
       "concepts": ["weathering", "physical weathering", "chemical weathering", "biological weathering"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.soils.org/about-soils/basics/weathering",
-        "https://www.youtube.com/watch?v=pzG2H5eC1Lw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -91,10 +84,7 @@
       "concepts": ["soil horizons", "horizonation", "eluviation", "illuviation"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-survey-manual/chapter-3-examination-and-description-of-soils",
-        "https://casoilresource.lawr.ucdavis.edu/soil-properties/horizon-notation/"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -105,7 +95,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.soils.org/about-soils/climate",
         "https://www.fao.org/soils-portal/soil-survey/soil-classification/en/"
       ],
       "status": "pending"
@@ -117,9 +106,7 @@
       "concepts": ["five factors review", "weathering processes", "horizonation"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.soils.org/about-soils/basics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -129,10 +116,7 @@
       "concepts": ["soil age", "time factor", "soil maturity", "chronosequences"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.nrcs.usda.gov/about/history/articles/soils-and-the-dust-bowl",
-        "https://www.youtube.com/watch?v=BFYv6TRFlz0"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -142,10 +126,7 @@
       "concepts": ["particle size", "soil texture", "texture triangle"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-texture-calculator",
-        "https://soilseries.sc.egov.usda.gov/osdname.asp"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -155,10 +136,7 @@
       "concepts": ["soil structure", "aggregation", "peds"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.soils.org/about-soils/basics/structure",
-        "https://www.youtube.com/watch?v=Q0IgT2xN0-c"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -168,10 +146,7 @@
       "concepts": ["soil water", "porosity", "permeability", "infiltration"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nrcs.usda.gov/resources/education-and-teaching-materials/soil-water-movement",
-        "https://www.soils.org/about-soils/basics/water"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -182,7 +157,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/conservation-by-state/soil-health",
         "https://www.youtube.com/watch?v=ntJouJhLM48"
       ],
       "status": "pending"
@@ -195,8 +169,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://casoilresource.lawr.ucdavis.edu/",
-        "https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/"
+        "https://casoilresource.lawr.ucdavis.edu/"
       ],
       "status": "pending"
     },
@@ -207,10 +180,7 @@
       "concepts": ["pH", "acidity", "alkalinity", "buffering"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.soils.org/about-soils/basics/ph",
-        "https://www.youtube.com/watch?v=TX6RXgJk3bM"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -220,9 +190,7 @@
       "concepts": ["texture-structure-chemistry integration", "property interactions"],
       "difficulty": 2,
       "type": "review",
-      "resources": [
-        "https://www.soils.org/about-soils/basics"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -232,10 +200,7 @@
       "concepts": ["cation exchange", "CEC", "anion exchange", "surface charge"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nrcs.usda.gov/resources/education-and-teaching-materials/cation-exchange-capacity",
-        "https://www.soils.org/about-soils/basics/cec"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -245,10 +210,7 @@
       "concepts": ["organic matter", "humus", "decomposition", "carbon cycling"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-organic-matter",
-        "https://www.youtube.com/watch?v=AGHBZ1z5Nf4"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -258,10 +220,7 @@
       "concepts": ["soil biodiversity", "microbial communities", "soil food web"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-biology",
-        "https://www.soils.org/about-soils/basics/biology"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,10 +230,7 @@
       "concepts": ["soil fauna", "bioturbation", "macroorganisms"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/animals/earthworms",
-        "https://www.youtube.com/watch?v=g5hzJhXB5Yw"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -284,10 +240,7 @@
       "concepts": ["rhizosphere", "root exudates", "mycorrhizae", "plant-microbe interactions"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.soils.org/about-soils/basics/rhizosphere",
-        "https://www.youtube.com/watch?v=btMQ5w0vaQ0"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -311,7 +264,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.nrcs.usda.gov/resources/education-and-teaching-materials/soil-orders",
         "https://casoilresource.lawr.ucdavis.edu/see/"
       ],
       "status": "pending"
@@ -337,8 +289,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://websoilsurvey.nrcs.usda.gov/",
-        "https://www.nrcs.usda.gov/resources/guides-and-instructions/national-cooperative-soil-survey-ncss"
+        "https://websoilsurvey.nrcs.usda.gov/"
       ],
       "status": "pending"
     },
@@ -350,8 +301,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health",
-        "https://www.fao.org/global-soil-partnership/areas-of-work/soil-fertility/en/"
+        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils/soil-health"
       ],
       "status": "pending"
     },
@@ -362,10 +312,7 @@
       "concepts": ["soil erosion", "conservation practices", "land degradation"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/soil-erosion",
-        "https://www.youtube.com/watch?v=VdT8zLxGYqE"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -375,11 +322,7 @@
       "concepts": ["carbon sequestration", "soil health", "climate mitigation", "regenerative practices"],
       "difficulty": 4,
       "type": "resource-drop",
-      "resources": [
-        "https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/climate/soil-carbon-storage",
-        "https://www.fao.org/global-soil-partnership/areas-of-work/soil-carbon/en/",
-        "https://www.youtube.com/watch?v=0olLjzWZLFQ"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

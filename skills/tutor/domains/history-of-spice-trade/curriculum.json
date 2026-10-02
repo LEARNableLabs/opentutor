@@ -38,7 +38,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.nationalgeographic.org/encyclopedia/trade-route/",
         "https://www.youtube.com/watch?v=vfe-eNq-Qyg"
       ],
       "status": "pending"
@@ -115,7 +114,6 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=rRl76zK9U58",
         "https://www.britannica.com/place/Venice/History"
       ],
       "status": "pending"
@@ -128,7 +126,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.loc.gov/exhibits/world/world-trade.html",
         "https://www.britannica.com/biography/Marco-Polo"
       ],
       "status": "pending"
@@ -154,7 +151,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.bl.uk/maps",
         "https://www.youtube.com/watch?v=a6XtBLDmPA0"
       ],
       "status": "pending"
@@ -218,8 +214,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.britannica.com/biography/Ferdinand-Magellan",
-        "https://www.nationalgeographic.org/encyclopedia/spice-islands/"
+        "https://www.britannica.com/biography/Ferdinand-Magellan"
       ],
       "status": "pending"
     },
@@ -244,8 +239,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.britannica.com/topic/East-India-Company",
-        "https://www.historytoday.com/archive/spice-islands"
+        "https://www.britannica.com/topic/East-India-Company"
       ],
       "status": "pending"
     },
@@ -281,10 +275,7 @@
       "concepts": ["price history", "monopoly pricing", "scarcity manipulation", "speculation"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.historicalpriceindex.com/",
-        "https://www.mentalfloss.com/article/532447/nutmeg-wars-how-spice-changed-world"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -295,8 +286,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nytimes.com/2021/03/24/books/review/the-nutmeg-curse-amitav-ghosh.html",
-        "https://www.bbc.com/news/world-asia-39806162"
+        "https://www.nytimes.com/2021/03/24/books/review/the-nutmeg-curse-amitav-ghosh.html"
       ],
       "status": "pending"
     },
@@ -320,10 +310,7 @@
       "concepts": ["supply chains", "shipping lanes", "economic patterns", "modern parallels"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.youtube.com/watch?v=ZfahtCrMnIU",
-        "https://www.cfr.org/backgrounder/shipping-and-globalization"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

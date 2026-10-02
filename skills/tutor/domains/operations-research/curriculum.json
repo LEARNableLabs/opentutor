@@ -51,10 +51,7 @@
       "concepts": ["feasible region", "polyhedra", "geometric interpretation"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://optimization.cbe.cornell.edu/index.php?title=Linear_programming",
-        "https://www.geogebra.org/m/XJ8aXwQu"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -78,8 +75,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://neos-guide.org/optimization-tree",
-        "https://www.coursera.org/learn/discrete-optimization"
+        "https://neos-guide.org/optimization-tree"
       ],
       "status": "pending"
     },
@@ -91,7 +87,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://optimization.cbe.cornell.edu/index.php?title=Degeneracy",
         "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/"
       ],
       "status": "pending"
@@ -156,7 +151,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.coursera.org/learn/discrete-optimization",
         "https://developers.google.com/optimization/mip/integer_opt"
       ],
       "status": "pending"
@@ -182,7 +176,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://optimization.cbe.cornell.edu/index.php?title=Branch_and_bound",
         "https://neos-server.org/neos/"
       ],
       "status": "pending"
@@ -194,10 +187,7 @@
       "concepts": ["algorithm understanding", "tree search", "pruning"],
       "difficulty": 2,
       "type": "teach-back",
-      "resources": [
-        "https://www.coursera.org/learn/discrete-optimization",
-        "https://optimization.cbe.cornell.edu/index.php?title=Branch_and_bound"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -208,7 +198,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://optimization.cbe.cornell.edu/index.php?title=Cutting-plane_methods",
         "https://www.gurobi.com/documentation/current/refman/cuts.html"
       ],
       "status": "pending"
@@ -311,10 +300,7 @@
       "concepts": ["ML as optimization", "regularization", "loss functions"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.cvxpy.org/examples/machine_learning/index.html",
-        "https://web.stanford.edu/~boyd/papers/pdf/ml_for_opt.pdf"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {

@@ -9,7 +9,7 @@
 
 - **Sound Reproduction: The Acoustics and Psychoacoustics of Loudspeakers and Rooms (3rd ed.)** by Floyd Toole — evidence-based approach to speaker-room interaction. Essential for understanding boundary loading, SBIR, and the limits of EQ.
   - Publisher: Routledge
-  - https://www.routledge.com/Sound-Reproduction-The-Acoustics-and-Psychoacoustics-of-Loudspeakers-and-Rooms/Toole/p/book/9781138921368
+
 
 - **Acoustics and Psychoacoustics (5th ed.)** by David Howard & Jamie Angus — bridges physical and perceptual aspects. Good for understanding why measurements matter to listening.
   - Publisher: Routledge
@@ -21,10 +21,10 @@
 
 ### Academic Courses (Open Access)
 - **MIT 2.067: Acoustics and Sensing** (Spring 2015) — covers wave equation, impedance, radiation, room acoustics. Lecture notes, problem sets, and some video.
-  - https://ocw.mit.edu/courses/2-067-acoustics-and-sensing-spring-2015/
+
 
 - **Salford Acoustics Web Resources** — introductory modules on wave behavior, resonance, room acoustics from University of Salford's renowned acoustics program.
-  - https://www.acoustics.salford.ac.uk/acoustics_world/
+
 
 ### Standards and Technical Documents
 - **ISO 3382-1:2009** — Measurement of room acoustic parameters (RT60, EDT, clarity, etc.). Defines professional measurement practice.
@@ -37,13 +37,13 @@
 
 ### Video Channels and Tutorials
 - **Acoustic Insider** (YouTube) — Dennis Foley, practical treatment design, measurement walkthroughs, absorber/diffuser builds. Down-to-earth, measurement-focused.
-  - https://www.youtube.com/c/AcousticInsider
+
 
 - **Acoustic Fields** (YouTube) — Dennis Foley's main channel. Deep dives into specific topics: room modes, bass trapping, diffusion, material selection.
   - https://www.youtube.com/user/AcousticFields
 
 - **Ethan Winer** (YouTube + website) — myth-busting, measurement-driven approach. Excellent videos on absorption depth, EQ limits, and common misconceptions.
-  - https://www.youtube.com/user/videoethan
+
   - https://ethanwiner.com/acoustics.html
 
 - **REW Tutorial Series** (YouTube) — various creators have excellent REW walkthroughs. Search "REW room acoustics tutorial" for current best options.

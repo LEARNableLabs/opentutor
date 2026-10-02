@@ -21,7 +21,7 @@
   - Dr. Jamie Ellis's extension materials are exceptionally clear
 
 - **Penn State Extension Beekeeping**
-  - https://extension.psu.edu/honeybee-biology-and-behavior
+
   - Excellent online courses and webinars
   - Strong on temperate climate management
   - Good disease and pest resources
@@ -56,14 +56,14 @@
 ### Videos
 
 - **University of Georgia Honey Bee Program** (YouTube)
-  - https://www.youtube.com/c/UGAHoneyBee
+
   - Dr. Keith Delaplane and team
   - Detailed hive inspections, management techniques
   - Excellent production quality, clear explanations
   - **Recommended episodes**: "Reading Brood Comb", "Making Splits", "Varroa Monitoring"
 
 - **Norfolk Honey Company** (YouTube)
-  - https://www.youtube.com/c/NorfolkHoneyCompany
+
   - Commercial beekeeping perspective (10,000+ colonies)
   - Practical, no-nonsense approach
   - Shows scale of operations beyond hobbyist
@@ -106,7 +106,7 @@
 ### Code/Repos & Data
 
 - **BeeMapp** — Citizen science project, varroa resistance research (Cornell)
-- **Bee Informed Partnership Loss Survey Data** — https://beeinformed.org/citizen-science/loss-and-management-survey/
+- **Bee Informed Partnership Loss Survey Data**
   - Annual colony loss data by state, management practice
   - Students can compare their practices to national averages
   - Great for understanding what correlates with success/failure

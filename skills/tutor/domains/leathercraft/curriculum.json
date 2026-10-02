@@ -25,7 +25,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://tandyleather.com/pages/leather-library",
         "https://www.youtube.com/c/LeatherHub"
       ],
       "status": "pending"
@@ -38,7 +37,6 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/c/ChuckDorsett",
         "https://leathercraftmasterclass.com/"
       ],
       "status": "pending"
@@ -51,8 +49,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/c/CorterLeather",
-        "https://tandyleather.com/pages/leather-library"
+        "https://www.youtube.com/c/CorterLeather"
       ],
       "status": "pending"
     },
@@ -76,10 +73,7 @@
       "concepts": ["backgrounding", "figure-ground contrast", "stamp selection"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://tandyleather.com/pages/leather-library",
-        "https://www.youtube.com/c/ChuckDorsett"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -103,7 +97,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/c/ChuckDorsett",
         "https://leathercraftmasterclass.com/"
       ],
       "status": "pending"
@@ -116,7 +109,6 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://tandyleather.com/pages/leather-library",
         "https://www.weaverleathersupply.com/"
       ],
       "status": "pending"
@@ -142,8 +134,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.rmleathersupply.com/",
-        "https://tandyleather.com/pages/leather-library"
+        "https://www.rmleathersupply.com/"
       ],
       "status": "pending"
     },
@@ -155,7 +146,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/c/ChuckDorsett",
         "https://leathercraftmasterclass.com/"
       ],
       "status": "pending"
@@ -219,10 +209,7 @@
       "concepts": ["antiquing technique", "depth enhancement", "wiping technique"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://tandyleather.com/pages/leather-library",
-        "https://www.youtube.com/c/ChuckDorsett"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -325,8 +312,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "https://leathercraftmasterclass.com/",
-        "https://www.youtube.com/c/ChuckDorsett"
+        "https://leathercraftmasterclass.com/"
       ],
       "status": "pending"
     },
@@ -339,8 +325,7 @@
       "type": "review",
       "resources": [
         "https://www.reddit.com/r/Leathercraft/",
-        "https://leatherworker.net/",
-        "https://tandyleather.com/pages/leather-library"
+        "https://leatherworker.net/"
       ],
       "status": "pending"
     }

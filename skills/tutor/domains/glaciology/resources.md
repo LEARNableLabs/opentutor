@@ -8,10 +8,10 @@
 - **The Physics of Glaciers** by Roger LeB. Hooke (4th edition) — More accessible alternative to Cuffey & Paterson. Good physical intuition, less mathematical density. Suitable for intermediate level throughout.
 
 - **Glaciers and Glaciation (2nd edition)** by Douglas Benn & David Evans — Field-oriented approach with exceptional photography and diagrams. Emphasizes observational methods and geomorphology. Excellent visual support for lessons 1-6, 20-21.
-  - https://www.routledge.com/Glaciers-and-Glaciation/Benn-Evans/p/book/9781444135169
+
 
 - **MIT OpenCourseWare 12.475** — Seminar in Geophysics: Dynamics of Glaciers and Ice Sheets. Graduate-level course materials including lecture notes, problem sets. Strong on ice sheet modeling (lessons 13-18).
-  - https://ocw.mit.edu/courses/12-475-seminar-in-geophysics-dynamics-of-glaciers-and-ice-sheets-spring-2009/
+
 
 - **Antarctic Glaciers** — Educational website by Bethan Davies. Excellent accessible explanations, diagrams, and case studies. Free resource covering glacier processes, thermal regimes, Antarctic ice sheets. Use throughout.
   - https://www.antarcticglaciers.org/
@@ -30,7 +30,7 @@
   - https://svs.gsfc.nasa.gov/cgi-bin/search.cgi?value=glaciers
 
 - **NSIDC Educational Videos** — Short explainers on cryosphere topics (mass balance, ice cores, sea ice).
-  - https://nsidc.org/learn/videos
+
 
 - **Richard Alley's Ice Ages and Climate Lecture Series** — Penn State course videos; engaging presentation style.
   - https://www.e-education.psu.edu/earth107/
@@ -125,7 +125,7 @@
 ### Field Guides & Protocols
 
 - **USGS Glacier Monitoring Protocols** — How to measure mass balance in the field.
-  - https://www.usgs.gov/programs/climate-research-and-development-program/science/benchmarks-glacier-mass-balance
+
 - **WGMS Field Manual** — Standardized methods for glacier monitoring.
   - https://wgms.ch/downloads/
 

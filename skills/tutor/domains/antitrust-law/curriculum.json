@@ -65,7 +65,6 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.yalejreg.com/print/neo-brandeisian-antitrust/",
         "https://www.ftc.gov/system/files/attachments/us-submissions-oecd-2010-present-other-international-competition-fora/the_goals_of_competition_law_us.pdf"
       ],
       "status": "pending"
@@ -104,8 +103,7 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.justice.gov/atr/case/us-v-apple-inc-et-al",
-        "https://www.supremecourt.gov/opinions/14pdf/13-983_0pm1.pdf"
+        "https://www.justice.gov/atr/case/us-v-apple-inc-et-al"
       ],
       "status": "pending"
     },
@@ -117,8 +115,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ftc.gov/legal-library/browse/cases-proceedings/public-statements/statement-federal-trade-commission-concerning-competitor-collaborations",
-        "https://www.justice.gov/atr/competitor-collaboration-guidelines-april-2000"
+        "https://www.ftc.gov/legal-library/browse/cases-proceedings/public-statements/statement-federal-trade-commission-concerning-competitor-collaborations"
       ],
       "status": "pending"
     },
@@ -168,7 +165,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.justice.gov/atr/case/us-v-microsoft-corp",
         "https://caselaw.findlaw.com/us-dc-circuit/1206146.html"
       ],
       "status": "pending"
@@ -360,7 +356,6 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-markets-act-ensuring-fair-and-open-digital-markets_en",
         "https://www.ftc.gov/news-events/news/speeches/digital-markets-competition-policy-innovation"
       ],
       "status": "pending"

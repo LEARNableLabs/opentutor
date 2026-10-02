@@ -12,7 +12,7 @@
 
 - **University of Wisconsin-Madison Center for Dairy Research** — https://cdr.wisc.edu/ — Industry-leading research center. Excellent technical bulletins, fact sheets, and online resources. Strong on production science and quality control.
 
-- **Cornell University Dairy Foods Extension** — https://cals.cornell.edu/dairy-foods — Practical guides, fact sheets, and videos. Good for connecting science to practice.
+- **Cornell University Dairy Foods Extension** — Practical guides, fact sheets, and videos. Good for connecting science to practice.
 
 ## Textbooks by Topic
 
@@ -24,11 +24,11 @@
 
 - **Coursera: The Science of Gastronomy** (Hong Kong University of Science and Technology) — https://www.coursera.org/learn/gastronomy — Includes modules on cheese science and fermentation
 
-- **Coursera: Food Fermentation: The Science of Cooking** (Stanford) — https://www.coursera.org/learn/food-fermentation — Excellent coverage of fermentation microbiology with cheese examples
+- **Coursera: Food Fermentation: The Science of Cooking** (Stanford) — Excellent coverage of fermentation microbiology with cheese examples
 
 - **UC Davis Cheese Short Course** — https://extension.ucdavis.edu/areas-study/food-science/cheese — Professional development course (paid, in-person), but website has free resources
 
-- **American Cheese Society Education** — https://www.cheesesociety.org/education — Webinars, guides, and certification materials
+- **American Cheese Society Education** — Webinars, guides, and certification materials
 
 ## Research Journals (for current research and deep dives)
 
@@ -46,7 +46,7 @@
 
 - **Institute of Food Technologists (IFT)** — https://www.ift.org — Webinars and conference recordings on food science topics including cheese
 
-- **Culture: The Word on Cheese** — https://culturechemag.com — Industry publication with excellent science articles written for practitioners. Good bridge between research and practice.
+- **Culture: The Word on Cheese** — Industry publication with excellent science articles written for practitioners. Good bridge between research and practice.
 
 - **CheeseSlayer Podcast** — Interviews with cheesemakers and scientists. Less technical but good for context and real-world applications.
 
@@ -77,7 +77,7 @@
 ### Terroir and PDO
 - **EU Geographic Indications Database** — https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes — Official PDO/PGI registry with specifications
 - **Slow Food Ark of Taste** — https://www.slowfood.com/ark-of-taste/ — Traditional cheeses and their cultural context
-- **Origin Diversity** — https://www.originaldiversity.org — Research on geographic food diversity
+- **Origin Diversity** — Research on geographic food diversity
 
 ### Safety and Regulation
 - **FDA Food Safety** — https://www.fda.gov/food — Regulations, guidance documents, outbreak information
@@ -87,11 +87,11 @@
 ### Industry Organizations
 - **American Cheese Society** — https://www.cheesesociety.org — Professional organization, conference, competitions, education
 - **Academy of Cheese** — https://www.academyofcheese.org — UK-based certification and education
-- **Guilde Internationale des Fromagers** — https://www.guilde-fromagers.com — International guild of cheese professionals
+- **Guilde Internationale des Fromagers** — International guild of cheese professionals
 
 ## Unexpected Connections (for wild cards)
 
-- **Cheese and archaeology** — Ancient proteins preserved in pottery: https://www.nature.com/articles/nature23821
+- **Cheese and archaeology** — Ancient proteins preserved in pottery:
 - **Cheese microbiomes as model ecosystems** — Wolfe lab publications on community assembly
 - **Cheese terroir and climate change** — Studies on how warming affects milk composition and cave conditions
 - **Cheese waste valorization** — Using whey and cheese byproducts for bioactive compounds, bioplastics

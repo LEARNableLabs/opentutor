@@ -26,8 +26,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "https://www.tappi.org/content/sarg/t402.pdf"
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
       ],
       "status": "pending"
     },
@@ -38,10 +37,7 @@
       "concepts": ["bast fibers", "leaf fibers", "fiber length and strength"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.sfcb.org/classes/papermaking-fundamentals",
-        "https://uiowa.edu/book-arts/papermaking"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -51,10 +47,7 @@
       "concepts": ["lignin removal", "hemicellulose", "fiber purity vs. character"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.museumofpapermaking.org/fiber-chemistry",
-        "https://www.tappi.org/resources/fiber-properties"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -77,8 +70,7 @@
       "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://www.twinrocker.com/fiber-guide",
-        "https://www.lsmcd.com/fiber-comparison"
+        "https://www.twinrocker.com/fiber-guide"
       ],
       "status": "pending"
     },
@@ -89,9 +81,7 @@
       "concepts": ["cellulose bonding", "fiber types", "water chemistry", "material selection"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.sfcb.org/papermaking-glossary"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -101,9 +91,7 @@
       "concepts": ["retting methods", "microbial breakdown", "bast fiber separation"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://uiowa.edu/book-arts/fiber-processing"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -113,9 +101,7 @@
       "concepts": ["alkaline cooking", "fiber degradation vs. purification", "chemical safety"],
       "difficulty": 4,
       "type": "question",
-      "resources": [
-        "https://www.tappi.org/alkaline-pulping-methods"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -138,10 +124,7 @@
       "concepts": ["over-beating", "fiber cutting", "strength optimization"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.sfcb.org/beating-workshop",
-        "https://www.paperslurry.com/beating-tips"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -152,8 +135,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://www.twinrocker.com/experimental-fibers",
-        "https://uiowa.edu/book-arts/alternative-fibers"
+        "https://www.twinrocker.com/experimental-fibers"
       ],
       "status": "pending"
     },
@@ -164,10 +146,7 @@
       "concepts": ["fiber suspension", "drainage physics", "fiber orientation", "sheet formation"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/uiowa-papermaking/formation-fundamentals",
-        "https://www.tappi.org/sheet-formation"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -177,9 +156,7 @@
       "concepts": ["cellulose bonding", "fiber processing", "pulp preparation", "integrated understanding"],
       "difficulty": 1,
       "type": "review",
-      "resources": [
-        "https://www.sfcb.org/papermaking-glossary"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -202,10 +179,7 @@
       "concepts": ["Japanese formation", "neri (formation aid)", "layered fiber orientation"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.youtube.com/japanese-papermaking-demo",
-        "https://www.aimeelee.work/nagashi-zuki-workshop"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -215,10 +189,7 @@
       "concepts": ["formation defects", "fiber flocculation", "drainage problems", "troubleshooting"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.paperslurry.com/troubleshooting-formation",
-        "https://www.tappi.org/common-defects"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -229,7 +200,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://uiowa.edu/book-arts/drying-methods",
         "https://www.youtube.com/helenhiebert/drying-comparison"
       ],
       "status": "pending"
@@ -253,10 +223,7 @@
       "concepts": ["embedments", "material compatibility", "wet strength", "visual integration"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.sfcb.org/inclusions-workshop",
-        "https://www.youtube.com/inclusions-experiments"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -280,8 +247,7 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.youtube.com/helenhiebert/lamination-techniques",
-        "https://www.aimeelee.work/advanced-layering"
+        "https://www.youtube.com/helenhiebert/lamination-techniques"
       ],
       "status": "pending"
     },
@@ -292,10 +258,7 @@
       "concepts": ["experimental design", "variable isolation", "documentation", "material testing"],
       "difficulty": 3,
       "type": "teach-back",
-      "resources": [
-        "https://www.paperslurry.com/experimental-method",
-        "https://uiowa.edu/book-arts/testing-protocols"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -305,10 +268,7 @@
       "concepts": ["permanence", "pH neutral", "lignin-free", "conservation standards"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.tappi.org/archival-standards",
-        "https://www.museumofpapermaking.org/conservation"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -331,7 +291,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.sfcb.org/technique-compendium",
         "https://columbia.edu/bookarts/artistic-review"
       ],
       "status": "pending"
@@ -343,11 +302,7 @@
       "concepts": ["design criteria", "property engineering", "artistic intention", "technical execution"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://uiowa.edu/book-arts/design-for-use",
-        "https://www.aimeelee.work/paper-design-workshop",
-        "https://www.paperslurry.com/case-studies"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

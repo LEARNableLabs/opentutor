@@ -25,7 +25,6 @@
       "difficulty": 1,
       "type": "mini-lesson",
       "resources": [
-        "https://ocw.mit.edu/courses/ancient-cities-archaeology",
         "https://www.khanacademy.org/humanities/world-history/ancient-medieval"
       ],
       "status": "pending"
@@ -37,9 +36,7 @@
       "concepts": ["imperial strategy", "public works", "power projection"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.coursera.org/lecture/roman-architecture"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -61,9 +58,7 @@
       "concepts": ["surveying practice", "line-of-sight", "theodolite principles"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.pbs.org/engineering-empire-rome"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -73,10 +68,7 @@
       "concepts": ["road construction", "layering system", "drainage", "load distribution"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.smithsonianmag.com/history/roman-roads",
-        "https://ocw.mit.edu/courses/civil-engineering-history"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -96,9 +88,7 @@
       "concepts": ["Via Appia", "strategic infrastructure", "economic networks"],
       "difficulty": 2,
       "type": "real-world",
-      "resources": [
-        "https://www.nationalgeographic.com/history/article/via-appia"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -164,10 +154,7 @@
       "concepts": ["water demand", "population scale", "public baths", "urban planning"],
       "difficulty": 2,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.coursera.org/lecture/roman-water-systems",
-        "https://oyc.yale.edu/classics/roman-architecture"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -189,9 +176,7 @@
       "concepts": ["gradient calculation", "flow velocity", "erosion", "engineering constraints"],
       "difficulty": 4,
       "type": "mini-lesson",
-      "resources": [
-        "https://ocw.mit.edu/courses/hydraulic-engineering"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -237,9 +222,7 @@
       "concepts": ["water quality", "sediment removal", "maintenance design", "public health"],
       "difficulty": 2,
       "type": "question",
-      "resources": [
-        "https://www.smithsonianmag.com/science/roman-water-engineering"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -260,7 +243,6 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nature.com/articles/roman-concrete-chemistry",
         "https://www.sciencemag.org/news/roman-concrete-mystery"
       ],
       "status": "pending"
@@ -273,7 +255,6 @@
       "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://www.berkeley.edu/news/roman-concrete-seawater",
         "https://pubs.acs.org/journal/roman-concrete"
       ],
       "status": "pending"
@@ -309,9 +290,7 @@
       "concepts": ["material selection", "density", "structural requirements", "engineering optimization"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.smithsonianmag.com/history/roman-building-materials"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -343,9 +322,7 @@
       "concepts": ["knowledge loss", "dark ages", "technological regression", "historical contingency"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.historytoday.com/lost-roman-technology"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -355,11 +332,7 @@
       "concepts": ["sustainability", "longevity design", "material science", "contemporary applications"],
       "difficulty": 3,
       "type": "resource-drop",
-      "resources": [
-        "https://www.nature.com/articles/learning-from-roman-concrete",
-        "https://www.engineering.com/ancient-lessons-modern-infrastructure",
-        "https://www.ted.com/talks/roman-engineering-modern-lessons"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]
