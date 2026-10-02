@@ -83,6 +83,7 @@ describe('URL extraction details', () => {
     expect(extractUrls({ resources: ['https://example.org/archive/part)'] })).toEqual(['https://example.org/archive/part)']);
     expect(extractUrls('[archive](https://example.org/archive/part))')).toEqual(['https://example.org/archive/part)']);
     expect(extractUrls('Read https://example.org/paper。')).toEqual(['https://example.org/paper']);
+    expect(extractUrls('`git clone https://github.com/google/or-tools.git`')).toEqual(['https://github.com/google/or-tools.git']);
   });
   it('drops sentence punctuation, decodes JSON slashes, and walks every string of a value', () => {
     expect(extractUrls('Read https://example.org/paper! Or "https://example.org/b?".')).toEqual(['https://example.org/paper', 'https://example.org/b']);

@@ -9,6 +9,16 @@ const reply = (text) => ({ generate: vi.fn(async () => ({ text })) });
 const R = (url, type = 'video') => ({ url, type, title: `T ${url}`, why: 'because' });
 
 describe('findResources', () => {
+  it('skips invalid and duplicate candidates while allowing six distinct URL checks', async () => {
+    const invalid = [null, R('http://insecure.example'), R('https://')];
+    const dead = Array.from({ length: 8 }, () => R('https://dead.example/a'));
+    const good = Array.from({ length: 8 }, (_, n) => R(`https://example.org/${n}`));
+    const adapter = reply(JSON.stringify({ lessons: [{ lesson: 1, resources: [...invalid, ...dead, ...good] }] }));
+    const isReal = vi.fn(async (url) => !url.includes('dead.example'));
+    const found = await findResources({ adapter, topic: 'T', level: 'beginner', lessons, isReal });
+    expect(isReal).toHaveBeenCalledTimes(6);
+    expect(found[0].resources).toEqual(good.slice(0, 5));
+  });
   it('bounds verification work even if the reply duplicates a lesson or has too many resources', async () => {
     const candidates = Array.from({ length: 20 }, (_, n) => R(`https://example.org/${n}`));
     const adapter = reply(JSON.stringify({ lessons: [{ lesson: 1, resources: candidates }, { lesson: 1, resources: candidates }] }));

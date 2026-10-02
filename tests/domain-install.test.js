@@ -1,4 +1,4 @@
-import { it, expect } from 'vitest';
+import { it, expect, vi } from 'vitest';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -21,4 +21,33 @@ it('leaves an existing installation untouched if any required file is missing', 
     expect(fs.readFileSync(path.join(destination, 'curriculum.json'), 'utf8')).toBe('old course');
     expect(fs.readdirSync(destination)).toEqual(['curriculum.json']);
   } finally { fs.rmSync(root, { recursive: true, force: true }); }
+});
+
+it.each(['write', 'publish'])('preserves all previous files after a %s failure', (failure) => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'ot-install-fail-'));
+  let spy;
+  try {
+    const source = path.join(root, 'source'), destination = path.join(root, 'domains', 'course');
+    fs.mkdirSync(source); fs.mkdirSync(destination, { recursive: true });
+    for (const file of SHIPPED_DOMAIN_FILES) {
+      fs.writeFileSync(path.join(source, file), 'new content');
+      fs.writeFileSync(path.join(destination, file), 'old content');
+    }
+    if (failure === 'write') {
+      const write = fs.writeFileSync;
+      spy = vi.spyOn(fs, 'writeFileSync').mockImplementation((filename, ...args) => {
+        if (String(filename).endsWith('/domain/teacher.md')) throw Object.assign(new Error('disk full'), { code: 'ENOSPC' });
+        return write(filename, ...args);
+      });
+    } else {
+      const rename = fs.renameSync;
+      spy = vi.spyOn(fs, 'renameSync').mockImplementation((from, to) => {
+        if (String(from).endsWith('/domain')) throw new Error('publication failed');
+        return rename(from, to);
+      });
+    }
+    expect(() => installDomain(source, destination)).toThrow();
+    for (const file of SHIPPED_DOMAIN_FILES) expect(fs.readFileSync(path.join(destination, file), 'utf8')).toBe('old content');
+    expect(fs.readdirSync(root).some((name) => name.startsWith('.opentutor-install-'))).toBe(false);
+  } finally { spy?.mockRestore(); fs.rmSync(root, { recursive: true, force: true }); }
 });

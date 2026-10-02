@@ -7,6 +7,9 @@ const answer = (status, body = '') => async () => ({ ok: status < 400, status, t
 const throws = (code) => async () => { throw Object.assign(new Error('x'), { cause: { code } }); };
 
 describe('verify-links', () => {
+  it('does not use an HTTP page verdict to remove a Git clone URL', async () => {
+    expect(await check('https://github.com/google/or-tools.git', answer(404))).toMatchObject({ status: 'unknown' });
+  });
   it('rejects a YouTube slug where an 11-character id belongs, with no network', async () => {
     const never = async () => { throw new Error('fetched'); };
     expect(await check('https://www.youtube.com/watch?v=pantheon-construction', never)).toMatchObject({ status: 'dead' });
