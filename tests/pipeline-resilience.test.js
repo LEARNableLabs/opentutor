@@ -81,6 +81,8 @@ describe('URL extraction', () => {
 describe('URL extraction details', () => {
   it('preserves a literal resource URL with an unmatched closing parenthesis', () => {
     expect(extractUrls({ resources: ['https://example.org/archive/part)'] })).toEqual(['https://example.org/archive/part)']);
+    expect(extractUrls('[archive](https://example.org/archive/part))')).toEqual(['https://example.org/archive/part)']);
+    expect(extractUrls('Read https://example.org/paper。')).toEqual(['https://example.org/paper']);
   });
   it('drops sentence punctuation, decodes JSON slashes, and walks every string of a value', () => {
     expect(extractUrls('Read https://example.org/paper! Or "https://example.org/b?".')).toEqual(['https://example.org/paper', 'https://example.org/b']);
