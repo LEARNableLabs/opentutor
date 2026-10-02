@@ -304,3 +304,15 @@ describe('ClaudeCLIAdapter tools', () => {
     expect(web[web.indexOf('--allowedTools') + 1]).toBe('WebSearch,WebFetch');
   });
 });
+
+describe('ClaudeCLIAdapter failure', () => {
+  it('reports stdout when stderr is empty (a usage limit is printed there)', async () => {
+    const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
+    spawn.mockReturnValue(child);
+    const reply = new ClaudeCLIAdapter().generate('system', [{ role: 'user', content: 'hi' }], {});
+    const failed = expect(reply).rejects.toThrow('code 1: Usage limit reached');
+    child.stdout.emit('data', 'Usage limit reached');
+    child.emit('close', 1);
+    await failed;
+  });
+});

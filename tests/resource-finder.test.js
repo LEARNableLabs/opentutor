@@ -13,7 +13,7 @@ describe('findResources', () => {
     const adapter = reply(JSON.stringify({ lessons: [{ lesson: 1, resources: [R('https://youtu.be/AAAAAAAAAAA'), R('https://made.up/x'), R('http://insecure.example/y'), R('https://youtu.be/AAAAAAAAAAA')] }] }));
     const notes = [];
     const found = await findResources({ adapter, topic: 'T', level: 'beginner', lessons, isReal: async (u) => !u.includes('made.up'), onNote: (k, d) => notes.push([k, d.url]) });
-    expect(adapter.generate.mock.calls[0][2]).toMatchObject({ tools: 'WebSearch,WebFetch', model: 'strong' });
+    expect(adapter.generate.mock.calls[0][2]).toMatchObject({ tools: 'WebSearch,WebFetch', model: 'strong', timeout: 600_000 });
     expect(found).toEqual([{ lesson: 1, resources: [R('https://youtu.be/AAAAAAAAAAA')] }]);
     expect(notes).toEqual([['resource-dropped', 'https://made.up/x']]);
   });
