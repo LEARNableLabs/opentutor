@@ -131,6 +131,27 @@ export function removeDeadJsonLinks(text, cache) {
   return text;
 }
 
+/** Unlink a dead-only resource row while retaining its name and explanatory text. */
+export function removeDeadMarkdownLinks(text, cache) {
+  return text.split('\n').flatMap((line) => {
+    const urls = extractUrls(line);
+    // Mixed live/unknown rows and prose need manual review rather than collateral removal.
+    if (!/^\s*[-*|\d]/.test(line) || !urls.length || !urls.every((u) => isDead(cache, u))) return [line];
+    let out = line;
+    for (const url of urls) {
+      const literal = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      out = out.replace(new RegExp(`\\[([^\\]]+)\\]\\(<?${literal}>?\\)`, 'g'), '$1')
+        .replaceAll(`<${url}>`, '')
+        .replaceAll(` — ${url}`, '')
+        .replaceAll(` - ${url}`, '')
+        .replaceAll(url, '');
+    }
+    // A named entry remains, including the parent of an indented description block.
+    // Drop only a list item that was nothing but its URL.
+    return /^\s*(?:[-*]|\d+[.)])\s*$/.test(out) ? [] : [out.trimEnd()];
+  }).join('\n');
+}
+
 function runApply() {
   const cache = loadCache();
   const removed = {};
@@ -142,12 +163,7 @@ function runApply() {
       // Dead URLs leave every string array in the curriculum (a lesson's resources), nothing else.
       out = removeDeadJsonLinks(text, cache);
     } else {
-      // Remove a resource row only when all its links are dead. Prose and rows with a surviving
-      // link stay for a person, so an unknown/live resource cannot be collateral damage.
-      out = text.split('\n').filter((line) => {
-        const urls = extractUrls(line);
-        return !(/^\s*[-*|\d]/.test(line) && urls.length && urls.every((u) => isDead(cache, u)));
-      }).join('\n');
+      out = removeDeadMarkdownLinks(text, cache);
       if (out !== text) out = out.replace(/\n+$/, '\n');
     }
     if (out !== text) { fs.writeFileSync(file, out); removed[slug] = (removed[slug] || 0) + 1; }

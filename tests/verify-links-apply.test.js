@@ -1,5 +1,5 @@
 import { it, expect } from 'vitest';
-import { removeDeadJsonLinks, checkUrlQueue } from '../scripts/verify-links.js';
+import { removeDeadJsonLinks, removeDeadMarkdownLinks, checkUrlQueue } from '../scripts/verify-links.js';
 
 const cache = { 'https://dead.example/a': { status: 'dead' }, 'https://dead.example/b': { status: 'dead' } };
 
@@ -15,6 +15,16 @@ it('removes consecutive leading, middle, trailing and whole-array dead links wit
 it('preserves unknown URLs and exact formatting when nothing is dead', () => {
   const input = '{ "resources": ["https:\\/\\/unknown.example\\/a"], "n": 1e3 }';
   expect(removeDeadJsonLinks(input, cache)).toBe(input);
+});
+
+it('retains resource labels and child descriptions when removing dead Markdown links', () => {
+  const input = '- **Marlin** — https://dead.example/a\n  - Authoritative documentation\n\n- [RepRap](https://dead.example/b)\n  - Kinematics explanations\n- https://dead.example/a\n| Reference | https://dead.example/b | Useful background |\n';
+  expect(removeDeadMarkdownLinks(input, cache)).toBe('- **Marlin**\n  - Authoritative documentation\n\n- RepRap\n  - Kinematics explanations\n| Reference |  | Useful background |\n');
+});
+
+it('leaves prose and resource rows containing live or unknown links unchanged', () => {
+  const input = 'See https://dead.example/a for context.\n- Compare https://dead.example/a with https://unknown.example/a\n';
+  expect(removeDeadMarkdownLinks(input, cache)).toBe(input);
 });
 
 it('checks every queued link within both the global and per-host concurrency caps', async () => {
