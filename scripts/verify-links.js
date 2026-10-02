@@ -37,20 +37,29 @@ async function runCheck() {
   const cache = loadCache();
   const urls = new Set();
   for (const file of domainFiles()) for (const m of fs.readFileSync(file, 'utf8').matchAll(URL_RE)) urls.add(m[0].replace(/[.,;:]+$/, ''));
-  const todo = [...urls].filter((u) => !cache[u]);
-  console.log(`${urls.size} unique URLs, ${todo.length} to check`);
-  // A few at a time per host, and a pause between them: an audit must not look like an attack.
-  const byHost = Map.groupBy(todo, (u) => plan(u).host || 'bad');
+  // What was decided stays decided; "unknown" (a timeout, a blocked request) is asked again.
+  const queue = [...urls].filter((u) => !cache[u] || cache[u].status === 'unknown');
+  console.log(`${urls.size} unique URLs, ${queue.length} to check`);
+  // At most WORKERS requests at once and 2 per host, with a pause between a host's requests: an
+  // audit that opens a connection to every host at once only measures its own timeouts.
+  const WORKERS = 24;
+  const busy = new Map();
   let done = 0;
-  await Promise.all([...byHost.values()].map(async (list) => {
-    const lanes = Math.min(list[0] && plan(list[0]).host === 'youtube.com' ? 4 : 2, list.length);
-    await Promise.all(Array.from({ length: lanes }, async () => {
-      for (let u; (u = list.pop());) {
-        cache[u] = await check(u);
-        if (++done % 200 === 0) { fs.writeFileSync(CACHE, JSON.stringify(cache)); console.log(`${done}/${todo.length}`); }
-        await new Promise((r) => setTimeout(r, 250));
-      }
-    }));
+  const next = () => {
+    const i = queue.findIndex((u) => (busy.get(plan(u).host) || 0) < 2);
+    return i < 0 ? null : queue.splice(i, 1)[0];
+  };
+  await Promise.all(Array.from({ length: WORKERS }, async () => {
+    while (queue.length) {
+      const url = next();
+      if (!url) { await new Promise((r) => setTimeout(r, 50)); continue; }
+      const host = plan(url).host;
+      busy.set(host, (busy.get(host) || 0) + 1);
+      cache[url] = await check(url);
+      await new Promise((r) => setTimeout(r, 250));
+      busy.set(host, busy.get(host) - 1);
+      if (++done % 200 === 0) { fs.writeFileSync(CACHE, JSON.stringify(cache)); console.log(`${done}`); }
+    }
   }));
   fs.writeFileSync(CACHE, JSON.stringify(cache));
   const tally = Object.values(cache).reduce((t, r) => ({ ...t, [r.status]: (t[r.status] || 0) + 1 }), {});
