@@ -56,11 +56,14 @@ export function registerLessonConcepts(topicSlug, concepts) {
  * @param {string} topicSlug
  * @param {string} concept
  * @param {'easy'|'hard'|'wrong'} quality
+ * @param {string} [cardId] - the quiz poll or flashcard that asked (#294)
  */
-export function recordReview(topicSlug, concept, quality) {
+export function recordReview(topicSlug, concept, quality, cardId) {
   const key = conceptKey(topicSlug, concept);
 
   updateProgress((p) => {
+    // The card is spent in the same write, so an answer Telegram delivers twice is graded once.
+    if (cardId) p.review_cards = (p.review_cards || []).filter((c) => c.id !== cardId);
     p.spaced_repetition ??= {};
     const record = p.spaced_repetition[key];
     if (!record) return;

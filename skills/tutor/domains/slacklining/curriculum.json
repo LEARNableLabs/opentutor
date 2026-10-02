@@ -25,8 +25,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.khanacademy.org/science/physics/forces-newtons-laws",
-        "https://www.youtube.com/watch?v=example-catenary-demo"
+        "https://www.khanacademy.org/science/physics/forces-newtons-laws"
       ],
       "status": "pending"
     },
@@ -38,8 +37,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://slacklineindustries.com/rigging-basics",
-        "https://www.youtube.com/watch?v=example-force-analysis"
+        "https://slacklineindustries.com/rigging-basics"
       ],
       "status": "pending"
     },
@@ -64,7 +62,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=example-resonance-slackline",
         "https://www.isa-slackline.org/physics-fundamentals"
       ],
       "status": "pending"
@@ -77,8 +74,7 @@
       "difficulty": 2,
       "type": "real-world",
       "resources": [
-        "https://www.slackline.com/safety-guidelines",
-        "https://www.youtube.com/watch?v=example-tensioning-demo"
+        "https://www.slackline.com/safety-guidelines"
       ],
       "status": "pending"
     },
@@ -90,8 +86,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://slacklineindustries.com/webbing-comparison",
-        "https://www.youtube.com/watch?v=example-material-comparison"
+        "https://slacklineindustries.com/webbing-comparison"
       ],
       "status": "pending"
     },
@@ -103,8 +98,7 @@
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://balancecommunity.com/choosing-your-line",
-        "https://www.youtube.com/watch?v=example-line-width-effects"
+        "https://balancecommunity.com/choosing-your-line"
       ],
       "status": "pending"
     },
@@ -116,8 +110,7 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.isa-slackline.org/line-dynamics",
-        "https://www.youtube.com/watch?v=example-length-progression"
+        "https://www.isa-slackline.org/line-dynamics"
       ],
       "status": "pending"
     },
@@ -155,8 +148,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.physio-pedia.com/Center_of_Mass",
-        "https://www.youtube.com/watch?v=example-COM-analysis"
+        "https://www.physio-pedia.com/Center_of_Mass"
       ],
       "status": "pending"
     },
@@ -167,10 +159,7 @@
       "concepts": ["joint articulation", "kinematic chains", "moment distribution"],
       "difficulty": 3,
       "type": "question",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-balance-biomechanics",
-        "https://www.youtube.com/watch?v=example-joint-analysis"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -181,7 +170,6 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.youtube.com/watch?v=example-muscle-activation-EMG",
         "https://balancecommunity.com/muscle-mechanics"
       ],
       "status": "pending"
@@ -193,10 +181,7 @@
       "concepts": ["gait adaptation", "dynamic stability", "perturbation response"],
       "difficulty": 3,
       "type": "real-world",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-gait-perturbation",
-        "https://www.youtube.com/watch?v=example-slackline-gait"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -207,7 +192,6 @@
       "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=example-expert-analysis",
         "https://balancecommunity.com/expert-vs-novice"
       ],
       "status": "pending"
@@ -220,8 +204,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.physio-pedia.com/Proprioception",
-        "https://www.youtube.com/watch?v=example-proprioception-explained"
+        "https://www.physio-pedia.com/Proprioception"
       ],
       "status": "pending"
     },
@@ -233,8 +216,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor/vestibular-system",
-        "https://www.youtube.com/watch?v=example-vestibular-demo"
+        "https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor/vestibular-system"
       ],
       "status": "pending"
     },
@@ -246,7 +228,6 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-sensory-integration",
         "https://balancecommunity.com/eyes-closed-training"
       ],
       "status": "pending"
@@ -258,10 +239,7 @@
       "concepts": ["feedback loops", "latency", "predictive control", "reactive correction"],
       "difficulty": 4,
       "type": "real-world",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-control",
-        "https://www.youtube.com/watch?v=example-neuroscience-balance"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -271,10 +249,7 @@
       "concepts": ["sensory conflict", "multisensory integration", "Bayesian inference"],
       "difficulty": 4,
       "type": "teach-back",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-sensory-conflict",
-        "https://www.youtube.com/watch?v=example-perception-illusions"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -285,8 +260,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://balancecommunity.com/quiz-biomechanics",
-        "https://www.youtube.com/watch?v=example-review-sensory-systems"
+        "https://balancecommunity.com/quiz-biomechanics"
       ],
       "status": "pending"
     },
@@ -297,10 +271,7 @@
       "concepts": ["motor learning stages", "skill acquisition", "neural plasticity"],
       "difficulty": 3,
       "type": "mini-lesson",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-motor-learning",
-        "https://www.youtube.com/watch?v=example-skill-acquisition"
-      ],
+      "resources": [],
       "status": "pending"
     },
     {
@@ -311,7 +282,6 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-practice-variability",
         "https://balancecommunity.com/training-design"
       ],
       "status": "pending"
@@ -336,10 +306,7 @@
       "concepts": ["internal models", "forward prediction", "motor expertise", "system integration"],
       "difficulty": 5,
       "type": "teach-back",
-      "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC-example-internal-models",
-        "https://www.youtube.com/watch?v=example-expert-cognition"
-      ],
+      "resources": [],
       "status": "pending"
     }
   ]

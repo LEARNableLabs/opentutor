@@ -35,9 +35,10 @@ it.each([
 });
 
 it('still answers the profile and progress from a working store', async () => {
-  state = { readUser: async () => '- **Name:** Ada', readProgress: async () => ({ active_topics: ['knots'] }), writeUser: vi.fn(), getTopicProgress: async () => null, listKV: async () => [] };
+  state = { readUser: async () => '- **Name:** Ada', readProgress: async () => ({ active_topics: ['knots'] }), writeUser: vi.fn(), getTopicProgress: async () => null, listKV: async () => [], readCurriculum: async () => null, readDomainFile: async () => null };
 
-  expect((await call(progress, 'GET')).body).toEqual({ active_topics: ['knots'] });
+  // #292: with the streak and each topic's numbers, as the local server answers it.
+  expect((await call(progress, 'GET')).body).toEqual({ active_topics: ['knots'], streak: 0, lessonsThisWeek: 0, topics: [] });
   expect((await call(user, 'GET')).body).toEqual({ profile: '- **Name:** Ada', hasProfile: true, onboarded: true, welcome: { name: 'Ada', courses: [] } });
   expect(await call(user, 'POST', { name: 'Ada' })).toMatchObject({ statusCode: 200, body: { ok: true } });
   expect(state.writeUser).toHaveBeenCalledWith(expect.stringContaining('**Name:** Ada'));

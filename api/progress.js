@@ -1,5 +1,6 @@
 import { getState } from './_lib/init.js';
 import { authenticateRequest, authFailure } from './_lib/auth.js';
+import { progressView } from '../lib/core/progress-stats.js';
 
 export default async function handler(req, res) {
   res.setHeader?.('Cache-Control','private, no-store');
@@ -13,7 +14,8 @@ export default async function handler(req, res) {
 
   try {
     const state = await getState(auth.userId);
-    res.status(200).json(await state.readProgress());
+    // The streak and each topic's numbers, as the local server answers too (#292).
+    res.status(200).json(await progressView(state));
   } catch (err) {
     // Database error text stays in the log, not the browser (#144).
     console.error('[progress]', err.message);
