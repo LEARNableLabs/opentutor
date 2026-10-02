@@ -185,8 +185,7 @@
         "anchoring",
         "availability",
         "representativeness",
-        "overconfidence",
-        "framing"
+        "overconfidence"
       ],
       "difficulty": 3,
       "type": "review",
@@ -295,8 +294,7 @@
         "loss aversion",
         "reference dependence",
         "probability weighting",
-        "mental accounting",
-        "framing"
+        "mental accounting"
       ],
       "difficulty": 3,
       "type": "review",

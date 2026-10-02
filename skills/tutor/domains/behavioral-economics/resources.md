@@ -33,5 +33,5 @@
 
 ## Caution Notes
 
-- Some well-known studies are contested: ego depletion, social priming, and several findings in Ariely's *Predictably Irrational* (including a retracted 2012 honesty paper). Use them as case studies in evidence quality, not as settled facts.
+- Some well-known studies are contested: ego depletion, social priming, and some findings associated with Dan Ariely's research, including a 2012 honesty-priming paper (Shu et al., PNAS) that was retracted in 2021 after its field data were found to be unreliable. Use them as case studies in evidence quality, not as settled facts.
 - Verify any citation before presenting it as fact; references in this list are to real, widely cited works, but check page and volume details against the source.
