@@ -1,0 +1,356 @@
+diff --git a/api/lesson.js b/api/lesson.js
+index 10cbfff..27bf8a4 100644
+--- a/api/lesson.js
++++ b/api/lesson.js
+@@ -135,9 +135,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
+     // a late turn that wrote the record back) is cleared, so the student is never held on it (#228).
+     const completion = `lesson_done:${active.id || `${topicSlug}:${active.lessonDay}:${active.isReview ? 'review' : 'lesson'}`}`;
+     if ((await state.readKV(completion)) != null) {
+-      // Another request may still be saving this review. Only its owner can clear
+-      // the record or release a failed claim; a concurrent answer must leave it alone.
+-      if (active.isReview) return { status: 409, body: STALE };
++      // New review claims carry the graded session. Any retry can finish that
++      // same result idempotently, including after an interrupted owner or late write.
++      if (active.isReview) {
++        const claim = reviewClaim(await state.readKV(completion));
++        if (claim) return finishReview(state, kvKey, claim.review);
++      }
+       const now = await state.readKV(kvKey);
+       const current = typeof now === 'string' ? JSON.parse(now) : now;
+       if (current?.id === active.id && current?.plan) {
+@@ -196,8 +199,10 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
+       // tabs or a retry, only the first to claim its completion records it; the other is refused as
+       // stale. The claim is permanent, as a completion is: nothing expires or needs taking over.
+       const token = randomUUID();
+-      await state.insertKV(completion, token);
+-      if (String(await state.readKV(completion)) !== token) return { status: 409, body: STALE };
++      const claim = active.isReview ? JSON.stringify({ token, review: active }) : token;
++      await state.insertKV(completion, claim);
++      if (String(await state.readKV(completion)) !== claim) return { status: 409, body: STALE };
++      if (active.isReview) return finishReview(state, kvKey, active);
+       const day = active.lessonDay;
+       // Grade the session, write the learning log, run the practitioner — the
+       // adaptive half the web path used to skip entirely (#106).
+@@ -207,12 +212,6 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
+         lesson: { ...active.lesson, lesson: day },
+         session: active,
+       }), FAILED, 'completeLesson');
+-      if (active.isReview && saved === FAILED) {
+-        // The stored record still holds the last unanswered step. Release our
+-        // claim so it can be retried after the save recovers, without losing the review.
+-        await state.deleteKV(completion);
+-        return { status: 503, body: { error: 'This review could not be saved. Please try again.' } };
+-      }
+       // A finished review leaves its count behind for the next start; a lesson leaves nothing.
+       if (active.isReview) await state.writeKV(kvKey, JSON.stringify({ reviews: active.reviews }));
+       else await state.deleteKV(kvKey);
+@@ -243,6 +242,10 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
+   // free lesson. A new one is planned only when there is nothing to show.
+   const shown = active && lastShown(active);
+   if (shown != null) {
++    if (active.isReview) {
++      const claim = reviewClaim(await state.readKV(`lesson_done:${active.id || `${topicSlug}:${active.lessonDay}:review`}`));
++      if (claim) return finishReview(state, kvKey, claim.review);
++    }
+     // Filtered here too: a saved reply may predate the filter, or come from the history or plan.
+     // Saved new replies were already verified. Legacy replies lose an unverified footer
+     // without a network request or a write that could race with a progressing lesson.
+@@ -421,6 +424,27 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
+   return { status: 200, body: { reply: started.reply, step: 0, totalSteps: lessonSteps.length, done: false, lesson: started.lesson, lessonId: started.id, ...(note ? { note } : {}), ...suggested(plan, lessonSteps[0]) } };
+ }
+ 
++function reviewClaim(raw) {
++  try {
++    const claim = typeof raw === 'string' ? JSON.parse(raw) : raw;
++    return claim?.review?.isReview && claim.review.id ? claim : null;
++  } catch { return null; } // old token-only claims use the existing recovery path
++}
++
++async function finishReview(state, kvKey, review) {
++  try {
++    await completeLesson({ state, topicSlug: review.topicSlug, lesson: { ...review.lesson, lesson: review.lessonDay }, session: review });
++    const raw = await state.readKV(kvKey);
++    const current = typeof raw === 'string' ? JSON.parse(raw) : raw;
++    // A new lesson may already have started. Never clear it while recovering an old review.
++    if (current?.id === review.id) await state.compareAndSetKV(kvKey, raw, JSON.stringify({ reviews: review.reviews }));
++    return { status: 200, body: { reply: review.reply, step: review.step, totalSteps: review.steps.length, done: true, lesson: review.lesson, lessonId: review.id } };
++  } catch (err) {
++    console.error('[lesson] review save failed:', err.message);
++    return { status: 503, body: { error: 'This review could not be saved. Please try again.' } };
++  }
++}
++
+ // ── Helpers ────────────────────────────────────────────────
+ //
+ // Store methods are sync on TutorState/TutorStore and async on SupabaseStore,
+diff --git a/lib/core/lesson-completion.js b/lib/core/lesson-completion.js
+index 54be239..c05236b 100644
+--- a/lib/core/lesson-completion.js
++++ b/lib/core/lesson-completion.js
+@@ -10,7 +10,7 @@
+  * the local web server and the Vercel routes all call the same code.
+  */
+ 
+-import { registerConcepts, recordReviewResult } from './spaced-repetition.js';
++import { conceptKey, registerConcepts, recordReviewResult } from './spaced-repetition.js';
+ import { evaluatePractice, formatPracticeFeedback, parseRetested, withRetest, retestOutcome } from './deliberate-practice.js';
+ 
+ /**
+@@ -137,13 +137,19 @@ export async function completeLesson({ state, topicSlug, lesson, session }) {
+   try {
+     const outcome = retestOutcome(session, { passedReview: passedReview(session) });
+     await state.updateProgress((p) => {
++      if (session.isReview && session.id && p.review_completions?.[session.id]) return;
+       const records = (p.spaced_repetition ??= {});
+       if (outcome) {
+         // A concept the schedule has not met (a course from before it, a BLOCK's concept) starts here: the result counts.
+         registerConcepts(records, topicSlug, [outcome.concept]);
+-        recordReviewResult(records, topicSlug, outcome.concept, outcome.passed ? 'easy' : 'wrong');
++        const record = records[conceptKey(topicSlug, outcome.concept)];
++        if (!session.id || record.last_review_id !== session.id) {
++          recordReviewResult(records, topicSlug, outcome.concept, outcome.passed ? 'easy' : 'wrong');
++          if (session.id) record.last_review_id = session.id;
++        }
+       }
+       if (!session.isReview) registerConcepts(records, topicSlug, lesson.concepts);
++      if (session.isReview && session.id) (p.review_completions ??= {})[session.id] = true;
+     });
+   } catch (err) {
+     console.error('[lesson] spaced repetition update failed:', err.message);
+diff --git a/lib/core/state.js b/lib/core/state.js
+index 1e449af..eb93c05 100644
+--- a/lib/core/state.js
++++ b/lib/core/state.js
+@@ -68,6 +68,14 @@ export class TutorState {
+     this._atomicWrite(this._kvFile(), JSON.stringify(all, null, 2) + '\n');
+   }
+ 
++  compareAndSetKV(key, expected, next) {
++    const all = this._kvAll();
++    if (all[key] !== expected) return false;
++    all[key] = next;
++    this._atomicWrite(this._kvFile(), JSON.stringify(all, null, 2) + '\n');
++    return true;
++  }
++
+   // ── Progress ──────────────────────────────────────────────
+ 
+   readProgress() {
+diff --git a/lib/core/store.js b/lib/core/store.js
+index a2a1b8c..3b4cd69 100644
+--- a/lib/core/store.js
++++ b/lib/core/store.js
+@@ -86,6 +86,11 @@ export class TutorStore {
+     this._stmts.delKV.run(this._uid, key);
+   }
+ 
++  compareAndSetKV(key, expected, next) {
++    return this.db.prepare('UPDATE kv SET value = ? WHERE user_id = ? AND key = ? AND value = ?')
++      .run(next, this._uid, key, expected).changes === 1;
++  }
++
+   compareAndSetTopic(slug, expected, next) {
+     const key = generatedTopicKey(slug);
+     if (!expected) {
+@@ -116,10 +121,12 @@ export class TutorStore {
+   }
+ 
+   updateProgress(fn) {
+-    const data = this.readProgress();
+-    fn(data);
+-    this.writeProgress(data);
+-    return data;
++    return this.db.transaction(() => {
++      const data = this.readProgress();
++      fn(data);
++      this.writeProgress(data);
++      return data;
++    })();
+   }
+ 
+   // ── User profile ──────────────────────────────────────────
+diff --git a/lib/core/supabase-store.js b/lib/core/supabase-store.js
+index 4af13ce..3ef87fc 100644
+--- a/lib/core/supabase-store.js
++++ b/lib/core/supabase-store.js
+@@ -121,6 +121,13 @@ export class SupabaseStore {
+     if (error) throw error;
+   }
+ 
++  async compareAndSetKV(key, expected, next) {
++    const { data, error } = await this.supabase.from('kv').update({ value: next })
++      .eq('user_id', this._uid).eq('key', key).eq('value', JSON.stringify(expected)).select('key');
++    if (error) throw error;
++    return data?.length === 1;
++  }
++
+   async compareAndSetTopic(slug, expected, next) {
+     const key = generatedTopicKey(slug);
+     const query = expected
+@@ -152,10 +159,19 @@ export class SupabaseStore {
+   }
+ 
+   async updateProgress(fn) {
+-    const data = await this.readProgress();
+-    fn(data);
+-    await this.writeProgress(data);
+-    return data;
++    // Retrying the synchronous mutator against the winning document preserves
++    // concurrent topic updates. No schema migration or privileged RPC is needed.
++    for (let attempt = 0; attempt < 20; attempt++) {
++      const current = await this.readKV('progress');
++      if (current == null) {
++        await this.insertKV('progress', { active_topics: [], schedule: {}, history: [], onboarding: null });
++        continue;
++      }
++      const data = structuredClone(current);
++      fn(data);
++      if (await this.compareAndSetKV('progress', current, data)) return data;
++    }
++    throw new Error('Progress changed repeatedly; please retry');
+   }
+ 
+   // ── User profile ──────────────────────────────────────────
+diff --git a/tests/generated-topics-supabase.test.js b/tests/generated-topics-supabase.test.js
+index a1c3c02..9591e25 100644
+--- a/tests/generated-topics-supabase.test.js
++++ b/tests/generated-topics-supabase.test.js
+@@ -18,7 +18,7 @@ it('serializes scoped atomic updates and reads generated lessons without disk wr
+     const matches=(row)=>[...u.searchParams].every(([key,value])=>{
+       if(['select','on_conflict','order','offset','limit'].includes(key))return true;
+       const actual=key.startsWith('value->>')?row.value[key.slice(8)]:row[key];
+-      if(value.startsWith('eq.'))return String(actual)===value.slice(3);
++      if(value.startsWith('eq.'))return (key==='value'?JSON.stringify(actual):String(actual))===value.slice(3);
+       if(value.startsWith('like.'))return String(actual).startsWith(value.slice(5).replace(/%$/,''));
+       throw new Error(`Unexpected filter ${key}=${value}`);
+     });
+@@ -39,7 +39,7 @@ it('serializes scoped atomic updates and reads generated lessons without disk wr
+     const duplicate=await prepareTopicBuild(alice,{topic:'Knots'});expect(duplicate.doc.id).toBe(doc.id);
+     const result=await runTopicBuildStep({state:alice,adapter:{},skills:new Map(),slug:doc.slug,id:doc.id,seq:0,quickStart:async()=>({curriculum:{topic:'Knots',lessons:[{lesson:1,title:'Loops',status:'pending'}]},intro:'Hi',researchContext:'Source'})});
+     expect(result.phase).toBe('plan');
+-    for(const url of patches){expect(url.searchParams.get('user_id')).toBe('eq.alice');expect(url.searchParams.get('value->>id')).toBe(`eq.${doc.id}`);expect(url.searchParams.has('value->>revision')).toBe(true);}
++    for(const url of patches){expect(url.searchParams.get('user_id')).toBe('eq.alice');if(url.searchParams.get('key')!=='eq.progress'){expect(url.searchParams.get('value->>id')).toBe(`eq.${doc.id}`);expect(url.searchParams.has('value->>revision')).toBe(true);}else expect(url.searchParams.has('value')).toBe(true);}
+     expect(await alice.compareAndSetTopic('knots',doc,{...doc,revision:99})).toBe(false);
+     const restarted=new SupabaseStore(root,{client,userId:'alice'});
+     expect((await restarted.readCurriculum('knots')).lessons[0].title).toBe('Loops');
+diff --git a/tests/integration/supabase-store-persistence.test.js b/tests/integration/supabase-store-persistence.test.js
+index 6b24768..a8bce87 100644
+--- a/tests/integration/supabase-store-persistence.test.js
++++ b/tests/integration/supabase-store-persistence.test.js
+@@ -32,7 +32,7 @@ function fakePostgrest() {
+     const sorts = [];
+     let span = [0, Infinity];
+     const match = (row) => filters.every(([op, col, val]) =>
+-      op === 'eq' ? String(row[col]) === String(val)
++      op === 'eq' ? (col === 'value' ? JSON.stringify(row[col]) === String(val) : String(row[col]) === String(val))
+         : op === 'like' ? String(row[col]).startsWith(val.replace(/%$/, ''))
+           : op === 'lt' ? String(row[col]) < String(val)
+             : String(row[col]) >= String(val));
+@@ -58,13 +58,18 @@ function fakePostgrest() {
+       select() { return builder; },
+       maybeSingle: async () => ({ data: builder._rows()[0] ?? null, error: null }),
+       single: async () => ({ data: builder._rows()[0] ?? null, error: null }),
+-      then: (resolve) => resolve({ data: builder._rows(), error: null }),
++      then: (resolve) => {
++        const rows = builder._rows();
++        if (builder.patch) for (const row of rows) Object.assign(row, builder.patch);
++        return resolve({ data: rows, error: null });
++      },
++      update: (patch) => { builder.patch = patch; return builder; },
+       insert: async (row) => { db[table].push({ ...row }); return { error: null }; },
+-      upsert: async (rows) => {
++      upsert: async (rows, options = {}) => {
+         for (const row of [rows].flat()) { // one row, or an array of them, as PostgREST takes
+           const keys = Object.keys(row).filter((k) => ['user_id', 'key', 'slug', 'day', 'filename'].includes(k));
+           const i = db[table].findIndex((r) => keys.every((k) => String(r[k]) === String(row[k])));
+-          if (i >= 0) db[table][i] = { ...db[table][i], ...row }; else db[table].push({ ...row });
++          if (i >= 0) { if (!options.ignoreDuplicates) db[table][i] = { ...db[table][i], ...row }; } else db[table].push({ ...row });
+         }
+         return { error: null };
+       },
+diff --git a/tests/spaced-repetition.test.js b/tests/spaced-repetition.test.js
+index 09fa00e..aceeaf6 100644
+--- a/tests/spaced-repetition.test.js
++++ b/tests/spaced-repetition.test.js
+@@ -139,23 +139,29 @@ describe('spaced repetition in the web lesson', () => {
+     try {
+       expect((await lessonTurn(ctx, last)).status).toBe(503);
+       expect(JSON.parse(store.readKV('web_lesson:demo'))).toMatchObject({ id: lessonId, step: last.step });
+-      expect(store.readKV(`lesson_done:${lessonId}`)).toBeNull();
++      expect(JSON.parse(store.readKV(`lesson_done:${lessonId}`)).review.id).toBe(lessonId);
+       expect(store.readProgress().spaced_repetition['demo::c1'].next_review).toBe('2026-01-02');
+-      expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body).toMatchObject({ lessonId, step: last.step, resumed: true });
+-      expect((await lessonTurn(ctx, last)).body.done).toBe(true);
++      expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body).toMatchObject({ lessonId, done: true });
+       expect(store.readProgress().spaced_repetition['demo::c1'].reps).toBe(1);
+       expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.message).toBe('All lessons completed!');
+     } finally { failing.mockRestore(); log.mockRestore(); }
+   });
+ 
+-  it('does not clear a review while a competing request owns its completion claim', async () => {
++  it('recovers an abandoned graded review and a late session write without rescheduling twice', async () => {
+     for (let n = 1; n <= 3; n++) store.markLessonComplete('demo', n, 'correct');
+     store.updateProgress((p) => { p.spaced_repetition = registerConcepts({}, 'demo', ['c1'], day(0)); });
+     const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+     const before = store.readKV('web_lesson:demo');
+-    store.writeKV(`lesson_done:${lessonId}`, 'another-request');
+-    expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'Answer', lessonId, step: 0 })).status).toBe(409);
+-    expect(store.readKV('web_lesson:demo')).toBe(before);
++    const review = JSON.parse(before);
++    review.step = review.steps.length;
++    review.assessments = review.steps.map((step) => ({ step, score: 0.9 }));
++    store.writeKV(`lesson_done:${lessonId}`, JSON.stringify({ token: 'abandoned', review }));
++    expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.done).toBe(true);
++    expect(store.readProgress().spaced_repetition['demo::c1'].reps).toBe(1);
++    store.writeKV('web_lesson:demo', before); // an older step finishes writing after completion
++    expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'Answer', lessonId, step: 0 })).body.done).toBe(true);
++    expect(store.readProgress().spaced_repetition['demo::c1'].reps).toBe(1);
++    expect(JSON.parse(store.readKV('web_lesson:demo')).plan).toBeUndefined();
+   });
+ 
+   it('keeps an exhausted BLOCK counter through a scheduled review on a completed course', async () => {
+diff --git a/tests/supabase-store-errors.test.js b/tests/supabase-store-errors.test.js
+index 2215560..7496ba5 100644
+--- a/tests/supabase-store-errors.test.js
++++ b/tests/supabase-store-errors.test.js
+@@ -30,11 +30,12 @@ function postgrest({ failing = [] } = {}) {
+     if (init.method === 'POST') {
+       const row = JSON.parse(init.body);
+       const i = rows.findIndex((r) => KEYS[table].every((k) => String(r[k]) === String(row[k])));
+-      if (i < 0) rows.push(row); else rows[i] = row;
++      if (i < 0) rows.push(row); else if (!new Headers(init.headers).get('Prefer')?.includes('resolution=ignore-duplicates')) rows[i] = row;
+       return new Response(null, { status: 201 });
+     }
+     // Every filter the store sends here is an equality, `column=eq.value`.
+-    const found = rows.filter((r) => [...searchParams].every(([k, v]) => !v.startsWith('eq.') || String(r[k]) === v.slice(3)));
++    const found = rows.filter((r) => [...searchParams].every(([k, v]) => !v.startsWith('eq.') || (k === 'value' ? JSON.stringify(r[k]) : String(r[k])) === v.slice(3)));
++    if (init.method === 'PATCH') for (const row of found) Object.assign(row, JSON.parse(init.body));
+     // `.single()` asks for exactly one object, and PostgREST refuses when there is none.
+     const single = new Headers(init.headers).get('Accept')?.includes('vnd.pgrst.object');
+     if (single && found.length !== 1) {
+@@ -76,6 +77,25 @@ it('never writes progress over a read that failed', async () => {
+   expect(rows[0].value).toEqual({ active_topics: ['knots'], history: [] });
+ });
+ 
++it('retries a conflicting progress save so concurrent topics both survive, scoped to the student', async () => {
++  const { store, rows, methods } = postgrest();
++  rows.push({ user_id: 'alice', key: 'progress', value: { active_topics: [], history: [], spaced_repetition: {} } });
++  rows.push({ user_id: 'bob', key: 'progress', value: { active_topics: ['private-bob'] } });
++  const read = store.readKV.bind(store);
++  let arrivals = 0, release;
++  const gate = new Promise((resolve) => { release = resolve; });
++  vi.spyOn(store, 'readKV').mockImplementation(async (key) => {
++    const value = await read(key);
++    if (key === 'progress' && arrivals < 2) { if (++arrivals === 2) release(); await gate; }
++    return value;
++  });
++  await Promise.all(['a', 'b'].map((topic) => store.updateProgress((p) => { p.spaced_repetition[topic] = { concept: topic }; p.history.push(topic); })));
++  expect(Object.keys((await store.readProgress()).spaced_repetition).sort()).toEqual(['a', 'b']);
++  expect((await store.readProgress()).history.sort()).toEqual(['a', 'b']);
++  expect(methods.filter((m) => m === 'PATCH')).toHaveLength(3);
++  expect(rows.find((r) => r.user_id === 'bob').value).toEqual({ active_topics: ['private-bob'] });
++});
++
+ // ── #170: lesson state ─────────────────────────────────────
+ 
+ const CURRICULUM = { topic: 'Knots', lessons: [{ lesson: 1, title: 'Loops' }, { lesson: 2, title: 'Braids' }] };

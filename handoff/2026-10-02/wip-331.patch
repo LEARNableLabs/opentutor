@@ -1,0 +1,110 @@
+diff --git a/lib/core/resource-finder.js b/lib/core/resource-finder.js
+index 63a841b..3eea0ad 100644
+--- a/lib/core/resource-finder.js
++++ b/lib/core/resource-finder.js
+@@ -54,10 +54,12 @@ export async function findResources({ adapter, topic, level, lessons, batch = 6,
+       const checked = new Set();
+       for (const r of entry.resources) {
+         if (checked.size >= 6) break;
+-        if (typeof r?.url !== 'string' || !/^https:\/\//.test(r.url) || checked.has(r.url)) continue;
+-        try { new URL(r.url); } catch { continue; }
+-        checked.add(r.url);
+-        if (await isReal(r.url)) resources.push({ url: r.url, type: r.type, title: r.title, why: r.why });
++        if (typeof r?.url !== 'string' || /[\u0000-\u0020\u007f]/.test(r.url)) continue;
++        let url;
++        try { const parsed = new URL(r.url); if (parsed.protocol !== 'https:') continue; url = parsed.href; } catch { continue; }
++        if (checked.has(url)) continue;
++        checked.add(url);
++        if (await isReal(url)) resources.push({ url, type: r.type, title: r.title, why: r.why });
+         else onNote('resource-dropped', { lesson: entry.lesson, url: r.url });
+       }
+       found.push({ lesson: entry.lesson, resources });
+diff --git a/scripts/verify-links.js b/scripts/verify-links.js
+index 2cbd261..d51473b 100644
+--- a/scripts/verify-links.js
++++ b/scripts/verify-links.js
+@@ -20,6 +20,11 @@ import { plan, check, extractUrls } from '../lib/core/link-check.js';
+ 
+ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'skills', 'tutor', 'domains');
+ const CACHE = process.env.LINK_CACHE || path.join(os.tmpdir(), 'opentutor-link-cache.json');
++const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
++
++export function freshVerdict(verdict, now = Date.now()) {
++  return Number.isFinite(verdict?.checkedAt) && verdict.checkedAt <= now && now - verdict.checkedAt < CACHE_TTL_MS;
++}
+ 
+ function* domainFiles() {
+   for (const slug of fs.readdirSync(ROOT)) {
+@@ -56,7 +61,7 @@ export async function checkUrlQueue(queue, cache, { checkFn = check, workers = 2
+       while (index < urls.length) {
+         const url = urls[index++];
+         await acquire();
+-        try { cache[url] = await checkFn(url); onChecked(); }
++        try { cache[url] = { ...await checkFn(url), checkedAt: Date.now() }; onChecked(); }
+         finally { release(); }
+         if (pauseMs) await new Promise((resolve) => setTimeout(resolve, pauseMs));
+       }
+@@ -68,8 +73,8 @@ async function runCheck() {
+   const cache = loadCache();
+   const urls = new Set();
+   for (const file of domainFiles()) { const text = fs.readFileSync(file, 'utf8'); for (const u of extractUrls(file.endsWith('.json') ? JSON.parse(text) : text)) urls.add(u); }
+-  // What was decided stays decided; "unknown" (a timeout, a blocked request) is asked again.
+-  const queue = [...urls].filter((u) => !cache[u] || cache[u].status === 'unknown').map((url) => ({ url, host: plan(url).host }));
++  // Resume recent verdicts, but refresh old/unversioned results and uncertain requests.
++  const queue = [...urls].filter((u) => !freshVerdict(cache[u]) || cache[u].status === 'unknown').map((url) => ({ url, host: plan(url).host }));
+   console.log(`${urls.size} unique URLs, ${queue.length} to check`);
+   // At most WORKERS requests at once and 2 per host, with a pause between a host's requests: an
+   // audit that opens a connection to every host at once only measures its own timeouts.
+@@ -154,6 +159,11 @@ export function removeDeadMarkdownLinks(text, cache) {
+ 
+ function runApply() {
+   const cache = loadCache();
++  const stale = [...domainFiles()].some((file) => {
++    const text = fs.readFileSync(file, 'utf8');
++    return extractUrls(file.endsWith('.json') ? JSON.parse(text) : text).some((url) => cache[url]?.status === 'dead' && !freshVerdict(cache[url]));
++  });
++  if (stale) throw new Error('Dead-link verdicts are stale or unversioned; run check before apply');
+   const removed = {};
+   for (const file of domainFiles()) {
+     const slug = path.basename(path.dirname(file));
+diff --git a/tests/resource-finder.test.js b/tests/resource-finder.test.js
+index 390c735..7623d17 100644
+--- a/tests/resource-finder.test.js
++++ b/tests/resource-finder.test.js
+@@ -9,6 +9,14 @@ const reply = (text) => ({ generate: vi.fn(async () => ({ text })) });
+ const R = (url, type = 'video') => ({ url, type, title: `T ${url}`, why: 'because' });
+ 
+ describe('findResources', () => {
++  it('rejects control-character destinations and uses the canonical URL for checks and output', async () => {
++    const adapter = reply(JSON.stringify({ lessons: [{ lesson: 1, resources: [R('https://good.example/\nhttps://dead.example'), R('https://good.example/a\tbad'), R('https://GOOD.example:443/é')] }] }));
++    const isReal = vi.fn(async () => true);
++    const found = await findResources({ adapter, topic: 'T', level: 'beginner', lessons, isReal });
++    expect(isReal.mock.calls.map(([url]) => url)).toEqual(['https://good.example/%C3%A9']);
++    expect(found[0].resources[0].url).toBe('https://good.example/%C3%A9');
++    expect(resourcesSection(found, lessons)).not.toContain('dead.example');
++  });
+   it('skips invalid and duplicate candidates while allowing six distinct URL checks', async () => {
+     const invalid = [null, R('http://insecure.example'), R('https://')];
+     const dead = Array.from({ length: 8 }, () => R('https://dead.example/a'));
+diff --git a/tests/verify-links-apply.test.js b/tests/verify-links-apply.test.js
+index b04b31c..f53eeb8 100644
+--- a/tests/verify-links-apply.test.js
++++ b/tests/verify-links-apply.test.js
+@@ -1,8 +1,16 @@
+ import { it, expect } from 'vitest';
+-import { removeDeadJsonLinks, removeDeadMarkdownLinks, checkUrlQueue } from '../scripts/verify-links.js';
++import { removeDeadJsonLinks, removeDeadMarkdownLinks, checkUrlQueue, freshVerdict } from '../scripts/verify-links.js';
+ 
+ const cache = { 'https://dead.example/a': { status: 'dead' }, 'https://dead.example/b': { status: 'dead' } };
+ 
++it('refreshes unversioned, stale and future-dated verdicts rather than trusting them forever', () => {
++  const now = 2 * 24 * 60 * 60 * 1000;
++  expect(freshVerdict({ status: 'dead' }, now)).toBe(false);
++  expect(freshVerdict({ status: 'dead', checkedAt: 0 }, now)).toBe(false);
++  expect(freshVerdict({ status: 'dead', checkedAt: now + 1 }, now)).toBe(false);
++  expect(freshVerdict({ status: 'dead', checkedAt: now - 1 }, now)).toBe(true);
++});
++
+ it('removes consecutive leading, middle, trailing and whole-array dead links without changing other JSON', () => {
+   const input = '{\n  "leading": ["https://dead.example/a", "https://dead.example/b", "keep"],\n  "middle": ["a", "https://dead.example/a", "https://dead.example/b", "b"],\n  "trailing": ["keep", "https://dead.example/a", "https://dead.example/b"],\n  "all": ["https://dead.example/a", "https://dead.example/b"],\n  "nested": [{"resources": ["https://dead.example/a"]}],\n  "scalar": "https://dead.example/a"\n}\n';
+   const out = removeDeadJsonLinks(input, cache);

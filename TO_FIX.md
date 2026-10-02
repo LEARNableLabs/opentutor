@@ -1,6 +1,12 @@
 # Remaining work — 2026-10-02
 
-Read `AGENTS.md` and `CLAUDE.md` first. No PRs below have merged. Preserve the
+**Paused at the user’s request.** The newest #329/#331 persistence, URL and cache
+fixes are saved as unfinished patches in draft backup PR #342, under
+`handoff/2026-10-02/wip-329.patch` and `wip-331.patch`. See `WIP.md` there for exact
+base commits, test results and remaining review work. They are not on the actual
+PR branches yet. #340’s latest observed review has no open findings.
+
+Read `AGENTS.md` and `CLAUDE.md` first. #337 merged; the other PRs remain open. Preserve the
 existing deleted `.claude/workflows/*.js` files and untracked `issues.md`.
 
 - **#337 merged** October 2: README/methodology provenance corrections.

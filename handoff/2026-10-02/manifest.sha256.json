@@ -1,6 +1,7 @@
 {
-  "TO_FIX.md": "ce296ec818694c4f97a304e2b4320e5399f4286557d261e90b8452766ba0705b",
+  "TO_FIX.md": "361f5cb9cda9eb9b2b86cf20634778e2392403a3cdd3d6c13d8bfdb5287dcb67",
   "handoff/2026-10-02/PILOTS.md": "ee14f9fbacbcb33127ace6e1cfdf1ee8967c1d256f6c4391eac1e49933e95282",
+  "handoff/2026-10-02/WIP.md": "4cf5465b8db37e57f507d782f7c488ba140c31bafcecabbfcf15130053735ff6",
   "handoff/2026-10-02/builds/behavioral-economics-2026-10-02T13-04-12-347Z/domain/concept-map.md": "50c6e9eefc3b843ff2fb4570f0702769e8e5a72a5eb1d191ecb94284e17deb29",
   "handoff/2026-10-02/builds/behavioral-economics-2026-10-02T13-04-12-347Z/domain/critique.md": "5411cbc7a4f7904287ed7c458e50a0b338aa12487669bbca43e79101230184a1",
   "handoff/2026-10-02/builds/behavioral-economics-2026-10-02T13-04-12-347Z/domain/curriculum.json": "f3d1c9887d4ac754730a1f8cd92b4c292497e4fc7e67f237343a530ed308908a",
@@ -91,9 +92,18 @@
   "handoff/2026-10-02/builds/volcanology-2026-10-02T13-15-30-004Z/found-resources.json": "f13fca9db384c79a584bf76329ba0f2fd3bd66628464bfaad88acb3e19d58eeb",
   "handoff/2026-10-02/builds/volcanology-2026-10-02T13-15-30-004Z/research.json": "65c9262ce209a9a483b44d58df1163fcbe5e6fef1580789de32bb7ce9606daab",
   "handoff/2026-10-02/issues.md": "c8616edf6e8ec66591b45d585fd93f358d1514a1bccd556f008f2996ec6b3197",
+  "handoff/2026-10-02/live-check-fixtures/base.js": "316127f671f8ad0af8233ceb2a9c94b7e75fa623caf1f0bbb751dd0d2706ddf2",
+  "handoff/2026-10-02/live-check-fixtures/bin/claude": "8aad391b6188691a1e7e826b2a8f26ff8d48fffe509c6a60d095be84a1d35e84",
+  "handoff/2026-10-02/live-check-fixtures/legacy-bootstrap.mjs": "cf3d53328ae941fd7a6126598bf4ebbcbf40f9c7e128578fdf350730c3b1020e",
+  "handoff/2026-10-02/live-check-fixtures/legacy-cli.mjs": "1ef758e4ba036b967bc9c3269ab9fe4bc9bfe49401d85cbd9b0c13833ab949d3",
+  "handoff/2026-10-02/live-check-fixtures/legacy-install.mjs": "fd893cdf6e679633033527d27f0ce603a43d99ba6e329397d43a22ea51d03693",
+  "handoff/2026-10-02/live-check-fixtures/legacy-supabase.mjs": "c71a2478b72283fca57dce91dfe73ad27aa75b939f2e5c5836bf68be7f5e918e",
   "handoff/2026-10-02/local-workflow-deletions.patch": "80b48614d8ee1556d6734cf466bbe4410ab410aa4b13cabd2f14f9261733b30d",
   "handoff/2026-10-02/opentutor-cli-error-smoke.mjs": "3aceb50d7fcee1473108cfa22a20c1141d368f1a10ad61c3b411f82c49b6c4a0",
-  "handoff/2026-10-02/opentutor-review-save-smoke.mjs": "8705ef4c5b057d8d95c5aa1751d7b8d5eb355e2bae9fceb79789fac4eb181a2f",
+  "handoff/2026-10-02/opentutor-progress-cas-smoke.mjs": "61ec1ae2a5340512f50cbd5e7662578197fdbb88edc562651181f0529954bb9f",
+  "handoff/2026-10-02/opentutor-review-save-smoke.mjs": "636ba5285cac06497dcd6857d98da3af67632be0b572b94daa67a7353e4c322d",
   "handoff/2026-10-02/review-smoke.mjs": "ac0088153d188e77071861ec4e73f4257491d66244e25705197fe434b4578331",
-  "handoff/2026-10-02/reviewed-link-cache.json": "89e46c22c7c8aa5965154b18f974ffcc7318ded3d2537669201a247594d1a2ed"
+  "handoff/2026-10-02/reviewed-link-cache.json": "89e46c22c7c8aa5965154b18f974ffcc7318ded3d2537669201a247594d1a2ed",
+  "handoff/2026-10-02/wip-329.patch": "23ec6de85d44c1602055a373e6c5adc68984024a4e452c1404a4aec4a0889628",
+  "handoff/2026-10-02/wip-331.patch": "df36fbea00cbe11c4489b24da9412bcafca4c67e87a8d74ed4187b6172a73c03"
 }

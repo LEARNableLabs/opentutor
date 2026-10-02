@@ -25,6 +25,7 @@ try{
  const post=async body=>{const {stdout}=await execute('curl',['-sS','--max-time','10','-w','\n%{http_code}','-H','Content-Type: application/json','-H','Authorization: Bearer local-smoke-password','-d',JSON.stringify(body),`${base}/api/lesson`]);const split=stdout.lastIndexOf('\n');return{status:Number(stdout.slice(split+1)),body:JSON.parse(stdout.slice(0,split))};};
  let r=await post({topicSlug:'smoke-review'});
  while(r.body.step<r.body.totalSteps-1)r=await post({topicSlug:'smoke-review',answer:'Answer',lessonId:r.body.lessonId,step:r.body.step});
+ const beforeLast=store.readKV('web_lesson:smoke-review');
  const last={topicSlug:'smoke-review',answer:'Final answer',lessonId:r.body.lessonId,step:r.body.step};
  store.db.exec("CREATE TRIGGER fail_review_save BEFORE INSERT ON kv WHEN NEW.key='progress' BEGIN SELECT RAISE(ABORT, 'injected schedule save failure'); END;");
  const failed=await post(last);
@@ -32,7 +33,7 @@ try{
  assert.equal(failed.status,fixed?503:200);assert.equal(retained,fixed);
  assert.equal(store.readProgress().spaced_repetition['smoke-review::c1'].next_review,'2000-01-01');
  store.db.exec('DROP TRIGGER fail_review_save');
- if(fixed){const resume=await post({topicSlug:'smoke-review'});assert.equal(resume.body.lessonId,last.lessonId);assert.equal(resume.body.step,last.step);const retry=await post(last);assert.equal(retry.body.done,true);assert.equal(store.readProgress().spaced_repetition['smoke-review::c1'].reps,1);assert.equal((await post({topicSlug:'smoke-review'})).body.message,'All lessons completed!');}
+ if(fixed){const recovered=await post({topicSlug:'smoke-review'});assert.equal(recovered.body.lessonId,last.lessonId);assert.equal(recovered.body.done,true);assert.equal(store.readProgress().spaced_repetition['smoke-review::c1'].reps,1);store.writeKV('web_lesson:smoke-review',beforeLast);const late=await post(last);assert.equal(late.body.done,true);assert.equal(store.readProgress().spaced_repetition['smoke-review::c1'].reps,1);assert.equal((await post({topicSlug:'smoke-review'})).body.message,'All lessons completed!');}
  assert.equal((await post({topicSlug:'missing-smoke-course'})).status,404);
  console.log(JSON.stringify({version:fixed?'fixed':'original',failedSaveStatus:failed.status,reportedDone:failed.body.done??false,retainedReview:retained,retryVerified:fixed}));
 }finally{child.kill();fake.close();store.close();fs.rmSync(data,{recursive:true,force:true});}
