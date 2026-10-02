@@ -1,85 +1,620 @@
 {
   "topic": "Behavioral economics",
   "slug": "behavioral-economics",
-  "created": "2026-08-31",
+  "created": "2026-10-02",
   "student_level": "intermediate",
-  "level": "intermediate",
-  "prerequisites": [
-    "Basic familiarity with the idea of utility or cost-benefit reasoning",
-    "Some exposure to psychology or social science concepts (e.g., from school or popular reading)",
-    "Comfort interpreting simple graphs or examples involving probabilities and payoffs",
-    "Basic understanding of incentives and decision-making in everyday contexts"
+  "exit_criteria": [
+    "state the three pillars of the rational-agent model (rational beliefs, consistent preferences over risk and time, self-interest) and say which pillar a given anomaly violates",
+    "recognize anchoring, availability, representativeness (conjunction fallacy, base-rate neglect), overconfidence, confirmation bias and framing in an unfamiliar scenario",
+    "compute the expected value of a gamble and contrast it with a prospect-theory valuation using a reference point and a loss-aversion coefficient",
+    "explain the Allais and Ellsberg paradoxes, the endowment effect, the fourfold pattern of risk attitudes and mental accounting, with one real-world example each",
+    "use the beta-delta model to predict a preference reversal, and tell naive from sophisticated present-biased agents",
+    "describe the ultimatum, dictator, trust and public-goods games, and use Fehr-Schmidt inequity aversion to find a minimum acceptable offer",
+    "explain how incentives can crowd out intrinsic motivation, citing the day-care fine study",
+    "design a nudge for a stated problem, then name a sludge risk and an ethical objection to it",
+    "judge a behavioral finding's credibility: lab versus field, sample size, effect size, publication bias and replication status",
+    "explain the disposition effect, limits to arbitrage and how firms profit from shrouded fees and naive consumers",
+    "diagnose a real-world decision or market using several behavioral concepts together"
   ],
-  "preliminary": true,
   "lessons": [
     {
-      "day": 1,
-      "module": "Foundations",
-      "title": "Why aren't we rational? Bounded rationality & dual-process thinking",
+      "lesson": 1,
+      "module": "The Rational Agent and Its Cracks",
+      "title": "What would a perfectly rational shopper actually do?",
       "concepts": [
-        "Homo economicus vs. real humans",
-        "bounded rationality",
-        "System 1 and System 2",
-        "satisficing"
+        "homo economicus",
+        "utility maximization",
+        "consistent (transitive) preferences",
+        "self-interest"
       ],
-      "resources": [],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Homo_economicus",
+        "https://en.wikipedia.org/wiki/Behavioral_economics"
+      ],
       "status": "pending"
     },
     {
-      "day": 2,
-      "module": "Prospect Theory & Risk",
-      "title": "Why losses loom larger: Prospect Theory essentials",
+      "lesson": 2,
+      "module": "The Rational Agent and Its Cracks",
+      "title": "Why would a rational person turn down a bet with a positive expected value?",
+      "concepts": [
+        "expected value",
+        "expected utility",
+        "diminishing marginal utility",
+        "risk aversion"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Expected_utility_hypothesis",
+        "https://en.wikipedia.org/wiki/Risk_aversion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "The Rational Agent and Its Cracks",
+      "title": "If $100 next year is worth $90 to you today, what should $100 in two years be worth?",
+      "concepts": [
+        "exponential discounting",
+        "discount factor",
+        "time consistency"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Discounted_utility",
+        "https://en.wikipedia.org/wiki/Time_preference"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "The Rational Agent and Its Cracks",
+      "title": "Why did a Nobel laureate say we 'satisfice' instead of optimize?",
+      "concepts": [
+        "bounded rationality",
+        "satisficing",
+        "System 1 and System 2",
+        "heuristics as mental shortcuts"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://doi.org/10.2307/1884852",
+        "https://en.wikipedia.org/wiki/Bounded_rationality",
+        "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow",
+        "https://en.wikipedia.org/wiki/Dual_process_theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Heuristics and Biases",
+      "title": "Why does spinning a random wheel change your guess about a fact you know nothing about?",
+      "concepts": [
+        "anchoring",
+        "insufficient adjustment",
+        "arbitrary coherence"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1126/science.185.4157.1124",
+        "https://en.wikipedia.org/wiki/Anchoring_effect"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Heuristics and Biases",
+      "title": "Why did more people die on American roads after 9/11?",
+      "concepts": [
+        "availability heuristic",
+        "salience",
+        "risk perception"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Availability_heuristic",
+        "https://doi.org/10.1111/j.1539-6924.2006.00753.x"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Heuristics and Biases",
+      "title": "Is Linda a bank teller, or a feminist bank teller?",
+      "concepts": [
+        "representativeness heuristic",
+        "conjunction fallacy",
+        "base-rate neglect"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1037/0033-295X.90.4.293",
+        "https://en.wikipedia.org/wiki/Conjunction_fallacy",
+        "https://en.wikipedia.org/wiki/Base_rate_fallacy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Heuristics and Biases",
+      "title": "Why do most drivers think they're better than average?",
+      "concepts": [
+        "overconfidence",
+        "better-than-average effect",
+        "calibration",
+        "confirmation bias"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Overconfidence_effect",
+        "https://en.wikipedia.org/wiki/Confirmation_bias"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Heuristics and Biases",
+      "title": "Would you pick the program that saves 200 lives, or the one where 400 people die?",
+      "concepts": [
+        "framing effect",
+        "gain versus loss frames",
+        "description invariance"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1126/science.7455683",
+        "https://en.wikipedia.org/wiki/Framing_effect_(psychology)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Heuristics and Biases",
+      "title": "Review: How many biases can you find in one bad investment decision?",
+      "concepts": [
+        "anchoring",
+        "availability",
+        "representativeness",
+        "overconfidence",
+        "framing"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Risk, Reference Points and Prospect Theory",
+      "title": "Which gamble, and which urn, would you choose? And why does your answer break expected utility?",
+      "concepts": [
+        "Allais paradox",
+        "certainty effect",
+        "Ellsberg paradox",
+        "ambiguity aversion"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Allais_paradox",
+        "https://en.wikipedia.org/wiki/Ellsberg_paradox",
+        "https://doi.org/10.2307/1884324"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Risk, Reference Points and Prospect Theory",
+      "title": "Why does losing $100 hurt more than winning $100 feels good?",
+      "concepts": [
+        "reference dependence",
+        "loss aversion",
+        "prospect-theory value function",
+        "diminishing sensitivity"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.2307/1914185",
+        "https://en.wikipedia.org/wiki/Prospect_theory",
+        "https://en.wikipedia.org/wiki/Loss_aversion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Risk, Reference Points and Prospect Theory",
+      "title": "Why won't you sell a mug for the price you'd never pay for it?",
+      "concepts": [
+        "endowment effect",
+        "WTA-WTP gap",
+        "status quo bias"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1086/261737",
+        "https://en.wikipedia.org/wiki/Endowment_effect",
+        "https://en.wikipedia.org/wiki/Status_quo_bias"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Risk, Reference Points and Prospect Theory",
+      "title": "Why do the same people buy lottery tickets and insurance?",
+      "concepts": [
+        "probability weighting",
+        "overweighting small probabilities",
+        "fourfold pattern of risk attitudes"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Prospect_theory",
+        "https://doi.org/10.2307/1914185"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Risk, Reference Points and Prospect Theory",
+      "title": "Why is $20 found on the street easier to spend than $20 from your paycheck?",
+      "concepts": [
+        "mental accounting",
+        "fungibility",
+        "sunk cost fallacy",
+        "narrow bracketing"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1016/0167-2681(80)90051-7",
+        "https://en.wikipedia.org/wiki/Mental_accounting",
+        "https://doi.org/10.1162/003355397555244"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Risk, Reference Points and Prospect Theory",
+      "title": "Review: Can you explain loss aversion to a friend in three sentences?",
       "concepts": [
         "loss aversion",
         "reference dependence",
-        "diminishing sensitivity",
-        "certainty effect",
-        "framing effects"
+        "probability weighting",
+        "mental accounting",
+        "framing"
       ],
-      "resources": [],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://www.nobelprize.org/prizes/economic-sciences/2017/thaler/lecture/"
+      ],
       "status": "pending"
     },
     {
-      "day": 3,
-      "module": "Heuristics & Biases",
-      "title": "Mental shortcuts that mislead: anchoring, availability & representativeness",
-      "concepts": [
-        "anchoring",
-        "availability heuristic",
-        "representativeness heuristic",
-        "base rate neglect",
-        "overconfidence"
-      ],
-      "resources": [],
-      "status": "pending"
-    },
-    {
-      "day": 4,
-      "module": "Time & Self-Control",
-      "title": "Why we choose now over later: temporal discounting & commitment",
+      "lesson": 17,
+      "module": "Time and Self-Control",
+      "title": "$100 today or $110 tomorrow? Now compare a year from now with a year and a day.",
       "concepts": [
         "hyperbolic discounting",
-        "present bias",
-        "commitment devices",
-        "self-control problems",
-        "marshmallow test"
+        "preference reversal",
+        "time inconsistency"
       ],
-      "resources": [],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Hyperbolic_discounting",
+        "https://en.wikipedia.org/wiki/Time_preference"
+      ],
       "status": "pending"
     },
     {
-      "day": 5,
-      "module": "Social Preferences",
-      "title": "Fairness isn't irrational: trust, reciprocity & cooperation",
+      "lesson": 18,
+      "module": "Time and Self-Control",
+      "title": "How can two numbers, beta and delta, explain procrastination?",
+      "concepts": [
+        "quasi-hyperbolic (beta-delta) discounting",
+        "present bias",
+        "computing a preference reversal"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1162/003355397555253",
+        "https://doi.org/10.1257/aer.89.1.103"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Time and Self-Control",
+      "title": "Why do gym members pay for workouts they never do?",
+      "concepts": [
+        "naive versus sophisticated agents",
+        "overestimating future self-control",
+        "contract design"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1257/aer.96.3.694"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Time and Self-Control",
+      "title": "Why would anyone pay to tie their own hands?",
+      "concepts": [
+        "commitment devices",
+        "self-imposed deadlines",
+        "sophistication"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Commitment_device",
+        "https://doi.org/10.1111/1467-9280.00441"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Other People: Social Preferences",
+      "title": "Why do people turn down free money in the ultimatum game?",
       "concepts": [
         "ultimatum game",
         "dictator game",
         "fairness norms",
-        "reciprocity",
-        "inequality aversion"
+        "subgame-perfect prediction"
       ],
-      "resources": [],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Ultimatum_game",
+        "https://en.wikipedia.org/wiki/Dictator_game",
+        "https://doi.org/10.1016/0167-2681(82)90011-7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Other People: Social Preferences",
+      "title": "How can one equation capture envy and guilt?",
+      "concepts": [
+        "inequity aversion",
+        "Fehr-Schmidt utility",
+        "minimum acceptable offer"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1162/003355399556151",
+        "https://en.wikipedia.org/wiki/Inequity_aversion"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Other People: Social Preferences",
+      "title": "Why do strangers trust each other with money, and pay to punish free riders?",
+      "concepts": [
+        "trust game",
+        "reciprocity",
+        "public goods game",
+        "costly punishment"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://doi.org/10.1006/game.1995.1027",
+        "https://doi.org/10.1257/aer.90.4.980",
+        "https://en.wikipedia.org/wiki/Public_goods_game",
+        "https://veconlab.econ.virginia.edu/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Other People: Social Preferences",
+      "title": "Why did fining parents for late pickup make them even later?",
+      "concepts": [
+        "motivation crowding out",
+        "incomplete contracts",
+        "social versus market norms"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1086/468061",
+        "https://en.wikipedia.org/wiki/Motivation_crowding_theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Other People: Social Preferences",
+      "title": "Review: Which pillar of homo economicus has held up worst so far?",
+      "concepts": [
+        "rational beliefs",
+        "risk and time preferences",
+        "self-interest",
+        "cross-module diagnosis"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Homo_economicus"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Choice Architecture and Policy",
+      "title": "Why does a pre-ticked box change how many people become organ donors?",
+      "concepts": [
+        "default effect",
+        "opt-in versus opt-out",
+        "automatic enrollment",
+        "status quo bias"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1126/science.1091721",
+        "https://doi.org/10.1162/003355301753265543",
+        "https://en.wikipedia.org/wiki/Default_effect"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Choice Architecture and Policy",
+      "title": "How do you design a nudge that turns people's biases to their own advantage?",
+      "concepts": [
+        "Save More Tomorrow",
+        "nudge design",
+        "sludge"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://doi.org/10.1086/380085",
+        "https://en.wikipedia.org/wiki/Nudge_theory"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Choice Architecture and Policy",
+      "title": "If a nudge is for your own good, is it still manipulation?",
+      "concepts": [
+        "libertarian paternalism",
+        "transparency and autonomy",
+        "who nudges the nudgers"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Libertarian_paternalism",
+        "https://en.wikipedia.org/wiki/Nudge_(book)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Choice Architecture and Policy",
+      "title": "Do nudges really work as well as the famous studies claimed?",
+      "concepts": [
+        "replication crisis",
+        "publication bias",
+        "effect sizes at scale",
+        "research fraud"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://doi.org/10.3982/ECTA18709",
+        "https://doi.org/10.1073/pnas.2107346118",
+        "https://doi.org/10.1073/pnas.2200300119",
+        "https://doi.org/10.1126/science.aac4716",
+        "https://datacolada.org/98"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Markets, Finance and Synthesis",
+      "title": "Why do investors sell their winners and hold on to their losers?",
+      "concepts": [
+        "disposition effect",
+        "myopic loss aversion",
+        "equity premium puzzle"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1111/0022-1082.00072",
+        "https://doi.org/10.2307/2118511",
+        "https://en.wikipedia.org/wiki/Equity_premium_puzzle"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Markets, Finance and Synthesis",
+      "title": "If smart traders can bet against mistakes, why do bubbles still happen?",
+      "concepts": [
+        "limits to arbitrage",
+        "noise traders",
+        "speculative bubbles"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1111/j.1540-6261.1997.tb03807.x",
+        "https://en.wikipedia.org/wiki/Economic_bubble"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Markets, Finance and Synthesis",
+      "title": "Why do so many fees stay hidden until checkout?",
+      "concepts": [
+        "shrouded attributes",
+        "drip pricing",
+        "teaser rates and subscription traps",
+        "dark patterns"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1162/qjec.2006.121.2.505",
+        "https://en.wikipedia.org/wiki/Drip_pricing",
+        "https://en.wikipedia.org/wiki/Dark_pattern"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Markets, Finance and Synthesis",
+      "title": "Capstone: Can you diagnose a real decision with the full behavioral toolkit?",
+      "concepts": [
+        "synthesis across modules",
+        "evaluating evidence",
+        "designing interventions"
+      ],
+      "difficulty": 5,
+      "type": "review",
+      "resources": [
+        "https://www.nobelprize.org/prizes/economic-sciences/2017/popular-information/",
+        "https://en.wikipedia.org/wiki/Behavioral_economics"
+      ],
       "status": "pending"
     }
-  ]
+  ],
+  "level": "intermediate",
+  "prerequisites": [
+    "supply and demand basics and the idea of a market price",
+    "utility maximization at an introductory level (people choose what they like best given constraints)",
+    "high-school algebra (substituting into formulas, solving simple inequalities)",
+    "basic probability: percentages, probabilities of simple events, expected value",
+    "simple interest and the idea that money now differs from money later"
+  ],
+  "preliminary": false
 }
