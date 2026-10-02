@@ -263,3 +263,24 @@ describe('ClaudeCLIAdapter timeout', () => {
     }
   });
 });
+
+// #330: a curriculum build on Claude Code names the model for each tier.
+describe('ClaudeCLIAdapter model', () => {
+  const run = async (adapter, options) => {
+    const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
+    spawn.mockReturnValue(child);
+    const reply = adapter.generate('system', [{ role: 'user', content: 'hi' }], options);
+    child.stdout.emit('data', 'ok');
+    child.emit('close', 0);
+    await reply;
+    return spawn.mock.calls.at(-1)[1];
+  };
+
+  it('passes --model for the tier asked for, and nothing when none is set', async () => {
+    const adapter = new ClaudeCLIAdapter({ strongModel: 'opus', cheapModel: 'haiku' });
+    const strong = await run(adapter, { model: 'strong' });
+    expect(strong.slice(strong.indexOf('--model'))).toEqual(['--model', 'opus']);
+    expect((await run(adapter, { model: 'cheap' })).join(' ')).toContain('--model haiku');
+    expect((await run(new ClaudeCLIAdapter(), { model: 'strong' })).includes('--model')).toBe(false);
+  });
+});

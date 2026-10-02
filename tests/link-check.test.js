@@ -1,0 +1,34 @@
+import { describe, it, expect } from 'vitest';
+import { plan, check } from '../lib/core/link-check.js';
+
+// #293: only evidence of absence removes a link; a blocked or slow site is kept.
+
+const answer = (status, body = '') => async () => ({ ok: status < 400, status, text: async () => body });
+const throws = (code) => async () => { throw Object.assign(new Error('x'), { cause: { code } }); };
+
+describe('verify-links', () => {
+  it('rejects a YouTube slug where an 11-character id belongs, with no network', async () => {
+    const never = async () => { throw new Error('fetched'); };
+    expect(await check('https://www.youtube.com/watch?v=pantheon-construction', never)).toMatchObject({ status: 'dead' });
+    expect(plan('https://youtu.be/dQw4w9WgXcQ').url).toContain('oembed');
+  });
+
+  it('routes DOIs to Crossref and arXiv to its API', () => {
+    expect(plan('https://doi.org/10.1000/xyz').url).toBe('https://api.crossref.org/works/10.1000/xyz');
+    expect(plan('https://arxiv.org/pdf/1706.03762.pdf').url).toContain('id_list=1706.03762');
+  });
+
+  it('calls a link dead on 404/410 or an unresolvable host, and nothing else', async () => {
+    expect((await check('https://example.org/a', answer(404))).status).toBe('dead');
+    expect((await check('https://example.org/a', answer(410))).status).toBe('dead');
+    expect((await check('https://example.org/a', throws('ENOTFOUND'))).status).toBe('dead');
+    for (const f of [answer(200), answer(403), answer(429), answer(500), throws('ETIMEDOUT')]) {
+      expect((await check('https://example.org/a', f)).status).not.toBe('dead');
+    }
+  });
+
+  it('treats an arXiv API error entry as a missing paper', async () => {
+    expect((await check('https://arxiv.org/abs/0000.00000', answer(200, '<entry><title>Error</title></entry>'))).status).toBe('dead');
+    expect((await check('https://arxiv.org/abs/1706.03762', answer(200, '<entry><title>Attention</title></entry>'))).status).toBe('ok');
+  });
+});
