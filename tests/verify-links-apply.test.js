@@ -1,5 +1,5 @@
 import { it, expect } from 'vitest';
-import { removeDeadJsonLinks } from '../scripts/verify-links.js';
+import { removeDeadJsonLinks, checkUrlQueue } from '../scripts/verify-links.js';
 
 const cache = { 'https://dead.example/a': { status: 'dead' }, 'https://dead.example/b': { status: 'dead' } };
 
@@ -15,4 +15,21 @@ it('removes consecutive leading, middle, trailing and whole-array dead links wit
 it('preserves unknown URLs and exact formatting when nothing is dead', () => {
   const input = '{ "resources": ["https:\\/\\/unknown.example\\/a"], "n": 1e3 }';
   expect(removeDeadJsonLinks(input, cache)).toBe(input);
+});
+
+it('checks every queued link within both the global and per-host concurrency caps', async () => {
+  const queue = Array.from({ length: 40 }, (_, n) => ({ url: `https://host${n % 4}.example/${n}`, host: `host${n % 4}.example` }));
+  const busy = new Map(), peaks = new Map(), results = {};
+  let active = 0, peak = 0;
+  await checkUrlQueue(queue, results, { workers: 3, pauseMs: 0, checkFn: async (url) => {
+    const host = new URL(url).hostname;
+    active++; peak = Math.max(peak, active);
+    busy.set(host, (busy.get(host) || 0) + 1); peaks.set(host, Math.max(peaks.get(host) || 0, busy.get(host)));
+    await new Promise((resolve) => setTimeout(resolve, 1));
+    active--; busy.set(host, busy.get(host) - 1);
+    return { status: 'ok' };
+  } });
+  expect(Object.keys(results)).toHaveLength(40);
+  expect(peak).toBe(3);
+  expect(Math.max(...peaks.values())).toBeLessThanOrEqual(2);
 });

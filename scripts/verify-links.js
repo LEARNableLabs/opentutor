@@ -32,6 +32,38 @@ function* domainFiles() {
 
 const loadCache = () => (fs.existsSync(CACHE) ? JSON.parse(fs.readFileSync(CACHE, 'utf8')) : {});
 
+/** Two lanes per host, sharing a global request cap, without repeatedly scanning busy hosts. */
+export async function checkUrlQueue(queue, cache, { checkFn = check, workers = 24, pauseMs = 250, onChecked = () => {} } = {}) {
+  const hosts = new Map();
+  for (const item of queue) {
+    if (!hosts.has(item.host)) hosts.set(item.host, []);
+    hosts.get(item.host).push(item.url);
+  }
+  let active = 0;
+  const waiting = [];
+  const acquire = async () => {
+    if (active < workers) { active++; return; }
+    await new Promise((resolve) => waiting.push(resolve));
+  };
+  const release = () => {
+    const next = waiting.shift();
+    if (next) next();
+    else active--;
+  };
+  await Promise.all([...hosts.values()].flatMap((urls) => {
+    let index = 0;
+    return Array.from({ length: 2 }, async () => {
+      while (index < urls.length) {
+        const url = urls[index++];
+        await acquire();
+        try { cache[url] = await checkFn(url); onChecked(); }
+        finally { release(); }
+        if (pauseMs) await new Promise((resolve) => setTimeout(resolve, pauseMs));
+      }
+    });
+  }));
+}
+
 async function runCheck() {
   const cache = loadCache();
   const urls = new Set();
@@ -41,25 +73,12 @@ async function runCheck() {
   console.log(`${urls.size} unique URLs, ${queue.length} to check`);
   // At most WORKERS requests at once and 2 per host, with a pause between a host's requests: an
   // audit that opens a connection to every host at once only measures its own timeouts.
-  const WORKERS = 24;
-  const busy = new Map();
   let done = 0;
-  const next = () => {
-    const i = queue.findIndex((u) => (busy.get(u.host) || 0) < 2);
-    return i < 0 ? null : queue.splice(i, 1)[0];
-  };
-  await Promise.all(Array.from({ length: WORKERS }, async () => {
-    while (queue.length) {
-      const item = next();
-      if (!item) { await new Promise((r) => setTimeout(r, 50)); continue; }
-      const { url, host } = item;
-      busy.set(host, (busy.get(host) || 0) + 1);
-      cache[url] = await check(url);
-      await new Promise((r) => setTimeout(r, 250));
-      busy.set(host, busy.get(host) - 1);
+  await checkUrlQueue(queue, cache, {
+    onChecked: () => {
       if (++done % 200 === 0) { fs.writeFileSync(CACHE, JSON.stringify(cache)); console.log(`${done}`); }
-    }
-  }));
+    },
+  });
   fs.writeFileSync(CACHE, JSON.stringify(cache));
   const tally = Object.values(cache).reduce((t, r) => ({ ...t, [r.status]: (t[r.status] || 0) + 1 }), {});
   console.log('result', tally);
