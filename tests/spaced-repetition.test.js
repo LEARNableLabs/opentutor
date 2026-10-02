@@ -1,0 +1,100 @@
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
+import { TutorStore } from '../lib/core/store.js';
+import { lessonTurn } from '../api/lesson.js';
+import { registerConcepts, recordReviewResult, dueConcepts, summarize } from '../lib/core/spaced-repetition.js';
+
+// #327: one SM-2 for the web, the bot and agents.
+
+const day = (n) => new Date(Date.UTC(2026, 0, 1 + n));
+
+describe('SM-2 core', () => {
+  it('schedules 1 day, then 3, then interval x ease; a miss resets', () => {
+    const r = registerConcepts({}, 't', ['Alpha'], day(0));
+    const rec = r['t::alpha'];
+    expect(rec.next_review).toBe('2026-01-02');
+    recordReviewResult(r, 't', 'Alpha', 'easy', day(1));
+    expect([rec.interval, rec.next_review]).toEqual([1, '2026-01-03']);
+    recordReviewResult(r, 't', 'Alpha', 'easy', day(2));
+    expect(rec.interval).toBe(3);
+    recordReviewResult(r, 't', 'Alpha', 'easy', day(5));
+    expect(rec.interval).toBe(Math.ceil(3 * 2.7));
+    recordReviewResult(r, 't', 'Alpha', 'wrong', day(9));
+    expect([rec.interval, rec.streak]).toEqual([1, 0]);
+  });
+
+  it('keeps the schedule of a concept registered twice, and ignores an untracked one', () => {
+    const r = registerConcepts({}, 't', ['a'], day(0));
+    r['t::a'].ease = 1.5;
+    registerConcepts(r, 't', ['a'], day(3));
+    expect(r['t::a'].ease).toBe(1.5);
+    expect(recordReviewResult(r, 't', 'nope', 'easy')).toBe(r);
+  });
+
+  it('lists the most overdue first, per topic, minus the excluded', () => {
+    const r = {};
+    registerConcepts(r, 't', ['old'], day(0));
+    registerConcepts(r, 't', ['newer'], day(2));
+    registerConcepts(r, 't', ['skip'], day(0));
+    registerConcepts(r, 'other', ['x'], day(0));
+    expect(dueConcepts(r, { topicSlug: 't', now: day(5), exclude: ['skip'] }).map((c) => c.concept)).toEqual(['old', 'newer']);
+    expect(dueConcepts(r, { topicSlug: 't', now: day(0) })).toEqual([]);
+    expect(summarize(r, 't', day(5))).toMatchObject({ total: 3, due: 3 });
+  });
+});
+
+describe('spaced repetition in the web lesson', () => {
+  let root, store, ctx, score;
+  const PLAN = { goal: 'g', retrieval: 'Warm up?', diagnostic: 'What do you know?', followUp: 'Example?', application: 'Apply it.', commonMisconceptions: [] };
+
+  beforeEach(() => {
+    vi.stubEnv('OPENTUTOR_DATA_DIR', '');
+    root = fs.mkdtempSync(path.join(os.tmpdir(), 'ot-sr-'));
+    const dir = path.join(root, 'skills', 'tutor', 'domains', 'demo');
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'curriculum.json'), JSON.stringify({
+      topic: 'Demo',
+      lessons: [1, 2, 3].map((n) => ({ lesson: n, module: 'M', title: `L${n}`, concepts: [`c${n}`], status: 'pending' })),
+    }));
+    store = new TutorStore(root);
+    score = 0.9;
+    const adapter = { generate: vi.fn(async (system) => (system.includes('## Current Step:')
+      ? { text: `<assessment>{"score":${score}}</assessment>\nNoted.` }
+      : { text: JSON.stringify(PLAN) })) };
+    ctx = { state: store, getAdapter: vi.fn(async () => adapter), skills: new Map() };
+  });
+  afterEach(() => { store.close(); fs.rmSync(root, { recursive: true, force: true }); vi.unstubAllEnvs(); });
+
+  async function finish() {
+    for (let i = 0; i < 6; i++) if ((await lessonTurn(ctx, { topicSlug: 'demo', answer: `a${i}` })).body.done) return;
+    throw new Error('never finished');
+  }
+
+  it('registers a finished lesson\'s concepts', async () => {
+    await lessonTurn(ctx, { topicSlug: 'demo' });
+    await finish();
+    expect(Object.keys(store.readProgress().spaced_repetition)).toEqual(['demo::c1']);
+  });
+
+  it('opens the next lesson on a due concept, and a miss reschedules it', async () => {
+    await lessonTurn(ctx, { topicSlug: 'demo' });
+    await finish();
+    store.updateProgress((p) => { p.spaced_repetition['demo::c1'].next_review = '2000-01-01'; });
+    const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+    expect(start.body.reply).toContain('what is c1');
+    score = 0.1;
+    await finish();
+    const rec = store.readProgress().spaced_repetition['demo::c1'];
+    expect([rec.reps, rec.interval, rec.streak]).toEqual([1, 1, 0]);
+    expect(rec.next_review > '2000-01-01').toBe(true);
+  });
+
+  it('does not retest anything before a concept is due', async () => {
+    await lessonTurn(ctx, { topicSlug: 'demo' });
+    await finish();
+    const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+    expect(start.body.reply).not.toContain('what is c1');
+  });
+});

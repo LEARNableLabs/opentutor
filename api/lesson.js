@@ -21,6 +21,7 @@ import { suggestedAnswers, settleOptions } from '../lib/core/answer-options.js';
 import { parseDirectives, parseRetested, reviewLesson, namesConcept } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter, stripGrades } from '../lib/core/assessment.js';
 import { parseFirstJson } from '../lib/core/json.js';
+import { dueConcepts } from '../lib/core/spaced-repetition.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 // Review lessons in a row before the next lesson goes ahead (#149), whichever concepts they
@@ -348,7 +349,11 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   // The planner is asked to open on this retest, but its plan can leave it out,
   // and the fallback above has none. Same order as the planner's instruction.
-  const retest = directives.find((d) => d.type === 'REVISIT') || directives.find((d) => d.type === 'BLOCK');
+  // With neither, the most overdue concept of the spaced-repetition schedule is retested (#327).
+  const progress = await safely(() => state.readProgress(), null, 'read progress');
+  const due = dueConcepts(progress?.spaced_repetition, { topicSlug, limit: 1, exclude: lesson.concepts })[0];
+  const retest = directives.find((d) => d.type === 'REVISIT') || directives.find((d) => d.type === 'BLOCK')
+    || (due && { target: due.concept });
   const hasRetrieval = typeof plan.retrieval === 'string' && plan.retrieval.trim();
   // The planner's own question counts as the retest only when it names the concept as a whole
   // ("asset" is not "set", "NoSQL" is not "SQL"); otherwise the lesson asks ours (#227), so a right
