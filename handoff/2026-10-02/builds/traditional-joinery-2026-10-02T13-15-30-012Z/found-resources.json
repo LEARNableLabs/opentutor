@@ -1,0 +1,170 @@
+[
+ {
+  "lesson": 7,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=f08Y39UiC-o",
+    "type": "video",
+    "title": "Understanding Stresses in Beams (The Efficient Engineer)",
+    "why": "Clear animations show the stress flipping from squeezing at the top to stretching at the bottom, with zero stress along the neutral axis, so you can see why cracks start on the tension face."
+   },
+   {
+    "url": "https://unseel.com/engineering/beam-bending",
+    "type": "interactive",
+    "title": "Beam Bending: Interactive Explainer",
+    "why": "You load a beam yourself and watch the compression and tension zones and the neutral axis move, which beats any diagram in a book."
+   },
+   {
+    "url": "https://practical.engineering/blog/2018/8/1/why-does-concrete-need-reinforcement",
+    "type": "article",
+    "title": "Why Does Concrete Need Reinforcement? (Practical Engineering)",
+    "why": "Grady Hillhouse breaks beams and the crack opens at the bottom every time, which explains why builders put steel exactly where wood is also most at risk."
+   },
+   {
+    "url": "https://www.gutenberg.org/files/12299/12299-h/12299-h.htm",
+    "type": "article",
+    "title": "The Mechanical Properties of Wood, Samuel J. Record (Project Gutenberg)",
+    "why": "A free 1914 primary source that sorts real timber beam failures into types, such as 'simple tension' and 'cross-grained tension' on the underside, the way a forester of that era actually saw them."
+   }
+  ]
+ },
+ {
+  "lesson": 8,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=dEVm5Jmvtmc",
+    "type": "video",
+    "title": "Butt Joint Strength Test: Nails vs Glues vs Screws",
+    "why": "Brad nails, framing nails, CA glue, wood glue and screws are each loaded until they break, so you can see which one wins before you form an opinion."
+   },
+   {
+    "url": "https://woodgears.ca/joint_strength/glue.html",
+    "type": "article",
+    "title": "Glue strength testing (Matthias Wandel, woodgears.ca)",
+    "why": "An engineer tests glues on a home-built machine, and the wood often breaks before the glue line does, which upsets the idea that glue is the weak link."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ugw29gB8HW0",
+    "type": "video",
+    "title": "No Nails, No Screws: Japanese Woodworking WARI-KUSABI (割楔)",
+    "why": "A split wedge gets driven into a tenon and spreads it inside its hole, so you see a mechanical lock hold the joint with no glue and no metal."
+   },
+   {
+    "url": "https://research.fs.usda.gov/fpl/wood-handbook",
+    "type": "paper",
+    "title": "Wood Handbook: Wood as an Engineering Material (USDA Forest Products Laboratory)",
+    "why": "This is the free government reference engineers use, and its Fastenings and Adhesives chapters give real numbers for how nails, bolts and glue carry load."
+   }
+  ]
+ },
+ {
+  "lesson": 9,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=lpjf5KoqpRQ",
+    "type": "video",
+    "title": "What I learned from breaking 100 pieces of wood",
+    "why": "Watching 100 nearly identical sticks each break somewhere different shows that knots and grain often decide where a part fails, not the textbook cross-section."
+   },
+   {
+    "url": "https://woodgears.ca/joint_strength/pockethole.html",
+    "type": "article",
+    "title": "Testing pocket holes against mortise and tenon and dowel joints (woodgears.ca)",
+    "why": "The screw joints bend so far before they break that their 'failure strength' means little for furniture, which teaches you that failure isn't only the moment something snaps."
+   },
+   {
+    "url": "https://ftet.com/sites/default/files/2018-07/miller_report.pdf",
+    "type": "paper",
+    "title": "Capacity of Pegged Mortise and Tenon Joinery (Richard J. Schmidt)",
+    "why": "Lab photos show pegs bending, wood crushing, and the 'relish' shearing out behind the peg, a full list of how a real timber joint breaks."
+   }
+  ]
+ },
+ {
+  "lesson": 10,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=iblkJnlmg4w",
+    "type": "video",
+    "title": "Drawbore: An Inside Look (Paul Sellers)",
+    "why": "Paul Sellers saws a drawbored joint in half so you can see the peg bent into an S-curve, pulling the tenon tight from inside."
+   },
+   {
+    "url": "https://woodgears.ca/mortise/strong.html",
+    "type": "article",
+    "title": "Mortise and tenon vs. dowel joints: A strength test (woodgears.ca)",
+    "why": "A homemade test rig with a bathroom scale gives real numbers: on average the mortise and tenon beat dowels by about 25%, and the photos show bits of the post still stuck to the broken tenons."
+   },
+   {
+    "url": "https://www.popularwoodworking.com/techniques/drawboring-resurrected/",
+    "type": "article",
+    "title": "Drawboring Resurrected (Popular Woodworking)",
+    "why": "It explains how a centuries-old trick made joints that held for generations with no clamps and no glue at all."
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Nuki_(joinery)",
+    "type": "article",
+    "title": "Nuki (joinery) (Wikipedia)",
+    "why": "Japan's wedged through-tenon lets a frame flex and soak up earthquake energy without collapsing, a different answer to racking than Western framing gives."
+   }
+  ]
+ },
+ {
+  "lesson": 11,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=OCYjoj6cfno",
+    "type": "video",
+    "title": "How to make a Dovetail Joint: The Three Joints (Paul Sellers)",
+    "why": "Watching tails and pins cut by hand, then tapped together, makes it obvious why the joint slides together one way and can't pull apart the other."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=cRPgCMmbeyQ",
+    "type": "video",
+    "title": "Dovetail joint vs box joint strength test",
+    "why": "The dovetail loses to a plain box joint when pulled the 'wrong' way, which shows that its strength depends on direction."
+   },
+   {
+    "url": "https://woodgears.ca/dovetail/strength.html",
+    "type": "article",
+    "title": "Dovetail vs. box joint strength (woodgears.ca)",
+    "why": "The pins sheared off while the glue held, and the author argues that with modern glue, choosing a dovetail just for strength is obsolete, which gives you something to argue about."
+   },
+   {
+    "url": "https://japanesewoodjoints.com/joint/koshikake-ari-tsugi",
+    "type": "article",
+    "title": "Koshikake Ari Tsugi (腰掛蟻継ぎ): Seated Dovetail Splice",
+    "why": "Japanese carpenters use the same flared shape to splice beams end to end, with a seat underneath to carry the weight, so this is the dovetail's lock at building scale."
+   }
+  ]
+ },
+ {
+  "lesson": 12,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=CE147Ow7RmM",
+    "type": "video",
+    "title": "What's the Best Wood Joint || Insanely Strong Joinery!",
+    "why": "Lots of joints are broken one after another, so you can pause before each break and guess which force it resists and where it will fail."
+   },
+   {
+    "url": "https://woodgears.ca/joint_strength/",
+    "type": "article",
+    "title": "Wood joint strength testing (woodgears.ca)",
+    "why": "One page brings together tests on mortise and tenon, dowel, pocket-hole and screw joints with numbers and failure photos, which makes it a ready-made review sheet."
+   },
+   {
+    "url": "https://www.arch2o.com/perfection-traditional-japanese-joinery-animated-illustrations-gifs/",
+    "type": "article",
+    "title": "The Perfection of Traditional Japanese Joinery in Animated Illustrations (Arch2O)",
+    "why": "Looping animations take complex Japanese joints apart, so you can work out which force each interlocking face is there to resist."
+   },
+   {
+    "url": "https://www.designboom.com/technology/free-interactive-software-easily-complex-japanese-wooden-joints-furniture-04-13-2021/",
+    "type": "interactive",
+    "title": "Tsugite: free interactive software for designing Japanese wood joints (designboom)",
+    "why": "University of Tokyo software lets you design your own interlocking joint and checks whether it can actually be assembled and will stay locked."
+   }
+  ]
+ }
+]

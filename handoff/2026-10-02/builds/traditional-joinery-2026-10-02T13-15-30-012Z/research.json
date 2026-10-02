@@ -1,0 +1,35 @@
+{
+ "arxiv": [],
+ "semanticScholar": [],
+ "wikipedia": null,
+ "openAlex": [
+  {
+   "type": "work",
+   "name": "The wood from the trees: The use of timber in construction",
+   "description": "2016 — 1400 citations",
+   "worksCount": 1400,
+   "authors": [
+    "Michael H. Ramage",
+    "Henry C. Burridge",
+    "Marta Busse‐Wicher"
+   ],
+   "doi": "https://doi.org/10.1016/j.rser.2016.09.107"
+  },
+  {
+   "type": "work",
+   "name": "Enhancement of large-scale flood risk assessments using building-material-based vulnerability curves for an object-based approach in urban and rural areas",
+   "description": "2019 — 102 citations",
+   "worksCount": 102,
+   "authors": [
+    "Johanna Englhardt",
+    "Hans de Moel",
+    "Charles K. Huyck"
+   ],
+   "doi": "https://doi.org/10.5194/nhess-19-1703-2019"
+  }
+ ],
+ "syllabi": [],
+ "youtube": [],
+ "github": [],
+ "wikiLinks": []
+}

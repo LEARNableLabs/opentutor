@@ -1,0 +1,627 @@
+{
+  "topic": "Bread chemistry — gluten networks and baking science",
+  "slug": "bread-chemistry",
+  "created": "2026-10-02",
+  "student_level": "intermediate",
+  "exit_criteria": [
+    "Name the main components of wheat flour (gliadin, glutenin, starch, damaged starch, arabinoxylans, lipids, enzymes) and give the role of each in dough",
+    "Explain how hydration, kneading and rest build a gluten network through disulfide and hydrogen bonding, and why gliadin and glutenin contribute different properties",
+    "Predict how salt, time and temperature change dough strength and fermentation, and justify each prediction mechanistically",
+    "Describe yeast and lactic/acetic acid bacteria metabolism, and explain where bread's rise, flavor and sourness come from",
+    "Explain viscoelasticity, elasticity vs. extensibility and gas retention conceptually, and link them to shaping and proofing decisions",
+    "Walk through the oven sequence (oven spring, starch gelatinization, protein setting, Maillard browning vs. caramelization, the role of steam)",
+    "Explain staling as starch retrogradation and choose the right storage method",
+    "Contrast enriched, rye and gluten-free doughs with lean wheat dough by asking what replaces or weakens the gluten network",
+    "Calculate hydration, salt percentage and preferment percentage with baker's percentages",
+    "Diagnose common bread defects (dense crumb, flying crust, pale crust, gummy interior, collapse) by tracing them to a cause in a specific stage"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Inside the Flour Bag",
+      "title": "Why can wheat flour make a risen loaf when rice flour can't?",
+      "concepts": [
+        "flour composition",
+        "gluten-forming proteins",
+        "gas-holding network"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=3g7sGpYUieg",
+        "https://annex.exploratorium.edu/cooking/bread/bread_science.html",
+        "https://www.sciencedaily.com/releases/2017/03/170322092653.htm",
+        "https://www.compoundchem.com/2016/01/13/bread/",
+        "https://en.wikipedia.org/wiki/Gluten"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Inside the Flour Bag",
+      "title": "Why does wheat need two different gluten proteins instead of one?",
+      "concepts": [
+        "gliadin",
+        "glutenin",
+        "viscosity vs. elasticity"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=-JVO62Vzhqc",
+        "https://modernistcuisine.com/mcah/gluten-how-does-it-work/",
+        "https://www.semanticscholar.org/paper/The-structure-and-properties-of-gluten:-an-elastic-Shewry-Halford/8ef16ac3eab3c11c6add37d509b7ce49711df922",
+        "https://en.wikipedia.org/wiki/Gliadin",
+        "https://en.wikipedia.org/wiki/Glutenin"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Inside the Flour Bag",
+      "title": "If flour is mostly starch, what is all that starch doing in dough?",
+      "concepts": [
+        "starch granules",
+        "amylose and amylopectin",
+        "damaged starch",
+        "water absorption"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://youtube.com/watch?pp=0gcJCdgAo7VqN5tD&v=3ziMBDPMuP8",
+        "https://www.youtube.com/watch?v=BMOgr-Buiag",
+        "https://bakerpedia.com/processes/damaged-starch/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9238825/",
+        "https://en.wikipedia.org/wiki/Starch"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Inside the Flour Bag",
+      "title": "What are the minor players (arabinoxylans, lipids and enzymes) doing in your flour?",
+      "concepts": [
+        "arabinoxylans (pentosans)",
+        "flour lipids",
+        "native amylases"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=7M1X4UFgn4w",
+        "https://www.pizzablab.com/learning-and-resources/flour/enzymatic-activity-in-flour/",
+        "https://bakerpedia.com/wp-content/uploads/2020/09/Enzymes-ebook_2020.pdf",
+        "https://www.chemistryworld.com/features/bread-chemistry-on-the-rise/3004720.article",
+        "https://en.wikipedia.org/wiki/Arabinoxylan"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Inside the Flour Bag",
+      "title": "Why does bread flour behave so differently from cake flour?",
+      "concepts": [
+        "protein content",
+        "hard vs. soft wheat",
+        "whole-grain vs. white flour",
+        "baker's percentages"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=otTGwL5RQn4",
+        "https://www.kingarthurbaking.com/blog/2022/04/28/what-is-bakers-math-and-how-can-i-use-it-in-my-everyday-bread-baking",
+        "https://annex.exploratorium.edu/cooking/icooks/4-21-03.html",
+        "https://en.wikipedia.org/wiki/Wheat_flour",
+        "https://en.wikipedia.org/wiki/Flour"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Mixing: Building the Gluten Network",
+      "title": "If gluten is 'in' flour, why can't you find any in a dry bag?",
+      "concepts": [
+        "hydration",
+        "gluten formation",
+        "dough-washing experiment"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=BXjvlYKsXgA",
+        "https://annex.exploratorium.edu/cooking/bread/activity-gluten.html",
+        "https://www.sciencebuddies.org/science-fair-projects/project-ideas/FoodSci_p040/cooking-food-science/which-wheat-flour-has-the-most-gluten",
+        "https://www.kingarthurbaking.com/blog/2021/08/18/a-beginners-guide-to-gluten",
+        "https://en.wikipedia.org/wiki/Gluten"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Mixing: Building the Gluten Network",
+      "title": "How do separate proteins link up into one stretchy network?",
+      "concepts": [
+        "disulfide bonds",
+        "cysteine",
+        "hydrogen bonding",
+        "glutenin macropolymer"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Disulfide",
+        "https://en.wikipedia.org/wiki/Cysteine",
+        "https://en.wikipedia.org/wiki/Hydrogen_bond",
+        "https://doi.org/10.1105/tpc.7.7.945"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Mixing: Building the Gluten Network",
+      "title": "What is kneading actually doing to the proteins?",
+      "concepts": [
+        "mechanical work input",
+        "protein alignment",
+        "disulfide interchange",
+        "overmixing"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Kneading",
+        "https://www.seriouseats.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Mixing: Building the Gluten Network",
+      "title": "How can flour and water build gluten while you do nothing at all?",
+      "concepts": [
+        "autolyse",
+        "passive gluten development",
+        "protease and amylase activity",
+        "delayed salt and yeast"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Protease",
+        "https://www.theperfectloaf.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Mixing: Building the Gluten Network",
+      "title": "Why does salt tighten dough, and does it matter when you add it?",
+      "concepts": [
+        "charge shielding",
+        "gluten tightening",
+        "osmotic effect on yeast",
+        "salt percentage"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Gluten",
+        "https://en.wikipedia.org/wiki/Baker_percentage"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Mixing: Building the Gluten Network",
+      "title": "What does the windowpane test really tell you, and when does it lie?",
+      "concepts": [
+        "extensibility",
+        "gluten film",
+        "limits of the windowpane test"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Gluten",
+        "https://www.kingarthurbaking.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Mixing: Building the Gluten Network",
+      "title": "Review: Why did this dough tear, slump or never come together?",
+      "concepts": [
+        "flour choice",
+        "hydration",
+        "kneading and autolyse",
+        "salt timing"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Gluten",
+        "https://en.wikipedia.org/wiki/Baker_percentage"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Fermentation",
+      "title": "What is yeast eating, and where does it find sugar in plain flour?",
+      "concepts": [
+        "amylase and maltose",
+        "yeast glycolysis",
+        "CO2 and ethanol production"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae",
+        "https://en.wikipedia.org/wiki/Ethanol_fermentation",
+        "https://en.wikipedia.org/wiki/Amylase"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Fermentation",
+      "title": "Why does a cold, slow fermentation make better-tasting bread?",
+      "concepts": [
+        "temperature and fermentation rate",
+        "desired dough temperature",
+        "cold retard",
+        "flavor compounds"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Proofing_(baking_technique)",
+        "https://en.wikipedia.org/wiki/Preferment"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Fermentation",
+      "title": "If yeast doesn't make sourdough sour, what does?",
+      "concepts": [
+        "lactic acid bacteria",
+        "homofermentative vs. heterofermentative",
+        "lactic vs. acetic acid",
+        "pH"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Sourdough",
+        "https://en.wikipedia.org/wiki/Lactic_acid_bacteria",
+        "https://en.wikipedia.org/wiki/Acetic_acid"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Fermentation",
+      "title": "Why does a sourdough starter settle into a stable ecosystem instead of a random mess?",
+      "concepts": [
+        "microbial ecology",
+        "acid tolerance",
+        "competition",
+        "feeding schedule"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Sourdough",
+        "https://www.theperfectloaf.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Fermentation",
+      "title": "Can fermentation destroy the network it's inflating?",
+      "concepts": [
+        "pH effects on gluten",
+        "proteolysis",
+        "over-fermentation",
+        "glutathione from dead yeast"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Glutathione",
+        "https://en.wikipedia.org/wiki/Protease"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Fermentation",
+      "title": "Review: Which fermentation went wrong, and how can you tell?",
+      "concepts": [
+        "yeast metabolism",
+        "temperature control",
+        "sourdough acidity",
+        "over- vs. under-fermentation"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Sourdough",
+        "https://en.wikipedia.org/wiki/Proofing_(baking_technique)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Rheology & Shaping",
+      "title": "Why does dough flow like a liquid but bounce like a solid?",
+      "concepts": [
+        "viscoelasticity",
+        "timescale of deformation",
+        "gluten as a natural elastomer"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Viscoelasticity",
+        "https://en.wikipedia.org/wiki/Rheology",
+        "https://en.wikipedia.org/wiki/Elastomer"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Rheology & Shaping",
+      "title": "Why does one dough snap back while another stretches forever?",
+      "concepts": [
+        "elasticity vs. extensibility",
+        "gliadin/glutenin balance",
+        "relaxation and bench rest"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Gliadin",
+        "https://en.wikipedia.org/wiki/Glutenin"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Rheology & Shaping",
+      "title": "How does dough hold gas without its bubbles popping or merging?",
+      "concepts": [
+        "gas cell nuclei from mixing",
+        "strain hardening",
+        "bubble-wall stability",
+        "gas retention"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Dough",
+        "https://en.wikipedia.org/wiki/Gluten"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Rheology & Shaping",
+      "title": "What are shaping and proofing doing to the bubbles, and what does the poke test detect?",
+      "concepts": [
+        "surface tension from shaping",
+        "degassing and bubble subdivision",
+        "proof level",
+        "poke test"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Proofing_(baking_technique)",
+        "https://www.kingarthurbaking.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "In the Oven",
+      "title": "What causes oven spring, and why does steam make it bigger?",
+      "concepts": [
+        "gas expansion with heat",
+        "water and ethanol vaporization",
+        "final yeast burst",
+        "steam and crust extensibility"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Bread",
+        "https://www.seriouseats.com/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "In the Oven",
+      "title": "At what point does dough actually become bread?",
+      "concepts": [
+        "starch gelatinization",
+        "protein denaturation and setting",
+        "foam-to-sponge transition",
+        "internal temperature"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Starch_gelatinization",
+        "https://en.wikipedia.org/wiki/Denaturation_(biochemistry)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "In the Oven",
+      "title": "Why is the crust brown, and why isn't that caramel?",
+      "concepts": [
+        "Maillard reaction",
+        "caramelization",
+        "surface temperature and dryness",
+        "pH effects on browning"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Maillard_reaction",
+        "https://en.wikipedia.org/wiki/Caramelization",
+        "https://en.wikipedia.org/wiki/Pretzel"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "In the Oven",
+      "title": "Review: Pale, flying, gummy or flat? Which oven stage failed?",
+      "concepts": [
+        "oven spring",
+        "gelatinization and setting",
+        "browning chemistry",
+        "steam"
+      ],
+      "difficulty": 4,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Starch_gelatinization",
+        "https://en.wikipedia.org/wiki/Maillard_reaction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "After the Bake & Variations",
+      "title": "If stale bread isn't dry, what happened to it?",
+      "concepts": [
+        "starch retrogradation",
+        "amylopectin recrystallization",
+        "fridge vs. freezer storage",
+        "reheating to reverse staling"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Retrogradation_(starch)",
+        "https://en.wikipedia.org/wiki/Staling"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "After the Bake & Variations",
+      "title": "Why do butter, sugar and eggs make dough softer and slower?",
+      "concepts": [
+        "fat coating gluten",
+        "sugar's hygroscopic and osmotic effects",
+        "egg proteins and lecithin"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Brioche",
+        "https://en.wikipedia.org/wiki/Lecithin"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "After the Bake & Variations",
+      "title": "How does rye rise with almost no gluten network?",
+      "concepts": [
+        "arabinoxylan viscosity",
+        "rye amylase activity",
+        "acidification to protect starch",
+        "viscous vs. elastic dough"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Rye_bread",
+        "https://en.wikipedia.org/wiki/Arabinoxylan",
+        "https://en.wikipedia.org/wiki/Sourdough"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "After the Bake & Variations",
+      "title": "What has to replace gluten in a gluten-free loaf?",
+      "concepts": [
+        "hydrocolloids (xanthan, psyllium)",
+        "batter-like doughs",
+        "starch- and egg-based structure",
+        "celiac disease (context only)"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Xanthan_gum",
+        "https://en.wikipedia.org/wiki/Gluten-free_diet",
+        "https://en.wikipedia.org/wiki/Celiac_disease"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "After the Bake & Variations",
+      "title": "What are 'improvers' like ascorbic acid and enzymes doing to commercial dough?",
+      "concepts": [
+        "ascorbic acid as an oxidant",
+        "xylanases and water redistribution",
+        "anti-staling amylases",
+        "Chorleywood process (brief)"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Flour_treatment_agent",
+        "https://en.wikipedia.org/wiki/Xylanase",
+        "https://doi.org/10.1016/j.femsre.2004.06.005",
+        "https://en.wikipedia.org/wiki/Chorleywood_bread_process"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "After the Bake & Variations",
+      "title": "Capstone: Can you diagnose any bad loaf from flour to staling?",
+      "concepts": [
+        "cross-stage defect diagnosis",
+        "causal chains",
+        "baker's percentage adjustments",
+        "designing a fix"
+      ],
+      "difficulty": 5,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Baker_percentage",
+        "https://en.wikipedia.org/wiki/Gluten",
+        "https://en.wikipedia.org/wiki/Maillard_reaction",
+        "https://en.wikipedia.org/wiki/Retrogradation_(starch)"
+      ],
+      "status": "pending"
+    }
+  ],
+  "level": "intermediate",
+  "prerequisites": [
+    "High-school chemistry: atoms, covalent bonds, hydrogen bonds and ionic interactions",
+    "Proteins as chains of amino acids that fold into shapes",
+    "What a chemical reaction is, and how temperature changes its rate",
+    "The pH scale: acids and bases",
+    "Ratio and percentage arithmetic (for baker's percentages)",
+    "Basic kitchen experience (helpful but not required)"
+  ],
+  "preliminary": false
+}

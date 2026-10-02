@@ -1,0 +1,150 @@
+{
+ "arxiv": [],
+ "semanticScholar": [],
+ "wikipedia": null,
+ "openAlex": [
+  {
+   "type": "work",
+   "name": "Smoothed particle hydrodynamics",
+   "description": "2005 — 2760 citations",
+   "worksCount": 2760,
+   "authors": [
+    "Joseph J. Monaghan"
+   ],
+   "doi": "https://doi.org/10.1088/0034-4885/68/8/r01"
+  },
+  {
+   "type": "work",
+   "name": "Encyclopedia of Volcanoes",
+   "description": "2000 — 2092 citations",
+   "worksCount": 2092,
+   "authors": [
+    "Gary L. Rowe"
+   ],
+   "doi": "https://doi.org/10.1029/00eo00168"
+  },
+  {
+   "type": "work",
+   "name": "Petrogenesis of Mesozoic granitoids and volcanic rocks in South China: A response to tectonic evolution",
+   "description": "2006 — 1778 citations",
+   "worksCount": 1778,
+   "authors": [
+    "Xinmin Zhou",
+    "Tao Sun",
+    "Weizhou Shen"
+   ],
+   "doi": "https://doi.org/10.18814/epiiugs/2006/v29i1/004"
+  },
+  {
+   "type": "work",
+   "name": "Viscosity of magmatic liquids: A model",
+   "description": "2008 — 1640 citations",
+   "worksCount": 1640,
+   "authors": [
+    "Daniele Giordano",
+    "James Kelly Russell",
+    "Donald Bruce Dingwell"
+   ],
+   "doi": "https://doi.org/10.1016/j.epsl.2008.03.038"
+  },
+  {
+   "type": "work",
+   "name": "High-resolution X-ray computed tomography in geosciences: A review of the current technology and applications",
+   "description": "2013 — 1595 citations",
+   "worksCount": 1595,
+   "authors": [
+    "Veerle Cnudde",
+    "Matthieu Boone"
+   ],
+   "doi": "https://doi.org/10.1016/j.earscirev.2013.04.003"
+  }
+ ],
+ "syllabi": [],
+ "youtube": [],
+ "github": [
+  {
+   "name": "ROBelgium/MSNoise",
+   "description": "A Python Package for Monitoring Seismic Velocity Changes using Ambient Seismic Noise | http://www.msnoise.org",
+   "url": "https://github.com/ROBelgium/MSNoise",
+   "stars": 214,
+   "language": "Python",
+   "topics": [
+    "data-mining",
+    "noise",
+    "passive",
+    "python",
+    "research"
+   ]
+  },
+  {
+   "name": "QuakeMigrate/QuakeMigrate",
+   "description": "A Python package for automatic earthquake detection and location using waveform migration and stacking.",
+   "url": "https://github.com/QuakeMigrate/QuakeMigrate",
+   "stars": 173,
+   "language": "Python",
+   "topics": [
+    "detection",
+    "earthquake",
+    "location",
+    "passive",
+    "python"
+   ]
+  },
+  {
+   "name": "ahotovec/REDPy",
+   "description": "Repeating Earthquake Detector (Python)",
+   "url": "https://github.com/ahotovec/REDPy",
+   "stars": 90,
+   "language": "Python",
+   "topics": [
+    "python",
+    "repeating-earthquakes",
+    "seismology",
+    "volcanology"
+   ]
+  },
+  {
+   "name": "TITAN2D/titan2d",
+   "description": "The TITAN2D toolkit is used for modeling of geophysical mass flows over natural terrain (volcanic flows, avalanches, landslides, ...).",
+   "url": "https://github.com/TITAN2D/titan2d",
+   "stars": 35,
+   "language": "C",
+   "topics": [
+    "amr",
+    "avalanche",
+    "digital-elevation-model",
+    "geophysical-fluid",
+    "hazard-assessment"
+   ]
+  },
+  {
+   "name": "ThomasLecocq/msnoise-tomo",
+   "description": "The Ambient Noise Tomography Plugin for MSNoise",
+   "url": "https://github.com/ThomasLecocq/msnoise-tomo",
+   "stars": 30,
+   "language": "Python",
+   "topics": [
+    "imaging",
+    "noise",
+    "passive",
+    "python",
+    "research"
+   ]
+  },
+  {
+   "name": "caiosweet/Home-Assistant-custom-components-INGV",
+   "description": "INGV - National Institute of Geophysics and Volcanology [Istituto Nazionale di Geofisica e Vulcanologia] Terremoti Italia.",
+   "url": "https://github.com/caiosweet/Home-Assistant-custom-components-INGV",
+   "stars": 29,
+   "language": "Python",
+   "topics": [
+    "assistant",
+    "geofisica",
+    "home",
+    "homeassistant",
+    "ingv"
+   ]
+  }
+ ],
+ "wikiLinks": []
+}

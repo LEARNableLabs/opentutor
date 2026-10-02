@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ "$PRIVATE_OUTPUT_MODE" = "stderr" ]; then
+  printf "%s" "PRIVATE_DIAGNOSTIC_SENTINEL" >&2
+else
+  printf "%s" "PRIVATE_COMPLETION_SENTINEL"
+fi
+exit 1

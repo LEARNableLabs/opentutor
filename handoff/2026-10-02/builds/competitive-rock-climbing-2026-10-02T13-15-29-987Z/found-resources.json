@@ -1,0 +1,332 @@
+[
+ {
+  "lesson": 1,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=ImEYrUvdqXA",
+    "type": "video",
+    "title": "Sport Climbing Explained: A Pro Climber's Guide to Boulder, Lead & Speed Climbing",
+    "why": "Shauna Coxsey, a multiple Boulder World Cup champion and Team GB's first Olympic climber, explains the three disciplines from the athlete's side, not the rulebook's."
+   },
+   {
+    "url": "https://www.olympics.com/en/news/sport-climbing-la28-what-new-olympic-format-means-for-sport",
+    "type": "article",
+    "title": "Sport climbing at LA28: What the new Olympic format means for the sport and its stars",
+    "why": "The Olympic format has changed at every Games, from one combined medal in Tokyo to three separate medals for LA28, and this piece shows who gains and who loses each time."
+   },
+   {
+    "url": "https://gripped.com/indoor-climbing/the-olympic-qualifier-series-explained/",
+    "type": "article",
+    "title": "The Olympic Qualifier Series, Explained",
+    "why": "It shows the less visible part of the sport: the series of events climbers have to get through just to reach an Olympic final."
+   }
+  ]
+ },
+ {
+  "lesson": 2,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=29DbBWaNKJk",
+    "type": "video",
+    "title": "IFSC Boulder Scoring 2025 Explained — Old System vs New System",
+    "why": "It sets the old tops-zones-attempts system next to the 25/10/-0.1 points system, so you can see exactly which results would come out differently."
+   },
+   {
+    "url": "https://www.worldclimbing.com/news/new-rule-changes-take-effect-for-ifsc-world-cup-series-2025",
+    "type": "article",
+    "title": "New Rule Changes Take Effect for IFSC World Cup Series 2025",
+    "why": "This is the official announcement, and it says the change was made so newcomers could follow the leaderboard, not to make results fairer."
+   },
+   {
+    "url": "https://www.lacrux.com/en/competition/Fairer-for-athletes--more-complicated-for-coaches--new-ifsc-rules-in-competition/",
+    "type": "article",
+    "title": "Fairer for athletes, more complicated for coaches",
+    "why": "It covers how a new scoring rule changes decisions on the mat, like when to take another attempt and when to rest."
+   },
+   {
+    "url": "https://www.inside-climbing.com/2026/01/19/2025-reivew-part-2-boulder-points-system/",
+    "type": "article",
+    "title": "2025 in Review Part 2: Boulder Points System",
+    "why": "It looks back on the first season with data: in one Prague qualification round, tied groups went from 5 to 18, and it argues 2026 is the last chance to fix the system before Olympic qualification starts."
+   }
+  ]
+ },
+ {
+  "lesson": 3,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=uQo0o6KWhx8",
+    "type": "video",
+    "title": "Olympic Boulder Breakdown // The UNCLIMBED Final, What Was The Beta?",
+    "why": "No finalist topped this Olympic boulder, which makes it a good first case for asking what the setter wanted and why every climber missed it."
+   },
+   {
+    "url": "https://epsets.substack.com/p/whats-behind-boulder-1",
+    "type": "article",
+    "title": "What's Behind Boulder #1?",
+    "why": "It takes apart one Innsbruck men's final boulder that nobody solved and argues the setters asked for a move that couldn't be worked out within the 4-minute limit."
+   },
+   {
+    "url": "https://sendedition.com/how-climbing-routes-are-set-interview-with-team-usa-chief-route-setter-mike-bockino/",
+    "type": "article",
+    "title": "How Climbing Routes Are Set: Interview with Team USA Chief Route Setter Mike Bockino",
+    "why": "A chief setter explains how he mixes movement styles on purpose to separate climbers, and admits climbing is 'an inherently unfair sport.'"
+   }
+  ]
+ },
+ {
+  "lesson": 4,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=e863Qr0jaYo",
+    "type": "video",
+    "title": "Why It's Almost Impossible to Climb 15 Meters in 5 Secs. (ft. Alex Honnold)",
+    "why": "Even Alex Honnold finds the speed wall humbling, which shows how specialised a 5-second run up a fixed route has become."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=WzHofTkfSfs",
+    "type": "video",
+    "title": "Olympic SPORT CLIMBING Rules Explained",
+    "why": "A short rules walkthrough you can pause at the lead section to see how heights and '+' scores decide the ranking."
+   },
+   {
+    "url": "https://gearjunkie.com/climbing/ifsc-climbing-explained",
+    "type": "article",
+    "title": "IFSC World Cup Climbing Rules & Scoring Explained",
+    "why": "It explains why touching the next hold is worth less than controlling it, and why a single '+' can decide a lead final."
+   },
+   {
+    "url": "https://www.olympics.com/en/news/everything-you-need-to-know-about-speed-climbing",
+    "type": "article",
+    "title": "Don't blink: Everything you need to know about the lightning-quick world of speed climbing",
+    "why": "The wall is the same everywhere (15 m, 20 hand holds, 11 footholds), so speed is the only discipline where a world record means anything."
+   }
+  ]
+ },
+ {
+  "lesson": 5,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=FpO0_rArges",
+    "type": "video",
+    "title": "Open Hand vs Crimp Technique for Climbing",
+    "why": "It explains in plain terms why the grip that feels strongest is often the one that injures your fingers."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=KjE7R-tmYGE",
+    "type": "video",
+    "title": "Slopers: Technique, Training, and Cheat Codes",
+    "why": "Slopers depend on friction and body position more than finger strength, and this video shows the small adjustments that make them hold."
+   },
+   {
+    "url": "https://gripped.com/indoor-climbing/the-four-essential-gym-holds-and-how-to-use-them/",
+    "type": "article",
+    "title": "The Four Essential Gym Holds and How to Use Them",
+    "why": "A quick field guide that teaches you to identify each hold type from the ground before you touch it, which is what route reading needs."
+   },
+   {
+    "url": "https://ciss-journal.org/article/view/10986",
+    "type": "paper",
+    "title": "Open hand vs. half-crimp: Do climbers assume differences in their own maximal finger strength that do not exist?",
+    "why": "This open-access study tests whether climbers' belief that they're stronger in a half crimp holds up when finger force is actually measured."
+   }
+  ]
+ },
+ {
+  "lesson": 6,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=PI6eigr-oWY",
+    "type": "video",
+    "title": "Beginner's Guide to HEEL HOOKS and TOE HOOKS",
+    "why": "It shows how using your feet to pull, not just push, gives you options on steep comp walls that hands alone can't."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=QqDebkWHaWc",
+    "type": "video",
+    "title": "How to perform a drop knee in climbing",
+    "why": "It shows how turning one knee down moves your hips closer to the wall, which brings a reach that looked too far within range."
+   },
+   {
+    "url": "https://www.youtube.com/shorts/qpcjYqNbLZ8",
+    "type": "short",
+    "title": "What is flagging in climbing?",
+    "why": "In under a minute it shows how a leg with no foothold can still stop you swinging off the wall."
+   },
+   {
+    "url": "https://www.flashed.com/explore/beta-special/beta-special-the-heel-hook/",
+    "type": "article",
+    "title": "Beta Special: The Heel Hook",
+    "why": "A short written guide to when a heel hook is the right choice, useful for spotting the moments in a final when a climber goes for one."
+   }
+  ]
+ },
+ {
+  "lesson": 7,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/shorts/FeZvjbod-KU",
+    "type": "short",
+    "title": "Run & Jump Dyno (Technique Breakdown for Bouldering)",
+    "why": "In under a minute it shows how comp setters turn a sprint across the mat into the first move of a boulder."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=F30IaynnOLA",
+    "type": "video",
+    "title": "Ep. 66 - INSANE Coordination Dyno - Bouldering How To",
+    "why": "You watch a climber work out a full-body coordination jump attempt by attempt, so you see why the timing matters more than raw power."
+   },
+   {
+    "url": "https://www.climbing.com/skills/technique/michaela-kiersch-how-to-dyno/",
+    "type": "article",
+    "title": "Michaela Kiersch on How to Dyno in Climbing",
+    "why": "A World Cup boulderer explains the cues she uses to commit to a jump, which is the mental part that most dyno tutorials leave out."
+   },
+   {
+    "url": "https://colacoaching.com/paddle-dynos/",
+    "type": "article",
+    "title": "Paddle Dynos, Laches, and Other Monkey Business",
+    "why": "It shows why you would deliberately slap a hold you cannot hold: a paddle dyno splits one impossible jump into two moves you can actually do."
+   }
+  ]
+ },
+ {
+  "lesson": 8,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=Gnl-ZnH_PsE",
+    "type": "video",
+    "title": "CLIMBING Technique 96% of Climbers DON'T UNDERSTAND",
+    "why": "It shows that moving your hips a few centimetres can turn a hold you were straining on into one you can rest on, without getting any stronger."
+   },
+   {
+    "url": "https://sciencebehindthesport.wvu.edu/rock-climbing/balance-and-momentum",
+    "type": "article",
+    "title": "Balance and Momentum (WVU Science Behind the Sport)",
+    "why": "A university physics page uses impulse and momentum to explain why a static move and a dynamic move to the same hold put very different loads on your body."
+   },
+   {
+    "url": "https://www.maxclimbing.com/blogs/knowledge-hub-technique-movement/force-direction-hold-geometry",
+    "type": "article",
+    "title": "Force Direction in Climbing: How Hold Geometry Determines Technique",
+    "why": "Once you see that every hold only works if you pull in one particular direction, body positioning stops looking like style and starts looking like geometry."
+   },
+   {
+    "url": "https://www.mdpi.com/2411-5142/11/1/103",
+    "type": "paper",
+    "title": "Biomechanical Principles and Techniques—A Systematization for Sport Climbing",
+    "why": "This open-access paper sorts climbing techniques under a few biomechanical principles, so moves you usually learn one at a time fit into one system."
+   }
+  ]
+ },
+ {
+  "lesson": 9,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=ycxc2L03_zU",
+    "type": "video",
+    "title": "Men's Boulder Final - IFSC World Cup Innsbruck 2025",
+    "why": "Real World Cup footage to practise on: pause after each move, name it and the hold type, then check yourself against the commentary."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=SYpwT2SJBnw",
+    "type": "video",
+    "title": "Every Climbing Term Explained in 2 MINUTES",
+    "why": "A very fast run through climbing vocabulary that works as a quick self-test: how many terms can you say before he does?"
+   },
+   {
+    "url": "https://www.climbing.com/competition/olympics/40-climbing-terms-olympics/",
+    "type": "article",
+    "title": "WTF is a Rose Move? Plus, 39 Other Sport Climbing Terms You'll Hear this Olympics",
+    "why": "It is written for people watching comps, so it covers the moves and holds commentators name without explaining them."
+   },
+   {
+    "url": "https://www.99boulders.com/climbing-moves-holds-and-technique",
+    "type": "article",
+    "title": "Climbing Moves, Holds, & Technique: The Beginner's Guide - 99Boulders",
+    "why": "An illustrated reference you can keep open next to the clip to settle arguments like 'was that a gaston or a sidepull?'"
+   }
+  ]
+ },
+ {
+  "lesson": 10,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=v22zlz6UEYI",
+    "type": "video",
+    "title": "Most Climbers Read Routes Wrong",
+    "why": "It challenges the habit of tracing holds one at a time, which is the same mistake the expertise research below picks out."
+   },
+   {
+    "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0176306",
+    "type": "paper",
+    "title": "Role of route previewing strategies on climbing fluency and exploratory movements (Seifert et al.)",
+    "why": "An open-access study that measured whether previewing a route actually changes how smoothly people climb it, with fewer and shorter stops."
+   },
+   {
+    "url": "https://escholarship.org/content/qt6b6005sk/qt6b6005sk_noSplash_7ac84f791a31822cc841f292408936c1.pdf",
+    "type": "paper",
+    "title": "Motor Simulation in a Memory Task: Evidence from Rock Climbing (Pezzulo et al.)",
+    "why": "Experts remember routes better because they mentally climb them, grouping holds into chunks of movement, much as chess masters remember board positions."
+   }
+  ]
+ },
+ {
+  "lesson": 11,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=p9qKd-kfxzA",
+    "type": "video",
+    "title": "Tips & Tricks Episode 3 - Route Reading",
+    "why": "A short how-to that treats route reading as a separate skill you practise, which is the attitude this lesson needs."
+   },
+   {
+    "url": "https://www.climbing.com/videos/uncut-footage-adam-ondra-onsights-just-do-it-5-14c-with-commentary/",
+    "type": "video",
+    "title": "Uncut Footage: Adam Ondra Onsights Just Do It (5.14c), With Commentary",
+    "why": "About 20 minutes of the best onsight climber in the world talking through his plan, rests and clips while fighting for a 5.14c."
+   },
+   {
+    "url": "https://www.climbing.com/skills/reading-routes/",
+    "type": "article",
+    "title": "Increase Your Onsight Grade By Reading Routes From the Ground",
+    "why": "It sets out three levels of route reading, from hand sequence only up to rests, clips and body positions, so you can choose how deep to read for a given route."
+   },
+   {
+    "url": "https://www.lacrux.com/en/klettern/tips-from-adam-ondra-this-way-you-clip-better-and-faster/",
+    "type": "article",
+    "title": "Tips from Adam Ondra: How to clip better and faster",
+    "why": "Ondra says don't clip the moment you reach a rest: shake out first, then clip, a small change in routine that saves pump."
+   }
+  ]
+ },
+ {
+  "lesson": 12,
+  "resources": [
+   {
+    "url": "https://www.youtube.com/watch?v=U1InUMGprjc",
+    "type": "video",
+    "title": "HOW TO READ A BOULDER ROUTE: Step By Step Thought Process",
+    "why": "It talks through the reading process step by step, so you can copy the routine when you write your own beta plan."
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=uQo0o6KWhx8",
+    "type": "video",
+    "title": "Olympic Boulder Breakdown // The UNCLIMBED Final, What Was The Beta?",
+    "why": "An Olympic final boulder nobody topped, which makes it a good test: write your beta before the breakdown reveals what might have worked."
+   },
+   {
+    "url": "https://www.judgemate.com/en/guides/bouldering-competition-rules-climbers",
+    "type": "article",
+    "title": "Bouldering Competition Rules for Climbers",
+    "why": "It explains the observation period athletes get before finals, the same time pressure you are practising under."
+   },
+   {
+    "url": "https://climbingbusinessjournal.com/getting-your-team-prepared-for-onsight-bouldering-competitions-the-short-beta/",
+    "type": "article",
+    "title": "Getting Your Team Prepared for Onsight Bouldering Competitions",
+    "why": "Coaches describe how they train climbers to commit to a plan before anyone has tried the boulder, which is exactly what you are doing for your lesson-20 answer key."
+   }
+  ]
+ }
+]

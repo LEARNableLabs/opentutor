@@ -1,0 +1,1050 @@
+{
+  "topic": "Bonsai — Horticultural Science and Aesthetics",
+  "slug": "bonsai",
+  "created": "2026-10-02",
+  "student_level": "intermediate",
+  "exit_criteria": [
+    "explain how water transport, the energy budget, apical dominance, root biology, CODIT and dormancy affect every care and styling decision",
+    "diagnose common health problems (overwatering, underwatering, light starvation, nutrient chlorosis, winter damage, pests, fungal disease) by linking each symptom to its mechanism and prescribing a fix",
+    "mix or choose a substrate for a given species and climate, and justify the choice in terms of air-filled porosity and water retention",
+    "water by checking the tree's condition instead of following a fixed schedule, fertilise sensibly and plan winter protection for your climate zone",
+    "carry out pruning, pinching, partial defoliation, wiring, repotting and basic deadwood work at the right time of year without overstressing the tree",
+    "describe when and how to use trunk-thickening, grafting and air-layering",
+    "write a 12-month species calendar and a one-year development plan for your own tree",
+    "identify the classic styles, choose a front, and critique a tree's design using visual weight, asymmetry, negative space and trunk movement",
+    "describe Japanese bonsai, Chinese penjing, Vietnamese hòn non bộ, Korean bunjae and Western naturalistic bonsai",
+    "apply an integrated pest management (IPM) escalation ladder and handle chemicals safely",
+    "source material legally, ethically and with biosecurity in mind"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Orientation and Intake",
+      "title": "What turns an ordinary tree into a bonsai?",
+      "concepts": [
+        "bonsai as a living art form",
+        "dwarfing by technique, not genetics",
+        "misconception revisit: bonsai are not a special dwarf species",
+        "student intake: climate zone, growing space, current trees"
+      ],
+      "difficulty": 1,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=neb5UGYMM9M",
+        "https://www.youtube.com/watch?v=D6ENasnXyr0",
+        "https://www.scienceabc.com/nature/why-are-bonsai-trees-so-small",
+        "https://planthardiness.ars.usda.gov/",
+        "https://en.wikipedia.org/wiki/Bonsai"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Orientation and Intake",
+      "title": "Why do most first bonsai die indoors?",
+      "concepts": [
+        "temperate trees need outdoor seasons",
+        "indoor light intensity vs outdoor light",
+        "misconception revisit: bonsai are houseplants"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=fDxtzNixs1Q",
+        "https://forum.bonsaimirai.com/t/what-actually-kills-an-outdoor-tree-when-it-is-kept-indoors/8251",
+        "https://bonsai4me.com/indoor-bonsai/",
+        "https://www.plantlovers.eu/blogs/care-and-maintenance/indoor-light-reality-why-plants-need-more-light-than-you-think-especially-in-winter",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Orientation and Intake",
+      "title": "How do you read a bonsai from roots to apex?",
+      "concepts": [
+        "nebari (surface roots)",
+        "trunk line and taper",
+        "branch structure",
+        "apex and pot harmony"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Q16C2FMPWLg",
+        "https://www.youtube.com/watch?v=RiKdolsY4ww",
+        "https://www.bonsaiempire.com/basics/styling/trunk",
+        "https://www.bonsaiempire.com/basics/choosing-a-bonsai-pot",
+        "https://en.wikipedia.org/wiki/Bonsai_aesthetics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Orientation and Intake",
+      "title": "Which tools do you actually need, and how do you use them without hurting yourself or the tree?",
+      "concepts": [
+        "concave and knob cutters",
+        "wire cutters vs pliers",
+        "tool hygiene and sterilisation",
+        "safe cutting technique"
+      ],
+      "difficulty": 1,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=00uz-wCZPdo",
+        "https://www.youtube.com/watch?v=Qfx_0LHm5UY",
+        "https://bonsaitonight.com/2016/12/23/tips-using-basic-bonsai-tools/",
+        "https://mgnv.org/garden-myth-busters/garden-myth-busters-using-bleach-to-disinfect-tools/",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Tree Physiology for Growers",
+      "title": "How does water climb from root to leaf without a pump?",
+      "concepts": [
+        "xylem",
+        "transpiration pull (cohesion-tension)",
+        "stomata",
+        "why wilting happens"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=BickMFHAZR0",
+        "https://www.youtube.com/watch?v=UHmw02DDB3A",
+        "https://bio.libretexts.org/Courses/Norco_College/BIO_5%3A_General_Botany_(Friedrich_Finnern)/12%3A_Transport/12.06%3A_Cohesion-Tension_Theory",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6959229/",
+        "https://en.wikipedia.org/wiki/Xylem"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Tree Physiology for Growers",
+      "title": "Where does a tree's energy come from, and where does it go?",
+      "concepts": [
+        "photosynthesis as income",
+        "carbohydrate (starch) reserves",
+        "energy budget: growth vs storage",
+        "why weak trees must not be worked"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=WzOrF5W4l3Q",
+        "https://bonsaitonight.com/2016/12/20/distinguishing-vigorous-growth-healthy-growth-bonsai/",
+        "https://gardenlore.substack.com/p/how-much-to-prune",
+        "https://en.wikipedia.org/wiki/Photosynthesis",
+        "https://en.wikipedia.org/wiki/Starch"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Tree Physiology for Growers",
+      "title": "Why does the top of a tree grow fastest?",
+      "concepts": [
+        "apical dominance",
+        "auxin",
+        "back-budding",
+        "how pruning redistributes vigour"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=ourS8-9W6fM",
+        "https://www.youtube.com/watch?v=mBM4pLF_dIQ",
+        "https://bonsai4me.com/?p=2422",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5671643/",
+        "https://en.wikipedia.org/wiki/Apical_dominance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Tree Physiology for Growers",
+      "title": "Can you explain a wilting, weak, top-heavy tree using water, energy and hormones?",
+      "concepts": [
+        "review: transpiration",
+        "review: energy budget",
+        "review: apical dominance",
+        "misconception revisit: cutting a tree back makes it stronger right away"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=BickMFHAZR0",
+        "https://bonsaitonight.com/2016/12/20/distinguishing-vigorous-growth-healthy-growth-bonsai/",
+        "https://gardenshow.com/docs/librariesprovider108/2020-speaker-handouts/linda-chalker-scott-pruning-myths.pdf",
+        "https://en.wikipedia.org/wiki/Transpiration",
+        "https://en.wikipedia.org/wiki/Apical_dominance"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Tree Physiology for Growers",
+      "title": "What is happening underground where you can't see it?",
+      "concepts": [
+        "root tips and root hairs",
+        "roots need oxygen to respire",
+        "mycorrhizae",
+        "misconception revisit: more water means more growth"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=V4m9SefyRjg",
+        "https://www.youtube.com/watch?v=e2zVeUPxBU4",
+        "https://www.scienceabc.com/nature/why-does-over-watering-kill-plants",
+        "https://bonsaitonight.com/2016/07/15/all-about-akadama/",
+        "https://en.wikipedia.org/wiki/Root_hair"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Tree Physiology for Growers",
+      "title": "Why can't a tree heal its wounds?",
+      "concepts": [
+        "CODIT (compartmentalisation of decay in trees)",
+        "callus and wound wood",
+        "branch collar and where to cut",
+        "the wound-sealant debate"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/shorts/Dh4pn2KkLaI",
+        "https://northernwoodlands.org/articles/article/woods-whys-how-trees-heal",
+        "https://shigo.davey.com/shigo_publications/2125/publication_file/a-pictorial-primer-for-proper-pruning.pdf",
+        "https://extension.arizona.edu/sites/extension.arizona.edu/files/attachment/PruningSealants.pdf",
+        "https://en.wikipedia.org/wiki/Compartmentalization_of_decay_in_trees"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Tree Physiology for Growers",
+      "title": "Why do trees need winter?",
+      "concepts": [
+        "dormancy",
+        "chilling requirement",
+        "cold hardiness by plant type (deciduous, conifer, tropical)",
+        "roots are less hardy than branches"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=1Ntjxn_Dgw8",
+        "https://blog-fruit-vegetable-ipm.extension.umn.edu/2024/11/understanding-dormancy-and-chilling.html",
+        "https://bonsaiempire.com/basics/bonsai-care/overwintering",
+        "https://njaes.rutgers.edu/fs528/",
+        "https://en.wikipedia.org/wiki/Dormancy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Tree Physiology for Growers",
+      "title": "Roots, wounds and winter: can you predict what will go wrong?",
+      "concepts": [
+        "review: roots and mycorrhizae",
+        "review: CODIT",
+        "review: dormancy and hardiness",
+        "misconception revisit: trees heal like skin"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=o6U-6uTAm-o",
+        "https://auf.isa-arbor.com/content/9/12/317",
+        "https://bonsaitonight.com/?p=22880",
+        "https://www.bonsaidirect.co.uk/blog/bonsai-tree-care/why-is-my-bonsai-tree-dying-heres-how-to-bring-it-back-to-life/",
+        "https://en.wikipedia.org/wiki/Compartmentalization_of_decay_in_trees"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Soil, Water, Nutrition and Environment",
+      "title": "Why does bonsai soil look like gravel?",
+      "concepts": [
+        "air-filled porosity",
+        "particle size and sieving",
+        "perched water in shallow pots",
+        "misconception revisit: ordinary potting soil is fine for bonsai"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=mNTjSLfwRDw",
+        "https://www.youtube.com/watch?v=LO3J-CDojBo",
+        "https://bonsai4me.com/an-introduction-to-bonsai-soils/",
+        "https://en.wikipedia.org/wiki/Perched_water_table",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Soil, Water, Nutrition and Environment",
+      "title": "Akadama, pumice, lava, organics: what does each one actually do?",
+      "concepts": [
+        "akadama",
+        "pumice",
+        "lava rock",
+        "organic components and mixes by species"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=iCDPvzoNtC4",
+        "https://www.bonsaiempire.com/blog/akadama-soil",
+        "https://www.bonsaiempire.com/basics/bonsai-care/bonsai-soil",
+        "https://www.youtube.com/watch?v=sItSk-ywkUk",
+        "https://en.wikipedia.org/wiki/Akadama"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Soil, Water, Nutrition and Environment",
+      "title": "How do you know when to water?",
+      "concepts": [
+        "water when the tree needs it, not on a schedule",
+        "chopstick and pot-weight tests",
+        "seasonal and weather variation",
+        "misconception revisit: watering on a fixed schedule"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=Ljc3WDWsVRY",
+        "https://www.youtube.com/watch?v=1K1V-ecbg6c",
+        "https://www.bonsaiempire.com/basics/bonsai-care/watering",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care",
+        "https://en.wikipedia.org/wiki/Transpiration"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Soil, Water, Nutrition and Environment",
+      "title": "What does a tree eat?",
+      "concepts": [
+        "what N, P and K each do",
+        "micronutrients (iron, magnesium)",
+        "cation-exchange capacity primer",
+        "pH and chlorosis"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=-QBjl8ct6_E",
+        "https://www.mistralbonsai.com/en/the-secret-of-bonsai-fertilisation-the-power-of-npk/",
+        "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/soil-basics-part-ii-chemical-properties-of-soil",
+        "https://extension.usu.edu/news_sections/gardening/iron-chlorosis-symptoms-causes-and-solutions",
+        "https://en.wikipedia.org/wiki/Plant_nutrition"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Soil, Water, Nutrition and Environment",
+      "title": "When and how should you repot?",
+      "concepts": [
+        "repot at bud swell",
+        "root pruning",
+        "securing the tree in the pot",
+        "aftercare"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=VAtNcgfaQdM",
+        "https://www.youtube.com/watch?v=oju3bwiICgE",
+        "https://bonsaitonight.com/2009/12/18/repotting-a-trident-maple-securing-the-tree-in-the-pot/",
+        "https://bonsai4me.com/repotting-and-root-pruning-bonsai-part-1/",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Soil, Water, Nutrition and Environment",
+      "title": "How much sun does a bonsai need, and can grow lights replace it?",
+      "concepts": [
+        "light needs by species",
+        "balcony and garden microclimates",
+        "PPFD basics",
+        "grow lights for indoor tropicals"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.bonsaiempire.com/basics/bonsai-care/position",
+        "https://www.youtube.com/watch?v=BxH1fG4W380",
+        "https://yardandgarden.extension.iastate.edu/how-to/growing-indoor-plants-under-supplemental-lights/important-considerations-providing-supplemental-light-indoor-plants",
+        "https://www.canr.msu.edu/floriculture/uploads/files/Lighting%20plants%20indoors.pdf",
+        "https://en.wikipedia.org/wiki/Photosynthetically_active_radiation"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Soil, Water, Nutrition and Environment",
+      "title": "How do you get a tree through winter where you live?",
+      "concepts": [
+        "winter protection by climate zone",
+        "deciduous vs coniferous vs tropical winter care",
+        "cold frames, heeling in, unheated garages",
+        "root-zone protection"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=hAd-Gw6Gevs",
+        "https://www.youtube.com/watch?v=OyHxk51YuB4",
+        "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/gardening-help-faqs/question/537/how-do-i-overwinter-my-bonsai-plant",
+        "https://bonsai4me.com/winter-care-for-bonsai/",
+        "https://en.wikipedia.org/wiki/Cold_frame"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Soil, Water, Nutrition and Environment",
+      "title": "Can you diagnose five sick trees?",
+      "concepts": [
+        "GATE: diagnose 5 written cases (overwatering/root rot, underwatering, indoor light starvation, chlorosis from high pH, winter root damage); for each give the cause, the M2 mechanism and an M3 fix; pass = cause and mechanism correct in at least 4 of 5 cases and no prescription that would kill the tree; fail = reteach the mapped lessons before M4",
+        "cumulative: M2 tree physiology",
+        "cumulative: M3 soil, water, nutrition and environment"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=xnDCgRn4l7Y",
+        "https://bonsaitonight.com/2016/12/16/tell-something-wrong-bonsai/",
+        "https://extension.usu.edu/forestry/trees-cities-towns/tree-care/causes-iron-chlorosis",
+        "https://bonsaiempire.com/tree-species/indoor-bonsai",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Techniques",
+      "title": "Why prune at all?",
+      "concepts": [
+        "maintenance vs structural pruning",
+        "cut placement and CODIT",
+        "pruning and the energy budget",
+        "timing pruning to the tree's vigour"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=672Ua75bW-s",
+        "https://www.youtube.com/watch?v=tFd0z8EDSZo",
+        "https://en.wikipedia.org/wiki/Compartmentalization_of_decay_in_trees",
+        "https://bonsaitonight.com/2019/10/25/bonsai-development-series-18-timing-cutback-to-support-development-goals/",
+        "https://en.wikipedia.org/wiki/Pruning"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Techniques",
+      "title": "When do pinching and defoliation help, and when do they hurt?",
+      "concepts": [
+        "pinching for ramification",
+        "full vs partial defoliation",
+        "only on vigorous, healthy trees",
+        "leaf-size reduction"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=GFPxHQZm69Q",
+        "https://www.youtube.com/watch?v=_CsGQvUVlME",
+        "https://bonsaitonight.com/2019/05/24/leaf-pruning-vs-partial-defoliation/",
+        "https://bonsaitonight.com/2018/05/15/focus-on-defoliation-determining-how-many-leaves-to-remove/",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Techniques",
+      "title": "How does wire bend a branch without breaking it?",
+      "concepts": [
+        "aluminium vs copper wire",
+        "wire gauge and wrapping angle (about 45 degrees)",
+        "anchoring and two-branch wiring",
+        "removing wire before it scars"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=7YoghursEoA",
+        "https://www.youtube.com/watch?v=ff6EvLLUtD8",
+        "https://www.bonsaiempire.com/basics/styling/wiring",
+        "https://www.ausbonsai.com.au/wiki/index.php?title=Wire",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Techniques",
+      "title": "Pruning, wiring and the energy budget: how much can a tree take this year?",
+      "concepts": [
+        "review: pruning types",
+        "review: wiring",
+        "one major stress per year",
+        "misconception revisit: more work makes a bonsai faster"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=NLlp7Lo_aGw",
+        "https://bonsaitonight.com/2016/12/20/distinguishing-vigorous-growth-healthy-growth-bonsai/",
+        "https://www.bonsainut.com/threads/one-infraction-per-season.52527/post-907896",
+        "https://en.wikipedia.org/wiki/Pruning"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Techniques",
+      "title": "How do you thicken a trunk?",
+      "concepts": [
+        "sacrifice branches",
+        "ground growing and grow boxes",
+        "building taper by chopping and regrowing",
+        "why trunks thicken slowly in a bonsai pot"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=r-g9c6nuYfk",
+        "https://www.youtube.com/watch?v=hB8VicrHGNA",
+        "https://bonsaitonight.com/2019/08/06/bonsai-development-series-16-developing-the-trunk-with-multiple-sacrifice-branches/",
+        "https://bonsai4me.com/developing-informal-upright-trunks-for-deciduous-bonsai/",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Techniques",
+      "title": "Jin and shari: why does deadwood last so long?",
+      "concepts": [
+        "jin (dead branches)",
+        "shari (stripped trunk)",
+        "lifelines and live veins",
+        "lime-sulfur safety"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=9Z1n4K9HXdg",
+        "https://www.bonsaiempire.com/basics/styling/deadwood",
+        "https://museum.state.il.us/muslink/forest/htmls/popups/how_tr_bristle.html",
+        "https://en.wikipedia.org/wiki/Lime_sulfur",
+        "https://en.wikipedia.org/wiki/Bonsai_aesthetics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Techniques",
+      "title": "How do you add branches or roots that aren't there?",
+      "concepts": [
+        "approach grafting",
+        "thread grafting",
+        "scion grafting",
+        "air-layering"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=wnU-q-CNOHY",
+        "https://www.youtube.com/watch?v=bIogcjtaQMw",
+        "https://www.bonsaiempire.com/basics/styling/grafting-trees",
+        "https://bonsai4me.com/layering-techniques-for-bonsai/",
+        "https://en.wikipedia.org/wiki/Grafting"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Techniques",
+      "title": "What will you do to your tree over the next twelve months?",
+      "concepts": [
+        "one-year development plan",
+        "matching techniques to the season",
+        "one major stress per year",
+        "health first, style second"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=waurZKD9fE0",
+        "https://www.youtube.com/watch?v=sF4RLmHqbk8",
+        "https://www.bonsaiempire.com/basics/general/calendar",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Species Profiles",
+      "title": "Why are Chinese elm and zelkova the forgiving trees?",
+      "concepts": [
+        "Ulmus parvifolia",
+        "Zelkova serrata and broom form",
+        "ramification by pinching",
+        "elm cold tolerance and winter care"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=7F5OTG7jHoc",
+        "https://www.youtube.com/watch?v=2JdaZDyJvzg",
+        "https://www.bonsai-art-museum.jp/en/collection/A-114",
+        "https://ask.extension.org/kb/faq.php?id=923307",
+        "https://en.wikipedia.org/wiki/Ulmus_parvifolia"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Species Profiles",
+      "title": "Junipers: should you really pinch the tips?",
+      "concepts": [
+        "Juniperus chinensis and J. procumbens",
+        "misconception revisit: pinching juniper tips",
+        "cutting back with scissors",
+        "foliage health: juvenile vs mature foliage"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=Z9Gt0onvdP8",
+        "https://bonsaibark.com/2010/01/23/junipers-dont-pinch-too-much/",
+        "https://bonsaibark.com/?p=22522",
+        "https://forum.bonsaimirai.com/t/reversion-to-juvenile-foliage-juniper/7014",
+        "https://en.wikipedia.org/wiki/Juniperus_chinensis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Species Profiles",
+      "title": "Japanese maple: how do you get small leaves and fine twigs?",
+      "concepts": [
+        "Acer palmatum spring flush",
+        "partial defoliation",
+        "maple dormancy",
+        "root-zone winter protection"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=gWQQfSyGnTw",
+        "https://bonsaitonight.com/2019/05/17/partial-defoliation-on-shohin-japanese-maple/",
+        "https://bonsai4me.com/winter-care-for-bonsai/",
+        "https://www.bonsaiempire.com/tree-species/maple",
+        "https://en.wikipedia.org/wiki/Acer_palmatum"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Species Profiles",
+      "title": "Conifer or deciduous: when does each technique happen?",
+      "concepts": [
+        "review: technique timing for conifers vs deciduous trees",
+        "review: elm, juniper, maple",
+        "thinking in a seasonal calendar"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=8Rgut5nskpQ&vl=en",
+        "https://www.youtube.com/watch?v=fVHXuzHWrT4",
+        "https://mail.bonsainut.com/threads/seasonal-indicator-based-task-list.66972",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Species Profiles",
+      "title": "Pines: why are some decandled and others not?",
+      "concepts": [
+        "Pinus thunbergii (two-flush)",
+        "Pinus parviflora (single-flush)",
+        "decandling",
+        "needle reduction and energy balancing"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=qxuO9fkMsFM",
+        "https://www.youtube.com/watch?v=FgDkKZozHLs",
+        "https://bonsaitonight.com/2020/08/07/which-pine-species-can-i-decandle/",
+        "https://bonsaitonight.com/2013/05/31/why-we-decandle-pine-bonsai/",
+        "https://en.wikipedia.org/wiki/Pinus_thunbergii"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Species Profiles",
+      "title": "Can a ficus really live on a windowsill?",
+      "concepts": [
+        "ficus minimum temperatures",
+        "humidity",
+        "grow lights in practice",
+        "misconception revisit: the windowsill myth"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=8WRLYgy0nGE",
+        "https://www.youtube.com/watch?v=ScERkPzssZU",
+        "https://www.bonsaiempire.com/tree-species/ficus",
+        "https://www.bonsaiempire.com/blog/ficus-mallsai",
+        "https://en.wikipedia.org/wiki/Ficus_microcarpa"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 35,
+      "module": "Species Profiles",
+      "title": "Azaleas and crabapples: how do you prune a tree you want to flower?",
+      "concepts": [
+        "Satsuki azalea (Rhododendron indicum)",
+        "acidic substrate (kanuma)",
+        "prune after flowering",
+        "fruit load and the tree's energy"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=hZbnPrLusDo",
+        "https://bonsaitonight.com/2023/08/04/post-bloom-thinning-satsuki-azalea/",
+        "https://www.bonsaiempire.com/tree-species/azalea",
+        "https://phoenixbonsai.com/crab-apple/",
+        "https://en.wikipedia.org/wiki/Rhododendron_indicum"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 36,
+      "module": "Species Profiles",
+      "title": "Can you build a year-round calendar for your own species?",
+      "concepts": [
+        "species calendar template",
+        "month by month: growth stage, watering, feeding, techniques, protection",
+        "adjusting for your climate zone"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://planthardiness.ars.usda.gov/",
+        "https://stormthecastle.com/bonsai/bonsai-care-timeline.htm",
+        "https://www.youtube.com/watch?v=OVN3CuJhryg",
+        "https://www.bonsaiempire.com/basics/bonsai-care/overwintering",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 37,
+      "module": "Aesthetics and Traditions",
+      "title": "What does each classic style communicate?",
+      "concepts": [
+        "formal upright (chokkan)",
+        "informal upright (moyogi)",
+        "slanting, cascade and semi-cascade",
+        "literati (bunjingi) and windswept"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Bonsai_aesthetics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 38,
+      "module": "Aesthetics and Traditions",
+      "title": "Why are bonsai shaped like asymmetrical triangles?",
+      "concepts": [
+        "visual weight and asymmetry",
+        "choosing the front",
+        "negative space",
+        "trunk movement",
+        "optional bonus: curvature and MC-curves"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Bonsai_aesthetics",
+        "http://arxiv.org/abs/1305.1737v1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 39,
+      "module": "Aesthetics and Traditions",
+      "title": "How do the pot, stand and accent plant complete a tree?",
+      "concepts": [
+        "choosing a pot for the species and style",
+        "display stands",
+        "accent plants",
+        "tokonoma display and suiseki"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Tokonoma",
+        "https://en.wikipedia.org/wiki/Suiseki"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 40,
+      "module": "Aesthetics and Traditions",
+      "title": "Where did it all start? Penjing and Lingnan clip-and-grow",
+      "concepts": [
+        "Chinese origins of penjing",
+        "landscape penjing",
+        "Lingnan clip-and-grow",
+        "clip-and-grow vs wiring"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Penjing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 41,
+      "module": "Aesthetics and Traditions",
+      "title": "What does bonsai look like beyond Japan and China?",
+      "concepts": [
+        "Vietnamese hòn non bộ",
+        "Korean bunjae",
+        "Western naturalistic bonsai",
+        "note: English-language sources on hòn non bộ and bunjae are thin"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://en.wikipedia.org/wiki/H%C3%B2n_non_b%E1%BB%99",
+        "https://en.wikipedia.org/wiki/Bonsai"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 42,
+      "module": "Aesthetics and Traditions",
+      "title": "Styles, design, display, traditions: can you name what you see?",
+      "concepts": [
+        "review: styles",
+        "review: design principles",
+        "review: traditions",
+        "misconception revisit: bonsai is only Japanese"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Bonsai_aesthetics",
+        "https://en.wikipedia.org/wiki/Penjing"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 43,
+      "module": "Aesthetics and Traditions",
+      "title": "What makes John Naka's Goshin a masterpiece?",
+      "concepts": [
+        "forest-planting design",
+        "Goshin at the National Bonsai & Penjing Museum",
+        "structured critique: trunks, branches, apex, pot, display",
+        "applying design principles"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/John_Y._Naka",
+        "https://www.bonsai-nbf.org/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 44,
+      "module": "Health, Sourcing and Biosecurity",
+      "title": "Who is eating my tree?",
+      "concepts": [
+        "spider mites",
+        "scale insects",
+        "aphids",
+        "adelgids"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Spider_mite",
+        "https://en.wikipedia.org/wiki/Scale_insect",
+        "https://en.wikipedia.org/wiki/Aphid",
+        "https://en.wikipedia.org/wiki/Adelgidae"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 45,
+      "module": "Health, Sourcing and Biosecurity",
+      "title": "Which fungi attack bonsai, and why?",
+      "concepts": [
+        "root rot (Phytophthora, Pythium)",
+        "needle cast",
+        "powdery mildew",
+        "rust",
+        "the disease triangle"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Root_rot",
+        "https://en.wikipedia.org/wiki/Powdery_mildew",
+        "https://en.wikipedia.org/wiki/Rust_(fungus)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 46,
+      "module": "Health, Sourcing and Biosecurity",
+      "title": "When should you reach for a spray, and how do you use it safely?",
+      "concepts": [
+        "action thresholds",
+        "IPM escalation ladder: cultural, mechanical, oils and soaps, registered pesticides",
+        "reading the label",
+        "PPE, storage and disposal"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Integrated_pest_management",
+        "https://en.wikipedia.org/wiki/Horticultural_oil",
+        "https://en.wikipedia.org/wiki/Insecticidal_soap"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 47,
+      "module": "Health, Sourcing and Biosecurity",
+      "title": "Why are imported bonsai a biosecurity risk?",
+      "concepts": [
+        "nonnative forest insects and pathogens (Lovett et al. 2016)",
+        "Anoplophora chinensis arriving in bonsai imports",
+        "plant quarantine and import rules",
+        "buying responsibly"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://doi.org/10.1890/15-1176",
+        "https://en.wikipedia.org/wiki/Anoplophora_chinensis"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 48,
+      "module": "Health, Sourcing and Biosecurity",
+      "title": "Nursery stock or a collected tree: how do you source material legally and ethically?",
+      "concepts": [
+        "choosing nursery stock",
+        "yamadori (wild collecting) and landowner permission",
+        "protected species and CITES",
+        "aftercare for collected trees"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/CITES",
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 49,
+      "module": "Health, Sourcing and Biosecurity",
+      "title": "Health, pests and sourcing: what would you do?",
+      "concepts": [
+        "review: pests and disease",
+        "review: IPM ladder and chemical safety",
+        "review: biosecurity and sourcing"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Integrated_pest_management"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 50,
+      "module": "Capstone",
+      "title": "Can you connect physiology to technique to design?",
+      "concepts": [
+        "cumulative review: physiology to care",
+        "cumulative review: technique timing",
+        "cumulative review: design and traditions",
+        "revisit any concepts flagged as shaky"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Bonsai_cultivation_and_care",
+        "https://en.wikipedia.org/wiki/Bonsai_aesthetics"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 51,
+      "module": "Capstone",
+      "title": "Capstone: can you present your own tree's diagnosis, plan and design?",
+      "concepts": [
+        "health assessment of your own tree",
+        "species calendar plus one-year development plan",
+        "design critique and a chosen front",
+        "sourcing and biosecurity check"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Bonsai"
+      ],
+      "status": "pending"
+    }
+  ],
+  "level": "intermediate",
+  "prerequisites": [
+    "high-school biology (cells, photosynthesis, basic plant structure)",
+    "basic gardening experience (potting, watering, keeping a plant alive for one season)",
+    "access to an outdoor space (garden, balcony or patio) or a bright south- or west-facing window for tropical species",
+    "knowing your local climate or hardiness zone, or being willing to look it up",
+    "one living tree to practise on (nursery stock is fine)"
+  ],
+  "preliminary": false
+}

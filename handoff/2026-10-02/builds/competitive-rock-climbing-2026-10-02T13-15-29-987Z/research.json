@@ -1,0 +1,68 @@
+{
+ "arxiv": [],
+ "semanticScholar": [],
+ "wikipedia": null,
+ "openAlex": [
+  {
+   "type": "work",
+   "name": "Building machines that learn and think like people",
+   "description": "2016 — 2620 citations",
+   "worksCount": 2620,
+   "authors": [
+    "Brenden M. Lake",
+    "Tomer David Ullman",
+    "Joshua B. Tenenbaum"
+   ],
+   "doi": "https://doi.org/10.1017/s0140525x16001837"
+  },
+  {
+   "type": "work",
+   "name": "Heritage Regimes and the State",
+   "description": "2013 — 379 citations",
+   "worksCount": 379,
+   "authors": [
+    "Regina F. Bendix",
+    "Aditya Eggert",
+    "Arnika Peselmann"
+   ],
+   "doi": "https://doi.org/10.4000/books.gup.348"
+  },
+  {
+   "type": "work",
+   "name": "Weather and Climate Information for Tourism",
+   "description": "2010 — 376 citations",
+   "worksCount": 376,
+   "authors": [
+    "Daniel J. Scott",
+    "Christopher James Lemieux"
+   ],
+   "doi": "https://doi.org/10.1016/j.proenv.2010.09.011"
+  },
+  {
+   "type": "work",
+   "name": "Event Perception and Memory",
+   "description": "2020 — 375 citations",
+   "worksCount": 375,
+   "authors": [
+    "Jeffrey M. Zacks"
+   ],
+   "doi": "https://doi.org/10.1146/annurev-psych-010419-051101"
+  },
+  {
+   "type": "work",
+   "name": "Service Robots in the Healthcare Sector",
+   "description": "2021 — 326 citations",
+   "worksCount": 326,
+   "authors": [
+    "Jane Holland",
+    "Liz Kingston",
+    "C.T. McCarthy"
+   ],
+   "doi": "https://doi.org/10.3390/robotics10010047"
+  }
+ ],
+ "syllabi": [],
+ "youtube": [],
+ "github": [],
+ "wikiLinks": []
+}

@@ -1,0 +1,748 @@
+{
+  "topic": "Competitive rock climbing — route reading and training science",
+  "slug": "competitive-rock-climbing",
+  "created": "2026-10-02",
+  "student_level": "intermediate",
+  "exit_criteria": [
+    "Explain how boulder, lead and speed are scored under the current IFSC rules and how scoring shapes tactics",
+    "Name and explain the hold types and movement techniques in a competition clip, including dynos and coordination moves",
+    "Read a boulder or lead route before it is climbed: predict sequence, cruxes, rests and clips, and identify what the setter is testing",
+    "Compare a prediction with what elite climbers did, and explain the gaps using movement and physiology",
+    "Explain the main performance determinants without reducing performance to a single factor",
+    "Explain forearm pump in terms of intermittent contractions, blood-flow occlusion and recovery",
+    "Fit a critical-force line (F = CF + W'/t; F·t = CF·t + W') to three data points by hand and interpret CF and W'",
+    "Explain finger pulley and tendon anatomy, why tendons adapt more slowly than muscle, and the specific risks for adolescents, well enough to pass the safety gate",
+    "Choose the right training track (A: hangboard, B: climbing-based loading) and justify the choice",
+    "Design a 6-week training block for a target competition with strength, endurance, antagonist work, load monitoring and a taper",
+    "Recognise injury red flags and low-energy-availability warning signs, and know when to refer to a qualified professional",
+    "Plan competition-day routines: warm-up in isolation, observation, attempt strategy and pacing"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "M1 Competition Landscape",
+      "title": "What actually decides a climbing competition?",
+      "concepts": [
+        "boulder, lead and speed disciplines",
+        "Olympic and World Cup structure",
+        "qualification, semi-final and final rounds"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=ImEYrUvdqXA",
+        "https://www.olympics.com/en/news/sport-climbing-la28-what-new-olympic-format-means-for-sport",
+        "https://gripped.com/indoor-climbing/the-olympic-qualifier-series-explained/",
+        "https://www.ifsc-climbing.org",
+        "https://en.wikipedia.org/wiki/Competition_climbing"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 2,
+      "module": "M1 Competition Landscape",
+      "title": "How is a boulder round scored, and why did the rules change?",
+      "concepts": [
+        "tops, zones and attempts",
+        "current IFSC points-based boulder scoring",
+        "how scoring rules change tactics"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=29DbBWaNKJk",
+        "https://www.worldclimbing.com/news/new-rule-changes-take-effect-for-ifsc-world-cup-series-2025",
+        "https://www.lacrux.com/en/competition/Fairer-for-athletes--more-complicated-for-coaches--new-ifsc-rules-in-competition/",
+        "https://www.inside-climbing.com/2026/01/19/2025-reivew-part-2-boulder-points-system/",
+        "VERIFY-SLOT: IFSC Rules (current season), boulder scoring section — ifsc-climbing.org"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 3,
+      "module": "M1 Competition Landscape",
+      "title": "Watch a final: what is the setter asking?",
+      "concepts": [
+        "guided footage viewing",
+        "footage rubric: hold, move, crux, outcome",
+        "the setter as question-writer"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=uQo0o6KWhx8",
+        "https://epsets.substack.com/p/whats-behind-boulder-1",
+        "https://sendedition.com/how-climbing-routes-are-set-interview-with-team-usa-chief-route-setter-mike-bockino/",
+        "IFSC-CLIP-SLOT:L03-boulder-final",
+        "https://www.youtube.com/@sportclimbing"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 4,
+      "module": "M1 Competition Landscape",
+      "title": "Lead and speed: heights, plus scores, isolation, observation",
+      "concepts": [
+        "lead scoring: highest hold controlled or used ('+')",
+        "isolation zone and observation period",
+        "speed climbing overview: standardised wall and head-to-head format"
+      ],
+      "difficulty": 2,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=e863Qr0jaYo",
+        "https://www.youtube.com/watch?v=WzHofTkfSfs",
+        "https://gearjunkie.com/climbing/ifsc-climbing-explained",
+        "https://www.olympics.com/en/news/everything-you-need-to-know-about-speed-climbing",
+        "VERIFY-SLOT: IFSC Rules (current season), lead and speed sections"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 5,
+      "module": "M2 Movement Vocabulary",
+      "title": "Crimp, sloper, pinch, pocket, volume: what each hold demands",
+      "concepts": [
+        "hold types",
+        "grip positions: open hand, half crimp, full crimp",
+        "friction vs edge-loading"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=FpO0_rArges",
+        "https://www.youtube.com/watch?v=KjE7R-tmYGE",
+        "https://gripped.com/indoor-climbing/the-four-essential-gym-holds-and-how-to-use-them/",
+        "https://ciss-journal.org/article/view/10986",
+        "https://en.wikipedia.org/wiki/Glossary_of_climbing_terms"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 6,
+      "module": "M2 Movement Vocabulary",
+      "title": "Feet first: heel hooks, toe hooks, drop knees, flags",
+      "concepts": [
+        "heel and toe hooks",
+        "drop knee",
+        "flagging",
+        "footwork precision"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=PI6eigr-oWY",
+        "https://www.youtube.com/watch?v=QqDebkWHaWc",
+        "https://www.youtube.com/shorts/qpcjYqNbLZ8",
+        "https://www.flashed.com/explore/beta-special/beta-special-the-heel-hook/",
+        "https://en.wikipedia.org/wiki/Glossary_of_climbing_terms"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 7,
+      "module": "M2 Movement Vocabulary",
+      "title": "Why do comp boulders make you jump?",
+      "concepts": [
+        "dynos",
+        "coordination moves",
+        "run-and-jump",
+        "paddle dyno"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/shorts/FeZvjbod-KU",
+        "https://www.youtube.com/watch?v=F30IaynnOLA",
+        "https://www.climbing.com/skills/technique/michaela-kiersch-how-to-dyno/",
+        "https://colacoaching.com/paddle-dynos/",
+        "IFSC-CLIP-SLOT:L07-coordination-boulder"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 8,
+      "module": "M2 Movement Vocabulary",
+      "title": "Where is your centre of mass, and why does it matter?",
+      "concepts": [
+        "centre of mass",
+        "direction of force on holds",
+        "static vs dynamic movement"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=Gnl-ZnH_PsE",
+        "https://sciencebehindthesport.wvu.edu/rock-climbing/balance-and-momentum",
+        "https://www.maxclimbing.com/blogs/knowledge-hub-technique-movement/force-direction-hold-geometry",
+        "https://www.mdpi.com/2411-5142/11/1/103",
+        "https://en.wikipedia.org/wiki/Center_of_mass"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 9,
+      "module": "M2 Movement Vocabulary",
+      "title": "Teach it back: name and explain every move in one clip",
+      "concepts": [
+        "spaced review of lessons 5-8",
+        "hold-type identification",
+        "technique naming under real footage"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=ycxc2L03_zU",
+        "https://www.youtube.com/watch?v=SYpwT2SJBnw",
+        "https://www.climbing.com/competition/olympics/40-climbing-terms-olympics/",
+        "https://www.99boulders.com/climbing-moves-holds-and-technique",
+        "IFSC-CLIP-SLOT:L09-review-clip"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 10,
+      "module": "M3 Route Reading",
+      "title": "How do elite climbers read a route before touching it?",
+      "concepts": [
+        "expertise in route preview",
+        "chunking of hold patterns",
+        "visual inspection research"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=v22zlz6UEYI",
+        "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0176306",
+        "https://escholarship.org/content/qt6b6005sk/qt6b6005sk_noSplash_7ac84f791a31822cc841f292408936c1.pdf",
+        "https://doi.org/10.1111/j.1600-0838.2010.01151.x",
+        "https://doi.org/10.1016/0010-0285(73)90004-2"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 11,
+      "module": "M3 Route Reading",
+      "title": "Route preview: sequence, rests, clips",
+      "concepts": [
+        "sequence planning",
+        "rest identification",
+        "clip positions",
+        "marking cruxes"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=p9qKd-kfxzA",
+        "https://www.climbing.com/videos/uncut-footage-adam-ondra-onsights-just-do-it-5-14c-with-commentary/",
+        "https://www.climbing.com/skills/reading-routes/",
+        "https://www.lacrux.com/en/klettern/tips-from-adam-ondra-this-way-you-clip-better-and-faster/",
+        "https://doi.org/10.1111/j.1600-0838.2010.01151.x"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 12,
+      "module": "M3 Route Reading",
+      "title": "Read this boulder before anyone climbs it",
+      "concepts": [
+        "prediction before viewing",
+        "written beta plan",
+        "saved answer key for lesson 20"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=U1InUMGprjc",
+        "https://www.youtube.com/watch?v=uQo0o6KWhx8",
+        "https://www.judgemate.com/en/guides/bouldering-competition-rules-climbers",
+        "https://climbingbusinessjournal.com/getting-your-team-prepared-for-onsight-bouldering-competitions-the-short-beta/",
+        "IFSC-CLIP-SLOT:L12-prediction-boulder"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 13,
+      "module": "M3 Route Reading",
+      "title": "Pacing under the clock: on-sight lead and boulder rotations",
+      "concepts": [
+        "lead pacing",
+        "boulder rotation time management",
+        "attempt economy"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "VERIFY-SLOT: the on-sight lead physiological-responses paper named in the plan — candidate: de Geus, Villanueva O'Driscoll & Meeusen 2006, Eur J Appl Physiol, 'Influence of climbing style on physiological responses during indoor rock climbing' — confirm it supports each pacing claim",
+        "IFSC-CLIP-SLOT:L13-lead-final-pacing"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 14,
+      "module": "M3 Route Reading",
+      "title": "Setter intent: what is this problem testing, and how do women's and paraclimbing setting differ?",
+      "concepts": [
+        "setter intent",
+        "style categories: power, coordination, balance",
+        "women's setting",
+        "paraclimbing categories and adapted setting"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "IFSC-CLIP-SLOT:L14-setter-intent",
+        "https://en.wikipedia.org/wiki/Glossary_of_climbing_terms",
+        "VERIFY-SLOT: IFSC Paraclimbing rules and sport-class descriptions — ifsc-climbing.org"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 15,
+      "module": "M3 Route Reading",
+      "title": "Pause and predict: a full round",
+      "concepts": [
+        "pause-and-predict review of lessons 10-14",
+        "setter intent under time pressure",
+        "comparing predicted and actual beta"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "IFSC-CLIP-SLOT:L15-full-round"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 16,
+      "module": "M4 Physiology of Performance",
+      "title": "What actually predicts climbing performance?",
+      "concepts": [
+        "performance determinants reviews",
+        "multi-factor performance model",
+        "why single-factor explanations fail (Misconception 4)"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.2165/00007256-200636060-00006",
+        "https://doi.org/10.1136/bjsm.34.5.359",
+        "https://doi.org/10.1016/j.jesf.2019.04.002"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 17,
+      "module": "M4 Physiology of Performance",
+      "title": "Why does your forearm pump?",
+      "concepts": [
+        "intermittent isometric contractions",
+        "blood-flow occlusion",
+        "forearm oxygenation",
+        "recovery on rests"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.2165/00007256-200636060-00006",
+        "VERIFY-SLOT: Fryer et al., forearm oxygenation and blood-flow kinetics in rock climbers (J Sports Sci) — confirm citation"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 18,
+      "module": "M4 Physiology of Performance",
+      "title": "Critical force: the line between sustainable and not",
+      "concepts": [
+        "critical force (CF)",
+        "W' (finite work capacity above CF)",
+        "model F = CF + W'/t, equivalently F·t = CF·t + W'",
+        "worked example"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "VERIFY-SLOT: Giles et al. 2019, 'The determination of finger-flexor critical force in rock climbers', Int J Sports Physiol Perform — confirm DOI",
+        "https://en.wikipedia.org/wiki/Critical_power"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 19,
+      "module": "M4 Physiology of Performance",
+      "title": "Fit your own critical-force line",
+      "concepts": [
+        "formula F = CF + W'/t",
+        "linear form impulse = CF·t + W' (slope = CF, intercept = W')",
+        "fitting slope and intercept by hand from 3 pre-filled data points",
+        "optional own data collection with submaximal efforts only"
+      ],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [
+        "VERIFY-SLOT: Giles et al. 2019, finger-flexor critical force (same as lesson 18)"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 20,
+      "module": "M4 Physiology of Performance",
+      "title": "Re-read lesson 12 with a physiologist's eyes",
+      "concepts": [
+        "re-reading a route through physiology",
+        "pump and rest placement",
+        "where CF limits change the read",
+        "comparison with the saved lesson 12 answer key"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "IFSC-CLIP-SLOT:L12-prediction-boulder"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 21,
+      "module": "M4 Physiology of Performance",
+      "title": "Fingers aren't muscles: tendons, pulleys and slow adaptation",
+      "concepts": [
+        "flexor tendons and annular pulleys (A2, A4)",
+        "tendon vs muscle adaptation timescales",
+        "adolescent growth plates (epiphyseal stress)"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "VERIFY-SLOT: Schöffl et al., pulley injuries in rock climbers (Wilderness Environ Med) — confirm citation",
+        "https://en.wikipedia.org/wiki/Epiphyseal_plate"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 22,
+      "module": "M4 Physiology of Performance",
+      "title": "Gate: can you explain the risk before you load it?",
+      "concepts": [
+        "safety gate",
+        "explaining tendon and pulley risk",
+        "adolescent and novice risk factors",
+        "routing: pass → Track A eligible, fail → Track B"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "VERIFY-SLOT: Schöffl et al., pulley injuries (same as lesson 21)"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 23,
+      "module": "M5 Training Design",
+      "title": "Hangboard protocols: what the evidence says (Track A)",
+      "concepts": [
+        "max hangs vs repeaters",
+        "edge depth",
+        "protocol comparison studies",
+        "Track A only"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "VERIFY-SLOT: López-Rivera & González-Badillo 2012, Sports Technology — hangboard method and edge-depth comparison in elite climbers",
+        "https://en.wikipedia.org/wiki/Hangboard"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 24,
+      "module": "M5 Training Design",
+      "title": "Limit bouldering, rate of force development and the campus board",
+      "concepts": [
+        "maximal strength vs rate of force development (RFD)",
+        "limit bouldering",
+        "campus board restricted to experienced adults"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "VERIFY-SLOT: peer-reviewed source on rate of force development in climbers",
+        "VERIFY-SLOT: source on campus-board use and age/experience restrictions"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 25,
+      "module": "M5 Training Design",
+      "title": "Endurance and pump tolerance: ARC, intervals, 4x4s",
+      "concepts": [
+        "aerobic base (ARC)",
+        "interval design",
+        "4x4 bouldering",
+        "link to CF and W' (lessons 18-19)"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "VERIFY-SLOT: Giles et al. 2019, finger-flexor critical force (training implications)",
+        "https://doi.org/10.2165/00007256-200636060-00006"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 26,
+      "module": "M5 Training Design",
+      "title": "Track B: loading fingers through climbing alone",
+      "concepts": [
+        "climbing-based finger loading progression",
+        "volume before intensity",
+        "evidence labelling: 'no direct evidence' vs cited"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "VERIFY-SLOT: any direct study of climbing-only finger loading — if none found, the lesson labels the claims 'no direct evidence'"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 27,
+      "module": "M5 Training Design",
+      "title": "Review: strength, endurance and the two tracks",
+      "concepts": [
+        "spaced review of lessons 16-26",
+        "choosing a track",
+        "matching training to determinants"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 28,
+      "module": "M5 Training Design",
+      "title": "Antagonists and shoulders: the strength nobody sees on the wall",
+      "concepts": [
+        "antagonist strength",
+        "shoulder strength and stability",
+        "posture",
+        "injury-prevention rationale"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "VERIFY-SLOT: peer-reviewed source on shoulder injury and antagonist training in climbers"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 29,
+      "module": "M5 Training Design",
+      "title": "Periodisation: peaking for a competition season",
+      "concepts": [
+        "training blocks",
+        "tapering",
+        "aligning the training calendar with the competition calendar"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "VERIFY-SLOT: general periodisation and taper reference (textbook or review)"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 30,
+      "module": "M5 Training Design",
+      "title": "Monitoring load and recovery",
+      "concepts": [
+        "session RPE (rating of perceived exertion)",
+        "training logs",
+        "sleep",
+        "warning signs"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "VERIFY-SLOT: Foster et al. 2001, 'A new approach to monitoring exercise training', J Strength Cond Res",
+        "https://en.wikipedia.org/wiki/Rating_of_perceived_exertion"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 31,
+      "module": "M5 Training Design",
+      "title": "Design a 6-week block for a target competition",
+      "concepts": [
+        "block design on Track A or Track B",
+        "strength, endurance and antagonist balance",
+        "load monitoring plan",
+        "taper into competition week"
+      ],
+      "difficulty": 5,
+      "type": "question",
+      "resources": [],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 32,
+      "module": "M6 Health and Welfare",
+      "title": "Finger pain or a sore shoulder: when is it time to see a professional?",
+      "concepts": [
+        "common climbing injuries: pulleys, tendons, shoulders, adolescent growth-plate injuries",
+        "red flags that need referral",
+        "scope limits: no self-diagnosis or rehab prescription"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "VERIFY-SLOT: Schöffl et al., pulley injuries (same as lesson 21)",
+        "VERIFY-SLOT: review of climbing injury epidemiology"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 33,
+      "module": "M6 Health and Welfare",
+      "title": "Fuel, not weight: what are low energy availability and REDs?",
+      "concepts": [
+        "low energy availability",
+        "Relative Energy Deficiency in Sport (REDs)",
+        "athlete welfare and federation policy",
+        "no body-weight or body-composition targets"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://doi.org/10.1136/bjsports-2023-106994",
+        "https://en.wikipedia.org/wiki/Relative_energy_deficiency_in_sport",
+        "VERIFY-SLOT: current IFSC medical and athlete-welfare policy on REDs"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 34,
+      "module": "M6 Health and Welfare",
+      "title": "Review: would your block survive a health check?",
+      "concepts": [
+        "spaced review of lessons 28-33",
+        "auditing the lesson 31 block for load, recovery and welfare risks"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 35,
+      "module": "M7 Competition Day",
+      "title": "From isolation to first attempt: what should your warm-up and observation look like?",
+      "concepts": [
+        "warm-up in isolation",
+        "using the observation period",
+        "transition from warm-up to wall"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "VERIFY-SLOT: IFSC Rules (current season), isolation and observation procedures",
+        "IFSC-CLIP-SLOT:L35-observation-period"
+      ],
+      "status": "pending",
+      "extended": false
+    },
+    {
+      "lesson": 36,
+      "module": "M7 Competition Day",
+      "title": "Fell on the first go: now what?",
+      "concepts": [
+        "attempt strategy across a round",
+        "pre-performance routines",
+        "managing arousal and nerves",
+        "adapting beta between attempts"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "VERIFY-SLOT: peer-reviewed source on anxiety and performance in climbing",
+        "IFSC-CLIP-SLOT:L36-attempt-strategy"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 37,
+      "module": "M7 Competition Day",
+      "title": "Capstone: read, plan and pace a full final",
+      "concepts": [
+        "full route read",
+        "physiological and pacing plan",
+        "setter intent",
+        "attempt strategy synthesis"
+      ],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "IFSC-CLIP-SLOT:L37-capstone-final"
+      ],
+      "status": "pending",
+      "extended": true
+    },
+    {
+      "lesson": 38,
+      "module": "M7 Competition Day",
+      "title": "Final review: from route read to training block",
+      "concepts": [
+        "cumulative spaced review",
+        "weak-spot retest from the learning log",
+        "next steps"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [],
+      "status": "pending",
+      "extended": false
+    }
+  ],
+  "level": "intermediate",
+  "prerequisites": [
+    "Regular indoor climbing (bouldering and/or roped) with basic hold and move familiarity",
+    "High-school algebra: slope, intercept, averaging, reading a straight-line graph",
+    "Willingness to watch and pause competition footage (IFSC broadcasts)"
+  ],
+  "preliminary": false
+}

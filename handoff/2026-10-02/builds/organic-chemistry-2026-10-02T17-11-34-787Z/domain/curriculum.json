@@ -1,0 +1,1132 @@
+{
+  "topic": "Organic Chemistry — Reaction Mechanisms",
+  "slug": "organic-chemistry",
+  "created": "2026-10-02",
+  "student_level": "advanced",
+  "exit_criteria": [
+    "Write complete, charge-balanced arrow mechanisms of 5 steps or fewer in the course text notation for polar, radical, pericyclic and Pd-catalysed reactions",
+    "Predict SN1/SN2/E1/E2/E1cB outcomes from substrate, nucleophile or base, solvent and conformation, including Curtin–Hammett cases",
+    "Rank SN2 nucleophiles with Swain–Scott n; estimate relative rates of nucleophiles with carbocations and Michael acceptors using Mayr N/s_N/E; state where the Mayr equation is not validated (e.g., SN2 at sp3 carbon)",
+    "Distinguish concerted from stepwise alkene additions and predict their regiochemistry and stereochemistry",
+    "Draw acid- and base-catalysed carbonyl mechanisms (hydride/Grignard, acetal, imine/enamine, acyl substitution, enolate, aldol/Claisen, conjugate addition) with correct proton bookkeeping",
+    "Use FMO and Woodward–Hoffmann rules to classify cycloadditions, electrocyclic reactions and sigmatropic shifts under thermal and photochemical conditions",
+    "Count electrons and oxidation states at metal centres and trace a Suzuki cycle through its elementary steps, including competing transmetalation pathways",
+    "Design and interpret mechanistic experiments (KIE, crossover and labeling, trapping, radical clocks, Hammett ρ)",
+    "Critique ML reaction-prediction claims for dataset bias and Clever Hans effects"
+  ],
+  "lessons": [
+    {
+      "lesson": 1,
+      "module": "Mechanistic Toolkit",
+      "title": "Where do the electrons actually go — and how do we write it down unambiguously?",
+      "concepts": [
+        "curved-arrow notation",
+        "electron sources and sinks",
+        "formal-charge conservation",
+        "course text notation"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=nx44QhGY-S0",
+        "https://www.youtube.com/watch?v=UVpizSVIBX0",
+        "https://www.chemistryworld.com/feature/the-iconic-curly-arrow/3004840.article",
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 1",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 2,
+      "module": "Mechanistic Toolkit",
+      "title": "Why does a nucleophile attack exactly where it does? HOMO meets LUMO",
+      "concepts": [
+        "nucleophile HOMO",
+        "electrophile LUMO (π*, σ*, empty p)",
+        "orbital overlap and energy match"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=v-B52CDasX8",
+        "https://www.youtube.com/watch?v=ctzv5o4RGXE",
+        "https://employees.csbsju.edu/cschaller/Reactivity/Carbonyl/COMO.htm",
+        "https://en.wikipedia.org/wiki/B%C3%BCrgi%E2%80%93Dunitz_angle",
+        "Fleming, Molecular Orbitals and Organic Chemical Reactions, Student Ed. (Wiley, 2009), Ch. 4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 3,
+      "module": "Mechanistic Toolkit",
+      "title": "Why is pKa the single most useful number when writing a mechanism?",
+      "concepts": [
+        "pKa ladder",
+        "leaving-group ability",
+        "acid/base condition consistency"
+      ],
+      "difficulty": 2,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=ve5hfX3ywk0",
+        "https://www.masterorganicchemistry.com/?p=1474",
+        "https://www.chem.tamu.edu/rgroup/begley/Organic%20Chemistry%20Tools/evans_pKa_table.pdf",
+        "https://organicchemistrydata.org/hansreich/resources/pka/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 8"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 4,
+      "module": "Mechanistic Toolkit",
+      "title": "Is that bump on the energy diagram a transition state or an intermediate — and which step sets the rate?",
+      "concepts": [
+        "transition state vs intermediate",
+        "rate-determining step",
+        "ΔG‡ and rate laws"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=-DqG1GUtjUs",
+        "https://www.khanacademy.org/science/chemistry/chem-kinetics/arrhenius-equation/v/multistep-reaction-energy-profiles",
+        "https://www.nobelprize.org/prizes/chemistry/1999/press-release/",
+        "Anslyn & Dougherty, Modern Physical Organic Chemistry (University Science Books, 2006), Ch. 7",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 12"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 5,
+      "module": "Mechanistic Toolkit",
+      "title": "Why does a transition state look like whichever neighbour is closest in energy?",
+      "concepts": [
+        "Hammond postulate",
+        "early vs late transition states",
+        "reactivity–selectivity"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=dpBEPksr0xU",
+        "https://www.masterorganicchemistry.com/2011/09/28/hammonds-postulate",
+        "https://www.youtube.com/watch?v=nNubeKtLGBI",
+        "Anslyn & Dougherty, Modern Physical Organic Chemistry (University Science Books, 2006), Ch. 7",
+        "https://doi.org/10.1021/ja01607a027"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 6,
+      "module": "Mechanistic Toolkit",
+      "title": "Why is a tertiary carbocation comfortable while a primary one barely exists?",
+      "concepts": [
+        "hyperconjugation",
+        "resonance stabilisation",
+        "carbocation, carbanion and radical stability orders"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=ZRp4F6ktSB0",
+        "https://www.masterorganicchemistry.com/2011/03/11/3-factors-that-stabilize-carbocations/",
+        "https://www.nobelprize.org/prizes/chemistry/1994/olah/lecture/",
+        "https://sciencedaily.com/releases/2013/07/130709124000.htm",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 15"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 7,
+      "module": "Mechanistic Toolkit",
+      "title": "Can you write a charge-balanced mechanism and its energy diagram from scratch?",
+      "concepts": [
+        "arrow notation",
+        "pKa reasoning",
+        "Hammond postulate",
+        "intermediate stability"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=UVpizSVIBX0",
+        "https://www.youtube.com/watch?v=Et0Y7z-sLUg",
+        "https://www.masterorganicchemistry.com/2011/09/28/hammonds-postulate",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)/02%3A_Polar_Covalent_Bonds_Acids_and_Bases/2.08%3A_Predicting_Acid-Base_Reactions_from_pKa_Values",
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 1"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 8,
+      "module": "Substitution & Elimination",
+      "title": "Why does SN2 turn a molecule inside out?",
+      "concepts": [
+        "backside attack into σ*C–X",
+        "Walden inversion",
+        "steric hindrance at the electrophilic carbon"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=eaQyzkAZGjM",
+        "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/sn2mov.htm",
+        "https://www.masterorganicchemistry.com/?p=5333",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 15",
+        "https://en.wikipedia.org/wiki/SN2_reaction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 9,
+      "module": "Substitution & Elimination",
+      "title": "Why does SN1 scramble stereochemistry — but rarely completely?",
+      "concepts": [
+        "ionisation as the rate-determining step",
+        "ion pairs and partial racemisation",
+        "solvent ionising power"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=f8ZitqJOMcM",
+        "https://www.youtube.com/watch?v=5EJ5-uZufZ8",
+        "https://ncstate.pressbooks.pub/organicchem/chapter/the-sn1-reaction/",
+        "https://en.wikipedia.org/wiki/Grunwald%E2%80%93Winstein_equation",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 15"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 10,
+      "module": "Substitution & Elimination",
+      "title": "Can one number predict how fast a nucleophile reacts — and where does that number stop working?",
+      "concepts": [
+        "Swain–Scott n (SN2 at methyl)",
+        "Mayr equation log k = s_N(N + E)",
+        "validated scope of Mayr N/E",
+        "nucleophilicity vs basicity"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=3vyeQ8DC_D8",
+        "https://www.youtube.com/watch?v=s0PVmUT5G4s",
+        "https://www.cup.lmu.de/oc/mayr/reaktionsdatenbank2/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3458771",
+        "https://doi.org/10.1021/ja01097a041"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 11,
+      "module": "Substitution & Elimination",
+      "title": "Why must the E2 hydrogen be antiperiplanar — and what does a cyclohexane chair do to that?",
+      "concepts": [
+        "antiperiplanar σ–σ* alignment",
+        "trans-diaxial requirement",
+        "menthyl vs neomenthyl chloride"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=FZKTSHLh84I",
+        "https://www.liverpool.ac.uk/~ngreeves/ltfdemo/jmol/E2Menthyl.html",
+        "https://openstax.org/books/organic-chemistry/pages/11-9-the-e2-reaction-and-cyclohexane-conformation",
+        "https://www.masterorganicchemistry.com/2012/10/18/the-e2-reaction-and-cyclohexane-rings/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 17"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 12,
+      "module": "Substitution & Elimination",
+      "title": "Who chooses between Zaitsev and Hofmann — the base, the leaving group or the mechanism?",
+      "concepts": [
+        "Zaitsev vs Hofmann selectivity",
+        "E1 via carbocations",
+        "E1cB via carbanions",
+        "base size"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=bTS-mINzs2U",
+        "https://www.youtube.com/watch?v=sN1PFc2xkYU",
+        "https://www.masterorganicchemistry.com/2017/10/18/the-hofmann-elimination/",
+        "https://en.wikipedia.org/wiki/E1cB-elimination_reaction",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 17"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 13,
+      "module": "Substitution & Elimination",
+      "title": "SN1, SN2, E1, E2 or E1cB — can you call it in under a minute and justify it?",
+      "concepts": [
+        "substitution/elimination decision",
+        "solvent and nucleophile effects",
+        "stereochemical outcomes"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=N2ppCPP8B1I",
+        "https://www.youtube.com/watch?v=hz-fSXifP9w",
+        "https://www.youtube.com/watch?v=2KYa-PnBWfU",
+        "https://www.masterorganicchemistry.com/?p=6762",
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 2"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 14,
+      "module": "Substitution & Elimination",
+      "title": "If the less stable conformer reacts faster, which product wins?",
+      "concepts": [
+        "Curtin–Hammett principle",
+        "rapidly equilibrating conformers",
+        "product ratio from ΔΔG‡"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=FaJgvdb9YyI",
+        "https://www.youtube.com/watch?v=5DAapo9JDFY",
+        "https://en.wikipedia.org/wiki/Curtin%E2%80%93Hammett_principle",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11023033/",
+        "Anslyn & Dougherty, Modern Physical Organic Chemistry (University Science Books, 2006), Ch. 7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 15,
+      "module": "Carbocations: Rearrangements & Alkene Additions",
+      "title": "Why would a carbocation move a methyl group — and how does the pinacol rearrangement exploit that?",
+      "concepts": [
+        "1,2-hydride and alkyl shifts (Wagner–Meerwein)",
+        "pinacol and semipinacol rearrangements",
+        "migratory aptitude"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=BfJR9zUYfY8",
+        "https://www.youtube.com/watch?v=CIhApQUSF10",
+        "https://masterorganicchemistry.com/2023/01/10/pinacol-rearrangement",
+        "https://pubs.rsc.org/en/content/articlehtml/2021/sc/d1sc02386a",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 36"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 16,
+      "module": "Carbocations: Rearrangements & Alkene Additions",
+      "title": "How can a sulfur atom two carbons away turn an alkyl chloride into a weapon — and the idea behind the first chemotherapy?",
+      "concepts": [
+        "neighbouring-group participation",
+        "episulfonium/aziridinium ions and net retention",
+        "nonclassical 2-norbornyl cation"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=4ejrFUZnrwA",
+        "https://research.cm.utexas.edu/nbauld/Anchimeric.htm",
+        "https://www.youtube.com/watch?v=o7IMMB2AcfA",
+        "https://www.nat.fau.eu/2013/07/12/doubted-molecular-structure-confirmed/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 36"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 17,
+      "module": "Carbocations: Rearrangements & Alkene Additions",
+      "title": "Why do Br2 and Hg(OAc)2 add anti — and why don't they rearrange?",
+      "concepts": [
+        "bridged halonium and mercurinium ions",
+        "anti addition",
+        "halohydrin regiochemistry",
+        "oxymercuration–demercuration"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=1bWZR__InTQ",
+        "https://www.youtube.com/watch?v=7yDAm0R9Xvo",
+        "https://chem.libretexts.org/Courses/Purdue/Purdue%3A_Chem_26605%3A_Organic_Chemistry_II_(Lipton)/Chapter_11.__Addition_to_pi_Systems/11.1%3A_Electrophilic_Addition/11.1.2_Electrophilic_Addition_to_Alkenes/11.1.2.3%3A_Oxymercuration",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 19",
+        "https://en.wikipedia.org/wiki/Oxymercuration_reaction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 18,
+      "module": "Carbocations: Rearrangements & Alkene Additions",
+      "title": "How does hydroboration put the OH on the 'wrong' carbon, syn?",
+      "concepts": [
+        "concerted four-centre addition",
+        "anti-Markovnikov regiochemistry",
+        "syn stereospecificity",
+        "B→O migration with retention"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=Ux9BEDgfZBg",
+        "https://www.masterorganicchemistry.com/2013/03/28/hydroboration/",
+        "https://www.nobelprize.org/prizes/chemistry/1979/brown/lecture/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 19 (stepwise additions for contrast)",
+        "https://doi.org/10.1126/science.210.4469.485"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 19,
+      "module": "Carbocations: Rearrangements & Alkene Additions",
+      "title": "Why does an epoxide open at the more substituted carbon in acid but the less substituted one in base?",
+      "concepts": [
+        "concerted peracid epoxidation",
+        "SN2-type epoxide opening",
+        "borderline SN1 character under acid",
+        "regiochemical switch"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=j4yPeJI9gn0",
+        "https://www.youtube.com/watch?v=k-RKOC9olL0",
+        "https://www.masterorganicchemistry.com/2015/02/02/opening-of-epoxides-with-acid/",
+        "https://chem.libretexts.org/Courses/Nassau_Community_College/Organic_Chemistry_I_and_II/08%3A_Reactions_of_Alkenes/8.14%3A_Opening_of_Epoxides_-_Acidic_versus_Basic_Conditions",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 19"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 20,
+      "module": "Carbocations: Rearrangements & Alkene Additions",
+      "title": "How does one enzyme fold a linear chain into four rings? Reviewing cations through the lanosterol cascade",
+      "concepts": [
+        "cation–alkene cyclisation cascade",
+        "Markovnikov addition",
+        "1,2-shifts",
+        "review of carbocation reasoning"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=k4JX32SK21c",
+        "https://openstax.org/books/organic-chemistry/pages/27-7-biosynthesis-of-steroids",
+        "https://rcsb.org/structure/1w6k",
+        "https://en.wikipedia.org/wiki/Lanosterol_synthase",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 42"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 21,
+      "module": "Carbonyl Chemistry",
+      "title": "Why do nucleophiles hit a carbonyl at about 107°, not 90°?",
+      "concepts": [
+        "Bürgi–Dunitz trajectory",
+        "π*C=O as acceptor",
+        "tetrahedral intermediate",
+        "reversible additions (hydrates, cyanohydrins)"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=U0UvgnbeCqA",
+        "https://en.wikipedia.org/wiki/B%C3%BCrgi%E2%80%93Dunitz_angle",
+        "https://www.ch.imperial.ac.uk/rzepa/blog/?p=14016",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10601473/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 22,
+      "module": "Carbonyl Chemistry",
+      "title": "Why can NaBH4 sit in methanol when a Grignard can't survive a drop of water?",
+      "concepts": [
+        "hydride delivery (NaBH4, LiAlH4)",
+        "Grignard addition",
+        "chemoselectivity from basicity",
+        "workup protonation"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=xSyO_lBJPDE",
+        "https://www.youtube.com/watch?v=4CaAuyDpRpE",
+        "https://openstax.org/books/organic-chemistry/pages/19-7-nucleophilic-addition-of-hydride-and-grignard-reagents-alcohol-formation",
+        "https://chemistryviews.org/?p=38971",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 23,
+      "module": "Carbonyl Chemistry",
+      "title": "Why does an acetal need acid to form and acid to fall apart — and why do sugars prefer an axial OR?",
+      "concepts": [
+        "hemiacetal and acetal formation",
+        "oxocarbenium ion",
+        "acid-catalysis proton bookkeeping",
+        "anomeric effect"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=rmhcAMDUXwM",
+        "https://www.youtube.com/watch?v=FTK_X7ZmteQ",
+        "https://en.wikipedia.org/wiki/Anomeric_effect",
+        "https://www.chemistryworld.com/news/anomeric-effect-cannot-be-explained-by-hyperconjugation-alone/4022751.article",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 11"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 24,
+      "module": "Carbonyl Chemistry",
+      "title": "Why does a primary amine give an imine but a secondary amine an enamine — and why did that win a Nobel Prize?",
+      "concepts": [
+        "carbinolamine and iminium ion",
+        "imine vs enamine",
+        "enamine nucleophilicity",
+        "enamine organocatalysis"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=TvtRgoJxqLc",
+        "https://www.nobelprize.org/prizes/chemistry/2021/popular-information/",
+        "https://www.youtube.com/watch?v=3R6-jPWyidw",
+        "https://masterorganicchemistry.com/?p=3771",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 11"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 25,
+      "module": "Carbonyl Chemistry",
+      "title": "How does aspirin permanently switch off an enzyme? Acyl transfer in action",
+      "concepts": [
+        "addition–elimination at acyl carbon",
+        "leaving-group pKa and acyl reactivity order",
+        "covalent acetylation of a COX serine"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=VJr1LvRx3hk",
+        "https://www.youtube.com/watch?v=6KlUPoGHVBg",
+        "https://public.csusm.edu/jayasinghe/visualizing-inhibition-of-cyclooxygenase-by-aspirin.html",
+        "https://www.smithsonianmag.com/smart-news/brief-history-aspirin-180964329/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 10"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Carbonyl Chemistry",
+      "title": "Addition or substitution — when does the tetrahedral intermediate collapse, and which way?",
+      "concepts": [
+        "tetrahedral intermediate fate",
+        "acid vs base proton bookkeeping",
+        "carbonyl review"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=_M7deYMHYkA",
+        "https://chemguide.co.uk/mechanisms/addelim/whatis.html",
+        "https://psu.pb.unizin.org/ch220/chapter/nucleophilic-acyl-substitution-reactions/",
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 2",
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 3"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Carbonyl Chemistry",
+      "title": "Why does LDA at −78 °C choose a different enolate than NaOEt at room temperature?",
+      "concepts": [
+        "enolate formation",
+        "kinetic vs thermodynamic control",
+        "directed aldol addition"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=0inUP3alKOY",
+        "https://www.youtube.com/watch?v=QSDL22_EhrA",
+        "https://www.ch.imperial.ac.uk/rzepa/blog/?p=11512",
+        "https://organicchemistrydata.org/reusch/virtualtext/aldol-reactions/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 20"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Carbonyl Chemistry",
+      "title": "How does your body build fatty acids with a textbook Claisen condensation?",
+      "concepts": [
+        "Claisen condensation",
+        "deprotonation as thermodynamic driving force",
+        "thioester enolates",
+        "decarboxylative Claisen (thiolase, fatty-acid synthase)"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=u4Dpo8OuRAM",
+        "https://www.youtube.com/watch?v=UUsG5oguR5E",
+        "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Book%3A_Organic_Chemistry_with_a_Biological_Emphasis_v2.0_(Soderberg)/13%3A_Reactions_at_the_-Carbon_Part_II/13.04%3A_Claisen_Condensation",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 26",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 42"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Carbonyl Chemistry",
+      "title": "Why does an acrylamide warhead find one cysteine in a kinase? Conjugate addition",
+      "concepts": [
+        "1,2- vs 1,4-addition",
+        "Michael acceptors on the Mayr E scale",
+        "cuprate conjugate addition via Cu(III)",
+        "HSAB as a heuristic"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "https://www.youtube.com/watch?v=CdiDzwz4cCM",
+        "https://www.cup.lmu.de/oc/mayr/reaktionsdatenbank2/",
+        "https://www.chemistryworld.com/news/covalent-drugs-just-got-a-new-spring-loaded-warhead/4023989.article",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8097726",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 22"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Aromatic & Radical Reactions",
+      "title": "Why does benzene substitute instead of adding?",
+      "concepts": [
+        "Wheland (σ-complex) intermediate",
+        "rearomatisation",
+        "electrophile generation (nitronium)"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=NtLzBzAGjnM",
+        "https://en.wikipedia.org/wiki/Arenium_ion",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5735206/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 21"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Aromatic & Radical Reactions",
+      "title": "Why does –OMe direct ortho/para and –NO2 meta — and where do halogens fit?",
+      "concepts": [
+        "resonance vs inductive effects",
+        "σ-complex stability",
+        "halogen anomaly (deactivating o/p directors)"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.youtube.com/watch?v=geIhhMml1W8",
+        "https://www.masterorganicchemistry.com/2018/03/05/why-are-halogens-ortho-para-directors/",
+        "https://www.youtube.com/watch?v=19XyR3EFw9k",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12053944/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 21"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Aromatic & Radical Reactions",
+      "title": "How can a nucleophile replace an aryl halide in two completely different ways?",
+      "concepts": [
+        "SNAr addition–elimination (Meisenheimer complex)",
+        "concerted SNAr",
+        "elimination–addition via benzyne",
+        "Roberts' 14C labeling"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=IaplvqRJL1I",
+        "https://chemistryworld.com/news/textbook-aromatic-substitution-mechanism-overthrown/3009288.article",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6105541/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 22",
+        "https://doi.org/10.1021/ja01109a523"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Aromatic & Radical Reactions",
+      "title": "Why does Cl· attack almost any C–H while Br· picks the tertiary one?",
+      "concepts": [
+        "radical chain (initiation, propagation, termination)",
+        "bond dissociation energies",
+        "selectivity via the Hammond postulate",
+        "fishhook arrows"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=07vXkQvN-Ss",
+        "https://www.masterorganicchemistry.com/2013/10/31/selectivity-in-free-radical-reactions/",
+        "https://demonstrations.wolfram.com/HammondsPostulateAndSelectivityInFreeRadicalHalogenation/",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 37",
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 5"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Aromatic & Radical Reactions",
+      "title": "Polar or radical? Aromatic or carbonyl? Can you sort a mixed set before drawing a single arrow?",
+      "concepts": [
+        "mechanism-class recognition",
+        "aromatic substitution review",
+        "carbonyl review",
+        "radical chain review"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://vrchemistry.chem.ox.ac.uk/iom/default.html",
+        "https://orgchem101.uottawa.ca/",
+        "https://www.youtube.com/watch?v=o-mHSTqwwzg",
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 35,
+      "module": "Aromatic & Radical Reactions",
+      "title": "Why does HBr add anti-Markovnikov with peroxides — and how does NBS brominate an allylic C–H?",
+      "concepts": [
+        "radical addition chain",
+        "regiochemistry from radical stability",
+        "low-[Br2] regime via NBS",
+        "allylic bromination"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.masterorganicchemistry.com/2013/04/12/addition-hbr-alkenes-roor-peroxides-free-radical/",
+        "https://www.youtube.com/watch?v=Mkdfv1oagdw",
+        "https://www.youtube.com/watch?v=Qx4BDOjVvIw",
+        "https://en.wikipedia.org/wiki/Morris_S._Kharasch",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 37"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 36,
+      "module": "Aromatic & Radical Reactions",
+      "title": "Why does a 5-hexenyl radical close to a five-membered ring, and how can that be used as a stopwatch?",
+      "concepts": [
+        "Bu3SnH chain mechanism",
+        "5-exo-trig cyclisation and Baldwin's rules",
+        "radical clocks",
+        "tin toxicity and silane/photoredox alternatives"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Radical_clock",
+        "https://www.youtube.com/watch?v=72EDMowgess",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8009483/",
+        "https://www.organic-chemistry.org/chemicals/reductions/tris%28trimethylsilyl%29silane-ttmss.shtm",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 37"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 37,
+      "module": "Aromatic & Radical Reactions",
+      "title": "Is the intermediate real, or just convenient? What trapping experiments can and cannot prove",
+      "concepts": [
+        "trapping agents (TEMPO, furan for benzyne)",
+        "competition kinetics",
+        "accessible vs on-pathway intermediates"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 39",
+        "Anslyn & Dougherty, Modern Physical Organic Chemistry (University Science Books, 2006), Ch. 8",
+        "https://en.wikipedia.org/wiki/TEMPO"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 38,
+      "module": "Pericyclic Reactions",
+      "title": "What do the π orbitals of allyl, butadiene and hexatriene look like — and which ones matter?",
+      "concepts": [
+        "polyene π-MO node patterns",
+        "HOMO/LUMO symmetry",
+        "ground- vs excited-state HOMO",
+        "FMO interaction"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "Fleming, Molecular Orbitals and Organic Chemical Reactions, Student Ed. (Wiley, 2009), Ch. 1",
+        "https://doi.org/10.1063/1.1700523"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 39,
+      "module": "Pericyclic Reactions",
+      "title": "Why do Diels–Alder reactions love electron-poor dienophiles — and is the endo rule really about orbitals?",
+      "concepts": [
+        "normal-demand FMO analysis",
+        "Lewis-acid LUMO lowering",
+        "suprafacial stereospecificity",
+        "endo selectivity (contested origins)"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 34",
+        "https://doi.org/10.1021/ar0000152",
+        "https://en.wikipedia.org/wiki/Diels%E2%80%93Alder_reaction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 40,
+      "module": "Pericyclic Reactions",
+      "title": "Why do 1,3-dipoles cycloadd easily while two alkenes refuse to — unless you shine light on them?",
+      "concepts": [
+        "1,3-dipolar [3+2] cycloaddition",
+        "thermal [2+2] forbidden; photochemical allowed",
+        "Criegee ozonolysis",
+        "strain-promoted azide–alkyne click"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 34",
+        "https://doi.org/10.1002/anie.196305651",
+        "https://doi.org/10.1002/anie.197507451",
+        "https://doi.org/10.1021/ja044996f",
+        "https://doi.org/10.1021/ja0734086"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 41,
+      "module": "Pericyclic Reactions",
+      "title": "Can a single rule decide every pericyclic reaction? Woodward–Hoffmann",
+      "concepts": [
+        "generalised Woodward–Hoffmann rule",
+        "suprafacial vs antarafacial components",
+        "thermal vs photochemical selection"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
+      "resources": [
+        "Fleming, Molecular Orbitals and Organic Chemical Reactions, Student Ed. (Wiley, 2009), Ch. 6",
+        "Anslyn & Dougherty, Modern Physical Organic Chemistry (University Science Books, 2006), Ch. 15",
+        "https://doi.org/10.1002/anie.196907811"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 42,
+      "module": "Pericyclic Reactions",
+      "title": "Allowed or forbidden, and with what stereochemistry? An FMO and Woodward–Hoffmann drill",
+      "concepts": [
+        "component counting",
+        "FMO stereochemical prediction",
+        "cycloaddition review"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "Fleming, Molecular Orbitals and Organic Chemical Reactions, Student Ed. (Wiley, 2009), Ch. 6",
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 4"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 43,
+      "module": "Pericyclic Reactions",
+      "title": "Why does heat twist a cyclobutene open one way and light twist it the other?",
+      "concepts": [
+        "electrocyclic reactions",
+        "conrotatory vs disrotatory",
+        "4n vs 4n+2 under thermal and photochemical conditions"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 35",
+        "https://doi.org/10.1021/ja01080a054"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 44,
+      "module": "Pericyclic Reactions",
+      "title": "How does sunlight on your skin make vitamin D? A ring opening plus a hydrogen shift",
+      "concepts": [
+        "[1,n] sigmatropic H shifts",
+        "suprafacial vs antarafacial H migration",
+        "photochemical 6π conrotatory ring opening",
+        "thermal antarafacial [1,7]-H shift"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
+      "resources": [
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 35",
+        "https://en.wikipedia.org/wiki/Sigmatropic_reaction"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 45,
+      "module": "Pericyclic Reactions",
+      "title": "Chair or boat? Predicting the stereochemistry of Cope and Claisen rearrangements",
+      "concepts": [
+        "[3,3] sigmatropic shifts",
+        "chair transition state",
+        "alkene geometry → stereocentre transfer",
+        "chorismate mutase"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 35",
+        "Fleming, Molecular Orbitals and Organic Chemical Reactions, Student Ed. (Wiley, 2009), Ch. 6",
+        "https://en.wikipedia.org/wiki/Chorismate_mutase"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 46,
+      "module": "Organometallic Mechanisms",
+      "title": "How many electrons does that palladium really have?",
+      "concepts": [
+        "metal oxidation state",
+        "dⁿ count",
+        "18-electron rule and 16-electron square-planar d8",
+        "L- and X-type ligands"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
+      "resources": [
+        "Crabtree, The Organometallic Chemistry of the Transition Metals, 6th ed. (Wiley, 2014), Ch. 2",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 40"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 47,
+      "module": "Organometallic Mechanisms",
+      "title": "What are the few elementary moves every catalytic cycle is built from?",
+      "concepts": [
+        "oxidative addition and reductive elimination",
+        "transmetalation",
+        "migratory insertion and β-hydride elimination"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
+      "resources": [
+        "Crabtree, The Organometallic Chemistry of the Transition Metals, 6th ed. (Wiley, 2014), Ch. 6",
+        "Crabtree, The Organometallic Chemistry of the Transition Metals, 6th ed. (Wiley, 2014), Ch. 7",
+        "Anslyn & Dougherty, Modern Physical Organic Chemistry (University Science Books, 2006), Ch. 12"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 48,
+      "module": "Organometallic Mechanisms",
+      "title": "Why does Suzuki coupling need base — and which way does boron reach palladium?",
+      "concepts": [
+        "Suzuki catalytic cycle",
+        "oxo-palladium vs boronate transmetalation",
+        "role of base",
+        "earth-abundant Ni and Fe alternatives"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 6",
+        "https://doi.org/10.1021/cr00039a007",
+        "https://doi.org/10.1021/ja1108326",
+        "https://doi.org/10.1038/nature13274",
+        "https://doi.org/10.1021/acscentsci.6b00272"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 49,
+      "module": "Organometallic Mechanisms",
+      "title": "Can you trace the cycle — electron count and oxidation state at every stop?",
+      "concepts": [
+        "catalytic-cycle bookkeeping",
+        "elementary-step review",
+        "pericyclic carry-over"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 6"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 50,
+      "module": "Mechanistic Evidence & Prediction",
+      "title": "What does swapping H for D tell you about the slow step?",
+      "concepts": [
+        "primary kinetic isotope effect",
+        "zero-point-energy origin",
+        "secondary KIE",
+        "intra- vs intermolecular competition"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "Anslyn & Dougherty, Modern Physical Organic Chemistry (University Science Books, 2006), Ch. 8",
+        "https://doi.org/10.1021/cr60211a004",
+        "https://doi.org/10.1002/anie.201107334"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 51,
+      "module": "Mechanistic Evidence & Prediction",
+      "title": "Did the pieces ever leave the molecule? Labeling and crossover experiments",
+      "concepts": [
+        "isotopic labeling (13C, 14C, 18O, D)",
+        "crossover experiments",
+        "intra- vs intermolecular pathways"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 39",
+        "https://doi.org/10.1021/ja01109a523",
+        "https://en.wikipedia.org/wiki/Crossover_experiment_(chemistry)"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 52,
+      "module": "Mechanistic Evidence & Prediction",
+      "title": "What does a Hammett ρ of −4 tell you about the transition state?",
+      "concepts": [
+        "Hammett equation log(k/k0) = ρσ",
+        "σ vs σ+",
+        "sign and magnitude of ρ",
+        "curved Hammett plots as mechanism change"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "Anslyn & Dougherty, Modern Physical Organic Chemistry (University Science Books, 2006), Ch. 8",
+        "https://doi.org/10.1021/ja01280a022",
+        "https://doi.org/10.1021/cr00002a004"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 53,
+      "module": "Mechanistic Evidence & Prediction",
+      "title": "Three hypotheses, one week of instrument time — which experiment do you run?",
+      "concepts": [
+        "choosing among KIE, crossover, trapping and Hammett",
+        "predicting outcomes for each hypothesis",
+        "falsifiability"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 39",
+        "https://doi.org/10.1021/ja1108326"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 54,
+      "module": "Mechanistic Evidence & Prediction",
+      "title": "Can a neural network 'know' a mechanism? Reading ML reaction-prediction claims critically",
+      "concepts": [
+        "template-free sequence models (Molecular Transformer)",
+        "dataset bias and Clever Hans predictions",
+        "yield-prediction controls",
+        "benchmark design (ChemPro)"
+      ],
+      "difficulty": 4,
+      "type": "resource-drop",
+      "resources": [
+        "http://arxiv.org/abs/1608.06296v2",
+        "https://doi.org/10.1021/acscentsci.9b00576",
+        "https://doi.org/10.1038/s41467-021-21895-w",
+        "https://doi.org/10.1126/science.aar5169",
+        "https://doi.org/10.1126/science.aat8603"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 55,
+      "module": "Mechanistic Evidence & Prediction",
+      "title": "Can you draw one mechanism from every module without notes?",
+      "concepts": [
+        "cumulative polar review",
+        "radical and pericyclic review",
+        "organometallic and evidence review"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 7"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 56,
+      "module": "Mechanistic Evidence & Prediction",
+      "title": "Can you propose, defend and design a test for a mechanism of a reaction you've never seen?",
+      "concepts": [
+        "multistep mechanism proposal",
+        "competing hypotheses",
+        "experimental design to discriminate"
+      ],
+      "difficulty": 5,
+      "type": "teach-back",
+      "resources": [
+        "Grossman, The Art of Writing Reasonable Organic Reaction Mechanisms, 2nd ed. (Springer, 2003), Ch. 7",
+        "Clayden, Greeves & Warren, Organic Chemistry, 2nd ed. (OUP, 2012), Ch. 39"
+      ],
+      "status": "pending"
+    }
+  ],
+  "level": "advanced",
+  "prerequisites": [
+    "Two semesters of undergraduate organic chemistry (functional groups, nomenclature, basic reactions)",
+    "Stereochemistry (R/S, E/Z, relative configuration) and cyclohexane conformational analysis",
+    "General chemistry kinetics and thermodynamics (ΔG, ΔG‡, rate laws, equilibrium constants)",
+    "Aromaticity and Hückel's 4n+2 rule",
+    "Basic MO theory (bonding/antibonding, HOMO/LUMO); polyene π MOs are refreshed in lesson 38",
+    "Oxidation states (d-electron and 18-electron counting is taught in lesson 46; prior exposure helps)",
+    "Basic NMR and IR interpretation (used in the evidence lessons)"
+  ],
+  "preliminary": false
+}

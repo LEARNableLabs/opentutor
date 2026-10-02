@@ -1,0 +1,243 @@
+{
+ "arxiv": [
+  {
+   "title": "Pulsar Science with the SKA Observatory",
+   "summary": "The large instantaneous sensitivity, a wide frequency coverage and flexible observation modes with large number of beams in the sky are the main features of the SKA observatory's two telescopes, the SKA-Low and the SKA-Mid, which are located on two different continents. Owing to these capabilities, ",
+   "year": "2025",
+   "authors": [
+    "Bhal Chandra Joshi",
+    "Aris Karastergiou",
+    "Marta Burgay",
+    "The SKA pulsar science working group"
+   ],
+   "url": "http://arxiv.org/abs/2512.16152v1"
+  },
+  {
+   "title": "Large Synoptic Survey Telescope: Dark Energy Science Collaboration",
+   "summary": "This white paper describes the LSST Dark Energy Science Collaboration (DESC), whose goal is the study of dark energy and related topics in fundamental physics with data from the Large Synoptic Survey Telescope (LSST). It provides an overview of dark energy science and describes the current and antic",
+   "year": "2012",
+   "authors": [
+    " LSST Dark Energy Science Collaboration"
+   ],
+   "url": "http://arxiv.org/abs/1211.0310v1"
+  },
+  {
+   "title": "Bonsai-Net: One-Shot Neural Architecture Search via Differentiable Pruners",
+   "summary": "One-shot Neural Architecture Search (NAS) aims to minimize the computational expense of discovering state-of-the-art models. However, in the past year attention has been drawn to the comparable performance of naive random search across the same search spaces used by leading NAS algorithms. To addres",
+   "year": "2020",
+   "authors": [
+    "Rob Geada",
+    "Dennis Prangle",
+    "Andrew Stephen McGough"
+   ],
+   "url": "http://arxiv.org/abs/2006.09264v3"
+  },
+  {
+   "title": "GREX-PLUS Science Book",
+   "summary": "GREX-PLUS (Galaxy Reionization EXplorer and PLanetary Universe Spectrometer) is a mission candidate for a JAXA's strategic L-class mission to be launched in the 2030s. Its primary sciences are two-fold: galaxy formation and evolution and planetary system formation and evolution. The GREX-PLUS spacec",
+   "year": "2023",
+   "authors": [
+    "GREX-PLUS Science Team",
+    " :",
+    "Akio K. Inoue",
+    "Yuichi Harikane",
+    "Takashi Moriya",
+    "Hideko Nomura",
+    "Shunsuke Baba",
+    "Yuka Fujii",
+    "Naoteru Gouda",
+    "Yasuhiro Hirahara",
+    "Yui Kawashima",
+    "Tadayuki Kodama",
+    "Yusei Koyama",
+    "Hiroyuki Kurokawa",
+    "Taro Matsuo",
+    "Yoshiki Matsuoka",
+    "Shuji Matsuura",
+    "Ken Mawatari",
+    "Toru Misawa",
+    "Kentaro Nagamine",
+    "Kimihiko Nakajima",
+    "Shota Notsu",
+    "Takafumi Ootsubo",
+    "Kazumasa Ohno",
+    "Hideo Sagawa",
+    "Takashi Shimonishi",
+    "Ken-ichi Tadaki",
+    "Michihiro Takami",
+    "Tsuyoshi Terai",
+    "Yoshiki Toba",
+    "Takuji Yamashita",
+    "Chikako Yasui"
+   ],
+   "url": "http://arxiv.org/abs/2304.08104v2"
+  },
+  {
+   "title": "Science with the X-ray Imaging and Spectroscopy Mission (XRISM)",
+   "summary": "This white paper was prepared by members of the XRISM Science Team for the benefit of the general astronomical community. This paper describes the capabilities of XRISM, offers a sampling of the many science topics that the mission will address, and discusses the synergies of XRISM with the plethora",
+   "year": "2020",
+   "authors": [
+    " XRISM Science Team"
+   ],
+   "url": "http://arxiv.org/abs/2003.04962v1"
+  },
+  {
+   "title": "Meta Audiobox Aesthetics: Unified Automatic Quality Assessment for Speech, Music, and Sound",
+   "summary": "The quantification of audio aesthetics remains a complex challenge in audio processing, primarily due to its subjective nature, which is influenced by human perception and cultural context. Traditional methods often depend on human listeners for evaluation, leading to inconsistencies and high resour",
+   "year": "2025",
+   "authors": [
+    "Andros Tjandra",
+    "Yi-Chiao Wu",
+    "Baishan Guo",
+    "John Hoffman",
+    "Brian Ellis",
+    "Apoorv Vyas",
+    "Bowen Shi",
+    "Sanyuan Chen",
+    "Matt Le",
+    "Nick Zacharov",
+    "Carleigh Wood",
+    "Ann Lee",
+    "Wei-Ning Hsu"
+   ],
+   "url": "http://arxiv.org/abs/2502.05139v1"
+  },
+  {
+   "title": "Microwave Engineering of Tunable Spin Interactions with Superconducting Qubits",
+   "summary": "Quantum simulation has emerged as a powerful framework for investigating complex many - body phenomena. A key requirement for emulating these dynamics is the realization of fully controllable quantum systems enabling various spin interactions. Yet, quantum simulators remain constrained in the types ",
+   "year": "2025",
+   "authors": [
+    "Kui Zhao",
+    "Ziting Wang",
+    "Yu Liu",
+    "Gui - Han Liang",
+    "Cai - Ping Fang",
+    "Yun - Hao Shi",
+    "Lv Zhang",
+    "Jia - Chi Zhang",
+    "Tian - Ming Li",
+    "Hao Li",
+    "Yueshan Xu",
+    "Wei - Guo Ma",
+    "Hao - Tian Liu",
+    "Jia - Cheng Song",
+    "Zhen - Ting Bao",
+    "Yong - Xi Xiao",
+    "Bing - Jie Chen",
+    "Cheng - Lin Deng",
+    "Zheng - He Liu",
+    "Yang He",
+    "Si - Yun Zhou",
+    "Xiaohui Song",
+    "Zhongcheng Xiang",
+    "Dongning Zheng",
+    "Kaixuan Huang",
+    "Kai Xu",
+    "Heng Fan"
+   ],
+   "url": "http://arxiv.org/abs/2505.16286v2"
+  },
+  {
+   "title": "Inventions on GUI Aesthetics",
+   "summary": "Aesthetics or \"look and feel\" is one of the most important features of any graphical user interface. Better aesthetics makes the interface user-friendlier and more popular. Better aesthetics helps the user to understand the meaning of various components and memorize the navigation paths. A better lo",
+   "year": "2014",
+   "authors": [
+    "Umakant Mishra"
+   ],
+   "url": "http://arxiv.org/abs/1404.6776v1"
+  },
+  {
+   "title": "Lynx2030 Science Analysis Group: Final Report",
+   "summary": "The Lynx2030 Science Analysis Group (SAG) was convened to reassess the scientific goals and technical drivers of the Lynx mission concept amid a rapidly evolving astrophysics landscape. Building on the original Lynx Concept Study, the SAG examined how recent discoveries, emerging facilities, and adv",
+   "year": "2026",
+   "authors": [
+    " Lynx2030 Science Analysis Group",
+    "Simon R. Bandler",
+    "Laura W. Brenneman",
+    "Nico Cappelluti",
+    "Daniel Castro",
+    "Steven R. Ehlert",
+    "W. Peter Maksym",
+    "Fabio Pacucci",
+    "Scott W. Randall",
+    "Grant R. Tremblay",
+    "John ZuHone",
+    "Steven W. Allen",
+    "Antara R. Basu-Zych",
+    "Akos Bogdan",
+    "Joel N. Bregman",
+    "Tamta Burduli",
+    "Thomas Connor",
+    "Sanskriti Das",
+    "Casey DeRoo",
+    "Stephen DiKerby",
+    "Paul A. Draghis",
+    "Martin Elvis",
+    "Giuseppina Fabbiano",
+    "Ralf K. Heilmann",
+    "Jimmy A. Irwin",
+    "Amruta Jaodand",
+    "Margarita Karovska",
+    "Vinay L. Kashyap",
+    "Anthony A. Kerr",
+    "Caroline Kilbourne",
+    "Ralph Kraft",
+    "Jiangtao Li",
+    "Labani Mallick",
+    "Herman L. Marshall",
+    "Michael L. McCollough",
+    "Anna Ogorzałek",
+    "Frederik Paerels",
+    "Daniel Patnaude",
+    "Paul Plucinsky",
+    "David Pooley",
+    "Frederick S. Porter",
+    "Daniele Rogantini",
+    "Roger Romani",
+    "Helen R. Russell",
+    "Kazuhiro Sakai",
+    "Mark Schattenburg",
+    "Dan A. Schwartz",
+    "Malgorzata Sobolewska",
+    "Paolo Soffitta",
+    "Alexey Vikhlinin",
+    "Daniel R. Wilkins",
+    "Scott Wolk",
+    "Ka-Wah Wong",
+    "Irina Zhuravleva"
+   ],
+   "url": "http://arxiv.org/abs/2609.00033v1"
+  },
+  {
+   "title": "MC-curves and aesthetic measurements for pseudospiral curve segments",
+   "summary": "This article studies families of curves with monotonic curvature function (MC-curves) and their applications in geometric modelling and aesthetic design. Aesthetic analysis and assessment of the structure and plastic qualities of pseudospirals, which are curves with monotonic curvature function, are",
+   "year": "2013",
+   "authors": [
+    "Rushan Ziatdinov",
+    "Rifkat I. Nabiyev",
+    "Kenjiro T. Miura"
+   ],
+   "url": "http://arxiv.org/abs/1305.1737v1"
+  }
+ ],
+ "semanticScholar": [],
+ "wikipedia": null,
+ "openAlex": [
+  {
+   "type": "work",
+   "name": "Nonnative forest insects and pathogens in the United States: Impacts and policy options",
+   "description": "2016 — 408 citations",
+   "worksCount": 408,
+   "authors": [
+    "Gary M. Lovett",
+    "Marissa S. Weiss",
+    "Andrew M. Liebhold"
+   ],
+   "doi": "https://doi.org/10.1890/15-1176"
+  }
+ ],
+ "syllabi": [],
+ "youtube": [],
+ "github": [],
+ "wikiLinks": []
+}

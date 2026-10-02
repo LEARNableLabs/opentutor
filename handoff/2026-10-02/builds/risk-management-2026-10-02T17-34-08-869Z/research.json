@@ -1,0 +1,184 @@
+{
+ "arxiv": [
+  {
+   "title": "A Stochastic Processes Toolkit for Risk Management",
+   "summary": "In risk management it is desirable to grasp the essential statistical features of a time series representing a risk factor. This tutorial aims to introduce a number of different stochastic processes that can help in grasping the essential features of risk factors describing different asset classes o",
+   "year": "2008",
+   "authors": [
+    "Damiano Brigo",
+    "Antonio Dalessandro",
+    "Matthias Neugebauer",
+    "Fares Triki"
+   ],
+   "url": "http://arxiv.org/abs/0812.4210v1"
+  },
+  {
+   "title": "Robust blue-green urban flood risk management optimised with a genetic algorithm for multiple rainstorm return periods",
+   "summary": "Flood risk managers seek to optimise Blue-Green Infrastructure (BGI) designs to maximise return on investment. Current systems often use optimisation algorithms and detailed flood models to maximise benefit-cost ratios for single rainstorm return periods. However, these schemes may lack robustness i",
+   "year": "2025",
+   "authors": [
+    "Asid Ur Rehman",
+    "Vassilis Glenis",
+    "Elizabeth Lewis",
+    "Chris Kilsby",
+    "Claire Walsh"
+   ],
+   "url": "http://arxiv.org/abs/2502.12174v2"
+  },
+  {
+   "title": "Neural-Actuarial Longevity Forecasting: Anchoring LSTMs for Explainable Risk Management",
+   "summary": "Traditional multi-population models, such as the Li-Lee framework, rely on the assumption of mean-reverting country-specific deviations. However, recent data from high-longevity clusters suggest a systemic break in this paradigm. We identify a stationarity paradox where mortality residuals in countr",
+   "year": "2026",
+   "authors": [
+    "Davide Rindori"
+   ],
+   "url": "http://arxiv.org/abs/2605.06438v1"
+  },
+  {
+   "title": "Modelo de maturidade em gerenciamento de riscos em projetos (Project Risk Management Model Maturity)",
+   "summary": "The globalization feeded by the technology explosion that begans in the end of the last century, started the world to change faster every day. The only today's certain is the tomorrow's uncertain. Risk is defined as uncertain where one or many causes composed of ocurrence probality can generate an i",
+   "year": "2018",
+   "authors": [
+    "Ricardo Antunes",
+    "Daniel Birchal",
+    "João Márcio Abijaodi",
+    "Paulo Abreu",
+    "Rogério Peixoto"
+   ],
+   "url": "http://arxiv.org/abs/1801.06595v1"
+  },
+  {
+   "title": "Sequential Design and Spatial Modeling for Portfolio Tail Risk Measurement",
+   "summary": "We consider calculation of capital requirements when the underlying economic scenarios are determined by simulatable risk factors. In the respective nested simulation framework, the goal is to estimate portfolio tail risk, quantified via VaR or TVaR of a given collection of future economic scenarios",
+   "year": "2017",
+   "authors": [
+    "Michael Ludkovski",
+    "James Risk"
+   ],
+   "url": "http://arxiv.org/abs/1710.05204v2"
+  },
+  {
+   "title": "Understanding and managing blockchain protocol risks",
+   "summary": "This paper addresses the issue of blockchain protocol risks, a foundational category of risks affecting Distributed Ledger Technology (DLT) which underpins digital assets, smart contracts, and decentralised applications. It presents a comprehensive risk management framework developed in collaboratio",
+   "year": "2023",
+   "authors": [
+    "Alex Nathan",
+    "Dimosthenis Kaponis",
+    "Saul Lustgarten"
+   ],
+   "url": "http://arxiv.org/abs/2310.10797v1"
+  },
+  {
+   "title": "Contraction or steady state? An analysis of credit risk management in Italy in the period 2008-2012",
+   "summary": "Credit risk management in Italy is characterized, in the period June 2008 to June 2012, by frequent (frequency=0.5 cycles per year) and intense (peak amplitude: mean=39.2 billion Euros, s.e.=2.83 billion Euros) quarterly contractions and expansions around the mean (915.4 billion Euros, s.e.=3.59 bil",
+   "year": "2013",
+   "authors": [
+    "Stefano Olgiati",
+    "Alessandro Danovi"
+   ],
+   "url": "http://arxiv.org/abs/1307.2465v1"
+  },
+  {
+   "title": "The role of the Model Validation function to manage and mitigate model risk",
+   "summary": "This paper describes the current taxonomy of model risk, ways for its mitigation and management and the importance of the model validation function in collaboration with other departments to design and implement them.",
+   "year": "2012",
+   "authors": [
+    "Alberto Elices"
+   ],
+   "url": "http://arxiv.org/abs/1211.0225v1"
+  },
+  {
+   "title": "Next Generation Models for Portfolio Risk Management: An Approach Using Financial Big Data",
+   "summary": "This paper proposes a dynamic process of portfolio risk measurement to address potential information loss. The proposed model takes advantage of financial big data to incorporate out-of-target-portfolio information that may be missed when one considers the Value at Risk (VaR) measures only from cert",
+   "year": "2021",
+   "authors": [
+    "Kwangmin Jung",
+    "Donggyu Kim",
+    "Seunghyeon Yu"
+   ],
+   "url": "http://arxiv.org/abs/2102.12783v3"
+  },
+  {
+   "title": "A generic nonparametric value-at-risk estimator for high dimensions",
+   "summary": "We present in this article a non-parametric value-at-risk (VaR+CVaR) algorithm that remains accurate for an arbitrarily large number of underlying positions. The algorithm solves the two inherent problems of VaR estimation. First, past history is not directly applicable to the future, but all predic",
+   "year": "2026",
+   "authors": [
+    "Siyuan Sun"
+   ],
+   "url": "http://arxiv.org/abs/2608.17481v1"
+  }
+ ],
+ "semanticScholar": [],
+ "wikipedia": {
+  "title": "Actuarial science",
+  "extract": "Actuarial science is the discipline that applies mathematical and statistical methods to assess risk in insurance, pension, finance, investment, psychology, medicine, and other industries and professions.",
+  "url": "https://en.wikipedia.org/wiki/Actuarial_science",
+  "description": "Statistics applied to risk in insurance and other financial products"
+ },
+ "openAlex": [
+  {
+   "type": "work",
+   "name": "Global, regional, and national incidence, prevalence, and years lived with disability for 354 diseases and injuries for 195 countries and territories, 1990–2017: a systematic analysis for the Global Burden of Disease Study 2017",
+   "description": "2018 — 14266 citations",
+   "worksCount": 14266,
+   "authors": [
+    "Spencer Lewis James",
+    "Degu Abate",
+    "Kalkidan Hassen Abate"
+   ],
+   "doi": "https://doi.org/10.1016/s0140-6736(18)32279-7"
+  },
+  {
+   "type": "work",
+   "name": "2013 ACCF/AHA Guideline for the Management of Heart Failure",
+   "description": "2013 — 12632 citations",
+   "worksCount": 12632,
+   "authors": [
+    "Clyde W. Yancy",
+    "Mariell L Jessup",
+    "Biykem Bozkurt"
+   ],
+   "doi": "https://doi.org/10.1016/j.jacc.2013.05.019"
+  },
+  {
+   "type": "work",
+   "name": "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI",
+   "description": "2019 — 10137 citations",
+   "worksCount": 10137,
+   "authors": [
+    "Alejandro Barredo Arrieta",
+    "Natalia Díaz-Rodríguez",
+    "Javier Del Ser"
+   ],
+   "doi": "https://doi.org/10.1016/j.inffus.2019.12.012"
+  },
+  {
+   "type": "work",
+   "name": "Coherent Measures of Risk",
+   "description": "1999 — 9118 citations",
+   "worksCount": 9118,
+   "authors": [
+    "Philippe Artzner",
+    "Freddy Delbaen",
+    "Jean‐Marc Eber"
+   ],
+   "doi": "https://doi.org/10.1111/1467-9965.00068"
+  },
+  {
+   "type": "work",
+   "name": "Sirolimus-Eluting Stents versus Standard Stents in Patients with Stenosis in a Native Coronary Artery",
+   "description": "2003 — 4241 citations",
+   "worksCount": 4241,
+   "authors": [
+    "Jeffrey W. Moses",
+    "Martin B. Leon",
+    "Jeffrey J. Popma"
+   ],
+   "doi": "https://doi.org/10.1056/nejmoa035071"
+  }
+ ],
+ "syllabi": [],
+ "youtube": [],
+ "github": [],
+ "wikiLinks": []
+}
