@@ -44,12 +44,14 @@
 - **edX "Nanotechnology: The Basics"** (Rice University)
   - Covers nanofabrication techniques relevant to metamaterials
 
+
 ## Supplementary (for engagement)
 
 ### Videos and Channels
 
 - **Veritasium: "The Invisibility Cloak"**
   - Excellent explanation of metamaterial cloaking for general audiences
+
 
 - **Applied Science (Ben Krasnow)**
   - DIY metamaterial fabrication, piezoelectric experiments
@@ -58,6 +60,7 @@
 
 - **The Royal Institution: "The Magic of Metamaterials"** (Ortwin Hess)
   - Engaging lecture for general audience
+
 
 - **3Blue1Brown: Wave Interference**
   - Beautiful animations of wave phenomena (helpful for understanding bandgaps)
@@ -70,8 +73,10 @@
 - **TED-Ed: "The Science of Invisibility"**
   - Accessible 5-minute primer on cloaking
 
+
 - **Steve Mould: "Auxetic Materials"**
   - Fun demonstration of negative Poisson's ratio
+
 
 ### Interactive Tools and Simulations
 
@@ -83,6 +88,7 @@
 - **COMSOL Multiphysics Gallery**
   - Metamaterial simulation examples (photonic crystals, cloaking, acoustic absorption)
   - Can download models if you have COMSOL license
+
 
 - **Wolfram Demonstrations Project**
   - Split-ring resonator models, bandgap calculators, auxetic structure visualizations
@@ -137,6 +143,7 @@
 
 - **Berkeley Nanosciences and Nanoengineering Institute**
   - Work on optical metamaterials and plasmonic devices
+
 
 - **Harvard Materials Science and Mechanical Behavior Group** (Bertoldi Lab)
   - Mechanical metamaterials, instability-driven design
@@ -281,6 +288,7 @@
   - https://www.astm.org/
 
 - **IEEE Antennas and Propagation Society**: Conferences on metamaterial antennas
+
 
 - **MRS (Materials Research Society)**: Symposia on metamaterials and smart materials
   - https://www.mrs.org/

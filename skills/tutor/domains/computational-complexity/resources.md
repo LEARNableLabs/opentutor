@@ -103,6 +103,7 @@
 
 - **Aaronson, "P =? NP"** (2016) — Philosophical and technical exploration. Available at https://www.scottaaronson.com/papers/pnp.pdf
 
+- **Cook, "The P versus NP Problem"** (2000) — Clay Mathematics Institute official description.
 
 - **Arora & Barak, "Complexity Theory: A Modern Approach" (draft chapters)** — Free online at https://theory.cs.princeton.edu/complexity/
 
@@ -132,6 +133,7 @@
 
 - **Wikipedia's List of NP-complete Problems** — https://en.wikipedia.org/wiki/List_of_NP-complete_problems — Comprehensive catalog.
 
+- **Clay Mathematics Institute P vs NP page** — Official problem statement and background.
 
 - **Computational Complexity Foundation** — https://computationalcomplexity.org/ — Conference proceedings, surveys, and community resources.
 

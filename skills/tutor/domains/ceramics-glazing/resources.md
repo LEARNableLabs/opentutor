@@ -17,6 +17,7 @@
 - **"Understanding Glazes"** by Richard Eppler & Douglas Mimi Obstler
   - **Coverage**: Deep dive into oxide chemistry, phase diagrams, and glaze calculation
   - **Why it's good**: Most technical of the standard texts; perfect for intermediate students ready for rigor; excellent on eutectic systems
+  - **URL**:
 
 - **"Glazes and Glass Coatings"** by Richard Eppler & Douglas Knovel
   - **Coverage**: Industrial perspective on glaze chemistry, including commercial applications
@@ -50,6 +51,7 @@
 
 ### Video Channels & Tutorials
 
+- **The Ceramic School** (YouTube)
   - **Coverage**: Beginner to intermediate tutorials on all aspects of ceramics, including glaze chemistry basics
   - **Best for**: Visual learners who want step-by-step demonstrations
 
@@ -66,6 +68,7 @@
   - **Coverage**: Traditional pottery techniques with emphasis on classic glaze surfaces
   - **Best for**: Contextualizing chemistry within throwing and making practice
 
+- **Ceramic Arts Network Videos**
   - **Coverage**: Professional instruction on all ceramic topics including glaze chemistry
   - **Best for**: High-quality production; subscription-based but excellent content
 
@@ -103,6 +106,7 @@
 
 ### Testing Methodology
 
+- **Cone 6 Glaze Tests** by John Hesselberth
   - **Coverage**: Systematic testing results for mid-range glazes
   - **Best for**: Seeing methodology in action; understanding how testing reveals patterns
 
@@ -116,6 +120,7 @@
 
 ### Code & Data
 
+- **Glazy API**
   - **Type**: REST API for accessing glaze database
   - **Best for**: Developers who want to build tools or analyze large datasets
 
@@ -161,6 +166,7 @@
   - **Focus**: Crystalline glazes, specialized surface effects
   - **Why follow**: Master of advanced glaze techniques; excellent teacher
 
+- **Val Cushing** (legacy)
   - **Focus**: Glaze formulation, testing methodology
   - **Why follow**: Influential 20th-century educator; methods still widely used
 
@@ -230,6 +236,7 @@
 
 ## Community & Forums
 
+- **Clayart Listserv**
   - **Type**: Email discussion list (since 1993)
   - **Best for**: Technical questions, community knowledge sharing
 
@@ -265,6 +272,7 @@
   - **Focus**: Art pottery with regular glaze chemistry features
   - **Subscription**: Paid
 
+- **Pottery Making Illustrated**
   - **Focus**: Practical techniques including glaze application and testing
   - **Subscription**: Paid
 

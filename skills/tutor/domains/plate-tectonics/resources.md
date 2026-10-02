@@ -6,8 +6,10 @@
 - **"Geodynamics" by Donald Turcotte and Gerald Schubert (3rd ed, 2014)** — The canonical quantitative textbook. Covers heat flow, rheology, convection, plate dynamics with full mathematical development. Advanced but essential reference. Intermediate students can read selected chapters (1-4, 6-7) for conceptual grounding and key equations.
   - Cambridge University Press
 
+
 - **"The Solid Earth: An Introduction to Global Geophysics" by C.M.R. Fowler (2nd ed, 2004)** — Excellent balance of observation and theory. Strong on seismology, gravity, heat flow. More accessible than Turcotte & Schubert while maintaining rigor. Great for intermediate level.
   - Cambridge University Press
+
 
 ### Plate tectonics focused
 - **"Plate Tectonics: An Insider's History of the Modern Theory of the Earth" edited by Naomi Oreskes (2001)** — Historical perspective with original papers by pioneers. Provides context for how the theory developed. Complements technical treatments.
@@ -43,6 +45,7 @@
 
 - **EarthByte Portal** — Web-based viewer for plate reconstructions, seafloor age grids, topography evolution
   - https://portal.earthbyte.org/
+  - Interactive globe:
 
 ### Real-time data
 - **UNAVCO GPS Velocity Viewer** — Visualize real-time and campaign GPS velocities globally
@@ -74,6 +77,7 @@
 ### Academic lectures
 - **IRIS Distinguished Lecture Series** — Recorded talks by leading seismologists and geodynamicists
 
+
 - **AGU (American Geophysical Union) Fall Meeting Lectures** — Many keynote lectures available on YouTube
   - Search: "AGU Fall Meeting plate tectonics" or "AGU mantle convection"
 
@@ -102,10 +106,13 @@
   - Requires some programming experience (C++, Python)
 
 - **Underworld** — Python-based geodynamics modeling framework
+
   - More accessible for students with Python background
 
 ### Jupyter notebooks
 - **Geodynamic Modeling Examples** — Community-contributed notebooks for thermal models, convection, plate motion calculations
+
+  (various modeling scripts)
 
 ### Data access tools
 - **ObsPy** — Python framework for seismology, access to waveform data

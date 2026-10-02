@@ -62,8 +62,10 @@
   - Clear explanations of fiber optics fundamentals
   - Good animations for mode propagation and dispersion
 
+
 - **The Photonics Spotlight (YouTube)**
   - Industry updates and deep-dives into photonic technologies
+
 
 - **Branch Education (YouTube)**
   - "How do Fiber Optic Cables Work?" — excellent visual explanation
@@ -88,6 +90,7 @@
   - Simulation software for fiber optics and amplifiers
   - Free demo version available
 
+
 - **Lumerical MODE Solutions**
   - Professional fiber mode solver
   - Free trial for students
@@ -110,6 +113,7 @@
 
 - **GitHub: Fiber Optic Simulations**
   - Search for "fiber optic simulation python" or "SSMF dispersion matlab"
+  - Example:  (Python-based fiber propagation)
 
 - **GitHub: OptiCommPy**
   - Open-source Python library for simulating optical communications systems
@@ -135,6 +139,7 @@
 
 - **Cisco Dense Wavelength Division Multiplexing Guide**
   - Practical DWDM design guide
+
 
 - **Submarine Cable Map**
   - Interactive map of undersea fiber optic cables
@@ -222,6 +227,7 @@
 
 - **Link budget calculators**
   - Online tools: search "fiber optic link budget calculator"
+  - Example:
 
 - **BER testers and analyzers**
   - Keysight, Anritsu, EXFO — learn what industry measures

@@ -71,14 +71,17 @@
 - **Master Organic Chemistry (YouTube channel)**
   - Channel by James Ashenhurst. Complements the blog (see below) with mechanism videos.
 
+
 ### Interactive Tools
 
 - **ChemDraw (PerkinElmer)**
   - Industry-standard chemical drawing software. Free trial available; student licenses discounted.
+
   - Essential for drawing mechanisms with proper formatting.
 
 - **MarvinSketch (ChemAxon)**
   - Free chemical structure editor. Good alternative to ChemDraw for students.
+
   - Draw mechanisms, predict products, visualize 3D structures.
 
 - **MolView**
@@ -102,6 +105,9 @@
   - https://www.masterorganicchemistry.com/
   - Key posts:
 
+
+
+
 - **Chemistry LibreTexts**
   - Crowd-sourced open textbooks. Comprehensive, well-organized, free.
   - https://chem.libretexts.org/
@@ -112,6 +118,7 @@
 
 - **Not Voodoo (MIT OpenCourseWare adjacent site)**
   - Practical tips for lab techniques, but also conceptual explanations of mechanisms.
+
 
 ### Code and Molecular Modeling
 
@@ -146,8 +153,10 @@
 - **Organic Chemistry Problems (University of Alberta)**
   - Free problem bank organized by topic.
 
+
 - **Master Organic Chemistry Practice Problems**
   - Topic-specific practice problems with explanations.
+
 
 ### Community and Q&A
 
@@ -193,6 +202,7 @@
   - https://www.ncbi.nlm.nih.gov/books/NBK22586/ (NCBI Bookshelf)
 
 - **Drug mechanisms** — How do antibiotics work? Beta-lactams (penicillin) inhibit cell wall synthesis via acyl-enzyme intermediate (nucleophilic acyl substitution)
+  - Resource:  (mechanism of aspirin)
 
 ### Materials Science
 
@@ -204,6 +214,7 @@
 ### Environmental Chemistry
 
 - **Atmospheric chemistry** — Ozone depletion by CFCs (radical chain mechanisms), smog formation (radical reactions)
+  - Resource:  (radical polymerization and atmospheric radicals)
 
 ### History of Science
 

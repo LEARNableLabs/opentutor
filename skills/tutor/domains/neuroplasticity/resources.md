@@ -15,6 +15,7 @@
 - **Coursera: Understanding the Brain** (University of Chicago) — https://www.coursera.org/learn/neurobiology — Includes modules on neuroplasticity and neural development.
 
 ### Review Articles (Open Access)
+- **Nature Reviews Neuroscience** — Curated collection of reviews on plasticity mechanisms, clinical applications, and emerging technologies.
 - **Kolb et al. (2016) "Brain plasticity in the developing brain"** — https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5854417/ — Comprehensive review of developmental and adult plasticity. Good for lesson 4 (critical periods) and lesson 25 (pediatric).
 - **Cramer et al. (2011) "Harnessing neuroplasticity for clinical applications"** — https://pubmed.ncbi.nlm.nih.gov/21228773/ — Translational review linking mechanisms to rehabilitation. Excellent for lessons 12-23.
 - **Malenka & Bear (2004) "LTP and LTD: an embarrassment of riches"** — https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3753797/ — Classic review of LTP/LTD mechanisms. Dense but authoritative for lesson 7.
@@ -34,6 +35,7 @@
 - **Nature Video: "The brain that changes itself"** — https://www.youtube.com/watch?v=ELpfYCZa87g — Documentary-style explainer on neuroplasticity mechanisms.
 
 ### Interactive Tools
+- **3D Brain (Cold Spring Harbor Laboratory)** — Interactive 3D brain model with information on structures and functions. Use to orient students on brain anatomy.
 - **Backyard Brains: Virtual Neurophysiology Lab** — https://backyardbrains.com/ — Simulations of action potentials, synaptic transmission, and plasticity. Hands-on learning for lesson 6-7.
 - **The Brain Atlas** — https://www.brainfacts.org/3d-brain — Interactive atlas from the Society for Neuroscience. Good for stroke lesion mapping (lesson 12).
 - **PubMed Central (PMC)** — https://www.ncbi.nlm.nih.gov/pmc/ — Open-access repository of biomedical literature. Teach students to search for and read primary research.

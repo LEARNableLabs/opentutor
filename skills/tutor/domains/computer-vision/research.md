@@ -25,9 +25,11 @@
   - URL: http://cs231n.stanford.edu/
   - Lecture notes, assignments, video lectures available
 - **MIT 6.801/6.866: Advanced Computer Vision** — classical and modern techniques
+  - URL:
 
 ### Interactive Resources
 - **OpenCV Tutorials** — practical implementation guide
+  - URL:
 - **PyImageSearch** — tutorials and practical projects
   - URL: https://pyimagesearch.com/
 - **Papers With Code (Computer Vision)** — state-of-the-art papers with implementations

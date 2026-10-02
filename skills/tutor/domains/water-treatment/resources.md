@@ -7,6 +7,7 @@
 - **Water Quality & Treatment: A Handbook on Drinking Water** (AWWA, 6th edition) — The definitive reference for drinking water treatment processes. Comprehensive coverage of coagulation, filtration, disinfection, and advanced treatment. Ideal for intermediate students who need both theory and practical design guidance.
   - Publisher: McGraw-Hill
 
+
 - **Wastewater Engineering: Treatment and Resource Recovery** (Metcalf & Eddy, 5th edition) — Industry standard for wastewater treatment. Excellent on biological processes, nutrient removal, and activated sludge. Strong on design calculations and real-world constraints.
   - Publisher: McGraw-Hill
   - https://www.mheducation.com/highered/product/wastewater-engineering-treatment-resource-recovery-metcalf-eddy-inc-tchobanoglous/M9780073401188.html
@@ -29,7 +30,9 @@
 
 - **TU Delft: Wastewater Treatment (edX)** — Online course covering biological wastewater treatment with process modeling. Includes quizzes and design exercises.
 
+
 - **Coursera: Water Supply and Sanitation Policy in Developing Countries** (University of Manchester) — Broader policy context for water systems. Good for understanding real-world constraints beyond engineering.
+
 
 ## Supplementary (for engagement)
 
@@ -41,9 +44,12 @@
 
 - **Breaking Through Concrete** — YouTube channel focused on civil engineering and water systems. Good visualizations of treatment processes.
 
+
 - **Water Environment Federation (WEF) YouTube** — Industry organization with technical webinars and plant tours.
 
+
 - **How Stuff Works: Water Treatment Plant Tour** — Accessible explanation for general audiences. Good for visual learners.
+
 
 ### Interactive Tools and Simulators
 
@@ -92,10 +98,12 @@
 
 - **Mark van Loosdrecht** (TU Delft) — Leading researcher in biological wastewater treatment, microbial ecology, and resource recovery. His group developed many foundational models.
 
+
 - **David Sedlak** (UC Berkeley) — Expert on water reuse, emerging contaminants, and urban water systems. Author of "Water 4.0: The Past, Present, and Future of the World's Most Vital Resource."
   - https://ce.berkeley.edu/people/faculty/sedlak
 
 - **Menachem Elimelech** (Yale) — Leading researcher in membrane processes, desalination, and water-energy nexus.
+
 
 ### Organizations
 
@@ -122,6 +130,7 @@
 - **Historical water treatment disasters** — Milwaukee cryptosporidiosis outbreak (1993), Walkerton E. coli outbreak (2000), Flint lead crisis (2014). Sobering reminders of why this work matters.
 
 - **Space station water recycling** — ISS recycles 93% of water including urine. Distillation + catalytic oxidation achieve extreme reuse.
+
 
 - **Ancient water systems** — Roman aqueducts, Mayan cisterns, Persian qanats. Historical engineering shows longstanding human need for clean water.
 

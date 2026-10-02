@@ -4,6 +4,7 @@
 
 - **Vitruvius, *De Architectura*** — Roman architectural treatise with extensive measurement descriptions. English translations available at [Archive.org](https://archive.org/details/vitruviustenbook00vitr). Essential for understanding Roman standardization.
 
+- **Cuneiform Digital Library Initiative (CDLI)** — searchable database of Mesopotamian tablets, many documenting measurements. Advanced, but browsable for visual evidence.
 
 - **NIST (National Institute of Standards and Technology)** — [https://www.nist.gov/pml/weights-and-measures](https://www.nist.gov/pml/weights-and-measures) — modern standards authority with historical archives. Excellent for understanding contemporary standardization.
 
@@ -47,6 +48,7 @@
 
 - **Timeline of Historical Measurement** — Wikipedia's history of measurement article has a good timeline: [https://en.wikipedia.org/wiki/History_of_measurement](https://en.wikipedia.org/wiki/History_of_measurement)
 
+- **Ancient Egyptian Virtual Temple** — Giza pyramid reconstructions show measurement precision in practice.
 
 ## Specific Wikipedia Articles (Well-Curated Starting Points)
 

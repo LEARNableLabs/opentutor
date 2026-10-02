@@ -2,11 +2,13 @@
 
 ## Primary Sources (for lesson content)
 
+- **On Rope: North American Vertical Rope Techniques** (NSS) — The definitive SRT manual. Multiple editions available through NSS bookstore. Covers everything from basic knots to complex rigging. At intermediate level, focus on chapters 5-9 (ascending/descending systems and changeovers). Available at
 
 - **Vertical Caving** (NSS Vertical Section publications) — Technical articles, rigging guides, and technique refinements published by the NSS Vertical Section. More advanced and specialized than On Rope. https://caves.org/section/vertical/
 
 - **Alpine Caving Techniques** (Georges Marbach and Bernard Tourte) — European perspective with more alpine-influenced rigging. Good for comparing American vs European approaches. Shows alternative techniques like the Mitchell system and alpine-style rebelays.
 
+- **NSS Safety and Techniques Committee** — Accident reports, safety bulletins, and best practices. Essential reading for understanding what goes wrong and why.
 
 - **NFPA Standards** — National Fire Protection Association standards for rope (NFPA 1983) and equipment. Technical but important for understanding equipment ratings. https://www.nfpa.org/
 
@@ -44,6 +46,7 @@
 
 - **ISC (International Safety Components)** — Welsh manufacturer, strong in rope access and industrial markets. https://www.iscwales.com/
 
+- **PMI (Pigeon Mountain Industries)** — American rope manufacturer, produces caving-specific static ropes.
 
 ### Rope Manufacturers
 - **BlueWater Ropes** — American, makes dedicated caving ropes with good abrasion resistance. https://www.bluewaterropes.com/
@@ -62,6 +65,7 @@
 
 - **CavingUK** — British caving forums with active technical discussions. Good for European perspective. https://www.cavinguk.co.uk/
 
+- **CaveChat** — Active online caving community with vertical techniques subforum.
 
 ## People (influential in vertical caving)
 

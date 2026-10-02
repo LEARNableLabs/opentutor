@@ -26,6 +26,7 @@
   - Definitive hemodynamics reference
   - Advanced treatment of wave propagation, impedance, compliance
   - For deep dives into vascular mechanics
+  - CRC Press
 
 ### Online Courses & Textbooks
 
@@ -44,6 +45,7 @@
 - **PhysioNet — Teaching Resources**
   - Real physiological datasets (ECGs, hemodynamic waveforms)
   - Signal processing tutorials
+
 
 ## Supplementary Resources (for engagement)
 
@@ -68,6 +70,7 @@
 
 - **Stanford Medcast — Cardiovascular Physiology Lectures**
   - University-level lectures, more formal but comprehensive
+  - []()
 
 ### Interactive Tools & Simulations
 

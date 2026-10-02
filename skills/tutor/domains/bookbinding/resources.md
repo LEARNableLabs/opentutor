@@ -46,6 +46,7 @@
 
 - **Sage Reynolds** — Hand bookbinding tutorials ranging from simple pamphlet stitch to complex case bindings.
 
+
 - **The Brain Scoop** (Field Museum) — Has several episodes on book conservation, featuring museum conservators working on historical specimens.
   - https://www.youtube.com/user/thebrainscoop
 
@@ -59,6 +60,7 @@
 
 - **"Book Conservation: A Close Look" (British Library)** — Short films showing conservation techniques and decision-making.
 
+
 - **"The Bookbinder" (PBS Craft in America series)** — Profile of traditional bookbinders and their work.
 
 ## Interactive Tools and Visual Resources
@@ -66,6 +68,7 @@
 ### 3D Models and Virtual Tours
 
 - **British Library Collection Care** — Visual guides to bookbinding structures, with diagrams and historical examples.
+
 
 - **Ligatus Language of Bindings** — Visual thesaurus of bookbinding structures and terminology with diagrams.
   - https://www.ligatus.org.uk/lob/
@@ -108,6 +111,7 @@
   - https://www.westdean.ac.uk/
 
 - **Kilgarlin Center for Preservation of the Cultural Record** (University of Texas at Austin) — Graduate program in preservation and conservation.
+
 
 ## People to Follow
 

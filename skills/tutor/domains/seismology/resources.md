@@ -61,10 +61,12 @@
   - Free, embeddable, clear visualizations
 
 - **UNAVCO Videos**
+  - URL:
   - Geodesy and crustal deformation
   - Use: complement seismology with GPS observations
 
 - **USGS Earthquake Hazards Videos**
+  - URL:
   - Includes ShakeOut scenarios, earthquake animations, hazard communication
   - Use: lessons 24-27 (hazards module)
 
@@ -88,6 +90,7 @@
   - Use: lesson 22 (data access)
 
 - **TauP Toolkit**
+  - URL:
   - Calculate travel times and ray paths through Earth models
   - Java application (requires download)
   - Use: lessons 9, 11
@@ -106,15 +109,18 @@
   - Use: **daily habit** — check recent earthquakes; lessons 22, 27
 
 - **Seismic Sound Lab (SeisSound)**
+  - URL:
   - Convert seismograms to audio
   - Use: fun engagement, shows frequency content
 
 - **AmaSeis (educational seismology software)**
+  - URL:
   - Free software for visualizing and analyzing seismic data
   - Windows-based
   - Use: lessons 5, 21, 22
 
 - **Focal Mechanism Tools**
+  - **USGS Moment Tensor Calculator:**
   - **IRIS SPUD Moment Tensor:** https://ds.iris.edu/spud/momenttensor
   - Interactive beach ball viewers
   - Use: lessons 16, 17
@@ -322,8 +328,10 @@
 |------|---------|---------|-----|
 | IRIS Animations | Wave visualization | 2, 3, 6, 8-10 | https://www.iris.edu/hq/inclass/animations |
 | IRIS IEB | Explore earthquake data | 5, 11, 17, 22, 27 | https://ds.iris.edu/ieb/ |
+| TauP | Travel time calculations | 9, 11 |  |
 | Global CMT | Focal mechanisms | 16, 17 | https://www.globalcmt.org/ |
 | USGS Earthquake Map | Real-time monitoring | Daily, 22, 27 | https://earthquake.usgs.gov/earthquakes/map/ |
+| AmaSeis | Educational seismology software | 5, 21, 22 |  |
 | ObsPy | Python seismology library | 21, 22 | https://www.obspy.org/ |
 | USGS Hazard Maps | Seismic hazard assessment | 24 | https://earthquake.usgs.gov/hazards/ |
 | ShakeAlert | Earthquake early warning | 26 | https://www.shakealert.org/ |

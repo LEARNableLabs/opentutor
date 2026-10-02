@@ -2,6 +2,7 @@
 
 ## Primary Sources (for lesson content)
 
+- **Let There Be Neon (NYC)** — Historic neon school offering hands-on courses. Excellent for practical bending technique (lessons 5-9, 17).
 
 - **American Scientific Glassblowers Society (ASGS)** — https://www.glassblower.info/ — Professional organization with technical bulletins, safety standards, and glassworking resources. Best source for glass science fundamentals (lessons 1-4).
 
@@ -23,6 +24,7 @@
 
 ### Interactive Tools
 
+- **PhET: Neon Lights & Other Discharge Lamps** — Interactive simulation of gas discharge with adjustable voltage and gas type. Perfect for lessons 10-14.
 
 - **PhET: Discharge Lamps** — https://phet.colorado.edu/en/simulations/discharge-lamps — Simplified discharge physics simulator. Good introduction for lesson 12.
 

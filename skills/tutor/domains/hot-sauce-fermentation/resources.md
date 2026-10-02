@@ -4,22 +4,27 @@
 
 ### Books
 
+- **"The Noma Guide to Fermentation"** by René Redzepi and David Zilber — The gold standard for modern fermentation science and practice. Chapters on lacto-fermentation, hot sauce, and flavor development are essential. Intermediate-friendly with both science and recipes.
 
 - **"The Art of Fermentation"** by Sandor Ellix Katz — Comprehensive cultural and practical guide to fermentation. Less technical than Noma, more philosophical. Great for understanding wild fermentation traditions. [https://www.wildfermentation.com/the-art-of-fermentation/](https://www.wildfermentation.com/the-art-of-fermentation/)
 
+- **"Hot Sauce!: Techniques for Making Signature Hot Sauces"** by Jennifer Trainer Thompson — Recipe-focused with excellent process photography. Good for beginners transitioning to intermediate.
 
 - **"The Pepper Trail: History and Recipes from Around the World"** by Jean Andrews — Historical and botanical deep dive. Excellent for understanding pepper varietals and regional fermentation traditions. [https://www.amazon.com/Pepper-Trail-History-Recipes-Around/dp/1574160184](https://www.amazon.com/Pepper-Trail-History-Recipes-Around/dp/1574160184)
 
 ### Academic & Technical
 
+- **"Handbook of Vegetable Preservation and Processing" (2nd edition)** — Chapter 12 covers fermented vegetables including peppers. Industrial-scale protocols adaptable to home scale. Technical but accessible at intermediate level.
 
 - **Journal of Food Science** — Regular papers on capsaicin chemistry, LAB fermentation kinetics, and hot sauce safety. Search "capsaicin fermentation" or "lactic acid pepper." [https://ift.onlinelibrary.wiley.com/journal/17503841](https://ift.onlinelibrary.wiley.com/journal/17503841)
 
 - **Food Microbiology (journal)** — Deep dives into LAB species, succession dynamics, and safety. More advanced but critical for understanding the microbiology. [https://www.journals.elsevier.com/food-microbiology](https://www.journals.elsevier.com/food-microbiology)
 
+- **"Practical Fermentation Guide" by NCHFP** — National Center for Home Food Preservation's guide to safe acidified foods. Essential for understanding FDA/USDA standards. Free online.
 
 ### Online Courses & Educational Resources
 
+- **Sandor Katz's "Wild Fermentation Workshops"** — Recorded workshops and tutorials. Excellent for visual learners.
 
 - **Cultures for Health Learning Library** — Free tutorials on LAB fermentation, starter cultures, troubleshooting. Very beginner-friendly. [https://www.culturesforhealth.com/learn/](https://www.culturesforhealth.com/learn/)
 
@@ -31,8 +36,11 @@
 
 - **Brad Leone's "It's Alive" series** (Bon Appétit YouTube) — Episode on fermented hot sauce is a masterclass in accessible fermentation education. Entertaining and informative. [https://www.youtube.com/watch?v=UGjCeAbWKPo](https://www.youtube.com/watch?v=UGjCeAbWKPo)
 
+- **ChilliChump** — Detailed pepper variety reviews, Scoville testing, growing guides. Great for understanding pepper selection.
 
+- **Joshua Weissman** — Several hot sauce fermentation videos with good production values and clear technique.
 
+- **Fermentation Podcast by Agro-Culture** — Interviews with fermentation experts, including hot sauce makers. Audio-based learning.
 
 - **Tabasco Factory Tour** (virtual) — See industrial fermentation at scale. Three-year barrel aging process. [https://www.tabasco.com/visit-avery-island/](https://www.tabasco.com/visit-avery-island/)
 
@@ -40,13 +48,17 @@
 
 - **MolView** — Visualize capsaicin, lactic acid, and other molecules in 3D. Great for understanding structure. [https://molview.org/](https://molview.org/)
 
+- **Brine Calculator** (Cultures for Health) — Calculate precise salt percentages for vegetable weight.
 
+- **pH Calculator for Fermentation** — Estimate final pH based on salt %, time, and temperature.
 
+- **Scoville Scale Interactive Chart** — Compare pepper varieties visually.
 
 - **Lactobacillus Growth Curve Simulator** — Model fermentation kinetics. More advanced. [https://www.aem.asm.org/simulators](https://www.aem.asm.org/simulators)
 
 ### Code & Data
 
+- **Fermentation Data Logger** (GitHub) — Arduino-based pH and temperature logger for tracking fermentation. For students who want to nerd out.
 
 - **USDA FoodData Central** — Nutrient and chemical composition data for peppers. Includes capsaicinoid content by variety. [https://fdc.nal.usda.gov/](https://fdc.nal.usda.gov/)
 
@@ -68,9 +80,11 @@
 
 - **David Zilber** — Former Noma fermentation lab director. Cutting-edge techniques. [https://www.instagram.com/david.zilber/](https://www.instagram.com/david.zilber/)
 
+- **Brad Leone** — Bon Appétit's fermentation guy. Makes it fun and accessible.
 
 - **Dr. Keith Warriner** — Food safety microbiologist. Excellent on LAB and pathogen control. University of Guelph. [https://www.uoguelph.ca/foodscience/](https://www.uoguelph.ca/foodscience/)
 
+- **Dr. Bob Hutkins** — Fermentation microbiologist, author of "Microbiology and Technology of Fermented Foods."
 
 ### Commercial Hot Sauce Case Studies
 
@@ -90,17 +104,23 @@ Study these for reverse-engineering exercises:
 
 ### Essential
 
+- **pH meter or pH strips** — Non-negotiable for safety. Strips are fine for home use (±0.5 accuracy).
 
 - **Mason jars or fermentation crocks** — Wide-mouth quart jars are standard. Crocks with airlocks for serious fermenters. [https://www.ballmasonjars.com/](https://www.ballmasonjars.com/)
 
+- **Fermentation weights** — Keep vegetables submerged. Glass weights or ziplock bags of brine.
 
+- **Digital kitchen scale** — For precise salt percentage calculations.
 
 ### Nice-to-Have
 
+- **Airlocks** — One-way CO2 release prevents mold. Not required but reduces babysitting.
 
 - **Immersion blender** — For final blending. Better texture control than standard blender. [https://www.cuisinart.com/shopping/appliances/hand_blenders/](https://www.cuisinart.com/shopping/appliances/hand_blenders/)
 
+- **Thermometer** — Monitor fermentation temperature. Stick-on strips work fine.
 
+- **Fine mesh strainer** — For straining seeds and skins if desired.
 
 ## Unexpected Connections
 
@@ -118,10 +138,13 @@ Study these for reverse-engineering exercises:
 
 ### Wild Cards
 
+- **Pain science** — Why do some people love capsaicin pain while others hate it? Endorphin release, learned tolerance.
 
+- **Evolutionary biology of capsaicin** — Plant defense chemistry, bird dispersal, mammal deterrence.
 
 - **Industrial fermentation scaling** — How does Tabasco ferment 10,000 barrels at once? Process control challenges. [https://www.foodengineeringmag.com/](https://www.foodengineeringmag.com/)
 
+- **Hot sauce as cultural artifact** — Louisiana vs. Mexican vs. Caribbean vs. Korean hot sauce traditions. Anthropology of fermentation.
 
 - **Capsaicin medical uses** — Pain relief creams, cancer research, metabolic effects. [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3462985/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3462985/)
 
@@ -129,9 +152,13 @@ Study these for reverse-engineering exercises:
 
 ### Critical References
 
+- **FDA Bad Bug Book** — Clostridium botulinum, pH requirements, acidified food safety.
 
+- **USDA Complete Guide to Home Canning** — Chapter on pickled and fermented foods. Gold standard.
 
+- **FDA Acidified Foods Guidelines** — Regulations for commercial production (overkill for home, but good to understand).
 
+- **Wild Fermentation Troubleshooting Guide** — When to worry, when not to.
 
 ## Pepper Sourcing
 
@@ -142,5 +169,6 @@ Study these for reverse-engineering exercises:
 
 ## Starter Culture Sources (if not doing wild fermentation)
 
+- **Caldwell's Starter Culture** — Vegetable fermentation blend.
 - **Cultures for Health LAB Culture** — Specific Lactobacillus strains. [https://www.culturesforhealth.com/](https://www.culturesforhealth.com/)
 - **Whey from live yogurt** — DIY starter option. Contains Lactobacillus acidophilus.

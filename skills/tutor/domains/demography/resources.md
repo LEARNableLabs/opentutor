@@ -50,6 +50,7 @@
 - **UN Population Pyramids (interactive)**
   - Official UN data, all countries, historical and projected
 
+
 - **Gapminder World**
   - Animated scatter plots of population indicators over time
   - Great for showing demographic transition visually
@@ -94,6 +95,7 @@
   - Regular expert presentations on current demographic topics
   - Archive of past webinars available
 
+
 - **Population Association of America (PAA)**
   - Professional association, some public lecture recordings
   - https://populationassociation.org/
@@ -106,6 +108,7 @@
 - **BBC — "Don't Panic: The Truth About Population" (2013)**
   - Hans Rosling documentary on population growth myths
   - 60 minutes, accessible, policy-relevant
+
 
 ### Hands-on Tools
 
@@ -136,6 +139,7 @@
 - **Omran, Abdel R.** (1971) — "The Epidemiological Transition"
   - Classic paper explaining mortality decline through disease patterns
   - Complements lesson 10 and 24
+
 
 - **Lee, Ronald** (2003) — "The Demographic Transition: Three Centuries of Fundamental Change"
   - Comprehensive review of demographic transition theory
@@ -168,8 +172,10 @@
 - **Jennifer Sciubba** — Political demographer, author of "8 Billion and Counting"
   - Twitter: @profsciubba
 
+
 - **Lyman Stone** — Demographer studying fertility decline
   - Twitter: @lymanstoneky
+
 
 - **John Wilmoth** — Director of UN Population Division
   - Oversees World Population Prospects
@@ -192,6 +198,7 @@
 
 ### Demography + Economics
 - **Demographic dividend** — East Asian growth driven by age structure
+  - David Bloom et al. work:
 
 ### Demography + Climate
 - **Population scenarios in IPCC models** — SSPs (Shared Socioeconomic Pathways)
@@ -205,6 +212,7 @@
 ### Demography + Genetics
 - **Effective population size** — genetic diversity depends on demographic history
   - Bottlenecks, founder effects
+
 
 ### Demography + Machine Learning
 - **Mortality forecasting with neural networks** — competing with Lee-Carter models
@@ -227,6 +235,7 @@
 - **University of Pennsylvania — Population Studies Center**
   - Graduate level but some accessible content
 
+
 - **London School of Economics — Department of Social Policy**
   - European perspective, strong on aging and policy
   - https://www.lse.ac.uk/social-policy
@@ -234,6 +243,7 @@
 ## Quick Reference Sites
 
 - **PRB Glossary of Demographic Terms**
+
 
 - **CDC Wonder** — US vital statistics query system
   - https://wonder.cdc.gov/

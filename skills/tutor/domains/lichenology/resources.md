@@ -20,13 +20,16 @@
 
 - **British Lichen Society — Educational Resources** — Training modules, identification guides, and field course listings. Excellent for UK/European species but concepts are universal.
 
+
 - **USDA Forest Service FIA Lichen Program** — Protocols, training materials, and monitoring data for North American bioindication studies. Free and comprehensive.
+
 
 ## Supplementary (for engagement)
 
 ### Videos and Lectures
 
 - **"Lichen: The Remarkable Organism That Made Life on Land Possible"** (PBS Eons) — 10-minute animated overview of lichen evolution and ecology. Great hook for Lesson 1.
+  (check YouTube for PBS Eons lichens)
 
 - **"The Hidden Kingdom of Fungi" (BBC/PBS)** — Episode 2 features lichen symbiosis with high-quality cinematography. Use clips for Lessons 2-3.
 
@@ -39,6 +42,7 @@
 
 - **Consortium of Lichen Herbaria (formerly CNALH)** — Searchable database of 2+ million lichen specimens with photos, locality data, and identification keys. Essential for Lessons 23-26.
 
+
 - **iNaturalist — Lichens** — Crowdsourced observation platform with AI-assisted identification suggestions. Students can upload photos and get community feedback. Gamifies learning.
   - https://www.inaturalist.org/taxa/54743-Lichens
 
@@ -47,9 +51,11 @@
 
 - **British Lichen Society Spot Test Guide** — Photos and videos demonstrating K, C, KC, P reagent tests with color change examples.
 
+
 ### Citizen Science and Monitoring Projects
 
 - **North American Lichen Project** — Community science initiative documenting lichen diversity across the continent. Students can contribute observations.
+
 
 - **USFS FIA Lichen Air Quality Gradient Projects** — Access to long-term monitoring data for student data analysis exercises (Lesson 19).
   - https://www.fs.usda.gov/research/products/dataandtools/datasets
@@ -100,11 +106,13 @@
 
 - **Beatrix Potter's lichen drawings** — Before *Peter Rabbit*, Potter was an accomplished lichen illustrator and amateur researcher who challenged Victorian mycologists. Gender and science history angle.
 
+
 - **Lichen green roofs** — Some green roof designs intentionally cultivate *Cladonia*, *Cetraria*, and other lichens for stormwater management and urban biodiversity. Ties ecology to green infrastructure.
 
 ## Academic Journals (for deeper dives)
 
 - **The Bryologist** — Quarterly journal of the American Bryological and Lichenological Society. Open-access archive after embargo period.
+
 
 - **Lichenologist** — Cambridge University Press journal covering all aspects of lichenology.
   - https://www.cambridge.org/core/journals/lichenologist
@@ -125,7 +133,9 @@
 
 - **Eagle Hill Institute (Maine) — Lichen Workshops** — Week-long field courses on identification, ecology, and biomonitoring. Highly recommended for hands-on learners.
 
+
 - **British Lichen Society Field Meetings** — Regional forays throughout UK and Europe, open to international participants.
+
 
 - **Oregon Lichenologists — Annual Foray** — Pacific Northwest lichen enthusiasts hold annual collecting trips. Community-building and mentorship.
 

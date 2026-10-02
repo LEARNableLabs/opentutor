@@ -20,6 +20,7 @@
 
 - **MIT OpenCourseWare: 1.054 Mechanics and Design of Concrete Structures** — https://ocw.mit.edu/courses/1-054-mechanics-and-design-of-concrete-structures-spring-2004/ — reinforced concrete behavior and design principles.
 
+- **Coursera: Engineering Mechanics Specialization (Georgia Tech)** — statics, dynamics, and mechanics of materials sequence.
 
 - **edX: Delft University Structural Engineering Courses** — https://www.edx.org/school/delftx — multiple courses on structural analysis, design, and materials.
 
@@ -60,14 +61,17 @@
 
 - **Algodoo (2D Physics Sandbox)** — http://www.algodoo.com/ — create and test structures in a physics simulator. Intuitive way to explore equilibrium and failure modes.
 
+- **Finite Element Method Magnets** — Duke University's interactive FEM tutorials with visualizations.
 
 ### Case Study Collections
 
+- **Council on Tall Buildings and Urban Habitat (CTBUH) Case Studies** — detailed analyses of supertall buildings with structural system diagrams and design rationale.
 
 - **Historic Bridge Foundation Database** — http://historicbridges.org/ — photos and technical descriptions of thousands of bridges worldwide.
 
 - **Federal Highway Administration Bridge Technology** — https://www.fhwa.dot.gov/bridge/ — reports, case studies, and technical guidance on bridge design and construction.
 
+- **FailureWiki** — database of engineering failures with root cause analysis. Sobering and educational.
 
 - **Engineering Failures: Learning from Disaster (YouTube Playlist)** — Compilation of documentaries on Tacoma Narrows, Hyatt Regency walkway collapse, I-35W bridge collapse, etc.
 
@@ -91,6 +95,7 @@
 
 - **FreeCAD FEM Workbench** — https://www.freecad.org/ — open-source CAD with integrated finite element analysis. Good for learning FEM concepts.
 
+- **Ftool** — free 2D frame analysis tool. Simple interface, great for teaching.
 
 ### Visualization
 
@@ -133,20 +138,25 @@
 ### Biomimicry in Structures
 
 - **The Gherkin (30 St Mary Axe, London)** — diagrid structure inspired by sea sponges' skeletal geometry. Uses 50% less steel than conventional bracing.
+  - Resource:
 
 - **Eden Project Biomes** — lightweight geodesic domes based on soap bubble geometry and pollen grain structures.
+  - Resource:
 
 - **Eastgate Centre (Harare, Zimbabwe)** — natural ventilation system based on termite mound airflow. Not structural per se, but shows nature-inspired engineering.
+  - Resource:
 
 ### Music & Structures
 
 - **Resonance phenomena** — bridges and buildings can act like musical instruments. The Millennium Bridge in London vibrated laterally when pedestrians' footsteps synchronized.
+  - Resource:
 
 - **Singing cables** — cable-stayed bridges sometimes produce eerie tones when wind flows over cables (Rama VIII Bridge in Bangkok, Auckland Harbour Bridge).
 
 ### Art & Structural Form
 
 - **Frei Otto's tensile structures** — German architect-engineer who pioneered lightweight membrane structures. His hanging chain models found optimal compression forms (inverted = tension structures).
+  - Resource:
 
 - **Antonio Gaudí's funicular models** — Gaudí used weighted strings to find optimal arch shapes for the Sagrada Família. Pure geometry derived from physical forces.
   - Resource: https://calatravasantiago.wordpress.com/2011/04/05/gaudi-and-his-use-of-catenary-curve/
@@ -168,6 +178,7 @@
 
 - **To Engineer Is Human by Henry Petroski** (book) — philosophical exploration of failure as essential to engineering progress. ISBN: 978-0679734161
 
+- **ASCE forensic engineering resources** — technical committee focused on learning from failures.
 
 ## Additional Reading
 

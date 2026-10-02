@@ -34,6 +34,7 @@
 - **MIT OCW 15.093: Optimization Methods**
   - More advanced than 15.053, stronger on algorithms
 
+
 - **Stanford EE364A: Convex Optimization**
   - Video lectures by Stephen Boyd himself
   - Essential for nonlinear optimization (lessons 21-23)
@@ -43,8 +44,10 @@
   - Excellent on IP, constraint programming, local search
   - Programming assignments in Python/Java
 
+
 - **Coursera: Linear and Integer Programming** (University of Colorado Boulder)
   - Practical focus, uses Excel and Python
+
 
 ## Supplementary (for engagement)
 
@@ -136,6 +139,7 @@
 - **JuMP Tutorials**
   - Interactive notebooks for LP, IP, NLP, SDP
 
+
 - **CVXPY Examples**
   - Finance, ML, signal processing, control
   - https://www.cvxpy.org/examples/index.html
@@ -185,6 +189,7 @@
   - https://www.mit.edu/~dbertsim/
 
 - **Laurence Wolsey** (UC Louvain) — Integer programming, polyhedral theory
+
 
 - **Michel Goemans** (MIT) — Combinatorial optimization, approximation algorithms
   - https://math.mit.edu/~goemans/

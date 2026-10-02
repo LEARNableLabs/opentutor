@@ -21,6 +21,7 @@
   - Cantor sets, Hausdorff dimension, symbolic dynamics, one-dimensional Markov maps
   - Perfect intermediate-level depth with rigorous proofs
 
+
 ### University Lecture Notes
 
 - **"Lecture Notes on Dynamical Systems, Chaos and Fractal Geometry"**

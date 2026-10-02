@@ -15,6 +15,7 @@
 
 ### Primary Texts (for advanced students)
 - **Ferdinand de Saussure, *Course in General Linguistics*** — foundational text for dyadic model, langue/parole, synchronic/diachronic.
+  - Stanford Encyclopedia:
 
 - **Charles Sanders Peirce, *Collected Papers*** — especially volumes 2 (elements of logic) and 5 (pragmatism). Dense but rewarding.
   - Stanford Encyclopedia: https://plato.stanford.edu/entries/peirce-semiotics/
@@ -38,6 +39,7 @@
   - https://www.youtube.com/playlist?list=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
 
 - **Yale Open Courses (Paul Fry)** — structuralism and semiotics lectures
+
 
 - **The School of Life** — accessible videos on Barthes and structuralism
   - https://www.youtube.com/user/schooloflifechannel
@@ -82,6 +84,7 @@
   - https://ojs.utlib.ee/index.php/sss
 
 - ***American Journal of Semiotics***
+
 
 - **Semiotic Review** — online journal with contemporary work
   - https://semioticreview.com/

@@ -5,6 +5,7 @@
 ### Foundational Books
 - **Edward Tufte — The Visual Display of Quantitative Information** (https://www.edwardtufte.com/tufte/books_vdqi) — The classic. Data-ink ratio, chartjunk, small multiples. Dense but essential. Best for intermediate students who want rigor.
 - **Cole Nussbaumer Knaflic — Storytelling with Data** (https://www.storytellingwithdata.com/books) — Practical, accessible, business-focused. Great for learning to communicate, not just analyze. Excellent for lessons 19-22.
+- **Alberto Cairo — The Truthful Art** () — Balance of theory and practice. Strong on ethics and statistical thinking. Intermediate-friendly.
 - **Stephen Few — Show Me the Numbers** (https://www.stephen-few.com/smtn.php) — Dashboard and table design. Detailed, prescriptive. Best for lessons 11, 26.
 - **Tamara Munzner — Visualization Analysis and Design** (https://www.cs.ubc.ca/~tmm/vadbook/) — Academic textbook. Comprehensive theory of marks, channels, tasks. Advanced but worth it for serious students.
 - **Isabel Meirelles — Design for Information** (https://isabelmeirelles.com/book-design-for-information/) — Beautiful examples, organized by data type. Visual reference.
@@ -12,6 +13,7 @@
 ### Research Papers (accessible to intermediate students)
 - **Cleveland & McGill (1984) — Graphical Perception** (https://www.jstor.org/stable/2288400) — The foundational study ranking visual encodings. Cited everywhere.
 - **Heer & Bostock (2010) — Crowdsourcing Graphical Perception** (http://vis.stanford.edu/files/2010-MTurk-CHI.pdf) — Modern replication and extension of Cleveland-McGill using Mechanical Turk.
+- **Borkin et al. (2013) — What Makes a Visualization Memorable?** () — Eye-tracking study on memorability vs. effectiveness.
 
 ### Online Courses
 - **UW CSE 442 — Data Visualization** (https://courses.cs.washington.edu/courses/cse442/) — Excellent syllabus, D3-focused, publicly available lectures and assignments
@@ -78,7 +80,9 @@
 ### Researchers
 - **Tamara Munzner** (https://www.cs.ubc.ca/~tmm/) — UBC professor, wrote the VAD textbook, theorist
 - **Jeffrey Heer** (https://homes.cs.washington.edu/~jheer/) — UW professor, created D3 with Bostock, interactive systems researcher
+- **Hanspeter Pfister** () — Harvard VCG director, biomedical and scientific visualization
 - **Robert Kosara** (https://eagereyes.org/about) — Tableau Research, blogging about visualization for 15+ years
+- **Steve Franconeri** () — Northwestern psychologist studying perception in visualization
 
 ### Practitioners and Designers
 - **Nadieh Bremer** (https://www.visualcinnamon.com/) — Freelance data viz designer, advanced D3.js expert
@@ -138,6 +142,7 @@
 ### History of Data Visualization
 - **Michael Friendly — Milestones in Data Visualization** (https://www.datavis.ca/milestones/) — Timeline from 1600s to present
 - **W.E.B. Du Bois Data Portraits** (https://www.smithsonianmag.com/history/first-time-together-and-color-book-displays-web-du-bois-visionary-infographics-180970826/) — 1900 Paris Exposition, hand-drawn advocacy
+- **Florence Nightingale's Coxcomb** () — First data visualization that changed policy
 - **John Snow's Cholera Map** (https://www.theguardian.com/news/datablog/2013/mar/15/john-snow-cholera-map) — 1854 map that proved disease transmission theory
 
 ### Cross-Discipline Applications

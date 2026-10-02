@@ -8,9 +8,11 @@
   - Best introductory textbook for intermediate learners. Clear, engaging, historically grounded. Covers all major schools.
   - ISBN: 978-0226300634
 
+
 - **Alex Rosenberg, *Philosophy of Science: A Contemporary Introduction*** (4th ed., 2020)
   - Comprehensive, analytically rigorous, covers contemporary debates. Good for students who want formalism.
   - ISBN: 978-0415891776
+
 
 - **James Ladyman, *Understanding Philosophy of Science*** (2001)
   - Excellent on scientific realism and the semantic view of theories. More advanced sections for rabbit holes.
@@ -21,10 +23,12 @@
   - Accessible, question-driven approach. Good for students coming from science backgrounds.
   - ISBN: 978-0335264827
 
+
 ### Canonical Primary Texts (excerpts recommended)
 
 - **Karl Popper, *The Logic of Scientific Discovery*** (1959)
   - Chapters on falsificationism and demarcation. Dense but essential for understanding Popper.
+
 
 - **Thomas Kuhn, *The Structure of Scientific Revolutions*** (1962)
   - Chapters on normal science, paradigms, and revolutions. Most influential work in 20th-century philosophy of science.
@@ -48,6 +52,7 @@
 
 - **MIT OpenCourseWare: 24.00 Problems in Philosophy**
   - Includes philosophy of science units. Readings, lecture notes, assignments.
+
 
 - **MIT OpenCourseWare: STS.003 The Rise of Modern Science**
   - Historical approach to scientific revolutions. Good complement to philosophical analysis.
@@ -94,6 +99,7 @@
 - **Internet Encyclopedia of Philosophy**
   - Similar to SEP but often more accessible. Good for quick overviews.
   - https://iep.utm.edu/
+  - Philosophy of Science section:
 
 - **PhilPapers: Philosophy of Science**
   - Research database. Search for papers on specific topics. Many open access.
@@ -152,6 +158,7 @@
 
 - **Nancy Cartwright** (UC San Diego) — Laws, models, philosophy of physics
 
+
 - **Philip Kitcher** (Columbia) — Science and values, social epistemology
   - https://philosophy.columbia.edu/directories/faculty/philip-kitcher
 
@@ -165,6 +172,7 @@
   - https://www.hps.cam.ac.uk/people/chang
 
 - **Massimo Pigliucci** (CUNY) — Demarcation, philosophy of biology, science communication
+
   - Active on social media, writes accessible philosophy
 
 - **Peter Godfrey-Smith** (Sydney) — Philosophy of biology, mind, pragmatism

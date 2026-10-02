@@ -41,14 +41,17 @@
 ### Course Materials
 
 - **University of Bergen** — Maritime Archaeology MA program
+
   - Covers: Scandinavian maritime archaeology, Viking ships
   - Why: Active research program with Viking ship focus
 
 - **University of Iceland** — Medieval Icelandic Studies
+
   - Covers: Saga literature, Old Norse, medieval Iceland
   - Why: Primary institution for saga scholarship
 
 - **Viking Ship Museum (Roskilde)** — Educational resources
+
   - Covers: Ship construction, experimental archaeology, navigation
   - Why: Hands-on museum with reconstructed ships and sailing programs
 
@@ -57,6 +60,7 @@
 ### Video Resources
 
 - **BBC Horizon: "Secrets of the Viking Navigators"** (2016)
+
   - Duration: 60 minutes
   - Covers: Sunstone experiments, saga evidence, polarization physics
   - Why: Excellent visualization of polarization patterns, accessible physics
@@ -68,11 +72,13 @@
   - Why: High-quality footage of replica ships at sea
 
 - **YouTube: "How Vikings Navigated the Ocean" by Real Science**
+
   - Duration: 14 minutes
   - Covers: Overview of navigation methods
   - Why: Concise, well-animated introduction
 
 - **Draken Harald Hårfagre Expedition America** (2016 voyage documentation)
+
   - Duration: Multiple videos, 5-20 min each
   - Covers: Modern crossing using traditional methods
   - Why: Real-time navigation problem-solving on replica ship
@@ -119,6 +125,7 @@
 ## Code & Datasets
 
 - **Viking Ship Museum Digital Collection**
+
   - Contains: 3D models of ships, archaeological data
   - Use: Visual reference for lessons 2, 5
 

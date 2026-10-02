@@ -24,10 +24,12 @@
   - Detailed treatment of life history theory
   - May be dense for some intermediate students but excellent reference
 
+
 - **"Introduction to Population Ecology" by Larry L. Rockwood** (2nd edition, 2015)
   - Focused treatment of population dynamics
   - Excellent on density dependence, life tables, and demographic models
   - Case studies from wildlife management and conservation
+
 
 ### Open Educational Resources
 
@@ -48,6 +50,7 @@
   - Written by active researchers
   - Covers current topics and classic concepts
   - Free access, excellent for building on textbook knowledge
+
 
 - **SERC (Science Education Resource Center): Teaching Quantitative Skills in the Geosciences**
   - Datasets and activities for hands-on ecological analysis
@@ -105,6 +108,7 @@
   - Wolf Sheep Predation, Rabbits Grass Weeds, Virus, Cooperation models
   - Students can modify parameters and explore emergent phenomena
 
+
 - **EcoLab**
   - Population dynamics simulator for growth models and species interactions
   - Web-based, user-friendly interface
@@ -154,6 +158,7 @@
   - https://slevin.princeton.edu/
 
 - **Stuart Pimm** (Duke) — conservation biology, extinction rates, species invasions
+
 
 - **Mary Power** (UC Berkeley) — food webs, trophic cascades, river ecology
   - https://ib.berkeley.edu/people/faculty/powerme

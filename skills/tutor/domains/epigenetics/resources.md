@@ -8,6 +8,7 @@
 
 - **Carey, _Epigenetics_ (Academic Cell, 2021)** — More accessible than Allis, good balance of mechanisms and applications. Strong on disease and therapeutics.
 
+
 - **Ptashne, _Genes & Signals_ (2002)** — Classic short book on gene regulation, foundational for understanding chromatin regulation.
 
 ### Review Articles
@@ -29,7 +30,9 @@
 ### Online Courses
 - **Coursera: "Introduction to Genomic Technologies" (Johns Hopkins University)** — Includes excellent modules on ChIP-seq, methylation profiling, and epigenomic data analysis.
 
+
 - **edX: "Epigenetic Control of Gene Expression" (University of Melbourne)** — Focused course specifically on epigenetics, intermediate level.
+
 
 - **MIT OpenCourseWare: 7.91J Foundations of Computational and Systems Biology** — Includes epigenomics analysis modules.
   - https://ocw.mit.edu/courses/7-91j-foundations-of-computational-and-systems-biology-spring-2014/
@@ -43,8 +46,10 @@
 
 #### Lecture Series
 - **iBiology: Chromatin and Epigenetics Seminar Series** — World-class researchers presenting their work. Includes talks by Danny Reinberg, Ali Shilatifard, Yang Shi, and others.
+
   
 - **Cold Spring Harbor Laboratory: Epigenetics Video Lectures** — Conference talks and summer course lectures.
+
 
 - **NIH VideoCasting: Epigenomics Lectures** — Wednesday Afternoon Lecture Series includes epigenetics talks.
   - https://videocast.nih.gov/
@@ -60,6 +65,7 @@
   - https://www.youtube.com/watch?v=kp1bZEUgqVI
 
 - **PBS Nova: "Epigenetics"** — Documentary-style, covers history and applications.
+
 
 ### Interactive Tools
 
@@ -120,6 +126,7 @@
 
 - **PyMethylation** — DNA methylation analysis toolkit.
 
+
 #### Web-based Analysis
 - **Galaxy** — Web platform for genomic data analysis, includes epigenomics workflows.
   - https://usegalaxy.org/
@@ -156,6 +163,7 @@
 
 - **Meissner Lab (Max Planck)** — Methylation methods, single-cell epigenomics
 
+
 ### Unexpected Connections (Rabbit Holes)
 
 #### Evolution and Comparative Epigenomics
@@ -174,6 +182,7 @@
 
 #### Neuroscience and Cognition
 - **Sweatt Lab (Vanderbilt)** — Epigenetics of learning and memory
+
 
 - **HDAC inhibitors for memory** — Drugs that enhance memory consolidation
   - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2755056/
@@ -258,6 +267,7 @@
   - https://www.amazon.com/Epigenetics-Revolution-Modern-Biology-Rewriting/dp/0231161174
 
 - **Ghost in Your Genes (BBC Documentary, 2006)** — Slightly dated but excellent storytelling
+
 
 - **Radiolab: "Inheritance"** — Podcast episode on transgenerational epigenetics, compelling narrative
   - https://radiolab.org/podcast/inheritance

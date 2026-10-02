@@ -64,6 +64,7 @@
 ## Video Lectures
 
 ### **Steve Brunton** (University of Washington)
+- **YouTube Channel**:
 - **Topics**: Control theory, data-driven dynamics, Koopman operator methods
 - **Why watch**: Clear explanations, modern perspective, connects control to machine learning
 - **Best series**: "Control Bootcamp" playlist

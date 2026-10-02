@@ -28,6 +28,7 @@
   - URL: https://www.umdphysics.umd.edu/academics/courses/989-physics-102-physics-of-music.html
 
 - **Northern Illinois University Physics 180: Acoustics, Music and Hearing** — Syllabus covering fundamentals through perception and hearing.
+  - URL:
 
 ## Supplementary Resources
 

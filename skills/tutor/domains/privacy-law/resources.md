@@ -18,6 +18,7 @@
 ### Case Law and Enforcement
 - **CJEU Case Law** (https://curia.europa.eu/en/content/juris/index.htm) — Court of Justice of the European Union decisions (search "GDPR" or "data protection")
 - **EUR-Lex** (https://eur-lex.europa.eu/) — official EU legal database
+- **EDPB Case Law Database** () — curated privacy case law
 - **FTC Enforcement Actions** (https://www.ftc.gov/news-events/news/press-releases) — search for privacy/data security cases; includes consent decrees
 
 ## Books
@@ -39,9 +40,12 @@
 ## Video Lectures & Courses
 
 ### Structured Courses
+- **University of London, "Global Privacy Law" on Coursera** () — MOOC covering GDPR, US law, cross-border transfers
 - **edX Privacy and Data Protection Courses** (https://www.edx.org/learn/data-privacy) — various universities offer privacy law and data protection courses
+- **IAPP Training** () — professional certification training (CIPP/E for Europe, CIPP/US for US); paid but industry-standard
 
 ### YouTube Channels & Talks
+- **IAPP YouTube Channel** () — webinars, conference talks, expert interviews
 - **Electronic Frontier Foundation (EFF) Talks** (https://www.eff.org/deeplinks) — privacy advocacy perspective; good for emerging issues
 - **Computerphile** (https://www.youtube.com/user/Computerphile) — technical explainers (search "encryption", "anonymization", "privacy")
 - **Stanford Law School's CodeX Talks** (https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/) — occasional privacy law lectures
@@ -54,12 +58,15 @@
 ## Tools & Interactive Resources
 
 ### Privacy Compliance Tools
+- **ICO DPIA Toolkit** () — free DPIA templates and guidance
+- **CNIL GDPR Compliance Tools** () — developer-focused GDPR resources
 - **OneTrust Demo/Trial** (https://www.onetrust.com/) — leading privacy management software; free trials available for learning
 - **TrustArc GDPR Compliance Platform Demo** (https://trustarc.com/) — another major privacy platform; good for understanding compliance automation
 
 ### Privacy Analysis Tools
 - **Terms of Service; Didn't Read (ToS;DR)** (https://tosdr.org/) — crowdsourced privacy policy ratings; useful for comparative analysis
 - **Blacklight by The Markup** (https://themarkup.org/blacklight) — scan websites for privacy-invasive tracking tech
+- **Cookiebot Website Scanner** () — free cookie compliance checker
 - **PrivacyScore** (https://privacyscore.org/) — website privacy assessment tool
 
 ### Standards & Frameworks
@@ -89,6 +96,7 @@
 ### Sample Privacy Policies & Templates
 - **iubenda Privacy Policy Generator** (https://www.iubenda.com/en/privacy-and-cookie-policy-generator) — generates compliant privacy policies; free tier available
 - **PrivacyPolicies.com** (https://www.privacypolicies.com/privacy-policy-generator/) — another generator with GDPR/CCPA templates
+- **ICO Templates** () — official UK templates for privacy notices
 
 ## Organizations & People to Follow
 
@@ -100,6 +108,7 @@
 
 ### Professional Associations
 - **International Association of Privacy Professionals (IAPP)** (https://iapp.org/) — industry association; certifications, conferences, resources
+- **Association of Privacy Managers (APM)** () — UK-based privacy professional community
 
 ### Academic Centers
 - **Berkeley Center for Law & Technology** (https://www.law.berkeley.edu/research/bclt/) — privacy law research

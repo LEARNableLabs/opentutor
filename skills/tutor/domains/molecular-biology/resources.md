@@ -11,6 +11,7 @@
   - Chapter 6 (DNA to RNA), Chapter 7 (Protein synthesis)
 
 - **Lehninger Principles of Biochemistry** (Nelson & Cox, 8th edition)
+
   - Strong on biochemical mechanisms and energetics
   - Chapter 26 (RNA metabolism), Chapter 27 (Protein metabolism)
 
@@ -21,6 +22,7 @@
 ### Online Textbooks & References
 
 - **Nature Scitable: Genetics and Gene Regulation**
+
   - Free, peer-reviewed educational resource with excellent review articles
   - Topic pages on transcription, translation, gene expression
 
@@ -87,6 +89,7 @@
     - tRNA: 1EHZ
 
 - **Molecule World**
+
   - iOS/Android app for exploring PDB structures
   - Great for students to manipulate structures on their devices
 
@@ -197,6 +200,7 @@
   - Reading DNA from extinct species (mammoths, Neanderthals)
   - How DNA degrades over time
 
+
 - **Forensics and the Central Dogma**
   - DNA profiling, paternity testing
   - mRNA expression analysis at crime scenes
@@ -225,11 +229,13 @@
   - Editing the genome to fix disease
 
 - **Synthetic Biology and Minimal Genomes**
+
   - Craig Venter's minimal cell: what genes are essential?
   - Programming cells like computers
 
 - **Anti-Aging and Telomerase**
   - Connection to transcription and cancer
+
 
 ## Journals & Publications
 
@@ -262,7 +268,9 @@
 
 - **Meselson-Stahl** — DNA replication mechanism
 
+
 - **Nirenberg-Matthaei** — Cracking the genetic code with synthetic RNA
+
 
 - **Anfinsen** — Protein folding is determined by sequence
   - https://www.nobelprize.org/prizes/chemistry/1972/anfinsen/facts/

@@ -18,6 +18,7 @@
 
 - **"Algorithmic Trading and DMA" by Barry Johnson** (4Myeloma Press, 2010) — practitioner's guide to direct market access and execution algorithms. Very practical.
 
+
 ### Academic Papers (Open Access)
 
 - **Kyle (1985)** "Continuous Auctions and Insider Trading" — foundational model of informed trading and market impact
@@ -33,6 +34,7 @@
   - https://arxiv.org/abs/1003.4739
 
 - **Almgren & Chriss (2000)** "Optimal execution of portfolio transactions" — optimal execution with market impact
+
 
 ### University Courses
 
@@ -63,6 +65,7 @@
 - **QuantInsti YouTube Channel**
   - Tutorials on algorithmic trading strategies, backtesting, risk management
 
+
 - **QuantPy YouTube Channel**
   - Python implementations of trading strategies and microstructure analysis
   - https://www.youtube.com/c/QuantPy
@@ -73,6 +76,7 @@
 
 - **High-Frequency Trading Explained (60 Minutes)**
   - Popular accessible explanation of HFT and latency advantages
+
 
 ### Interactive Tools and Platforms
 

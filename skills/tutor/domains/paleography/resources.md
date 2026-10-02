@@ -38,6 +38,7 @@
 ### Online Courses & Tutorials
 
 - **The National Archives (UK) — Palaeography Tutorial**
+
   - Interactive tutorials for English documents 1500-1800
   - Includes transcription practice with answer keys
   - Best for: Secretary hand, early modern English documents, self-paced practice
@@ -59,6 +60,7 @@
 ### Major Repositories
 
 - **British Library Digitised Manuscripts**
+
   - Over 1000 manuscripts fully digitized, high-resolution images
   - Browse by date, origin, language, subject
   - Best for: seeing authentic examples, comparing scripts, dating practice
@@ -199,6 +201,7 @@
 ### Institutional Blogs & Projects
 
 - **Medieval Manuscripts Blog** (British Library)
+
   - Regular posts on manuscripts, paleography, new acquisitions
   - Why follow: expert curators, beautiful images, accessible scholarship
 

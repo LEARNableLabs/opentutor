@@ -18,6 +18,7 @@
 
 - **"Social Choice and the Mathematics of Manipulation"** by Alan D. Taylor (Cambridge University Press, 2005) — Focused on strategic voting and manipulation. Covers Gibbard-Satterthwaite and related results.
 
+
 ### Academic Papers (Foundational)
 
 - **Arrow, Kenneth J.** "A Difficulty in the Concept of Social Welfare" (1950) — The original Arrow's theorem paper. Surprisingly readable for a foundational result.
@@ -27,6 +28,7 @@
   - https://www.jstor.org/stable/1914083
 
 - **Brams, Steven J., and Alan D. Taylor.** "Fair Division: From Cake-Cutting to Dispute Resolution" (1996)
+
 
 ### Open Educational Resources
 
@@ -63,9 +65,11 @@
   - Another interactive fair division platform with different algorithms
 
 - **GeoGebra Cake Cutting Applets**
+
   - Visual demonstrations of cake cutting protocols
 
 - **Cut-the-Knot: Fair Division**
+
   - Interactive demonstrations with explanations
 
 ### Video Lectures & Explainers
@@ -95,11 +99,13 @@
   - Mathematical deep dive into Arrow's proof structure
 
 - **Lecture by Ariel Procaccia — "Computational Fair Division"**
+
   - Advanced but accessible lecture on modern algorithmic approaches
 
 ### Podcasts & Audio
 
 - **EconTalk — "Steven Brams on Fair Division"** (2008)
+
   - Interview with leading researcher on practical applications
 
 - **My Favorite Theorem — "Arrow's Theorem"** (2017)
@@ -125,6 +131,7 @@
 ### Jupyter Notebooks & Tutorials
 
 - **Social Choice in Python — Tutorial by Eric Gorr**
+
   - Worked examples of voting systems with code
 
 - **Fair Division Algorithms — Erel Segal-Halevi**
@@ -134,9 +141,11 @@
 ### Online Calculators
 
 - **Voting Power Calculator (Banzhaf & Shapley-Shubik)**
+
   - Compute voting power indices for small examples
 
 - **Borda Count Calculator**
+
 
 ## Organizations & Communities
 
@@ -172,6 +181,7 @@
 
 - **Erel Segal-Halevi** (Ariel University) — Fair division algorithms, computational approaches
 
+
 - **Edith Elkind** (Oxford) — Computational social choice, voting theory
   - https://www.cs.ox.ac.uk/people/edith.elkind/
 
@@ -179,6 +189,7 @@
   - https://home.agh.edu.pl/~faliszew/
 
 - **Toby Walsh** (UNSW) — AI and voting, computational social choice
+
 
 ### Communicators & Educators
 
@@ -199,6 +210,7 @@
 - **Computational Complexity of Voting**
   - NP-hardness of manipulation, winner determination
   - "Computational Social Choice" edited by Brandt et al. (2016)
+
 
 ### Philosophy
 

@@ -8,6 +8,7 @@
   - The definitive reference for computational origami
   - Comprehensive coverage of flat-foldability, complexity results, and universality theorems
   - Advanced undergraduate to graduate level
+  - Freely available online:
 
 - **Origami Design Secrets: Mathematical Methods for an Ancient Art** — Robert J. Lang (A K Peters/CRC Press, 2003)
   - Bridges practical origami design and mathematical foundations
@@ -39,6 +40,7 @@
 
 - **MIT 6.849: Geometric Folding Algorithms** — Erik Demaine (Fall 2012 and later)
   - Graduate-level course; lecture notes available
+  - Homepage:
   - Covers cutting-edge research and open problems
   - Video lectures may be available through MIT OpenCourseWare
 
@@ -124,6 +126,7 @@
 
 - **TreeMaker Source** — Robert Lang
   - Source code for TreeMaker algorithm
+  (if available)
 
 - **Erik Demaine's Origami Tools**
   - Various computational geometry tools
@@ -142,6 +145,7 @@
   - Bridges pure mathematics and artistic practice
   
 - **Thomas Hull** (Western New England University) — pedagogy, combinatorics
+  - Faculty page:
   - Focus on teaching origami mathematics
 
 - **Tomohiro Tachi** (University of Tokyo) — rigid origami, computational tools

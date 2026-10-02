@@ -30,6 +30,7 @@
 
 ### Zen Buddhism
 - **Platform Sutra** (Huineng)
+
   - Foundational Chan/Zen text, accessible narrative
 - **Mumonkan** (The Gateless Gate)
   - http://www.sacred-texts.com/bud/zen/mumonkan.htm
@@ -44,16 +45,22 @@
 ## Academic & Reference
 
 ### Stanford Encyclopedia of Philosophy (Comprehensive, Peer-Reviewed)
+- **Vedanta**:
 - **Laozi**: https://plato.stanford.edu/entries/laozi/
 - **Zhuangzi**: https://plato.stanford.edu/entries/zhuangzi/
 - **Japanese Zen**: https://plato.stanford.edu/entries/japanese-zen/
 - **Buddha**: https://plato.stanford.edu/entries/buddha/
+- **Consciousness in Indian Philosophy**:
+- **Comparative Philosophy**:
 - **Mysticism**: https://plato.stanford.edu/entries/mysticism/
 
 ### Internet Encyclopedia of Philosophy (Accessible Introductions)
 - **Advaita Vedanta**: https://iep.utm.edu/adv-veda/
+- **Taoism**:
 - **Zen Buddhism**: https://iep.utm.edu/zen/
+- **Eastern Philosophy**:
 - **Yin and Yang**: https://iep.utm.edu/yinyang/
+- **Ramana Maharshi**:
 
 ### Textbooks & Scholarly Overviews
 - **Huston Smith**, *The World's Religions*
@@ -77,6 +84,7 @@
 
 ### Online Courses
 - **Coursera: "Buddhism and Modern Psychology"** (Princeton/Robert Wright)
+
   - Includes Zen perspectives, strong on meditation and philosophy intersection
 - **edX: "Chinese Thought: Ancient Wisdom Meets Modern Science"** (Harvard)
   - Covers Taoism and Confucianism in cultural context

@@ -53,9 +53,12 @@
 
 - **Bank of England — Explainers**
   - URL: https://www.bankofengland.co.uk/explainers
+  - "How does monetary policy work?" (video + article):
   - Excellent visual explanations of transmission mechanisms
 
 - **EconTalk Podcast Episodes**
+  - John Taylor on the Taylor Rule:
+  - Ben Bernanke on the Federal Reserve:
 
 - **Bloomberg "Odd Lots" Podcast**
   - Regular episodes on Fed policy, yield curves, repo markets, QE
@@ -96,10 +99,12 @@
 ### Research and Working Papers
 
 - **NBER Monetary Economics Working Papers**
+  - URL:
   - Cutting-edge research, many papers are accessible to intermediate students
   - Especially useful for current debates (NGDP targeting, NIRP, CBDCs)
 
 - **BIS Working Papers and Quarterly Reviews**
+  - URL:
   - International perspective on central banking
   - Quarterly Review has excellent non-technical summaries of policy issues
 
@@ -119,6 +124,7 @@
   - Advanced students can explore policy simulations
 
 - **IRIS Toolbox for MATLAB**
+  - URL:
   - Build and simulate DSGE models
   - Requires MATLAB proficiency
 
@@ -176,6 +182,7 @@
 
 - **Monetary Policy and Inequality**
   - Does QE worsen wealth inequality? Debate between Saez/Zucman vs. Bernanke
+  - ECB research:
 
 - **Central Banking and Climate Change**
   - Network for Greening the Financial System (NGFS): https://www.ngfs.net/en
@@ -183,12 +190,14 @@
 
 - **Cryptocurrency and Central Banks**
   - Does Bitcoin compete with fiat money? CBDCs as a response?
+  - BIS Innovation Hub:
 
 - **Monetary Policy in Space Colonies**
   - Thought experiment: how would you design monetary policy for a Mars colony?
   - Connects to optimal currency area theory, Hayek's denationalization of money
 
 - **Central Banking and Behavioral Economics**
+  - Akerlof & Shiller, "Animal Spirits":
   - How do central banks manage irrational exuberance and panic?
 
 - **Political Economy of Central Banking**

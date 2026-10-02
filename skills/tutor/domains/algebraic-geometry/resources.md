@@ -19,6 +19,7 @@
 
 - **Gathmann, "Algebraic Geometry" (Lecture Notes)** — Free, well-written lecture notes. Covers varieties and schemes with good examples.
 
+
 ### Commutative Algebra Prerequisites
 
 - **Eisenbud, "Commutative Algebra with a View Toward Algebraic Geometry"** (Springer GTM 150, 1995) — Comprehensive, with geometric motivation. The standard reference.
@@ -101,6 +102,7 @@
 ### Code and Computational Resources
 
 - **SageMath tutorials for algebraic geometry** — Tutorials on computing with varieties, ideals, schemes.
+
 
 - **Macaulay2 tutorials** — Extensive documentation and examples.
   - https://macaulay2.com/doc/Macaulay2/

@@ -9,7 +9,9 @@
 
 - **Glaciers and Glaciation (2nd edition)** by Douglas Benn & David Evans — Field-oriented approach with exceptional photography and diagrams. Emphasizes observational methods and geomorphology. Excellent visual support for lessons 1-6, 20-21.
 
+
 - **MIT OpenCourseWare 12.475** — Seminar in Geophysics: Dynamics of Glaciers and Ice Sheets. Graduate-level course materials including lecture notes, problem sets. Strong on ice sheet modeling (lessons 13-18).
+
 
 - **Antarctic Glaciers** — Educational website by Bethan Davies. Excellent accessible explanations, diagrams, and case studies. Free resource covering glacier processes, thermal regimes, Antarctic ice sheets. Use throughout.
   - https://www.antarcticglaciers.org/
@@ -28,6 +30,7 @@
   - https://svs.gsfc.nasa.gov/cgi-bin/search.cgi?value=glaciers
 
 - **NSIDC Educational Videos** — Short explainers on cryosphere topics (mass balance, ice cores, sea ice).
+
 
 - **Richard Alley's Ice Ages and Climate Lecture Series** — Penn State course videos; engaging presentation style.
   - https://www.e-education.psu.edu/earth107/
@@ -122,6 +125,7 @@
 ### Field Guides & Protocols
 
 - **USGS Glacier Monitoring Protocols** — How to measure mass balance in the field.
+
 - **WGMS Field Manual** — Standardized methods for glacier monitoring.
   - https://wgms.ch/downloads/
 

@@ -22,6 +22,7 @@
 
 - **Treaty of Utrecht (1713)** — Ended War of Spanish Succession and privateer employment.
 
+
 ## Secondary Sources (Modern Scholarship)
 
 ### Essential Books
@@ -45,6 +46,7 @@
   - Deep dive into maritime technology and combat methods
   - Primary source-heavy
   - Level: Advanced
+  - Archive.org:
 
 - **Colin Woodard — "The Republic of Pirates" (2007)**
   - Focuses on Nassau period and Woodes Rogers
@@ -78,8 +80,10 @@
   - Covers major figures and periods
   - Good production value, accessible
 
+
 - **"Blackbeard: Terror at Sea"** — National Geographic (2006)
   - Focus on Blackbeard and his suppression
+
 
 - **"Golden Age of Piracy"** — PBS Documentary
   - Emphasis on archaeological evidence
@@ -107,6 +111,7 @@
 - **Mariners' Museum (Newport News, VA)**
   - Pirates and Privateers exhibit
   - Interactive displays
+
 
 - **Whydah Pirate Museum (Cape Cod, MA)**
   - Only authenticated pirate treasure ship wreck
@@ -158,6 +163,7 @@
 - **North Carolina Encyclopedia — Edward Teach (Blackbeard)**
   - Scholarly but accessible biography
 
+
 ## Legal Resources
 
 ### Historical Law Collections
@@ -165,8 +171,10 @@
 - **Yale Law School Avalon Project** — Historical legal documents
   - Treaties, letters of marque, prize law
 
+
 - **UC Berkeley Robbins Collection** — Property law and piracy
   - Historical legal analysis
+
 
 ### Modern Law
 

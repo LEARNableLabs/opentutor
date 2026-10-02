@@ -9,6 +9,7 @@
   - Distinguishes state effects from trait effects
   - Good for intermediate students; balances rigor with readability
 
+
 - **"The Neuroscience of Mindfulness Meditation"** edited by Yi-Yuan Tang (2017)
   - Academic textbook covering mechanisms and applications
   - Strong on attention training and neuroplasticity
@@ -18,6 +19,7 @@
 - **"The Craving Mind: From Cigarettes to Smartphones to Love—Why We Get Hooked and How We Can Break Bad Habits"** by Judson Brewer (2017)
   - Focuses on addiction neuroscience and mindfulness
   - Accessible neuroscience with clinical applications
+
 
 ### Review Articles and Meta-Analyses
 
@@ -62,6 +64,7 @@
 - **"De-Mystifying Mindfulness"** — Leiden University (Coursera)
   - Academic course on mindfulness and neuroscience
 
+
 - **"Buddhism and Modern Psychology"** — Princeton University (Coursera)
   - Robert Wright's course on evolutionary psychology and meditation
   - https://www.coursera.org/learn/science-of-meditation
@@ -74,6 +77,7 @@
 
 - **Richard Davidson TED Talks**
   - "How Mindfulness Changes the Emotional Life of Our Brains" (2019)
+
 
 - **Sara Lazar: How Meditation Can Reshape Our Brains** (TEDxCambridge 2011)
   - Accessible overview of structural changes research
@@ -138,21 +142,27 @@
   - Emotion neuroscience, meditation expertise studies
   - https://centerhealthyminds.org/
 
+
 - **Sara Lazar** — Massachusetts General Hospital / Harvard Medical School
   - Structural brain changes, yoga and meditation
+
   - https://www.nmr.mgh.harvard.edu/user/6267
 
 - **Judson Brewer** — Brown University Mindfulness Center
   - Addiction, craving, habit change
   - https://www.brown.edu/public-health/mindfulness/
 
+
 - **Antoine Lutz** — Lyon Neuroscience Research Center
   - Expert meditators, gamma oscillations, attention
+
 
 ### Active Researchers
 
 - **Amishi Jha** — University of Miami
   - Attention training, working memory, military applications
+
+
 
 - **Cliff Saron** — UC Davis Center for Mind and Brain
   - Shamatha Project (3-month retreat studies)
@@ -163,26 +173,34 @@
   - Mind-wandering, attention, network dynamics
   - https://www.mindandlife.org/
 
+
 - **Britta Hölzel** — Technical University Munich
   - MBSR mechanisms, emotion regulation, stress
 
+
 - **Yi-Yuan Tang** — Texas Tech University
   - Integrative body-mind training, neuroplasticity
+
 
 - **Fadel Zeidan** — UC San Diego
   - Pain modulation, mindfulness mechanisms
   - https://profiles.ucsd.edu/fadel.zeidan
 
+
 - **Kalina Christoff** — University of British Columbia
   - Mind-wandering, default mode network, spontaneous thought
+
+
 
 ### Clinical Researchers
 
 - **Zindel Segal** — University of Toronto
   - Mindfulness-Based Cognitive Therapy (MBCT), depression
 
+
 - **Mark Williams** — Oxford University
   - MBCT co-developer, depression relapse prevention
+
 
 ## Organizations and Research Centers
 
@@ -209,6 +227,7 @@
 - **Max Planck Institute for Human Cognitive and Brain Sciences**
   - ReSource Project (9-month meditation training study)
 
+
 ## Unexpected Connections (Cross-Discipline Links)
 
 ### Philosophy of Mind
@@ -219,6 +238,7 @@
 ### Evolutionary Psychology
 - **Robert Wright** — "Why Buddhism is True" (2017)
   - Evolutionary mismatch and meditation as corrective
+
 
 ### Psychedelic Science
 - **Robin Carhart-Harris** — Imperial College London
@@ -234,9 +254,11 @@
 - **Patricia Jennings** — University of Virginia
   - Mindfulness in schools, teacher training
 
+
 ### Cultural Neuroscience
 - **Shihui Han** — Peking University
   - Cultural differences in self-processing and meditation
+
 
 ## Journals (Where to Find New Research)
 

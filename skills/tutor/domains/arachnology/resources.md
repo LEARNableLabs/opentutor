@@ -8,6 +8,7 @@
 - **Ruppert, Fox, & Barnes "Invertebrate Zoology" (7th edition)** — Chapter on Chelicerata provides excellent evolutionary and comparative context. Good for understanding where spiders fit in arthropod phylogeny.
 
 ### Open Educational Resources
+- **UC Berkeley Museum of Paleontology — Spider resources** — Excellent introduction to spider diversity, anatomy, and evolution. Clear diagrams and accessible text.
 
 - **Australian Museum — Spider section** — https://australian.museum/learn/animals/spiders/ — Outstanding resource for spider diversity, identification, and biology. Many species profiles with photos.
 
@@ -29,6 +30,7 @@
 
 - **BBC Earth — Spider videos** — https://www.youtube.com/user/BBCEarth — High-quality footage of spider behavior, hunting, and mating.
 
+- **Smarter Every Day — "The Secret Mechanism Inside a Mechanical Spider"** — While focused on mechanical spider, excellent explanation of hydraulic systems that parallels spider locomotion.
 
 - **National Geographic — Jumping Spiders** — https://www.nationalgeographic.com/animals/invertebrates/facts/jumping-spiders — Species profiles and behavior videos.
 

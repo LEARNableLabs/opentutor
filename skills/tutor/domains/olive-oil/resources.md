@@ -9,6 +9,7 @@
   - Intermediate to advanced level; strong on fatty acids and phenolic compounds
   - Best for: chemistry module (Lessons 10-14)
 
+
 - **Harwood, J. & Aparicio, R. (eds.) — *Handbook of Olive Oil: Analysis and Properties*** (Springer)
   - Deep dive into analytical methods and quality parameters
   - Advanced level; focus on laboratory techniques
@@ -39,6 +40,7 @@
   - Advanced academic program in olive science
   - Technical papers and research updates
   - Best for: chemistry deep dives, processing technology
+
 
 - **California Olive Oil Council (COOC) — Certification Materials**
   - Sensory analysis training, panel testing protocols, quality standards
@@ -92,6 +94,7 @@
   - Interactive PDF
   - Best for: sensory lessons (Lessons 18-20), can fill out during practice tastings
 
+
 - **The Olive Oil Source — Cultivar Directory**
   - Searchable cultivar encyclopedia with flavor wheels and regional information
   - Web directory
@@ -110,6 +113,7 @@
   - Calculate peroxide value, free fatty acid %, quality indices
   - Intermediate coding; requires basic Python
   - Best for: chemistry module practice problems
+  (example repo)
 
 - **Sensory Analysis Statistical Tools**
   - R scripts for calculating median panel scores, statistical significance
@@ -130,6 +134,7 @@
 
 #### Wine and Olive Oil Parallels
 - Both use terroir concepts, varietal character, professional tasting panels
+- Wine Folly's comparison:
 - Best for: terroir lesson (Lesson 6), sensory methodology (Lesson 16)
 
 #### Oleocanthal and Ibuprofen
@@ -169,6 +174,7 @@
   - Professional training tool
   - Best for: Lesson 18 (defect identification)
 
+
 - **Modern Olives Tasting Set**
   - Curated set of oils from different cultivars (Arbequina, Koroneiki, Picual, Hojiblanca)
   - Consumer level, good quality
@@ -179,6 +185,7 @@
   - Standardized oils for panel calibration
   - Professional/research use
   - Best for: advanced sensory training
+
 
 ### Equipment
 

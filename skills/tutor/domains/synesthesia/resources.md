@@ -24,6 +24,7 @@
 - **Ramachandran, V.S. & Hubbard, E.M. (2001). "Synaesthesia: A window into perception, thought and language." *Journal of Consciousness Studies***
   - Foundational paper on cross-activation theory
   - Highly cited, clearly written
+  - Available:  (TED talk version)
 
 - **Ward, J. (2013). "Synesthesia." *Annual Review of Psychology*, 64, 49-75**
   - Comprehensive review of the field as of 2013
@@ -53,6 +54,7 @@
 ### Videos
 
 - **V.S. Ramachandran — "3 Clues to Understanding Your Brain" (TED Talk)**
+
   - Covers synesthesia, mirror neurons, and consciousness
   - Engaging, accessible, 8 minutes on synesthesia section
 
@@ -78,6 +80,7 @@
   - Developed by David Eagleman's lab
 
 - **Synesthesia test at University of Sussex**
+  (Jamie Ward's page, links to lab resources)
   - Additional testing and information
 
 - **Interactive demonstrations of cross-modal effects:**
@@ -99,6 +102,7 @@
 ### People (Researchers to Follow)
 
 - **Jamie Ward** (University of Sussex)
+
   - Leading researcher on cognitive and neural mechanisms
   - Prolific author, clear communicator
 
@@ -113,6 +117,7 @@
   - Broader work on perception and time
 
 - **V.S. Ramachandran** (UC San Diego)
+
   - Pioneer in synesthesia research, cross-activation theory
   - Engaging public communicator
 
@@ -188,6 +193,7 @@
 3. **Read Ward (2013) Annual Review paper** for comprehensive, up-to-date summary
 4. **Watch BBC Horizon documentary** for rich phenomenology and personal stories
 5. **Read "Wednesday is Indigo Blue"** (Cytowic & Eagleman) for deep dive
+6. **Explore Jamie Ward's research** () for current work
 7. **Follow rabbit holes** based on interest (genetics, art, applications, etc.)
 
 ## Gaps and Opportunities

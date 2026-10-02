@@ -28,6 +28,7 @@
 
 - **Coursera: Sustainable Energy** (University of Washington) — Broader than power systems alone, but good context for energy transition.
 
+
 ## Supplementary (for engagement)
 
 ### Video Channels
@@ -40,12 +41,14 @@
 
 - **3Blue1Brown** — For phasor visualization, watch the Euler's formula and Fourier series videos. Not power systems specific, but essential math background.
 
+
 - **Khan Academy: Electrical Engineering** — Review AC circuits, phasors, and complex numbers if needed.
   - https://www.khanacademy.org/science/electrical-engineering
 
 ### Interactive Tools and Software
 
 - **PowerWorld Simulator** — Industry-standard power flow and stability simulator. Free educational version available. Start here.
+
 
 - **GridLAB-D** — Open-source distribution system simulator. Great for DER and microgrid modeling.
   - https://www.gridlabd.org/
@@ -86,6 +89,7 @@
   - https://www.ieee-pes.org/
 
 - **NREL (National Renewable Energy Laboratory)** — Renewable integration studies, grid modernization research.
+
 
 - **EPRI (Electric Power Research Institute)** — Industry research, whitepapers, software tools.
   - https://www.epri.com/

@@ -11,12 +11,14 @@
 - **Ruggles, Clive (2005). _Ancient Astronomy: An Encyclopedia of Cosmologies and Myth_. ABC-CLIO.**
   - Reference work with entries on sites, concepts, and cultures worldwide. Good for looking up specific topics. More Eurocentric than Aveni but strong on British Isles.
 
+
 - **Krupp, E. C. (1983). _Echoes of the Ancient Skies: The Astronomy of Lost Civilizations_. Oxford University Press.**
   - Combines archaeology with myth and cosmology. Engaging narrative style. Slightly dated but still valuable for understanding cultural astronomy.
   - https://global.oup.com/academic/product/echoes-of-the-ancient-skies-9780195042597
 
 - **Hoskin, Michael (2001). _Tombs, Temples and Their Orientations: A New Perspective on Mediterranean Prehistory_. Cambridge University Press.**
   - Rigorous quantitative approach to Mediterranean and Middle Eastern sites. Good model for statistical methods.
+
 
 - **Magli, Giulio (2016). _Archaeoastronomy: Introduction to the Science of Stars and Stones_. Springer.**
   - Modern undergraduate-level textbook with mathematical rigor. Covers methods, statistics, and global case studies. Best for students comfortable with equations.
@@ -36,6 +38,7 @@
 ### Online Courses and Educational Resources
 
 - **Universidad Politécnica de Madrid: Archaeoastronomy courses** — several MOOCs and degree-level courses available.
+
 
 - **University of Leicester: MSc in Archaeological Studies** — includes archaeoastronomy modules.
   - https://le.ac.uk/courses/archaeological-studies-msc
@@ -58,6 +61,7 @@
 
 - **"Chaco Canyon: Solving the Mystery" (KNME)**
 
+
 - **The Great Courses: "Archaeoastronomy" by Ed Krupp**
   - https://www.thegreatcourses.com/
 
@@ -68,6 +72,7 @@
   - https://www.rigb.org/christmas-lectures
 
 - **"Standing with Stones" documentary series** — beautiful cinematography of megalithic sites with astronomical context.
+
 
 ### Interactive Tools and Software
 
@@ -127,12 +132,14 @@
 
 - **Clive Ruggles (University of Leicester)** — leading authority on statistical methods and prehistoric European astronomy. UNESCO advisor on astronomical heritage.
 
+
 - **E. C. Krupp (Griffith Observatory)** — director of Griffith Observatory, prolific author, global archaeoastronomy expert.
   - https://griffithobservatory.org/about/director/
 
 - **Ed Krupp (Griffith Observatory)** — cultural astronomy and archaeomythology.
 
 - **Giulio Magli (Politecnico di Milano)** — Egyptian and Mediterranean archaeoastronomy; mathematical approaches.
+
 
 - **Juan Antonio Belmonte (Instituto de Astrofísica de Canarias)** — Iberian and Egyptian archaeoastronomy.
   - https://www.iac.es/en/personal/belmonte
@@ -146,6 +153,7 @@
 ### Indigenous Scholars and Practitioners
 
 - **Ray Norris (CSIRO Australia)** — Aboriginal Australian astronomy and ethnoastronomy.
+
 
 - **Duane Hamacher (University of Melbourne)** — Indigenous astronomy, Aboriginal and Torres Strait Islander knowledge.
   - https://findanexpert.unimelb.edu.au/profile/duane-hamacher
@@ -187,6 +195,7 @@
   - https://www.nps.gov/chcu/
 
 - **Maeshowe** — Orkney, Scotland. Winter solstice illumination chamber.
+
 
 - **Angkor Wat** — Cambodia. Equinox sunrise over central tower.
   - https://www.tourismcambodia.com/

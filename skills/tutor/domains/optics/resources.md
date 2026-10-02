@@ -71,6 +71,8 @@
   [https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhqq9c5cHCK32](https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhqq9c5cHCK32)
 
 - **Quantum cryptography explained** (various)  
+  - BB84 protocol:
+  - Qiskit tutorial:
 
 ## Interactive Tools and Simulations
 

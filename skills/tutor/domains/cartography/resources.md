@@ -42,6 +42,7 @@
 
 ### Code and Repositories
 - **Observable** — https://observablehq.com/ — Many interactive cartography notebooks, especially for D3.js and web mapping
+- **Oregon State Cartography and Geovisualization Group** — Software and tools developed for cartographic research
 
 ### Organizations and Communities
 - **ICA Commission on Education and Training** — https://education.icaci.org/education-material/ — International Cartographic Association's curated education materials

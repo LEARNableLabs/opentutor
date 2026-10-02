@@ -85,6 +85,7 @@
   - Covers spatial vision, color, motion from engineering perspective
   - Lots of MATLAB code for illusions
 
+
 - **Coursera: Visual Perception and the Brain (Duke University, Dale Purves)**
   - MOOC covering illusions, empirical approach
   - Accessible, video lectures + quizzes
@@ -116,6 +117,7 @@
   - Curated collection, puzzle/game format
   - Good for warm-ups or breaks
 
+
 - **Mighty Optical Illusions**
   - Daily illusion blog, user submissions
   - Mix of classic and novel, some explanations
@@ -141,6 +143,7 @@
 - **TED: V.S. Ramachandran "3 Clues to Understanding Your Brain"**
   - Phantom limbs, synesthesia, Capgras delusion
   - Links illusions to broader brain function
+
 
 - **TED: Anil Seth "Your Brain Hallucinates Your Conscious Reality"**
   - Predictive coding, interoception, conscious experience
@@ -219,6 +222,8 @@
 
 - **GitHub: Illusion Code Repositories**
   - Search "optical illusions python" or "peripheral drift illusion"
+  - Example:  (interactive JavaScript)
+  - Example:  (Kitaoka's illusion code)
 
 ### Books for Deeper Dives
 
@@ -236,6 +241,7 @@
 - **"Phantoms in the Brain" by V.S. Ramachandran & Sandra Blakeslee** (1998)
   - Neurological case studies (phantom limbs, Capgras, neglect)
   - Illusions as windows into brain organization
+
 
 ## People to Follow
 

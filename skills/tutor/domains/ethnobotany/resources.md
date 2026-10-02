@@ -115,6 +115,7 @@ While MIT doesn't have a dedicated ethnobotany course, relevant materials appear
 - **Ecocrop** (FAO)
   - Crop ecology and distribution
 
+
 - **NAPRALERT** (Natural Products Alert)
   - Chemical and biological information on traditional medicines
   - https://www.napralert.org/ (subscription required, but many universities have access)
@@ -321,6 +322,7 @@ While MIT doesn't have a dedicated ethnobotany course, relevant materials appear
 ### Curriculum Guides
 
 - **Ethnobotany in the Classroom** (Society for Economic Botany education resources)
+
 
 - **Project Learning Tree** — environmental education with plant focus
   - https://www.plt.org/

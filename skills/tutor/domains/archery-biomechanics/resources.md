@@ -8,11 +8,13 @@
   - Systematic breakdown of Olympic recurve biomechanics from one of the most successful coaches in history
   - Covers skeletal alignment, muscle activation, shot sequence in exhaustive detail
   - Intermediate-friendly: minimal jargon, heavy on photos and diagrams
+  - Available:
 
 - **Archery Anatomy** by Ray Axford
   - Muscle-by-muscle analysis of archery movements
   - Excellent for understanding muscle activation sequences and injury mechanisms
   - Includes exercises for strengthening relevant muscle groups
+  - Available:
 
 - **The Herrigel Doctrine** (historical/philosophical)
   - Classic text on motor learning in archery (Zen archery tradition)
@@ -22,6 +24,7 @@
 - **Simple Maintenance for Archery** by Ruth Rowe
   - Equipment tuning guide that explains bow mechanics
   - Useful for understanding how equipment setup affects biomechanics
+  - Available:
 
 ### Academic Sources
 
@@ -44,10 +47,12 @@
 ### Online Courses & Educational Sites
 
 - **World Archery Coach Certification Materials**
+
   - Official coaching education from international federation
   - Level 1-2 materials are accessible to intermediate students
 
 - **USA Archery Education Resources**
+
   - NTS (National Training System) documentation
   - Free resources on form, technique, biomechanics
 
@@ -84,6 +89,7 @@
   - Recommended: "Release Aid Comparison", "Understanding Let-Off", "Bow Torque Explained"
 
 - **Inside the Archer**
+
   - Biomechanics-focused analysis of elite archers
   - Form comparison videos, high-speed analysis
   - Recommended: "Balance and Stability", "Muscle Activation Visualization"
@@ -96,6 +102,7 @@
 ### Interactive Tools & Apps
 
 - **OnForm Video Analysis App**
+
   - Frame-by-frame video analysis, drawing tools, slow motion
   - Essential for self-analysis and form checking
   - iOS and Android
@@ -106,6 +113,7 @@
   - Drawing tools, voice-over analysis, comparison features
 
 - **Hudl Technique**
+
   - Video analysis platform
   - Good for comparing your form to reference videos side-by-side
 
@@ -126,6 +134,7 @@
   - Useful for understanding motion analysis
 
 - **Biomechanics Datasets**
+  (hypothetical but realistic)
   - OpenSim models of archery movements (if available)
 
 ### Research Databases
@@ -208,6 +217,7 @@
 
 - **Horse archery** — Biomechanics under dynamic platform (moving horse)
 
+
 - **Historical European archery** — Longbow traditions (English, Welsh)
   - Different force curves and draw weights; extreme strength requirements
 
@@ -232,6 +242,7 @@
 
 - **Lancaster Archery Supply** — https://www.lancasterarchery.com/
 - **Merlin Archery (UK)** — https://www.merlinarchery.co.uk/
+- **Alternative Sporting Services**
 
 ### Compound Resources
 

@@ -6,6 +6,7 @@
 
 - **"The Alcohol Textbook" (5th ed.) by Jacques, Lyons, and Kelsall** — Industry-standard reference covering fermentation science, distillation theory, and quality control. Comprehensive but accessible. Best for: deep dives into fermentation biochemistry and industrial processes.
 
+
 - **"Whisky: Technology, Production and Marketing" (2nd ed.) by Inge Russell et al.** — Detailed chemistry and engineering of whisky production. Excellent on malting, distillation equipment, and maturation. Best for: lessons 17, 23-24.
   - https://www.elsevier.com/books/whisky/russell/978-0-12-401735-1
 
@@ -61,6 +62,7 @@
 
 - **Proof Calculator (TTB formula)** — Convert between ABV, proof, and density. Practical tool for lessons 17-18.
 
+
 ### Code & Simulations
 
 - **Distillation Column Simulator (Python)** — GitHub repo with McCabe-Thiele implementation and column design tools. For programming-inclined students. Best for: lesson 10.
@@ -76,7 +78,9 @@
 
 - **"Proof: The Science of Booze" by Adam Rogers** — Pop-science book on distillation, fermentation, and aging. Engaging introduction to the topic; good supplementary reading.
 
+
 - **"The Drunken Botanist" by Amy Stewart** — Chemistry and botany of spirit ingredients (grains, agave, botanicals). Best for: lessons 17, 20-22 (spirit-specific).
+
 
 ## Academic Papers (Deep Dives)
 
@@ -117,6 +121,7 @@
 
 - **ADI Forums (American Distilling Institute)** — Industry professionals; requires membership. Best for advanced questions and commercial perspectives.
 
+
 ## Unexpected Connections
 
 - **Perfume Distillation** — Essential oil extraction shares principles with spirit distillation (vapor extraction, fractionation). Interesting cross-domain application. Best for: lesson 21 (gin).
@@ -137,6 +142,7 @@
   - https://www.ttb.gov/spirits
 
 - **OSHA Distillery Safety Guidelines** — Flammability, ventilation, and hazard management. Important safety context for lessons 3, 8.
+
 
 - **Methanol Safety Data (NIH)** — Toxicology and exposure data; addresses methanol fears in lesson 14.
   - https://pubchem.ncbi.nlm.nih.gov/compound/Methanol

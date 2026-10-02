@@ -46,6 +46,7 @@
   - Multi-course program covering implementation, middleware, and design
   - Professional certificate available
 
+
 - **Coursera: Music Production Specialization** (Berklee)
   - Includes mixing and mastering courses applicable to sound design
   - https://www.coursera.org/specializations/music-production
@@ -65,6 +66,7 @@
   - Official Wwise courses and certification
   - Comprehensive game audio middleware training
   - Free access
+
 
 ### Educational Websites
 
@@ -94,9 +96,11 @@
 - **Game Audio Institute** (YouTube)
   - Game audio tutorials and implementation guides
 
+
 - **Sound Works Collection** (YouTube)
   - Behind-the-scenes of film sound design
   - Interviews with award-winning sound designers
+
 
 - **Creative Field Recording** (YouTube/Podcast)
   - Field recording techniques and philosophy

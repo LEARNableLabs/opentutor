@@ -37,6 +37,7 @@
   - Accessible synthesis of zonation, competition, predation
   - Good for intermediate students
 
+
 ## Classic Research Papers (Canonical Studies)
 
 ### Competition & Zonation
@@ -100,6 +101,7 @@
 - **Nature Education (Scitable): Community Ecology**
   - Curated learning modules on competition, predation, keystone species
 
+
 ## Field Guides & Species Identification
 
 ### Regional Guides
@@ -109,6 +111,7 @@
 
 - **National Audubon Society Field Guide to North American Seashore Creatures** by Norman Meinkoth (1981, Knopf)
   - Photographic guide, accessible for beginners
+
 
 - **Beachcomber's Guide to Seashore Life in the Pacific Northwest** by J. Duane Sept (2009, Harbour)
   - Regional guide for Washington, Oregon, British Columbia
@@ -152,6 +155,7 @@
   - Episode 4: Community Ecology (covers keystone species, competition)
   - Accessible, fast-paced, animated
 
+
 - **Tidepool Tim** (Tim Visel)
   - Educational videos on tide pool organisms and ecology
   - Identification tips, natural history
@@ -179,6 +183,7 @@
 - **Virtual Tide Pool** (California Academy of Sciences)
   - Interactive 360° exploration of tide pool habitats
   - Species identification, ecological relationships
+
 
 - **Natural History Museum Virtual Tour: Tidal Zone**
   - Interactive exploration with species profiles
@@ -232,6 +237,7 @@
 ### Community Ecology
 - **Bruce Menge** (Oregon State University)
   - Environmental stress gradients, food web dynamics, climate impacts
+
 
 - **Jane Lubchenco** (Oregon State University)
   - Community ecology, marine conservation, science policy
@@ -287,6 +293,7 @@
 
 - **The Nature Conservancy: Marine Program**
   - Coastal resilience, marine protected areas
+
 
 - **Ocean Conservancy**
   - Marine debris, climate change, ocean health advocacy

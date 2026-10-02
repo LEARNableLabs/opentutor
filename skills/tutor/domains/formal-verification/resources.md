@@ -26,6 +26,7 @@
 
 - **An Axiomatic Basis for Computer Programming (Hoare, 1969)** — The original Hoare logic paper. Readable and foundational.
 
+
 - **How Amazon Web Services Uses Formal Methods (Newcombe et al., 2015)** — Case study of TLA+ at AWS. Shows real-world impact.
   - https://cacm.acm.org/magazines/2015/4/184701-how-amazon-web-services-uses-formal-methods/
 
@@ -98,6 +99,7 @@
 
 - **Dafny Examples** — Verified programs: sorting, binary search, graph algorithms.
 
+
 ### Research Groups & People
 
 - **Leslie Lamport** — Turing Award winner, creator of TLA+, pioneer in distributed systems and temporal logic.
@@ -110,6 +112,7 @@
   - https://xavierleroy.org/
 
 - **Gernot Heiser (UNSW, seL4)** — Led seL4 microkernel verification, now works on verified OS ecosystems.
+
 
 - **Hillel Wayne** — Formal methods educator, writes practical guides for working programmers.
   - https://www.hillelwayne.com/
@@ -126,6 +129,7 @@
 ### Industry Applications & Case Studies
 
 - **Amazon Web Services (TLA+)** — Specs for S3, DynamoDB, EBS. Open-source examples and experience reports.
+
 
 - **Facebook Infer** — Open-source static analyzer using separation logic. Analyzes millions of lines of code.
   - https://fbinfer.com/
@@ -149,6 +153,7 @@
 
 - **Coq Discourse** — Q&A forum for Coq users.
 
+
 - **r/formal_verification subreddit** — Reddit community for formal methods news and discussion.
   - https://www.reddit.com/r/formal_verification/
 
@@ -158,6 +163,7 @@
 ## Wild Cards & Unexpected Connections
 
 - **Formal Verification in Game Design** — Can you verify a game is fair? Poker hand probabilities, chess endgames.
+
 
 - **Mathematical Components Library (Coq)** — Formalized Four Color Theorem and Feit-Thompson Theorem. Pure math meets proof assistants.
   - https://math-comp.github.io/

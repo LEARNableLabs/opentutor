@@ -12,6 +12,7 @@
   - Exercises at the end of each chapter are excellent for practice
 
 - **John Preskill: "Quantum Computation" Lecture Notes (Caltech)**
+  - URL:
   - Physics-focused approach with deep treatment of error correction and fault tolerance
   - Excellent for understanding decoherence, noise models, and stabilizer codes
   - More mathematical than Nielsen & Chuang, assumes physics background

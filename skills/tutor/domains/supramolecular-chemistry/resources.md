@@ -8,6 +8,7 @@
   - Covers all interaction types, host-guest chemistry, crystal engineering, and applications
   - Excellent for intermediate learners — good balance of theory and examples
 
+
 - **Lehn, J.-M. "Supramolecular Chemistry: Concepts and Perspectives" (VCH, 1995)**
   - Nobel Prize winner's vision of the field
   - More conceptual than Steed & Atwood, less comprehensive
@@ -143,6 +144,7 @@
 
 - **PyMOL API** — programmatic molecular visualization
 
+
 ### Simulation Tutorials
 - **GROMACS tutorials** — molecular dynamics simulations
   - Includes tutorials on self-assembly of lipid bilayers, micelles
@@ -231,6 +233,7 @@
 ## Datasets and Databases
 
 - **CoRE MOF Database** — computed structures and properties of MOFs
+
 
 - **BindingDB** — database of measured binding affinities
   - https://www.bindingdb.org/

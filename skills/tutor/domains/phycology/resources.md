@@ -34,7 +34,9 @@
 - **UC Berkeley Museum of Paleontology** — [https://ucmp.berkeley.edu](https://ucmp.berkeley.edu)
   - Excellent introductions to major algal groups
   - Phylogenetic trees, fossil records, key characteristics
+  - Cyanobacteria
   - [Green Algae](https://ucmp.berkeley.edu/greenalgae/greenalgae.html)
+  - Red Algae
   - [Brown Algae](https://ucmp.berkeley.edu/chromista/phaeophyta.html)
 
 - **Tree of Life Web Project** — [https://tolweb.org](https://tolweb.org)
@@ -63,6 +65,7 @@
 
 - **NOAA Ocean Exploration**
   - Kelp forest ecology and marine algae habitats
+  - Kelp Forests
   - Underwater footage of algal communities
 
 - **Blue Planet II (BBC)** — Episode 1 ("One Ocean")
@@ -77,6 +80,7 @@
 
 ### Interactive Tools
 
+- **Protist Image Database**
   - University of Montreal collection
   - High-resolution images of algae and other protists
   - Searchable by taxonomic group
@@ -96,6 +100,7 @@
   - Crowd-sourced content from multiple databases
   - Good for quick overviews
 
+- **MBARI (Monterey Bay Aquarium Research Institute)** — Bioluminescence research
   - Videos and information on bioluminescent dinoflagellates
   - Research expeditions and discoveries
   - Beautiful footage of living bioluminescence

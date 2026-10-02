@@ -10,6 +10,7 @@
 - **Sound Reproduction: The Acoustics and Psychoacoustics of Loudspeakers and Rooms (3rd ed.)** by Floyd Toole — evidence-based approach to speaker-room interaction. Essential for understanding boundary loading, SBIR, and the limits of EQ.
   - Publisher: Routledge
 
+
 - **Acoustics and Psychoacoustics (5th ed.)** by David Howard & Jamie Angus — bridges physical and perceptual aspects. Good for understanding why measurements matter to listening.
   - Publisher: Routledge
   - https://www.routledge.com/Acoustics-and-Psychoacoustics/Howard-Angus/p/book/9781138859876
@@ -21,7 +22,9 @@
 ### Academic Courses (Open Access)
 - **MIT 2.067: Acoustics and Sensing** (Spring 2015) — covers wave equation, impedance, radiation, room acoustics. Lecture notes, problem sets, and some video.
 
+
 - **Salford Acoustics Web Resources** — introductory modules on wave behavior, resonance, room acoustics from University of Salford's renowned acoustics program.
+
 
 ### Standards and Technical Documents
 - **ISO 3382-1:2009** — Measurement of room acoustic parameters (RT60, EDT, clarity, etc.). Defines professional measurement practice.
@@ -35,10 +38,12 @@
 ### Video Channels and Tutorials
 - **Acoustic Insider** (YouTube) — Dennis Foley, practical treatment design, measurement walkthroughs, absorber/diffuser builds. Down-to-earth, measurement-focused.
 
+
 - **Acoustic Fields** (YouTube) — Dennis Foley's main channel. Deep dives into specific topics: room modes, bass trapping, diffusion, material selection.
   - https://www.youtube.com/user/AcousticFields
 
 - **Ethan Winer** (YouTube + website) — myth-busting, measurement-driven approach. Excellent videos on absorption depth, EQ limits, and common misconceptions.
+
   - https://ethanwiner.com/acoustics.html
 
 - **REW Tutorial Series** (YouTube) — various creators have excellent REW walkthroughs. Search "REW room acoustics tutorial" for current best options.

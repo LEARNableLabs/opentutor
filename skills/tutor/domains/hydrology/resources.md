@@ -37,6 +37,7 @@
 ### University Courses (OpenCourseWare)
 
 - **MIT OpenCourseWare: 1.72 Groundwater Hydrology**
+
   - *Content:* Complete course materials, lecture notes, problem sets, exams
   - *Best for:* Groundwater modules (lessons 17-22)
 
@@ -48,10 +49,12 @@
 ### CUAHSI HydroLearn
 
 - **CUAHSI HydroLearn Platform**
+
   - *Content:* Modular educational materials created by hydrology educators, includes interactive exercises, data activities, and case studies
   - *Best for:* All modules—search by topic for supplementary materials
 
 - **CUAHSI Virtual University**
+
   - *Content:* Recorded webinars on cutting-edge hydrology topics
   - *Best for:* Enrichment on current research topics
 
@@ -108,6 +111,7 @@
   - *Best for:* Water cycle fundamentals (lessons 1-4)
 
 - **USGS Water Science School Activities**
+
   - *Content:* Interactive activities, calculators, educational games
   - *Best for:* Engaging activities throughout
 
@@ -200,6 +204,7 @@
 
 - **PyHydroQC** — Quality control for hydrology data
 
+
 - **PyGeoprocessing** — Geospatial processing
   - https://github.com/natcap/pygeoprocessing
 
@@ -217,6 +222,7 @@
 ### Example Notebooks and Tutorials
 
 - **CUAHSI HydroLearn Jupyter Notebooks**
+
   - *Content:* Computational hydrology exercises in Python
 
 ## Organizations and Professional Societies

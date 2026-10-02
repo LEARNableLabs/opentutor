@@ -4,6 +4,7 @@
 
 - **"The Backstage Handbook" by Paul Carter** — Technical theatre rigging bible, covers hardware, load calculations, safety systems. Excellent for lessons 6-11 (rigging systems). Not circus-specific but foundational engineering principles apply directly. Available from major booksellers.
 
+- **ETCP Rigging Handbook** — Entertainment Technician Certification Program study materials. Industry-standard reference for rigging safety, load paths, hardware specifications. Essential for lessons 8-11 and 23-25. Available at
 
 - **"Mechanical Design for the Stage" by Alan Hendrickson** — Advanced rigging engineering with detailed force calculations, structural design, and mechanical systems. Chapter 2 (loads and forces) and Chapter 3 (wire rope and cables) are most relevant. Intermediate level will benefit from the worked examples. Available from Routledge.
 
@@ -44,6 +45,7 @@
 
 ### Academic Papers and Research
 
+- **Circus Sciences Research Network** — interdisciplinary research on circus arts, including biomechanics and injury studies. Some papers accessible at
 
 - **"Injury Incidence in Circus Artists: A Systematic Review"** (Shrier et al., various years) — epidemiological studies of circus injuries, useful context for lessons 19-20, 22.
 
@@ -75,6 +77,7 @@
 
 ## Professional Organizations and Standards
 
+- **ETCP (Entertainment Technician Certification Program)** — Rigging certification body. Study guides and standards documents are educational resources.
 
 - **ESTA (Entertainment Services and Technology Association)** — Publishes technical standards including E1.43 for aerial rigging. https://tsp.esta.org/
 

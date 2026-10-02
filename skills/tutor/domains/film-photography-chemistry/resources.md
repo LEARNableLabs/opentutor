@@ -15,6 +15,7 @@
   - Excellent chapters on developer chemistry and toning
   - Includes digital negative techniques for alternative processes
 
+
 - **The Darkroom Cookbook** by Steve Anchell (4th ed.)
   - Deep dive into printing chemistry and formulations
   - Extensive toning recipes and alternative processes
@@ -43,6 +44,7 @@
   - Historical archive of technical bulletins (many still relevant)
   - Deep coverage of sensitometry, grain structure, spectral sensitivity
 
+
 - **Digital Truth Photo / Massive Dev Chart**
   - Comprehensive database of film/developer combinations
   - Great for pattern analysis: see how different developers behave across films
@@ -56,6 +58,7 @@
   - Professional darkroom techniques and chemistry explanations
   - High production quality, accurate information
   - Good visual demonstrations of development, printing, toning
+
 
 - **The Art of Photography** (Ted Forbes)
   - Film photography and darkroom episodes
@@ -85,9 +88,11 @@
   - Timer with temperature compensation
   - iOS and Android
 
+
 - **Analyzer Light Meter Simulator**
   - Simulates spot meter readings for zone system work
   - Connects chemistry choices (N+1/N-1) to exposure strategy
+
 
 ### Online Communities & Forums
 
@@ -118,9 +123,11 @@
   - Log film/developer/time/temperature, compare results
   - Good for systematic exploration of chemistry variables
 
+
 - **Cyanotype Chemistry Calculator**
   - Python script for scaling cyanotype chemistry formulas
   - Example of using code to manage chemistry workflows
+
 
 ## People to Follow
 
@@ -130,10 +137,12 @@
   - Platinum/palladium printer with deep chemistry knowledge
   - Workshops and writing on alternative processes
 
+
 - **Christina Z. Anderson**
   - Professor specializing in alternative processes
   - Co-author of *Alternative Photographic Processes*
   - Active in educational community
+
 
 - **Christopher James**
   - Master printer and author
@@ -156,12 +165,14 @@
   - Process historian and practitioner
   - Expert on wet plate collodion and 19th-century chemistry
 
+
 ## Institutions & Museums
 
 - **George Eastman Museum** (Rochester, NY)
   - World's oldest photography museum
   - Extensive archives and educational resources
   - Conservation lab insights into chemistry and archival science
+
 
 - **Image Permanence Institute** (Rochester Institute of Technology)
   - Research on photographic materials stability and preservation

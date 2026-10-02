@@ -49,6 +49,7 @@
 - **MIT 8.231 Video Lectures** (if available through MIT OpenCourseWare)
 - **Stanford Physics 263/363** — Check Stanford Online for condensed matter courses
 - **ICTP Diploma Programme** — Condensed matter physics lectures
+
   - Search for "condensed matter" — many excellent lecture series
 
 - **Perimeter Institute Recorded Seminar Archive (PIRSA)**
@@ -71,6 +72,7 @@
 - **DoITPoMS** (University of Cambridge) — Teaching and learning packages
   - https://www.doitpoms.ac.uk/
   - Crystallography: https://www.doitpoms.ac.uk/tlplib/crystallography3/
+  - Magnetism:
   - Semiconductors: https://www.doitpoms.ac.uk/tlplib/semiconductors/
   - Superconductivity: https://www.doitpoms.ac.uk/tlplib/superconductivity/
   - Excellent interactive modules with quizzes

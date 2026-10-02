@@ -39,6 +39,7 @@
   - Level: Intermediate to advanced
   - Format: Lecture notes, assignments, readings
   - Best for: Lessons 6-26 (entire curriculum)
+  - URL:
 
 - **Coursera: Financial Engineering and Risk Management (Columbia)**
   - Instructors: Martin Haugh, Garud Iyengar
@@ -51,6 +52,7 @@
   - Coverage: Options, futures, swaps, risk management
   - Level: Intermediate
   - Best for: Practical applications, real-world examples
+  - URL:
 
 ## Supplementary Resources
 
@@ -109,12 +111,14 @@
   - Interactive tool to explore delta, gamma, theta, vega, rho
   - Visualize how Greeks change with inputs
   - Best for: Lessons 20-21 (Greeks)
+  - URL:
 
 - **Black-Scholes Calculator (multiple implementations)**
   - Online calculators for option pricing
   - Experiment with parameter sensitivity
   - Best for: Lesson 18 (Black-Scholes)
   - Examples:
+
     - https://www.cboe.com/tradable_products/sp_500/spx_options/
 
 - **Option Strategy Visualizer**

@@ -141,6 +141,7 @@
 
 - **Carbon Cowboys** — Australian grazing and soil carbon pioneers
 
+
 - **Quivira Coalition** — regenerative ranching, New Mexico-based
   - https://quiviracoalition.org/
 
@@ -149,6 +150,7 @@
 ### Cross-Disciplinary Links
 
 - **Soil and Mental Health** — "Nature Deficit Disorder," biophilia, soil microbes (M. vaccae) and mood
+
 
 - **Soil Art and Aesthetics** — soil painting, soil color charts, photography
   - https://www.munsell.com/color-solutions/soil-color-charts/
@@ -169,6 +171,8 @@
 
 - **Soil Carbon Markets** — promise, pitfalls, permanence debates
 
+
+
 - **Allan Savory and Holistic Grazing** — contested evidence, case studies vs trials
   - https://savory.global/
   - Critiques: https://www.hindawi.com/journals/ijbd/2014/163431/
@@ -187,7 +191,9 @@
 ### DIY Soil Assessments
 - **Jar Test** — soil texture analysis with water and a jar
 
+
 - **Slake Test** — aggregate stability in water
+
 
 - **Earthworm Count** — dig 1 cubic foot, count worms (healthy = 10+)
   - https://rodaleinstitute.org/
@@ -197,6 +203,7 @@
 
 ### Hands-On Projects
 - **Compost Building** — hot composting, C:N balancing, temperature monitoring
+
 
 - **Cover Crop Trial** — plant a cocktail mix, observe root diversity and biomass
   - https://www.sare.org/publications/managing-cover-crops-profitably/

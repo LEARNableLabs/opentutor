@@ -50,6 +50,8 @@
 - **UMass COMPSCI 650: Applied Information Theory**
   - Application-focused course
   - Practical examples and implementations
+  - Course page:
+  - Resource list:
   - Best for: Applied perspective, computational implementations
 
 ## Supplementary Resources (for engagement)

@@ -72,6 +72,7 @@
 
 - **Lean theorem prover** — Measure theory formalized in Lean's mathlib. For students interested in formalization and proof verification.
 
+
 ## People to Follow (researchers and educators)
 
 - **Terence Tao** — UCLA mathematician, Fields Medalist. Excellent blog posts connecting measure theory to analysis, probability, and ergodic theory.

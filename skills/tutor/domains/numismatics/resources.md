@@ -14,7 +14,9 @@
 
 ### Online Courses and Structured Learning
 
+- **Yale Online Numismatics Resources** () — Curated research guides, bibliography, methodology resources.
 
+- **American Numismatic Society Education Programs** () — Introductory tutorials, terminology guides, and educational materials.
 
 - **British Museum Coin Collection** (https://www.britishmuseum.org/collection/subjects/coins-and-medals) — Educational materials, curator essays, and thematic collections.
 
@@ -56,6 +58,7 @@
 
 - **MANTIS (Material and Analytical Tools for Images and Coins)** (https://numismatics.org/mantis/) — ANS's coin cataloging system. Learn professional documentation standards.
 
+- **Roman Economy Project** () — Oxford's research initiative on Roman economic history. Includes databases, GIS mapping of coin finds, and scholarly articles. Essential for Lessons 17, 21-22.
 
 - **Nomisma.org** (http://nomisma.org/) — Linked Open Data for numismatics. Allows cross-database searching and data export for analysis.
 

@@ -23,6 +23,7 @@
 
 - **MIT OpenCourseWare: 7.342 Viruses and Cells** — advanced undergraduate seminar on viral biology
 
+
 - **NCBI Bookshelf** — free medical and biology textbooks, including Medical Microbiology
   - https://www.ncbi.nlm.nih.gov/books/
 
@@ -36,8 +37,11 @@
 
 - **iBiology Microbiology** — research talks and educational lectures from leading microbiologists
 
+
 - **HHMI BioInteractive** — animations of viral life cycles, immune responses, biofilms
+
   - https://www.biointeractive.org/classroom-resources/hiv-life-cycle
+
 
 - **MicrobeTV** — podcasts and video series on microbiology (TWiM, TWiV)
   - https://www.microbe.tv/
@@ -91,6 +95,7 @@
 
 - **American Society for Microbiology (ASM)** — leading professional organization, excellent educational resources
   - https://asm.org/
+  - ASM MicrobeLibrary:
 
 - **Society for General Microbiology (SGM/Microbiology Society)** — UK-based, excellent outreach
   - https://microbiologyonline.org/
@@ -149,13 +154,18 @@
 
 - **Art and extremophiles** — Artists use extremophile pigments (thermophiles, halophiles) in paintings
 
+
 - **Fermentation and food science** — cheese, beer, kimchi, sourdough all rely on microbial metabolism
+
 
 - **Space microbiology** — microbes on the ISS, planetary protection, searching for life on Mars/Europa
 
+
 - **Microbial forensics** — using microbiome signatures to identify individuals or locations
 
+
 - **Bioluminescence** — from fireflies to anglerfish to bacteria (Vibrio fischeri)
+
 
 - **Biological computation** — using bacteria as logic gates and biosensors
   - https://www.nature.com/articles/s41589-020-0510-4

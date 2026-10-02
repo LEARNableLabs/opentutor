@@ -11,10 +11,12 @@
 - **"The Art of Japanese Joinery"** by Kiyosi Seike
   - Definitive catalog of Japanese joints with diagrams and applications
   - Best for: understanding Japanese tradition philosophy and joint diversity (Lessons 11-16)
+  - Available:
 
 - **"Taunton's Complete Illustrated Guide to Joinery"** by Gary Rogowski
   - Western joinery reference with clear diagrams, wood movement considerations
   - Best for: comprehensive overview and joint selection guidance (all modules)
+  - Available:
 
 - **"With the Grain: A Craftsman's Guide to Understanding Wood"** by Christian Becksvoort
   - Essential for wood movement and grain orientation concepts
@@ -55,9 +57,11 @@
   - Traditional Japanese temple carpentry, real project documentation
   - Best for: Japanese techniques in context (Lessons 11-16)
 
+- **The Samurai Carpenter**
   - Japanese techniques explained in English, good cross-cultural perspective
   - Best for: Japanese basics with Western comparison (Lessons 11-13)
 
+- **Matt Estlea**
   - Modern hand tool joinery with clear explanations
   - Best for: technique refinement and project applications (Lessons 18-21)
 
@@ -82,6 +86,7 @@
 - **Wood Magazine** — https://www.woodmagazine.com/
   - Project-based joinery, tool reviews, technique tips
 
+- **Mortise & Tenon Magazine**
   - Historical furniture and traditional joinery focus
   - Best for: furniture history and period-accurate techniques (Lesson 23)
 
@@ -119,6 +124,7 @@
   - Best for: visualizing complex joints before cutting
 
 - **Dovetail Layout Calculators** — various online tools
+
   - Calculates pin/tail spacing for balanced proportions (Lesson 8)
 
 - **Wood Movement Calculator** — https://www.popularwoodworking.com/calculators/wood-movement-calculator/

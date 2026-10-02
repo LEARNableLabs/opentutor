@@ -131,6 +131,7 @@
 
 - **HyperPhysics: Thermodynamics and Statistical Mechanics**
   - Concept maps and quick references
+  - **URL**:
   - **Use for**: Quick concept lookup; relationship diagrams
 
 - **Wikipedia: Statistical Mechanics Portal**

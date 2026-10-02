@@ -119,6 +119,7 @@
 
 ### Commercial (widely used, worth investing in)
 - **Xfer Serum** (paid, wavetable)
+  - URL:
   - Industry-standard wavetable synthesizer
   - Used in Berklee courses
   - Excellent visual feedback (oscilloscope, spectrum)

@@ -8,6 +8,7 @@
   - Comprehensive coverage of loss distributions, frequency models, and aggregate losses
   - Standard reference for SOA exams
   - Excellent for lessons 12-19, 21-23
+  - Wiley page
 
 - **Actuarial Mathematics for Life Contingent Risks** (Dickson, Hardy, Waters)
   - Modern treatment of life insurance mathematics
@@ -28,20 +29,24 @@
 - **Foundations of Casualty Actuarial Science** (CAS)
   - Free online textbook from Casualty Actuarial Society
   - Comprehensive, exam-focused
+  - CAS website
 
 ### Course Materials
 
 - **MIT OpenCourseWare: Probability and Statistics**
   - 18.05 Introduction to Probability and Statistics
   - Excellent for foundational review (lessons 1-6)
+  - MIT OCW
 
 - **University of Connecticut Actuarial Science Program**
   - Publishes syllabi and practice problems
   - One of top-ranked actuarial programs in US
+  - UConn Actuarial
 
 - **Heriot-Watt University Online Actuarial Science Materials**
   - Free resources for life contingencies and loss models
   - Well-structured, exam-aligned
+  - Heriot-Watt
 
 ## Supplementary (for engagement)
 
@@ -60,9 +65,11 @@
 - **Society of Actuaries Webcasts**
   - Professional development webinars, often technical
   - Archive available to members
+  - SOA Learning
 
 - **Casualty Actuarial Society Webinar Series**
   - Emerging topics, practical applications
+  - CAS Webinars
 
 ### Interactive Tools
 
@@ -82,6 +89,7 @@
 
 - **GeoGebra**
   - Interactive probability and statistics applets
+  - GeoGebra Probability
 
 ### Code and Datasets
 
@@ -109,6 +117,7 @@
 
 - **CAS Loss Data**
   - Historical insurance claim datasets
+  - CAS Datasets
 
 - **GitHub: Open Actuarial Models**
   - Community-contributed actuarial code
@@ -175,6 +184,7 @@
 - **ASTIN (Actuarial Studies in Non-Life Insurance)**
   - Research section of IAA
   - Publishes ASTIN Bulletin
+  - astin.org
 
 ## Journals and Publications
 
@@ -196,6 +206,7 @@
 
 - **Variance (CAS Journal)**
   - Practical articles for property/casualty actuaries
+  - CAS Variance
 
 ## Unexpected Connections (for wild cards)
 
@@ -205,6 +216,7 @@
 
 - **Pandemic Modeling**
   - SIR models, epidemiology → aggregate loss models for pandemic risk
+  - CDC Pandemic Planning
 
 - **Sports Analytics**
   - Injury rates, player longevity → actuarial methods applied to sports

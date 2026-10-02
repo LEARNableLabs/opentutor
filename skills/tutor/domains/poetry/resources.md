@@ -59,6 +59,7 @@
 
 ### University Syllabi (for pedagogical models)
 
+- **Bergen Community College: Introduction to Poetry (LIT 227)** ()
   - Course outline covering meter, form, sound devices
   - Use as: supplementary structure reference
 
@@ -111,6 +112,7 @@
   - Full-text searchable database
   - Best for: lesson 23 (historical evolution), research-oriented students
 
+- **Leonardo Flores: Materials of Poetry Resources** ()
   - Curated collection of poetry pedagogy resources
   - Best for: instructor reference, finding additional materials
 

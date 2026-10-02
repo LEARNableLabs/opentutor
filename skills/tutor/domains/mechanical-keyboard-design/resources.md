@@ -148,5 +148,6 @@ Focus on: r/MechanicalKeyboards daily threads, Discord communities, build logs o
 - **Layout Editor:** https://keyboard-layout-editor.com/
 - **Plate Builder:** https://builder.swillkb.com/
 - **PCB Guide:** https://github.com/ruiqimao/keyboard-pcb-guide
+- **Learning Platform:**
 - **Community:** https://www.reddit.com/r/MechanicalKeyboards/
 - **Switch Database:** https://deskthority.net/wiki/Main_Page

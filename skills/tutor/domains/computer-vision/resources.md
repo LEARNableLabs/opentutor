@@ -30,6 +30,7 @@
   - Use for: Lessons 14-23, especially CNN training and object detection
 
 - **MIT 6.801/6.866: Advanced Computer Vision**
+  - URL:
   - Coverage: Classical techniques, recognition, scene understanding
   - Why useful: Strong theoretical foundations, connects perception to cognition
   - Use for: Supplementary depth on classical methods (lessons 1-13)
@@ -63,6 +64,7 @@
 ### Interactive Tools & Visualizations
 
 - **OpenCV Tutorials**
+  - URL:
   - Format: Hands-on Python tutorials with code samples
   - Coverage: All basic CV operations (filtering, edge detection, features, camera calibration, stereo)
   - Why essential: Standard library for CV; students must learn this
@@ -160,6 +162,7 @@
 
 ### Face Recognition
 - **Face Recognition Resources**
+  - OpenCV Face Detection:
   - FaceNet paper and implementations
   - Why: Widely applicable, good teaching examples
 

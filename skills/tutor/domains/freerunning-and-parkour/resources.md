@@ -14,6 +14,7 @@
 ### Books
 - **"Biomechanical Basis of Human Movement" by Joseph Hamill and Kathleen M. Knutzen** — comprehensive biomechanics textbook covering force, motion, and joint mechanics
 - **"Parkour Strength Training" by Ryan Ford** — https://www.amazon.com/Parkour-Strength-Training-Overcome-Obstacles/dp/1937715302 — practical strength and conditioning for parkour athletes
+- **"The Parkour & Freerunning Handbook" by Dan Edwardes** — foundational techniques and training progressions
 
 ### Educational Websites
 - **Physiopedia** — https://www.physio-pedia.com/ — free physiotherapy resource with excellent biomechanics articles (kinetic chain, tendon adaptation, landing mechanics)
@@ -25,12 +26,18 @@
 ### YouTube Channels - Educational
 - **Ronnie Shalvis** — https://www.youtube.com/@RonnieShalvis — parkour tutorials with biomechanical breakdowns and slow-motion analysis
 - **STORROR** — https://www.youtube.com/@STORROR — elite parkour athletes, excellent for technique observation and real-world applications
+- **Ryan Ford (Demon Drills)** — strength and conditioning specifically for parkour
+- **The Movement Creative** — movement analysis and coaching breakdowns
 - **American Parkour** — https://www.youtube.com/@AmericanParkour — tutorials, documentaries, and community content
 
 ### YouTube Channels - Biomechanics
+- **E-Centric Performance** — sports biomechanics analysis including parkour movements
 - **The Sports Physio** — https://www.youtube.com/@TheSportsPhysio — injury biomechanics and prevention strategies
 
 ### Video Series
+- **"The Science of Parkour" (Wired)** — accessible biomechanics explanations with parkour athletes
+- **"Parkour World Championship" footage** — elite-level performance analysis opportunities
+- **Red Bull Art of Motion** — high-quality footage of advanced techniques
 
 ### Interactive Tools
 - **Kinovea** — https://www.kinovea.org/ — free video analysis software for movement breakdown and annotation

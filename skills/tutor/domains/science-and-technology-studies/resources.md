@@ -31,6 +31,7 @@
 - **Donna Haraway, "A Cyborg Manifesto" (1985)**
   - Short, influential essay. Essential feminist STS.
 
+
 - **Langdon Winner, "Do Artifacts Have Politics?" (Daedalus, 1980)**
   - Classic paper on embedded values. Very readable.
   - https://faculty.cc.gatech.edu/~beki/cs4001/Winner.pdf
@@ -38,12 +39,15 @@
 - **Sheila Jasanoff, ed., *States of Knowledge: The Co-Production of Science and Social Order* (Routledge, 2004)**
   - Key work on regulatory science and co-production.
 
+
 ## Courses and Syllabi
 
 ### MIT OpenCourseWare
 - **STS.004: Intersections: Science, Technology, and the World**
 
+
 - **STS.089: Technology and Innovation in Africa**
+
 
 - **MIT STS Program home**
   - https://web.mit.edu/sts/
@@ -51,8 +55,10 @@
 ### University Programs
 - **Stanford STS** — https://sts.stanford.edu/
 - **Cornell STS** — https://sts.cornell.edu/
+- **UC Berkeley Science & Technology Studies**
 - **Harvard Kennedy School STS** — https://www.hks.harvard.edu/
 - **UCL STS** — https://www.ucl.ac.uk/sts/
+- **University of Edinburgh STIS**
 
 ## Videos and Lectures
 

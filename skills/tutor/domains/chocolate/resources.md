@@ -31,9 +31,11 @@
 - **Reading University International Centre for Cacao Research** (ICCR)
   - Cacao genetics, disease resistance, sustainability
 
+
 ### Scientific Papers (Open Access)
 - **Cacao Genome Project** — Nature Communications (2018)
   - Genetic basis of flavor diversity
+
 
 - **Cocoa Bean Fermentation** — Applied and Environmental Microbiology (2010)
   - Microbial succession and flavor precursors
@@ -51,8 +53,10 @@
 - **How It's Made: Chocolate** (Science Channel)
   - Factory tour showing bean-to-bar. Good visual anchor for processing.
 
+
 - **The Chemistry of Chocolate** (Reactions, ACS)
   - 6-minute overview of Maillard reactions and tempering
+
 
 #### Tempering Demonstrations
 - **ChefSteps: Tempering Chocolate**
@@ -62,19 +66,24 @@
 - **Serious Eats: How to Temper Chocolate**
   - Kenji López-Alt demonstrates seeding method with explanation
 
+
 - **Ecole Chocolat: Tabling Technique**
   - Traditional marble slab tempering. Beautiful to watch.
+
 
 #### Fermentation
 - **BBC Earth: Cacao Fermentation in Ecuador**
   - On-site fermentation footage. Shows the pile, banana leaves, temperature monitoring.
 
+
 - **Dandelion Chocolate: Bean to Bar**
   - Small-batch maker's perspective. Emphasizes sourcing and fermentation quality.
+
 
 #### Genetics and Agriculture
 - **Smithsonian: Saving Cacao from Extinction**
   - Disease pressure and genetic conservation efforts
+
 
 - **World Cocoa Foundation: Sustainable Cacao**
   - Cultivation challenges, climate change, farmer livelihoods
@@ -84,6 +93,7 @@
 
 - **Fine Cacao Flavor Map**
   - Interactive flavor wheel for chocolate tasting. Use in sensory module.
+
 
 - **Cocoa Butter Phase Diagram Tool** (simulation)
   - Limited availability, but check university food science sites for crystallization simulators
@@ -106,6 +116,7 @@
 
 - **Valrhona Technical Guides**
   - Tempering curves, recipe formulation, troubleshooting
+
 
 - **Barry Callebaut Chocolate Academy**
   - Processing techniques, product development

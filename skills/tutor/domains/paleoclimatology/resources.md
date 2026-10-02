@@ -30,6 +30,7 @@
   - Advanced undergraduate/graduate level
 
 - **NOAA Paleoclimatology Education**
+
   - Educational resources, lesson plans, data tutorials
   - Wide range of levels, excellent for self-study
 
@@ -139,6 +140,7 @@
   - Standardized formats, DOIs for all datasets
 
 - **NOAA Paleoclimatology Data Archive**
+
   - Ice cores, tree rings, corals, sediments, etc.
   - Free download, well-documented
 
@@ -211,9 +213,11 @@
 
 ### Paleoclimate ↔ Astrobiology
 - **Faint Young Sun Paradox** — How Earth stayed warm 4 Ga ago
+
 - **Snowball Earth and Oxygenation** — Life reshaping climate
   - https://www.science.org/doi/10.1126/science.1090110
 - **Exoplanet habitability** — Using Earth's climate extremes as analogs
+
 
 ### Paleoclimate ↔ Human Evolution
 - **Precessional pacing of African climate** — Orbital forcing → lake level changes → hominin evolution

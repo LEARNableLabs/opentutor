@@ -98,6 +98,7 @@
 ### Suppliers with Educational Content
 - https://www.centaurforge.com/ (tools and educational resources)
 - https://www.blacksmithsdepot.com/ (beginner through advanced resources)
+-  (tool making materials)
 
 ## Research Gaps
 

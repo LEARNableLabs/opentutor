@@ -10,6 +10,7 @@
 ### Academic Courses & Lectures
 - **MIT OpenCourseWare: Engineering and Ancient Civilizations** — https://ocw.mit.edu/courses/civil-and-environmental-engineering/ — search for courses on engineering history and structural systems. Free lecture notes, assignments, and readings.
 
+- **Yale Open Courses: Roman Architecture** — Professor Diana E. E. Kleiner's comprehensive course on Roman building from technical and cultural perspectives. Video lectures, transcripts, and syllabus available.
 
 - **Coursera: Roman Architecture (University of Michigan)** — https://www.coursera.org/learn/roman-architecture — includes modules on engineering, materials, and construction techniques.
 
@@ -27,16 +28,24 @@
 ### Videos & Documentaries
 - **Engineering an Empire: Rome** — History Channel documentary series. Available on various streaming platforms. Excellent visual reconstructions of construction techniques.
 
+- **Building the Ancient World** — YouTube channel with detailed animations of Roman construction processes.
 
+- **Crash Course World History: The Roman Empire** — accessible overview with cultural and engineering context.
 
+- **How to Build a Roman Road** — experimental archaeology demonstrating layered construction techniques.
 
+- **Pont du Gard: Engineering Marvel** — focused documentary on the iconic three-tier aqueduct.
 
+- **Secrets of Roman Concrete** — Berkeley Lab researchers explain pozzolanic reactions and tobermorite formation.
 
 ### Interactive Tools & Simulations
 - **Roman Aqueduct Gradient Calculator** — https://www.romanaqueducts.info/gradient-calculator — interactive tool for exploring gradient/flow relationships.
 
+- **Virtual Roman House (Pompeii)** — explore water supply, drains, and infrastructure in reconstructed Roman homes.
 
+- **Rome Reborn** — 3D digital reconstruction of ancient Rome, showing aqueduct routes, road networks, and major structures.
 
+- **Arch Mechanics Simulator** — interactive 3D model showing force distribution in arches.
 
 ### Code & Datasets
 - **OpenStreetMap: Roman Roads** — https://www.openstreetmap.org — search for "Via Appia", "Via Flaminia", etc. Many Roman roads are mapped with historical annotations.
@@ -152,8 +161,11 @@
 ## Multimedia & News
 
 ### Recent Discoveries & Research
+- **"Roman Concrete Reveals Secrets of Ancient Architects"** — Nature (2023)
 
+- **"How Roman Aqueducts Worked"** — Smithsonian Magazine
 
+- **"The Mystery of Roman Concrete's Durability Might Be Solved"** — Science News
 
 ### Podcasts
 - **_The History of Rome_ by Mike Duncan** — episodes on infrastructure and engineering achievements

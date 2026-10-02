@@ -158,6 +158,7 @@
 - **Why**: Theoretical foundation for all light transport; introduce in lesson 23
 
 **"Bidirectional Path Tracing"** (Lafortune & Willems, 1993)
+- **Link**:
 - **Why**: Advanced technique preview for lesson 26
 
 ## People to Follow

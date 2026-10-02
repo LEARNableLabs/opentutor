@@ -20,6 +20,7 @@
 - **International Court of Justice** — https://www.icj-cij.org/en/cases — full judgments, advisory opinions, case summaries
 - **International Criminal Court** — https://www.icc-cpi.int/cases — ongoing and completed cases, trial transcripts
 - **European Court of Human Rights** — https://www.echr.coe.int/hudoc — searchable HUDOC database
+- **Inter-American Court of Human Rights** — judgments, advisory opinions
 - **African Court on Human and Peoples' Rights** — https://www.african-court.org/ — decisions and provisional measures
 
 ## Textbooks and Academic Resources
@@ -44,10 +45,14 @@
 
 ### Structured Online Courses
 - **"International Law in Action: A Guide to the International Courts and Tribunals in The Hague" (Coursera, Leiden University)** — https://www.coursera.org/learn/international-law-in-action — excellent intro to ICJ, ICC, and other Hague institutions
+- **"International Humanitarian Law in Theory and Practice" (edX, Louvain)** — deep dive into IHL with case studies
+- **"Human Rights for Open Societies" (edX, Utrecht University)** — contemporary HR issues
+- **UN Human Rights Learning Platform** — thematic modules on treaty bodies, special procedures, specific rights
 
 ### Individual Lectures and Channels
 - **UN WebTV** — https://webtv.un.org/ — livestreams and archives of Human Rights Council sessions, treaty body reviews, General Assembly debates
 - **International Criminal Court YouTube Channel** — https://www.youtube.com/user/IntlCriminalCourt — trial proceedings, outreach videos, educational content
+- **Geneva Academy YouTube Channel** — expert talks on IHL, HR law, transitional justice
 - **Justice Hub** — https://www.justicehub.org/ — video interviews and analysis on international justice
 
 ### TED Talks and Accessible Talks
@@ -149,6 +154,7 @@
 
 ## Citation and Research Guides
 
+- **ASIL Research Guides** — excellent starting points for specific topics
 - **Oxford Bibliographies in International Law** — https://www.oxfordbibliographies.com/browse?module_0=obo-9780199796953 — annotated bibliographies (may require library access)
 - **Max Planck Encyclopedia of Public International Law** — https://opil.ouplaw.com/home/mpil — comprehensive reference (requires subscription but often available via university libraries)
 - **UN Audiovisual Library Research Guides** — https://legal.un.org/avl/studyguides.html — curated by topic

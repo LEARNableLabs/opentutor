@@ -10,6 +10,7 @@
 
 - **"LikeWar: The Weaponization of Social Media" by P.W. Singer and Emerson T. Brooking (2018)** — Accessible overview of digital propaganda and information warfare. Covers bots, trolls, viral spread, state actors. Excellent case studies. Perfect for intermediate students transitioning from theory to practice.
 
+
 - **"Network Propaganda: Manipulation, Disinformation, and Radicalization in American Politics" by Yochai Benkler, Robert Faris, and Hal Roberts (2018)** — Data-driven analysis of propaganda ecosystems. Shows asymmetric polarization. More academic but crucial for understanding network effects.
   - https://global.oup.com/academic/product/network-propaganda-9780190923631
 
@@ -65,6 +66,7 @@
   - https://www.activemeasures.com/
 
 - **TED Talks on Misinformation:**
+  - Sinan Aral: "The spread of misinformation online"
   - Claire Wardle: "How you can help transform the internet into a place of trust" — https://www.ted.com/talks/claire_wardle_how_you_can_help_transform_the_internet_into_a_place_of_trust
 
 - **C-SPAN Lectures and Congressional Hearings** — Testimony from tech CEOs, security officials on election interference, platform responsibility.
@@ -105,6 +107,7 @@
   - https://propaganda.qcri.org/
 
 - **Twitter API for Academic Research** — Access historical tweet data for analysis (requires approval).
+
 
 - **ClaimBuster API** — Automated claim detection in text. Can integrate into projects.
   - https://idir.uta.edu/claimbuster/
@@ -208,6 +211,7 @@
 
 - **CISA (Cybersecurity & Infrastructure Security Agency) — Misinformation, Disinformation, and Malinformation** — US government guidance and resources.
 
+
 - **EU Code of Practice on Disinformation** — European regulatory framework for platform responsibilities.
   - https://digital-strategy.ec.europa.eu/en/policies/code-practice-disinformation
 
@@ -223,6 +227,7 @@
   - https://about.fb.com/news/category/integrity-and-security/
 
 - **Twitter Election Integrity Datasets** — Historical archives of information operations.
+
 
 - **Lumen Database** — Tracks content removal requests, provides transparency on censorship.
   - https://www.lumendatabase.org/

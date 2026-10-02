@@ -43,6 +43,8 @@
 - **Fermilab** (YouTube channel) — "Dr. Don Lincoln" explains particle physics concepts clearly. Topics on Higgs, quarks, antimatter, symmetries. https://www.youtube.com/user/fermilab
 
 - **ATLAS and CMS experiment channels** — Real footage of LHC experiments, Higgs discovery announcement, detector construction. Makes the physics tangible. 
+  - ATLAS:
+  - CMS:
 
 - **Sixty Symbols** (Nottingham University) — Physics professors explain concepts on camera. Informal, accessible, good for alternative explanations. https://www.youtube.com/user/sixtysymbols
 
@@ -54,6 +56,7 @@
 
 - **LHC@Home** — Visualize real particle collision data from CERN experiments. Citizen science project. https://lhcathome.web.cern.ch/
 
+- **ATLAS Event Displays** — Browse real collision events from the ATLAS detector, color-coded by particle type. See Higgs candidates, top quark pairs, etc.
 
 - **PhET Interactive Simulations** — Quantum mechanics and atomic physics sims (not particle physics directly, but foundational). https://phet.colorado.edu/
 

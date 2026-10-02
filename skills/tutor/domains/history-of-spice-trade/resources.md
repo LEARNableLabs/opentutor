@@ -8,6 +8,7 @@
   - Direct evidence of ancient spice trade knowledge; surprisingly detailed geographic and commercial information
 
 - **Marco Polo's "Travels"** (1300) — Venetian merchant's account of Asian trade
+
   - Controversial authenticity but massive cultural impact on European geographic imagination
 
 - **Ibn Battuta's "Rihla"** (1355) — Islamic traveler's account of spice trading cities
@@ -24,6 +25,7 @@
   - Extraordinarily detailed; reveals economic mechanics and colonial violence
 
 - **English East India Company records** — Similar to VOC but British perspective
+
   - Traces evolution from spice company to colonial government
 
 ## Books
@@ -33,13 +35,16 @@
   - Engaging narrative history from ancient to modern times
   - Excellent for intermediate level; balances story and analysis
 
+
 - **"The Taste of Conquest: The Rise and Fall of the Three Great Cities of Spice" by Michael Krondl** (2007)
   - Focuses on Venice, Lisbon, and Amsterdam as case studies
   - Good for understanding how spice trade shaped urban development
 
+
 - **"Nathaniel's Nutmeg" by Giles Milton** (1999)
   - Narrative history of the Anglo-Dutch nutmeg wars
   - Accessible; focuses on specific merchants and events
+
 
 - **"The Spice Route: A History" by John Keay** (2005)
   - Geographic focus; traces routes from ancient to modern
@@ -80,6 +85,7 @@
 
 - **"The Spice Routes" (History Channel)** — Focus on economic and military dimensions
 
+
 ## Interactive Tools and Maps
 
 ### Geographic and Historical Mapping
@@ -88,6 +94,7 @@
   - Incredible tool for understanding why maritime routes dominated; shows monsoon wind impact
 
 - **National Geographic Historical Maps** — Spice trade routes across eras
+
   - Clear visualizations; chronological layers
 
 - **Google Arts & Culture: The Spice Trade Collection** — Museum artifacts and virtual exhibits
@@ -96,12 +103,14 @@
 
 ### Data Visualization
 - **Historical Price Index** — Compare commodity prices across centuries
+
   - Shows how spice prices changed; quantitative evidence for economic claims
 
 ## Museums and Archival Collections
 
 ### Digital Collections
 - **British Library Asian and African Studies** — Trade documents, maps, manuscripts
+
   - Excellent portolan charts and medieval navigation documents
 
 - **Smithsonian National Museum of Natural History** — Spice specimens and trade artifacts
@@ -161,6 +170,7 @@
 - **Art history** — Dutch Golden Age painting funded by spice wealth
   - Vermeer, Rembrandt, and contemporaries; "follow the money" from spices to art
 
+
 - **Climate and trade** — How monsoon wind patterns enabled predictable navigation
   - Connect to basic climatology; shows how environmental knowledge was economic advantage
   - https://www.britannica.com/science/monsoon
@@ -172,6 +182,7 @@
 ## Modern Parallels
 
 - **"Shipping and Globalization" (Council on Foreign Relations)** — Modern supply chains echo historical patterns
+
   - Shows how container shipping mirrors spice route efficiency gains
 
 - **"The New Silk Road" / Belt and Road Initiative** — China's modern version of historical trade networks

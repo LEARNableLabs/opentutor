@@ -58,6 +58,7 @@
   - Interviews with elite climbers and coaches, training tips, program discussions
   - Key content: podcast interviews, training series
 
+- **Eric Hörst / PhysiVantage**
   - Training exercises, fingerboard protocols, program design
   - Best for: practical how-to guides
 
@@ -67,6 +68,7 @@
 
 ### IFSC Competition Footage
 
+- **IFSC Official Channel**
   - Full competition broadcasts, finals, qualification rounds
   - Use for: route reading practice, observing competition tactics, warm-up analysis
   - Key competitions: World Championships, World Cup circuit, Olympic Games
@@ -77,6 +79,7 @@
   - Assessment tools, periodized training plans, video exercise library
   - Paid but high quality, evidence-based
 
+- **TrainingBeta Programs**
   - Structured training programs from various coaches
   - Range of focuses: finger strength, power, endurance, technique
 
@@ -96,9 +99,11 @@
   - Training log, session planning, analytics, hangboard timer
   - Free with premium features
 
+- **MyClimb**
   - Training diary, route pyramid tracking, performance analytics
   - Free with premium features
 
+- **MaxClimb**
   - Project tracking, beta notes, send analysis
   - Free
 
@@ -114,6 +119,7 @@
   - Built-in programming, data tracking
   - ~$600 USD
 
+- **BeastMaker Training App**
   - Hangboard timer and protocol guide
   - Free, pairs with BeastMaker boards
 
@@ -143,6 +149,7 @@
 
 ### Programming Training Tools
 
+- **GymTimer**
   - Customizable interval timer for training protocols
   - Free, web-based
 
@@ -174,6 +181,7 @@
 
 - **Jonathan Siegrist** — Elite sport climber, shares training insights and mental approach
   - Instagram: https://www.instagram.com/jondoessickthings
+  - Blog:
 
 - **Sasha DiGiulian** — Competition climber, route reading and mental training insights
   - Website: https://www.sashadigiulian.com
@@ -181,6 +189,7 @@
 
 - **Eva López-Rivera** — Researcher and coach, finger strength and periodization expert
   - Research: Search "Eva López climbing research"
+  - Blog:  (if available)
 
 ### Sport Scientists
 
@@ -197,9 +206,11 @@
 
 ### Training and Performance
 
+- **TrainingBeta Podcast**
   - Interviews with elite climbers, coaches, researchers
   - Wide range of topics: training, mental game, competition
 
+- **The Nugget Climbing Podcast**
   - Climbing culture, athlete interviews, training discussions
 
 - **The Power Company Podcast** — https://www.powercompanyclimbing.com/podcast
@@ -226,6 +237,7 @@
   - Training questions, program discussions, injury advice
   - Large community, varying quality
 
+- **BetaCloud**
   - Route beta sharing, project tracking
   - Community-driven movement analysis
 

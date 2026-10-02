@@ -3,11 +3,13 @@
 ## Primary Sources (for lesson content)
 
 ### Comprehensive DIY Resources
+- **Music From Outer Space (MFOS)** — Complete synthesizer projects with schematics, PCB layouts, and detailed explanations. Particularly good for understanding VCO and VCF design from the ground up. Intermediate-friendly with both theory and practice.
 
 - **Doepfer DIY Pages** — [https://www.doepfer.de/DIY/a100_diy.htm](https://www.doepfer.de/DIY/a100_diy.htm) — Schematics and technical documentation for Doepfer A-100 modules. Industry-standard Eurorack designs with clear documentation. Good for seeing professional implementations.
 
 - **René Schmitz Synth Pages** — [https://www.schmitzbits.de/](https://www.schmitzbits.de/) — Circuit analysis and variations on classic designs. Excellent for understanding *why* circuits work the way they do, not just *what* they do. Includes exponential converters, VCOs, VCFs, and more.
 
+- **Tim Stinchcombe's Synth Pages** — Deep mathematical and analytical treatment of filter circuits, particularly the Moog ladder and MS-20 Korg filters. Advanced level but invaluable for understanding the theory.
 
 ### Books
 - **"Analog Days: The Invention and Impact of the Moog Synthesizer" by Trevor Pinch and Frank Trocco** — Historical context for the development of voltage-controlled synthesis. Not circuit-heavy, but essential for understanding *why* these designs emerged.
@@ -23,6 +25,7 @@
 
 - **Texas Instruments Filter Design Application Notes** — [https://www.ti.com/lit/an/sloa093/sloa093.pdf](https://www.ti.com/lit/an/sloa093/sloa093.pdf) — Sallen-Key and active filter design fundamentals. Good foundation before diving into voltage-controlled variants.
 
+- **Sound On Sound "Synth Secrets" Series** — 63-part series covering synthesis from first principles. Not circuit-focused, but excellent for understanding the musical context of VCOs, VCFs, and modulation.
 
 ## Supplementary (for engagement)
 
@@ -80,6 +83,7 @@
 
 - **r/synthdiy subreddit** — [https://www.reddit.com/r/synthdiy/](https://www.reddit.com/r/synthdiy/) — Reddit community for DIY synth builders. Good for beginner questions and project showcases.
 
+- **SDIY Wiki** — Community-maintained wiki with component sourcing guides, beginner tutorials, and project links.
 
 ## Unexpected Connections (Rabbit Holes)
 

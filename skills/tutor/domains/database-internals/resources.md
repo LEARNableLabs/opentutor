@@ -20,6 +20,7 @@
   - Excellent modern treatment with lecture notes, projects, and assignments. Best single resource for this curriculum.
 
 - **MIT 6.830/6.814: Database Systems**
+  - Course materials:
   - Includes SimpleDB project (teaching database implementation)
 
 - **Stanford CS245: Principles of Data-Intensive Systems**
@@ -28,6 +29,7 @@
 ### Implementation Documentation
 - **PostgreSQL Internals Documentation**
   - Overview: https://www.postgresql.org/docs/current/internals.html
+  - B-tree implementation:
   - Planner/optimizer: https://www.postgresql.org/docs/current/planner-optimizer.html
   - EXPLAIN: https://www.postgresql.org/docs/current/using-explain.html
   - Statistics: https://www.postgresql.org/docs/current/planner-stats.html
@@ -35,6 +37,7 @@
 - **SQLite Architecture**
   - Architecture overview: https://sqlite.org/arch.html
   - File format: https://sqlite.org/fileformat.html
+  - B-tree implementation:
   - Query planner: https://sqlite.org/queryplanner.html
 
 - **RocksDB (LSM-tree implementation)**
@@ -119,6 +122,7 @@
   - Production LSM-tree implementation
 
 - **SimpleDB** (MIT 6.830 teaching database)
+
   - Simplified implementation for learning
 
 ## People to Follow

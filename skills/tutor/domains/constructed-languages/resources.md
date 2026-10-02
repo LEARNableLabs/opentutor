@@ -11,6 +11,7 @@
 
 - **"The Language Construction Kit"** by Mark Rosenfelder (2010) — practical, detailed guide to building a language from scratch. Covers phonology, morphology, syntax, semantics, and historical change. Essential reference for Lessons 5-9, 23-25.
   - [Online version](https://zompist.com/kit.html)
+  - Extended version (book)
 
 - **"Toki Pona: The Language of Good"** by Sonja Lang (2014) — official book for Toki Pona, covers philosophy, vocabulary, grammar, and usage. Primary source for Lessons 14, 16.
   - [Official site](https://tokipona.org)
@@ -19,6 +20,7 @@
   - [Free online version](https://lojban.org/publications/cll/cll_v1.1_book.pdf)
 
 - **"Fundamento de Esperanto"** by L.L. Zamenhof (1905) — foundational document of Esperanto, historically important. For context in Lesson 10.
+  - Online version
 
 ### Online Courses & Platforms
 - **lernu.net** — comprehensive free Esperanto learning platform with courses, grammar reference, dictionary, and community. Interactive and well-structured.
@@ -37,6 +39,7 @@
 ### Videos — YouTube Channels
 
 - **jan Misali** — "Conlang Critic" series analyzing real constructed languages in depth. Excellent production quality, rigorous analysis, entertaining. Essential viewing for Lessons 1, 10, 14, 15, 18.
+
   - Specific videos: "Conlang Critic: Esperanto", "Toki Pona is not the world's smallest language", "Ithkuil is not the hardest language"
 
 - **Artifexian** — worldbuilding channel with extensive conlang tutorials on phonology, phonotactics, morphology, syntax, writing systems. Clear, systematic, with examples. Great for Lessons 5, 7-8, 23-25.
@@ -47,6 +50,7 @@
   - [https://www.youtube.com/@Biblaridion](https://www.youtube.com/@Biblaridion)
 
 - **David J. Peterson** — creator of Dothraki and High Valyrian posts occasional videos about language creation and linguistics.
+  - Personal channel:
 
 - **Langfocus** — general linguistics channel with episodes on Esperanto, Interlingua, and other conlangs. Accessible, well-researched.
   - [https://www.youtube.com/@Langfocus](https://www.youtube.com/@Langfocus)
@@ -56,20 +60,27 @@
 
 - **"The Ling Space" — Constructed Languages episode** — linguistic analysis of conlangs (15 min)
 
+
 - **"Toki Pona in 12 minutes"** by jan Misali — quick introduction to the language
+
 
 - **"Lojban: A Logical Language"** by Langfocus — accessible overview
 
+
 - **"Dothraki Language: Behind the Scenes"** — Peterson explaining his creation process
+
 
 ### Interactive Tools
 
 - **Zompist.com Language Generator Tools** — phonology generator, word generator, morphology tools. Free, browser-based, excellent for hands-on learning.
+  - Phonology generator:
+  - Morphology tool:
 
 - **Vulgarlang** — commercial tool for generating naturalistic conlangs with historical evolution. Great for seeing linguistic change in action.
   - [https://www.vulgarlang.com](https://www.vulgarlang.com)
 
 - **Lexifer** — command-line tool for generating words based on phonological rules. For more technical students.
+
 
 - **IPA Chart with Audio** — essential for phonology lessons
   - [https://www.ipachart.com](https://www.ipachart.com)
@@ -84,6 +95,7 @@
   - [https://github.com/lojban/ilmentufa](https://github.com/lojban/ilmentufa)
 
 - **Gleb** — tool for managing conlang lexicons and grammar documentation
+
 
 ## Communities & Organizations
 
@@ -172,7 +184,9 @@
 
 - **Glossopoeia** — comprehensive conlang bibliography by Carol Fisher and Ray Brown
 
+
 - **Conlang Atlas** — database of documented constructed languages
+
 
 - **WALS (World Atlas of Language Structures)** — for understanding typological patterns to make naturalistic conlangs
   - [https://wals.info](https://wals.info)

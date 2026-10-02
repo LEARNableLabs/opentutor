@@ -15,6 +15,7 @@
   - Excellent material science foundation for machinability
   - Used in university manufacturing courses
 
+
 - **"Metal Cutting Theory and Practice" by David A. Stephenson & John S. Agapiou** (3rd Edition, 2016)
   - Deep dive into cutting mechanics and tool wear
   - Research-level treatment of chip formation and forces
@@ -33,8 +34,10 @@
   - OpenCourseWare materials available
   - Covers manufacturing processes including CNC fundamentals
 
+
 - **Penn State EME 405 Computer-Aided Manufacturing**
   - Course materials on CAM software and toolpath generation
+
 
 ## Supplementary Resources
 
@@ -44,6 +47,7 @@
   - Practical machining tutorials and shop workflow
   - Excellent for seeing real-world CNC operations
   - Beginner to intermediate level
+
 
 - **This Old Tony**
   - Machining fundamentals with humor
@@ -66,6 +70,7 @@
   - Machine manufacturer's training channel
   - Setup, programming, and operations
 
+
 ### Interactive Tools & Software
 
 - **Autodesk Fusion 360** (Free for hobbyists/students)
@@ -84,6 +89,7 @@
   - Feeds and speeds calculator
   - Tool deflection analysis
   - Material database
+
 
 - **HSMAdvisor** (Commercial)
   - Advanced cutting parameter optimization
@@ -106,6 +112,7 @@
 - **NIST Manufacturing Engineering Laboratory**
   - Research publications on machining
   - Cutting force models, process optimization
+
 
 - **Sandvik Coromant Technical Library**
   - Tool manufacturer's extensive knowledge base
@@ -189,6 +196,7 @@
 - **Dr. Tony Schmitz** — University of Tennessee
   - Machine tool dynamics, chatter prediction
 
+
 - **Dr. Shreyes Melkote** — Georgia Tech
   - Machining process mechanics, micro-machining
   - https://www.me.gatech.edu/faculty/melkote
@@ -237,6 +245,7 @@
 
 - **The Manufacturing Show**
   - News and trends in manufacturing technology
+
 
 ## Trade Publications
 

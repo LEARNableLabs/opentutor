@@ -24,6 +24,7 @@
 - **Memory League** — https://www.memoryleague.com/ — Online platform for competitive memory training. Games for cards, numbers, names, images. Good for gamified practice.
 
 ### Videos
+- **Memory Sports TV** — Channel covering memory championships, technique tutorials, and athlete interviews. High production quality.
 - **Ali Abdaal's Anki Tutorials** — https://www.youtube.com/watch?v=5urUZUWoTLo — Medical student's guide to using Anki for studying. Practical deck design tips.
 - **3Blue1Brown — "What is a convolution?"** (example of math visualization) — https://www.youtube.com/c/3blue1brown — Not memory-specific, but excellent model for encoding abstract math concepts visually.
 
@@ -42,8 +43,10 @@
 
 ### Anki Add-ons
 - **AnkiWeb Add-ons** — https://ankiweb.net/shared/addons — Directory of community plugins. Notable: Image Occlusion Enhanced, Heatmap, Advanced Review Bottom Bar.
+- **Anki Manual** — Official documentation including statistics, card templates, and scripting.
 
 ### Algorithm Implementations
+- **SuperMemo algorithm implementation** (Python) — Open-source implementation of SM-2 for educational purposes.
 - **Leitner System implementation** — https://en.wikipedia.org/wiki/Leitner_system — Simple physical box system predating computer SRS. Good for understanding interval expansion.
 
 ### Data Analysis

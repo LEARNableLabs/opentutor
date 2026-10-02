@@ -49,6 +49,7 @@
   - **Why it's good**: Video lecture with clear explanations; good for review or alternative presentation.
 
 - **University of Chicago: "Intro to Semantics and Pragmatics"**
+
   - **Coverage**: Survey of major topics with reading lists
   - **Why it's good**: Another perspective on curriculum design; helps triangulate which topics are essential.
 

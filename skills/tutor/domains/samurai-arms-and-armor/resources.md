@@ -46,6 +46,7 @@
   - Historical context for feudal periods, samurai class evolution
   - Good supplemental background for lessons 3, 23-25
 
+
 ## Museums and Collections (Online Resources)
 
 ### Tokyo National Museum
@@ -87,6 +88,7 @@
   - Shows tamahagane smelting, forging, sharpening
   - Visually engaging, minimal narration
 
+
 - **That Works** (NHK World)
   - Documentary series on traditional Japanese crafts
   - Episodes on swordsmithing, armor restoration, polishing
@@ -103,6 +105,7 @@
   - Historical weapons analysis (sometimes polemical, but thorough)
   - Good videos debunking katana myths (use for misconception correction)
   - Compare European vs. Japanese sword engineering
+
 
 #### Specific Documentaries
 
@@ -186,8 +189,10 @@
   - Sets appraisal standards, issues authenticity papers
   - Publishes Token Bijutsu journal
 
+
 - **NTHK (Nihon Token Hozon Kai)**
   - Rival preservation organization, slightly different appraisal criteria
+
 
 ### Online Communities
 
@@ -208,6 +213,7 @@
 
 - **Tenshin Shoden Katori Shinto-ryu** — separate lineage of above
 - **Kyudo Federation** — preserves traditional Japanese archery (yumi)
+
 
 ## Unexpected Connections (Cross-Discipline Links)
 

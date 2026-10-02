@@ -11,6 +11,7 @@
   - ISBN: 978-0521575416
 
 - **Baake, M. & Grimm, U. (2013). *Aperiodic Order, Vol 1: A Mathematical Invitation*** — Modern treatment with rigorous foundations. Strong on substitution systems and spectral theory.
+
   - ISBN: 978-0521869928
 
 ### Online Courses
@@ -54,9 +55,11 @@
   - Accessible introduction with Roger Penrose himself
 
 - **Numberphile — "Einstein Tile"**
+
   - Coverage of the 2023 hat monotile discovery
 
 - **Quanta Magazine — "The Quest for the Aperiodic Monotile"**
+
   - Documentary-style overview of the Einstein problem
 
 - **Mathematical Association of America — "Aperiodic Tilings" lecture series**
@@ -90,14 +93,17 @@
   - Design and test Wang tile sets
 
 - **GeoGebra Tiling Activities**
+
   - Interactive tiling constructions
 
 ### Code Repositories
 
 - **Python `penrose` library**
+
   - Generate and visualize Penrose tilings
 
 - **Python `tilings` library**
+
   - General tiling generation and analysis
 
 - **JavaScript p5.js Penrose sketches**
@@ -105,6 +111,7 @@
   - Interactive browser-based visualizations
 
 - **Rust `quasicrystal` crate**
+
   - High-performance tiling generation
 
 - **Observable notebooks**
@@ -122,6 +129,7 @@
   - Accessible mathematical exposition
 
 - **Plus Magazine: "Penrose Tiles to Trapdoor Ciphers"**
+
   - Wide-ranging connections
 
 - **Math Pages: "Penrose Tiles"**
@@ -139,6 +147,7 @@
   - David Eppstein's curated links
 
 - **Alcuin's 17 Wallpaper Groups**
+
   - Visual guide to all wallpaper patterns
 
 ## People (to follow)
@@ -193,6 +202,7 @@
 ### Cross-disciplinary
 
 - **Islamic geometric art** — Girih tiles at Darb-i Imam (1453) show near-Penrose patterns
+
   - Paper: Lu & Steinhardt (2007), *Science* 315:1106
 
 - **Music and tilings** — Rhythmic patterns as 1D tilings

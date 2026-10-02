@@ -49,11 +49,13 @@
   - Free online course materials
   - Practical labs using ENVI and other tools
 
+
 ### Mission-Specific Documentation
 
 - **Copernicus Sentinel Online**
   - Complete documentation for Sentinel-1 (SAR), Sentinel-2 (optical), Sentinel-3 (ocean/land), etc.
   - Data access guides
+
 
 - **NASA MODIS Website**
   - Documentation for Moderate Resolution Imaging Spectroradiometer
@@ -171,6 +173,7 @@
 
 - **ENVI** — advanced image processing
   - Free trial, academic licenses
+
 
 - **ArcGIS** — Esri's platform
   - Image Analyst extension for remote sensing

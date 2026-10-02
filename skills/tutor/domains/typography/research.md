@@ -57,6 +57,7 @@
 - **The Art of Hand Lettering** by Shauna Lynn Panczyszyn
 - **Lettering & Type** by Bruce Willen and Nolen Strals
 - **Skillshare** lettering courses (https://www.skillshare.com/browse/lettering)
+- **Domestika** typography courses ()
 
 ### Type Design Resources
 - **Type@Cooper** educational content (https://coopertype.org/)

@@ -20,9 +20,11 @@
 
 - **Evans-Pritchard, E.E. *The Nuer* (1940)** — Foundational study of segmentary lineage system. Case study for lessons 4, 7.
   - Oxford University Press
+  - Available:
 
 - **Malinowski, Bronislaw. *Argonauts of the Western Pacific* (1922)** — Classic Trobriand ethnography. Kula ring, matrilineal kinship, exchange.
   - Routledge
+  - Available:
 
 - **Turner, Victor. *The Ritual Process: Structure and Anti-Structure* (1969)** — Essential for lessons 11-12 on liminality and communitas.
   - Aldine Transaction
@@ -52,9 +54,11 @@
 ### MIT OpenCourseWare
 
 - **21A.01 How Culture Works** (Fall 2012)
+
   - Intro to cultural anthropology. Good for lessons 1-2.
 
 - **21A.112 Culture and Society in Southeast Asia** (Spring 2006)
+
   - Kinship and ritual in ethnographic context.
 
 ### Yale Open Courses
@@ -87,6 +91,7 @@
   - 12 episodes covering basics. Good for visual learners.
 
 - **The Santa Fe Institute** — Lectures on complexity and cultural evolution
+
   - David Krakauer, Sam Bowles, and others on cultural evolution.
 
 - **Center for Behavior, Evolution, and Culture (UCLA)**
@@ -96,6 +101,7 @@
 ### Individual Lectures
 
 - **Joseph Henrich: "The WEIRdest People in the World"** (Long Now Foundation)
+
   - 1-hour talk summarizing the book. Excellent for lesson 19.
 
 - **Robert Sapolsky: "Behavioral Evolution II"** (Stanford)
@@ -129,6 +135,7 @@
   - Tutorial on drawing kinship diagrams.
 
 - **Anthropological notation guide**
+
   - Interactive kinship terminology reference.
 
 ### Cultural Evolution Simulations
@@ -176,6 +183,7 @@
 - **Cultural Evolution Society** — https://culturalevolutionsociety.org/
   - Interdisciplinary group focused on cultural evolution research.
 
+- **Society for Anthropological Sciences**
   - Focus on scientific approaches (evolution, cognition, quantitative methods).
 
 - **European Association of Social Anthropologists** — https://www.easaonline.org/
@@ -213,10 +221,12 @@
 
 - **Robert Boyd** (ASU) — Dual inheritance theory, cultural evolution
 
+
 - **Peter Richerson** (UC Davis, emeritus) — Cultural evolution
   - https://des.ucdavis.edu/faculty/peter-richerson
 
 - **Kim Hill** (ASU) — Forager societies, cooperation, food sharing
+
 
 - **Harvey Whitehouse** (Oxford) — Ritual, memory, social cohesion
   - https://www.anthro.ox.ac.uk/people/professor-harvey-whitehouse
@@ -226,7 +236,9 @@
 
 - **Daniel Hruschka** (ASU) — Friendship, cooperation, cross-cultural psychology
 
+
 - **Cristine Legare** (UT Austin) — Ritual cognition, causal reasoning
+
 
 ## Code and Data
 
@@ -241,6 +253,7 @@
 ### Teaching Resources
 
 - **Kinship and Social Organization** (teaching module)
+
 
 - **RACE: Are We So Different?** (museum exhibit materials)
   - https://www.understandingrace.org/

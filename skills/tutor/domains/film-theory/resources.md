@@ -40,6 +40,7 @@
 - **BFI Player** — British Film Institute's streaming service with educational content [https://player.bfi.org.uk/](https://player.bfi.org.uk/)
 
 ### Interactive Tools
+- **StudioBinder's Shot List Library** — visual database of shot types and compositions
 - **Film Grab** — screenshot database for composition study [https://film-grab.com/](https://film-grab.com/)
 - **Vimeo Staff Picks & Film School Picks** — curated short films and analysis [https://vimeo.com/channels/staffpicks](https://vimeo.com/channels/staffpicks)
 - **Cinesift** — color palette extraction from films [http://cinesift.com/](http://cinesift.com/)

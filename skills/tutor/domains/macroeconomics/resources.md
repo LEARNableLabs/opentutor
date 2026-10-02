@@ -6,6 +6,7 @@
 
 - **Mankiw, N. Gregory. *Macroeconomics* (9th ed.)** — Gold standard intermediate text. Clear exposition, extensive policy applications, US-focused. Best for traditional IS-LM approach.
 
+
 - **Blanchard, Olivier and David R. Johnson. *Macroeconomics* (7th ed.)** — Alternative to Mankiw, stronger on European perspective and open economy. More emphasis on dynamics.
   - https://www.pearson.com/en-us/subject-catalog/p/macroeconomics/P200000005835
 
@@ -25,6 +26,7 @@
 
 - **MIT OpenCourseWare 14.06 Macroeconomic Theory IV** — Advanced undergraduate/early graduate. For students who want to go deeper.
 
+
 - **Stanford Online Economics Courses** — Various macro courses with video lectures.
   - https://online.stanford.edu/
 
@@ -42,6 +44,7 @@
   - https://www.federalreserveeducation.org/resources/video
 
 - **EconplusDal** — YouTube channel with whiteboard-style macro lessons, exam prep.
+
 
 - **Economic Synopses (St. Louis Fed)** — Short video explainers on current economic topics.
   - https://research.stlouisfed.org/publications/economic-synopses
@@ -85,7 +88,9 @@
 
 - **Macroeconomic Models in Python** — GitHub repo with implementations of Solow, RBC, New Keynesian DSGE.
 
+
 - **Notebook Economics** — Jupyter notebooks for teaching macro concepts.
+
 
 ## Research and Policy Sources
 
@@ -178,6 +183,7 @@
 
 - **Nordhaus Integrated Assessment Models** — DICE/RICE models linking climate and economy (Nobel 2018)
 
+
 ### Macro and Psychology
 - **Behavioral Macroeconomics** — Animal spirits, over-optimism, narrative economics (Shiller, Akerlof)
   - Shiller's *Narrative Economics*: https://press.princeton.edu/books/hardcover/9780691182292/narrative-economics
@@ -202,6 +208,7 @@
 
 ### Macro and Institutions
 - **Why Nations Fail** (Acemoglu & Robinson) — Institutions determine long-run prosperity
+
 
 ### Macro and Finance
 - **Asset pricing and macro** — Equity premium puzzle, consumption-based CAPM
@@ -247,6 +254,7 @@
   - https://www.core-econ.org/the-economy/
 
 - **Fed Challenge** — National competition where students present monetary policy recommendations
+
 
 - **Federal Reserve Educational Lesson Plans** — Classroom activities and problem sets
   - https://www.federalreserveeducation.org/resources/

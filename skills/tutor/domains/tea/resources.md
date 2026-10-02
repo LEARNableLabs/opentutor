@@ -9,6 +9,7 @@
   - Covers: polyphenol chemistry, processing biochemistry, cultivar variation
 
 - **"The Tea Enthusiast's Handbook"** (Mary Lou Heiss & Robert J. Heiss) — accessible science + practical brewing guide. Perfect intermediate resource bridging theory and practice.
+
   - Covers: all processing types, brewing parameters, tasting notes
 
 - **"The Book of Tea"** (Kakuzō Okakura) — cultural and philosophical foundations. Historical context for gongfu tradition.
@@ -42,9 +43,11 @@
   - Level: intermediate to advanced, scientifically rigorous
 
 - **Tea DB** — visual database of teas with tasting notes and processing information
+
   - Interactive sensory wheel and flavor mapping
 
 - **The Tea Crane** — processing documentaries from Taiwan and China
+
   - Best for: visual learning of hand-processing techniques
 
 - **Global Tea Hut** — monthly journal with articles on tea culture, science, and practice
@@ -54,9 +57,11 @@
 ### Interactive Tools
 
 - **Tea Flavor Wheel** — interactive sensory analysis tool
+
   - Based on professional cupping protocols
 
 - **Brewing Calculator** — parameter calculator for leaf-to-water ratios by tea type
+
   - Adjusts for gongfu vs. Western brewing
 
 - **Tea Timer App** — tracks infusion times and temperature by tea category
@@ -66,6 +71,7 @@
 ### Hands-On Practice
 
 - **Specialty Tea Institute (STI)** — professional certification program with tasting kits and sensory training
+
   - Level 1-3 certifications cover cultivars, processing, sensory evaluation
 
 - **Global Tea Championship** — competition protocols and judging rubrics
@@ -81,9 +87,11 @@
 ## Code & Data
 
 - **Tea Chemistry Database** — open dataset of chemical compounds by tea type
+
   - CSV format, includes catechins, theaflavins, amino acids
 
 - **Sensory Analysis Toolkit** — Python scripts for analyzing tea tasting data
+
   - Statistical methods for flavor profiling
 
 ## People (to look up)
@@ -134,6 +142,7 @@
 ## Wild Cards (for rabbit holes)
 
 - **Tea Genetics Project** — genome sequencing of *Camellia sinensis*, comparative genomics
+
   - For students interested in molecular biology
 
 - **Historical Trade Routes** — Tea Horse Road, Silk Road economics, opium trade connections

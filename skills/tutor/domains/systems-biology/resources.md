@@ -28,10 +28,12 @@
 - **MIT 7.32 Systems Biology (MIT OpenCourseWare)**
   - Instructor: Jeff Gore. Covers network motifs, robustness, evolution of cooperation.
   - Video lectures, lecture notes, problem sets available free.
+  - URL:
 
 - **MIT 7.91J Foundations of Computational and Systems Biology (edX)**
   - Broader than systems biology; includes genomics, proteomics, network analysis.
   - Good for computational techniques (alignment, assembly, network inference).
+  - URL:
 
 - **Systems Biology: Cell-Cell Communication (Icahn School of Medicine at Mount Sinai, Coursera)**
   - Focuses on signaling networks and crosstalk. Good for lessons 10, 21.
@@ -69,6 +71,7 @@
 
 - **iBiology Systems Biology Talks**
   - Short talks by leaders in the field (Uri Alon, Wendell Lim, Michael Elowitz). High-quality, 20-30 min each.
+  - URL:
 
 - **Complexity Explorer (Santa Fe Institute)**
   - Free courses on complex systems, including network science and dynamical systems.
@@ -80,6 +83,7 @@
 
 - **Cell Signaling Technology: Pathway Resources**
   - Video animations of signaling pathways (MAPK, PI3K/Akt, etc.). Beautiful visualizations.
+  - URL:
 
 ### Interactive Tools
 
@@ -200,6 +204,7 @@
   - Twitter: @barabasi; Website: https://barabasi.com/
 
 - **Hiroaki Kitano** (RIKEN, Sony CSL) — systems biology founding figure, robustness theory
+  - Website:
 
 - **Marc Kirschner** (Harvard Medical School) — cell systems, robustness, evolution
   - Lab: https://kirschner.med.harvard.edu/
@@ -227,6 +232,7 @@
   - Lab: https://www.collinslab.mit.edu/
 
 - **Christopher Voigt** (MIT) — genetic circuit design, CRISPR applications
+  - Twitter: @VoigtLab; Lab:
 
 ### Computational and Theoretical
 
@@ -234,6 +240,7 @@
   - Twitter: @chris_wiggins
 
 - **Nir Friedman** (Hebrew University) — probabilistic models, network inference
+  - Website:
 
 - **Eduardo Sontag** (Northeastern) — control theory in biology, feedback systems
   - Website: http://sontaglab.org/

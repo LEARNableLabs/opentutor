@@ -66,6 +66,8 @@ All three are challenging but essential for intermediate students:
   - Aristotle's Ethics series
 
 #### Individual Videos
+- **Peter Singer TED Talk: The Why and How of Effective Altruism** (17 min)
+- **BBC Ethics Bites Podcast** — Short interviews with philosophers on ethical issues
 
 ### Interactive Tools & Simulations
 
@@ -191,6 +193,7 @@ Modern utilitarian-inspired social movement focused on doing the most good with 
 ### Stoicism (Modern Resurgence)
 Ancient virtue ethics school (Epictetus, Seneca, Marcus Aurelius) experiencing popularity surge:
 - **Daily Stoic** — https://dailystoic.com
+- **Massimo Pigliucci** — Modern Stoic philosopher
 
 ### Buddhist Ethics
 Non-Western ethical framework with overlaps to virtue ethics:
@@ -199,6 +202,7 @@ Non-Western ethical framework with overlaps to virtue ethics:
 - Jay Garfield's work on Buddhist philosophy
 
 ### Ethics Bowls & Competitions
+- **National High School Ethics Bowl**
 - **Intercollegiate Ethics Bowl** — Case-based ethics competitions
 - Great for practicing applied ethics reasoning
 

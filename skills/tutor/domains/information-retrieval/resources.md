@@ -68,6 +68,7 @@
 
 - **StatQuest (Josh Starmer)**: "TF-IDF Explained"
   - Simple, visual explanation of TF-IDF
+  - **Link**:
   - **Use for**: Lesson 4
 
 - **Victor Lavrenko's IR Lectures**
@@ -79,6 +80,7 @@
 
 - **Google: How Search Works**
   - Official Google video explaining their search pipeline
+  - **Link**:
   - **Use for**: Lessons 1, 21, 24 (overview and motivation)
 
 - **PageRank Explanation (Computerphile)**

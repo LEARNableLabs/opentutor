@@ -5,7 +5,9 @@
 ### Comprehensive Guides
 - **Breakthrough Taxidermy School** — Professional certification programs, online courses, and DVDs covering mammal, bird, and fish taxidermy from beginner to advanced. Strong focus on competition-quality work.
 
+
 - **McKenzie Taxidermy Supply Educational Resources** — Industry-leading supplier with extensive instructional videos, guides, and technical documentation. Covers anatomy, tools, techniques, and troubleshooting.
+
 
 - **Taxidermy.net Forums** — Long-running community with thousands of threads on techniques, troubleshooting, legal questions, and critiques. Searchable archive dating back 20+ years.
   - https://www.taxidermy.net/forum/
@@ -27,10 +29,12 @@
 
 - **Studies in Conservation** — International conservation science journal. Covers historical preservation techniques and modern materials analysis.
 
+
 ## Supplementary (for engagement)
 
 ### Video Channels & Tutorials
 - **Taxidermy Instruction Network (YouTube)** — Step-by-step tutorials on skinning, fleshing, form fitting, and mounting for various species. Well-produced, clear explanations.
+
 
 - **Chuck Testa (YouTube)** — Professional taxidermist known for high-quality big game work. Occasional tutorials and shop tours.
   - https://www.youtube.com/@ChuckTesta
@@ -41,6 +45,7 @@
 ### Interactive Tools & References
 - **McKenzie Anatomy References** — Photos, diagrams, and measurement guides for various game animals. Essential for form selection and posture accuracy.
 
+
 - **Cornell Lab of Ornithology — All About Birds** — Comprehensive bird ID, behavior, and anatomy reference. Essential for bird taxidermy posture and habitat context.
   - https://www.allaboutbirds.org/
 
@@ -49,6 +54,7 @@
 
 ### Professional Organizations
 - **Society of American Taxidermists (SAT)** — Professional association with code of ethics, educational resources, and networking. Offers certification and hosts annual convention.
+
 
 - **National Taxidermists Association (NTA)** — Hosts competitions, publishes technical journals, offers business resources and certification.
   - https://www.nationaltaxidermists.com/
@@ -67,11 +73,13 @@
 
 - **Research Mannikins** — High-end forms with exceptional anatomical accuracy, popular in competition circles.
 
+
 ### Specialty Materials
 - **Tohickon Tannery** — Professional tanning service and tanning supply. Useful when students can't tan themselves or need large/difficult specimens processed.
   - https://www.tohickon.com/
 
 - **Wildlife Artist Supply Company** — Specialty paints, airbrushing equipment, and reference materials for finishing work.
+
 
 ## Legal & Regulatory Resources
 
@@ -87,6 +95,7 @@
 
 ### State Regulations
 - **State Wildlife Agency Contacts** — Each state has different regulations for game animals, furbearers, and commercial taxidermy. Check state-specific rules.
+  - Find via:
 
 ## People & Practitioners to Follow
 
@@ -102,7 +111,9 @@
 ### Rogue/Artistic Taxidermy
 - **Sarina Brewer** — Co-founder of the Minnesota Association of Rogue Taxidermists. Artistic and surreal taxidermy using ethically sourced specimens.
 
+
 - **Divya Anantharaman** — Brooklyn-based artist and educator, known for accessible, ethical approach to artistic taxidermy.
+
 
 ### Conservation & Ethics Voices
 - **Pat Morris** — UK-based taxidermist and conservation biologist. Writes extensively on taxidermy history and ethics.
@@ -112,6 +123,7 @@
 
 ### Material Science & Chemistry
 - **Leather Chemistry** — LeatherChem.org has resources on tanning chemistry that apply directly to hide preservation.
+
 
 - **Conservation Science** — Techniques from art conservation (painting restoration, textile preservation) overlap with taxidermy finishing and maintenance.
 
@@ -128,7 +140,9 @@
 ### History & Culture
 - **"Still Life: Adventures in Taxidermy" by Melissa Milgrom** — Engaging narrative nonfiction exploring taxidermy culture, history, and personalities.
 
+
 - **"Stuffed Animals & Pickled Heads" by Stephen T. Asma** — Philosophical exploration of natural history museums, curiosity cabinets, and the human impulse to collect and preserve.
+
 
 ## Tools for Self-Directed Learning
 
@@ -153,8 +167,10 @@
 ### Zoonotic Disease Information
 - **CDC — Diseases from Wildlife** — Guides on rabies, tularemia, hantavirus, and other diseases transmissible from animals to humans.
 
+
 ### Chemical Safety
 - **OSHA Safety Data Sheets** — Required safety information for all commercial chemicals. Search by product name to find hazards, handling, and first aid.
+
 
 - **Ventilation & Respiratory Protection** — Guidelines for fume hood use and respirator selection when working with tanning agents, solvents, and paints.
   - https://www.cdc.gov/niosh/topics/respirators/

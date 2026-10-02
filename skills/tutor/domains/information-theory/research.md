@@ -22,6 +22,7 @@
   - Lecture notes PDF: https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf
 
 - **UMass COMPSCI 650 Applied Information Theory** — Application-focused course with practical examples
+  - URL:
 
 ### Textbooks
 

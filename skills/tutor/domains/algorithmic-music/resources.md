@@ -71,6 +71,8 @@
 - **SuperCollider Code Repository (sccode.org)** — community-shared SC code. Browse by category. http://sccode.org/
 - **TidalCycles Patterns Documentation** — comprehensive pattern library. https://tidalcycles.org/docs/patternlib/
 - **Awesome Live Coding** — curated list of tools, languages, and resources. https://github.com/toplap/awesome-livecoding
+- **Markov Music Generator (Python)** — simple implementation for learning.
+- **Genetic Algorithm Music** — example of evolutionary composition.
 - **Kolmogorov Music** — constraint-based composition in Clojure. https://github.com/ctford/kolmogorov-music
 
 ### People to Follow
@@ -114,6 +116,7 @@
 - **Drone Music** — La Monte Young, sustained tones, harmonic series. Generative systems for timbre exploration.
 
 ### Technical Deep Dives
+- **Procedural Audio in Games** — No Man's Sky's generative soundtrack, adaptive music in games.
 - **Sonification of Data** — turning climate data, network traffic, stock markets into sound. Not "music" but related techniques. https://en.wikipedia.org/wiki/Sonification
 - **Microtonal Music** — breaking free of 12-tone equal temperament. Just intonation, Bohlen-Pierce scale. http://www.huygens-fokker.org/
 - **Modular Synthesis** — Eurorack, hardware patching. Algorithmic thinking in physical domain. https://www.muffwiggler.com/

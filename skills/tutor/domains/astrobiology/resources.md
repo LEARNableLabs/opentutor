@@ -33,8 +33,10 @@
 - **Planetary Habitability Laboratory (PHL)** — habitability catalogs, HZ calculators, and visualizations from University of Puerto Rico at Arecibo. https://phl.upr.edu
 - **SETI@home** — distributed computing project for analyzing radio telescope data (currently in hibernation but data available). https://setiathome.berkeley.edu
 - **ESA Exoplanet Catalogue** — European Space Agency's exoplanet database with interactive plots and filters. http://exoplanet.eu
+- **Astrobiology Web** — educational portal with interactive modules on origin of life, extremophiles, and planetary science.
 
 ### Code & Data
+- **Exoplanet Data Explorer** — Python notebooks for analyzing NASA Exoplanet Archive data.
 - **PyKE (Kepler/TESS Data Analysis)** — Python tools for analyzing transit light curves. https://github.com/KeplerGO/PyKE
 - **Astropy** — Python library for astronomy, useful for unit conversions, coordinate transformations, and photometry. https://www.astropy.org
 - **SETI Breakthrough Listen Open Data Archive** — petabytes of radio and optical SETI data from Green Bank and Parkes telescopes. https://breakthroughinitiatives.org/opendatasearch
@@ -93,6 +95,7 @@
 
 ### Future Missions
 - **Dragonfly** — rotorcraft lander to explore Titan's organic chemistry (launch 2027, arrival 2034). https://dragonfly.jhuapl.edu
+- **Habitable Worlds Observatory (HWO)** — flagship mission concept for direct imaging of Earth-like exoplanets (2040s).
 - **Mars Sample Return** — joint NASA/ESA mission to return Perseverance's cached samples (2030s). https://mars.nasa.gov/msr/
 - **Enceladus Orbilander** — mission concept to orbit and land on Enceladus, analyzing plume composition. (Concept study)
 

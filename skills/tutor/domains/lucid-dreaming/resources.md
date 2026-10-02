@@ -56,12 +56,16 @@
 
 - **Konkoly et al. (2021) Media Coverage** — Videos explaining the real-time communication experiment
 
+
 - **World Science Festival: "The Science of Dreaming"** — Panel with dream researchers including Deirdre Barrett
+
 
 - **"Your Brain on Lucid Dreaming" (Seeker)** — YouTube explainer on neuroscience
 
+
 ### Interactive Tools & Apps
 - **Dream Journal Ultimate** (iOS/Android) — Dream logging with reality check reminders, pattern analysis
+
 
 - **Awoken** (Android) — Reality testing app with customizable cues and totem features
   - https://play.google.com/store/apps/details?id=com.lucid_dreaming.awoken
@@ -95,7 +99,9 @@
 
 - **Dr. Benjamin Baird** — University of Wisconsin-Madison; cognitive neuroscience of lucid dreaming, induction techniques
 
+
 - **Dr. Karen Konkoly** — Northwestern University; real-time communication experiments
+
 
 - **Dr. Deirdre Barrett** — Harvard Medical School; dream content, applications, cross-cultural dream studies
   - https://psychology.fas.harvard.edu/people/deirdre-barrett
@@ -138,6 +144,7 @@
 - **Memory Consolidation and Lucid Dreaming** — Does lucidity disrupt the memory processing functions of REM? Or enhance them? Active area of research with mixed findings.
 
 - **Lucid Dreaming as Consciousness Probe** — Tool for studying hard problem of consciousness, sense of self, and volition. See Thomas Metzinger's work on "minimal phenomenal selfhood" in lucid dreams.
+
 
 ### Practical Connections
 - **Athletic Performance** — Gymnasts, skateboarders, and martial artists using lucid dreams for mental rehearsal (motor cortex activation during dream movement)

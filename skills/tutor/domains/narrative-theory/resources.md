@@ -54,6 +54,7 @@
 - **Stockholm University**: Narrative Theory, Literary Studies
   - Course syllabus with clear learning outcomes and structure
 
+
 ### MIT OpenCourseWare (Free Lecture Notes and Assignments)
 
 - **Forms of Western Narrative** (21L.012)

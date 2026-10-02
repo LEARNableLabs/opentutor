@@ -4,6 +4,7 @@
 
 ### Textbooks
 
+- **Kundu, Cohen & Dowling**: *Fluid Mechanics* (6th ed, 2015) — Excellent for intermediate level. Strong on physical intuition, broad coverage, good balance of theory and applications. Covers kinematics through turbulence. Available: academic libraries, Amazon
 
 - **Panton, Ronald L.**: *Incompressible Flow* (4th ed, 2013) — More mathematical than Kundu. Rigorous derivations, tensor notation introduced gently. Best for students comfortable with vector calculus. Emphasizes incompressible flows (good for most of this curriculum).
 
@@ -15,6 +16,7 @@
 
 - **MIT OpenCourseWare 2.25**: *Advanced Fluid Mechanics* (Fall 2013) — Graduate-level but accessible for strong intermediate students. Full lecture notes, problem sets, exams. [https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/](https://ocw.mit.edu/courses/2-25-advanced-fluid-mechanics-fall-2013/)
 
+- **MIT OpenCourseWare 18.355**: *Fluid Mechanics* (Fall 2019) — More mathematical approach from math department perspective.
 
 - **Stanford ME 335**: *Introduction to Turbulent Flows* — For the advanced turbulence sections. Some video lectures available through Stanford Engineering.
 
@@ -54,6 +56,7 @@
 
 - **Lorena Barba's CFD Python**: 12 steps to Navier-Stokes — [https://github.com/barbagroup/CFDPython](https://github.com/barbagroup/CFDPython) — Jupyter notebooks building up from simple diffusion to full Navier-Stokes. Python-based, excellent for learning both physics and numerics.
 
+- **Philip Mocz's fluid dynamics notebooks**:  — Concise Python implementations of various fluid solvers.
 
 - **Online Navier-Stokes solvers**: Search for "2D Navier-Stokes solver online" for interactive browser-based demonstrations.
 
@@ -83,6 +86,7 @@
 
 - **John Bush** (MIT) — Experimental fluid dynamics, hydrodynamics of walking on water, surface tension phenomena.
 
+- **APS Division of Fluid Dynamics**: Annual meeting features Gallery of Fluid Motion — spectacular visualizations and cutting-edge research.
 
 ## Unexpected Connections (Cross-Disciplinary Links)
 

@@ -23,6 +23,7 @@
 
 - **Guild of American Luthiers Learning Center** — Extensive article archive on all aspects of lutherie, searchable by topic. Free for members.
 
+
 - **Stewart-MacDonald Video & Ideas** — Hundreds of free instructional videos on guitar and bass building, setup, and repair.
   - https://www.stewmac.com/video-and-ideas/
 
@@ -47,6 +48,7 @@
 
 - **Guitar Acoustics (UNSW Physics)** — Interactive explanations of guitar acoustics by Joe Wolfe. Covers Helmholtz resonance, modes, and harmonics.
 
+
 ### Videos (specific series and episodes)
 
 - **"Building a Classical Guitar" by O'Brien Guitars** — Full build series from wood selection to French polishing.
@@ -57,7 +59,9 @@
 
 - **"Violin Making Process" by The Strad** — Time-lapse and detailed footage of professional violin makers.
 
+
 - **"Tap Tuning Tutorial" by StewMac** — How to hear and interpret tap tones on soundboards.
+
 
 ### Code & Software
 
@@ -76,6 +80,7 @@
   - https://www.maestronet.com/forum/
 
 - **Guild of American Luthiers Forum** — Members-only forum for lutherie discussions across all instrument families.
+
 
 - **The Acoustic Guitar Forum** — Community for guitar builders and players. Good for beginner questions and build journals.
   - https://www.acousticguitarforum.com
@@ -108,6 +113,7 @@
 
 - **Joseph Curtin** — Violin maker and researcher who collaborated on blind listening tests comparing Stradivari violins to modern instruments.
 
+
 - **Dr. Knut Guettler** — Researcher at Norwegian Academy of Music studying bowing physics and violin acoustics.
 
 ## Tools & Suppliers
@@ -121,6 +127,7 @@
 
 - **International Violin Company** — Tools and materials specifically for violin family instruments. Good source for specialized planes and knives.
 
+
 - **Lee Valley Tools** — High-quality hand tools (planes, chisels, saws) useful for lutherie. Not lutherie-specific but excellent quality.
   - https://www.leevalley.com
 
@@ -130,7 +137,9 @@
 ### Specialized Tools
 - **Ibex Planes** — Makers of specialized lutherie planes (finger planes, violin planes, channel gouges).
 
+
 - **Two Cherries Carving Tools** — German-made gouges and carving chisels, favored by many luthiers.
+
 
 - **Mitutoyo Digital Calipers** — Industry-standard precision measurement tools for thickness, scale length, and fret spacing.
   - https://www.mitutoyo.com

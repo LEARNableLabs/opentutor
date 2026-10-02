@@ -5,6 +5,7 @@
 ### Textbooks
 - **Biomechanics and Motor Control of Human Movement (4th ed.)** by David Winter — authoritative reference for gait analysis, joint kinetics, and motion analysis. Excellent for lessons 3-4 on biomechanics foundations. Accessible to intermediate students with calculus background.
 
+
 - **Introduction to Biomedical Engineering (3rd ed.)** by John Enderle, Joseph Bronzino, Susan Blanchard — comprehensive coverage of prosthetics, implants, and medical devices. Good balance of engineering principles and clinical applications.
   - https://www.elsevier.com/books/introduction-to-biomedical-engineering/enderle/978-0-12-374979-6
 
@@ -20,7 +21,9 @@
 ### Open Educational Resources
 - **MIT OpenCourseWare: Biomedical Device Design (2.75)** — complete course with lecture notes, assignments, and readings. Covers design process, regulatory pathways, prototyping.
 
+
 - **MIT OCW: Materials for Biomedical Applications (3.051J)** — deep dive into biomaterials selection, biocompatibility testing, surface modification.
+
 
 - **Stanford Biodesign Innovation Process** — freely available online book covering needs finding, concept generation, implementation strategy for medical devices.
   - http://biodesign.stanford.edu/resources.html
@@ -29,6 +32,7 @@
 
 ### Video Lectures and Demonstrations
 - **Institute of Physics YouTube** — excellent biomechanics visualizations, gait analysis demonstrations
+
 
 - **Applied Biomechanics Lab (University of Nebraska)** — gait analysis videos, prosthetic testing demonstrations
   - https://www.youtube.com/channel/UCVqWY7ZFqJqL-Z8eJqp8RYg
@@ -41,6 +45,7 @@
 
 - **Össur Academy** — prosthetic manufacturer's educational content, device demonstrations, clinical training
 
+
 ### Interactive Tools and Software
 - **OpenSim** — open-source musculoskeletal modeling platform. Essential for understanding gait biomechanics and joint loading.
   - https://opensim.stanford.edu/
@@ -52,6 +57,7 @@
   - https://3dprint.nih.gov/
 
 - **Ottobock Mobility Lab** — virtual lab for exploring prosthetic components and configurations
+
 
 - **BioDigital Human** — interactive 3D anatomy platform useful for understanding implant placement
   - https://www.biodigital.com/
@@ -139,6 +145,7 @@
   - Lab: https://www.sralab.org/researchers/levi-hargrove-phd
 
 - **Helen Huang** (NC State/UNC) — neural interfaces for prosthetic control, sensory feedback
+  - Lab:
 
 - **Dustin Tyler** (Case Western) — peripheral nerve interfaces, sensory restoration
   - Lab: https://engineering.case.edu/ebme/tyler

@@ -44,6 +44,7 @@
   - Linguistics and deaf studies
   - More interdisciplinary than SL&L
 
+
 - **Journal of Deaf Studies and Deaf Education** (Oxford)
   - Includes linguistic, educational, and social research
   - https://academic.oup.com/jdsde
@@ -56,6 +57,7 @@
   - Video examples with glossing
 
 - **Lifeprint.com (Dr. Bill Vicars)**
+
   - ASL linguistics resources for beginners
   - Clear explanations, video examples
   - Good supplementary material
@@ -75,8 +77,11 @@
   - Search: "sign language linguistics lecture"
 
 - **TEDx Talks on Sign Languages**
+  — "The Linguistics of Sign Language" by Carol Padden
+  — Various talks on Deaf culture and linguistics
 
 - **Sign Language Phonology Demonstrations**
+
   - Videos showing minimal pairs, assimilation, etc.
 
 - **Nicaraguan Sign Language Documentary**
@@ -125,6 +130,7 @@
   - Regional variation data
 
 - **Max Planck Institute Sign Language Resources**
+
   - Typological databases
   - Cross-linguistic resources
 

@@ -70,6 +70,7 @@
   - Prof. Deepto Chakrabarty's complete course
   
 - **Yale Open Courses** — Prof. Ramamurti Shankar
+
   - Foundations of Mechanics (includes Lagrangian/Hamiltonian later in course)
 
 **Individual Topics:**
@@ -83,6 +84,7 @@
   - Visual explanations of Lagrangian mechanics
   
 - **minutephysics** — Principle of Least Action
+
   - Intuitive 5-minute overview
 
 ### Interactive Tools & Simulations
@@ -128,6 +130,7 @@
 **Jupyter Notebooks & Tutorials:**
 
 - **Classical Mechanics with Python** (GitHub)
+
   - Various example problems solved computationally
   
 - **Computational Physics Tutorials**
