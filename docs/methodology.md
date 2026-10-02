@@ -93,14 +93,21 @@ Two mechanisms, and they don't run everywhere:
 
 ## Where the curriculum comes from
 
-Not from the model's memory. Each topic is researched across eight sources —
-arxiv, Semantic Scholar, OpenAlex, Wikipedia, university syllabi, YouTube, GitHub,
-and Wikipedia's concept graph — and the sources are cited in the lessons. A draft
-is then reviewed by a separate Critic agent and rewritten until it passes, up to
-three rounds.
+For a newly generated topic, the pipeline queries eight public sources — arXiv,
+Semantic Scholar, OpenAlex, Wikipedia, university syllabi, YouTube, GitHub, and
+Wikipedia's concept graph — and passes the available results to the builder.
+Some sources can fail or return no results, so research coverage varies. A
+separate Critic agent reviews the draft, with up to three rounds of revision.
+Reaching that limit can still leave a course unapproved.
 
-A curriculum invented from a model's priors is exactly the failure this is built
-to avoid: fluent, plausible, and wrong in ways a beginner cannot detect.
+The 293 shipped courses are an existing AI-generated catalog. They have not all
+been rebuilt or approved by this pipeline, and their resource lists contain
+invented or dead links. Their presence in the catalog does not establish that
+their citations or claims were verified. A link resolving successfully does not
+show that it cites the right work or supports the lesson's claim.
+
+Research and automated critique help identify errors, but neither guarantees
+accuracy. These courses have not received a systematic subject-expert review.
 
 ## What it deliberately doesn't do
 

@@ -87,13 +87,18 @@ it, and where it falls short.
 ## Where the courses come from
 
 The 293 shipped courses live in [`skills/tutor/domains/`](skills/tutor/domains/),
-5 to 40 lessons each; the website lists them all.
+5 to 40 lessons each; the website lists them all. They are AI-generated and have
+not all been rebuilt or approved by the current pipeline. Their citations and
+resource lists have not been systematically verified; an audit found thousands
+of dead links. A working link alone does not verify the lesson's claims.
 
 For a new topic, OpenTutor searches public sources (arXiv, Semantic Scholar,
 OpenAlex, Wikipedia, course syllabi, YouTube and GitHub), plans a course, and has a
-second AI pass review it, revising for up to three rounds. On the website and
-Telegram, five starter lessons are ready straight away while the full course is
-built. On the hosted site, new topics need your own OpenRouter account.
+second AI pass review it, revising for up to three rounds. Sources can be
+unavailable, and a course can remain unapproved after the third round. On the
+website and Telegram, five starter lessons are ready straight away while the
+full course is built. On the hosted site, new topics need your own OpenRouter
+account.
 
 ## Host it for others
 
