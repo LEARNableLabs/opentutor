@@ -128,6 +128,36 @@ describe('spaced repetition in the web lesson', () => {
     await expect(lessonTurn(ctx, { topicSlug: 'demo' })).rejects.toThrow('database unavailable');
   });
 
+  it('retains a review after a schedule-save failure and lets its last answer be retried', async () => {
+    for (let n = 1; n <= 3; n++) store.markLessonComplete('demo', n, 'correct');
+    store.updateProgress((p) => { p.spaced_repetition = registerConcepts({}, 'demo', ['c1'], day(0)); });
+    const { lessonId, totalSteps } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+    for (let step = 0; step < totalSteps - 1; step++) await lessonTurn(ctx, { topicSlug: 'demo', answer: 'Answer', lessonId, step });
+    const last = { topicSlug: 'demo', answer: 'Final answer', lessonId, step: totalSteps - 1 };
+    const failing = vi.spyOn(store, 'updateProgress').mockRejectedValueOnce(new Error('schedule unavailable'));
+    const log = vi.spyOn(console, 'error').mockImplementation(() => {});
+    try {
+      expect((await lessonTurn(ctx, last)).status).toBe(503);
+      expect(JSON.parse(store.readKV('web_lesson:demo'))).toMatchObject({ id: lessonId, step: last.step });
+      expect(store.readKV(`lesson_done:${lessonId}`)).toBeNull();
+      expect(store.readProgress().spaced_repetition['demo::c1'].next_review).toBe('2026-01-02');
+      expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body).toMatchObject({ lessonId, step: last.step, resumed: true });
+      expect((await lessonTurn(ctx, last)).body.done).toBe(true);
+      expect(store.readProgress().spaced_repetition['demo::c1'].reps).toBe(1);
+      expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.message).toBe('All lessons completed!');
+    } finally { failing.mockRestore(); log.mockRestore(); }
+  });
+
+  it('does not clear a review while a competing request owns its completion claim', async () => {
+    for (let n = 1; n <= 3; n++) store.markLessonComplete('demo', n, 'correct');
+    store.updateProgress((p) => { p.spaced_repetition = registerConcepts({}, 'demo', ['c1'], day(0)); });
+    const { lessonId } = (await lessonTurn(ctx, { topicSlug: 'demo' })).body;
+    const before = store.readKV('web_lesson:demo');
+    store.writeKV(`lesson_done:${lessonId}`, 'another-request');
+    expect((await lessonTurn(ctx, { topicSlug: 'demo', answer: 'Answer', lessonId, step: 0 })).status).toBe(409);
+    expect(store.readKV('web_lesson:demo')).toBe(before);
+  });
+
   it('keeps an exhausted BLOCK counter through a scheduled review on a completed course', async () => {
     for (let n = 1; n <= 3; n++) store.markLessonComplete('demo', n, 'correct');
     const reviews = { concept: 'blocked', day: 3, count: 2 };

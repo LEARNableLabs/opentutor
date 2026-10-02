@@ -135,6 +135,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     // a late turn that wrote the record back) is cleared, so the student is never held on it (#228).
     const completion = `lesson_done:${active.id || `${topicSlug}:${active.lessonDay}:${active.isReview ? 'review' : 'lesson'}`}`;
     if ((await state.readKV(completion)) != null) {
+      // Another request may still be saving this review. Only its owner can clear
+      // the record or release a failed claim; a concurrent answer must leave it alone.
+      if (active.isReview) return { status: 409, body: STALE };
       const now = await state.readKV(kvKey);
       const current = typeof now === 'string' ? JSON.parse(now) : now;
       if (current?.id === active.id && current?.plan) {
@@ -204,6 +207,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         lesson: { ...active.lesson, lesson: day },
         session: active,
       }), FAILED, 'completeLesson');
+      if (active.isReview && saved === FAILED) {
+        // The stored record still holds the last unanswered step. Release our
+        // claim so it can be retried after the save recovers, without losing the review.
+        await state.deleteKV(completion);
+        return { status: 503, body: { error: 'This review could not be saved. Please try again.' } };
+      }
       // A finished review leaves its count behind for the next start; a lesson leaves nothing.
       if (active.isReview) await state.writeKV(kvKey, JSON.stringify({ reviews: active.reviews }));
       else await state.deleteKV(kvKey);
