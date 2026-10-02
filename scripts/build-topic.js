@@ -28,6 +28,7 @@ process.env.OPENTUTOR_PIPELINE_LLM ||= 'cli';
 const { TutorStore } = await import('../lib/core/store.js');
 const { CurriculumPipeline } = await import('../lib/core/pipeline.js');
 const { researchTopic, formatResearchContext, verifyUrls } = await import('../lib/core/research.js');
+const { findResources, withResources, resourcesSection } = await import('../lib/core/resource-finder.js');
 const { createPipelineAdapterFromEnv } = await import('../lib/adapters/index.js');
 
 const logDir = path.join(REPO, '.build-logs', `${slug}-${new Date().toISOString().replace(/[:.]/g, '-')}`);
@@ -84,8 +85,16 @@ try {
     wikiConcepts: research.wikiLinks?.join(', ') || null,
     verifyUrls: verifying,
   });
-  note('done', { calls, iterations: result.iterations, approved: result.approved, lessons: result.curriculum.lessons.length });
+  // Resources by web search, not from the model's memory; every URL it brings back is checked (#334).
   const built = path.join(root, 'skills', 'tutor', 'domains', slug);
+  const found = await findResources({ adapter, topic, level, lessons: result.curriculum.lessons, onNote: note });
+  const curriculum = withResources(result.curriculum, found);
+  fs.writeFileSync(path.join(built, 'curriculum.json'), `${JSON.stringify(curriculum, null, 2)}\n`);
+  fs.appendFileSync(path.join(built, 'resources.md'), resourcesSection(found, curriculum.lessons));
+  fs.writeFileSync(path.join(logDir, 'found-resources.json'), JSON.stringify(found, null, 1));
+  note('resources', { lessonsWithResources: found.filter((f) => f.resources.length).length, urls: found.reduce((n, f) => n + f.resources.length, 0) });
+
+  note('done', { calls, iterations: result.iterations, approved: result.approved, lessons: result.curriculum.lessons.length });
   fs.cpSync(built, path.join(logDir, 'domain'), { recursive: true });
   if (args.includes('--install')) {
     // The six files a shipped domain has. plan.md and critique.md stay in the log: they are build-time notes.

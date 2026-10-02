@@ -284,3 +284,23 @@ describe('ClaudeCLIAdapter model', () => {
     expect((await run(new ClaudeCLIAdapter(), { model: 'strong' })).includes('--model')).toBe(false);
   });
 });
+
+describe('ClaudeCLIAdapter tools', () => {
+  it('has none unless the call asks, then allows exactly those', async () => {
+    const run = async (options) => {
+      const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
+      spawn.mockReturnValue(child);
+      const reply = new ClaudeCLIAdapter().generate('system', [{ role: 'user', content: 'hi' }], options);
+      child.stdout.emit('data', 'ok');
+      child.emit('close', 0);
+      await reply;
+      return spawn.mock.calls.at(-1)[1];
+    };
+    const none = await run({});
+    expect(none[none.indexOf('--tools') + 1]).toBe('');
+    expect(none.includes('--allowedTools')).toBe(false);
+    const web = await run({ tools: 'WebSearch,WebFetch' });
+    expect(web[web.indexOf('--tools') + 1]).toBe('WebSearch,WebFetch');
+    expect(web[web.indexOf('--allowedTools') + 1]).toBe('WebSearch,WebFetch');
+  });
+});
