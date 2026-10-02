@@ -263,3 +263,67 @@ describe('ClaudeCLIAdapter timeout', () => {
     }
   });
 });
+
+// #330: a curriculum build on Claude Code names the model for each tier.
+describe('ClaudeCLIAdapter model', () => {
+  const run = async (adapter, options) => {
+    const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
+    spawn.mockReturnValue(child);
+    const reply = adapter.generate('system', [{ role: 'user', content: 'hi' }], options);
+    child.stdout.emit('data', 'ok');
+    child.emit('close', 0);
+    await reply;
+    return spawn.mock.calls.at(-1)[1];
+  };
+
+  it('passes --model for the tier asked for, and nothing when none is set', async () => {
+    const adapter = new ClaudeCLIAdapter({ strongModel: 'opus', cheapModel: 'haiku' });
+    const strong = await run(adapter, { model: 'strong' });
+    expect(strong.slice(strong.indexOf('--model'))).toEqual(['--model', 'opus']);
+    expect((await run(adapter, { model: 'cheap' })).join(' ')).toContain('--model haiku');
+    expect((await run(new ClaudeCLIAdapter(), { model: 'strong' })).includes('--model')).toBe(false);
+  });
+});
+
+describe('ClaudeCLIAdapter tools', () => {
+  it('has none unless the call asks, then allows exactly those', async () => {
+    const run = async (options) => {
+      const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
+      spawn.mockReturnValue(child);
+      const reply = new ClaudeCLIAdapter().generate('system', [{ role: 'user', content: 'hi' }], options);
+      child.stdout.emit('data', 'ok');
+      child.emit('close', 0);
+      await reply;
+      return spawn.mock.calls.at(-1)[1];
+    };
+    const none = await run({});
+    expect(none[none.indexOf('--tools') + 1]).toBe('');
+    expect(none.includes('--allowedTools')).toBe(false);
+    const web = await run({ tools: 'WebSearch,WebFetch' });
+    expect(web[web.indexOf('--tools') + 1]).toBe('WebSearch,WebFetch');
+    expect(web[web.indexOf('--allowedTools') + 1]).toBe('WebSearch,WebFetch');
+  });
+});
+
+describe('ClaudeCLIAdapter failure', () => {
+  it('recognizes a usage limit without including the CLI output', async () => {
+    const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
+    spawn.mockReturnValue(child);
+    const reply = new ClaudeCLIAdapter().generate('system', [{ role: 'user', content: 'hi' }], {});
+    const failed = expect(reply).rejects.toThrow(/^Claude CLI usage limit reached$/);
+    child.stdout.emit('data', 'Usage limit reached\nprivate prompt material');
+    child.emit('close', 1);
+    await failed;
+  });
+
+  it('does not expose partial completions or tool diagnostics on failure', async () => {
+    const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
+    spawn.mockReturnValue(child);
+    const reply = new ClaudeCLIAdapter().generate('system', [{ role: 'user', content: 'hi' }], {});
+    const failed = expect(reply).rejects.toThrow(/^Claude CLI exited with code 1$/);
+    child.stdout.emit('data', 'private completion with pasted credentials');
+    child.stderr.emit('data', 'private tool diagnostics');
+    child.emit('close', 1);
+    await failed;
+  });
+});

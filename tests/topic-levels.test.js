@@ -76,6 +76,7 @@ it('replaces an empty prerequisites field instead of adding a second one', async
 });
 
 // Codex on #258: a new topic's first, quick build is what the Topics tab shows until the full one lands.
+const DOMAIN_REPLY = JSON.stringify({ resources: '# Resources', teacher: '# Teacher' });
 import { generateQuickStart } from '../lib/core/quick-start.js';
 const quick = (extra) => {
   const adapter = { generate: async () => ({ text: JSON.stringify({ taster: 't', roadmap: 'r', quickCurriculum: Array.from({ length: 5 }, (_, i) => ({ title: `L${i + 1}` })), ...extra }) }) };
@@ -120,7 +121,8 @@ it.each(['deterministic', 'agentic'])('a %s pipeline run keeps the quick build\'
     writeCurriculum: (_slug, c) => written.push(structuredClone(c)),
     writeDomainFile() {},
   };
-  const adapter = { generate: async () => ({ text: reply, model: 'fake' }) };
+  // The domain-files call needs an answer of its own: a build without resources or a teacher config fails.
+  const adapter = { generate: async (system) => ({ text: /Domain Files Builder/.test(system) ? DOMAIN_REPLY : reply, model: 'fake' }) };
   await new CurriculumPipeline({ adapter, state, skills: { get: () => '' }, mode }).run('Knots', 'knots', 'intermediate', 'sources').catch(() => {});
   expect(written.length).toBeGreaterThan(0);
   for (const c of written) expect(c).toMatchObject({ level: 'beginner', prerequisites: ['curiosity'] });
@@ -246,6 +248,7 @@ it('carries the latest valid level and prerequisites across builder revisions', 
     generate: async (system) => {
       if (/CurriculumBuilder Instructions/.test(system)) return { text: JSON.stringify({ curriculum: builds.shift() }) };
       if (/Critic/.test(system)) return { text: JSON.stringify({ status: critiques++ ? 'APPROVED' : 'REVISE', critique: 'again' }) };
+      if (/Domain Files Builder/.test(system)) return { text: DOMAIN_REPLY };
       return { text: '{}' };
     },
   };

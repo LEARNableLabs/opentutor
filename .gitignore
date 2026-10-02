@@ -26,3 +26,4 @@ workspace/memory/*
 !workspace/memory/.gitkeep
 workspace/students/
 workspace/groups/
+.build-logs/

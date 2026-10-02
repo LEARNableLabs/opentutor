@@ -1,0 +1,101 @@
+import { describe, it, expect, vi } from 'vitest';
+import { findResources, withResources, resourcesSection } from '../lib/core/resource-finder.js';
+import { plan } from '../lib/core/link-check.js';
+
+// #334: resources come from a web search, and a URL that is not real never reaches a lesson.
+
+const lessons = [{ lesson: 1, title: 'One', concepts: ['a'], resources: ['https://old.example/a'] }, { lesson: 2, title: 'Two', concepts: ['b'] }];
+const reply = (text) => ({ generate: vi.fn(async () => ({ text })) });
+const R = (url, type = 'video') => ({ url, type, title: `T ${url}`, why: 'because' });
+
+describe('findResources', () => {
+  it('skips invalid and duplicate candidates while allowing six distinct URL checks', async () => {
+    const invalid = [null, R('http://insecure.example'), R('https://')];
+    const dead = Array.from({ length: 8 }, () => R('https://dead.example/a'));
+    const good = Array.from({ length: 8 }, (_, n) => R(`https://example.org/${n}`));
+    const adapter = reply(JSON.stringify({ lessons: [{ lesson: 1, resources: [...invalid, ...dead, ...good] }] }));
+    const isReal = vi.fn(async (url) => !url.includes('dead.example'));
+    const found = await findResources({ adapter, topic: 'T', level: 'beginner', lessons, isReal });
+    expect(isReal).toHaveBeenCalledTimes(6);
+    expect(found[0].resources).toEqual(good.slice(0, 5));
+  });
+  it('bounds verification work even if the reply duplicates a lesson or has too many resources', async () => {
+    const candidates = Array.from({ length: 20 }, (_, n) => R(`https://example.org/${n}`));
+    const adapter = reply(JSON.stringify({ lessons: [{ lesson: 1, resources: candidates }, { lesson: 1, resources: candidates }] }));
+    const isReal = vi.fn(async () => true);
+    const found = await findResources({ adapter, topic: 'T', level: 'beginner', lessons, isReal });
+    expect(isReal).toHaveBeenCalledTimes(6);
+    expect(found).toHaveLength(1);
+    expect(found[0].resources).toHaveLength(6);
+  });
+  it('asks for the web tools, and keeps only real URLs', async () => {
+    const adapter = reply(JSON.stringify({ lessons: [{ lesson: 1, resources: [R('https://youtu.be/AAAAAAAAAAA'), R('https://made.up/x'), R('http://insecure.example/y'), R('https://youtu.be/AAAAAAAAAAA')] }] }));
+    const notes = [];
+    const found = await findResources({ adapter, topic: 'T', level: 'beginner', lessons, isReal: async (u) => !u.includes('made.up'), onNote: (k, d) => notes.push([k, d.url]) });
+    expect(adapter.generate.mock.calls[0][2]).toMatchObject({ tools: 'WebSearch,WebFetch', model: 'strong', timeout: 600_000 });
+    expect(found).toEqual([{ lesson: 1, resources: [R('https://youtu.be/AAAAAAAAAAA')] }]);
+    expect(notes).toEqual([['resource-dropped', 'https://made.up/x']]);
+  });
+
+  it('yields nothing, and says so, for a batch that does not parse or fails', async () => {
+    const notes = [];
+    expect(await findResources({ adapter: reply('sorry, no json'), topic: 'T', level: 'x', lessons, isReal: async () => true, onNote: (k) => notes.push(k) })).toEqual([]);
+    const failing = { generate: async () => { throw new Error('boom'); } };
+    expect(await findResources({ adapter: failing, topic: 'T', level: 'x', lessons, onNote: (k) => notes.push(k) })).toEqual([]);
+    expect(notes).toEqual(['resource-search-failed', 'resource-search-failed']); // one for each way it can fail
+  });
+});
+
+describe('a reply that is not what was asked for', () => {
+  it('ignores lessons it was not asked about and malformed entries', async () => {
+    const adapter = reply(JSON.stringify({ lessons: [{ lesson: 99, resources: [R('https://a.example/stray')] }, { lesson: 1, resources: 'nope' }, null, { lesson: 2, resources: [R('https://a.example/ok')] }] }));
+    const found = await findResources({ adapter, topic: 'T', level: 'x', lessons, isReal: async () => true });
+    expect(found).toEqual([{ lesson: 2, resources: [R('https://a.example/ok')] }]);
+  });
+
+  it('says so when a reply holds no lessons at all', async () => {
+    const notes = [];
+    await findResources({ adapter: reply('{"hello":1}'), topic: 'T', level: 'x', lessons, isReal: async () => true, onNote: (k) => notes.push(k) });
+    expect(notes).toEqual(['resource-search-failed']);
+  });
+});
+
+describe('applying what was found', () => {
+  const found = [{ lesson: 1, resources: [R('https://a.example/1'), R('https://a.example/2', 'article')] }];
+
+  it('puts the found URLs first, keeps what a lesson had, and caps at five', () => {
+    const out = withResources({ lessons: [{ ...lessons[0], resources: ['https://old.example/a', 'https://a.example/1', 'x1', 'x2', 'x3', 'x4'] }, lessons[1]] }, found);
+    expect(out.lessons[0].resources).toEqual(['https://a.example/1', 'https://a.example/2', 'https://old.example/a', 'x1', 'x2']);
+    expect(out.lessons[1].resources).toEqual([]);
+  });
+
+  it('removes verified-dead builder URLs even when searches return few or no replacements', () => {
+    const curriculum = { lessons: [{ lesson: 1, resources: ['https://dead.example/a', 'https://live.example/a', 'https://unknown.example/a'] }, { lesson: 2, resources: ['https://dead.example/a'] }] };
+    const out = withResources(curriculum, found, { deadUrls: new Set(['https://dead.example/a']) });
+    expect(out.lessons[0].resources).toEqual(['https://a.example/1', 'https://a.example/2', 'https://live.example/a', 'https://unknown.example/a']);
+    expect(out.lessons[1].resources).toEqual([]);
+  });
+
+  it('writes a markdown section with the hook, only for lessons that have resources', () => {
+    const md = resourcesSection([...found, { lesson: 2, resources: [] }], lessons);
+    expect(md).toContain('### Lesson 1: One');
+    expect(md).toContain('- ▶ [T](https://a.example/1) — because');
+    expect(md).not.toContain('Lesson 2');
+    expect(resourcesSection([], lessons)).toBe('');
+    expect(resourcesSection([{ lesson: 1, resources: [R('https://a.example/x_(y)')] }], lessons)).toContain('(https://a.example/x_%28y%29)');
+  });
+
+  it('renders metadata as plain prose without adding unchecked links', () => {
+    const md = resourcesSection([{ lesson: 1, resources: [{ url: 'https://a.example/checked', title: '[Extra](https://dead.example/title) <https://dead.example/auto>', why: 'See https://dead.example/why or [click](javascript:alert)\n- injected row' }] }], [{ lesson: 1, title: 'Title https://dead.example/heading' }]);
+    expect(md.match(/https?:\/\/[^\s)]+/g)).toEqual(['https://a.example/checked']);
+    expect(md).not.toContain('](javascript:');
+    expect(md).not.toContain('\n- injected row');
+  });
+});
+
+describe('YouTube Shorts', () => {
+  it('are checked as the video they are', () => {
+    expect(plan('https://www.youtube.com/shorts/dQw4w9WgXcQ').url).toContain(encodeURIComponent('watch?v=dQw4w9WgXcQ'));
+    expect(plan('https://www.youtube.com/shorts/not-an-id').kind).toBe('dead');
+  });
+});
