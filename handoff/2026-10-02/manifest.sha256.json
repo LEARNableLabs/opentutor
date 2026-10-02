@@ -1,5 +1,5 @@
 {
-  "TO_FIX.md": "53d11a354c84fa797a742986c281648f28ebfe6d7a7a88af9c601750db56a287",
+  "TO_FIX.md": "ce296ec818694c4f97a304e2b4320e5399f4286557d261e90b8452766ba0705b",
   "handoff/2026-10-02/PILOTS.md": "ee14f9fbacbcb33127ace6e1cfdf1ee8967c1d256f6c4391eac1e49933e95282",
   "handoff/2026-10-02/builds/behavioral-economics-2026-10-02T13-04-12-347Z/domain/concept-map.md": "50c6e9eefc3b843ff2fb4570f0702769e8e5a72a5eb1d191ecb94284e17deb29",
   "handoff/2026-10-02/builds/behavioral-economics-2026-10-02T13-04-12-347Z/domain/critique.md": "5411cbc7a4f7904287ed7c458e50a0b338aa12487669bbca43e79101230184a1",
@@ -92,6 +92,8 @@
   "handoff/2026-10-02/builds/volcanology-2026-10-02T13-15-30-004Z/research.json": "65c9262ce209a9a483b44d58df1163fcbe5e6fef1580789de32bb7ce9606daab",
   "handoff/2026-10-02/issues.md": "c8616edf6e8ec66591b45d585fd93f358d1514a1bccd556f008f2996ec6b3197",
   "handoff/2026-10-02/local-workflow-deletions.patch": "80b48614d8ee1556d6734cf466bbe4410ab410aa4b13cabd2f14f9261733b30d",
+  "handoff/2026-10-02/opentutor-cli-error-smoke.mjs": "3aceb50d7fcee1473108cfa22a20c1141d368f1a10ad61c3b411f82c49b6c4a0",
+  "handoff/2026-10-02/opentutor-review-save-smoke.mjs": "8705ef4c5b057d8d95c5aa1751d7b8d5eb355e2bae9fceb79789fac4eb181a2f",
   "handoff/2026-10-02/review-smoke.mjs": "ac0088153d188e77071861ec4e73f4257491d66244e25705197fe434b4578331",
   "handoff/2026-10-02/reviewed-link-cache.json": "89e46c22c7c8aa5965154b18f974ffcc7318ded3d2537669201a247594d1a2ed"
 }

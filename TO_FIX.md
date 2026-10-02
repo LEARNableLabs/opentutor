@@ -3,24 +3,26 @@
 Read `AGENTS.md` and `CLAUDE.md` first. No PRs below have merged. Preserve the
 existing deleted `.claude/workflows/*.js` files and untracked `issues.md`.
 
-- **#337 is ready to merge:** documentation fixes; both reviewers completed,
-  all findings resolved, CI green (checked October 2, about 19:25 UTC).
-- **#329 is blocked by a new review finding:** a failed review-schedule save
-  is swallowed and the active review is cleared. Preserve the session or
-  propagate the failure. Earlier tests/live checks passed; CI is green.
-- **#331 is blocked by new review findings:** installation staging across mount
-  boundaries, cleanup reporting after a successful install, Windows test path
-  matching, model stdout leaking through error messages, previously verified
-  dead resources surviving merges, and unchecked links inside resource metadata.
-  CodeRabbit also notes optional builder files at the CLI install boundary in an
-  outside-diff comment. Verify each before fixing; reproduce state/security
-  findings against something running. CodeRabbit auto-review is paused; request
-  it explicitly after fixes. Earlier 1,389 tests/lint passed; CI is green.
-- **#340 needs final review checks:** the valid OR-Tools clone URL was restored,
-  its thread resolved, and a fresh Codex review requested. CodeRabbit skips
-  shipped domains under the configured path filter; CI is green. This separate
-  PR removes 3,799 confirmed dead URLs from 471 files (original audit: 4,041).
-  Verify review requirements before merging any PR.
+- **#337 merged** October 2: README/methodology provenance corrections.
+- **#329 fixes pushed at `e855932`:** review-schedule save failures now return
+  503, retain the last step, and allow retry; competing requests cannot clear an
+  owned review. Full suite: 1,365 passed; lint and live JSON-server reproduction
+  passed. Check the latest Codex/CodeRabbit review threads and CI before merge.
+- **#331 fixes pushed at `c16f23c`:** staging stays on the destination filesystem;
+  cleanup failures warn without misreporting publication; portable test paths;
+  CLI errors omit private model output; known-dead builder resources are removed;
+  metadata cannot inject unchecked links; link cleanup retains resource labels.
+  Full suite: 1,396 passed; lint and live JSON/SSE privacy checks passed. Fresh
+  reviews requested (CodeRabbit was resumed); check new findings before merge.
+  The optional-file suggestion was answered: shipped installs intentionally
+  require all six nonempty files, unlike the hosted course path.
+- **#340 fixes pushed at `b8bc576`:** restored the valid OR-Tools clone URL and
+  preserved Markdown resource labels and descriptions. Separate content-only
+  diff removes 3,807 distinct confirmed-dead URLs across 471 files/243 courses.
+  Live/unknown URLs and non-link curriculum content are preserved; 25 cached
+  dead URLs in prose/mixed rows still need manual review. Fresh Codex review
+  requested; CodeRabbit skips shipped domains under the configured path filter.
+  Check latest reviews and CI before merge.
 - **Rerun failed builds:** `risk-management`, `luthiery`, `seismology`.
   The attempted rerun hit Claude's session limit, reported to reset at 6:10pm
   America/New_York on October 2. Check availability before retrying.
