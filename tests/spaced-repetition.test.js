@@ -121,4 +121,26 @@ describe('spaced repetition in the web lesson', () => {
     expect(store.readProgress().spaced_repetition['demo::c3'].next_review > '2000-01-01').toBe(true);
     expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.message).toBe('All lessons completed!');
   });
+
+  it('propagates a failed progress read on a completed course instead of claiming it is done', async () => {
+    for (let n = 1; n <= 3; n++) store.markLessonComplete('demo', n, 'correct');
+    vi.spyOn(store, 'readProgress').mockRejectedValue(new Error('database unavailable'));
+    await expect(lessonTurn(ctx, { topicSlug: 'demo' })).rejects.toThrow('database unavailable');
+  });
+
+  it('keeps an exhausted BLOCK counter through a scheduled review on a completed course', async () => {
+    for (let n = 1; n <= 3; n++) store.markLessonComplete('demo', n, 'correct');
+    const reviews = { concept: 'blocked', day: 3, count: 2 };
+    store.writeKV('web_lesson:demo', JSON.stringify({ reviews }));
+    const feedback = '## Directives\n\n- **BLOCK** [critical]: blocked — BLOCK advancement until retested\n';
+    store.writeDomainFile('demo', 'practice-feedback.md', feedback);
+    store.updateProgress((p) => { p.spaced_repetition = registerConcepts({}, 'demo', ['c1'], day(0)); });
+    const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+    expect(start.body.lesson.concepts).toEqual(['c1']);
+    expect(JSON.parse(store.readKV('web_lesson:demo')).reviews).toEqual(reviews);
+    await finish();
+    expect(JSON.parse(store.readKV('web_lesson:demo')).reviews).toEqual(reviews);
+    store.writeDomainFile('demo', 'practice-feedback.md', feedback);
+    expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.done).toBe(true);
+  });
 });

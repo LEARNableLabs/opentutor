@@ -317,9 +317,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   if (allDone) {
     // A finished course still brings back a concept that has fallen due (#327): a review, which settles it
     // and moves its date on, so the next start is not another one.
-    const progress = await safely(() => state.readProgress(), null, 'read progress');
+    const progress = await state.readProgress();
     const overdue = dueConcepts(progress?.spaced_repetition, { topicSlug, limit: 1 })[0];
-    if (overdue) return startReview(overdue.concept, {}, `Time to revisit ${overdue.concept}.`);
+    if (overdue) return startReview(overdue.concept, { reviews: record?.reviews }, `Time to revisit ${overdue.concept}.`);
     return { status: 200, body: { done: true, message: 'All lessons completed!' } };
   }
 
