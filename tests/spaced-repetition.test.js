@@ -4,6 +4,7 @@ import os from 'os';
 import path from 'path';
 import { TutorStore } from '../lib/core/store.js';
 import { lessonTurn } from '../api/lesson.js';
+import { completeLesson } from '../lib/core/lesson-completion.js';
 import { registerConcepts, recordReviewResult, dueConcepts, summarize } from '../lib/core/spaced-repetition.js';
 
 // #327: one SM-2 for the web, the bot and agents.
@@ -96,5 +97,28 @@ describe('spaced repetition in the web lesson', () => {
     await finish();
     const start = await lessonTurn(ctx, { topicSlug: 'demo' });
     expect(start.body.reply).not.toContain('what is c1');
+  });
+
+  it('records the result of a review of a concept the schedule had not met', async () => {
+    // A BLOCK on a concept from before spaced repetition: no record yet, and a miss must still count.
+    await completeLesson({
+      state: store,
+      topicSlug: 'demo',
+      lesson: { day: 1, lesson: 1, title: 'Review: zeta', concepts: ['zeta'] },
+      session: { isReview: true, reviewConcept: 'zeta', steps: ['diagnostic'], assessments: [{ step: 'diagnostic', score: 0.1 }], history: [] },
+    });
+    const rec = store.readProgress().spaced_repetition['demo::zeta'];
+    expect([rec.reps, rec.streak, rec.interval]).toEqual([1, 0, 1]);
+  });
+
+  it('brings a due concept back after the last lesson, once, and moves its date on', async () => {
+    for (let n = 0; n < 3; n++) { await lessonTurn(ctx, { topicSlug: 'demo' }); await finish(); }
+    expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body).toMatchObject({ done: true, message: 'All lessons completed!' });
+    store.updateProgress((p) => { p.spaced_repetition['demo::c3'].next_review = '2000-01-01'; });
+    const start = await lessonTurn(ctx, { topicSlug: 'demo' });
+    expect(start.body).toMatchObject({ done: false, lesson: { review: true, concepts: ['c3'] } });
+    await finish();
+    expect(store.readProgress().spaced_repetition['demo::c3'].next_review > '2000-01-01').toBe(true);
+    expect((await lessonTurn(ctx, { topicSlug: 'demo' })).body.message).toBe('All lessons completed!');
   });
 });
