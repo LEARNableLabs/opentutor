@@ -3,15 +3,24 @@
 Read `AGENTS.md` and `CLAUDE.md` first. No PRs below have merged. Preserve the
 existing deleted `.claude/workflows/*.js` files and untracked `issues.md`.
 
-- **Finish reviews and merge #329, #331, #337, #340.** Fixes are pushed;
-  final Codex reviews were requested for #329/#331/#337. Check current comments,
-  resolve verified findings, and ensure both Codex and CodeRabbit have reviewed
-  and CI passes before merging. #329 passed 1,363 tests and live error-path
-  checks; #331 passed 1,389 tests and lint. #337 corrects README/methodology
-  provenance claims. #340 is the separate link-removal PR: 3,799 confirmed dead
-  URLs removed from 471 files (the original audit counted 4,041). A valid
-  OR-Tools Git clone URL was restored; reply to its review thread is posted but
-  resolution and a final review of the updated head still need checking.
+- **#337 is ready to merge:** documentation fixes; both reviewers completed,
+  all findings resolved, CI green (checked October 2, about 19:25 UTC).
+- **#329 is blocked by a new review finding:** a failed review-schedule save
+  is swallowed and the active review is cleared. Preserve the session or
+  propagate the failure. Earlier tests/live checks passed; CI is green.
+- **#331 is blocked by new review findings:** installation staging across mount
+  boundaries, cleanup reporting after a successful install, Windows test path
+  matching, model stdout leaking through error messages, previously verified
+  dead resources surviving merges, and unchecked links inside resource metadata.
+  CodeRabbit also notes optional builder files at the CLI install boundary in an
+  outside-diff comment. Verify each before fixing; reproduce state/security
+  findings against something running. CodeRabbit auto-review is paused; request
+  it explicitly after fixes. Earlier 1,389 tests/lint passed; CI is green.
+- **#340 needs final review checks:** the valid OR-Tools clone URL was restored,
+  its thread resolved, and a fresh Codex review requested. CodeRabbit skips
+  shipped domains under the configured path filter; CI is green. This separate
+  PR removes 3,799 confirmed dead URLs from 471 files (original audit: 4,041).
+  Verify review requirements before merging any PR.
 - **Rerun failed builds:** `risk-management`, `luthiery`, `seismology`.
   The attempted rerun hit Claude's session limit, reported to reset at 6:10pm
   America/New_York on October 2. Check availability before retrying.
