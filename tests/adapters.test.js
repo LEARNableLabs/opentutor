@@ -306,12 +306,23 @@ describe('ClaudeCLIAdapter tools', () => {
 });
 
 describe('ClaudeCLIAdapter failure', () => {
-  it('reports stdout when stderr is empty (a usage limit is printed there)', async () => {
+  it('recognizes a usage limit without including the CLI output', async () => {
     const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
     spawn.mockReturnValue(child);
     const reply = new ClaudeCLIAdapter().generate('system', [{ role: 'user', content: 'hi' }], {});
-    const failed = expect(reply).rejects.toThrow('code 1: Usage limit reached');
-    child.stdout.emit('data', 'Usage limit reached');
+    const failed = expect(reply).rejects.toThrow(/^Claude CLI usage limit reached$/);
+    child.stdout.emit('data', 'Usage limit reached\nprivate prompt material');
+    child.emit('close', 1);
+    await failed;
+  });
+
+  it('does not expose partial completions or tool diagnostics on failure', async () => {
+    const child = Object.assign(new EventEmitter(), { stdout: new EventEmitter(), stderr: new EventEmitter(), kill: vi.fn() });
+    spawn.mockReturnValue(child);
+    const reply = new ClaudeCLIAdapter().generate('system', [{ role: 'user', content: 'hi' }], {});
+    const failed = expect(reply).rejects.toThrow(/^Claude CLI exited with code 1$/);
+    child.stdout.emit('data', 'private completion with pasted credentials');
+    child.stderr.emit('data', 'private tool diagnostics');
     child.emit('close', 1);
     await failed;
   });

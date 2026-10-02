@@ -69,13 +69,27 @@ describe('applying what was found', () => {
     expect(out.lessons[1].resources).toEqual([]);
   });
 
+  it('removes verified-dead builder URLs even when searches return few or no replacements', () => {
+    const curriculum = { lessons: [{ lesson: 1, resources: ['https://dead.example/a', 'https://live.example/a', 'https://unknown.example/a'] }, { lesson: 2, resources: ['https://dead.example/a'] }] };
+    const out = withResources(curriculum, found, { deadUrls: new Set(['https://dead.example/a']) });
+    expect(out.lessons[0].resources).toEqual(['https://a.example/1', 'https://a.example/2', 'https://live.example/a', 'https://unknown.example/a']);
+    expect(out.lessons[1].resources).toEqual([]);
+  });
+
   it('writes a markdown section with the hook, only for lessons that have resources', () => {
     const md = resourcesSection([...found, { lesson: 2, resources: [] }], lessons);
     expect(md).toContain('### Lesson 1: One');
-    expect(md).toContain('- ▶ [T https://a.example/1](https://a.example/1) — because');
+    expect(md).toContain('- ▶ [T](https://a.example/1) — because');
     expect(md).not.toContain('Lesson 2');
     expect(resourcesSection([], lessons)).toBe('');
     expect(resourcesSection([{ lesson: 1, resources: [R('https://a.example/x_(y)')] }], lessons)).toContain('(https://a.example/x_%28y%29)');
+  });
+
+  it('renders metadata as plain prose without adding unchecked links', () => {
+    const md = resourcesSection([{ lesson: 1, resources: [{ url: 'https://a.example/checked', title: '[Extra](https://dead.example/title) <https://dead.example/auto>', why: 'See https://dead.example/why or [click](javascript:alert)\n- injected row' }] }], [{ lesson: 1, title: 'Title https://dead.example/heading' }]);
+    expect(md.match(/https?:\/\/[^\s)]+/g)).toEqual(['https://a.example/checked']);
+    expect(md).not.toContain('](javascript:');
+    expect(md).not.toContain('\n- injected row');
   });
 });
 

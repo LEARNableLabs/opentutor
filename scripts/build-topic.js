@@ -71,8 +71,10 @@ try {
   const sources = Object.fromEntries(Object.entries(research).map(([k, v]) => [k, Array.isArray(v) ? v.length : Boolean(v)]));
   note('research', sources);
   fs.writeFileSync(path.join(logDir, 'research.json'), JSON.stringify(research, null, 1));
+  const deadUrls = new Set();
   const verifying = async (urls) => {
     const out = await verifyUrls(urls);
+    for (const result of out) if (!result.ok) deadUrls.add(result.url);
     note('verifyUrls', { checked: out.length, dead: out.filter((r) => !r.ok).map((r) => r.url) });
     return out;
   };
@@ -89,7 +91,7 @@ try {
   // Resources by web search, not from the model's memory; every URL it brings back is checked (#334).
   const built = path.join(root, 'skills', 'tutor', 'domains', slug);
   const found = await findResources({ adapter, topic, level, lessons: result.curriculum.lessons, onNote: note });
-  const curriculum = withResources(result.curriculum, found);
+  const curriculum = withResources(result.curriculum, found, { deadUrls });
   fs.writeFileSync(path.join(built, 'curriculum.json'), `${JSON.stringify(curriculum, null, 2)}\n`);
   fs.appendFileSync(path.join(built, 'resources.md'), resourcesSection(found, curriculum.lessons));
   fs.writeFileSync(path.join(logDir, 'found-resources.json'), JSON.stringify(found, null, 1));
