@@ -67,6 +67,51 @@ async function runCheck() {
 
 const isDead = (cache, url) => cache[url]?.status === 'dead';
 
+/** Remove dead URL array entries while preserving the curriculum's existing JSON formatting. */
+export function removeDeadJsonLinks(text, cache) {
+  JSON.parse(text); // only process valid JSON
+  const tokens = [...text.matchAll(/"(?:\\.|[^"\\])*"|[{}\[\],:]|[^{}\[\],:\s]+/g)];
+  const edits = [];
+  let index = 0;
+  const read = () => {
+    const token = tokens[index++];
+    const start = token.index;
+    if (token[0] === '{') {
+      while (tokens[index][0] !== '}') {
+        index += 2; // property name and colon
+        read();
+        if (tokens[index][0] === ',') index++;
+      }
+      const end = tokens[index++].index + 1;
+      return { start, end };
+    }
+    if (token[0] === '[') {
+      const children = [];
+      while (tokens[index][0] !== ']') {
+        children.push(read());
+        if (tokens[index][0] === ',') index++;
+      }
+      const end = tokens[index++].index + 1;
+      const dead = children.map((n) => typeof n.value === 'string' && /^https?:\/\//.test(n.value) && isDead(cache, n.value));
+      for (let i = 0; i < children.length; i++) {
+        if (!dead[i]) continue;
+        const first = i;
+        while (dead[i + 1]) i++;
+        // Use the following comma for a leading/middle run, the preceding comma for a trailing
+        // run, and empty the brackets when every element is removed. Consecutive removals are one edit.
+        if (first === 0 && i === children.length - 1) edits.push([start + 1, end - 1]);
+        else if (i < children.length - 1) edits.push([children[first].start, children[i + 1].start]);
+        else edits.push([children[first - 1].end, children[i].end]);
+      }
+      return { start, end };
+    }
+    return { start, end: start + token[0].length, value: token[0].startsWith('"') ? JSON.parse(token[0]) : undefined };
+  };
+  read();
+  for (const [start, end] of edits.sort((a, b) => b[0] - a[0])) text = text.slice(0, start) + text.slice(end);
+  return text;
+}
+
 function runApply() {
   const cache = loadCache();
   const removed = {};
@@ -76,12 +121,15 @@ function runApply() {
     let out;
     if (file.endsWith('.json')) {
       // Dead URLs leave every string array in the curriculum (a lesson's resources), nothing else.
-      const strip = (v) => Array.isArray(v) ? v.filter((x) => !(typeof x === 'string' && /^https?:\/\//.test(x) && isDead(cache, x))).map(strip)
-        : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, strip(x)])) : v;
-      out = JSON.stringify(strip(JSON.parse(text)), null, text.includes('\n  ') ? 2 : undefined) + (text.endsWith('\n') ? '\n' : '');
+      out = removeDeadJsonLinks(text, cache);
     } else {
-      // A markdown line that carries a dead URL goes whole; a dead link inside prose is left for a person.
-      out = text.split('\n').filter((line) => !(/^\s*[-*|\d]/.test(line) && extractUrls(line).some((u) => isDead(cache, u)))).join('\n');
+      // Remove a resource row only when all its links are dead. Prose and rows with a surviving
+      // link stay for a person, so an unknown/live resource cannot be collateral damage.
+      out = text.split('\n').filter((line) => {
+        const urls = extractUrls(line);
+        return !(/^\s*[-*|\d]/.test(line) && urls.length && urls.every((u) => isDead(cache, u)));
+      }).join('\n');
+      if (out !== text) out = out.replace(/\n+$/, '\n');
     }
     if (out !== text) { fs.writeFileSync(file, out); removed[slug] = (removed[slug] || 0) + 1; }
   }
