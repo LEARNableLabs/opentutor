@@ -216,8 +216,7 @@
       "difficulty": 2,
       "type": "resource-drop",
       "resources": [
-        "http://www.goodearthgraphics.com/virtual_cave/vcpearl.html",
-        "https://www.youtube.com/watch?v=cave-pearls-example"
+        "http://www.goodearthgraphics.com/virtual_cave/vcpearl.html"
       ],
       "status": "pending"
     },
@@ -267,8 +266,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://caves.org/section/vertical/index.shtml",
-        "https://www.youtube.com/watch?v=SRT-basics-example"
+        "https://caves.org/section/vertical/index.shtml"
       ],
       "status": "pending"
     },
@@ -293,8 +291,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml",
-        "https://www.youtube.com/watch?v=3D-cave-scanning-example"
+        "https://caves.org/pub/journal/Journal_of_Cave_and_Karst_Studies.shtml"
       ],
       "status": "pending"
     },

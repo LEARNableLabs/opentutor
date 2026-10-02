@@ -18,9 +18,12 @@ export function registerLessonConcepts(topicSlug, concepts) {
   updateProgress((p) => { registerConcepts(records(p), topicSlug, concepts); });
 }
 
-/** Record a review result ('easy' | 'hard' | 'wrong') and update the schedule. */
-export function recordReview(topicSlug, concept, quality) {
-  updateProgress((p) => { recordReviewResult(records(p), topicSlug, concept, quality); });
+/** Record a review result and consume the quiz poll or flashcard in the same write (#294). */
+export function recordReview(topicSlug, concept, quality, cardId) {
+  updateProgress((p) => {
+    if (cardId) p.review_cards = (p.review_cards || []).filter((c) => c.id !== cardId);
+    recordReviewResult(records(p), topicSlug, concept, quality);
+  });
 }
 
 /** Concepts due for review today, optionally for one topic. */

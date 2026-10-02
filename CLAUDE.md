@@ -14,6 +14,7 @@ opentutor/
 │   │   ├── store.js                  # TutorStore — SQLite-backed state (local dev)
 │   │   ├── supabase-store.js         # SupabaseStore — Postgres-backed state (see issue #94)
 │   │   ├── progress.js               # Lesson completion: overlay on read, never written to content
+│   │   ├── progress-stats.js         # Streak and each topic's numbers: GET /api/progress on web and Vercel, the bot's streak (#292)
 │   │   ├── db.js                     # SQLite schema and migrations
 │   │   ├── pipeline.js               # CurriculumPipeline — Builder/Critic loop (max 3 iterations)
 │   │   ├── research.js               # 8-source research; the pipeline falls back to it when a caller passes none
@@ -47,6 +48,7 @@ opentutor/
 │   ├── setup.js                      # Interactive setup CLI (no flags — prompts for everything)
 │   ├── generate-teacher-md.js        # Backfills teacher.md across domains
 │   ├── backfill-topic-levels.js      # Rates each shipped topic beginner/intermediate/advanced (#251); one cheap model call per topic
+│   ├── check-resource-links.js       # Removes lesson resources whose shape can't be real (invented YouTube ids, placeholders) from the shipped curricula (#293)
 │   ├── bot/                          # Telegram bot adapter
 │   │   ├── index.js                  # Entry point (npm run bot)
 │   │   ├── claude.js                 # LLM wrapper — the same backend factories as the web (#98)

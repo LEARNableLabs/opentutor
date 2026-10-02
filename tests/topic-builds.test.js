@@ -89,6 +89,13 @@ it('bounds slow research independently and still produces starters',async()=>{
   const result=await generateQuickStart({adapter:model,skills:new Map(),topic:'Knots',slug:'knots',researchTimeout:5,research:()=>new Promise(()=>{}),wikipedia:()=>new Promise(()=>{})});
   expect(result.curriculum.lessons).toHaveLength(5);expect(model.generate).toHaveBeenCalledOnce();
 });
+it('drops starter lesson resources whose shape cannot be real (#293)',async()=>{
+  const real='https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/';
+  const lessons=starter().lessons.map((l)=>({...l,resources:['https://www.youtube.com/watch?v=knot-basics-intro',real,'https://example.com/knots']}));
+  const model={generate:async()=>({text:JSON.stringify({taster:'Intro',roadmap:'Plan',quickCurriculum:lessons})})};
+  const result=await generateQuickStart({adapter:model,skills:new Map(),topic:'Knots',slug:'knots',research:async()=>({}),wikipedia:async()=>null});
+  expect(result.curriculum.lessons.map((l)=>l.resources)).toEqual(Array(5).fill([real]));
+});
 it.each([null,{}, {topic:'!!!'}])('rejects invalid payload %j',async(payload)=>{
   await expect(prepareTopicBuild(state,payload)).rejects.toThrow(/topic name|Invalid topic slug/);
 });

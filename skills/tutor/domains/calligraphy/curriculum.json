@@ -52,7 +52,6 @@
       "difficulty": 1,
       "type": "teach-back",
       "resources": [
-        "https://www.youtube.com/watch?v=videoid",
         "https://www.calligraphy.org/resources/ergonomics"
       ],
       "status": "pending"

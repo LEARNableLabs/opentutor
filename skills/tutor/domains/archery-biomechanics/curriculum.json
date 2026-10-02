@@ -29,8 +29,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.worldarchery.sport/news/177425/biomechanics-basics-understanding-archery-form",
-        "https://www.youtube.com/watch?v=NUSensei-kinematic-chains"
+        "https://www.worldarchery.sport/news/177425/biomechanics-basics-understanding-archery-form"
       ],
       "status": "pending"
     },
@@ -63,8 +62,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://journals.lww.com/nsca-scj/archery-muscle-activation",
-        "https://www.youtube.com/watch?v=JakeKaminski-back-tension"
+        "https://journals.lww.com/nsca-scj/archery-muscle-activation"
       ],
       "status": "pending"
     },
@@ -80,8 +78,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://link.springer.com/article/10.1007/s12283-021-balance-archery",
-        "https://www.youtube.com/watch?v=InsideTheArcher-balance"
+        "https://link.springer.com/article/10.1007/s12283-021-balance-archery"
       ],
       "status": "pending"
     },
@@ -97,8 +94,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.archerylibrary.com/books/total-archery-kisik-lee",
-        "https://www.youtube.com/watch?v=NUSensei-draw-curves"
+        "https://www.archerylibrary.com/books/total-archery-kisik-lee"
       ],
       "status": "pending"
     },
@@ -114,8 +110,7 @@
       "difficulty": 1,
       "type": "review",
       "resources": [
-        "https://usarchery.org/biomechanics-fundamentals",
-        "https://www.youtube.com/watch?v=NUSensei-form-basics"
+        "https://usarchery.org/biomechanics-fundamentals"
       ],
       "status": "pending"
     },
@@ -131,7 +126,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=SmartEveryday-archers-paradox",
         "https://www.lancasterarchery.com/blog/understanding-archers-paradox"
       ],
       "status": "pending"
@@ -148,8 +142,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://worldarchery.sport/news/finger-release-technique",
-        "https://www.youtube.com/watch?v=JakeKaminski-release-analysis"
+        "https://worldarchery.sport/news/finger-release-technique"
       ],
       "status": "pending"
     },
@@ -165,8 +158,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://usarchery.org/nts-anchor-point-guide",
-        "https://www.youtube.com/watch?v=NUSensei-anchor-consistency"
+        "https://usarchery.org/nts-anchor-point-guide"
       ],
       "status": "pending"
     },
@@ -182,8 +174,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.researchgate.net/publication/bow-energy-efficiency-comparison",
-        "https://www.youtube.com/watch?v=NUSensei-recurve-vs-longbow"
+        "https://www.researchgate.net/publication/bow-energy-efficiency-comparison"
       ],
       "status": "pending"
     },
@@ -199,7 +190,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=InsideTheArcher-form-check",
         "https://usarchery.org/form-analysis-checklist"
       ],
       "status": "pending"
@@ -216,8 +206,7 @@
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.nockon.tv/compound-bow-letoff-explained",
-        "https://www.youtube.com/watch?v=JohnDudley-letoff-biomechanics"
+        "https://www.nockon.tv/compound-bow-letoff-explained"
       ],
       "status": "pending"
     },
@@ -233,8 +222,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.archerytalk.com/threads/cam-system-biomechanics",
-        "https://www.youtube.com/watch?v=InsideTheArcher-cam-comparison"
+        "https://www.archerytalk.com/threads/cam-system-biomechanics"
       ],
       "status": "pending"
     },
@@ -250,8 +238,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.nockon.tv/release-aid-biomechanics",
-        "https://www.youtube.com/watch?v=JohnDudley-release-types"
+        "https://www.nockon.tv/release-aid-biomechanics"
       ],
       "status": "pending"
     },
@@ -267,8 +254,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.archerytalk.com/wall-contact-techniques",
-        "https://www.youtube.com/watch?v=InsideTheArcher-wall-timing"
+        "https://www.archerytalk.com/wall-contact-techniques"
       ],
       "status": "pending"
     },
@@ -284,8 +270,7 @@
       "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://www.lancasterarchery.com/blog/understanding-bow-torque",
-        "https://www.youtube.com/watch?v=JohnDudley-torque-analysis"
+        "https://www.lancasterarchery.com/blog/understanding-bow-torque"
       ],
       "status": "pending"
     },
@@ -301,7 +286,6 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://www.youtube.com/watch?v=NUSensei-compound-vs-recurve",
         "https://www.lancasterarchery.com/blog/bow-comparison"
       ],
       "status": "pending"
@@ -318,8 +302,7 @@
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://journals.humankinetics.com/view/motor-learning-archery",
-        "https://www.youtube.com/watch?v=JakeKaminski-shot-sequence"
+        "https://journals.humankinetics.com/view/motor-learning-archery"
       ],
       "status": "pending"
     },
@@ -352,7 +335,6 @@
       "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://www.youtube.com/watch?v=NUSensei-aiming-methods",
         "https://worldarchery.sport/aiming-biomechanics-study"
       ],
       "status": "pending"
@@ -369,8 +351,7 @@
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://journals.lww.com/mental-practice-archery",
-        "https://www.youtube.com/watch?v=InsideTheArcher-mental-game"
+        "https://journals.lww.com/mental-practice-archery"
       ],
       "status": "pending"
     },
@@ -386,8 +367,7 @@
       "difficulty": 2,
       "type": "review",
       "resources": [
-        "https://usarchery.org/shot-sequence-design",
-        "https://www.youtube.com/watch?v=JakeKaminski-personalized-form"
+        "https://usarchery.org/shot-sequence-design"
       ],
       "status": "pending"
     },
@@ -420,8 +400,7 @@
       "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7654321",
-        "https://www.youtube.com/watch?v=InsideTheArcher-injury-prevention"
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7654321"
       ],
       "status": "pending"
     },
@@ -437,8 +416,7 @@
       "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.lancasterarchery.com/blog/equipment-fitting-guide",
-        "https://www.youtube.com/watch?v=JohnDudley-bow-fitting"
+        "https://www.lancasterarchery.com/blog/equipment-fitting-guide"
       ],
       "status": "pending"
     },
@@ -454,7 +432,6 @@
       "difficulty": 4,
       "type": "resource-drop",
       "resources": [
-        "https://www.youtube.com/watch?v=JakeKaminski-high-speed-analysis",
         "https://apps.apple.com/us/app/onform-video-analysis"
       ],
       "status": "pending"
@@ -471,8 +448,7 @@
       "difficulty": 3,
       "type": "teach-back",
       "resources": [
-        "https://usarchery.org/self-coaching-guide",
-        "https://www.youtube.com/watch?v=InsideTheArcher-self-analysis"
+        "https://usarchery.org/self-coaching-guide"
       ],
       "status": "pending"
     },
