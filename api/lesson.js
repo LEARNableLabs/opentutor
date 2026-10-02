@@ -21,6 +21,7 @@ import { suggestedAnswers, settleOptions } from '../lib/core/answer-options.js';
 import { parseDirectives, parseRetested, reviewLesson, namesConcept } from '../lib/core/deliberate-practice.js';
 import { parseAssessment, assessmentFilter, stripGrades } from '../lib/core/assessment.js';
 import { parseFirstJson } from '../lib/core/json.js';
+import { dueConcepts } from '../lib/core/spaced-repetition.js';
 
 const STEPS = ['retrieval', 'diagnostic', 'followUp', 'application'];
 // Review lessons in a row before the next lesson goes ahead (#149), whichever concepts they
@@ -134,6 +135,9 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
     // a late turn that wrote the record back) is cleared, so the student is never held on it (#228).
     const completion = `lesson_done:${active.id || `${topicSlug}:${active.lessonDay}:${active.isReview ? 'review' : 'lesson'}`}`;
     if ((await state.readKV(completion)) != null) {
+      // Another request may still be saving this review. Only its owner can clear
+      // the record or release a failed claim; a concurrent answer must leave it alone.
+      if (active.isReview) return { status: 409, body: STALE };
       const now = await state.readKV(kvKey);
       const current = typeof now === 'string' ? JSON.parse(now) : now;
       if (current?.id === active.id && current?.plan) {
@@ -203,6 +207,12 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
         lesson: { ...active.lesson, lesson: day },
         session: active,
       }), FAILED, 'completeLesson');
+      if (active.isReview && saved === FAILED) {
+        // The stored record still holds the last unanswered step. Release our
+        // claim so it can be retried after the save recovers, without losing the review.
+        await state.deleteKV(completion);
+        return { status: 503, body: { error: 'This review could not be saved. Please try again.' } };
+      }
       // A finished review leaves its count behind for the next start; a lesson leaves nothing.
       if (active.isReview) await state.writeKV(kvKey, JSON.stringify({ reviews: active.reviews }));
       else await state.deleteKV(kvKey);
@@ -284,39 +294,51 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
   // belongs to the lesson it holds back, so finishing that lesson starts a new one, and it is
   // saved with its review in one write: a failed write leaves neither, and two overlapping
   // starts write the same review and count (a review is deterministic and plans nothing).
+  // A review lesson on one concept: it plans nothing (no model call) and is not a completion.
+  const startReview = async (concept, extra, noteText) => {
+    const { plan, steps } = reviewLesson(concept);
+    const review = {
+      id: randomUUID(),
+      topicSlug,
+      lessonDay,
+      lesson: { day: lessonDay, title: `Review: ${concept}`, module: lesson.module, concepts: [concept], review: true },
+      plan,
+      steps,
+      step: 0,
+      // The concept comes from a curriculum, which a model may have written: no resources, only the allowlist.
+      reply: keepTrustedLinks(withGoal(plan, `Explain **${concept}** in your own words: what is it, and why does it matter?`)),
+      history: [],
+      assessments: [],
+      isReview: true,
+      reviewConcept: concept,
+      course,
+      ...extra,
+    };
+    await state.writeKV(kvKey, JSON.stringify(review));
+    return {
+      status: 200,
+      body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, lessonId: review.id, note: noteText },
+    };
+  };
+
   const block = directives.find((d) => d.type === 'BLOCK');
   let note;
   if (block) {
     const held = record?.reviews;
     const reviews = held?.day === lessonDay ? held.count : 0;
     if (reviews < MAX_REVIEWS) {
-      const { plan, steps } = reviewLesson(block.target);
-      const review = {
-        id: randomUUID(),
-        topicSlug,
-        lessonDay,
-        lesson: { day: lessonDay, title: `Review: ${block.target}`, module: lesson.module, concepts: [block.target], review: true },
-        plan,
-        steps,
-        step: 0,
-        // The concept comes from a curriculum, which a model may have written: no resources, only the allowlist.
-        reply: keepTrustedLinks(withGoal(plan, `Explain **${block.target}** in your own words: what is it, and why does it matter?`)),
-        history: [],
-        assessments: [],
-        isReview: true,
-        reviewConcept: block.target,
-        course,
-        reviews: { concept: block.target, day: lessonDay, count: reviews + 1 },
-      };
-      await state.writeKV(kvKey, JSON.stringify(review));
-      return {
-        status: 200,
-        body: { reply: review.reply, step: 0, totalSteps: steps.length, done: false, lesson: review.lesson, lessonId: review.id, note: `Let's revisit ${block.target} before moving on.` },
-      };
+      return startReview(block.target, { reviews: { concept: block.target, day: lessonDay, count: reviews + 1 } }, `Let's revisit ${block.target} before moving on.`);
     }
     note = `Let's move on for now. We'll keep coming back to ${block.target}.`;
   }
-  if (allDone) return { status: 200, body: { done: true, message: 'All lessons completed!' } };
+  if (allDone) {
+    // A finished course still brings back a concept that has fallen due (#327): a review, which settles it
+    // and moves its date on, so the next start is not another one.
+    const progress = await state.readProgress();
+    const overdue = dueConcepts(progress?.spaced_repetition, { topicSlug, limit: 1 })[0];
+    if (overdue) return startReview(overdue.concept, { reviews: record?.reviews }, `Time to revisit ${overdue.concept}.`);
+    return { status: 200, body: { done: true, message: 'All lessons completed!' } };
+  }
 
   const learningMd = (await safely(() => state.readDomainFile(topicSlug, 'learning.md'), '')) || '';
   const user = await safely(() => state.readUser(), '');
@@ -356,7 +378,11 @@ export async function lessonTurn({ state, getAdapter, skills }, { topicSlug, ans
 
   // The planner is asked to open on this retest, but its plan can leave it out,
   // and the fallback above has none. Same order as the planner's instruction.
-  const retest = directives.find((d) => d.type === 'REVISIT') || directives.find((d) => d.type === 'BLOCK');
+  // With neither, the most overdue concept of the spaced-repetition schedule is retested (#327).
+  const progress = await safely(() => state.readProgress(), null, 'read progress');
+  const due = dueConcepts(progress?.spaced_repetition, { topicSlug, limit: 1, exclude: lesson.concepts })[0];
+  const retest = directives.find((d) => d.type === 'REVISIT') || directives.find((d) => d.type === 'BLOCK')
+    || (due && { target: due.concept });
   const hasRetrieval = typeof plan.retrieval === 'string' && plan.retrieval.trim();
   // The planner's own question counts as the retest only when it names the concept as a whole
   // ("asset" is not "set", "NoSQL" is not "SQL"); otherwise the lesson asks ours (#227), so a right
