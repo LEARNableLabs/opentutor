@@ -23,6 +23,20 @@ describe('findResources', () => {
     expect(await findResources({ adapter: reply('sorry, no json'), topic: 'T', level: 'x', lessons, isReal: async () => true, onNote: (k) => notes.push(k) })).toEqual([]);
     const failing = { generate: async () => { throw new Error('boom'); } };
     expect(await findResources({ adapter: failing, topic: 'T', level: 'x', lessons, onNote: (k) => notes.push(k) })).toEqual([]);
+    expect(notes).toEqual(['resource-search-failed', 'resource-search-failed']); // one for each way it can fail
+  });
+});
+
+describe('a reply that is not what was asked for', () => {
+  it('ignores lessons it was not asked about and malformed entries', async () => {
+    const adapter = reply(JSON.stringify({ lessons: [{ lesson: 99, resources: [R('https://a.example/stray')] }, { lesson: 1, resources: 'nope' }, null, { lesson: 2, resources: [R('https://a.example/ok')] }] }));
+    const found = await findResources({ adapter, topic: 'T', level: 'x', lessons, isReal: async () => true });
+    expect(found).toEqual([{ lesson: 2, resources: [R('https://a.example/ok')] }]);
+  });
+
+  it('says so when a reply holds no lessons at all', async () => {
+    const notes = [];
+    await findResources({ adapter: reply('{"hello":1}'), topic: 'T', level: 'x', lessons, isReal: async () => true, onNote: (k) => notes.push(k) });
     expect(notes).toEqual(['resource-search-failed']);
   });
 });
@@ -42,6 +56,7 @@ describe('applying what was found', () => {
     expect(md).toContain('- ▶ [T https://a.example/1](https://a.example/1) — because');
     expect(md).not.toContain('Lesson 2');
     expect(resourcesSection([], lessons)).toBe('');
+    expect(resourcesSection([{ lesson: 1, resources: [R('https://a.example/x_(y)')] }], lessons)).toContain('(https://a.example/x_%28y%29)');
   });
 });
 

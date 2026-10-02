@@ -14,7 +14,8 @@ describe('verify-links', () => {
   });
 
   it('routes DOIs to Crossref and arXiv to its API', () => {
-    expect(plan('https://doi.org/10.1000/xyz').url).toBe('https://api.crossref.org/works/10.1000/xyz');
+    // The handle system, not Crossref: a Zenodo or arXiv DOI is DataCite's and Crossref answers 404 for it.
+    expect(plan('https://doi.org/10.5281/zenodo.1234').url).toBe('https://doi.org/api/handles/10.5281/zenodo.1234');
     expect(plan('https://arxiv.org/pdf/1706.03762.pdf').url).toContain('id_list=1706.03762');
   });
 

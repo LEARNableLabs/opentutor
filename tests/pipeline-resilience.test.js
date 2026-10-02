@@ -1,5 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
-import { CurriculumPipeline, extractUrls } from '../lib/core/pipeline.js';
+import { CurriculumPipeline } from '../lib/core/pipeline.js';
+import { extractUrls } from '../lib/core/link-check.js';
+import { DOMAIN_FILES_FORMAT } from '../lib/core/prompts.js';
 
 // A rebuild of behavioral-economics shipped the output format's own text as resources.md and
 // teacher.md (a 0.5 s reply that echoed the schema), and sent a valid DOI to the Critic as dead.
@@ -23,7 +25,7 @@ function make({ domainReplies, verifyUrls }) {
 }
 
 describe('domain files', () => {
-  const echo = JSON.stringify({ resources: 'markdown — curated books, papers, videos, tools. Only real URLs.', teacher: 'markdown — DOMAIN-ONLY teaching config. What\'s intrinsic to the subject, NOT the student.' });
+  const echo = JSON.stringify(DOMAIN_FILES_FORMAT);
   const good = JSON.stringify({ resources: RESOURCES, teacher: TEACHER });
 
   it('asks again when the reply only repeats the output format, and keeps the real answer', async () => {
@@ -34,14 +36,38 @@ describe('domain files', () => {
     expect(adapter.generate.mock.calls.filter(([s]) => s.includes('"teacher": "markdown'))).toHaveLength(2);
   });
 
-  it('writes no placeholder when the retry echoes too', async () => {
-    const error = vi.spyOn(console, 'error').mockImplementation(() => {});
-    const { pipeline, written } = make({ domainReplies: [echo, echo] });
+  it('tells the model what was wrong on the retry', async () => {
+    const { pipeline, adapter } = make({ domainReplies: [echo, good] });
     await pipeline._build({ topic: 'T', slug: 't', studentLevel: 'beginner', researchContext: '', plan: 'p' });
+    const asks = adapter.generate.mock.calls.filter(([s]) => s.includes('"teacher": "markdown')).map(([, m]) => m[0].content);
+    expect(asks[1]).toMatch(/left resources and teacher empty or repeated the format's description/);
+  });
+
+  it('fails the build, writing no placeholder, when the retry echoes too', async () => {
+    const { pipeline, written } = make({ domainReplies: [echo, echo] });
+    await expect(pipeline._build({ topic: 'T', slug: 't', studentLevel: 'beginner', researchContext: '', plan: 'p' }))
+      .rejects.toThrow('no valid resources or teacher config after a retry');
     expect(written['resources.md']).toBeUndefined();
     expect(written['teacher.md']).toBeUndefined();
-    expect(error).toHaveBeenCalledWith(expect.stringContaining('no valid resources or teacher config'));
-    error.mockRestore();
+  });
+
+  it('fails the same way when the retry itself errors', async () => {
+    const { pipeline, adapter } = make({ domainReplies: [echo] });
+    const real = adapter.generate.getMockImplementation();
+    let domainCalls = 0;
+    adapter.generate.mockImplementation(async (system, ...rest) => {
+      if (system.includes('"teacher": "markdown') && ++domainCalls === 2) throw new Error('timed out');
+      return real(system, ...rest);
+    });
+    await expect(pipeline._build({ topic: 'T', slug: 't', studentLevel: 'beginner', researchContext: '', plan: 'p' }))
+      .rejects.toThrow('after a retry');
+  });
+
+  it('keeps a real answer that repeats text from the research it was given', async () => {
+    const copied = JSON.stringify({ resources: 'https://doi.org/10.5281/zenodo.1234', teacher: TEACHER });
+    const { pipeline, written } = make({ domainReplies: [copied] });
+    await pipeline._build({ topic: 'T', slug: 't', studentLevel: 'beginner', researchContext: 'https://doi.org/10.5281/zenodo.1234', plan: 'p' });
+    expect(written['resources.md']).toBe('https://doi.org/10.5281/zenodo.1234');
   });
 });
 
@@ -49,6 +75,14 @@ describe('URL extraction', () => {
   it('keeps the ")" inside a DOI and drops the one that closes a markdown link', () => {
     expect(extractUrls('see [paper](https://doi.org/10.1016/0167-2681(80)90001-1). Also https://example.org/a, and (https://example.org/b)'))
       .toEqual(['https://doi.org/10.1016/0167-2681(80)90001-1', 'https://example.org/a', 'https://example.org/b']);
+  });
+});
+
+describe('URL extraction details', () => {
+  it('drops sentence punctuation, decodes JSON slashes, and walks every string of a value', () => {
+    expect(extractUrls('Read https://example.org/paper! Or "https://example.org/b?".')).toEqual(['https://example.org/paper', 'https://example.org/b']);
+    expect(extractUrls('{"url":"https:\\/\\/example.org\\/x"}')).toEqual(['https://example.org/x']);
+    expect(extractUrls({ lessons: [{ resources: ['https://a.example/1'], note: 'see (https://b.example/2)' }] })).toEqual(['https://a.example/1', 'https://b.example/2']);
   });
 });
 
@@ -60,5 +94,15 @@ describe('URL verification across rounds', () => {
     expect(await pipeline._deadUrls(parsed, verifyUrls)).toEqual(['https://example.org/dead', 'https://example.org/lesson-dead']);
     expect(await pipeline._deadUrls(parsed, verifyUrls)).toEqual(['https://example.org/dead', 'https://example.org/lesson-dead']);
     expect(verifyUrls).toHaveBeenCalledTimes(1);
+  });
+
+  it('forgets the verdicts when the pipeline runs another topic', async () => {
+    const verifyUrls = vi.fn(async (urls) => urls.map((url) => ({ url, ok: true })));
+    const { pipeline } = make({ domainReplies: [] });
+    const parsed = { resources: 'https://example.org/paper', curriculum: { lessons: [] } };
+    await pipeline._deadUrls(parsed, verifyUrls);
+    pipeline._urlVerdicts = undefined; // what run() does first
+    await pipeline.run('T', 't', 'beginner', 'research', { verifyUrls }).catch(() => {});
+    expect(pipeline._urlVerdicts).toBeInstanceOf(Map);
   });
 });

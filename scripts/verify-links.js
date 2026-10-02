@@ -16,11 +16,10 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { plan, check } from '../lib/core/link-check.js';
+import { plan, check, extractUrls } from '../lib/core/link-check.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'skills', 'tutor', 'domains');
 const CACHE = process.env.LINK_CACHE || path.join(os.tmpdir(), 'opentutor-link-cache.json');
-const URL_RE = /https?:\/\/[^\s)"'<>\\\]]+/g;
 
 function* domainFiles() {
   for (const slug of fs.readdirSync(ROOT)) {
@@ -36,9 +35,9 @@ const loadCache = () => (fs.existsSync(CACHE) ? JSON.parse(fs.readFileSync(CACHE
 async function runCheck() {
   const cache = loadCache();
   const urls = new Set();
-  for (const file of domainFiles()) for (const m of fs.readFileSync(file, 'utf8').matchAll(URL_RE)) urls.add(m[0].replace(/[.,;:]+$/, ''));
+  for (const file of domainFiles()) { const text = fs.readFileSync(file, 'utf8'); for (const u of extractUrls(file.endsWith('.json') ? JSON.parse(text) : text)) urls.add(u); }
   // What was decided stays decided; "unknown" (a timeout, a blocked request) is asked again.
-  const queue = [...urls].filter((u) => !cache[u] || cache[u].status === 'unknown');
+  const queue = [...urls].filter((u) => !cache[u] || cache[u].status === 'unknown').map((url) => ({ url, host: plan(url).host }));
   console.log(`${urls.size} unique URLs, ${queue.length} to check`);
   // At most WORKERS requests at once and 2 per host, with a pause between a host's requests: an
   // audit that opens a connection to every host at once only measures its own timeouts.
@@ -46,14 +45,14 @@ async function runCheck() {
   const busy = new Map();
   let done = 0;
   const next = () => {
-    const i = queue.findIndex((u) => (busy.get(plan(u).host) || 0) < 2);
+    const i = queue.findIndex((u) => (busy.get(u.host) || 0) < 2);
     return i < 0 ? null : queue.splice(i, 1)[0];
   };
   await Promise.all(Array.from({ length: WORKERS }, async () => {
     while (queue.length) {
-      const url = next();
-      if (!url) { await new Promise((r) => setTimeout(r, 50)); continue; }
-      const host = plan(url).host;
+      const item = next();
+      if (!item) { await new Promise((r) => setTimeout(r, 50)); continue; }
+      const { url, host } = item;
       busy.set(host, (busy.get(host) || 0) + 1);
       cache[url] = await check(url);
       await new Promise((r) => setTimeout(r, 250));
@@ -66,7 +65,7 @@ async function runCheck() {
   console.log('result', tally);
 }
 
-const isDead = (cache, url) => cache[url.replace(/[.,;:]+$/, '')]?.status === 'dead';
+const isDead = (cache, url) => cache[url]?.status === 'dead';
 
 function runApply() {
   const cache = loadCache();
@@ -82,7 +81,7 @@ function runApply() {
       out = JSON.stringify(strip(JSON.parse(text)), null, text.includes('\n  ') ? 2 : undefined) + (text.endsWith('\n') ? '\n' : '');
     } else {
       // A markdown line that carries a dead URL goes whole; a dead link inside prose is left for a person.
-      out = text.split('\n').filter((line) => !(/^\s*[-*|\d]/.test(line) && (line.match(URL_RE) || []).some((u) => isDead(cache, u)))).join('\n');
+      out = text.split('\n').filter((line) => !(/^\s*[-*|\d]/.test(line) && extractUrls(line).some((u) => isDead(cache, u)))).join('\n');
     }
     if (out !== text) { fs.writeFileSync(file, out); removed[slug] = (removed[slug] || 0) + 1; }
   }
