@@ -89,12 +89,14 @@ it, and where it falls short.
 The 293 shipped courses live in [`skills/tutor/domains/`](skills/tutor/domains/),
 5 to 40 lessons each; the website lists them all. They are AI-generated and have
 not all been rebuilt or approved by the current pipeline. Their citations and
-resource lists have not been systematically verified; an audit found thousands
-of dead links. A working link alone does not verify the lesson's claims.
+resource lists have not been systematically verified and can contain invented
+or dead links. A working link alone does not establish that it identifies the
+cited work or supports the lesson's claims.
 
 For a new topic, OpenTutor searches public sources (arXiv, Semantic Scholar,
 OpenAlex, Wikipedia, course syllabi, YouTube and GitHub), plans a course, and has a
-second AI pass review it, revising for up to three rounds. Sources can be
+second AI pass review it, with up to three build/review rounds (the initial draft
+and at most two revisions). Sources can be
 unavailable, and a course can remain unapproved after the third round. On the
 website and Telegram, five starter lessons are ready straight away while the
 full course is built. On the hosted site, new topics need your own OpenRouter

@@ -97,8 +97,9 @@ For a newly generated topic, the pipeline queries eight public sources — arXiv
 Semantic Scholar, OpenAlex, Wikipedia, university syllabi, YouTube, GitHub, and
 Wikipedia's concept graph — and passes the available results to the builder.
 Some sources can fail or return no results, so research coverage varies. A
-separate Critic agent reviews the draft, with up to three rounds of revision.
-Reaching that limit can still leave a course unapproved.
+separate Critic agent reviews the draft. The pipeline allows up to three
+build/review rounds: the initial draft and at most two revisions. Reaching that
+limit can still leave a course unapproved.
 
 The 293 shipped courses are an existing AI-generated catalog. They have not all
 been rebuilt or approved by this pipeline, and their resource lists contain
