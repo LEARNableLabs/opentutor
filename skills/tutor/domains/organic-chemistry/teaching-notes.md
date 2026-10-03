@@ -1,126 +1,127 @@
-# Organic Chemistry: Reaction Mechanisms — Teaching Notes
+# Organic Chemistry — Reaction Mechanisms — Teaching Notes
 
 ## Approach
 
-Reaction mechanisms are best taught through **deliberate practice of pattern recognition**. Unlike many other chemistry topics that emphasize memorization, mechanisms require students to develop intuition for electron flow. The intermediate level assumes students have seen basic mechanisms before but need to develop fluency and predictive power. Use a mix of mechanistic analysis (forward direction: given a mechanism, explain why it works) and mechanistic reasoning (reverse direction: given reactants and products, propose the mechanism). Emphasize the "why" behind each arrow — every curved arrow must be justified by electron density, stability, or orbital interactions. Draw mechanisms repeatedly, out loud, with running commentary on each step.
+The student is advanced, roughly an upper-level undergraduate or early graduate student who has already seen most of these reactions as facts to memorise. This course turns them into mechanisms they can **derive**. Each lesson works from orbital or energy-surface logic to a prediction, and then checks that prediction against evidence. Lead with a concrete puzzle (the lesson title), resolve it with one core principle, and finish with one exercise. Everything is drawn in text, so the fixed notation below is part of the curriculum, not a convenience.
 
-At the intermediate level, shift from "here's what happens" to "how do we know this happens?" — introduce evidence from kinetics (rate laws), stereochemistry (inversion/retention), isotope labeling, and intermediate trapping. This bridges descriptive organic chemistry to physical organic chemistry.
+### Time budget
+- A 3–5 minute read plus a 10–20 minute exercise, under 25 minutes in total.
+- An ordinary lesson's exercise is capped at **one mechanism of 3 steps or fewer**.
+- Multi-step synthesis and mechanisms longer than 3 steps belong only in reviews (L7, 13, 20, 26, 34, 42, 49, 55) and the capstone (L56). The capstone may run over two sessions.
+
+### Spaced-repetition carry-over
+Every non-review lesson ends with **one carry-over question taken from at least two modules back**:
+- Modules 1–2 have no module two back, so they draw on prerequisite material instead (stereochemistry, kinetics, pKa from gen chem).
+- Module 3 draws on Module 1. Module 4 draws on Modules 1–2. Later modules follow the same rule.
+- Prefer concepts the DeliberatePractitioner has flagged as shaky.
+
+## Course Text Notation (exercises)
+
+Students answer in plain text. Use this format exactly so answers can be checked deterministically.
+
+- **Atom labels:** element plus index from the numbered structure given in the prompt (C1, O3, Br4). The prompt always supplies a numbered SMILES or labelled structure.
+- **Two-electron arrow:** `source -> sink`.
+  - Sources are `lp(O3)` (lone pair), `pi(C1=C2)` (π bond) or `b(C1-Br4)` (σ bond).
+  - A sink is either an atom (`Br4`, meaning the electrons become a lone pair there) or a new bond written as an atom pair (`C1-O3`).
+  - Example SN2: `lp(O3) -> C1-O3 ; b(C1-Br4) -> Br4`.
+- **One-electron (fishhook) arrow:** `source ~> sink`, with `rad(C1)` as a radical source. Homolysis is written as two fishhooks.
+- **Step line:** `Step n: <arrows> | <species after the step, as SMILES with explicit charges/radicals> | <conditions>`.
+- **Energy diagram:** an ordered string such as `R -> TS1 -> I1 -> TS2 -> P`, with relative ΔG (kcal/mol) or an explicit ranking. Mark the rate-determining TS with `*`.
+- **Pericyclic:** list the cyclic arrows, then the classification, e.g. `[π4s + π2s] thermal: allowed`. State the stereochemical outcome (con/dis, endo/exo, chair/boat).
+- **Organometallic:** annotate every intermediate as `[Pd(II), d8, 16e]`.
+
+### Deterministic checks (apply before judging chemistry)
+1. Net charge is identical across all steps.
+2. Atoms are conserved, including counter-ions and protons.
+3. Every source holds electrons and every sink can accept them. No five-bond carbon, and no second-row atom above an octet.
+4. Conditions are consistent:
+   - Under acidic conditions, no species far more basic than the conjugate base of the acid used (no free HO⁻ or RO⁻ in aqueous acid).
+   - Under strongly basic conditions, no free H⁺ or ROH2⁺.
+5. The step count is within the cap for that lesson.
+6. Stereodescriptors are given wherever the question asks for them.
+
+A failed check is reported as a check failure first. Then discuss the chemistry.
+
+## Gates (do not advance until passed)
+
+1. **G1, after L7: notation and charge balance.** Pass: 3 consecutive mechanisms that pass all deterministic checks. Remediation: one extra notation drill on proton transfers and SN2 only, then re-gate.
+2. **G2, after L13: SN/E decision.** Pass: at least 4 of 5 substrate/conditions pairs classified correctly with justification. Remediation: re-teach the decision via pKa (L3) and carbocation stability (L6), use a decision table, then re-gate with new substrates.
+3. **G3, after L26: carbonyl proton bookkeeping.** Pass: acid- and base-catalysed versions of one acetal or ester mechanism, both passing check 4. Remediation: redo L23 under base conditions and L25 under acid conditions, then re-gate.
+4. **G4, at the start of L38: polyene MOs.** Pass: draw the node patterns of allyl and butadiene and identify the HOMO and LUMO. Remediation: pause the pericyclic module for an extra MO refresher session (Fleming Ch. 1) before L39.
+5. **G5, after L42: Woodward–Hoffmann.** Pass: at least 4 of 5 reactions classified as allowed or forbidden, thermal or photochemical, with stereochemistry. Remediation: return to FMO-only reasoning for each case, then reapply the generalised rule on simpler [4+2] and [2+2] examples.
+6. **G6, after L49: organometallic counting.** Pass: oxidation state, dⁿ and electron count correct at every intermediate of a Suzuki cycle. Remediation: L46-style counting drill on 5 isolated complexes, then re-gate on a Negishi cycle.
+
+## Accuracy Guardrails
+
+- **Mayr equation** (log k at 20 °C = s_N(N + E)):
+  - Validated for nucleophiles reacting with carbocations, Michael acceptors and related π-electrophiles. **Do not** apply it to SN2 at sp3 carbon.
+  - For SN2 at methyl, use Swain–Scott: log(k/k0) = s·n, with methyl bromide as the reference substrate.
+  - The Mayr database URL (https://www.cup.lmu.de/oc/mayr/reaktionsdatenbank2/) could not be checked as live when this curriculum was built. Check it before delivering L10. If it is dead, fall back to `/reaktionsdatenbank/` and use the same URL in L10, L29 and resources.md.
+- **Endo rule:** teach it as contested. Secondary orbital interactions are one account; sterics, electrostatics and distortion/interaction analyses are others. Never present it as a settled law.
+- **HSAB** is a heuristic, not a predictive theory. Use it to describe trends and then check against data.
+- **Cuprate conjugate addition:** the current view involves Cu(III) intermediates (Yoshikai & Nakamura review). Don't draw a simple direct carbanion transfer as the full story.
+- **Vitamin D:**
+  - 7-dehydrocholesterol → previtamin D3 by a **photochemical 6π conrotatory** ring opening.
+  - Previtamin D3 → vitamin D3 by a **thermal antarafacial [1,7]-H shift**.
+- **2-Norbornyl cation:** the nonclassical structure is supported by the 2013 crystal structure (Scholz et al.). Present the historical Brown–Winstein debate as resolved for that ion. Don't generalise it to all cations.
+- **'Forbidden'** means the concerted pathway has a high barrier. Stepwise or photochemical alternatives can still happen.
+- **Radical clocks:** the 5-hexenyl cyclisation has k ≈ 2 × 10⁵ s⁻¹ at 25 °C (Griller & Ingold). Use order-of-magnitude reasoning and don't over-quote digits.
 
 ## Common Misconceptions
 
-1. **"Curved arrows are just notation"** — Students treat arrow-pushing as symbol manipulation rather than electron movement. Correct this by constantly connecting arrows to physical electron density (HOMO-LUMO, partial charges, orbital overlap). Ask: "Where are the electrons before? Where do they go? Why do they move?"
-
-2. **"All mechanisms are two steps"** — Students default to exactly two steps (often SN1-like) even when the reaction is concerted (SN2, E2). Emphasize the distinction between stepwise (with intermediates) and concerted (one transition state) mechanisms.
-
-3. **"The strongest nucleophile is the strongest base"** — Nucleophilicity and basicity are related but not identical. In aprotic solvents, they correlate; in protic solvents, basicity is attenuated by solvation. Use specific examples (iodide is a weak base but strong nucleophile).
-
-4. **"SN2 only happens with primary substrates"** — While primary substrates are fastest, SN2 CAN occur with secondary substrates if the nucleophile is strong and the solvent is aprotic. The mechanism isn't all-or-nothing; it's about relative rates.
-
-5. **"Carbocations rearrange randomly"** — Rearrangements are driven by thermodynamics (moving to a more stable carbocation). Students need to check: would a hydride or alkyl shift create a more stable carbocation? If not, no rearrangement.
-
-6. **"Aromatic substitution breaks aromaticity"** — Students panic about losing aromaticity. Clarify: the intermediate (arenium ion/σ-complex) is NOT aromatic, but re-aromatization by losing H+ is so favorable it drives the reaction forward. The product is aromatic again.
-
-7. **"Enolates attack with oxygen because it's more electronegative"** — Enolates have two resonance contributors (charge on oxygen vs on carbon). While oxygen bears more negative charge, carbon is the better nucleophile (HSAB: carbon is a softer nucleophile, carbonyls are soft electrophiles). Emphasize ambident nucleophiles and regioselectivity.
-
-8. **"Markovnikov's rule is just memorization"** — It's not arbitrary! The rule reflects carbocation stability: the more substituted carbocation forms preferentially. Connect it to hyperconjugation and inductive effects. Students should be able to derive Markovnikov's rule, not just recite it.
-
-9. **"Leaving group leaves first in all mechanisms"** — Only true for SN1/E1. In SN2/E2, bond breaking and bond forming are concerted. Sequence matters! Reinforce the difference between stepwise and concerted.
-
-10. **"Radical mechanisms are just like ionic mechanisms with dots"** — Radicals have different stability orders (resonance > 3° > 2° > 1°, not the same as carbocations), different selectivity (less selective than cations), and follow different rules (entropy favors radical formation). Treat them as a separate paradigm.
+1. **Arrows show atoms moving.** They show electrons. Fix: make the student name the electron source for every arrow (enforced by the notation).
+2. **Transition state = intermediate.** Fix: an intermediate sits in an energy minimum and could in principle be observed. A TS is a saddle point. Ask: 'could you put this in a flask?'
+3. **SN1 gives full racemisation.** Fix: ion pairs shield one face, so partial inversion is typical (L9).
+4. **Nucleophilicity equals basicity.** Fix: compare thiolate and alkoxide in protic solvent. Basicity is a thermodynamic property and nucleophilicity is a kinetic one (L10).
+5. **The most stable conformer gives the major product.** Fix: Curtin–Hammett. When conformers interconvert fast, ΔΔG‡ decides the ratio (L14).
+6. **Every alkene addition goes through a free carbocation.** Fix: bridged ions (L17) and concerted additions (L18–19) give no rearrangement and predictable stereochemistry.
+7. **A bare 'H⁺' floats around in mechanisms.** Fix: name the actual acid and conjugate base at every proton transfer (check 4).
+8. **Enolate selectivity is about which proton is most acidic.** Fix: under kinetic control, the accessibility of the proton and the rate of its removal decide. Under thermodynamic control, the more substituted enolate wins (L27).
+9. **Endo is always favoured because of secondary orbital overlap.** Fix: see the guardrail above, and use counterexamples.
+10. **No KIE means the C–H bond is never broken.** Fix: it means C–H cleavage is not (part of) the rate-determining step. Intramolecular and intermolecular competition measure different things (Simmons & Hartwig).
+11. **Trapping an intermediate proves it lies on the pathway.** Fix: a trap shows the intermediate is accessible. Combine trapping with kinetics or labeling (L37, L53).
+12. **Oxidation state and electron count are the same thing.** Fix: Pd(0)L2 is d10, 14e. Pd(II) square planar is d8, 16e. Count them separately every time (L46).
+13. **High ML top-1 accuracy means the model understands mechanism.** Fix: Clever Hans analyses (Kovács et al.) and the Chuang & Keiser critique of the Doyle yield model show that models can learn dataset artefacts.
 
 ## Level Adjustments
 
-### For Beginner → Intermediate Transition
-- Beginners focus on "what happens" — intermediates need "how do we know?" Add evidence from experiments (stereochemistry, isotopes, kinetics).
-- Introduce competing pathways (SN1 vs SN2 vs E1 vs E2) rather than teaching each in isolation.
-- Use reaction coordinate diagrams to visualize transition states and intermediates.
-- Begin asking "what if we changed X?" to develop intuition for structure-reactivity relationships.
+- Assume fluency with functional groups and named reactions. **Do not** re-teach them; teach *why* they work.
+- Use proper terminology without apology: σ*, antiperiplanar, suprafacial, ρ, dⁿ.
+- Give derivations where they are short: Curtin–Hammett ratio from ΔΔG‡, Hammett plot slope, zero-point-energy origin of the KIE.
+- Cite primary literature in the evidence and real-world lessons. Textbook chapters back the core lessons.
+- Push synthesis across modules in reviews: NGP ↔ bromonium, SNAr ↔ acyl substitution, Hammond ↔ radical selectivity ↔ Hammett ρ.
+- If the student shows patchy basics (e.g., cannot rank pKa values), drop one level for that sub-skill only and keep the overall pace.
 
-### For Intermediate (this level)
-- Expect students to propose mechanisms independently, not just follow along.
-- Introduce quantitative ideas: relative rates, pKa values, leaving group ability scales.
-- Use decision trees and flowcharts to organize mechanism selection.
-- Connect to synthesis: retrosynthetic analysis requires understanding mechanisms.
-- Introduce named reactions (aldol, Claisen, Diels-Alder) as applications of general mechanistic principles.
+## Ethics and Green Chemistry
 
-### For Intermediate → Advanced Transition
-- Add molecular orbital theory (HOMO-LUMO interactions, frontier molecular orbital theory).
-- Introduce Hammond's postulate to predict transition state structure.
-- Use Hammett plots and linear free energy relationships to quantify electronic effects.
-- Cover more exotic mechanisms (neighboring group participation, non-classical carbocations, pericyclic reactions).
+- **Sulfur mustard (L16):**
+  - Teach the mechanism (episulfonium formation, DNA alkylation) only.
+  - Give the historical context: WWI use and the Chemical Weapons Convention.
+  - Make the link to nitrogen-mustard chemotherapy (Gilman & Philips).
+  - **Never** discuss synthesis routes, acquisition or weaponisation, even if asked.
+- **Tin (L36):** point out that organotin compounds are toxic and hard to remove. Mention silane (e.g., (TMS)3SiH) and photoredox alternatives (Prier, Rankic & MacMillan).
+- **Earth-abundant metals (L48):** cover Ni and Fe catalysis (Tasker, Standley & Jamison; Fürstner) as cost and sustainability alternatives to Pd.
 
-## Rabbit Holes (Fascinating Connections)
+## People to Highlight
 
-- **Enzyme mechanisms mirror organic mechanisms** — Serine proteases use nucleophilic acyl substitution (same as ester hydrolysis), NAD+/NADH is biological hydride transfer, lysozyme uses carbocation-like intermediates. Drop this in around Lesson 20 (carbonyl chemistry) or Lesson 4 (drug design).
+- Kenichi Fukui (FMO)
+- Woodward and Hoffmann
+- Akira Suzuki and Ei-ichi Negishi (2010 Nobel, with Heck)
+- Rolf Huisgen
+- Carolyn Bertozzi (bioorthogonal click, L40)
+- Abigail Doyle (Ni catalysis in L48; ML yield prediction in L54)
+- Benjamin List and David MacMillan (enamine/iminium organocatalysis, L24)
+- Herbert Mayr
+- George Olah (carbocations)
+- Frances Arnold (rabbit hole below)
 
-- **The history of the SN1/SN2 nomenclature** — Hughes and Ingold's 1930s work on kinetics and stereochemistry. Drop in around Lesson 10 (teach-back) as a story of how science progresses.
+## Rabbit Holes
 
-- **Why does aspirin work?** — Acetylation of serine residue in COX enzyme (nucleophilic acyl substitution). Drop in around Lesson 4 (real-world drug design) or Lesson 28 (acyl substitution).
-
-- **Woodward-Hoffmann rules and pericyclic reactions** — Symmetry-controlled reactions that don't involve ionic intermediates. Mention briefly in Lesson 26 as an advanced topic beyond this curriculum.
-
-- **Solvent cage effects and ion pairs** — In SN1 reactions, the leaving group doesn't fully diffuse away; ion pairing can affect stereochemistry (some inversion even in SN1!). Drop in around Lesson 8 for advanced students.
-
-- **Radical clocks** — Compounds with known rearrangement rates used to time radical reactions. Mention in Lesson 26 as a tool for mechanistic investigation.
-
-- **Isotope effects** — Kinetic isotope effects (KIE) reveal which bond is breaking in the rate-determining step. Primary KIE for C-H bond breaking in E2 proves it's concerted. Drop in around Lesson 12 or 13 as experimental evidence.
-
-- **Curtin-Hammett principle** — For reactions with rapidly equilibrating intermediates, product distribution depends on the transition states, not the intermediate concentrations. Advanced topic for Lesson 19 (directing effects) or Lesson 25 (rearrangements).
-
-- **Baldwin's rules** — Predict which ring closures are favored (exo-tet, endo-trig, etc.). Drop in if student asks about cyclization reactions.
-
-- **Non-classical carbocations** — 2-norbornyl cation and the controversy around delocalized carbocations. Mention in Lesson 25 as a historical debate in mechanistic chemistry.
-
-## Difficulty Progression Notes
-
-- **Lessons 1-5** (Difficulty 1-2): Foundation-building. Electron flow basics, notation. Should feel accessible and confidence-building.
-
-- **Lessons 6-11** (Difficulty 2-3): First major challenge — distinguishing SN1 from SN2 requires integrating multiple factors (substrate, nucleophile, solvent, leaving group). Expect struggle here. The teach-back (Lesson 10) is designed to consolidate understanding.
-
-- **Lessons 12-17** (Difficulty 2-3): Elimination adds another layer of competition. Decision-making becomes more complex. Review at Lesson 17 is critical before moving to new mechanism families.
-
-- **Lessons 18-24** (Difficulty 3-4): Peak difficulty. Aromatic chemistry introduces new paradigm (arenium ion, directing effects). Carbonyl chemistry is mechanistically rich (addition, substitution, enolates). Enolates (Lesson 22) are the hardest concept — carbon nucleophiles are counterintuitive.
-
-- **Lessons 25-26** (Difficulty 3-4): Advanced mechanisms. Rearrangements require pattern recognition and stability analysis. Radicals are a new electron-counting system. These are "dessert" topics — enrichment for students who mastered the core.
-
-## Engagement Strategies
-
-- **Mechanism bees** — Like spelling bees, but students propose mechanisms at the board. Peer feedback is valuable.
-- **Mechanism prediction games** — Give reactants and conditions; students predict products. Then reveal answer and discuss mechanism.
-- **Retrosynthetic challenges** — Work backward from a target molecule. Requires fluency with mechanisms.
-- **Error analysis** — Show incorrect mechanisms; students identify mistakes. This builds critical thinking.
-- **Molecular model kits** — Especially for SN2 backside attack, E2 anti-periplanar geometry. Tactile learning helps.
-- **Animation tools** — ChemTube3D, YouTube animations, or drawing mechanisms step-by-step on screen.
-- **Real-world connections** — Drug mechanisms (aspirin, beta-lactams), industrial processes (polymerization, petrochemical cracking), biochemistry (citric acid cycle, fatty acid synthesis).
-
-## Pacing Notes
-
-- Lessons 1-5: Can move quickly if students have solid Lewis structure and resonance skills. If not, slow down and reinforce.
-- Lessons 6-11: Substitution mechanisms are the first major conceptual hurdle. Budget extra time for practice and the teach-back.
-- Lesson 11 (review): Critical checkpoint. If students struggle here, pause and add supplementary problems before moving to elimination.
-- Lessons 18-19: Aromatic chemistry is a shift. Take time to establish aromaticity concepts before diving into EAS mechanisms.
-- Lesson 22: Enolates are hard. Consider splitting into two lessons if needed (enolate formation, then enolate reactivity).
-- Lessons 25-26: These can be optional "stretch" topics if time is limited. Prioritize mastery of Lessons 1-24.
-
-## Assessment Ideas
-
-- **Mechanism quizzes** — Give reactants/conditions, ask for mechanism (arrows, intermediates, products).
-- **Concept mapping** — Ask students to create their own concept map linking different mechanisms.
-- **Predict and explain** — Give a novel reaction; students predict products and justify with mechanism.
-- **Compare and contrast** — SN1 vs SN2, E1 vs E2, addition vs substitution, etc.
-- **Error correction** — Provide a flawed mechanism; students find and fix errors.
-- **Synthesis planning** — Multi-step synthesis requiring mechanistic knowledge.
-- **Verbal explanations** — Students explain a mechanism out loud (like teach-back lessons). Reveals depth of understanding.
-
-## Red Flags (Signs a Student is Struggling)
-
-- Curved arrows that don't start from electron-rich sites (lone pairs, π bonds)
-- Arrows pointing at atoms instead of showing electron movement to form/break bonds
-- Proposing intermediates with incorrect formal charges or octets
-- Defaulting to the same mechanism (often SN1) for every reaction
-- Inability to explain WHY a step occurs (just drawing arrows mechanically)
-- Confusing carbocation stability with radical stability
-- Missing rearrangement opportunities when they should occur
-- Violating stereochemical constraints (e.g., SN2 with no inversion)
-
-If you see these, pause and go back to fundamentals: drawing Lewis structures, counting electrons, identifying electron-rich/poor sites.
+- **Frances Arnold's engineered P450s** do carbene transfer (cyclopropanation) that no natural enzyme does (Coelho et al., Science 2013, https://doi.org/10.1126/science.1231434). Drop this in after L47 or L54 as a contrast between enzyme evolution and ML.
+- **Woodward–Hoffmann was born from vitamin B12 synthesis**: an unexpected stereochemical outcome made Woodward ask why. Use it in L41.
+- **Olah's magic acid** made carbocations persistent enough to take NMR spectra (L6).
+- **Lanosterol synthase** controls a cascade that forms four rings and several stereocentres in one enzyme pocket (L20).
+- **Aromatic and cyclic molecules in interstellar clouds** (McCarthy & McGuire, arXiv 2103.09608) are a wild-card link from the research file. Use it after L30.
+- **Baeyer–Villiger, Beckmann and Wittig** are out of scope, but each is a 1,2-shift or [2+2]-like variation on lessons 15 and 40. Offer them if the student breezes through.
+- **Diels–Alderases** are natural enzymes that may catalyse [4+2] cycloadditions. Use as a bonus after L39.
+- **Radiation chemistry of hydrocarbons** (Shkrob et al., arXiv physics/0405014) is radical-cation chemistry beyond the course. Offer it after L36.

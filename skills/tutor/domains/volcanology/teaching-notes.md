@@ -2,112 +2,69 @@
 
 ## Approach
 
-Volcanology is fundamentally a **visual and observational science** that bridges chemistry, physics, and geology. At the intermediate level, emphasize physical intuition and real-world case studies before diving into mathematical models. The subject naturally engages through spectacular imagery and consequential hazards—leverage this! Start each concept with observable phenomena (what you can see, hear, or measure at a volcano), then work backward to the underlying processes. Use modern eruptions extensively (2010 Eyjafjallajökull, 2018 Kilauea, 2021 Cumbre Vieja, 2022 Hunga Tonga) as case studies since students can access real monitoring data, satellite imagery, and news coverage. The topic is inherently interdisciplinary: volcanic gas chemistry connects to atmospheric science, eruption dynamics to fluid mechanics, hazard assessment to social science.
+Volcanology is a process science: every observable, from the shape of a cone to an ash cloud over Europe, is the end of a causal chain that starts with how rock melts. Teach intuition first, then light quantification. Anchor each mechanism in a familiar analogy before introducing order-of-magnitude numbers:
+
+- shaken soda → exsolution
+- honey versus water → viscosity
+- a lid coming off a pressure cooker → decompression
+- salt melting ice → flux melting
+
+Then make the student run the chain forward ('given this magma, what happens?') and backward ('given this deposit, what magma was it?'). The subject is highly visual, so link real footage or images in most lessons.
+
+Use a small cast of recurring case studies and return to each one in several modules:
+
+- **Kīlauea:** effusive basalt and monitoring
+- **Mount St. Helens 1980:** lateral blast, PDCs, a dome and a stratovolcano
+- **Pinatubo 1991:** Plinian eruption, a successful forecast and climate cooling
+- **Nevado del Ruiz 1985:** lahars and a failure of communication
+- **Tambora 1815:** VEI 7 and the Year Without a Summer
+
+The student should finish knowing these five volcanoes in depth rather than fifty superficially.
 
 ## Common Misconceptions
 
-1. **"Lava comes from Earth's molten core"**
-   - **Why it persists**: Early education teaches "Earth has a molten interior" without nuance about where melting actually occurs
-   - **Correction**: Emphasize that the mantle is solid at rest; melting requires special conditions (decompression, volatiles, or heat addition) in the upper mantle or crust, not the core
-
-2. **"All magma of a given composition behaves the same way"**
-   - **Why it persists**: Simplified composition categories (basalt, andesite, rhyolite) suggest homogeneity
-   - **Correction**: Volatile content, temperature, and crystal content matter as much as bulk composition. A degassed rhyolite can flow like thick molasses; a volatile-rich rhyolite explodes catastrophically
-
-3. **"Volcanic ash is soft and fluffy like campfire ash"**
-   - **Why it persists**: The word "ash" evokes familiar combustion products
-   - **Correction**: Volcanic ash is pulverized rock and glass—abrasive, conductive, and capable of destroying jet engines. Show SEM images of sharp angular particles
-
-4. **"Bigger volcano = bigger eruptions"**
-   - **Why it persists**: Intuition that size correlates with power
-   - **Correction**: Eruption magnitude depends on eruption volume and energy, not edifice size. Small Icelandic fissures can produce enormous flood basalts; giant Mauna Loa rarely explodes
-
-5. **"Dormant volcanoes are extinct volcanoes"**
-   - **Why it persists**: Everyday language conflates "dormant" with "dead"
-   - **Correction**: Dormant means currently quiet but capable of reawakening. Use examples like Vesuvius (dormant for centuries before 79 CE) or Pinatubo (500 years dormant before 1991)
-
-6. **"We can predict eruptions accurately days or weeks in advance"**
-   - **Why it persists**: Media reports of "scientists predict eruption" without conveying uncertainty
-   - **Correction**: Forecasting provides probabilities and timescales (hours to months), not precise schedules. Some eruptions have clear precursors, others (phreatic) have almost none. Emphasize the difference between detecting unrest and predicting eruption timing
-
-7. **"Pyroclastic flows are just hot landslides"**
-   - **Why it persists**: Videos show downslope movement of material
-   - **Correction**: They're fluidized gas-particle mixtures that can travel uphill, cross water, and reach hundreds of km/h—fundamentally different physics than debris flows
-
-8. **"Volcanoes only occur at plate boundaries"**
-   - **Why it persists**: Plate tectonics emphasis on boundaries
-   - **Correction**: Hotspot volcanism (Hawaii, Yellowstone) occurs in plate interiors. Also rifts within continents (East African Rift)
-
-9. **"Caldera eruptions empty the entire magma chamber"**
-   - **Why it persists**: Dramatic imagery of collapse suggests total evacuation
-   - **Correction**: Typically only a fraction of the chamber erupts before the system seals or the magma becomes too crystalline to erupt
-
-10. **"Lava temperature is constant across all volcanoes"**
-    - **Why it persists**: "Red-hot lava" seems universal
-    - **Correction**: Basaltic lava can exceed 1200°C, rhyolitic lava may be as cool as 700°C. Temperature affects color, viscosity, and flow behavior
+1. **'The mantle is an ocean of molten magma.'** Diagrams with orange interiors and the phrase 'molten core' cause this. *Correction:* the mantle carries seismic shear (S) waves, which cannot travel through liquids, so it is solid. It flows slowly by creep over millions of years, and melt makes up only small fractions in special places. Address this in Lesson 1 and come back to it whenever a student says magma 'comes up from the mantle layer'.
+2. **'Rock melts because it gets hotter.'** This is the everyday intuition from stoves. *Correction:* most of Earth's magma forms by lowering pressure (decompression) or by lowering the melting point (flux melting). Use the geotherm–solidus sketch: move the rock, or move the curve.
+3. **'Hotter magma is more explosive.'** Students link heat with violence. *Correction:* the hottest magma (basalt, about 1,100–1,200 °C) is usually the least explosive. Cooler, silica-rich magma is viscous and traps gas. Drill this with predict-the-eruption problems.
+4. **'The gas is already sitting as bubbles in the chamber.'** *Correction:* at depth most volatiles are dissolved in the melt, like CO2 in a sealed soda bottle. They come out of solution during ascent as pressure drops. Explosivity depends on whether those new bubbles can escape.
+5. **'Lava is what kills people.'** Films are the source of this. *Correction:* lava usually moves at walking pace or slower and mostly destroys property. Historically, PDCs and lahars have caused most volcanic deaths (Mount Pelée 1902, Armero 1985). Correct this before Module 6 so students rank hazards properly.
+6. **'Volcanic ash is like soot from a fire.'** *Correction:* ash is pulverised rock and volcanic glass, which is hard, abrasive and electrically conductive when wet. It can melt inside jet engines, whose operating temperatures exceed the melting point of the glass. That is why airspace closes.
+7. **'VEI 6 is twice as big as VEI 3' or 'VEI measures deaths.'** *Correction:* VEI is roughly logarithmic, with each step about 10 times more erupted volume above VEI 2. It measures explosive size, not impact. Laki 1783 had a modest VEI but enormous effects because it was effusive and released a lot of gas.
+8. **'Earthquakes under a volcano mean it will erupt' or 'a forecast that didn't happen means scientists were wrong.'** *Correction:* many unrest episodes end without an eruption (failed eruptions). Forecasts are probabilities, and a forecast that was never actually certain did not 'fail'. Make students state forecasts as probabilities with timescales.
+9. **'Volcanoes cause global warming through CO2.'** *Correction:* large eruptions cool the planet for about 1–3 years through sulfate aerosols in the stratosphere. Annual volcanic CO2 is around 1% of human emissions or less. This contrast also opens a discussion of geoengineering.
+10. **'Dormant means extinct' or 'supervolcanoes are overdue.'** *Correction:* eruptions are not periodic, so 'overdue' has no meaning. Long repose times can produce larger eruptions, as at Pinatubo after about 500 years.
 
 ## Level Adjustments
 
-**For intermediate students (target level):**
-- Assume familiarity with plate tectonics, basic chemistry, and igneous rock types
-- Introduce quantitative concepts (VEI scale, eruption column heights, lava viscosities) but don't require derivations
-- Use phase diagrams qualitatively (melting curves, volatile solubility) without thermodynamic rigor
-- Emphasize process over terminology—understanding gas exsolution mechanisms matters more than memorizing mineral names
-- Integrate real monitoring data interpretation (seismograms, deformation plots) to build practical skills
-- Expect students to critically evaluate volcanic hazards for specific scenarios
+The student is at an intermediate level: comfortable with high-school chemistry and physics and with algebra.
 
-**Compared to beginner level:**
-- Beginners need more emphasis on volcanic vocabulary and classification, less on underlying physics
-- Move faster through descriptive content (volcano types, lava textures) to spend more time on processes
-- Expect more quantitative thinking and fewer analogies
+- **Use real SI units and orders of magnitude freely:** Pa·s, MPa, km³, wt% H2O and SiO2 %. Exercises should ask for estimates such as 'about 10^6 times more viscous', not precise calculations.
+- **Phase relations stay qualitative.** Use one geotherm–solidus sketch, not ternary diagrams or thermodynamic derivations.
+- **Eruption-type labels** (Hawaiian, Strombolian, Vulcanian, Plinian) are points on a spectrum controlled by gas escape. Do not ask for definitions to be memorised.
+- **Monitoring:** explain what each signal means physically. Skip Fourier analysis and waveform inversion. Treat REDPy and MSNoise as optional 'see what observatories actually run' demos for students who code. Never require an install.
+- **Cite papers sparingly,** to show what a real model looks like: Giordano et al. (2008) for viscosity, and TITAN2D or smoothed particle hydrodynamics (SPH) for flow modelling. Textbook-level reasoning should carry the lessons.
+- **Exercise formats:**
+  - Multiple choice for classification: tectonic setting, VEI, deposit type
+  - Free text for causal chains: predict the eruption, interpret the signals
+  - Teach-backs for synthesis, in Lessons 21 and 29
+- **Difficulty peaks:**
+  - Lesson 9 (viscosity magnitudes)
+  - Lesson 13 (fragmentation)
+  - Lesson 25 (probabilistic forecasting)
+  - Lesson 32 (capstone)
 
-**Compared to advanced level:**
-- Advanced students tackle eruption column fluid dynamics, rheological models, thermodynamic phase equilibria
-- At intermediate level, use simplified models and qualitative explanations for complex physics
-- Skip detailed magma chamber thermomechanics and constitutional supercooling
-- Focus on observable outcomes rather than microscale processes
+  If a student struggles at Lesson 9 or 13, hold them there. Modules 3–5 depend on those ideas.
 
-## Rabbit Holes (Fascinating Connections)
+## Rabbit Holes
 
-- **Io's volcanoes** — Most volcanically active body in the solar system, driven by tidal heating not plate tectonics. Reveals fundamental physics of volcanism independent of Earth-specific conditions. **Drop in**: When discussing heat sources for melting (lesson 2)
-
-- **Volcanic lightning** — Triboelectric charging in ash plumes creates spectacular lightning storms. Intersection of volcanology and atmospheric electricity. **Drop in**: During pyroclastic eruptions discussion (lesson 10)
-
-- **Lava tube caves** — Self-insulating conduits that allow lava to travel vast distances. Accessible volcanic plumbing systems. **Drop in**: When discussing lava flows (lesson 12)
-
-- **Obsidian as ancient surgical tools** — Volcanic glass sharper than steel scalpels, used by prehistoric peoples and modern surgeons. **Drop in**: When discussing lava cooling and glass formation (lesson 12)
-
-- **Volcanic winter and human history** — Tambora 1815 ("year without summer"), Toba 74 kya (population bottleneck hypothesis). Volcanoes as drivers of human history. **Drop in**: Climate impacts lesson (lesson 20)
-
-- **Pillow lavas and ophiolites** — Submarine volcanism preserved in mountain belts, evidence of ancient seafloor. **Drop in**: When discussing basaltic volcanism and tectonic settings (lesson 2-3)
-
-- **Carbonatite volcanoes** — Bizarre CO₂-rich lavas (Ol Doinyo Lengai, Tanzania) that are black when fresh and turn white in days. **Drop in**: When discussing magma diversity (lesson 3)
-
-- **Volcanic geothermal energy** — Iceland's renewable energy success story. **Drop in**: As a real-world application during any module
-
-- **Volcanic soils and agriculture** — Why volcanic regions support dense populations despite hazards (Java, Naples). Risk-benefit tradeoffs. **Drop in**: During hazards module (lessons 17-21)
-
-- **Mars's Olympus Mons** — Tallest volcano in solar system (21 km), reveals how different gravity and tectonics shape volcanism. **Drop in**: When discussing shield volcanoes (lesson 14)
-
-## Difficulty Progression
-
-**Early lessons (1-5)**: Establish foundational vocabulary and basic processes. Keep difficulty at 1-2, focusing on observation and description. Build confidence with accessible concepts.
-
-**Middle section (6-16)**: Increase to difficulty 3-4 as students integrate chemistry, physics, and observation. Expect them to predict outcomes and explain mechanisms. Include complex case studies (Plinian eruptions, calderas).
-
-**Hazards module (17-21)**: Mix of difficulty levels—some hazards are conceptually simple (lava flows, difficulty 2) while others require integrating multiple processes (pyroclastic flows, difficulty 4).
-
-**Monitoring and synthesis (22-25)**: Return to difficulty 3-4 as students apply all prior knowledge to real-world forecasting challenges. Final lesson (25) drops to difficulty 2 as a teach-back integration exercise.
-
-**Review lessons (5, 11, 16, 21)**: Always difficulty 1. Low-stakes consolidation, not new material.
-
-## Practical Teaching Tips
-
-- **Use before-and-after satellite imagery** — Dramatically shows landscape changes (new craters, lava fields, ash deposits)
-- **Link to real-time monitoring dashboards** — USGS, INGV, GNS Science provide live seismograms and webcams
-- **Assign volcano "case studies" as recurring check-ins** — Have students follow a specific active volcano throughout the curriculum
-- **Viscosity demos with fluids** — Compare pouring honey vs water to illustrate how composition controls flow
-- **Emphasize scale** — A VEI 6 eruption is 10× larger than VEI 5, not slightly bigger. Powers of 10 matter
-- **Contrasting pairs** — Hawaiian vs Plinian, shield vs stratovolcano, effusive vs explosive. Comparative learning aids retention
-- **Normalize uncertainty** — Scientists don't always know when a volcano will erupt. Model probabilistic thinking
-- **Safety and ethics** — Discuss evacuation decisions, false alarm tradeoffs, communicating risk to diverse populations
+- **Pliny the Younger's letters on Vesuvius, AD 79.** The first eyewitness account of an eruption, and the origin of the name 'Plinian'. Use with Lesson 14.
+- **Tambora and Frankenstein.** The cold, stormy summer of 1816 kept Mary Shelley's circle indoors at Lake Geneva, where Frankenstein began. Use with Lesson 30.
+- **Krakatoa 1883.** Its explosion was heard about 4,800 km away on Rodrigues Island, and its pressure wave circled the globe several times. Use with Lesson 14 or 16.
+- **Benjamin Franklin and Laki 1783.** Franklin speculated that a 'dry fog' over Europe was linked to cold weather, which was an early guess at volcanic climate forcing. Use with Lesson 30.
+- **Lake Nyos 1986.** A lake suddenly released dissolved CO2 and suffocated about 1,700 people. It is the soda-bottle analogy at full scale. Use with Lesson 24.
+- **Pinatubo as a natural geoengineering experiment.** Proposals for solar geoengineering cite it. Use with Lesson 30 for an ethics discussion.
+- **Surtsey, 1963.** An island born from the sea off Iceland, where scientists watched life colonise new land. Use with Lesson 3.
+- **Io's lava lakes and Olympus Mons.** Other worlds test whether the Earth rules hold. Use with Lesson 31.
+- **X-ray CT of pumice.** Researchers image bubble networks in 3D to study fragmentation (Cnudde & Boone 2013, Earth-Science Reviews). Use with Lesson 13.
+- **Listening to volcanoes with ambient noise.** MSNoise tracks tiny drops in seismic velocity as a volcano pressurises, without needing any earthquakes. Use with Lesson 22.
+- **Smoothed particle hydrodynamics (SPH).** The same particle method used for film special effects and astrophysics also models lava and pyroclastic flows (Monaghan 2005). Use with Lesson 17.

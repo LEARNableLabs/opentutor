@@ -1,344 +1,646 @@
 {
   "topic": "Volcanology",
   "slug": "volcanology",
-  "created": "2026-08-21",
+  "created": "2026-10-02",
   "student_level": "intermediate",
-  "level": "intermediate",
-  "prerequisites": [
-    "basic geology",
-    "plate tectonics",
-    "rock cycle and igneous rocks",
-    "Earth's interior structure"
-  ],
   "exit_criteria": [
-    "explain how magma forms and evolves in different tectonic settings",
-    "classify eruption styles and predict volcanic behavior from magma properties",
-    "identify volcanic landforms and interpret their formation mechanisms",
-    "assess volcanic hazards and understand monitoring techniques",
-    "analyze real-time volcano monitoring data",
-    "communicate volcanic risk to non-technical audiences"
+    "Explain why volcanoes cluster at subduction zones, rifts and hotspots, and name the melting mechanism that dominates at each",
+    "Predict an eruption's likely style from magma composition, temperature, crystal content and volatile content, and justify the prediction as a causal chain",
+    "Explain how viscosity controls eruption style, and estimate relative viscosities of basalt, andesite and rhyolite to within orders of magnitude",
+    "Classify an eruption on the Volcanic Explosivity Index, and tell apart its products: lava flows, tephra fall, pyroclastic density currents and lahars",
+    "Read a volcano's shape and deposit sequence to infer its eruptive history",
+    "Interpret basic monitoring signals (earthquake swarms, tremor, inflation or deflation, SO2/CO2 changes) and explain why eruption forecasts are probabilistic",
+    "Read a volcanic hazard map, separate hazard from risk, and analyse a historical case study (Pinatubo 1991, Nevado del Ruiz 1985, Tambora 1815) for both its science and its human factors",
+    "Explain how large explosive eruptions cool global climate through stratospheric sulfate aerosols, and why the cooling lasts only a few years"
   ],
   "lessons": [
     {
       "lesson": 1,
-      "module": "Volcanic Anatomy & Magma Fundamentals",
-      "title": "What makes a mountain explode instead of just crack?",
-      "concepts": ["volcanic systems", "magma vs lava", "volcanic anatomy"],
-      "difficulty": 1,
+      "module": "Where and Why Volcanoes Form",
+      "title": "If the mantle is solid rock, where does magma come from?",
+      "concepts": [
+        "solid but convecting mantle",
+        "geotherm",
+        "solidus",
+        "partial melting"
+      ],
+      "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-processes",
-        "https://www.youtube.com/watch?v=cvNIQtheUiM"
+        "https://en.wikipedia.org/wiki/Mantle_(geology)",
+        "https://en.wikipedia.org/wiki/Partial_melting",
+        "https://en.wikipedia.org/wiki/Geothermal_gradient"
       ],
       "status": "pending"
     },
     {
       "lesson": 2,
-      "module": "Volcanic Anatomy & Magma Fundamentals",
-      "title": "Why does solid rock melt deep underground?",
-      "concepts": ["partial melting", "mantle geochemistry", "tectonic controls"],
+      "module": "Where and Why Volcanoes Form",
+      "title": "Why do volcanoes line up along plate boundaries instead of appearing at random?",
+      "concepts": [
+        "divergent boundaries",
+        "convergent boundaries and subduction",
+        "intraplate volcanism",
+        "Ring of Fire"
+      ],
       "difficulty": 2,
-      "type": "mini-lesson",
+      "type": "real-world",
       "resources": [
-        "https://www.iris.edu/hq/inclass/animation/how_magma_forms",
-        "https://www.open.edu/openlearn/science-maths-technology/volcanoes-earthquakes-and-tsunamis"
+        "https://volcano.si.edu/",
+        "https://en.wikipedia.org/wiki/Ring_of_Fire",
+        "https://en.wikipedia.org/wiki/Plate_tectonics"
       ],
       "status": "pending"
     },
     {
       "lesson": 3,
-      "module": "Volcanic Anatomy & Magma Fundamentals",
-      "title": "How does a magma's recipe determine its temperament?",
-      "concepts": ["silica content", "basaltic vs rhyolitic magma", "viscosity"],
+      "module": "Where and Why Volcanoes Form",
+      "title": "How can you melt rock without adding any heat?",
+      "concepts": [
+        "decompression melting",
+        "adiabatic ascent",
+        "mid-ocean ridges",
+        "Iceland as a ridge on land"
+      ],
       "difficulty": 3,
-      "type": "question",
+      "type": "mini-lesson",
       "resources": [
-        "https://volcano.oregonstate.edu/magma-composition",
-        "https://www.youtube.com/watch?v=4E84WICoNYY"
+        "https://en.wikipedia.org/wiki/Decompression_melting",
+        "https://en.wikipedia.org/wiki/Mid-ocean_ridge",
+        "https://en.wikipedia.org/wiki/Volcanism_of_Iceland"
       ],
       "status": "pending"
     },
     {
       "lesson": 4,
-      "module": "Volcanic Anatomy & Magma Fundamentals",
-      "title": "What happens in the kitchen before the volcano serves dinner?",
-      "concepts": ["magma chambers", "fractional crystallization", "magma mixing"],
-      "difficulty": 2,
-      "type": "real-world",
+      "module": "Where and Why Volcanoes Form",
+      "title": "Why does adding water make rock melt at subduction zones?",
+      "concepts": [
+        "flux melting",
+        "slab dehydration",
+        "lowering the solidus",
+        "volcanic arcs"
+      ],
+      "difficulty": 3,
+      "type": "question",
       "resources": [
-        "https://www.usgs.gov/observatories/cvo/magma-reservoirs",
-        "https://www.youtube.com/watch?v=AXJJmRN_VNA"
+        "https://en.wikipedia.org/wiki/Flux_melting",
+        "https://en.wikipedia.org/wiki/Subduction",
+        "https://en.wikipedia.org/wiki/Volcanic_arc"
       ],
       "status": "pending"
     },
     {
       "lesson": 5,
-      "module": "Volcanic Anatomy & Magma Fundamentals",
-      "title": "How does rock become ready to erupt?",
-      "concepts": ["melting processes", "magma composition", "pre-eruptive storage"],
-      "difficulty": 1,
-      "type": "review",
+      "module": "Where and Why Volcanoes Form",
+      "title": "Why is Hawaiʻi erupting in the middle of a plate, thousands of kilometres from any boundary?",
+      "concepts": [
+        "hotspots",
+        "mantle plumes",
+        "age-progressive island chains",
+        "Hawaiian–Emperor seamount chain"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-processes"
+        "https://en.wikipedia.org/wiki/Hotspot_(geology)",
+        "https://en.wikipedia.org/wiki/Hawaiian%E2%80%93Emperor_seamount_chain",
+        "https://www.usgs.gov/observatories/hvo"
       ],
       "status": "pending"
     },
     {
       "lesson": 6,
-      "module": "Eruption Dynamics",
-      "title": "Why do some volcanoes ooze while others obliterate?",
-      "concepts": ["effusive eruptions", "explosive eruptions", "eruption controls"],
+      "module": "Where and Why Volcanoes Form",
+      "title": "Review: given a dot on a world map, can you name the melting mechanism?",
+      "concepts": [
+        "tectonic setting classification",
+        "decompression vs flux melting",
+        "hotspot identification"
+      ],
       "difficulty": 2,
-      "type": "mini-lesson",
+      "type": "review",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/types-volcanic-eruptions",
-        "https://www.youtube.com/watch?v=kq7DDk8eLs8"
+        "https://volcano.si.edu/",
+        "https://en.wikipedia.org/wiki/Ring_of_Fire"
       ],
       "status": "pending"
     },
     {
       "lesson": 7,
-      "module": "Eruption Dynamics",
-      "title": "How do invisible gases make visible explosions?",
-      "concepts": ["volatile content", "gas exsolution", "fragmentation"],
-      "difficulty": 3,
-      "type": "question",
+      "module": "Magma: The Engine",
+      "title": "What is magma actually made of: liquid, crystals, or gas?",
+      "concepts": [
+        "silicate melt",
+        "crystals and volatiles as three phases",
+        "SiO2 spectrum: basalt–andesite–dacite–rhyolite"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
       "resources": [
-        "https://volcano.oregonstate.edu/role-gases",
-        "https://www.youtube.com/watch?v=BUREX8aFbMs"
+        "https://en.wikipedia.org/wiki/Magma",
+        "https://en.wikipedia.org/wiki/Igneous_rock"
       ],
       "status": "pending"
     },
     {
       "lesson": 8,
-      "module": "Eruption Dynamics",
-      "title": "Can we measure how apocalyptic an eruption is?",
-      "concepts": ["Volcanic Explosivity Index", "eruption magnitude", "intensity"],
-      "difficulty": 2,
-      "type": "resource-drop",
+      "module": "Magma: The Engine",
+      "title": "Why does more silica make magma stickier?",
+      "concepts": [
+        "silica tetrahedra",
+        "melt polymerization",
+        "viscosity",
+        "network formers vs modifiers"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
       "resources": [
-        "https://volcano.si.edu/faq/index.cfm?question=vei",
-        "https://www.usgs.gov/programs/VHP/volcanic-explosivity-index-vei"
+        "https://en.wikipedia.org/wiki/Silicate_minerals",
+        "https://en.wikipedia.org/wiki/Viscosity",
+        "https://doi.org/10.1016/j.epsl.2008.03.038"
       ],
       "status": "pending"
     },
     {
       "lesson": 9,
-      "module": "Eruption Dynamics",
-      "title": "What's in a name: Hawaiian, Strombolian, or Plinian?",
-      "concepts": ["eruption classification", "Hawaiian style", "Strombolian", "Vulcanian", "Plinian"],
-      "difficulty": 3,
-      "type": "mini-lesson",
+      "module": "Magma: The Engine",
+      "title": "How many orders of magnitude separate runny basalt from stiff rhyolite?",
+      "concepts": [
+        "viscosity in Pa·s on a log scale",
+        "temperature dependence",
+        "dissolved water lowers viscosity",
+        "crystal content raises viscosity"
+      ],
+      "difficulty": 4,
+      "type": "question",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/eruption-styles",
-        "https://www.youtube.com/watch?v=9vBHlXkv-c0"
+        "https://doi.org/10.1016/j.epsl.2008.03.038",
+        "https://en.wikipedia.org/wiki/Lava"
       ],
       "status": "pending"
     },
     {
       "lesson": 10,
-      "module": "Eruption Dynamics",
-      "title": "How did Pompeii's perfect preservation become its tomb?",
-      "concepts": ["Plinian eruptions", "eruption columns", "pyroclastic surges"],
-      "difficulty": 4,
+      "module": "Magma: The Engine",
+      "title": "Why does a soda bottle fizz over when you open it, and what does that have to do with eruptions?",
+      "concepts": [
+        "volatile solubility depends on pressure",
+        "H2O and CO2 in magma",
+        "exsolution and bubble nucleation",
+        "Henry's law analogy"
+      ],
+      "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://www.usgs.gov/observatories/hvo/1980-mount-st-helens-eruption",
-        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        "https://en.wikipedia.org/wiki/Volcanic_gas",
+        "https://en.wikipedia.org/wiki/Henry%27s_law"
       ],
       "status": "pending"
     },
     {
       "lesson": 11,
-      "module": "Eruption Dynamics",
-      "title": "What determines whether a volcano whispers or screams?",
-      "concepts": ["eruption styles", "VEI", "controls on explosivity"],
-      "difficulty": 1,
-      "type": "review",
+      "module": "Magma: The Engine",
+      "title": "Why does magma change its recipe on the way to the surface?",
+      "concepts": [
+        "buoyant ascent",
+        "magma chambers and crystal mush",
+        "fractional crystallization",
+        "crustal assimilation"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/types-volcanic-eruptions"
+        "https://en.wikipedia.org/wiki/Magma_chamber",
+        "https://en.wikipedia.org/wiki/Fractional_crystallization_(geology)",
+        "https://en.wikipedia.org/wiki/Bowen%27s_reaction_series"
       ],
       "status": "pending"
     },
     {
       "lesson": 12,
-      "module": "Volcanic Products & Landforms",
-      "title": "Why does lava come in wrinkly and chunky varieties?",
-      "concepts": ["pahoehoe", "aa lava", "lava viscosity", "cooling rates"],
-      "difficulty": 2,
-      "type": "mini-lesson",
+      "module": "Magma: The Engine",
+      "title": "Review: predict the eruption from four numbers (SiO2, temperature, water, crystals)",
+      "concepts": [
+        "composition → viscosity → gas escape → style chain",
+        "viscosity controls",
+        "volatile behaviour"
+      ],
+      "difficulty": 3,
+      "type": "review",
       "resources": [
-        "https://www.usgs.gov/observatories/hvo/lava-flows",
-        "https://www.youtube.com/watch?v=gPjjhq0GC7s"
+        "https://doi.org/10.1016/j.epsl.2008.03.038",
+        "https://en.wikipedia.org/wiki/Magma"
       ],
       "status": "pending"
     },
     {
       "lesson": 13,
-      "module": "Volcanic Products & Landforms",
-      "title": "Teach me: What's the difference between ash, lapilli, and bombs?",
-      "concepts": ["pyroclastic materials", "tephra classification", "volcanic bombs"],
-      "difficulty": 3,
-      "type": "teach-back",
+      "module": "Eruptions and Their Products",
+      "title": "What makes liquid magma shatter into ash?",
+      "concepts": [
+        "bubble growth and vesicularity",
+        "fragmentation threshold",
+        "effusive vs explosive eruptions",
+        "pumice and scoria"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
       "resources": [
-        "https://volcano.oregonstate.edu/pyroclastic-materials",
-        "https://www.usgs.gov/programs/VHP/volcanic-ash"
+        "https://www.youtube.com/watch?v=xX6YGpk3DWk",
+        "https://ed.ted.com/lessons/what-makes-volcanoes-erupt-steven-anderson",
+        "https://gonnermann.rice.edu/publications/gonnermann-2015-magma-fragmentation.pdf",
+        "https://en.wikipedia.org/wiki/Pumice",
+        "https://en.wikipedia.org/wiki/Vesicular_texture"
       ],
       "status": "pending"
     },
     {
       "lesson": 14,
-      "module": "Volcanic Products & Landforms",
-      "title": "What shape is your volcano, and what does it say about its past?",
-      "concepts": ["shield volcanoes", "stratovolcanoes", "cinder cones", "volcanic morphology"],
-      "difficulty": 2,
-      "type": "real-world",
+      "module": "Eruptions and Their Products",
+      "title": "From Hawaiian fountains to Plinian columns: how do you measure how big an eruption was?",
+      "concepts": [
+        "eruption style spectrum (Hawaiian, Strombolian, Vulcanian, Plinian)",
+        "open vs closed system degassing",
+        "Volcanic Explosivity Index",
+        "logarithmic scales"
+      ],
+      "difficulty": 3,
+      "type": "question",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcano-types",
-        "https://www.youtube.com/watch?v=sHl9hDs4Z4M"
+        "https://www.youtube.com/watch?v=iic5VEpIdgE",
+        "https://mapscaping.com/significant-global-volcanic-eruptions-map/",
+        "https://en.wikipedia.org/wiki/Volcanic_explosivity_index",
+        "https://en.wikipedia.org/wiki/Plinian_eruption",
+        "https://en.wikipedia.org/wiki/Strombolian_eruption"
       ],
       "status": "pending"
     },
     {
       "lesson": 15,
-      "module": "Volcanic Products & Landforms",
-      "title": "How does a mountain collapse into a hole in the ground?",
-      "concepts": ["calderas", "ignimbrites", "caldera formation", "resurgence"],
-      "difficulty": 4,
-      "type": "mini-lesson",
+      "module": "Eruptions and Their Products",
+      "title": "How far and how fast can lava travel, and why can you usually walk away from it?",
+      "concepts": [
+        "pāhoehoe vs ʻaʻā vs block lava",
+        "lava tubes",
+        "flow advance rates",
+        "Kīlauea 2018"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
       "resources": [
-        "https://www.usgs.gov/observatories/yvo/caldera-forming-eruptions",
-        "https://www.youtube.com/watch?v=VqzJpQxgBvM"
+        "https://www.youtube.com/watch?v=RhXdDA15SR4",
+        "https://m.youtube.com/watch?v=vkaGvP8IKJM",
+        "https://www.usgs.gov/media/videos/time-series-kilauea-volcanos-lower-east-rift-zone-lava-flow-maps",
+        "https://www.usgs.gov/observatories/hvo",
+        "https://en.wikipedia.org/wiki/2018_lower_Puna_eruption"
       ],
       "status": "pending"
     },
     {
       "lesson": 16,
-      "module": "Volcanic Products & Landforms",
-      "title": "What stories do volcanic landforms tell?",
-      "concepts": ["lava types", "pyroclastics", "volcano types", "calderas"],
-      "difficulty": 1,
-      "type": "review",
+      "module": "Eruptions and Their Products",
+      "title": "What goes up an eruption column, and why did Iceland's ash cloud shut down Europe's airspace?",
+      "concepts": [
+        "jet, buoyant plume and umbrella cloud",
+        "tephra fallout",
+        "volcanic ash vs aviation",
+        "Eyjafjallajökull 2010"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcano-types"
+        "https://www.youtube.com/watch?v=pkyNoJupihA",
+        "https://www.cam.ac.uk/research/news/video-analysis-of-iceland-2010-eruption-could-improve-volcanic-ash-forecasts-for-aviation-safety",
+        "https://pubs.usgs.gov/fs/2010/3116/fs2010-3116.pdf",
+        "https://all-geo.org/volcan01010/2014/02/a-history-of-ash-clouds-and-aviation/",
+        "https://en.wikipedia.org/wiki/Eruption_column"
       ],
       "status": "pending"
     },
     {
       "lesson": 17,
-      "module": "Volcanic Hazards & Impacts",
-      "title": "When is flowing rock slower than flowing mud?",
-      "concepts": ["lava flow hazards", "lahars", "debris flows", "secondary hazards"],
-      "difficulty": 2,
-      "type": "mini-lesson",
+      "module": "Eruptions and Their Products",
+      "title": "Why are pyroclastic density currents the deadliest thing a volcano does?",
+      "concepts": [
+        "column collapse",
+        "dome collapse and lateral blasts",
+        "pyroclastic density currents",
+        "Mount Pelée 1902 and Mount St. Helens 1980"
+      ],
+      "difficulty": 4,
+      "type": "real-world",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-lahars",
-        "https://www.youtube.com/watch?v=lP4B2KqG9dw"
+        "https://www.youtube.com/watch?v=N4-5kLbHY2Y",
+        "https://www.youtube.com/watch?v=IeskQETCT8Q",
+        "https://www.usgs.gov/volcanoes/mount-st.-helens/science/1980-cataclysmic-eruption",
+        "https://www.youtube.com/watch?v=p5RohaQ3wfk",
+        "https://en.wikipedia.org/wiki/Pyroclastic_flow"
       ],
       "status": "pending"
     },
     {
       "lesson": 18,
-      "module": "Volcanic Hazards & Impacts",
-      "title": "What killed more people at Mount St. Helens: lava or clouds?",
-      "concepts": ["pyroclastic density currents", "base surges", "lateral blasts"],
-      "difficulty": 4,
-      "type": "real-world",
+      "module": "Eruptions and Their Products",
+      "title": "Review: given a plume height and an erupted volume, what happened and who was in danger?",
+      "concepts": [
+        "VEI classification",
+        "fragmentation",
+        "product identification: lava, tephra, PDC"
+      ],
+      "difficulty": 3,
+      "type": "review",
       "resources": [
-        "https://www.usgs.gov/observatories/cvo/pyroclastic-flows",
-        "https://www.youtube.com/watch?v=vAknJoATKIw"
+        "https://scied.ucar.edu/image/how-big-was-eruption-check-volcanic-explosivity-index",
+        "https://www.usgs.gov/media/images/amount-magma-fragmentation-and-resulting-dispersal-tephra",
+        "https://www.youtube.com/watch?v=jlPB0MWyA5o",
+        "https://volcano.si.edu/faq/index.cfm?question=eruptionsbyyear",
+        "https://en.wikipedia.org/wiki/Volcanic_explosivity_index"
       ],
       "status": "pending"
     },
     {
       "lesson": 19,
-      "module": "Volcanic Hazards & Impacts",
-      "title": "How does volcanic ash bring down planes and power grids?",
-      "concepts": ["ashfall hazards", "aviation impacts", "infrastructure disruption"],
-      "difficulty": 3,
+      "module": "Reading Volcanoes: Landforms and Deposits",
+      "title": "Why is Mauna Loa a gentle dome while Mount Fuji is a steep cone?",
+      "concepts": [
+        "shield volcanoes",
+        "stratovolcanoes",
+        "cinder cones",
+        "lava domes"
+      ],
+      "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-ash-impacts",
-        "https://volcano.si.edu/faq/index.cfm?question=ash"
+        "https://en.wikipedia.org/wiki/Shield_volcano",
+        "https://en.wikipedia.org/wiki/Stratovolcano",
+        "https://en.wikipedia.org/wiki/Cinder_cone",
+        "https://en.wikipedia.org/wiki/Lava_dome"
       ],
       "status": "pending"
     },
     {
       "lesson": 20,
-      "module": "Volcanic Hazards & Impacts",
-      "title": "Can a single volcano change the weather for years?",
-      "concepts": ["volcanic aerosols", "climate forcing", "volcanic winter", "sulfur dioxide"],
+      "module": "Reading Volcanoes: Landforms and Deposits",
+      "title": "What happens when a volcano empties its chamber so fast that it swallows itself?",
+      "concepts": [
+        "caldera collapse",
+        "ignimbrites",
+        "Crater Lake / Mount Mazama",
+        "supervolcano myths and facts (Yellowstone)"
+      ],
       "difficulty": 3,
-      "type": "mini-lesson",
+      "type": "real-world",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanoes-and-climate",
-        "https://www.youtube.com/watch?v=FXWm0k9v4jM"
+        "https://en.wikipedia.org/wiki/Caldera",
+        "https://en.wikipedia.org/wiki/Crater_Lake",
+        "https://en.wikipedia.org/wiki/Yellowstone_Caldera",
+        "https://en.wikipedia.org/wiki/Ignimbrite"
       ],
       "status": "pending"
     },
     {
       "lesson": 21,
-      "module": "Volcanic Hazards & Impacts",
-      "title": "How many ways can a volcano threaten life?",
-      "concepts": ["lava and lahar hazards", "pyroclastic flows", "ashfall", "climate impacts"],
-      "difficulty": 1,
-      "type": "review",
+      "module": "Reading Volcanoes: Landforms and Deposits",
+      "title": "Can you read a volcano's life story from a road cut?",
+      "concepts": [
+        "fall vs flow deposits",
+        "stratigraphy and superposition",
+        "tephrochronology",
+        "monogenetic vs polygenetic volcanoes"
+      ],
+      "difficulty": 4,
+      "type": "teach-back",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcanic-hazards"
+        "https://en.wikipedia.org/wiki/Tephrochronology",
+        "https://en.wikipedia.org/wiki/Tephra",
+        "https://en.wikipedia.org/wiki/Monogenetic_volcanic_field"
       ],
       "status": "pending"
     },
     {
       "lesson": 22,
-      "module": "Monitoring & Forecasting",
-      "title": "What do earthquakes tell us about a restless volcano?",
-      "concepts": ["volcano seismology", "tremor", "magma movement signals"],
+      "module": "Monitoring and Forecasting",
+      "title": "Why do volcanoes rumble before they erupt?",
+      "concepts": [
+        "volcano-tectonic earthquakes",
+        "long-period events and tremor",
+        "earthquake swarms",
+        "repeating earthquakes"
+      ],
       "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/seismic-monitoring",
-        "https://www.iris.edu/hq/inclass/fact-sheet/volcano_seismology"
+        "https://en.wikipedia.org/wiki/Earthquake_swarm",
+        "https://en.wikipedia.org/wiki/Harmonic_tremor",
+        "https://github.com/ahotovec/REDPy",
+        "https://github.com/ROBelgium/MSNoise"
       ],
       "status": "pending"
     },
     {
       "lesson": 23,
-      "module": "Monitoring & Forecasting",
-      "title": "How do we watch a mountain swell before it bursts?",
-      "concepts": ["ground deformation", "GPS", "InSAR", "tiltmeters"],
+      "module": "Monitoring and Forecasting",
+      "title": "How can a satellite see a volcano breathing from 700 km up?",
+      "concepts": [
+        "inflation and deflation",
+        "GPS and tiltmeters",
+        "InSAR interferograms",
+        "Mogi point-source intuition"
+      ],
       "difficulty": 3,
       "type": "resource-drop",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/ground-deformation",
-        "https://www.youtube.com/watch?v=Xp8vqhE9z4A"
+        "https://en.wikipedia.org/wiki/Interferometric_synthetic-aperture_radar",
+        "https://www.usgs.gov/programs/VHP",
+        "https://www.usgs.gov/observatories/hvo"
       ],
       "status": "pending"
     },
     {
       "lesson": 24,
-      "module": "Monitoring & Forecasting",
-      "title": "Why can't we predict eruptions like we predict eclipses?",
-      "concepts": ["eruption forecasting", "uncertainty", "false alarms", "volcano observatories"],
-      "difficulty": 4,
+      "module": "Monitoring and Forecasting",
+      "title": "What can a volcano's breath tell us about magma we can't see?",
+      "concepts": [
+        "SO2 and CO2 emission rates",
+        "CO2/SO2 ratio as a depth indicator",
+        "gas measurement methods",
+        "Lake Nyos as a CO2 hazard"
+      ],
+      "difficulty": 3,
       "type": "question",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/eruption-forecasting",
-        "https://www.youtube.com/watch?v=u6e6gQ9z8xs"
+        "https://en.wikipedia.org/wiki/Volcanic_gas",
+        "https://en.wikipedia.org/wiki/Lake_Nyos_disaster",
+        "https://www.usgs.gov/programs/VHP"
       ],
       "status": "pending"
     },
     {
       "lesson": 25,
-      "module": "Monitoring & Forecasting",
-      "title": "Teach me: How would you monitor a volcano threatening your hometown?",
-      "concepts": ["integrated monitoring", "risk communication", "decision-making under uncertainty"],
-      "difficulty": 2,
+      "module": "Monitoring and Forecasting",
+      "title": "If the signals are all flashing, why can't scientists just say 'it will erupt on Tuesday'?",
+      "concepts": [
+        "probabilistic forecasting",
+        "event trees",
+        "failed eruptions and false alarms",
+        "combining multiple signals"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://pubs.usgs.gov/pinatubo/",
+        "https://pubs.usgs.gov/fs/1997/fs113-97/",
+        "https://www.usgs.gov/programs/VHP"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 26,
+      "module": "Monitoring and Forecasting",
+      "title": "Review: read three weeks of monitoring data and decide what is happening underground",
+      "concepts": [
+        "seismic signal interpretation",
+        "deformation patterns",
+        "gas trends",
+        "forecast uncertainty"
+      ],
+      "difficulty": 3,
+      "type": "review",
+      "resources": [
+        "https://volcano.si.edu/",
+        "https://pubs.usgs.gov/pinatubo/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 27,
+      "module": "Hazards, Risk and Society",
+      "title": "How did a small eruption kill 23,000 people in a town 70 km away?",
+      "concepts": [
+        "lahars",
+        "ice and snow melt on volcanoes",
+        "valley-following flows",
+        "Nevado del Ruiz 1985 and Armero"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/Lahar",
+        "https://en.wikipedia.org/wiki/Armero_tragedy",
+        "https://www.usgs.gov/volcanoes/mount-rainier"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Hazards, Risk and Society",
+      "title": "What does a volcanic hazard map actually tell you, and what doesn't it?",
+      "concepts": [
+        "hazard vs risk",
+        "exposure and vulnerability",
+        "hazard zones",
+        "reading a hazard map"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.usgs.gov/volcanoes/mount-rainier",
+        "https://www.usgs.gov/volcanoes/mount-st.-helens",
+        "https://www.usgs.gov/programs/VHP"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Hazards, Risk and Society",
+      "title": "Why did Pinatubo's warning save thousands of lives when Ruiz's warning failed?",
+      "concepts": [
+        "alert levels",
+        "risk communication and trust",
+        "evacuation decision-making",
+        "the cost of false alarms"
+      ],
+      "difficulty": 4,
       "type": "teach-back",
       "resources": [
-        "https://www.usgs.gov/programs/VHP/volcano-monitoring",
-        "https://volcano.si.edu"
+        "https://pubs.usgs.gov/pinatubo/",
+        "https://pubs.usgs.gov/fs/1997/fs113-97/",
+        "https://en.wikipedia.org/wiki/Armero_tragedy"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Hazards, Risk and Society",
+      "title": "How can one volcano cool the entire planet, and why only for a few years?",
+      "concepts": [
+        "stratospheric sulfate aerosols",
+        "Pinatubo cooling",
+        "Tambora 1815 and the Year Without a Summer",
+        "volcanic CO2 vs human CO2"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
+      "resources": [
+        "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora",
+        "https://en.wikipedia.org/wiki/Year_Without_a_Summer",
+        "https://en.wikipedia.org/wiki/Volcanic_winter",
+        "https://en.wikipedia.org/wiki/1991_eruption_of_Mount_Pinatubo"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Synthesis",
+      "title": "Why does a moon of Jupiter have more active volcanoes than Earth?",
+      "concepts": [
+        "tidal heating on Io",
+        "Olympus Mons and low gravity",
+        "cryovolcanism",
+        "testing Earth rules on other worlds"
+      ],
+      "difficulty": 2,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=98iCzrNRWmQ",
+        "https://www.nasa.gov/missions/juno/nasas-juno-gets-a-close-up-look-at-lava-lakes-on-jupiters-moon-io/",
+        "https://www.forbes.com/sites/robinandrews/2018/08/31/this-is-why-mars-will-always-have-the-solar-systems-largest-volcano/",
+        "https://eos.org/features/cryovolcanisms-song-of-ice-and-fire",
+        "https://en.wikipedia.org/wiki/Volcanism_on_Io"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Synthesis",
+      "title": "Capstone: you run the volcano observatory and the mayor is on the phone. What do you tell them?",
+      "concepts": [
+        "full causal chain from melting to eruption style",
+        "monitoring interpretation",
+        "hazard map reasoning",
+        "communicating uncertainty"
+      ],
+      "difficulty": 5,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=NpD16effFiQ",
+        "https://www.youtube.com/watch?v=um3APcwT8FQ",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6560653/",
+        "https://eos.org/articles/how-the-armero-tragedy-changed-volcanology-in-colombia",
+        "https://volcano.si.edu/"
       ],
       "status": "pending"
     }
-  ]
+  ],
+  "level": "intermediate",
+  "prerequisites": [
+    "High-school chemistry: elements, oxides, and gases dissolving in liquids under pressure",
+    "Basic physics: pressure, density, buoyancy, and heat versus temperature",
+    "Algebra, including powers of ten and order-of-magnitude reasoning",
+    "Reading graphs and maps, including log scales and depth profiles",
+    "Basic plate tectonics vocabulary: plates, boundaries, crust and mantle (refreshed in Module 1)",
+    "Optional: basic Python, needed only to explore the monitoring-tool demos in Lesson 22"
+  ],
+  "preliminary": false
 }

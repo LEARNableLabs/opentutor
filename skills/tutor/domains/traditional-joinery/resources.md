@@ -1,237 +1,67 @@
-# Traditional Joinery — Resources
-
-## Primary Sources (for lesson content)
-
-### Books
-
-- **"The Complete Dovetail: A Portfolio of Methods"** by Ian J. Kirby
-  - Comprehensive Western dovetail techniques, layout theory, hand-cutting methods
-  - Best for: intermediate students mastering dovetail family (Lessons 7-8)
-
-- **"The Art of Japanese Joinery"** by Kiyosi Seike
-  - Definitive catalog of Japanese joints with diagrams and applications
-  - Best for: understanding Japanese tradition philosophy and joint diversity (Lessons 11-16)
-  - Available: https://www.amazon.com/Art-Japanese-Joinery-Kiyosi-Seike/dp/0834815648
-
-- **"Taunton's Complete Illustrated Guide to Joinery"** by Gary Rogowski
-  - Western joinery reference with clear diagrams, wood movement considerations
-  - Best for: comprehensive overview and joint selection guidance (all modules)
-  - Available: https://www.finewoodworking.com/book/taunton-s-complete-illustrated-guide-to-joinery
-
-- **"With the Grain: A Craftsman's Guide to Understanding Wood"** by Christian Becksvoort
-  - Essential for wood movement and grain orientation concepts
-  - Best for: foundational understanding (Lessons 1-2)
-
-- **"Japanese Woodworking Tools: Their Tradition, Spirit and Use"** by Toshio Odate
-  - Philosophy and tool technique for Japanese methods
-  - Best for: cultural context and tool understanding (Lessons 11, 13)
-
-- **"The Joint Book: The Complete Guide to Wood Joinery"** by Terrie Noll
-  - Encyclopedic Western joint reference with strength comparisons
-  - Best for: joint selection and structural analysis (Lesson 22)
-
-### Educational Institutions & Courses
-
-- **North Bennet Street School** (Boston, MA) — https://www.nbss.edu/
-  - Cabinet & Furniture Making program, intensive joinery curriculum
-  - Offers short workshops and full-time programs
-
-- **Center for Furniture Craftsmanship** (Rockport, ME) — https://www.woodschool.org/
-  - Workshops on hand-cut joinery, both Western and Japanese traditions
-
-- **The Krenov School** (Fort Bragg, CA) — https://www.thekrenovschool.org/
-  - Fine furniture program emphasizing hand-cut joints and design thinking
-
-- **Roy Underhill's The Woodwright's School** — https://www.woodwrightschool.com/
-  - Traditional hand tool techniques and historical joinery
-
-## Supplementary Resources
-
-### Video Series & Channels
-
-- **Paul Sellers** — https://www.youtube.com/user/PaulSellersWoodwork
-  - Hand-cut mortise & tenon, dovetail tutorials with real-time technique
-  - Best for: Western hand tool fundamentals (Lessons 4-9)
-
-- **Japanese Carpenter** — https://www.youtube.com/channel/UCnK8G2u3XVZFU7DpE7PxGRA
-  - Traditional Japanese temple carpentry, real project documentation
-  - Best for: Japanese techniques in context (Lessons 11-16)
-
-- **The Samurai Carpenter** — https://www.youtube.com/user/TheSamuraiCarpenter
-  - Japanese techniques explained in English, good cross-cultural perspective
-  - Best for: Japanese basics with Western comparison (Lessons 11-13)
-
-- **Matt Estlea** — https://www.youtube.com/user/MattEstlea
-  - Modern hand tool joinery with clear explanations
-  - Best for: technique refinement and project applications (Lessons 18-21)
-
-- **Roy Underhill - The Woodwright's Shop (PBS)** — https://www.pbs.org/show/woodwrights-shop/
-  - Historical techniques and tool use
-  - Best for: historical context and traditional methods (Lessons 3, 23)
-
-- **Dorian Bracht (Dorian Bracht Art)** — https://www.youtube.com/c/DorianBracht
-  - Kumiko and Japanese joinery specialists
-  - Best for: advanced Japanese techniques (Lesson 16)
-
-### Magazines & Online Publications
-
-- **Fine Woodworking** — https://www.finewoodworking.com/
-  - Archive of joinery articles, technique videos, project plans
-  - Subscription provides access to decades of joinery expertise
-
-- **Popular Woodworking** — https://www.popularwoodworking.com/
-  - Practical joinery tutorials, hand tool techniques
-  - Free articles and premium content
-
-- **Wood Magazine** — https://www.woodmagazine.com/
-  - Project-based joinery, tool reviews, technique tips
-
-- **Mortise & Tenon Magazine** — https://www.mortiseandtenonmagazine.com/
-  - Historical furniture and traditional joinery focus
-  - Best for: furniture history and period-accurate techniques (Lesson 23)
-
-### Interactive Tools & Visualizations
-
-- **Wood Database** — https://www.wood-database.com/
-  - Wood species properties including movement coefficients
-  - Best for: wood movement calculations (Lesson 1)
-
-- **FineWoodworking Joint Strength Comparison** — https://www.finewoodworking.com/project-guides/joinery
-  - Test data on various joint types under different loads
-
-- **Woodworking Joint Visualizer (various)** — 3D models and exploded views
-  - Search "3D wood joint models" or "woodworking joint diagrams"
-  - Best for: understanding complex geometry (Lessons 14, 19)
-
-### Tool Specialty Retailers (with educational content)
-
-- **Hida Tool & Hardware** — https://www.hidatool.com/
-  - Japanese tool specialists with technique guides and tool explanations
-
-- **Japan Woodworker** — https://www.japanwoodworker.com/
-  - Japanese tool selection, sharpening guides, joint-specific tools
-
-- **Lie-Nielsen Toolworks** — https://www.lie-nielsen.com/
-  - Western hand tool manufacturer with technique videos and workshops
-
-- **Lee Valley Tools** — https://www.leevalley.com/
-  - Tool selection and extensive technique articles
-
-## Code/Templates
-
-- **SketchUp 3D Warehouse** — https://3dwarehouse.sketchup.com/
-  - Search "wood joints" for 3D models to study and rotate
-  - Best for: visualizing complex joints before cutting
-
-- **Dovetail Layout Calculators** — various online tools
-  - https://www.blocklayer.com/dovetail-angleeng
-  - Calculates pin/tail spacing for balanced proportions (Lesson 8)
-
-- **Wood Movement Calculator** — https://www.popularwoodworking.com/calculators/wood-movement-calculator/
-  - Predicts seasonal expansion/contraction by species and width
-  - Best for: designing joints with appropriate clearance (Lesson 1)
-
-## People to Follow
-
-### Contemporary Craftspeople
-
-- **Chris Becksvoort** — Fine furniture maker, wood movement expert
-  - Author of multiple books on furniture construction
-
-- **Toshio Odate** — Japanese woodworking master and teacher
-  - Bridges Japanese traditional techniques and Western teaching methods
-
-- **Frank Klausz** — Hungarian-trained master craftsman
-  - Known for hand-cut dovetail demonstrations
-
-- **George Nakashima** — Influential furniture designer (deceased, but work remains)
-  - Blended Japanese philosophy with American materials
-
-- **Christian Becksvoort** — Shaker furniture specialist
-  - Expert on traditional American joinery
-
-### Researchers & Historians
-
-- **Roy Underhill** — Woodworking historian and traditional techniques expert
-  - Host of The Woodwright's Shop (PBS)
-
-- **Jim Tolpin** — Furniture designer and author
-  - Studies historical design and joinery systems
-
-- **Adam Cherubini** — Period furniture researcher
-  - Focuses on 18th-century American joinery techniques
-
-## Unexpected Connections
-
-### Cross-Discipline Links
-
-- **Islamic Geometric Art** — Tessellation principles parallel kumiko patterns
-  - Explore at: https://www.metmuseum.org/toah/hd/geom/hd_geom.htm
-  - Connection to Lesson 16 (kumiko)
-
-- **Seismic Engineering** — Japanese joinery's controlled movement during earthquakes
-  - Study timber frame seismic performance research
-  - Connection to Lesson 11 (Japanese philosophy)
-
-- **Rock Climbing Gear** — Cam devices use similar mechanical wedging principles as shachi-sen
-  - Physics of self-locking tapers
-  - Connection to Lesson 14 (shachi-sen)
-
-- **Historical Shipbuilding** — Traditional scarf joints and timber framing techniques
-  - Maritime Museums (Mystic Seaport, etc.) often have joinery exhibits
-  - Connection to Lesson 19 (compound angles)
-
-- **Forensic Furniture Analysis** — Dating and authentication through joint analysis
-  - Museum conservation departments
-  - Connection to Lesson 23 (furniture history)
-
-### Museums & Exhibitions
-
-- **Winterthur Museum** (Delaware) — https://www.winterthur.org/
-  - American furniture collection, visible joinery in period pieces
-
-- **Victoria & Albert Museum** (London) — https://www.vam.ac.uk/
-  - Furniture and Woodwork collection with global joinery examples
-
-- **Edo-Tokyo Open Air Architectural Museum** (Japan)
-  - Traditional Japanese timber frame structures showing joinery at scale
-
-- **The Furniture Institute** (various locations)
-  - Regional furniture museums often have "construction revealed" exhibits
-
-## Tools for This Domain
-
-### Essential Hand Tools (Western)
-
-- Marking gauge (wheel or pin type)
-- Dovetail saw and tenon saw
-- Bench chisels (1/4", 1/2", 3/4", 1")
-- Mortise chisel (if cutting mortises)
-- Try square and sliding bevel
-- Marking knife
-
-### Essential Hand Tools (Japanese)
-
-- Dozuki (thin kerf dovetail saw)
-- Ryoba (dual-edge crosscut/rip saw)
-- Nomi (Japanese chisels) in similar sizes
-- Kanna (pull plane, optional)
-- Kebiki (marking gauge)
-
-### Sharpening System
-- Waterstones (1000, 6000, 8000 grit) or
-- Diamond plates (coarse, fine, extra-fine) or
-- Scary sharp (sandpaper on glass)
-
-Required for all cutting operations — dull tools make joinery impossible
-
-## Practice Projects (Progressive Difficulty)
-
-1. **Simple Box** — through dovetails at corners (Lesson 8 application)
-2. **Picture Frame** — mortise and tenon corners (Lesson 4-6 application)
-3. **Small Stool** — bridle joints and wedged tenons (Lesson 9 application)
-4. **Japanese Tool Box** — hozo joints and sliding lid (Lesson 12 application)
-5. **Kumiko Panel** — geometric lattice in frame (Lesson 16 application)
-6. **Dining Chair** — multiple joint types, technique selection (Lesson 22-24 application)
-
-Each project reinforces 2-3 lessons and provides context for joint application.
+# Traditional joinery: Japanese and Western wood joints. Resources
+
+## Verification status (read first)
+This build had no network access to check links. Only one URL appears below, the Ramage DOI, which came from the research step. Everything else is listed by title and search terms, with no link. A resource moves into a lesson's `resources` array only after its URL has been checked.
+
+- Larsson et al., 'Tsugite: Interactive Design and Fabrication of Wood Joints' (UIST 2020): **pending verification**. No DOI is given here. L33 stays empty until the DOI resolves. If it never does, L33's notes say: 'No verified source for Tsugite in this build.'
+- Ise Jingu is **not** a UNESCO World Heritage site. The correct UNESCO source is the 2020 Intangible Cultural Heritage inscription, 'Traditional skills, techniques and knowledge for the conservation and transmission of wooden architecture in Japan'.
+
+## Primary sources (lesson content)
+- **R. Bruce Hoadley, _Understanding Wood: A Craftsman's Guide to Wood Technology_ (Taunton Press)**. Covers grain, shrinkage and movement, moisture content, and the reason end grain glues poorly. Backs L1-L4.
+- **USDA Forest Products Laboratory, _Wood Handbook: Wood as an Engineering Material_**. This is the authoritative reference for wood properties, moisture and mechanical behaviour. Search: 'Wood Handbook FPL-GTR-190'. Add a link only after the verification gate.
+- **Hideo Sato and Yasua Nakahara (tr. Koichi Paul Nii), _The Complete Japanese Joinery_ (Hartley & Marks)**. Gives drawings and assembly sequences for tsugi and shiguchi. Use it as the main reference for the Japanese joint lessons.
+- **Kiyosi Seike, _The Art of Japanese Joinery_ (Weatherhill)**. Photographs and cultural context for Japanese joints.
+- **Toshio Odate, _Japanese Woodworking Tools: Their Tradition, Spirit and Use_ (Taunton Press)**. Covers the Japanese tool and layout tradition, including pull saws. Use it for the tools module.
+- **Michael H. Ramage, Henry C. Burridge, Marta Busse-Wicher et al., 'The wood from the trees: The use of timber in construction', _Renewable and Sustainable Energy Reviews_ (2016)**. DOI: https://doi.org/10.1016/j.rser.2016.09.107. Use it only as a second item in L33, next to a verified Larsson source, and only for the 'engineered timber context' concept. It is not a source for CNC joint design.
+- **UNESCO, 2020 Intangible Cultural Heritage inscription: 'Traditional skills, techniques and knowledge for the conservation and transmission of wooden architecture in Japan'**. Search: 'UNESCO intangible cultural heritage wooden architecture Japan 2020'. Add a link only after the verification gate.
+
+## Search directions (no links on purpose)
+- Takenaka Carpentry Tools Museum (Kobe), Japanese carpentry tools and joinery exhibits. Search: 'Takenaka Carpentry Tools Museum'. No lesson depends on it.
+- Tsugite joint editor (Larsson et al., UIST 2020). Search: 'Tsugite UIST 2020'. Do not link the editor or its GitHub repository.
+- Ise Jingu shikinen sengu (the ritual rebuilding every 20 years). Search: 'Ise Jingu shikinen sengu'. Pair it with the UNESCO ICH source above, not with any World Heritage claim.
+- Joint-name vocabulary. Search the romanized names: 'koshikake ari tsugi', 'koshikake kama tsugi', 'okkake daisen tsugi', 'kanawa tsugi', 'nagahozo komisen', 'watari ago', 'sampo zashi'.
+
+## Supplementary (engagement)
+- **Videos.** Search for Japanese carpenter channels showing tsugi cut and assembled. Search for dovetail and mortise-and-tenon demonstrations by established Western woodworking educators. Treat videos as supplementary only, never as the sole backing for a claim.
+- **Hands-on without a workshop.** Paper, foam board, stacked blocks or a simple 3D printer let the student model a joint. Every 3D lesson has a required text fallback in its `notes` field: (a) describe the assembly direction, (b) describe the load path and first failure, (c) sketch an exploded view.
+- **People to look up.** Toshio Odate, Kiyosi Seike, Michael Ramage (timber in construction), R. Bruce Hoadley.
+- **Unexpected connections.** Draw-bored pegs act as a built-in clamp. Frame-and-panel doors are a wood-movement solution. Interlocking joints show up in puzzle design and in computational fabrication.
+
+## Lesson by lesson
+
+Found by web search; every link was checked.
+
+### Lesson 7: Why do beams fail at the bottom first?
+- ▶ [Understanding Stresses in Beams (The Efficient Engineer)](https://www.youtube.com/watch?v=f08Y39UiC-o) — Clear animations show the stress flipping from squeezing at the top to stretching at the bottom, with zero stress along the neutral axis, so you can see why cracks start on the tension face.
+- 🕹 [Beam Bending: Interactive Explainer](https://unseel.com/engineering/beam-bending) — You load a beam yourself and watch the compression and tension zones and the neutral axis move, which beats any diagram in a book.
+- 📄 [Why Does Concrete Need Reinforcement? (Practical Engineering)](https://practical.engineering/blog/2018/8/1/why-does-concrete-need-reinforcement) — Grady Hillhouse breaks beams and the crack opens at the bottom every time, which explains why builders put steel exactly where wood is also most at risk.
+- 📄 [The Mechanical Properties of Wood, Samuel J. Record (Project Gutenberg)](https://www.gutenberg.org/files/12299/12299-h/12299-h.htm) — A free 1914 primary source that sorts real timber beam failures into types, such as 'simple tension' and 'cross-grained tension' on the underside, the way a forester of that era actually saw them.
+
+### Lesson 8: Glue, peg, wedge or nail: what actually holds a joint together?
+- ▶ [Butt Joint Strength Test: Nails vs Glues vs Screws](https://www.youtube.com/watch?v=dEVm5Jmvtmc) — Brad nails, framing nails, CA glue, wood glue and screws are each loaded until they break, so you can see which one wins before you form an opinion.
+- 📄 [Glue strength testing (Matthias Wandel, woodgears.ca)](https://woodgears.ca/joint_strength/glue.html) — An engineer tests glues on a home-built machine, and the wood often breaks before the glue line does, which upsets the idea that glue is the weak link.
+- ▶ [No Nails, No Screws: Japanese Woodworking WARI-KUSABI (割楔)](https://www.youtube.com/watch?v=ugw29gB8HW0) — A split wedge gets driven into a tenon and spreads it inside its hole, so you see a mechanical lock hold the joint with no glue and no metal.
+- 📑 [Wood Handbook: Wood as an Engineering Material (USDA Forest Products Laboratory)](https://research.fs.usda.gov/fpl/wood-handbook) — This is the free government reference engineers use, and its Fastenings and Adhesives chapters give real numbers for how nails, bolts and glue carry load.
+
+### Lesson 9: Where does this joint break first?
+- ▶ [What I learned from breaking 100 pieces of wood](https://www.youtube.com/watch?v=lpjf5KoqpRQ) — Watching 100 nearly identical sticks each break somewhere different shows that knots and grain often decide where a part fails, not the textbook cross-section.
+- 📄 [Testing pocket holes against mortise and tenon and dowel joints (woodgears.ca)](https://woodgears.ca/joint_strength/pockethole.html) — The screw joints bend so far before they break that their 'failure strength' means little for furniture, which teaches you that failure isn't only the moment something snaps.
+- 📑 [Capacity of Pegged Mortise and Tenon Joinery (Richard J. Schmidt)](https://ftet.com/sites/default/files/2018-07/miller_report.pdf) — Lab photos show pegs bending, wood crushing, and the 'relish' shearing out behind the peg, a full list of how a real timber joint breaks.
+
+### Lesson 10: Why is the mortise and tenon everywhere?
+- ▶ [Drawbore: An Inside Look (Paul Sellers)](https://www.youtube.com/watch?v=iblkJnlmg4w) — Paul Sellers saws a drawbored joint in half so you can see the peg bent into an S-curve, pulling the tenon tight from inside.
+- 📄 [Mortise and tenon vs. dowel joints: A strength test (woodgears.ca)](https://woodgears.ca/mortise/strong.html) — A homemade test rig with a bathroom scale gives real numbers: on average the mortise and tenon beat dowels by about 25%, and the photos show bits of the post still stuck to the broken tenons.
+- 📄 [Drawboring Resurrected (Popular Woodworking)](https://www.popularwoodworking.com/techniques/drawboring-resurrected/) — It explains how a centuries-old trick made joints that held for generations with no clamps and no glue at all.
+- 📄 [Nuki (joinery) (Wikipedia)](https://en.wikipedia.org/wiki/Nuki_(joinery)) — Japan's wedged through-tenon lets a frame flex and soak up earthquake energy without collapsing, a different answer to racking than Western framing gives.
+
+### Lesson 11: Why does a dovetail lock in one direction only?
+- ▶ [How to make a Dovetail Joint: The Three Joints (Paul Sellers)](https://www.youtube.com/watch?v=OCYjoj6cfno) — Watching tails and pins cut by hand, then tapped together, makes it obvious why the joint slides together one way and can't pull apart the other.
+- ▶ [Dovetail joint vs box joint strength test](https://www.youtube.com/watch?v=cRPgCMmbeyQ) — The dovetail loses to a plain box joint when pulled the 'wrong' way, which shows that its strength depends on direction.
+- 📄 [Dovetail vs. box joint strength (woodgears.ca)](https://woodgears.ca/dovetail/strength.html) — The pins sheared off while the glue held, and the author argues that with modern glue, choosing a dovetail just for strength is obsolete, which gives you something to argue about.
+- 📄 [Koshikake Ari Tsugi (腰掛蟻継ぎ): Seated Dovetail Splice](https://japanesewoodjoints.com/joint/koshikake-ari-tsugi) — Japanese carpenters use the same flared shape to splice beams end to end, with a seat underneath to carry the weight, so this is the dovetail's lock at building scale.
+
+### Lesson 12: Review: which force does each joint resist, and how does it fail?
+- ▶ [What's the Best Wood Joint || Insanely Strong Joinery!](https://www.youtube.com/watch?v=CE147Ow7RmM) — Lots of joints are broken one after another, so you can pause before each break and guess which force it resists and where it will fail.
+- 📄 [Wood joint strength testing (woodgears.ca)](https://woodgears.ca/joint_strength/) — One page brings together tests on mortise and tenon, dowel, pocket-hole and screw joints with numbers and failure photos, which makes it a ready-made review sheet.
+- 📄 [The Perfection of Traditional Japanese Joinery in Animated Illustrations (Arch2O)](https://www.arch2o.com/perfection-traditional-japanese-joinery-animated-illustrations-gifs/) — Looping animations take complex Japanese joints apart, so you can work out which force each interlocking face is there to resist.
+- 🕹 [Tsugite: free interactive software for designing Japanese wood joints (designboom)](https://www.designboom.com/technology/free-interactive-software-easily-complex-japanese-wooden-joints-furniture-04-13-2021/) — University of Tokyo software lets you design your own interlocking joint and checks whether it can actually be assembled and will stay locked.

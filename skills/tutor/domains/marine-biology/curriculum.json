@@ -1,372 +1,754 @@
 {
   "topic": "Marine biology — deep ocean ecosystems",
   "slug": "marine-biology",
-  "created": "2026-08-21",
+  "created": "2026-10-02",
   "student_level": "intermediate",
-  "level": "intermediate",
-  "prerequisites": [
-    "basic biology (cellular structure, metabolism)",
-    "ecology fundamentals (food webs, energy flow)",
-    "basic chemistry (chemical bonds, pH)"
-  ],
   "exit_criteria": [
-    "student can explain adaptations to deep ocean conditions (pressure, darkness, temperature)",
-    "student can describe chemosynthesis and compare it to photosynthesis",
-    "student can identify major deep ocean zones and their characteristics",
-    "student can explain the role of bioluminescence in deep sea ecosystems",
-    "student can trace energy flow in deep sea food webs from chemosynthesis and marine snow",
-    "student can discuss current conservation challenges facing deep ocean ecosystems"
+    "Name the depth zones of the ocean and sketch how light, temperature, pressure and oxygen change with depth",
+    "Estimate pressure at a given depth (about 1 atm per 10 m) and explain why gas-filled spaces, not water-filled bodies, are what pressure threatens",
+    "Explain at least four deep-sea adaptations (bioluminescence, counterillumination, eye design, piezolytes such as TMAO, low metabolism, mate-finding strategies), each as an answer to a specific environmental constraint",
+    "Trace the path of carbon from surface phytoplankton to the abyssal seafloor through marine snow, the biological pump and diel vertical migration, and say roughly what fraction arrives",
+    "Explain chemosynthesis as a redox process, describe the Riftia–bacteria symbiosis, and say why vent ecosystems still depend indirectly on surface photosynthesis",
+    "Compare the energy sources and characteristic life of vents, seeps, whale falls, abyssal plains, seamounts and hadal trenches",
+    "Describe how scientists study the deep sea (ROVs, crewed submersibles, AUVs, landers, sonar, stable isotopes) and the limits of what we know",
+    "Evaluate a deep-sea policy question (mining, trawling, climate, pollution, ISA or BBNJ governance) using ecological evidence about recovery time, connectivity and biodiversity"
   ],
   "lessons": [
     {
       "lesson": 1,
-      "module": "Introduction to Deep Ocean Zones",
-      "title": "What makes the deep ocean 'deep'?",
-      "concepts": ["ocean zonation", "aphotic zone", "bathyal zone"],
+      "module": "The Physical Deep Sea",
+      "title": "Where does the 'deep sea' actually begin, and why is it the largest habitat on Earth?",
+      "concepts": [
+        "ocean depth zones (epipelagic to hadal)",
+        "the 200 m boundary",
+        "pelagic vs benthic",
+        "scale of the deep sea"
+      ],
       "difficulty": 2,
       "type": "mini-lesson",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/zones.html",
-        "https://ocean.si.edu/ecosystems/deep-sea/deep-sea"
+        "https://www.youtube.com/watch?v=U69LIr0OrNc",
+        "https://www.youtube.com/watch?v=Q5C7sqVe2Vg",
+        "https://worldoceanreview.com/en/depth-zones-of-the-ocean/",
+        "https://www.whoi.edu/know-your-ocean/ocean-topics/ocean-life/ocean-twilight-zone/",
+        "https://neal.fun/deep-sea/"
       ],
       "status": "pending"
     },
     {
       "lesson": 2,
-      "module": "Introduction to Deep Ocean Zones",
-      "title": "How much pressure can life withstand?",
-      "concepts": ["hydrostatic pressure", "pressure adaptation", "hadal zone"],
+      "module": "The Physical Deep Sea",
+      "title": "How quickly does sunlight die as you go down, and what does 'dark' mean at 1,000 m?",
+      "concepts": [
+        "light attenuation",
+        "photic, twilight and aphotic zones",
+        "why deep light is blue",
+        "exponential decay of light"
+      ],
       "difficulty": 2,
       "type": "question",
       "resources": [
-        "https://www.mbari.org/pressure-in-the-deep-sea/",
-        "https://www.whoi.edu/know-your-ocean/ocean-topics/how-the-ocean-works/ocean-pressure/"
+        "https://www.youtube.com/shorts/LCPD1FJcbdA",
+        "https://oceanexplorer.noaa.gov/facts/light-distributed.html",
+        "https://oceanexplorer.noaa.gov/facts/red-color.html",
+        "https://www.youtube.com/watch?v=GcZempOu7pk",
+        "https://en.wikipedia.org/wiki/Photic_zone"
       ],
       "status": "pending"
     },
     {
       "lesson": 3,
-      "module": "Introduction to Deep Ocean Zones",
-      "title": "Where does the sunlight zone end and why does it matter?",
-      "concepts": ["euphotic zone", "disphotic zone", "light attenuation"],
-      "difficulty": 1,
+      "module": "The Physical Deep Sea",
+      "title": "What would 400 atmospheres do to your body, and why doesn't it crush a jellyfish?",
+      "concepts": [
+        "hydrostatic pressure (about 1 atm per 10 m)",
+        "compressible gas spaces vs incompressible water",
+        "deep-sea temperature (about 2–4 °C)",
+        "molecular effects of pressure"
+      ],
+      "difficulty": 3,
       "type": "mini-lesson",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/light-distributed.html",
-        "https://www.oceannetworks.ca/learning/get-involved/educators/deep-sea"
+        "https://youtube.com/watch?pp=0gcJCfwAo7VqN5tD&v=ud7w4nHgS0E",
+        "https://oceanservice.noaa.gov/facts/pressure.html",
+        "https://www.discoverwildlife.com/animal-facts/marine-animals/why-deep-sea-animals-dont-implode",
+        "https://snexplores.org/?p=189679",
+        "https://en.wikipedia.org/wiki/Deep_sea"
       ],
       "status": "pending"
     },
     {
       "lesson": 4,
-      "module": "Introduction to Deep Ocean Zones",
-      "title": "Why is the ocean floor both a desert and an oasis?",
-      "concepts": ["nutrient limitation", "patchiness", "oases"],
-      "difficulty": 2,
+      "module": "The Physical Deep Sea",
+      "title": "Why is there oxygen at 4,000 m but almost none at 600 m?",
+      "concepts": [
+        "thermohaline circulation",
+        "polar deep-water formation",
+        "oxygen minimum zones",
+        "respiration consuming oxygen at mid-depth"
+      ],
+      "difficulty": 3,
       "type": "real-world",
       "resources": [
-        "https://ocean.si.edu/ecosystems/deep-sea/deep-sea-oases",
-        "https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-exploration"
+        "https://www.youtube.com/watch?v=1uuqvu--6Yg",
+        "https://oceanservice.noaa.gov/facts/conveyor.html",
+        "https://www.mbari.org/?p=86211",
+        "https://www.youtube.com/watch?v=ui3c9pC6P7s",
+        "https://en.wikipedia.org/wiki/Thermohaline_circulation"
       ],
       "status": "pending"
     },
     {
       "lesson": 5,
-      "module": "Adaptations to Extreme Conditions",
-      "title": "How do deep sea fish survive crushing pressure?",
-      "concepts": ["osmotic pressure", "protein adaptation", "TMAO"],
-      "difficulty": 3,
-      "type": "mini-lesson",
+      "module": "The Physical Deep Sea",
+      "title": "Review: How do we know any of this when so little of the deep seafloor has been seen?",
+      "concepts": [
+        "the five constraints (dark, cold, pressure, scarce food, low oxygen)",
+        "ROVs, crewed submersibles and AUVs",
+        "baited landers and sonar mapping",
+        "how much is unexplored"
+      ],
+      "difficulty": 2,
+      "type": "review",
       "resources": [
-        "https://www.mbari.org/adaptations-to-the-deep-sea/",
-        "https://oceanexplorer.noaa.gov/facts/pressure-adapt.html"
+        "https://www.pbs.org/video/the-deep-sea-1746906919",
+        "https://www.wlrn.org/npr-breaking-news/2025-05-07/humans-still-havent-seen-99-999-of-the-deep-seafloor",
+        "https://www.youtube.com/watch?v=NrahF3opykM",
+        "https://nautiluslive.org/blog/2024/09/03/deep-sea-collaboration-rov-hercules-and-auv-sentry-team-american-samoa",
+        "https://en.wikipedia.org/wiki/Remotely_operated_underwater_vehicle"
       ],
       "status": "pending"
     },
     {
       "lesson": 6,
-      "module": "Adaptations to Extreme Conditions",
-      "title": "How do ocean zones and physical conditions shape deep sea life?",
-      "concepts": ["zonation", "pressure", "light penetration"],
-      "difficulty": 1,
-      "type": "review",
+      "module": "Life Under Pressure: Adaptations",
+      "title": "Why do most animals in the open deep ocean make their own light?",
+      "concepts": [
+        "bioluminescence",
+        "luciferin and luciferase",
+        "functions: defence, hunting, communication",
+        "how common bioluminescence is"
+      ],
+      "difficulty": 2,
+      "type": "mini-lesson",
       "resources": [
-        "https://oceanexplorer.noaa.gov/edu/oceanage/welcome.html"
+        "https://www.youtube.com/watch?v=lKeDBpkrDUA",
+        "https://www.mbari.org/?p=86796",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5379559/",
+        "https://doi.org/10.1146/annurev-marine-120308-081028",
+        "https://doi.org/10.1038/srep45750"
       ],
       "status": "pending"
     },
     {
       "lesson": 7,
-      "module": "Adaptations to Extreme Conditions",
-      "title": "Why are so many deep sea creatures gelatinous and translucent?",
-      "concepts": ["body composition", "buoyancy", "predator avoidance"],
-      "difficulty": 2,
-      "type": "question",
+      "module": "Life Under Pressure: Adaptations",
+      "title": "How do you hide where there is nowhere to hide, and why does a barreleye have a see-through head?",
+      "concepts": [
+        "counterillumination",
+        "red and black colouration as invisibility",
+        "transparency",
+        "tubular and enlarged eyes vs eye loss"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
       "resources": [
-        "https://www.mbari.org/products/creature-feature/gelatinous-zooplankton/",
-        "https://ocean.si.edu/ocean-life/invertebrates/gelatinous-zooplankton"
+        "https://www.youtube.com/watch?v=RM9o4VnfHJU",
+        "https://www.nationalgeographic.com/science/phenomena/2011/11/10/octopuses-and-squids-can-switch-camouflage-mode-to-stay-invisible-in-the-twilight-zone/",
+        "https://today.duke.edu/2020/07/ultra-black-skin-allows-some-fish-lurk-unseen",
+        "https://oceanexplorer.noaa.gov/facts/animal-color.html",
+        "https://en.wikipedia.org/wiki/Counterillumination"
       ],
       "status": "pending"
     },
     {
       "lesson": 8,
-      "module": "Adaptations to Extreme Conditions",
-      "title": "What happens when you bring a deep sea fish to the surface?",
-      "concepts": ["decompression", "gas expansion", "sampling challenges"],
-      "difficulty": 2,
-      "type": "teach-back",
+      "module": "Life Under Pressure: Adaptations",
+      "title": "What stops a fish's proteins from being crushed at 7,000 m, and why can't fish reach the deepest trenches?",
+      "concepts": [
+        "piezolytes",
+        "TMAO as a protein stabiliser",
+        "the roughly 8,200–8,400 m fish depth limit",
+        "membrane fluidity at high pressure"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
       "resources": [
-        "https://www.whoi.edu/multimedia/v-deep-sea-fish-challenges/",
-        "https://www.mbari.org/science/upper-ocean-systems/biological-oceanography/"
+        "https://www.youtube.com/watch?v=IXZ-ftJGDCg",
+        "https://www.thenakedscientists.com/node/170978",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3970477",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7671157/",
+        "https://doi.org/10.1073/pnas.1322003111"
       ],
       "status": "pending"
     },
     {
       "lesson": 9,
-      "module": "Adaptations to Extreme Conditions",
-      "title": "How do organisms find food and mates in eternal darkness?",
-      "concepts": ["chemoreception", "mechanoreception", "bioluminescent signals"],
+      "module": "Life Under Pressure: Adaptations",
+      "title": "How do you survive when your next meal could be months away?",
+      "concepts": [
+        "low metabolic rate",
+        "sit-and-wait predation",
+        "watery, gelatinous bodies",
+        "huge mouths and expandable stomachs; deep-sea gigantism"
+      ],
       "difficulty": 3,
-      "type": "mini-lesson",
+      "type": "question",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/senses.html",
-        "https://www.nationalgeographic.com/animals/article/deep-sea-creatures"
+        "https://www.youtube.com/watch?v=iT_EMKl2A3Y",
+        "https://annualreport.mbari.org/2021/story/the-deep-sea-anglerfish-is-a-couch-potatos-hero",
+        "https://www.mbari.org/news/mbari-researchers-discover-what-vampire-squids-eat-its-not-what-you-think/",
+        "https://www.livescience.com/why-deep-sea-animals-are-giants",
+        "https://en.wikipedia.org/wiki/Vampire_squid"
       ],
       "status": "pending"
     },
     {
       "lesson": 10,
-      "module": "Adaptations to Extreme Conditions",
-      "title": "Can you design an organism for the abyssal zone?",
-      "concepts": ["adaptation synthesis", "trade-offs", "evolutionary constraints"],
+      "module": "Life Under Pressure: Adaptations",
+      "title": "How do you find a mate when you may meet another of your species once a year?",
+      "concepts": [
+        "anglerfish sexual parasitism",
+        "hermaphroditism",
+        "pheromones and light signals",
+        "why finding a mate is so hard at low population density"
+      ],
       "difficulty": 3,
-      "type": "real-world",
+      "type": "resource-drop",
       "resources": [
-        "https://www.mbari.org/products/creature-feature/",
-        "http://www.coml.org/image-gallery"
+        "https://www.youtube.com/watch?v=oyXV7ZIIg4g",
+        "https://www.washington.edu/news/2020/07/30/deep-sea-anglerfishes-have-evolved-a-new-type-of-immune-system/",
+        "https://www.aquariumofpacific.org/onlinelearningcenter/species/tripod_fish",
+        "https://www.peerj.com/articles/17075",
+        "https://en.wikipedia.org/wiki/Anglerfish"
       ],
       "status": "pending"
     },
     {
       "lesson": 11,
-      "module": "Hydrothermal Vent Ecosystems",
-      "title": "What lives at the hottest places in the ocean?",
-      "concepts": ["hydrothermal vents", "thermophiles", "vent fauna"],
-      "difficulty": 3,
-      "type": "mini-lesson",
+      "module": "Life Under Pressure: Adaptations",
+      "title": "Teach-back: Design an animal for 1,500 m. What does it look like, and why?",
+      "concepts": [
+        "constraint → adaptation reasoning",
+        "trade-offs between adaptations",
+        "energy source of the designed animal"
+      ],
+      "difficulty": 2,
+      "type": "teach-back",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/vents.html",
-        "https://www.whoi.edu/know-your-ocean/ocean-topics/volcanoes-and-hydrothermal-vents/hydrothermal-vents/"
+        "https://neal.fun/deep-sea/",
+        "https://www.youtube.com/watch?v=-_0UoTm4pGI",
+        "https://oceanexplorer.noaa.gov/expedition-feature/19biolum-background-midnight-zone/",
+        "https://www.mbari.org/"
       ],
       "status": "pending"
     },
     {
       "lesson": 12,
-      "module": "Hydrothermal Vent Ecosystems",
-      "title": "How can life exist without sunlight?",
-      "concepts": ["chemosynthesis", "hydrogen sulfide oxidation", "primary production"],
-      "difficulty": 4,
-      "type": "question",
+      "module": "Food From Above",
+      "title": "If no sunlight reaches the seafloor, where does dinner come from?",
+      "concepts": [
+        "marine snow",
+        "export flux",
+        "only about 1–3% of surface production reaching the abyss",
+        "detritivores"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/chemosynthesis.html",
-        "https://www.mbari.org/chemosynthesis-comes-to-light/"
+        "https://www.youtube.com/watch?v=RAO-dfLXszI",
+        "https://oceanservice.noaa.gov/facts/marinesnow.html",
+        "https://www.whoi.edu/ocean-learning-hub/multimedia/the-biological-pump",
+        "https://www.sciencedaily.com/releases/2013/11/131111185518.htm",
+        "https://en.wikipedia.org/wiki/Marine_snow"
       ],
       "status": "pending"
     },
     {
       "lesson": 13,
-      "module": "Hydrothermal Vent Ecosystems",
-      "title": "What are the key differences between chemosynthesis and photosynthesis?",
-      "concepts": ["energy sources", "chemical vs. light energy", "electron donors"],
-      "difficulty": 2,
-      "type": "review",
+      "module": "Food From Above",
+      "title": "How does the ocean move carbon from the sky to the seafloor?",
+      "concepts": [
+        "the biological carbon pump",
+        "carbon sequestration timescales",
+        "remineralisation with depth",
+        "links to the global carbon cycle"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
       "resources": [
-        "https://ocean.si.edu/ocean-life/microbes/chemosynthesis-vs-photosynthesis"
+        "https://www.youtube.com/watch?v=4xXGlnCoik8",
+        "https://esa.int/esatv/Videos/2023/04/Phytoplankton_and_the_ocean_biological_carbon_pump",
+        "https://www.whoi.edu/news-insights/content/the-ocean-twilight-zones-crucial-carbon-pump",
+        "https://en.wikipedia.org/wiki/Biological_pump"
       ],
       "status": "pending"
     },
     {
       "lesson": 14,
-      "module": "Hydrothermal Vent Ecosystems",
-      "title": "Why do giant tubeworms need bacteria to survive?",
-      "concepts": ["symbiosis", "endosymbionts", "metabolic dependence"],
+      "module": "Food From Above",
+      "title": "What is the biggest migration on Earth, and why does it happen every night?",
+      "concepts": [
+        "diel vertical migration",
+        "deep scattering layer",
+        "avoiding predators vs feeding",
+        "active carbon transport"
+      ],
       "difficulty": 3,
-      "type": "mini-lesson",
+      "type": "resource-drop",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/tubeworms.html",
-        "https://www.mbari.org/vent-tubeworms-can-live-astonishingly-long/"
+        "https://www.youtube.com/watch?v=U7qF0_SyFAY",
+        "https://twilightzone.whoi.edu/the-mysterious-false-bottom-of-the-twilight-zone/",
+        "https://nautil.us/the-earth-shaping-animal-migration-no-one-ever-sees-237990",
+        "https://fish.uw.edu/?p=27781",
+        "https://en.wikipedia.org/wiki/Diel_vertical_migration"
       ],
       "status": "pending"
     },
     {
       "lesson": 15,
-      "module": "Hydrothermal Vent Ecosystems",
-      "title": "What does a real hydrothermal vent expedition look like?",
-      "concepts": ["exploration", "ROV technology", "in situ observation"],
-      "difficulty": 2,
-      "type": "resource-drop",
+      "module": "Food From Above",
+      "title": "What happens when a 40-tonne whale lands on the abyssal seafloor?",
+      "concepts": [
+        "whale fall",
+        "ecological succession stages",
+        "Osedax bone-eating worms",
+        "sulfophilic stage as a bridge to chemosynthesis"
+      ],
+      "difficulty": 3,
+      "type": "real-world",
       "resources": [
-        "https://schmidtocean.org/cruise-log/",
-        "https://www.mbari.org/products/video-lab/",
-        "https://oceanexplorer.noaa.gov/okeanos/explorations/explorations.html"
+        "https://www.youtube.com/watch?v=fFtcK1cK1ro",
+        "https://ocean.si.edu/ocean-life/marine-mammals/life-after-whale-whale-falls",
+        "https://www.mbari.org/whale-carcass-yields-bone-devouring-worms/",
+        "https://en.wikipedia.org/wiki/Whale_fall",
+        "https://en.wikipedia.org/wiki/Osedax"
       ],
       "status": "pending"
     },
     {
       "lesson": 16,
-      "module": "Bioluminescence and Communication",
-      "title": "Why do 90% of deep sea animals glow in the dark?",
-      "concepts": ["bioluminescence", "luciferin-luciferase", "ecological functions"],
+      "module": "Food From Above",
+      "title": "How can a chemical fingerprint in muscle show what an animal ate months ago?",
+      "concepts": [
+        "stable isotopes",
+        "δ13C as a carbon-source tracer",
+        "δ15N and trophic level",
+        "reconstructing food webs"
+      ],
       "difficulty": 3,
-      "type": "mini-lesson",
+      "type": "question",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/biolum.html",
-        "https://ocean.si.edu/ocean-life/fish/bioluminescence"
+        "https://deepseanews.com/2019/05/you-are-what-you-eat-using-bad-boy-carbons-to-understand-food-webs/",
+        "https://stories.alaskasealife.org/2020/03/13/whos-eating-what/",
+        "https://acer.disl.org/news/2017/08/14/tool-talk-stable-isotopes",
+        "https://en.wikipedia.org/wiki/Isotope_analysis"
       ],
       "status": "pending"
     },
     {
       "lesson": 17,
-      "module": "Bioluminescence and Communication",
-      "title": "How does counter-illumination camouflage work?",
-      "concepts": ["counter-illumination", "photophores", "predator evasion"],
-      "difficulty": 4,
-      "type": "question",
+      "module": "Food From Above",
+      "title": "Review: Follow one carbon atom from a surface diatom to a sea cucumber at 4,000 m",
+      "concepts": [
+        "marine snow",
+        "biological pump",
+        "diel vertical migration",
+        "food falls",
+        "isotope evidence"
+      ],
+      "difficulty": 2,
+      "type": "review",
       "resources": [
-        "https://www.mbari.org/bioluminescence-in-the-deep-sea/",
-        "https://ocean.si.edu/ocean-life/fish/why-do-animals-deep-sea-glow"
+        "https://www.youtube.com/watch?v=RAO-dfLXszI",
+        "https://twilightzone.whoi.edu/where-does-the-carbon-go",
+        "https://www.mbari.org/station-m-discoveries/",
+        "https://annualreport.mbari.org/2019/story/30-years-of-research-on-the-abyssal-plain-provides-clues-to-climate-change",
+        "https://en.wikipedia.org/wiki/Biological_pump"
       ],
       "status": "pending"
     },
     {
       "lesson": 18,
-      "module": "Bioluminescence and Communication",
-      "title": "Can you predict which organisms use bioluminescence and how?",
-      "concepts": ["function prediction", "ecological niche", "light patterns"],
+      "module": "Chemosynthetic Ecosystems",
+      "title": "What did scientists find in 1977 that broke the rule that all life runs on sunlight?",
+      "concepts": [
+        "Galápagos Rift vent discovery",
+        "DSV Alvin",
+        "black smokers",
+        "mid-ocean ridges and seafloor spreading"
+      ],
       "difficulty": 3,
-      "type": "teach-back",
+      "type": "real-world",
       "resources": [
-        "https://www.mbari.org/products/creature-feature/bioluminescent-jellies/",
-        "http://www.coml.org/bioluminescence"
+        "https://www.youtube.com/watch?v=ehfYjbIuoH8",
+        "https://www.whoi.edu/feature/history-hydrothermal-vents/discovery/1977.html",
+        "https://divediscover.whoi.edu/archives/ventcd/vent_discovery/thediscovery/trail_77.html",
+        "https://tos.org/oceanography/assets/docs/20-4_haymon.pdf",
+        "https://doi.org/10.1126/science.203.4385.1073"
       ],
       "status": "pending"
     },
     {
       "lesson": 19,
-      "module": "Bioluminescence and Communication",
-      "title": "How does bioluminescence work and why do deep sea organisms use it?",
-      "concepts": ["bacterial vs. intrinsic", "communication", "defense"],
-      "difficulty": 1,
-      "type": "review",
+      "module": "Chemosynthetic Ecosystems",
+      "title": "How can a microbe live on chemicals coming out of rock?",
+      "concepts": [
+        "chemosynthesis",
+        "redox: electron donors (H2S, CH4, H2) and acceptors (O2)",
+        "chemoautotrophy vs photoautotrophy",
+        "indirect dependence on photosynthetic oxygen"
+      ],
+      "difficulty": 5,
+      "type": "mini-lesson",
       "resources": [
-        "https://oceanexplorer.noaa.gov/edu/learning/player/lesson09.html"
+        "https://www.youtube.com/watch?v=KMocaHnuwR4",
+        "https://ocean.si.edu/ecosystems/deep-sea/microbes-keep-hydrothermal-vents-pumping",
+        "https://oceanexplorer.noaa.gov/facts/photochemo.html",
+        "https://en.wikipedia.org/wiki/Chemosynthesis",
+        "https://en.wikipedia.org/wiki/Hydrothermal_vent"
       ],
       "status": "pending"
     },
     {
       "lesson": 20,
-      "module": "Bioluminescence and Communication",
-      "title": "What does bioluminescence look like in the wild ocean?",
-      "concepts": ["in situ bioluminescence", "diversity", "visual observation"],
-      "difficulty": 2,
-      "type": "resource-drop",
+      "module": "Chemosynthetic Ecosystems",
+      "title": "How does a worm with no mouth and no gut grow 2 metres long?",
+      "concepts": [
+        "symbiosis and symbionts",
+        "Riftia pachyptila and the trophosome",
+        "haemoglobin carrying both sulfide and oxygen",
+        "other vent animals that host symbionts (scaly-foot snail)"
+      ],
+      "difficulty": 4,
+      "type": "question",
       "resources": [
-        "https://www.mbari.org/products/video-lab/video-search/?search=bioluminescence",
-        "https://schmidtocean.org/technology/bioluminescence-camera/",
-        "https://www.nationalgeographic.com/video/bioluminescence"
+        "https://www.pbs.org/video/how-giant-tube-worms-survive-at-hydrothermal-vents-cpms1j",
+        "https://www.youtube.com/watch?v=7j_RfzhddBM",
+        "https://www.youtube.com/watch?v=_d-us3DL5Kk",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8789280/",
+        "https://en.wikipedia.org/wiki/Riftia_pachyptila"
       ],
       "status": "pending"
     },
     {
       "lesson": 21,
-      "module": "Deep Sea Food Webs",
-      "title": "What is marine snow and why does it feed the abyss?",
-      "concepts": ["marine snow", "detrital pathway", "particulate organic carbon"],
-      "difficulty": 2,
+      "module": "Chemosynthetic Ecosystems",
+      "title": "How can there be a lake at the bottom of the ocean?",
+      "concepts": [
+        "cold seeps",
+        "anaerobic oxidation of methane",
+        "brine pools",
+        "slow growth and long lifespans at seeps"
+      ],
+      "difficulty": 4,
       "type": "mini-lesson",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/marine-snow.html",
-        "https://www.mbari.org/marine-snow-connecting-surface-and-seafloor/"
+        "https://www.youtube.com/watch/nGLtMWx28hs",
+        "https://nautiluslive.org/video/2015/06/01/below-surface-brine-pool-rov-hercules-splashes",
+        "https://www.sciencedaily.com/releases/2005/02/050223130039.htm",
+        "https://en.wikipedia.org/wiki/Cold_seep",
+        "https://en.wikipedia.org/wiki/Brine_pool"
       ],
       "status": "pending"
     },
     {
       "lesson": 22,
-      "module": "Deep Sea Food Webs",
-      "title": "How does a dead whale create an underwater oasis for decades?",
-      "concepts": ["whale falls", "succession", "chemosynthetic stage"],
-      "difficulty": 3,
+      "module": "Chemosynthetic Ecosystems",
+      "title": "When a vent dies, how do its animals find the next one hundreds of kilometres away?",
+      "concepts": [
+        "larval dispersal",
+        "colonisation after eruptions",
+        "vent community succession",
+        "biogeographic provinces (an open question)"
+      ],
+      "difficulty": 4,
       "type": "question",
       "resources": [
-        "https://oceanexplorer.noaa.gov/facts/whalefall.html",
-        "https://www.mbari.org/whale-fall/"
+        "https://www.youtube.com/watch?v=jkT9UA-MvWM",
+        "https://www.sciencenews.org/?p=5733",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC2867905",
+        "https://earthsky.org/earth/ocean-animals-life-discovered-beneath-seafloor/",
+        "https://en.wikipedia.org/wiki/Hydrothermal_vent"
       ],
       "status": "pending"
     },
     {
       "lesson": 23,
-      "module": "Deep Sea Food Webs",
-      "title": "Why are giant squid so rarely seen despite being huge?",
-      "concepts": ["mesopelagic predators", "elusive behavior", "deep scattering layer"],
-      "difficulty": 3,
+      "module": "Chemosynthetic Ecosystems",
+      "title": "Could life on Earth, or on Enceladus, have started at a hydrothermal vent?",
+      "concepts": [
+        "origin-of-life hypotheses",
+        "alkaline vents and Lost City",
+        "natural chemical gradients as an energy source",
+        "astrobiology on icy moons"
+      ],
+      "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://ocean.si.edu/ocean-life/invertebrates/giant-squid",
-        "https://www.nationalgeographic.com/animals/invertebrates/facts/giant-squid"
+        "https://www.youtube.com/watch?v=_uAJY1mqtw4",
+        "https://www.youtube.com/watch?v=-nzaFDkDU7c",
+        "https://nautil.us/in-search-of-lifes-smoking-gun-234991",
+        "https://www.nasa.gov/news-release/nasa-missions-provide-new-insights-into-ocean-worlds-in-our-solar-system/",
+        "https://en.wikipedia.org/wiki/Lost_City_Hydrothermal_Field"
       ],
       "status": "pending"
     },
     {
       "lesson": 24,
-      "module": "Deep Sea Food Webs",
-      "title": "Can you map energy flow in a deep sea food web?",
-      "concepts": ["trophic levels", "energy transfer", "detrital vs. chemosynthetic pathways"],
-      "difficulty": 4,
+      "module": "Chemosynthetic Ecosystems",
+      "title": "Teach-back: Explain to a friend why a vent ecosystem is almost, but not completely, independent of the Sun",
+      "concepts": [
+        "chemosynthesis vs photosynthesis",
+        "symbiosis",
+        "vents vs seeps vs whale falls",
+        "dependence on oxygen made at the surface"
+      ],
+      "difficulty": 2,
       "type": "teach-back",
       "resources": [
-        "https://oceanexplorer.noaa.gov/edu/learning/player/lesson08.html",
-        "https://www.whoi.edu/oceanus/feature/food-webs-in-the-deep-sea/"
+        "https://www.southernfriedscience.com/ocean-of-pseudoscience-shortie-chemosythetic-ecosystems-and-independence-from-the-sun/",
+        "https://www.youtube.com/watch?v=CZzQhiNQXxU",
+        "https://oceanexplorer.noaa.gov/facts/photochemo.html",
+        "https://en.wikipedia.org/wiki/Chemosynthesis"
       ],
       "status": "pending"
     },
     {
       "lesson": 25,
-      "module": "Conservation and Exploration",
-      "title": "How do all the pieces of deep ocean ecology fit together?",
-      "concepts": ["adaptations", "energy sources", "biodiversity"],
-      "difficulty": 2,
-      "type": "review",
+      "module": "Seafloor Habitats and Biodiversity",
+      "title": "Is the abyssal plain a desert or a hidden metropolis?",
+      "concepts": [
+        "abyssal plains",
+        "meiofauna and macrofauna in sediment",
+        "the deep subseafloor biosphere",
+        "polymetallic nodules as hard habitat"
+      ],
+      "difficulty": 3,
+      "type": "mini-lesson",
       "resources": [
-        "https://oceanexplorer.noaa.gov/edu/materials/deepocean-background.pdf"
+        "https://www.youtube.com/watch?v=YyFg6nOMRdM",
+        "https://vimeo.com/48903410",
+        "https://www.earthmagazine.org/article/subseafloor-biosphere-extended-greatest-depth-yet/",
+        "https://www.fox6now.com/news/see-some-of-the-5000-new-species-found-in-planned-mining-zone-of-the-deep-pacific",
+        "https://en.wikipedia.org/wiki/Abyssal_plain"
       ],
       "status": "pending"
     },
     {
       "lesson": 26,
-      "module": "Conservation and Exploration",
-      "title": "What threatens the least-explored ecosystem on Earth?",
-      "concepts": ["deep sea mining", "bottom trawling", "climate change impacts"],
+      "module": "Seafloor Habitats and Biodiversity",
+      "title": "Why are seamounts oases in the deep?",
+      "concepts": [
+        "seamounts",
+        "current acceleration and food supply",
+        "cold-water corals",
+        "very slow growth and great age"
+      ],
       "difficulty": 3,
-      "type": "mini-lesson",
+      "type": "real-world",
       "resources": [
-        "https://www.savethehighseas.org/",
-        "https://ocean.si.edu/conservation/threats-ocean/deep-sea-mining"
+        "https://www.youtube.com/watch?v=c6GRMV3rHhE",
+        "https://www.youtube.com/watch?v=ZdPYAeB2uIo",
+        "https://lenfestocean.org/en/news-and-publications/news/why-are-some-seamounts-biological-hotspots",
+        "https://www.sciencedaily.com/releases/2009/03/090324091209.htm",
+        "https://en.wikipedia.org/wiki/Seamount"
       ],
       "status": "pending"
     },
     {
       "lesson": 27,
-      "module": "Conservation and Exploration",
-      "title": "How do we explore the final frontier on our own planet?",
-      "concepts": ["ROV technology", "AUV", "submersibles", "future exploration"],
+      "module": "Seafloor Habitats and Biodiversity",
+      "title": "What lives at the bottom of the Mariana Trench?",
+      "concepts": [
+        "hadal zone",
+        "trenches as isolated 'islands'",
+        "amphipods, holothurians and snailfish",
+        "the deepest fish ever recorded"
+      ],
       "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=4VpUoMIPiVs",
+        "https://www.uwa.edu.au/news/article/2022/october/tiny-crustacean-reveals-deepest-parts-of-oceans-like-isolated-islands",
+        "https://schmidtocean.org/cruise-log-post/amphipod-mania/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7671157/",
+        "https://en.wikipedia.org/wiki/Hadal_zone"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 28,
+      "module": "Seafloor Habitats and Biodiversity",
+      "title": "Why is the deep sea so diverse when there is so little food?",
+      "concepts": [
+        "the deep-sea diversity puzzle",
+        "stability, disturbance and patch hypotheses",
+        "pattern and scale",
+        "links between biodiversity and ecosystem function"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://deepseanews.com/?p=59077",
+        "https://dsbsoc.org/new-research-2/new-paper-hypotheses-on-deep-sea-diversity/",
+        "https://dsbsoc.org/indeep/new-paper-deep-sea-diversity-patterns-are-shaped-by-energy-availability/",
+        "https://deepseanews.com/2008/01/saving-the-deep-sea-will-save-the-world/",
+        "https://doi.org/10.2307/1941447"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 29,
+      "module": "Seafloor Habitats and Biodiversity",
+      "title": "Review: Pick a habitat (vent, whale fall, seamount, trench or abyssal plain) and build its energy budget",
+      "concepts": [
+        "comparing habitats",
+        "energy sources by habitat",
+        "constraint → adaptation across habitats"
+      ],
+      "difficulty": 2,
+      "type": "review",
+      "resources": [
+        "https://www.youtube.com/watch?v=RAO-dfLXszI",
+        "https://oceanservice.noaa.gov/facts/whale-fall.html",
+        "https://www.youtube.com/watch?v=8e0Mw_25ojg",
+        "https://oceana.org/blog/marine-snow-the-oceans-endless-snowfall-explained/",
+        "https://neal.fun/deep-sea/"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 30,
+      "module": "Humans and the Deep",
+      "title": "Should we mine the deep seafloor for battery metals?",
+      "concepts": [
+        "polymetallic nodules and the Clarion-Clipperton Zone",
+        "sediment plumes and loss of habitat",
+        "recovery timescales of decades or longer",
+        "weighing evidence that is uncertain or disputed"
+      ],
+      "difficulty": 4,
       "type": "real-world",
       "resources": [
-        "https://oceanexplorer.noaa.gov/technology/technology.html",
-        "https://www.mbari.org/technology/",
-        "https://schmidtocean.org/technology/"
+        "https://www.youtube.com/watch?v=KumS5rdFflM",
+        "https://noc.ac.uk/news/new-study-reveals-long-term-impacts-deep-sea-mining-first-signs-biological-recovery",
+        "https://noc.ac.uk/news/study-measuring-impacts-deep-sea-mining-machine-finds-abundance-animals-site-decreased-37",
+        "https://news.northwestern.edu/stories/2024/july/deep-ocean-floor-produces-its-own-dark-oxygen",
+        "https://en.wikipedia.org/wiki/Deep_sea_mining"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 31,
+      "module": "Humans and the Deep",
+      "title": "What does a bottom trawl leave behind on a seamount?",
+      "concepts": [
+        "bottom trawling",
+        "long-lived, slow-reproducing fish (orange roughy)",
+        "damage to coral and slow recovery",
+        "bycatch"
+      ],
+      "difficulty": 3,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=biHEc0IVi3o",
+        "https://www.nationalgeographic.com/environment/article/bottom-trawling-effects-seabed-ocean",
+        "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2020.567002/pdf",
+        "https://news.mongabay.com/2026/08/decades-after-bottom-trawling-chilean-seamounts-remain-degraded/",
+        "https://en.wikipedia.org/wiki/Bottom_trawling"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 32,
+      "module": "Humans and the Deep",
+      "title": "How does climate change reach places sunlight never does?",
+      "concepts": [
+        "warming of deep water",
+        "ocean deoxygenation and growing OMZs",
+        "acidification and calcifying organisms",
+        "changes in food supply from the surface"
+      ],
+      "difficulty": 4,
+      "type": "mini-lesson",
+      "resources": [
+        "https://www.youtube.com/watch?v=KJPpJhQxaLw",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7693292/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4261893/",
+        "https://www.geomar.de/en/news/article/oxygen-minimum-zones-are-growing",
+        "https://doi.org/10.1038/nature04095"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 33,
+      "module": "Humans and the Deep",
+      "title": "How did plastic and banned chemicals end up inside animals at the bottom of the Mariana Trench?",
+      "concepts": [
+        "microplastics in hadal amphipods",
+        "persistent organic pollutants (PCBs)",
+        "the deep sea as a final sink",
+        "bioaccumulation"
+      ],
+      "difficulty": 3,
+      "type": "resource-drop",
+      "resources": [
+        "https://www.youtube.com/watch?v=i8X7VUB1s6g",
+        "https://www.ncl.ac.uk/press/articles/archive/2017/02/deepsea",
+        "https://www.csmonitor.com/Environment/2017/0214/How-did-banned-chemicals-wind-up-in-the-deepest-trenches-of-the-ocean",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6408374/",
+        "https://doi.org/10.1098/rsos.180667"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 34,
+      "module": "Humans and the Deep",
+      "title": "Who owns the deep sea, and who gets to decide what happens to it?",
+      "concepts": [
+        "UNCLOS and 'the Area'",
+        "the International Seabed Authority",
+        "the BBNJ High Seas Treaty",
+        "marine protected areas in international waters"
+      ],
+      "difficulty": 4,
+      "type": "question",
+      "resources": [
+        "https://www.youtube.com/watch?v=pf1GvrUqeIA",
+        "https://news.mongabay.com/video/2024/10/what-are-the-high-seas-and-why-should-we-care/",
+        "https://dialogue.earth/en/ocean/6677-deep-seabed-mining-2/",
+        "https://en.wikipedia.org/wiki/United_Nations_Convention_on_the_Law_of_the_Sea",
+        "https://en.wikipedia.org/wiki/International_Seabed_Authority"
+      ],
+      "status": "pending"
+    },
+    {
+      "lesson": 35,
+      "module": "Humans and the Deep",
+      "title": "Capstone teach-back: Make the case for or against a new deep-sea protection, using evidence from the whole course",
+      "concepts": [
+        "synthesis: environment → adaptation → energy → habitat → impact",
+        "arguing from evidence",
+        "stating what is still unknown"
+      ],
+      "difficulty": 3,
+      "type": "teach-back",
+      "resources": [
+        "https://www.sciencealert.com/weve-only-glimpsed-0-001-of-earths-deep-seafloor-study-reveals",
+        "https://seabedminingsciencestatement.org/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7496832/",
+        "https://news.mongabay.com/short-article/2026/08/six-african-countries-now-support-precautionary-pause-on-deep-seabed-mining/",
+        "https://doi.org/10.5194/bg-7-2851-2010"
       ],
       "status": "pending"
     }
-  ]
+  ],
+  "level": "intermediate",
+  "prerequisites": [
+    "High-school biology: cells, photosynthesis, aerobic respiration, food chains and webs, natural selection",
+    "Basic chemistry: ions, reading a simple chemical equation, rough idea of oxidation vs reduction",
+    "Comfort with simple arithmetic, percentages and orders of magnitude (back-of-envelope estimates)"
+  ],
+  "preliminary": false
 }

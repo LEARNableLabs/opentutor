@@ -1,91 +1,49 @@
-# Marine Biology — Deep Ocean Ecosystems Concept Map
+# Marine Biology: Deep Ocean Ecosystems (Concept Map)
 
 ## Core Concepts (in learning order)
 
-1. **Ocean zonation** — vertical stratification of the ocean into layers based on light and depth
-2. **Aphotic zone** — the region below ~200m where photosynthesis cannot occur
-3. **Hydrostatic pressure** — pressure exerted by water column; increases ~1 atmosphere per 10m depth
-4. **Bathyal, abyssal, and hadal zones** — deep ocean zones from 200m to 11,000m depth
-5. **Light attenuation** — exponential decrease in light intensity with depth due to absorption and scattering
-6. **Pressure adaptation** — biochemical and structural modifications allowing organisms to function under extreme pressure. Depends on: hydrostatic pressure
-7. **Nutrient limitation** — scarcity of organic matter in deep ocean due to distance from primary production. Depends on: aphotic zone
-8. **Body composition adaptations** — gelatinous bodies, reduced mineralization, water-filled tissues. Depends on: pressure adaptation, nutrient limitation
-9. **Chemoreception and mechanoreception** — sensory adaptations for finding food and mates in darkness. Depends on: aphotic zone
-10. **Hydrothermal vents** — seafloor features where superheated water rich in minerals and chemicals emerges. Depends on: bathyal/abyssal zones
-11. **Chemosynthesis** — production of organic compounds using chemical energy (e.g., from H₂S oxidation) instead of light. Depends on: hydrothermal vents
-12. **Thermophiles** — organisms adapted to extremely high temperatures found at vents. Depends on: hydrothermal vents
-13. **Endosymbiosis** — symbiotic relationship where chemosynthetic bacteria live inside host tissues. Depends on: chemosynthesis
-14. **Bioluminescence** — production of light by living organisms through luciferin-luciferase reactions
-15. **Counter-illumination** — camouflage strategy using ventral photophores to match downwelling light. Depends on: bioluminescence
-16. **Marine snow** — continuous rain of organic detritus from surface waters to deep ocean. Depends on: aphotic zone, nutrient limitation
-17. **Detrital food webs** — energy pathways based on consumption of dead organic matter. Depends on: marine snow
-18. **Whale falls** — nutrient-rich habitats created by dead whale carcasses on seafloor. Depends on: nutrient limitation, chemosynthesis
-19. **Chemosynthetic succession** — progression of communities at whale falls from scavenger stage to chemosynthetic stage
-20. **Deep scattering layer** — midwater zone of high biomass, dominated by small fish and invertebrates performing diel vertical migration
-21. **Mesopelagic predators** — organisms (e.g., giant squid) hunting in midwater zones. Depends on: deep scattering layer, bioluminescence
-22. **Trophic cascades in deep sea** — energy transfer through food web levels in deep ocean. Depends on: detrital food webs, chemosynthetic food webs
+1. **Depth zonation.** The ocean is divided into layers: epipelagic (0–200 m), mesopelagic (200–1,000 m), bathypelagic (1,000–4,000 m), abyssopelagic (4,000–6,000 m) and hadal (trenches deeper than about 6,000 m). Pelagic means the water column. Benthic means the seafloor.
+2. **Light attenuation.** Sunlight fades roughly exponentially with depth. Practically none is left by about 1,000 m. Depends on: 1
+3. **Pressure and temperature.** Pressure rises by about 1 atm per 10 m. The deep sea is about 2–4 °C almost everywhere. Depends on: 1
+4. **Oxygen and circulation.** Deep water forms at the poles and carries oxygen down. Oxygen minimum zones form at mid-depths because respiration uses up oxygen there. Depends on: 1, 3
+5. **Exploration methods.** ROVs, crewed submersibles, AUVs, landers and sonar are how we know what we know, and they also limit it. Depends on: 1–4
+6. **Bioluminescence.** Animals make their own light with luciferin and luciferase. This is common in the deep water column. Depends on: 2
+7. **Camouflage and vision.** Counterillumination, red and black colouration, transparency, and specialised eyes. Depends on: 2, 6
+8. **Pressure biochemistry.** Piezolytes such as TMAO stabilise proteins. TMAO may set the depth limit for fish. Depends on: 3
+9. **Energy economy.** Low metabolism, sit-and-wait feeding, and gelatinous bodies. Depends on: 3, 10 (preview), 12
+10. **Mate-finding in the dark.** Sexual parasitism, hermaphroditism, and chemical and light signals. Depends on: 6, 9
+11. **Marine snow and export flux.** Particles sinking from the surface. Only about 1–3% of surface production reaches the abyss. Depends on: 1, 2
+12. **Biological carbon pump.** Biology moves carbon from the atmosphere into the deep ocean. Depends on: 11
+13. **Diel vertical migration.** Animals move up and down every day, which also carries carbon down. Depends on: 2, 11, 12
+14. **Food falls (whale falls).** Rare, large packets of food, and the succession of communities that feed on them. Depends on: 11; previews 16
+15. **Stable isotopes.** Chemical tracers used to reconstruct food webs. Depends on: 11, 12
+16. **Chemosynthesis.** Microbes fix carbon using energy from redox reactions (H2S, CH4 or H2 oxidised by O2 or other acceptors). Depends on: 4, prerequisite redox, 14
+17. **Symbiosis at vents.** Riftia and other animals host chemosynthetic symbionts. Depends on: 16
+18. **Seeps and brine pools.** Chemosynthesis driven by methane and sulfide, without volcanic heat. Depends on: 16
+19. **Vent colonisation and dispersal.** Larvae spread between short-lived, patchy habitats. Depends on: 17, 18
+20. **Origin of life and astrobiology.** Vent chemistry as a possible cradle for life. Depends on: 16
+21. **Abyssal plains and sediment life.** Depends on: 11, 9
+22. **Seamounts and cold-water corals.** Depends on: 4, 11
+23. **Hadal trenches.** Depends on: 3, 8, 11
+24. **The diversity puzzle.** Why diversity is high when food is scarce, and how biodiversity relates to ecosystem function. Depends on: 21–23
+25. **Human impacts.** Mining, trawling, climate stressors and pollution. Depends on: 9, 12, 19, 21–23
+26. **Governance.** UNCLOS, the ISA and BBNJ. Depends on: 25
 
 ## Dependencies
 
-### Zone and Physical Factors
-- **Pressure adaptation** requires understanding **hydrostatic pressure** because organisms must counteract the physical effects of extreme pressure on proteins, membranes, and gas spaces
-- **Light attenuation** explains why the **aphotic zone** exists — no photosynthesis can occur below the depth where light is insufficient
-- **Nutrient limitation** follows from **aphotic zone** because primary production (photosynthesis) cannot occur, making deep ocean dependent on inputs from surface
-
-### Adaptations
-- **Body composition adaptations** build on **pressure adaptation** and **nutrient limitation** because gelatinous bodies reduce metabolic costs and minimize pressure differential
-- **Chemoreception and mechanoreception** depend on **aphotic zone** because visual systems are ineffective in complete darkness
-
-### Chemosynthetic Ecosystems
-- **Chemosynthesis** requires understanding **hydrothermal vents** as the source of reduced chemical compounds (H₂S, CH₄, H₂) that fuel the process
-- **Endosymbiosis** builds on **chemosynthesis** because host animals (tubeworms, clams) house bacteria internally to access chemosynthetic products
-- **Whale falls** create conditions for **chemosynthesis** in their late stages as anaerobic decomposition produces sulfides
-- **Chemosynthetic succession** depends on both **whale falls** and **chemosynthesis** as the habitat transitions from scavenger-dominated to chemosynthetic-bacteria-dominated
-
-### Bioluminescence
-- **Counter-illumination** is a specific application of **bioluminescence** where organisms match ambient light to avoid silhouette detection
-- **Bioluminescence** interacts with **mesopelagic predators** as both hunting tool and defense mechanism
-
-### Food Webs
-- **Marine snow** is the primary input to **detrital food webs** in the deep ocean
-- **Detrital food webs** depend on **marine snow** as the energy source in aphotic regions lacking local primary production
-- **Trophic cascades** integrate both **detrital food webs** and chemosynthetic pathways, showing how energy moves through deep ocean ecosystems
+- **Adaptations (6–10) need the constraints (1–4).** Every adaptation answers a specific physical problem. Without the constraint, the adaptation looks like a random oddity.
+- **Bioluminescence (6) needs light attenuation (2).** Light made by animals only matters in places where sunlight has faded.
+- **The energy economy (9) needs marine snow (11).** Low metabolism makes sense once the student sees how little food arrives. The course gives a preview in Module 2 and returns to it fully in Module 3.
+- **Chemosynthesis (16) needs both redox (prerequisite) and the 'food from above' model (11–14).** The vent discovery is only surprising if the student first believes everything runs on sunlight. Whale falls (14) are the bridge, because their sulfophilic stage is chemosynthetic.
+- **'Almost independent of the Sun' (16) needs oxygen circulation (4).** Most vent chemosynthesis uses O2 as the electron acceptor, and that O2 came from surface photosynthesis carried down by circulation.
+- **The diversity puzzle (24) needs all the habitats (21–23) and the food supply (11).** It is only a puzzle once low food and a uniform-looking environment are understood.
+- **Human impacts (25) build on slow life histories (9), dispersal (19) and the carbon pump (12).** Recovery time, connectivity and carbon storage are the scientific core of every policy argument.
 
 ## Prerequisite Topics
 
-- **Basic cellular biology** — needed for understanding chemosynthesis, symbiosis, pressure effects on proteins and membranes
-- **Ecology fundamentals** — needed for food webs, energy flow, trophic levels, succession
-- **Basic chemistry** — needed for understanding oxidation-reduction reactions in chemosynthesis, pH, chemical bonds
-- **Physics of fluids** (helpful but not required) — for understanding pressure, buoyancy, light absorption
-
-## Key Concept Bottlenecks
-
-### Chemosynthesis
-This is the most conceptually challenging topic for intermediate students. It requires:
-- Understanding that energy can come from chemical bonds, not just light
-- Grasping oxidation-reduction chemistry
-- Recognizing that life can have fundamentally different energy sources than surface ecosystems
-
-Without solid understanding of chemosynthesis, students will struggle with vent ecosystems, whale fall succession, and the full scope of deep ocean energy pathways.
-
-### Pressure Adaptation
-Students often have misconceptions about how pressure affects organisms. Key insight:
-- Organisms aren't "fighting" pressure with rigid structures
-- Internal pressure equals external pressure
-- Adaptations are at molecular level (protein flexibility, membrane composition)
-
-This concept is prerequisite for understanding why deep sea animals are often soft-bodied.
-
-### Marine Snow vs. Whale Falls
-Students may conflate these two nutrient sources. Important distinction:
-- Marine snow = continuous low-level input from surface (detrital pathway)
-- Whale falls = rare but massive pulses creating localized oases (supports chemosynthesis in later stages)
-
-Understanding both pathways is needed for grasping deep ocean food web complexity.
-
-## Common Conceptual Progressions
-
-1. **Light limitation → Chemosynthesis** — students first understand why photosynthesis fails, then can appreciate alternative energy sources
-2. **Individual adaptations → Ecosystem function** — start with how single organisms survive pressure/darkness, then build to community interactions
-3. **Physical gradients → Biological patterns** — use zonation and pressure gradients to explain distribution of life forms
-4. **Surface connections → Deep isolation** — trace linkages (marine snow) before exploring isolated systems (vents)
+- **Photosynthesis and aerobic respiration.** Needed for concepts 11–16 and the energy thread throughout.
+- **Food chains and trophic levels.** Needed for 11, 14, 15.
+- **Oxidation and reduction (basic).** Needed for 16–18. Review it briefly at the start of lesson 19.
+- **Natural selection.** Needed for 6–10.
+- **Orders of magnitude and exponential decay (intuitive).** Needed for 2, 3, 11.
+- **Plate tectonics (basic).** Helpful for 18 and 23. Give a one-paragraph refresher in lesson 18.

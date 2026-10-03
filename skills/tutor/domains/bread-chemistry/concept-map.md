@@ -2,108 +2,42 @@
 
 ## Core Concepts (in learning order)
 
-1. **Gluten proteins (gliadin and glutenin)** — two protein types in flour that form elastic networks when hydrated
-2. **Protein hydration** — water binds to flour proteins, enabling movement and interaction
-3. **Gluten network formation** — mechanical work aligns proteins into organized elastic structure. Depends on: gluten proteins, protein hydration
-4. **Flour protein content** — different flours contain different amounts of protein, affecting gluten strength
-5. **Gluten development stages** — dough progresses from shaggy to smooth to elastic; can be over-developed
-6. **Autolyse** — resting hydrated flour before kneading; enzymes begin breaking down proteins and starches. Depends on: protein hydration
-7. **Baker's percentage** — formula notation where flour = 100%, other ingredients expressed as percentages of flour weight
-8. **Hydration ratio** — water-to-flour ratio, expressed as baker's percentage; affects dough consistency and final texture
-9. **Gluten extensibility** — gluten's ability to stretch without breaking; increased by higher hydration. Depends on: gluten network formation, hydration ratio
-10. **Water chemistry (pH and minerals)** — mineral content and pH affect gluten development and enzyme activity
-11. **Temperature and hydration rate** — warmer water speeds protein swelling and enzyme activation
-12. **Yeast metabolism** — yeast consumes sugars, producing CO2 (leavening) and ethanol (flavor)
-13. **Lactic acid bacteria (LAB)** — bacteria in sourdough produce lactic and acetic acids, creating tangy flavor
-14. **Organic acids** — lactic and acetic acids from fermentation; contribute to flavor and dough pH. Depends on: lactic acid bacteria
-15. **Enzymatic activity (amylase and protease)** — enzymes break down starches into sugars and proteins into peptides during fermentation
-16. **Gas bubble formation and coalescence** — CO2 bubbles form and may merge; gluten films must be strong enough to separate them. Depends on: yeast metabolism, gluten network formation
-17. **Temperature and fermentation rate** — cooler temperatures slow metabolism, allowing more flavor development
-18. **Oven spring** — rapid gas expansion in early baking before yeast dies and proteins set. Depends on: yeast metabolism, gas retention
-19. **Protein denaturation** — heat permanently unfolds and sets gluten proteins around 160-180°F
-20. **Starch gelatinization** — starch granules absorb water and swell when heated, then set as bread cools (retrogradation)
-21. **Maillard reaction** — amino acids + reducing sugars + heat → brown color and complex flavors on crust
-22. **Caramelization** — direct sugar browning at high temperatures; contributes to crust color and flavor
-23. **Salt and protein interaction** — salt tightens gluten networks through ionic effects
-24. **Osmotic pressure** — salt draws water from yeast cells, slowing fermentation. Depends on: salt concentration
-25. **Fat interference with gluten** — fats coat proteins, weakening gluten networks but creating tender texture
-26. **Sugar and yeast** — sugar feeds yeast but in high concentrations creates osmotic stress, slowing fermentation
-27. **Troubleshooting framework** — systematic approach using chemistry to diagnose bread failures. Depends on: all previous concepts
+1. **Flour composition**: wheat flour is mostly starch, plus gluten-forming proteins (gliadin, glutenin), arabinoxylans, lipids and native enzymes.
+2. **Gliadin and glutenin**: gliadin is the viscous 'ball bearings / glue' and gives extensibility. Glutenin is the long 'springs' that link into polymers and give elasticity. Depends on: 1
+3. **Starch and damaged starch**: starch granules are the main filler. Damaged granules absorb more water and are easier for amylase to attack. Depends on: 1
+4. **Minor components**: arabinoxylans bind a lot of water, lipids sit at interfaces, and amylases release sugars from starch. Depends on: 1, 3
+5. **Hydration and gluten formation**: gluten exists only once the proteins are hydrated. Depends on: 2
+6. **Network bonding**: disulfide bonds between cysteines build the glutenin macropolymer, and hydrogen bonds and hydrophobic interactions add weaker, reversible links. Depends on: 2, 5
+7. **Kneading and autolyse**: mechanical work and time both unfold and align proteins. Disulfide interchange lets the network rearrange. Depends on: 6
+8. **Salt**: shields charges on the proteins, which tightens the network, and slows yeast by osmotic stress. Depends on: 6
+9. **Yeast fermentation**: yeast turns sugars (many released by amylase from damaged starch) into CO2 and ethanol. Rate depends on temperature. Depends on: 3, 4
+10. **Sourdough microbiology**: lactic acid bacteria make lactic and acetic acid, which lower pH, create sourness and shape flavor. Depends on: 9
+11. **Acid and proteolysis**: pH changes, proteases and glutathione from dead yeast can weaken the network. This is the over-fermentation story. Depends on: 6, 10
+12. **Viscoelasticity**: dough flows over long timescales and springs back over short ones. Elasticity and extensibility are different properties. Depends on: 2, 6
+13. **Gas retention**: CO2 diffuses into bubble nuclei that mixing created. Strain hardening keeps the bubble walls stable. Depends on: 7, 9, 12
+14. **Shaping and proofing**: shaping builds surface tension and divides bubbles. Proof level is the balance between gas production and network strength. Depends on: 13, 11
+15. **Oven spring**: heat expands the gas, vaporizes water and ethanol and gives the yeast one last burst until the crust sets. Steam delays crust setting. Depends on: 13, 14
+16. **Setting**: starch gelatinizes and gluten denatures, turning a closed-cell foam into an open-cell sponge. Depends on: 3, 6, 15
+17. **Crust browning**: the Maillard reaction (reducing sugars + amino groups) is distinct from caramelization (sugars alone). It is affected by temperature, dryness and pH. Depends on: 9, 15
+18. **Staling**: amylopectin recrystallizes (retrogradation). It is fastest at fridge temperatures and partly reversed by reheating. Depends on: 3, 16
+19. **Enriched doughs**: fat, sugar and eggs dilute and lubricate the network and compete with yeast for water. Depends on: 6, 9
+20. **Rye and gluten-free systems**: structure comes from arabinoxylan viscosity (rye) or added hydrocolloids (gluten-free) instead of an elastic network. Depends on: 4, 13, 16
+21. **Improvers**: oxidants (ascorbic acid) and enzymes (xylanase, amylase) tune the network, water distribution and staling. Depends on: 4, 6, 18
+22. **Defect diagnosis**: following a visible flaw back to its cause in a specific stage. Depends on: all of the above
 
 ## Dependencies
 
-### Foundation Layer
-- **Gluten proteins** and **protein hydration** are the absolute foundation — everything builds on these
-- Without understanding these, concepts like kneading, flour choice, and network development make no sense
+- Gas retention (13) needs the gluten network (6) **and** fermentation (9). The yeast makes the gas, but only the network holds it.
+- Oven spring (15) is gas retention under heat, so it inherits every weakness of the network and the proof.
+- Over-fermentation (11) links Module 3 back to Module 2: the chemistry that makes flavor (acids, enzymes) can also break the bonds built in mixing.
+- Staling (18) is the reverse of gelatinization (16), so gelatinization has to be understood first.
+- Rye and gluten-free (20) are taught by contrast, which needs the full wheat baseline (2–17) first.
+- Damaged starch (3) feeds yeast (9), affects water absorption (5) and supplies sugar for browning (17). It ties several modules together.
 
-### Mechanical Development Layer
-- **Gluten network formation** requires understanding protein hydration and gluten proteins
-- **Autolyse** technique makes sense only after understanding hydration and enzymatic activity
-- **Gluten development stages** depend on understanding network formation mechanics
+## Prerequisite Topics
 
-### Hydration & Formula Layer
-- **Baker's percentage** is a tool for expressing ratios; foundational for discussing hydration
-- **Hydration ratio** builds on baker's percentage and affects gluten extensibility
-- **Gluten extensibility** depends on both network formation and hydration level
-
-### Fermentation Layer
-- **Yeast metabolism** and **lactic acid bacteria** can be introduced independently but both contribute to gas and flavor
-- **Enzymatic activity** happens in parallel with microbial fermentation
-- **Gas bubble formation** requires understanding both yeast metabolism and gluten network strength
-- **Temperature effects** apply to both microbial activity and enzyme function
-
-### Baking/Heat Layer
-- **Oven spring** depends on understanding gas expansion, yeast activity, and protein setting temperature
-- **Protein denaturation** and **starch gelatinization** happen simultaneously but are independent processes
-- **Maillard reaction** and **caramelization** both contribute to crust but via different mechanisms
-
-### Advanced Ingredients Layer
-- **Salt effects** have dual mechanisms: gluten tightening and osmotic pressure on yeast
-- **Fat, egg, sugar effects** all interfere with basic gluten network in different ways
-- Understanding these requires solid grasp of baseline gluten chemistry
-
-### Integration Layer
-- **Troubleshooting** requires synthesizing all previous concepts to diagnose problems systematically
-
-## Key Bottlenecks
-
-Students often struggle at these transition points:
-
-1. **Hydration → Extensibility** — understanding that more water makes gluten stretchier (not weaker) is counterintuitive
-2. **Multiple fermentation products** — tracking that yeast makes CO2 + ethanol while bacteria make acids requires mental organization
-3. **Heat transformations** — three things happen at once (protein sets, starch gels, crust browns) and students conflate them
-4. **Salt's dual role** — strengthens gluten BUT slows fermentation seems contradictory until mechanisms are separated
-
-## Prerequisite Topics (External)
-
-- **Basic chemistry** — needed for understanding molecular interactions, reactions, pH
-- **Protein structure basics** — helpful for understanding denaturation and network formation
-- **Acid-base chemistry** — needed for pH effects and organic acid production
-- **Microbiology basics** — needed for fermentation (yeast and bacteria)
-- **Thermodynamics** — helpful for understanding temperature effects on reactions
-- **Percentages and ratios** — essential for baker's percentage calculations
-
-## Common Misconceptions (addressed in concept order)
-
-1. "Gluten is one thing" — actually two distinct proteins with different properties
-2. "Kneading creates gluten" — kneading organizes existing gluten, doesn't create it
-3. "More protein = better bread" — depends on bread type; too much protein can be detrimental
-4. "You can't over-knead by hand" — you can, though it's difficult
-5. "Water just makes dough wet" — water is chemically active, not just a lubricant
-6. "High hydration = weak dough" — high hydration creates extensible (stretchy) dough, not weak dough
-7. "Yeast makes dough rise" — yeast makes gas; gluten network traps it to create rise
-8. "Sourdough is just slow yeast bread" — bacterial fermentation creates fundamentally different flavor chemistry
-9. "Oven spring is just yeast working harder" — it's thermal expansion of existing gas plus final yeast activity before death
-10. "Bread sets because it dries out" — bread sets because proteins denature and starches gel, not from moisture loss
-
-## Pedagogical Sequence Notes
-
-The lesson order follows a logical chemical journey:
-
-1. **Flour + Water** → gluten basics (lessons 1-5)
-2. **Optimizing hydration** → water chemistry (lessons 6-10)
-3. **Adding life** → fermentation (lessons 11-16)
-4. **Applying heat** → baking transformations (lessons 17-21)
-5. **Modifying with ingredients** → salt, fat, sugar (lessons 22-24)
-
-This progression lets students build a complete mental model before adding complexity. Each module depends on the previous, but within modules, some concepts can be learned in flexible order.
+- **Protein structure basics** (amino acids, folding, cysteine): needed for concepts 2, 6, 7, 16. Highest-risk gap; add a remedial lesson if shaky.
+- **Bond types** (covalent vs. hydrogen vs. ionic interactions): needed for concepts 6, 8.
+- **pH and acids**: needed for concepts 10, 11, 17, 20.
+- **Reaction rate vs. temperature**: needed for concepts 9, 14, 17, 18.
+- **Percentages and ratios**: needed for baker's percentages (5, 10, 14) and the capstone.
